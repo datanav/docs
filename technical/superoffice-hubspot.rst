@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-10-06 13:44:17
+Generated: 2023-10-06 14:13:48
 
 Introduction.
 ------------
@@ -267,6 +267,9 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - HubSpot Lineitem Property
      - HubSpot Data Type
+   * - Description
+     - properties.description
+     - "string"
    * - ERPProductKey
      - properties.hs_product_id
      - "string"
