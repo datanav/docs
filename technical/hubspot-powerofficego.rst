@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-10-06 13:44:17
+Generated: 2023-10-06 13:44:20
 
 Introduction.
 ------------
@@ -524,6 +524,15 @@ The following properties are synchronized between a HubSpot Lineitem and a Power
    * - HubSpot Lineitem Property
      - PowerOfficeGo Salesorderlines Property
      - PowerOfficeGo Data Type
+   * - properties.name
+     - Description
+     - "string"
+   * - properties.price
+     - ProductUnitPrice
+     - "string"
+   * - properties.quantity
+     - Quantity
+     - "string"
 
 
 HubSpot Lineitemdealassociation to PowerOfficeGo Salesorderlines
