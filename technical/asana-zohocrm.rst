@@ -2,7 +2,7 @@
 Asana to ZohoCRM Dataflow
 =========================
 
-Generated: 2023-10-07 10:38:47
+Generated: 2023-10-07 10:39:03
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Asana Teams and a ZohoCRM Ac
    * - Asana Teams Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - description
+     - Created_Time
+     - "string"
 
 
 Asana Workspaces to ZohoCRM Account
