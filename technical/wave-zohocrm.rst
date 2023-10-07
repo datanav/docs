@@ -2,7 +2,7 @@
 Wave Financial to ZohoCRM Dataflow
 ==================================
 
-Generated: 2023-10-07 10:42:40
+Generated: 2023-10-07 10:43:15
 
 Introduction.
 ------------
@@ -23,6 +23,66 @@ The following properties are synchronized between a Wave Customer and a ZohoCRM 
    * - Wave Customer Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - address.city
+     - Billing_City
+     - "string"
+   * - address.city
+     - Shipping_City
+     - "string"
+   * - address.country.code
+     - Billing_Country
+     - "string"
+   * - address.country.code
+     - Shipping_Country
+     - "string"
+   * - address.countryCode
+     - Billing_Country
+     - "string"
+   * - address.countryCode
+     - Shipping_Country
+     - "string"
+   * - address.postalCode
+     - Billing_Code
+     - "string"
+   * - address.postalCode
+     - Shipping_Code
+     - "string"
+   * - fax
+     - Fax
+     - "string"
+   * - internalNotes
+     - Created_Time
+     - "string"
+   * - name
+     - Account_Name
+     - "string"
+   * - phone
+     - Phone
+     - "string"
+   * - shippingDetails.address.city
+     - Billing_City
+     - "string"
+   * - shippingDetails.address.city
+     - Shipping_City
+     - "string"
+   * - shippingDetails.address.country.code
+     - Billing_Country
+     - "string"
+   * - shippingDetails.address.country.code
+     - Shipping_Country
+     - "string"
+   * - shippingDetails.address.postalCode
+     - Billing_Code
+     - "string"
+   * - shippingDetails.address.postalCode
+     - Shipping_Code
+     - "string"
+   * - shippingDetails.phone
+     - Phone
+     - "string"
+   * - website
+     - Website
+     - "string"
 
 
 Wave Vendor to ZohoCRM Account
@@ -39,4 +99,31 @@ The following properties are synchronized between a Wave Vendor and a ZohoCRM Ac
    * - Wave Vendor Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - address.city
+     - Billing_City
+     - "string"
+   * - address.city
+     - Shipping_City
+     - "string"
+   * - address.country.code
+     - Billing_Country
+     - "string"
+   * - address.country.code
+     - Shipping_Country
+     - "string"
+   * - address.postalCode
+     - Billing_Code
+     - "string"
+   * - address.postalCode
+     - Shipping_Code
+     - "string"
+   * - internalNotes
+     - Created_Time
+     - "string"
+   * - name
+     - Account_Name
+     - "string"
+   * - website
+     - Website
+     - "string"
 
