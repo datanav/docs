@@ -2,7 +2,7 @@
 SuperOffice to ZohoCRM Dataflow
 ===============================
 
-Generated: 2023-10-07 10:41:43
+Generated: 2023-10-07 10:42:10
 
 Introduction.
 ------------
@@ -23,4 +23,43 @@ The following properties are synchronized between a SuperOffice Contact and a Zo
    * - SuperOffice Contact Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - Address.Postal.City
+     - Billing_City
+     - "string"
+   * - Address.Postal.City
+     - Shipping_City
+     - "string"
+   * - Address.Postal.Zipcode
+     - Billing_Code
+     - "string"
+   * - Address.Postal.Zipcode
+     - Shipping_Code
+     - "string"
+   * - Address.Street.City
+     - Billing_City
+     - "string"
+   * - Address.Street.City
+     - Shipping_City
+     - "string"
+   * - Address.Street.Zipcode
+     - Billing_Code
+     - "string"
+   * - Address.Street.Zipcode
+     - Shipping_Code
+     - "string"
+   * - Country.CountryId
+     - Billing_Country
+     - "string"
+   * - Country.CountryId
+     - Shipping_Country
+     - "string"
+   * - Name
+     - Account_Name
+     - "string"
+   * - Phones.Value
+     - Phone
+     - "string"
+   * - Urls.Value
+     - Website
+     - "string"
 
