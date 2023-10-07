@@ -2,7 +2,7 @@
 Freshteam to ZohoCRM Dataflow
 =============================
 
-Generated: 2023-10-07 10:39:41
+Generated: 2023-10-07 10:40:10
 
 Introduction.
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Freshteam Department and a Z
    * - Freshteam Department Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - name
+     - Account_Name
+     - "string"
 
