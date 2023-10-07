@@ -2,7 +2,7 @@
 Tripletex to ZohoCRM Dataflow
 =============================
 
-Generated: 2023-10-07 10:42:40
+Generated: 2023-10-07 10:43:15
 
 Introduction.
 ------------
@@ -99,6 +99,9 @@ The following properties are synchronized between a Tripletex Department and a Z
    * - Tripletex Department Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - name
+     - Account_Name
+     - "string"
 
 
 Tripletex Supplier to ZohoCRM Account
@@ -115,4 +118,64 @@ The following properties are synchronized between a Tripletex Supplier and a Zoh
    * - Tripletex Supplier Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - deliveryAddress.changes
+     - Billing_City
+     - "string"
+   * - deliveryAddress.changes
+     - Shipping_City
+     - "string"
+   * - deliveryAddress.city
+     - Billing_Country
+     - "string"
+   * - deliveryAddress.city
+     - Shipping_Country
+     - "string"
+   * - deliveryAddress.postalCode
+     - Billing_Code
+     - "string"
+   * - deliveryAddress.postalCode
+     - Shipping_Code
+     - "string"
+   * - name
+     - Account_Name
+     - "string"
+   * - phoneNumber
+     - Phone
+     - "string"
+   * - physicalAddress.city
+     - Billing_City
+     - "string"
+   * - physicalAddress.city
+     - Shipping_City
+     - "string"
+   * - physicalAddress.country.id
+     - Billing_Country
+     - "string"
+   * - physicalAddress.country.id
+     - Shipping_Country
+     - "string"
+   * - physicalAddress.postalCode
+     - Billing_Code
+     - "string"
+   * - physicalAddress.postalCode
+     - Shipping_Code
+     - "string"
+   * - postalAddress.city
+     - Billing_City
+     - "string"
+   * - postalAddress.city
+     - Shipping_City
+     - "string"
+   * - postalAddress.country.id
+     - Billing_Country
+     - "string"
+   * - postalAddress.country.id
+     - Shipping_Country
+     - "string"
+   * - postalAddress.postalCode
+     - Billing_Code
+     - "string"
+   * - postalAddress.postalCode
+     - Shipping_Code
+     - "string"
 
