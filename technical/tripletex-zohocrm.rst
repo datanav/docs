@@ -2,7 +2,7 @@
 Tripletex to ZohoCRM Dataflow
 =============================
 
-Generated: 2023-10-07 10:25:24
+Generated: 2023-10-07 10:32:37
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Tripletex Customer and a Zoh
    * - Tripletex Customer Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - deliveryAddress.city
+     - Billing_City
+     - "string"
    * - name
      - Account_Name
      - "string"
