@@ -2,7 +2,7 @@
 Businesscentral to ZohoCRM Dataflow
 ===================================
 
-Generated: 2023-10-07 10:39:41
+Generated: 2023-10-07 10:40:03
 
 Introduction.
 ------------
@@ -39,4 +39,7 @@ The following properties are synchronized between a Businesscentral Contact comp
    * - Businesscentral Contact company Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - city
+     - Billing_City
+     - "string"
 
