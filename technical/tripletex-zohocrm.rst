@@ -2,7 +2,7 @@
 Tripletex to ZohoCRM Dataflow
 =============================
 
-Generated: 2023-10-07 10:42:10
+Generated: 2023-10-07 10:42:40
 
 Introduction.
 ------------
@@ -83,4 +83,36 @@ The following properties are synchronized between a Tripletex Customer and a Zoh
    * - postalAddress.postalCode
      - Shipping_Code
      - "string"
+
+
+Tripletex Department to ZohoCRM Account
+---------------------------------------
+Every Tripletex Department will be synchronized with a ZohoCRM Account.
+
+Once a link between a Tripletex Department and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a ZohoCRM Account:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - ZohoCRM Account Property
+     - ZohoCRM Data Type
+
+
+Tripletex Supplier to ZohoCRM Account
+-------------------------------------
+Every Tripletex Supplier will be synchronized with a ZohoCRM Account.
+
+Once a link between a Tripletex Supplier and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Supplier and a ZohoCRM Account:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Supplier Property
+     - ZohoCRM Account Property
+     - ZohoCRM Data Type
 
