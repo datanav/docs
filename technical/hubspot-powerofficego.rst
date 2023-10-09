@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-10-06 13:44:20
+Generated: 2023-10-09 14:12:46
 
 Introduction.
 ------------
@@ -13,7 +13,7 @@ HubSpot Company to PowerOfficeGo Customers
 ------------------------------------------
 Before any synchronization can take place, a link between a HubSpot Company and a PowerOfficeGo Customers must be established.
 
-A new PowerOfficeGo Customers will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into PowerOfficeGo.
+A new PowerOfficeGo Customers will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into PowerOfficeGo.
 
 Once a link between a HubSpot Company and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -61,7 +61,7 @@ HubSpot Company to PowerOfficeGo Customers person
 -------------------------------------------------
 Before any synchronization can take place, a link between a HubSpot Company and a PowerOfficeGo Customers person must be established.
 
-A new PowerOfficeGo Customers person will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into PowerOfficeGo.
+A new PowerOfficeGo Customers person will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into PowerOfficeGo.
 
 Once a link between a HubSpot Company and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -88,7 +88,7 @@ HubSpot Contact to PowerOfficeGo Customers
 ------------------------------------------
 Before any synchronization can take place, a link between a HubSpot Contact and a PowerOfficeGo Customers must be established.
 
-A new PowerOfficeGo Customers will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into PowerOfficeGo.
+A new PowerOfficeGo Customers will be created from a HubSpot Contact if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into PowerOfficeGo.
 
 Once a link between a HubSpot Contact and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -109,7 +109,7 @@ HubSpot Contact to PowerOfficeGo Customers person
 -------------------------------------------------
 Before any synchronization can take place, a link between a HubSpot Contact and a PowerOfficeGo Customers person must be established.
 
-A new PowerOfficeGo Customers person will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into PowerOfficeGo.
+A new PowerOfficeGo Customers person will be created from a HubSpot Contact if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into PowerOfficeGo.
 
 Once a link between a HubSpot Contact and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
