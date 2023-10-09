@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-10-09 06:58:12
+Generated: 2023-10-09 06:58:27
 
 Introduction.
 ------------
@@ -304,6 +304,9 @@ The following properties are synchronized between a Tripletex Supplier and a Sup
      - "string"
    * - deliveryAddress.city
      - Address.Postal.City
+     - "string"
+   * - deliveryAddress.city
+     - Address.Street.City
      - "string"
    * - deliveryAddress.city
      - Country.CountryId
