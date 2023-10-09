@@ -2,7 +2,7 @@
 Tripletex to ZohoCRM Dataflow
 =============================
 
-Generated: 2023-10-09 06:51:36
+Generated: 2023-10-09 06:58:50
 
 Introduction.
 ------------
@@ -125,7 +125,13 @@ The following properties are synchronized between a Tripletex Supplier and a Zoh
      - Shipping_City
      - "string"
    * - deliveryAddress.city
+     - Billing_City
+     - "string"
+   * - deliveryAddress.city
      - Billing_Country
+     - "string"
+   * - deliveryAddress.city
+     - Shipping_City
      - "string"
    * - deliveryAddress.city
      - Shipping_Country
