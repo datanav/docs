@@ -2,7 +2,7 @@
 SuperOffice to ZohoCRM Dataflow
 ===============================
 
-Generated: 2023-10-09 18:15:02
+Generated: 2023-10-09 18:29:19
 
 Introduction.
 ------------
@@ -98,5 +98,11 @@ The following properties are synchronized between a SuperOffice Sale and a ZohoC
      - "string"
    * - Saledate
      - Closing_Date
+     - "string"
+   * - Status
+     - Probability
+     - "string"
+   * - Status
+     - Stage
      - "string"
 
