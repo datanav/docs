@@ -2,7 +2,7 @@
 Wave Financial to ZohoCRM Dataflow
 ==================================
 
-Generated: 2023-10-07 10:43:15
+Generated: 2023-10-09 20:39:40
 
 Introduction.
 ------------
@@ -126,4 +126,20 @@ The following properties are synchronized between a Wave Vendor and a ZohoCRM Ac
    * - website
      - Website
      - "string"
+
+
+Wave Customer person to ZohoCRM Contact
+---------------------------------------
+Every Wave Customer person will be synchronized with a ZohoCRM Contact.
+
+Once a link between a Wave Customer person and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer person and a ZohoCRM Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - ZohoCRM Contact Property
+     - ZohoCRM Data Type
 
