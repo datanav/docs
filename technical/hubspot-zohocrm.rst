@@ -2,7 +2,7 @@
 HubSpot to ZohoCRM Dataflow
 ===========================
 
-Generated: 2023-10-09 18:15:02
+Generated: 2023-10-09 18:21:47
 
 Introduction.
 ------------
@@ -57,7 +57,7 @@ The following properties are synchronized between a HubSpot Company and a ZohoCR
 
 HubSpot Deal to ZohoCRM Deal
 ----------------------------
-Every HubSpot Deal will be synchronized with a ZohoCRM Deal.
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a ZohoCRM Deal.
 
 Once a link between a HubSpot Deal and a ZohoCRM Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
 
