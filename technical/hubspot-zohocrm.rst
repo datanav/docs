@@ -2,7 +2,7 @@
 HubSpot to ZohoCRM Dataflow
 ===========================
 
-Generated: 2023-10-09 18:14:45
+Generated: 2023-10-09 18:15:02
 
 Introduction.
 ------------
@@ -69,4 +69,16 @@ The following properties are synchronized between a HubSpot Deal and a ZohoCRM D
    * - HubSpot Deal Property
      - ZohoCRM Deal Property
      - ZohoCRM Data Type
+   * - properties.amount
+     - Amount
+     - "string"
+   * - properties.closedate
+     - Closing_Date
+     - "string"
+   * - properties.dealname
+     - Deal_Name
+     - "string"
+   * - properties.description
+     - Deal_Name
+     - "string"
 
