@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-10-09 08:16:12
+Generated: 2023-10-09 14:12:46
 
 Introduction.
 ------------
@@ -580,7 +580,7 @@ Powerofficego Customers to PowerOfficeGo Customers person
 ---------------------------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Customers and a PowerOfficeGo Customers person must be established.
 
-A new PowerOfficeGo Customers person will be created from a Powerofficego Customers if it is connected to a Powerofficego Customers, Suppliers, Customers-person, or Suppliers-person that is synchronized into PowerOfficeGo.
+A new PowerOfficeGo Customers person will be created from a Powerofficego Customers if it is connected to a Powerofficego Customers, Suppliers, Salesorder, Salesorders, Salesorderline, Outgoinginvoice, Salesorderlines, Customers-person, or Suppliers-person that is synchronized into PowerOfficeGo.
 
 Once a link between a Powerofficego Customers and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
