@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-10-05 08:40:19
+Generated: 2023-10-09 06:51:36
 
 Introduction.
 ------------
@@ -247,6 +247,9 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
    * - Country.CountryId
      - deliveryAddress.city
      - "string"
+   * - Country.CountryId
+     - deliveryAddress.country.id
+     - "integer"
    * - Country.CountryId
      - physicalAddress.country.id
      - "integer"
