@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-10-09 06:51:36
+Generated: 2023-10-09 06:58:50
 
 Introduction.
 ------------
@@ -881,6 +881,9 @@ The following properties are synchronized between a Powerofficego Suppliers and 
      - "string"
    * - MailAddress.City
      - deliveryAddress.changes
+     - "string"
+   * - MailAddress.City
+     - deliveryAddress.city
      - "string"
    * - MailAddress.City
      - physicalAddress.city
