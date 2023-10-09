@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-10-09 06:51:36
+Generated: 2023-10-09 06:58:50
 
 Introduction.
 ------------
@@ -191,6 +191,9 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - deliveryAddress.changes
      - "string"
    * - Address.Postal.City
+     - deliveryAddress.city
+     - "string"
+   * - Address.Postal.City
      - physicalAddress.city
      - "string"
    * - Address.Postal.City
@@ -225,6 +228,9 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - "string"
    * - Address.Street.City
      - deliveryAddress.changes
+     - "string"
+   * - Address.Street.City
+     - deliveryAddress.city
      - "string"
    * - Address.Street.City
      - physicalAddress.city
