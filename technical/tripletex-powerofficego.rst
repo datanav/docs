@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-10-09 06:51:36
+Generated: 2023-10-09 06:58:50
 
 Introduction.
 ------------
@@ -707,6 +707,9 @@ The following properties are synchronized between a Tripletex Supplier and a Pow
      - MailAddress.AddressLine2
      - "string"
    * - deliveryAddress.changes
+     - MailAddress.City
+     - "string"
+   * - deliveryAddress.city
      - MailAddress.City
      - "string"
    * - deliveryAddress.city
