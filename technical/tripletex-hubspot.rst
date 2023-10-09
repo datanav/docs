@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-10-09 06:51:36
+Generated: 2023-10-09 06:58:50
 
 Introduction.
 ------------
@@ -231,6 +231,9 @@ The following properties are synchronized between a Tripletex Supplier and a Hub
      - properties.address2
      - "string"
    * - deliveryAddress.changes
+     - properties.city
+     - "string"
+   * - deliveryAddress.city
      - properties.city
      - "string"
    * - deliveryAddress.city
