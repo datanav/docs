@@ -2,7 +2,7 @@
 HubSpot to ZohoCRM Dataflow
 ===========================
 
-Generated: 2023-10-09 20:38:46
+Generated: 2023-10-09 20:39:02
 
 Introduction.
 ------------
@@ -25,6 +25,9 @@ The following properties are synchronized between a HubSpot Owner and a ZohoCRM 
    * - HubSpot Owner Property
      - ZohoCRM Contact Property
      - ZohoCRM Data Type
+   * - firstName
+     - First_Name
+     - "string"
 
 
 HubSpot Company to ZohoCRM Account
