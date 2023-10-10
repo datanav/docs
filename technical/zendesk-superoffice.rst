@@ -2,7 +2,7 @@
 Zendesk to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-08-03 06:25:38
+Generated: 2023-10-10 20:55:48
 
 Introduction.
 ------------
@@ -36,6 +36,9 @@ The following properties are synchronized between a Zendesk Users and a SuperOff
    * - Zendesk Users Property
      - SuperOffice Person Property
      - SuperOffice Data Type
+   * - organization_id
+     - Contact.ContactId
+     - "integer"
    * - phone
      - PrivatePhones.Value
      - "string"
