@@ -2,7 +2,7 @@
 Tripletex to Zendesk Dataflow
 =============================
 
-Generated: 2023-10-10 20:58:59
+Generated: 2023-10-10 20:59:49
 
 Introduction.
 ------------
@@ -95,6 +95,24 @@ The following properties are synchronized between a Tripletex Customer and a Zen
      - "string"
 
 
+Tripletex Customer to Zendesk Organizations
+-------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a Zendesk Organizations must be established.
+
+A new Zendesk Organizations will be created from a Tripletex Customer if it is connected to a Tripletex Contact, or Employee that is synchronized into Zendesk.
+
+Once a link between a Tripletex Customer and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a Zendesk Organizations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - Zendesk Organizations Property
+     - Zendesk Data Type
+
+
 Tripletex Department to Zendesk Organisations
 ---------------------------------------------
 Every Tripletex Department will be synchronized with a Zendesk Organisations.
@@ -112,6 +130,24 @@ The following properties are synchronized between a Tripletex Department and a Z
    * - name
      - name
      - "string"
+
+
+Tripletex Department to Zendesk Organizations
+---------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Department and a Zendesk Organizations must be established.
+
+A new Zendesk Organizations will be created from a Tripletex Department if it is connected to a Tripletex Contact, or Employee that is synchronized into Zendesk.
+
+Once a link between a Tripletex Department and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a Zendesk Organizations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - Zendesk Organizations Property
+     - Zendesk Data Type
 
 
 Tripletex Project to Zendesk Ticketcomments
