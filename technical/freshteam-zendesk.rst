@@ -2,7 +2,7 @@
 Freshteam to Zendesk Dataflow
 =============================
 
-Generated: 2023-10-10 20:58:59
+Generated: 2023-10-10 21:04:53
 
 Introduction.
 ------------
@@ -26,6 +26,22 @@ The following properties are synchronized between a Freshteam Department and a Z
    * - name
      - name
      - "string"
+
+
+Freshteam Department to Zendesk Organizations
+---------------------------------------------
+Every Freshteam Department will be synchronized with a Zendesk Organizations.
+
+Once a link between a Freshteam Department and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Freshteam Department and a Zendesk Organizations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Freshteam Department Property
+     - Zendesk Organizations Property
+     - Zendesk Data Type
 
 
 Freshteam Employee to Zendesk Users
