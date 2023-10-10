@@ -2,7 +2,7 @@
 Freshteam to Tripletex Dataflow
 ===============================
 
-Generated: 2023-10-05 08:40:19
+Generated: 2023-10-10 20:55:40
 
 Introduction.
 ------------
@@ -77,6 +77,9 @@ The following properties are synchronized between a Freshteam Employee and a Tri
    * - date_of_birth
      - dateOfBirth
      - "datetime-format","%Y-%m-%d","_."]
+   * - designation
+     - department.id
+     - "if", "neq", "_.", "X"], "integer", "string"]
    * - first_name
      - firstName
      - "string"
