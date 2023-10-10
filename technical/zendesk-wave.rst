@@ -2,7 +2,7 @@
 Zendesk to Wave Dataflow
 ========================
 
-Generated: 2023-10-10 20:55:56
+Generated: 2023-10-10 20:59:49
 
 Introduction.
 ------------
@@ -47,6 +47,42 @@ The following properties are synchronized between a Zendesk Organisations and a 
    * - url
      - website
      - "string"
+
+
+Zendesk Organizations to Wave Customer person
+---------------------------------------------
+Before any synchronization can take place, a link between a Zendesk Organizations and a Wave Customer person must be established.
+
+A new Wave Customer person will be created from a Zendesk Organizations if it is connected to a Zendesk Users, or Organisations that is synchronized into Wave.
+
+Once a link between a Zendesk Organizations and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Organizations and a Wave Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Organizations Property
+     - Wave Customer person Property
+     - Wave Data Type
+
+
+Zendesk Organizations to Wave Customer
+--------------------------------------
+Before any synchronization can take place, a link between a Zendesk Organizations and a Wave Customer must be established.
+
+A new Wave Customer will be created from a Zendesk Organizations if it is connected to a Zendesk Users, or Organisations that is synchronized into Wave.
+
+Once a link between a Zendesk Organizations and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Organizations and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Organizations Property
+     - Wave Customer Property
+     - Wave Data Type
 
 
 Zendesk Users to Wave Customer
