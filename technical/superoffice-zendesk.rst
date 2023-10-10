@@ -2,7 +2,7 @@
 SuperOffice to Zendesk Dataflow
 ===============================
 
-Generated: 2023-10-10 21:00:00
+Generated: 2023-10-10 21:05:50
 
 Introduction.
 ------------
@@ -97,9 +97,7 @@ The following properties are synchronized between a SuperOffice Contact and a Ze
 
 SuperOffice Contact to Zendesk Organizations
 --------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a Zendesk Organizations must be established.
-
-A new Zendesk Organizations will be created from a SuperOffice Contact if it is connected to a SuperOffice User, or Person that is synchronized into Zendesk.
+Every SuperOffice Contact will be synchronized with a Zendesk Organizations.
 
 Once a link between a SuperOffice Contact and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
