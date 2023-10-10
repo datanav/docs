@@ -2,7 +2,7 @@
 Asana to Zendesk Dataflow
 =========================
 
-Generated: 2023-10-05 08:41:49
+Generated: 2023-10-10 20:58:57
 
 Introduction.
 ------------
@@ -88,24 +88,5 @@ The following properties are synchronized between a Asana Workspaces and a Zende
      - "string"
    * - name
      - name
-     - "string"
-
-
-Asana Users to Zendesk Users
-----------------------------
-Every Asana Users will be synchronized with a Zendesk Users.
-
-Once a link between a Asana Users and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Asana Users and a Zendesk Users:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Asana Users Property
-     - Zendesk Users Property
-     - Zendesk Data Type
-   * - workspaces.gid
-     - organization_id
      - "string"
 
