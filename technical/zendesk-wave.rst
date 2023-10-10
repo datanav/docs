@@ -2,7 +2,7 @@
 Zendesk to Wave Dataflow
 ========================
 
-Generated: 2023-10-10 21:00:00
+Generated: 2023-10-10 21:00:53
 
 Introduction.
 ------------
@@ -53,7 +53,7 @@ Zendesk Organizations to Wave Customer person
 ---------------------------------------------
 Before any synchronization can take place, a link between a Zendesk Organizations and a Wave Customer person must be established.
 
-A new Wave Customer person will be created from a Zendesk Organizations if it is connected to a Zendesk Users, or Organisations that is synchronized into Wave.
+A new Wave Customer person will be created from a Zendesk Organizations if it is connected to a Zendesk Users, Organisations, or Organizations that is synchronized into Wave.
 
 Once a link between a Zendesk Organizations and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -71,7 +71,7 @@ Zendesk Organizations to Wave Customer
 --------------------------------------
 Before any synchronization can take place, a link between a Zendesk Organizations and a Wave Customer must be established.
 
-A new Wave Customer will be created from a Zendesk Organizations if it is connected to a Zendesk Users, or Organisations that is synchronized into Wave.
+A new Wave Customer will be created from a Zendesk Organizations if it is connected to a Zendesk Users, Organisations, or Organizations that is synchronized into Wave.
 
 Once a link between a Zendesk Organizations and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
