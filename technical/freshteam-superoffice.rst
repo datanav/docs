@@ -2,7 +2,7 @@
 Freshteam to SuperOffice Dataflow
 =================================
 
-Generated: 2023-09-18 08:18:26
+Generated: 2023-10-10 20:55:38
 
 Introduction.
 ------------
@@ -60,6 +60,9 @@ The following properties are synchronized between a Freshteam Employee and a Sup
    * - date_of_birth
      - BirthDate
      - "datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
+   * - designation
+     - Contact.ContactId
+     - "integer"
    * - first_name
      - Firstname
      - "string"
