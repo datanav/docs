@@ -2,7 +2,7 @@
 Wave Financial to Zendesk Dataflow
 ==================================
 
-Generated: 2023-10-10 21:07:50
+Generated: 2023-10-10 21:08:26
 
 Introduction.
 ------------
@@ -173,4 +173,10 @@ The following properties are synchronized between a Wave Vendor and a Zendesk Or
    * - Wave Vendor Property
      - Zendesk Organizations Property
      - Zendesk Data Type
+   * - name
+     - name
+     - "string"
+   * - website
+     - url
+     - "string"
 
