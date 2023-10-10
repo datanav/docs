@@ -2,7 +2,7 @@
 Tripletex to Zendesk Dataflow
 =============================
 
-Generated: 2023-10-10 20:55:56
+Generated: 2023-10-10 20:58:59
 
 Introduction.
 ------------
@@ -38,6 +38,41 @@ The following properties are synchronized between a Tripletex Contact and a Zend
      - Zendesk Data Type
    * - customer.id
      - organization_id
+     - "string"
+
+
+Tripletex Employee to Zendesk Users
+-----------------------------------
+Every Tripletex Employee will be synchronized with a Zendesk Users.
+
+If a matching Zendesk Users already exists, the Tripletex Employee will be merged with the existing one.
+If no matching Zendesk Users is found, a new Zendesk Users will be created.
+
+A Tripletex Employee will merge with a Zendesk Users if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - Zendesk Users Property
+   * - email
+     - email
+
+Once a link between a Tripletex Employee and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a Zendesk Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - Zendesk Users Property
+     - Zendesk Data Type
+   * - department.id
+     - organization_id
+     - "string"
+   * - phoneNumberHome
+     - phone
      - "string"
 
 
@@ -111,40 +146,5 @@ The following properties are synchronized between a Tripletex Supplier and a Zen
      - Zendesk Data Type
    * - name
      - name
-     - "string"
-
-
-Tripletex Employee to Zendesk Users
------------------------------------
-Every Tripletex Employee will be synchronized with a Zendesk Users.
-
-If a matching Zendesk Users already exists, the Tripletex Employee will be merged with the existing one.
-If no matching Zendesk Users is found, a new Zendesk Users will be created.
-
-A Tripletex Employee will merge with a Zendesk Users if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - Zendesk Users Property
-   * - email
-     - email
-
-Once a link between a Tripletex Employee and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Employee and a Zendesk Users:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - Zendesk Users Property
-     - Zendesk Data Type
-   * - department.id
-     - organization_id
-     - "string"
-   * - phoneNumberHome
-     - phone
      - "string"
 
