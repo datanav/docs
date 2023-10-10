@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-10-09 14:12:46
+Generated: 2023-10-10 11:14:25
 
 Introduction.
 ------------
@@ -658,7 +658,7 @@ The following properties are synchronized between a Tripletex Product and a Powe
      - "string"
    * - stockOfGoods
      - availableStock
-     - "string"
+     - "integer"
    * - vatType.id
      - VatCode
      - "string"
