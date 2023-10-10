@@ -2,7 +2,7 @@
 Zendesk to Tripletex Dataflow
 =============================
 
-Generated: 2023-10-10 20:55:48
+Generated: 2023-10-10 20:56:02
 
 Introduction.
 ------------
@@ -51,6 +51,27 @@ The following properties are synchronized between a Zendesk Organisations and a 
 
    * - Zendesk Organisations Property
      - Tripletex Customer Property
+     - Tripletex Data Type
+   * - name
+     - name
+     - "string"
+
+
+Zendesk Organisations to Tripletex Department
+---------------------------------------------
+Before any synchronization can take place, a link between a Zendesk Organisations and a Tripletex Department must be established.
+
+A new Tripletex Department will be created from a Zendesk Organisations if it is connected to a Zendesk Users that is synchronized into Tripletex.
+
+Once a link between a Zendesk Organisations and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Organisations and a Tripletex Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Organisations Property
+     - Tripletex Department Property
      - Tripletex Data Type
    * - name
      - name
