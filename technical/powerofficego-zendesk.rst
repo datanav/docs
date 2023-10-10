@@ -2,7 +2,7 @@
 Powerofficego to Zendesk Dataflow
 =================================
 
-Generated: 2023-10-10 21:00:00
+Generated: 2023-10-10 21:04:53
 
 Introduction.
 ------------
@@ -33,9 +33,7 @@ The following properties are synchronized between a Powerofficego Customers and 
 
 Powerofficego Customers to Zendesk Organizations
 ------------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Customers and a Zendesk Organizations must be established.
-
-A new Zendesk Organizations will be created from a Powerofficego Customers if it is connected to a Powerofficego Employees, or Contactperson that is synchronized into Zendesk.
+Every Powerofficego Customers will be synchronized with a Zendesk Organizations.
 
 Once a link between a Powerofficego Customers and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
