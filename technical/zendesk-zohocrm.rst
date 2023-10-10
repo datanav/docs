@@ -2,7 +2,7 @@
 Zendesk to ZohoCRM Dataflow
 ===========================
 
-Generated: 2023-10-07 10:43:15
+Generated: 2023-10-10 21:00:53
 
 Introduction.
 ------------
@@ -29,4 +29,20 @@ The following properties are synchronized between a Zendesk Organisations and a 
    * - url
      - Website
      - "string"
+
+
+Zendesk Organizations to ZohoCRM Account
+----------------------------------------
+Every Zendesk Organizations will be synchronized with a ZohoCRM Account.
+
+Once a link between a Zendesk Organizations and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Organizations and a ZohoCRM Account:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Organizations Property
+     - ZohoCRM Account Property
+     - ZohoCRM Data Type
 
