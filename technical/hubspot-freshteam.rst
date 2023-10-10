@@ -2,7 +2,7 @@
 HubSpot to Freshteam Dataflow
 =============================
 
-Generated: 2023-09-16 15:05:05
+Generated: 2023-10-10 20:55:48
 
 Introduction.
 ------------
@@ -127,7 +127,7 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
    * - HubSpot Contactcompanyassociation Property
      - Freshteam Employee Property
      - Freshteam Data Type
-   * - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - designation
      - "string"
 
