@@ -2,7 +2,7 @@
 Freshteam to Zendesk Dataflow
 =============================
 
-Generated: 2023-10-05 08:41:49
+Generated: 2023-10-10 20:55:48
 
 Introduction.
 ------------
@@ -42,6 +42,9 @@ The following properties are synchronized between a Freshteam Employee and a Zen
    * - Freshteam Employee Property
      - Zendesk Users Property
      - Zendesk Data Type
+   * - designation
+     - organization_id
+     - "string"
    * - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.name)
      - phone
      - "string"
