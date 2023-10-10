@@ -2,7 +2,7 @@
 Asana to Zendesk Dataflow
 =========================
 
-Generated: 2023-10-10 20:58:57
+Generated: 2023-10-10 21:02:57
 
 Introduction.
 ------------
@@ -67,6 +67,22 @@ The following properties are synchronized between a Asana Teams and a Zendesk Or
    * - permalink_url
      - url
      - "string"
+
+
+Asana Teams to Zendesk Organizations
+------------------------------------
+Every Asana Teams will be synchronized with a Zendesk Organizations.
+
+Once a link between a Asana Teams and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Asana Teams and a Zendesk Organizations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Asana Teams Property
+     - Zendesk Organizations Property
+     - Zendesk Data Type
 
 
 Asana Workspaces to Zendesk Organisations
