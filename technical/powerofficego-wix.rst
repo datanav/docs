@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-10-05 08:46:20
+Generated: 2023-10-10 11:14:25
 
 Introduction.
 ------------
@@ -239,7 +239,7 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "string"
    * - availableStock
      - variants.quantity
-     - "string"
+     - "integer"
 
 
 Powerofficego Product to Wix Products
