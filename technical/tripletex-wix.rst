@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-10-05 08:46:20
+Generated: 2023-10-10 11:14:25
 
 Introduction.
 ------------
@@ -307,7 +307,7 @@ The following properties are synchronized between a Tripletex Product and a Wix 
      - "string"
    * - stockOfGoods
      - variants.quantity
-     - "string"
+     - "integer"
 
 
 Tripletex Product to Wix Products
