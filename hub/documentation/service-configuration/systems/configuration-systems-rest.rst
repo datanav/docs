@@ -36,6 +36,11 @@ Prototype
         "rate_limiting_retries": 3,
         "rate_limiting_delay": 60,
         "json_content_types": ["application/jsonish"]
+        "headers": {
+            "MY_HEADER": "some-value",
+            "MY_OTHER_HEADER": "$ENV(key-for-other-value)",
+            "MY_SECRET_HEADER": "$SECRET(secret-key)"
+        },
         "operations": {
             "get-operation": {
                 "url" : "/a/service/that/supports/get/{{ _id }}",
@@ -94,6 +99,15 @@ Properties
    * - ``<any url system property>``
      -
      - The REST system extends the URL system, so any property from the URL system can be applied.
+     -
+     -
+
+   * - ``headers``
+     - Dict<String,String>
+     - A optional set of header values to set as defaults in the requests made using the REST system. Both keys and values must
+       evaluate to strings. Note that any "Authorization" header provided in this object is automatically overwritten
+       when using the ``jwt_token`` property. Note that the keys in this mapping can be overridden in the ``operations``
+       section but cannot be discarded.
      -
      -
 

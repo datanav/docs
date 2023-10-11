@@ -117,7 +117,7 @@ Properties
 
    * - ``headers``
      - Dict<String,String>
-     - A optional set of header values to set as defaults in request made using the URL system. Both keys and values must
+     - A optional set of header values to set as defaults in the requests made using the URL system. Both keys and values must
        evaluate to strings. Note that any "Authorization" header provided in this object is automatically overwritten
        when using the ``jwt_token`` property.
      -

@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2023_10_11:
+
+2023-10-11
+----------
+
+* Clarified that the system level ``headers`` property on :ref:`REST systems <rest_system>` is used on all requests executed by the system. The keys in this property can be overridden in the individual operations but cannot be discarded.
+
 .. _changelog_2023_09_01:
 
 2023-09-01
