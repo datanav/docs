@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-10-11 09:32:26
+Generated: 2023-10-12 08:02:54
 
 Introduction.
 ------------
@@ -812,37 +812,6 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
    * - zipCode
      - zipCode
-     - "string"
-
-
-Powerofficego Customers person to PowerOfficeGo Contactperson
--------------------------------------------------------------
-Every Powerofficego Customers person will be synchronized with a PowerOfficeGo Contactperson.
-
-Once a link between a Powerofficego Customers person and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customers person and a PowerOfficeGo Contactperson:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers person Property
-     - PowerOfficeGo Contactperson Property
-     - PowerOfficeGo Data Type
-   * - DateOfBirth
-     - dateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
-   * - EmailAddress
-     - emailAddress
-     - "string"
-   * - FirstName
-     - firstName
-     - "string"
-   * - LastName
-     - lastName
-     - "string"
-   * - PhoneNumber
-     - phoneNumber
      - "string"
 
 
