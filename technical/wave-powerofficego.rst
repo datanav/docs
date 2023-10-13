@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGo Dataflow
 ========================================
 
-Generated: 2023-10-13 13:42:54
+Generated: 2023-10-13 14:33:51
 
 Introduction.
 ------------
@@ -142,6 +142,76 @@ The following properties are synchronized between a Wave Customer person and a P
      - "string"
    * - shippingDetails.address.postalCode
      - zipCode
+     - "string"
+
+
+Wave Customer to PowerOfficeGo Contactperson
+--------------------------------------------
+Every Wave Customer will be synchronized with a PowerOfficeGo Contactperson.
+
+Once a link between a Wave Customer and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a PowerOfficeGo Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - PowerOfficeGo Contactperson Property
+     - PowerOfficeGo Data Type
+   * - address.addressLine1
+     - address1
+     - "string"
+   * - address.addressLine2
+     - address2
+     - "string"
+   * - address.city
+     - city
+     - "string"
+   * - address.country.code
+     - residenceCountryCode
+     - "string"
+   * - address.countryCode
+     - residenceCountryCode
+     - "string"
+   * - address.postalCode
+     - zipCode
+     - "string"
+   * - email
+     - emailAddress
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - id
+     - partyId
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - phone
+     - phoneNumber
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - address1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - address2
+     - "string"
+   * - shippingDetails.address.city
+     - city
+     - "string"
+   * - shippingDetails.address.country.code
+     - residenceCountryCode
+     - "string"
+   * - shippingDetails.address.postalCode
+     - zipCode
+     - "string"
+   * - shippingDetails.phone
+     - phoneNumber
      - "string"
 
 
