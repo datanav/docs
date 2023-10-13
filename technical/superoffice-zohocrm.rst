@@ -2,7 +2,7 @@
 SuperOffice to ZohoCRM Dataflow
 ===============================
 
-Generated: 2023-10-09 18:29:19
+Generated: 2023-10-13 05:17:54
 
 Introduction.
 ------------
@@ -62,6 +62,24 @@ The following properties are synchronized between a SuperOffice Contact and a Zo
    * - Urls.Value
      - Website
      - "string"
+
+
+SuperOffice Person to ZohoCRM Account
+-------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a ZohoCRM Account must be established.
+
+A new ZohoCRM Account will be created from a SuperOffice Person if it is connected to a SuperOffice Sale that is synchronized into ZohoCRM.
+
+Once a link between a SuperOffice Person and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Person and a ZohoCRM Account:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - ZohoCRM Account Property
+     - ZohoCRM Data Type
 
 
 SuperOffice Sale to ZohoCRM Deal
