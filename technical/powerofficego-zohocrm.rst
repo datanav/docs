@@ -2,7 +2,7 @@
 Powerofficego to ZohoCRM Dataflow
 =================================
 
-Generated: 2023-10-12 08:03:20
+Generated: 2023-10-17 07:29:25
 
 Introduction.
 ------------
@@ -121,6 +121,9 @@ The following properties are synchronized between a Powerofficego Customers pers
      - "string"
    * - LastName
      - Last_Name
+     - "string"
+   * - PhoneNumber
+     - Other_Phone
      - "string"
    * - PhoneNumber
      - Phone
