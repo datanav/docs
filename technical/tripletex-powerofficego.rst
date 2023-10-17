@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-10-11 09:32:26
+Generated: 2023-10-17 07:52:39
 
 Introduction.
 ------------
@@ -686,85 +686,6 @@ The following properties are synchronized between a Tripletex Productgroup and a
      - PowerOfficeGo Data Type
    * - name
      - Name
-     - "string"
-
-
-Tripletex Supplier to PowerOfficeGo Suppliers
----------------------------------------------
-Every Tripletex Supplier will be synchronized with a PowerOfficeGo Suppliers.
-
-Once a link between a Tripletex Supplier and a PowerOfficeGo Suppliers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Supplier and a PowerOfficeGo Suppliers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Supplier Property
-     - PowerOfficeGo Suppliers Property
-     - PowerOfficeGo Data Type
-   * - deliveryAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - deliveryAddress.changes
-     - MailAddress.City
-     - "string"
-   * - deliveryAddress.city
-     - MailAddress.City
-     - "string"
-   * - deliveryAddress.city
-     - MailAddress.CountryCode
-     - "string"
-   * - deliveryAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - deliveryAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - email
-     - EmailAddress
-     - "string"
-   * - id
-     - Id
-     - "string"
-   * - name
-     - LegalName
-     - "string"
-   * - phoneNumber
-     - PhoneNumber
-     - "string"
-   * - physicalAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - physicalAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - physicalAddress.city
-     - MailAddress.City
-     - "string"
-   * - physicalAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - physicalAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - postalAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - postalAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - postalAddress.city
-     - MailAddress.City
-     - "string"
-   * - postalAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - postalAddress.postalCode
-     - MailAddress.ZipCode
      - "string"
 
 
