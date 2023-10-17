@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGo Dataflow
 ========================================
 
-Generated: 2023-10-13 14:33:51
+Generated: 2023-10-17 07:52:39
 
 Introduction.
 ------------
@@ -443,30 +443,5 @@ The following properties are synchronized between a Wave Vendor and a PowerOffic
      - "string"
    * - address.postalCode
      - zipCode
-     - "string"
-
-
-Wave Vendor to PowerOfficeGo Suppliers
---------------------------------------
-Every Wave Vendor will be synchronized with a PowerOfficeGo Suppliers.
-
-Once a link between a Wave Vendor and a PowerOfficeGo Suppliers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a PowerOfficeGo Suppliers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     - PowerOfficeGo Suppliers Property
-     - PowerOfficeGo Data Type
-   * - modifiedAt
-     - LastChanged
-     - "string"
-   * - name
-     - LegalName
-     - "string"
-   * - website
-     - WebsiteUrl
      - "string"
 
