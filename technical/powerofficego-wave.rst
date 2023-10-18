@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-10-06 14:57:18
+Generated: 2023-10-18 09:11:17
 
 Introduction.
 ------------
@@ -275,6 +275,9 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - Wave Data Type
    * - Description
      - items.description
+     - "string"
+   * - ProductCode
+     - items.product.id
      - "string"
    * - ProductUnitPrice
      - items.price
