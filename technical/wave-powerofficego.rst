@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGo Dataflow
 ========================================
 
-Generated: 2023-10-17 07:52:39
+Generated: 2023-10-18 09:11:17
 
 Introduction.
 ------------
@@ -332,6 +332,9 @@ The following properties are synchronized between a Wave Invoice and a PowerOffi
      - "string"
    * - items.price
      - SalesOrderLineUnitPrice
+     - "string"
+   * - items.product.id
+     - ProductCode
      - "string"
    * - items.quantity
      - Quantity
