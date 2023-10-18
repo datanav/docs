@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-10-17 07:52:39
+Generated: 2023-10-18 09:11:17
 
 Introduction.
 ------------
@@ -588,6 +588,9 @@ The following properties are synchronized between a Tripletex Orderline and a Po
      - "string"
    * - order.id
      - sesam_SalesOrdersId
+     - "string"
+   * - product.id
+     - ProductCode
      - "string"
    * - unitCostCurrency
      - ProductUnitCost
