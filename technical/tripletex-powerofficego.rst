@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-10-18 09:11:17
+Generated: 2023-10-18 14:05:39
 
 Introduction.
 ------------
@@ -246,6 +246,22 @@ The following properties are synchronized between a Tripletex Orderline and a Po
    * - order.id
      - OrderNo
      - "string"
+
+
+Tripletex Address to PowerOfficeGo Location
+-------------------------------------------
+Every Tripletex Address will be synchronized with a PowerOfficeGo Location.
+
+Once a link between a Tripletex Address and a PowerOfficeGo Location is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Address and a PowerOfficeGo Location:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Address Property
+     - PowerOfficeGo Location Property
+     - PowerOfficeGo Data Type
 
 
 Tripletex Contact to PowerOfficeGo Contactperson
