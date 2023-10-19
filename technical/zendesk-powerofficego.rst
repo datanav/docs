@@ -2,7 +2,7 @@
 Zendesk to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-10-19 20:13:06
+Generated: 2023-10-19 20:16:05
 
 Introduction.
 ------------
@@ -35,7 +35,7 @@ The following properties are synchronized between a Zendesk Organisations and a 
 
 Zendesk Users to PowerOfficeGo Employees
 ----------------------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a PowerOfficeGo Employees.
+When a Zendesk User is of type End User, it  will be synchronized with a PowerOfficeGo Employees.
 
 Once a link between a Zendesk Users and a PowerOfficeGo Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
