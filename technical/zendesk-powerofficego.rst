@@ -2,7 +2,7 @@
 Zendesk to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-10-19 20:19:07
+Generated: 2023-10-19 20:20:29
 
 Introduction.
 ------------
@@ -55,5 +55,8 @@ The following properties are synchronized between a Zendesk Users and a PowerOff
      - "string"
    * - organization_id
      - DepartmentId
+     - "string"
+   * - role
+     - MailAddress.countryCode
      - "string"
 
