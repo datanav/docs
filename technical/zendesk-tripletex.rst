@@ -2,7 +2,7 @@
 Zendesk to Tripletex Dataflow
 =============================
 
-Generated: 2023-10-19 20:13:06
+Generated: 2023-10-19 20:16:05
 
 Introduction.
 ------------
@@ -163,7 +163,7 @@ The following properties are synchronized between a Zendesk Tickets and a Triple
 
 Zendesk Users to Tripletex Employee
 -----------------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Tripletex Employee.
+When a Zendesk User is of type End User, it  will be synchronized with a Tripletex Employee.
 
 If a matching Tripletex Employee already exists, the Zendesk Users will be merged with the existing one.
 If no matching Tripletex Employee is found, a new Tripletex Employee will be created.
