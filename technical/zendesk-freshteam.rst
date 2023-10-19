@@ -2,7 +2,7 @@
 Zendesk to Freshteam Dataflow
 =============================
 
-Generated: 2023-10-19 20:16:05
+Generated: 2023-10-19 20:19:07
 
 Introduction.
 ------------
@@ -11,7 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Zendesk Users to Freshteam Employee
 -----------------------------------
-When a Zendesk User is of type End User, it  will be synchronized with a Freshteam Employee.
+When a Zendesk User is of type Agent, it  will be synchronized with a Freshteam Employee.
 
 Once a link between a Zendesk Users and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
