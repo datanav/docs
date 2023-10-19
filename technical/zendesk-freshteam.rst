@@ -2,7 +2,7 @@
 Zendesk to Freshteam Dataflow
 =============================
 
-Generated: 2023-10-10 20:58:59
+Generated: 2023-10-19 20:13:06
 
 Introduction.
 ------------
@@ -11,7 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Zendesk Users to Freshteam Employee
 -----------------------------------
-Every Zendesk Users will be synchronized with a Freshteam Employee.
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Freshteam Employee.
 
 Once a link between a Zendesk Users and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -27,6 +27,9 @@ The following properties are synchronized between a Zendesk Users and a Freshtea
      - designation
      - "string"
    * - phone
-     - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.name)
+     - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.name)
+     - "string"
+   * - updated_at
+     - updated_at
      - "string"
 
