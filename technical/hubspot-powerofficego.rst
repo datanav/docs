@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-10-20 13:43:40
+Generated: 2023-10-20 14:00:41
 
 Introduction.
 ------------
@@ -195,6 +195,24 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
    * - properties.phone
      - PhoneNumber
      - "string"
+
+
+HubSpot Product to PowerOfficeGo Product
+----------------------------------------
+Before any synchronization can take place, a link between a HubSpot Product and a PowerOfficeGo Product must be established.
+
+A new PowerOfficeGo Product will be created from a HubSpot Product if it is connected to a HubSpot Lineitem, or Lineitemdealassociation that is synchronized into PowerOfficeGo.
+
+Once a link between a HubSpot Product and a PowerOfficeGo Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a PowerOfficeGo Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     - PowerOfficeGo Product Property
+     - PowerOfficeGo Data Type
 
 
 HubSpot Deal to PowerOfficeGo Outgoinginvoices
@@ -617,45 +635,5 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
      - PowerOfficeGo Data Type
    * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - sesam_SalesOrdersId
-     - "string"
-
-
-HubSpot Product to PowerOfficeGo Product
-----------------------------------------
-Every HubSpot Product will be synchronized with a PowerOfficeGo Product.
-
-Once a link between a HubSpot Product and a PowerOfficeGo Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Product and a PowerOfficeGo Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Product Property
-     - PowerOfficeGo Product Property
-     - PowerOfficeGo Data Type
-   * - properties.description
-     - Description
-     - "string"
-   * - properties.description
-     - description
-     - "string"
-   * - properties.hs_cost_of_goods_sold
-     - CostPrice
-     - "string"
-   * - properties.hs_cost_of_goods_sold
-     - costPrice
-     - "string"
-   * - properties.name
-     - Name
-     - "string"
-   * - properties.name
-     - name
-     - "string"
-   * - properties.price
-     - SalesPrice
-     - "string"
-   * - properties.price
-     - salesPrice
      - "string"
 
