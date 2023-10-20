@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-10-20 14:00:41
+Generated: 2023-10-20 14:01:05
 
 Introduction.
 ------------
@@ -213,6 +213,18 @@ The following properties are synchronized between a HubSpot Product and a PowerO
    * - HubSpot Product Property
      - PowerOfficeGo Product Property
      - PowerOfficeGo Data Type
+   * - properties.description
+     - description
+     - "string"
+   * - properties.hs_cost_of_goods_sold
+     - costPrice
+     - "string"
+   * - properties.name
+     - name
+     - "string"
+   * - properties.price
+     - salesPrice
+     - "string"
 
 
 HubSpot Deal to PowerOfficeGo Outgoinginvoices
