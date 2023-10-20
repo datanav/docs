@@ -2,7 +2,7 @@
 Powerofficego to Freshteam Dataflow
 ===================================
 
-Generated: 2023-10-10 20:55:48
+Generated: 2023-10-20 08:34:34
 
 Introduction.
 ------------
@@ -65,6 +65,19 @@ The following properties are synchronized between a Powerofficego Departments an
 Powerofficego Employees to Freshteam Employee
 ---------------------------------------------
 Every Powerofficego Employees will be synchronized with a Freshteam Employee.
+
+If a matching Freshteam Employee already exists, the Powerofficego Employees will be merged with the existing one.
+If no matching Freshteam Employee is found, a new Freshteam Employee will be created.
+
+A Powerofficego Employees will merge with a Freshteam Employee if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Employees Property
+     - Freshteam Employee Property
+   * - Number
+     - employee_id
 
 Once a link between a Powerofficego Employees and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
