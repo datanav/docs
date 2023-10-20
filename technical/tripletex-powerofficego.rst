@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-10-20 10:50:13
+Generated: 2023-10-20 10:50:37
 
 Introduction.
 ------------
@@ -71,6 +71,48 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - phoneNumberWork
      - phoneNumber
      - "string"
+
+
+Tripletex Supplier to PowerOfficeGo Customers
+---------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Supplier and a PowerOfficeGo Customers must be established.
+
+A Tripletex Supplier will merge with a PowerOfficeGo Customers if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Supplier Property
+     - PowerOfficeGo Customers Property
+   * - email
+     - EmailAddress
+   * - email
+     - InvoiceEmailAddress
+   * - invoiceEmail
+     - EmailAddress
+   * - overdueNoticeEmail
+     - EmailAddress
+   * - invoiceEmail
+     - InvoiceEmailAddress
+   * - email
+     - PaymentReminderEmailAddress
+   * - overdueNoticeEmail
+     - InvoiceEmailAddress
+   * - invoiceEmail
+     - PaymentReminderEmailAddress
+   * - overdueNoticeEmail
+     - PaymentReminderEmailAddress
+
+Once a link between a Tripletex Supplier and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Supplier and a PowerOfficeGo Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Supplier Property
+     - PowerOfficeGo Customers Property
+     - PowerOfficeGo Data Type
 
 
 Tripletex Contact to PowerOfficeGo Customers person
@@ -425,6 +467,35 @@ The following properties are synchronized between a Tripletex Currency and a Pow
 Tripletex Customer to PowerOfficeGo Customers
 ---------------------------------------------
 removed person customers for now until that pattern is resolved, it  will be synchronized with a PowerOfficeGo Customers.
+
+If a matching PowerOfficeGo Customers already exists, the Tripletex Customer will be merged with the existing one.
+If no matching PowerOfficeGo Customers is found, a new PowerOfficeGo Customers will be created.
+
+A Tripletex Customer will merge with a PowerOfficeGo Customers if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - PowerOfficeGo Customers Property
+   * - email
+     - EmailAddress
+   * - email
+     - InvoiceEmailAddress
+   * - invoiceEmail
+     - EmailAddress
+   * - overdueNoticeEmail
+     - EmailAddress
+   * - invoiceEmail
+     - InvoiceEmailAddress
+   * - email
+     - PaymentReminderEmailAddress
+   * - overdueNoticeEmail
+     - InvoiceEmailAddress
+   * - invoiceEmail
+     - PaymentReminderEmailAddress
+   * - overdueNoticeEmail
+     - PaymentReminderEmailAddress
 
 Once a link between a Tripletex Customer and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
