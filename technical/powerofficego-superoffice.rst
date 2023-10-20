@@ -2,12 +2,95 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-10-04 17:46:47
+Generated: 2023-10-20 08:12:38
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Powerofficego Contactperson to SuperOffice Person
+-------------------------------------------------
+Every Powerofficego Contactperson will be synchronized with a SuperOffice Person.
+
+If a matching SuperOffice Person already exists, the Powerofficego Contactperson will be merged with the existing one.
+If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
+
+A Powerofficego Contactperson will merge with a SuperOffice Person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     - SuperOffice Person Property
+   * - emailAddress
+     - Emails.Value
+
+Once a link between a Powerofficego Contactperson and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Contactperson and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
+   * - address1
+     - Address.Postal.Address1
+     - "string"
+   * - address1
+     - Address.Street.Address1
+     - "string"
+   * - address2
+     - Address.Postal.Address2
+     - "string"
+   * - address2
+     - Address.Street.Address2
+     - "string"
+   * - city
+     - Address.Postal.City
+     - "string"
+   * - city
+     - Address.Street.City
+     - "string"
+   * - dateOfBirth
+     - BirthDate
+     - "datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
+   * - emailAddress
+     - Emails.Value
+     - "string"
+   * - firstName
+     - Firstname
+     - "string"
+   * - id
+     - PersonId
+     - "integer"
+   * - lastName
+     - Lastname
+     - "string"
+   * - partyCustomerCode
+     - Contact.ContactId
+     - "integer"
+   * - partyId
+     - Contact.ContactId
+     - "integer"
+   * - partySupplierCode
+     - Contact.ContactId
+     - "integer"
+   * - phoneNumber
+     - OfficePhones.Value
+     - "string"
+   * - residenceCountryCode
+     - Country.CountryId
+     - "integer"
+   * - zipCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - zipCode
+     - Address.Street.Zipcode
+     - "string"
+
 
 Powerofficego Customer to SuperOffice Contact
 ---------------------------------------------
@@ -195,76 +278,6 @@ The following properties are synchronized between a Powerofficego Departments an
      - SuperOffice Data Type
    * - Name
      - Name
-     - "string"
-
-
-Powerofficego Contactperson to SuperOffice Person
--------------------------------------------------
-Every Powerofficego Contactperson will be synchronized with a SuperOffice Person.
-
-Once a link between a Powerofficego Contactperson and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Contactperson and a SuperOffice Person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Contactperson Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
-   * - address1
-     - Address.Postal.Address1
-     - "string"
-   * - address1
-     - Address.Street.Address1
-     - "string"
-   * - address2
-     - Address.Postal.Address2
-     - "string"
-   * - address2
-     - Address.Street.Address2
-     - "string"
-   * - city
-     - Address.Postal.City
-     - "string"
-   * - city
-     - Address.Street.City
-     - "string"
-   * - dateOfBirth
-     - BirthDate
-     - "datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
-   * - emailAddress
-     - Emails.Value
-     - "string"
-   * - firstName
-     - Firstname
-     - "string"
-   * - id
-     - PersonId
-     - "integer"
-   * - lastName
-     - Lastname
-     - "string"
-   * - partyCustomerCode
-     - Contact.ContactId
-     - "integer"
-   * - partyId
-     - Contact.ContactId
-     - "integer"
-   * - partySupplierCode
-     - Contact.ContactId
-     - "integer"
-   * - phoneNumber
-     - OfficePhones.Value
-     - "string"
-   * - residenceCountryCode
-     - Country.CountryId
-     - "integer"
-   * - zipCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - zipCode
-     - Address.Street.Zipcode
      - "string"
 
 
