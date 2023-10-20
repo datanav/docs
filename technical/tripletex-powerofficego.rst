@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-10-20 08:50:39
+Generated: 2023-10-20 10:50:13
 
 Introduction.
 ------------
@@ -454,17 +454,26 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - email
      - EmailAddress
      - "string"
+   * - email
+     - PaymentReminderEmailAddress
+     - "string"
    * - id
      - Id
      - "string"
    * - invoiceEmail
      - InvoiceEmailAddress
      - "string"
+   * - invoiceEmail
+     - PaymentReminderEmailAddress
+     - "string"
    * - name
      - Name
      - "string"
    * - organizationNumber
      - OrganizationNumber (Dependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCode)
+     - "string"
+   * - overdueNoticeEmail
+     - PaymentReminderEmailAddress
      - "string"
    * - phoneNumber
      - Number
