@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-10-20 08:13:06
+Generated: 2023-10-20 08:13:34
 
 Introduction.
 ------------
@@ -123,7 +123,7 @@ Tripletex Customer to PowerOfficeGo Customers person
 ----------------------------------------------------
 Before any synchronization can take place, a link between a Tripletex Customer and a PowerOfficeGo Customers person must be established.
 
-A new PowerOfficeGo Customers person will be created from a Tripletex Customer if it is connected to a Tripletex Order, Contact, or Orderline that is synchronized into PowerOfficeGo.
+A new PowerOfficeGo Customers person will be created from a Tripletex Customer if it is connected to a Tripletex Order, Contact, Employee, or Orderline that is synchronized into PowerOfficeGo.
 
 Once a link between a Tripletex Customer and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -213,7 +213,7 @@ Tripletex Department to PowerOfficeGo Customers person
 ------------------------------------------------------
 Before any synchronization can take place, a link between a Tripletex Department and a PowerOfficeGo Customers person must be established.
 
-A new PowerOfficeGo Customers person will be created from a Tripletex Department if it is connected to a Tripletex Contact that is synchronized into PowerOfficeGo.
+A new PowerOfficeGo Customers person will be created from a Tripletex Department if it is connected to a Tripletex Contact, or Employee that is synchronized into PowerOfficeGo.
 
 Once a link between a Tripletex Department and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -231,7 +231,7 @@ Tripletex Department to PowerOfficeGo Customers
 -----------------------------------------------
 Before any synchronization can take place, a link between a Tripletex Department and a PowerOfficeGo Customers must be established.
 
-A new PowerOfficeGo Customers will be created from a Tripletex Department if it is connected to a Tripletex Contact that is synchronized into PowerOfficeGo.
+A new PowerOfficeGo Customers will be created from a Tripletex Department if it is connected to a Tripletex Contact, or Employee that is synchronized into PowerOfficeGo.
 
 Once a link between a Tripletex Department and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
