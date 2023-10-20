@@ -2,7 +2,7 @@
 Freshteam to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-10-10 20:55:38
+Generated: 2023-10-20 08:34:12
 
 Introduction.
 ------------
@@ -86,6 +86,9 @@ The following properties are synchronized between a Freshteam Employee and a Pow
      - "string"
    * - designation
      - DepartmentId
+     - "string"
+   * - employee_id
+     - Number
      - "string"
    * - first_name
      - FirstName
