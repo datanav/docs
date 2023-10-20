@@ -2,12 +2,116 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-10-20 10:50:13
+Generated: 2023-10-20 10:50:37
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to PowerOfficeGo. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+SuperOffice Contact to PowerOfficeGo Customers
+----------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Contact and a PowerOfficeGo Customers must be established.
+
+A new PowerOfficeGo Customers will be created from a SuperOffice Contact if it is connected to a SuperOffice User, Person, Quoteline, or Quotealternative that is synchronized into PowerOfficeGo.
+
+A SuperOffice Contact will merge with a PowerOfficeGo Customers if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Contact Property
+     - PowerOfficeGo Customers Property
+   * - Emails.Value
+     - EmailAddress
+   * - Emails.Value
+     - InvoiceEmailAddress
+   * - Emails.Value
+     - PaymentReminderEmailAddress
+
+Once a link between a SuperOffice Contact and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Contact and a PowerOfficeGo Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Contact Property
+     - PowerOfficeGo Customers Property
+     - PowerOfficeGo Data Type
+   * - Address.Postal.Address1
+     - MailAddress.AddressLine1
+     - "string"
+   * - Address.Postal.Address1
+     - MailAddress.addressLine1
+     - "string"
+   * - Address.Postal.Address2
+     - MailAddress.AddressLine2
+     - "string"
+   * - Address.Postal.Address2
+     - MailAddress.addressLine2
+     - "string"
+   * - Address.Postal.City
+     - MailAddress.City
+     - "string"
+   * - Address.Postal.City
+     - MailAddress.city
+     - "string"
+   * - Address.Postal.Zipcode
+     - MailAddress.ZipCode
+     - "string"
+   * - Address.Postal.Zipcode
+     - MailAddress.zipCode
+     - "string"
+   * - Address.Street.Address1
+     - MailAddress.AddressLine1
+     - "string"
+   * - Address.Street.Address2
+     - MailAddress.AddressLine2
+     - "string"
+   * - Address.Street.City
+     - MailAddress.City
+     - "string"
+   * - Address.Street.Zipcode
+     - MailAddress.ZipCode
+     - "string"
+   * - ContactId
+     - Id
+     - "string"
+   * - Country.CountryId
+     - MailAddress.CountryCode
+     - "string"
+   * - Country.CountryId
+     - MailAddress.countryCode
+     - "string"
+   * - Country.ThreeLetterISOCountry
+     - OrganizationNumber (Dependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.CountryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCode)
+     - "string"
+   * - Emails.Value
+     - EmailAddress
+     - "string"
+   * - Emails.Value
+     - PaymentReminderEmailAddress
+     - "string"
+   * - Name
+     - Name
+     - "string"
+   * - OrgNr
+     - OrganizationNumber (Dependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.CountryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCode)
+     - "string"
+   * - OrgNr (Dependant on having wd:Q1273217 in Country.ThreeLetterISOCountryDependant on having wd:Q1273217 in Country.TwoLetterISOCountry)
+     - PaymentReminderEmailAddress
+     - "string"
+   * - Phones.Value
+     - Number
+     - "string"
+   * - Phones.Value
+     - PhoneNumber
+     - "string"
+   * - Urls.Value
+     - WebsiteUrl
+     - "string"
+
 
 SuperOffice Person to PowerOfficeGo Contactperson
 -------------------------------------------------
@@ -180,96 +284,6 @@ The following properties are synchronized between a SuperOffice Contact and a Po
      - "string"
    * - Country.CountryId
      - MailAddress.CountryCode
-     - "string"
-
-
-SuperOffice Contact to PowerOfficeGo Customers
-----------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a PowerOfficeGo Customers must be established.
-
-A new PowerOfficeGo Customers will be created from a SuperOffice Contact if it is connected to a SuperOffice User, Person, Quoteline, or Quotealternative that is synchronized into PowerOfficeGo.
-
-Once a link between a SuperOffice Contact and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Contact and a PowerOfficeGo Customers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Contact Property
-     - PowerOfficeGo Customers Property
-     - PowerOfficeGo Data Type
-   * - Address.Postal.Address1
-     - MailAddress.AddressLine1
-     - "string"
-   * - Address.Postal.Address1
-     - MailAddress.addressLine1
-     - "string"
-   * - Address.Postal.Address2
-     - MailAddress.AddressLine2
-     - "string"
-   * - Address.Postal.Address2
-     - MailAddress.addressLine2
-     - "string"
-   * - Address.Postal.City
-     - MailAddress.City
-     - "string"
-   * - Address.Postal.City
-     - MailAddress.city
-     - "string"
-   * - Address.Postal.Zipcode
-     - MailAddress.ZipCode
-     - "string"
-   * - Address.Postal.Zipcode
-     - MailAddress.zipCode
-     - "string"
-   * - Address.Street.Address1
-     - MailAddress.AddressLine1
-     - "string"
-   * - Address.Street.Address2
-     - MailAddress.AddressLine2
-     - "string"
-   * - Address.Street.City
-     - MailAddress.City
-     - "string"
-   * - Address.Street.Zipcode
-     - MailAddress.ZipCode
-     - "string"
-   * - ContactId
-     - Id
-     - "string"
-   * - Country.CountryId
-     - MailAddress.CountryCode
-     - "string"
-   * - Country.CountryId
-     - MailAddress.countryCode
-     - "string"
-   * - Country.ThreeLetterISOCountry
-     - OrganizationNumber (Dependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.CountryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCode)
-     - "string"
-   * - Emails.Value
-     - EmailAddress
-     - "string"
-   * - Emails.Value
-     - PaymentReminderEmailAddress
-     - "string"
-   * - Name
-     - Name
-     - "string"
-   * - OrgNr
-     - OrganizationNumber (Dependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.CountryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCode)
-     - "string"
-   * - OrgNr (Dependant on having wd:Q1273217 in Country.ThreeLetterISOCountryDependant on having wd:Q1273217 in Country.TwoLetterISOCountry)
-     - PaymentReminderEmailAddress
-     - "string"
-   * - Phones.Value
-     - Number
-     - "string"
-   * - Phones.Value
-     - PhoneNumber
-     - "string"
-   * - Urls.Value
-     - WebsiteUrl
      - "string"
 
 
