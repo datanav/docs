@@ -2,12 +2,38 @@
 Wix.com to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-10-18 09:11:17
+Generated: 2023-10-20 08:12:38
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to PowerOfficeGo. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wix.com Members to PowerOfficeGo Contactperson
+----------------------------------------------
+Before any synchronization can take place, a link between a Wix.com Members and a PowerOfficeGo Contactperson must be established.
+
+A Wix.com Members will merge with a PowerOfficeGo Contactperson if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
+     - PowerOfficeGo Contactperson Property
+   * - loginEmail
+     - emailAddress
+
+Once a link between a Wix.com Members and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Members and a PowerOfficeGo Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
+     - PowerOfficeGo Contactperson Property
+     - PowerOfficeGo Data Type
+
 
 Wix.com Contacts to PowerOfficeGo Customers person
 --------------------------------------------------
@@ -109,6 +135,19 @@ The following properties are synchronized between a Wix.com Orders and a PowerOf
 Wix.com Contacts to PowerOfficeGo Contactperson
 -----------------------------------------------
 Every Wix.com Contacts will be synchronized with a PowerOfficeGo Contactperson.
+
+If a matching PowerOfficeGo Contactperson already exists, the Wix.com Contacts will be merged with the existing one.
+If no matching PowerOfficeGo Contactperson is found, a new PowerOfficeGo Contactperson will be created.
+
+A Wix.com Contacts will merge with a PowerOfficeGo Contactperson if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Contacts Property
+     - PowerOfficeGo Contactperson Property
+   * - primaryInfo.email
+     - emailAddress
 
 Once a link between a Wix.com Contacts and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
