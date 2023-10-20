@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-10-20 13:47:09
+Generated: 2023-10-20 13:49:10
 
 Introduction.
 ------------
@@ -679,7 +679,7 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - PowerOfficeGo Data Type
    * - DiscountPercent
      - Allowance
-     - "string"
+     - "float"
    * - DiscountPercent
      - Discount
      - "string"
