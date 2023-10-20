@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-10-20 13:03:17
+Generated: 2023-10-20 13:13:40
 
 Introduction.
 ------------
@@ -942,6 +942,8 @@ A Powerofficego Product will merge with a Tripletex Productunit if one of the fo
 
    * - Powerofficego Product Property
      - Tripletex Productunit Property
+   * - unit
+     - name
    * - unitOfMeasureCode
      - name
 
