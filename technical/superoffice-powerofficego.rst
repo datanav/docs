@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-10-20 08:12:38
+Generated: 2023-10-20 08:13:06
 
 Introduction.
 ------------
@@ -33,6 +33,42 @@ The following properties are synchronized between a SuperOffice Person and a Pow
    * - SuperOffice Person Property
      - PowerOfficeGo Contactperson Property
      - PowerOfficeGo Data Type
+   * - Address.Street.Address1
+     - address1
+     - "string"
+   * - Address.Street.Address2
+     - address2
+     - "string"
+   * - Address.Street.City
+     - city
+     - "string"
+   * - Address.Street.Zipcode
+     - zipCode
+     - "string"
+   * - BirthDate
+     - dateOfBirth
+     - "datetime-format","%Y-%m-%d","_."]
+   * - Contact.ContactId
+     - partyId
+     - "string"
+   * - Country.CountryId
+     - residenceCountryCode
+     - "string"
+   * - Emails.Value
+     - emailAddress
+     - "string"
+   * - Firstname
+     - firstName
+     - "string"
+   * - Lastname
+     - lastName
+     - "string"
+   * - OfficePhones.Value
+     - phoneNumber
+     - "string"
+   * - PersonId
+     - id
+     - "integer"
 
 
 SuperOffice Pricelist to PowerOfficeGo Currency
@@ -85,6 +121,18 @@ The following properties are synchronized between a SuperOffice User and a Power
    * - SuperOffice User Property
      - PowerOfficeGo Contactperson Property
      - PowerOfficeGo Data Type
+   * - contactId
+     - partyId
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - personEmail
+     - emailAddress
+     - "string"
 
 
 SuperOffice Contact to PowerOfficeGo Customers person
