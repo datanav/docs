@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-10-20 08:12:38
+Generated: 2023-10-20 08:15:40
 
 Introduction.
 ------------
@@ -89,6 +89,50 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
    * - zipCode
      - Address.Street.Zipcode
+     - "string"
+
+
+Powerofficego Customers person to SuperOffice Person
+----------------------------------------------------
+Every Powerofficego Customers person will be synchronized with a SuperOffice Person.
+
+If a matching SuperOffice Person already exists, the Powerofficego Customers person will be merged with the existing one.
+If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
+
+A Powerofficego Customers person will merge with a SuperOffice Person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers person Property
+     - SuperOffice Person Property
+   * - EmailAddress
+     - Emails.Value
+
+Once a link between a Powerofficego Customers person and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers person and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers person Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
+   * - DateOfBirth
+     - BirthDate
+     - "datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
+   * - EmailAddress
+     - Emails.Value
+     - "string"
+   * - FirstName
+     - Firstname
+     - "string"
+   * - LastName
+     - Lastname
+     - "string"
+   * - PhoneNumber
+     - OfficePhones.Value
      - "string"
 
 
@@ -327,37 +371,6 @@ The following properties are synchronized between a Powerofficego Customer and a
      - "integer"
    * - mailAddress.zipCode
      - Address.Postal.Zipcode
-     - "string"
-
-
-Powerofficego Customers person to SuperOffice Person
-----------------------------------------------------
-Every Powerofficego Customers person will be synchronized with a SuperOffice Person.
-
-Once a link between a Powerofficego Customers person and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customers person and a SuperOffice Person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers person Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
-   * - DateOfBirth
-     - BirthDate
-     - "datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
-   * - EmailAddress
-     - Emails.Value
-     - "string"
-   * - FirstName
-     - Firstname
-     - "string"
-   * - LastName
-     - Lastname
-     - "string"
-   * - PhoneNumber
-     - OfficePhones.Value
      - "string"
 
 
