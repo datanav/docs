@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-10-20 08:26:13
+Generated: 2023-10-20 08:34:34
 
 Introduction.
 ------------
@@ -681,6 +681,8 @@ A Powerofficego Employees will merge with a Tripletex Employee if one of the fol
 
    * - Powerofficego Employees Property
      - Tripletex Employee Property
+   * - Number
+     - employeeNumber
    * - SocialSecurityNumber
      - nationalIdentityNumber
 
