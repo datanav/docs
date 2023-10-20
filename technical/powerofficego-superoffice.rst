@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-10-20 13:03:10
+Generated: 2023-10-20 13:26:39
 
 Introduction.
 ------------
@@ -340,6 +340,24 @@ The following properties are synchronized between a Powerofficego Departments an
    * - Name
      - Name
      - "string"
+
+
+Powerofficego Product classification type to SuperOffice Listproducttypeitems
+-----------------------------------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Product classification type and a SuperOffice Listproducttypeitems must be established.
+
+A new SuperOffice Listproducttypeitems will be created from a Powerofficego Product classification type if it is connected to a Powerofficego Product that is synchronized into SuperOffice.
+
+Once a link between a Powerofficego Product classification type and a SuperOffice Listproducttypeitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product classification type and a SuperOffice Listproducttypeitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product classification type Property
+     - SuperOffice Listproducttypeitems Property
+     - SuperOffice Data Type
 
 
 Powerofficego Customer to SuperOffice Person
