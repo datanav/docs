@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-10-20 08:34:34
+Generated: 2023-10-20 08:50:39
 
 Introduction.
 ------------
@@ -22,6 +22,8 @@ A Powerofficego Contactperson will merge with a Tripletex Employee if one of the
      - Tripletex Employee Property
    * - emailAddress
      - email
+   * - SocialSecurityNumber
+     - nationalIdentityNumber
 
 Once a link between a Powerofficego Contactperson and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
