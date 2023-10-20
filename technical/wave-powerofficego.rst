@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGo Dataflow
 ========================================
 
-Generated: 2023-10-20 13:43:40
+Generated: 2023-10-20 14:00:41
 
 Introduction.
 ------------
@@ -167,6 +167,24 @@ The following properties are synchronized between a Wave Customer and a PowerOff
    * - lastName
      - LastName
      - "string"
+
+
+Wave Product to PowerOfficeGo Product
+-------------------------------------
+Before any synchronization can take place, a link between a Wave Product and a PowerOfficeGo Product must be established.
+
+A new PowerOfficeGo Product will be created from a Wave Product if it is connected to a Wave Invoice that is synchronized into PowerOfficeGo.
+
+Once a link between a Wave Product and a PowerOfficeGo Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Product and a PowerOfficeGo Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Product Property
+     - PowerOfficeGo Product Property
+     - PowerOfficeGo Data Type
 
 
 Wave Invoice to PowerOfficeGo Outgoinginvoices
@@ -523,46 +541,6 @@ The following properties are synchronized between a Wave Invoice and a PowerOffi
      - "string"
    * - total.value
      - TotalAmount
-     - "string"
-
-
-Wave Product to PowerOfficeGo Product
--------------------------------------
-Every Wave Product will be synchronized with a PowerOfficeGo Product.
-
-Once a link between a Wave Product and a PowerOfficeGo Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Product and a PowerOfficeGo Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Product Property
-     - PowerOfficeGo Product Property
-     - PowerOfficeGo Data Type
-   * - description
-     - Description
-     - "string"
-   * - description
-     - description
-     - "string"
-   * - modifiedAt
-     - LastChanged
-     - "string"
-   * - modifiedAt
-     - lastChanged
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - unitPrice
-     - SalesPrice
-     - "string"
-   * - unitPrice
-     - salesPrice
      - "string"
 
 
