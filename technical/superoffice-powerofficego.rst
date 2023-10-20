@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-10-20 10:50:37
+Generated: 2023-10-20 13:03:17
 
 Introduction.
 ------------
@@ -751,7 +751,7 @@ The following properties are synchronized between a SuperOffice User and a Power
      - DepartmendId
      - "string"
    * - contactId
-     - DepartmentId
+     - DepartmentId (Dependant on having wd:Q703534 in JobTitle)
      - "string"
    * - firstName
      - FirstName
