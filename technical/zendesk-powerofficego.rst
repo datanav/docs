@@ -2,7 +2,7 @@
 Zendesk to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-10-20 08:13:06
+Generated: 2023-10-20 08:13:34
 
 Introduction.
 ------------
@@ -60,6 +60,42 @@ The following properties are synchronized between a Zendesk Organisations and a 
    * - name
      - Name
      - "string"
+
+
+Zendesk Organizations to PowerOfficeGo Customers person
+-------------------------------------------------------
+Before any synchronization can take place, a link between a Zendesk Organizations and a PowerOfficeGo Customers person must be established.
+
+A new PowerOfficeGo Customers person will be created from a Zendesk Organizations if it is connected to a Zendesk Users that is synchronized into PowerOfficeGo.
+
+Once a link between a Zendesk Organizations and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Organizations and a PowerOfficeGo Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Organizations Property
+     - PowerOfficeGo Customers person Property
+     - PowerOfficeGo Data Type
+
+
+Zendesk Organizations to PowerOfficeGo Customers
+------------------------------------------------
+Before any synchronization can take place, a link between a Zendesk Organizations and a PowerOfficeGo Customers must be established.
+
+A new PowerOfficeGo Customers will be created from a Zendesk Organizations if it is connected to a Zendesk Users that is synchronized into PowerOfficeGo.
+
+Once a link between a Zendesk Organizations and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Organizations and a PowerOfficeGo Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Organizations Property
+     - PowerOfficeGo Customers Property
+     - PowerOfficeGo Data Type
 
 
 Zendesk Users to PowerOfficeGo Employees
