@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-10-20 13:27:35
+Generated: 2023-10-20 14:18:10
 
 Introduction.
 ------------
@@ -772,7 +772,7 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "integer"
    * - vatCode
      - VAT
-     - "integer"
+     - "integer", "decimal"]
 
 
 Powerofficego Productgroup to SuperOffice Listproductcategoryitems
