@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-10-20 08:26:13
+Generated: 2023-10-20 10:50:37
 
 Introduction.
 ------------
@@ -136,6 +136,102 @@ The following properties are synchronized between a Powerofficego Customers pers
      - "string"
 
 
+Powerofficego Customers to SuperOffice Contact
+----------------------------------------------
+Every Powerofficego Customers will be synchronized with a SuperOffice Contact.
+
+If a matching SuperOffice Contact already exists, the Powerofficego Customers will be merged with the existing one.
+If no matching SuperOffice Contact is found, a new SuperOffice Contact will be created.
+
+A Powerofficego Customers will merge with a SuperOffice Contact if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - SuperOffice Contact Property
+   * - EmailAddress
+     - Emails.Value
+   * - InvoiceEmailAddress
+     - Emails.Value
+   * - PaymentReminderEmailAddress
+     - Emails.Value
+
+Once a link between a Powerofficego Customers and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a SuperOffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
+   * - EmailAddress
+     - Emails.Value
+     - "string"
+   * - Id
+     - ContactId
+     - "integer"
+   * - MailAddress.AddressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - MailAddress.AddressLine1
+     - Address.Street.Address1
+     - "string"
+   * - MailAddress.AddressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - MailAddress.AddressLine2
+     - Address.Street.Address2
+     - "string"
+   * - MailAddress.City
+     - Address.Postal.City
+     - "string"
+   * - MailAddress.City
+     - Address.Street.City
+     - "string"
+   * - MailAddress.CountryCode
+     - Country.CountryId
+     - "integer"
+   * - MailAddress.ZipCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - MailAddress.ZipCode
+     - Address.Street.Zipcode
+     - "string"
+   * - MailAddress.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - MailAddress.addressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - MailAddress.city
+     - Address.Postal.City
+     - "string"
+   * - MailAddress.countryCode
+     - Country.CountryId
+     - "integer"
+   * - MailAddress.zipCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - Name
+     - Name
+     - "string"
+   * - Number
+     - Phones.Value
+     - "string"
+   * - OrganizationNumber
+     - OrgNr (Dependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountry)
+     - "string"
+   * - PhoneNumber
+     - Phones.Value
+     - "string"
+   * - WebsiteUrl
+     - Urls.Value
+     - "string"
+
+
 Powerofficego Customer to SuperOffice Contact
 ---------------------------------------------
 Every Powerofficego Customer will be synchronized with a SuperOffice Contact.
@@ -223,85 +319,6 @@ The following properties are synchronized between a Powerofficego Customer and a
      - Domains
      - "list"
    * - websiteUrl
-     - Urls.Value
-     - "string"
-
-
-Powerofficego Customers to SuperOffice Contact
-----------------------------------------------
-Every Powerofficego Customers will be synchronized with a SuperOffice Contact.
-
-Once a link between a Powerofficego Customers and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customers and a SuperOffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
-   * - EmailAddress
-     - Emails.Value
-     - "string"
-   * - Id
-     - ContactId
-     - "integer"
-   * - MailAddress.AddressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - MailAddress.AddressLine1
-     - Address.Street.Address1
-     - "string"
-   * - MailAddress.AddressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - MailAddress.AddressLine2
-     - Address.Street.Address2
-     - "string"
-   * - MailAddress.City
-     - Address.Postal.City
-     - "string"
-   * - MailAddress.City
-     - Address.Street.City
-     - "string"
-   * - MailAddress.CountryCode
-     - Country.CountryId
-     - "integer"
-   * - MailAddress.ZipCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - MailAddress.ZipCode
-     - Address.Street.Zipcode
-     - "string"
-   * - MailAddress.addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - MailAddress.addressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - MailAddress.city
-     - Address.Postal.City
-     - "string"
-   * - MailAddress.countryCode
-     - Country.CountryId
-     - "integer"
-   * - MailAddress.zipCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - Name
-     - Name
-     - "string"
-   * - Number
-     - Phones.Value
-     - "string"
-   * - OrganizationNumber
-     - OrgNr (Dependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountry)
-     - "string"
-   * - PhoneNumber
-     - Phones.Value
-     - "string"
-   * - WebsiteUrl
      - Urls.Value
      - "string"
 
