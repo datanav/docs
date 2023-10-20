@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGo Dataflow
 ========================================
 
-Generated: 2023-10-20 08:13:06
+Generated: 2023-10-20 08:13:34
 
 Introduction.
 ------------
@@ -120,6 +120,33 @@ Wave Customer to PowerOfficeGo Customers person
 Before any synchronization can take place, a link between a Wave Customer and a PowerOfficeGo Customers person must be established.
 
 A new PowerOfficeGo Customers person will be created from a Wave Customer if it is connected to a Wave Invoice, or Customer that is synchronized into PowerOfficeGo.
+
+Once a link between a Wave Customer and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a PowerOfficeGo Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - PowerOfficeGo Customers person Property
+     - PowerOfficeGo Data Type
+   * - email
+     - EmailAddress
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - lastName
+     - LastName
+     - "string"
+
+
+Wave Customer to PowerOfficeGo Customers person
+-----------------------------------------------
+Before any synchronization can take place, a link between a Wave Customer and a PowerOfficeGo Customers person must be established.
+
+A new PowerOfficeGo Customers person will be created from a Wave Customer if it is connected to a Wave Vendor, Invoice, Customer, or Customer-person that is synchronized into PowerOfficeGo.
 
 Once a link between a Wave Customer and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
