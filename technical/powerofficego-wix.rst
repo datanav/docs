@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-10-20 08:13:06
+Generated: 2023-10-20 08:15:40
 
 Introduction.
 ------------
@@ -36,6 +36,58 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - emailAddress
      - loginEmail
      - "string"
+
+
+Powerofficego Customers person to Wix Contacts
+----------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers person and a Wix Contacts must be established.
+
+A Powerofficego Customers person will merge with a Wix Contacts if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers person Property
+     - Wix Contacts Property
+   * - EmailAddress
+     - primaryInfo.email
+
+Once a link between a Powerofficego Customers person and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers person and a Wix Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers person Property
+     - Wix Contacts Property
+     - Wix Data Type
+
+
+Powerofficego Customers person to Wix Members
+---------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers person and a Wix Members must be established.
+
+A Powerofficego Customers person will merge with a Wix Members if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers person Property
+     - Wix Members Property
+   * - EmailAddress
+     - loginEmail
+
+Once a link between a Powerofficego Customers person and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers person and a Wix Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers person Property
+     - Wix Members Property
+     - Wix Data Type
 
 
 Powerofficego Customers to Wix Contacts
