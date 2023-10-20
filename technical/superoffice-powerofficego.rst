@@ -2,12 +2,38 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-10-18 09:11:17
+Generated: 2023-10-20 08:12:38
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to PowerOfficeGo. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+SuperOffice Person to PowerOfficeGo Contactperson
+-------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a PowerOfficeGo Contactperson must be established.
+
+A SuperOffice Person will merge with a PowerOfficeGo Contactperson if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - PowerOfficeGo Contactperson Property
+   * - Emails.Value
+     - emailAddress
+
+Once a link between a SuperOffice Person and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Person and a PowerOfficeGo Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - PowerOfficeGo Contactperson Property
+     - PowerOfficeGo Data Type
+
 
 SuperOffice Pricelist to PowerOfficeGo Currency
 -----------------------------------------------
@@ -32,6 +58,32 @@ The following properties are synchronized between a SuperOffice Pricelist and a 
 
    * - SuperOffice Pricelist Property
      - PowerOfficeGo Currency Property
+     - PowerOfficeGo Data Type
+
+
+SuperOffice User to PowerOfficeGo Contactperson
+-----------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice User and a PowerOfficeGo Contactperson must be established.
+
+A SuperOffice User will merge with a PowerOfficeGo Contactperson if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - PowerOfficeGo Contactperson Property
+   * - personEmail
+     - emailAddress
+
+Once a link between a SuperOffice User and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice User and a PowerOfficeGo Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - PowerOfficeGo Contactperson Property
      - PowerOfficeGo Data Type
 
 
