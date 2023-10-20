@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-10-20 13:26:39
+Generated: 2023-10-20 13:27:35
 
 Introduction.
 ------------
@@ -687,6 +687,22 @@ The following properties are synchronized between a Powerofficego Suppliers and 
    * - PhoneNumber
      - OfficePhones.Value
      - "string"
+
+
+Powerofficego Product to SuperOffice Listproducttypeitems
+---------------------------------------------------------
+Every Powerofficego Product will be synchronized with a SuperOffice Listproducttypeitems.
+
+Once a link between a Powerofficego Product and a SuperOffice Listproducttypeitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product and a SuperOffice Listproducttypeitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     - SuperOffice Listproducttypeitems Property
+     - SuperOffice Data Type
 
 
 Powerofficego Product to SuperOffice Product
