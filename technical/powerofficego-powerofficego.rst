@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-10-12 08:02:54
+Generated: 2023-10-20 08:15:40
 
 Introduction.
 ------------
@@ -32,6 +32,32 @@ The following properties are synchronized between a Powerofficego Customer and a
 
    * - Powerofficego Customer Property
      - PowerOfficeGo Customers Property
+     - PowerOfficeGo Data Type
+
+
+Powerofficego Customers person to PowerOfficeGo Contactperson
+-------------------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers person and a PowerOfficeGo Contactperson must be established.
+
+A Powerofficego Customers person will merge with a PowerOfficeGo Contactperson if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers person Property
+     - PowerOfficeGo Contactperson Property
+   * - EmailAddress
+     - emailAddress
+
+Once a link between a Powerofficego Customers person and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers person and a PowerOfficeGo Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers person Property
+     - PowerOfficeGo Contactperson Property
      - PowerOfficeGo Data Type
 
 
