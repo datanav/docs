@@ -2,7 +2,7 @@
 Wix.com to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-10-20 13:43:40
+Generated: 2023-10-20 14:00:41
 
 Introduction.
 ------------
@@ -102,6 +102,24 @@ The following properties are synchronized between a Wix.com Members and a PowerO
    * - loginEmail
      - EmailAddress
      - "string"
+
+
+Wix.com Products to PowerOfficeGo Product
+-----------------------------------------
+Before any synchronization can take place, a link between a Wix.com Products and a PowerOfficeGo Product must be established.
+
+A new PowerOfficeGo Product will be created from a Wix.com Products if it is connected to a Wix.com Wix-orders that is synchronized into PowerOfficeGo.
+
+Once a link between a Wix.com Products and a PowerOfficeGo Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a PowerOfficeGo Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
+     - PowerOfficeGo Product Property
+     - PowerOfficeGo Data Type
 
 
 Wix.com Orders to PowerOfficeGo Outgoinginvoices
@@ -204,28 +222,6 @@ The following properties are synchronized between a Wix.com Currencies and a Pow
      - PowerOfficeGo Data Type
 
 
-Wix.com Inventory to PowerOfficeGo Product
-------------------------------------------
-Every Wix.com Inventory will be synchronized with a PowerOfficeGo Product.
-
-Once a link between a Wix.com Inventory and a PowerOfficeGo Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Inventory and a PowerOfficeGo Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Inventory Property
-     - PowerOfficeGo Product Property
-     - PowerOfficeGo Data Type
-   * - lastUpdated
-     - availableStock
-     - "string"
-   * - variants.quantity
-     - availableStock
-     - "integer"
-
-
 Wix.com Orders to PowerOfficeGo Salesorderlines
 -----------------------------------------------
 Every Wix.com Orders will be synchronized with a PowerOfficeGo Salesorderlines.
@@ -282,36 +278,5 @@ The following properties are synchronized between a Wix.com Orders and a PowerOf
      - "string"
    * - totals.total
      - TotalAmount
-     - "string"
-
-
-Wix.com Products to PowerOfficeGo Product
------------------------------------------
-Every Wix.com Products will be synchronized with a PowerOfficeGo Product.
-
-Once a link between a Wix.com Products and a PowerOfficeGo Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Products and a PowerOfficeGo Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Products Property
-     - PowerOfficeGo Product Property
-     - PowerOfficeGo Data Type
-   * - costRange.maxValue
-     - costPrice
-     - "string"
-   * - description
-     - description
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - price.price
-     - salesPrice
-     - "string"
-   * - priceData.price
-     - salesPrice
      - "string"
 
