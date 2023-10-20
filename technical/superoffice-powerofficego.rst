@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-10-20 08:26:13
+Generated: 2023-10-20 10:50:13
 
 Introduction.
 ------------
@@ -250,11 +250,17 @@ The following properties are synchronized between a SuperOffice Contact and a Po
    * - Emails.Value
      - EmailAddress
      - "string"
+   * - Emails.Value
+     - PaymentReminderEmailAddress
+     - "string"
    * - Name
      - Name
      - "string"
    * - OrgNr
      - OrganizationNumber (Dependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.CountryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCode)
+     - "string"
+   * - OrgNr (Dependant on having wd:Q1273217 in Country.ThreeLetterISOCountryDependant on having wd:Q1273217 in Country.TwoLetterISOCountry)
+     - PaymentReminderEmailAddress
      - "string"
    * - Phones.Value
      - Number
