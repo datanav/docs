@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-10-20 10:51:04
+Generated: 2023-10-20 13:03:17
 
 Introduction.
 ------------
@@ -835,7 +835,7 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - DepartmendId
      - department.id
      - "if", "neq", "_.", "X"], "integer", "string"]
-   * - DepartmentId
+   * - DepartmentId (Dependant on having wd:Q703534 in JobTitle)
      - department.id
      - "if", "neq", "_.", "X"], "integer", "string"]
    * - FirstName
