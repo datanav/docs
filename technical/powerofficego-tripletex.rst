@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-10-20 08:12:38
+Generated: 2023-10-20 08:13:06
 
 Introduction.
 ------------
@@ -33,6 +33,42 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - Powerofficego Contactperson Property
      - Tripletex Employee Property
      - Tripletex Data Type
+   * - address1
+     - address.addressLine1
+     - "string"
+   * - address2
+     - address.addressLine2
+     - "string"
+   * - city
+     - address.city
+     - "string"
+   * - dateOfBirth
+     - dateOfBirth
+     - "datetime-format","%Y-%m-%d","_."]
+   * - emailAddress
+     - email
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - lastName
+     - lastName
+     - "string"
+   * - partyId
+     - department.id
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - phoneNumber
+     - phoneNumberWork
+     - "string"
+   * - residenceCountryCode
+     - address.country.id
+     - "integer"
+   * - zipCode
+     - address.postalCode
+     - "string"
 
 
 Powerofficego Employee to Tripletex Employee
