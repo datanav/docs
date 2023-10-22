@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-10-09 06:58:27
+Generated: 2023-10-22 14:16:41
 
 Introduction.
 ------------
@@ -445,6 +445,9 @@ The following properties are synchronized between a Tripletex Product and a Supe
      - "string"
    * - name
      - Name
+     - "string"
+   * - number
+     - ERPProductKey
      - "string"
    * - priceExcludingVatCurrency
      - UnitListPrice
