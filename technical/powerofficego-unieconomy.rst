@@ -2,31 +2,12 @@
 Powerofficego to UniEconomy Dataflow
 ====================================
 
-Generated: 2023-10-20 08:23:11
+Generated: 2023-10-22 10:44:31
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to UniEconomy. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Powerofficego Customers to UniEconomy Companies
------------------------------------------------
-Every Powerofficego Customers will be synchronized with a UniEconomy Companies.
-
-Once a link between a Powerofficego Customers and a UniEconomy Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customers and a UniEconomy Companies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers Property
-     - UniEconomy Companies Property
-     - UniEconomy Data Type
-   * - Name
-     - Name
-     - "string"
-
 
 Powerofficego Departments to UniEconomy Companies
 -------------------------------------------------
@@ -65,6 +46,25 @@ The following properties are synchronized between a Powerofficego Suppliers and 
      - UpdatedAt
      - "string"
    * - LegalName
+     - Name
+     - "string"
+
+
+Powerofficego Customers to UniEconomy Companies
+-----------------------------------------------
+Every Powerofficego Customers will be synchronized with a UniEconomy Companies.
+
+Once a link between a Powerofficego Customers and a UniEconomy Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a UniEconomy Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - UniEconomy Companies Property
+     - UniEconomy Data Type
+   * - Name
      - Name
      - "string"
 
