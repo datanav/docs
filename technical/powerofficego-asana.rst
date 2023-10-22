@@ -2,7 +2,7 @@
 Powerofficego to Asana Dataflow
 ===============================
 
-Generated: 2023-10-22 10:44:31
+Generated: 2023-10-22 10:44:33
 
 Introduction.
 ------------
@@ -23,4 +23,10 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      - Asana Workspaces Property
      - Asana Data Type
+   * - Name
+     - name
+     - "string"
+   * - WebsiteUrl
+     - email_domains
+     - "string"
 
