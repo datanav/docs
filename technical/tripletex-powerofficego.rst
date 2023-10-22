@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-10-20 14:01:05
+Generated: 2023-10-22 16:47:25
 
 Introduction.
 ------------
@@ -358,48 +358,6 @@ The following properties are synchronized between a Tripletex Department and a P
      - PowerOfficeGo Data Type
    * - name
      - Name
-     - "string"
-
-
-Tripletex Product to PowerOfficeGo Product
-------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Product and a PowerOfficeGo Product must be established.
-
-A new PowerOfficeGo Product will be created from a Tripletex Product if it is connected to a Tripletex Orderline that is synchronized into PowerOfficeGo.
-
-Once a link between a Tripletex Product and a PowerOfficeGo Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Product and a PowerOfficeGo Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     - PowerOfficeGo Product Property
-     - PowerOfficeGo Data Type
-   * - costExcludingVatCurrency
-     - costPrice
-     - "string"
-   * - description
-     - description
-     - "string"
-   * - ean
-     - gtin
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - priceExcludingVatCurrency
-     - salesPrice
-     - "string"
-   * - productUnit.id
-     - unitOfMeasureCode
-     - "string"
-   * - stockOfGoods
-     - availableStock
-     - "integer"
-   * - vatType.id
-     - vatCode
      - "string"
 
 
@@ -912,6 +870,73 @@ The following properties are synchronized between a Tripletex Orderline and a Po
      - "string"
    * - vatType.id
      - VatReturnSpecification
+     - "string"
+
+
+Tripletex Product to PowerOfficeGo Product
+------------------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a PowerOfficeGo Product.
+
+Once a link between a Tripletex Product and a PowerOfficeGo Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a PowerOfficeGo Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - PowerOfficeGo Product Property
+     - PowerOfficeGo Data Type
+   * - costExcludingVatCurrency
+     - CostPrice
+     - "string"
+   * - costExcludingVatCurrency
+     - costPrice
+     - "string"
+   * - description
+     - Description
+     - "string"
+   * - description
+     - description
+     - "string"
+   * - ean
+     - Gtin
+     - "string"
+   * - ean
+     - gtin
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - priceExcludingVatCurrency
+     - SalesPrice
+     - "string"
+   * - priceExcludingVatCurrency
+     - salesPrice
+     - "string"
+   * - productUnit.id
+     - Unit
+     - "string"
+   * - productUnit.id
+     - unit
+     - "string"
+   * - productUnit.id
+     - unitOfMeasureCode
+     - "string"
+   * - stockOfGoods
+     - AvailableStock
+     - "string"
+   * - stockOfGoods
+     - availableStock
+     - "integer"
+   * - vatType.id
+     - VatCode
+     - "string"
+   * - vatType.id
+     - vatCode
      - "string"
 
 
