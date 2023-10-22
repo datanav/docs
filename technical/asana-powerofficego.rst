@@ -2,7 +2,7 @@
 Asana to PowerOfficeGo Dataflow
 ===============================
 
-Generated: 2023-10-22 10:44:33
+Generated: 2023-10-22 10:55:31
 
 Introduction.
 ------------
@@ -28,27 +28,5 @@ The following properties are synchronized between a Asana Users and a PowerOffic
      - "string"
    * - name
      - firstName
-     - "string"
-
-
-Asana Workspaces to PowerOfficeGo Customers
--------------------------------------------
-Every Asana Workspaces will be synchronized with a PowerOfficeGo Customers.
-
-Once a link between a Asana Workspaces and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Asana Workspaces and a PowerOfficeGo Customers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Asana Workspaces Property
-     - PowerOfficeGo Customers Property
-     - PowerOfficeGo Data Type
-   * - email_domains
-     - WebsiteUrl
-     - "string"
-   * - name
-     - Name
      - "string"
 
