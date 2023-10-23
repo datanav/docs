@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-10-20 13:47:09
+Generated: 2023-10-23 12:20:45
 
 Introduction.
 ------------
@@ -1010,6 +1010,9 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - discount
      - "float"
    * - ProductCode
+     - product.id
+     - "integer"
+   * - ProductId
      - product.id
      - "integer"
    * - ProductUnitCost
