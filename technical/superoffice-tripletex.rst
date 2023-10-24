@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-10-09 06:58:50
+Generated: 2023-10-24 10:46:11
 
 Introduction.
 ------------
@@ -854,6 +854,9 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - Tripletex Orderline Property
      - Tripletex Data Type
+   * - Description
+     - description
+     - "string"
    * - DiscountPercent
      - count
      - "float"
