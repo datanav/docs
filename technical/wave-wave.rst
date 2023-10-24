@@ -2,7 +2,7 @@
 Wave Financial to Wave Dataflow
 ===============================
 
-Generated: 2023-10-13 13:34:47
+Generated: 2023-10-24 08:41:34
 
 Introduction.
 ------------
@@ -28,17 +28,29 @@ The following properties are synchronized between a Wave Customer and a Wave Cus
    * - address.addressLine1
      - address.addressLine1
      - "string"
+   * - address.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
    * - address.addressLine2
      - address.addressLine2
      - "string"
+   * - address.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
    * - address.city
      - address.city
+     - "string"
+   * - address.city
+     - shippingDetails.address.city
      - "string"
    * - address.country.code
      - address.country.code
      - "string"
    * - address.country.code
      - address.countryCode
+     - "string"
+   * - address.country.code
+     - shippingDetails.address.country.code
      - "string"
    * - address.countryCode
      - address.country.code
@@ -49,14 +61,26 @@ The following properties are synchronized between a Wave Customer and a Wave Cus
    * - address.postalCode
      - address.postalCode
      - "string"
+   * - address.postalCode
+     - shippingDetails.address.postalCode
+     - "string"
    * - shippingDetails.address.addressLine1
      - address.addressLine1
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - shippingDetails.address.addressLine1
      - "string"
    * - shippingDetails.address.addressLine2
      - address.addressLine2
      - "string"
+   * - shippingDetails.address.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
    * - shippingDetails.address.city
      - address.city
+     - "string"
+   * - shippingDetails.address.city
+     - shippingDetails.address.city
      - "string"
    * - shippingDetails.address.country.code
      - address.country.code
@@ -64,8 +88,14 @@ The following properties are synchronized between a Wave Customer and a Wave Cus
    * - shippingDetails.address.country.code
      - address.countryCode
      - "string"
+   * - shippingDetails.address.country.code
+     - shippingDetails.address.country.code
+     - "string"
    * - shippingDetails.address.postalCode
      - address.postalCode
+     - "string"
+   * - shippingDetails.address.postalCode
+     - shippingDetails.address.postalCode
      - "string"
 
 
