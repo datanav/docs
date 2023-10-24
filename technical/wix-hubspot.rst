@@ -2,7 +2,7 @@
 Wix.com to HubSpot Dataflow
 ===========================
 
-Generated: 2023-10-06 13:44:17
+Generated: 2023-10-24 12:05:14
 
 Introduction.
 ------------
@@ -140,7 +140,7 @@ The following properties are synchronized between a Wix.com Orders and a HubSpot
      - "string"
    * - lineItems.quantity
      - properties.quantity
-     - "string"
+     - "integer"
    * - lineItems.quantity.quantity
      - properties.quantity
      - "string"
