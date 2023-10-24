@@ -2,7 +2,7 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2023-10-24 08:41:34
+Generated: 2023-10-24 08:43:36
 
 Introduction.
 ------------
@@ -149,6 +149,9 @@ The following properties are synchronized between a HubSpot Contact and a Wave C
      - Wave Data Type
    * - properties.address
      - address.addressLine1
+     - "string"
+   * - properties.address
+     - shippingDetails.address.addressLine1
      - "string"
    * - properties.city
      - address.city
