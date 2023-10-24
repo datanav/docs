@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-10-09 11:11:08
+Generated: 2023-10-24 10:46:11
 
 Introduction.
 ------------
@@ -695,6 +695,9 @@ The following properties are synchronized between a HubSpot Lineitem and a Tripl
    * - HubSpot Lineitem Property
      - Tripletex Orderline Property
      - Tripletex Data Type
+   * - properties.description
+     - description
+     - "string"
    * - properties.hs_product_id
      - product.id
      - "integer"
