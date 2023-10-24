@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-10-23 12:20:45
+Generated: 2023-10-24 08:43:36
 
 Introduction.
 ------------
@@ -177,6 +177,9 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - address1
      - address.addressLine1
      - "string"
+   * - address1
+     - shippingDetails.address.addressLine1
+     - "string"
    * - address2
      - address.addressLine2
      - "string"
@@ -309,6 +312,9 @@ The following properties are synchronized between a Powerofficego Suppliers and 
      - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
    * - MailAddress.AddressLine1
      - address.addressLine1
+     - "string"
+   * - MailAddress.AddressLine1
+     - shippingDetails.address.addressLine1
      - "string"
    * - MailAddress.AddressLine2
      - address.addressLine2
