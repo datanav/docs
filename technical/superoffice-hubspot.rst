@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-10-06 14:13:48
+Generated: 2023-10-24 12:05:14
 
 Introduction.
 ------------
@@ -278,7 +278,7 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
    * - Quantity
      - properties.quantity
-     - "string"
+     - "integer"
    * - UnitListPrice
      - properties.price
      - "string"
