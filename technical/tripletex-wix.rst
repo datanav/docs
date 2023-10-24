@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-10-10 11:14:25
+Generated: 2023-10-24 12:19:14
 
 Introduction.
 ------------
@@ -168,7 +168,7 @@ The following properties are synchronized between a Tripletex Orderline and a Wi
      - Wix Data Type
    * - count
      - lineItems.quantity
-     - "string"
+     - "integer"
    * - count
      - lineItems.quantity.quantity
      - "string"
