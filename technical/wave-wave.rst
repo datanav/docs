@@ -2,7 +2,7 @@
 Wave Financial to Wave Dataflow
 ===============================
 
-Generated: 2023-10-24 08:41:34
+Generated: 2023-10-24 08:43:36
 
 Introduction.
 ------------
@@ -115,6 +115,9 @@ The following properties are synchronized between a Wave Vendor and a Wave Custo
      - Wave Data Type
    * - address.addressLine1
      - address.addressLine1
+     - "string"
+   * - address.addressLine1
+     - shippingDetails.address.addressLine1
      - "string"
    * - address.addressLine2
      - address.addressLine2
