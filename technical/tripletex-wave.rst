@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-10-09 06:58:50
+Generated: 2023-10-24 07:01:42
 
 Introduction.
 ------------
@@ -363,6 +363,9 @@ The following properties are synchronized between a Tripletex Supplier and a Wav
      - "string"
    * - deliveryAddress.city
      - address.countryCode
+     - "string"
+   * - deliveryAddress.country.id
+     - address.country.code
      - "string"
    * - deliveryAddress.country.id
      - address.countryCode
