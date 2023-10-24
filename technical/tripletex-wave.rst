@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-10-24 07:01:42
+Generated: 2023-10-24 08:43:36
 
 Introduction.
 ------------
@@ -250,6 +250,9 @@ The following properties are synchronized between a Tripletex Employee and a Wav
    * - address.addressLine1
      - address.addressLine1
      - "string"
+   * - address.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
    * - address.addressLine2
      - address.addressLine2
      - "string"
@@ -349,6 +352,9 @@ The following properties are synchronized between a Tripletex Supplier and a Wav
    * - deliveryAddress.addressLine1
      - address.addressLine1
      - "string"
+   * - deliveryAddress.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
    * - deliveryAddress.addressLine2
      - address.addressLine2
      - "string"
@@ -382,6 +388,9 @@ The following properties are synchronized between a Tripletex Supplier and a Wav
    * - physicalAddress.addressLine1
      - address.addressLine1
      - "string"
+   * - physicalAddress.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
    * - physicalAddress.addressLine2
      - address.addressLine2
      - "string"
@@ -399,6 +408,9 @@ The following properties are synchronized between a Tripletex Supplier and a Wav
      - "string"
    * - postalAddress.addressLine1
      - address.addressLine1
+     - "string"
+   * - postalAddress.addressLine1
+     - shippingDetails.address.addressLine1
      - "string"
    * - postalAddress.addressLine2
      - address.addressLine2
