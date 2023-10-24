@@ -2,7 +2,7 @@
 HubSpot to Zendesk Dataflow
 ===========================
 
-Generated: 2023-10-24 19:04:22
+Generated: 2023-10-24 20:04:38
 
 Introduction.
 ------------
@@ -143,4 +143,26 @@ The following properties are synchronized between a HubSpot User and a Zendesk U
    * - HubSpot User Property
      - Zendesk Users Property
      - Zendesk Data Type
+
+
+HubSpot Ticket to Zendesk Tickets
+---------------------------------
+Every HubSpot Ticket will be synchronized with a Zendesk Tickets.
+
+Once a link between a HubSpot Ticket and a Zendesk Tickets is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Ticket and a Zendesk Tickets:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Ticket Property
+     - Zendesk Tickets Property
+     - Zendesk Data Type
+   * - properties.hubspot_owner_id
+     - requester_id
+     - "string"
+   * - properties.subject
+     - subject
+     - "string"
 
