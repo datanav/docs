@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-10-24 08:43:36
+Generated: 2023-10-24 08:44:44
 
 Introduction.
 ------------
@@ -183,8 +183,14 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - address2
      - address.addressLine2
      - "string"
+   * - address2
+     - shippingDetails.address.addressLine2
+     - "string"
    * - city
      - address.city
+     - "string"
+   * - city
+     - shippingDetails.address.city
      - "string"
    * - emailAddress
      - email
@@ -207,8 +213,14 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - residenceCountryCode
      - address.countryCode
      - "string"
+   * - residenceCountryCode
+     - shippingDetails.address.country.code
+     - "string"
    * - zipCode
      - address.postalCode
+     - "string"
+   * - zipCode
+     - shippingDetails.address.postalCode
      - "string"
 
 
@@ -319,8 +331,14 @@ The following properties are synchronized between a Powerofficego Suppliers and 
    * - MailAddress.AddressLine2
      - address.addressLine2
      - "string"
+   * - MailAddress.AddressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
    * - MailAddress.City
      - address.city
+     - "string"
+   * - MailAddress.City
+     - shippingDetails.address.city
      - "string"
    * - MailAddress.CountryCode
      - address.country.code
@@ -328,8 +346,14 @@ The following properties are synchronized between a Powerofficego Suppliers and 
    * - MailAddress.CountryCode
      - address.countryCode
      - "string"
+   * - MailAddress.CountryCode
+     - shippingDetails.address.country.code
+     - "string"
    * - MailAddress.ZipCode
      - address.postalCode
+     - "string"
+   * - MailAddress.ZipCode
+     - shippingDetails.address.postalCode
      - "string"
    * - PhoneNumber
      - phone
