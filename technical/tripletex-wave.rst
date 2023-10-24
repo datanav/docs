@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-10-24 08:43:36
+Generated: 2023-10-24 08:44:44
 
 Introduction.
 ------------
@@ -256,8 +256,14 @@ The following properties are synchronized between a Tripletex Employee and a Wav
    * - address.addressLine2
      - address.addressLine2
      - "string"
+   * - address.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
    * - address.city
      - address.city
+     - "string"
+   * - address.city
+     - shippingDetails.address.city
      - "string"
    * - address.country.id
      - address.country.code
@@ -265,8 +271,14 @@ The following properties are synchronized between a Tripletex Employee and a Wav
    * - address.country.id
      - address.countryCode
      - "string"
+   * - address.country.id
+     - shippingDetails.address.country.code
+     - "string"
    * - address.postalCode
      - address.postalCode
+     - "string"
+   * - address.postalCode
+     - shippingDetails.address.postalCode
      - "string"
    * - department.id
      - id
@@ -358,6 +370,9 @@ The following properties are synchronized between a Tripletex Supplier and a Wav
    * - deliveryAddress.addressLine2
      - address.addressLine2
      - "string"
+   * - deliveryAddress.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
    * - deliveryAddress.changes
      - address.city
      - "string"
@@ -370,14 +385,23 @@ The following properties are synchronized between a Tripletex Supplier and a Wav
    * - deliveryAddress.city
      - address.countryCode
      - "string"
+   * - deliveryAddress.city
+     - shippingDetails.address.city
+     - "string"
    * - deliveryAddress.country.id
      - address.country.code
      - "string"
    * - deliveryAddress.country.id
      - address.countryCode
      - "string"
+   * - deliveryAddress.country.id
+     - shippingDetails.address.country.code
+     - "string"
    * - deliveryAddress.postalCode
      - address.postalCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - shippingDetails.address.postalCode
      - "string"
    * - name
      - name
@@ -394,8 +418,14 @@ The following properties are synchronized between a Tripletex Supplier and a Wav
    * - physicalAddress.addressLine2
      - address.addressLine2
      - "string"
+   * - physicalAddress.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
    * - physicalAddress.city
      - address.city
+     - "string"
+   * - physicalAddress.city
+     - shippingDetails.address.city
      - "string"
    * - physicalAddress.country.id
      - address.country.code
@@ -403,8 +433,14 @@ The following properties are synchronized between a Tripletex Supplier and a Wav
    * - physicalAddress.country.id
      - address.countryCode
      - "string"
+   * - physicalAddress.country.id
+     - shippingDetails.address.country.code
+     - "string"
    * - physicalAddress.postalCode
      - address.postalCode
+     - "string"
+   * - physicalAddress.postalCode
+     - shippingDetails.address.postalCode
      - "string"
    * - postalAddress.addressLine1
      - address.addressLine1
@@ -415,8 +451,14 @@ The following properties are synchronized between a Tripletex Supplier and a Wav
    * - postalAddress.addressLine2
      - address.addressLine2
      - "string"
+   * - postalAddress.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
    * - postalAddress.city
      - address.city
+     - "string"
+   * - postalAddress.city
+     - shippingDetails.address.city
      - "string"
    * - postalAddress.country.id
      - address.country.code
@@ -424,8 +466,14 @@ The following properties are synchronized between a Tripletex Supplier and a Wav
    * - postalAddress.country.id
      - address.countryCode
      - "string"
+   * - postalAddress.country.id
+     - shippingDetails.address.country.code
+     - "string"
    * - postalAddress.postalCode
      - address.postalCode
+     - "string"
+   * - postalAddress.postalCode
+     - shippingDetails.address.postalCode
      - "string"
 
 
