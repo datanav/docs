@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-10-25 22:08:55
+Generated: 2023-10-25 22:11:04
 
 Introduction.
 ------------
@@ -565,6 +565,9 @@ The following properties are synchronized between a Powerofficego Suppliers and 
    * - Powerofficego Suppliers Property
      - PowerOfficeGo Location Property
      - PowerOfficeGo Data Type
+   * - MailAddress.CountryCode
+     - countryCode
+     - "string"
 
 
 Powerofficego Vatcode to PowerOfficeGo Vatcodes
