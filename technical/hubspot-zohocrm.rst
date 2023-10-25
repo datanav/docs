@@ -2,7 +2,7 @@
 HubSpot to ZohoCRM Dataflow
 ===========================
 
-Generated: 2023-10-24 21:49:02
+Generated: 2023-10-25 17:16:57
 
 Introduction.
 ------------
@@ -61,6 +61,12 @@ The following properties are synchronized between a HubSpot Company and a ZohoCR
      - "string"
    * - properties.phone
      - Phone
+     - "string"
+   * - properties.state
+     - Billing_Country
+     - "string"
+   * - properties.state
+     - Shipping_Country
      - "string"
    * - properties.type
      - Billing_Country
