@@ -2,7 +2,7 @@
 Wave Financial to ZohoCRM Dataflow
 ==================================
 
-Generated: 2023-10-25 16:28:58
+Generated: 2023-10-25 16:30:12
 
 Introduction.
 ------------
@@ -128,6 +128,12 @@ The following properties are synchronized between a Wave Vendor and a ZohoCRM Ac
      - "string"
    * - address.postalCode
      - Shipping_Code
+     - "string"
+   * - address.province.code
+     - Billing_State
+     - "string"
+   * - address.province.code
+     - Shipping_State
      - "string"
    * - internalNotes
      - Created_Time
