@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-10-20 12:16:16
+Generated: 2023-10-25 22:08:55
 
 Introduction.
 ------------
@@ -536,6 +536,9 @@ The following properties are synchronized between a Powerofficego Suppliers pers
    * - Powerofficego Suppliers person Property
      - PowerOfficeGo Location Property
      - PowerOfficeGo Data Type
+   * - MailAddress.CountryCode
+     - countryCode
+     - "string"
 
 
 Powerofficego Suppliers to PowerOfficeGo Location
@@ -869,6 +872,9 @@ The following properties are synchronized between a Powerofficego Suppliers pers
      - "datetime-format","%Y-%m-%d","_."]
    * - FirstName
      - firstName
+     - "string"
+   * - MailAddress.CountryCode
+     - residenceCountryCode
      - "string"
    * - PhoneNumber
      - phoneNumber
