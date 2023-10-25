@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-10-24 10:46:11
+Generated: 2023-10-25 17:19:38
 
 Introduction.
 ------------
@@ -387,6 +387,32 @@ The following properties are synchronized between a SuperOffice Person and a Tri
      - "string"
 
 
+SuperOffice Product to Tripletex Productunit
+--------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Product and a Tripletex Productunit must be established.
+
+A SuperOffice Product will merge with a Tripletex Productunit if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Tripletex Productunit Property
+   * - QuantityUnit
+     - name
+
+Once a link between a SuperOffice Product and a Tripletex Productunit is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a Tripletex Productunit:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Tripletex Productunit Property
+     - Tripletex Data Type
+
+
 SuperOffice User to Tripletex Contact
 -------------------------------------
 Before any synchronization can take place, a link between a SuperOffice User and a Tripletex Contact must be established.
@@ -766,47 +792,6 @@ The following properties are synchronized between a SuperOffice Product and a Tr
    * - VAT
      - vatType.id
      - "integer"
-
-
-SuperOffice Product to Tripletex Productunit
---------------------------------------------
-Every SuperOffice Product will be synchronized with a Tripletex Productunit.
-
-If a matching Tripletex Productunit already exists, the SuperOffice Product will be merged with the existing one.
-If no matching Tripletex Productunit is found, a new Tripletex Productunit will be created.
-
-A SuperOffice Product will merge with a Tripletex Productunit if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - Tripletex Productunit Property
-   * - QuantityUnit
-     - name
-
-Once a link between a SuperOffice Product and a Tripletex Productunit is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Product and a Tripletex Productunit:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - Tripletex Productunit Property
-     - Tripletex Data Type
-   * - QuantityUnit
-     - commonCode
-     - "string"
-   * - QuantityUnit
-     - name
-     - "string"
-   * - VAT
-     - commonCode
-     - "string"
-   * - VATInfo
-     - name
-     - "string"
 
 
 SuperOffice Project to Tripletex Project
