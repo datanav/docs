@@ -30,14 +30,17 @@ Properties
 
    * - ``dataset``
      - String
-     - The id of the dataset to write entities into. Note: if it doesn't exist before
-       entities are written to the sink, it will be created on the fly.
+     - The id of the dataset to write entities into. You should normally not have to specify the dataset id 
+       as the default value is the pipe id, and there should be a very good reason for the dataset id to be 
+       different from the pipe id.
+
+       Note: if it doesn't exist before entities are written to the sink, it will be created on the fly.
 
        .. NOTE::
 
           The dataset id cannot contain forward slash characters (``/``) nor can it
           reference a ``system:`` dataset.
-     -
+     - The pipe id.
      - Yes
 
    * - ``set_initial_offset``
