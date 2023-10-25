@@ -346,9 +346,9 @@ Template properties
      - ``100-599``
      - No
 
-   * - ``rules`` (Deprecated. Use ``rewrite_rules_lookup`` instead.)
+   * - ``rules``
      - Object
-     - A dictionary of DTL named rules. This can be used to implement the ``lookup_rewrite`` named rule, which when defined will be used to rewrite the lookup response body.
+     - A dictionary of DTL named rules. This can be used to implement the ``lookup_rewrite``, ``lookup_rewrite_based_on`` and ``lookup_rewrite_update`` named rules, which when defined will be used to rewrite the lookup response body. The ``lookup_rewrite`` named rule is used as a fallback if ``lookup_rewrite_based_on`` or ``lookup_rewrite_update`` is not specified. ``lookup_rewrite_based_on`` is used to rewrite the lookup response before it is used to create the ``$based_on_lookup`` value. ``lookup_rewrite_update`` is used to rewrite the lookup response before using it for client side patching  (see ``client_side_patching``).
      -
      - No
 
@@ -372,7 +372,7 @@ Template properties
 
    * - ``client_side_patching``
      - Boolean
-     - If set to ``true`` then the update payload will be built from the result of the lookup operation and then patched with the actual payload. The use-case for this when the REST operation does not support patching, but instead require a complete payload to be sent.
+     - If set to ``true`` then the update payload will be built from the result of the lookup operation and then patched with the actual payload. The use-case for this is when the REST operation does not support patching, but instead requires a complete payload to be sent.
      - ``false``
      - No
 
