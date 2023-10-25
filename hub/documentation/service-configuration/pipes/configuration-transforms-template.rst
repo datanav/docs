@@ -370,6 +370,12 @@ Template properties
      -
      - No
 
+   * - ``client_side_patching``
+     - Boolean
+     - If set to ``true`` then the update payload will be built from the result of the lookup operation and then patched with the actual payload. The use-case for this when the REST operation does not support patching, but instead require a complete payload to be sent.
+     - ``false``
+     - No
+
 Special entity properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
