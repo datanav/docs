@@ -2,7 +2,7 @@
 Wave Financial to ZohoCRM Dataflow
 ==================================
 
-Generated: 2023-10-17 07:29:27
+Generated: 2023-10-25 12:04:56
 
 Introduction.
 ------------
@@ -184,6 +184,12 @@ The following properties are synchronized between a Wave Customer person and a Z
    * - address.postalCode
      - Other_Zip
      - "string"
+   * - address.province
+     - Mailing_State
+     - "string"
+   * - address.province
+     - Other_State
+     - "string"
    * - email
      - Email
      - "string"
@@ -237,6 +243,12 @@ The following properties are synchronized between a Wave Customer person and a Z
      - "string"
    * - shippingDetails.address.postalCode
      - Other_Zip
+     - "string"
+   * - shippingDetails.address.province
+     - Mailing_State
+     - "string"
+   * - shippingDetails.address.province
+     - Other_State
      - "string"
    * - shippingDetails.phone
      - Other_Phone
