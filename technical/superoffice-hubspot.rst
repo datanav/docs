@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-10-24 12:05:14
+Generated: 2023-10-25 20:50:05
 
 Introduction.
 ------------
@@ -97,6 +97,9 @@ The following properties are synchronized between a SuperOffice User and a HubSp
      - HubSpot Data Type
    * - contactCategory
      - properties.country
+     - "string"
+   * - contactCategory
+     - properties.state
      - "string"
    * - firstName
      - properties.firstname
