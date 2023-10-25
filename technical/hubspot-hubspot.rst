@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-10-06 13:44:17
+Generated: 2023-10-25 17:16:55
 
 Introduction.
 ------------
@@ -1015,6 +1015,9 @@ The following properties are synchronized between a HubSpot Company and a HubSpo
      - properties.country
      - "string"
    * - properties.industry
+     - properties.country
+     - "string"
+   * - properties.state
      - properties.country
      - "string"
    * - properties.type
