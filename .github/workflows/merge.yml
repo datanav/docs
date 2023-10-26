@@ -48,14 +48,3 @@ jobs:
         run: |
             echo "Pushing $IMAGE_NAME_ACR"
             docker push $IMAGE_NAME_ACR
-      - name: Log in to Azure
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-      - name: Build and deploy Container App
-        uses: azure/container-apps-deploy-action@v1
-        with:
-          acrName: sesam
-          containerAppName: docs
-          resourceGroup: sesam-container-apps
-          imageToDeploy: sesam/docs:latest
