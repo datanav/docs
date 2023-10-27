@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-10-25 22:11:04
+Generated: 2023-10-27 08:36:42
 
 Introduction.
 ------------
@@ -59,11 +59,26 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - Powerofficego Customers person Property
      - PowerOfficeGo Contactperson Property
      - PowerOfficeGo Data Type
+   * - Id
+     - id
+     - "integer"
    * - IsPerson
      - residenceCountryCode
      - "string"
+   * - MailAddress.AddressLine1
+     - address1
+     - "string"
+   * - MailAddress.AddressLine2
+     - address2
+     - "string"
+   * - MailAddress.City
+     - city
+     - "string"
    * - MailAddress.CountryCode
      - residenceCountryCode
+     - "string"
+   * - MailAddress.ZipCode
+     - zipCode
      - "string"
 
 
