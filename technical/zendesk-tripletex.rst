@@ -2,7 +2,7 @@
 Zendesk to Tripletex Dataflow
 =============================
 
-Generated: 2023-10-19 20:19:07
+Generated: 2023-10-30 16:24:00
 
 Introduction.
 ------------
@@ -33,6 +33,9 @@ The following properties are synchronized between a Zendesk Users and a Triplete
    * - Zendesk Users Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - email
+     - email
+     - "string"
    * - organization_id
      - customer.id
      - "integer"
@@ -188,6 +191,9 @@ The following properties are synchronized between a Zendesk Users and a Triplete
    * - Zendesk Users Property
      - Tripletex Employee Property
      - Tripletex Data Type
+   * - email
+     - email
+     - "string"
    * - organization_id
      - department.id
      - "if", "neq", "_.", "X"], "integer", "string"]
