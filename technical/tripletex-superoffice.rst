@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-10-22 14:16:41
+Generated: 2023-10-30 15:56:02
 
 Introduction.
 ------------
@@ -221,6 +221,9 @@ The following properties are synchronized between a Tripletex Employee and a Sup
    * - address.city
      - Address.Street.City
      - "string"
+   * - address.country.id
+     - Country.CountryId
+     - "integer"
    * - address.postalCode
      - Address.Street.Zipcode
      - "string"
