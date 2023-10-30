@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-09-16 15:00:32
+Generated: 2023-10-30 15:56:02
 
 Introduction.
 ------------
@@ -45,6 +45,9 @@ The following properties are synchronized between a HubSpot Contact and a SuperO
    * - properties.city
      - Address.Street.City
      - "string"
+   * - properties.country
+     - Country.CountryId
+     - "integer"
    * - properties.date_of_birth
      - BirthDate
      - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
