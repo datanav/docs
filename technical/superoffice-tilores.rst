@@ -2,7 +2,7 @@
 SuperOffice to Tilores Dataflow
 ===============================
 
-Generated: 2023-09-06 11:59:30
+Generated: 2023-10-30 16:24:00
 
 Introduction.
 ------------
@@ -37,6 +37,9 @@ The following properties are synchronized between a SuperOffice Person and a Til
      - "string"
    * - BirthDate
      - dateOfBirth
+     - "string"
+   * - Emails.Value
+     - email
      - "string"
    * - Firstname
      - firstName
