@@ -2,7 +2,7 @@
 HubSpot to Tilores Dataflow
 ===========================
 
-Generated: 2023-06-27 11:51:17
+Generated: 2023-10-30 16:24:00
 
 Introduction.
 ------------
@@ -31,6 +31,9 @@ The following properties are synchronized between a HubSpot Contact and a Tilore
      - "string"
    * - properties.date_of_birth
      - dateOfBirth
+     - "string"
+   * - properties.email
+     - email
      - "string"
    * - properties.firstname
      - firstName
