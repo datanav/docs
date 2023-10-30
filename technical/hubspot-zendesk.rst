@@ -2,7 +2,7 @@
 HubSpot to Zendesk Dataflow
 ===========================
 
-Generated: 2023-10-24 20:04:38
+Generated: 2023-10-30 16:24:00
 
 Introduction.
 ------------
@@ -36,6 +36,9 @@ The following properties are synchronized between a HubSpot Contact and a Zendes
    * - HubSpot Contact Property
      - Zendesk Users Property
      - Zendesk Data Type
+   * - properties.email
+     - email
+     - "string"
 
 
 HubSpot Company to Zendesk Organisations
