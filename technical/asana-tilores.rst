@@ -2,7 +2,7 @@
 Asana to Tilores Dataflow
 =========================
 
-Generated: 2023-06-29 21:30:38
+Generated: 2023-10-30 16:23:52
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Asana Users and a Tilores Hu
    * - Asana Users Property
      - Tilores Human Property
      - Tilores Data Type
+   * - email
+     - email
+     - "string"
    * - name
      - firstName
      - "string"
