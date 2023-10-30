@@ -2,7 +2,7 @@
 Tripletex to Tilores Dataflow
 =============================
 
-Generated: 2023-08-15 10:00:00
+Generated: 2023-10-30 16:24:00
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Tripletex Contact and a Tilo
    * - Tripletex Contact Property
      - Tilores Human Property
      - Tilores Data Type
+   * - email
+     - email
+     - "string"
    * - firstName
      - firstName
      - "string"
@@ -56,6 +59,9 @@ The following properties are synchronized between a Tripletex Employee and a Til
      - "string"
    * - dateOfBirth
      - dateOfBirth
+     - "string"
+   * - email
+     - email
      - "string"
    * - firstName
      - firstName
