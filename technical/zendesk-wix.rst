@@ -2,7 +2,7 @@
 Zendesk to Wix Dataflow
 =======================
 
-Generated: 2023-09-05 12:56:28
+Generated: 2023-10-30 16:24:00
 
 Introduction.
 ------------
@@ -70,4 +70,7 @@ The following properties are synchronized between a Zendesk Users and a Wix Memb
    * - Zendesk Users Property
      - Wix Members Property
      - Wix Data Type
+   * - email
+     - loginEmail
+     - "string"
 
