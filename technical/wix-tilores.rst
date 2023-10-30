@@ -2,7 +2,7 @@
 Wix.com to Tilores Dataflow
 ===========================
 
-Generated: 2023-09-05 12:56:28
+Generated: 2023-10-30 16:24:00
 
 Introduction.
 ------------
@@ -32,6 +32,9 @@ The following properties are synchronized between a Wix.com Contacts and a Tilor
    * - info.name.last
      - lastName
      - "string"
+   * - primaryInfo.email
+     - email
+     - "string"
 
 
 Wix.com Members to Tilores Human
@@ -48,4 +51,7 @@ The following properties are synchronized between a Wix.com Members and a Tilore
    * - Wix.com Members Property
      - Tilores Human Property
      - Tilores Data Type
+   * - loginEmail
+     - email
+     - "string"
 
