@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-10-27 08:36:42
+Generated: 2023-11-01 11:30:56
 
 Introduction.
 ------------
@@ -490,34 +490,6 @@ The following properties are synchronized between a HubSpot Account and a PowerO
    * - HubSpot Account Property
      - PowerOfficeGo Currency Property
      - PowerOfficeGo Data Type
-
-
-HubSpot Contact to PowerOfficeGo Location
------------------------------------------
-Every HubSpot Contact will be synchronized with a PowerOfficeGo Location.
-
-Once a link between a HubSpot Contact and a PowerOfficeGo Location is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contact and a PowerOfficeGo Location:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     - PowerOfficeGo Location Property
-     - PowerOfficeGo Data Type
-   * - properties.address
-     - address1
-     - "string"
-   * - properties.city
-     - city
-     - "string"
-   * - properties.country
-     - countryCode
-     - "string"
-   * - properties.zip
-     - zipCode
-     - "string"
 
 
 HubSpot Deal to PowerOfficeGo Currency
