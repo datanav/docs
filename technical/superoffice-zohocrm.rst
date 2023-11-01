@@ -2,7 +2,7 @@
 SuperOffice to ZohoCRM Dataflow
 ===============================
 
-Generated: 2023-10-13 05:17:54
+Generated: 2023-11-01 11:34:53
 
 Introduction.
 ------------
@@ -64,6 +64,24 @@ The following properties are synchronized between a SuperOffice Contact and a Zo
      - "string"
 
 
+SuperOffice Contact to ZohoCRM Contact
+--------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Contact and a ZohoCRM Contact must be established.
+
+A new ZohoCRM Contact will be created from a SuperOffice Contact if it is connected to a SuperOffice Sale that is synchronized into ZohoCRM.
+
+Once a link between a SuperOffice Contact and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Contact and a ZohoCRM Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Contact Property
+     - ZohoCRM Contact Property
+     - ZohoCRM Data Type
+
+
 SuperOffice Person to ZohoCRM Account
 -------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Person and a ZohoCRM Account must be established.
@@ -79,6 +97,24 @@ The following properties are synchronized between a SuperOffice Person and a Zoh
 
    * - SuperOffice Person Property
      - ZohoCRM Account Property
+     - ZohoCRM Data Type
+
+
+SuperOffice Person to ZohoCRM Contact
+-------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a ZohoCRM Contact must be established.
+
+A new ZohoCRM Contact will be created from a SuperOffice Person if it is connected to a SuperOffice Sale that is synchronized into ZohoCRM.
+
+Once a link between a SuperOffice Person and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Person and a ZohoCRM Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - ZohoCRM Contact Property
      - ZohoCRM Data Type
 
 
