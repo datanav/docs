@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGo Dataflow
 ========================================
 
-Generated: 2023-10-27 08:36:42
+Generated: 2023-11-01 11:30:56
 
 Introduction.
 ------------
@@ -297,55 +297,6 @@ The following properties are synchronized between a Wave Currency and a PowerOff
      - PowerOfficeGo Data Type
 
 
-Wave Customer person to PowerOfficeGo Location
-----------------------------------------------
-Every Wave Customer person will be synchronized with a PowerOfficeGo Location.
-
-Once a link between a Wave Customer person and a PowerOfficeGo Location is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer person and a PowerOfficeGo Location:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer person Property
-     - PowerOfficeGo Location Property
-     - PowerOfficeGo Data Type
-   * - address.addressLine1
-     - address1
-     - "string"
-   * - address.addressLine2
-     - address2
-     - "string"
-   * - address.city
-     - city
-     - "string"
-   * - address.country.code
-     - countryCode
-     - "string"
-   * - address.countryCode
-     - countryCode
-     - "string"
-   * - address.postalCode
-     - zipCode
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - address1
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - address2
-     - "string"
-   * - shippingDetails.address.city
-     - city
-     - "string"
-   * - shippingDetails.address.country.code
-     - countryCode
-     - "string"
-   * - shippingDetails.address.postalCode
-     - zipCode
-     - "string"
-
-
 Wave Customer to PowerOfficeGo Contactperson
 --------------------------------------------
 Every Wave Customer will be synchronized with a PowerOfficeGo Contactperson.
@@ -472,55 +423,6 @@ The following properties are synchronized between a Wave Customer and a PowerOff
      - "string"
 
 
-Wave Customer to PowerOfficeGo Location
----------------------------------------
-Every Wave Customer will be synchronized with a PowerOfficeGo Location.
-
-Once a link between a Wave Customer and a PowerOfficeGo Location is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a PowerOfficeGo Location:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - PowerOfficeGo Location Property
-     - PowerOfficeGo Data Type
-   * - address.addressLine1
-     - address1
-     - "string"
-   * - address.addressLine2
-     - address2
-     - "string"
-   * - address.city
-     - city
-     - "string"
-   * - address.country.code
-     - countryCode
-     - "string"
-   * - address.countryCode
-     - countryCode
-     - "string"
-   * - address.postalCode
-     - zipCode
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - address1
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - address2
-     - "string"
-   * - shippingDetails.address.city
-     - city
-     - "string"
-   * - shippingDetails.address.country.code
-     - countryCode
-     - "string"
-   * - shippingDetails.address.postalCode
-     - zipCode
-     - "string"
-
-
 Wave Invoice to PowerOfficeGo Salesorderlines
 ---------------------------------------------
 Every Wave Invoice will be synchronized with a PowerOfficeGo Salesorderlines.
@@ -632,36 +534,5 @@ The following properties are synchronized between a Wave Product and a PowerOffi
      - "string"
    * - unitPrice
      - salesPrice
-     - "string"
-
-
-Wave Vendor to PowerOfficeGo Location
--------------------------------------
-Every Wave Vendor will be synchronized with a PowerOfficeGo Location.
-
-Once a link between a Wave Vendor and a PowerOfficeGo Location is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a PowerOfficeGo Location:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     - PowerOfficeGo Location Property
-     - PowerOfficeGo Data Type
-   * - address.addressLine1
-     - address1
-     - "string"
-   * - address.addressLine2
-     - address2
-     - "string"
-   * - address.city
-     - city
-     - "string"
-   * - address.country.code
-     - countryCode
-     - "string"
-   * - address.postalCode
-     - zipCode
      - "string"
 
