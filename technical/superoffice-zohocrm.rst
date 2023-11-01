@@ -2,7 +2,7 @@
 SuperOffice to ZohoCRM Dataflow
 ===============================
 
-Generated: 2023-11-01 11:34:53
+Generated: 2023-11-01 11:34:56
 
 Introduction.
 ------------
@@ -116,6 +116,51 @@ The following properties are synchronized between a SuperOffice Person and a Zoh
    * - SuperOffice Person Property
      - ZohoCRM Contact Property
      - ZohoCRM Data Type
+   * - Address.Street.City
+     - Mailing_City
+     - "string"
+   * - Address.Street.City
+     - Other_City
+     - "string"
+   * - Address.Street.Zipcode
+     - Mailing_Zip
+     - "string"
+   * - Address.Street.Zipcode
+     - Other_Zip
+     - "string"
+   * - Contact.ContactId
+     - Account_Name.id
+     - "string"
+   * - Country.CountryId
+     - Mailing_Country
+     - "string"
+   * - Country.CountryId
+     - Other_Country
+     - "string"
+   * - Emails.Value
+     - Email
+     - "string"
+   * - Emails.Value
+     - Secondary_Email
+     - "string"
+   * - Firstname
+     - First_Name
+     - "string"
+   * - Lastname
+     - Last_Name
+     - "string"
+   * - MobilePhones.Value
+     - Mobile
+     - "string"
+   * - OfficePhones.Value
+     - Other_Phone
+     - "string"
+   * - OfficePhones.Value
+     - Phone
+     - "string"
+   * - PrivatePhones.Value
+     - Home_Phone
+     - "string"
 
 
 SuperOffice Sale to ZohoCRM Deal
