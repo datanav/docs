@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-10-27 08:36:42
+Generated: 2023-11-01 11:30:56
 
 Introduction.
 ------------
@@ -512,40 +512,6 @@ The following properties are synchronized between a SuperOffice Ownercontactlink
      - PowerOfficeGo Data Type
    * - name
      - Name
-     - "string"
-
-
-SuperOffice Person to PowerOfficeGo Location
---------------------------------------------
-Every SuperOffice Person will be synchronized with a PowerOfficeGo Location.
-
-Once a link between a SuperOffice Person and a PowerOfficeGo Location is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Person and a PowerOfficeGo Location:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Person Property
-     - PowerOfficeGo Location Property
-     - PowerOfficeGo Data Type
-   * - Address.Street.Address1
-     - address1
-     - "string"
-   * - Address.Street.Address2
-     - address2
-     - "string"
-   * - Address.Street.Address3
-     - address3
-     - "string"
-   * - Address.Street.City
-     - city
-     - "string"
-   * - Address.Street.Zipcode
-     - zipCode
-     - "string"
-   * - Country.CountryId
-     - countryCode
      - "string"
 
 
