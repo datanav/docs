@@ -2,7 +2,7 @@
 HubSpot to ZohoCRM Dataflow
 ===========================
 
-Generated: 2023-11-01 11:34:53
+Generated: 2023-11-01 11:34:56
 
 Introduction.
 ------------
@@ -113,6 +113,30 @@ The following properties are synchronized between a HubSpot Company and a ZohoCR
    * - HubSpot Company Property
      - ZohoCRM Contact Property
      - ZohoCRM Data Type
+   * - properties.country
+     - Mailing_Country
+     - "string"
+   * - properties.country
+     - Other_Country
+     - "string"
+   * - properties.industry
+     - Mailing_Country
+     - "string"
+   * - properties.industry
+     - Other_Country
+     - "string"
+   * - properties.state
+     - Mailing_Country
+     - "string"
+   * - properties.state
+     - Other_Country
+     - "string"
+   * - properties.type
+     - Mailing_Country
+     - "string"
+   * - properties.type
+     - Other_Country
+     - "string"
 
 
 HubSpot Contact to ZohoCRM Account
@@ -149,6 +173,51 @@ The following properties are synchronized between a HubSpot Contact and a ZohoCR
    * - HubSpot Contact Property
      - ZohoCRM Contact Property
      - ZohoCRM Data Type
+   * - properties.city
+     - Mailing_City
+     - "string"
+   * - properties.city
+     - Other_City
+     - "string"
+   * - properties.country
+     - Mailing_Country
+     - "string"
+   * - properties.country
+     - Other_Country
+     - "string"
+   * - properties.email
+     - Email
+     - "string"
+   * - properties.email
+     - Secondary_Email
+     - "string"
+   * - properties.firstname
+     - First_Name
+     - "string"
+   * - properties.lastname
+     - Last_Name
+     - "string"
+   * - properties.mobilephone
+     - Mobile
+     - "string"
+   * - properties.phone
+     - Other_Phone
+     - "string"
+   * - properties.phone
+     - Phone
+     - "string"
+   * - properties.state
+     - Mailing_State
+     - "string"
+   * - properties.state
+     - Other_State
+     - "string"
+   * - properties.zip
+     - Mailing_Zip
+     - "string"
+   * - properties.zip
+     - Other_Zip
+     - "string"
 
 
 HubSpot Owner to ZohoCRM Contact
