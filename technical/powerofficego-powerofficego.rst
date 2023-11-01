@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-10-27 08:38:40
+Generated: 2023-11-01 11:30:56
 
 Introduction.
 ------------
@@ -837,68 +837,6 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - "string"
    * - TotalAmount
      - NetAmount
-     - "string"
-
-
-Powerofficego Contactperson to PowerOfficeGo Location
------------------------------------------------------
-Every Powerofficego Contactperson will be synchronized with a PowerOfficeGo Location.
-
-Once a link between a Powerofficego Contactperson and a PowerOfficeGo Location is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Contactperson and a PowerOfficeGo Location:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Contactperson Property
-     - PowerOfficeGo Location Property
-     - PowerOfficeGo Data Type
-   * - address1
-     - address1
-     - "string"
-   * - address2
-     - address2
-     - "string"
-   * - city
-     - city
-     - "string"
-   * - residenceCountryCode
-     - countryCode
-     - "string"
-   * - zipCode
-     - zipCode
-     - "string"
-
-
-Powerofficego Customers person to PowerOfficeGo Location
---------------------------------------------------------
-Every Powerofficego Customers person will be synchronized with a PowerOfficeGo Location.
-
-Once a link between a Powerofficego Customers person and a PowerOfficeGo Location is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customers person and a PowerOfficeGo Location:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers person Property
-     - PowerOfficeGo Location Property
-     - PowerOfficeGo Data Type
-   * - MailAddress.AddressLine1
-     - address1
-     - "string"
-   * - MailAddress.AddressLine2
-     - address2
-     - "string"
-   * - MailAddress.City
-     - city
-     - "string"
-   * - MailAddress.CountryCode
-     - countryCode
-     - "string"
-   * - MailAddress.ZipCode
-     - zipCode
      - "string"
 
 
