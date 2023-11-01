@@ -2,7 +2,7 @@
 HubSpot to ZohoCRM Dataflow
 ===========================
 
-Generated: 2023-10-25 17:22:06
+Generated: 2023-11-01 11:34:53
 
 Introduction.
 ------------
@@ -97,6 +97,24 @@ The following properties are synchronized between a HubSpot Company and a ZohoCR
      - "string"
 
 
+HubSpot Company to ZohoCRM Contact
+----------------------------------
+Before any synchronization can take place, a link between a HubSpot Company and a ZohoCRM Contact must be established.
+
+A new ZohoCRM Contact will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into ZohoCRM.
+
+Once a link between a HubSpot Company and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Company and a ZohoCRM Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Company Property
+     - ZohoCRM Contact Property
+     - ZohoCRM Data Type
+
+
 HubSpot Contact to ZohoCRM Account
 ----------------------------------
 Before any synchronization can take place, a link between a HubSpot Contact and a ZohoCRM Account must be established.
@@ -112,6 +130,24 @@ The following properties are synchronized between a HubSpot Contact and a ZohoCR
 
    * - HubSpot Contact Property
      - ZohoCRM Account Property
+     - ZohoCRM Data Type
+
+
+HubSpot Contact to ZohoCRM Contact
+----------------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a ZohoCRM Contact must be established.
+
+A new ZohoCRM Contact will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into ZohoCRM.
+
+Once a link between a HubSpot Contact and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a ZohoCRM Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - ZohoCRM Contact Property
      - ZohoCRM Data Type
 
 
