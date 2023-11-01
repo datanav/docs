@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-10-30 12:20:20
+Generated: 2023-11-01 11:30:56
 
 Introduction.
 ------------
@@ -731,37 +731,6 @@ The following properties are synchronized between a Tripletex Employee and a Pow
      - "string"
    * - userType
      - MailAddress.countryCode
-     - "string"
-
-
-Tripletex Employee to PowerOfficeGo Location
---------------------------------------------
-Every Tripletex Employee will be synchronized with a PowerOfficeGo Location.
-
-Once a link between a Tripletex Employee and a PowerOfficeGo Location is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Employee and a PowerOfficeGo Location:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - PowerOfficeGo Location Property
-     - PowerOfficeGo Data Type
-   * - address.addressLine1
-     - address1
-     - "string"
-   * - address.addressLine2
-     - address2
-     - "string"
-   * - address.city
-     - city
-     - "string"
-   * - address.country.id
-     - countryCode
-     - "string"
-   * - address.postalCode
-     - zipCode
      - "string"
 
 
