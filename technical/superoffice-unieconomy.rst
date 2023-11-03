@@ -2,7 +2,7 @@
 SuperOffice to UniEconomy Dataflow
 ==================================
 
-Generated: 2023-10-05 08:40:19
+Generated: 2023-11-03 10:14:07
 
 Introduction.
 ------------
@@ -25,6 +25,9 @@ The following properties are synchronized between a SuperOffice Contact and a Un
      - UniEconomy Data Type
    * - Name
      - Name
+     - "string"
+   * - OrgNr (Dependant on having wd:Q11994066 in Country.ThreeLetterISOCountryDependant on having wd:Q11994066 in Country.TwoLetterISOCountry)
+     - OrganizationNumber
      - "string"
 
 
