@@ -2,7 +2,7 @@
 Freshteam to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-10-20 13:03:17
+Generated: 2023-11-07 13:23:48
 
 Introduction.
 ------------
@@ -59,10 +59,19 @@ The following properties are synchronized between a Freshteam Employee and a Pow
      - PowerOfficeGo Employees Property
      - PowerOfficeGo Data Type
    * - address.city
+     - MailAddress.City
+     - "string"
+   * - address.city
      - MailAddress.city
      - "string"
    * - address.country_code
+     - MailAddress.CountryCode
+     - "string"
+   * - address.country_code
      - MailAddress.countryCode
+     - "string"
+   * - address.zip_code
+     - MailAddress.ZipCode
      - "string"
    * - address.zip_code
      - MailAddress.zipCode
