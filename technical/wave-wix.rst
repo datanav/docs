@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2023-10-24 12:19:14
+Generated: 2023-11-07 15:54:25
 
 Introduction.
 ------------
@@ -33,6 +33,15 @@ The following properties are synchronized between a Wave Customer person and a W
    * - Wave Customer person Property
      - Wix Contacts Property
      - Wix Data Type
+   * - address.addressLine1
+     - info.addresses.items.address.addressLine
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - info.addresses.items.address.addressLine
+     - "string"
 
 
 Wave Customer person to Wix Members
@@ -118,6 +127,9 @@ The following properties are synchronized between a Wave Vendor and a Wix Contac
    * - Wave Vendor Property
      - Wix Contacts Property
      - Wix Data Type
+   * - address.addressLine1
+     - info.addresses.items.address.addressLine
+     - "string"
    * - email
      - info.emails
      - "string"
@@ -126,6 +138,9 @@ The following properties are synchronized between a Wave Vendor and a Wix Contac
      - "string"
    * - firstName
      - info.name.first
+     - "string"
+   * - id
+     - id
      - "string"
    * - lastName
      - info.name.last
@@ -183,6 +198,12 @@ The following properties are synchronized between a Wave Business and a Wix Cont
    * - Wave Business Property
      - Wix Contacts Property
      - Wix Data Type
+   * - address.addressLine1
+     - info.addresses.items.address.addressLine
+     - "string"
+   * - id
+     - id
+     - "string"
 
 
 Wave Customer to Wix Contacts
@@ -214,6 +235,9 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
    * - Wave Customer Property
      - Wix Contacts Property
      - Wix Data Type
+   * - address.addressLine1
+     - info.addresses.items.address.addressLine
+     - "string"
    * - email
      - info.emails
      - "string"
@@ -223,6 +247,9 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
    * - firstName
      - info.name.first
      - "string"
+   * - id
+     - id
+     - "string"
    * - lastName
      - info.name.last
      - "string"
@@ -231,6 +258,9 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
      - "string"
    * - mobile
      - primaryInfo.phone
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - info.addresses.items.address.addressLine
      - "string"
 
 
