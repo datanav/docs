@@ -87,6 +87,7 @@
    DTL: Namespaced identifiers <dtl/dtl-functions-namespaced-identifiers.rst>
    DTL: Nulls <dtl/dtl-functions-nulls.rst>
    DTL: Numbers <dtl/dtl-functions-numbers.rst>
+   DTL: Phonenumbers <dtl/dtl-functions-phonenumbers.rst>
    DTL: Sets <dtl/dtl-functions-sets.rst>
    DTL: Strings <dtl/dtl-functions-strings.rst>
    DTL: URIs <dtl/dtl-functions-uris.rst>

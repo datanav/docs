@@ -1,6 +1,14 @@
 Changelog
 =========
 
+.. _changelog_2023_11_07:
+
+2023-11-07
+----------
+
+* Added a new :ref:`phonenumber-parse <phonenumber_parse_dtl_function>` DTL function.
+* Added a new :ref:`phonenumber-format <phonenumber_format_dtl_function>` DTL function.
+
 .. _changelog_2023_10_11:
 
 2023-10-11
