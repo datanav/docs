@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2023-10-24 12:19:14
+Generated: 2023-11-07 15:54:17
 
 Introduction.
 ------------
@@ -38,6 +38,9 @@ The following properties are synchronized between a HubSpot Contact and a Wix Co
    * - HubSpot Contact Property
      - Wix Contacts Property
      - Wix Data Type
+   * - id
+     - id
+     - "string"
    * - properties.email
      - info.emails
      - "string"
