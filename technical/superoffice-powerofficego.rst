@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-11-01 11:30:56
+Generated: 2023-11-07 08:39:41
 
 Introduction.
 ------------
@@ -738,6 +738,9 @@ The following properties are synchronized between a SuperOffice User and a Power
    * - SuperOffice User Property
      - PowerOfficeGo Employees Property
      - PowerOfficeGo Data Type
+   * - contactCategory
+     - MailAddress.CountryCode
+     - "string"
    * - contactCategory
      - MailAddress.countryCode
      - "string"
