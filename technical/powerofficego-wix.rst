@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-10-24 12:19:14
+Generated: 2023-11-07 15:54:25
 
 Introduction.
 ------------
@@ -62,6 +62,12 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - Powerofficego Customers person Property
      - Wix Contacts Property
      - Wix Data Type
+   * - Id
+     - id
+     - "string"
+   * - MailAddress.AddressLine1
+     - info.addresses.items.address.addressLine
+     - "string"
 
 
 Powerofficego Customers person to Wix Members
@@ -107,6 +113,12 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - EmailAddress
      - info.emails
      - "string"
+   * - Id
+     - id
+     - "string"
+   * - MailAddress.AddressLine1
+     - info.addresses.items.address.addressLine
+     - "string"
 
 
 Powerofficego Customers to Wix Members
@@ -147,8 +159,14 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - FirstName
      - info.name.first
      - "string"
+   * - Id
+     - id
+     - "string"
    * - LastName
      - info.name.last
+     - "string"
+   * - MailAddress.Address1
+     - info.addresses.items.address.addressLine
      - "string"
    * - PhoneNumber
      - info.phones
@@ -281,6 +299,9 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - Powerofficego Contactperson Property
      - Wix Contacts Property
      - Wix Data Type
+   * - address1
+     - info.addresses.items.address.addressLine
+     - "string"
    * - emailAddress
      - info.emails
      - "string"
@@ -289,6 +310,9 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
    * - firstName
      - info.name.first
+     - "string"
+   * - id
+     - id
      - "string"
    * - lastName
      - info.name.last
@@ -386,5 +410,11 @@ The following properties are synchronized between a Powerofficego Suppliers pers
      - Wix Data Type
    * - FirstName
      - info.name.first
+     - "string"
+   * - Id
+     - id
+     - "string"
+   * - MailAddress.AddressLine1
+     - info.addresses.items.address.addressLine
      - "string"
 
