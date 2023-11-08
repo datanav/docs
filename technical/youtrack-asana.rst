@@ -2,7 +2,7 @@
 YouTrack to Asana Dataflow
 ==========================
 
-Generated: 2023-11-08 13:15:06
+Generated: 2023-11-08 13:15:29
 
 Introduction.
 ------------
@@ -13,7 +13,7 @@ YouTrack Teams to Asana Teams
 -----------------------------
 Before any synchronization can take place, a link between a YouTrack Teams and a Asana Teams must be established.
 
-A new Asana Teams will be created from a YouTrack Teams if it is connected to a YouTrack Projects that is synchronized into Asana.
+A new Asana Teams will be created from a YouTrack Teams if it is connected to a YouTrack Projects, or Projectroles that is synchronized into Asana.
 
 Once a link between a YouTrack Teams and a Asana Teams is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -31,7 +31,7 @@ YouTrack Workspaces to Asana Workspaces
 ---------------------------------------
 Before any synchronization can take place, a link between a YouTrack Workspaces and a Asana Workspaces must be established.
 
-A new Asana Workspaces will be created from a YouTrack Workspaces if it is connected to a YouTrack Tasks, or Projects that is synchronized into Asana.
+A new Asana Workspaces will be created from a YouTrack Workspaces if it is connected to a YouTrack Tasks, Projects, Workitems, or Projectroles that is synchronized into Asana.
 
 Once a link between a YouTrack Workspaces and a Asana Workspaces is established, it will keep in sync between the two systems, regardless of where it is edited.
 
