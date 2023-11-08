@@ -2,7 +2,7 @@
 SuperOffice to YouTrack Dataflow
 ================================
 
-Generated: 2023-11-08 13:13:37
+Generated: 2023-11-08 13:13:50
 
 Introduction.
 ------------
@@ -23,4 +23,16 @@ The following properties are synchronized between a SuperOffice Project and a Yo
    * - SuperOffice Project Property
      - YouTrack Projects Property
      - YouTrack Data Type
+   * - Associate.AssociateId
+     - owner.gid
+     - "string"
+   * - EndDate
+     - due_on
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - NextMilestoneDate
+     - start_on
+     - "string"
 
