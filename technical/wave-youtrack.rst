@@ -2,7 +2,7 @@
 Wave Financial to YouTrack Dataflow
 ===================================
 
-Generated: 2023-11-08 14:20:32
+Generated: 2023-11-08 14:31:45
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Wave Customer and a YouTrack
    * - Wave Customer Property
      - YouTrack Usergroups Property
      - YouTrack Data Type
+   * - name
+     - name
+     - "string"
 
 
 Wave Customer to YouTrack Workitems
@@ -61,6 +64,9 @@ The following properties are synchronized between a Wave Vendor and a YouTrack U
    * - Wave Vendor Property
      - YouTrack Usergroups Property
      - YouTrack Data Type
+   * - name
+     - name
+     - "string"
 
 
 Wave Vendor to YouTrack Workitems
