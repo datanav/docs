@@ -58,4 +58,4 @@ jobs:
           acrName: sesam
           containerAppName: docs
           resourceGroup: sesam-container-apps
-          imageToDeploy: sesam/docs:latest
+          imageToDeploy: sesam.azurecr.io/sesam/docs:latest
