@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-11-07 15:54:25
+Generated: 2023-11-08 08:34:49
 
 Introduction.
 ------------
@@ -69,6 +69,12 @@ The following properties are synchronized between a Tripletex Employee and a Wix
      - Wix Data Type
    * - address.addressLine1
      - info.addresses.items.address.addressLine
+     - "string"
+   * - address.addressLine2
+     - info.addresses.items.address.addressLine2
+     - "string"
+   * - address.city
+     - info.addresses.items.address.city
      - "string"
    * - email
      - info.emails
@@ -141,14 +147,32 @@ The following properties are synchronized between a Tripletex Customer and a Wix
    * - deliveryAddress.addressLine1
      - info.addresses.items.address.addressLine
      - "string"
+   * - deliveryAddress.addressLine2
+     - info.addresses.items.address.addressLine2
+     - "string"
+   * - deliveryAddress.city
+     - info.addresses.items.address.city
+     - "string"
    * - id
      - id
      - "string"
    * - physicalAddress.addressLine1
      - info.addresses.items.address.addressLine
      - "string"
+   * - physicalAddress.addressLine2
+     - info.addresses.items.address.addressLine2
+     - "string"
+   * - physicalAddress.city
+     - info.addresses.items.address.city
+     - "string"
    * - postalAddress.addressLine1
      - info.addresses.items.address.addressLine
+     - "string"
+   * - postalAddress.addressLine2
+     - info.addresses.items.address.addressLine2
+     - "string"
+   * - postalAddress.city
+     - info.addresses.items.address.city
      - "string"
 
 
