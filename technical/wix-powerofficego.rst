@@ -2,7 +2,7 @@
 Wix.com to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-10-24 12:12:14
+Generated: 2023-11-08 09:09:26
 
 Introduction.
 ------------
@@ -54,6 +54,9 @@ The following properties are synchronized between a Wix.com Contacts and a Power
    * - Wix.com Contacts Property
      - PowerOfficeGo Customers person Property
      - PowerOfficeGo Data Type
+   * - info.addresses.items.address.country
+     - MailAddress.CountryCode
+     - "string"
    * - info.name.first
      - FirstName
      - "string"
