@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2023-11-08 08:37:41
+Generated: 2023-11-08 08:37:48
 
 Introduction.
 ------------
@@ -126,6 +126,9 @@ The following properties are synchronized between a HubSpot Company and a Wix Co
      - "string"
    * - properties.city
      - info.addresses.items.address.city
+     - "string"
+   * - properties.zip
+     - info.addresses.items.address.postalCode
      - "string"
 
 
