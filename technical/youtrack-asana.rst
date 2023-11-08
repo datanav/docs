@@ -2,7 +2,7 @@
 YouTrack to Asana Dataflow
 ==========================
 
-Generated: 2023-11-08 13:13:50
+Generated: 2023-11-08 13:14:21
 
 Introduction.
 ------------
@@ -64,6 +64,9 @@ The following properties are synchronized between a YouTrack Projects and a Asan
      - "string"
    * - owner.gid
      - owner.gid
+     - "string"
+   * - ringId
+     - completed_at
      - "string"
    * - start_on
      - start_on
