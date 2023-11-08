@@ -2,7 +2,7 @@
 Freshteam to Wix Dataflow
 =========================
 
-Generated: 2023-11-07 15:54:25
+Generated: 2023-11-08 08:34:49
 
 Introduction.
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a Freshteam Employee and a Wix
    * - Freshteam Employee Property
      - Wix Contacts Property
      - Wix Data Type
+   * - address.city
+     - info.addresses.items.address.city
+     - "string"
+   * - address.street
+     - info.addresses.items.address.addressLine
+     - "string"
+   * - communication_address.communication_city
+     - info.addresses.items.address.city
+     - "string"
+   * - communication_address.communication_street
+     - info.addresses.items.address.addressLine
+     - "string"
    * - first_name
      - info.name.first
      - "string"
