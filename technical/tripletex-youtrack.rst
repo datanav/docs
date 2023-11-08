@@ -2,12 +2,44 @@
 Tripletex to YouTrack Dataflow
 ==============================
 
-Generated: 2023-11-08 13:22:55
+Generated: 2023-11-08 13:23:30
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to YouTrack. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Customer to YouTrack Workitems
+----------------------------------------
+Every Tripletex Customer will be synchronized with a YouTrack Workitems.
+
+Once a link between a Tripletex Customer and a YouTrack Workitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a YouTrack Workitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - YouTrack Workitems Property
+     - YouTrack Data Type
+
+
+Tripletex Department to YouTrack Workitems
+------------------------------------------
+Every Tripletex Department will be synchronized with a YouTrack Workitems.
+
+Once a link between a Tripletex Department and a YouTrack Workitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a YouTrack Workitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - YouTrack Workitems Property
+     - YouTrack Data Type
+
 
 Tripletex Project to YouTrack Organizationroles
 -----------------------------------------------
@@ -28,30 +60,18 @@ The following properties are synchronized between a Tripletex Project and a YouT
      - "string"
 
 
-Tripletex Project to YouTrack Projects
---------------------------------------
-Every Tripletex Project will be synchronized with a YouTrack Projects.
+Tripletex Supplier to YouTrack Workitems
+----------------------------------------
+Every Tripletex Supplier will be synchronized with a YouTrack Workitems.
 
-Once a link between a Tripletex Project and a YouTrack Projects is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Supplier and a YouTrack Workitems is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Project and a YouTrack Projects:
+The following properties are synchronized between a Tripletex Supplier and a YouTrack Workitems:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Project Property
-     - YouTrack Projects Property
+   * - Tripletex Supplier Property
+     - YouTrack Workitems Property
      - YouTrack Data Type
-   * - endDate
-     - due_on
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - projectManager.id
-     - owner.gid
-     - "string"
-   * - startDate
-     - start_on
-     - "string"
 
