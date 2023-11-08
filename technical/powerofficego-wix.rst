@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-11-08 08:37:48
+Generated: 2023-11-08 09:07:26
 
 Introduction.
 ------------
@@ -74,6 +74,9 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - MailAddress.City
      - info.addresses.items.address.city
      - "string"
+   * - MailAddress.CountryCode
+     - info.addresses.items.address.country
+     - "string"
    * - MailAddress.ZipCode
      - info.addresses.items.address.postalCode
      - "string"
@@ -133,6 +136,9 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - MailAddress.City
      - info.addresses.items.address.city
+     - "string"
+   * - MailAddress.CountryCode
+     - info.addresses.items.address.country
      - "string"
    * - MailAddress.ZipCode
      - info.addresses.items.address.postalCode
@@ -350,6 +356,9 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - lastName
      - info.name.last
      - "string"
+   * - residenceCountryCode
+     - info.addresses.items.address.country
+     - "string"
    * - zipCode
      - info.addresses.items.address.postalCode
      - "string"
@@ -458,6 +467,9 @@ The following properties are synchronized between a Powerofficego Suppliers pers
      - "string"
    * - MailAddress.City
      - info.addresses.items.address.city
+     - "string"
+   * - MailAddress.CountryCode
+     - info.addresses.items.address.country
      - "string"
    * - MailAddress.ZipCode
      - info.addresses.items.address.postalCode
