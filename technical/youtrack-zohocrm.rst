@@ -2,7 +2,7 @@
 YouTrack to ZohoCRM Dataflow
 ============================
 
-Generated: 2023-11-08 13:26:28
+Generated: 2023-11-08 13:26:51
 
 Introduction.
 ------------
@@ -23,4 +23,10 @@ The following properties are synchronized between a YouTrack Workitems and a Zoh
    * - YouTrack Workitems Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - date
+     - Created_Time
+     - "string"
+   * - updated
+     - Account_Name
+     - "string"
 
