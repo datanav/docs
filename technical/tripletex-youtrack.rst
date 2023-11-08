@@ -2,12 +2,28 @@
 Tripletex to YouTrack Dataflow
 ==============================
 
-Generated: 2023-11-08 14:15:37
+Generated: 2023-11-08 14:20:32
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to YouTrack. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Customer to YouTrack Usergroups
+-----------------------------------------
+Every Tripletex Customer will be synchronized with a YouTrack Usergroups.
+
+Once a link between a Tripletex Customer and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a YouTrack Usergroups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - YouTrack Usergroups Property
+     - YouTrack Data Type
+
 
 Tripletex Customer to YouTrack Workitems
 ----------------------------------------
@@ -41,6 +57,22 @@ The following properties are synchronized between a Tripletex Customercategory a
 
    * - Tripletex Customercategory Property
      - YouTrack Organizationroles Property
+     - YouTrack Data Type
+
+
+Tripletex Department to YouTrack Usergroups
+-------------------------------------------
+Every Tripletex Department will be synchronized with a YouTrack Usergroups.
+
+Once a link between a Tripletex Department and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a YouTrack Usergroups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - YouTrack Usergroups Property
      - YouTrack Data Type
 
 
@@ -149,6 +181,22 @@ The following properties are synchronized between a Tripletex Projectcategory an
 
    * - Tripletex Projectcategory Property
      - YouTrack Organizationroles Property
+     - YouTrack Data Type
+
+
+Tripletex Supplier to YouTrack Usergroups
+-----------------------------------------
+Every Tripletex Supplier will be synchronized with a YouTrack Usergroups.
+
+Once a link between a Tripletex Supplier and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Supplier and a YouTrack Usergroups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Supplier Property
+     - YouTrack Usergroups Property
      - YouTrack Data Type
 
 
