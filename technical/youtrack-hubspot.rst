@@ -2,7 +2,7 @@
 YouTrack to HubSpot Dataflow
 ============================
 
-Generated: 2023-11-08 13:25:29
+Generated: 2023-11-08 13:25:49
 
 Introduction.
 ------------
@@ -23,4 +23,10 @@ The following properties are synchronized between a YouTrack Workitems and a Hub
    * - YouTrack Workitems Property
      - HubSpot Company Property
      - HubSpot Data Type
+   * - date
+     - properties.description
+     - "string"
+   * - updated
+     - properties.name
+     - "string"
 
