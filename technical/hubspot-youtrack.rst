@@ -2,7 +2,7 @@
 HubSpot to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-08 14:14:27
+Generated: 2023-11-08 14:15:32
 
 Introduction.
 ------------
@@ -95,6 +95,86 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
      - YouTrack Data Type
 
 
+HubSpot Lineitemquoteassociationtype to YouTrack Organizationroles
+------------------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a YouTrack Organizationroles.
+
+Once a link between a HubSpot Lineitemquoteassociationtype and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a YouTrack Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociationtype Property
+     - YouTrack Organizationroles Property
+     - YouTrack Data Type
+
+
+HubSpot Quotecompanyassociationtype to YouTrack Organizationroles
+-----------------------------------------------------------------
+Every HubSpot Quotecompanyassociationtype will be synchronized with a YouTrack Organizationroles.
+
+Once a link between a HubSpot Quotecompanyassociationtype and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecompanyassociationtype and a YouTrack Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecompanyassociationtype Property
+     - YouTrack Organizationroles Property
+     - YouTrack Data Type
+
+
+HubSpot Quotecontactassociationtype to YouTrack Organizationroles
+-----------------------------------------------------------------
+Every HubSpot Quotecontactassociationtype will be synchronized with a YouTrack Organizationroles.
+
+Once a link between a HubSpot Quotecontactassociationtype and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecontactassociationtype and a YouTrack Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecontactassociationtype Property
+     - YouTrack Organizationroles Property
+     - YouTrack Data Type
+
+
+HubSpot Quotedealassociationtype to YouTrack Organizationroles
+--------------------------------------------------------------
+Every HubSpot Quotedealassociationtype will be synchronized with a YouTrack Organizationroles.
+
+Once a link between a HubSpot Quotedealassociationtype and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotedealassociationtype and a YouTrack Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotedealassociationtype Property
+     - YouTrack Organizationroles Property
+     - YouTrack Data Type
+
+
+HubSpot Quotequotetemplateassociationtype to YouTrack Organizationroles
+-----------------------------------------------------------------------
+Every HubSpot Quotequotetemplateassociationtype will be synchronized with a YouTrack Organizationroles.
+
+Once a link between a HubSpot Quotequotetemplateassociationtype and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotequotetemplateassociationtype and a YouTrack Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotequotetemplateassociationtype Property
+     - YouTrack Organizationroles Property
+     - YouTrack Data Type
+
+
 HubSpot Ticket to YouTrack Organizationroles
 --------------------------------------------
 Every HubSpot Ticket will be synchronized with a YouTrack Organizationroles.
@@ -107,6 +187,38 @@ The following properties are synchronized between a HubSpot Ticket and a YouTrac
    :header-rows: 1
 
    * - HubSpot Ticket Property
+     - YouTrack Organizationroles Property
+     - YouTrack Data Type
+
+
+HubSpot Ticket to YouTrack Usergroups
+-------------------------------------
+Every HubSpot Ticket will be synchronized with a YouTrack Usergroups.
+
+Once a link between a HubSpot Ticket and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Ticket and a YouTrack Usergroups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Ticket Property
+     - YouTrack Usergroups Property
+     - YouTrack Data Type
+
+
+HubSpot Ticketcompanyassociationtype to YouTrack Organizationroles
+------------------------------------------------------------------
+Every HubSpot Ticketcompanyassociationtype will be synchronized with a YouTrack Organizationroles.
+
+Once a link between a HubSpot Ticketcompanyassociationtype and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Ticketcompanyassociationtype and a YouTrack Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Ticketcompanyassociationtype Property
      - YouTrack Organizationroles Property
      - YouTrack Data Type
 
