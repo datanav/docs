@@ -2,7 +2,7 @@
 YouTrack to Asana Dataflow
 ==========================
 
-Generated: 2023-11-08 13:13:37
+Generated: 2023-11-08 13:13:50
 
 Introduction.
 ------------
@@ -23,6 +23,57 @@ The following properties are synchronized between a YouTrack Projects and a Asan
    * - YouTrack Projects Property
      - Asana Projects Property
      - Asana Data Type
+   * - completed
+     - completed
+     - "string"
+   * - completed
+     - current_status.gid
+     - "string"
+   * - completed
+     - current_status.title
+     - "string"
+   * - completed_at
+     - completed_at
+     - "string"
+   * - completed_by.gid
+     - completed_by.gid
+     - "string"
+   * - current_status.gid
+     - completed
+     - "string"
+   * - current_status.gid
+     - current_status.gid
+     - "string"
+   * - current_status.text
+     - current_status.text
+     - "string"
+   * - current_status.title
+     - completed
+     - "string"
+   * - current_status.title
+     - current_status.title
+     - "string"
+   * - due_on
+     - due_on
+     - "string"
+   * - members.gid
+     - members.gid
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - owner.gid
+     - owner.gid
+     - "string"
+   * - start_on
+     - start_on
+     - "string"
+   * - team.gid
+     - team.gid
+     - "string"
+   * - workspace.gid
+     - workspace.gid
+     - "string"
 
 
 YouTrack Tasks to Asana Tasks
@@ -39,4 +90,31 @@ The following properties are synchronized between a YouTrack Tasks and a Asana T
    * - YouTrack Tasks Property
      - Asana Tasks Property
      - Asana Data Type
+   * - assignee.gid
+     - assignee.gid
+     - "string"
+   * - completed
+     - completed
+     - "string"
+   * - completed_at
+     - completed_at
+     - "string"
+   * - due_on
+     - due_on
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - parent
+     - parent
+     - "string"
+   * - projects.gid
+     - projects.gid
+     - "string"
+   * - start_at
+     - start_at
+     - "string"
+   * - workspace.gid
+     - workspace.gid
+     - "string"
 
