@@ -2,7 +2,7 @@
 Wix.com to Tilores Dataflow
 ===========================
 
-Generated: 2023-11-07 15:54:07
+Generated: 2023-11-08 08:34:30
 
 Introduction.
 ------------
@@ -25,6 +25,9 @@ The following properties are synchronized between a Wix.com Contacts and a Tilor
      - Tilores Data Type
    * - id
      - id
+     - "string"
+   * - info.addresses.items.address.addressLine
+     - street
      - "string"
    * - info.emails
      - email
