@@ -2,7 +2,7 @@
 SuperOffice to YouTrack Dataflow
 ================================
 
-Generated: 2023-11-08 13:22:55
+Generated: 2023-11-08 13:23:30
 
 Introduction.
 ------------
@@ -25,33 +25,5 @@ The following properties are synchronized between a SuperOffice Contact and a Yo
      - YouTrack Data Type
    * - Name
      - updated
-     - "string"
-
-
-SuperOffice Project to YouTrack Projects
-----------------------------------------
-Every SuperOffice Project will be synchronized with a YouTrack Projects.
-
-Once a link between a SuperOffice Project and a YouTrack Projects is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Project and a YouTrack Projects:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Project Property
-     - YouTrack Projects Property
-     - YouTrack Data Type
-   * - Associate.AssociateId
-     - owner.gid
-     - "string"
-   * - EndDate
-     - due_on
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - NextMilestoneDate
-     - start_on
      - "string"
 
