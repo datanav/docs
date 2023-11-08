@@ -2,7 +2,7 @@
 HubSpot to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-08 13:21:30
+Generated: 2023-11-08 13:21:41
 
 Introduction.
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a HubSpot Company and a YouTra
    * - HubSpot Company Property
      - YouTrack Workitems Property
      - YouTrack Data Type
+   * - properties.description
+     - date
+     - "string"
+   * - properties.name
+     - updated
+     - "string"
 
 
 HubSpot Ticket to YouTrack Organizationroles
