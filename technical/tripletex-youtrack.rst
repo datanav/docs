@@ -2,7 +2,7 @@
 Tripletex to YouTrack Dataflow
 ==============================
 
-Generated: 2023-11-08 14:15:32
+Generated: 2023-11-08 14:15:37
 
 Introduction.
 ------------
@@ -128,6 +128,12 @@ The following properties are synchronized between a Tripletex Project and a YouT
    * - Tripletex Project Property
      - YouTrack Usergroups Property
      - YouTrack Data Type
+   * - endDate
+     - name
+     - "string"
+   * - name
+     - users.id
+     - "string"
 
 
 Tripletex Projectcategory to YouTrack Organizationroles
