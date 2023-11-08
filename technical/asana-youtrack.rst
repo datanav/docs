@@ -2,7 +2,7 @@
 Asana to YouTrack Dataflow
 ==========================
 
-Generated: 2023-11-08 14:13:35
+Generated: 2023-11-08 14:13:37
 
 Introduction.
 ------------
@@ -45,6 +45,12 @@ The following properties are synchronized between a Asana Projects and a YouTrac
    * - Asana Projects Property
      - YouTrack Usergroups Property
      - YouTrack Data Type
+   * - due_on
+     - name
+     - "string"
+   * - name
+     - users.id
+     - "string"
 
 
 Asana Tasks to YouTrack Organizationroles
@@ -80,6 +86,12 @@ The following properties are synchronized between a Asana Tasks and a YouTrack U
    * - Asana Tasks Property
      - YouTrack Usergroups Property
      - YouTrack Data Type
+   * - due_on
+     - name
+     - "string"
+   * - name
+     - users.id
+     - "string"
 
 
 Asana Teams to YouTrack Workitems
