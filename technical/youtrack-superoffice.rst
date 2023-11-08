@@ -2,7 +2,7 @@
 YouTrack to SuperOffice Dataflow
 ================================
 
-Generated: 2023-11-08 13:25:29
+Generated: 2023-11-08 13:25:49
 
 Introduction.
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a YouTrack Workitems and a Sup
    * - YouTrack Workitems Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
+   * - updated
+     - Name
+     - "string"
 
