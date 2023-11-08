@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2023-11-08 08:34:49
+Generated: 2023-11-08 08:37:48
 
 Introduction.
 ------------
@@ -42,6 +42,9 @@ The following properties are synchronized between a Wave Customer person and a W
    * - address.city
      - info.addresses.items.address.city
      - "string"
+   * - address.postalCode
+     - info.addresses.items.address.postalCode
+     - "string"
    * - id
      - id
      - "string"
@@ -53,6 +56,9 @@ The following properties are synchronized between a Wave Customer person and a W
      - "string"
    * - shippingDetails.address.city
      - info.addresses.items.address.city
+     - "string"
+   * - shippingDetails.address.postalCode
+     - info.addresses.items.address.postalCode
      - "string"
 
 
@@ -148,6 +154,9 @@ The following properties are synchronized between a Wave Vendor and a Wix Contac
    * - address.city
      - info.addresses.items.address.city
      - "string"
+   * - address.postalCode
+     - info.addresses.items.address.postalCode
+     - "string"
    * - email
      - info.emails
      - "string"
@@ -225,6 +234,9 @@ The following properties are synchronized between a Wave Business and a Wix Cont
    * - address.city
      - info.addresses.items.address.city
      - "string"
+   * - address.postalCode
+     - info.addresses.items.address.postalCode
+     - "string"
    * - id
      - id
      - "string"
@@ -268,6 +280,9 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
    * - address.city
      - info.addresses.items.address.city
      - "string"
+   * - address.postalCode
+     - info.addresses.items.address.postalCode
+     - "string"
    * - email
      - info.emails
      - "string"
@@ -297,6 +312,9 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
      - "string"
    * - shippingDetails.address.city
      - info.addresses.items.address.city
+     - "string"
+   * - shippingDetails.address.postalCode
+     - info.addresses.items.address.postalCode
      - "string"
 
 
