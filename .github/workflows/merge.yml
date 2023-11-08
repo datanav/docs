@@ -30,14 +30,14 @@ jobs:
         env:
           DOCKER_BUILD_PUSH: 1                  
           VIRTUAL_ENV: venv
-          IMAGE_NAME: sesam/docs
         run: |
           export TAG=${TAG-latest}
+          export IMAGE_NAME=sesam/docs
           export IMAGE_NAME_ACR=sesam.azurecr.io/$IMAGE_NAME
           make html
           make docker
           docker tag $IMAGE_NAME:$TAG $IMAGE_NAME_ACR:$TAG
-          echo "IMAGE_NAME_ACR=$IMAGE_NAME_ACR:$TAG" >> "$GITHUB_ENV"
+          docker tag $IMAGE_NAME:$TAG $IMAGE_NAME_ACR:${{github.sha}}
       - name: ACR login
         uses: azure/docker-login@v1
         with:
@@ -46,8 +46,13 @@ jobs:
           password: ${{ secrets.ACR_PASSWORD }}
       - name: Push ACR image
         run: |
-            echo "Pushing $IMAGE_NAME_ACR"
-            docker push $IMAGE_NAME_ACR
+            export TAG=${TAG-latest}
+            export IMAGE_NAME=sesam/docs
+            export IMAGE_NAME_ACR=sesam.azurecr.io/$IMAGE_NAME
+            echo "Pushing $IMAGE_NAME_ACR:$TAG"
+            docker push $IMAGE_NAME_ACR:$TAG
+            echo "Pushing $IMAGE_NAME_ACR:${{github.sha}}"
+            docker push $IMAGE_NAME_ACR:${{github.sha}}
       - name: Log in to Azure
         uses: azure/login@v1
         with:
@@ -58,4 +63,4 @@ jobs:
           acrName: sesam
           containerAppName: docs
           resourceGroup: sesam-container-apps
-          imageToDeploy: sesam.azurecr.io/sesam/docs:latest
+          imageToDeploy: sesam.azurecr.io/sesam/docs:${{github.sha}}
