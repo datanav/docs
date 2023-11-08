@@ -2,7 +2,7 @@
 Asana to YouTrack Dataflow
 ==========================
 
-Generated: 2023-11-08 14:31:35
+Generated: 2023-11-08 14:43:36
 
 Introduction.
 ------------
@@ -170,24 +170,5 @@ The following properties are synchronized between a Asana Workspaces and a YouTr
      - YouTrack Data Type
    * - name
      - updated
-     - "string"
-
-
-Asana Tasks to YouTrack Workitems
----------------------------------
-Every Asana Tasks will be synchronized with a YouTrack Workitems.
-
-Once a link between a Asana Tasks and a YouTrack Workitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Asana Tasks and a YouTrack Workitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Asana Tasks Property
-     - YouTrack Workitems Property
-     - YouTrack Data Type
-   * - workspace.gid
-     - attributes.value
      - "string"
 
