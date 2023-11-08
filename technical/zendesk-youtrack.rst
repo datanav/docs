@@ -2,7 +2,7 @@
 Zendesk to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-08 13:27:28
+Generated: 2023-11-08 13:27:52
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Zendesk Organizations and a 
    * - Zendesk Organizations Property
      - YouTrack Workitems Property
      - YouTrack Data Type
+   * - name
+     - updated
+     - "string"
 
 
 Zendesk Ticketcomments to YouTrack Organizationroles
@@ -55,4 +58,7 @@ The following properties are synchronized between a Zendesk Tickets and a YouTra
    * - Zendesk Tickets Property
      - YouTrack Organizationroles Property
      - YouTrack Data Type
+   * - due_at
+     - id
+     - "string"
 
