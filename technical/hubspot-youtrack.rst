@@ -2,7 +2,7 @@
 HubSpot to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-08 13:21:41
+Generated: 2023-11-08 14:13:35
 
 Introduction.
 ------------
@@ -29,6 +29,22 @@ The following properties are synchronized between a HubSpot Company and a YouTra
    * - properties.name
      - updated
      - "string"
+
+
+HubSpot Contactcompanyassociationtype to YouTrack Organizationroles
+-------------------------------------------------------------------
+Every HubSpot Contactcompanyassociationtype will be synchronized with a YouTrack Organizationroles.
+
+Once a link between a HubSpot Contactcompanyassociationtype and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contactcompanyassociationtype and a YouTrack Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contactcompanyassociationtype Property
+     - YouTrack Organizationroles Property
+     - YouTrack Data Type
 
 
 HubSpot Ticket to YouTrack Organizationroles
