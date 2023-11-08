@@ -2,7 +2,7 @@
 Tripletex to YouTrack Dataflow
 ==============================
 
-Generated: 2023-11-08 13:24:03
+Generated: 2023-11-08 14:15:32
 
 Introduction.
 ------------
@@ -28,6 +28,22 @@ The following properties are synchronized between a Tripletex Customer and a You
      - "string"
 
 
+Tripletex Customercategory to YouTrack Organizationroles
+--------------------------------------------------------
+Every Tripletex Customercategory will be synchronized with a YouTrack Organizationroles.
+
+Once a link between a Tripletex Customercategory and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customercategory and a YouTrack Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customercategory Property
+     - YouTrack Organizationroles Property
+     - YouTrack Data Type
+
+
 Tripletex Department to YouTrack Workitems
 ------------------------------------------
 Every Tripletex Department will be synchronized with a YouTrack Workitems.
@@ -47,6 +63,38 @@ The following properties are synchronized between a Tripletex Department and a Y
      - "string"
 
 
+Tripletex Productgroup to YouTrack Organizationroles
+----------------------------------------------------
+Every Tripletex Productgroup will be synchronized with a YouTrack Organizationroles.
+
+Once a link between a Tripletex Productgroup and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Productgroup and a YouTrack Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Productgroup Property
+     - YouTrack Organizationroles Property
+     - YouTrack Data Type
+
+
+Tripletex Productunit to YouTrack Organizationroles
+---------------------------------------------------
+Every Tripletex Productunit will be synchronized with a YouTrack Organizationroles.
+
+Once a link between a Tripletex Productunit and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Productunit and a YouTrack Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Productunit Property
+     - YouTrack Organizationroles Property
+     - YouTrack Data Type
+
+
 Tripletex Project to YouTrack Organizationroles
 -----------------------------------------------
 Every Tripletex Project will be synchronized with a YouTrack Organizationroles.
@@ -64,6 +112,38 @@ The following properties are synchronized between a Tripletex Project and a YouT
    * - endDate
      - id
      - "string"
+
+
+Tripletex Project to YouTrack Usergroups
+----------------------------------------
+Every Tripletex Project will be synchronized with a YouTrack Usergroups.
+
+Once a link between a Tripletex Project and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Project and a YouTrack Usergroups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Project Property
+     - YouTrack Usergroups Property
+     - YouTrack Data Type
+
+
+Tripletex Projectcategory to YouTrack Organizationroles
+-------------------------------------------------------
+Every Tripletex Projectcategory will be synchronized with a YouTrack Organizationroles.
+
+Once a link between a Tripletex Projectcategory and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Projectcategory and a YouTrack Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Projectcategory Property
+     - YouTrack Organizationroles Property
+     - YouTrack Data Type
 
 
 Tripletex Supplier to YouTrack Workitems
