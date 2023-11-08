@@ -2,7 +2,7 @@
 Powerofficego to YouTrack Dataflow
 ==================================
 
-Generated: 2023-11-08 13:21:41
+Generated: 2023-11-08 13:22:29
 
 Introduction.
 ------------
@@ -26,4 +26,20 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Name
      - updated
      - "string"
+
+
+Powerofficego Departments to YouTrack Workitems
+-----------------------------------------------
+Every Powerofficego Departments will be synchronized with a YouTrack Workitems.
+
+Once a link between a Powerofficego Departments and a YouTrack Workitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Departments and a YouTrack Workitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Departments Property
+     - YouTrack Workitems Property
+     - YouTrack Data Type
 
