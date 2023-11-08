@@ -270,6 +270,10 @@ DTL Expression Functions
        :ref:`is-float <is_float_dtl_function>` ·
        :ref:`is-integer <is_integer_dtl_function>`
 
+   * - Phonenumbers
+     - :ref:`phonenumber-parse <phonenumber_parse_dtl_function>` ·
+       :ref:`phonenumber-format <phonenumber_format_dtl_function>` ·
+
    * - Sets
      - :ref:`difference <difference_dtl_function>` ·
        :ref:`intersection <intersection_dtl_function>` ·
