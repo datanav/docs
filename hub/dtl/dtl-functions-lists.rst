@@ -230,6 +230,41 @@ Lists
        |
        | Returns a list that contains the sisters and brothers.
 
+.. _group_dtl_function:
+
+``group``
+------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   KEY_FUNCTION(function-expression(1}
+       |   VALUE_FUNCTION(function-expression(1}
+       |   VALUES(value-expression{1})
+       |
+       | Groups the items in VALUES by executing the KEY_FUNCTION and
+         VALUE_FUNCTON functions on each item to generate a group key and a grouped value.
+         Returns a list of [group-key, grouped-values] tuples.
+     - | ``["group", ["first", "_."], ["nth", 1, "_."],``
+       |   ``["list", ["list", "Adresse1", "A"], ["list", "Adresse2", "B"], ["list", "Adresse2", "C"]]]``
+       |
+       | Returns ``[["Adresse1", ["A"]], ["Adresse2", ["B", "C"]]]``.
+       |
+       | ``["group", ["upper", "_."], ["lower", "_."],``
+       |   ``"Hello"]``
+       |
+       | Returns ``[["HELLO", ["hello"]]]``
+       |
+       | ``["dict", ["group", ["first", "_."], ["nth", 1, "_."],``
+       |   ``["list", ["list", "Adresse1", "A"], ["list", "Adresse2", "B"], ["list", "Adresse2", "C"]]]]``
+       |
+       | Returns ``{"Adresse1": ["A"], "Adresse2": ["B", "C"]}``.
+
 .. _group_by_dtl_function:
 
 ``group-by``
@@ -290,41 +325,6 @@ Lists
        |
        | Returns ``{"A": ["a"], "B": ["b"]}``. Same as above, but we specify
          a STRING_FUNCTION function that creates string keys.
-
-.. _group_dtl_function:
-
-``group``
-------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   KEY_FUNCTION(function-expression(1}
-       |   VALUE_FUNCTION(function-expression(1}
-       |   VALUES(value-expression{1})
-       |
-       | Groups the items in VALUES by executing the KEY_FUNCTION and
-         VALUE_FUNCTON functions on each item to generate a group key and a grouped value.
-         Returns a list of [group-key, grouped-values] tuples.
-     - | ``["group", ["first", "_."], ["nth", 1, "_."],``
-       |   ``["list", ["list", "Adresse1", "A"], ["list", "Adresse2", "B"], ["list", "Adresse2", "C"]]]``
-       |
-       | Returns ``[["Adresse1", ["A"]], ["Adresse2", ["B", "C"]]]``.
-       |
-       | ``["group", ["upper", "_."], ["lower", "_."],``
-       |   ``"Hello"]``
-       |
-       | Returns ``[["HELLO", ["hello"]]]``
-       |
-       | ``["dict", ["group", ["first", "_."], ["nth", 1, "_."],``
-       |   ``["list", ["list", "Adresse1", "A"], ["list", "Adresse2", "B"], ["list", "Adresse2", "C"]]]]``
-       |
-       | Returns ``{"Adresse1": ["A"], "Adresse2": ["B", "C"]}``.
 
 .. _in_dtl_function:
 
