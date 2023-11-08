@@ -2,7 +2,7 @@
 Businesscentral to YouTrack Dataflow
 ====================================
 
-Generated: 2023-11-08 13:19:27
+Generated: 2023-11-08 13:20:30
 
 Introduction.
 ------------
@@ -21,6 +21,22 @@ The following properties are synchronized between a Businesscentral Company and 
    :header-rows: 1
 
    * - Businesscentral Company Property
+     - YouTrack Workitems Property
+     - YouTrack Data Type
+
+
+Businesscentral Contact company to YouTrack Workitems
+-----------------------------------------------------
+Every Businesscentral Contact company will be synchronized with a YouTrack Workitems.
+
+Once a link between a Businesscentral Contact company and a YouTrack Workitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Contact company and a YouTrack Workitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Contact company Property
      - YouTrack Workitems Property
      - YouTrack Data Type
 
