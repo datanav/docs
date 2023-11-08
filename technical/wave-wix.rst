@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2023-11-07 15:54:25
+Generated: 2023-11-08 08:34:49
 
 Introduction.
 ------------
@@ -36,11 +36,23 @@ The following properties are synchronized between a Wave Customer person and a W
    * - address.addressLine1
      - info.addresses.items.address.addressLine
      - "string"
+   * - address.addressLine2
+     - info.addresses.items.address.addressLine2
+     - "string"
+   * - address.city
+     - info.addresses.items.address.city
+     - "string"
    * - id
      - id
      - "string"
    * - shippingDetails.address.addressLine1
      - info.addresses.items.address.addressLine
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - info.addresses.items.address.addressLine2
+     - "string"
+   * - shippingDetails.address.city
+     - info.addresses.items.address.city
      - "string"
 
 
@@ -130,6 +142,12 @@ The following properties are synchronized between a Wave Vendor and a Wix Contac
    * - address.addressLine1
      - info.addresses.items.address.addressLine
      - "string"
+   * - address.addressLine2
+     - info.addresses.items.address.addressLine2
+     - "string"
+   * - address.city
+     - info.addresses.items.address.city
+     - "string"
    * - email
      - info.emails
      - "string"
@@ -201,6 +219,12 @@ The following properties are synchronized between a Wave Business and a Wix Cont
    * - address.addressLine1
      - info.addresses.items.address.addressLine
      - "string"
+   * - address.addressLine2
+     - info.addresses.items.address.addressLine2
+     - "string"
+   * - address.city
+     - info.addresses.items.address.city
+     - "string"
    * - id
      - id
      - "string"
@@ -238,6 +262,12 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
    * - address.addressLine1
      - info.addresses.items.address.addressLine
      - "string"
+   * - address.addressLine2
+     - info.addresses.items.address.addressLine2
+     - "string"
+   * - address.city
+     - info.addresses.items.address.city
+     - "string"
    * - email
      - info.emails
      - "string"
@@ -261,6 +291,12 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
      - "string"
    * - shippingDetails.address.addressLine1
      - info.addresses.items.address.addressLine
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - info.addresses.items.address.addressLine2
+     - "string"
+   * - shippingDetails.address.city
+     - info.addresses.items.address.city
      - "string"
 
 
