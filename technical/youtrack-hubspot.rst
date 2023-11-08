@@ -2,7 +2,7 @@
 YouTrack to HubSpot Dataflow
 ============================
 
-Generated: 2023-11-08 14:20:32
+Generated: 2023-11-08 14:31:25
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a YouTrack Usergroups and a Hu
    * - YouTrack Usergroups Property
      - HubSpot Company Property
      - HubSpot Data Type
+   * - name
+     - properties.name
+     - "string"
 
 
 YouTrack Workitems to HubSpot Company
