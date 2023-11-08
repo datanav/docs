@@ -2,7 +2,7 @@
 Wix.com to HubSpot Dataflow
 ===========================
 
-Generated: 2023-10-24 12:05:14
+Generated: 2023-11-08 09:09:24
 
 Introduction.
 ------------
@@ -38,6 +38,12 @@ The following properties are synchronized between a Wix.com Contacts and a HubSp
    * - Wix.com Contacts Property
      - HubSpot Contact Property
      - HubSpot Data Type
+   * - info.addresses.items.address.countryFullname
+     - properties.country
+     - "string"
+   * - info.addresses.items.address.countryFullname
+     - properties.state
+     - "string"
    * - info.emails
      - properties.email
      - "string"
