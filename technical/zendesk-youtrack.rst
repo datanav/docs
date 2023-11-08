@@ -2,7 +2,7 @@
 Zendesk to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-08 13:27:52
+Generated: 2023-11-08 14:15:32
 
 Introduction.
 ------------
@@ -44,6 +44,22 @@ The following properties are synchronized between a Zendesk Ticketcomments and a
      - YouTrack Data Type
 
 
+Zendesk Ticketcomments to YouTrack Usergroups
+---------------------------------------------
+Every Zendesk Ticketcomments will be synchronized with a YouTrack Usergroups.
+
+Once a link between a Zendesk Ticketcomments and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Ticketcomments and a YouTrack Usergroups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Ticketcomments Property
+     - YouTrack Usergroups Property
+     - YouTrack Data Type
+
+
 Zendesk Tickets to YouTrack Organizationroles
 ---------------------------------------------
 Every Zendesk Tickets will be synchronized with a YouTrack Organizationroles.
@@ -61,4 +77,20 @@ The following properties are synchronized between a Zendesk Tickets and a YouTra
    * - due_at
      - id
      - "string"
+
+
+Zendesk Tickets to YouTrack Usergroups
+--------------------------------------
+Every Zendesk Tickets will be synchronized with a YouTrack Usergroups.
+
+Once a link between a Zendesk Tickets and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Tickets and a YouTrack Usergroups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Tickets Property
+     - YouTrack Usergroups Property
+     - YouTrack Data Type
 
