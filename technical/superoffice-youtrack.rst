@@ -2,7 +2,7 @@
 SuperOffice to YouTrack Dataflow
 ================================
 
-Generated: 2023-11-08 13:22:29
+Generated: 2023-11-08 13:22:55
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a SuperOffice Contact and a Yo
    * - SuperOffice Contact Property
      - YouTrack Workitems Property
      - YouTrack Data Type
+   * - Name
+     - updated
+     - "string"
 
 
 SuperOffice Project to YouTrack Projects
