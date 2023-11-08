@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-11-07 15:54:25
+Generated: 2023-11-08 08:34:49
 
 Introduction.
 ------------
@@ -68,6 +68,12 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - MailAddress.AddressLine1
      - info.addresses.items.address.addressLine
      - "string"
+   * - MailAddress.AddressLine2
+     - info.addresses.items.address.addressLine2
+     - "string"
+   * - MailAddress.City
+     - info.addresses.items.address.city
+     - "string"
 
 
 Powerofficego Customers person to Wix Members
@@ -119,6 +125,12 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - MailAddress.AddressLine1
      - info.addresses.items.address.addressLine
      - "string"
+   * - MailAddress.AddressLine2
+     - info.addresses.items.address.addressLine2
+     - "string"
+   * - MailAddress.City
+     - info.addresses.items.address.city
+     - "string"
 
 
 Powerofficego Customers to Wix Members
@@ -167,6 +179,12 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
    * - MailAddress.Address1
      - info.addresses.items.address.addressLine
+     - "string"
+   * - MailAddress.Address2
+     - info.addresses.items.address.addressLine2
+     - "string"
+   * - MailAddress.City
+     - info.addresses.items.address.city
      - "string"
    * - PhoneNumber
      - info.phones
@@ -302,6 +320,12 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - address1
      - info.addresses.items.address.addressLine
      - "string"
+   * - address2
+     - info.addresses.items.address.addressLine2
+     - "string"
+   * - city
+     - info.addresses.items.address.city
+     - "string"
    * - emailAddress
      - info.emails
      - "string"
@@ -416,5 +440,11 @@ The following properties are synchronized between a Powerofficego Suppliers pers
      - "string"
    * - MailAddress.AddressLine1
      - info.addresses.items.address.addressLine
+     - "string"
+   * - MailAddress.AddressLine2
+     - info.addresses.items.address.addressLine2
+     - "string"
+   * - MailAddress.City
+     - info.addresses.items.address.city
      - "string"
 
