@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-11-08 08:34:49
+Generated: 2023-11-08 08:37:48
 
 Introduction.
 ------------
@@ -74,6 +74,9 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - MailAddress.City
      - info.addresses.items.address.city
      - "string"
+   * - MailAddress.ZipCode
+     - info.addresses.items.address.postalCode
+     - "string"
 
 
 Powerofficego Customers person to Wix Members
@@ -131,6 +134,9 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - MailAddress.City
      - info.addresses.items.address.city
      - "string"
+   * - MailAddress.ZipCode
+     - info.addresses.items.address.postalCode
+     - "string"
 
 
 Powerofficego Customers to Wix Members
@@ -185,6 +191,9 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
    * - MailAddress.City
      - info.addresses.items.address.city
+     - "string"
+   * - MailAddress.ZipCode
+     - info.addresses.items.address.postalCode
      - "string"
    * - PhoneNumber
      - info.phones
@@ -341,6 +350,9 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - lastName
      - info.name.last
      - "string"
+   * - zipCode
+     - info.addresses.items.address.postalCode
+     - "string"
 
 
 Powerofficego Product to Wix Inventory
@@ -446,5 +458,8 @@ The following properties are synchronized between a Powerofficego Suppliers pers
      - "string"
    * - MailAddress.City
      - info.addresses.items.address.city
+     - "string"
+   * - MailAddress.ZipCode
+     - info.addresses.items.address.postalCode
      - "string"
 
