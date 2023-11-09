@@ -2,7 +2,7 @@
 Freshteam to SuperOffice Dataflow
 =================================
 
-Generated: 2023-10-10 20:55:38
+Generated: 2023-11-09 15:37:54
 
 Introduction.
 ------------
@@ -71,6 +71,9 @@ The following properties are synchronized between a Freshteam Employee and a Sup
      - "integer"
    * - last_name
      - Lastname
+     - "string"
+   * - personal_email
+     - Emails.Value
      - "string"
    * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
      - MobilePhones.Value
