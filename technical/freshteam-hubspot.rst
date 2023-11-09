@@ -2,7 +2,7 @@
 Freshteam to HubSpot Dataflow
 =============================
 
-Generated: 2023-11-09 12:54:08
+Generated: 2023-11-09 15:37:45
 
 Introduction.
 ------------
@@ -106,6 +106,9 @@ The following properties are synchronized between a Freshteam Employee and a Hub
      - "string"
    * - official_email
      - properties.work_email
+     - "string"
+   * - personal_email
+     - properties.email
      - "string"
    * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
      - properties.mobilephone
