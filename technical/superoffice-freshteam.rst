@@ -2,7 +2,7 @@
 SuperOffice to Freshteam Dataflow
 =================================
 
-Generated: 2023-11-09 12:54:44
+Generated: 2023-11-09 15:37:54
 
 Introduction.
 ------------
@@ -46,6 +46,9 @@ The following properties are synchronized between a SuperOffice Person and a Fre
      - "string"
    * - Country.CountryId
      - communication_address.communication_country_code
+     - "string"
+   * - Emails.Value
+     - personal_email
      - "string"
    * - Firstname
      - first_name
@@ -120,5 +123,8 @@ The following properties are synchronized between a SuperOffice User and a Fresh
      - "string"
    * - lastName
      - last_name
+     - "string"
+   * - personEmail
+     - personal_email
      - "string"
 
