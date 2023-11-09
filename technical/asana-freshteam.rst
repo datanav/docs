@@ -2,7 +2,7 @@
 Asana to Freshteam Dataflow
 ===========================
 
-Generated: 2023-09-16 20:59:23
+Generated: 2023-11-09 15:37:54
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Asana Users and a Freshteam 
    * - Asana Users Property
      - Freshteam Employee Property
      - Freshteam Data Type
+   * - email
+     - personal_email
+     - "string"
    * - name
      - first_name
      - "string"
