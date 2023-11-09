@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-11-01 11:30:56
+Generated: 2023-11-09 15:40:28
 
 Introduction.
 ------------
@@ -707,6 +707,9 @@ The following properties are synchronized between a Tripletex Employee and a Pow
      - "string"
    * - department.id
      - DepartmentId (Dependant on having wd:Q703534 in JobTitle)
+     - "string"
+   * - email
+     - EmailAddress
      - "string"
    * - employeeNumber
      - Number
