@@ -2,7 +2,7 @@
 Powerofficego to Freshteam Dataflow
 ===================================
 
-Generated: 2023-11-09 12:49:17
+Generated: 2023-11-09 15:37:54
 
 Introduction.
 ------------
@@ -25,6 +25,9 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - Freshteam Data Type
    * - dateOfBirth
      - date_of_birth
+     - "string"
+   * - emailAddress
+     - personal_email
      - "string"
    * - firstName
      - first_name
