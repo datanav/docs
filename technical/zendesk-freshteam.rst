@@ -2,7 +2,7 @@
 Zendesk to Freshteam Dataflow
 =============================
 
-Generated: 2023-10-19 20:19:07
+Generated: 2023-11-09 15:37:54
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Zendesk Users and a Freshtea
    * - Zendesk Users Property
      - Freshteam Employee Property
      - Freshteam Data Type
+   * - email
+     - personal_email
+     - "string"
    * - organization_id
      - designation
      - "string"
