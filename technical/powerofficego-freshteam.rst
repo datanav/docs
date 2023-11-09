@@ -2,7 +2,7 @@
 Powerofficego to Freshteam Dataflow
 ===================================
 
-Generated: 2023-11-09 12:13:49
+Generated: 2023-11-09 12:49:17
 
 Introduction.
 ------------
@@ -115,6 +115,12 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
    * - MailAddress.City
      - communication_address.communication_city
+     - "string"
+   * - MailAddress.CountryCode
+     - Billing_Country
+     - "string"
+   * - MailAddress.CountryCode
+     - Shipping_Country
      - "string"
    * - MailAddress.CountryCode
      - address.country
