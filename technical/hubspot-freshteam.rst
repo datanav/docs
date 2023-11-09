@@ -2,7 +2,7 @@
 HubSpot to Freshteam Dataflow
 =============================
 
-Generated: 2023-10-10 20:55:48
+Generated: 2023-11-09 12:49:17
 
 Introduction.
 ------------
@@ -93,6 +93,12 @@ The following properties are synchronized between a HubSpot Contact and a Fresht
    * - id
      - id
      - "string"
+   * - properties.country
+     - Billing_Country
+     - "string"
+   * - properties.country
+     - Shipping_Country
+     - "string"
    * - properties.date_of_birth
      - date_of_birth
      - "string"
@@ -107,6 +113,12 @@ The following properties are synchronized between a HubSpot Contact and a Fresht
      - "string"
    * - properties.phone
      - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.name)
+     - "string"
+   * - properties.state
+     - Billing_Country
+     - "string"
+   * - properties.state
+     - Shipping_Country
      - "string"
    * - properties.work_email
      - official_email
