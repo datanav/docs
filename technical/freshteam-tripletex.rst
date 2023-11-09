@@ -2,7 +2,7 @@
 Freshteam to Tripletex Dataflow
 ===============================
 
-Generated: 2023-11-09 15:37:54
+Generated: 2023-11-09 15:40:28
 
 Introduction.
 ------------
@@ -85,6 +85,9 @@ The following properties are synchronized between a Freshteam Employee and a Tri
      - "string"
    * - last_name
      - lastName
+     - "string"
+   * - official_email
+     - email
      - "string"
    * - personal_email
      - email
