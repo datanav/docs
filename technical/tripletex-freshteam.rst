@@ -2,7 +2,7 @@
 Tripletex to Freshteam Dataflow
 ===============================
 
-Generated: 2023-11-09 15:37:54
+Generated: 2023-11-09 15:40:28
 
 Introduction.
 ------------
@@ -97,6 +97,9 @@ The following properties are synchronized between a Tripletex Employee and a Fre
      - "string"
    * - department.id
      - designation
+     - "string"
+   * - email
+     - official_email
      - "string"
    * - email
      - personal_email
