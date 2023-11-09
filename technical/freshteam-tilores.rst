@@ -2,7 +2,7 @@
 Freshteam to Tilores Dataflow
 =============================
 
-Generated: 2023-06-27 11:29:18
+Generated: 2023-11-09 15:37:54
 
 Introduction.
 ------------
@@ -52,5 +52,8 @@ The following properties are synchronized between a Freshteam Employee and a Til
      - "string"
    * - last_name
      - lastName
+     - "string"
+   * - personal_email
+     - email
      - "string"
 
