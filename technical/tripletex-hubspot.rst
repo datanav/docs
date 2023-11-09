@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-10-24 12:05:14
+Generated: 2023-11-09 15:40:28
 
 Introduction.
 ------------
@@ -97,6 +97,9 @@ The following properties are synchronized between a Tripletex Employee and a Hub
      - "string"
    * - email
      - properties.email
+     - "string"
+   * - email
+     - properties.work_email
      - "string"
    * - firstName
      - properties.firstname
