@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-10-27 08:36:42
+Generated: 2023-11-09 15:40:28
 
 Introduction.
 ------------
@@ -856,6 +856,9 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - DepartmentId (Dependant on having wd:Q703534 in JobTitle)
      - department.id
      - "if", "neq", "_.", "X"], "integer", "string"]
+   * - EmailAddress
+     - email
+     - "string"
    * - FirstName
      - firstName
      - "string"
@@ -1098,6 +1101,9 @@ The following properties are synchronized between a Powerofficego Suppliers pers
    * - Powerofficego Suppliers person Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - EmailAddress
+     - email
+     - "string"
    * - FirstName
      - firstName
      - "string"
