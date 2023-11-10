@@ -2,7 +2,7 @@
 Powerofficego to YouTrack Dataflow
 ==================================
 
-Generated: 2023-11-10 13:02:58
+Generated: 2023-11-10 13:04:36
 
 Introduction.
 ------------
@@ -12,6 +12,19 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 Powerofficego Contactperson to YouTrack Users
 ---------------------------------------------
 Every Powerofficego Contactperson will be synchronized with a YouTrack Users.
+
+If a matching YouTrack Users already exists, the Powerofficego Contactperson will be merged with the existing one.
+If no matching YouTrack Users is found, a new YouTrack Users will be created.
+
+A Powerofficego Contactperson will merge with a YouTrack Users if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     - YouTrack Users Property
+   * - emailAddress
+     - 
 
 Once a link between a Powerofficego Contactperson and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -24,6 +37,35 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - YouTrack Users Property
      - YouTrack Data Type
    * - emailAddress
+     - profile.email
+     - "string"
+
+
+Powerofficego Customers person to YouTrack Users
+------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers person and a YouTrack Users must be established.
+
+A Powerofficego Customers person will merge with a YouTrack Users if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers person Property
+     - YouTrack Users Property
+   * - EmailAddress
+     - 
+
+Once a link between a Powerofficego Customers person and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers person and a YouTrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers person Property
+     - YouTrack Users Property
+     - YouTrack Data Type
+   * - EmailAddress
      - profile.email
      - "string"
 
