@@ -2,7 +2,7 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2023-10-25 19:17:01
+Generated: 2023-11-10 23:28:31
 
 Introduction.
 ------------
@@ -535,6 +535,9 @@ The following properties are synchronized between a HubSpot Deal and a Wave Invo
      - "string"
    * - properties.dealname
      - memo
+     - "string"
+   * - properties.dealname
+     - title
      - "string"
    * - properties.description
      - memo
