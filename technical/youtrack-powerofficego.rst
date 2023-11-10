@@ -2,7 +2,7 @@
 YouTrack to PowerOfficeGo Dataflow
 ==================================
 
-Generated: 2023-11-10 13:04:36
+Generated: 2023-11-10 13:08:33
 
 Introduction.
 ------------
@@ -36,4 +36,20 @@ The following properties are synchronized between a YouTrack Users and a PowerOf
    * - profile.email
      - emailAddress
      - "string"
+
+
+YouTrack Users to PowerOfficeGo Employees
+-----------------------------------------
+Every YouTrack Users will be synchronized with a PowerOfficeGo Employees.
+
+Once a link between a YouTrack Users and a PowerOfficeGo Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Users and a PowerOfficeGo Employees:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Users Property
+     - PowerOfficeGo Employees Property
+     - PowerOfficeGo Data Type
 
