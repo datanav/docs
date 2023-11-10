@@ -2,12 +2,28 @@
 Tripletex to YouTrack Dataflow
 ==============================
 
-Generated: 2023-11-10 01:41:57
+Generated: 2023-11-10 01:42:31
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to YouTrack. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Contact to YouTrack Users
+-----------------------------------
+Every Tripletex Contact will be synchronized with a YouTrack Users.
+
+Once a link between a Tripletex Contact and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a YouTrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - YouTrack Users Property
+     - YouTrack Data Type
+
 
 Tripletex Customer to YouTrack Groups
 -------------------------------------
@@ -137,6 +153,22 @@ The following properties are synchronized between a Tripletex Department and a Y
    * - name
      - updated
      - "string"
+
+
+Tripletex Employee to YouTrack Users
+------------------------------------
+Every Tripletex Employee will be synchronized with a YouTrack Users.
+
+Once a link between a Tripletex Employee and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a YouTrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - YouTrack Users Property
+     - YouTrack Data Type
 
 
 Tripletex Productgroup to YouTrack Organizationroles
