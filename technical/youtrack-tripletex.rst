@@ -2,7 +2,7 @@
 YouTrack to Tripletex Dataflow
 ==============================
 
-Generated: 2023-11-10 13:04:36
+Generated: 2023-11-10 13:08:33
 
 Introduction.
 ------------
@@ -40,7 +40,10 @@ The following properties are synchronized between a YouTrack Users and a Triplet
 
 YouTrack Users to Tripletex Employee
 ------------------------------------
-Before any synchronization can take place, a link between a YouTrack Users and a Tripletex Employee must be established.
+Every YouTrack Users will be synchronized with a Tripletex Employee.
+
+If a matching Tripletex Employee already exists, the YouTrack Users will be merged with the existing one.
+If no matching Tripletex Employee is found, a new Tripletex Employee will be created.
 
 A YouTrack Users will merge with a Tripletex Employee if one of the following property combinations match:
 
