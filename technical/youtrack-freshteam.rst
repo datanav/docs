@@ -2,7 +2,7 @@
 YouTrack to Freshteam Dataflow
 ==============================
 
-Generated: 2023-11-10 13:08:33
+Generated: 2023-11-10 13:08:37
 
 Introduction.
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a YouTrack Users and a Freshte
    * - YouTrack Users Property
      - Freshteam Employee Property
      - Freshteam Data Type
+   * - profile.email
+     - personal_email
+     - "string"
 
