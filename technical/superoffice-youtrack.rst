@@ -2,7 +2,7 @@
 SuperOffice to YouTrack Dataflow
 ================================
 
-Generated: 2023-11-10 13:13:33
+Generated: 2023-11-10 13:53:30
 
 Introduction.
 ------------
@@ -239,5 +239,21 @@ The following properties are synchronized between a SuperOffice Listticketcatego
 
    * - SuperOffice Listticketcategoryitems Property
      - YouTrack Organizationroles Property
+     - YouTrack Data Type
+
+
+SuperOffice Person to YouTrack Usersyoutrack
+--------------------------------------------
+Every SuperOffice Person will be synchronized with a YouTrack Usersyoutrack.
+
+Once a link between a SuperOffice Person and a YouTrack Usersyoutrack is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Person and a YouTrack Usersyoutrack:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - YouTrack Usersyoutrack Property
      - YouTrack Data Type
 
