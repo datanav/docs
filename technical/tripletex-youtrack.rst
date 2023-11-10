@@ -2,7 +2,7 @@
 Tripletex to YouTrack Dataflow
 ==============================
 
-Generated: 2023-11-10 01:41:29
+Generated: 2023-11-10 01:41:57
 
 Introduction.
 ------------
@@ -96,6 +96,9 @@ The following properties are synchronized between a Tripletex Department and a Y
    * - Tripletex Department Property
      - YouTrack Groups Property
      - YouTrack Data Type
+   * - name
+     - name
+     - "string"
 
 
 Tripletex Department to YouTrack Usergroups
@@ -255,6 +258,9 @@ The following properties are synchronized between a Tripletex Supplier and a You
    * - Tripletex Supplier Property
      - YouTrack Groups Property
      - YouTrack Data Type
+   * - name
+     - name
+     - "string"
 
 
 Tripletex Supplier to YouTrack Usergroups
