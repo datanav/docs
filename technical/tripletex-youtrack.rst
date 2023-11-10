@@ -2,7 +2,7 @@
 Tripletex to YouTrack Dataflow
 ==============================
 
-Generated: 2023-11-10 01:42:31
+Generated: 2023-11-10 13:02:58
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Tripletex Contact and a YouT
    * - Tripletex Contact Property
      - YouTrack Users Property
      - YouTrack Data Type
+   * - email
+     - profile.email
+     - "string"
 
 
 Tripletex Customer to YouTrack Groups
