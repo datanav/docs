@@ -2,7 +2,7 @@
 Asana to YouTrack Dataflow
 ==========================
 
-Generated: 2023-11-10 13:08:33
+Generated: 2023-11-10 13:08:37
 
 Introduction.
 ------------
@@ -257,4 +257,7 @@ The following properties are synchronized between a Asana Users and a YouTrack U
    * - Asana Users Property
      - YouTrack Users Property
      - YouTrack Data Type
+   * - email
+     - profile.email
+     - "string"
 
