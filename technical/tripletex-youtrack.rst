@@ -2,7 +2,7 @@
 Tripletex to YouTrack Dataflow
 ==============================
 
-Generated: 2023-11-10 01:40:50
+Generated: 2023-11-10 01:41:29
 
 Introduction.
 ------------
@@ -82,6 +82,22 @@ The following properties are synchronized between a Tripletex Customercategory a
      - YouTrack Data Type
 
 
+Tripletex Department to YouTrack Groups
+---------------------------------------
+Every Tripletex Department will be synchronized with a YouTrack Groups.
+
+Once a link between a Tripletex Department and a YouTrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a YouTrack Groups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - YouTrack Groups Property
+     - YouTrack Data Type
+
+
 Tripletex Department to YouTrack Usergroups
 -------------------------------------------
 Every Tripletex Department will be synchronized with a YouTrack Usergroups.
@@ -152,6 +168,22 @@ The following properties are synchronized between a Tripletex Productunit and a 
      - YouTrack Data Type
 
 
+Tripletex Project to YouTrack Hubprojects
+-----------------------------------------
+Every Tripletex Project will be synchronized with a YouTrack Hubprojects.
+
+Once a link between a Tripletex Project and a YouTrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Project and a YouTrack Hubprojects:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Project Property
+     - YouTrack Hubprojects Property
+     - YouTrack Data Type
+
+
 Tripletex Project to YouTrack Organizationroles
 -----------------------------------------------
 Every Tripletex Project will be synchronized with a YouTrack Organizationroles.
@@ -206,6 +238,22 @@ The following properties are synchronized between a Tripletex Projectcategory an
 
    * - Tripletex Projectcategory Property
      - YouTrack Organizationroles Property
+     - YouTrack Data Type
+
+
+Tripletex Supplier to YouTrack Groups
+-------------------------------------
+Every Tripletex Supplier will be synchronized with a YouTrack Groups.
+
+Once a link between a Tripletex Supplier and a YouTrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Supplier and a YouTrack Groups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Supplier Property
+     - YouTrack Groups Property
      - YouTrack Data Type
 
 
