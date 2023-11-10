@@ -2,7 +2,7 @@
 Powerofficego to YouTrack Dataflow
 ==================================
 
-Generated: 2023-11-10 13:13:33
+Generated: 2023-11-10 13:53:30
 
 Introduction.
 ------------
@@ -68,6 +68,22 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - EmailAddress
      - profile.email
      - "string"
+
+
+Powerofficego Contactperson to YouTrack Usersyoutrack
+-----------------------------------------------------
+Every Powerofficego Contactperson will be synchronized with a YouTrack Usersyoutrack.
+
+Once a link between a Powerofficego Contactperson and a YouTrack Usersyoutrack is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Contactperson and a YouTrack Usersyoutrack:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     - YouTrack Usersyoutrack Property
+     - YouTrack Data Type
 
 
 Powerofficego Currency to YouTrack Organizationroles
@@ -198,6 +214,22 @@ The following properties are synchronized between a Powerofficego Departments an
    * - Name
      - updated
      - "string"
+
+
+Powerofficego Employees to YouTrack Usersyoutrack
+-------------------------------------------------
+Every Powerofficego Employees will be synchronized with a YouTrack Usersyoutrack.
+
+Once a link between a Powerofficego Employees and a YouTrack Usersyoutrack is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Employees and a YouTrack Usersyoutrack:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Employees Property
+     - YouTrack Usersyoutrack Property
+     - YouTrack Data Type
 
 
 Powerofficego Productgroup to YouTrack Organizationroles
