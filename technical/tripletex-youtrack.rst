@@ -2,7 +2,7 @@
 Tripletex to YouTrack Dataflow
 ==============================
 
-Generated: 2023-11-10 13:02:58
+Generated: 2023-11-10 13:04:36
 
 Introduction.
 ------------
@@ -12,6 +12,19 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 Tripletex Contact to YouTrack Users
 -----------------------------------
 Every Tripletex Contact will be synchronized with a YouTrack Users.
+
+If a matching YouTrack Users already exists, the Tripletex Contact will be merged with the existing one.
+If no matching YouTrack Users is found, a new YouTrack Users will be created.
+
+A Tripletex Contact will merge with a YouTrack Users if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - YouTrack Users Property
+   * - email
+     - 
 
 Once a link between a Tripletex Contact and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -26,6 +39,35 @@ The following properties are synchronized between a Tripletex Contact and a YouT
    * - email
      - profile.email
      - "string"
+
+
+Tripletex Employee to YouTrack Users
+------------------------------------
+Every Tripletex Employee will be synchronized with a YouTrack Users.
+
+If a matching YouTrack Users already exists, the Tripletex Employee will be merged with the existing one.
+If no matching YouTrack Users is found, a new YouTrack Users will be created.
+
+A Tripletex Employee will merge with a YouTrack Users if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - YouTrack Users Property
+   * - email
+     - 
+
+Once a link between a Tripletex Employee and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a YouTrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - YouTrack Users Property
+     - YouTrack Data Type
 
 
 Tripletex Customer to YouTrack Groups
@@ -156,22 +198,6 @@ The following properties are synchronized between a Tripletex Department and a Y
    * - name
      - updated
      - "string"
-
-
-Tripletex Employee to YouTrack Users
-------------------------------------
-Every Tripletex Employee will be synchronized with a YouTrack Users.
-
-Once a link between a Tripletex Employee and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Employee and a YouTrack Users:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - YouTrack Users Property
-     - YouTrack Data Type
 
 
 Tripletex Productgroup to YouTrack Organizationroles
