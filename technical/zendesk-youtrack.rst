@@ -2,12 +2,44 @@
 Zendesk to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-10 13:02:58
+Generated: 2023-11-10 13:04:36
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Zendesk to YouTrack. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Zendesk Users to YouTrack Users
+-------------------------------
+Every Zendesk Users will be synchronized with a YouTrack Users.
+
+If a matching YouTrack Users already exists, the Zendesk Users will be merged with the existing one.
+If no matching YouTrack Users is found, a new YouTrack Users will be created.
+
+A Zendesk Users will merge with a YouTrack Users if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Users Property
+     - YouTrack Users Property
+   * - email
+     - 
+
+Once a link between a Zendesk Users and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Users and a YouTrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Users Property
+     - YouTrack Users Property
+     - YouTrack Data Type
+   * - email
+     - profile.email
+     - "string"
+
 
 Zendesk Organizations to YouTrack Groups
 ----------------------------------------
@@ -168,24 +200,5 @@ The following properties are synchronized between a Zendesk Tickets and a YouTra
      - "string"
    * - subject
      - users.id
-     - "string"
-
-
-Zendesk Users to YouTrack Users
--------------------------------
-Every Zendesk Users will be synchronized with a YouTrack Users.
-
-Once a link between a Zendesk Users and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Users and a YouTrack Users:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Users Property
-     - YouTrack Users Property
-     - YouTrack Data Type
-   * - email
-     - profile.email
      - "string"
 
