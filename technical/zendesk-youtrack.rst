@@ -2,7 +2,7 @@
 Zendesk to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-10 01:46:32
+Generated: 2023-11-10 01:47:08
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Zendesk Organizations and a 
    * - Zendesk Organizations Property
      - YouTrack Groups Property
      - YouTrack Data Type
+   * - name
+     - name
+     - "string"
 
 
 Zendesk Organizations to YouTrack Usergroups
