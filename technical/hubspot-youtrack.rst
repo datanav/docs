@@ -2,7 +2,7 @@
 HubSpot to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-10 01:38:30
+Generated: 2023-11-10 13:02:58
 
 Introduction.
 ------------
@@ -83,6 +83,9 @@ The following properties are synchronized between a HubSpot Contact and a YouTra
    * - HubSpot Contact Property
      - YouTrack Users Property
      - YouTrack Data Type
+   * - properties.email
+     - profile.email
+     - "string"
 
 
 HubSpot Contactcompanyassociation to YouTrack Users
