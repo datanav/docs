@@ -2,12 +2,28 @@
 SuperOffice to YouTrack Dataflow
 ================================
 
-Generated: 2023-11-08 14:31:45
+Generated: 2023-11-10 01:40:29
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to YouTrack. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+SuperOffice Contact to YouTrack Groups
+--------------------------------------
+Every SuperOffice Contact will be synchronized with a YouTrack Groups.
+
+Once a link between a SuperOffice Contact and a YouTrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Contact and a YouTrack Groups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Contact Property
+     - YouTrack Groups Property
+     - YouTrack Data Type
+
 
 SuperOffice Contact to YouTrack Usergroups
 ------------------------------------------
@@ -188,5 +204,21 @@ The following properties are synchronized between a SuperOffice Listticketcatego
 
    * - SuperOffice Listticketcategoryitems Property
      - YouTrack Organizationroles Property
+     - YouTrack Data Type
+
+
+SuperOffice Person to YouTrack Users
+------------------------------------
+Every SuperOffice Person will be synchronized with a YouTrack Users.
+
+Once a link between a SuperOffice Person and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Person and a YouTrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - YouTrack Users Property
      - YouTrack Data Type
 
