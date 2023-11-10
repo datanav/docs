@@ -2,7 +2,7 @@
 Powerofficego to YouTrack Dataflow
 ==================================
 
-Generated: 2023-11-08 14:31:45
+Generated: 2023-11-10 01:38:30
 
 Introduction.
 ------------
@@ -22,6 +22,22 @@ The following properties are synchronized between a Powerofficego Currency and a
 
    * - Powerofficego Currency Property
      - YouTrack Organizationroles Property
+     - YouTrack Data Type
+
+
+Powerofficego Customers to YouTrack Groups
+------------------------------------------
+Every Powerofficego Customers will be synchronized with a YouTrack Groups.
+
+Once a link between a Powerofficego Customers and a YouTrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a YouTrack Groups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - YouTrack Groups Property
      - YouTrack Data Type
 
 
