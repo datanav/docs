@@ -2,7 +2,7 @@
 Wix.com to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-10 13:04:36
+Generated: 2023-11-10 13:55:28
 
 Introduction.
 ------------
@@ -71,4 +71,36 @@ The following properties are synchronized between a Wix.com Members and a YouTra
    * - loginEmail
      - profile.email
      - "string"
+
+
+Wix.com Contacts to YouTrack Usersyoutrack
+------------------------------------------
+Every Wix.com Contacts will be synchronized with a YouTrack Usersyoutrack.
+
+Once a link between a Wix.com Contacts and a YouTrack Usersyoutrack is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Contacts and a YouTrack Usersyoutrack:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Contacts Property
+     - YouTrack Usersyoutrack Property
+     - YouTrack Data Type
+
+
+Wix.com Members to YouTrack Usersyoutrack
+-----------------------------------------
+Every Wix.com Members will be synchronized with a YouTrack Usersyoutrack.
+
+Once a link between a Wix.com Members and a YouTrack Usersyoutrack is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Members and a YouTrack Usersyoutrack:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
+     - YouTrack Usersyoutrack Property
+     - YouTrack Data Type
 
