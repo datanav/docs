@@ -2,12 +2,28 @@
 HubSpot to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-08 14:31:45
+Generated: 2023-11-10 01:37:28
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to YouTrack. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+HubSpot Company to YouTrack Groups
+----------------------------------
+Every HubSpot Company will be synchronized with a YouTrack Groups.
+
+Once a link between a HubSpot Company and a YouTrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Company and a YouTrack Groups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Company Property
+     - YouTrack Groups Property
+     - YouTrack Data Type
+
 
 HubSpot Company to YouTrack Usergroups
 --------------------------------------
@@ -48,6 +64,22 @@ The following properties are synchronized between a HubSpot Company and a YouTra
    * - properties.name
      - updated
      - "string"
+
+
+HubSpot Contact to YouTrack Users
+---------------------------------
+Every HubSpot Contact will be synchronized with a YouTrack Users.
+
+Once a link between a HubSpot Contact and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a YouTrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - YouTrack Users Property
+     - YouTrack Data Type
 
 
 HubSpot Contactcompanyassociationtype to YouTrack Organizationroles
@@ -191,6 +223,22 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
 
    * - HubSpot Quotequotetemplateassociationtype Property
      - YouTrack Organizationroles Property
+     - YouTrack Data Type
+
+
+HubSpot Ticket to YouTrack Hubprojects
+--------------------------------------
+Every HubSpot Ticket will be synchronized with a YouTrack Hubprojects.
+
+Once a link between a HubSpot Ticket and a YouTrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Ticket and a YouTrack Hubprojects:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Ticket Property
+     - YouTrack Hubprojects Property
      - YouTrack Data Type
 
 
