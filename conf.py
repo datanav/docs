@@ -53,18 +53,6 @@ redirects = {
 
 }
 
-
-def load_json(filename):
-    with open(filename) as f:
-        return json.load(f)
-
-
-jinja_contexts = {
-    **{'talk_system_%s' % e['_id']: e for e in load_json('_data/talk_systems.json')},
-    **{'talk_datatype_%s' % e['_id']: e for e in load_json('_data/talk_datatypes.json')},
-    **{'talk_categories_%s' % e['_id']: e for e in load_json('_data/talk_systemtypes.json')}
-}
-
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 

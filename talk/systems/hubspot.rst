@@ -2,7 +2,7 @@
 
 Hubspot
 =======
-HubSpot's integrated CRM platform contains marketing, sales, service, operations, and website-building tools.
+`HubSpot's <https://hubspot.com>`_ integrated CRM platform contains marketing, sales, service, operations, and website-building tools.
 
 .. panels::
     :body: text-left
@@ -19,10 +19,3 @@ HubSpot's integrated CRM platform contains marketing, sales, service, operations
         :text: Try for free
         :classes: btn-primary btn-block
 
-
-.. jinja:: talk_system_hubspot
-  :file: _jinja/system_mapping.jinja
-
-Known issues
-------------
-No known issues.

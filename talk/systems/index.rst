@@ -1,21 +1,13 @@
 Supported systems
 =================
 
-Sesam Talk support systems across a range of categories. You can read more about the various categories below.
+Sesam Talk support systems across a range of categories. You can read more about some of the supported systems below.
 
 .. toctree::
    :maxdepth: 1
 
-   categories/bi
-   categories/crm
-   categories/dbms
-   categories/eai
-   categories/ecm
-   categories/erp
-   categories/fintech
-   categories/gis
-   categories/hrm
-   categories/iam
-   categories/od
-   categories/ot
-   categories/pms
+   hubspot
+   poweroffice
+   superoffice
+   tripletex
+   wave

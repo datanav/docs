@@ -3,14 +3,6 @@
 SuperOffice
 ===========
 
-SuperOffice is a CRM system, combining all customer-facing processes – sales, marketing and customer service – into one technology stack.
+`SuperOffice <https://www.superoffice.com/>`_ is a CRM system, combining all customer-facing processes – sales, marketing and customer service – into one technology stack.
 
-https://www.superoffice.com/
-
-
-.. jinja:: talk_system_superoffice
-   :file: _jinja/system_mapping.jinja
-
-Known issues
-------------
-No known issues.
+Contact `support@superoffice.com` if you want to learn more about their offering.

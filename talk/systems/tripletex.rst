@@ -40,11 +40,3 @@ Using test accounts in Tripletex
 If wish to connect a Tripletex test account, please follow `these instructions <https://developer.tripletex.no/docs/documentation/getting-started/1-creating-a-test-account/>`_ .
 
 You will be provided with your employee and consumer token as part of creating the test account. 
-
-
-.. jinja:: talk_system_tripletex
-  :file: _jinja/system_mapping.jinja
-
-Known issues
-------------
-No known issues.
