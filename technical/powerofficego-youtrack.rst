@@ -2,7 +2,7 @@
 Powerofficego to YouTrack Dataflow
 ==================================
 
-Generated: 2023-11-10 01:38:30
+Generated: 2023-11-10 01:38:54
 
 Introduction.
 ------------
@@ -39,6 +39,9 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      - YouTrack Groups Property
      - YouTrack Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Powerofficego Customers to YouTrack Usergroups
