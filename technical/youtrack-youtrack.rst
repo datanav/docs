@@ -2,7 +2,7 @@
 YouTrack to YouTrack Dataflow
 =============================
 
-Generated: 2023-11-10 01:45:49
+Generated: 2023-11-10 01:46:32
 
 Introduction.
 ------------
@@ -131,6 +131,22 @@ The following properties are synchronized between a YouTrack Usergroups and a Yo
    * - name
      - id
      - "string"
+
+
+YouTrack Usersyoutrack to YouTrack Users
+----------------------------------------
+Every YouTrack Usersyoutrack will be synchronized with a YouTrack Users.
+
+Once a link between a YouTrack Usersyoutrack and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Usersyoutrack and a YouTrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Usersyoutrack Property
+     - YouTrack Users Property
+     - YouTrack Data Type
 
 
 YouTrack Workitems to YouTrack Hubprojects
