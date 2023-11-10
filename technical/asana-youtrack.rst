@@ -2,7 +2,7 @@
 Asana to YouTrack Dataflow
 ==========================
 
-Generated: 2023-11-10 01:34:55
+Generated: 2023-11-10 01:35:29
 
 Introduction.
 ------------
@@ -67,6 +67,22 @@ The following properties are synchronized between a Asana Projects and a YouTrac
    * - name
      - users.id
      - "string"
+
+
+Asana Tasks to YouTrack Hubprojects
+-----------------------------------
+Every Asana Tasks will be synchronized with a YouTrack Hubprojects.
+
+Once a link between a Asana Tasks and a YouTrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Asana Tasks and a YouTrack Hubprojects:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Asana Tasks Property
+     - YouTrack Hubprojects Property
+     - YouTrack Data Type
 
 
 Asana Tasks to YouTrack Organizationroles
