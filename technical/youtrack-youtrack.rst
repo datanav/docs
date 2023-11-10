@@ -2,7 +2,7 @@
 YouTrack to YouTrack Dataflow
 =============================
 
-Generated: 2023-11-10 01:44:40
+Generated: 2023-11-10 01:45:16
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a YouTrack Issues and a YouTra
    * - YouTrack Issues Property
      - YouTrack Hubprojects Property
      - YouTrack Data Type
+   * - created
+     - creationTime
+     - "string"
 
 
 YouTrack Organizations to YouTrack Groups
@@ -74,6 +77,9 @@ The following properties are synchronized between a YouTrack Usergroups and a Yo
    * - YouTrack Usergroups Property
      - YouTrack Groups Property
      - YouTrack Data Type
+   * - name
+     - name
+     - "string"
 
 
 YouTrack Usergroups to YouTrack Organizationroles
