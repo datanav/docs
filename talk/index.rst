@@ -1,7 +1,7 @@
 Sesam Talk
 ==========
 
-Sesam Talk :doc:`synchronizes <selective-data-sync>` core business data across different system types. You can read about which systems that are :doc:`currently supported <systems/index>`.
+Sesam Talk synchronizes core business data across different system types. You can read about which systems that are :doc:`currently supported <systems/index>`.
 
 .. toctree::
    :hidden:
