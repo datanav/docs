@@ -2,7 +2,7 @@
 YouTrack to YouTrack Dataflow
 =============================
 
-Generated: 2023-11-10 01:43:33
+Generated: 2023-11-10 01:44:06
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a YouTrack Organizations and a
    * - YouTrack Organizations Property
      - YouTrack Groups Property
      - YouTrack Data Type
+   * - name
+     - name
+     - "string"
 
 
 YouTrack Usergroups to YouTrack Organizationroles
