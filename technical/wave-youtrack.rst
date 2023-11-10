@@ -2,7 +2,7 @@
 Wave Financial to YouTrack Dataflow
 ===================================
 
-Generated: 2023-11-10 01:43:33
+Generated: 2023-11-10 01:44:06
 
 Introduction.
 ------------
@@ -83,6 +83,9 @@ The following properties are synchronized between a Wave Vendor and a YouTrack G
    * - Wave Vendor Property
      - YouTrack Groups Property
      - YouTrack Data Type
+   * - name
+     - name
+     - "string"
 
 
 Wave Vendor to YouTrack Usergroups
