@@ -2,7 +2,7 @@
 YouTrack to HubSpot Dataflow
 ============================
 
-Generated: 2023-11-10 01:31:46
+Generated: 2023-11-10 01:32:29
 
 Introduction.
 ------------
@@ -28,6 +28,22 @@ The following properties are synchronized between a YouTrack Groups and a HubSpo
      - "string"
 
 
+YouTrack Organizations to HubSpot Company
+-----------------------------------------
+Every YouTrack Organizations will be synchronized with a HubSpot Company.
+
+Once a link between a YouTrack Organizations and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Organizations and a HubSpot Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Organizations Property
+     - HubSpot Company Property
+     - HubSpot Data Type
+
+
 YouTrack Usergroups to HubSpot Company
 --------------------------------------
 Every YouTrack Usergroups will be synchronized with a HubSpot Company.
@@ -45,6 +61,38 @@ The following properties are synchronized between a YouTrack Usergroups and a Hu
    * - name
      - properties.name
      - "string"
+
+
+YouTrack Users to HubSpot Contact
+---------------------------------
+Every YouTrack Users will be synchronized with a HubSpot Contact.
+
+Once a link between a YouTrack Users and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Users and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Users Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
+
+
+YouTrack Usersyoutrack to HubSpot Contact
+-----------------------------------------
+Every YouTrack Usersyoutrack will be synchronized with a HubSpot Contact.
+
+Once a link between a YouTrack Usersyoutrack and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Usersyoutrack and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Usersyoutrack Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
 
 
 YouTrack Workitems to HubSpot Company
