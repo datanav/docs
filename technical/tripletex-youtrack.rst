@@ -2,7 +2,7 @@
 Tripletex to YouTrack Dataflow
 ==============================
 
-Generated: 2023-11-10 13:13:33
+Generated: 2023-11-10 13:54:33
 
 Introduction.
 ------------
@@ -39,6 +39,22 @@ The following properties are synchronized between a Tripletex Contact and a YouT
    * - email
      - profile.email
      - "string"
+
+
+Tripletex Contact to YouTrack Usersyoutrack
+-------------------------------------------
+Every Tripletex Contact will be synchronized with a YouTrack Usersyoutrack.
+
+Once a link between a Tripletex Contact and a YouTrack Usersyoutrack is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a YouTrack Usersyoutrack:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - YouTrack Usersyoutrack Property
+     - YouTrack Data Type
 
 
 Tripletex Customer to YouTrack Groups
@@ -169,6 +185,22 @@ The following properties are synchronized between a Tripletex Department and a Y
    * - name
      - updated
      - "string"
+
+
+Tripletex Employee to YouTrack Usersyoutrack
+--------------------------------------------
+Every Tripletex Employee will be synchronized with a YouTrack Usersyoutrack.
+
+Once a link between a Tripletex Employee and a YouTrack Usersyoutrack is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a YouTrack Usersyoutrack:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - YouTrack Usersyoutrack Property
+     - YouTrack Data Type
 
 
 Tripletex Productgroup to YouTrack Organizationroles
