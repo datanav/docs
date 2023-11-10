@@ -2,7 +2,7 @@
 YouTrack to SuperOffice Dataflow
 ================================
 
-Generated: 2023-11-10 01:32:44
+Generated: 2023-11-10 01:33:32
 
 Introduction.
 ------------
@@ -64,6 +64,38 @@ The following properties are synchronized between a YouTrack Usergroups and a Su
    * - name
      - Name
      - "string"
+
+
+YouTrack Users to SuperOffice Person
+------------------------------------
+Every YouTrack Users will be synchronized with a SuperOffice Person.
+
+Once a link between a YouTrack Users and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Users and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Users Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
+
+
+YouTrack Usersyoutrack to SuperOffice Person
+--------------------------------------------
+Every YouTrack Usersyoutrack will be synchronized with a SuperOffice Person.
+
+Once a link between a YouTrack Usersyoutrack and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Usersyoutrack and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Usersyoutrack Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
 
 
 YouTrack Workitems to SuperOffice Contact
