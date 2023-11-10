@@ -2,7 +2,7 @@
 Freshteam to YouTrack Dataflow
 ==============================
 
-Generated: 2023-11-10 01:36:31
+Generated: 2023-11-10 01:36:47
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Freshteam Department and a Y
    * - Freshteam Department Property
      - YouTrack Groups Property
      - YouTrack Data Type
+   * - name
+     - name
+     - "string"
 
 
 Freshteam Department to YouTrack Usergroups
