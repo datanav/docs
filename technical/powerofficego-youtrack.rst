@@ -2,7 +2,7 @@
 Powerofficego to YouTrack Dataflow
 ==================================
 
-Generated: 2023-11-10 13:08:33
+Generated: 2023-11-10 13:13:33
 
 Introduction.
 ------------
@@ -213,21 +213,5 @@ The following properties are synchronized between a Powerofficego Productgroup a
 
    * - Powerofficego Productgroup Property
      - YouTrack Organizationroles Property
-     - YouTrack Data Type
-
-
-Powerofficego Employees to YouTrack Users
------------------------------------------
-Every Powerofficego Employees will be synchronized with a YouTrack Users.
-
-Once a link between a Powerofficego Employees and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Employees and a YouTrack Users:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Employees Property
-     - YouTrack Users Property
      - YouTrack Data Type
 
