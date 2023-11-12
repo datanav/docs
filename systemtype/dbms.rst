@@ -39,7 +39,7 @@ Data types
      - true
 
    * - :ref:`Event <datatype_event>`
-     - true
+     - false
      - true
 
    * - :ref:`Person <datatype_human>`
