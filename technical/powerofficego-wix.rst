@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-11-09 15:40:28
+Generated: 2023-11-13 13:34:52
 
 Introduction.
 ------------
@@ -106,6 +106,9 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - Powerofficego Customers person Property
      - Wix Members Property
      - Wix Data Type
+   * - EmailAddress
+     - loginEmail
+     - "string"
 
 
 Powerofficego Customers to Wix Contacts
