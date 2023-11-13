@@ -2,7 +2,7 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2023-10-13 14:33:51
+Generated: 2023-11-13 14:20:04
 
 Introduction.
 ------------
@@ -354,6 +354,9 @@ The following properties are synchronized between a Wave Vendor and a Tripletex 
    * - phone
      - phoneNumber
      - "string"
+   * - website
+     - url
+     - "string"
 
 
 Wave Customer to Tripletex Contact
@@ -530,6 +533,9 @@ The following properties are synchronized between a Wave Customer and a Triplete
      - "string"
    * - shippingDetails.phone
      - phoneNumber
+     - "string"
+   * - website
+     - url
      - "string"
 
 
