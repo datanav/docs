@@ -2,12 +2,30 @@
 YouTrack to YouTrack Dataflow
 =============================
 
-Generated: 2023-11-13 14:44:53
+Generated: 2023-11-13 15:02:21
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from YouTrack to YouTrack. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+YouTrack Role to YouTrack Projectroles
+--------------------------------------
+Before any synchronization can take place, a link between a YouTrack Role and a YouTrack Projectroles must be established.
+
+A new YouTrack Projectroles will be created from a YouTrack Role if it is connected to a YouTrack Issues, Projects, Workitems, or Projectroles that is synchronized into YouTrack.
+
+Once a link between a YouTrack Role and a YouTrack Projectroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Role and a YouTrack Projectroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Role Property
+     - YouTrack Projectroles Property
+     - YouTrack Data Type
+
 
 YouTrack Issues to YouTrack Hubprojects
 ---------------------------------------
