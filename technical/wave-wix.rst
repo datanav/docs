@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2023-11-13 13:35:17
+Generated: 2023-11-13 13:49:22
 
 Introduction.
 ------------
@@ -60,6 +60,32 @@ The following properties are synchronized between a Wave Customer person and a W
    * - shippingDetails.address.postalCode
      - info.addresses.items.address.postalCode
      - "string"
+
+
+Wave Customer person to Wix Members
+-----------------------------------
+Before any synchronization can take place, a link between a Wave Customer person and a Wix Members must be established.
+
+A Wave Customer person will merge with a Wix Members if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - Wix Members Property
+   * - email
+     - loginEmail
+
+Once a link between a Wave Customer person and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer person and a Wix Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - Wix Members Property
+     - Wix Data Type
 
 
 Wave Customer to Wix Members
@@ -213,38 +239,6 @@ The following properties are synchronized between a Wave Business and a Wix Cont
      - "string"
    * - id
      - id
-     - "string"
-
-
-Wave Customer person to Wix Members
------------------------------------
-Every Wave Customer person will be synchronized with a Wix Members.
-
-If a matching Wix Members already exists, the Wave Customer person will be merged with the existing one.
-If no matching Wix Members is found, a new Wix Members will be created.
-
-A Wave Customer person will merge with a Wix Members if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer person Property
-     - Wix Members Property
-   * - email
-     - loginEmail
-
-Once a link between a Wave Customer person and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer person and a Wix Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer person Property
-     - Wix Members Property
-     - Wix Data Type
-   * - email
-     - loginEmail
      - "string"
 
 
