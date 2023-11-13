@@ -2,7 +2,7 @@
 YouTrack to YouTrack Dataflow
 =============================
 
-Generated: 2023-11-13 14:39:51
+Generated: 2023-11-13 14:41:50
 
 Introduction.
 ------------
@@ -65,6 +65,24 @@ The following properties are synchronized between a YouTrack Issues and a YouTra
    * - externalIssue.id
      - projectType.id
      - "string"
+   * - links.id
+     - projectType.id
+     - "string"
+   * - parent.id
+     - projectType.id
+     - "string"
+   * - project.id
+     - projectType.id
+     - "string"
+   * - reporter.id
+     - owner.id
+     - "string"
+   * - reporter.id
+     - transitiveProjectRoles.id
+     - "string"
+   * - subtasks.id
+     - projectType.id
+     - "string"
 
 
 YouTrack Organizations to YouTrack Groups
@@ -100,6 +118,21 @@ The following properties are synchronized between a YouTrack Projectroles and a 
    * - YouTrack Projectroles Property
      - YouTrack Hubprojects Property
      - YouTrack Data Type
+   * - owner.id
+     - owner.id
+     - "string"
+   * - owner.id
+     - transitiveProjectRoles.id
+     - "string"
+   * - project.id
+     - projectType.id
+     - "string"
+   * - role.id
+     - projectRoles.id
+     - "string"
+   * - role.id
+     - team.id
+     - "string"
 
 
 YouTrack Projects to YouTrack Hubprojects
@@ -116,6 +149,12 @@ The following properties are synchronized between a YouTrack Projects and a YouT
    * - YouTrack Projects Property
      - YouTrack Hubprojects Property
      - YouTrack Data Type
+   * - createdBy.id
+     - owner.id
+     - "string"
+   * - createdBy.id
+     - transitiveProjectRoles.id
+     - "string"
 
 
 YouTrack Roles to YouTrack Organizationroles
