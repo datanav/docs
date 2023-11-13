@@ -2,7 +2,7 @@
 YouTrack to YouTrack Dataflow
 =============================
 
-Generated: 2023-11-13 14:29:51
+Generated: 2023-11-13 14:39:51
 
 Introduction.
 ------------
@@ -61,6 +61,9 @@ The following properties are synchronized between a YouTrack Issues and a YouTra
      - "string"
    * - created
      - creationTime
+     - "string"
+   * - externalIssue.id
+     - projectType.id
      - "string"
 
 
