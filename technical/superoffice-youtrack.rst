@@ -2,7 +2,7 @@
 SuperOffice to YouTrack Dataflow
 ================================
 
-Generated: 2023-11-10 13:53:30
+Generated: 2023-11-13 14:39:51
 
 Introduction.
 ------------
@@ -240,6 +240,15 @@ The following properties are synchronized between a SuperOffice Listticketcatego
    * - SuperOffice Listticketcategoryitems Property
      - YouTrack Organizationroles Property
      - YouTrack Data Type
+   * - CategoryMaster
+     - organization.id
+     - "string"
+   * - CategoryMaster
+     - owner.id
+     - "string"
+   * - CategoryMaster
+     - role.id
+     - "string"
 
 
 SuperOffice Person to YouTrack Usersyoutrack
