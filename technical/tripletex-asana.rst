@@ -2,7 +2,7 @@
 Tripletex to Asana Dataflow
 ===========================
 
-Generated: 2023-10-05 08:40:19
+Generated: 2023-11-13 14:19:53
 
 Introduction.
 ------------
@@ -28,6 +28,9 @@ The following properties are synchronized between a Tripletex Customer and a Asa
      - "string"
    * - name
      - name
+     - "string"
+   * - url
+     - permalink_url
      - "string"
 
 
