@@ -2,7 +2,7 @@
 Wix.com to ZohoCRM Dataflow
 ===========================
 
-Generated: 2023-11-13 13:35:17
+Generated: 2023-11-13 13:35:44
 
 Introduction.
 ------------
@@ -23,4 +23,10 @@ The following properties are synchronized between a Wix.com Members and a ZohoCR
    * - Wix.com Members Property
      - ZohoCRM Contact Property
      - ZohoCRM Data Type
+   * - loginEmail
+     - Email
+     - "string"
+   * - loginEmail
+     - Secondary_Email
+     - "string"
 
