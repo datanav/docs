@@ -2,7 +2,7 @@
 YouTrack to YouTrack Dataflow
 =============================
 
-Generated: 2023-11-10 01:46:32
+Generated: 2023-11-13 14:29:51
 
 Introduction.
 ------------
@@ -23,6 +23,42 @@ The following properties are synchronized between a YouTrack Issues and a YouTra
    * - YouTrack Issues Property
      - YouTrack Hubprojects Property
      - YouTrack Data Type
+   * - attachments.id
+     - owner.id
+     - "string"
+   * - attachments.id
+     - projectRoles.id
+     - "string"
+   * - attachments.id
+     - projectType.id
+     - "string"
+   * - attachments.id
+     - resources.id
+     - "string"
+   * - attachments.id
+     - team.id
+     - "string"
+   * - attachments.id
+     - transitiveProjectRoles.id
+     - "string"
+   * - comments.id
+     - owner.id
+     - "string"
+   * - comments.id
+     - projectRoles.id
+     - "string"
+   * - comments.id
+     - projectType.id
+     - "string"
+   * - comments.id
+     - resources.id
+     - "string"
+   * - comments.id
+     - team.id
+     - "string"
+   * - comments.id
+     - transitiveProjectRoles.id
+     - "string"
    * - created
      - creationTime
      - "string"
