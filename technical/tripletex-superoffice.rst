@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-11-13 14:19:53
+Generated: 2023-11-14 12:58:58
 
 Introduction.
 ------------
@@ -184,6 +184,9 @@ The following properties are synchronized between a Tripletex Customer and a Sup
      - Address.Street.Zipcode
      - "string"
    * - url
+     - Urls.Value
+     - "string"
+   * - website
      - Urls.Value
      - "string"
 
