@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-11-14 12:59:13
+Generated: 2023-11-14 13:19:21
 
 Introduction.
 ------------
@@ -150,6 +150,8 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
 SuperOffice Contact to Tripletex Supplier
 -----------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Contact and a Tripletex Supplier must be established.
+
+A new Tripletex Supplier will be created from a SuperOffice Contact if it is connected to a SuperOffice Product that is synchronized into Tripletex.
 
 A SuperOffice Contact will merge with a Tripletex Supplier if one of the following property combinations match:
 
