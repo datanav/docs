@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-11-13 14:20:04
+Generated: 2023-11-14 12:59:13
 
 Introduction.
 ------------
@@ -600,6 +600,9 @@ The following properties are synchronized between a Tripletex Customer and a Wav
      - shippingDetails.address.postalCode
      - "string"
    * - url
+     - website
+     - "string"
+   * - website
      - website
      - "string"
 
