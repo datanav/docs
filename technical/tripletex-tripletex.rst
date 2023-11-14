@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2023-10-09 06:58:50
+Generated: 2023-11-14 12:38:59
 
 Introduction.
 ------------
@@ -157,6 +157,9 @@ The following properties are synchronized between a Tripletex Customer and a Tri
      - "string"
    * - name
      - name
+     - "string"
+   * - organizationNumber
+     - organizationNumber
      - "string"
    * - overdueNoticeEmail
      - overdueNoticeEmail
