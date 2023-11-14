@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-11-14 12:38:59
+Generated: 2023-11-14 12:59:13
 
 Introduction.
 ------------
@@ -141,6 +141,9 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - "string"
    * - Urls.Value
      - url
+     - "string"
+   * - Urls.Value
+     - website
      - "string"
 
 
