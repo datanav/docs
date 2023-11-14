@@ -2,12 +2,59 @@
 YouTrack to YouTrack Dataflow
 =============================
 
-Generated: 2023-11-13 15:02:21
+Generated: 2023-11-14 11:53:22
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from YouTrack to YouTrack. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+YouTrack Projects to YouTrack Hubprojects
+-----------------------------------------
+Every YouTrack Projects will be synchronized with a YouTrack Hubprojects.
+
+If a matching YouTrack Hubprojects already exists, the YouTrack Projects will be merged with the existing one.
+If no matching YouTrack Hubprojects is found, a new YouTrack Hubprojects will be created.
+
+A YouTrack Projects will merge with a YouTrack Hubprojects if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Projects Property
+     - YouTrack Hubprojects Property
+   * - ringId
+     - id
+
+Once a link between a YouTrack Projects and a YouTrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Projects and a YouTrack Hubprojects:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Projects Property
+     - YouTrack Hubprojects Property
+     - YouTrack Data Type
+   * - createdBy.id
+     - owner.id
+     - "string"
+   * - createdBy.id
+     - transitiveProjectRoles.id
+     - "string"
+   * - leader.id
+     - owner.id
+     - "string"
+   * - leader.id
+     - transitiveProjectRoles.id
+     - "string"
+   * - team.id
+     - owner.id
+     - "string"
+   * - team.id
+     - transitiveProjectRoles.id
+     - "string"
+
 
 YouTrack Role to YouTrack Projectroles
 --------------------------------------
@@ -150,40 +197,6 @@ The following properties are synchronized between a YouTrack Projectroles and a 
      - "string"
    * - role.id
      - team.id
-     - "string"
-
-
-YouTrack Projects to YouTrack Hubprojects
------------------------------------------
-Every YouTrack Projects will be synchronized with a YouTrack Hubprojects.
-
-Once a link between a YouTrack Projects and a YouTrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Projects and a YouTrack Hubprojects:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Projects Property
-     - YouTrack Hubprojects Property
-     - YouTrack Data Type
-   * - createdBy.id
-     - owner.id
-     - "string"
-   * - createdBy.id
-     - transitiveProjectRoles.id
-     - "string"
-   * - leader.id
-     - owner.id
-     - "string"
-   * - leader.id
-     - transitiveProjectRoles.id
-     - "string"
-   * - team.id
-     - owner.id
-     - "string"
-   * - team.id
-     - transitiveProjectRoles.id
      - "string"
 
 
