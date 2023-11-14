@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-11-13 14:20:04
+Generated: 2023-11-14 12:59:13
 
 Introduction.
 ------------
@@ -638,6 +638,9 @@ The following properties are synchronized between a Tripletex Customer and a Pow
      - MailAddress.zipCode
      - "string"
    * - url
+     - WebsiteUrl
+     - "string"
+   * - website
      - WebsiteUrl
      - "string"
 
