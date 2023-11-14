@@ -13,7 +13,8 @@ Hubspot
 
     Easily synchronise valuable data between Hubspot and your other systems.
     
-
+    |
+    
     .. link-button:: https://hubspot.talk.market
         :type: url
         :text: Try for free

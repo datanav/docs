@@ -14,7 +14,8 @@ Tripletex
 
     Easily synchronise valuable data between Tripletex and your other systems.
     
-
+    |
+    
     .. link-button:: https://tripletex.talk.market
         :type: url
         :text: Try for free
