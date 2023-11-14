@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-11-14 12:38:57
+Generated: 2023-11-14 12:59:13
 
 Introduction.
 ------------
@@ -748,6 +748,9 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - WebsiteUrl
      - url
+     - "string"
+   * - WebsiteUrl
+     - website
      - "string"
    * - id
      - id
