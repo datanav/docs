@@ -29,11 +29,11 @@ In order to connect your PowerOffice account to Sesam Talk you need to create a 
 
 |
 
+FAQ
+===
+
 .. panels::
     :column: col-lg-12 p-2 
-
-    **FAQ**
-    ^^^^^^^
 
     .. dropdown:: **Why is Product data not in sync with PowerOffice**
        
