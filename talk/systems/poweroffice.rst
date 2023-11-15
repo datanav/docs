@@ -24,7 +24,7 @@ In order to connect your PowerOffice account to Sesam Talk you need to create a 
 
 .. image:: images/poweroffice-client-key.png
     :width: 800px
-    :align: center
+    :align: left
     :alt: PowerOffice Client Key 
 
 |
