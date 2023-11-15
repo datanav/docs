@@ -42,6 +42,11 @@ Make sure you have selected **Standard Sales Account** for your products in Powe
 #. Click on **Sales Accounts** on left menu
 #. Make sure you have selected an account for **Standard Sales Account**
 
+.. image:: images/poweroffice-standard-sales-account.png
+    :width: 800px
+    :align: left
+    :alt: PowerOffice Standard Sales Account
+
 Why can I not see my CRM companies and contacts?
 ************************************************
 
