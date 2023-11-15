@@ -44,7 +44,7 @@ Frequently Asked Questions
         #. Click on **Sales Accounts** on left menu
         #. Make sure you have selected an account for **Standard Sales Account**
 
-    .. dropdown:: **Why can I not see my CRM companies and contacts in PowerOffice**
+    .. dropdown:: **Why can I not see my CRM companies and contacts in PowerOffice?**
         
         Companies and contacts in CRM will only sync to PowerOffice if they are associated or involved with a closed/won deal.
 
