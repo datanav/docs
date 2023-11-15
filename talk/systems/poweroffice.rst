@@ -28,3 +28,23 @@ In order to connect your PowerOffice account to Sesam Talk you need to create a 
     :alt: PowerOffice Client Key 
 
 |
+
+Frequently Asked Questions
+--------------------------
+
+Why is Product data not in sync with PowerOffice?
+*************************************************
+
+Make sure you have selected **Standard Sales Account** for your products in PowerOffice.
+
+#. Navigate to **Settings** in PowerOffice
+#. Click on a **Invoice Settings**
+#. Click on **Sales Accounts** on left menu
+#. Make sure you have selected an account for **Standard Sales Account**
+
+Why can I not see my CRM companies and contacts?
+************************************************
+
+Companies and contacts in CRM will only sync to PowerOffice if they are associated or involved with a closed/won deal.
+
+Make sure that the companies and contacts you are trying to synchronise are associated with a closed or won deal in your CRM.
