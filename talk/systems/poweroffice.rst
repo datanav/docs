@@ -39,8 +39,9 @@ In order to connect your PowerOffice account to Sesam Talk you need to create a 
        
         Make sure you have selected **Standard Sales Account** for your products in PowerOffice.
 
-        #. Navigate to **Products** in PowerOffice
-        #. Click on a product from the list
+        #. Navigate to **Settings** in PowerOffice
+        #. Click on a **Invoice Settings**
+        #. Click on **Sales Accounts** on left menu
         #. Make sure you have selected an account for **Standard Sales Account**
 
     .. dropdown:: **I can not see my CRM companies and contacts in PowerOffice**
