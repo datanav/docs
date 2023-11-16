@@ -2,7 +2,7 @@
 SuperOffice to YouTrack Dataflow
 ================================
 
-Generated: 2023-11-16 13:29:42
+Generated: 2023-11-16 13:55:28
 
 Introduction.
 ------------
@@ -40,6 +40,9 @@ The following properties are synchronized between a SuperOffice Person and a You
      - YouTrack Data Type
    * - Emails.Value
      - profile.email
+     - "string"
+   * - Emails.Value
+     - profile.email.email
      - "string"
 
 
@@ -300,5 +303,8 @@ The following properties are synchronized between a SuperOffice User and a YouTr
      - YouTrack Data Type
    * - personEmail
      - profile.email
+     - "string"
+   * - personEmail
+     - profile.email.email
      - "string"
 
