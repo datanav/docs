@@ -2,7 +2,7 @@
 HubSpot to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-16 13:55:28
+Generated: 2023-11-16 13:55:43
 
 Introduction.
 ------------
@@ -27,6 +27,8 @@ A HubSpot Contact will merge with a YouTrack Users if one of the following prope
      - 
    * - properties.email
      - profile.email
+   * - properties.email
+     - profile.email.email
 
 Once a link between a HubSpot Contact and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
