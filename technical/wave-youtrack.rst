@@ -2,7 +2,7 @@
 Wave Financial to YouTrack Dataflow
 ===================================
 
-Generated: 2023-11-16 13:29:42
+Generated: 2023-11-16 13:55:43
 
 Introduction.
 ------------
@@ -24,6 +24,8 @@ A Wave Customer person will merge with a YouTrack Users if one of the following 
      - 
    * - email
      - profile.email
+   * - email
+     - profile.email.email
 
 Once a link between a Wave Customer person and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -55,6 +57,8 @@ A Wave Customer will merge with a YouTrack Users if one of the following propert
      - 
    * - email
      - profile.email
+   * - email
+     - profile.email.email
 
 Once a link between a Wave Customer and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -86,6 +90,8 @@ A Wave Vendor will merge with a YouTrack Users if one of the following property 
      - 
    * - email
      - profile.email
+   * - email
+     - profile.email.email
 
 Once a link between a Wave Vendor and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
