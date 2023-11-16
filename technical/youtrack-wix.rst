@@ -2,7 +2,7 @@
 YouTrack to Wix Dataflow
 ========================
 
-Generated: 2023-11-10 13:04:36
+Generated: 2023-11-16 13:18:48
 
 Introduction.
 ------------
@@ -21,6 +21,8 @@ A YouTrack Users will merge with a Wix Contacts if one of the following property
    * - YouTrack Users Property
      - Wix Contacts Property
    * - 
+     - primaryInfo.email
+   * - profile.email
      - primaryInfo.email
 
 Once a link between a YouTrack Users and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
@@ -50,6 +52,8 @@ A YouTrack Users will merge with a Wix Members if one of the following property 
    * - YouTrack Users Property
      - Wix Members Property
    * - 
+     - loginEmail
+   * - profile.email
      - loginEmail
 
 Once a link between a YouTrack Users and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
