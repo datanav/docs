@@ -2,7 +2,7 @@
 YouTrack to Tilores Dataflow
 ============================
 
-Generated: 2023-11-10 13:02:58
+Generated: 2023-11-16 13:55:28
 
 Introduction.
 ------------
@@ -24,6 +24,9 @@ The following properties are synchronized between a YouTrack Users and a Tilores
      - Tilores Human Property
      - Tilores Data Type
    * - profile.email
+     - email
+     - "string"
+   * - profile.email.email
      - email
      - "string"
 
