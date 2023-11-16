@@ -2,7 +2,7 @@
 YouTrack to Tripletex Dataflow
 ==============================
 
-Generated: 2023-11-16 13:18:48
+Generated: 2023-11-16 13:54:44
 
 Introduction.
 ------------
@@ -23,6 +23,8 @@ A YouTrack Users will merge with a Tripletex Contact if one of the following pro
    * - 
      - email
    * - profile.email
+     - email
+   * - profile.email.email
      - email
 
 Once a link between a YouTrack Users and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
@@ -57,6 +59,8 @@ A YouTrack Users will merge with a Tripletex Employee if one of the following pr
    * - 
      - email
    * - profile.email
+     - email
+   * - profile.email.email
      - email
 
 Once a link between a YouTrack Users and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
