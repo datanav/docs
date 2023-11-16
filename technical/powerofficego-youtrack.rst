@@ -2,7 +2,7 @@
 Powerofficego to YouTrack Dataflow
 ==================================
 
-Generated: 2023-11-16 13:29:08
+Generated: 2023-11-16 13:29:42
 
 Introduction.
 ------------
@@ -25,6 +25,8 @@ A Powerofficego Contactperson will merge with a YouTrack Users if one of the fol
      - YouTrack Users Property
    * - emailAddress
      - 
+   * - emailAddress
+     - profile.email
 
 Once a link between a Powerofficego Contactperson and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -54,6 +56,8 @@ A Powerofficego Customers person will merge with a YouTrack Users if one of the 
      - YouTrack Users Property
    * - EmailAddress
      - 
+   * - EmailAddress
+     - profile.email
 
 Once a link between a Powerofficego Customers person and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
