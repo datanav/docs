@@ -2,7 +2,7 @@
 YouTrack to Zendesk Dataflow
 ============================
 
-Generated: 2023-11-16 13:18:48
+Generated: 2023-11-16 13:54:44
 
 Introduction.
 ------------
@@ -23,6 +23,8 @@ A YouTrack Users will merge with a Zendesk Users if one of the following propert
    * - 
      - email
    * - profile.email
+     - email
+   * - profile.email.email
      - email
 
 Once a link between a YouTrack Users and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
