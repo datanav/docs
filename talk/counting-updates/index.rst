@@ -1,4 +1,4 @@
-.. _updates:
+.. _counting_updates:
 
 ================
 Counting updates
