@@ -55,57 +55,57 @@ Companies and contacts in CRM will only sync to PowerOffice if they are associat
 Make sure that the companies and contacts you are trying to synchronise are associated with a closed or won deal in your CRM.
 
 
-What to Expect When Connecting Your PowerOffice to Your CRM
-***********************************************************
+What to Expect When Connecting Your PowerOffice to other systems
+****************************************************************
 
 Contacts
 ^^^^^^^^
 
-- **PowerOffice Contacts:** All contacts in your PowerOffice will sync to your CRM as contacts.
+- **PowerOffice Contacts:** All contacts in your PowerOffice will sync to other systems as humans.
 
-- **CRM Contacts:** Only contacts associated with a closed/won deal will synchronize to your PowerOffice.
+- **todo link Humans:** Only humans link to human associated with a closed/won deal will synchronize to your PowerOffice.
 
-- **Merging of Contacts:** Contacts will merge if they share the same email.
+- **Merging:** Contacts will merge if they share the same email. todo link merging of humans
 
-Customers/Companies
-^^^^^^^^^^^^^^^^^^^
-
-- **PowerOffice Customers:** All PowerOffice customers will sync to CRM as companies.
-
-- **CRM Customers/Companies:** Only customers/companies associated with a closed/won deal will synchronize to your PowerOffice.
-
-- **Merging of Customers/Companies:** Companies will not merge unless safe merging criteria are met.
 
 .. admonition:: **Example**
 
-   HubSpot lacks a unique field to confirm that two companies are the same. In such cases, we avoid merging companies, which may result in occasional duplicates. For guidance on avoiding duplicates, refer to :ref:`avoid_duplicates`.
+   HubSpot also merges on email so contacts are merged between Poweroffice and Hubspot if they have the same email. For contacts that do not have email duplicates might occur. If contacts share the same email, they will be merged. For guidance on avoiding duplicates, refer to :ref:`avoid_duplicates`. For guidance on avoiding merges, refer to `:ref:avoid_merges`.
 
-Invoices
-^^^^^^^^
+Customers
+^^^^^^^^^
 
-- **PowerOffice Invoices:** All closed or won deals in your CRM will generate invoices/drafts in your PowerOffice, along with associated data such as company, contact, products, and line items.
+- **PowerOffice Customers:** All PowerOffice customers will sync to other systems as organisation.
+
+- **todo link Organisations:** Only organisation associated with a closed/won deal will synchronize to your PowerOffice. todo link to _customer
+
+todo figure out if we support human customers
+- **todo link Human:** Only organisation associated with a closed/won deal will synchronize to your PowerOffice. todo link to _customer
+
+- **Merging:** Companies will not merge as we have not idenfied any safe merging criterias in PowerOffice, refer to :ref:`avoid_duplicates`.
+
+Suppliers
+^^^^^^^^^
+
+todo do we support this?
+
+Sales order drafts
+^^^^^^^^^^^^^^^^^^
+
+Found under 'Invoices'.
+
+- **PowerOffice sales order drafts:** All closed or won deals will generate sales order drafts in your PowerOffice, along with associated data such as company, contact, products, and line items.
 
 Products
 ^^^^^^^^
 
-- **PowerOffice Products:** All products will synchronize with CRM products.
-- **CRM Products:** All products will synchronize with CRM products.
+- **PowerOffice Products:** All products will synchronize to other systems products.
 
-- **Merging of Products:** Products will not merge unless safe merging criteria are met.
+- **todo link Products:** All products will synchronize with PowerOffice products.
+
+- **Merging:** Products will not merge as we have not idenfied any safe merging criterias,  refer to :ref:`avoid_duplicates`.
 
 
-.. admonition:: **Example**
-
-   HubSpot may lack a unique field to confirm identical products. Consequently, we avoid merging products, occasionally resulting in duplicates. For guidance on avoiding duplicates, refer to :ref:`avoid_duplicates`.
-
-.. _avoid_duplicates:
-
-Avoiding Duplicates in Your PowerOffice
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-To prevent duplicates when merging isn't safe, we've disabled `Full Sync`, the synchronization of pre-existing data in the systems before connecting them. This means only new data flows between connected systems. You can enable `Full Sync` at any time in the management console `Management Console <https://talk.sesam.io>`_  to synchronize all records across connected systems.
-
-In case of duplicates in HubSpot, we recommend using the deduplication service on your HubSpot account to `merge records <https://knowledge.hubspot.com/crm-setup/merge-records#:~:text=You%20can%20merge%20two%20companies,and%20associations%20from%20both%20records>`_.
 
 
 
