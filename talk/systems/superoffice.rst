@@ -6,3 +6,18 @@ SuperOffice
 `SuperOffice <https://www.superoffice.com/>`_ is a CRM system, combining all customer-facing processes – sales, marketing and customer service – into one technology stack.
 
 Contact support@sesam.io if you want to learn more about this offering.
+
+|
+
+Frequently Asked Questions
+--------------------------
+
+Why isn´t the account manager from my SuperOffice syncing over to Tripletex?
+****************************************************************************
+
+To sync the Account Manager from SuperOffice to Tripletex, please enable **Departmental costing** in Tripletex, as the Account Manager needs to be synched as an employee within a department. Follow these steps in order to enable **Departmental costing** in Tripletex:
+
+.. image:: images/enable-departments-in-tripletex.png
+    :width: 800px
+    :align: left
+    :alt: Enable departments in Tripletex
