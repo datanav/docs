@@ -26,10 +26,6 @@ Data types
      - true
      - false
 
-   * - :ref:`Event <datatype_event>`
-     - false
-     - true
-
    * - :ref:`Location <datatype_location>`
      - true
      - false
