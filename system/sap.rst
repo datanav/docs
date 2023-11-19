@@ -30,10 +30,6 @@ Data types
      - true
      - false
 
-   * - :ref:`Event <datatype_event>`
-     - true
-     - true
-
    * - :ref:`Person <datatype_human>`
      - true
      - true
