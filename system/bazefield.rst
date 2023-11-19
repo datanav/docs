@@ -22,10 +22,6 @@ Data types
      - true
      - false
 
-   * - :ref:`Event <datatype_event>`
-     - true
-     - false
-
 Other :ref:`Operational technology (OT) <systemtypeot>` Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
