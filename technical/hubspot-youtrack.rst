@@ -2,7 +2,7 @@
 HubSpot to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-16 13:55:43
+Generated: 2023-11-20 15:16:14
 
 Introduction.
 ------------
@@ -367,22 +367,6 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
      - YouTrack Data Type
 
 
-HubSpot User to YouTrack Users
-------------------------------
-Every HubSpot User will be synchronized with a YouTrack Users.
-
-Once a link between a HubSpot User and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot User and a YouTrack Users:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot User Property
-     - YouTrack Users Property
-     - YouTrack Data Type
-
-
 HubSpot User to YouTrack Usersyoutrack
 --------------------------------------
 Every HubSpot User will be synchronized with a YouTrack Usersyoutrack.
@@ -396,5 +380,21 @@ The following properties are synchronized between a HubSpot User and a YouTrack 
 
    * - HubSpot User Property
      - YouTrack Usersyoutrack Property
+     - YouTrack Data Type
+
+
+HubSpot User to YouTrack Users
+------------------------------
+Every HubSpot User will be synchronized with a YouTrack Users.
+
+Once a link between a HubSpot User and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot User and a YouTrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot User Property
+     - YouTrack Users Property
      - YouTrack Data Type
 
