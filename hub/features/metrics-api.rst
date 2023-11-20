@@ -68,7 +68,10 @@ Service metrics
    * - ``sesam_backup_health``
      - Enum<healthy|unhealthy|unknown>
      - Are there any failed backups?
-
+     
+   * - ``sesam_service_restarts``
+     - Gauge
+     - Number of restarts since last upgrade
 
 Pipe metrics
 ------------
@@ -80,6 +83,10 @@ Pipe metrics
    * - Metric
      - Type
      - Description
+
+   * - ``sesam_pipe_enabled``
+     - Gauge
+     - Value is ``1.0`` if pipe is enabled and ``0.0`` if pipe is disabled.
 
    * - ``sesam_pipe_queue_source``
      - Gauge
@@ -142,6 +149,10 @@ Note that metrics are not exposed for pipes that are disabled or have pump.mode=
    * - Metric
      - Type
      - Description
+
+   * - ``sesam_pump_successful``
+     - Gauge
+     - Was the last pump run successful? 1.0 if successful and -1.0 if not successful and 0.0 if the pipe has not run yet.
 
    * - ``sesam_pump_started``
      - Counter
