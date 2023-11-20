@@ -2,7 +2,7 @@
 Freshteam to YouTrack Dataflow
 ==============================
 
-Generated: 2023-11-20 15:20:35
+Generated: 2023-11-20 15:21:12
 
 Introduction.
 ------------
@@ -66,22 +66,6 @@ The following properties are synchronized between a Freshteam Department and a Y
      - "string"
 
 
-Freshteam Employee to YouTrack Usersyoutrack
---------------------------------------------
-Every Freshteam Employee will be synchronized with a YouTrack Usersyoutrack.
-
-Once a link between a Freshteam Employee and a YouTrack Usersyoutrack is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Freshteam Employee and a YouTrack Usersyoutrack:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Freshteam Employee Property
-     - YouTrack Usersyoutrack Property
-     - YouTrack Data Type
-
-
 Freshteam Employee to YouTrack Users
 ------------------------------------
 Every Freshteam Employee will be synchronized with a YouTrack Users.
@@ -96,13 +80,20 @@ The following properties are synchronized between a Freshteam Employee and a You
    * - Freshteam Employee Property
      - YouTrack Users Property
      - YouTrack Data Type
-   * - official_email
-     - profile.email.email
-     - "string"
-   * - personal_email
-     - profile.email
-     - "string"
-   * - personal_email
-     - profile.email.email
-     - "string"
+
+
+Freshteam Employee to YouTrack Usersyoutrack
+--------------------------------------------
+Every Freshteam Employee will be synchronized with a YouTrack Usersyoutrack.
+
+Once a link between a Freshteam Employee and a YouTrack Usersyoutrack is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Freshteam Employee and a YouTrack Usersyoutrack:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Freshteam Employee Property
+     - YouTrack Usersyoutrack Property
+     - YouTrack Data Type
 
