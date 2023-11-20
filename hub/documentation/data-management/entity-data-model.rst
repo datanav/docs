@@ -102,7 +102,7 @@ Entity fields starting with ``_`` are reserved. Any such fields, except ``_id`` 
 
        .. _ts_field:
    * - ``_ts``
-     - This the real-world timestamp for when the entity was added to
+     - This is the real-world timestamp for when the entity was added to
        the dataset. The value is an integer representing the number
        of microseconds since epoch (January 1st 1970 UTC). This field is
        used only for informal purposes.
