@@ -2,7 +2,7 @@
 Asana to YouTrack Dataflow
 ==========================
 
-Generated: 2023-11-16 13:55:28
+Generated: 2023-11-20 09:23:14
 
 Introduction.
 ------------
@@ -241,6 +241,22 @@ The following properties are synchronized between a Asana Workspaces and a YouTr
    * - name
      - updated
      - "string"
+
+
+Asana Tasks to YouTrack Issues
+------------------------------
+Every Asana Tasks will be synchronized with a YouTrack Issues.
+
+Once a link between a Asana Tasks and a YouTrack Issues is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Asana Tasks and a YouTrack Issues:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Asana Tasks Property
+     - YouTrack Issues Property
+     - YouTrack Data Type
 
 
 Asana Users to YouTrack Users
