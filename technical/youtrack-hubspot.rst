@@ -2,7 +2,7 @@
 YouTrack to HubSpot Dataflow
 ============================
 
-Generated: 2023-11-20 15:20:02
+Generated: 2023-11-20 15:20:08
 
 Introduction.
 ------------
@@ -163,4 +163,7 @@ The following properties are synchronized between a YouTrack Users and a HubSpot
    * - YouTrack Users Property
      - HubSpot User Property
      - HubSpot Data Type
+   * - profile.email.email
+     - email
+     - "string"
 
