@@ -2,7 +2,7 @@
 YouTrack to HubSpot Dataflow
 ============================
 
-Generated: 2023-11-16 13:54:54
+Generated: 2023-11-20 15:16:14
 
 Introduction.
 ------------
@@ -144,4 +144,20 @@ The following properties are synchronized between a YouTrack Workitems and a Hub
    * - updated
      - properties.name
      - "string"
+
+
+YouTrack Users to HubSpot User
+------------------------------
+Every YouTrack Users will be synchronized with a HubSpot User.
+
+Once a link between a YouTrack Users and a HubSpot User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Users and a HubSpot User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Users Property
+     - HubSpot User Property
+     - HubSpot Data Type
 
