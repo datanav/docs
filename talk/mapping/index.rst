@@ -75,4 +75,15 @@ An **agreement** is a representation of a formal understanding, contract, or arr
 	- A quote associated with a closed sale
 	- A contract
 
-	
+Location
+--------
+
+A  **location** represents a specific place or area, serving as a reference point for organising and managing geographical information.
+
+.. admonition:: **Examples of locations**
+
+	- Location ID: FR1234567
+	- Name: Paris
+	- Type: City
+	- Geographical coordinates: 48.8566° N, 2.3522° E
+	- Hierarchy: Capital city of France
