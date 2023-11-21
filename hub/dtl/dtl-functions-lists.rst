@@ -81,7 +81,7 @@ Lists
      - Examples
 
    * - | *Arguments:*
-       |   FUNCTION(function-expression(0|1}
+       |   FUNCTION(function-expression{0|1}
        |   VALUES(value-expression{1})
        |
        | Returns a list of distinct values in VALUES, i.e. it returns a list
@@ -155,7 +155,7 @@ Lists
      - Examples
 
    * - | *Arguments:*
-       |   FUNCTION(function-expression(1}
+       |   FUNCTION(function-expression{1}
        |   VALUES(value-expression{1})
        |
        | Filters out the the values in VALUES for which the FUNCTION expression
@@ -243,8 +243,8 @@ Lists
      - Examples
 
    * - | *Arguments:*
-       |   KEY_FUNCTION(function-expression(1}
-       |   VALUE_FUNCTION(function-expression(1}
+       |   KEY_FUNCTION(function-expression{1}
+       |   VALUE_FUNCTION(function-expression{1}
        |   VALUES(value-expression{1})
        |
        | Groups the items in VALUES by executing the KEY_FUNCTION and
@@ -278,8 +278,8 @@ Lists
      - Examples
 
    * - | *Arguments:*
-       |   KEY_FUNCTION(function-expression(0|1}
-       |   STRING_FUNCTION(function-expression(0|1}
+       |   KEY_FUNCTION(function-expression{0|1}
+       |   STRING_FUNCTION(function-expression{0|1}
        |   VALUES(value-expression{1})
        |
        | Groups the values in VALUES by the result of executing the KEY_FUNCTION
@@ -554,7 +554,7 @@ Lists
      - Examples
 
    * - | *Arguments:*
-       |   FUNCTION(function-expression(1}
+       |   FUNCTION(function-expression{1}
        |   VALUES(value-expression{1})
        |
        | For each value in VALUES apply the FUNCTION function and construct a new
@@ -582,8 +582,8 @@ Lists
      - Examples
 
    * - | *Arguments:*
-       |   KEY_FUNCTION(function-expression(1}
-       |   VALUE_FUNCTION(function-expression(1}
+       |   KEY_FUNCTION(function-expression{1}
+       |   VALUE_FUNCTION(function-expression{1}
        |   VALUES(value-expression{1})
        |
        | For each dictionary in VALUES construct a new dictionary by applying
@@ -618,7 +618,7 @@ Lists
      - Examples
 
    * - | *Arguments:*
-       |   VALUE_FUNCTION(function-expression(1}
+       |   VALUE_FUNCTION(function-expression{1}
        |   VALUES(value-expression{1})
        |
        | For each dictionary in VALUES apply the VALUE_FUNCTION to the
@@ -651,7 +651,7 @@ Lists
      - Examples
 
    * - | *Arguments:*
-       |   FUNCTION(function-expression(0|1}
+       |   FUNCTION(function-expression{0|1}
        |   VALUES(value-expression{1})
        |
        | Returns the maximum value in VALUES. If FUNCTION is given, the
@@ -693,7 +693,7 @@ Lists
      - Examples
 
    * - | *Arguments:*
-       |   FUNCTION(function-expression(0|1}
+       |   FUNCTION(function-expression{0|1}
        |   VALUES(value-expression{1})
        |
        | Returns the minimum value in VALUES. If FUNCTION is given, the
@@ -851,7 +851,7 @@ Lists
      - Examples
 
    * - | *Arguments:*
-       |   FUNCTION(function-expression(0|1}
+       |   FUNCTION(function-expression{0|1}
        |   VALUES(value-expression{1})
        |
        | Returns VALUES sorted in ascending order. If FUNCTION is given, then
@@ -902,7 +902,7 @@ Lists
      - Examples
 
    * - | *Arguments:*
-       |   FUNCTION(function-expression(0|1}
+       |   FUNCTION(function-expression{0|1}
        |   VALUES(value-expression{1})
        |
        | Returns VALUES sorted in descending order. If FUNCTION is given, then
