@@ -2,7 +2,7 @@
 Powerofficego to YouTrack Dataflow
 ==================================
 
-Generated: 2023-11-20 15:21:20
+Generated: 2023-11-22 14:45:06
 
 Introduction.
 ------------
@@ -46,6 +46,9 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - emailAddress
      - profile.email.email
      - "string"
+   * - residenceCountryCode
+     - userType.id
+     - "string"
 
 
 Powerofficego Customers person to YouTrack Users
@@ -78,6 +81,9 @@ The following properties are synchronized between a Powerofficego Customers pers
      - YouTrack Data Type
    * - EmailAddress
      - profile.email
+     - "string"
+   * - MailAddress.CountryCode
+     - userType.id
      - "string"
 
 
