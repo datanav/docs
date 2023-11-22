@@ -12,33 +12,55 @@ Sesam Talk employs a unified global data model, encompassing diverse entity type
 
 .. admonition:: **Examples**
 
+    - TODO replace ERP and CRM system with an actual ERP and CRM systems for better examples.
 	- A **contact** from an ERP system will be mapped in our global model as a **Human**. It will then flow to a CRM system as a **contact**.
 	- A **supplier** from an ERP system will me mapped in our global model as an **organisation**. It will then flow to a CRM system as a **company**.
 
+TODO link each type to their wikidata page
+
+.. _model_asset:
+
+Asset
+-----
+
+https://www.wikidata.org/wiki/Q46737
+
+Items or resources, such as valuables, machinery, or real estate.
+
+.. admonition:: **Examples of assets**
+
+    - TODO qualify these examples with an actual system
 
 .. _model_human:
 
 Human
 -----
-A **human** typically refers to individual entities, representing people within the system. This data type may include information such as personal details, phone numbers, emails, roles, and other relevant attributes associated with individuals.
+
+https://www.wikidata.org/wiki/Q5
+
+A human being, regardless of role.
 
 .. admonition:: **Examples of humans**
 
+    - TODO qualify these examples with an actual system
 	- Contact
 	- Employee
 	- Customer that is a private person
 	- User
 
 
-.. _model_organisations:
+.. _model_organisation:
 
-Organisations
--------------
+Organisation
+------------
 
-An **organization** refers to an entity that represents a business entity or a structured group of business entities. This entity type includes information such as the organisation's name, contact details, and other relevant attributes that help define and characterise the entity within the system.
+https://www.wikidata.org/wiki/Q43229
+
+Any type of group or association of individuals who are joined together either formally or legally.
 
 .. admonition:: **Examples of organisations**
 
+    - TODO qualify these examples with an actual system
 	- Company
 	- Supplier
 	- Customer that is a business organisation
@@ -46,44 +68,109 @@ An **organization** refers to an entity that represents a business entity or a s
 
 .. _model_customer:
 
-Customer??
-==========
-todo customer when org has a closed deal
+Customer
+========
+todo customer when org or human is associated with a closed deal
 
-.. _model_products:
+.. _model_product:
 
-Products
---------
+Product
+-------
 
-A **Product** is a representation of an item, or a service that can be bought, sold, or used. The entity encapsulates various attributes and characteristics that describe the item, providing a structured way to organise and manage information about products within a system. 
+https://www.wikidata.org/wiki/Q2424752
+
+A product is the item offered for sale. A product can be a service or an item.
 
 .. admonition:: **Examples of products**
 
+    - TODO this is not a list of data types but examples of instances, makes no sense
 	- A pair of shoes
 	- An hourly service fee
 	- A hairdryer
 	- A transportation fee
 
+.. _model_agreement:
+
 Agreement
 ---------
 
-An **agreement** is a representation of a formal understanding, contract, or arrangement between parties.
+https://www.wikidata.org/wiki/Q321839
+
+An agreement such as orders, invoices, that is intended to be enforceable by law.
 
 .. admonition:: **Examples of agreements**
 
+    - TODO qualify these examples with an actual system
 	- A deal or a closed sale
 	- A quote associated with a closed sale
 	- A contract
 
+.. _model_location:
+
 Location
 --------
 
-A  **location** represents a specific place or area, serving as a reference point for organising and managing geographical information.
+https://www.wikidata.org/wiki/Q115095765
+
+A position, place or site that something is in or where something happens.
 
 .. admonition:: **Examples of locations**
 
+    - TODO this is not a list of data types but examples of instances, makes no sense, we need to explain where we find locations in real life data types from real systems
 	- Location ID: FR1234567
 	- Name: Paris
 	- Type: City
 	- Geographical coordinates: 48.8566° N, 2.3522° E
 	- Hierarchy: Capital city of France
+
+.. _model_classification:
+
+Classification
+--------------
+
+https://www.wikidata.org/wiki/Q13582682
+
+Classification and grouping used as controlled vocabularies.
+
+.. admonition:: **Examples of classifications**
+
+    - TODO
+
+.. _model_documentation:
+
+Documentation
+-------------
+
+https://www.wikidata.org/wiki/Q788790
+
+A permanent record of information in written, photographic, or other form.
+
+.. admonition:: **Examples of documentation**
+
+    - TODO
+
+.. _model_occurrence:
+
+Occurence
+---------
+
+https://www.wikidata.org/wiki/Q1190554
+
+Something that occurs in a certain place during a particular interval of time.
+
+.. admonition:: **Examples of occurences**
+
+    - TODO
+
+.. _model_task:
+
+Task
+----
+
+https://www.wikidata.org/wiki/Q759676
+
+A piece of work to be done.
+
+.. admonition:: **Examples of tasks**
+
+    - TODO
