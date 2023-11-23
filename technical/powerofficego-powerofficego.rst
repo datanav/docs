@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-11-23 12:03:35
+Generated: 2023-11-23 14:44:53
 
 Introduction.
 ------------
@@ -611,6 +611,42 @@ The following properties are synchronized between a Powerofficego Vatcode and a 
 
    * - Powerofficego Vatcode Property
      - PowerOfficeGo Vatcodes Property
+     - PowerOfficeGo Data Type
+
+
+Powerofficego Contactperson to PowerOfficeGo Customers person
+-------------------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Contactperson and a PowerOfficeGo Customers person must be established.
+
+A new PowerOfficeGo Customers person will be created from a Powerofficego Contactperson if it is connected to a Powerofficego Salesorder, Salesorders, Salesorderline, Outgoinginvoice, or Salesorderlines that is synchronized into PowerOfficeGo.
+
+Once a link between a Powerofficego Contactperson and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Contactperson and a PowerOfficeGo Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     - PowerOfficeGo Customers person Property
+     - PowerOfficeGo Data Type
+
+
+Powerofficego Contactperson to PowerOfficeGo Customers
+------------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Contactperson and a PowerOfficeGo Customers must be established.
+
+A new PowerOfficeGo Customers will be created from a Powerofficego Contactperson if it is connected to a Powerofficego Salesorder, Salesorders, Salesorderline, Outgoinginvoice, or Salesorderlines that is synchronized into PowerOfficeGo.
+
+Once a link between a Powerofficego Contactperson and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Contactperson and a PowerOfficeGo Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     - PowerOfficeGo Customers Property
      - PowerOfficeGo Data Type
 
 
