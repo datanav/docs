@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-11-23 14:45:46
+Generated: 2023-11-23 18:48:32
 
 Introduction.
 ------------
@@ -381,7 +381,7 @@ The following properties are synchronized between a SuperOffice Person and a Pow
      - "string"
    * - PersonId
      - Id
-     - "string"
+     - "integer"
 
 
 SuperOffice Person to PowerOfficeGo Customers
