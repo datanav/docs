@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-11-23 18:59:56
+Generated: 2023-11-23 19:17:58
 
 Introduction.
 ------------
@@ -838,7 +838,7 @@ The following properties are synchronized between a Tripletex Orderline and a Po
      - "integer"
    * - unitCostCurrency
      - ProductUnitCost
-     - "string"
+     - "if", "is-decimal", "decimal", "integer"]
    * - unitPriceExcludingVatCurrency
      - ProductUnitPrice
      - "string"
