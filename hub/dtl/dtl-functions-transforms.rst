@@ -785,6 +785,11 @@ modifying the target entity, and has no return value.
        | For each entity in VALUES copy all the properties of the value onto the
          target entity. If the property already exists, it will be overwritten. This means that
          properties from later value entities win over earlier  ones.
+
+       .. NOTE::
+
+          Any properties at the root level starting with ``"_"`` are filtered out.
+
      - | ``["merge", "_S.orders"]``
        |
        | Copies the properties of the entities in ``_S.orders`` to the target.
@@ -812,6 +817,11 @@ modifying the target entity, and has no return value.
        | For each entity in VALUES copy all the properties of the value onto the
          target entity. If the property already exists on the target entity, add
          the new values as a list of values.
+
+       .. NOTE::
+
+          Any properties at the root level starting with ``"_"`` are filtered out.
+
      - | ``["merge-union", "_S.orders"]``
        |
        | Copies the properties of the entities in ``_S.orders`` to the target.
