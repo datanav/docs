@@ -2,7 +2,7 @@
 Wix.com to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-11-23 19:10:57
+Generated: 2023-11-23 19:14:02
 
 Introduction.
 ------------
@@ -316,7 +316,7 @@ The following properties are synchronized between a Wix.com Products and a Power
      - PowerOfficeGo Data Type
    * - costRange.maxValue
      - costPrice
-     - "decimal"
+     - "if", "is-decimal", "decimal", "integer"]
    * - description
      - description
      - "string"
