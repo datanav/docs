@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-11-23 18:57:57
+Generated: 2023-11-23 18:59:56
 
 Introduction.
 ------------
@@ -692,7 +692,7 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
    * - ERPProductKey
      - ProductId
-     - "string"
+     - "integer"
    * - Name
      - Description
      - "string"
