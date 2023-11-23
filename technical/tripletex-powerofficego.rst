@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-11-14 12:59:13
+Generated: 2023-11-23 12:03:54
 
 Introduction.
 ------------
@@ -737,6 +737,9 @@ The following properties are synchronized between a Tripletex Employee and a Pow
      - "string"
    * - phoneNumberMobile
      - phoneNumber
+     - "string"
+   * - userType
+     - MailAddress.CountryCode
      - "string"
    * - userType
      - MailAddress.countryCode
