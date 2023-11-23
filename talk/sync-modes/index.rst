@@ -18,7 +18,7 @@ todo "shared enabled" toggle off. Means we only read data, never write. Data is 
 Limited sync
 ------------
 
-todo Only sync data that has changed after the system is connected. Data might sync regardless if the object is referenced by another object that is about to be synced. E.g. if a deal is updated and about to be inserted and it references a company or a product that has not been inserted as it was not changed after onboarding, will cause the product or company to be inserted into the target system. duplicateion will potentially happen over time if old entities are references gradidually.
+todo Only sync data that was created after the system is connected. Data might sync regardless if the object is referenced/required by another object that is about to be synced. E.g. if a deal is about to be inserted and it references a company or a product that was created before onboarding, it will cause the product or company to be inserted into the target system regardless. This can cause duplicates if that product or company already exists in the target system. Duplicates can therefore appear over time if old entities are references gradidually.
 
 Full sync
 ---------
