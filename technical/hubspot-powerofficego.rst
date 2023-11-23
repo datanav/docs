@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-11-23 14:44:53
+Generated: 2023-11-23 18:48:32
 
 Introduction.
 ------------
@@ -103,7 +103,7 @@ The following properties are synchronized between a HubSpot Company and a PowerO
      - PowerOfficeGo Data Type
    * - id
      - Id
-     - "string"
+     - "integer"
    * - properties.address
      - MailAddress.AddressLine1
      - "string"
@@ -214,7 +214,7 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
      - PowerOfficeGo Data Type
    * - id
      - Id
-     - "string"
+     - "integer"
    * - properties.address
      - MailAddress.AddressLine1
      - "string"
