@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-11-07 08:39:41
+Generated: 2023-11-23 14:44:53
 
 Introduction.
 ------------
@@ -116,6 +116,8 @@ The following properties are synchronized between a SuperOffice Contact and a Po
 SuperOffice Person to PowerOfficeGo Contactperson
 -------------------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Person and a PowerOfficeGo Contactperson must be established.
+
+A new PowerOfficeGo Contactperson will be created from a SuperOffice Person if it is connected to a SuperOffice Quotealternative that is synchronized into PowerOfficeGo.
 
 A SuperOffice Person will merge with a PowerOfficeGo Contactperson if one of the following property combinations match:
 
@@ -239,6 +241,24 @@ The following properties are synchronized between a SuperOffice User and a Power
    * - personEmail
      - emailAddress
      - "string"
+
+
+SuperOffice Contact to PowerOfficeGo Contactperson
+--------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Contact and a PowerOfficeGo Contactperson must be established.
+
+A new PowerOfficeGo Contactperson will be created from a SuperOffice Contact if it is connected to a SuperOffice Quotealternative that is synchronized into PowerOfficeGo.
+
+Once a link between a SuperOffice Contact and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Contact and a PowerOfficeGo Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Contact Property
+     - PowerOfficeGo Contactperson Property
+     - PowerOfficeGo Data Type
 
 
 SuperOffice Contact to PowerOfficeGo Customers person
