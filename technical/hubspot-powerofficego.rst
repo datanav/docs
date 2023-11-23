@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-11-02 08:51:58
+Generated: 2023-11-23 14:44:53
 
 Introduction.
 ------------
@@ -12,6 +12,8 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 HubSpot Contact to PowerOfficeGo Contactperson
 ----------------------------------------------
 Before any synchronization can take place, a link between a HubSpot Contact and a PowerOfficeGo Contactperson must be established.
+
+A new PowerOfficeGo Contactperson will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into PowerOfficeGo.
 
 A HubSpot Contact will merge with a PowerOfficeGo Contactperson if one of the following property combinations match:
 
@@ -63,6 +65,24 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
    * - properties.zip
      - zipCode
      - "string"
+
+
+HubSpot Company to PowerOfficeGo Contactperson
+----------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Company and a PowerOfficeGo Contactperson must be established.
+
+A new PowerOfficeGo Contactperson will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into PowerOfficeGo.
+
+Once a link between a HubSpot Company and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Company and a PowerOfficeGo Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Company Property
+     - PowerOfficeGo Contactperson Property
+     - PowerOfficeGo Data Type
 
 
 HubSpot Company to PowerOfficeGo Customers
