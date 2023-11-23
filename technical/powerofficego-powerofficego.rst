@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-11-23 14:48:37
+Generated: 2023-11-23 14:48:49
 
 Introduction.
 ------------
@@ -639,11 +639,17 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - city
      - MailAddress.City
      - "string"
+   * - dateOfBirth
+     - DateOfBirth
+     - "datetime-format","%Y-%m-%d","_."]
    * - id
      - Id
      - "string"
    * - residenceCountryCode
      - MailAddress.CountryCode
+     - "string"
+   * - zipCode
+     - MailAddress.ZipCode
      - "string"
 
 
