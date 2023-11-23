@@ -2,7 +2,7 @@
 Wix.com to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-10-05 08:40:19
+Generated: 2023-11-23 11:43:00
 
 Introduction.
 ------------
@@ -88,6 +88,24 @@ The following properties are synchronized between a Wix.com Members and a SuperO
    * - loginEmail
      - Emails.Value
      - "string"
+
+
+Wix.com Products classification to SuperOffice Listproducttypeitems
+-------------------------------------------------------------------
+Before any synchronization can take place, a link between a Wix.com Products classification and a SuperOffice Listproducttypeitems must be established.
+
+A new SuperOffice Listproducttypeitems will be created from a Wix.com Products classification if it is connected to a Wix.com Wix-products, or Wix-inventory that is synchronized into SuperOffice.
+
+Once a link between a Wix.com Products classification and a SuperOffice Listproducttypeitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products classification and a SuperOffice Listproducttypeitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products classification Property
+     - SuperOffice Listproducttypeitems Property
+     - SuperOffice Data Type
 
 
 Wix.com Inventory to SuperOffice Product
