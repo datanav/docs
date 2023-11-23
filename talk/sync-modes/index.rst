@@ -23,6 +23,16 @@ todo Only sync data that has changed after the system is connected. Data might s
 Full sync
 ---------
 
+**Full Sync** enables the synchronisation of pre-existing data in the systems before connecting them using Sesam Talk. 
+
+To prevent duplicates when merging isn't safe, we have disabled **Full Sync**. This means that once you connect your systems, only new data will flow.
+
+You can enable **Full Sync** at any time in the management console `Management Console <https://talk.sesam.cloud/onboarding>`_  to synchronise all records across connected systems.
+
+.. important ::
+	
+	Once enabled, **Full Sync** might create duplicates in some systems if they do not support good merging criteria. 
+
 todo All data will be synced regardless of when the system was connected. duplicatation will happen once
 
 
@@ -31,6 +41,4 @@ todo All data will be synced regardless of when the system was connected. duplic
 Avoiding Duplicates
 -------------------
 
-This can cause duplicates if the data types between the different systems don't have merge criteria and both systems are populated with overlapping initial data. 
-
-To prevent duplicates when merging isn't safe, we've disabled `Full Sync`, the synchronization of pre-existing data in the systems before connecting them. This means only new data flows between connected systems. You can enable `Full Sync` at any time in the management console `Management Console <https://talk.sesam.cloud/onboarding>`_  to synchronize all records across connected systems.
+Duplicates accure if the same data in the different systems don't have merge criteria and both systems are populated with overlapping initial data.

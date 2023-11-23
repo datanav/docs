@@ -80,7 +80,7 @@ Location
 
 A  **location** represents a specific place or area, serving as a reference point for organising and managing geographical information.
 
-.. admonition:: **Examples of locations**
+.. admonition:: **Examples of a location**
 
 	- Location ID: FR1234567
 	- Name: Paris
