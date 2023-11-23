@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-11-23 14:48:49
+Generated: 2023-11-23 14:49:14
 
 Introduction.
 ------------
@@ -642,6 +642,12 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - dateOfBirth
      - DateOfBirth
      - "datetime-format","%Y-%m-%d","_."]
+   * - emailAddress
+     - EmailAddress
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
    * - id
      - Id
      - "string"
