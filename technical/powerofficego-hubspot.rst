@@ -2,7 +2,7 @@
 Powerofficego to HubSpot Dataflow
 =================================
 
-Generated: 2023-11-09 15:40:11
+Generated: 2023-11-23 14:44:53
 
 Introduction.
 ------------
@@ -128,6 +128,24 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - PhoneNumber
      - properties.phone
      - "string"
+
+
+Powerofficego Contactperson to HubSpot Company
+----------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Contactperson and a HubSpot Company must be established.
+
+A new HubSpot Company will be created from a Powerofficego Contactperson if it is connected to a Powerofficego Quote that is synchronized into HubSpot.
+
+Once a link between a Powerofficego Contactperson and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Contactperson and a HubSpot Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     - HubSpot Company Property
+     - HubSpot Data Type
 
 
 Powerofficego Customers to HubSpot Company
