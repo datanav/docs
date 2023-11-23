@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-11-23 18:49:47
+Generated: 2023-11-23 18:54:58
 
 Introduction.
 ------------
@@ -587,7 +587,7 @@ The following properties are synchronized between a SuperOffice Product and a Po
      - "string"
    * - UnitCost
      - costPrice
-     - "string"
+     - "decimal"
    * - UnitListPrice
      - SalesPrice
      - "string"
