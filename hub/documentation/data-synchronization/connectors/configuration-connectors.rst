@@ -2,7 +2,7 @@
 Connector Configuration
 =======================
 
-In a particular environment, connectors can be configured using the ``config.json`` file found in the `sesam-talk-config <https://github.com/datanav/sesam-talk-config/>`_ repository. This file has a property called ``connector_config`` whose value is the configuration of an embedded pipe with the same name. By edititng the entities in the embedded source, the various connectors can be configured.
+In a particular environment, connectors can be configured using the ``config.json`` file found in the `sesam-talk-config <https://github.com/datanav/sesam-talk-config/>`_ repository. This file has a property called ``connector_config`` whose value is the configuration of an embedded pipe with the same name. By editing the entities in the embedded source, the various connectors can be configured.
 
 
 Properties
@@ -229,7 +229,7 @@ Properties in the ``auth`` object for API key based connectors
 
    * - ``auth.api_base_url``
      - String
-     - This will replace the {{@ base_url @}} expression in templates. The endpoints in the connector's API can vary from environment to environment (e.g. using a test environment in Playground, prod environment in Prod), so we configure this per branch.
+     - This will replace the ``{{@ base_url @}}`` expression in templates. The endpoints in the connector's API can vary from environment to environment (e.g. using a test environment in Playground, prod environment in Prod), so we configure this per branch.
      - Yes
 
    * - ``auth.label``
@@ -253,7 +253,7 @@ Properties in the ``auth`` object for OAuth2 based connectors
 
    * - ``auth.api_base_url``
      - String
-     - Similar to the config for the API key type authentication, the connector-deployer uses this for the {{@ base_url @}} value. In the Management console it is only needed for the Tripletex connector.
+     - Similar to the config for the API key type authentication, the connector-deployer uses this for the ``{{@ base_url @}}`` value. In the Management console it is only needed for the Tripletex connector.
      - Yes
 
    * - ``auth.access_token_url``
