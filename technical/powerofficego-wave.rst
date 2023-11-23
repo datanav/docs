@@ -2,12 +2,94 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-11-02 08:51:58
+Generated: 2023-11-23 14:44:53
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Powerofficego Contactperson to Wave Customer person
+---------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Contactperson and a Wave Customer person must be established.
+
+A new Wave Customer person will be created from a Powerofficego Contactperson if it is connected to a Powerofficego Salesorder, Salesorders, Salesorderlines, or Outgoinginvoices that is synchronized into Wave.
+
+Once a link between a Powerofficego Contactperson and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Contactperson and a Wave Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     - Wave Customer person Property
+     - Wave Data Type
+
+
+Powerofficego Contactperson to Wave Customer
+--------------------------------------------
+Every Powerofficego Contactperson will be synchronized with a Wave Customer.
+
+Once a link between a Powerofficego Contactperson and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Contactperson and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     - Wave Customer Property
+     - Wave Data Type
+   * - address1
+     - address.addressLine1
+     - "string"
+   * - address1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - address2
+     - address.addressLine2
+     - "string"
+   * - address2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - city
+     - address.city
+     - "string"
+   * - city
+     - shippingDetails.address.city
+     - "string"
+   * - emailAddress
+     - email
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - partyId
+     - id
+     - "string"
+   * - phoneNumber
+     - phone
+     - "string"
+   * - residenceCountryCode
+     - address.country.code
+     - "string"
+   * - residenceCountryCode
+     - address.countryCode
+     - "string"
+   * - residenceCountryCode
+     - shippingDetails.address.country.code
+     - "string"
+   * - zipCode
+     - address.postalCode
+     - "string"
+   * - zipCode
+     - shippingDetails.address.postalCode
+     - "string"
+
 
 Powerofficego Customers to Wave Customer person
 -----------------------------------------------
@@ -158,70 +240,6 @@ The following properties are synchronized between a Powerofficego Salesorder and
    * - Powerofficego Salesorder Property
      - Wave Invoice Property
      - Wave Data Type
-
-
-Powerofficego Contactperson to Wave Customer
---------------------------------------------
-Every Powerofficego Contactperson will be synchronized with a Wave Customer.
-
-Once a link between a Powerofficego Contactperson and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Contactperson and a Wave Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Contactperson Property
-     - Wave Customer Property
-     - Wave Data Type
-   * - address1
-     - address.addressLine1
-     - "string"
-   * - address1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - address2
-     - address.addressLine2
-     - "string"
-   * - address2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - city
-     - address.city
-     - "string"
-   * - city
-     - shippingDetails.address.city
-     - "string"
-   * - emailAddress
-     - email
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - lastName
-     - lastName
-     - "string"
-   * - partyId
-     - id
-     - "string"
-   * - phoneNumber
-     - phone
-     - "string"
-   * - residenceCountryCode
-     - address.country.code
-     - "string"
-   * - residenceCountryCode
-     - address.countryCode
-     - "string"
-   * - residenceCountryCode
-     - shippingDetails.address.country.code
-     - "string"
-   * - zipCode
-     - address.postalCode
-     - "string"
-   * - zipCode
-     - shippingDetails.address.postalCode
-     - "string"
 
 
 Powerofficego Employees to Wave Customer
