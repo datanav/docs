@@ -9,3 +9,4 @@ See also :doc:`Connector Tools <../../../connector-tools>`.
    :maxdepth: 1
 
    The Connector Contract <contract-connectors>
+   Connector Configuration <configuration-connectors>
