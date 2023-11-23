@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-11-23 14:44:53
+Generated: 2023-11-23 14:54:34
 
 Introduction.
 ------------
@@ -25,6 +25,48 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - Powerofficego Contactperson Property
      - Wave Customer person Property
      - Wave Data Type
+   * - address1
+     - address.addressLine1
+     - "string"
+   * - address1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - address2
+     - address.addressLine2
+     - "string"
+   * - address2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - city
+     - address.city
+     - "string"
+   * - city
+     - shippingDetails.address.city
+     - "string"
+   * - emailAddress
+     - email
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
+   * - phoneNumber
+     - phone
+     - "string"
+   * - residenceCountryCode
+     - address.country.code
+     - "string"
+   * - residenceCountryCode
+     - shippingDetails.address.country.code
+     - "string"
+   * - zipCode
+     - address.postalCode
+     - "string"
+   * - zipCode
+     - shippingDetails.address.postalCode
+     - "string"
 
 
 Powerofficego Contactperson to Wave Customer
@@ -70,9 +112,6 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
    * - partyId
      - id
-     - "string"
-   * - phoneNumber
-     - phone
      - "string"
    * - residenceCountryCode
      - address.country.code
@@ -531,6 +570,9 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - Wave Data Type
    * - CurrencyCode
      - currency.code
+     - "string"
+   * - CustomerReferenceContactPersonId
+     - customer.id
      - "string"
    * - PurchaseOrderReference
      - poNumber
