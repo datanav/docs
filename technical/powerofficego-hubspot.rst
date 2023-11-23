@@ -2,7 +2,7 @@
 Powerofficego to HubSpot Dataflow
 =================================
 
-Generated: 2023-11-23 14:44:53
+Generated: 2023-11-23 19:07:56
 
 Introduction.
 ------------
@@ -624,6 +624,9 @@ The following properties are synchronized between a Powerofficego Quote and a Hu
    * - Powerofficego Quote Property
      - HubSpot Quote Property
      - HubSpot Data Type
+   * - CreatedDate
+     - properties.hs_createdate
+     - "string"
 
 
 Powerofficego Salesorderlines to HubSpot Lineitem
