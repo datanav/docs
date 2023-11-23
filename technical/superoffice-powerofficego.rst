@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-11-23 18:54:58
+Generated: 2023-11-23 18:57:57
 
 Introduction.
 ------------
@@ -566,13 +566,13 @@ The following properties are synchronized between a SuperOffice Product and a Po
      - "string"
    * - ProductCategoryKey
      - productGroupId
-     - "string"
+     - "integer"
    * - ProductTypeKey
      - Type
      - "string"
    * - ProductTypeKey
      - type
-     - "string"
+     - "integer"
    * - QuantityUnit
      - Unit
      - "string"
