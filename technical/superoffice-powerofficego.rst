@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-11-23 14:44:53
+Generated: 2023-11-23 14:45:46
 
 Introduction.
 ------------
@@ -13,7 +13,7 @@ SuperOffice Contact to PowerOfficeGo Customers
 ----------------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Contact and a PowerOfficeGo Customers must be established.
 
-A new PowerOfficeGo Customers will be created from a SuperOffice Contact if it is connected to a SuperOffice User, Person, Quoteline, or Quotealternative that is synchronized into PowerOfficeGo.
+A new PowerOfficeGo Customers will be created from a SuperOffice Contact if it is connected to a SuperOffice User, Person, Contact, Quoteline, or Quotealternative that is synchronized into PowerOfficeGo.
 
 A SuperOffice Contact will merge with a PowerOfficeGo Customers if one of the following property combinations match:
 
@@ -265,7 +265,7 @@ SuperOffice Contact to PowerOfficeGo Customers person
 -----------------------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Contact and a PowerOfficeGo Customers person must be established.
 
-A new PowerOfficeGo Customers person will be created from a SuperOffice Contact if it is connected to a SuperOffice User, Person, Quoteline, or Quotealternative that is synchronized into PowerOfficeGo.
+A new PowerOfficeGo Customers person will be created from a SuperOffice Contact if it is connected to a SuperOffice User, Person, Contact, Quoteline, or Quotealternative that is synchronized into PowerOfficeGo.
 
 Once a link between a SuperOffice Contact and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
