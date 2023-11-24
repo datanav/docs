@@ -24,9 +24,10 @@ Wave
 Frequently Asked Questions
 --------------------------
 
-How to to syncronize your contact persons to a Wave customer
-************************************************************
+How can I synchronise my contact persons to a Wave customer
+***********************************************************
 Wave has no contact of a person concept, but rather integrates this information directly on the customer object. In order for this information to flow between your Wave account and other connected systems, we infer a contact person object to the Wave customer object. This means, as long as we have either a **Firstname**, **lastname**, **phone number** or an **email** a contact person will be created based on these attributes and syncronized to the connected system/systems.
+
 The side effects of this are:
 
 #. A Wave customer's contact information can not be removed by simply removing it from Wave, you also have to remove it from other conencted systems first.
