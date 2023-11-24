@@ -49,4 +49,10 @@ Why isn't my CRM order line with a new product being synced over when the produc
 *****
 Tripletex does not allow multiple products to have the same name. This means that if a new product from the CRM system has the same name as an existing product in Tripletex we are not allowed to create this new product in Tripletex. This means we are not able to insert the order line with the product reference as it depends on the product being created to obtain that reference.
 
-TODO write up workaround
+There are two ways to work around this problem:
+
+#. Change the name of the CRM product to something that does not exist in Tripletex already.
+
+or
+
+#. Add enough information in the CRM product (if the system supports this) so that it merges with an existing product in Tripletex.
