@@ -17,7 +17,6 @@ Properties
      - Description
      - Required?
 
-
    * - ``_id``
      - String
      - The id of the connector. This id will be used throughout the various components
@@ -114,6 +113,11 @@ Properties
      - This property tells us if this connector is something that every tenant can use. With the exception of "shared" connectors like ``difi`` or ``wikidata``, this is always ``true``.
      -
 
+   * - ``favicon``
+     - String
+     - Favicon used for this connector.
+     - No
+
    * - ``title``
      - String
      - The title shown on the connector card on the dashboard in Management Console.
@@ -183,11 +187,6 @@ Properties
      - String
      - The display title used for the system this connector connects to, e.g. SuperOffice.
      - Yes
-     
-   * - ``vendor.favicon``
-     - String
-     - Favicon used for this vendor.
-     - No
 
    * - ``vendor.supported_connectors``
      - Array
@@ -205,12 +204,12 @@ Properties
      - No
 
    * - ``vendor.homepageLogo.logo``
-     - Object
+     - String
      - URL for the logo used for the homepage link.
      - No
 
-   * - ``vendor.homepageLogo.url``
-     - Object
+   * - ``vendor.homepageLogo.homepageUrl``
+     - String
      - URL of the corresponding marketplace for this vendor, e.g. ``https://wave.sesam.io``.
      - No
 
@@ -221,6 +220,11 @@ Properties in the ``auth`` object for API key based connectors
 .. list-table::
    :header-rows: 1
    :widths: 10, 10, 60, 10
+
+   * - Property
+     - Type
+     - Description
+     - Required?
 
    * - ``auth.type``
      - String
@@ -245,6 +249,11 @@ Properties in the ``auth`` object for OAuth2 based connectors
 .. list-table::
    :header-rows: 1
    :widths: 10, 10, 60, 10
+
+   * - Property
+     - Type
+     - Description
+     - Required?
 
    * - ``auth.type``
      - "api_key" | "oauth2"
