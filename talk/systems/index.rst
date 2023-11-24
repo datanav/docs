@@ -11,3 +11,4 @@ Sesam Talk support systems across a range of categories. You can read more about
    superoffice
    tripletex
    wave
+   wix
