@@ -7,4 +7,4 @@ Wix
 
 Why are not my ERP orders created in Wix?
 -----------------------------------------
-TODO
+The Wix API does not allow general updates of orders, so we do not write any orders as we are not able to keep them in sync after creation.
