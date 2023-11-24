@@ -45,8 +45,8 @@ You will be provided with your employee and consumer token as part of creating t
 Frequently Asked Questions
 --------------------------
 
-Why isn't my CRM order line with a new product being synced over when the product has the same name as an existing product?
-*****
+Why aren´t line-items showing in a Tripletex order?
+***************************************************
 Tripletex does not allow multiple products to have the same name. This means that if a new product from the CRM system has the same name as an existing product in Tripletex we are not allowed to create this new product in Tripletex. This means we are not able to insert the order line with the product reference as it depends on the product being created to obtain that reference.
 
 There are two ways to work around this problem:
