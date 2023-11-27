@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-11-23 18:48:32
+Generated: 2023-11-27 20:43:47
 
 Introduction.
 ------------
@@ -875,6 +875,9 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - PowerOfficeGo Data Type
    * - TotalAmount
      - NetAmount
+     - "string"
+   * - sesam_SalesOrderId
+     - OrderNo
      - "string"
    * - sesam_SalesOrdersId
      - OrderNo
