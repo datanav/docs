@@ -2,7 +2,7 @@
 YouTrack to HubSpot Dataflow
 ============================
 
-Generated: 2023-11-20 15:20:08
+Generated: 2023-11-27 08:05:45
 
 Introduction.
 ------------
@@ -109,6 +109,22 @@ The following properties are synchronized between a YouTrack Usergroups and a Hu
    * - name
      - properties.name
      - "string"
+
+
+YouTrack Users users to HubSpot Contact
+---------------------------------------
+Every YouTrack Users users will be synchronized with a HubSpot Contact.
+
+Once a link between a YouTrack Users users and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Users users and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Users users Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
 
 
 YouTrack Usersyoutrack to HubSpot Contact
