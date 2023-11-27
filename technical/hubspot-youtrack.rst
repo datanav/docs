@@ -2,7 +2,7 @@
 HubSpot to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-27 14:21:22
+Generated: 2023-11-27 14:28:44
 
 Introduction.
 ------------
@@ -400,6 +400,9 @@ The following properties are synchronized between a HubSpot Ticket and a YouTrac
    * - HubSpot Ticket Property
      - YouTrack Issues Property
      - YouTrack Data Type
+   * - properties.hubspot_owner_id
+     - reporter.id
+     - "string"
 
 
 HubSpot User to YouTrack Users
