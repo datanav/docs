@@ -2,7 +2,7 @@
 YouTrack to YouTrack Dataflow
 =============================
 
-Generated: 2023-11-27 10:34:44
+Generated: 2023-11-27 10:35:38
 
 Introduction.
 ------------
@@ -40,16 +40,25 @@ The following properties are synchronized between a YouTrack Projects and a YouT
      - owner.id
      - "string"
    * - createdBy.id
+     - team.id
+     - "string"
+   * - createdBy.id
      - transitiveProjectRoles.id
      - "string"
    * - leader.id
      - owner.id
+     - "string"
+   * - leader.id
+     - team.id
      - "string"
    * - leader.id
      - transitiveProjectRoles.id
      - "string"
    * - team.id
      - owner.id
+     - "string"
+   * - team.id
+     - team.id
      - "string"
    * - team.id
      - transitiveProjectRoles.id
@@ -429,6 +438,9 @@ The following properties are synchronized between a YouTrack Issues and a YouTra
      - owner.id
      - "string"
    * - reporter.id
+     - team.id
+     - "string"
+   * - reporter.id
      - transitiveProjectRoles.id
      - "string"
    * - subtasks.id
@@ -471,6 +483,9 @@ The following properties are synchronized between a YouTrack Projectroles and a 
      - YouTrack Data Type
    * - owner.id
      - owner.id
+     - "string"
+   * - owner.id
+     - team.id
      - "string"
    * - owner.id
      - transitiveProjectRoles.id
