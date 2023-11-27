@@ -2,7 +2,7 @@
 YouTrack to YouTrack Dataflow
 =============================
 
-Generated: 2023-11-27 12:09:39
+Generated: 2023-11-27 12:15:40
 
 Introduction.
 ------------
@@ -53,6 +53,9 @@ The following properties are synchronized between a YouTrack Projects and a YouT
      - "string"
    * - leader.id
      - transitiveProjectRoles.id
+     - "string"
+   * - team.id
+     - organization.id
      - "string"
    * - team.id
      - owner.id
@@ -170,6 +173,24 @@ The following properties are synchronized between a YouTrack Creator and a YouTr
 
    * - YouTrack Creator Property
      - YouTrack Users Property
+     - YouTrack Data Type
+
+
+YouTrack Groups to YouTrack Usergroups
+--------------------------------------
+Before any synchronization can take place, a link between a YouTrack Groups and a YouTrack Usergroups must be established.
+
+A new YouTrack Usergroups will be created from a YouTrack Groups if it is connected to a YouTrack Issues, Projects, Workitems, or Projectroles that is synchronized into YouTrack.
+
+Once a link between a YouTrack Groups and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Groups and a YouTrack Usergroups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Groups Property
+     - YouTrack Usergroups Property
      - YouTrack Data Type
 
 
