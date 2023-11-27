@@ -2,7 +2,7 @@
 YouTrack to Zendesk Dataflow
 ============================
 
-Generated: 2023-11-27 14:21:22
+Generated: 2023-11-27 14:28:44
 
 Introduction.
 ------------
@@ -135,4 +135,7 @@ The following properties are synchronized between a YouTrack Issues and a Zendes
    * - YouTrack Issues Property
      - Zendesk Tickets Property
      - Zendesk Data Type
+   * - reporter.id
+     - requester_id
+     - "string"
 
