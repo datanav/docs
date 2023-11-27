@@ -2,7 +2,7 @@
 YouTrack to YouTrack Dataflow
 =============================
 
-Generated: 2023-11-27 12:45:50
+Generated: 2023-11-27 12:48:50
 
 Introduction.
 ------------
@@ -410,6 +410,24 @@ The following properties are synchronized between a YouTrack Team and a YouTrack
      - YouTrack Data Type
 
 
+YouTrack Usergroups to YouTrack Users
+-------------------------------------
+Before any synchronization can take place, a link between a YouTrack Usergroups and a YouTrack Users must be established.
+
+A new YouTrack Users will be created from a YouTrack Usergroups if it is connected to a YouTrack Users, Groups, or Organization that is synchronized into YouTrack.
+
+Once a link between a YouTrack Usergroups and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Usergroups and a YouTrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Usergroups Property
+     - YouTrack Users Property
+     - YouTrack Data Type
+
+
 YouTrack Users to YouTrack Projectroles
 ---------------------------------------
 Before any synchronization can take place, a link between a YouTrack Users and a YouTrack Projectroles must be established.
@@ -425,6 +443,24 @@ The following properties are synchronized between a YouTrack Users and a YouTrac
 
    * - YouTrack Users Property
      - YouTrack Projectroles Property
+     - YouTrack Data Type
+
+
+YouTrack Users to YouTrack Usergroups
+-------------------------------------
+Before any synchronization can take place, a link between a YouTrack Users and a YouTrack Usergroups must be established.
+
+A new YouTrack Usergroups will be created from a YouTrack Users if it is connected to a YouTrack Users, Groups, or Organization that is synchronized into YouTrack.
+
+Once a link between a YouTrack Users and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Users and a YouTrack Usergroups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Users Property
+     - YouTrack Usergroups Property
      - YouTrack Data Type
 
 
