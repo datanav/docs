@@ -2,7 +2,7 @@
 YouTrack to HubSpot Dataflow
 ============================
 
-Generated: 2023-11-27 08:05:45
+Generated: 2023-11-27 14:21:22
 
 Introduction.
 ------------
@@ -163,6 +163,22 @@ The following properties are synchronized between a YouTrack Workitems and a Hub
    * - updated
      - properties.name
      - "string"
+
+
+YouTrack Issues to HubSpot Ticket
+---------------------------------
+Every YouTrack Issues will be synchronized with a HubSpot Ticket.
+
+Once a link between a YouTrack Issues and a HubSpot Ticket is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Issues and a HubSpot Ticket:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Issues Property
+     - HubSpot Ticket Property
+     - HubSpot Data Type
 
 
 YouTrack Users to HubSpot User
