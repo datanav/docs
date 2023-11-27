@@ -55,8 +55,8 @@ Companies and contacts in CRM will only sync to PowerOffice if they are associat
 Make sure that the companies and contacts you are trying to synchronise are not duplicated in PowerOffice.
 
 
-My contact person is not being synched over to PowerOffice
-**********************************************************
+Why contact person is not synched to PowerOffice?
+*************************************************
 
 Your contact person might already exist in PowerOffice, and is associated with another customer. We identify contacts by their emails, so if the email is the same as another contact person, the data will be merged, and you will not see your contact flow as you would expect.
 
