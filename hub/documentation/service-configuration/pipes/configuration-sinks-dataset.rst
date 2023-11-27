@@ -161,8 +161,9 @@ Properties
      - No
 
    * - ``prevent_multiple_versions``
-     - Boolean
+     - Boolean or Enum<String>
      - If ``true`` then the pipe will fail if a new version of an existing entity is attempted written to the sink dataset. This is useful if one wants to prevent multiple versions of the same entity to be written to the sink dataset.
+       If set to ``"ignore"`` the pipe will not fail but instead ignore any updates to existing entities in the dataset.
      - ``false``
      - No
 
