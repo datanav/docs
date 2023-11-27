@@ -23,8 +23,8 @@ Hubspot
 Frequently Asked Questions
 --------------------------
 
-Why is **website** of a company not being updated from other connected systems?
-*******************************************************************************
+Why is website of a company not being updated from other connected systems?
+***************************************************************************
 
 In Hubspot the company field for **website** is read-only. That means that we can not write new domains into this field. 
 
