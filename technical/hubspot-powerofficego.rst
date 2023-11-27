@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-11-23 19:19:27
+Generated: 2023-11-27 20:43:47
 
 Introduction.
 ------------
@@ -637,6 +637,9 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - HubSpot Lineitemdealassociation Property
      - PowerOfficeGo Salesorderlines Property
      - PowerOfficeGo Data Type
+   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+     - sesam_SalesOrderId
+     - "string"
    * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - sesam_SalesOrdersId
      - "string"
