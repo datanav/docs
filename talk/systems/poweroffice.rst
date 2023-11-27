@@ -52,4 +52,22 @@ Why can I not see my CRM companies and contacts?
 
 Companies and contacts in CRM will only sync to PowerOffice if they are associated or involved with a closed/won deal.
 
-Make sure that the companies and contacts you are trying to synchronise are associated with a closed or won deal in your CRM.
+Make sure that the companies and contacts you are trying to synchronise are not duplicated in PowerOffice.
+
+
+My contact person is not being synched over to PowerOffice
+**********************************************************
+
+Your contact person might already exist in PowerOffice, and is associated with another customer. We identify contacts by their emails, so if the email is the same as another contact person, the data will be merged and you will not see your contact flow as you would expect.
+
+.. Note ::
+
+    Contact persons might have different names. So check if the contacts your are trying to sync has the same email as any other contact. 
+
+In PowerOffice a contact person can only be associatied with one customer at a time. That means that in order to associate this contact with another company, you need first to remove it from the customer he is currently associated with.
+
+To delete a contact person association to a customer you can do the following:
+
+#. Find the customer associated with your contact person
+#. Click on **Contact Persons** on the left menu once in the customer card
+#. Select the contact person you want to remove and click **Remove**
