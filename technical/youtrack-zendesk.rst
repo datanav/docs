@@ -2,7 +2,7 @@
 YouTrack to Zendesk Dataflow
 ============================
 
-Generated: 2023-11-16 13:55:28
+Generated: 2023-11-27 14:21:22
 
 Introduction.
 ------------
@@ -119,4 +119,20 @@ The following properties are synchronized between a YouTrack Workitems and a Zen
    * - updated
      - name
      - "string"
+
+
+YouTrack Issues to Zendesk Tickets
+----------------------------------
+Every YouTrack Issues will be synchronized with a Zendesk Tickets.
+
+Once a link between a YouTrack Issues and a Zendesk Tickets is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Issues and a Zendesk Tickets:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Issues Property
+     - Zendesk Tickets Property
+     - Zendesk Data Type
 
