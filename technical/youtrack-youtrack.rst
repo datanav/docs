@@ -2,7 +2,7 @@
 YouTrack to YouTrack Dataflow
 =============================
 
-Generated: 2023-11-27 12:15:40
+Generated: 2023-11-27 12:45:50
 
 Introduction.
 ------------
@@ -280,6 +280,24 @@ The following properties are synchronized between a YouTrack Owner and a YouTrac
    :header-rows: 1
 
    * - YouTrack Owner Property
+     - YouTrack Users Property
+     - YouTrack Data Type
+
+
+YouTrack Parent to YouTrack Users
+---------------------------------
+Before any synchronization can take place, a link between a YouTrack Parent and a YouTrack Users must be established.
+
+A new YouTrack Users will be created from a YouTrack Parent if it is connected to a YouTrack Groups, or Organization that is synchronized into YouTrack.
+
+Once a link between a YouTrack Parent and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Parent and a YouTrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Parent Property
      - YouTrack Users Property
      - YouTrack Data Type
 
