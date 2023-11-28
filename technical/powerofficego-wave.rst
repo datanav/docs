@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-11-23 14:54:34
+Generated: 2023-11-28 09:59:54
 
 Introduction.
 ------------
@@ -297,6 +297,9 @@ The following properties are synchronized between a Powerofficego Employees and 
      - Wave Data Type
    * - DepartmentId
      - id
+     - "string"
+   * - EmailAddress
+     - email
      - "string"
    * - FirstName
      - firstName
