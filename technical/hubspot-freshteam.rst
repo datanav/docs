@@ -2,7 +2,7 @@
 HubSpot to Freshteam Dataflow
 =============================
 
-Generated: 2023-11-09 15:37:54
+Generated: 2023-11-28 09:33:08
 
 Introduction.
 ------------
@@ -107,6 +107,9 @@ The following properties are synchronized between a HubSpot Contact and a Fresht
      - "string"
    * - properties.date_of_birth
      - date_of_birth
+     - "string"
+   * - properties.email
+     - official_email
      - "string"
    * - properties.email
      - personal_email
