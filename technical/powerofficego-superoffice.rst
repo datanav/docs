@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-11-09 15:40:16
+Generated: 2023-11-28 09:59:45
 
 Introduction.
 ------------
@@ -539,6 +539,9 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - DepartmentId (Dependant on having wd:Q703534 in JobTitle)
      - Contact.ContactId
      - "integer"
+   * - EmailAddress
+     - Emails.Value
+     - "string"
    * - FirstName
      - Firstname
      - "string"
