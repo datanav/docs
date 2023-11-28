@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2023_11_27:
+
+2023-11-27
+----------
+
+* Extended the ``prevent_multiple_versions`` property of :ref:`dataset sinks <dataset_sink>` to also accept the enum ``"ignore"`` (in addition to ``true`` or the default value ``false``). If set to ``"ignore"`` the pipe will silently ignore any updates to existing entities in the dataset (whereas a ``true`` value makes the pipe fail when encountering updates).
+
 .. _changelog_2023_11_07:
 
 2023-11-07
