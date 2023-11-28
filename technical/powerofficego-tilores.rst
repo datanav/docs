@@ -2,7 +2,7 @@
 Powerofficego to Tilores Dataflow
 =================================
 
-Generated: 2023-11-09 15:40:19
+Generated: 2023-11-28 09:59:54
 
 Introduction.
 ------------
@@ -252,6 +252,9 @@ The following properties are synchronized between a Powerofficego Employees and 
      - Tilores Data Type
    * - DateOfBirth
      - dateOfBirth
+     - "string"
+   * - EmailAddress
+     - email
      - "string"
    * - FirstName
      - firstName
