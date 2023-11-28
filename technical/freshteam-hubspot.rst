@@ -2,7 +2,7 @@
 Freshteam to HubSpot Dataflow
 =============================
 
-Generated: 2023-11-09 15:37:45
+Generated: 2023-11-28 09:33:08
 
 Introduction.
 ------------
@@ -103,6 +103,9 @@ The following properties are synchronized between a Freshteam Employee and a Hub
      - "string"
    * - last_name
      - properties.lastname
+     - "string"
+   * - official_email
+     - properties.email
      - "string"
    * - official_email
      - properties.work_email
