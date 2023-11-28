@@ -2,7 +2,7 @@
 Powerofficego to Zendesk Dataflow
 =================================
 
-Generated: 2023-10-30 16:24:00
+Generated: 2023-11-28 09:59:54
 
 Introduction.
 ------------
@@ -168,6 +168,9 @@ The following properties are synchronized between a Powerofficego Employees and 
      - Zendesk Data Type
    * - DepartmentId (Dependant on having wd:Q703534 in JobTitle)
      - organization_id
+     - "string"
+   * - EmailAddress
+     - email
      - "string"
 
 
