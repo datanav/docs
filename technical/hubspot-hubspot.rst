@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-10-25 20:50:05
+Generated: 2023-11-28 09:33:08
 
 Introduction.
 ------------
@@ -1069,6 +1069,9 @@ The following properties are synchronized between a HubSpot User and a HubSpot C
    * - HubSpot User Property
      - HubSpot Contact Property
      - HubSpot Data Type
+   * - email
+     - properties.email
+     - "string"
    * - email
      - properties.work_email
      - "string"
