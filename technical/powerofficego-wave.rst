@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-11-29 14:42:04
+Generated: 2023-11-29 14:42:09
 
 Introduction.
 ------------
@@ -178,24 +178,6 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Departments to Wave Customer person
--------------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Departments and a Wave Customer person must be established.
-
-A new Wave Customer person will be created from a Powerofficego Departments if it is connected to a Powerofficego Customers, Employees, Suppliers, Departments, or Contactperson that is synchronized into Wave.
-
-Once a link between a Powerofficego Departments and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Departments and a Wave Customer person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Departments Property
-     - Wave Customer person Property
-     - Wave Data Type
-
-
 Powerofficego Departments to Wave Customer
 ------------------------------------------
 Every Powerofficego Departments will be synchronized with a Wave Customer.
@@ -209,27 +191,6 @@ The following properties are synchronized between a Powerofficego Departments an
 
    * - Powerofficego Departments Property
      - Wave Customer Property
-     - Wave Data Type
-   * - Name
-     - name
-     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
-
-
-Powerofficego Salesorder to Wave Invoice
-----------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Salesorder and a Wave Invoice must be established.
-
-A new Wave Invoice will be created from a Powerofficego Salesorder if it is connected to a Powerofficego Salesorder, or Salesorders that is synchronized into Wave.
-
-Once a link between a Powerofficego Salesorder and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorder and a Wave Invoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorder Property
-     - Wave Invoice Property
      - Wave Data Type
 
 
