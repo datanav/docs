@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-29 23:37:13
+Generated: 2023-11-29 23:38:14
 
 Introduction.
 ------------
@@ -269,20 +269,20 @@ The following properties are synchronized between a Tripletex Orderline and a  L
      - "string"
 
 
-Tripletex Product to HubSpot Product
-------------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a HubSpot Product.
+Tripletex Product to  Product
+-----------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Product.
 
-Once a link between a Tripletex Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Product and a HubSpot Product:
+The following properties are synchronized between a Tripletex Product and a  Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     - HubSpot Product Property
-     - HubSpot Data Type
+     -  Product Property
+     -  Data Type
    * - costExcludingVatCurrency
      - properties.hs_cost_of_goods_sold
      - "string"
