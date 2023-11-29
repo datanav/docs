@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
@@ -71,30 +71,30 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
 
 
-Powerofficego Customers person to HubSpot Contact
--------------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Customers person and a HubSpot Contact must be established.
+Powerofficego Customers person to  Contact
+------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers person and a  Contact must be established.
 
-A Powerofficego Customers person will merge with a HubSpot Contact if one of the following property combinations match:
+A Powerofficego Customers person will merge with a  Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers person Property
-     - HubSpot Contact Property
+     -  Contact Property
    * - EmailAddress
      - properties.email
 
-Once a link between a Powerofficego Customers person and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers person and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers person and a HubSpot Contact:
+The following properties are synchronized between a Powerofficego Customers person and a  Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers person Property
-     - HubSpot Contact Property
-     - HubSpot Data Type
+     -  Contact Property
+     -  Data Type
    * - DateOfBirth
      - properties.date_of_birth
      - "string"
@@ -329,39 +329,39 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "string"
 
 
-Powerofficego Quote to HubSpot Quote
-------------------------------------
-Every Powerofficego Quote will be synchronized with a HubSpot Quote.
+Powerofficego Quote to  Quote
+-----------------------------
+Every Powerofficego Quote will be synchronized with a  Quote.
 
-Once a link between a Powerofficego Quote and a HubSpot Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Quote and a  Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Quote and a HubSpot Quote:
+The following properties are synchronized between a Powerofficego Quote and a  Quote:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Quote Property
-     - HubSpot Quote Property
-     - HubSpot Data Type
+     -  Quote Property
+     -  Data Type
    * - CreatedDate
      - properties.hs_createdate
      - "string"
 
 
-Powerofficego Salesorderlines to HubSpot Lineitem
--------------------------------------------------
-Every Powerofficego Salesorderlines will be synchronized with a HubSpot Lineitem.
+Powerofficego Salesorderlines to  Lineitem
+------------------------------------------
+Every Powerofficego Salesorderlines will be synchronized with a  Lineitem.
 
-Once a link between a Powerofficego Salesorderlines and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Salesorderlines and a  Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Salesorderlines and a HubSpot Lineitem:
+The following properties are synchronized between a Powerofficego Salesorderlines and a  Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Salesorderlines Property
-     - HubSpot Lineitem Property
-     - HubSpot Data Type
+     -  Lineitem Property
+     -  Data Type
    * - Description
      - properties.name
      - "string"
@@ -379,20 +379,20 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - "integer"
 
 
-Powerofficego Salesorderlines to HubSpot Lineitemdealassociation
-----------------------------------------------------------------
-Every Powerofficego Salesorderlines will be synchronized with a HubSpot Lineitemdealassociation.
+Powerofficego Salesorderlines to  Lineitemdealassociation
+---------------------------------------------------------
+Every Powerofficego Salesorderlines will be synchronized with a  Lineitemdealassociation.
 
-Once a link between a Powerofficego Salesorderlines and a HubSpot Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Salesorderlines and a  Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Salesorderlines and a HubSpot Lineitemdealassociation:
+The following properties are synchronized between a Powerofficego Salesorderlines and a  Lineitemdealassociation:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Salesorderlines Property
-     - HubSpot Lineitemdealassociation Property
-     - HubSpot Data Type
+     -  Lineitemdealassociation Property
+     -  Data Type
    * - sesam_SalesOrderId
      - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - "string"
