@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-29 23:37:14
+Generated: 2023-11-29 23:45:21
 
 Introduction.
 ------------
@@ -96,39 +96,39 @@ The following properties are synchronized between a Wave Vendor and a  Users:
      - "string"
 
 
-Wave Customer to YouTrack Groups
---------------------------------
-Every Wave Customer will be synchronized with a YouTrack Groups.
+Wave Customer to  Groups
+------------------------
+Every Wave Customer will be synchronized with a  Groups.
 
-Once a link between a Wave Customer and a YouTrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a  Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a YouTrack Groups:
+The following properties are synchronized between a Wave Customer and a  Groups:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - YouTrack Groups Property
-     - YouTrack Data Type
+     -  Groups Property
+     -  Data Type
    * - name
      - name
      - "string"
 
 
-Wave Vendor to YouTrack Groups
-------------------------------
-Every Wave Vendor will be synchronized with a YouTrack Groups.
+Wave Vendor to  Groups
+----------------------
+Every Wave Vendor will be synchronized with a  Groups.
 
-Once a link between a Wave Vendor and a YouTrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a  Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a YouTrack Groups:
+The following properties are synchronized between a Wave Vendor and a  Groups:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     - YouTrack Groups Property
-     - YouTrack Data Type
+     -  Groups Property
+     -  Data Type
    * - name
      - name
      - "string"
