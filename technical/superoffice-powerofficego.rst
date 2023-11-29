@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-29 23:37:13
+Generated: 2023-11-29 23:38:14
 
 Introduction.
 ------------
@@ -376,22 +376,22 @@ The following properties are synchronized between a SuperOffice Person and a Pow
      - PowerOfficeGo Data Type
 
 
-SuperOffice Quotealternative to PowerOfficeGo Salesorders
----------------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Quotealternative and a PowerOfficeGo Salesorders must be established.
+SuperOffice Quotealternative to  Salesorders
+--------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Quotealternative and a  Salesorders must be established.
 
-A new PowerOfficeGo Salesorders will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into PowerOfficeGo.
+A new  Salesorders will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into .
 
-Once a link between a SuperOffice Quotealternative and a PowerOfficeGo Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quotealternative and a  Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quotealternative and a PowerOfficeGo Salesorders:
+The following properties are synchronized between a SuperOffice Quotealternative and a  Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quotealternative Property
-     - PowerOfficeGo Salesorders Property
-     - PowerOfficeGo Data Type
+     -  Salesorders Property
+     -  Data Type
    * - TotalPrice
      - TotalAmount
      - "string"
@@ -467,20 +467,20 @@ The following properties are synchronized between a SuperOffice Ownercontactlink
      - "string"
 
 
-SuperOffice Product to PowerOfficeGo Product
---------------------------------------------
-Every SuperOffice Product will be synchronized with a PowerOfficeGo Product.
+SuperOffice Product to  Product
+-------------------------------
+Every SuperOffice Product will be synchronized with a  Product.
 
-Once a link between a SuperOffice Product and a PowerOfficeGo Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Product and a PowerOfficeGo Product:
+The following properties are synchronized between a SuperOffice Product and a  Product:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Product Property
-     - PowerOfficeGo Product Property
-     - PowerOfficeGo Data Type
+     -  Product Property
+     -  Data Type
    * - Description
      - Description
      - "string"
