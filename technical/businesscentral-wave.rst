@@ -2,7 +2,7 @@
 Businesscentral to Wave Dataflow
 ================================
 
-Generated: 2023-10-05 10:40:49
+Generated: 2023-11-29 14:35:43
 
 Introduction.
 ------------
