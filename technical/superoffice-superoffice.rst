@@ -2,7 +2,7 @@
 SuperOffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-11-29 15:04:37
+Generated: 2023-11-29 15:05:02
 
 Introduction.
 ------------
@@ -38,29 +38,59 @@ The following properties are synchronized between a SuperOffice Contact and a Su
    * - Address.Postal.Address1
      - Address.Postal.Address1
      - "string"
+   * - Address.Postal.Address1
+     - Address.Street.Address1
+     - "string"
    * - Address.Postal.Address2
      - Address.Postal.Address2
+     - "string"
+   * - Address.Postal.Address2
+     - Address.Street.Address2
      - "string"
    * - Address.Postal.Address3
      - Address.Postal.Address3
      - "string"
+   * - Address.Postal.Address3
+     - Address.Street.Address3
+     - "string"
    * - Address.Postal.City
      - Address.Postal.City
      - "string"
+   * - Address.Postal.City
+     - Address.Street.City
+     - "string"
    * - Address.Postal.Zipcode
      - Address.Postal.Zipcode
+     - "string"
+   * - Address.Postal.Zipcode
+     - Address.Street.Zipcode
+     - "string"
+   * - Address.Street.Address1
+     - Address.Postal.Address1
      - "string"
    * - Address.Street.Address1
      - Address.Street.Address1
      - "string"
    * - Address.Street.Address2
+     - Address.Postal.Address2
+     - "string"
+   * - Address.Street.Address2
      - Address.Street.Address2
+     - "string"
+   * - Address.Street.Address3
+     - Address.Postal.Address3
      - "string"
    * - Address.Street.Address3
      - Address.Street.Address3
      - "string"
    * - Address.Street.City
+     - Address.Postal.City
+     - "string"
+   * - Address.Street.City
      - Address.Street.City
+     - "string"
+   * - Address.Street.Zipcode
+     - Address.Postal.Zipcode
      - "string"
    * - Address.Street.Zipcode
      - Address.Street.Zipcode
@@ -72,7 +102,7 @@ The following properties are synchronized between a SuperOffice Contact and a Su
      - Country.CountryId
      - "integer"
    * - Country.ThreeLetterISOCountry
-     - OrgNr (Dependant on having wd:Q906278 in Country.ThreeLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountryDependant on having wd:Q906278 in Country.TwoLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountry)
+     - OrgNr (Dependant on having wd:Q906278 in Country.TwoLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountryDependant on having wd:Q906278 in Country.TwoLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountry)
      - "string"
    * - Domains
      - Domains
