@@ -2,7 +2,7 @@
 Tripletex to UniEconomy Dataflow
 ================================
 
-Generated: 2023-11-29 14:37:48
+Generated: 2023-11-29 14:44:43
 
 Introduction.
 ------------
@@ -11,10 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Tripletex Customer to UniEconomy Companies
 ------------------------------------------
-Every Tripletex Customer will be synchronized with a UniEconomy Companies.
-
-If a matching UniEconomy Companies already exists, the Tripletex Customer will be merged with the existing one.
-If no matching UniEconomy Companies is found, a new UniEconomy Companies will be created.
+Before any synchronization can take place, a link between a Tripletex Customer and a UniEconomy Companies must be established.
 
 A Tripletex Customer will merge with a UniEconomy Companies if one of the following property combinations match:
 
@@ -46,10 +43,7 @@ The following properties are synchronized between a Tripletex Customer and a Uni
 
 Tripletex Supplier to UniEconomy Companies
 ------------------------------------------
-Every Tripletex Supplier will be synchronized with a UniEconomy Companies.
-
-If a matching UniEconomy Companies already exists, the Tripletex Supplier will be merged with the existing one.
-If no matching UniEconomy Companies is found, a new UniEconomy Companies will be created.
+Before any synchronization can take place, a link between a Tripletex Supplier and a UniEconomy Companies must be established.
 
 A Tripletex Supplier will merge with a UniEconomy Companies if one of the following property combinations match:
 
@@ -105,25 +99,6 @@ The following properties are synchronized between a Tripletex Supplier and a Uni
      - UniEconomy Data Type
    * - organizationNumber
      - OrgNumber
-     - "string"
-
-
-Tripletex Department to UniEconomy Companies
---------------------------------------------
-Every Tripletex Department will be synchronized with a UniEconomy Companies.
-
-Once a link between a Tripletex Department and a UniEconomy Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Department and a UniEconomy Companies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Department Property
-     - UniEconomy Companies Property
-     - UniEconomy Data Type
-   * - name
-     - Name
      - "string"
 
 
