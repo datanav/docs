@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
@@ -67,30 +67,30 @@ The following properties are synchronized between a HubSpot Contact and a Wix Co
      - "string"
 
 
-HubSpot Contact to Wix Members
-------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a Wix Members must be established.
+HubSpot Contact to  Members
+---------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a  Members must be established.
 
-A HubSpot Contact will merge with a Wix Members if one of the following property combinations match:
+A HubSpot Contact will merge with a  Members if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contact Property
-     - Wix Members Property
+     -  Members Property
    * - properties.email
      - loginEmail
 
-Once a link between a HubSpot Contact and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contact and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contact and a Wix Members:
+The following properties are synchronized between a HubSpot Contact and a  Members:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contact Property
-     - Wix Members Property
-     - Wix Data Type
+     -  Members Property
+     -  Data Type
    * - properties.email
      - loginEmail
      - "string"
@@ -141,20 +141,20 @@ The following properties are synchronized between a HubSpot Company and a Wix Co
      - "string"
 
 
-HubSpot Product to Wix Inventory
---------------------------------
-Every HubSpot Product will be synchronized with a Wix Inventory.
+HubSpot Product to  Inventory
+-----------------------------
+Every HubSpot Product will be synchronized with a  Inventory.
 
-Once a link between a HubSpot Product and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Product and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Product and a Wix Inventory:
+The following properties are synchronized between a HubSpot Product and a  Inventory:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Product Property
-     - Wix Inventory Property
-     - Wix Data Type
+     -  Inventory Property
+     -  Data Type
 
 
 HubSpot Product to Wix Products
