@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-11-29 14:35:43
+Generated: 2023-11-29 14:37:48
 
 Introduction.
 ------------
@@ -400,24 +400,6 @@ The following properties are synchronized between a SuperOffice Person and a Pow
      - PowerOfficeGo Data Type
 
 
-SuperOffice Quotealternative to PowerOfficeGo Salesorder
---------------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Quotealternative and a PowerOfficeGo Salesorder must be established.
-
-A new PowerOfficeGo Salesorder will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into PowerOfficeGo.
-
-Once a link between a SuperOffice Quotealternative and a PowerOfficeGo Salesorder is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quotealternative and a PowerOfficeGo Salesorder:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quotealternative Property
-     - PowerOfficeGo Salesorder Property
-     - PowerOfficeGo Data Type
-
-
 SuperOffice Quotealternative to PowerOfficeGo Salesorders
 ---------------------------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Quotealternative and a PowerOfficeGo Salesorders must be established.
@@ -439,28 +421,6 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
    * - sesam_SaleId (Dependant on having poweroffice-salesorder in sesam_AcceptedDependant on having poweroffice-salesorder in sesam_AcceptedDependant on having poweroffice-salesorder in sesam_AcceptedDependant on having poweroffice-salesorder in sesam_AcceptedDependant on having poweroffice-salesorder in sesam_Accepted)
      - Id
-     - "string"
-
-
-SuperOffice Quoteline to PowerOfficeGo Outgoinginvoices
--------------------------------------------------------
-Every SuperOffice Quoteline will be synchronized with a PowerOfficeGo Outgoinginvoices.
-
-Once a link between a SuperOffice Quoteline and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quoteline and a PowerOfficeGo Outgoinginvoices:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quoteline Property
-     - PowerOfficeGo Outgoinginvoices Property
-     - PowerOfficeGo Data Type
-   * - QuoteAlternativeId
-     - OrderNo
-     - "string"
-   * - TotalPrice
-     - NetAmount
      - "string"
 
 
@@ -604,65 +564,6 @@ The following properties are synchronized between a SuperOffice Product and a Po
      - "string"
 
 
-SuperOffice Product to PowerOfficeGo Vatcodes
----------------------------------------------
-Every SuperOffice Product will be synchronized with a PowerOfficeGo Vatcodes.
-
-Once a link between a SuperOffice Product and a PowerOfficeGo Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Product and a PowerOfficeGo Vatcodes:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - PowerOfficeGo Vatcodes Property
-     - PowerOfficeGo Data Type
-   * - QuantityUnit
-     - Name
-     - "string"
-   * - VAT
-     - Rate
-     - "string"
-   * - VAT
-     - rate
-     - "string"
-   * - VATInfo
-     - Name
-     - "string"
-   * - VATInfo
-     - name
-     - "string"
-
-
-SuperOffice Quotealternative to PowerOfficeGo Vatcodes
-------------------------------------------------------
-Every SuperOffice Quotealternative will be synchronized with a PowerOfficeGo Vatcodes.
-
-Once a link between a SuperOffice Quotealternative and a PowerOfficeGo Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quotealternative and a PowerOfficeGo Vatcodes:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quotealternative Property
-     - PowerOfficeGo Vatcodes Property
-     - PowerOfficeGo Data Type
-   * - VAT
-     - Rate
-     - "string"
-   * - VAT
-     - rate
-     - "string"
-   * - VATInfo
-     - Name
-     - "string"
-   * - VATInfo
-     - name
-     - "string"
-
-
 SuperOffice Quoteline to PowerOfficeGo Salesorderlines
 ------------------------------------------------------
 Every SuperOffice Quoteline will be synchronized with a PowerOfficeGo Salesorderlines.
@@ -715,34 +616,6 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
    * - VAT
      - VatReturnSpecification
-     - "string"
-
-
-SuperOffice Quoteline to PowerOfficeGo Vatcodes
------------------------------------------------
-Every SuperOffice Quoteline will be synchronized with a PowerOfficeGo Vatcodes.
-
-Once a link between a SuperOffice Quoteline and a PowerOfficeGo Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quoteline and a PowerOfficeGo Vatcodes:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quoteline Property
-     - PowerOfficeGo Vatcodes Property
-     - PowerOfficeGo Data Type
-   * - VAT
-     - Rate
-     - "string"
-   * - VAT
-     - rate
-     - "string"
-   * - VATInfo
-     - Name
-     - "string"
-   * - VATInfo
-     - name
      - "string"
 
 
