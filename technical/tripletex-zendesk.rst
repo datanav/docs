@@ -2,7 +2,7 @@
 Tripletex to Zendesk Dataflow
 =============================
 
-Generated: 2023-11-29 14:42:04
+Generated: 2023-11-29 14:44:43
 
 Introduction.
 ------------
@@ -11,10 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Tripletex Contact to Zendesk Users
 ----------------------------------
-Every Tripletex Contact will be synchronized with a Zendesk Users.
-
-If a matching Zendesk Users already exists, the Tripletex Contact will be merged with the existing one.
-If no matching Zendesk Users is found, a new Zendesk Users will be created.
+Before any synchronization can take place, a link between a Tripletex Contact and a Zendesk Users must be established.
 
 A Tripletex Contact will merge with a Zendesk Users if one of the following property combinations match:
 
@@ -46,10 +43,7 @@ The following properties are synchronized between a Tripletex Contact and a Zend
 
 Tripletex Employee to Zendesk Users
 -----------------------------------
-Every Tripletex Employee will be synchronized with a Zendesk Users.
-
-If a matching Zendesk Users already exists, the Tripletex Employee will be merged with the existing one.
-If no matching Zendesk Users is found, a new Zendesk Users will be created.
+Before any synchronization can take place, a link between a Tripletex Employee and a Zendesk Users must be established.
 
 A Tripletex Employee will merge with a Zendesk Users if one of the following property combinations match:
 
@@ -113,41 +107,6 @@ The following properties are synchronized between a Tripletex Department and a Z
    :header-rows: 1
 
    * - Tripletex Department Property
-     - Zendesk Organizations Property
-     - Zendesk Data Type
-   * - name
-     - name
-     - "string"
-
-
-Tripletex Project to Zendesk Ticketcomments
--------------------------------------------
-Every Tripletex Project will be synchronized with a Zendesk Ticketcomments.
-
-Once a link between a Tripletex Project and a Zendesk Ticketcomments is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Project and a Zendesk Ticketcomments:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Project Property
-     - Zendesk Ticketcomments Property
-     - Zendesk Data Type
-
-
-Tripletex Supplier to Zendesk Organizations
--------------------------------------------
-Every Tripletex Supplier will be synchronized with a Zendesk Organizations.
-
-Once a link between a Tripletex Supplier and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Supplier and a Zendesk Organizations:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Supplier Property
      - Zendesk Organizations Property
      - Zendesk Data Type
    * - name
