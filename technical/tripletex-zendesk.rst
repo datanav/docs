@@ -2,37 +2,37 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-29 23:36:03
+Generated: 2023-11-29 23:37:14
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Contact to Zendesk Users
-----------------------------------
-Before any synchronization can take place, a link between a Tripletex Contact and a Zendesk Users must be established.
+Tripletex Contact to  Users
+---------------------------
+Before any synchronization can take place, a link between a Tripletex Contact and a  Users must be established.
 
-A Tripletex Contact will merge with a Zendesk Users if one of the following property combinations match:
+A Tripletex Contact will merge with a  Users if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     - Zendesk Users Property
+     -  Users Property
    * - email
      - email
 
-Once a link between a Tripletex Contact and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a Zendesk Users:
+The following properties are synchronized between a Tripletex Contact and a  Users:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     - Zendesk Users Property
-     - Zendesk Data Type
+     -  Users Property
+     -  Data Type
    * - customer.id
      - organization_id
      - "string"
@@ -41,30 +41,30 @@ The following properties are synchronized between a Tripletex Contact and a Zend
      - "string"
 
 
-Tripletex Employee to Zendesk Users
------------------------------------
-Before any synchronization can take place, a link between a Tripletex Employee and a Zendesk Users must be established.
+Tripletex Employee to  Users
+----------------------------
+Before any synchronization can take place, a link between a Tripletex Employee and a  Users must be established.
 
-A Tripletex Employee will merge with a Zendesk Users if one of the following property combinations match:
+A Tripletex Employee will merge with a  Users if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     - Zendesk Users Property
+     -  Users Property
    * - email
      - email
 
-Once a link between a Tripletex Employee and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a Zendesk Users:
+The following properties are synchronized between a Tripletex Employee and a  Users:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     - Zendesk Users Property
-     - Zendesk Data Type
+     -  Users Property
+     -  Data Type
    * - department.id
      - organization_id
      - "string"
