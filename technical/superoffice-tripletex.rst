@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
@@ -188,30 +188,30 @@ The following properties are synchronized between a SuperOffice Person and a Tri
      - "string"
 
 
-SuperOffice Person to Tripletex Employee
-----------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a Tripletex Employee must be established.
+SuperOffice Person to  Employee
+-------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a  Employee must be established.
 
-A SuperOffice Person will merge with a Tripletex Employee if one of the following property combinations match:
+A SuperOffice Person will merge with a  Employee if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - Tripletex Employee Property
+     -  Employee Property
    * - Emails.Value
      - email
 
-Once a link between a SuperOffice Person and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a  Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a Tripletex Employee:
+The following properties are synchronized between a SuperOffice Person and a  Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - Tripletex Employee Property
-     - Tripletex Data Type
+     -  Employee Property
+     -  Data Type
    * - Address.Street.Address1
      - address.addressLine1
      - "string"
@@ -256,30 +256,30 @@ The following properties are synchronized between a SuperOffice Person and a Tri
      - "string"
 
 
-SuperOffice User to Tripletex Contact
--------------------------------------
-Before any synchronization can take place, a link between a SuperOffice User and a Tripletex Contact must be established.
+SuperOffice User to  Contact
+----------------------------
+Before any synchronization can take place, a link between a SuperOffice User and a  Contact must be established.
 
-A SuperOffice User will merge with a Tripletex Contact if one of the following property combinations match:
+A SuperOffice User will merge with a  Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     - Tripletex Contact Property
+     -  Contact Property
    * - personEmail
      - email
 
-Once a link between a SuperOffice User and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice User and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice User and a Tripletex Contact:
+The following properties are synchronized between a SuperOffice User and a  Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     - Tripletex Contact Property
-     - Tripletex Data Type
+     -  Contact Property
+     -  Data Type
    * - contactId
      - customer.id
      - "integer"
@@ -372,39 +372,39 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
 
 
-SuperOffice Listproductcategoryitems to Tripletex Productgroup
---------------------------------------------------------------
-Every SuperOffice Listproductcategoryitems will be synchronized with a Tripletex Productgroup.
+SuperOffice Listproductcategoryitems to  Productgroup
+-----------------------------------------------------
+Every SuperOffice Listproductcategoryitems will be synchronized with a  Productgroup.
 
-Once a link between a SuperOffice Listproductcategoryitems and a Tripletex Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Listproductcategoryitems and a  Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Listproductcategoryitems and a Tripletex Productgroup:
+The following properties are synchronized between a SuperOffice Listproductcategoryitems and a  Productgroup:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Listproductcategoryitems Property
-     - Tripletex Productgroup Property
-     - Tripletex Data Type
+     -  Productgroup Property
+     -  Data Type
    * - Name
      - name
      - "string"
 
 
-SuperOffice Ownercontactlink to Tripletex Department
-----------------------------------------------------
-Every SuperOffice Ownercontactlink will be synchronized with a Tripletex Department.
+SuperOffice Ownercontactlink to  Department
+-------------------------------------------
+Every SuperOffice Ownercontactlink will be synchronized with a  Department.
 
-Once a link between a SuperOffice Ownercontactlink and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Ownercontactlink and a  Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Ownercontactlink and a Tripletex Department:
+The following properties are synchronized between a SuperOffice Ownercontactlink and a  Department:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Ownercontactlink Property
-     - Tripletex Department Property
-     - Tripletex Data Type
+     -  Department Property
+     -  Data Type
    * - name
      - name
      - "string"
@@ -453,20 +453,20 @@ The following properties are synchronized between a SuperOffice Product and a Tr
      - "integer"
 
 
-SuperOffice Project to Tripletex Project
-----------------------------------------
-Every SuperOffice Project will be synchronized with a Tripletex Project.
+SuperOffice Project to  Project
+-------------------------------
+Every SuperOffice Project will be synchronized with a  Project.
 
-Once a link between a SuperOffice Project and a Tripletex Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Project and a  Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Project and a Tripletex Project:
+The following properties are synchronized between a SuperOffice Project and a  Project:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Project Property
-     - Tripletex Project Property
-     - Tripletex Data Type
+     -  Project Property
+     -  Data Type
    * - Associate.AssociateId
      - projectManager.id
      - "integer"
@@ -484,20 +484,20 @@ The following properties are synchronized between a SuperOffice Project and a Tr
      - "integer"
 
 
-SuperOffice Quoteline to Tripletex Orderline
---------------------------------------------
-Every SuperOffice Quoteline will be synchronized with a Tripletex Orderline.
+SuperOffice Quoteline to  Orderline
+-----------------------------------
+Every SuperOffice Quoteline will be synchronized with a  Orderline.
 
-Once a link between a SuperOffice Quoteline and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quoteline and a  Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quoteline and a Tripletex Orderline:
+The following properties are synchronized between a SuperOffice Quoteline and a  Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quoteline Property
-     - Tripletex Orderline Property
-     - Tripletex Data Type
+     -  Orderline Property
+     -  Data Type
    * - Description
      - description
      - "string"
@@ -635,33 +635,33 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "integer"
 
 
-SuperOffice User to Tripletex Employee
---------------------------------------
-Every SuperOffice User will be synchronized with a Tripletex Employee.
+SuperOffice User to  Employee
+-----------------------------
+Every SuperOffice User will be synchronized with a  Employee.
 
-If a matching Tripletex Employee already exists, the SuperOffice User will be merged with the existing one.
-If no matching Tripletex Employee is found, a new Tripletex Employee will be created.
+If a matching  Employee already exists, the SuperOffice User will be merged with the existing one.
+If no matching  Employee is found, a new  Employee will be created.
 
-A SuperOffice User will merge with a Tripletex Employee if one of the following property combinations match:
+A SuperOffice User will merge with a  Employee if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     - Tripletex Employee Property
+     -  Employee Property
    * - personEmail
      - email
 
-Once a link between a SuperOffice User and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice User and a  Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice User and a Tripletex Employee:
+The following properties are synchronized between a SuperOffice User and a  Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     - Tripletex Employee Property
-     - Tripletex Data Type
+     -  Employee Property
+     -  Data Type
    * - contactId
      - department.id
      - "if", "neq", "_.", "X"], "integer", "string"]
