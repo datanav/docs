@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-11-29 14:42:03
+Generated: 2023-11-29 14:44:42
 
 Introduction.
 ------------
@@ -216,82 +216,6 @@ The following properties are synchronized between a Tripletex Department and a H
      - "string"
    * - name
      - properties.name
-     - "string"
-
-
-Tripletex Supplier to HubSpot Company
--------------------------------------
-Every Tripletex Supplier will be synchronized with a HubSpot Company.
-
-Once a link between a Tripletex Supplier and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Supplier and a HubSpot Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Supplier Property
-     - HubSpot Company Property
-     - HubSpot Data Type
-   * - deliveryAddress.addressLine1
-     - properties.address
-     - "string"
-   * - deliveryAddress.addressLine2
-     - properties.address2
-     - "string"
-   * - deliveryAddress.changes
-     - properties.city
-     - "string"
-   * - deliveryAddress.city
-     - properties.city
-     - "string"
-   * - deliveryAddress.city
-     - properties.country
-     - "string"
-   * - deliveryAddress.country.id
-     - properties.country
-     - "string"
-   * - deliveryAddress.postalCode
-     - properties.zip
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - name
-     - properties.name
-     - "string"
-   * - phoneNumber
-     - properties.phone
-     - "string"
-   * - physicalAddress.addressLine1
-     - properties.address
-     - "string"
-   * - physicalAddress.addressLine2
-     - properties.address2
-     - "string"
-   * - physicalAddress.city
-     - properties.city
-     - "string"
-   * - physicalAddress.country.id
-     - properties.country
-     - "string"
-   * - physicalAddress.postalCode
-     - properties.zip
-     - "string"
-   * - postalAddress.addressLine1
-     - properties.address
-     - "string"
-   * - postalAddress.addressLine2
-     - properties.address2
-     - "string"
-   * - postalAddress.city
-     - properties.city
-     - "string"
-   * - postalAddress.country.id
-     - properties.country
-     - "string"
-   * - postalAddress.postalCode
-     - properties.zip
      - "string"
 
 
