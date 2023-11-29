@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:37:14
+Generated: 2023-11-29 23:38:14
 
 Introduction.
 ------------
@@ -198,20 +198,20 @@ The following properties are synchronized between a Wix.com Inventory and a  Pro
      - "integer"
 
 
-Wix.com Orders to Tripletex Order
----------------------------------
-Every Wix.com Orders will be synchronized with a Tripletex Order.
+Wix.com Orders to  Order
+------------------------
+Every Wix.com Orders will be synchronized with a  Order.
 
-Once a link between a Wix.com Orders and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a Tripletex Order:
+The following properties are synchronized between a Wix.com Orders and a  Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     - Tripletex Order Property
-     - Tripletex Data Type
+     -  Order Property
+     -  Data Type
    * - buyerInfo.contactId
      - customer.id
      - "integer"
@@ -257,20 +257,20 @@ The following properties are synchronized between a Wix.com Orders and a  Orderl
      - "float"
 
 
-Wix.com Products to Tripletex Product
--------------------------------------
-Every Wix.com Products will be synchronized with a Tripletex Product.
+Wix.com Products to  Product
+----------------------------
+Every Wix.com Products will be synchronized with a  Product.
 
-Once a link between a Wix.com Products and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a Tripletex Product:
+The following properties are synchronized between a Wix.com Products and a  Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     - Tripletex Product Property
-     - Tripletex Data Type
+     -  Product Property
+     -  Data Type
    * - costRange.maxValue
      - costExcludingVatCurrency
      - "integer"
