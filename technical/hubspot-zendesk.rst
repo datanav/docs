@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:37:13
+Generated: 2023-11-29 23:45:21
 
 Introduction.
 ------------
@@ -38,20 +38,20 @@ The following properties are synchronized between a HubSpot Contact and a  Users
      - "string"
 
 
-HubSpot Company to Zendesk Organizations
-----------------------------------------
-Every HubSpot Company will be synchronized with a Zendesk Organizations.
+HubSpot Company to  Organizations
+---------------------------------
+Every HubSpot Company will be synchronized with a  Organizations.
 
-Once a link between a HubSpot Company and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a Zendesk Organizations:
+The following properties are synchronized between a HubSpot Company and a  Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     - Zendesk Organizations Property
-     - Zendesk Data Type
+     -  Organizations Property
+     -  Data Type
    * - properties.country
      - tags
      - "string"
