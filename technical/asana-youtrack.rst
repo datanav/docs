@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:43:32
 
 Introduction.
 ------------
@@ -41,20 +41,20 @@ The following properties are synchronized between a Asana Tasks and a YouTrack H
      - YouTrack Data Type
 
 
-Asana Teams to YouTrack Groups
-------------------------------
-Every Asana Teams will be synchronized with a YouTrack Groups.
+Asana Teams to  Groups
+----------------------
+Every Asana Teams will be synchronized with a  Groups.
 
-Once a link between a Asana Teams and a YouTrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Teams and a  Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Teams and a YouTrack Groups:
+The following properties are synchronized between a Asana Teams and a  Groups:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Teams Property
-     - YouTrack Groups Property
-     - YouTrack Data Type
+     -  Groups Property
+     -  Data Type
    * - name
      - name
      - "string"
