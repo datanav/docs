@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-11-29 14:42:03
+Generated: 2023-11-29 14:42:09
 
 Introduction.
 ------------
@@ -127,6 +127,42 @@ The following properties are synchronized between a HubSpot Company and a SuperO
    * - properties.zip
      - Address.Street.Zipcode
      - "string"
+
+
+HubSpot Company to SuperOffice Person
+-------------------------------------
+Before any synchronization can take place, a link between a HubSpot Company and a SuperOffice Person must be established.
+
+A new SuperOffice Person will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into SuperOffice.
+
+Once a link between a HubSpot Company and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Company and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Company Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
+
+
+HubSpot Contact to SuperOffice Contact
+--------------------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a SuperOffice Contact must be established.
+
+A new SuperOffice Contact will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into SuperOffice.
+
+Once a link between a HubSpot Contact and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a SuperOffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
 
 
 HubSpot Contactcompanyassociation to SuperOffice Person
