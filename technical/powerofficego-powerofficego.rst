@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-11-29 15:04:37
+Generated: 2023-11-29 15:05:23
 
 Introduction.
 ------------
@@ -282,7 +282,7 @@ Powerofficego Customers to PowerOfficeGo Contactperson
 ------------------------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Customers and a PowerOfficeGo Contactperson must be established.
 
-A new PowerOfficeGo Contactperson will be created from a Powerofficego Customers if it is connected to a Powerofficego Salesorder that is synchronized into PowerOfficeGo.
+A new PowerOfficeGo Contactperson will be created from a Powerofficego Customers if it is connected to a Powerofficego Salesorder, or Salesorders that is synchronized into PowerOfficeGo.
 
 Once a link between a Powerofficego Customers and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -303,7 +303,7 @@ Powerofficego Customers to PowerOfficeGo Customers person
 ---------------------------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Customers and a PowerOfficeGo Customers person must be established.
 
-A new PowerOfficeGo Customers person will be created from a Powerofficego Customers if it is connected to a Powerofficego Customer, Customers, Suppliers, Salesorder, Salesorders, Salesorderline, Outgoinginvoice, Salesorderlines, Customers-person, or Suppliers-person that is synchronized into PowerOfficeGo.
+A new PowerOfficeGo Customers person will be created from a Powerofficego Customers if it is connected to a Powerofficego Customer, Customers, Suppliers, Salesorder, Salesorders, Contactperson, Salesorderline, Outgoinginvoice, Salesorderlines, Customers-person, or Suppliers-person that is synchronized into PowerOfficeGo.
 
 Once a link between a Powerofficego Customers and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
