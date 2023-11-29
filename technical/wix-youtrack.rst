@@ -2,7 +2,7 @@
 Wix.com to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-16 13:55:43
+Generated: 2023-11-29 14:34:53
 
 Introduction.
 ------------
@@ -23,10 +23,6 @@ A Wix.com Contacts will merge with a YouTrack Users if one of the following prop
 
    * - Wix.com Contacts Property
      - YouTrack Users Property
-   * - primaryInfo.email
-     - 
-   * - primaryInfo.email
-     - profile.email
    * - primaryInfo.email
      - profile.email.email
 
@@ -62,10 +58,6 @@ A Wix.com Members will merge with a YouTrack Users if one of the following prope
 
    * - Wix.com Members Property
      - YouTrack Users Property
-   * - loginEmail
-     - 
-   * - loginEmail
-     - profile.email
    * - loginEmail
      - profile.email.email
 
