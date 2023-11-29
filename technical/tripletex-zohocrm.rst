@@ -2,27 +2,27 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-29 23:36:03
+Generated: 2023-11-29 23:45:21
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Customer to ZohoCRM Account
--------------------------------------
-Every Tripletex Customer will be synchronized with a ZohoCRM Account.
+Tripletex Customer to  Account
+------------------------------
+Every Tripletex Customer will be synchronized with a  Account.
 
-Once a link between a Tripletex Customer and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a  Account is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a ZohoCRM Account:
+The following properties are synchronized between a Tripletex Customer and a  Account:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     - ZohoCRM Account Property
-     - ZohoCRM Data Type
+     -  Account Property
+     -  Data Type
    * - deliveryAddress.city
      - Billing_City
      - "string"
@@ -91,20 +91,20 @@ The following properties are synchronized between a Tripletex Customer and a Zoh
      - "string"
 
 
-Tripletex Department to ZohoCRM Account
----------------------------------------
-Every Tripletex Department will be synchronized with a ZohoCRM Account.
+Tripletex Department to  Account
+--------------------------------
+Every Tripletex Department will be synchronized with a  Account.
 
-Once a link between a Tripletex Department and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a  Account is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a ZohoCRM Account:
+The following properties are synchronized between a Tripletex Department and a  Account:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     - ZohoCRM Account Property
-     - ZohoCRM Data Type
+     -  Account Property
+     -  Data Type
    * - name
      - Account_Name
      - "string"
