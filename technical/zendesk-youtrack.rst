@@ -2,7 +2,7 @@
 Zendesk to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-29 14:42:04
+Generated: 2023-11-29 14:44:43
 
 Introduction.
 ------------
@@ -11,10 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Zendesk Users to YouTrack Users
 -------------------------------
-Every Zendesk Users will be synchronized with a YouTrack Users.
-
-If a matching YouTrack Users already exists, the Zendesk Users will be merged with the existing one.
-If no matching YouTrack Users is found, a new YouTrack Users will be created.
+Before any synchronization can take place, a link between a Zendesk Users and a YouTrack Users must be established.
 
 A Zendesk Users will merge with a YouTrack Users if one of the following property combinations match:
 
@@ -57,44 +54,6 @@ The following properties are synchronized between a Zendesk Organizations and a 
      - "string"
 
 
-Zendesk Organizations to YouTrack Usergroups
---------------------------------------------
-Every Zendesk Organizations will be synchronized with a YouTrack Usergroups.
-
-Once a link between a Zendesk Organizations and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Organizations and a YouTrack Usergroups:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Organizations Property
-     - YouTrack Usergroups Property
-     - YouTrack Data Type
-   * - name
-     - name
-     - "string"
-
-
-Zendesk Organizations to YouTrack Workitems
--------------------------------------------
-Every Zendesk Organizations will be synchronized with a YouTrack Workitems.
-
-Once a link between a Zendesk Organizations and a YouTrack Workitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Organizations and a YouTrack Workitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Organizations Property
-     - YouTrack Workitems Property
-     - YouTrack Data Type
-   * - name
-     - updated
-     - "string"
-
-
 Zendesk Ticketcomments to YouTrack Hubprojects
 ----------------------------------------------
 Every Zendesk Ticketcomments will be synchronized with a YouTrack Hubprojects.
@@ -108,38 +67,6 @@ The following properties are synchronized between a Zendesk Ticketcomments and a
 
    * - Zendesk Ticketcomments Property
      - YouTrack Hubprojects Property
-     - YouTrack Data Type
-
-
-Zendesk Ticketcomments to YouTrack Organizationroles
-----------------------------------------------------
-Every Zendesk Ticketcomments will be synchronized with a YouTrack Organizationroles.
-
-Once a link between a Zendesk Ticketcomments and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Ticketcomments and a YouTrack Organizationroles:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Ticketcomments Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
-
-
-Zendesk Ticketcomments to YouTrack Usergroups
----------------------------------------------
-Every Zendesk Ticketcomments will be synchronized with a YouTrack Usergroups.
-
-Once a link between a Zendesk Ticketcomments and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Ticketcomments and a YouTrack Usergroups:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Ticketcomments Property
-     - YouTrack Usergroups Property
      - YouTrack Data Type
 
 
@@ -157,47 +84,6 @@ The following properties are synchronized between a Zendesk Tickets and a YouTra
    * - Zendesk Tickets Property
      - YouTrack Hubprojects Property
      - YouTrack Data Type
-
-
-Zendesk Tickets to YouTrack Organizationroles
----------------------------------------------
-Every Zendesk Tickets will be synchronized with a YouTrack Organizationroles.
-
-Once a link between a Zendesk Tickets and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Tickets and a YouTrack Organizationroles:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Tickets Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
-   * - due_at
-     - id
-     - "string"
-
-
-Zendesk Tickets to YouTrack Usergroups
---------------------------------------
-Every Zendesk Tickets will be synchronized with a YouTrack Usergroups.
-
-Once a link between a Zendesk Tickets and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Tickets and a YouTrack Usergroups:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Tickets Property
-     - YouTrack Usergroups Property
-     - YouTrack Data Type
-   * - due_at
-     - name
-     - "string"
-   * - subject
-     - users.id
-     - "string"
 
 
 Zendesk Tickets to YouTrack Issues
