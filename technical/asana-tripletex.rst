@@ -2,84 +2,12 @@
 Asana to Tripletex Dataflow
 ===========================
 
-Generated: 2023-11-29 14:37:48
+Generated: 2023-11-29 14:44:42
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Asana to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Asana Tasks to Tripletex Project
---------------------------------
-Every Asana Tasks will be synchronized with a Tripletex Project.
-
-Once a link between a Asana Tasks and a Tripletex Project is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Asana Tasks and a Tripletex Project:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Asana Tasks Property
-     - Tripletex Project Property
-     - Tripletex Data Type
-   * - due_on
-     - endDate
-     - "datetime-format","%Y-%m-%d","_."]
-   * - name
-     - name
-     - "string"
-
-
-Asana Teams to Tripletex Customer
----------------------------------
-Every Asana Teams will be synchronized with a Tripletex Customer.
-
-Once a link between a Asana Teams and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Asana Teams and a Tripletex Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Asana Teams Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
-   * - name
-     - name
-     - "string"
-   * - permalink_url
-     - url
-     - "string"
-   * - permalink_url
-     - website
-     - "string"
-
-
-Asana Workspaces to Tripletex Customer
---------------------------------------
-Every Asana Workspaces will be synchronized with a Tripletex Customer.
-
-Once a link between a Asana Workspaces and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Asana Workspaces and a Tripletex Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Asana Workspaces Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
-   * - email_domains
-     - url
-     - "string"
-   * - email_domains
-     - website
-     - "string"
-   * - name
-     - name
-     - "string"
-
 
 Asana Projects to Tripletex Project
 -----------------------------------
