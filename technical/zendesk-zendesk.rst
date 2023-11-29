@@ -1,13 +1,13 @@
-===========================
-Zendesk to Zendesk Dataflow
-===========================
+====================
+Zendesk to  Dataflow
+====================
 
-Generated: 2023-11-29 15:04:37
+Generated: 2023-11-29 23:36:03
 
 Introduction.
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Zendesk to Zendesk. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Zendesk to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Zendesk Users to Zendesk Users
 ------------------------------
