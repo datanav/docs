@@ -2,40 +2,40 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:38:14
+Generated: 2023-11-29 23:45:21
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wix.com Contacts to SuperOffice Person
---------------------------------------
-Every Wix.com Contacts will be synchronized with a SuperOffice Person.
+Wix.com Contacts to  Person
+---------------------------
+Every Wix.com Contacts will be synchronized with a  Person.
 
-If a matching SuperOffice Person already exists, the Wix.com Contacts will be merged with the existing one.
-If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
+If a matching  Person already exists, the Wix.com Contacts will be merged with the existing one.
+If no matching  Person is found, a new  Person will be created.
 
-A Wix.com Contacts will merge with a SuperOffice Person if one of the following property combinations match:
+A Wix.com Contacts will merge with a  Person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     - SuperOffice Person Property
+     -  Person Property
    * - primaryInfo.email
      - Emails.Value
 
-Once a link between a Wix.com Contacts and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a  Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a SuperOffice Person:
+The following properties are synchronized between a Wix.com Contacts and a  Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
+     -  Person Property
+     -  Data Type
    * - info.emails
      - Emails.Value
      - "string"
@@ -56,33 +56,33 @@ The following properties are synchronized between a Wix.com Contacts and a Super
      - "string"
 
 
-Wix.com Members to SuperOffice Person
--------------------------------------
-Every Wix.com Members will be synchronized with a SuperOffice Person.
+Wix.com Members to  Person
+--------------------------
+Every Wix.com Members will be synchronized with a  Person.
 
-If a matching SuperOffice Person already exists, the Wix.com Members will be merged with the existing one.
-If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
+If a matching  Person already exists, the Wix.com Members will be merged with the existing one.
+If no matching  Person is found, a new  Person will be created.
 
-A Wix.com Members will merge with a SuperOffice Person if one of the following property combinations match:
+A Wix.com Members will merge with a  Person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Members Property
-     - SuperOffice Person Property
+     -  Person Property
    * - loginEmail
      - Emails.Value
 
-Once a link between a Wix.com Members and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Members and a  Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Members and a SuperOffice Person:
+The following properties are synchronized between a Wix.com Members and a  Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Members Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
+     -  Person Property
+     -  Data Type
    * - loginEmail
      - Emails.Value
      - "string"
