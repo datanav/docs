@@ -2,39 +2,39 @@
 Freshteam to  Dataflow
 ======================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:37:14
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Freshteam to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Freshteam Employee to Freshteam Employee
-----------------------------------------
-Before any synchronization can take place, a link between a Freshteam Employee and a Freshteam Employee must be established.
+Freshteam Employee to  Employee
+-------------------------------
+Before any synchronization can take place, a link between a Freshteam Employee and a  Employee must be established.
 
-A Freshteam Employee will merge with a Freshteam Employee if one of the following property combinations match:
+A Freshteam Employee will merge with a  Employee if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Employee Property
-     - Freshteam Employee Property
+     -  Employee Property
    * - employee_id
      - employee_id
    * - official_email
      - official_email
 
-Once a link between a Freshteam Employee and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Employee and a  Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Employee and a Freshteam Employee:
+The following properties are synchronized between a Freshteam Employee and a  Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Employee Property
-     - Freshteam Employee Property
-     - Freshteam Data Type
+     -  Employee Property
+     -  Data Type
    * - address.city
      - address.city
      - "string"
