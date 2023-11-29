@@ -2,7 +2,7 @@
 Zendesk to Tripletex Dataflow
 =============================
 
-Generated: 2023-11-29 14:42:10
+Generated: 2023-11-29 14:44:42
 
 Introduction.
 ------------
@@ -79,66 +79,6 @@ The following properties are synchronized between a Zendesk Organizations and a 
      - Tripletex Department Property
      - Tripletex Data Type
    * - name
-     - name
-     - "string"
-
-
-Zendesk Organisations to Tripletex Customer
--------------------------------------------
-Every Zendesk Organisations will be synchronized with a Tripletex Customer.
-
-Once a link between a Zendesk Organisations and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Organisations and a Tripletex Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Organisations Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
-   * - name
-     - name
-     - "string"
-
-
-Zendesk Ticketcomments to Tripletex Project
--------------------------------------------
-Every Zendesk Ticketcomments will be synchronized with a Tripletex Project.
-
-Once a link between a Zendesk Ticketcomments and a Tripletex Project is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Ticketcomments and a Tripletex Project:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Ticketcomments Property
-     - Tripletex Project Property
-     - Tripletex Data Type
-
-
-Zendesk Tickets to Tripletex Project
-------------------------------------
-Every Zendesk Tickets will be synchronized with a Tripletex Project.
-
-Once a link between a Zendesk Tickets and a Tripletex Project is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Tickets and a Tripletex Project:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Tickets Property
-     - Tripletex Project Property
-     - Tripletex Data Type
-   * - due_at
-     - endDate
-     - "datetime-format","%Y-%m-%d","_."]
-   * - requester_id
-     - projectManager.id
-     - "integer"
-   * - subject
      - name
      - "string"
 
