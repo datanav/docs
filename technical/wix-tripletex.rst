@@ -2,7 +2,7 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2023-10-05 08:40:19
+Generated: 2023-11-29 14:34:53
 
 Introduction.
 ------------
@@ -20,8 +20,6 @@ A Wix.com Contacts will merge with a Tripletex Employee if one of the following 
 
    * - Wix.com Contacts Property
      - Tripletex Employee Property
-   * - info.emails
-     - email
    * - primaryInfo.email
      - email
 
@@ -163,8 +161,6 @@ A Wix.com Contacts will merge with a Tripletex Contact if one of the following p
 
    * - Wix.com Contacts Property
      - Tripletex Contact Property
-   * - info.emails
-     - email
    * - primaryInfo.email
      - email
 
