@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-29 23:36:03
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
@@ -219,20 +219,20 @@ The following properties are synchronized between a Tripletex Department and a H
      - "string"
 
 
-Tripletex Orderline to HubSpot Lineitem
----------------------------------------
-Every Tripletex Orderline will be synchronized with a HubSpot Lineitem.
+Tripletex Orderline to  Lineitem
+--------------------------------
+Every Tripletex Orderline will be synchronized with a  Lineitem.
 
-Once a link between a Tripletex Orderline and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Orderline and a  Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Orderline and a HubSpot Lineitem:
+The following properties are synchronized between a Tripletex Orderline and a  Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Orderline Property
-     - HubSpot Lineitem Property
-     - HubSpot Data Type
+     -  Lineitem Property
+     -  Data Type
    * - count
      - properties.quantity
      - "integer"
@@ -250,20 +250,20 @@ The following properties are synchronized between a Tripletex Orderline and a Hu
      - "string"
 
 
-Tripletex Orderline to HubSpot Lineitemdealassociation
-------------------------------------------------------
-Every Tripletex Orderline will be synchronized with a HubSpot Lineitemdealassociation.
+Tripletex Orderline to  Lineitemdealassociation
+-----------------------------------------------
+Every Tripletex Orderline will be synchronized with a  Lineitemdealassociation.
 
-Once a link between a Tripletex Orderline and a HubSpot Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Orderline and a  Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Orderline and a HubSpot Lineitemdealassociation:
+The following properties are synchronized between a Tripletex Orderline and a  Lineitemdealassociation:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Orderline Property
-     - HubSpot Lineitemdealassociation Property
-     - HubSpot Data Type
+     -  Lineitemdealassociation Property
+     -  Data Type
    * - order.id
      - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - "string"
