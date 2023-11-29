@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-11-29 14:35:43
+Generated: 2023-11-29 14:37:48
 
 Introduction.
 ------------
@@ -996,84 +996,5 @@ The following properties are synchronized between a Powerofficego Suppliers pers
      - "string"
    * - PhoneNumber
      - phoneNumberWork
-     - "string"
-
-
-Powerofficego Suppliers to Tripletex Supplier
----------------------------------------------
-Every Powerofficego Suppliers will be synchronized with a Tripletex Supplier.
-
-Once a link between a Powerofficego Suppliers and a Tripletex Supplier is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Suppliers and a Tripletex Supplier:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Suppliers Property
-     - Tripletex Supplier Property
-     - Tripletex Data Type
-   * - EmailAddress
-     - email
-     - "string"
-   * - Id
-     - id
-     - "integer"
-   * - LegalName
-     - name
-     - "string"
-   * - MailAddress.AddressLine1
-     - deliveryAddress.addressLine1
-     - "string"
-   * - MailAddress.AddressLine1
-     - physicalAddress.addressLine1
-     - "string"
-   * - MailAddress.AddressLine1
-     - postalAddress.addressLine1
-     - "string"
-   * - MailAddress.AddressLine2
-     - deliveryAddress.addressLine2
-     - "string"
-   * - MailAddress.AddressLine2
-     - physicalAddress.addressLine2
-     - "string"
-   * - MailAddress.AddressLine2
-     - postalAddress.addressLine2
-     - "string"
-   * - MailAddress.City
-     - deliveryAddress.changes
-     - "string"
-   * - MailAddress.City
-     - deliveryAddress.city
-     - "string"
-   * - MailAddress.City
-     - physicalAddress.city
-     - "string"
-   * - MailAddress.City
-     - postalAddress.city
-     - "string"
-   * - MailAddress.CountryCode
-     - deliveryAddress.city
-     - "string"
-   * - MailAddress.CountryCode
-     - deliveryAddress.country.id
-     - "integer"
-   * - MailAddress.CountryCode
-     - physicalAddress.country.id
-     - "integer"
-   * - MailAddress.CountryCode
-     - postalAddress.country.id
-     - "integer"
-   * - MailAddress.ZipCode
-     - deliveryAddress.postalCode
-     - "string"
-   * - MailAddress.ZipCode
-     - physicalAddress.postalCode
-     - "string"
-   * - MailAddress.ZipCode
-     - postalAddress.postalCode
-     - "string"
-   * - PhoneNumber
-     - phoneNumber
      - "string"
 
