@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:37:13
+Generated: 2023-11-29 23:38:14
 
 Introduction.
 ------------
@@ -312,20 +312,20 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
      - "integer"
 
 
-HubSpot Product to Tripletex Product
-------------------------------------
-Every HubSpot Product will be synchronized with a Tripletex Product.
+HubSpot Product to  Product
+---------------------------
+Every HubSpot Product will be synchronized with a  Product.
 
-Once a link between a HubSpot Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Product and a Tripletex Product:
+The following properties are synchronized between a HubSpot Product and a  Product:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Product Property
-     - Tripletex Product Property
-     - Tripletex Data Type
+     -  Product Property
+     -  Data Type
    * - properties.description
      - description
      - "string"
