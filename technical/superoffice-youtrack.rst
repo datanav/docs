@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-29 23:37:13
+Generated: 2023-11-29 23:45:21
 
 Introduction.
 ------------
@@ -67,167 +67,167 @@ The following properties are synchronized between a SuperOffice User and a  User
      -  Data Type
 
 
-SuperOffice Contact to YouTrack Groups
---------------------------------------
-Every SuperOffice Contact will be synchronized with a YouTrack Groups.
+SuperOffice Contact to  Groups
+------------------------------
+Every SuperOffice Contact will be synchronized with a  Groups.
 
-Once a link between a SuperOffice Contact and a YouTrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a  Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a YouTrack Groups:
+The following properties are synchronized between a SuperOffice Contact and a  Groups:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - YouTrack Groups Property
-     - YouTrack Data Type
+     -  Groups Property
+     -  Data Type
    * - Name
      - name
      - "string"
 
 
-SuperOffice Listbusinessitems to YouTrack Organizationroles
------------------------------------------------------------
-Every SuperOffice Listbusinessitems will be synchronized with a YouTrack Organizationroles.
+SuperOffice Listbusinessitems to  Organizationroles
+---------------------------------------------------
+Every SuperOffice Listbusinessitems will be synchronized with a  Organizationroles.
 
-Once a link between a SuperOffice Listbusinessitems and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Listbusinessitems and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Listbusinessitems and a YouTrack Organizationroles:
+The following properties are synchronized between a SuperOffice Listbusinessitems and a  Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Listbusinessitems Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
+     -  Organizationroles Property
+     -  Data Type
 
 
-SuperOffice Listcategoryitems to YouTrack Organizationroles
------------------------------------------------------------
-Every SuperOffice Listcategoryitems will be synchronized with a YouTrack Organizationroles.
+SuperOffice Listcategoryitems to  Organizationroles
+---------------------------------------------------
+Every SuperOffice Listcategoryitems will be synchronized with a  Organizationroles.
 
-Once a link between a SuperOffice Listcategoryitems and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Listcategoryitems and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Listcategoryitems and a YouTrack Organizationroles:
+The following properties are synchronized between a SuperOffice Listcategoryitems and a  Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Listcategoryitems Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
+     -  Organizationroles Property
+     -  Data Type
 
 
-SuperOffice Listproductcategoryitems to YouTrack Organizationroles
-------------------------------------------------------------------
-Every SuperOffice Listproductcategoryitems will be synchronized with a YouTrack Organizationroles.
+SuperOffice Listproductcategoryitems to  Organizationroles
+----------------------------------------------------------
+Every SuperOffice Listproductcategoryitems will be synchronized with a  Organizationroles.
 
-Once a link between a SuperOffice Listproductcategoryitems and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Listproductcategoryitems and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Listproductcategoryitems and a YouTrack Organizationroles:
+The following properties are synchronized between a SuperOffice Listproductcategoryitems and a  Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Listproductcategoryitems Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
+     -  Organizationroles Property
+     -  Data Type
 
 
-SuperOffice Listproductfamilyitems to YouTrack Organizationroles
-----------------------------------------------------------------
-Every SuperOffice Listproductfamilyitems will be synchronized with a YouTrack Organizationroles.
+SuperOffice Listproductfamilyitems to  Organizationroles
+--------------------------------------------------------
+Every SuperOffice Listproductfamilyitems will be synchronized with a  Organizationroles.
 
-Once a link between a SuperOffice Listproductfamilyitems and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Listproductfamilyitems and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Listproductfamilyitems and a YouTrack Organizationroles:
+The following properties are synchronized between a SuperOffice Listproductfamilyitems and a  Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Listproductfamilyitems Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
+     -  Organizationroles Property
+     -  Data Type
 
 
-SuperOffice Listproducttypeitems to YouTrack Organizationroles
---------------------------------------------------------------
-Every SuperOffice Listproducttypeitems will be synchronized with a YouTrack Organizationroles.
+SuperOffice Listproducttypeitems to  Organizationroles
+------------------------------------------------------
+Every SuperOffice Listproducttypeitems will be synchronized with a  Organizationroles.
 
-Once a link between a SuperOffice Listproducttypeitems and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Listproducttypeitems and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Listproducttypeitems and a YouTrack Organizationroles:
+The following properties are synchronized between a SuperOffice Listproducttypeitems and a  Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Listproducttypeitems Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
+     -  Organizationroles Property
+     -  Data Type
 
 
-SuperOffice Listprojectstatusitems to YouTrack Organizationroles
-----------------------------------------------------------------
-Every SuperOffice Listprojectstatusitems will be synchronized with a YouTrack Organizationroles.
+SuperOffice Listprojectstatusitems to  Organizationroles
+--------------------------------------------------------
+Every SuperOffice Listprojectstatusitems will be synchronized with a  Organizationroles.
 
-Once a link between a SuperOffice Listprojectstatusitems and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Listprojectstatusitems and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Listprojectstatusitems and a YouTrack Organizationroles:
+The following properties are synchronized between a SuperOffice Listprojectstatusitems and a  Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Listprojectstatusitems Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
+     -  Organizationroles Property
+     -  Data Type
 
 
-SuperOffice Listprojecttypeitems to YouTrack Organizationroles
---------------------------------------------------------------
-Every SuperOffice Listprojecttypeitems will be synchronized with a YouTrack Organizationroles.
+SuperOffice Listprojecttypeitems to  Organizationroles
+------------------------------------------------------
+Every SuperOffice Listprojecttypeitems will be synchronized with a  Organizationroles.
 
-Once a link between a SuperOffice Listprojecttypeitems and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Listprojecttypeitems and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Listprojecttypeitems and a YouTrack Organizationroles:
+The following properties are synchronized between a SuperOffice Listprojecttypeitems and a  Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Listprojecttypeitems Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
+     -  Organizationroles Property
+     -  Data Type
 
 
-SuperOffice Listsaletypeitems to YouTrack Organizationroles
------------------------------------------------------------
-Every SuperOffice Listsaletypeitems will be synchronized with a YouTrack Organizationroles.
+SuperOffice Listsaletypeitems to  Organizationroles
+---------------------------------------------------
+Every SuperOffice Listsaletypeitems will be synchronized with a  Organizationroles.
 
-Once a link between a SuperOffice Listsaletypeitems and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Listsaletypeitems and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Listsaletypeitems and a YouTrack Organizationroles:
+The following properties are synchronized between a SuperOffice Listsaletypeitems and a  Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Listsaletypeitems Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
+     -  Organizationroles Property
+     -  Data Type
 
 
-SuperOffice Listticketcategoryitems to YouTrack Organizationroles
------------------------------------------------------------------
-Every SuperOffice Listticketcategoryitems will be synchronized with a YouTrack Organizationroles.
+SuperOffice Listticketcategoryitems to  Organizationroles
+---------------------------------------------------------
+Every SuperOffice Listticketcategoryitems will be synchronized with a  Organizationroles.
 
-Once a link between a SuperOffice Listticketcategoryitems and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Listticketcategoryitems and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Listticketcategoryitems and a YouTrack Organizationroles:
+The following properties are synchronized between a SuperOffice Listticketcategoryitems and a  Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Listticketcategoryitems Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
+     -  Organizationroles Property
+     -  Data Type
    * - CategoryMaster
      - organization.id
      - "string"
