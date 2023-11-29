@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-29 23:39:28
+Generated: 2023-11-29 23:40:24
 
 Introduction.
 ------------
@@ -336,20 +336,20 @@ The following properties are synchronized between a Wave Customer and a  Contact
      - "string"
 
 
-Wave Customer to Tripletex Customer
------------------------------------
-Every Wave Customer will be synchronized with a Tripletex Customer.
+Wave Customer to  Customer
+--------------------------
+Every Wave Customer will be synchronized with a  Customer.
 
-Once a link between a Wave Customer and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a Tripletex Customer:
+The following properties are synchronized between a Wave Customer and a  Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
+     -  Customer Property
+     -  Data Type
    * - address.addressLine1
      - deliveryAddress.addressLine1
      - "string"
