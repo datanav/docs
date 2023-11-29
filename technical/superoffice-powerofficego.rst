@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
@@ -177,56 +177,56 @@ The following properties are synchronized between a SuperOffice Person and a Pow
      - "integer"
 
 
-SuperOffice Pricelist to PowerOfficeGo Currency
------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Pricelist and a PowerOfficeGo Currency must be established.
+SuperOffice Pricelist to  Currency
+----------------------------------
+Before any synchronization can take place, a link between a SuperOffice Pricelist and a  Currency must be established.
 
-A SuperOffice Pricelist will merge with a PowerOfficeGo Currency if one of the following property combinations match:
+A SuperOffice Pricelist will merge with a  Currency if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Pricelist Property
-     - PowerOfficeGo Currency Property
+     -  Currency Property
    * - Currency
      - code
 
-Once a link between a SuperOffice Pricelist and a PowerOfficeGo Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Pricelist and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Pricelist and a PowerOfficeGo Currency:
+The following properties are synchronized between a SuperOffice Pricelist and a  Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Pricelist Property
-     - PowerOfficeGo Currency Property
-     - PowerOfficeGo Data Type
+     -  Currency Property
+     -  Data Type
 
 
-SuperOffice User to PowerOfficeGo Contactperson
------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice User and a PowerOfficeGo Contactperson must be established.
+SuperOffice User to  Contactperson
+----------------------------------
+Before any synchronization can take place, a link between a SuperOffice User and a  Contactperson must be established.
 
-A SuperOffice User will merge with a PowerOfficeGo Contactperson if one of the following property combinations match:
+A SuperOffice User will merge with a  Contactperson if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     - PowerOfficeGo Contactperson Property
+     -  Contactperson Property
    * - personEmail
      - emailAddress
 
-Once a link between a SuperOffice User and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice User and a  Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice User and a PowerOfficeGo Contactperson:
+The following properties are synchronized between a SuperOffice User and a  Contactperson:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     - PowerOfficeGo Contactperson Property
-     - PowerOfficeGo Data Type
+     -  Contactperson Property
+     -  Data Type
    * - contactId
      - partyId
      - "integer"
@@ -400,68 +400,68 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
 
 
-SuperOffice Listcurrencyitems to PowerOfficeGo Currency
--------------------------------------------------------
-Every SuperOffice Listcurrencyitems will be synchronized with a PowerOfficeGo Currency.
+SuperOffice Listcurrencyitems to  Currency
+------------------------------------------
+Every SuperOffice Listcurrencyitems will be synchronized with a  Currency.
 
-If a matching PowerOfficeGo Currency already exists, the SuperOffice Listcurrencyitems will be merged with the existing one.
-If no matching PowerOfficeGo Currency is found, a new PowerOfficeGo Currency will be created.
+If a matching  Currency already exists, the SuperOffice Listcurrencyitems will be merged with the existing one.
+If no matching  Currency is found, a new  Currency will be created.
 
-A SuperOffice Listcurrencyitems will merge with a PowerOfficeGo Currency if one of the following property combinations match:
+A SuperOffice Listcurrencyitems will merge with a  Currency if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Listcurrencyitems Property
-     - PowerOfficeGo Currency Property
+     -  Currency Property
    * - Name
      - code
 
-Once a link between a SuperOffice Listcurrencyitems and a PowerOfficeGo Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Listcurrencyitems and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Listcurrencyitems and a PowerOfficeGo Currency:
+The following properties are synchronized between a SuperOffice Listcurrencyitems and a  Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Listcurrencyitems Property
-     - PowerOfficeGo Currency Property
-     - PowerOfficeGo Data Type
+     -  Currency Property
+     -  Data Type
 
 
-SuperOffice Listproductcategoryitems to PowerOfficeGo Productgroup
-------------------------------------------------------------------
-Every SuperOffice Listproductcategoryitems will be synchronized with a PowerOfficeGo Productgroup.
+SuperOffice Listproductcategoryitems to  Productgroup
+-----------------------------------------------------
+Every SuperOffice Listproductcategoryitems will be synchronized with a  Productgroup.
 
-Once a link between a SuperOffice Listproductcategoryitems and a PowerOfficeGo Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Listproductcategoryitems and a  Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Listproductcategoryitems and a PowerOfficeGo Productgroup:
+The following properties are synchronized between a SuperOffice Listproductcategoryitems and a  Productgroup:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Listproductcategoryitems Property
-     - PowerOfficeGo Productgroup Property
-     - PowerOfficeGo Data Type
+     -  Productgroup Property
+     -  Data Type
    * - Name
      - Name
      - "string"
 
 
-SuperOffice Ownercontactlink to PowerOfficeGo Departments
----------------------------------------------------------
-Every SuperOffice Ownercontactlink will be synchronized with a PowerOfficeGo Departments.
+SuperOffice Ownercontactlink to  Departments
+--------------------------------------------
+Every SuperOffice Ownercontactlink will be synchronized with a  Departments.
 
-Once a link between a SuperOffice Ownercontactlink and a PowerOfficeGo Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Ownercontactlink and a  Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Ownercontactlink and a PowerOfficeGo Departments:
+The following properties are synchronized between a SuperOffice Ownercontactlink and a  Departments:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Ownercontactlink Property
-     - PowerOfficeGo Departments Property
-     - PowerOfficeGo Data Type
+     -  Departments Property
+     -  Data Type
    * - name
      - Name
      - "string"
@@ -540,20 +540,20 @@ The following properties are synchronized between a SuperOffice Product and a Po
      - "string"
 
 
-SuperOffice Quoteline to PowerOfficeGo Salesorderlines
-------------------------------------------------------
-Every SuperOffice Quoteline will be synchronized with a PowerOfficeGo Salesorderlines.
+SuperOffice Quoteline to  Salesorderlines
+-----------------------------------------
+Every SuperOffice Quoteline will be synchronized with a  Salesorderlines.
 
-Once a link between a SuperOffice Quoteline and a PowerOfficeGo Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quoteline and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quoteline and a PowerOfficeGo Salesorderlines:
+The following properties are synchronized between a SuperOffice Quoteline and a  Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quoteline Property
-     - PowerOfficeGo Salesorderlines Property
-     - PowerOfficeGo Data Type
+     -  Salesorderlines Property
+     -  Data Type
    * - DiscountPercent
      - Allowance
      - "float"
@@ -595,20 +595,20 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
 
 
-SuperOffice User to PowerOfficeGo Employees
--------------------------------------------
-Every SuperOffice User will be synchronized with a PowerOfficeGo Employees.
+SuperOffice User to  Employees
+------------------------------
+Every SuperOffice User will be synchronized with a  Employees.
 
-Once a link between a SuperOffice User and a PowerOfficeGo Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice User and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice User and a PowerOfficeGo Employees:
+The following properties are synchronized between a SuperOffice User and a  Employees:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     - PowerOfficeGo Employees Property
-     - PowerOfficeGo Data Type
+     -  Employees Property
+     -  Data Type
    * - contactCategory
      - MailAddress.CountryCode
      - "string"
