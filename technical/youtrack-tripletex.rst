@@ -2,37 +2,37 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2023-11-29 23:36:03
+Generated: 2023-11-29 23:37:14
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from YouTrack to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-YouTrack Users to Tripletex Contact
------------------------------------
-Before any synchronization can take place, a link between a YouTrack Users and a Tripletex Contact must be established.
+YouTrack Users to  Contact
+--------------------------
+Before any synchronization can take place, a link between a YouTrack Users and a  Contact must be established.
 
-A YouTrack Users will merge with a Tripletex Contact if one of the following property combinations match:
+A YouTrack Users will merge with a  Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     - Tripletex Contact Property
+     -  Contact Property
    * - profile.email.email
      - email
 
-Once a link between a YouTrack Users and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Users and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Users and a Tripletex Contact:
+The following properties are synchronized between a YouTrack Users and a  Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     - Tripletex Contact Property
-     - Tripletex Data Type
+     -  Contact Property
+     -  Data Type
    * - profile.email
      - email
      - "string"
@@ -41,30 +41,30 @@ The following properties are synchronized between a YouTrack Users and a Triplet
      - "string"
 
 
-YouTrack Users to Tripletex Employee
-------------------------------------
-Before any synchronization can take place, a link between a YouTrack Users and a Tripletex Employee must be established.
+YouTrack Users to  Employee
+---------------------------
+Before any synchronization can take place, a link between a YouTrack Users and a  Employee must be established.
 
-A YouTrack Users will merge with a Tripletex Employee if one of the following property combinations match:
+A YouTrack Users will merge with a  Employee if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     - Tripletex Employee Property
+     -  Employee Property
    * - profile.email.email
      - email
 
-Once a link between a YouTrack Users and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Users and a  Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Users and a Tripletex Employee:
+The following properties are synchronized between a YouTrack Users and a  Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     - Tripletex Employee Property
-     - Tripletex Data Type
+     -  Employee Property
+     -  Data Type
    * - profile.email.email
      - email
      - "string"
