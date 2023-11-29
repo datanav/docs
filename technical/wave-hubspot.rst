@@ -2,37 +2,37 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-29 23:36:03
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Customer to HubSpot Contact
---------------------------------
-Before any synchronization can take place, a link between a Wave Customer and a HubSpot Contact must be established.
+Wave Customer to  Contact
+-------------------------
+Before any synchronization can take place, a link between a Wave Customer and a  Contact must be established.
 
-A Wave Customer will merge with a HubSpot Contact if one of the following property combinations match:
+A Wave Customer will merge with a  Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - HubSpot Contact Property
+     -  Contact Property
    * - email
      - properties.email
 
-Once a link between a Wave Customer and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a HubSpot Contact:
+The following properties are synchronized between a Wave Customer and a  Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - HubSpot Contact Property
-     - HubSpot Data Type
+     -  Contact Property
+     -  Data Type
    * - address.addressLine1
      - properties.address
      - "string"
@@ -98,30 +98,30 @@ The following properties are synchronized between a Wave Customer and a HubSpot 
      - "string"
 
 
-Wave Customer person to HubSpot Contact
----------------------------------------
-Before any synchronization can take place, a link between a Wave Customer person and a HubSpot Contact must be established.
+Wave Customer person to  Contact
+--------------------------------
+Before any synchronization can take place, a link between a Wave Customer person and a  Contact must be established.
 
-A Wave Customer person will merge with a HubSpot Contact if one of the following property combinations match:
+A Wave Customer person will merge with a  Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     - HubSpot Contact Property
+     -  Contact Property
    * - email
      - properties.email
 
-Once a link between a Wave Customer person and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer person and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a HubSpot Contact:
+The following properties are synchronized between a Wave Customer person and a  Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     - HubSpot Contact Property
-     - HubSpot Data Type
+     -  Contact Property
+     -  Data Type
    * - address.addressLine1
      - properties.address
      - "string"
@@ -190,30 +190,30 @@ The following properties are synchronized between a Wave Customer person and a H
      - "string"
 
 
-Wave Vendor to HubSpot Contact
-------------------------------
-Before any synchronization can take place, a link between a Wave Vendor and a HubSpot Contact must be established.
+Wave Vendor to  Contact
+-----------------------
+Before any synchronization can take place, a link between a Wave Vendor and a  Contact must be established.
 
-A Wave Vendor will merge with a HubSpot Contact if one of the following property combinations match:
+A Wave Vendor will merge with a  Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     - HubSpot Contact Property
+     -  Contact Property
    * - email
      - properties.email
 
-Once a link between a Wave Vendor and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a HubSpot Contact:
+The following properties are synchronized between a Wave Vendor and a  Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     - HubSpot Contact Property
-     - HubSpot Data Type
+     -  Contact Property
+     -  Data Type
    * - address.addressLine1
      - properties.address
      - "string"
@@ -392,20 +392,20 @@ The following properties are synchronized between a Wave Vendor and a HubSpot Co
      - "string"
 
 
-Wave Invoice to HubSpot Lineitem
---------------------------------
-Every Wave Invoice will be synchronized with a HubSpot Lineitem.
+Wave Invoice to  Lineitem
+-------------------------
+Every Wave Invoice will be synchronized with a  Lineitem.
 
-Once a link between a Wave Invoice and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a  Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a HubSpot Lineitem:
+The following properties are synchronized between a Wave Invoice and a  Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     - HubSpot Lineitem Property
-     - HubSpot Data Type
+     -  Lineitem Property
+     -  Data Type
    * - items.description
      - properties.description
      - "string"
@@ -426,20 +426,20 @@ The following properties are synchronized between a Wave Invoice and a HubSpot L
      - "string"
 
 
-Wave Invoice to HubSpot Lineitemdealassociation
------------------------------------------------
-Every Wave Invoice will be synchronized with a HubSpot Lineitemdealassociation.
+Wave Invoice to  Lineitemdealassociation
+----------------------------------------
+Every Wave Invoice will be synchronized with a  Lineitemdealassociation.
 
-Once a link between a Wave Invoice and a HubSpot Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a  Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a HubSpot Lineitemdealassociation:
+The following properties are synchronized between a Wave Invoice and a  Lineitemdealassociation:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     - HubSpot Lineitemdealassociation Property
-     - HubSpot Data Type
+     -  Lineitemdealassociation Property
+     -  Data Type
    * - id
      - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - "string"
