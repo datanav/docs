@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-29 23:37:13
+Generated: 2023-11-29 23:45:21
 
 Introduction.
 ------------
@@ -255,20 +255,20 @@ The following properties are synchronized between a Wave Vendor and a  Contact:
      - "string"
 
 
-Wave Customer to HubSpot Company
---------------------------------
-Every Wave Customer will be synchronized with a HubSpot Company.
+Wave Customer to  Company
+-------------------------
+Every Wave Customer will be synchronized with a  Company.
 
-Once a link between a Wave Customer and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a HubSpot Company:
+The following properties are synchronized between a Wave Customer and a  Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - HubSpot Company Property
-     - HubSpot Data Type
+     -  Company Property
+     -  Data Type
    * - address.addressLine1
      - properties.address
      - "string"
@@ -340,20 +340,20 @@ The following properties are synchronized between a Wave Customer and a HubSpot 
      - "string"
 
 
-Wave Vendor to HubSpot Company
-------------------------------
-Every Wave Vendor will be synchronized with a HubSpot Company.
+Wave Vendor to  Company
+-----------------------
+Every Wave Vendor will be synchronized with a  Company.
 
-Once a link between a Wave Vendor and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a HubSpot Company:
+The following properties are synchronized between a Wave Vendor and a  Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     - HubSpot Company Property
-     - HubSpot Data Type
+     -  Company Property
+     -  Data Type
    * - address.addressLine1
      - properties.address
      - "string"
