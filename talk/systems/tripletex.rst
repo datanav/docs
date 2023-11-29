@@ -42,6 +42,39 @@ If wish to connect a Tripletex test account, please follow `these instructions <
 
 You will be provided with your employee and consumer token as part of creating the test account. 
 
+Tripletex merge criteria
+------------------------
+This section covers the different merge criterion in use Sesam Talk for Tripletex data. For more information about the concept, please read the section about :ref:`merging`.
+
+Customers
+*********
+For customers the following merge criteria is used:
+
+* email  
+* organizationnumner
+
+Suppliers
+*********
+For suppliers the following merge criteria is used:
+
+* email  
+* organizationnumner
+
+Contacts
+********
+For contact the following merge criteria is used:
+
+* email
+
+Employees
+*********
+For contact the following merge criteria is used:
+
+* email
+* employeeNumber
+* nationalIdentityNumber
+
+
 Frequently Asked Questions
 --------------------------
 

@@ -1,3 +1,5 @@
+.. _supported_systems:
+
 Supported systems
 =================
 
