@@ -2,7 +2,7 @@
 Wix.com to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-11-27 20:43:47
+Generated: 2023-11-29 14:34:53
 
 Introduction.
 ------------
@@ -196,8 +196,6 @@ A Wix.com Currencies will merge with a PowerOfficeGo Currency if one of the foll
 
    * - Wix.com Currencies Property
      - PowerOfficeGo Currency Property
-   * - code
-     - Code
    * - code
      - code
 
