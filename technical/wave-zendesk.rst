@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-29 23:37:14
+Generated: 2023-11-29 23:45:21
 
 Introduction.
 ------------
@@ -96,20 +96,20 @@ The following properties are synchronized between a Wave Vendor and a  Users:
      - "string"
 
 
-Wave Customer to Zendesk Organizations
---------------------------------------
-Every Wave Customer will be synchronized with a Zendesk Organizations.
+Wave Customer to  Organizations
+-------------------------------
+Every Wave Customer will be synchronized with a  Organizations.
 
-Once a link between a Wave Customer and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a Zendesk Organizations:
+The following properties are synchronized between a Wave Customer and a  Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - Zendesk Organizations Property
-     - Zendesk Data Type
+     -  Organizations Property
+     -  Data Type
    * - name
      - name
      - "string"
@@ -118,20 +118,20 @@ The following properties are synchronized between a Wave Customer and a Zendesk 
      - "string"
 
 
-Wave Vendor to Zendesk Organizations
-------------------------------------
-Every Wave Vendor will be synchronized with a Zendesk Organizations.
+Wave Vendor to  Organizations
+-----------------------------
+Every Wave Vendor will be synchronized with a  Organizations.
 
-Once a link between a Wave Vendor and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a Zendesk Organizations:
+The following properties are synchronized between a Wave Vendor and a  Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     - Zendesk Organizations Property
-     - Zendesk Data Type
+     -  Organizations Property
+     -  Data Type
    * - name
      - name
      - "string"
