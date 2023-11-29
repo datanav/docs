@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-11-29 14:35:43
+Generated: 2023-11-29 14:37:48
 
 Introduction.
 ------------
@@ -162,25 +162,6 @@ The following properties are synchronized between a HubSpot User and a SuperOffi
    * - HubSpot User Property
      - SuperOffice Person Property
      - SuperOffice Data Type
-
-
-HubSpot Lineitemdealassociation to SuperOffice Quoteline
---------------------------------------------------------
-Every HubSpot Lineitemdealassociation will be synchronized with a SuperOffice Quoteline.
-
-Once a link between a HubSpot Lineitemdealassociation and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Lineitemdealassociation and a SuperOffice Quoteline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Lineitemdealassociation Property
-     - SuperOffice Quoteline Property
-     - SuperOffice Data Type
-   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
-     - QuoteAlternativeId
-     - "integer"
 
 
 HubSpot Product to SuperOffice Product
