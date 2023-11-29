@@ -2,7 +2,7 @@
 Zendesk to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-11-29 14:37:48
+Generated: 2023-11-29 14:42:10
 
 Introduction.
 ------------
@@ -39,30 +39,6 @@ The following properties are synchronized between a Zendesk Users and a PowerOff
    * - organization_id
      - partyId
      - "integer"
-
-
-Zendesk Organisations to PowerOfficeGo Departments
---------------------------------------------------
-Before any synchronization can take place, a link between a Zendesk Organisations and a PowerOfficeGo Departments must be established.
-
-A new PowerOfficeGo Departments will be created from a Zendesk Organisations if it is connected to a Zendesk Users that is synchronized into PowerOfficeGo.
-
-Once a link between a Zendesk Organisations and a PowerOfficeGo Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Organisations and a PowerOfficeGo Departments:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Organisations Property
-     - PowerOfficeGo Departments Property
-     - PowerOfficeGo Data Type
-   * - created_at
-     - CreatedDateTimeOffset
-     - "string"
-   * - name
-     - Name
-     - "string"
 
 
 Zendesk Organizations to PowerOfficeGo Customers person
