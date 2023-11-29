@@ -2,7 +2,7 @@
 Wix.com to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-11-29 14:35:43
+Generated: 2023-11-29 14:37:48
 
 Introduction.
 ------------
@@ -107,37 +107,6 @@ The following properties are synchronized between a Wix.com Members and a PowerO
      - PowerOfficeGo Data Type
    * - loginEmail
      - EmailAddress
-     - "string"
-
-
-Wix.com Orders to PowerOfficeGo Outgoinginvoices
-------------------------------------------------
-Every Wix.com Orders will be synchronized with a PowerOfficeGo Outgoinginvoices.
-
-Once a link between a Wix.com Orders and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Orders and a PowerOfficeGo Outgoinginvoices:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Orders Property
-     - PowerOfficeGo Outgoinginvoices Property
-     - PowerOfficeGo Data Type
-   * - buyerInfo.contactId
-     - customerId
-     - "string"
-   * - buyerInfo.id
-     - customerId
-     - "string"
-   * - currency
-     - CurrencyCode
-     - "string"
-   * - id
-     - OrderNo
-     - "string"
-   * - totals.total
-     - NetAmount
      - "string"
 
 
