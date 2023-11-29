@@ -2,7 +2,7 @@
 Wave Financial to HubSpot Dataflow
 ==================================
 
-Generated: 2023-11-29 14:42:03
+Generated: 2023-11-29 14:44:42
 
 Introduction.
 ------------
@@ -11,10 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Wave Customer to HubSpot Contact
 --------------------------------
-Every Wave Customer will be synchronized with a HubSpot Contact.
-
-If a matching HubSpot Contact already exists, the Wave Customer will be merged with the existing one.
-If no matching HubSpot Contact is found, a new HubSpot Contact will be created.
+Before any synchronization can take place, a link between a Wave Customer and a HubSpot Contact must be established.
 
 A Wave Customer will merge with a HubSpot Contact if one of the following property combinations match:
 
@@ -340,70 +337,6 @@ The following properties are synchronized between a Wave Customer and a HubSpot 
      - "string"
    * - website
      - properties.website
-     - "string"
-
-
-Wave Customer person to HubSpot Company
----------------------------------------
-Every Wave Customer person will be synchronized with a HubSpot Company.
-
-Once a link between a Wave Customer person and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer person and a HubSpot Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer person Property
-     - HubSpot Company Property
-     - HubSpot Data Type
-   * - address.addressLine1
-     - properties.address
-     - "string"
-   * - address.addressLine2
-     - properties.address2
-     - "string"
-   * - address.city
-     - properties.city
-     - "string"
-   * - address.country.code
-     - properties.country
-     - "string"
-   * - address.countryCode
-     - properties.country
-     - "string"
-   * - address.postalCode
-     - properties.zip
-     - "string"
-   * - address.province
-     - properties.state
-     - "string"
-   * - address.province.name
-     - properties.state
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - properties.address
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - properties.address2
-     - "string"
-   * - shippingDetails.address.city
-     - properties.city
-     - "string"
-   * - shippingDetails.address.country.code
-     - properties.country
-     - "string"
-   * - shippingDetails.address.postalCode
-     - properties.zip
-     - "string"
-   * - shippingDetails.address.province
-     - properties.state
-     - "string"
-   * - shippingDetails.address.province.name
-     - properties.state
      - "string"
 
 
