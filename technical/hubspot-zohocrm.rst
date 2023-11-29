@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:37:13
+Generated: 2023-11-29 23:38:14
 
 Introduction.
 ------------
@@ -109,22 +109,22 @@ The following properties are synchronized between a HubSpot Company and a ZohoCR
      - "string"
 
 
-HubSpot Company to ZohoCRM Contact
-----------------------------------
-Before any synchronization can take place, a link between a HubSpot Company and a ZohoCRM Contact must be established.
+HubSpot Company to  Contact
+---------------------------
+Before any synchronization can take place, a link between a HubSpot Company and a  Contact must be established.
 
-A new ZohoCRM Contact will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into ZohoCRM.
+A new  Contact will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into .
 
-Once a link between a HubSpot Company and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a ZohoCRM Contact:
+The following properties are synchronized between a HubSpot Company and a  Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     - ZohoCRM Contact Property
-     - ZohoCRM Data Type
+     -  Contact Property
+     -  Data Type
    * - properties.country
      - Mailing_Country
      - "string"
@@ -151,40 +151,40 @@ The following properties are synchronized between a HubSpot Company and a ZohoCR
      - "string"
 
 
-HubSpot Contact to ZohoCRM Account
-----------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a ZohoCRM Account must be established.
+HubSpot Contact to  Account
+---------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a  Account must be established.
 
-A new ZohoCRM Account will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into ZohoCRM.
+A new  Account will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into .
 
-Once a link between a HubSpot Contact and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contact and a  Account is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contact and a ZohoCRM Account:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     - ZohoCRM Account Property
-     - ZohoCRM Data Type
-
-
-HubSpot Contact to ZohoCRM Contact
-----------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a ZohoCRM Contact must be established.
-
-A new ZohoCRM Contact will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into ZohoCRM.
-
-Once a link between a HubSpot Contact and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contact and a ZohoCRM Contact:
+The following properties are synchronized between a HubSpot Contact and a  Account:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contact Property
-     - ZohoCRM Contact Property
-     - ZohoCRM Data Type
+     -  Account Property
+     -  Data Type
+
+
+HubSpot Contact to  Contact
+---------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a  Contact must be established.
+
+A new  Contact will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into .
+
+Once a link between a HubSpot Contact and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a  Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     -  Contact Property
+     -  Data Type
    * - properties.city
      - Mailing_City
      - "string"
@@ -232,22 +232,22 @@ The following properties are synchronized between a HubSpot Contact and a ZohoCR
      - "string"
 
 
-HubSpot Owner to ZohoCRM Contact
---------------------------------
-Before any synchronization can take place, a link between a HubSpot Owner and a ZohoCRM Contact must be established.
+HubSpot Owner to  Contact
+-------------------------
+Before any synchronization can take place, a link between a HubSpot Owner and a  Contact must be established.
 
-A new ZohoCRM Contact will be created from a HubSpot Owner if it is connected to a HubSpot Deal that is synchronized into ZohoCRM.
+A new  Contact will be created from a HubSpot Owner if it is connected to a HubSpot Deal that is synchronized into .
 
-Once a link between a HubSpot Owner and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Owner and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Owner and a ZohoCRM Contact:
+The following properties are synchronized between a HubSpot Owner and a  Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Owner Property
-     - ZohoCRM Contact Property
-     - ZohoCRM Data Type
+     -  Contact Property
+     -  Data Type
    * - firstName
      - First_Name
      - "string"
