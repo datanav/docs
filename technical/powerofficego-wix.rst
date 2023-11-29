@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-11-29 14:42:09
+Generated: 2023-11-29 14:44:42
 
 Introduction.
 ------------
@@ -110,7 +110,9 @@ The following properties are synchronized between a Powerofficego Customers pers
 
 Powerofficego Customers to Wix Contacts
 ---------------------------------------
-Every Powerofficego Customers will be synchronized with a Wix Contacts.
+Before any synchronization can take place, a link between a Powerofficego Customers and a Wix Contacts must be established.
+
+A new Wix Contacts will be created from a Powerofficego Customers if it is connected to a Powerofficego Salesorders, Salesorderline, Salesorderlines, or Outgoinginvoices that is synchronized into Wix.
 
 Once a link between a Powerofficego Customers and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -122,9 +124,6 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      - Wix Contacts Property
      - Wix Data Type
-   * - EmailAddress
-     - info.emails
-     - "string"
    * - Id
      - id
      - "string"
@@ -142,52 +141,6 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - MailAddress.ZipCode
      - info.addresses.items.address.postalCode
-     - "string"
-
-
-Powerofficego Employees to Wix Contacts
----------------------------------------
-Every Powerofficego Employees will be synchronized with a Wix Contacts.
-
-Once a link between a Powerofficego Employees and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Employees and a Wix Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Employees Property
-     - Wix Contacts Property
-     - Wix Data Type
-   * - EmailAddress
-     - primaryInfo.email
-     - "string"
-   * - FirstName
-     - info.name.first
-     - "string"
-   * - Id
-     - id
-     - "string"
-   * - LastName
-     - info.name.last
-     - "string"
-   * - MailAddress.Address1
-     - info.addresses.items.address.addressLine
-     - "string"
-   * - MailAddress.Address2
-     - info.addresses.items.address.addressLine2
-     - "string"
-   * - MailAddress.City
-     - info.addresses.items.address.city
-     - "string"
-   * - MailAddress.ZipCode
-     - info.addresses.items.address.postalCode
-     - "string"
-   * - PhoneNumber
-     - info.phones
-     - "string"
-   * - PhoneNumber
-     - primaryInfo.phone
      - "string"
 
 
@@ -226,9 +179,6 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
    * - city
      - info.addresses.items.address.city
-     - "string"
-   * - emailAddress
-     - info.emails
      - "string"
    * - emailAddress
      - primaryInfo.email
