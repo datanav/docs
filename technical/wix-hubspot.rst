@@ -2,7 +2,7 @@
 Wix.com to HubSpot Dataflow
 ===========================
 
-Generated: 2023-11-08 09:09:24
+Generated: 2023-11-29 14:34:53
 
 Introduction.
 ------------
@@ -23,8 +23,6 @@ A Wix.com Contacts will merge with a HubSpot Contact if one of the following pro
 
    * - Wix.com Contacts Property
      - HubSpot Contact Property
-   * - info.emails
-     - properties.email
    * - primaryInfo.email
      - properties.email
 
