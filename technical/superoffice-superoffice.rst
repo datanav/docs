@@ -2,7 +2,7 @@
 SuperOffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-11-29 14:37:48
+Generated: 2023-11-29 14:42:03
 
 Introduction.
 ------------
@@ -77,6 +77,42 @@ The following properties are synchronized between a SuperOffice User and a Super
    * - personEmail
      - Emails.Value
      - "string"
+
+
+SuperOffice Contact to SuperOffice Person
+-----------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Contact and a SuperOffice Person must be established.
+
+A new SuperOffice Person will be created from a SuperOffice Contact if it is connected to a SuperOffice Sale, or Quote that is synchronized into SuperOffice.
+
+Once a link between a SuperOffice Contact and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Contact and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Contact Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
+
+
+SuperOffice Person to SuperOffice Contact
+-----------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a SuperOffice Contact must be established.
+
+A new SuperOffice Contact will be created from a SuperOffice Person if it is connected to a SuperOffice Sale, or Quote that is synchronized into SuperOffice.
+
+Once a link between a SuperOffice Person and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Person and a SuperOffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
 
 
 SuperOffice User to SuperOffice Listcategoryitems
