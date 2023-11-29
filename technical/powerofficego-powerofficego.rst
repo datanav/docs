@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-11-29 14:35:43
+Generated: 2023-11-29 14:37:54
 
 Introduction.
 ------------
@@ -146,11 +146,29 @@ The following properties are synchronized between a Powerofficego Customer and a
      - PowerOfficeGo Data Type
 
 
+Powerofficego Customers to PowerOfficeGo Contactperson
+------------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers and a PowerOfficeGo Contactperson must be established.
+
+A new PowerOfficeGo Contactperson will be created from a Powerofficego Customers if it is connected to a Powerofficego Salesorder that is synchronized into PowerOfficeGo.
+
+Once a link between a Powerofficego Customers and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a PowerOfficeGo Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - PowerOfficeGo Contactperson Property
+     - PowerOfficeGo Data Type
+
+
 Powerofficego Customers to PowerOfficeGo Customers person
 ---------------------------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Customers and a PowerOfficeGo Customers person must be established.
 
-A new PowerOfficeGo Customers person will be created from a Powerofficego Customers if it is connected to a Powerofficego Customers, Suppliers, Salesorder, Salesorders, Salesorderline, Outgoinginvoice, Salesorderlines, Customers-person, or Suppliers-person that is synchronized into PowerOfficeGo.
+A new PowerOfficeGo Customers person will be created from a Powerofficego Customers if it is connected to a Powerofficego Customer, Customers, Suppliers, Salesorder, Salesorders, Salesorderline, Outgoinginvoice, Salesorderlines, Customers-person, or Suppliers-person that is synchronized into PowerOfficeGo.
 
 Once a link between a Powerofficego Customers and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -251,115 +269,6 @@ The following properties are synchronized between a Powerofficego Departments an
      - PowerOfficeGo Data Type
    * - Name
      - Name
-     - "string"
-
-
-Powerofficego Salesorder to PowerOfficeGo Outgoinginvoices
-----------------------------------------------------------
-Every Powerofficego Salesorder will be synchronized with a PowerOfficeGo Outgoinginvoices.
-
-Once a link between a Powerofficego Salesorder and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorder and a PowerOfficeGo Outgoinginvoices:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorder Property
-     - PowerOfficeGo Outgoinginvoices Property
-     - PowerOfficeGo Data Type
-   * - Currency
-     - CurrencyCode
-     - "string"
-   * - DeliveryDate
-     - DeliveryDate
-     - "string"
-   * - DeliveryDate
-     - sentDateTimeOffset
-     - "string"
-   * - DepartmentCode
-     - customerId
-     - "string"
-   * - OrderDate
-     - OrderDate
-     - "string"
-
-
-Powerofficego Salesorderline to PowerOfficeGo Outgoinginvoices
---------------------------------------------------------------
-Every Powerofficego Salesorderline will be synchronized with a PowerOfficeGo Outgoinginvoices.
-
-Once a link between a Powerofficego Salesorderline and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorderline and a PowerOfficeGo Outgoinginvoices:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorderline Property
-     - PowerOfficeGo Outgoinginvoices Property
-     - PowerOfficeGo Data Type
-
-
-Powerofficego Salesorderlines to PowerOfficeGo Outgoinginvoices
----------------------------------------------------------------
-Every Powerofficego Salesorderlines will be synchronized with a PowerOfficeGo Outgoinginvoices.
-
-Once a link between a Powerofficego Salesorderlines and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorderlines and a PowerOfficeGo Outgoinginvoices:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorderlines Property
-     - PowerOfficeGo Outgoinginvoices Property
-     - PowerOfficeGo Data Type
-   * - TotalAmount
-     - NetAmount
-     - "string"
-   * - sesam_SalesOrderId
-     - OrderNo
-     - "string"
-   * - sesam_SalesOrdersId
-     - OrderNo
-     - "string"
-
-
-Powerofficego Salesorders to PowerOfficeGo Outgoinginvoices
------------------------------------------------------------
-Every Powerofficego Salesorders will be synchronized with a PowerOfficeGo Outgoinginvoices.
-
-Once a link between a Powerofficego Salesorders and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorders and a PowerOfficeGo Outgoinginvoices:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorders Property
-     - PowerOfficeGo Outgoinginvoices Property
-     - PowerOfficeGo Data Type
-   * - CreatedDateTimeOffset
-     - createdDateTimeOffset
-     - "string"
-   * - CurrencyCode
-     - CurrencyCode
-     - "string"
-   * - CustomerReferenceContactPersonId
-     - customerId
-     - "string"
-   * - NetAmount
-     - NetAmount
-     - "string"
-   * - OrderDate
-     - OrderDate
-     - "string"
-   * - SalesOrderDate
-     - OrderDate
-     - "string"
-   * - TotalAmount
-     - NetAmount
      - "string"
 
 
