@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-11-27 20:43:47
+Generated: 2023-11-29 14:34:53
 
 Introduction.
 ------------
@@ -141,137 +141,6 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - MailAddress.ZipCode
      - address.postalCode
      - "string"
-
-
-Powerofficego Customers to Tripletex Supplier
----------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Customers and a Tripletex Supplier must be established.
-
-A Powerofficego Customers will merge with a Tripletex Supplier if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers Property
-     - Tripletex Supplier Property
-   * - EmailAddress
-     - email
-   * - EmailAddress
-     - invoiceEmail
-   * - InvoiceEmailAddress
-     - email
-   * - EmailAddress
-     - overdueNoticeEmail
-   * - InvoiceEmailAddress
-     - invoiceEmail
-   * - PaymentReminderEmailAddress
-     - email
-   * - InvoiceEmailAddress
-     - overdueNoticeEmail
-   * - PaymentReminderEmailAddress
-     - invoiceEmail
-   * - PaymentReminderEmailAddress
-     - overdueNoticeEmail
-
-Once a link between a Powerofficego Customers and a Tripletex Supplier is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customers and a Tripletex Supplier:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers Property
-     - Tripletex Supplier Property
-     - Tripletex Data Type
-   * - EmailAddress
-     - email
-     - "string"
-   * - Id
-     - id
-     - "integer"
-   * - InvoiceEmailAddress
-     - invoiceEmail
-     - "string"
-   * - MailAddress.AddressLine1
-     - deliveryAddress.addressLine1
-     - "string"
-   * - MailAddress.AddressLine1
-     - physicalAddress.addressLine1
-     - "string"
-   * - MailAddress.AddressLine1
-     - postalAddress.addressLine1
-     - "string"
-   * - MailAddress.AddressLine2
-     - deliveryAddress.addressLine2
-     - "string"
-   * - MailAddress.AddressLine2
-     - physicalAddress.addressLine2
-     - "string"
-   * - MailAddress.AddressLine2
-     - postalAddress.addressLine2
-     - "string"
-   * - MailAddress.City
-     - deliveryAddress.city
-     - "string"
-   * - MailAddress.City
-     - physicalAddress.city
-     - "string"
-   * - MailAddress.City
-     - postalAddress.city
-     - "string"
-   * - MailAddress.CountryCode
-     - deliveryAddress.country.id
-     - "integer"
-   * - MailAddress.CountryCode
-     - physicalAddress.country.id
-     - "integer"
-   * - MailAddress.CountryCode
-     - postalAddress.country.id
-     - "integer"
-   * - MailAddress.ZipCode
-     - deliveryAddress.postalCode
-     - "string"
-   * - MailAddress.ZipCode
-     - physicalAddress.postalCode
-     - "string"
-   * - MailAddress.ZipCode
-     - postalAddress.postalCode
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - OrganizationNumber (Dependant on having NO in MailAddress.CountryCode)
-     - organizationNumber
-     - "string"
-   * - PhoneNumber
-     - phoneNumber
-     - "string"
-
-
-Powerofficego Employee to Tripletex Employee
---------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Employee and a Tripletex Employee must be established.
-
-A Powerofficego Employee will merge with a Tripletex Employee if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Employee Property
-     - Tripletex Employee Property
-   * - SocialSecurityNumber
-     - nationalIdentityNumber
-
-Once a link between a Powerofficego Employee and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Employee and a Tripletex Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Employee Property
-     - Tripletex Employee Property
-     - Tripletex Data Type
 
 
 Powerofficego Contactperson to Tripletex Customer
@@ -650,22 +519,10 @@ A Powerofficego Customers will merge with a Tripletex Customer if one of the fol
      - Tripletex Customer Property
    * - EmailAddress
      - email
-   * - EmailAddress
-     - invoiceEmail
    * - InvoiceEmailAddress
      - email
-   * - EmailAddress
-     - overdueNoticeEmail
-   * - InvoiceEmailAddress
-     - invoiceEmail
    * - PaymentReminderEmailAddress
      - email
-   * - InvoiceEmailAddress
-     - overdueNoticeEmail
-   * - PaymentReminderEmailAddress
-     - invoiceEmail
-   * - PaymentReminderEmailAddress
-     - overdueNoticeEmail
 
 Once a link between a Powerofficego Customers and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -861,8 +718,6 @@ A Powerofficego Employees will merge with a Tripletex Employee if one of the fol
      - Tripletex Employee Property
    * - Number
      - employeeNumber
-   * - SocialSecurityNumber
-     - nationalIdentityNumber
 
 Once a link between a Powerofficego Employees and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -990,11 +845,7 @@ A Powerofficego Product will merge with a Tripletex Productunit if one of the fo
 
    * - Powerofficego Product Property
      - Tripletex Productunit Property
-   * - type
-     - name
    * - unit
-     - name
-   * - unitOfMeasureCode
      - name
 
 Once a link between a Powerofficego Product and a Tripletex Productunit is established, it will keep in sync between the two systems, regardless of where it is edited.
