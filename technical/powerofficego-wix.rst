@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-11-29 14:35:43
+Generated: 2023-11-29 14:37:48
 
 Introduction.
 ------------
@@ -212,102 +212,6 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
 
 
-Powerofficego Outgoinginvoices to Wix Orders
---------------------------------------------
-Every Powerofficego Outgoinginvoices will be synchronized with a Wix Orders.
-
-Once a link between a Powerofficego Outgoinginvoices and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Outgoinginvoices and a Wix Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Outgoinginvoices Property
-     - Wix Orders Property
-     - Wix Data Type
-   * - CurrencyCode
-     - currency
-     - "string"
-   * - NetAmount
-     - totals.total
-     - "string"
-   * - customerId
-     - buyerInfo.contactId
-     - "string"
-   * - customerId
-     - buyerInfo.id
-     - "string"
-
-
-Powerofficego Salesorderline to Wix Orders
-------------------------------------------
-Every Powerofficego Salesorderline will be synchronized with a Wix Orders.
-
-Once a link between a Powerofficego Salesorderline and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorderline and a Wix Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorderline Property
-     - Wix Orders Property
-     - Wix Data Type
-   * - Description
-     - lineItems.name
-     - "string"
-   * - Description
-     - lineItems.name.name
-     - "string"
-   * - Quantity
-     - lineItems.quantity
-     - "string"
-   * - Quantity
-     - lineItems.quantity.quantity
-     - "string"
-   * - SalesOrderLineUnitPrice
-     - lineItems.price
-     - "string"
-   * - SalesOrderLineUnitPrice
-     - lineItems.price.price
-     - "string"
-
-
-Powerofficego Salesorderlines to Wix Orders
--------------------------------------------
-Every Powerofficego Salesorderlines will be synchronized with a Wix Orders.
-
-Once a link between a Powerofficego Salesorderlines and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorderlines and a Wix Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorderlines Property
-     - Wix Orders Property
-     - Wix Data Type
-   * - Description
-     - lineItems.name
-     - "string"
-   * - ProductCode
-     - lineItems.productId
-     - "string"
-   * - ProductId
-     - lineItems.productId
-     - "string"
-   * - ProductUnitPrice
-     - lineItems.price
-     - "string"
-   * - Quantity
-     - lineItems.quantity
-     - "integer"
-   * - TotalAmount
-     - totals.total
-     - "string"
-
-
 Powerofficego Contactperson to Wix Contacts
 -------------------------------------------
 Every Powerofficego Contactperson will be synchronized with a Wix Contacts.
@@ -418,28 +322,6 @@ The following properties are synchronized between a Powerofficego Product and a 
    * - salesPrice
      - priceData.price
      - "decimal"
-
-
-Powerofficego Salesorders to Wix Orders
----------------------------------------
-Every Powerofficego Salesorders will be synchronized with a Wix Orders.
-
-Once a link between a Powerofficego Salesorders and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorders and a Wix Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorders Property
-     - Wix Orders Property
-     - Wix Data Type
-   * - CurrencyCode
-     - currency
-     - "string"
-   * - TotalAmount
-     - totals.total
-     - "string"
 
 
 Powerofficego Suppliers person to Wix Contacts
