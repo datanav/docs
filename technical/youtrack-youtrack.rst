@@ -2,7 +2,7 @@
 YouTrack to YouTrack Dataflow
 =============================
 
-Generated: 2023-11-29 15:05:02
+Generated: 2023-11-29 15:05:23
 
 Introduction.
 ------------
@@ -185,7 +185,7 @@ YouTrack Groups to YouTrack Usergroups
 --------------------------------------
 Before any synchronization can take place, a link between a YouTrack Groups and a YouTrack Usergroups must be established.
 
-A new YouTrack Usergroups will be created from a YouTrack Groups if it is connected to a YouTrack Issues, Projects, Workitems, or Projectroles that is synchronized into YouTrack.
+A new YouTrack Usergroups will be created from a YouTrack Groups if it is connected to a YouTrack Issues, Projects, Workitems, Hubprojects, or Projectroles that is synchronized into YouTrack.
 
 Once a link between a YouTrack Groups and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -203,7 +203,7 @@ YouTrack Organization to YouTrack Usergroups
 --------------------------------------------
 Before any synchronization can take place, a link between a YouTrack Organization and a YouTrack Usergroups must be established.
 
-A new YouTrack Usergroups will be created from a YouTrack Organization if it is connected to a YouTrack Issues, Projects, Workitems, or Projectroles that is synchronized into YouTrack.
+A new YouTrack Usergroups will be created from a YouTrack Organization if it is connected to a YouTrack Issues, Projects, Workitems, Hubprojects, or Projectroles that is synchronized into YouTrack.
 
 Once a link between a YouTrack Organization and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -221,7 +221,7 @@ YouTrack Organizationroles to YouTrack Projectroles
 ---------------------------------------------------
 Before any synchronization can take place, a link between a YouTrack Organizationroles and a YouTrack Projectroles must be established.
 
-A new YouTrack Projectroles will be created from a YouTrack Organizationroles if it is connected to a YouTrack Team, Owner, Author, Leader, Parent, Creator, Created by, Usergroups, Projectroles, or Usersyoutrack that is synchronized into YouTrack.
+A new YouTrack Projectroles will be created from a YouTrack Organizationroles if it is connected to a YouTrack Team, Owner, Users, Author, Leader, Parent, Creator, Created by, Usergroups, Projectroles, or Usersyoutrack that is synchronized into YouTrack.
 
 Once a link between a YouTrack Organizationroles and a YouTrack Projectroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -239,7 +239,7 @@ YouTrack Projectroles to YouTrack Organizationroles
 ---------------------------------------------------
 Before any synchronization can take place, a link between a YouTrack Projectroles and a YouTrack Organizationroles must be established.
 
-A new YouTrack Organizationroles will be created from a YouTrack Projectroles if it is connected to a YouTrack Team, Owner, Author, Leader, Parent, Creator, Created by, Usergroups, Projectroles, or Usersyoutrack that is synchronized into YouTrack.
+A new YouTrack Organizationroles will be created from a YouTrack Projectroles if it is connected to a YouTrack Team, Owner, Users, Author, Leader, Parent, Creator, Created by, Usergroups, Projectroles, or Usersyoutrack that is synchronized into YouTrack.
 
 Once a link between a YouTrack Projectroles and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -275,7 +275,7 @@ YouTrack Projectroles to YouTrack Users
 ---------------------------------------
 Before any synchronization can take place, a link between a YouTrack Projectroles and a YouTrack Users must be established.
 
-A new YouTrack Users will be created from a YouTrack Projectroles if it is connected to a YouTrack Role, Team, Owner, Roles, Users, Author, Issues, Leader, Creator, Projects, Workitems, Created by, Projectroles, Usersyoutrack, or Organizationroles that is synchronized into YouTrack.
+A new YouTrack Users will be created from a YouTrack Projectroles if it is connected to a YouTrack Role, Team, Owner, Roles, Users, Author, Issues, Leader, Creator, Projects, Workitems, Created by, Hubprojects, Projectroles, Usersyoutrack, or Organizationroles that is synchronized into YouTrack.
 
 Once a link between a YouTrack Projectroles and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -293,7 +293,7 @@ YouTrack Roles to YouTrack Projectroles
 ---------------------------------------
 Before any synchronization can take place, a link between a YouTrack Roles and a YouTrack Projectroles must be established.
 
-A new YouTrack Projectroles will be created from a YouTrack Roles if it is connected to a YouTrack Issues, Projects, Workitems, or Projectroles that is synchronized into YouTrack.
+A new YouTrack Projectroles will be created from a YouTrack Roles if it is connected to a YouTrack Issues, Projects, Workitems, Hubprojects, or Projectroles that is synchronized into YouTrack.
 
 Once a link between a YouTrack Roles and a YouTrack Projectroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -311,7 +311,7 @@ YouTrack Users to YouTrack Projectroles
 ---------------------------------------
 Before any synchronization can take place, a link between a YouTrack Users and a YouTrack Projectroles must be established.
 
-A new YouTrack Projectroles will be created from a YouTrack Users if it is connected to a YouTrack Issues, Projects, Workitems, or Projectroles that is synchronized into YouTrack.
+A new YouTrack Projectroles will be created from a YouTrack Users if it is connected to a YouTrack Issues, Projects, Workitems, Hubprojects, or Projectroles that is synchronized into YouTrack.
 
 Once a link between a YouTrack Users and a YouTrack Projectroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -329,7 +329,7 @@ YouTrack Usersyoutrack to YouTrack Projectroles
 -----------------------------------------------
 Before any synchronization can take place, a link between a YouTrack Usersyoutrack and a YouTrack Projectroles must be established.
 
-A new YouTrack Projectroles will be created from a YouTrack Usersyoutrack if it is connected to a YouTrack Issues, Projects, Workitems, or Projectroles that is synchronized into YouTrack.
+A new YouTrack Projectroles will be created from a YouTrack Usersyoutrack if it is connected to a YouTrack Issues, Projects, Workitems, Hubprojects, or Projectroles that is synchronized into YouTrack.
 
 Once a link between a YouTrack Usersyoutrack and a YouTrack Projectroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -347,7 +347,7 @@ YouTrack Usersyoutrack to YouTrack Users
 ----------------------------------------
 Before any synchronization can take place, a link between a YouTrack Usersyoutrack and a YouTrack Users must be established.
 
-A new YouTrack Users will be created from a YouTrack Usersyoutrack if it is connected to a YouTrack Role, Team, Owner, Roles, Users, Author, Issues, Leader, Creator, Projects, Workitems, Created by, Projectroles, Usersyoutrack, or Organizationroles that is synchronized into YouTrack.
+A new YouTrack Users will be created from a YouTrack Usersyoutrack if it is connected to a YouTrack Role, Team, Owner, Roles, Users, Author, Issues, Leader, Creator, Projects, Workitems, Created by, Hubprojects, Projectroles, Usersyoutrack, or Organizationroles that is synchronized into YouTrack.
 
 Once a link between a YouTrack Usersyoutrack and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
