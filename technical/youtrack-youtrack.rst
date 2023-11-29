@@ -2,37 +2,37 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2023-11-29 23:36:03
+Generated: 2023-11-29 23:37:14
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from YouTrack to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-YouTrack Hubprojects to YouTrack Hubprojects
---------------------------------------------
-Before any synchronization can take place, a link between a YouTrack Hubprojects and a YouTrack Hubprojects must be established.
+YouTrack Hubprojects to  Hubprojects
+------------------------------------
+Before any synchronization can take place, a link between a YouTrack Hubprojects and a  Hubprojects must be established.
 
-A YouTrack Hubprojects will merge with a YouTrack Hubprojects if one of the following property combinations match:
+A YouTrack Hubprojects will merge with a  Hubprojects if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Hubprojects Property
-     - YouTrack Hubprojects Property
+     -  Hubprojects Property
    * - id
      - id
 
-Once a link between a YouTrack Hubprojects and a YouTrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Hubprojects and a  Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Hubprojects and a YouTrack Hubprojects:
+The following properties are synchronized between a YouTrack Hubprojects and a  Hubprojects:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Hubprojects Property
-     - YouTrack Hubprojects Property
-     - YouTrack Data Type
+     -  Hubprojects Property
+     -  Data Type
    * - organization.id
      - team.id
      - "string"
@@ -47,30 +47,30 @@ The following properties are synchronized between a YouTrack Hubprojects and a Y
      - "string"
 
 
-YouTrack Users to YouTrack Users
---------------------------------
-Before any synchronization can take place, a link between a YouTrack Users and a YouTrack Users must be established.
+YouTrack Users to  Users
+------------------------
+Before any synchronization can take place, a link between a YouTrack Users and a  Users must be established.
 
-A YouTrack Users will merge with a YouTrack Users if one of the following property combinations match:
+A YouTrack Users will merge with a  Users if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     - YouTrack Users Property
+     -  Users Property
    * - profile.email.email
      - profile.email.email
 
-Once a link between a YouTrack Users and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Users and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Users and a YouTrack Users:
+The following properties are synchronized between a YouTrack Users and a  Users:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     - YouTrack Users Property
-     - YouTrack Data Type
+     -  Users Property
+     -  Data Type
    * - groups.id
      - transitiveGroups.id
      - "string"
