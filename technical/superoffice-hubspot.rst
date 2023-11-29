@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-29 23:37:13
+Generated: 2023-11-29 23:38:14
 
 Introduction.
 ------------
@@ -206,20 +206,20 @@ The following properties are synchronized between a SuperOffice Person and a Hub
      - HubSpot Data Type
 
 
-SuperOffice Product to HubSpot Product
---------------------------------------
-Every SuperOffice Product will be synchronized with a HubSpot Product.
+SuperOffice Product to  Product
+-------------------------------
+Every SuperOffice Product will be synchronized with a  Product.
 
-Once a link between a SuperOffice Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Product and a HubSpot Product:
+The following properties are synchronized between a SuperOffice Product and a  Product:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Product Property
-     - HubSpot Product Property
-     - HubSpot Data Type
+     -  Product Property
+     -  Data Type
    * - Description
      - properties.description
      - "string"
