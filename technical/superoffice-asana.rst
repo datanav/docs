@@ -2,40 +2,12 @@
 SuperOffice to Asana Dataflow
 =============================
 
-Generated: 2023-11-29 14:37:49
+Generated: 2023-11-29 14:44:42
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Asana. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-SuperOffice Contact to Asana Teams
-----------------------------------
-Every SuperOffice Contact will be synchronized with a Asana Teams.
-
-Once a link between a SuperOffice Contact and a Asana Teams is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Contact and a Asana Teams:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Contact Property
-     - Asana Teams Property
-     - Asana Data Type
-   * - Domains
-     - permalink_url
-     - "string"
-   * - Name
-     - member_invite_management_access_level
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - Urls.Value
-     - permalink_url
-     - "string"
-
 
 SuperOffice Project to Asana Projects
 -------------------------------------
