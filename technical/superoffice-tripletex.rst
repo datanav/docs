@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-11-29 14:42:03
+Generated: 2023-11-29 14:42:09
 
 Introduction.
 ------------
@@ -299,7 +299,7 @@ SuperOffice Contact to Tripletex Contact
 ----------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Contact and a Tripletex Contact must be established.
 
-A new Tripletex Contact will be created from a SuperOffice Contact if it is connected to a SuperOffice Quotealternative that is synchronized into Tripletex.
+A new Tripletex Contact will be created from a SuperOffice Contact if it is connected to a SuperOffice Sale, Quote, Quoteline, or Quotealternative that is synchronized into Tripletex.
 
 Once a link between a SuperOffice Contact and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -338,7 +338,7 @@ SuperOffice Person to Tripletex Customer
 ----------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Person and a Tripletex Customer must be established.
 
-A new Tripletex Customer will be created from a SuperOffice Person if it is connected to a SuperOffice Quotealternative that is synchronized into Tripletex.
+A new Tripletex Customer will be created from a SuperOffice Person if it is connected to a SuperOffice Sale, Quote, Quoteline, or Quotealternative that is synchronized into Tripletex.
 
 Once a link between a SuperOffice Person and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
