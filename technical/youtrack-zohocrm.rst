@@ -2,7 +2,7 @@
 YouTrack to ZohoCRM Dataflow
 ============================
 
-Generated: 2023-11-29 14:37:49
+Generated: 2023-11-29 14:44:43
 
 Introduction.
 ------------
@@ -65,28 +65,6 @@ The following properties are synchronized between a YouTrack Usergroups and a Zo
      - ZohoCRM Account Property
      - ZohoCRM Data Type
    * - name
-     - Account_Name
-     - "string"
-
-
-YouTrack Workitems to ZohoCRM Account
--------------------------------------
-Every YouTrack Workitems will be synchronized with a ZohoCRM Account.
-
-Once a link between a YouTrack Workitems and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Workitems and a ZohoCRM Account:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Workitems Property
-     - ZohoCRM Account Property
-     - ZohoCRM Data Type
-   * - date
-     - Created_Time
-     - "string"
-   * - updated
      - Account_Name
      - "string"
 
