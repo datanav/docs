@@ -2,7 +2,7 @@
 SuperOffice to YouTrack Dataflow
 ================================
 
-Generated: 2023-11-29 14:42:04
+Generated: 2023-11-29 14:44:43
 
 Introduction.
 ------------
@@ -11,10 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 SuperOffice Person to YouTrack Users
 ------------------------------------
-Every SuperOffice Person will be synchronized with a YouTrack Users.
-
-If a matching YouTrack Users already exists, the SuperOffice Person will be merged with the existing one.
-If no matching YouTrack Users is found, a new YouTrack Users will be created.
+Before any synchronization can take place, a link between a SuperOffice Person and a YouTrack Users must be established.
 
 A SuperOffice Person will merge with a YouTrack Users if one of the following property combinations match:
 
@@ -86,44 +83,6 @@ The following properties are synchronized between a SuperOffice Contact and a Yo
      - YouTrack Data Type
    * - Name
      - name
-     - "string"
-
-
-SuperOffice Contact to YouTrack Usergroups
-------------------------------------------
-Every SuperOffice Contact will be synchronized with a YouTrack Usergroups.
-
-Once a link between a SuperOffice Contact and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Contact and a YouTrack Usergroups:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Contact Property
-     - YouTrack Usergroups Property
-     - YouTrack Data Type
-   * - Name
-     - name
-     - "string"
-
-
-SuperOffice Contact to YouTrack Workitems
------------------------------------------
-Every SuperOffice Contact will be synchronized with a YouTrack Workitems.
-
-Once a link between a SuperOffice Contact and a YouTrack Workitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Contact and a YouTrack Workitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Contact Property
-     - YouTrack Workitems Property
-     - YouTrack Data Type
-   * - Name
-     - updated
      - "string"
 
 
