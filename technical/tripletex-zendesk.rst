@@ -2,7 +2,7 @@
 Tripletex to Zendesk Dataflow
 =============================
 
-Generated: 2023-11-29 14:35:43
+Generated: 2023-11-29 14:37:48
 
 Introduction.
 ------------
@@ -82,25 +82,6 @@ The following properties are synchronized between a Tripletex Employee and a Zen
      - "string"
 
 
-Tripletex Customer to Zendesk Organisations
--------------------------------------------
-Every Tripletex Customer will be synchronized with a Zendesk Organisations.
-
-Once a link between a Tripletex Customer and a Zendesk Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer and a Zendesk Organisations:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer Property
-     - Zendesk Organisations Property
-     - Zendesk Data Type
-   * - name
-     - name
-     - "string"
-
-
 Tripletex Customer to Zendesk Organizations
 -------------------------------------------
 Every Tripletex Customer will be synchronized with a Zendesk Organizations.
@@ -114,25 +95,6 @@ The following properties are synchronized between a Tripletex Customer and a Zen
 
    * - Tripletex Customer Property
      - Zendesk Organizations Property
-     - Zendesk Data Type
-   * - name
-     - name
-     - "string"
-
-
-Tripletex Department to Zendesk Organisations
----------------------------------------------
-Every Tripletex Department will be synchronized with a Zendesk Organisations.
-
-Once a link between a Tripletex Department and a Zendesk Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Department and a Zendesk Organisations:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Department Property
-     - Zendesk Organisations Property
      - Zendesk Data Type
    * - name
      - name
@@ -172,25 +134,6 @@ The following properties are synchronized between a Tripletex Project and a Zend
    * - Tripletex Project Property
      - Zendesk Ticketcomments Property
      - Zendesk Data Type
-
-
-Tripletex Supplier to Zendesk Organisations
--------------------------------------------
-Every Tripletex Supplier will be synchronized with a Zendesk Organisations.
-
-Once a link between a Tripletex Supplier and a Zendesk Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Supplier and a Zendesk Organisations:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Supplier Property
-     - Zendesk Organisations Property
-     - Zendesk Data Type
-   * - name
-     - name
-     - "string"
 
 
 Tripletex Supplier to Zendesk Organizations
