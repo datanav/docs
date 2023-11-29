@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2023-11-29 23:37:14
+Generated: 2023-11-29 23:45:21
 
 Introduction.
 ------------
@@ -76,72 +76,72 @@ The following properties are synchronized between a Powerofficego Customers pers
      - "string"
 
 
-Powerofficego Currency to YouTrack Organizationroles
-----------------------------------------------------
-Every Powerofficego Currency will be synchronized with a YouTrack Organizationroles.
+Powerofficego Currency to  Organizationroles
+--------------------------------------------
+Every Powerofficego Currency will be synchronized with a  Organizationroles.
 
-Once a link between a Powerofficego Currency and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Currency and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Currency and a YouTrack Organizationroles:
+The following properties are synchronized between a Powerofficego Currency and a  Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Currency Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
+     -  Organizationroles Property
+     -  Data Type
 
 
-Powerofficego Customers to YouTrack Groups
-------------------------------------------
-Every Powerofficego Customers will be synchronized with a YouTrack Groups.
+Powerofficego Customers to  Groups
+----------------------------------
+Every Powerofficego Customers will be synchronized with a  Groups.
 
-Once a link between a Powerofficego Customers and a YouTrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers and a  Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers and a YouTrack Groups:
+The following properties are synchronized between a Powerofficego Customers and a  Groups:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers Property
-     - YouTrack Groups Property
-     - YouTrack Data Type
+     -  Groups Property
+     -  Data Type
    * - Name
      - name
      - "string"
 
 
-Powerofficego Departments to YouTrack Groups
---------------------------------------------
-Every Powerofficego Departments will be synchronized with a YouTrack Groups.
+Powerofficego Departments to  Groups
+------------------------------------
+Every Powerofficego Departments will be synchronized with a  Groups.
 
-Once a link between a Powerofficego Departments and a YouTrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Departments and a  Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Departments and a YouTrack Groups:
+The following properties are synchronized between a Powerofficego Departments and a  Groups:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Departments Property
-     - YouTrack Groups Property
-     - YouTrack Data Type
+     -  Groups Property
+     -  Data Type
    * - Name
      - name
      - "string"
 
 
-Powerofficego Productgroup to YouTrack Organizationroles
---------------------------------------------------------
-Every Powerofficego Productgroup will be synchronized with a YouTrack Organizationroles.
+Powerofficego Productgroup to  Organizationroles
+------------------------------------------------
+Every Powerofficego Productgroup will be synchronized with a  Organizationroles.
 
-Once a link between a Powerofficego Productgroup and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Productgroup and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Productgroup and a YouTrack Organizationroles:
+The following properties are synchronized between a Powerofficego Productgroup and a  Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Productgroup Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
+     -  Organizationroles Property
+     -  Data Type
 
