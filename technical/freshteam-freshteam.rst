@@ -2,7 +2,7 @@
 Freshteam to Freshteam Dataflow
 ===============================
 
-Generated: 2023-11-29 15:04:37
+Generated: 2023-11-29 15:05:02
 
 Introduction.
 ------------
@@ -38,14 +38,26 @@ The following properties are synchronized between a Freshteam Employee and a Fre
    * - address.city
      - address.city
      - "string"
+   * - address.city
+     - communication_address.communication_city
+     - "string"
+   * - address.country
+     - communication_address.communication_country
+     - "string"
    * - address.country_code
      - address.country_code
      - "string"
    * - address.street
      - address.street
      - "string"
+   * - address.street
+     - communication_address.communication_street
+     - "string"
    * - address.zip_code
      - address.zip_code
+     - "string"
+   * - address.zip_code
+     - communication_address.communication_zip_code
      - "string"
    * - branch_id
      - branch_id
@@ -72,13 +84,25 @@ The following properties are synchronized between a Freshteam Employee and a Fre
      - sub_department_id
      - "string"
    * - communication_address.communication_city
+     - address.city
+     - "string"
+   * - communication_address.communication_city
      - communication_address.communication_city
+     - "string"
+   * - communication_address.communication_country
+     - address.country
      - "string"
    * - communication_address.communication_country_code
      - communication_address.communication_country_code
      - "string"
    * - communication_address.communication_street
+     - address.street
+     - "string"
+   * - communication_address.communication_street
      - communication_address.communication_street
+     - "string"
+   * - communication_address.communication_zip_code
+     - address.zip_code
      - "string"
    * - communication_address.communication_zip_code
      - communication_address.communication_zip_code
