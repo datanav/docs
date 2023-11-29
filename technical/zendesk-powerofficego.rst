@@ -2,7 +2,7 @@
 Zendesk to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:37:14
+Generated: 2023-11-29 23:38:14
 
 Introduction.
 ------------
@@ -41,40 +41,40 @@ The following properties are synchronized between a Zendesk Users and a  Contact
      - "integer"
 
 
-Zendesk Organizations to PowerOfficeGo Customers person
--------------------------------------------------------
-Before any synchronization can take place, a link between a Zendesk Organizations and a PowerOfficeGo Customers person must be established.
+Zendesk Organizations to  Customers person
+------------------------------------------
+Before any synchronization can take place, a link between a Zendesk Organizations and a  Customers person must be established.
 
-A new PowerOfficeGo Customers person will be created from a Zendesk Organizations if it is connected to a Zendesk Users that is synchronized into PowerOfficeGo.
+A new  Customers person will be created from a Zendesk Organizations if it is connected to a Zendesk Users that is synchronized into .
 
-Once a link between a Zendesk Organizations and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Organizations and a  Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Organizations and a PowerOfficeGo Customers person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Organizations Property
-     - PowerOfficeGo Customers person Property
-     - PowerOfficeGo Data Type
-
-
-Zendesk Organizations to PowerOfficeGo Customers
-------------------------------------------------
-Before any synchronization can take place, a link between a Zendesk Organizations and a PowerOfficeGo Customers must be established.
-
-A new PowerOfficeGo Customers will be created from a Zendesk Organizations if it is connected to a Zendesk Users that is synchronized into PowerOfficeGo.
-
-Once a link between a Zendesk Organizations and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Organizations and a PowerOfficeGo Customers:
+The following properties are synchronized between a Zendesk Organizations and a  Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Organizations Property
-     - PowerOfficeGo Customers Property
-     - PowerOfficeGo Data Type
+     -  Customers person Property
+     -  Data Type
+
+
+Zendesk Organizations to  Customers
+-----------------------------------
+Before any synchronization can take place, a link between a Zendesk Organizations and a  Customers must be established.
+
+A new  Customers will be created from a Zendesk Organizations if it is connected to a Zendesk Users that is synchronized into .
+
+Once a link between a Zendesk Organizations and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Organizations and a  Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Organizations Property
+     -  Customers Property
+     -  Data Type
    * - name
      - Name
      - "string"
