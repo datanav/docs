@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-11-29 14:42:03
+Generated: 2023-11-29 14:42:09
 
 Introduction.
 ------------
@@ -999,7 +999,7 @@ HubSpot Company to HubSpot Contact
 ----------------------------------
 Before any synchronization can take place, a link between a HubSpot Company and a HubSpot Contact must be established.
 
-A new HubSpot Contact will be created from a HubSpot Company if it is connected to a HubSpot Quotedealassociation, Quotecompanyassociation, Quotecontactassociation, or Quotequotetemplateassociation that is synchronized into HubSpot.
+A new HubSpot Contact will be created from a HubSpot Company if it is connected to a HubSpot Quote, Quotedealassociation, Quotecompanyassociation, Quotecontactassociation, or Quotequotetemplateassociation that is synchronized into HubSpot.
 
 Once a link between a HubSpot Company and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -1041,7 +1041,7 @@ HubSpot Contact to HubSpot Company
 ----------------------------------
 Before any synchronization can take place, a link between a HubSpot Contact and a HubSpot Company must be established.
 
-A new HubSpot Company will be created from a HubSpot Contact if it is connected to a HubSpot Quotedealassociation, Quotecompanyassociation, Quotecontactassociation, or Quotequotetemplateassociation that is synchronized into HubSpot.
+A new HubSpot Company will be created from a HubSpot Contact if it is connected to a HubSpot Quote, Quotedealassociation, Quotecompanyassociation, Quotecontactassociation, or Quotequotetemplateassociation that is synchronized into HubSpot.
 
 Once a link between a HubSpot Contact and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
