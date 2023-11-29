@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGo Dataflow
 ========================================
 
-Generated: 2023-11-29 14:35:43
+Generated: 2023-11-29 14:37:48
 
 Introduction.
 ------------
@@ -119,66 +119,6 @@ Wave Customer to PowerOfficeGo Customers person
 -----------------------------------------------
 Before any synchronization can take place, a link between a Wave Customer and a PowerOfficeGo Customers person must be established.
 
-A new PowerOfficeGo Customers person will be created from a Wave Customer if it is connected to a Wave Invoice, or Customer that is synchronized into PowerOfficeGo.
-
-Once a link between a Wave Customer and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a PowerOfficeGo Customers person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - PowerOfficeGo Customers person Property
-     - PowerOfficeGo Data Type
-   * - address.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - address.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - address.city
-     - MailAddress.City
-     - "string"
-   * - address.country.code
-     - MailAddress.CountryCode
-     - "string"
-   * - address.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - email
-     - EmailAddress
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - id
-     - Id
-     - "integer"
-   * - lastName
-     - LastName
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - shippingDetails.address.city
-     - MailAddress.City
-     - "string"
-   * - shippingDetails.address.country.code
-     - MailAddress.CountryCode
-     - "string"
-   * - shippingDetails.address.postalCode
-     - MailAddress.ZipCode
-     - "string"
-
-
-Wave Customer to PowerOfficeGo Customers person
------------------------------------------------
-Before any synchronization can take place, a link between a Wave Customer and a PowerOfficeGo Customers person must be established.
-
 A new PowerOfficeGo Customers person will be created from a Wave Customer if it is connected to a Wave Vendor, Invoice, Customer, or Customer-person that is synchronized into PowerOfficeGo.
 
 Once a link between a Wave Customer and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
@@ -232,37 +172,6 @@ The following properties are synchronized between a Wave Customer and a PowerOff
      - "string"
    * - shippingDetails.address.postalCode
      - MailAddress.ZipCode
-     - "string"
-
-
-Wave Invoice to PowerOfficeGo Outgoinginvoices
-----------------------------------------------
-Every Wave Invoice will be synchronized with a PowerOfficeGo Outgoinginvoices.
-
-Once a link between a Wave Invoice and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Invoice and a PowerOfficeGo Outgoinginvoices:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Invoice Property
-     - PowerOfficeGo Outgoinginvoices Property
-     - PowerOfficeGo Data Type
-   * - createdAt
-     - createdDateTimeOffset
-     - "string"
-   * - currency.code
-     - CurrencyCode
-     - "string"
-   * - customer.id
-     - customerId
-     - "string"
-   * - id
-     - OrderNo
-     - "string"
-   * - total.value
-     - NetAmount
      - "string"
 
 
