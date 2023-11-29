@@ -2,7 +2,7 @@
 YouTrack to YouTrack Dataflow
 =============================
 
-Generated: 2023-11-29 14:42:10
+Generated: 2023-11-29 14:44:43
 
 Introduction.
 ------------
@@ -173,7 +173,9 @@ The following properties are synchronized between a YouTrack Usersyoutrack and a
 
 YouTrack Usersyoutrack to YouTrack Users
 ----------------------------------------
-Every YouTrack Usersyoutrack will be synchronized with a YouTrack Users.
+Before any synchronization can take place, a link between a YouTrack Usersyoutrack and a YouTrack Users must be established.
+
+A new YouTrack Users will be created from a YouTrack Usersyoutrack if it is connected to a YouTrack Role, Team, Owner, Roles, Users, Author, Issues, Leader, Creator, Projects, Workitems, Created by, Projectroles, Usersyoutrack, or Organizationroles that is synchronized into YouTrack.
 
 Once a link between a YouTrack Usersyoutrack and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -319,40 +321,6 @@ The following properties are synchronized between a YouTrack Projectroles and a 
      - "string"
 
 
-YouTrack Projects to YouTrack Hubprojects
------------------------------------------
-Every YouTrack Projects will be synchronized with a YouTrack Hubprojects.
-
-Once a link between a YouTrack Projects and a YouTrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Projects and a YouTrack Hubprojects:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Projects Property
-     - YouTrack Hubprojects Property
-     - YouTrack Data Type
-   * - createdBy.id
-     - owner.id
-     - "string"
-   * - createdBy.id
-     - transitiveProjectRoles.id
-     - "string"
-   * - leader.id
-     - owner.id
-     - "string"
-   * - leader.id
-     - transitiveProjectRoles.id
-     - "string"
-   * - team.id
-     - organization.id
-     - "string"
-   * - team.id
-     - team.id
-     - "string"
-
-
 YouTrack Roles to YouTrack Organizationroles
 --------------------------------------------
 Every YouTrack Roles will be synchronized with a YouTrack Organizationroles.
@@ -385,25 +353,6 @@ The following properties are synchronized between a YouTrack Usergroups and a Yo
      - YouTrack Data Type
    * - name
      - name
-     - "string"
-
-
-YouTrack Usergroups to YouTrack Organizationroles
--------------------------------------------------
-Every YouTrack Usergroups will be synchronized with a YouTrack Organizationroles.
-
-Once a link between a YouTrack Usergroups and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Usergroups and a YouTrack Organizationroles:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Usergroups Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
-   * - name
-     - id
      - "string"
 
 
