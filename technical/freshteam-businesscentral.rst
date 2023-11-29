@@ -2,7 +2,7 @@
 Freshteam to BusinessCentral Dataflow
 =====================================
 
-Generated: 2023-11-29 14:35:43
+Generated: 2023-11-29 14:37:49
 
 Introduction.
 ------------
@@ -22,21 +22,5 @@ The following properties are synchronized between a Freshteam Department and a B
 
    * - Freshteam Department Property
      - BusinessCentral Company Property
-     - BusinessCentral Data Type
-
-
-Freshteam Employee to BusinessCentral Contact
----------------------------------------------
-Every Freshteam Employee will be synchronized with a BusinessCentral Contact.
-
-Once a link between a Freshteam Employee and a BusinessCentral Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Freshteam Employee and a BusinessCentral Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Freshteam Employee Property
-     - BusinessCentral Contact Property
      - BusinessCentral Data Type
 
