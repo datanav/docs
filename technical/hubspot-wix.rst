@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2023-11-29 14:42:09
+Generated: 2023-11-29 14:44:42
 
 Introduction.
 ------------
@@ -11,10 +11,9 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 HubSpot Contact to Wix Contacts
 -------------------------------
-Every HubSpot Contact will be synchronized with a Wix Contacts.
+Before any synchronization can take place, a link between a HubSpot Contact and a Wix Contacts must be established.
 
-If a matching Wix Contacts already exists, the HubSpot Contact will be merged with the existing one.
-If no matching Wix Contacts is found, a new Wix Contacts will be created.
+A new Wix Contacts will be created from a HubSpot Contact if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Wix.
 
 A HubSpot Contact will merge with a Wix Contacts if one of the following property combinations match:
 
@@ -140,38 +139,6 @@ The following properties are synchronized between a HubSpot Company and a Wix Co
    * - properties.zip
      - info.addresses.items.address.postalCode
      - "string"
-
-
-HubSpot Contactcompanyassociation to Wix Contacts
--------------------------------------------------
-Every HubSpot Contactcompanyassociation will be synchronized with a Wix Contacts.
-
-Once a link between a HubSpot Contactcompanyassociation and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contactcompanyassociation and a Wix Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contactcompanyassociation Property
-     - Wix Contacts Property
-     - Wix Data Type
-
-
-HubSpot User to Wix Contacts
-----------------------------
-Every HubSpot User will be synchronized with a Wix Contacts.
-
-Once a link between a HubSpot User and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot User and a Wix Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot User Property
-     - Wix Contacts Property
-     - Wix Data Type
 
 
 HubSpot Product to Wix Inventory
