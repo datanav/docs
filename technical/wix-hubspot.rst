@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:36:03
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
@@ -94,36 +94,36 @@ The following properties are synchronized between a Wix.com Members and a HubSpo
      - "string"
 
 
-Wix.com Inventory to HubSpot Product
-------------------------------------
-Every Wix.com Inventory will be synchronized with a HubSpot Product.
+Wix.com Inventory to  Product
+-----------------------------
+Every Wix.com Inventory will be synchronized with a  Product.
 
-Once a link between a Wix.com Inventory and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Inventory and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Inventory and a HubSpot Product:
+The following properties are synchronized between a Wix.com Inventory and a  Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Inventory Property
-     - HubSpot Product Property
-     - HubSpot Data Type
+     -  Product Property
+     -  Data Type
 
 
-Wix.com Orders to HubSpot Lineitem
-----------------------------------
-Every Wix.com Orders will be synchronized with a HubSpot Lineitem.
+Wix.com Orders to  Lineitem
+---------------------------
+Every Wix.com Orders will be synchronized with a  Lineitem.
 
-Once a link between a Wix.com Orders and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a  Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a HubSpot Lineitem:
+The following properties are synchronized between a Wix.com Orders and a  Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     - HubSpot Lineitem Property
-     - HubSpot Data Type
+     -  Lineitem Property
+     -  Data Type
    * - lineItems.name
      - properties.name
      - "string"
@@ -150,20 +150,20 @@ The following properties are synchronized between a Wix.com Orders and a HubSpot
      - "string"
 
 
-Wix.com Orders to HubSpot Lineitemdealassociation
--------------------------------------------------
-Every Wix.com Orders will be synchronized with a HubSpot Lineitemdealassociation.
+Wix.com Orders to  Lineitemdealassociation
+------------------------------------------
+Every Wix.com Orders will be synchronized with a  Lineitemdealassociation.
 
-Once a link between a Wix.com Orders and a HubSpot Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a  Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a HubSpot Lineitemdealassociation:
+The following properties are synchronized between a Wix.com Orders and a  Lineitemdealassociation:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     - HubSpot Lineitemdealassociation Property
-     - HubSpot Data Type
+     -  Lineitemdealassociation Property
+     -  Data Type
    * - id
      - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - "string"
