@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-29 23:37:13
+Generated: 2023-11-29 23:38:14
 
 Introduction.
 ------------
@@ -312,22 +312,22 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - Tripletex Data Type
 
 
-SuperOffice Contact to Tripletex Department
--------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a Tripletex Department must be established.
+SuperOffice Contact to  Department
+----------------------------------
+Before any synchronization can take place, a link between a SuperOffice Contact and a  Department must be established.
 
-A new Tripletex Department will be created from a SuperOffice Contact if it is connected to a SuperOffice User, or Person that is synchronized into Tripletex.
+A new  Department will be created from a SuperOffice Contact if it is connected to a SuperOffice User, or Person that is synchronized into .
 
-Once a link between a SuperOffice Contact and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a  Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a Tripletex Department:
+The following properties are synchronized between a SuperOffice Contact and a  Department:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - Tripletex Department Property
-     - Tripletex Data Type
+     -  Department Property
+     -  Data Type
    * - Name
      - name
      - "string"
@@ -351,22 +351,22 @@ The following properties are synchronized between a SuperOffice Person and a Tri
      - Tripletex Data Type
 
 
-SuperOffice Quotealternative to Tripletex Order
------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Tripletex Order must be established.
+SuperOffice Quotealternative to  Order
+--------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Quotealternative and a  Order must be established.
 
-A new Tripletex Order will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into Tripletex.
+A new  Order will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into .
 
-Once a link between a SuperOffice Quotealternative and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quotealternative and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quotealternative and a Tripletex Order:
+The following properties are synchronized between a SuperOffice Quotealternative and a  Order:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quotealternative Property
-     - Tripletex Order Property
-     - Tripletex Data Type
+     -  Order Property
+     -  Data Type
    * - Name
      - invoiceComment
      - "string"
@@ -410,20 +410,20 @@ The following properties are synchronized between a SuperOffice Ownercontactlink
      - "string"
 
 
-SuperOffice Product to Tripletex Product
-----------------------------------------
-Every SuperOffice Product will be synchronized with a Tripletex Product.
+SuperOffice Product to  Product
+-------------------------------
+Every SuperOffice Product will be synchronized with a  Product.
 
-Once a link between a SuperOffice Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Product and a Tripletex Product:
+The following properties are synchronized between a SuperOffice Product and a  Product:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Product Property
-     - Tripletex Product Property
-     - Tripletex Data Type
+     -  Product Property
+     -  Data Type
    * - Description
      - description
      - "string"
