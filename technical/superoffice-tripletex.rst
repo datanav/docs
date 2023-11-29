@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-11-29 14:42:09
+Generated: 2023-11-29 14:44:42
 
 Introduction.
 ------------
@@ -11,10 +11,9 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 SuperOffice Contact to Tripletex Customer
 -----------------------------------------
-Every SuperOffice Contact will be synchronized with a Tripletex Customer.
+Before any synchronization can take place, a link between a SuperOffice Contact and a Tripletex Customer must be established.
 
-If a matching Tripletex Customer already exists, the SuperOffice Contact will be merged with the existing one.
-If no matching Tripletex Customer is found, a new Tripletex Customer will be created.
+A new Tripletex Customer will be created from a SuperOffice Contact if it is connected to a SuperOffice Sale, User, Quote, Person, Contact, Quoteline, or Quotealternative that is synchronized into Tripletex.
 
 A SuperOffice Contact will merge with a Tripletex Customer if one of the following property combinations match:
 
@@ -370,177 +369,6 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - Tripletex Data Type
    * - Name
      - invoiceComment
-     - "string"
-
-
-SuperOffice Listbusinessitems to Tripletex Customercategory
------------------------------------------------------------
-Every SuperOffice Listbusinessitems will be synchronized with a Tripletex Customercategory.
-
-Once a link between a SuperOffice Listbusinessitems and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listbusinessitems and a Tripletex Customercategory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listbusinessitems Property
-     - Tripletex Customercategory Property
-     - Tripletex Data Type
-   * - Name
-     - name
-     - "string"
-
-
-SuperOffice Listcategoryitems to Tripletex Customercategory
------------------------------------------------------------
-Every SuperOffice Listcategoryitems will be synchronized with a Tripletex Customercategory.
-
-Once a link between a SuperOffice Listcategoryitems and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listcategoryitems and a Tripletex Customercategory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listcategoryitems Property
-     - Tripletex Customercategory Property
-     - Tripletex Data Type
-   * - Name
-     - name
-     - "string"
-
-
-SuperOffice Listproductcategoryitems to Tripletex Customercategory
-------------------------------------------------------------------
-Every SuperOffice Listproductcategoryitems will be synchronized with a Tripletex Customercategory.
-
-Once a link between a SuperOffice Listproductcategoryitems and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listproductcategoryitems and a Tripletex Customercategory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listproductcategoryitems Property
-     - Tripletex Customercategory Property
-     - Tripletex Data Type
-   * - Name
-     - name
-     - "string"
-
-
-SuperOffice Listproductfamilyitems to Tripletex Customercategory
-----------------------------------------------------------------
-Every SuperOffice Listproductfamilyitems will be synchronized with a Tripletex Customercategory.
-
-Once a link between a SuperOffice Listproductfamilyitems and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listproductfamilyitems and a Tripletex Customercategory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listproductfamilyitems Property
-     - Tripletex Customercategory Property
-     - Tripletex Data Type
-   * - Name
-     - name
-     - "string"
-
-
-SuperOffice Listproducttypeitems to Tripletex Customercategory
---------------------------------------------------------------
-Every SuperOffice Listproducttypeitems will be synchronized with a Tripletex Customercategory.
-
-Once a link between a SuperOffice Listproducttypeitems and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listproducttypeitems and a Tripletex Customercategory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listproducttypeitems Property
-     - Tripletex Customercategory Property
-     - Tripletex Data Type
-   * - Name
-     - name
-     - "string"
-
-
-SuperOffice Listprojectstatusitems to Tripletex Customercategory
-----------------------------------------------------------------
-Every SuperOffice Listprojectstatusitems will be synchronized with a Tripletex Customercategory.
-
-Once a link between a SuperOffice Listprojectstatusitems and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listprojectstatusitems and a Tripletex Customercategory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listprojectstatusitems Property
-     - Tripletex Customercategory Property
-     - Tripletex Data Type
-   * - Name
-     - name
-     - "string"
-
-
-SuperOffice Listprojecttypeitems to Tripletex Customercategory
---------------------------------------------------------------
-Every SuperOffice Listprojecttypeitems will be synchronized with a Tripletex Customercategory.
-
-Once a link between a SuperOffice Listprojecttypeitems and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listprojecttypeitems and a Tripletex Customercategory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listprojecttypeitems Property
-     - Tripletex Customercategory Property
-     - Tripletex Data Type
-   * - Name
-     - name
-     - "string"
-
-
-SuperOffice Listsaletypeitems to Tripletex Customercategory
------------------------------------------------------------
-Every SuperOffice Listsaletypeitems will be synchronized with a Tripletex Customercategory.
-
-Once a link between a SuperOffice Listsaletypeitems and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listsaletypeitems and a Tripletex Customercategory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listsaletypeitems Property
-     - Tripletex Customercategory Property
-     - Tripletex Data Type
-   * - Name
-     - name
-     - "string"
-
-
-SuperOffice Listticketcategoryitems to Tripletex Customercategory
------------------------------------------------------------------
-Every SuperOffice Listticketcategoryitems will be synchronized with a Tripletex Customercategory.
-
-Once a link between a SuperOffice Listticketcategoryitems and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listticketcategoryitems and a Tripletex Customercategory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listticketcategoryitems Property
-     - Tripletex Customercategory Property
-     - Tripletex Data Type
-   * - Name
-     - name
      - "string"
 
 
