@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-29 23:38:14
+Generated: 2023-11-29 23:39:28
 
 Introduction.
 ------------
@@ -204,33 +204,33 @@ The following properties are synchronized between a Wave Currency and a  Currenc
      -  Data Type
 
 
-Wave Customer to PowerOfficeGo Contactperson
---------------------------------------------
-Every Wave Customer will be synchronized with a PowerOfficeGo Contactperson.
+Wave Customer to  Contactperson
+-------------------------------
+Every Wave Customer will be synchronized with a  Contactperson.
 
-If a matching PowerOfficeGo Contactperson already exists, the Wave Customer will be merged with the existing one.
-If no matching PowerOfficeGo Contactperson is found, a new PowerOfficeGo Contactperson will be created.
+If a matching  Contactperson already exists, the Wave Customer will be merged with the existing one.
+If no matching  Contactperson is found, a new  Contactperson will be created.
 
-A Wave Customer will merge with a PowerOfficeGo Contactperson if one of the following property combinations match:
+A Wave Customer will merge with a  Contactperson if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - PowerOfficeGo Contactperson Property
+     -  Contactperson Property
    * - email
      - emailAddress
 
-Once a link between a Wave Customer and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a  Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a PowerOfficeGo Contactperson:
+The following properties are synchronized between a Wave Customer and a  Contactperson:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - PowerOfficeGo Contactperson Property
-     - PowerOfficeGo Data Type
+     -  Contactperson Property
+     -  Data Type
    * - address.addressLine1
      - address1
      - "string"
