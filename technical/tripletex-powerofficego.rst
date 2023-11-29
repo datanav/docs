@@ -1,13 +1,13 @@
-===================================
-Tripletex to PowerOfficeGo Dataflow
-===================================
+======================
+Tripletex to  Dataflow
+======================
 
-Generated: 2023-11-29 14:42:09
+Generated: 2023-11-29 23:36:03
 
 Introduction.
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to PowerOfficeGo. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Tripletex Employee to PowerOfficeGo Contactperson
 -------------------------------------------------
