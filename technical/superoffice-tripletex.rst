@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-11-14 13:19:21
+Generated: 2023-11-29 14:34:53
 
 Introduction.
 ------------
@@ -25,10 +25,6 @@ A SuperOffice Contact will merge with a Tripletex Customer if one of the followi
      - Tripletex Customer Property
    * - Emails.Value
      - email
-   * - Emails.Value
-     - invoiceEmail
-   * - Emails.Value
-     - overdueNoticeEmail
 
 Once a link between a SuperOffice Contact and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -147,143 +143,6 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - "string"
 
 
-SuperOffice Contact to Tripletex Supplier
------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a Tripletex Supplier must be established.
-
-A new Tripletex Supplier will be created from a SuperOffice Contact if it is connected to a SuperOffice Product that is synchronized into Tripletex.
-
-A SuperOffice Contact will merge with a Tripletex Supplier if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Contact Property
-     - Tripletex Supplier Property
-   * - Emails.Value
-     - email
-   * - Emails.Value
-     - invoiceEmail
-   * - Emails.Value
-     - overdueNoticeEmail
-
-Once a link between a SuperOffice Contact and a Tripletex Supplier is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Contact and a Tripletex Supplier:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Contact Property
-     - Tripletex Supplier Property
-     - Tripletex Data Type
-   * - Address.Postal.Address1
-     - deliveryAddress.addressLine1
-     - "string"
-   * - Address.Postal.Address1
-     - physicalAddress.addressLine1
-     - "string"
-   * - Address.Postal.Address1
-     - postalAddress.addressLine1
-     - "string"
-   * - Address.Postal.Address2
-     - deliveryAddress.addressLine2
-     - "string"
-   * - Address.Postal.Address2
-     - physicalAddress.addressLine2
-     - "string"
-   * - Address.Postal.Address2
-     - postalAddress.addressLine2
-     - "string"
-   * - Address.Postal.City
-     - deliveryAddress.changes
-     - "string"
-   * - Address.Postal.City
-     - deliveryAddress.city
-     - "string"
-   * - Address.Postal.City
-     - physicalAddress.city
-     - "string"
-   * - Address.Postal.City
-     - postalAddress.city
-     - "string"
-   * - Address.Postal.Zipcode
-     - deliveryAddress.postalCode
-     - "string"
-   * - Address.Postal.Zipcode
-     - physicalAddress.postalCode
-     - "string"
-   * - Address.Postal.Zipcode
-     - postalAddress.postalCode
-     - "string"
-   * - Address.Street.Address1
-     - deliveryAddress.addressLine1
-     - "string"
-   * - Address.Street.Address1
-     - physicalAddress.addressLine1
-     - "string"
-   * - Address.Street.Address1
-     - postalAddress.addressLine1
-     - "string"
-   * - Address.Street.Address2
-     - deliveryAddress.addressLine2
-     - "string"
-   * - Address.Street.Address2
-     - physicalAddress.addressLine2
-     - "string"
-   * - Address.Street.Address2
-     - postalAddress.addressLine2
-     - "string"
-   * - Address.Street.City
-     - deliveryAddress.changes
-     - "string"
-   * - Address.Street.City
-     - deliveryAddress.city
-     - "string"
-   * - Address.Street.City
-     - physicalAddress.city
-     - "string"
-   * - Address.Street.City
-     - postalAddress.city
-     - "string"
-   * - Address.Street.Zipcode
-     - deliveryAddress.postalCode
-     - "string"
-   * - Address.Street.Zipcode
-     - physicalAddress.postalCode
-     - "string"
-   * - Address.Street.Zipcode
-     - postalAddress.postalCode
-     - "string"
-   * - ContactId
-     - id
-     - "integer"
-   * - Country.CountryId
-     - deliveryAddress.city
-     - "string"
-   * - Country.CountryId
-     - deliveryAddress.country.id
-     - "integer"
-   * - Country.CountryId
-     - physicalAddress.country.id
-     - "integer"
-   * - Country.CountryId
-     - postalAddress.country.id
-     - "integer"
-   * - Emails.Value
-     - email
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - OrgNr (Dependant on having NO in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountry)
-     - organizationNumber
-     - "string"
-   * - Phones.Value
-     - phoneNumber
-     - "string"
-
-
 SuperOffice Person to Tripletex Contact
 ---------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Person and a Tripletex Contact must be established.
@@ -396,32 +255,6 @@ The following properties are synchronized between a SuperOffice Person and a Tri
    * - PrivatePhones.Value
      - phoneNumberHome
      - "string"
-
-
-SuperOffice Product to Tripletex Productunit
---------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Product and a Tripletex Productunit must be established.
-
-A SuperOffice Product will merge with a Tripletex Productunit if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - Tripletex Productunit Property
-   * - QuantityUnit
-     - name
-
-Once a link between a SuperOffice Product and a Tripletex Productunit is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Product and a Tripletex Productunit:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - Tripletex Productunit Property
-     - Tripletex Data Type
 
 
 SuperOffice User to Tripletex Contact
@@ -752,19 +585,6 @@ The following properties are synchronized between a SuperOffice Ownercontactlink
 SuperOffice Product to Tripletex Product
 ----------------------------------------
 Every SuperOffice Product will be synchronized with a Tripletex Product.
-
-If a matching Tripletex Product already exists, the SuperOffice Product will be merged with the existing one.
-If no matching Tripletex Product is found, a new Tripletex Product will be created.
-
-A SuperOffice Product will merge with a Tripletex Product if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - Tripletex Product Property
-   * - ERPProductKey
-     - number
 
 Once a link between a SuperOffice Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
