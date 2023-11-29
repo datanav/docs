@@ -2,27 +2,27 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2023-11-29 23:35:19
+Generated: 2023-11-29 23:36:03
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Asana to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Asana Teams to HubSpot Company
-------------------------------
-Every Asana Teams will be synchronized with a HubSpot Company.
+Asana Teams to  Company
+-----------------------
+Every Asana Teams will be synchronized with a  Company.
 
-Once a link between a Asana Teams and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Teams and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Teams and a HubSpot Company:
+The following properties are synchronized between a Asana Teams and a  Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Teams Property
-     - HubSpot Company Property
-     - HubSpot Data Type
+     -  Company Property
+     -  Data Type
    * - description
      - properties.description
      - "string"
@@ -37,20 +37,20 @@ The following properties are synchronized between a Asana Teams and a HubSpot Co
      - "string"
 
 
-Asana Workspaces to HubSpot Company
------------------------------------
-Every Asana Workspaces will be synchronized with a HubSpot Company.
+Asana Workspaces to  Company
+----------------------------
+Every Asana Workspaces will be synchronized with a  Company.
 
-Once a link between a Asana Workspaces and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Workspaces and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Workspaces and a HubSpot Company:
+The following properties are synchronized between a Asana Workspaces and a  Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Workspaces Property
-     - HubSpot Company Property
-     - HubSpot Data Type
+     -  Company Property
+     -  Data Type
    * - email_domains
      - properties.website
      - "string"
