@@ -2,7 +2,7 @@
 YouTrack to Zendesk Dataflow
 ============================
 
-Generated: 2023-11-27 14:28:44
+Generated: 2023-11-29 14:34:53
 
 Introduction.
 ------------
@@ -20,10 +20,6 @@ A YouTrack Users will merge with a Zendesk Users if one of the following propert
 
    * - YouTrack Users Property
      - Zendesk Users Property
-   * - 
-     - email
-   * - profile.email
-     - email
    * - profile.email.email
      - email
 
