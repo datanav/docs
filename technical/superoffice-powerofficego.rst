@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-11-27 20:43:47
+Generated: 2023-11-29 13:08:06
 
 Introduction.
 ------------
@@ -705,6 +705,9 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - QuoteAlternativeId
      - sesam_SalesOrdersId
      - "string"
+   * - Rank
+     - SortOrder
+     - "integer"
    * - TotalPrice
      - TotalAmount
      - "string"
