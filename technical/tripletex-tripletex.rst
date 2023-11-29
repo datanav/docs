@@ -2,37 +2,37 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-29 23:36:03
+Generated: 2023-11-29 23:37:14
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Contact to Tripletex Contact
---------------------------------------
-Before any synchronization can take place, a link between a Tripletex Contact and a Tripletex Contact must be established.
+Tripletex Contact to  Contact
+-----------------------------
+Before any synchronization can take place, a link between a Tripletex Contact and a  Contact must be established.
 
-A Tripletex Contact will merge with a Tripletex Contact if one of the following property combinations match:
+A Tripletex Contact will merge with a  Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     - Tripletex Contact Property
+     -  Contact Property
    * - email
      - email
 
-Once a link between a Tripletex Contact and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a Tripletex Contact:
+The following properties are synchronized between a Tripletex Contact and a  Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     - Tripletex Contact Property
-     - Tripletex Data Type
+     -  Contact Property
+     -  Data Type
    * - customer.id
      - customer.id
      - "integer"
@@ -56,30 +56,30 @@ The following properties are synchronized between a Tripletex Contact and a Trip
      - "string"
 
 
-Tripletex Contact to Tripletex Employee
----------------------------------------
-Before any synchronization can take place, a link between a Tripletex Contact and a Tripletex Employee must be established.
+Tripletex Contact to  Employee
+------------------------------
+Before any synchronization can take place, a link between a Tripletex Contact and a  Employee must be established.
 
-A Tripletex Contact will merge with a Tripletex Employee if one of the following property combinations match:
+A Tripletex Contact will merge with a  Employee if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     - Tripletex Employee Property
+     -  Employee Property
    * - email
      - email
 
-Once a link between a Tripletex Contact and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a  Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a Tripletex Employee:
+The following properties are synchronized between a Tripletex Contact and a  Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     - Tripletex Employee Property
-     - Tripletex Data Type
+     -  Employee Property
+     -  Data Type
    * - customer.id
      - department.id
      - "if", "neq", "_.", "X"], "integer", "string"]
@@ -100,32 +100,32 @@ The following properties are synchronized between a Tripletex Contact and a Trip
      - "string"
 
 
-Tripletex Customer to Tripletex Customer
-----------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer and a Tripletex Customer must be established.
+Tripletex Customer to  Customer
+-------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a  Customer must be established.
 
-A Tripletex Customer will merge with a Tripletex Customer if one of the following property combinations match:
+A Tripletex Customer will merge with a  Customer if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     - Tripletex Customer Property
+     -  Customer Property
    * - email
      - email
    * - organizationNumber
      - organizationNumber
 
-Once a link between a Tripletex Customer and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a Tripletex Customer:
+The following properties are synchronized between a Tripletex Customer and a  Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
+     -  Customer Property
+     -  Data Type
    * - accountManager.id
      - accountManager.id
      - "integer"
@@ -290,56 +290,56 @@ The following properties are synchronized between a Tripletex Customer and a Tri
      - "string"
 
 
-Tripletex Department to Tripletex Employee
-------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Department and a Tripletex Employee must be established.
+Tripletex Department to  Employee
+---------------------------------
+Before any synchronization can take place, a link between a Tripletex Department and a  Employee must be established.
 
-A Tripletex Department will merge with a Tripletex Employee if one of the following property combinations match:
+A Tripletex Department will merge with a  Employee if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     - Tripletex Employee Property
+     -  Employee Property
    * - departmentManager.id
      - id
 
-Once a link between a Tripletex Department and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a  Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a Tripletex Employee:
+The following properties are synchronized between a Tripletex Department and a  Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     - Tripletex Employee Property
-     - Tripletex Data Type
+     -  Employee Property
+     -  Data Type
 
 
-Tripletex Employee to Tripletex Contact
----------------------------------------
-Before any synchronization can take place, a link between a Tripletex Employee and a Tripletex Contact must be established.
+Tripletex Employee to  Contact
+------------------------------
+Before any synchronization can take place, a link between a Tripletex Employee and a  Contact must be established.
 
-A Tripletex Employee will merge with a Tripletex Contact if one of the following property combinations match:
+A Tripletex Employee will merge with a  Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     - Tripletex Contact Property
+     -  Contact Property
    * - email
      - email
 
-Once a link between a Tripletex Employee and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a Tripletex Contact:
+The following properties are synchronized between a Tripletex Employee and a  Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     - Tripletex Contact Property
-     - Tripletex Data Type
+     -  Contact Property
+     -  Data Type
    * - department.id
      - customer.id
      - "integer"
@@ -360,17 +360,17 @@ The following properties are synchronized between a Tripletex Employee and a Tri
      - "string"
 
 
-Tripletex Employee to Tripletex Employee
-----------------------------------------
-Before any synchronization can take place, a link between a Tripletex Employee and a Tripletex Employee must be established.
+Tripletex Employee to  Employee
+-------------------------------
+Before any synchronization can take place, a link between a Tripletex Employee and a  Employee must be established.
 
-A Tripletex Employee will merge with a Tripletex Employee if one of the following property combinations match:
+A Tripletex Employee will merge with a  Employee if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     - Tripletex Employee Property
+     -  Employee Property
    * - id
      - id
    * - email
@@ -380,16 +380,16 @@ A Tripletex Employee will merge with a Tripletex Employee if one of the followin
    * - nationalIdentityNumber
      - nationalIdentityNumber
 
-Once a link between a Tripletex Employee and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a  Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a Tripletex Employee:
+The following properties are synchronized between a Tripletex Employee and a  Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     - Tripletex Employee Property
-     - Tripletex Data Type
+     -  Employee Property
+     -  Data Type
    * - dateOfBirth
      - dateOfBirth
      - "datetime-format","%Y-%m-%d","_."]
@@ -401,162 +401,162 @@ The following properties are synchronized between a Tripletex Employee and a Tri
      - "string"
 
 
-Tripletex Product to Tripletex Product
---------------------------------------
-Before any synchronization can take place, a link between a Tripletex Product and a Tripletex Product must be established.
+Tripletex Product to  Product
+-----------------------------
+Before any synchronization can take place, a link between a Tripletex Product and a  Product must be established.
 
-A Tripletex Product will merge with a Tripletex Product if one of the following property combinations match:
+A Tripletex Product will merge with a  Product if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     - Tripletex Product Property
+     -  Product Property
    * - id
      - id
 
-Once a link between a Tripletex Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Product and a Tripletex Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     - Tripletex Product Property
-     - Tripletex Data Type
-
-
-Tripletex Product to Tripletex Productgrouprelation
----------------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Product and a Tripletex Productgrouprelation must be established.
-
-A Tripletex Product will merge with a Tripletex Productgrouprelation if one of the following property combinations match:
+The following properties are synchronized between a Tripletex Product and a  Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     - Tripletex Productgrouprelation Property
+     -  Product Property
+     -  Data Type
+
+
+Tripletex Product to  Productgrouprelation
+------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Product and a  Productgrouprelation must be established.
+
+A Tripletex Product will merge with a  Productgrouprelation if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     -  Productgrouprelation Property
    * - id
      - product.id
 
-Once a link between a Tripletex Product and a Tripletex Productgrouprelation is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Product and a  Productgrouprelation is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Product and a Tripletex Productgrouprelation:
+The following properties are synchronized between a Tripletex Product and a  Productgrouprelation:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     - Tripletex Productgrouprelation Property
-     - Tripletex Data Type
+     -  Productgrouprelation Property
+     -  Data Type
 
 
-Tripletex Productgrouprelation to Tripletex Product
----------------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Productgrouprelation and a Tripletex Product must be established.
+Tripletex Productgrouprelation to  Product
+------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Productgrouprelation and a  Product must be established.
 
-A Tripletex Productgrouprelation will merge with a Tripletex Product if one of the following property combinations match:
+A Tripletex Productgrouprelation will merge with a  Product if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Productgrouprelation Property
-     - Tripletex Product Property
+     -  Product Property
    * - product.id
      - id
 
-Once a link between a Tripletex Productgrouprelation and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Productgrouprelation and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Productgrouprelation and a Tripletex Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productgrouprelation Property
-     - Tripletex Product Property
-     - Tripletex Data Type
-
-
-Tripletex Productgrouprelation to Tripletex Productgrouprelation
-----------------------------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Productgrouprelation and a Tripletex Productgrouprelation must be established.
-
-A Tripletex Productgrouprelation will merge with a Tripletex Productgrouprelation if one of the following property combinations match:
+The following properties are synchronized between a Tripletex Productgrouprelation and a  Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Productgrouprelation Property
-     - Tripletex Productgrouprelation Property
+     -  Product Property
+     -  Data Type
+
+
+Tripletex Productgrouprelation to  Productgrouprelation
+-------------------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Productgrouprelation and a  Productgrouprelation must be established.
+
+A Tripletex Productgrouprelation will merge with a  Productgrouprelation if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Productgrouprelation Property
+     -  Productgrouprelation Property
    * - product.id
      - product.id
 
-Once a link between a Tripletex Productgrouprelation and a Tripletex Productgrouprelation is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Productgrouprelation and a  Productgrouprelation is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Productgrouprelation and a Tripletex Productgrouprelation:
+The following properties are synchronized between a Tripletex Productgrouprelation and a  Productgrouprelation:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Productgrouprelation Property
-     - Tripletex Productgrouprelation Property
-     - Tripletex Data Type
+     -  Productgrouprelation Property
+     -  Data Type
 
 
-Tripletex Productunit to Tripletex Productunit
-----------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Productunit and a Tripletex Productunit must be established.
+Tripletex Productunit to  Productunit
+-------------------------------------
+Before any synchronization can take place, a link between a Tripletex Productunit and a  Productunit must be established.
 
-A Tripletex Productunit will merge with a Tripletex Productunit if one of the following property combinations match:
+A Tripletex Productunit will merge with a  Productunit if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Productunit Property
-     - Tripletex Productunit Property
+     -  Productunit Property
    * - name
      - name
 
-Once a link between a Tripletex Productunit and a Tripletex Productunit is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Productunit and a  Productunit is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Productunit and a Tripletex Productunit:
+The following properties are synchronized between a Tripletex Productunit and a  Productunit:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Productunit Property
-     - Tripletex Productunit Property
-     - Tripletex Data Type
+     -  Productunit Property
+     -  Data Type
 
 
-Tripletex Supplier to Tripletex Customer
-----------------------------------------
-Before any synchronization can take place, a link between a Tripletex Supplier and a Tripletex Customer must be established.
+Tripletex Supplier to  Customer
+-------------------------------
+Before any synchronization can take place, a link between a Tripletex Supplier and a  Customer must be established.
 
-A Tripletex Supplier will merge with a Tripletex Customer if one of the following property combinations match:
+A Tripletex Supplier will merge with a  Customer if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Supplier Property
-     - Tripletex Customer Property
+     -  Customer Property
    * - email
      - email
    * - organizationNumber
      - organizationNumber
 
-Once a link between a Tripletex Supplier and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Supplier and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Supplier and a Tripletex Customer:
+The following properties are synchronized between a Tripletex Supplier and a  Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Supplier Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
+     -  Customer Property
+     -  Data Type
    * - deliveryAddress.addressLine1
      - deliveryAddress.addressLine1
      - "string"
