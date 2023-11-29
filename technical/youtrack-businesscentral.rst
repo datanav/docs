@@ -2,7 +2,7 @@
 YouTrack to BusinessCentral Dataflow
 ====================================
 
-Generated: 2023-11-10 01:46:32
+Generated: 2023-11-29 14:35:43
 
 Introduction.
 ------------
