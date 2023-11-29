@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-11-29 14:42:03
+Generated: 2023-11-29 14:42:09
 
 Introduction.
 ------------
@@ -250,6 +250,24 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
+Powerofficego Product classification type to SuperOffice Listproducttypeitems
+-----------------------------------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Product classification type and a SuperOffice Listproducttypeitems must be established.
+
+A new SuperOffice Listproducttypeitems will be created from a Powerofficego Product classification type if it is connected to a Powerofficego Product that is synchronized into SuperOffice.
+
+Once a link between a Powerofficego Product classification type and a SuperOffice Listproducttypeitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product classification type and a SuperOffice Listproducttypeitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product classification type Property
+     - SuperOffice Listproducttypeitems Property
+     - SuperOffice Data Type
+
+
 Powerofficego Customer to SuperOffice Contact
 ---------------------------------------------
 Every Powerofficego Customer will be synchronized with a SuperOffice Contact.
@@ -276,106 +294,6 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - WebsiteUrl
      - Domains
      - "list"
-   * - emailAddress
-     - Emails.Value
-     - "string"
-   * - id
-     - ContactId
-     - "integer"
-   * - legalName
-     - Name
-     - "string"
-   * - mailAddress.address1
-     - Address.Postal.Address1
-     - "string"
-   * - mailAddress.address2
-     - Address.Postal.Address2
-     - "string"
-   * - mailAddress.address3
-     - Address.Postal.Address3
-     - "string"
-   * - mailAddress.city
-     - Address.Postal.City
-     - "string"
-   * - mailAddress.countryCode
-     - Country.CountryId
-     - "integer"
-   * - mailAddress.countryCode
-     - OrgNr (Dependant on having wd:Q906278 in Country.ThreeLetterISOCountryDependant on having wd:Q906278 in Country.TwoLetterISOCountry)
-     - "string"
-   * - mailAddress.zipCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - phoneNumber
-     - Phones.Value
-     - "string"
-   * - phoneNumberMobile
-     - Phones.Value
-     - "string"
-   * - streetAddresses.address1
-     - Address.Street.Address1
-     - "string"
-   * - streetAddresses.address2
-     - Address.Street.Address2
-     - "string"
-   * - streetAddresses.address3
-     - Address.Street.Address3
-     - "string"
-   * - streetAddresses.city
-     - Address.Street.City
-     - "string"
-   * - streetAddresses.countryCode
-     - OrgNr (Dependant on having wd:Q906278 in Country.ThreeLetterISOCountry)
-     - "string"
-   * - streetAddresses.zipCode
-     - Address.Street.Zipcode
-     - "string"
-   * - vatNumber
-     - OrgNr (Dependant on having  in Country.TwoLetterISOCountry)
-     - "string"
-   * - websiteUrl
-     - Domains
-     - "list"
-   * - websiteUrl
-     - Urls.Value
-     - "string"
-
-
-Powerofficego Departments to SuperOffice Contact
-------------------------------------------------
-Every Powerofficego Departments will be synchronized with a SuperOffice Contact.
-
-Once a link between a Powerofficego Departments and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Departments and a SuperOffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Departments Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
-   * - Name
-     - Name
-     - "string"
-
-
-Powerofficego Product classification type to SuperOffice Listproducttypeitems
------------------------------------------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Product classification type and a SuperOffice Listproducttypeitems must be established.
-
-A new SuperOffice Listproducttypeitems will be created from a Powerofficego Product classification type if it is connected to a Powerofficego Product that is synchronized into SuperOffice.
-
-Once a link between a Powerofficego Product classification type and a SuperOffice Listproducttypeitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Product classification type and a SuperOffice Listproducttypeitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Product classification type Property
-     - SuperOffice Listproducttypeitems Property
-     - SuperOffice Data Type
 
 
 Powerofficego Customer to SuperOffice Person
@@ -465,6 +383,22 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - firstName
      - Firstname
      - "string"
+
+
+Powerofficego Departments to SuperOffice Contact
+------------------------------------------------
+Every Powerofficego Departments will be synchronized with a SuperOffice Contact.
+
+Once a link between a Powerofficego Departments and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Departments and a SuperOffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Departments Property
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
 
 
 Powerofficego Employee to SuperOffice Person
