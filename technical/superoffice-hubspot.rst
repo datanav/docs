@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
@@ -71,30 +71,30 @@ The following properties are synchronized between a SuperOffice Person and a Hub
      - "string"
 
 
-SuperOffice User to HubSpot Contact
------------------------------------
-Before any synchronization can take place, a link between a SuperOffice User and a HubSpot Contact must be established.
+SuperOffice User to  Contact
+----------------------------
+Before any synchronization can take place, a link between a SuperOffice User and a  Contact must be established.
 
-A SuperOffice User will merge with a HubSpot Contact if one of the following property combinations match:
+A SuperOffice User will merge with a  Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     - HubSpot Contact Property
+     -  Contact Property
    * - personEmail
      - properties.email
 
-Once a link between a SuperOffice User and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice User and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice User and a HubSpot Contact:
+The following properties are synchronized between a SuperOffice User and a  Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     - HubSpot Contact Property
-     - HubSpot Data Type
+     -  Contact Property
+     -  Data Type
    * - contactCategory
      - properties.country
      - "string"
@@ -237,39 +237,39 @@ The following properties are synchronized between a SuperOffice Product and a Hu
      - "string"
 
 
-SuperOffice Quotealternative to HubSpot Quote
----------------------------------------------
-Every SuperOffice Quotealternative will be synchronized with a HubSpot Quote.
+SuperOffice Quotealternative to  Quote
+--------------------------------------
+Every SuperOffice Quotealternative will be synchronized with a  Quote.
 
-Once a link between a SuperOffice Quotealternative and a HubSpot Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quotealternative and a  Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quotealternative and a HubSpot Quote:
+The following properties are synchronized between a SuperOffice Quotealternative and a  Quote:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quotealternative Property
-     - HubSpot Quote Property
-     - HubSpot Data Type
+     -  Quote Property
+     -  Data Type
    * - Name
      - properties.hs_title
      - "string"
 
 
-SuperOffice Quoteline to HubSpot Lineitem
------------------------------------------
-Every SuperOffice Quoteline will be synchronized with a HubSpot Lineitem.
+SuperOffice Quoteline to  Lineitem
+----------------------------------
+Every SuperOffice Quoteline will be synchronized with a  Lineitem.
 
-Once a link between a SuperOffice Quoteline and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quoteline and a  Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quoteline and a HubSpot Lineitem:
+The following properties are synchronized between a SuperOffice Quoteline and a  Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quoteline Property
-     - HubSpot Lineitem Property
-     - HubSpot Data Type
+     -  Lineitem Property
+     -  Data Type
    * - Description
      - properties.description
      - "string"
@@ -287,39 +287,39 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
 
 
-SuperOffice Quoteline to HubSpot Lineitemdealassociation
---------------------------------------------------------
-Every SuperOffice Quoteline will be synchronized with a HubSpot Lineitemdealassociation.
+SuperOffice Quoteline to  Lineitemdealassociation
+-------------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a  Lineitemdealassociation.
 
-Once a link between a SuperOffice Quoteline and a HubSpot Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quoteline and a  Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quoteline and a HubSpot Lineitemdealassociation:
+The following properties are synchronized between a SuperOffice Quoteline and a  Lineitemdealassociation:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quoteline Property
-     - HubSpot Lineitemdealassociation Property
-     - HubSpot Data Type
+     -  Lineitemdealassociation Property
+     -  Data Type
    * - QuoteAlternativeId
      - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - "string"
 
 
-SuperOffice Sale to HubSpot Deal
---------------------------------
-Every SuperOffice Sale will be synchronized with a HubSpot Deal.
+SuperOffice Sale to  Deal
+-------------------------
+Every SuperOffice Sale will be synchronized with a  Deal.
 
-Once a link between a SuperOffice Sale and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Sale and a  Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Sale and a HubSpot Deal:
+The following properties are synchronized between a SuperOffice Sale and a  Deal:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Sale Property
-     - HubSpot Deal Property
-     - HubSpot Data Type
+     -  Deal Property
+     -  Data Type
    * - Amount
      - properties.amount
      - "string"
@@ -337,20 +337,20 @@ The following properties are synchronized between a SuperOffice Sale and a HubSp
      - "string"
 
 
-SuperOffice Ticket to HubSpot Ticket
-------------------------------------
-Every SuperOffice Ticket will be synchronized with a HubSpot Ticket.
+SuperOffice Ticket to  Ticket
+-----------------------------
+Every SuperOffice Ticket will be synchronized with a  Ticket.
 
-Once a link between a SuperOffice Ticket and a HubSpot Ticket is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Ticket and a  Ticket is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Ticket and a HubSpot Ticket:
+The following properties are synchronized between a SuperOffice Ticket and a  Ticket:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Ticket Property
-     - HubSpot Ticket Property
-     - HubSpot Data Type
+     -  Ticket Property
+     -  Data Type
    * - OwnedBy.AssociateId
      - properties.hubspot_owner_id
      - "string"
