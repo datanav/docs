@@ -2,37 +2,37 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-29 23:36:03
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Customer person to Wix Contacts
-------------------------------------
-Before any synchronization can take place, a link between a Wave Customer person and a Wix Contacts must be established.
+Wave Customer person to  Contacts
+---------------------------------
+Before any synchronization can take place, a link between a Wave Customer person and a  Contacts must be established.
 
-A Wave Customer person will merge with a Wix Contacts if one of the following property combinations match:
+A Wave Customer person will merge with a  Contacts if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     - Wix Contacts Property
+     -  Contacts Property
    * - email
      - primaryInfo.email
 
-Once a link between a Wave Customer person and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer person and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a Wix Contacts:
+The following properties are synchronized between a Wave Customer person and a  Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     - Wix Contacts Property
-     - Wix Data Type
+     -  Contacts Property
+     -  Data Type
    * - address.addressLine1
      - info.addresses.items.address.addressLine
      - "string"
@@ -62,85 +62,85 @@ The following properties are synchronized between a Wave Customer person and a W
      - "string"
 
 
-Wave Customer person to Wix Members
------------------------------------
-Before any synchronization can take place, a link between a Wave Customer person and a Wix Members must be established.
+Wave Customer person to  Members
+--------------------------------
+Before any synchronization can take place, a link between a Wave Customer person and a  Members must be established.
 
-A Wave Customer person will merge with a Wix Members if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer person Property
-     - Wix Members Property
-   * - email
-     - loginEmail
-
-Once a link between a Wave Customer person and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer person and a Wix Members:
+A Wave Customer person will merge with a  Members if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     - Wix Members Property
-     - Wix Data Type
-
-
-Wave Customer to Wix Members
-----------------------------
-Before any synchronization can take place, a link between a Wave Customer and a Wix Members must be established.
-
-A Wave Customer will merge with a Wix Members if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Wix Members Property
+     -  Members Property
    * - email
      - loginEmail
 
-Once a link between a Wave Customer and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer person and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a Wix Members:
+The following properties are synchronized between a Wave Customer person and a  Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     -  Members Property
+     -  Data Type
+
+
+Wave Customer to  Members
+-------------------------
+Before any synchronization can take place, a link between a Wave Customer and a  Members must be established.
+
+A Wave Customer will merge with a  Members if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - Wix Members Property
-     - Wix Data Type
+     -  Members Property
+   * - email
+     - loginEmail
+
+Once a link between a Wave Customer and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a  Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     -  Members Property
+     -  Data Type
    * - email
      - loginEmail
      - "string"
 
 
-Wave Vendor to Wix Contacts
----------------------------
-Before any synchronization can take place, a link between a Wave Vendor and a Wix Contacts must be established.
+Wave Vendor to  Contacts
+------------------------
+Before any synchronization can take place, a link between a Wave Vendor and a  Contacts must be established.
 
-A Wave Vendor will merge with a Wix Contacts if one of the following property combinations match:
+A Wave Vendor will merge with a  Contacts if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     - Wix Contacts Property
+     -  Contacts Property
    * - email
      - primaryInfo.email
 
-Once a link between a Wave Vendor and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a Wix Contacts:
+The following properties are synchronized between a Wave Vendor and a  Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     - Wix Contacts Property
-     - Wix Data Type
+     -  Contacts Property
+     -  Data Type
    * - address.addressLine1
      - info.addresses.items.address.addressLine
      - "string"
@@ -176,30 +176,30 @@ The following properties are synchronized between a Wave Vendor and a Wix Contac
      - "string"
 
 
-Wave Vendor to Wix Members
---------------------------
-Before any synchronization can take place, a link between a Wave Vendor and a Wix Members must be established.
+Wave Vendor to  Members
+-----------------------
+Before any synchronization can take place, a link between a Wave Vendor and a  Members must be established.
 
-A Wave Vendor will merge with a Wix Members if one of the following property combinations match:
+A Wave Vendor will merge with a  Members if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     - Wix Members Property
+     -  Members Property
    * - email
      - loginEmail
 
-Once a link between a Wave Vendor and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a Wix Members:
+The following properties are synchronized between a Wave Vendor and a  Members:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     - Wix Members Property
-     - Wix Data Type
+     -  Members Property
+     -  Data Type
    * - email
      - loginEmail
      - "string"
@@ -279,20 +279,20 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
      - "string"
 
 
-Wave Product to Wix Inventory
------------------------------
-Every Wave Product will be synchronized with a Wix Inventory.
+Wave Product to  Inventory
+--------------------------
+Every Wave Product will be synchronized with a  Inventory.
 
-Once a link between a Wave Product and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a Wix Inventory:
+The following properties are synchronized between a Wave Product and a  Inventory:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Product Property
-     - Wix Inventory Property
-     - Wix Data Type
+     -  Inventory Property
+     -  Data Type
 
 
 Wave Product to Wix Products
