@@ -2,7 +2,7 @@
 Zendesk to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-29 14:35:43
+Generated: 2023-11-29 14:37:48
 
 Introduction.
 ------------
@@ -198,22 +198,6 @@ The following properties are synchronized between a Zendesk Tickets and a YouTra
    * - subject
      - users.id
      - "string"
-
-
-Zendesk Users to YouTrack Usersyoutrack
----------------------------------------
-Every Zendesk Users will be synchronized with a YouTrack Usersyoutrack.
-
-Once a link between a Zendesk Users and a YouTrack Usersyoutrack is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Users and a YouTrack Usersyoutrack:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Users Property
-     - YouTrack Usersyoutrack Property
-     - YouTrack Data Type
 
 
 Zendesk Tickets to YouTrack Issues
