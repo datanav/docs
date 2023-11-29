@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:38:14
+Generated: 2023-11-29 23:39:28
 
 Introduction.
 ------------
@@ -38,22 +38,22 @@ The following properties are synchronized between a Wix.com Members and a  Conta
      - "string"
 
 
-Wix.com Contacts to PowerOfficeGo Customers person
---------------------------------------------------
-Before any synchronization can take place, a link between a Wix.com Contacts and a PowerOfficeGo Customers person must be established.
+Wix.com Contacts to  Customers person
+-------------------------------------
+Before any synchronization can take place, a link between a Wix.com Contacts and a  Customers person must be established.
 
-A new PowerOfficeGo Customers person will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into PowerOfficeGo.
+A new  Customers person will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into .
 
-Once a link between a Wix.com Contacts and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a  Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a PowerOfficeGo Customers person:
+The following properties are synchronized between a Wix.com Contacts and a  Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     - PowerOfficeGo Customers person Property
-     - PowerOfficeGo Data Type
+     -  Customers person Property
+     -  Data Type
    * - info.addresses.items.address.country
      - MailAddress.CountryCode
      - "string"
@@ -68,54 +68,54 @@ The following properties are synchronized between a Wix.com Contacts and a Power
      - "string"
 
 
-Wix.com Contacts to PowerOfficeGo Customers
--------------------------------------------
-Before any synchronization can take place, a link between a Wix.com Contacts and a PowerOfficeGo Customers must be established.
+Wix.com Contacts to  Customers
+------------------------------
+Before any synchronization can take place, a link between a Wix.com Contacts and a  Customers must be established.
 
-A new PowerOfficeGo Customers will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into PowerOfficeGo.
+A new  Customers will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into .
 
-Once a link between a Wix.com Contacts and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a PowerOfficeGo Customers:
+The following properties are synchronized between a Wix.com Contacts and a  Customers:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     - PowerOfficeGo Customers Property
-     - PowerOfficeGo Data Type
+     -  Customers Property
+     -  Data Type
    * - info.addresses.items.address.country
      - MailAddress.CountryCode
      - "string"
 
 
-Wix.com Contacts to PowerOfficeGo Contactperson
------------------------------------------------
-Every Wix.com Contacts will be synchronized with a PowerOfficeGo Contactperson.
+Wix.com Contacts to  Contactperson
+----------------------------------
+Every Wix.com Contacts will be synchronized with a  Contactperson.
 
-If a matching PowerOfficeGo Contactperson already exists, the Wix.com Contacts will be merged with the existing one.
-If no matching PowerOfficeGo Contactperson is found, a new PowerOfficeGo Contactperson will be created.
+If a matching  Contactperson already exists, the Wix.com Contacts will be merged with the existing one.
+If no matching  Contactperson is found, a new  Contactperson will be created.
 
-A Wix.com Contacts will merge with a PowerOfficeGo Contactperson if one of the following property combinations match:
+A Wix.com Contacts will merge with a  Contactperson if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     - PowerOfficeGo Contactperson Property
+     -  Contactperson Property
    * - primaryInfo.email
      - emailAddress
 
-Once a link between a Wix.com Contacts and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a  Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a PowerOfficeGo Contactperson:
+The following properties are synchronized between a Wix.com Contacts and a  Contactperson:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     - PowerOfficeGo Contactperson Property
-     - PowerOfficeGo Data Type
+     -  Contactperson Property
+     -  Data Type
    * - info.addresses.items.address.country
      - residenceCountryCode
      - "string"
