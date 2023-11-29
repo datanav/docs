@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-11-29 14:42:04
+Generated: 2023-11-29 14:42:09
 
 Introduction.
 ------------
@@ -304,30 +304,6 @@ The following properties are synchronized between a SuperOffice Contact and a Po
      - "string"
    * - Country.CountryId
      - MailAddress.CountryCode
-     - "string"
-
-
-SuperOffice Contact to PowerOfficeGo Departments
-------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a PowerOfficeGo Departments must be established.
-
-A new PowerOfficeGo Departments will be created from a SuperOffice Contact if it is connected to a SuperOffice User that is synchronized into PowerOfficeGo.
-
-Once a link between a SuperOffice Contact and a PowerOfficeGo Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Contact and a PowerOfficeGo Departments:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Contact Property
-     - PowerOfficeGo Departments Property
-     - PowerOfficeGo Data Type
-   * - CreatedDate
-     - CreatedDateTimeOffset
-     - "string"
-   * - Name
-     - Name
      - "string"
 
 
