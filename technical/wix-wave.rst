@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:36:03
+Generated: 2023-11-29 23:37:14
 
 Introduction.
 ------------
@@ -69,20 +69,20 @@ The following properties are synchronized between a Wix.com Contacts and a Wave 
      - "string"
 
 
-Wix.com Inventory to Wave Product
----------------------------------
-Every Wix.com Inventory will be synchronized with a Wave Product.
+Wix.com Inventory to  Product
+-----------------------------
+Every Wix.com Inventory will be synchronized with a  Product.
 
-Once a link between a Wix.com Inventory and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Inventory and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Inventory and a Wave Product:
+The following properties are synchronized between a Wix.com Inventory and a  Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Inventory Property
-     - Wave Product Property
-     - Wave Data Type
+     -  Product Property
+     -  Data Type
 
 
 Wix.com Orders to Wave Invoice
