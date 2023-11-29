@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-11-29 14:42:04
+Generated: 2023-11-29 14:42:09
 
 Introduction.
 ------------
@@ -184,24 +184,6 @@ The following properties are synchronized between a Tripletex Customer and a Wix
    * - postalAddress.postalCode
      - info.addresses.items.address.postalCode
      - "string"
-
-
-Tripletex Customer to Wix Members
----------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer and a Wix Members must be established.
-
-A new Wix Members will be created from a Tripletex Customer if it is connected to a Tripletex Order, or Orderline that is synchronized into Wix.
-
-Once a link between a Tripletex Customer and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer and a Wix Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer Property
-     - Wix Members Property
-     - Wix Data Type
 
 
 Tripletex Productgrouprelation to Wix Inventory
