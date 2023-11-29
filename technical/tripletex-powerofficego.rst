@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-11-27 20:43:47
+Generated: 2023-11-29 14:34:53
 
 Introduction.
 ------------
@@ -88,19 +88,7 @@ A Tripletex Supplier will merge with a PowerOfficeGo Customers if one of the fol
      - EmailAddress
    * - email
      - InvoiceEmailAddress
-   * - invoiceEmail
-     - EmailAddress
-   * - overdueNoticeEmail
-     - EmailAddress
-   * - invoiceEmail
-     - InvoiceEmailAddress
    * - email
-     - PaymentReminderEmailAddress
-   * - overdueNoticeEmail
-     - InvoiceEmailAddress
-   * - invoiceEmail
-     - PaymentReminderEmailAddress
-   * - overdueNoticeEmail
      - PaymentReminderEmailAddress
 
 Once a link between a Tripletex Supplier and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
@@ -506,8 +494,6 @@ A Tripletex Currency will merge with a PowerOfficeGo Currency if one of the foll
    * - Tripletex Currency Property
      - PowerOfficeGo Currency Property
    * - code
-     - Code
-   * - code
      - code
 
 Once a link between a Tripletex Currency and a PowerOfficeGo Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
@@ -540,19 +526,7 @@ A Tripletex Customer will merge with a PowerOfficeGo Customers if one of the fol
      - EmailAddress
    * - email
      - InvoiceEmailAddress
-   * - invoiceEmail
-     - EmailAddress
-   * - overdueNoticeEmail
-     - EmailAddress
-   * - invoiceEmail
-     - InvoiceEmailAddress
    * - email
-     - PaymentReminderEmailAddress
-   * - overdueNoticeEmail
-     - InvoiceEmailAddress
-   * - invoiceEmail
-     - PaymentReminderEmailAddress
-   * - overdueNoticeEmail
      - PaymentReminderEmailAddress
 
 Once a link between a Tripletex Customer and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
@@ -701,8 +675,6 @@ A Tripletex Employee will merge with a PowerOfficeGo Employees if one of the fol
      - PowerOfficeGo Employees Property
    * - employeeNumber
      - Number
-   * - nationalIdentityNumber
-     - SocialSecurityNumber
 
 Once a link between a Tripletex Employee and a PowerOfficeGo Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
