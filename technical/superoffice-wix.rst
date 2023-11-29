@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2023-11-29 14:35:43
+Generated: 2023-11-29 14:37:48
 
 Introduction.
 ------------
@@ -98,32 +98,6 @@ The following properties are synchronized between a SuperOffice Person and a Wix
    * - Emails.Value
      - loginEmail
      - "string"
-
-
-SuperOffice Pricelist to Wix Currencies
----------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Pricelist and a Wix Currencies must be established.
-
-A SuperOffice Pricelist will merge with a Wix Currencies if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Pricelist Property
-     - Wix Currencies Property
-   * - Currency
-     - code
-
-Once a link between a SuperOffice Pricelist and a Wix Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Pricelist and a Wix Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Pricelist Property
-     - Wix Currencies Property
-     - Wix Data Type
 
 
 SuperOffice User to Wix Contacts
@@ -235,27 +209,6 @@ The following properties are synchronized between a SuperOffice Contact and a Wi
      - "string"
    * - ContactId
      - id
-     - "string"
-
-
-SuperOffice Quotealternative to Wix Orders
-------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Wix Orders must be established.
-
-A new Wix Orders will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline, or Quotealternative that is synchronized into Wix.
-
-Once a link between a SuperOffice Quotealternative and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quotealternative and a Wix Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quotealternative Property
-     - Wix Orders Property
-     - Wix Data Type
-   * - TotalPrice
-     - totals.total
      - "string"
 
 
