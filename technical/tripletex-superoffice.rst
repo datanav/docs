@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-11-14 12:58:58
+Generated: 2023-11-29 14:34:53
 
 Introduction.
 ------------
@@ -71,10 +71,6 @@ A Tripletex Customer will merge with a SuperOffice Contact if one of the followi
    * - Tripletex Customer Property
      - SuperOffice Contact Property
    * - email
-     - Emails.Value
-   * - invoiceEmail
-     - Emails.Value
-   * - overdueNoticeEmail
      - Emails.Value
 
 Once a link between a Tripletex Customer and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
@@ -278,10 +274,6 @@ A Tripletex Supplier will merge with a SuperOffice Contact if one of the followi
      - SuperOffice Contact Property
    * - email
      - Emails.Value
-   * - invoiceEmail
-     - Emails.Value
-   * - overdueNoticeEmail
-     - Emails.Value
 
 Once a link between a Tripletex Supplier and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -419,19 +411,6 @@ The following properties are synchronized between a Tripletex Department and a S
 Tripletex Product to SuperOffice Product
 ----------------------------------------
 preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a SuperOffice Product.
-
-If a matching SuperOffice Product already exists, the Tripletex Product will be merged with the existing one.
-If no matching SuperOffice Product is found, a new SuperOffice Product will be created.
-
-A Tripletex Product will merge with a SuperOffice Product if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     - SuperOffice Product Property
-   * - number
-     - ERPProductKey
 
 Once a link between a Tripletex Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
