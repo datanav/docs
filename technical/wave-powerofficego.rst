@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGo Dataflow
 ========================================
 
-Generated: 2023-11-27 20:43:47
+Generated: 2023-11-29 14:34:53
 
 Introduction.
 ------------
@@ -280,8 +280,6 @@ A Wave Currency will merge with a PowerOfficeGo Currency if one of the following
 
    * - Wave Currency Property
      - PowerOfficeGo Currency Property
-   * - code
-     - Code
    * - code
      - code
 
