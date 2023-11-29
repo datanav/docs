@@ -2,7 +2,7 @@
 Zendesk to Asana Dataflow
 =========================
 
-Generated: 2023-11-29 14:42:09
+Generated: 2023-11-29 14:44:42
 
 Introduction.
 ------------
@@ -30,64 +30,5 @@ The following properties are synchronized between a Zendesk Organizations and a 
      - "string"
    * - url
      - email_domains
-     - "string"
-
-
-Zendesk Organisations to Asana Teams
-------------------------------------
-Every Zendesk Organisations will be synchronized with a Asana Teams.
-
-Once a link between a Zendesk Organisations and a Asana Teams is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Organisations and a Asana Teams:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Organisations Property
-     - Asana Teams Property
-     - Asana Data Type
-   * - name
-     - member_invite_management_access_level
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - url
-     - permalink_url
-     - "string"
-
-
-Zendesk Tickets to Asana Projects
----------------------------------
-Every Zendesk Tickets will be synchronized with a Asana Projects.
-
-Once a link between a Zendesk Tickets and a Asana Projects is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Tickets and a Asana Projects:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Tickets Property
-     - Asana Projects Property
-     - Asana Data Type
-   * - created_at
-     - created_at
-     - "string"
-   * - due_at
-     - due_date
-     - "string"
-   * - due_at
-     - due_on
-     - "string"
-   * - organization_id
-     - workspace.gid
-     - "string"
-   * - requester_id
-     - owner.gid
-     - "string"
-   * - subject
-     - name
      - "string"
 
