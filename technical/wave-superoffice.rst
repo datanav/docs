@@ -2,7 +2,7 @@
 Wave Financial to SuperOffice Dataflow
 ======================================
 
-Generated: 2023-11-29 14:42:03
+Generated: 2023-11-29 14:44:42
 
 Introduction.
 ------------
@@ -88,10 +88,9 @@ The following properties are synchronized between a Wave Customer person and a S
 
 Wave Customer to SuperOffice Person
 -----------------------------------
-Every Wave Customer will be synchronized with a SuperOffice Person.
+Before any synchronization can take place, a link between a Wave Customer and a SuperOffice Person must be established.
 
-If a matching SuperOffice Person already exists, the Wave Customer will be merged with the existing one.
-If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
+A new SuperOffice Person will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into SuperOffice.
 
 A Wave Customer will merge with a SuperOffice Person if one of the following property combinations match:
 
@@ -316,82 +315,6 @@ The following properties are synchronized between a Wave Customer and a SuperOff
      - "list"
    * - website
      - Urls.Value
-     - "string"
-
-
-Wave Customer person to SuperOffice Contact
--------------------------------------------
-Every Wave Customer person will be synchronized with a SuperOffice Contact.
-
-Once a link between a Wave Customer person and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer person and a SuperOffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer person Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
-   * - address.addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - address.addressLine1
-     - Address.Street.Address1
-     - "string"
-   * - address.addressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - address.addressLine2
-     - Address.Street.Address2
-     - "string"
-   * - address.city
-     - Address.Postal.City
-     - "string"
-   * - address.city
-     - Address.Street.City
-     - "string"
-   * - address.country.code
-     - Country.CountryId
-     - "integer"
-   * - address.countryCode
-     - Country.CountryId
-     - "integer"
-   * - address.postalCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - address.postalCode
-     - Address.Street.Zipcode
-     - "string"
-   * - id
-     - ContactId
-     - "integer"
-   * - shippingDetails.address.addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - Address.Street.Address1
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - Address.Street.Address2
-     - "string"
-   * - shippingDetails.address.city
-     - Address.Postal.City
-     - "string"
-   * - shippingDetails.address.city
-     - Address.Street.City
-     - "string"
-   * - shippingDetails.address.country.code
-     - Country.CountryId
-     - "integer"
-   * - shippingDetails.address.postalCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - shippingDetails.address.postalCode
-     - Address.Street.Zipcode
      - "string"
 
 
