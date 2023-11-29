@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-29 23:38:14
+Generated: 2023-11-29 23:39:28
 
 Introduction.
 ------------
@@ -286,33 +286,33 @@ The following properties are synchronized between a Wave Customer and a  Departm
      - "string"
 
 
-Wave Customer to Tripletex Contact
-----------------------------------
-Every Wave Customer will be synchronized with a Tripletex Contact.
+Wave Customer to  Contact
+-------------------------
+Every Wave Customer will be synchronized with a  Contact.
 
-If a matching Tripletex Contact already exists, the Wave Customer will be merged with the existing one.
-If no matching Tripletex Contact is found, a new Tripletex Contact will be created.
+If a matching  Contact already exists, the Wave Customer will be merged with the existing one.
+If no matching  Contact is found, a new  Contact will be created.
 
-A Wave Customer will merge with a Tripletex Contact if one of the following property combinations match:
+A Wave Customer will merge with a  Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - Tripletex Contact Property
+     -  Contact Property
    * - email
      - email
 
-Once a link between a Wave Customer and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a Tripletex Contact:
+The following properties are synchronized between a Wave Customer and a  Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - Tripletex Contact Property
-     - Tripletex Data Type
+     -  Contact Property
+     -  Data Type
    * - email
      - email
      - "string"
