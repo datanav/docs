@@ -2,27 +2,27 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2023-11-29 23:37:13
+Generated: 2023-11-29 23:45:21
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Powerofficego Customers to ZohoCRM Account
-------------------------------------------
-Every Powerofficego Customers will be synchronized with a ZohoCRM Account.
+Powerofficego Customers to  Account
+-----------------------------------
+Every Powerofficego Customers will be synchronized with a  Account.
 
-Once a link between a Powerofficego Customers and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers and a  Account is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers and a ZohoCRM Account:
+The following properties are synchronized between a Powerofficego Customers and a  Account:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers Property
-     - ZohoCRM Account Property
-     - ZohoCRM Data Type
+     -  Account Property
+     -  Data Type
    * - MailAddress.City
      - Billing_City
      - "string"
@@ -52,20 +52,20 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Departments to ZohoCRM Account
---------------------------------------------
-Every Powerofficego Departments will be synchronized with a ZohoCRM Account.
+Powerofficego Departments to  Account
+-------------------------------------
+Every Powerofficego Departments will be synchronized with a  Account.
 
-Once a link between a Powerofficego Departments and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Departments and a  Account is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Departments and a ZohoCRM Account:
+The following properties are synchronized between a Powerofficego Departments and a  Account:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Departments Property
-     - ZohoCRM Account Property
-     - ZohoCRM Data Type
+     -  Account Property
+     -  Data Type
    * - Name
      - Account_Name
      - "string"
