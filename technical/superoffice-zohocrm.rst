@@ -2,27 +2,27 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-29 23:38:14
+Generated: 2023-11-29 23:45:21
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-SuperOffice Contact to ZohoCRM Account
---------------------------------------
-Every SuperOffice Contact will be synchronized with a ZohoCRM Account.
+SuperOffice Contact to  Account
+-------------------------------
+Every SuperOffice Contact will be synchronized with a  Account.
 
-Once a link between a SuperOffice Contact and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a  Account is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a ZohoCRM Account:
+The following properties are synchronized between a SuperOffice Contact and a  Account:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - ZohoCRM Account Property
-     - ZohoCRM Data Type
+     -  Account Property
+     -  Data Type
    * - Address.Postal.City
      - Billing_City
      - "string"
