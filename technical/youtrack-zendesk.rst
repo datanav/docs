@@ -2,7 +2,7 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2023-11-29 23:37:14
+Generated: 2023-11-29 23:45:21
 
 Introduction.
 ------------
@@ -41,58 +41,58 @@ The following properties are synchronized between a YouTrack Users and a  Users:
      - "string"
 
 
-YouTrack Groups to Zendesk Organizations
-----------------------------------------
-Every YouTrack Groups will be synchronized with a Zendesk Organizations.
+YouTrack Groups to  Organizations
+---------------------------------
+Every YouTrack Groups will be synchronized with a  Organizations.
 
-Once a link between a YouTrack Groups and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Groups and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Groups and a Zendesk Organizations:
+The following properties are synchronized between a YouTrack Groups and a  Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Groups Property
-     - Zendesk Organizations Property
-     - Zendesk Data Type
+     -  Organizations Property
+     -  Data Type
    * - name
      - name
      - "string"
 
 
-YouTrack Organizations to Zendesk Organizations
------------------------------------------------
-Every YouTrack Organizations will be synchronized with a Zendesk Organizations.
+YouTrack Organizations to  Organizations
+----------------------------------------
+Every YouTrack Organizations will be synchronized with a  Organizations.
 
-Once a link between a YouTrack Organizations and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Organizations and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Organizations and a Zendesk Organizations:
+The following properties are synchronized between a YouTrack Organizations and a  Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Organizations Property
-     - Zendesk Organizations Property
-     - Zendesk Data Type
+     -  Organizations Property
+     -  Data Type
    * - name
      - name
      - "string"
 
 
-YouTrack Usergroups to Zendesk Organizations
---------------------------------------------
-Every YouTrack Usergroups will be synchronized with a Zendesk Organizations.
+YouTrack Usergroups to  Organizations
+-------------------------------------
+Every YouTrack Usergroups will be synchronized with a  Organizations.
 
-Once a link between a YouTrack Usergroups and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Usergroups and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Usergroups and a Zendesk Organizations:
+The following properties are synchronized between a YouTrack Usergroups and a  Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Usergroups Property
-     - Zendesk Organizations Property
-     - Zendesk Data Type
+     -  Organizations Property
+     -  Data Type
    * - name
      - name
      - "string"
