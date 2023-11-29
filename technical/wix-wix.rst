@@ -2,63 +2,63 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:36:03
+Generated: 2023-11-29 23:37:14
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wix.com Contacts to Wix Contacts
---------------------------------
-Before any synchronization can take place, a link between a Wix.com Contacts and a Wix Contacts must be established.
+Wix.com Contacts to  Contacts
+-----------------------------
+Before any synchronization can take place, a link between a Wix.com Contacts and a  Contacts must be established.
 
-A Wix.com Contacts will merge with a Wix Contacts if one of the following property combinations match:
+A Wix.com Contacts will merge with a  Contacts if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     - Wix Contacts Property
+     -  Contacts Property
    * - primaryInfo.email
      - primaryInfo.email
 
-Once a link between a Wix.com Contacts and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a Wix Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Contacts Property
-     - Wix Contacts Property
-     - Wix Data Type
-
-
-Wix.com Contacts to Wix Members
--------------------------------
-Before any synchronization can take place, a link between a Wix.com Contacts and a Wix Members must be established.
-
-A Wix.com Contacts will merge with a Wix Members if one of the following property combinations match:
+The following properties are synchronized between a Wix.com Contacts and a  Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     - Wix Members Property
+     -  Contacts Property
+     -  Data Type
+
+
+Wix.com Contacts to  Members
+----------------------------
+Before any synchronization can take place, a link between a Wix.com Contacts and a  Members must be established.
+
+A Wix.com Contacts will merge with a  Members if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Contacts Property
+     -  Members Property
    * - primaryInfo.email
      - loginEmail
 
-Once a link between a Wix.com Contacts and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a Wix Members:
+The following properties are synchronized between a Wix.com Contacts and a  Members:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     - Wix Members Property
-     - Wix Data Type
+     -  Members Property
+     -  Data Type
    * - info.emails
      - loginEmail
      - "string"
@@ -67,58 +67,58 @@ The following properties are synchronized between a Wix.com Contacts and a Wix M
      - "string"
 
 
-Wix.com Inventory to Wix Inventory
-----------------------------------
-Before any synchronization can take place, a link between a Wix.com Inventory and a Wix Inventory must be established.
+Wix.com Inventory to  Inventory
+-------------------------------
+Before any synchronization can take place, a link between a Wix.com Inventory and a  Inventory must be established.
 
-A Wix.com Inventory will merge with a Wix Inventory if one of the following property combinations match:
+A Wix.com Inventory will merge with a  Inventory if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Inventory Property
-     - Wix Inventory Property
+     -  Inventory Property
    * - id
      - id
    * - productId
      - productId
 
-Once a link between a Wix.com Inventory and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Inventory and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Inventory and a Wix Inventory:
+The following properties are synchronized between a Wix.com Inventory and a  Inventory:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Inventory Property
-     - Wix Inventory Property
-     - Wix Data Type
+     -  Inventory Property
+     -  Data Type
 
 
-Wix.com Members to Wix Contacts
--------------------------------
-Before any synchronization can take place, a link between a Wix.com Members and a Wix Contacts must be established.
+Wix.com Members to  Contacts
+----------------------------
+Before any synchronization can take place, a link between a Wix.com Members and a  Contacts must be established.
 
-A Wix.com Members will merge with a Wix Contacts if one of the following property combinations match:
+A Wix.com Members will merge with a  Contacts if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Members Property
-     - Wix Contacts Property
+     -  Contacts Property
    * - loginEmail
      - primaryInfo.email
 
-Once a link between a Wix.com Members and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Members and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Members and a Wix Contacts:
+The following properties are synchronized between a Wix.com Members and a  Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Members Property
-     - Wix Contacts Property
-     - Wix Data Type
+     -  Contacts Property
+     -  Data Type
    * - loginEmail
      - info.emails
      - "string"
@@ -127,123 +127,123 @@ The following properties are synchronized between a Wix.com Members and a Wix Co
      - "string"
 
 
-Wix.com Members to Wix Members
-------------------------------
-Before any synchronization can take place, a link between a Wix.com Members and a Wix Members must be established.
+Wix.com Members to  Members
+---------------------------
+Before any synchronization can take place, a link between a Wix.com Members and a  Members must be established.
 
-A Wix.com Members will merge with a Wix Members if one of the following property combinations match:
+A Wix.com Members will merge with a  Members if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Members Property
-     - Wix Members Property
+     -  Members Property
    * - loginEmail
      - loginEmail
 
-Once a link between a Wix.com Members and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Members and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Members and a Wix Members:
+The following properties are synchronized between a Wix.com Members and a  Members:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Members Property
-     - Wix Members Property
-     - Wix Data Type
+     -  Members Property
+     -  Data Type
 
 
-Wix.com Products to Wix Products
---------------------------------
-Before any synchronization can take place, a link between a Wix.com Products and a Wix Products must be established.
+Wix.com Products to  Products
+-----------------------------
+Before any synchronization can take place, a link between a Wix.com Products and a  Products must be established.
 
-A Wix.com Products will merge with a Wix Products if one of the following property combinations match:
+A Wix.com Products will merge with a  Products if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     - Wix Products Property
+     -  Products Property
    * - id
      - id
    * - inventoryItemId
      - inventoryItemId
 
-Once a link between a Wix.com Products and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a Wix Products:
+The following properties are synchronized between a Wix.com Products and a  Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     - Wix Products Property
-     - Wix Data Type
+     -  Products Property
+     -  Data Type
 
 
-Wix.com Inventory to Wix Products
----------------------------------
-Every Wix.com Inventory will be synchronized with a Wix Products.
+Wix.com Inventory to  Products
+------------------------------
+Every Wix.com Inventory will be synchronized with a  Products.
 
-If a matching Wix Products already exists, the Wix.com Inventory will be merged with the existing one.
-If no matching Wix Products is found, a new Wix Products will be created.
+If a matching  Products already exists, the Wix.com Inventory will be merged with the existing one.
+If no matching  Products is found, a new  Products will be created.
 
-A Wix.com Inventory will merge with a Wix Products if one of the following property combinations match:
+A Wix.com Inventory will merge with a  Products if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Inventory Property
-     - Wix Products Property
+     -  Products Property
    * - productId
      - id
    * - id
      - inventoryItemId
 
-Once a link between a Wix.com Inventory and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Inventory and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Inventory and a Wix Products:
+The following properties are synchronized between a Wix.com Inventory and a  Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Inventory Property
-     - Wix Products Property
-     - Wix Data Type
+     -  Products Property
+     -  Data Type
    * - id
      - inventoryItemId
      - "string"
 
 
-Wix.com Products to Wix Inventory
----------------------------------
-Every Wix.com Products will be synchronized with a Wix Inventory.
+Wix.com Products to  Inventory
+------------------------------
+Every Wix.com Products will be synchronized with a  Inventory.
 
-If a matching Wix Inventory already exists, the Wix.com Products will be merged with the existing one.
-If no matching Wix Inventory is found, a new Wix Inventory will be created.
+If a matching  Inventory already exists, the Wix.com Products will be merged with the existing one.
+If no matching  Inventory is found, a new  Inventory will be created.
 
-A Wix.com Products will merge with a Wix Inventory if one of the following property combinations match:
+A Wix.com Products will merge with a  Inventory if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     - Wix Inventory Property
+     -  Inventory Property
    * - id
      - productId
    * - inventoryItemId
      - id
 
-Once a link between a Wix.com Products and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a Wix Inventory:
+The following properties are synchronized between a Wix.com Products and a  Inventory:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     - Wix Inventory Property
-     - Wix Data Type
+     -  Inventory Property
+     -  Data Type
    * - id
      - productId
      - "string"
