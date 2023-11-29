@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2023-11-13 13:49:22
+Generated: 2023-11-29 14:34:53
 
 Introduction.
 ------------
@@ -131,8 +131,6 @@ A Wave Vendor will merge with a Wix Contacts if one of the following property co
    * - Wave Vendor Property
      - Wix Contacts Property
    * - email
-     - info.emails
-   * - email
      - primaryInfo.email
 
 Once a link between a Wave Vendor and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
@@ -256,8 +254,6 @@ A Wave Customer will merge with a Wix Contacts if one of the following property 
 
    * - Wave Customer Property
      - Wix Contacts Property
-   * - email
-     - info.emails
    * - email
      - primaryInfo.email
 
