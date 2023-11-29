@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:36:03
+Generated: 2023-11-29 23:37:14
 
 Introduction.
 ------------
@@ -106,55 +106,55 @@ The following properties are synchronized between a Wix.com Products classificat
      - SuperOffice Data Type
 
 
-Wix.com Inventory to SuperOffice Product
-----------------------------------------
-Every Wix.com Inventory will be synchronized with a SuperOffice Product.
+Wix.com Inventory to  Product
+-----------------------------
+Every Wix.com Inventory will be synchronized with a  Product.
 
-Once a link between a Wix.com Inventory and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Inventory and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Inventory and a SuperOffice Product:
+The following properties are synchronized between a Wix.com Inventory and a  Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Inventory Property
-     - SuperOffice Product Property
-     - SuperOffice Data Type
+     -  Product Property
+     -  Data Type
 
 
-Wix.com Products to SuperOffice Listproducttypeitems
-----------------------------------------------------
-Every Wix.com Products will be synchronized with a SuperOffice Listproducttypeitems.
+Wix.com Products to  Listproducttypeitems
+-----------------------------------------
+Every Wix.com Products will be synchronized with a  Listproducttypeitems.
 
-Once a link between a Wix.com Products and a SuperOffice Listproducttypeitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a  Listproducttypeitems is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a SuperOffice Listproducttypeitems:
+The following properties are synchronized between a Wix.com Products and a  Listproducttypeitems:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     - SuperOffice Listproducttypeitems Property
-     - SuperOffice Data Type
+     -  Listproducttypeitems Property
+     -  Data Type
    * - productType
      - Name
      - "string"
 
 
-Wix.com Products to SuperOffice Product
----------------------------------------
-Every Wix.com Products will be synchronized with a SuperOffice Product.
+Wix.com Products to  Product
+----------------------------
+Every Wix.com Products will be synchronized with a  Product.
 
-Once a link between a Wix.com Products and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a SuperOffice Product:
+The following properties are synchronized between a Wix.com Products and a  Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     - SuperOffice Product Property
-     - SuperOffice Data Type
+     -  Product Property
+     -  Data Type
    * - costRange.maxValue
      - UnitCost
      - "string"
