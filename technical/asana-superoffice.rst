@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2023-11-29 23:42:25
+Generated: 2023-11-29 23:43:32
 
 Introduction.
 ------------
@@ -34,20 +34,20 @@ The following properties are synchronized between a Asana Teams and a  Contact:
      - "string"
 
 
-Asana Workspaces to SuperOffice Contact
----------------------------------------
-Every Asana Workspaces will be synchronized with a SuperOffice Contact.
+Asana Workspaces to  Contact
+----------------------------
+Every Asana Workspaces will be synchronized with a  Contact.
 
-Once a link between a Asana Workspaces and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Workspaces and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Workspaces and a SuperOffice Contact:
+The following properties are synchronized between a Asana Workspaces and a  Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Workspaces Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
+     -  Contact Property
+     -  Data Type
    * - email_domains
      - Domains
      - "list"
