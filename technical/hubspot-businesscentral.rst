@@ -2,7 +2,7 @@
 HubSpot to BusinessCentral Dataflow
 ===================================
 
-Generated: 2023-11-29 14:35:43
+Generated: 2023-11-29 14:37:49
 
 Introduction.
 ------------
@@ -22,53 +22,5 @@ The following properties are synchronized between a HubSpot Company and a Busine
 
    * - HubSpot Company Property
      - BusinessCentral Company Property
-     - BusinessCentral Data Type
-
-
-HubSpot Contact to BusinessCentral Contact
-------------------------------------------
-Every HubSpot Contact will be synchronized with a BusinessCentral Contact.
-
-Once a link between a HubSpot Contact and a BusinessCentral Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contact and a BusinessCentral Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     - BusinessCentral Contact Property
-     - BusinessCentral Data Type
-
-
-HubSpot Contactcompanyassociation to BusinessCentral Contact
-------------------------------------------------------------
-Every HubSpot Contactcompanyassociation will be synchronized with a BusinessCentral Contact.
-
-Once a link between a HubSpot Contactcompanyassociation and a BusinessCentral Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contactcompanyassociation and a BusinessCentral Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contactcompanyassociation Property
-     - BusinessCentral Contact Property
-     - BusinessCentral Data Type
-
-
-HubSpot User to BusinessCentral Contact
----------------------------------------
-Every HubSpot User will be synchronized with a BusinessCentral Contact.
-
-Once a link between a HubSpot User and a BusinessCentral Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot User and a BusinessCentral Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot User Property
-     - BusinessCentral Contact Property
      - BusinessCentral Data Type
 
