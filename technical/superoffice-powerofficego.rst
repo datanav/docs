@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-11-29 13:08:06
+Generated: 2023-11-29 14:34:53
 
 Introduction.
 ------------
@@ -188,8 +188,6 @@ A SuperOffice Pricelist will merge with a PowerOfficeGo Currency if one of the f
 
    * - SuperOffice Pricelist Property
      - PowerOfficeGo Currency Property
-   * - Currency
-     - Code
    * - Currency
      - code
 
@@ -480,8 +478,6 @@ A SuperOffice Listcurrencyitems will merge with a PowerOfficeGo Currency if one 
 
    * - SuperOffice Listcurrencyitems Property
      - PowerOfficeGo Currency Property
-   * - Name
-     - Code
    * - Name
      - code
 
