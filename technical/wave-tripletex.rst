@@ -2,7 +2,7 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2023-11-29 14:42:03
+Generated: 2023-11-29 14:44:42
 
 Introduction.
 ------------
@@ -283,82 +283,6 @@ The following properties are synchronized between a Wave Customer and a Triplete
      - Tripletex Data Type
    * - name
      - name
-     - "string"
-
-
-Wave Vendor to Tripletex Customer
----------------------------------
-Every Wave Vendor will be synchronized with a Tripletex Customer.
-
-Once a link between a Wave Vendor and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a Tripletex Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
-   * - address.addressLine1
-     - deliveryAddress.addressLine1
-     - "string"
-   * - address.addressLine1
-     - physicalAddress.addressLine1
-     - "string"
-   * - address.addressLine1
-     - postalAddress.addressLine1
-     - "string"
-   * - address.addressLine2
-     - deliveryAddress.addressLine2
-     - "string"
-   * - address.addressLine2
-     - physicalAddress.addressLine2
-     - "string"
-   * - address.addressLine2
-     - postalAddress.addressLine2
-     - "string"
-   * - address.city
-     - deliveryAddress.city
-     - "string"
-   * - address.city
-     - physicalAddress.city
-     - "string"
-   * - address.city
-     - postalAddress.city
-     - "string"
-   * - address.country.code
-     - deliveryAddress.country.id
-     - "string"
-   * - address.country.code
-     - physicalAddress.country.id
-     - "integer"
-   * - address.country.code
-     - postalAddress.country.id
-     - "integer"
-   * - address.postalCode
-     - deliveryAddress.postalCode
-     - "string"
-   * - address.postalCode
-     - physicalAddress.postalCode
-     - "string"
-   * - address.postalCode
-     - postalAddress.postalCode
-     - "string"
-   * - id
-     - id
-     - "integer"
-   * - name
-     - name
-     - "string"
-   * - phone
-     - phoneNumber
-     - "string"
-   * - website
-     - url
-     - "string"
-   * - website
-     - website
      - "string"
 
 
