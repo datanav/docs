@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-11-29 14:37:48
+Generated: 2023-11-29 14:42:09
 
 Introduction.
 ------------
@@ -161,42 +161,6 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - Tripletex Data Type
 
 
-Powerofficego Customer to Tripletex Customer
---------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Customer and a Tripletex Customer must be established.
-
-A new Tripletex Customer will be created from a Powerofficego Customer if it is connected to a Powerofficego Customer, Customers, or Contactperson that is synchronized into Tripletex.
-
-Once a link between a Powerofficego Customer and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customer and a Tripletex Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customer Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
-
-
-Powerofficego Customer to Tripletex Department
-----------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Customer and a Tripletex Department must be established.
-
-A new Tripletex Department will be created from a Powerofficego Customer if it is connected to a Powerofficego Employee, or Employees that is synchronized into Tripletex.
-
-Once a link between a Powerofficego Customer and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customer and a Tripletex Department:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customer Property
-     - Tripletex Department Property
-     - Tripletex Data Type
-
-
 Powerofficego Customers to Tripletex Contact
 --------------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Customers and a Tripletex Contact must be established.
@@ -236,43 +200,6 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Departments to Tripletex Customer
------------------------------------------------
-Every Powerofficego Departments will be synchronized with a Tripletex Customer.
-
-Once a link between a Powerofficego Departments and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Departments and a Tripletex Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Departments Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
-   * - Name
-     - name
-     - "string"
-
-
-Powerofficego Salesorder to Tripletex Order
--------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Salesorder and a Tripletex Order must be established.
-
-A new Tripletex Order will be created from a Powerofficego Salesorder if it is connected to a Powerofficego Salesorderline that is synchronized into Tripletex.
-
-Once a link between a Powerofficego Salesorder and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorder and a Tripletex Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorder Property
-     - Tripletex Order Property
-     - Tripletex Data Type
-
-
 Powerofficego Currency to Tripletex Customercategory
 ----------------------------------------------------
 Every Powerofficego Currency will be synchronized with a Tripletex Customercategory.
@@ -286,6 +213,22 @@ The following properties are synchronized between a Powerofficego Currency and a
 
    * - Powerofficego Currency Property
      - Tripletex Customercategory Property
+     - Tripletex Data Type
+
+
+Powerofficego Departments to Tripletex Customer
+-----------------------------------------------
+Every Powerofficego Departments will be synchronized with a Tripletex Customer.
+
+Once a link between a Powerofficego Departments and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Departments and a Tripletex Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Departments Property
+     - Tripletex Customer Property
      - Tripletex Data Type
 
 
