@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
@@ -92,30 +92,30 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
 
 
-Powerofficego Customers person to SuperOffice Person
-----------------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Customers person and a SuperOffice Person must be established.
+Powerofficego Customers person to  Person
+-----------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers person and a  Person must be established.
 
-A Powerofficego Customers person will merge with a SuperOffice Person if one of the following property combinations match:
+A Powerofficego Customers person will merge with a  Person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers person Property
-     - SuperOffice Person Property
+     -  Person Property
    * - EmailAddress
      - Emails.Value
 
-Once a link between a Powerofficego Customers person and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers person and a  Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers person and a SuperOffice Person:
+The following properties are synchronized between a Powerofficego Customers person and a  Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers person Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
+     -  Person Property
+     -  Data Type
    * - DateOfBirth
      - BirthDate
      - "datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
@@ -333,20 +333,20 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
 
 
-Powerofficego Product to SuperOffice Listproducttypeitems
----------------------------------------------------------
-Every Powerofficego Product will be synchronized with a SuperOffice Listproducttypeitems.
+Powerofficego Product to  Listproducttypeitems
+----------------------------------------------
+Every Powerofficego Product will be synchronized with a  Listproducttypeitems.
 
-Once a link between a Powerofficego Product and a SuperOffice Listproducttypeitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Product and a  Listproducttypeitems is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Product and a SuperOffice Listproducttypeitems:
+The following properties are synchronized between a Powerofficego Product and a  Listproducttypeitems:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Product Property
-     - SuperOffice Listproducttypeitems Property
-     - SuperOffice Data Type
+     -  Listproducttypeitems Property
+     -  Data Type
 
 
 Powerofficego Product to SuperOffice Product
@@ -419,20 +419,20 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "integer", "decimal"]
 
 
-Powerofficego Productgroup to SuperOffice Listproductcategoryitems
-------------------------------------------------------------------
-Every Powerofficego Productgroup will be synchronized with a SuperOffice Listproductcategoryitems.
+Powerofficego Productgroup to  Listproductcategoryitems
+-------------------------------------------------------
+Every Powerofficego Productgroup will be synchronized with a  Listproductcategoryitems.
 
-Once a link between a Powerofficego Productgroup and a SuperOffice Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Productgroup and a  Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Productgroup and a SuperOffice Listproductcategoryitems:
+The following properties are synchronized between a Powerofficego Productgroup and a  Listproductcategoryitems:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Productgroup Property
-     - SuperOffice Listproductcategoryitems Property
-     - SuperOffice Data Type
+     -  Listproductcategoryitems Property
+     -  Data Type
    * - Name
      - Name
      - "string"
