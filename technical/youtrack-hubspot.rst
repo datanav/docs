@@ -2,7 +2,7 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2023-11-29 23:36:03
+Generated: 2023-11-29 23:37:14
 
 Introduction.
 ------------
@@ -107,39 +107,39 @@ The following properties are synchronized between a YouTrack Usergroups and a Hu
      - "string"
 
 
-YouTrack Issues to HubSpot Ticket
----------------------------------
-Every YouTrack Issues will be synchronized with a HubSpot Ticket.
+YouTrack Issues to  Ticket
+--------------------------
+Every YouTrack Issues will be synchronized with a  Ticket.
 
-Once a link between a YouTrack Issues and a HubSpot Ticket is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Issues and a  Ticket is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Issues and a HubSpot Ticket:
+The following properties are synchronized between a YouTrack Issues and a  Ticket:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Issues Property
-     - HubSpot Ticket Property
-     - HubSpot Data Type
+     -  Ticket Property
+     -  Data Type
    * - reporter.id
      - properties.hubspot_owner_id
      - "string"
 
 
-YouTrack Users to HubSpot User
-------------------------------
-Every YouTrack Users will be synchronized with a HubSpot User.
+YouTrack Users to  User
+-----------------------
+Every YouTrack Users will be synchronized with a  User.
 
-Once a link between a YouTrack Users and a HubSpot User is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Users and a  User is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Users and a HubSpot User:
+The following properties are synchronized between a YouTrack Users and a  User:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     - HubSpot User Property
-     - HubSpot Data Type
+     -  User Property
+     -  Data Type
    * - profile.email.email
      - email
      - "string"
