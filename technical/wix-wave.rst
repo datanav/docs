@@ -2,7 +2,7 @@
 Wix.com to Wave Dataflow
 ========================
 
-Generated: 2023-11-29 14:37:48
+Generated: 2023-11-29 14:42:09
 
 Introduction.
 ------------
@@ -67,27 +67,6 @@ The following properties are synchronized between a Wix.com Contacts and a Wave 
      - "string"
 
 
-Wix.com Members to Wave Customer person
----------------------------------------
-Before any synchronization can take place, a link between a Wix.com Members and a Wave Customer person must be established.
-
-A new Wave Customer person will be created from a Wix.com Members if it is connected to a Wix.com Wix-orders that is synchronized into Wave.
-
-Once a link between a Wix.com Members and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Members and a Wave Customer person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Members Property
-     - Wave Customer person Property
-     - Wave Data Type
-   * - loginEmail
-     - email
-     - "string"
-
-
 Wix.com Members to Wave Customer
 --------------------------------
 Every Wix.com Members will be synchronized with a Wave Customer.
@@ -101,27 +80,6 @@ The following properties are synchronized between a Wix.com Members and a Wave C
 
    * - Wix.com Members Property
      - Wave Customer Property
-     - Wave Data Type
-   * - loginEmail
-     - email
-     - "string"
-
-
-Wix.com Product to Wave Product
--------------------------------
-Before any synchronization can take place, a link between a Wix.com Product and a Wave Product must be established.
-
-A new Wave Product will be created from a Wix.com Product if it is connected to a Wix.com Wix-orders that is synchronized into Wave.
-
-Once a link between a Wix.com Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Product and a Wave Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Product Property
-     - Wave Product Property
      - Wave Data Type
 
 
