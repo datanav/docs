@@ -2,37 +2,37 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-HubSpot Contact to Zendesk Users
---------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a Zendesk Users must be established.
+HubSpot Contact to  Users
+-------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a  Users must be established.
 
-A HubSpot Contact will merge with a Zendesk Users if one of the following property combinations match:
+A HubSpot Contact will merge with a  Users if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contact Property
-     - Zendesk Users Property
+     -  Users Property
    * - properties.email
      - email
 
-Once a link between a HubSpot Contact and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contact and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contact and a Zendesk Users:
+The following properties are synchronized between a HubSpot Contact and a  Users:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contact Property
-     - Zendesk Users Property
-     - Zendesk Data Type
+     -  Users Property
+     -  Data Type
    * - properties.email
      - email
      - "string"
@@ -69,20 +69,20 @@ The following properties are synchronized between a HubSpot Company and a Zendes
      - "string"
 
 
-HubSpot Ticket to Zendesk Tickets
----------------------------------
-Every HubSpot Ticket will be synchronized with a Zendesk Tickets.
+HubSpot Ticket to  Tickets
+--------------------------
+Every HubSpot Ticket will be synchronized with a  Tickets.
 
-Once a link between a HubSpot Ticket and a Zendesk Tickets is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Ticket and a  Tickets is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Ticket and a Zendesk Tickets:
+The following properties are synchronized between a HubSpot Ticket and a  Tickets:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Ticket Property
-     - Zendesk Tickets Property
-     - Zendesk Data Type
+     -  Tickets Property
+     -  Data Type
    * - properties.hubspot_owner_id
      - requester_id
      - "string"
