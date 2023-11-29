@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-29 23:37:14
+Generated: 2023-11-29 23:45:21
 
 Introduction.
 ------------
@@ -73,120 +73,120 @@ The following properties are synchronized between a Tripletex Employee and a  Us
      - "string"
 
 
-Tripletex Customer to YouTrack Groups
--------------------------------------
-Every Tripletex Customer will be synchronized with a YouTrack Groups.
+Tripletex Customer to  Groups
+-----------------------------
+Every Tripletex Customer will be synchronized with a  Groups.
 
-Once a link between a Tripletex Customer and a YouTrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a  Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a YouTrack Groups:
+The following properties are synchronized between a Tripletex Customer and a  Groups:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     - YouTrack Groups Property
-     - YouTrack Data Type
+     -  Groups Property
+     -  Data Type
    * - name
      - name
      - "string"
 
 
-Tripletex Customercategory to YouTrack Organizationroles
---------------------------------------------------------
-Every Tripletex Customercategory will be synchronized with a YouTrack Organizationroles.
+Tripletex Customercategory to  Organizationroles
+------------------------------------------------
+Every Tripletex Customercategory will be synchronized with a  Organizationroles.
 
-Once a link between a Tripletex Customercategory and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customercategory and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customercategory and a YouTrack Organizationroles:
+The following properties are synchronized between a Tripletex Customercategory and a  Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customercategory Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
+     -  Organizationroles Property
+     -  Data Type
 
 
-Tripletex Department to YouTrack Groups
----------------------------------------
-Every Tripletex Department will be synchronized with a YouTrack Groups.
+Tripletex Department to  Groups
+-------------------------------
+Every Tripletex Department will be synchronized with a  Groups.
 
-Once a link between a Tripletex Department and a YouTrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a  Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a YouTrack Groups:
+The following properties are synchronized between a Tripletex Department and a  Groups:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     - YouTrack Groups Property
-     - YouTrack Data Type
+     -  Groups Property
+     -  Data Type
    * - name
      - name
      - "string"
 
 
-Tripletex Productgroup to YouTrack Organizationroles
-----------------------------------------------------
-Every Tripletex Productgroup will be synchronized with a YouTrack Organizationroles.
+Tripletex Productgroup to  Organizationroles
+--------------------------------------------
+Every Tripletex Productgroup will be synchronized with a  Organizationroles.
 
-Once a link between a Tripletex Productgroup and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Productgroup and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Productgroup and a YouTrack Organizationroles:
+The following properties are synchronized between a Tripletex Productgroup and a  Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Productgroup Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
+     -  Organizationroles Property
+     -  Data Type
 
 
-Tripletex Productunit to YouTrack Organizationroles
----------------------------------------------------
-Every Tripletex Productunit will be synchronized with a YouTrack Organizationroles.
+Tripletex Productunit to  Organizationroles
+-------------------------------------------
+Every Tripletex Productunit will be synchronized with a  Organizationroles.
 
-Once a link between a Tripletex Productunit and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Productunit and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Productunit and a YouTrack Organizationroles:
+The following properties are synchronized between a Tripletex Productunit and a  Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Productunit Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
+     -  Organizationroles Property
+     -  Data Type
 
 
-Tripletex Project to YouTrack Hubprojects
------------------------------------------
-Every Tripletex Project will be synchronized with a YouTrack Hubprojects.
+Tripletex Project to  Hubprojects
+---------------------------------
+Every Tripletex Project will be synchronized with a  Hubprojects.
 
-Once a link between a Tripletex Project and a YouTrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Project and a  Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Project and a YouTrack Hubprojects:
+The following properties are synchronized between a Tripletex Project and a  Hubprojects:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Project Property
-     - YouTrack Hubprojects Property
-     - YouTrack Data Type
+     -  Hubprojects Property
+     -  Data Type
 
 
-Tripletex Projectcategory to YouTrack Organizationroles
--------------------------------------------------------
-Every Tripletex Projectcategory will be synchronized with a YouTrack Organizationroles.
+Tripletex Projectcategory to  Organizationroles
+-----------------------------------------------
+Every Tripletex Projectcategory will be synchronized with a  Organizationroles.
 
-Once a link between a Tripletex Projectcategory and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Projectcategory and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Projectcategory and a YouTrack Organizationroles:
+The following properties are synchronized between a Tripletex Projectcategory and a  Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Projectcategory Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
+     -  Organizationroles Property
+     -  Data Type
 
