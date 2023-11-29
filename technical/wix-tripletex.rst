@@ -2,7 +2,7 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2023-11-29 14:42:09
+Generated: 2023-11-29 14:44:43
 
 Introduction.
 ------------
