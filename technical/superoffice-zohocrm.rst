@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
@@ -163,20 +163,20 @@ The following properties are synchronized between a SuperOffice Person and a Zoh
      - "string"
 
 
-SuperOffice Sale to ZohoCRM Deal
---------------------------------
-Every SuperOffice Sale will be synchronized with a ZohoCRM Deal.
+SuperOffice Sale to  Deal
+-------------------------
+Every SuperOffice Sale will be synchronized with a  Deal.
 
-Once a link between a SuperOffice Sale and a ZohoCRM Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Sale and a  Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Sale and a ZohoCRM Deal:
+The following properties are synchronized between a SuperOffice Sale and a  Deal:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Sale Property
-     - ZohoCRM Deal Property
-     - ZohoCRM Data Type
+     -  Deal Property
+     -  Data Type
    * - Amount
      - Amount
      - "string"
