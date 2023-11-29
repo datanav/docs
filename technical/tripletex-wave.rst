@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-29 23:36:03
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
@@ -420,20 +420,20 @@ The following properties are synchronized between a Tripletex Product and a Wave
      - "string"
 
 
-Tripletex Supplier to Wave Vendor
----------------------------------
-Every Tripletex Supplier will be synchronized with a Wave Vendor.
+Tripletex Supplier to  Vendor
+-----------------------------
+Every Tripletex Supplier will be synchronized with a  Vendor.
 
-Once a link between a Tripletex Supplier and a Wave Vendor is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Supplier and a  Vendor is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Supplier and a Wave Vendor:
+The following properties are synchronized between a Tripletex Supplier and a  Vendor:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Supplier Property
-     - Wave Vendor Property
-     - Wave Data Type
+     -  Vendor Property
+     -  Data Type
    * - deliveryAddress.addressLine1
      - address.addressLine1
      - "string"
