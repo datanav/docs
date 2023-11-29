@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
@@ -244,78 +244,78 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
      - "string"
 
 
-HubSpot Account to PowerOfficeGo Currency
------------------------------------------
-Every HubSpot Account will be synchronized with a PowerOfficeGo Currency.
+HubSpot Account to  Currency
+----------------------------
+Every HubSpot Account will be synchronized with a  Currency.
 
-If a matching PowerOfficeGo Currency already exists, the HubSpot Account will be merged with the existing one.
-If no matching PowerOfficeGo Currency is found, a new PowerOfficeGo Currency will be created.
+If a matching  Currency already exists, the HubSpot Account will be merged with the existing one.
+If no matching  Currency is found, a new  Currency will be created.
 
-A HubSpot Account will merge with a PowerOfficeGo Currency if one of the following property combinations match:
+A HubSpot Account will merge with a  Currency if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Account Property
-     - PowerOfficeGo Currency Property
+     -  Currency Property
    * - companyCurrency
      - code
 
-Once a link between a HubSpot Account and a PowerOfficeGo Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Account and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Account and a PowerOfficeGo Currency:
+The following properties are synchronized between a HubSpot Account and a  Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Account Property
-     - PowerOfficeGo Currency Property
-     - PowerOfficeGo Data Type
+     -  Currency Property
+     -  Data Type
 
 
-HubSpot Deal to PowerOfficeGo Currency
---------------------------------------
-Every HubSpot Deal will be synchronized with a PowerOfficeGo Currency.
+HubSpot Deal to  Currency
+-------------------------
+Every HubSpot Deal will be synchronized with a  Currency.
 
-If a matching PowerOfficeGo Currency already exists, the HubSpot Deal will be merged with the existing one.
-If no matching PowerOfficeGo Currency is found, a new PowerOfficeGo Currency will be created.
+If a matching  Currency already exists, the HubSpot Deal will be merged with the existing one.
+If no matching  Currency is found, a new  Currency will be created.
 
-A HubSpot Deal will merge with a PowerOfficeGo Currency if one of the following property combinations match:
+A HubSpot Deal will merge with a  Currency if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     - PowerOfficeGo Currency Property
+     -  Currency Property
    * - properties.deal_currency_code
      - code
 
-Once a link between a HubSpot Deal and a PowerOfficeGo Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a PowerOfficeGo Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     - PowerOfficeGo Currency Property
-     - PowerOfficeGo Data Type
-
-
-HubSpot Deal to PowerOfficeGo Salesorders
------------------------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a PowerOfficeGo Salesorders.
-
-Once a link between a HubSpot Deal and a PowerOfficeGo Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Deal and a PowerOfficeGo Salesorders:
+The following properties are synchronized between a HubSpot Deal and a  Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     - PowerOfficeGo Salesorders Property
-     - PowerOfficeGo Data Type
+     -  Currency Property
+     -  Data Type
+
+
+HubSpot Deal to  Salesorders
+----------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a  Salesorders.
+
+Once a link between a HubSpot Deal and a  Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a  Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     -  Salesorders Property
+     -  Data Type
    * - properties.amount
      - NetAmount
      - "string"
@@ -336,20 +336,20 @@ The following properties are synchronized between a HubSpot Deal and a PowerOffi
      - "string"
 
 
-HubSpot Lineitem to PowerOfficeGo Salesorderlines
--------------------------------------------------
-Every HubSpot Lineitem will be synchronized with a PowerOfficeGo Salesorderlines.
+HubSpot Lineitem to  Salesorderlines
+------------------------------------
+Every HubSpot Lineitem will be synchronized with a  Salesorderlines.
 
-Once a link between a HubSpot Lineitem and a PowerOfficeGo Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitem and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitem and a PowerOfficeGo Salesorderlines:
+The following properties are synchronized between a HubSpot Lineitem and a  Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitem Property
-     - PowerOfficeGo Salesorderlines Property
-     - PowerOfficeGo Data Type
+     -  Salesorderlines Property
+     -  Data Type
    * - properties.hs_product_id
      - ProductCode
      - "string"
@@ -367,20 +367,20 @@ The following properties are synchronized between a HubSpot Lineitem and a Power
      - "integer"
 
 
-HubSpot Lineitemdealassociation to PowerOfficeGo Salesorderlines
-----------------------------------------------------------------
-Every HubSpot Lineitemdealassociation will be synchronized with a PowerOfficeGo Salesorderlines.
+HubSpot Lineitemdealassociation to  Salesorderlines
+---------------------------------------------------
+Every HubSpot Lineitemdealassociation will be synchronized with a  Salesorderlines.
 
-Once a link between a HubSpot Lineitemdealassociation and a PowerOfficeGo Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitemdealassociation and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitemdealassociation and a PowerOfficeGo Salesorderlines:
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a  Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitemdealassociation Property
-     - PowerOfficeGo Salesorderlines Property
-     - PowerOfficeGo Data Type
+     -  Salesorderlines Property
+     -  Data Type
    * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - sesam_SalesOrderId
      - "string"
