@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2023-11-29 14:37:48
+Generated: 2023-11-29 14:42:09
 
 Introduction.
 ------------
@@ -140,24 +140,6 @@ The following properties are synchronized between a HubSpot Company and a Wix Co
    * - properties.zip
      - info.addresses.items.address.postalCode
      - "string"
-
-
-HubSpot Company to Wix Members
-------------------------------
-Before any synchronization can take place, a link between a HubSpot Company and a Wix Members must be established.
-
-A new Wix Members will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Wix.
-
-Once a link between a HubSpot Company and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Company and a Wix Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Company Property
-     - Wix Members Property
-     - Wix Data Type
 
 
 HubSpot Contactcompanyassociation to Wix Contacts
