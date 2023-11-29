@@ -2,7 +2,7 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2023-11-29 14:35:43
+Generated: 2023-11-29 14:37:48
 
 Introduction.
 ------------
@@ -630,80 +630,4 @@ The following properties are synchronized between a Wave Product and a Tripletex
    * - unitPrice
      - priceExcludingVatCurrency
      - "float"
-
-
-Wave Vendor to Tripletex Supplier
----------------------------------
-Every Wave Vendor will be synchronized with a Tripletex Supplier.
-
-Once a link between a Wave Vendor and a Tripletex Supplier is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a Tripletex Supplier:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     - Tripletex Supplier Property
-     - Tripletex Data Type
-   * - address.addressLine1
-     - deliveryAddress.addressLine1
-     - "string"
-   * - address.addressLine1
-     - physicalAddress.addressLine1
-     - "string"
-   * - address.addressLine1
-     - postalAddress.addressLine1
-     - "string"
-   * - address.addressLine2
-     - deliveryAddress.addressLine2
-     - "string"
-   * - address.addressLine2
-     - physicalAddress.addressLine2
-     - "string"
-   * - address.addressLine2
-     - postalAddress.addressLine2
-     - "string"
-   * - address.city
-     - deliveryAddress.changes
-     - "string"
-   * - address.city
-     - deliveryAddress.city
-     - "string"
-   * - address.city
-     - physicalAddress.city
-     - "string"
-   * - address.city
-     - postalAddress.city
-     - "string"
-   * - address.country.code
-     - deliveryAddress.city
-     - "string"
-   * - address.country.code
-     - deliveryAddress.country.id
-     - "integer"
-   * - address.country.code
-     - physicalAddress.country.id
-     - "integer"
-   * - address.country.code
-     - postalAddress.country.id
-     - "integer"
-   * - address.postalCode
-     - deliveryAddress.postalCode
-     - "string"
-   * - address.postalCode
-     - physicalAddress.postalCode
-     - "string"
-   * - address.postalCode
-     - postalAddress.postalCode
-     - "string"
-   * - id
-     - id
-     - "integer"
-   * - name
-     - name
-     - "string"
-   * - phone
-     - phoneNumber
-     - "string"
 
