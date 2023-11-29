@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
@@ -333,20 +333,20 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - "string"
 
 
-Powerofficego Suppliers to Wave Vendor
---------------------------------------
-Every Powerofficego Suppliers will be synchronized with a Wave Vendor.
+Powerofficego Suppliers to  Vendor
+----------------------------------
+Every Powerofficego Suppliers will be synchronized with a  Vendor.
 
-Once a link between a Powerofficego Suppliers and a Wave Vendor is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Suppliers and a  Vendor is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Suppliers and a Wave Vendor:
+The following properties are synchronized between a Powerofficego Suppliers and a  Vendor:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Suppliers Property
-     - Wave Vendor Property
-     - Wave Data Type
+     -  Vendor Property
+     -  Data Type
    * - FirstName
      - firstName
      - "string"
