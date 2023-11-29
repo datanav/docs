@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-29 23:37:13
+Generated: 2023-11-29 23:38:14
 
 Introduction.
 ------------
@@ -406,20 +406,20 @@ The following properties are synchronized between a Wave Invoice and a  Salesord
      - "string"
 
 
-Wave Invoice to PowerOfficeGo Salesorders
------------------------------------------
-Every Wave Invoice will be synchronized with a PowerOfficeGo Salesorders.
+Wave Invoice to  Salesorders
+----------------------------
+Every Wave Invoice will be synchronized with a  Salesorders.
 
-Once a link between a Wave Invoice and a PowerOfficeGo Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a  Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a PowerOfficeGo Salesorders:
+The following properties are synchronized between a Wave Invoice and a  Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     - PowerOfficeGo Salesorders Property
-     - PowerOfficeGo Data Type
+     -  Salesorders Property
+     -  Data Type
    * - createdAt
      - CreatedDateTimeOffset
      - "string"
@@ -443,20 +443,20 @@ The following properties are synchronized between a Wave Invoice and a PowerOffi
      - "string"
 
 
-Wave Product to PowerOfficeGo Product
--------------------------------------
-Every Wave Product will be synchronized with a PowerOfficeGo Product.
+Wave Product to  Product
+------------------------
+Every Wave Product will be synchronized with a  Product.
 
-Once a link between a Wave Product and a PowerOfficeGo Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a PowerOfficeGo Product:
+The following properties are synchronized between a Wave Product and a  Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Product Property
-     - PowerOfficeGo Product Property
-     - PowerOfficeGo Data Type
+     -  Product Property
+     -  Data Type
    * - description
      - Description
      - "string"
