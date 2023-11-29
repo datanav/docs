@@ -2,31 +2,12 @@
 Freshteam to Zendesk Dataflow
 =============================
 
-Generated: 2023-11-29 14:35:43
+Generated: 2023-11-29 14:37:48
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Freshteam to Zendesk. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Freshteam Department to Zendesk Organisations
----------------------------------------------
-Every Freshteam Department will be synchronized with a Zendesk Organisations.
-
-Once a link between a Freshteam Department and a Zendesk Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Freshteam Department and a Zendesk Organisations:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Freshteam Department Property
-     - Zendesk Organisations Property
-     - Zendesk Data Type
-   * - name
-     - name
-     - "string"
-
 
 Freshteam Department to Zendesk Organizations
 ---------------------------------------------
