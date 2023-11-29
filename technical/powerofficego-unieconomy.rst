@@ -2,27 +2,27 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Powerofficego Customers to UniEconomy Companies
------------------------------------------------
-Every Powerofficego Customers will be synchronized with a UniEconomy Companies.
+Powerofficego Customers to  Companies
+-------------------------------------
+Every Powerofficego Customers will be synchronized with a  Companies.
 
-Once a link between a Powerofficego Customers and a UniEconomy Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers and a UniEconomy Companies:
+The following properties are synchronized between a Powerofficego Customers and a  Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers Property
-     - UniEconomy Companies Property
-     - UniEconomy Data Type
+     -  Companies Property
+     -  Data Type
    * - Name
      - Name
      - "string"
@@ -31,20 +31,20 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Customers to UniEconomy Customers
------------------------------------------------
-Every Powerofficego Customers will be synchronized with a UniEconomy Customers.
+Powerofficego Customers to  Customers
+-------------------------------------
+Every Powerofficego Customers will be synchronized with a  Customers.
 
-Once a link between a Powerofficego Customers and a UniEconomy Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers and a UniEconomy Customers:
+The following properties are synchronized between a Powerofficego Customers and a  Customers:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers Property
-     - UniEconomy Customers Property
-     - UniEconomy Data Type
+     -  Customers Property
+     -  Data Type
    * - OrganizationNumber (Dependant on having wd:Q11994066 in MailAddress.CountryCodeDependant on having wd:Q11994066 in MailAddress.countryCodeDependant on having wd:Q11994066 in MailAddress.countryCodeDependant on having wd:Q11994066 in MailAddress.countryCodeDependant on having wd:Q11994066 in MailAddress.countryCodeDependant on having wd:Q11994066 in MailAddress.countryCodeDependant on having wd:Q11994066 in MailAddress.countryCode)
      - OrgNumber
      - "string"
@@ -62,20 +62,20 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Departments to UniEconomy Departments
----------------------------------------------------
-Every Powerofficego Departments will be synchronized with a UniEconomy Departments.
+Powerofficego Departments to  Departments
+-----------------------------------------
+Every Powerofficego Departments will be synchronized with a  Departments.
 
-Once a link between a Powerofficego Departments and a UniEconomy Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Departments and a  Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Departments and a UniEconomy Departments:
+The following properties are synchronized between a Powerofficego Departments and a  Departments:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Departments Property
-     - UniEconomy Departments Property
-     - UniEconomy Data Type
+     -  Departments Property
+     -  Data Type
    * - Name
      - Name
      - "string"
