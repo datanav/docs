@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-29 23:36:03
+Generated: 2023-11-29 23:45:21
 
 Introduction.
 ------------
@@ -187,33 +187,33 @@ The following properties are synchronized between a Tripletex Customer and a Sup
      - "string"
 
 
-Tripletex Employee to SuperOffice Person
-----------------------------------------
-Every Tripletex Employee will be synchronized with a SuperOffice Person.
+Tripletex Employee to  Person
+-----------------------------
+Every Tripletex Employee will be synchronized with a  Person.
 
-If a matching SuperOffice Person already exists, the Tripletex Employee will be merged with the existing one.
-If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
+If a matching  Person already exists, the Tripletex Employee will be merged with the existing one.
+If no matching  Person is found, a new  Person will be created.
 
-A Tripletex Employee will merge with a SuperOffice Person if one of the following property combinations match:
+A Tripletex Employee will merge with a  Person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     - SuperOffice Person Property
+     -  Person Property
    * - email
      - Emails.Value
 
-Once a link between a Tripletex Employee and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a  Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a SuperOffice Person:
+The following properties are synchronized between a Tripletex Employee and a  Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
+     -  Person Property
+     -  Data Type
    * - address.addressLine1
      - Address.Street.Address1
      - "string"
