@@ -2,7 +2,7 @@
 YouTrack to Tilores Dataflow
 ============================
 
-Generated: 2023-11-29 14:37:49
+Generated: 2023-11-29 14:44:43
 
 Introduction.
 ------------
@@ -29,36 +29,4 @@ The following properties are synchronized between a YouTrack Users and a Tilores
    * - profile.email.email
      - email
      - "string"
-
-
-YouTrack Users users to Tilores Human
--------------------------------------
-Every YouTrack Users users will be synchronized with a Tilores Human.
-
-Once a link between a YouTrack Users users and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Users users and a Tilores Human:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Users users Property
-     - Tilores Human Property
-     - Tilores Data Type
-
-
-YouTrack Usersyoutrack to Tilores Human
----------------------------------------
-Every YouTrack Usersyoutrack will be synchronized with a Tilores Human.
-
-Once a link between a YouTrack Usersyoutrack and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Usersyoutrack and a Tilores Human:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Usersyoutrack Property
-     - Tilores Human Property
-     - Tilores Data Type
 
