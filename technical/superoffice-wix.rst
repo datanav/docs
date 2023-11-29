@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2023-11-08 08:37:48
+Generated: 2023-11-29 14:34:53
 
 Introduction.
 ------------
@@ -23,8 +23,6 @@ A SuperOffice Person will merge with a Wix Contacts if one of the following prop
 
    * - SuperOffice Person Property
      - Wix Contacts Property
-   * - Emails.Value
-     - info.emails
    * - Emails.Value
      - primaryInfo.email
 
@@ -139,8 +137,6 @@ A SuperOffice User will merge with a Wix Contacts if one of the following proper
 
    * - SuperOffice User Property
      - Wix Contacts Property
-   * - personEmail
-     - info.emails
    * - personEmail
      - primaryInfo.email
 
@@ -267,19 +263,6 @@ SuperOffice Product to Wix Inventory
 ------------------------------------
 Every SuperOffice Product will be synchronized with a Wix Inventory.
 
-If a matching Wix Inventory already exists, the SuperOffice Product will be merged with the existing one.
-If no matching Wix Inventory is found, a new Wix Inventory will be created.
-
-A SuperOffice Product will merge with a Wix Inventory if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - Wix Inventory Property
-   * - ERPProductKey
-     - id
-
 Once a link between a SuperOffice Product and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
 
 The following properties are synchronized between a SuperOffice Product and a Wix Inventory:
@@ -290,9 +273,6 @@ The following properties are synchronized between a SuperOffice Product and a Wi
    * - SuperOffice Product Property
      - Wix Inventory Property
      - Wix Data Type
-   * - ERPProductKey
-     - id
-     - "string"
 
 
 SuperOffice Product to Wix Products
