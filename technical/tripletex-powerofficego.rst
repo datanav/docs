@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-11-29 14:35:43
+Generated: 2023-11-29 14:37:48
 
 Introduction.
 ------------
@@ -364,68 +364,6 @@ The following properties are synchronized between a Tripletex Department and a P
      - PowerOfficeGo Data Type
    * - name
      - Name
-     - "string"
-
-
-Tripletex Order to PowerOfficeGo Outgoinginvoices
--------------------------------------------------
-Every Tripletex Order will be synchronized with a PowerOfficeGo Outgoinginvoices.
-
-Once a link between a Tripletex Order and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Order and a PowerOfficeGo Outgoinginvoices:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Order Property
-     - PowerOfficeGo Outgoinginvoices Property
-     - PowerOfficeGo Data Type
-   * - changes.timestamp
-     - createdDateTimeOffset
-     - "string"
-   * - contact.id
-     - customerId
-     - "string"
-   * - currency.id
-     - CurrencyCode
-     - "string"
-   * - customer.id
-     - customerId
-     - "string"
-   * - deliveryDate
-     - DeliveryDate
-     - "string"
-   * - deliveryDate
-     - sentDateTimeOffset
-     - "string"
-   * - orderDate
-     - OrderDate
-     - "string"
-
-
-Tripletex Orderline to PowerOfficeGo Outgoinginvoices
------------------------------------------------------
-Every Tripletex Orderline will be synchronized with a PowerOfficeGo Outgoinginvoices.
-
-Once a link between a Tripletex Orderline and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Orderline and a PowerOfficeGo Outgoinginvoices:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Orderline Property
-     - PowerOfficeGo Outgoinginvoices Property
-     - PowerOfficeGo Data Type
-   * - changes.timestamp
-     - createdDateTimeOffset
-     - "string"
-   * - currency.id
-     - CurrencyCode
-     - "string"
-   * - order.id
-     - OrderNo
      - "string"
 
 
@@ -908,33 +846,5 @@ The following properties are synchronized between a Tripletex Productgroup and a
      - PowerOfficeGo Data Type
    * - name
      - Name
-     - "string"
-
-
-Tripletex Vattype to PowerOfficeGo Vatcodes
--------------------------------------------
-Every Tripletex Vattype will be synchronized with a PowerOfficeGo Vatcodes.
-
-Once a link between a Tripletex Vattype and a PowerOfficeGo Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Vattype and a PowerOfficeGo Vatcodes:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Vattype Property
-     - PowerOfficeGo Vatcodes Property
-     - PowerOfficeGo Data Type
-   * - name
-     - Name
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - percentage
-     - Rate
-     - "string"
-   * - percentage
-     - rate
      - "string"
 
