@@ -2,43 +2,43 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:45:21
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Company to ZohoCRM Account
-------------------------------------------
-Every Businesscentral Company will be synchronized with a ZohoCRM Account.
+Businesscentral Company to  Account
+-----------------------------------
+Every Businesscentral Company will be synchronized with a  Account.
 
-Once a link between a Businesscentral Company and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Company and a  Account is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Company and a ZohoCRM Account:
+The following properties are synchronized between a Businesscentral Company and a  Account:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Company Property
-     - ZohoCRM Account Property
-     - ZohoCRM Data Type
+     -  Account Property
+     -  Data Type
 
 
-Businesscentral Contact company to ZohoCRM Account
---------------------------------------------------
-Every Businesscentral Contact company will be synchronized with a ZohoCRM Account.
+Businesscentral Contact company to  Account
+-------------------------------------------
+Every Businesscentral Contact company will be synchronized with a  Account.
 
-Once a link between a Businesscentral Contact company and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Contact company and a  Account is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Contact company and a ZohoCRM Account:
+The following properties are synchronized between a Businesscentral Contact company and a  Account:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Contact company Property
-     - ZohoCRM Account Property
-     - ZohoCRM Data Type
+     -  Account Property
+     -  Data Type
    * - city
      - Billing_City
      - "string"
