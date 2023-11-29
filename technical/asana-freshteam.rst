@@ -1,13 +1,13 @@
-===========================
-Asana to Freshteam Dataflow
-===========================
+==================
+Asana to  Dataflow
+==================
 
-Generated: 2023-11-29 14:37:48
+Generated: 2023-11-29 23:34:58
 
 Introduction.
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Asana to Freshteam. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Asana to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Asana Users to Freshteam Employee
 ---------------------------------
