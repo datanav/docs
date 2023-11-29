@@ -2,7 +2,7 @@
 YouTrack to YouTrack Dataflow
 =============================
 
-Generated: 2023-11-29 15:04:37
+Generated: 2023-11-29 15:05:02
 
 Introduction.
 ------------
@@ -33,6 +33,18 @@ The following properties are synchronized between a YouTrack Hubprojects and a Y
    * - YouTrack Hubprojects Property
      - YouTrack Hubprojects Property
      - YouTrack Data Type
+   * - organization.id
+     - team.id
+     - "string"
+   * - owner.id
+     - transitiveProjectRoles.id
+     - "string"
+   * - team.id
+     - organization.id
+     - "string"
+   * - transitiveProjectRoles.id
+     - owner.id
+     - "string"
 
 
 YouTrack Users to YouTrack Users
@@ -59,6 +71,114 @@ The following properties are synchronized between a YouTrack Users and a YouTrac
    * - YouTrack Users Property
      - YouTrack Users Property
      - YouTrack Data Type
+   * - groups.id
+     - transitiveGroups.id
+     - "string"
+   * - groups.id
+     - transitiveTeams.id
+     - "string"
+   * - organizationRoles.id
+     - projectRoles.id
+     - "string"
+   * - organizationRoles.id
+     - sourcedOrganizationRoles.id
+     - "string"
+   * - organizationRoles.id
+     - sourcedProjectRoles.id
+     - "string"
+   * - organizationRoles.id
+     - transitiveOrganizationRoles.id
+     - "string"
+   * - organizationRoles.id
+     - transitiveProjectRoles.id
+     - "string"
+   * - projectRoles.id
+     - organizationRoles.id
+     - "string"
+   * - projectRoles.id
+     - sourcedOrganizationRoles.id
+     - "string"
+   * - projectRoles.id
+     - sourcedProjectRoles.id
+     - "string"
+   * - projectRoles.id
+     - transitiveOrganizationRoles.id
+     - "string"
+   * - projectRoles.id
+     - transitiveProjectRoles.id
+     - "string"
+   * - sourcedOrganizationRoles.id
+     - organizationRoles.id
+     - "string"
+   * - sourcedOrganizationRoles.id
+     - projectRoles.id
+     - "string"
+   * - sourcedOrganizationRoles.id
+     - sourcedProjectRoles.id
+     - "string"
+   * - sourcedOrganizationRoles.id
+     - transitiveOrganizationRoles.id
+     - "string"
+   * - sourcedOrganizationRoles.id
+     - transitiveProjectRoles.id
+     - "string"
+   * - sourcedProjectRoles.id
+     - organizationRoles.id
+     - "string"
+   * - sourcedProjectRoles.id
+     - projectRoles.id
+     - "string"
+   * - sourcedProjectRoles.id
+     - sourcedOrganizationRoles.id
+     - "string"
+   * - sourcedProjectRoles.id
+     - transitiveOrganizationRoles.id
+     - "string"
+   * - sourcedProjectRoles.id
+     - transitiveProjectRoles.id
+     - "string"
+   * - transitiveGroups.id
+     - groups.id
+     - "string"
+   * - transitiveGroups.id
+     - transitiveTeams.id
+     - "string"
+   * - transitiveOrganizationRoles.id
+     - organizationRoles.id
+     - "string"
+   * - transitiveOrganizationRoles.id
+     - projectRoles.id
+     - "string"
+   * - transitiveOrganizationRoles.id
+     - sourcedOrganizationRoles.id
+     - "string"
+   * - transitiveOrganizationRoles.id
+     - sourcedProjectRoles.id
+     - "string"
+   * - transitiveOrganizationRoles.id
+     - transitiveProjectRoles.id
+     - "string"
+   * - transitiveProjectRoles.id
+     - organizationRoles.id
+     - "string"
+   * - transitiveProjectRoles.id
+     - projectRoles.id
+     - "string"
+   * - transitiveProjectRoles.id
+     - sourcedOrganizationRoles.id
+     - "string"
+   * - transitiveProjectRoles.id
+     - sourcedProjectRoles.id
+     - "string"
+   * - transitiveProjectRoles.id
+     - transitiveOrganizationRoles.id
+     - "string"
+   * - transitiveTeams.id
+     - groups.id
+     - "string"
+   * - transitiveTeams.id
+     - transitiveGroups.id
+     - "string"
 
 
 YouTrack Groups to YouTrack Usergroups
