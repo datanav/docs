@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:37:13
+Generated: 2023-11-29 23:38:14
 
 Introduction.
 ------------
@@ -169,20 +169,20 @@ The following properties are synchronized between a Wix.com Orders and a  Lineit
      - "string"
 
 
-Wix.com Products to HubSpot Product
------------------------------------
-Every Wix.com Products will be synchronized with a HubSpot Product.
+Wix.com Products to  Product
+----------------------------
+Every Wix.com Products will be synchronized with a  Product.
 
-Once a link between a Wix.com Products and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a HubSpot Product:
+The following properties are synchronized between a Wix.com Products and a  Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     - HubSpot Product Property
-     - HubSpot Data Type
+     -  Product Property
+     -  Data Type
    * - costRange.maxValue
      - properties.hs_cost_of_goods_sold
      - "string"
