@@ -2,39 +2,39 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-29 23:37:13
+Generated: 2023-11-29 23:38:14
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-SuperOffice Person to Zendesk Users
------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a Zendesk Users must be established.
+SuperOffice Person to  Users
+----------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a  Users must be established.
 
-A new Zendesk Users will be created from a SuperOffice Person if it is connected to a SuperOffice Ticket that is synchronized into Zendesk.
+A new  Users will be created from a SuperOffice Person if it is connected to a SuperOffice Ticket that is synchronized into .
 
-A SuperOffice Person will merge with a Zendesk Users if one of the following property combinations match:
+A SuperOffice Person will merge with a  Users if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - Zendesk Users Property
+     -  Users Property
    * - Emails.Value
      - email
 
-Once a link between a SuperOffice Person and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a Zendesk Users:
+The following properties are synchronized between a SuperOffice Person and a  Users:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - Zendesk Users Property
-     - Zendesk Data Type
+     -  Users Property
+     -  Data Type
    * - Contact.ContactId
      - organization_id
      - "string"
