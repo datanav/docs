@@ -2,37 +2,37 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:36:03
+Generated: 2023-11-29 23:37:14
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wix.com Members to PowerOfficeGo Contactperson
-----------------------------------------------
-Before any synchronization can take place, a link between a Wix.com Members and a PowerOfficeGo Contactperson must be established.
+Wix.com Members to  Contactperson
+---------------------------------
+Before any synchronization can take place, a link between a Wix.com Members and a  Contactperson must be established.
 
-A Wix.com Members will merge with a PowerOfficeGo Contactperson if one of the following property combinations match:
+A Wix.com Members will merge with a  Contactperson if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Members Property
-     - PowerOfficeGo Contactperson Property
+     -  Contactperson Property
    * - loginEmail
      - emailAddress
 
-Once a link between a Wix.com Members and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Members and a  Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Members and a PowerOfficeGo Contactperson:
+The following properties are synchronized between a Wix.com Members and a  Contactperson:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Members Property
-     - PowerOfficeGo Contactperson Property
-     - PowerOfficeGo Data Type
+     -  Contactperson Property
+     -  Data Type
    * - loginEmail
      - emailAddress
      - "string"
@@ -130,49 +130,49 @@ The following properties are synchronized between a Wix.com Contacts and a Power
      - "string"
 
 
-Wix.com Currencies to PowerOfficeGo Currency
---------------------------------------------
-Every Wix.com Currencies will be synchronized with a PowerOfficeGo Currency.
+Wix.com Currencies to  Currency
+-------------------------------
+Every Wix.com Currencies will be synchronized with a  Currency.
 
-If a matching PowerOfficeGo Currency already exists, the Wix.com Currencies will be merged with the existing one.
-If no matching PowerOfficeGo Currency is found, a new PowerOfficeGo Currency will be created.
+If a matching  Currency already exists, the Wix.com Currencies will be merged with the existing one.
+If no matching  Currency is found, a new  Currency will be created.
 
-A Wix.com Currencies will merge with a PowerOfficeGo Currency if one of the following property combinations match:
+A Wix.com Currencies will merge with a  Currency if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Currencies Property
-     - PowerOfficeGo Currency Property
+     -  Currency Property
    * - code
      - code
 
-Once a link between a Wix.com Currencies and a PowerOfficeGo Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Currencies and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Currencies and a PowerOfficeGo Currency:
+The following properties are synchronized between a Wix.com Currencies and a  Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Currencies Property
-     - PowerOfficeGo Currency Property
-     - PowerOfficeGo Data Type
+     -  Currency Property
+     -  Data Type
 
 
-Wix.com Inventory to PowerOfficeGo Product
-------------------------------------------
-Every Wix.com Inventory will be synchronized with a PowerOfficeGo Product.
+Wix.com Inventory to  Product
+-----------------------------
+Every Wix.com Inventory will be synchronized with a  Product.
 
-Once a link between a Wix.com Inventory and a PowerOfficeGo Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Inventory and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Inventory and a PowerOfficeGo Product:
+The following properties are synchronized between a Wix.com Inventory and a  Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Inventory Property
-     - PowerOfficeGo Product Property
-     - PowerOfficeGo Data Type
+     -  Product Property
+     -  Data Type
    * - lastUpdated
      - availableStock
      - "string"
@@ -181,20 +181,20 @@ The following properties are synchronized between a Wix.com Inventory and a Powe
      - "integer"
 
 
-Wix.com Orders to PowerOfficeGo Salesorderlines
------------------------------------------------
-Every Wix.com Orders will be synchronized with a PowerOfficeGo Salesorderlines.
+Wix.com Orders to  Salesorderlines
+----------------------------------
+Every Wix.com Orders will be synchronized with a  Salesorderlines.
 
-Once a link between a Wix.com Orders and a PowerOfficeGo Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a PowerOfficeGo Salesorderlines:
+The following properties are synchronized between a Wix.com Orders and a  Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     - PowerOfficeGo Salesorderlines Property
-     - PowerOfficeGo Data Type
+     -  Salesorderlines Property
+     -  Data Type
    * - id
      - sesam_SalesOrderId
      - "string"
