@@ -47,8 +47,3 @@ Why is the address of my contact in HubSpot not up to date?
 In Hubspot the contact field for **address** is read-only. That means that we can not write data into this field. 
 
 If you want to change the address of a contact, you should do it in HubSpot.
-
-Why can't I update a synchronised deal in HubSpot from my ERP system?
-*********************************************************************
-
-Upon the closure or success of a deal, an order will be automatically generated in your ERP system. Subsequent modifications can be made within the ERP system prior to invoicing. It's important to note that any adjustments made in the ERP system after the deal is marked as closed will not be mirrored in HubSpot.
