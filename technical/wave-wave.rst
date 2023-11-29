@@ -2,7 +2,7 @@
 Wave Financial to Wave Dataflow
 ===============================
 
-Generated: 2023-11-29 14:37:48
+Generated: 2023-11-29 14:42:09
 
 Introduction.
 ------------
@@ -13,7 +13,7 @@ Wave Customer to Wave Customer person
 -------------------------------------
 Before any synchronization can take place, a link between a Wave Customer and a Wave Customer person must be established.
 
-A new Wave Customer person will be created from a Wave Customer if it is connected to a Wave Vendor that is synchronized into Wave.
+A new Wave Customer person will be created from a Wave Customer if it is connected to a Wave Vendor, Invoice, Business, or Customer that is synchronized into Wave.
 
 Once a link between a Wave Customer and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
