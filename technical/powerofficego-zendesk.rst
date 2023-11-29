@@ -2,7 +2,7 @@
 Powerofficego to Zendesk Dataflow
 =================================
 
-Generated: 2023-11-29 14:42:10
+Generated: 2023-11-29 14:43:14
 
 Introduction.
 ------------
@@ -106,6 +106,9 @@ The following properties are synchronized between a Powerofficego Departments an
    * - Powerofficego Departments Property
      - Zendesk Organizations Property
      - Zendesk Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Powerofficego Employees to Zendesk Users
