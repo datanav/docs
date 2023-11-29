@@ -2,7 +2,7 @@
 Powerofficego to BusinessCentral Dataflow
 =========================================
 
-Generated: 2023-11-29 14:37:49
+Generated: 2023-11-29 14:44:43
 
 Introduction.
 ------------
@@ -37,22 +37,6 @@ The following properties are synchronized between a Powerofficego Departments an
    :header-rows: 1
 
    * - Powerofficego Departments Property
-     - BusinessCentral Company Property
-     - BusinessCentral Data Type
-
-
-Powerofficego Suppliers to BusinessCentral Company
---------------------------------------------------
-Every Powerofficego Suppliers will be synchronized with a BusinessCentral Company.
-
-Once a link between a Powerofficego Suppliers and a BusinessCentral Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Suppliers and a BusinessCentral Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Suppliers Property
      - BusinessCentral Company Property
      - BusinessCentral Data Type
 
