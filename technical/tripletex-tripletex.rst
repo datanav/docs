@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2023-11-29 14:42:09
+Generated: 2023-11-29 14:44:42
 
 Introduction.
 ------------
@@ -151,10 +151,7 @@ The following properties are synchronized between a Tripletex Product and a Trip
 
 Tripletex Productgrouprelation to Tripletex Product
 ---------------------------------------------------
-Every Tripletex Productgrouprelation will be synchronized with a Tripletex Product.
-
-If a matching Tripletex Product already exists, the Tripletex Productgrouprelation will be merged with the existing one.
-If no matching Tripletex Product is found, a new Tripletex Product will be created.
+Before any synchronization can take place, a link between a Tripletex Productgrouprelation and a Tripletex Product must be established.
 
 A Tripletex Productgrouprelation will merge with a Tripletex Product if one of the following property combinations match:
 
@@ -180,10 +177,7 @@ The following properties are synchronized between a Tripletex Productgrouprelati
 
 Tripletex Supplier to Tripletex Customer
 ----------------------------------------
-Every Tripletex Supplier will be synchronized with a Tripletex Customer.
-
-If a matching Tripletex Customer already exists, the Tripletex Supplier will be merged with the existing one.
-If no matching Tripletex Customer is found, a new Tripletex Customer will be created.
+Before any synchronization can take place, a link between a Tripletex Supplier and a Tripletex Customer must be established.
 
 A Tripletex Supplier will merge with a Tripletex Customer if one of the following property combinations match:
 
@@ -442,7 +436,9 @@ The following properties are synchronized between a Tripletex Customer and a Tri
 
 Tripletex Department to Tripletex Customer
 ------------------------------------------
-Every Tripletex Department will be synchronized with a Tripletex Customer.
+Before any synchronization can take place, a link between a Tripletex Department and a Tripletex Customer must be established.
+
+A new Tripletex Customer will be created from a Tripletex Department if it is connected to a Tripletex Contact, Customer, or Employee that is synchronized into Tripletex.
 
 Once a link between a Tripletex Department and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -453,85 +449,6 @@ The following properties are synchronized between a Tripletex Department and a T
 
    * - Tripletex Department Property
      - Tripletex Customer Property
-     - Tripletex Data Type
-   * - name
-     - name
-     - "string"
-
-
-Tripletex Orderline to Tripletex Order
---------------------------------------
-Every Tripletex Orderline will be synchronized with a Tripletex Order.
-
-Once a link between a Tripletex Orderline and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Orderline and a Tripletex Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Orderline Property
-     - Tripletex Order Property
-     - Tripletex Data Type
-   * - currency.id
-     - currency.id
-     - "integer"
-
-
-Tripletex Productgroup to Tripletex Customercategory
-----------------------------------------------------
-Every Tripletex Productgroup will be synchronized with a Tripletex Customercategory.
-
-Once a link between a Tripletex Productgroup and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Productgroup and a Tripletex Customercategory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productgroup Property
-     - Tripletex Customercategory Property
-     - Tripletex Data Type
-   * - name
-     - name
-     - "string"
-
-
-Tripletex Productunit to Tripletex Customercategory
----------------------------------------------------
-Every Tripletex Productunit will be synchronized with a Tripletex Customercategory.
-
-Once a link between a Tripletex Productunit and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Productunit and a Tripletex Customercategory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productunit Property
-     - Tripletex Customercategory Property
-     - Tripletex Data Type
-   * - commonCode
-     - number
-     - "string"
-   * - name
-     - name
-     - "string"
-
-
-Tripletex Projectcategory to Tripletex Customercategory
--------------------------------------------------------
-Every Tripletex Projectcategory will be synchronized with a Tripletex Customercategory.
-
-Once a link between a Tripletex Projectcategory and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Projectcategory and a Tripletex Customercategory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Projectcategory Property
-     - Tripletex Customercategory Property
      - Tripletex Data Type
    * - name
      - name
