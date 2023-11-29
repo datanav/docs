@@ -2,7 +2,7 @@
 YouTrack to SuperOffice Dataflow
 ================================
 
-Generated: 2023-11-29 14:42:04
+Generated: 2023-11-29 14:44:43
 
 Introduction.
 ------------
@@ -97,57 +97,6 @@ The following properties are synchronized between a YouTrack Usergroups and a Su
      - SuperOffice Contact Property
      - SuperOffice Data Type
    * - name
-     - Name
-     - "string"
-
-
-YouTrack Users users to SuperOffice Person
-------------------------------------------
-Every YouTrack Users users will be synchronized with a SuperOffice Person.
-
-Once a link between a YouTrack Users users and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Users users and a SuperOffice Person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Users users Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
-
-
-YouTrack Usersyoutrack to SuperOffice Person
---------------------------------------------
-Every YouTrack Usersyoutrack will be synchronized with a SuperOffice Person.
-
-Once a link between a YouTrack Usersyoutrack and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Usersyoutrack and a SuperOffice Person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Usersyoutrack Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
-
-
-YouTrack Workitems to SuperOffice Contact
------------------------------------------
-Every YouTrack Workitems will be synchronized with a SuperOffice Contact.
-
-Once a link between a YouTrack Workitems and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Workitems and a SuperOffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Workitems Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
-   * - updated
      - Name
      - "string"
 
