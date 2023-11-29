@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-29 23:39:28
+Generated: 2023-11-29 23:40:24
 
 Introduction.
 ------------
@@ -115,22 +115,22 @@ The following properties are synchronized between a Wave Vendor and a  Contactpe
      - "integer"
 
 
-Wave Customer to PowerOfficeGo Customers person
------------------------------------------------
-Before any synchronization can take place, a link between a Wave Customer and a PowerOfficeGo Customers person must be established.
+Wave Customer to  Customers person
+----------------------------------
+Before any synchronization can take place, a link between a Wave Customer and a  Customers person must be established.
 
-A new PowerOfficeGo Customers person will be created from a Wave Customer if it is connected to a Wave Vendor, Invoice, Customer, or Customer-person that is synchronized into PowerOfficeGo.
+A new  Customers person will be created from a Wave Customer if it is connected to a Wave Vendor, Invoice, Customer, or Customer-person that is synchronized into .
 
-Once a link between a Wave Customer and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a  Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a PowerOfficeGo Customers person:
+The following properties are synchronized between a Wave Customer and a  Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - PowerOfficeGo Customers person Property
-     - PowerOfficeGo Data Type
+     -  Customers person Property
+     -  Data Type
    * - address.addressLine1
      - MailAddress.AddressLine1
      - "string"
@@ -287,20 +287,20 @@ The following properties are synchronized between a Wave Customer and a  Contact
      - "string"
 
 
-Wave Customer to PowerOfficeGo Customers
-----------------------------------------
-Every Wave Customer will be synchronized with a PowerOfficeGo Customers.
+Wave Customer to  Customers
+---------------------------
+Every Wave Customer will be synchronized with a  Customers.
 
-Once a link between a Wave Customer and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a PowerOfficeGo Customers:
+The following properties are synchronized between a Wave Customer and a  Customers:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - PowerOfficeGo Customers Property
-     - PowerOfficeGo Data Type
+     -  Customers Property
+     -  Data Type
    * - address.addressLine1
      - MailAddress.AddressLine1
      - "string"
