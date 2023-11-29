@@ -2,27 +2,27 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:42:25
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Asana to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Asana Teams to SuperOffice Contact
-----------------------------------
-Every Asana Teams will be synchronized with a SuperOffice Contact.
+Asana Teams to  Contact
+-----------------------
+Every Asana Teams will be synchronized with a  Contact.
 
-Once a link between a Asana Teams and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Teams and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Teams and a SuperOffice Contact:
+The following properties are synchronized between a Asana Teams and a  Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Teams Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
+     -  Contact Property
+     -  Data Type
    * - name
      - Name
      - "string"
