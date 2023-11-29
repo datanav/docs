@@ -2,7 +2,7 @@
 YouTrack to SuperOffice Dataflow
 ================================
 
-Generated: 2023-11-27 08:06:39
+Generated: 2023-11-29 14:34:53
 
 Introduction.
 ------------
@@ -23,10 +23,6 @@ A YouTrack Users will merge with a SuperOffice Person if one of the following pr
 
    * - YouTrack Users Property
      - SuperOffice Person Property
-   * - 
-     - Emails.Value
-   * - profile.email
-     - Emails.Value
    * - profile.email.email
      - Emails.Value
 
