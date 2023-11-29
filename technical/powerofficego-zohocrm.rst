@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
@@ -71,20 +71,20 @@ The following properties are synchronized between a Powerofficego Departments an
      - "string"
 
 
-Powerofficego Customers person to ZohoCRM Contact
--------------------------------------------------
-Every Powerofficego Customers person will be synchronized with a ZohoCRM Contact.
+Powerofficego Customers person to  Contact
+------------------------------------------
+Every Powerofficego Customers person will be synchronized with a  Contact.
 
-Once a link between a Powerofficego Customers person and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers person and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers person and a ZohoCRM Contact:
+The following properties are synchronized between a Powerofficego Customers person and a  Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers person Property
-     - ZohoCRM Contact Property
-     - ZohoCRM Data Type
+     -  Contact Property
+     -  Data Type
    * - EmailAddress
      - Email
      - "string"
