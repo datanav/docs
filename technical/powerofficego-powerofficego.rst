@@ -2,12 +2,66 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-11-29 14:42:09
+Generated: 2023-11-29 15:04:37
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to PowerOfficeGo. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Powerofficego Contactperson to PowerOfficeGo Contactperson
+----------------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Contactperson and a PowerOfficeGo Contactperson must be established.
+
+A Powerofficego Contactperson will merge with a PowerOfficeGo Contactperson if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     - PowerOfficeGo Contactperson Property
+   * - emailAddress
+     - emailAddress
+   * - SocialSecurityNumber
+     - SocialSecurityNumber
+
+Once a link between a Powerofficego Contactperson and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Contactperson and a PowerOfficeGo Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     - PowerOfficeGo Contactperson Property
+     - PowerOfficeGo Data Type
+
+
+Powerofficego Currency to PowerOfficeGo Currency
+------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Currency and a PowerOfficeGo Currency must be established.
+
+A Powerofficego Currency will merge with a PowerOfficeGo Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Currency Property
+     - PowerOfficeGo Currency Property
+   * - code
+     - code
+
+Once a link between a Powerofficego Currency and a PowerOfficeGo Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Currency and a PowerOfficeGo Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Currency Property
+     - PowerOfficeGo Currency Property
+     - PowerOfficeGo Data Type
+
 
 Powerofficego Customers person to PowerOfficeGo Contactperson
 -------------------------------------------------------------
@@ -54,6 +108,102 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - MailAddress.ZipCode
      - zipCode
      - "string"
+
+
+Powerofficego Customers to PowerOfficeGo Customers
+--------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers and a PowerOfficeGo Customers must be established.
+
+A Powerofficego Customers will merge with a PowerOfficeGo Customers if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - PowerOfficeGo Customers Property
+   * - EmailAddress
+     - EmailAddress
+   * - EmailAddress
+     - InvoiceEmailAddress
+   * - InvoiceEmailAddress
+     - EmailAddress
+   * - InvoiceEmailAddress
+     - InvoiceEmailAddress
+   * - EmailAddress
+     - PaymentReminderEmailAddress
+   * - PaymentReminderEmailAddress
+     - EmailAddress
+   * - InvoiceEmailAddress
+     - PaymentReminderEmailAddress
+   * - PaymentReminderEmailAddress
+     - InvoiceEmailAddress
+   * - PaymentReminderEmailAddress
+     - PaymentReminderEmailAddress
+
+Once a link between a Powerofficego Customers and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a PowerOfficeGo Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - PowerOfficeGo Customers Property
+     - PowerOfficeGo Data Type
+
+
+Powerofficego Employees to PowerOfficeGo Employees
+--------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Employees and a PowerOfficeGo Employees must be established.
+
+A Powerofficego Employees will merge with a PowerOfficeGo Employees if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Employees Property
+     - PowerOfficeGo Employees Property
+   * - Id
+     - Id
+   * - Number
+     - Number
+
+Once a link between a Powerofficego Employees and a PowerOfficeGo Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Employees and a PowerOfficeGo Employees:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Employees Property
+     - PowerOfficeGo Employees Property
+     - PowerOfficeGo Data Type
+
+
+Powerofficego Salesorders to PowerOfficeGo Salesorders
+------------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Salesorders and a PowerOfficeGo Salesorders must be established.
+
+A Powerofficego Salesorders will merge with a PowerOfficeGo Salesorders if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorders Property
+     - PowerOfficeGo Salesorders Property
+   * - Id
+     - Id
+
+Once a link between a Powerofficego Salesorders and a PowerOfficeGo Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorders and a PowerOfficeGo Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorders Property
+     - PowerOfficeGo Salesorders Property
+     - PowerOfficeGo Data Type
 
 
 Powerofficego Contactperson to PowerOfficeGo Customers person
