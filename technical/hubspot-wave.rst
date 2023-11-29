@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
@@ -270,20 +270,20 @@ The following properties are synchronized between a HubSpot Contact and a Wave C
      - "string"
 
 
-HubSpot Deal to Wave Invoice
-----------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Wave Invoice.
+HubSpot Deal to  Invoice
+------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a  Invoice.
 
-Once a link between a HubSpot Deal and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a  Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a Wave Invoice:
+The following properties are synchronized between a HubSpot Deal and a  Invoice:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     - Wave Invoice Property
-     - Wave Data Type
+     -  Invoice Property
+     -  Data Type
    * - properties.deal_currency_code
      - currency.code
      - "string"
