@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2023-11-29 14:35:43
+Generated: 2023-11-29 14:37:48
 
 Introduction.
 ------------
@@ -311,70 +311,6 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
      - "string"
    * - shippingDetails.address.postalCode
      - info.addresses.items.address.postalCode
-     - "string"
-
-
-Wave Invoice to Wix Orders
---------------------------
-Every Wave Invoice will be synchronized with a Wix Orders.
-
-Once a link between a Wave Invoice and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Invoice and a Wix Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Invoice Property
-     - Wix Orders Property
-     - Wix Data Type
-   * - business.id
-     - buyerInfo.contactId
-     - "string"
-   * - business.id
-     - buyerInfo.id
-     - "string"
-   * - currency.code
-     - currency
-     - "string"
-   * - customer.id
-     - buyerInfo.contactId
-     - "string"
-   * - customer.id
-     - buyerInfo.id
-     - "string"
-   * - invoiceDate
-     - dateCreated
-     - "string"
-   * - items.description
-     - lineItems.name
-     - "string"
-   * - items.description
-     - lineItems.name.name
-     - "string"
-   * - items.price
-     - lineItems.price
-     - "string"
-   * - items.price
-     - lineItems.price.price
-     - "string"
-   * - items.product.id
-     - lineItems.productId
-     - "string"
-   * - items.product.id
-     - lineItems.productId.productId
-     - "string"
-   * - items.quantity
-     - lineItems.quantity
-     - "integer"
-   * - items.quantity
-     - lineItems.quantity.quantity
-     - "string"
-   * - items.unitPrice
-     - lineItems.price
-     - "string"
-   * - total.value
-     - totals.total
      - "string"
 
 
