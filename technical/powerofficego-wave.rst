@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-11-29 14:43:14
+Generated: 2023-11-29 14:44:42
 
 Introduction.
 ------------
@@ -71,7 +71,9 @@ The following properties are synchronized between a Powerofficego Contactperson 
 
 Powerofficego Contactperson to Wave Customer
 --------------------------------------------
-Every Powerofficego Contactperson will be synchronized with a Wave Customer.
+Before any synchronization can take place, a link between a Powerofficego Contactperson and a Wave Customer must be established.
+
+A new Wave Customer will be created from a Powerofficego Contactperson if it is connected to a Powerofficego Salesorder, Salesorders, Salesorderlines, or Outgoinginvoices that is synchronized into Wave.
 
 Once a link between a Powerofficego Contactperson and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -110,14 +112,8 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - lastName
      - lastName
      - "string"
-   * - partyId
-     - id
-     - "string"
    * - residenceCountryCode
      - address.country.code
-     - "string"
-   * - residenceCountryCode
-     - address.countryCode
      - "string"
    * - residenceCountryCode
      - shippingDetails.address.country.code
@@ -169,167 +165,6 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - MailAddress.ZipCode
      - address.postalCode
-     - "string"
-   * - PhoneNumber
-     - phone
-     - "string"
-   * - WebsiteUrl
-     - website
-     - "string"
-
-
-Powerofficego Departments to Wave Customer
-------------------------------------------
-Every Powerofficego Departments will be synchronized with a Wave Customer.
-
-Once a link between a Powerofficego Departments and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Departments and a Wave Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Departments Property
-     - Wave Customer Property
-     - Wave Data Type
-   * - Name
-     - name
-     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
-
-
-Powerofficego Employees to Wave Customer
-----------------------------------------
-Every Powerofficego Employees will be synchronized with a Wave Customer.
-
-Once a link between a Powerofficego Employees and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Employees and a Wave Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Employees Property
-     - Wave Customer Property
-     - Wave Data Type
-   * - DepartmentId
-     - id
-     - "string"
-   * - EmailAddress
-     - email
-     - "string"
-   * - FirstName
-     - firstName
-     - "string"
-   * - LastName
-     - lastName
-     - "string"
-   * - PhoneNumber
-     - mobile
-     - "string"
-
-
-Powerofficego Outgoinginvoices to Wave Invoice
-----------------------------------------------
-Every Powerofficego Outgoinginvoices will be synchronized with a Wave Invoice.
-
-Once a link between a Powerofficego Outgoinginvoices and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Outgoinginvoices and a Wave Invoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Outgoinginvoices Property
-     - Wave Invoice Property
-     - Wave Data Type
-   * - CurrencyCode
-     - currency.code
-     - "string"
-   * - customerId
-     - customer.id
-     - "string"
-
-
-Powerofficego Salesorderlines to Wave Invoice
----------------------------------------------
-Every Powerofficego Salesorderlines will be synchronized with a Wave Invoice.
-
-Once a link between a Powerofficego Salesorderlines and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorderlines and a Wave Invoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorderlines Property
-     - Wave Invoice Property
-     - Wave Data Type
-   * - Description
-     - items.description
-     - "string"
-   * - ProductCode
-     - items.product.id
-     - "string"
-   * - ProductId
-     - items.product.id
-     - "string"
-   * - ProductUnitPrice
-     - items.price
-     - "float"
-   * - Quantity
-     - items.quantity
-     - "float"
-
-
-Powerofficego Suppliers to Wave Customer
-----------------------------------------
-Every Powerofficego Suppliers will be synchronized with a Wave Customer.
-
-Once a link between a Powerofficego Suppliers and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Suppliers and a Wave Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Suppliers Property
-     - Wave Customer Property
-     - Wave Data Type
-   * - LegalName
-     - name
-     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
-   * - MailAddress.AddressLine1
-     - address.addressLine1
-     - "string"
-   * - MailAddress.AddressLine1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - MailAddress.AddressLine2
-     - address.addressLine2
-     - "string"
-   * - MailAddress.AddressLine2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - MailAddress.City
-     - address.city
-     - "string"
-   * - MailAddress.City
-     - shippingDetails.address.city
-     - "string"
-   * - MailAddress.CountryCode
-     - address.country.code
-     - "string"
-   * - MailAddress.CountryCode
-     - address.countryCode
-     - "string"
-   * - MailAddress.CountryCode
-     - shippingDetails.address.country.code
-     - "string"
-   * - MailAddress.ZipCode
-     - address.postalCode
-     - "string"
-   * - MailAddress.ZipCode
-     - shippingDetails.address.postalCode
      - "string"
    * - PhoneNumber
      - phone
