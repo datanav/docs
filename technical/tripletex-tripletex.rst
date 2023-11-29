@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-29 23:37:14
+Generated: 2023-11-29 23:38:14
 
 Introduction.
 ------------
@@ -769,22 +769,22 @@ The following properties are synchronized between a Tripletex Customer and a Tri
      - Tripletex Data Type
 
 
-Tripletex Customer to Tripletex Department
-------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer and a Tripletex Department must be established.
+Tripletex Customer to  Department
+---------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a  Department must be established.
 
-A new Tripletex Department will be created from a Tripletex Customer if it is connected to a Tripletex Contact, Employee, or Department that is synchronized into Tripletex.
+A new  Department will be created from a Tripletex Customer if it is connected to a Tripletex Contact, Employee, or Department that is synchronized into .
 
-Once a link between a Tripletex Customer and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a  Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a Tripletex Department:
+The following properties are synchronized between a Tripletex Customer and a  Department:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     - Tripletex Department Property
-     - Tripletex Data Type
+     -  Department Property
+     -  Data Type
    * - name
      - name
      - "string"
