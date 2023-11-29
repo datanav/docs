@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:45:21
 
 Introduction.
 ------------
@@ -165,39 +165,39 @@ The following properties are synchronized between a HubSpot Contact and a SuperO
      - SuperOffice Data Type
 
 
-HubSpot Contactcompanyassociation to SuperOffice Person
--------------------------------------------------------
-Every HubSpot Contactcompanyassociation will be synchronized with a SuperOffice Person.
+HubSpot Contactcompanyassociation to  Person
+--------------------------------------------
+Every HubSpot Contactcompanyassociation will be synchronized with a  Person.
 
-Once a link between a HubSpot Contactcompanyassociation and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contactcompanyassociation and a  Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contactcompanyassociation and a SuperOffice Person:
+The following properties are synchronized between a HubSpot Contactcompanyassociation and a  Person:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contactcompanyassociation Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
+     -  Person Property
+     -  Data Type
    * - toObjectId (Dependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypes)
      - Contact.ContactId
      - "integer"
 
 
-HubSpot User to SuperOffice Person
-----------------------------------
-Every HubSpot User will be synchronized with a SuperOffice Person.
+HubSpot User to  Person
+-----------------------
+Every HubSpot User will be synchronized with a  Person.
 
-Once a link between a HubSpot User and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot User and a  Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot User and a SuperOffice Person:
+The following properties are synchronized between a HubSpot User and a  Person:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot User Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
+     -  Person Property
+     -  Data Type
 
 
 HubSpot Product to SuperOffice Product
