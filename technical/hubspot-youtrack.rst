@@ -2,7 +2,7 @@
 HubSpot to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-29 14:42:04
+Generated: 2023-11-29 14:44:43
 
 Introduction.
 ------------
@@ -11,10 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 HubSpot Contact to YouTrack Users
 ---------------------------------
-Every HubSpot Contact will be synchronized with a YouTrack Users.
-
-If a matching YouTrack Users already exists, the HubSpot Contact will be merged with the existing one.
-If no matching YouTrack Users is found, a new YouTrack Users will be created.
+Before any synchronization can take place, a link between a HubSpot Contact and a YouTrack Users must be established.
 
 A HubSpot Contact will merge with a YouTrack Users if one of the following property combinations match:
 
@@ -64,63 +61,6 @@ The following properties are synchronized between a HubSpot Company and a YouTra
    * - properties.name
      - name
      - "string"
-
-
-HubSpot Company to YouTrack Usergroups
---------------------------------------
-Every HubSpot Company will be synchronized with a YouTrack Usergroups.
-
-Once a link between a HubSpot Company and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Company and a YouTrack Usergroups:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Company Property
-     - YouTrack Usergroups Property
-     - YouTrack Data Type
-   * - properties.name
-     - name
-     - "string"
-
-
-HubSpot Company to YouTrack Workitems
--------------------------------------
-Every HubSpot Company will be synchronized with a YouTrack Workitems.
-
-Once a link between a HubSpot Company and a YouTrack Workitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Company and a YouTrack Workitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Company Property
-     - YouTrack Workitems Property
-     - YouTrack Data Type
-   * - properties.description
-     - date
-     - "string"
-   * - properties.name
-     - updated
-     - "string"
-
-
-HubSpot Contactcompanyassociation to YouTrack Users
----------------------------------------------------
-Every HubSpot Contactcompanyassociation will be synchronized with a YouTrack Users.
-
-Once a link between a HubSpot Contactcompanyassociation and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contactcompanyassociation and a YouTrack Users:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contactcompanyassociation Property
-     - YouTrack Users Property
-     - YouTrack Data Type
 
 
 HubSpot Contactcompanyassociationtype to YouTrack Organizationroles
@@ -281,41 +221,6 @@ The following properties are synchronized between a HubSpot Ticket and a YouTrac
    * - HubSpot Ticket Property
      - YouTrack Hubprojects Property
      - YouTrack Data Type
-
-
-HubSpot Ticket to YouTrack Organizationroles
---------------------------------------------
-Every HubSpot Ticket will be synchronized with a YouTrack Organizationroles.
-
-Once a link between a HubSpot Ticket and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Ticket and a YouTrack Organizationroles:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Ticket Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
-
-
-HubSpot Ticket to YouTrack Usergroups
--------------------------------------
-Every HubSpot Ticket will be synchronized with a YouTrack Usergroups.
-
-Once a link between a HubSpot Ticket and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Ticket and a YouTrack Usergroups:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Ticket Property
-     - YouTrack Usergroups Property
-     - YouTrack Data Type
-   * - properties.subject
-     - users.id
-     - "string"
 
 
 HubSpot Ticketcompanyassociationtype to YouTrack Organizationroles
