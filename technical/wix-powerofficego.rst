@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:37:14
+Generated: 2023-11-29 23:38:14
 
 Introduction.
 ------------
@@ -224,20 +224,20 @@ The following properties are synchronized between a Wix.com Orders and a  Saleso
      - "string"
 
 
-Wix.com Orders to PowerOfficeGo Salesorders
--------------------------------------------
-Every Wix.com Orders will be synchronized with a PowerOfficeGo Salesorders.
+Wix.com Orders to  Salesorders
+------------------------------
+Every Wix.com Orders will be synchronized with a  Salesorders.
 
-Once a link between a Wix.com Orders and a PowerOfficeGo Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a  Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a PowerOfficeGo Salesorders:
+The following properties are synchronized between a Wix.com Orders and a  Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     - PowerOfficeGo Salesorders Property
-     - PowerOfficeGo Data Type
+     -  Salesorders Property
+     -  Data Type
    * - buyerInfo.id
      - CustomerReferenceContactPersonId
      - "string"
@@ -249,20 +249,20 @@ The following properties are synchronized between a Wix.com Orders and a PowerOf
      - "string"
 
 
-Wix.com Products to PowerOfficeGo Product
------------------------------------------
-Every Wix.com Products will be synchronized with a PowerOfficeGo Product.
+Wix.com Products to  Product
+----------------------------
+Every Wix.com Products will be synchronized with a  Product.
 
-Once a link between a Wix.com Products and a PowerOfficeGo Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a PowerOfficeGo Product:
+The following properties are synchronized between a Wix.com Products and a  Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     - PowerOfficeGo Product Property
-     - PowerOfficeGo Data Type
+     -  Product Property
+     -  Data Type
    * - costRange.maxValue
      - costPrice
      - "if", "is-decimal", "decimal", "integer"]
