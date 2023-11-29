@@ -2,37 +2,37 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2023-11-29 23:36:03
+Generated: 2023-11-29 23:37:14
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from YouTrack to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-YouTrack Users to Zendesk Users
--------------------------------
-Before any synchronization can take place, a link between a YouTrack Users and a Zendesk Users must be established.
+YouTrack Users to  Users
+------------------------
+Before any synchronization can take place, a link between a YouTrack Users and a  Users must be established.
 
-A YouTrack Users will merge with a Zendesk Users if one of the following property combinations match:
+A YouTrack Users will merge with a  Users if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     - Zendesk Users Property
+     -  Users Property
    * - profile.email.email
      - email
 
-Once a link between a YouTrack Users and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Users and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Users and a Zendesk Users:
+The following properties are synchronized between a YouTrack Users and a  Users:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     - Zendesk Users Property
-     - Zendesk Data Type
+     -  Users Property
+     -  Data Type
    * - profile.email
      - email
      - "string"
@@ -98,20 +98,20 @@ The following properties are synchronized between a YouTrack Usergroups and a Ze
      - "string"
 
 
-YouTrack Issues to Zendesk Tickets
-----------------------------------
-Every YouTrack Issues will be synchronized with a Zendesk Tickets.
+YouTrack Issues to  Tickets
+---------------------------
+Every YouTrack Issues will be synchronized with a  Tickets.
 
-Once a link between a YouTrack Issues and a Zendesk Tickets is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Issues and a  Tickets is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Issues and a Zendesk Tickets:
+The following properties are synchronized between a YouTrack Issues and a  Tickets:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Issues Property
-     - Zendesk Tickets Property
-     - Zendesk Data Type
+     -  Tickets Property
+     -  Data Type
    * - reporter.id
      - requester_id
      - "string"
