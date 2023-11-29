@@ -2,7 +2,7 @@
 Tripletex to BusinessCentral Dataflow
 =====================================
 
-Generated: 2023-11-29 14:37:49
+Generated: 2023-11-29 14:44:43
 
 Introduction.
 ------------
@@ -37,22 +37,6 @@ The following properties are synchronized between a Tripletex Department and a B
    :header-rows: 1
 
    * - Tripletex Department Property
-     - BusinessCentral Company Property
-     - BusinessCentral Data Type
-
-
-Tripletex Supplier to BusinessCentral Company
----------------------------------------------
-Every Tripletex Supplier will be synchronized with a BusinessCentral Company.
-
-Once a link between a Tripletex Supplier and a BusinessCentral Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Supplier and a BusinessCentral Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Supplier Property
      - BusinessCentral Company Property
      - BusinessCentral Data Type
 
