@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-11-08 08:37:48
+Generated: 2023-11-29 14:34:53
 
 Introduction.
 ------------
@@ -52,8 +52,6 @@ A Tripletex Employee will merge with a Wix Contacts if one of the following prop
 
    * - Tripletex Employee Property
      - Wix Contacts Property
-   * - email
-     - info.emails
    * - email
      - primaryInfo.email
 
@@ -279,8 +277,6 @@ A Tripletex Contact will merge with a Wix Contacts if one of the following prope
 
    * - Tripletex Contact Property
      - Wix Contacts Property
-   * - email
-     - info.emails
    * - email
      - primaryInfo.email
 
