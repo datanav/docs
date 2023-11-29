@@ -2,7 +2,7 @@
 Businesscentral to SuperOffice Dataflow
 =======================================
 
-Generated: 2023-11-29 14:37:49
+Generated: 2023-11-29 14:44:43
 
 Introduction.
 ------------
@@ -72,20 +72,4 @@ The following properties are synchronized between a Businesscentral Contact comp
    * - postalCode
      - Address.Street.Zipcode
      - "string"
-
-
-Businesscentral Contact to SuperOffice Person
----------------------------------------------
-Every Businesscentral Contact will be synchronized with a SuperOffice Person.
-
-Once a link between a Businesscentral Contact and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Contact and a SuperOffice Person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Contact Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
 
