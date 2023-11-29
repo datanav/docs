@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-11-29 15:04:37
+Generated: 2023-11-29 15:05:02
 
 Introduction.
 ------------
@@ -48,6 +48,15 @@ The following properties are synchronized between a HubSpot Company and a HubSpo
    * - properties.country
      - properties.country
      - "string"
+   * - properties.country
+     - properties.industry
+     - "string"
+   * - properties.country
+     - properties.state
+     - "string"
+   * - properties.country
+     - properties.type
+     - "string"
    * - properties.description
      - properties.description
      - "string"
@@ -55,13 +64,40 @@ The following properties are synchronized between a HubSpot Company and a HubSpo
      - properties.hs_parent_company_id
      - "string"
    * - properties.industry
+     - properties.country
+     - "string"
+   * - properties.industry
      - properties.industry
+     - "string"
+   * - properties.industry
+     - properties.state
+     - "string"
+   * - properties.industry
+     - properties.type
      - "string"
    * - properties.name
      - properties.name
      - "string"
    * - properties.phone
      - properties.phone
+     - "string"
+   * - properties.state
+     - properties.country
+     - "string"
+   * - properties.state
+     - properties.industry
+     - "string"
+   * - properties.state
+     - properties.type
+     - "string"
+   * - properties.type
+     - properties.country
+     - "string"
+   * - properties.type
+     - properties.industry
+     - "string"
+   * - properties.type
+     - properties.state
      - "string"
    * - properties.type
      - properties.type
@@ -112,6 +148,9 @@ The following properties are synchronized between a HubSpot Contact and a HubSpo
    * - properties.country
      - properties.country
      - "string"
+   * - properties.country
+     - properties.state
+     - "string"
    * - properties.date_of_birth
      - properties.date_of_birth
      - "string"
@@ -129,6 +168,9 @@ The following properties are synchronized between a HubSpot Contact and a HubSpo
      - "string"
    * - properties.phone
      - properties.phone
+     - "string"
+   * - properties.state
+     - properties.country
      - "string"
    * - properties.work_email
      - properties.work_email
