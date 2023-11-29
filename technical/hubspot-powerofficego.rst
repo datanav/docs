@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-11-27 20:43:47
+Generated: 2023-11-29 14:34:53
 
 Introduction.
 ------------
@@ -511,8 +511,6 @@ A HubSpot Account will merge with a PowerOfficeGo Currency if one of the followi
    * - HubSpot Account Property
      - PowerOfficeGo Currency Property
    * - companyCurrency
-     - Code
-   * - companyCurrency
      - code
 
 Once a link between a HubSpot Account and a PowerOfficeGo Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
@@ -541,8 +539,6 @@ A HubSpot Deal will merge with a PowerOfficeGo Currency if one of the following 
 
    * - HubSpot Deal Property
      - PowerOfficeGo Currency Property
-   * - properties.deal_currency_code
-     - Code
    * - properties.deal_currency_code
      - code
 
