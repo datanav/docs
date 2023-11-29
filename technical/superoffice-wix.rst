@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-29 23:36:02
+Generated: 2023-11-29 23:37:13
 
 Introduction.
 ------------
@@ -70,59 +70,59 @@ The following properties are synchronized between a SuperOffice Person and a Wix
      - "string"
 
 
-SuperOffice Person to Wix Members
----------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a Wix Members must be established.
+SuperOffice Person to  Members
+------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a  Members must be established.
 
-A SuperOffice Person will merge with a Wix Members if one of the following property combinations match:
+A SuperOffice Person will merge with a  Members if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - Wix Members Property
+     -  Members Property
    * - Emails.Value
      - loginEmail
 
-Once a link between a SuperOffice Person and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a Wix Members:
+The following properties are synchronized between a SuperOffice Person and a  Members:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - Wix Members Property
-     - Wix Data Type
+     -  Members Property
+     -  Data Type
    * - Emails.Value
      - loginEmail
      - "string"
 
 
-SuperOffice User to Wix Contacts
---------------------------------
-Before any synchronization can take place, a link between a SuperOffice User and a Wix Contacts must be established.
+SuperOffice User to  Contacts
+-----------------------------
+Before any synchronization can take place, a link between a SuperOffice User and a  Contacts must be established.
 
-A SuperOffice User will merge with a Wix Contacts if one of the following property combinations match:
+A SuperOffice User will merge with a  Contacts if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     - Wix Contacts Property
+     -  Contacts Property
    * - personEmail
      - primaryInfo.email
 
-Once a link between a SuperOffice User and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice User and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice User and a Wix Contacts:
+The following properties are synchronized between a SuperOffice User and a  Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     - Wix Contacts Property
-     - Wix Data Type
+     -  Contacts Property
+     -  Data Type
    * - firstName
      - info.name.first
      - "string"
@@ -137,30 +137,30 @@ The following properties are synchronized between a SuperOffice User and a Wix C
      - "string"
 
 
-SuperOffice User to Wix Members
--------------------------------
-Before any synchronization can take place, a link between a SuperOffice User and a Wix Members must be established.
+SuperOffice User to  Members
+----------------------------
+Before any synchronization can take place, a link between a SuperOffice User and a  Members must be established.
 
-A SuperOffice User will merge with a Wix Members if one of the following property combinations match:
+A SuperOffice User will merge with a  Members if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     - Wix Members Property
+     -  Members Property
    * - personEmail
      - loginEmail
 
-Once a link between a SuperOffice User and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice User and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice User and a Wix Members:
+The following properties are synchronized between a SuperOffice User and a  Members:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     - Wix Members Property
-     - Wix Data Type
+     -  Members Property
+     -  Data Type
    * - personEmail
      - loginEmail
      - "string"
@@ -211,20 +211,20 @@ The following properties are synchronized between a SuperOffice Contact and a Wi
      - "string"
 
 
-SuperOffice Product to Wix Inventory
-------------------------------------
-Every SuperOffice Product will be synchronized with a Wix Inventory.
+SuperOffice Product to  Inventory
+---------------------------------
+Every SuperOffice Product will be synchronized with a  Inventory.
 
-Once a link between a SuperOffice Product and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Product and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Product and a Wix Inventory:
+The following properties are synchronized between a SuperOffice Product and a  Inventory:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Product Property
-     - Wix Inventory Property
-     - Wix Data Type
+     -  Inventory Property
+     -  Data Type
 
 
 SuperOffice Product to Wix Products
