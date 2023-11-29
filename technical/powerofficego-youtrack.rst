@@ -2,7 +2,7 @@
 Powerofficego to YouTrack Dataflow
 ==================================
 
-Generated: 2023-11-29 14:42:04
+Generated: 2023-11-29 14:44:43
 
 Introduction.
 ------------
@@ -11,10 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Powerofficego Contactperson to YouTrack Users
 ---------------------------------------------
-Every Powerofficego Contactperson will be synchronized with a YouTrack Users.
-
-If a matching YouTrack Users already exists, the Powerofficego Contactperson will be merged with the existing one.
-If no matching YouTrack Users is found, a new YouTrack Users will be created.
+Before any synchronization can take place, a link between a Powerofficego Contactperson and a YouTrack Users must be established.
 
 A Powerofficego Contactperson will merge with a YouTrack Users if one of the following property combinations match:
 
@@ -114,44 +111,6 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Customers to YouTrack Usergroups
-----------------------------------------------
-Every Powerofficego Customers will be synchronized with a YouTrack Usergroups.
-
-Once a link between a Powerofficego Customers and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customers and a YouTrack Usergroups:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers Property
-     - YouTrack Usergroups Property
-     - YouTrack Data Type
-   * - Name
-     - name
-     - "string"
-
-
-Powerofficego Customers to YouTrack Workitems
----------------------------------------------
-Every Powerofficego Customers will be synchronized with a YouTrack Workitems.
-
-Once a link between a Powerofficego Customers and a YouTrack Workitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customers and a YouTrack Workitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers Property
-     - YouTrack Workitems Property
-     - YouTrack Data Type
-   * - Name
-     - updated
-     - "string"
-
-
 Powerofficego Departments to YouTrack Groups
 --------------------------------------------
 Every Powerofficego Departments will be synchronized with a YouTrack Groups.
@@ -168,66 +127,6 @@ The following properties are synchronized between a Powerofficego Departments an
      - YouTrack Data Type
    * - Name
      - name
-     - "string"
-
-
-Powerofficego Departments to YouTrack Usergroups
-------------------------------------------------
-Every Powerofficego Departments will be synchronized with a YouTrack Usergroups.
-
-Once a link between a Powerofficego Departments and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Departments and a YouTrack Usergroups:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Departments Property
-     - YouTrack Usergroups Property
-     - YouTrack Data Type
-   * - Name
-     - name
-     - "string"
-
-
-Powerofficego Departments to YouTrack Workitems
------------------------------------------------
-Every Powerofficego Departments will be synchronized with a YouTrack Workitems.
-
-Once a link between a Powerofficego Departments and a YouTrack Workitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Departments and a YouTrack Workitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Departments Property
-     - YouTrack Workitems Property
-     - YouTrack Data Type
-   * - Name
-     - updated
-     - "string"
-
-
-Powerofficego Employees to YouTrack Users
------------------------------------------
-Every Powerofficego Employees will be synchronized with a YouTrack Users.
-
-Once a link between a Powerofficego Employees and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Employees and a YouTrack Users:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Employees Property
-     - YouTrack Users Property
-     - YouTrack Data Type
-   * - EmailAddress
-     - profile.email.email
-     - "string"
-   * - MailAddress.CountryCode
-     - userType.id
      - "string"
 
 
