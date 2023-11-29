@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-11-29 14:42:09
+Generated: 2023-11-29 14:44:42
 
 Introduction.
 ------------
@@ -40,10 +40,7 @@ The following properties are synchronized between a Tripletex Contact and a Wix 
 
 Tripletex Employee to Wix Contacts
 ----------------------------------
-Every Tripletex Employee will be synchronized with a Wix Contacts.
-
-If a matching Wix Contacts already exists, the Tripletex Employee will be merged with the existing one.
-If no matching Wix Contacts is found, a new Wix Contacts will be created.
+Before any synchronization can take place, a link between a Tripletex Employee and a Wix Contacts must be established.
 
 A Tripletex Employee will merge with a Wix Contacts if one of the following property combinations match:
 
@@ -184,22 +181,6 @@ The following properties are synchronized between a Tripletex Customer and a Wix
    * - postalAddress.postalCode
      - info.addresses.items.address.postalCode
      - "string"
-
-
-Tripletex Productgrouprelation to Wix Inventory
------------------------------------------------
-Every Tripletex Productgrouprelation will be synchronized with a Wix Inventory.
-
-Once a link between a Tripletex Productgrouprelation and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Productgrouprelation and a Wix Inventory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productgrouprelation Property
-     - Wix Inventory Property
-     - Wix Data Type
 
 
 Tripletex Contact to Wix Contacts
