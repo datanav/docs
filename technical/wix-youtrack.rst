@@ -2,7 +2,7 @@
 Wix.com to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-29 14:42:04
+Generated: 2023-11-29 14:44:43
 
 Introduction.
 ------------
@@ -11,10 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Wix.com Contacts to YouTrack Users
 ----------------------------------
-Every Wix.com Contacts will be synchronized with a YouTrack Users.
-
-If a matching YouTrack Users already exists, the Wix.com Contacts will be merged with the existing one.
-If no matching YouTrack Users is found, a new YouTrack Users will be created.
+Before any synchronization can take place, a link between a Wix.com Contacts and a YouTrack Users must be established.
 
 A Wix.com Contacts will merge with a YouTrack Users if one of the following property combinations match:
 
@@ -46,10 +43,7 @@ The following properties are synchronized between a Wix.com Contacts and a YouTr
 
 Wix.com Members to YouTrack Users
 ---------------------------------
-Every Wix.com Members will be synchronized with a YouTrack Users.
-
-If a matching YouTrack Users already exists, the Wix.com Members will be merged with the existing one.
-If no matching YouTrack Users is found, a new YouTrack Users will be created.
+Before any synchronization can take place, a link between a Wix.com Members and a YouTrack Users must be established.
 
 A Wix.com Members will merge with a YouTrack Users if one of the following property combinations match:
 
