@@ -2,46 +2,12 @@
 Powerofficego to Freshteam Dataflow
 ===================================
 
-Generated: 2023-11-29 14:42:04
+Generated: 2023-11-29 14:44:43
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Freshteam. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Powerofficego Contactperson to Freshteam Employee
--------------------------------------------------
-Every Powerofficego Contactperson will be synchronized with a Freshteam Employee.
-
-Once a link between a Powerofficego Contactperson and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Contactperson and a Freshteam Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Contactperson Property
-     - Freshteam Employee Property
-     - Freshteam Data Type
-   * - dateOfBirth
-     - date_of_birth
-     - "string"
-   * - emailAddress
-     - personal_email
-     - "string"
-   * - firstName
-     - first_name
-     - "string"
-   * - lastName
-     - last_name
-     - "string"
-   * - partyId
-     - designation
-     - "string"
-   * - phoneNumber
-     - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
-     - "string"
-
 
 Powerofficego Departments to Freshteam Department
 -------------------------------------------------
