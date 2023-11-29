@@ -2,7 +2,7 @@
 Zendesk to  Dataflow
 ====================
 
-Generated: 2023-11-29 23:37:14
+Generated: 2023-11-29 23:38:14
 
 Introduction.
 ------------
@@ -41,43 +41,43 @@ The following properties are synchronized between a Zendesk Users and a  Contact
      - "integer"
 
 
-Zendesk Organizations to Tripletex Customer
--------------------------------------------
-Before any synchronization can take place, a link between a Zendesk Organizations and a Tripletex Customer must be established.
+Zendesk Organizations to  Customer
+----------------------------------
+Before any synchronization can take place, a link between a Zendesk Organizations and a  Customer must be established.
 
-A new Tripletex Customer will be created from a Zendesk Organizations if it is connected to a Zendesk Users that is synchronized into Tripletex.
+A new  Customer will be created from a Zendesk Organizations if it is connected to a Zendesk Users that is synchronized into .
 
-Once a link between a Zendesk Organizations and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Organizations and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Organizations and a Tripletex Customer:
+The following properties are synchronized between a Zendesk Organizations and a  Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Organizations Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
+     -  Customer Property
+     -  Data Type
    * - name
      - name
      - "string"
 
 
-Zendesk Organizations to Tripletex Department
----------------------------------------------
-Before any synchronization can take place, a link between a Zendesk Organizations and a Tripletex Department must be established.
+Zendesk Organizations to  Department
+------------------------------------
+Before any synchronization can take place, a link between a Zendesk Organizations and a  Department must be established.
 
-A new Tripletex Department will be created from a Zendesk Organizations if it is connected to a Zendesk Users that is synchronized into Tripletex.
+A new  Department will be created from a Zendesk Organizations if it is connected to a Zendesk Users that is synchronized into .
 
-Once a link between a Zendesk Organizations and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Organizations and a  Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Organizations and a Tripletex Department:
+The following properties are synchronized between a Zendesk Organizations and a  Department:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Organizations Property
-     - Tripletex Department Property
-     - Tripletex Data Type
+     -  Department Property
+     -  Data Type
    * - name
      - name
      - "string"
