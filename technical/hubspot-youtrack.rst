@@ -2,7 +2,7 @@
 HubSpot to YouTrack Dataflow
 ============================
 
-Generated: 2023-11-29 14:35:43
+Generated: 2023-11-29 14:37:48
 
 Introduction.
 ------------
@@ -107,22 +107,6 @@ The following properties are synchronized between a HubSpot Company and a YouTra
      - "string"
 
 
-HubSpot Contact to YouTrack Usersyoutrack
------------------------------------------
-Every HubSpot Contact will be synchronized with a YouTrack Usersyoutrack.
-
-Once a link between a HubSpot Contact and a YouTrack Usersyoutrack is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contact and a YouTrack Usersyoutrack:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     - YouTrack Usersyoutrack Property
-     - YouTrack Data Type
-
-
 HubSpot Contactcompanyassociation to YouTrack Users
 ---------------------------------------------------
 Every HubSpot Contactcompanyassociation will be synchronized with a YouTrack Users.
@@ -136,22 +120,6 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
 
    * - HubSpot Contactcompanyassociation Property
      - YouTrack Users Property
-     - YouTrack Data Type
-
-
-HubSpot Contactcompanyassociation to YouTrack Usersyoutrack
------------------------------------------------------------
-Every HubSpot Contactcompanyassociation will be synchronized with a YouTrack Usersyoutrack.
-
-Once a link between a HubSpot Contactcompanyassociation and a YouTrack Usersyoutrack is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contactcompanyassociation and a YouTrack Usersyoutrack:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contactcompanyassociation Property
-     - YouTrack Usersyoutrack Property
      - YouTrack Data Type
 
 
@@ -363,22 +331,6 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
 
    * - HubSpot Ticketcompanyassociationtype Property
      - YouTrack Organizationroles Property
-     - YouTrack Data Type
-
-
-HubSpot User to YouTrack Usersyoutrack
---------------------------------------
-Every HubSpot User will be synchronized with a YouTrack Usersyoutrack.
-
-Once a link between a HubSpot User and a YouTrack Usersyoutrack is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot User and a YouTrack Usersyoutrack:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot User Property
-     - YouTrack Usersyoutrack Property
      - YouTrack Data Type
 
 
