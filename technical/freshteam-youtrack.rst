@@ -2,7 +2,7 @@
 Freshteam to YouTrack Dataflow
 ==============================
 
-Generated: 2023-11-29 14:37:48
+Generated: 2023-11-29 14:44:43
 
 Introduction.
 ------------
@@ -25,74 +25,5 @@ The following properties are synchronized between a Freshteam Department and a Y
      - YouTrack Data Type
    * - name
      - name
-     - "string"
-
-
-Freshteam Department to YouTrack Usergroups
--------------------------------------------
-Every Freshteam Department will be synchronized with a YouTrack Usergroups.
-
-Once a link between a Freshteam Department and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Freshteam Department and a YouTrack Usergroups:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Freshteam Department Property
-     - YouTrack Usergroups Property
-     - YouTrack Data Type
-   * - name
-     - name
-     - "string"
-
-
-Freshteam Department to YouTrack Workitems
-------------------------------------------
-Every Freshteam Department will be synchronized with a YouTrack Workitems.
-
-Once a link between a Freshteam Department and a YouTrack Workitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Freshteam Department and a YouTrack Workitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Freshteam Department Property
-     - YouTrack Workitems Property
-     - YouTrack Data Type
-   * - name
-     - updated
-     - "string"
-
-
-Freshteam Employee to YouTrack Users
-------------------------------------
-Every Freshteam Employee will be synchronized with a YouTrack Users.
-
-Once a link between a Freshteam Employee and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Freshteam Employee and a YouTrack Users:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Freshteam Employee Property
-     - YouTrack Users Property
-     - YouTrack Data Type
-   * - branch_id
-     - projectRoles.id
-     - "string"
-   * - business_unit_id
-     - projectRoles.id
-     - "string"
-   * - department_id
-     - projectRoles.id
-     - "string"
-   * - official_email
-     - profile.email.email
-     - "string"
-   * - sub_department_id
-     - projectRoles.id
      - "string"
 
