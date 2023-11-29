@@ -2,7 +2,7 @@
 Wave Financial to YouTrack Dataflow
 ===================================
 
-Generated: 2023-11-29 14:37:48
+Generated: 2023-11-29 14:44:43
 
 Introduction.
 ------------
@@ -115,47 +115,6 @@ The following properties are synchronized between a Wave Customer and a YouTrack
      - "string"
 
 
-Wave Customer to YouTrack Usergroups
-------------------------------------
-Every Wave Customer will be synchronized with a YouTrack Usergroups.
-
-Once a link between a Wave Customer and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a YouTrack Usergroups:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - YouTrack Usergroups Property
-     - YouTrack Data Type
-   * - name
-     - name
-     - "string"
-
-
-Wave Customer to YouTrack Workitems
------------------------------------
-Every Wave Customer will be synchronized with a YouTrack Workitems.
-
-Once a link between a Wave Customer and a YouTrack Workitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a YouTrack Workitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - YouTrack Workitems Property
-     - YouTrack Data Type
-   * - internalNotes
-     - date
-     - "string"
-   * - name
-     - updated
-     - "string"
-
-
 Wave Vendor to YouTrack Groups
 ------------------------------
 Every Wave Vendor will be synchronized with a YouTrack Groups.
@@ -172,46 +131,5 @@ The following properties are synchronized between a Wave Vendor and a YouTrack G
      - YouTrack Data Type
    * - name
      - name
-     - "string"
-
-
-Wave Vendor to YouTrack Usergroups
-----------------------------------
-Every Wave Vendor will be synchronized with a YouTrack Usergroups.
-
-Once a link between a Wave Vendor and a YouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a YouTrack Usergroups:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     - YouTrack Usergroups Property
-     - YouTrack Data Type
-   * - name
-     - name
-     - "string"
-
-
-Wave Vendor to YouTrack Workitems
----------------------------------
-Every Wave Vendor will be synchronized with a YouTrack Workitems.
-
-Once a link between a Wave Vendor and a YouTrack Workitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a YouTrack Workitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     - YouTrack Workitems Property
-     - YouTrack Data Type
-   * - internalNotes
-     - date
-     - "string"
-   * - name
-     - updated
      - "string"
 
