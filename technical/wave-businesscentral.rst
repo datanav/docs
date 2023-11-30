@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-30 15:20:05
+Generated: 2023-11-30 20:48:28
 
 Introduction.
 ------------
@@ -55,6 +55,34 @@ The following properties are synchronized between a Wave Vendor and a  Company:
    * - Wave Vendor Property
      -  Company Property
      -  Data Type
+
+
+Wave Invoice to  Salesorderlines
+--------------------------------
+Every Wave Invoice will be synchronized with a  Salesorderlines.
+
+Once a link between a Wave Invoice and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a  Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     -  Salesorderlines Property
+     -  Data Type
+   * - items.description
+     - description
+     - "string"
+   * - items.price
+     - amountExcludingTax
+     - "string"
+   * - items.product.id
+     - itemId
+     - "string"
+   * - items.quantity
+     - invoiceQuantity
+     - "string"
 
 
 Wave Invoice to  Salesorders
