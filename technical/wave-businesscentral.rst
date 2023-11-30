@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-30 13:24:08
+Generated: 2023-11-30 13:43:09
 
 Introduction.
 ------------
@@ -57,5 +57,8 @@ The following properties are synchronized between a Wave Invoice and a  Salesord
      -  Data Type
    * - customer.id
      - customerId
+     - "string"
+   * - total.value
+     - totalAmountExcludingTax
      - "string"
 
