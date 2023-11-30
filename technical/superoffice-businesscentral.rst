@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-30 15:19:02
+Generated: 2023-11-30 20:48:28
 
 Introduction.
 ------------
@@ -39,4 +39,35 @@ The following properties are synchronized between a SuperOffice Product and a  I
    * - SuperOffice Product Property
      -  Items Property
      -  Data Type
+
+
+SuperOffice Quoteline to  Salesorderlines
+-----------------------------------------
+Every SuperOffice Quoteline will be synchronized with a  Salesorderlines.
+
+Once a link between a SuperOffice Quoteline and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a  Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     -  Salesorderlines Property
+     -  Data Type
+   * - Description
+     - description
+     - "string"
+   * - DiscountPercent
+     - discountPercent
+     - "string"
+   * - ERPProductKey
+     - itemId
+     - "string"
+   * - Quantity
+     - invoiceQuantity
+     - "string"
+   * - UnitListPrice
+     - amountExcludingTax
+     - "string"
 
