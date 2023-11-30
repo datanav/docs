@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-11-30 12:43:05
+Generated: 2023-11-30 13:14:08
 
 Introduction.
 ------------
@@ -47,4 +47,20 @@ The following properties are synchronized between a Businesscentral Contact pers
    * - postalCode
      - zipCode
      - "string"
+
+
+Businesscentral Salesorders to  Salesorders
+-------------------------------------------
+Every Businesscentral Salesorders will be synchronized with a  Salesorders.
+
+Once a link between a Businesscentral Salesorders and a  Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorders and a  Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorders Property
+     -  Salesorders Property
+     -  Data Type
 
