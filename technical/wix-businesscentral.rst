@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-30 15:20:05
+Generated: 2023-11-30 15:21:03
 
 Introduction.
 ------------
@@ -21,6 +21,22 @@ The following properties are synchronized between a Wix.com Inventory and a  Ite
    :header-rows: 1
 
    * - Wix.com Inventory Property
+     -  Items Property
+     -  Data Type
+
+
+Wix.com Products to  Items
+--------------------------
+Every Wix.com Products will be synchronized with a  Items.
+
+Once a link between a Wix.com Products and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a  Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
      -  Items Property
      -  Data Type
 
