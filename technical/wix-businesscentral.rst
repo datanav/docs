@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-30 13:24:08
+Generated: 2023-11-30 13:43:09
 
 Introduction.
 ------------
@@ -25,5 +25,8 @@ The following properties are synchronized between a Wix.com Orders and a  Saleso
      -  Data Type
    * - buyerInfo.id
      - customerId
+     - "string"
+   * - totals.total
+     - totalAmountExcludingTax
      - "string"
 
