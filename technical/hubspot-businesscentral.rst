@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-30 13:15:03
+Generated: 2023-11-30 13:22:08
 
 Introduction.
 ------------
@@ -22,21 +22,5 @@ The following properties are synchronized between a HubSpot Company and a  Compa
 
    * - HubSpot Company Property
      -  Company Property
-     -  Data Type
-
-
-HubSpot Deal to  Salesorders
-----------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a  Salesorders.
-
-Once a link between a HubSpot Deal and a  Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Deal and a  Salesorders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     -  Salesorders Property
      -  Data Type
 
