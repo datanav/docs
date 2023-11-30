@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-30 15:21:03
+Generated: 2023-11-30 20:48:28
 
 Introduction.
 ------------
@@ -39,6 +39,31 @@ The following properties are synchronized between a Wix.com Products and a  Item
    * - Wix.com Products Property
      -  Items Property
      -  Data Type
+
+
+Wix.com Orders to  Salesorderlines
+----------------------------------
+Every Wix.com Orders will be synchronized with a  Salesorderlines.
+
+Once a link between a Wix.com Orders and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Orders and a  Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Orders Property
+     -  Salesorderlines Property
+     -  Data Type
+   * - lineItems.price
+     - amountExcludingTax
+     - "string"
+   * - lineItems.productId
+     - itemId
+     - "string"
+   * - lineItems.quantity
+     - invoiceQuantity
+     - "string"
 
 
 Wix.com Orders to  Salesorders
