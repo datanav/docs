@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-30 13:38:11
+Generated: 2023-11-30 13:41:10
 
 Introduction.
 ------------
@@ -66,5 +66,8 @@ The following properties are synchronized between a Tripletex Order and a  Sales
      - "string"
    * - orderDate
      - orderDate
+     - "string"
+   * - ourContactEmployee.id
+     - salesperson
      - "string"
 
