@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-30 00:10:08
+Generated: 2023-11-30 00:21:07
 
 Introduction.
 ------------
@@ -42,6 +42,201 @@ The following properties are synchronized between a HubSpot Contact and a  Users
    * - properties.work_email
      - profile.email.email
      - "string"
+
+
+HubSpot Company to  Groups
+--------------------------
+Every HubSpot Company will be synchronized with a  Groups.
+
+Once a link between a HubSpot Company and a  Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Company and a  Groups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Company Property
+     -  Groups Property
+     -  Data Type
+   * - properties.name
+     - name
+     - "string"
+
+
+HubSpot Contactcompanyassociationtype to  Organizationroles
+-----------------------------------------------------------
+Every HubSpot Contactcompanyassociationtype will be synchronized with a  Organizationroles.
+
+Once a link between a HubSpot Contactcompanyassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contactcompanyassociationtype and a  Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contactcompanyassociationtype Property
+     -  Organizationroles Property
+     -  Data Type
+
+
+HubSpot Dealcompanyassociationtype to  Organizationroles
+--------------------------------------------------------
+Every HubSpot Dealcompanyassociationtype will be synchronized with a  Organizationroles.
+
+Once a link between a HubSpot Dealcompanyassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcompanyassociationtype and a  Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcompanyassociationtype Property
+     -  Organizationroles Property
+     -  Data Type
+
+
+HubSpot Dealcontactassociationtype to  Organizationroles
+--------------------------------------------------------
+Every HubSpot Dealcontactassociationtype will be synchronized with a  Organizationroles.
+
+Once a link between a HubSpot Dealcontactassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcontactassociationtype and a  Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcontactassociationtype Property
+     -  Organizationroles Property
+     -  Data Type
+
+
+HubSpot Lineitemdealassociationtype to  Organizationroles
+---------------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a  Organizationroles.
+
+Once a link between a HubSpot Lineitemdealassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a  Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociationtype Property
+     -  Organizationroles Property
+     -  Data Type
+
+
+HubSpot Lineitemquoteassociationtype to  Organizationroles
+----------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a  Organizationroles.
+
+Once a link between a HubSpot Lineitemquoteassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a  Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociationtype Property
+     -  Organizationroles Property
+     -  Data Type
+
+
+HubSpot Quotecompanyassociationtype to  Organizationroles
+---------------------------------------------------------
+Every HubSpot Quotecompanyassociationtype will be synchronized with a  Organizationroles.
+
+Once a link between a HubSpot Quotecompanyassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecompanyassociationtype and a  Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecompanyassociationtype Property
+     -  Organizationroles Property
+     -  Data Type
+
+
+HubSpot Quotecontactassociationtype to  Organizationroles
+---------------------------------------------------------
+Every HubSpot Quotecontactassociationtype will be synchronized with a  Organizationroles.
+
+Once a link between a HubSpot Quotecontactassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecontactassociationtype and a  Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecontactassociationtype Property
+     -  Organizationroles Property
+     -  Data Type
+
+
+HubSpot Quotedealassociationtype to  Organizationroles
+------------------------------------------------------
+Every HubSpot Quotedealassociationtype will be synchronized with a  Organizationroles.
+
+Once a link between a HubSpot Quotedealassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotedealassociationtype and a  Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotedealassociationtype Property
+     -  Organizationroles Property
+     -  Data Type
+
+
+HubSpot Quotequotetemplateassociationtype to  Organizationroles
+---------------------------------------------------------------
+Every HubSpot Quotequotetemplateassociationtype will be synchronized with a  Organizationroles.
+
+Once a link between a HubSpot Quotequotetemplateassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotequotetemplateassociationtype and a  Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotequotetemplateassociationtype Property
+     -  Organizationroles Property
+     -  Data Type
+
+
+HubSpot Ticket to  Hubprojects
+------------------------------
+Every HubSpot Ticket will be synchronized with a  Hubprojects.
+
+Once a link between a HubSpot Ticket and a  Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Ticket and a  Hubprojects:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Ticket Property
+     -  Hubprojects Property
+     -  Data Type
+
+
+HubSpot Ticketcompanyassociationtype to  Organizationroles
+----------------------------------------------------------
+Every HubSpot Ticketcompanyassociationtype will be synchronized with a  Organizationroles.
+
+Once a link between a HubSpot Ticketcompanyassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Ticketcompanyassociationtype and a  Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Ticketcompanyassociationtype Property
+     -  Organizationroles Property
+     -  Data Type
 
 
 HubSpot Ticket to  Issues
