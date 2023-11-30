@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-11-30 13:41:10
+Generated: 2023-11-30 20:42:31
 
 Introduction.
 ------------
@@ -32,6 +32,22 @@ The following properties are synchronized between a Businesscentral Contact pers
    * - phoneNumber
      - phoneNumberWork
      - "string"
+
+
+Businesscentral Salesorderlines to  Orderline
+---------------------------------------------
+Every Businesscentral Salesorderlines will be synchronized with a  Orderline.
+
+Once a link between a Businesscentral Salesorderlines and a  Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorderlines and a  Orderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorderlines Property
+     -  Orderline Property
+     -  Data Type
 
 
 Businesscentral Salesorders to  Order
