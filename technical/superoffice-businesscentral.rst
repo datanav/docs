@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2023-11-30 15:19:02
 
 Introduction.
 ------------
@@ -22,5 +22,21 @@ The following properties are synchronized between a SuperOffice Contact and a  C
 
    * - SuperOffice Contact Property
      -  Company Property
+     -  Data Type
+
+
+SuperOffice Product to  Items
+-----------------------------
+Every SuperOffice Product will be synchronized with a  Items.
+
+Once a link between a SuperOffice Product and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a  Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     -  Items Property
      -  Data Type
 
