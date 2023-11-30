@@ -51,14 +51,14 @@ Customers
 For customers the following merge criteria is used:
 
 * email  
-* organizationnumner
+* organizationnumber
 
 Suppliers
 *********
 For suppliers the following merge criteria is used:
 
 * email  
-* organizationnumner
+* organizationnumber
 
 Contacts
 ********
@@ -68,7 +68,7 @@ For contact the following merge criteria is used:
 
 Employees
 *********
-For contact the following merge criteria is used:
+For employees the following merge criteria is used:
 
 * email
 * employeeNumber
