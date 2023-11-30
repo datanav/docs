@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-30 15:18:10
+Generated: 2023-11-30 20:48:28
 
 Introduction.
 ------------
@@ -64,4 +64,48 @@ The following properties are synchronized between a HubSpot Deal and a  Salesord
    * - properties.closedate
      - requestedDeliveryDate
      - "string"
+
+
+HubSpot Lineitem to  Salesorderlines
+------------------------------------
+Every HubSpot Lineitem will be synchronized with a  Salesorderlines.
+
+Once a link between a HubSpot Lineitem and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a  Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     -  Salesorderlines Property
+     -  Data Type
+   * - properties.description
+     - description
+     - "string"
+   * - properties.hs_product_id
+     - itemId
+     - "string"
+   * - properties.price
+     - amountExcludingTax
+     - "string"
+   * - properties.quantity
+     - invoiceQuantity
+     - "string"
+
+
+HubSpot Lineitemdealassociation to  Salesorderlines
+---------------------------------------------------
+Every HubSpot Lineitemdealassociation will be synchronized with a  Salesorderlines.
+
+Once a link between a HubSpot Lineitemdealassociation and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a  Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
+     -  Salesorderlines Property
+     -  Data Type
 
