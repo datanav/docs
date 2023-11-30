@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-30 15:20:05
+Generated: 2023-11-30 20:48:28
 
 Introduction.
 ------------
@@ -101,5 +101,36 @@ The following properties are synchronized between a Tripletex Order and a  Sales
      - "string"
    * - ourContactEmployee.id
      - salesperson
+     - "string"
+
+
+Tripletex Orderline to  Salesorderlines
+---------------------------------------
+Every Tripletex Orderline will be synchronized with a  Salesorderlines.
+
+Once a link between a Tripletex Orderline and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a  Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     -  Salesorderlines Property
+     -  Data Type
+   * - count
+     - invoiceQuantity
+     - "string"
+   * - description
+     - description
+     - "string"
+   * - discount
+     - discountPercent
+     - "string"
+   * - product.id
+     - itemId
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - amountExcludingTax
      - "string"
 
