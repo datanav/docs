@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-30 13:41:10
+Generated: 2023-11-30 15:19:02
 
 Introduction.
 ------------
@@ -38,6 +38,22 @@ The following properties are synchronized between a Tripletex Department and a  
 
    * - Tripletex Department Property
      -  Company Property
+     -  Data Type
+
+
+Tripletex Product to  Items
+---------------------------
+Every Tripletex Product will be synchronized with a  Items.
+
+Once a link between a Tripletex Product and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a  Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     -  Items Property
      -  Data Type
 
 
