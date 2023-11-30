@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-11-30 20:51:59
+Generated: 2023-11-30 20:56:59
 
 Introduction.
 ------------
@@ -87,6 +87,9 @@ The following properties are synchronized between a Businesscentral Salesorderli
    * - taxPercent
      - vatType.id
      - "integer"
+   * - unitPrice
+     - unitPriceExcludingVatCurrency
+     - "float"
 
 
 Businesscentral Salesorders to  Order
