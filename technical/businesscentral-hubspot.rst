@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-11-30 20:48:52
+Generated: 2023-11-30 20:56:59
 
 Introduction.
 ------------
@@ -109,6 +109,9 @@ The following properties are synchronized between a Businesscentral Salesorderli
    * - quantity
      - properties.quantity
      - "integer"
+   * - unitPrice
+     - properties.price
+     - "string"
 
 
 Businesscentral Salesorderlines to  Lineitemdealassociation
