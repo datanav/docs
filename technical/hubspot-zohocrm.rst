@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-30 15:42:33
+Generated: 2023-11-30 15:42:52
 
 Introduction.
 ------------
@@ -258,7 +258,7 @@ The following properties are synchronized between a HubSpot Owner and a  Contact
 
 HubSpot Deal to  Deal
 ---------------------
-Every HubSpot Deal will be synchronized with a  Deal.
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a  Deal.
 
 Once a link between a HubSpot Deal and a  Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
 
