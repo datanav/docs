@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-30 20:48:33
+Generated: 2023-11-30 20:49:03
 
 Introduction.
 ------------
@@ -120,6 +120,9 @@ The following properties are synchronized between a Tripletex Orderline and a  S
      -  Data Type
    * - count
      - invoiceQuantity
+     - "string"
+   * - count
+     - quantity
      - "string"
    * - description
      - description
