@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-30 20:51:59
+Generated: 2023-11-30 20:56:59
 
 Introduction.
 ------------
@@ -135,6 +135,9 @@ The following properties are synchronized between a Tripletex Orderline and a  S
      - "string"
    * - unitPriceExcludingVatCurrency
      - amountExcludingTax
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - unitPrice
      - "string"
    * - vatType.id
      - taxPercent
