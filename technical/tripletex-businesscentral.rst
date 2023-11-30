@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-30 15:19:02
+Generated: 2023-11-30 15:20:05
 
 Introduction.
 ------------
@@ -53,6 +53,22 @@ The following properties are synchronized between a Tripletex Product and a  Ite
    :header-rows: 1
 
    * - Tripletex Product Property
+     -  Items Property
+     -  Data Type
+
+
+Tripletex Productgrouprelation to  Items
+----------------------------------------
+Every Tripletex Productgrouprelation will be synchronized with a  Items.
+
+Once a link between a Tripletex Productgrouprelation and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Productgrouprelation and a  Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Productgrouprelation Property
      -  Items Property
      -  Data Type
 
