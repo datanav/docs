@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2023-11-30 20:51:59
+Generated: 2023-11-30 20:56:59
 
 Introduction.
 ------------
@@ -79,6 +79,9 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - "string"
    * - ProductUnitPrice
      - amountExcludingTax
+     - "string"
+   * - ProductUnitPrice
+     - unitPrice
      - "string"
    * - Quantity
      - invoiceQuantity
