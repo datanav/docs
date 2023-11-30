@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-30 20:51:59
+Generated: 2023-11-30 20:56:59
 
 Introduction.
 ------------
@@ -72,6 +72,9 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
    * - UnitListPrice
      - amountExcludingTax
+     - "string"
+   * - UnitListPrice
+     - unitPrice
      - "string"
    * - VAT
      - taxPercent
