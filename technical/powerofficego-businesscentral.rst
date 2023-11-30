@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2023-11-30 13:43:09
+Generated: 2023-11-30 15:19:02
 
 Introduction.
 ------------
@@ -38,6 +38,22 @@ The following properties are synchronized between a Powerofficego Departments an
 
    * - Powerofficego Departments Property
      -  Company Property
+     -  Data Type
+
+
+Powerofficego Product to  Items
+-------------------------------
+Every Powerofficego Product will be synchronized with a  Items.
+
+Once a link between a Powerofficego Product and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product and a  Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     -  Items Property
      -  Data Type
 
 
