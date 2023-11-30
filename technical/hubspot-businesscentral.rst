@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-30 13:38:11
+Generated: 2023-11-30 13:43:09
 
 Introduction.
 ------------
@@ -39,6 +39,9 @@ The following properties are synchronized between a HubSpot Deal and a  Salesord
    * - HubSpot Deal Property
      -  Salesorders Property
      -  Data Type
+   * - properties.amount
+     - totalAmountExcludingTax
+     - "string"
    * - properties.closedate
      - orderDate
      - "string"
