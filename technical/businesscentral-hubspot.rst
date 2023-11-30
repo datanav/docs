@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-11-30 20:44:04
+Generated: 2023-11-30 20:46:58
 
 Introduction.
 ------------
@@ -81,6 +81,12 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - "string"
    * - description
      - properties.description
+     - "string"
+   * - invoiceQuantity
+     - properties.quantity
+     - "integer"
+   * - itemId
+     - properties.hs_product_id
      - "string"
 
 
