@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-30 00:01:11
+Generated: 2023-11-30 00:10:08
 
 Introduction.
 ------------
@@ -11,7 +11,9 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 HubSpot Company to  Account
 ---------------------------
-Every HubSpot Company will be synchronized with a  Account.
+Before any synchronization can take place, a link between a HubSpot Company and a  Account must be established.
+
+A new  Account will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into .
 
 Once a link between a HubSpot Company and a  Account is established, it will keep in sync between the two systems, regardless of where it is edited.
 
