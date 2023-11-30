@@ -10,3 +10,4 @@ Sesam Talk synchronizes core business data across different system types. You ca
    Concepts <concepts>
    Becoming a partner <partner/index>
    Service Level Objective <legal-slo>
+   Help <help>
