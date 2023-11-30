@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2023-11-30 13:38:11
+Generated: 2023-11-30 13:43:09
 
 Introduction.
 ------------
@@ -60,5 +60,8 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - "string"
    * - SalesOrderDate
      - orderDate
+     - "string"
+   * - TotalAmount
+     - totalAmountExcludingTax
      - "string"
 
