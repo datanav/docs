@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-11-30 13:14:08
+Generated: 2023-11-30 13:24:08
 
 Introduction.
 ------------
@@ -63,4 +63,7 @@ The following properties are synchronized between a Businesscentral Salesorders 
    * - Businesscentral Salesorders Property
      -  Salesorders Property
      -  Data Type
+   * - customerId
+     - CustomerReferenceContactPersonId
+     - "string"
 
