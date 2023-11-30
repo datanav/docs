@@ -116,3 +116,28 @@ Sesam Talk synchronises core business data across different system types. Read a
             :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
+    ---
+
+    |
+
+    **Concepts**
+
+    Become familiar with our concepts to enhance your understanding of how the Sesam Talk works.
+
+    .. link-button:: concepts
+            :type: ref
+            :text: Read more
+            :classes: btn-outline-primary btn-block
+    ---
+    :body: bg-info text-left text-white
+
+    |
+
+    **Contact Support**
+
+    Reach out to our dedicated support team for assistance and prompt answers to your questions.
+
+    .. link-button:: mailto:support@sesam.io
+            :type: url
+            :text: Contact support
+            :classes: read-more
