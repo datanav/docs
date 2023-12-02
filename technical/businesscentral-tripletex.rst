@@ -2,30 +2,12 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-01 00:00:00
+Generated: 2023-12-02 00:00:00
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Businesscentral Items to  Product
----------------------------------
-Before any synchronization can take place, a link between a Businesscentral Items and a  Product must be established.
-
-A new  Product will be created from a Businesscentral Items if it is connected to a Businesscentral Salesorderlines that is synchronized into .
-
-Once a link between a Businesscentral Items and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Items and a  Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Items Property
-     -  Product Property
-     -  Data Type
-
 
 Businesscentral Contact person to  Contact
 ------------------------------------------
@@ -50,6 +32,56 @@ The following properties are synchronized between a Businesscentral Contact pers
    * - phoneNumber
      - phoneNumberWork
      - "string"
+
+
+Businesscentral Items to  Product
+---------------------------------
+Every Businesscentral Items will be synchronized with a  Product.
+
+If a matching  Product already exists, the Businesscentral Items will be merged with the existing one.
+If no matching  Product is found, a new  Product will be created.
+
+A Businesscentral Items will merge with a  Product if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Items Property
+     -  Product Property
+   * - gtin
+     - ean
+
+Once a link between a Businesscentral Items and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Items and a  Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Items Property
+     -  Product Property
+     -  Data Type
+   * - displayName
+     - name
+     - "string"
+   * - displayName.string
+     - name
+     - "string"
+   * - gtin
+     - ean
+     - "string"
+   * - inventory
+     - stockOfGoods
+     - "integer"
+   * - taxGroupCode
+     - vatType.id
+     - "integer"
+   * - unitCost
+     - costExcludingVatCurrency
+     - "float"
+   * - unitPrice
+     - priceExcludingVatCurrency
+     - "float"
 
 
 Businesscentral Salesorderlines to  Orderline
@@ -106,6 +138,9 @@ The following properties are synchronized between a Businesscentral Salesorders 
    * - Businesscentral Salesorders Property
      -  Order Property
      -  Data Type
+   * - currencyId
+     - currency.id
+     - "integer"
    * - customerId
      - contact.id
      - "integer"
