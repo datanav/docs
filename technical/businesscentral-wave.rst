@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-01 00:00:00
+Generated: 2023-12-02 00:00:00
 
 Introduction.
 ------------
@@ -11,9 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Businesscentral Items to  Product
 ---------------------------------
-Before any synchronization can take place, a link between a Businesscentral Items and a  Product must be established.
-
-A new  Product will be created from a Businesscentral Items if it is connected to a Businesscentral Salesorders that is synchronized into .
+Every Businesscentral Items will be synchronized with a  Product.
 
 Once a link between a Businesscentral Items and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -25,6 +23,15 @@ The following properties are synchronized between a Businesscentral Items and a 
    * - Businesscentral Items Property
      -  Product Property
      -  Data Type
+   * - displayName
+     - name
+     - "string"
+   * - displayName.string
+     - name
+     - "string"
+   * - unitPrice
+     - unitPrice
+     - "string"
 
 
 Businesscentral Salesorders to  Invoice
@@ -41,6 +48,9 @@ The following properties are synchronized between a Businesscentral Salesorders 
    * - Businesscentral Salesorders Property
      -  Invoice Property
      -  Data Type
+   * - currencyId
+     - currency.code
+     - "string"
    * - customerId
      - customer.id
      - "string"
