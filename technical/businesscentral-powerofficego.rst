@@ -2,30 +2,12 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-01 00:00:00
+Generated: 2023-12-02 00:00:00
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Businesscentral Items to  Product
----------------------------------
-Before any synchronization can take place, a link between a Businesscentral Items and a  Product must be established.
-
-A new  Product will be created from a Businesscentral Items if it is connected to a Businesscentral Salesorderlines that is synchronized into .
-
-Once a link between a Businesscentral Items and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Items and a  Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Items Property
-     -  Product Property
-     -  Data Type
-
 
 Businesscentral Contact person to  Contactperson
 ------------------------------------------------
@@ -65,6 +47,72 @@ The following properties are synchronized between a Businesscentral Contact pers
    * - postalCode
      - zipCode
      - "string"
+
+
+Businesscentral Currencies to  Currency
+---------------------------------------
+Every Businesscentral Currencies will be synchronized with a  Currency.
+
+If a matching  Currency already exists, the Businesscentral Currencies will be merged with the existing one.
+If no matching  Currency is found, a new  Currency will be created.
+
+A Businesscentral Currencies will merge with a  Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Currencies Property
+     -  Currency Property
+   * - code
+     - code
+
+Once a link between a Businesscentral Currencies and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Currencies and a  Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Currencies Property
+     -  Currency Property
+     -  Data Type
+
+
+Businesscentral Items to  Product
+---------------------------------
+Every Businesscentral Items will be synchronized with a  Product.
+
+Once a link between a Businesscentral Items and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Items and a  Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Items Property
+     -  Product Property
+     -  Data Type
+   * - displayName
+     - name
+     - "string"
+   * - displayName.string
+     - name
+     - "string"
+   * - gtin
+     - gtin
+     - "string"
+   * - inventory
+     - availableStock
+     - "integer"
+   * - taxGroupCode
+     - vatCode
+     - "string"
+   * - unitCost
+     - costPrice
+     - "if", "is-decimal", "decimal", "integer"]
+   * - unitPrice
+     - salesPrice
+     - "if", "is-decimal", "decimal", "integer"]
 
 
 Businesscentral Salesorderlines to  Salesorderlines
@@ -115,6 +163,9 @@ The following properties are synchronized between a Businesscentral Salesorders 
    * - Businesscentral Salesorders Property
      -  Salesorders Property
      -  Data Type
+   * - currencyId
+     - CurrencyCode
+     - "string"
    * - customerId
      - CustomerReferenceContactPersonId
      - "string"
