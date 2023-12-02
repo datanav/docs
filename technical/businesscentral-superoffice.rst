@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-01 00:00:00
+Generated: 2023-12-02 00:00:00
 
 Introduction.
 ------------
@@ -72,4 +72,38 @@ The following properties are synchronized between a Businesscentral Contact comp
    * - postalCode
      - Address.Street.Zipcode
      - "string"
+
+
+Businesscentral Items to  Product
+---------------------------------
+Every Businesscentral Items will be synchronized with a  Product.
+
+Once a link between a Businesscentral Items and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Items and a  Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Items Property
+     -  Product Property
+     -  Data Type
+   * - displayName
+     - Name
+     - "string"
+   * - displayName.string
+     - Name
+     - "string"
+   * - itemCategoryId
+     - ProductCategoryKey
+     - "string"
+   * - taxGroupCode
+     - VAT
+     - "integer", "decimal"]
+   * - unitCost
+     - UnitCost
+     - "string"
+   * - unitPrice
+     - UnitListPrice
+     - "decimal"
 
