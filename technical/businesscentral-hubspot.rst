@@ -2,30 +2,12 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-01 00:00:00
+Generated: 2023-12-02 00:00:00
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Businesscentral Items to  Product
----------------------------------
-Before any synchronization can take place, a link between a Businesscentral Items and a  Product must be established.
-
-A new  Product will be created from a Businesscentral Items if it is connected to a Businesscentral Salesorderlines that is synchronized into .
-
-Once a link between a Businesscentral Items and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Items and a  Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Items Property
-     -  Product Property
-     -  Data Type
-
 
 Businesscentral Company to  Company
 -----------------------------------
@@ -77,6 +59,34 @@ The following properties are synchronized between a Businesscentral Contact comp
      - "string"
    * - postalCode
      - properties.zip
+     - "string"
+
+
+Businesscentral Items to  Product
+---------------------------------
+Every Businesscentral Items will be synchronized with a  Product.
+
+Once a link between a Businesscentral Items and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Items and a  Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Items Property
+     -  Product Property
+     -  Data Type
+   * - displayName
+     - properties.name
+     - "string"
+   * - displayName.string
+     - properties.name
+     - "string"
+   * - unitCost
+     - properties.hs_cost_of_goods_sold
+     - "string"
+   * - unitPrice
+     - properties.price
      - "string"
 
 
