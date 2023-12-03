@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-02 00:00:00
+Generated: 2023-12-03 00:00:00
 
 Introduction.
 ------------
@@ -38,21 +38,5 @@ The following properties are synchronized between a Businesscentral Contact comp
 
    * - Businesscentral Contact company Property
      -  Groups Property
-     -  Data Type
-
-
-Businesscentral Itemcategories to  Organizationroles
-----------------------------------------------------
-Every Businesscentral Itemcategories will be synchronized with a  Organizationroles.
-
-Once a link between a Businesscentral Itemcategories and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Itemcategories and a  Organizationroles:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Itemcategories Property
-     -  Organizationroles Property
      -  Data Type
 
