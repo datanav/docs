@@ -77,4 +77,4 @@ Why are my deleted HubSpot lineitems not deleted in PowerOffice order
 
 Sesam Talk does not delete data in HubSpot and PowerOffice. This means that deleting lineitems in either of the systems will not be reflected in the other system.
 
-To ensure data consistency, we recommend that you manually delete corresponding line items in both systems whenever adjustments are made to an order.+
+To ensure data consistency, we recommend that you manually delete corresponding line items in both systems whenever adjustments are made to an order.
