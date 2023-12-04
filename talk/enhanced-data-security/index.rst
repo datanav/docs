@@ -1,4 +1,4 @@
-.. _data_governance:
+.. _enhanced_data_security:
 
 Enhanced Data Security
 ======================
