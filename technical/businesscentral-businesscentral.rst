@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-04 00:00:00
+Generated: 2023-12-05 00:00:00
 
 Introduction.
 ------------
@@ -54,5 +54,53 @@ The following properties are synchronized between a Businesscentral Contact comp
 
    * - Businesscentral Contact company Property
      -  Company Property
+     -  Data Type
+
+
+Businesscentral Contacts company to  Companies
+----------------------------------------------
+Every Businesscentral Contacts company will be synchronized with a  Companies.
+
+Once a link between a Businesscentral Contacts company and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Contacts company and a  Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Contacts company Property
+     -  Companies Property
+     -  Data Type
+
+
+Businesscentral Customers to  Companies
+---------------------------------------
+Every Businesscentral Customers will be synchronized with a  Companies.
+
+Once a link between a Businesscentral Customers and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers and a  Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers Property
+     -  Companies Property
+     -  Data Type
+
+
+Businesscentral Customers company to  Companies
+-----------------------------------------------
+Every Businesscentral Customers company will be synchronized with a  Companies.
+
+Once a link between a Businesscentral Customers company and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers company and a  Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers company Property
+     -  Companies Property
      -  Data Type
 
