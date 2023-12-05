@@ -2,25 +2,25 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-04 00:00:00
+Generated: 2023-12-05 00:00:00
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Contact person to  Contact
-------------------------------------------
-Every Businesscentral Contact person will be synchronized with a  Contact.
+Businesscentral Contacts person to  Contact
+-------------------------------------------
+Every Businesscentral Contacts person will be synchronized with a  Contact.
 
-Once a link between a Businesscentral Contact person and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Contacts person and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Contact person and a  Contact:
+The following properties are synchronized between a Businesscentral Contacts person and a  Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Contact person Property
+   * - Businesscentral Contacts person Property
      -  Contact Property
      -  Data Type
    * - email
@@ -31,6 +31,74 @@ The following properties are synchronized between a Businesscentral Contact pers
      - "if","matches","+* *","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
    * - phoneNumber
      - phoneNumberWork
+     - "string"
+
+
+Businesscentral Customers company to  Customer
+----------------------------------------------
+Every Businesscentral Customers company will be synchronized with a  Customer.
+
+Once a link between a Businesscentral Customers company and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers company and a  Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers company Property
+     -  Customer Property
+     -  Data Type
+   * - address.city
+     - deliveryAddress.city
+     - "string"
+   * - address.city
+     - physicalAddress.city
+     - "string"
+   * - address.city
+     - postalAddress.city
+     - "string"
+   * - address.countryLetterCode
+     - deliveryAddress.country.id
+     - "string"
+   * - address.countryLetterCode
+     - physicalAddress.country.id
+     - "integer"
+   * - address.countryLetterCode
+     - postalAddress.country.id
+     - "integer"
+   * - address.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - address.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - address.postalCode
+     - postalAddress.postalCode
+     - "string"
+   * - displayName
+     - name
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+
+
+Businesscentral Itemcategories to  Productgroup
+-----------------------------------------------
+Every Businesscentral Itemcategories will be synchronized with a  Productgroup.
+
+Once a link between a Businesscentral Itemcategories and a  Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Itemcategories and a  Productgroup:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Itemcategories Property
+     -  Productgroup Property
+     -  Data Type
+   * - displayName
+     - name
      - "string"
 
 
