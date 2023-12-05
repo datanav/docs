@@ -35,8 +35,6 @@ Why do I get company duplicates in HubSpot when I connect other systems?
 
 HubSpot does not have a unique identifier for companies that is safe enough to perform a merge of companies. In other words, we are unable to safely merge companies in HubSpot and duplicates might appear over time.
 
-In case of duplicates in HubSpot, you can use the deduplication service on your HubSpot account to `merge records <https://knowledge.hubspot.com/crm-setup/merge-records#:~:text=You%20can%20merge%20two%20companies,and%20associations%20from%20both%20records>`_.
-
 .. note ::
 
     Remember that we **do not delete** data from your systems. You will need to manage deduplication in your other systems, if duplication accurs.
