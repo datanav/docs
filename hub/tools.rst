@@ -16,4 +16,3 @@ In this section you learn both what these tools are, how they work and how we ca
    Consumer Portal <index-consumer-portal>
    GDPR platform <gdpr-platform>
    Connector Tools <connector-tools>
-   Model Mapping Tools <model-mapping-tools>
