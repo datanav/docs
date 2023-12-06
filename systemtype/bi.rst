@@ -47,7 +47,7 @@ Data types
      - true
 
    * - :ref:`Organisation <datatype_organisation>`
-     - true
+     - false
      - true
 
    * - :ref:`Product <datatype_product>`
