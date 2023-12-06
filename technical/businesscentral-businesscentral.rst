@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-05 00:00:00
+Generated: 2023-12-06 00:00:01
 
 Introduction.
 ------------
@@ -39,22 +39,6 @@ The following properties are synchronized between a Businesscentral Items and a 
    * - taxGroupId
      - itemCategoryId
      - "string"
-
-
-Businesscentral Contact company to  Company
--------------------------------------------
-Every Businesscentral Contact company will be synchronized with a  Company.
-
-Once a link between a Businesscentral Contact company and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Contact company and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Contact company Property
-     -  Company Property
-     -  Data Type
 
 
 Businesscentral Contacts company to  Companies
