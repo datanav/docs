@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-06 00:00:01
+Generated: 2023-12-07 00:00:00
 
 Introduction.
 ------------
@@ -23,71 +23,6 @@ The following properties are synchronized between a Businesscentral Companies an
    * - Businesscentral Companies Property
      -  Contact Property
      -  Data Type
-
-
-Businesscentral Company to  Contact
------------------------------------
-Every Businesscentral Company will be synchronized with a  Contact.
-
-Once a link between a Businesscentral Company and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Company and a  Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Company Property
-     -  Contact Property
-     -  Data Type
-
-
-Businesscentral Contact company to  Contact
--------------------------------------------
-Every Businesscentral Contact company will be synchronized with a  Contact.
-
-Once a link between a Businesscentral Contact company and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Contact company and a  Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Contact company Property
-     -  Contact Property
-     -  Data Type
-   * - addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - addressLine1
-     - Address.Street.Address1
-     - "string"
-   * - addressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - addressLine2
-     - Address.Street.Address2
-     - "string"
-   * - city
-     - Address.Postal.City
-     - "string"
-   * - city
-     - Address.Street.City
-     - "string"
-   * - country
-     - Country.CountryId
-     - "integer"
-   * - id
-     - ContactId
-     - "integer"
-   * - phoneNumber
-     - Phones.Value
-     - "string"
-   * - postalCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - postalCode
-     - Address.Street.Zipcode
-     - "string"
 
 
 Businesscentral Contacts company to  Contact
@@ -129,22 +64,6 @@ The following properties are synchronized between a Businesscentral Customers co
    * - phoneNumber
      - Phones.Value
      - "string"
-
-
-Businesscentral Customers to  Contact
--------------------------------------
-Every Businesscentral Customers will be synchronized with a  Contact.
-
-Once a link between a Businesscentral Customers and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Customers and a  Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Customers Property
-     -  Contact Property
-     -  Data Type
 
 
 Businesscentral Itemcategories to  Listproductcategoryitems
