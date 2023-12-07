@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-06 00:00:01
+Generated: 2023-12-07 00:00:00
 
 Introduction.
 ------------
@@ -23,59 +23,6 @@ The following properties are synchronized between a Businesscentral Companies an
    * - Businesscentral Companies Property
      -  Company Property
      -  Data Type
-
-
-Businesscentral Company to  Company
------------------------------------
-Every Businesscentral Company will be synchronized with a  Company.
-
-Once a link between a Businesscentral Company and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Company and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Company Property
-     -  Company Property
-     -  Data Type
-
-
-Businesscentral Contact company to  Company
--------------------------------------------
-Every Businesscentral Contact company will be synchronized with a  Company.
-
-Once a link between a Businesscentral Contact company and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Contact company and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Contact company Property
-     -  Company Property
-     -  Data Type
-   * - addressLine1
-     - properties.address
-     - "string"
-   * - addressLine2
-     - properties.address2
-     - "string"
-   * - city
-     - properties.city
-     - "string"
-   * - country
-     - properties.country
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - phoneNumber
-     - properties.phone
-     - "string"
-   * - postalCode
-     - properties.zip
-     - "string"
 
 
 Businesscentral Contacts company to  Company
@@ -144,22 +91,6 @@ The following properties are synchronized between a Businesscentral Customers co
    * - phoneNumber
      - properties.phone
      - "string"
-
-
-Businesscentral Customers to  Company
--------------------------------------
-Every Businesscentral Customers will be synchronized with a  Company.
-
-Once a link between a Businesscentral Customers and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Customers and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Customers Property
-     -  Company Property
-     -  Data Type
 
 
 Businesscentral Items to  Product
