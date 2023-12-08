@@ -42,10 +42,6 @@ Data types
      - true
      - true
 
-   * - :ref:`Organisation <datatype_organisation>`
-     - false
-     - true
-
    * - :ref:`Task <datatype_task>`
      - true
      - true
