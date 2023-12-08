@@ -189,6 +189,10 @@ Properties
        all pipes by default. Setting the property to false will
        disable schema inference by default. Notice that one can
        also configure schema inference at the pipe level.
+
+       .. NOTE::
+
+          The default value is ``false`` for developer subscriptions.
      - ``true``
      -
 

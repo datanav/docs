@@ -70,7 +70,7 @@ Entity types
 
 The Entity types tab shows all pipes and their inferred Model.
 
-All pipes that have ``infer_pipe_entity_types`` enabled (which is the default behaviour) will contribute to the contents of Entity types.
+All pipes that have ``infer_pipe_entity_types`` enabled (which is the default behaviour, except for developer subscriptions) will contribute to the contents of Entity types.
 
 .. note::
 
