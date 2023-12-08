@@ -8,7 +8,34 @@ Wix
 Find your API key
 -----------------
 
-https://dev.wix.com/docs/rest/articles/getting-started/api-keys
+To connect your Wix account you need to create an API-key. 
+
+.. image:: images/generate-api-key-wix.png
+    :width: 100%
+    :align: left
+    :alt: Generate Wix API-Key 
+
+Follow these steps to generate an API-key for Wix
+*************************************************
+
+#. On your Wix account. Open the `Wix API Keys Manager <https://manage.wix.com/account/api-keys>`_ 
+#. Click Create API-Key
+#. In the Name field write the name of the API-Key, for example: Making Wave Talk.
+#. Under Permission select **All Permissions**.
+#. Follow the steps and once you get your API-Key, also called key's token, Copy it and store it somewhere.
+#. Get back to `Making Wave Talk <https://talk.sesam.cloud/onboarding/wix/connect>`_ 
+#. Follow the steps and paste your generated API-Key.
+
+Find your Wix Site ID
+---------------------
+
+The site ID for a current site can be obtained from the site URL in your browser. For example, the site ID appears after the **/dashboard/** part of this URL:
+
+.. image:: images/find-site-id-wix.png
+    :width: 800px
+    :align: left
+    :alt: Wix Site ID
+
 
 Frequently Asked Questions
 --------------------------
