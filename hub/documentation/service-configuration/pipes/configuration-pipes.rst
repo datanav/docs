@@ -196,6 +196,10 @@ Properties
      - :ref:`Schema inference <schema_inference>` is enabled for
        all pipes by default. Setting this property to false will
        disable schema inference for this pipe.
+
+       .. NOTE::
+
+          The default value is ``false`` for developer subscriptions.
      - ``true``
      -
 
