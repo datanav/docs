@@ -18,6 +18,11 @@ To connect your Wix account you need to create an API-key.
 Follow these steps to generate an API-key for Wix
 *************************************************
 
+.. note::
+	You need to be the **owner** on your Wix site to be able to create a new API-key.
+
+	If you don't have direct access to the site, request the key and the account ID from the site owner.
+
 #. On your Wix account. Open the `Wix API Keys Manager <https://manage.wix.com/account/api-keys>`_ 
 #. Click Create API-Key
 #. In the Name field write the name of the API-Key, for example: Making Wave Talk.
