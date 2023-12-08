@@ -26,9 +26,9 @@ Follow these steps to generate an API-key for Wix
 #. On your Wix account. Open the `Wix API Keys Manager <https://manage.wix.com/account/api-keys>`_ 
 #. Click Create API-Key
 #. In the Name field write the name of the API-Key, for example: Making Wave Talk.
-#. Under Permission select **All Permissions**.
+#. Under **All site permissions** choose **Wix Stores** and **Wix Contacts & Members**.
 #. Follow the steps and once you get your API-Key, also called key's token, Copy it and store it somewhere.
-#. Get back to `Making Wave Talk <https://talk.sesam.cloud/onboarding/wix/connect>`_ 
+#. Get back to `The onboarding process <https://talk.sesam.cloud/onboarding/wix/connect>`_ 
 #. Follow the steps and paste your generated API-Key.
 
 Find your Wix Site ID
