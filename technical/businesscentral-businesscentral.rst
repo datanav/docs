@@ -2,12 +2,38 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-08 00:00:00
+Generated: 2023-12-09 00:00:00
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Businesscentral Contacts company to  Contacts company
+-----------------------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Contacts company and a  Contacts company must be established.
+
+A Businesscentral Contacts company will merge with a  Contacts company if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Contacts company Property
+     -  Contacts company Property
+   * - id
+     - id
+
+Once a link between a Businesscentral Contacts company and a  Contacts company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Contacts company and a  Contacts company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Contacts company Property
+     -  Contacts company Property
+     -  Data Type
+
 
 Businesscentral Items to  Items
 -------------------------------
