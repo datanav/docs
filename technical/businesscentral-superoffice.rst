@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-08 00:00:00
+Generated: 2023-12-09 00:00:00
 
 Introduction.
 ------------
@@ -39,6 +39,9 @@ The following properties are synchronized between a Businesscentral Contacts com
    * - Businesscentral Contacts company Property
      -  Contact Property
      -  Data Type
+   * - displayName
+     - Name
+     - "string"
    * - phoneNumber
      - Phones.Value
      - "string"
