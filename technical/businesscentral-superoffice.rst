@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-09 00:00:00
+Generated: 2023-12-10 00:00:00
 
 Introduction.
 ------------
@@ -120,4 +120,20 @@ The following properties are synchronized between a Businesscentral Items and a 
    * - unitPrice
      - UnitListPrice
      - "decimal"
+
+
+Businesscentral Salesorderlines to  Quoteline
+---------------------------------------------
+Every Businesscentral Salesorderlines will be synchronized with a  Quoteline.
+
+Once a link between a Businesscentral Salesorderlines and a  Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorderlines and a  Quoteline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorderlines Property
+     -  Quoteline Property
+     -  Data Type
 
