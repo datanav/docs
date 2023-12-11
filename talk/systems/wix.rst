@@ -45,7 +45,7 @@ The site ID for a current site can be obtained from the site URL in your browser
 Frequently Asked Questions
 --------------------------
 
-Why are not my ERP orders created in Wix?
+Why are my ERP orders not created in Wix?
 *****************************************
 
 The Wix API does not allow general updates of orders, so we do not write any orders as we are not able to keep them in sync after creation.
