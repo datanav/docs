@@ -49,3 +49,19 @@ Why are not my ERP orders created in Wix?
 *****************************************
 
 The Wix API does not allow general updates of orders, so we do not write any orders as we are not able to keep them in sync after creation.
+
+How do I edit the API permissions?
+**********************************
+
+If you want to edit the permissions in your API-key, please follow these steps:
+
+#. On your Wix account. Open the `Wix API Keys Manager <https://manage.wix.com/account/api-keys>`_ .
+#. Click the three dotted button on the API-key you want to edit.
+#. Click **Edit**.
+#. We suggest the following permissions: Under **All site permissions** choose **Wix Stores** and **Wix Contacts & Members**.
+#. Click **Save & Close**
+
+.. image:: images/edit-permissions-api-key-wix.png
+    :width: 100%
+    :align: left
+    :alt: Edit Wix API-Key
