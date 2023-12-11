@@ -35,8 +35,8 @@ Changelog
 2023-08-18
 ----------
 
-* Hibernation for developer subscriptions are extended to developer pro subscriptions as well. 
-* Any automated CI system that requires 24/7 uptime should be moved to a single node. You can still do CI testing with a developer subscription, but hibernation wake-up time must be expected. 
+* Hibernation for developer subscriptions are extended to developer pro subscriptions as well.
+* Any automated CI system that requires 24/7 uptime should be moved to a single node. You can still do CI testing with a developer subscription, but hibernation wake-up time must be expected.
 
 .. _changelog_2023_08_17:
 
@@ -83,7 +83,7 @@ Changelog
 
 2023-07-04
 ----------
-* We will from now on spin down developer-subscriptions that have had no interaction recently. "Interacted" is defined as clicking around in the Management Studio in the given subscription. After it has been interacted with it will be spun up again, taking about 15minutes. Improvements to the UI to reflect this is being worked on. 
+* We will from now on spin down developer-subscriptions that have had no interaction recently. "Interacted" is defined as clicking around in the Management Studio in the given subscription. After it has been interacted with it will be spun up again, taking about 15minutes. Improvements to the UI to reflect this is being worked on.
 
 .. _changelog_2023_06_30:
 
@@ -115,6 +115,12 @@ Changelog
 2023-05-02
 ----------
 * A :ref:`dataset <dataset_source>` source with ``subset`` now respects the ``include_previous_versions`` property (which is false by default). Before this change historical versions were included. The dataset entities API will also now respect the ``history`` request parameter for subsets.
+
+.. _changelog_2023_04_27:
+
+2023-04-27
+----------
+* Updated the documentation of the  :ref:`path <path_dtl_function>` DTL function with a description of how non-string items in the PROPERTY_PATH list are treated (they are ignored).
 
 .. _changelog_2023_04_25:
 

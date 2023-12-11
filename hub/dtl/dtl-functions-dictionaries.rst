@@ -299,9 +299,9 @@ Dictionaries
          VALUES. The result is all the values at the end of
          the traversal. This may be a single value or a list of values.
          PROPERTY_PATH is an expression that should resolve
-         to a string or a list of strings. Those strings are treated as
-         literals, i.e. property names, so no variables can be used. Only
-         properties on the entity can be traversed. If you want to traverse
+         to a string or a list of strings (non-string items in the list are ignored).
+         Those strings are treated as literals, i.e. property names, so no variables can be used.
+         Only properties on the entity can be traversed. If you want to traverse
          to other entities use the ``hops`` function instead.
 
        .. NOTE::
@@ -327,6 +327,18 @@ Dictionaries
        | ``["path", "age", {"age": 24}]``
        |
        | Returns ``24``.
+       |
+       | ``["path", ["list", 1, "age" None], {"age": 24}]``
+       |
+       | Returns ``24``, since the ``1`` and ``None`` in the PROPERTY_PATH are ignored.
+       |
+       | ``["path", ["list", 1], {"age": 24}]``
+       |
+       | Returns ``{"age": 24}``, since the ``1`` in the PROPERTY_PATH are ignored.
+       |
+       | ``["path", ["list"], {"age": 24}]``
+       |
+       | Returns ``{"age": 24}``, since the PROPERTY_PATH list is empty.
        |
        | ``["path", "foo", {"bar": 123}]``
        |
