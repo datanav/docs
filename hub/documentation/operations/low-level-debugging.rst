@@ -208,3 +208,188 @@ The file must be called "startup_options.json". It must be a valid json-file and
    }
 
 The sesam node must be restarted in order for the file to take effect (use docker restart <node-container-name>).
+
+
+----------------------
+Examining memory-usage
+----------------------
+
+The sesam-node has a few service api endpoints for indicating what is it using memory for.
+
+
+/api/status/heap
+~~~~~~~~~~~~~~~~
+
+Returns a plain-text document with informatino about what the memory is used for. This is the most high-level memory
+debug endpoint, and usually the most useful one. Example::
+
+    Process memory information: pmem(rss=664109056, vms=3156135936, shared=71004160, text=2220032, lib=0, data=3010367488, dirty=0)
+
+    Memory use summary:
+       rocksdb.kMemTableTotal                                           :  82692096
+       rocksdb.kTableReadersTotal                                       :   3266947
+       rocksdb.block-cache-usage                                        :  34275312
+       rocksdb.block-cache-pinned-usage                                 :    935104
+       ColumnFamily memory overhead                                     :  86988000
+       MemoryCachedRocksDbDataset cache size                            :  17352128
+       RocksDbDataset bitsets size                                      :   1092544
+       EntityBatch pool size                                            :   9244266
+       Node pipes size                                                  :  14972902
+       Node systems size                                                :    242230
+       Node datasets size                                               :    161918
+       PyMalloc cached bytes                                            :  24838224
+       je_malloc fragmentation (stats.active-stats.allocated)           :  27581760
+       je_malloc cached bytes and metadata (stats.resident-stats.active):  26914816
+       **Total accounted for memory**                                   : 329623143
+       **Unaccounted for memory (rss-total_accounted_for)               : 334485913
+
+    Top dataset bitsets sizes:
+       wikidata-organisation-organisation-enrich                      : 4672
+       wikidata-organisation-collect                                  : 4672
+       tripletex-account1-000002-tripletex-productunit-transform-split: 4672
+       tripletex-account1-000002-tripletex-productunit-transform-emit : 4672
+       tripletex-account1-000001-tripletex-productunit-transform-split: 4672
+       tripletex-account1-000001-tripletex-productunit-transform-emit : 4672
+       tenant000002-global-classification-enhance-merge               : 4672
+       tenant000001-global-classification-enhance-merge               : 4672
+       tenant-auth                                                    : 4672
+       system:pump:wikidata-organisation-organisation-enrich          : 4672
+
+    Top column family size-all-mem-tables:
+       n0 (NodeState)                                                                                        : 6293504
+       l760 (dataset 'system:pump:tripletex-account1-000002-tripletex-vattype-classification-enrich')        : 1050624
+       l748 (dataset 'system:pump:tripletex-account1-000002-tripletex-supplier-organisation-enrich')         : 1050624
+       l746 (dataset 'system:pump:tripletex-account1-000002-tripletex-supplier-location-enrich')             : 1050624
+       l738 (dataset 'system:pump:tripletex-account1-000002-tripletex-supplier-collect')                     : 1050624
+       l722 (dataset 'system:pump:tripletex-account1-000002-tripletex-projectcategory-classification-enrich'): 1050624
+       l714 (dataset 'system:pump:tripletex-account1-000002-tripletex-project-task-enrich')                  : 1050624
+       l702 (dataset 'system:pump:tripletex-account1-000002-tripletex-project-collect')                      : 1050624
+       l686 (dataset 'system:pump:tripletex-account1-000002-tripletex-productunit-classification-enrich')    : 1050624
+       l68 (dataset 'system:pump:wikidata-organisation-organisation-enrich')                                 : 1050624
+
+    Top column family estimate-table-readers-mem (i.e. index and filter blocks):
+       l68 (dataset 'system:pump:wikidata-organisation-organisation-enrich')                               : 29708
+       l23 (dataset 'system:backup')                                                                       : 25464
+       l6 (dataset 'system:pump:system:update-storage-node-pipe-entity-type')                              : 25452
+       l52 (dataset 'system:pump:global-organisation')                                                     : 23342
+       l67 (dataset 'wikidata-organisation-organisation-enrich')                                           : 21220
+       l422 (dataset 'wikidata-organisation-collect')                                                      : 19107
+       l51 (dataset 'global-organisation')                                                                 : 19098
+       l335 (dataset 'system:pump:tripletex-account1-000001-tripletex-productunit-classification-enrich')  : 16984
+       l325 (dataset 'system:pump:tripletex-account1-000001-tripletex-productgrouprelation-product-enrich'): 16984
+       l245 (dataset 'system:pump:tripletex-account1-000001-tripletex-order-agreement-enrich')             : 16984
+
+    Python memory summary:
+                                            types |   # objects |   total size
+    ============================================= | =========== | ============
+                                             dict |      222350 |     57.27 MB
+                                              str |      530396 |     46.13 MB
+                                             list |      309512 |     27.02 MB
+                                             code |       41449 |      7.37 MB
+                                              set |       10204 |      5.28 MB
+                                      pytrie.Node |      113661 |      5.20 MB
+                                             type |        5192 |      4.88 MB
+                                            tuple |       72466 |      4.40 MB
+                          collections.OrderedDict |        4157 |      1.72 MB
+                                          weakref |       12841 |    902.88 KB
+                                collections.deque |        1114 |    680.39 KB
+                                              int |       20285 |    588.96 KB
+                                      abc.ABCMeta |         532 |    562.54 KB
+                                datetime.datetime |       10961 |    513.80 KB
+                       builtin_function_or_method |        7035 |    494.65 KB
+                                        frozenset |        1854 |    490.83 KB
+                              function (__init__) |        3301 |    438.41 KB
+                                         property |        5573 |    391.85 KB
+                                getset_descriptor |        5772 |    360.75 KB
+            openpyxl.descriptors.MetaSerialisable |         334 |    347.05 KB
+                                             cell |        8846 |    345.55 KB
+                                       re.Pattern |         560 |    280.00 KB
+                          lake.store.ext_types.NI |        4290 |    201.09 KB
+                              function (__repr__) |        1248 |    165.75 KB
+                                           method |        2526 |    157.88 KB
+                          collections.defaultdict |         259 |    141.70 KB
+                                method_descriptor |        1834 |    128.95 KB
+                               wrapper_descriptor |        1804 |    126.84 KB
+                              function (<lambda>) |         870 |    115.55 KB
+                                            float |        4745 |    111.21 KB
+                                function (__eq__) |         836 |    111.03 KB
+                     _frozen_importlib.ModuleSpec |        2349 |    110.11 KB
+                     cachetools.keys._HashedTuple |        1989 |    109.25 KB
+               lake.store.rocksdb.SegmentedBitset |        2301 |    107.86 KB
+      _frozen_importlib_external.SourceFileLoader |        2256 |    105.75 KB
+                                    enum.EnumMeta |          96 |    100.55 KB
+                                            bytes |        2565 |    100.25 KB
+                                function (__ne__) |         726 |     96.42 KB
+                                    _thread.RLock |        2039 |     95.58 KB
+                  lake.store.rocksdb.ColumnFamily |        1977 |     92.67 KB
+                   lake.dtl.dtl_hops.CompiledHops |        1023 |     87.91 KB
+                               function (to_dict) |         611 |     81.15 KB
+                                function (to_str) |         605 |     80.35 KB
+                                     _thread.lock |        1882 |     73.52 KB
+                            jinja2.nodes.NodeType |          68 |     70.66 KB
+                                member_descriptor |        1021 |     63.81 KB
+                      pgpy.types.MetaDispatchable |          61 |     63.38 KB
+                        cython_function_or_method |         315 |     61.15 KB
+              lake.store.rocksdb.RocksDbEntityLog |         767 |     53.93 KB
+            lake.store.rocksdb.RocksDbEntityIndex |         767 |     53.93 KB
+
+
+
+/api/status
+~~~~~~~~~~~
+
+Returns a json document that among other things include memoryrelated output from the https://pypi.org/project/psutil package. Example::
+
+    {
+      "node_id": "singlenode",
+      "node_version": "1.0.230521.651",
+      "node_start_time": "2023-05-23T08:41:53Z",
+      "node_uptime": "1 hours, 59 minutes, 19 seconds",
+      "psutil.virtual_memory": {
+        "total": 50481627136,
+        "available": 30703407104,
+        "percent": 39.2,
+        "used": 18712219648,
+        "free": 1521696768,
+        "active": 9185828864,
+        "inactive": 36309233664,
+        "buffers": 2002059264,
+        "cached": 28245651456,
+        "shared": 542887936,
+        "slab": 2964918272
+      },
+      ...
+
+/api/status/debugmallocstats
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Returns the results of running the sys._debugmallocstats() function. Example::
+
+    Small block threshold = 512, in 32 size classes.
+
+    class   size   num pools   blocks in use  avail blocks
+    -----   ----   ---------   -------------  ------------
+        0     16         133           32277          1372
+        1     32        2711          310874         30712
+    ...
+       30    496         139            1084            28
+       31    512         265            1839            16
+
+    # arenas allocated total           =                1,784
+    # arenas reclaimed                 =                  851
+    # arenas highwater mark            =                1,054
+    # arenas allocated current         =                  933
+    933 arenas * 262144 bytes/arena    =          244,580,352
+
+    # bytes in allocated blocks        =          215,139,648
+    # bytes in available blocks        =           14,324,112
+    2670 unused pools * 4096 bytes     =           10,936,320
+    # bytes lost to pool headers       =            2,738,016
+    # bytes lost to quantization       =            1,442,256
+    # bytes lost to arena alignment    =                    0
+    Total                              =          244,580,352
+
+               13 free PyDictObjects * 48 bytes each =                  624
+              31 free PyFloatObjects * 24 bytes each =                  744
+              ...
+
