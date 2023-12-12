@@ -6,7 +6,7 @@ Changelog
 2023-12-12
 ----------
 
-* Fixed a bug where timestamps were not parsed correctly during partial rescans
+* Fixed a bug where timestamps were not parsed correctly during partial rescans.
 
 .. _changelog_2023_11_27:
 
