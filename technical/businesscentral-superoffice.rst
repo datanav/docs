@@ -2,12 +2,30 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-11 00:00:00
+Generated: 2023-12-12 00:00:00
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Businesscentral Customers to  Contact
+-------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Customers and a  Contact must be established.
+
+A new  Contact will be created from a Businesscentral Customers if it is connected to a Businesscentral Contacts-person that is synchronized into .
+
+Once a link between a Businesscentral Customers and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers and a  Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers Property
+     -  Contact Property
+     -  Data Type
+
 
 Businesscentral Companies to  Contact
 -------------------------------------
@@ -47,6 +65,31 @@ The following properties are synchronized between a Businesscentral Contacts com
      - "string"
 
 
+Businesscentral Contacts person to  Person
+------------------------------------------
+Every Businesscentral Contacts person will be synchronized with a  Person.
+
+Once a link between a Businesscentral Contacts person and a  Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Contacts person and a  Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Contacts person Property
+     -  Person Property
+     -  Data Type
+   * - email
+     - Emails.Value
+     - "string"
+   * - mobilePhoneNumber
+     - MobilePhones.Value
+     - "string"
+   * - phoneNumber
+     - OfficePhones.Value
+     - "string"
+
+
 Businesscentral Customers company to  Contact
 ---------------------------------------------
 Every Businesscentral Customers company will be synchronized with a  Contact.
@@ -61,6 +104,21 @@ The following properties are synchronized between a Businesscentral Customers co
    * - Businesscentral Customers company Property
      -  Contact Property
      -  Data Type
+   * - address.city
+     - Address.Postal.City
+     - "string"
+   * - address.city
+     - Address.Street.City
+     - "string"
+   * - address.countryLetterCode
+     - Country.CountryId
+     - "integer"
+   * - address.postalCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - address.postalCode
+     - Address.Street.Zipcode
+     - "string"
    * - displayName
      - Name
      - "string"
