@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2023_12_12:
+
+2023-12-12
+----------
+
+* Fixed a bug where timestamps were not parsed correctly during partial rescans
+
 .. _changelog_2023_11_27:
 
 2023-11-27
