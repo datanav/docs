@@ -88,6 +88,14 @@ Pipe metrics
      - Gauge
      - Value is ``1.0`` if pipe is enabled and ``0.0`` if pipe is disabled.
 
+   * - ``sesam_pipe_config``
+     - Gauge
+     - Value is always ``1.0`` Contains config_group label
+
+   * - ``sesam_pipe_usage``
+     - Gauge
+     - Returns bytes used by pipe
+
    * - ``sesam_pipe_queue_source``
      - Gauge
      - Number of source entities in the pipe queue
