@@ -2,12 +2,66 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-11 00:00:00
+Generated: 2023-12-12 00:00:00
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Businesscentral Customers to  Contactperson
+-------------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Customers and a  Contactperson must be established.
+
+A new  Contactperson will be created from a Businesscentral Customers if it is connected to a Businesscentral Salesorders that is synchronized into .
+
+Once a link between a Businesscentral Customers and a  Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers and a  Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers Property
+     -  Contactperson Property
+     -  Data Type
+
+
+Businesscentral Customers to  Customers
+---------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Customers and a  Customers must be established.
+
+A new  Customers will be created from a Businesscentral Customers if it is connected to a Businesscentral Customers, Salesorders, or Contacts-person that is synchronized into .
+
+Once a link between a Businesscentral Customers and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers and a  Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers Property
+     -  Customers Property
+     -  Data Type
+
+
+Businesscentral Customers to  Customers person
+----------------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Customers and a  Customers person must be established.
+
+A new  Customers person will be created from a Businesscentral Customers if it is connected to a Businesscentral Customers, Salesorders, or Contacts-person that is synchronized into .
+
+Once a link between a Businesscentral Customers and a  Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers and a  Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers Property
+     -  Customers person Property
+     -  Data Type
+
 
 Businesscentral Contacts person to  Contactperson
 -------------------------------------------------
