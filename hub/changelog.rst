@@ -6,7 +6,7 @@ Changelog
 2023-12-12
 ----------
 
-* Added the :ref:`coalesce-args <coalesce_args_dtl_function>` DTL function.
+* Added the :ref:`coalesce-args <coalesce_args_dtl_function>` DTL function. This function is different from ``coalesce`` in that it evaluates its arguments in order and stops when it finds an argument that is not null. This can in many situations be a lot more efficient.
 * Fixed a bug where timestamps were not parsed correctly during partial rescans.
 
 .. _changelog_2023_11_27:

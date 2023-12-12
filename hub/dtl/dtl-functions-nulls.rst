@@ -51,6 +51,10 @@ Nulls
          evaluating the arguments in order and will short-circuit once there is a 
          non-null value. If all arguments evaluate to ``null`` then the function 
          will return ``null``.
+
+         This function is different from ``coalesce`` in that it evaluates its 
+         arguments in order and stops when it finds an argument that is not null. 
+         This can in many situations be a lot more efficient.
      - | ``["coalesce-args", "_S.one", "_S.two", "_S.three"]``
        |
        | Returns the the value of ``_S.two`` if that evaluates to non-null and 
