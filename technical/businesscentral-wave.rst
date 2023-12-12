@@ -2,12 +2,48 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-11 00:00:00
+Generated: 2023-12-12 00:00:00
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Businesscentral Customers to  Customer
+--------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Customers and a  Customer must be established.
+
+A new  Customer will be created from a Businesscentral Customers if it is connected to a Businesscentral Customers, Salesorders, or Customers-company that is synchronized into .
+
+Once a link between a Businesscentral Customers and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers and a  Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers Property
+     -  Customer Property
+     -  Data Type
+
+
+Businesscentral Customers to  Customer person
+---------------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Customers and a  Customer person must be established.
+
+A new  Customer person will be created from a Businesscentral Customers if it is connected to a Businesscentral Customers, Salesorders, or Customers-company that is synchronized into .
+
+Once a link between a Businesscentral Customers and a  Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers and a  Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers Property
+     -  Customer person Property
+     -  Data Type
+
 
 Businesscentral Customers company to  Customer
 ----------------------------------------------
