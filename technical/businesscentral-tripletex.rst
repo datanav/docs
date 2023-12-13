@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-12 00:00:00
+Generated: 2023-12-13 00:00:00
 
 Introduction.
 ------------
@@ -31,7 +31,7 @@ Businesscentral Customers to  Customer
 --------------------------------------
 Before any synchronization can take place, a link between a Businesscentral Customers and a  Customer must be established.
 
-A new  Customer will be created from a Businesscentral Customers if it is connected to a Businesscentral Customers, Salesorders, or Contacts-person that is synchronized into .
+A new  Customer will be created from a Businesscentral Customers if it is connected to a Businesscentral Customers, Salesorders, Contact-person, or Contacts-person that is synchronized into .
 
 Once a link between a Businesscentral Customers and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -42,6 +42,24 @@ The following properties are synchronized between a Businesscentral Customers an
 
    * - Businesscentral Customers Property
      -  Customer Property
+     -  Data Type
+
+
+Businesscentral Customers to  Department
+----------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Customers and a  Department must be established.
+
+A new  Department will be created from a Businesscentral Customers if it is connected to a Businesscentral Employee that is synchronized into .
+
+Once a link between a Businesscentral Customers and a  Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers and a  Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers Property
+     -  Department Property
      -  Data Type
 
 
@@ -117,6 +135,31 @@ The following properties are synchronized between a Businesscentral Customers co
    * - phoneNumber
      - phoneNumber
      - "string"
+
+
+Businesscentral Employee to  Employee
+-------------------------------------
+Every Businesscentral Employee will be synchronized with a  Employee.
+
+Once a link between a Businesscentral Employee and a  Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Employee and a  Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Employee Property
+     -  Employee Property
+     -  Data Type
+   * - birthDate
+     - dateOfBirth
+     - "datetime-format","%Y-%m-%d","_."]
+   * - city
+     - address.city
+     - "string"
+   * - country
+     - address.country.id
+     - "integer"
 
 
 Businesscentral Itemcategories to  Productgroup
@@ -211,6 +254,9 @@ The following properties are synchronized between a Businesscentral Salesorderli
    * - discountPercent
      - discount
      - "float"
+   * - documentId
+     - order.id
+     - "integer"
    * - invoiceQuantity
      - count
      - "float"
