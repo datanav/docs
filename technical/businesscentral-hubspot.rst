@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-12 00:00:00
+Generated: 2023-12-13 00:00:00
 
 Introduction.
 ------------
@@ -23,46 +23,6 @@ The following properties are synchronized between a Businesscentral Companies an
    * - Businesscentral Companies Property
      -  Company Property
      -  Data Type
-
-
-Businesscentral Contacts company to  Company
---------------------------------------------
-Every Businesscentral Contacts company will be synchronized with a  Company.
-
-Once a link between a Businesscentral Contacts company and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Contacts company and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Contacts company Property
-     -  Company Property
-     -  Data Type
-   * - addressLine1
-     - properties.address
-     - "string"
-   * - addressLine2
-     - properties.address2
-     - "string"
-   * - city
-     - properties.city
-     - "string"
-   * - country
-     - properties.country
-     - "string"
-   * - displayName
-     - properties.name
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - phoneNumber
-     - properties.phone
-     - "string"
-   * - postalCode
-     - properties.zip
-     - "string"
 
 
 Businesscentral Contacts person to  Contact
@@ -197,4 +157,7 @@ The following properties are synchronized between a Businesscentral Salesorderli
    * - Businesscentral Salesorderlines Property
      -  Lineitemdealassociation Property
      -  Data Type
+   * - documentId
+     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+     - "string"
 
