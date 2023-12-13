@@ -257,6 +257,7 @@ DTL Expression Functions
 
    * - Nulls
      - :ref:`coalesce <coalesce_dtl_function>` ·
+       :ref:`coalesce-args <coalesce_args_dtl_function>` ·
        :ref:`if-null <if_null_dtl_function>` ·
        :ref:`is-not-null <is_not_null_dtl_function>` ·
        :ref:`is-null <is_null_dtl_function>`

@@ -32,6 +32,44 @@ Nulls
        |
        | Returns the first hobby that has expenses greater than 1000.
 
+.. _coalesce_args_dtl_function:
+
+``coalesce-args``
+-----------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   VALUES(value-expression{>=1})
+       |
+       | Returns the first argument in VALUES that is not ``null``. The function is 
+         evaluating the arguments in order and will short-circuit once there is a 
+         non-null value. If all arguments evaluate to ``null`` then the function 
+         will return ``null``.
+
+         This function is different from ``coalesce`` in that it evaluates its 
+         arguments in order and stops when it finds an argument that is not null. 
+         This can in many situations be a lot more efficient.
+     - | ``["coalesce-args", "_S.one", "_S.two", "_S.three"]``
+       |
+       | Returns the the value of ``_S.two`` if that evaluates to non-null and 
+         ``_S.one`` evaluates to null.
+       |
+       | ``["coalesce-args",``
+       |     ``null, null, 123, 236]``
+       |
+       | Returns ``123`` as that is the first non-null argument.
+       |
+       | ``["coalesce-args",``
+       |     ``null, ["list"], 123, 236]``
+       |
+       | Returns ``[]`` as that is the first non-null argument.
+
 .. _if_null_dtl_function:
 
 ``if-null``
