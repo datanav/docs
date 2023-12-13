@@ -2,29 +2,50 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-12 00:00:00
+Generated: 2023-12-13 00:00:00
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Customers to  Contact
--------------------------------------
-Before any synchronization can take place, a link between a Businesscentral Customers and a  Contact must be established.
+Businesscentral Customers to SuperOffice Contact
+------------------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Customers and a SuperOffice Contact must be established.
 
-A new  Contact will be created from a Businesscentral Customers if it is connected to a Businesscentral Contacts-person that is synchronized into .
+A new SuperOffice Contact will be created from a Businesscentral Customers if it is connected to a Businesscentral Contact, or Contacts-person that is synchronized into SuperOffice.
 
-Once a link between a Businesscentral Customers and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Customers and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers and a  Contact:
+The following properties are synchronized between a Businesscentral Customers and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Customers Property
-     -  Contact Property
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
+
+
+Businesscentral Salesorders to  Quotealternative
+------------------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Salesorders and a  Quotealternative must be established.
+
+A new  Quotealternative will be created from a Businesscentral Salesorders if it is connected to a Businesscentral Salesorderlines that is synchronized into .
+
+Once a link between a Businesscentral Salesorders and a  Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorders and a  Quotealternative:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorders Property
+     -  Quotealternative Property
      -  Data Type
+   * - totalAmountExcludingTax
+     - TotalPrice
+     - "float"
 
 
 Businesscentral Companies to  Contact
@@ -41,28 +62,6 @@ The following properties are synchronized between a Businesscentral Companies an
    * - Businesscentral Companies Property
      -  Contact Property
      -  Data Type
-
-
-Businesscentral Contacts company to  Contact
---------------------------------------------
-Every Businesscentral Contacts company will be synchronized with a  Contact.
-
-Once a link between a Businesscentral Contacts company and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Contacts company and a  Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Contacts company Property
-     -  Contact Property
-     -  Data Type
-   * - displayName
-     - Name
-     - "string"
-   * - phoneNumber
-     - Phones.Value
-     - "string"
 
 
 Businesscentral Contacts person to  Person
@@ -194,4 +193,7 @@ The following properties are synchronized between a Businesscentral Salesorderli
    * - Businesscentral Salesorderlines Property
      -  Quoteline Property
      -  Data Type
+   * - documentId
+     - QuoteAlternativeId
+     - "integer"
 
