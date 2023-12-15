@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-14 00:00:00
+Generated: 2023-12-15 00:00:00
 
 Introduction.
 ------------
@@ -33,6 +33,18 @@ The following properties are synchronized between a Businesscentral Contacts per
    * - Businesscentral Contacts person Property
      -  Contacts person Property
      -  Data Type
+   * - addressLine1
+     - addressLine2
+     - "string"
+   * - addressLine2
+     - addressLine1
+     - "string"
+   * - mobilePhoneNumber
+     - phoneNumber
+     - "string"
+   * - phoneNumber
+     - mobilePhoneNumber
+     - "string"
 
 
 Businesscentral Contactsinformation person customer relation to  Contacts person
@@ -116,4 +128,57 @@ The following properties are synchronized between a Businesscentral Customers co
    * - Businesscentral Customers company Property
      -  Companies Property
      -  Data Type
+
+
+Businesscentral Contacts person to  Customers person
+----------------------------------------------------
+Every Businesscentral Contacts person will be synchronized with a  Customers person.
+
+Once a link between a Businesscentral Contacts person and a  Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Contacts person and a  Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Contacts person Property
+     -  Customers person Property
+     -  Data Type
+   * - city
+     - address.city
+     - "string"
+   * - displayName
+     - displayName
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - type
+     - type
+     - "string"
+
+
+Businesscentral Customers person to  Contacts person
+----------------------------------------------------
+Every Businesscentral Customers person will be synchronized with a  Contacts person.
+
+Once a link between a Businesscentral Customers person and a  Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers person and a  Contacts person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers person Property
+     -  Contacts person Property
+     -  Data Type
+   * - address.city
+     - city
+     - "string"
+   * - type
+     - type
+     - "string"
 
