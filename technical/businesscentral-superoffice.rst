@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-14 00:00:00
+Generated: 2023-12-15 00:00:00
 
 Introduction.
 ------------
@@ -78,9 +78,15 @@ The following properties are synchronized between a Businesscentral Contacts per
    * - Businesscentral Contacts person Property
      -  Person Property
      -  Data Type
+   * - city
+     - Address.Street.City
+     - "string"
    * - email
      - Emails.Value
      - "string"
+   * - id
+     - PersonId
+     - "integer"
    * - mobilePhoneNumber
      - MobilePhones.Value
      - "string"
