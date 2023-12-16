@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-15 00:00:00
+Generated: 2023-12-16 00:00:00
 
 Introduction.
 ------------
@@ -132,6 +132,9 @@ The following properties are synchronized between a Businesscentral Customers co
    * - displayName
      - name
      - "string"
+   * - id
+     - id
+     - "integer"
    * - phoneNumber
      - phoneNumber
      - "string"
@@ -160,6 +163,9 @@ The following properties are synchronized between a Businesscentral Employee and
    * - country
      - address.country.id
      - "integer"
+   * - postalCode
+     - address.postalCode
+     - "string"
 
 
 Businesscentral Itemcategories to  Productgroup
