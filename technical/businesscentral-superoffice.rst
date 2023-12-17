@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-16 00:00:00
+Generated: 2023-12-17 00:00:00
 
 Introduction.
 ------------
@@ -25,6 +25,27 @@ The following properties are synchronized between a Businesscentral Customers an
    * - Businesscentral Customers Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
+
+
+Businesscentral Salesorders to  Quotealternative
+------------------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Salesorders and a  Quotealternative must be established.
+
+A new  Quotealternative will be created from a Businesscentral Salesorders if it is connected to a Businesscentral Salesorderlines that is synchronized into .
+
+Once a link between a Businesscentral Salesorders and a  Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorders and a  Quotealternative:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorders Property
+     -  Quotealternative Property
+     -  Data Type
+   * - totalAmountExcludingTax
+     - TotalPrice
+     - "float"
 
 
 Businesscentral Companies to  Contact
@@ -126,25 +147,6 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
 
 
-Businesscentral Itemcategories to  Listproductcategoryitems
------------------------------------------------------------
-Every Businesscentral Itemcategories will be synchronized with a  Listproductcategoryitems.
-
-Once a link between a Businesscentral Itemcategories and a  Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Itemcategories and a  Listproductcategoryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Itemcategories Property
-     -  Listproductcategoryitems Property
-     -  Data Type
-   * - displayName
-     - Name
-     - "string"
-
-
 Businesscentral Items to  Product
 ---------------------------------
 Every Businesscentral Items will be synchronized with a  Product.
@@ -177,4 +179,23 @@ The following properties are synchronized between a Businesscentral Items and a 
    * - unitPrice
      - UnitListPrice
      - "decimal"
+
+
+Businesscentral Salesorderlines to  Quoteline
+---------------------------------------------
+Every Businesscentral Salesorderlines will be synchronized with a  Quoteline.
+
+Once a link between a Businesscentral Salesorderlines and a  Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorderlines and a  Quoteline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorderlines Property
+     -  Quoteline Property
+     -  Data Type
+   * - documentId
+     - QuoteAlternativeId
+     - "integer"
 
