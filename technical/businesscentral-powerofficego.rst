@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-16 00:00:00
+Generated: 2023-12-17 00:00:00
 
 Introduction.
 ------------
@@ -266,28 +266,6 @@ The following properties are synchronized between a Businesscentral Employee and
    * - birthDate
      - DateOfBirth
      - "datetime-format","%Y-%m-%d","_."]
-
-
-Businesscentral Itemcategories to  Productgroup
------------------------------------------------
-Every Businesscentral Itemcategories will be synchronized with a  Productgroup.
-
-Once a link between a Businesscentral Itemcategories and a  Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Itemcategories and a  Productgroup:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Itemcategories Property
-     -  Productgroup Property
-     -  Data Type
-   * - code
-     - Code
-     - "string"
-   * - displayName
-     - Name
-     - "string"
 
 
 Businesscentral Items to  Product
