@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-18 00:00:00
+Generated: 2023-12-19 00:00:01
 
 Introduction.
 ------------
@@ -197,5 +197,8 @@ The following properties are synchronized between a Businesscentral Salesorderli
      -  Data Type
    * - documentId
      - QuoteAlternativeId
+     - "integer"
+   * - quantity
+     - Quantity
      - "integer"
 
