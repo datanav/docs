@@ -1,9 +1,9 @@
 Changelog
 =========
 
-.. _changelog_2023_12_18:
+.. _changelog_2023_12_20:
 
-2023-12-12
+2023-12-20
 ----------
 
 * Added support for using DTL to calculate value of the ``completeness`` property on the :ref:`dataset source <dataset_source>` at runtime.
