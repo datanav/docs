@@ -50,10 +50,28 @@ Properties
      - No
 
    * - ``completeness``
-     - Boolean or Array of strings
-     - If set to ``true``, the dataset source completeness filtering feature is enabled. This will instruct the source to only return source entities that have a ``_ts`` value that is older than or equal to the completeness timestamp value of the source dataset.
+     - Boolean, Dict or an Array of strings
+     - As a Boolean:
+       If set to ``true``, the dataset source completeness filtering feature is enabled. This will instruct the source
+       to only return source entities that have a ``_ts`` value that is older than or equal to the completeness
+       timestamp value of the source dataset.
 
+       As a Dict:
+       If set to a dict with an "expression" key, the minimum completeness value will be set to the return value
+       of the DTL expression. The expression will be evaluated each time the pipe is about to start.
+       The expression must return a datetime value. Example of an expression that will prevent
+       the pipe from processing entities with a ``_ts`` value that are less than seven days old::
+
+           "completeness": {
+              "expression": ["datetime-plus", "day", -7, ["now"]]
+           }
+
+       If the DTL expression returns anything other than a datetime object, the pipe will set the minimum completeness
+       value to "~t1970-01-01T00:00:00Z" (which will usually result in the pipe not processing any entities).
+
+       As an Array:
        It is also possible to use the completeness timestamp value of one or more specific upstream datasets instead of the source dataset; this is done by setting ``completeness`` to an array of the upstream dataset ids. If the array contains more than one dataset id, the smallest completeness timestamp value is used.
+
      - ``false``
      -
 
