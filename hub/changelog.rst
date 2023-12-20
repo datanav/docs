@@ -7,6 +7,7 @@ Changelog
 ----------
 
 * Added support for using DTL to calculate value of the ``completeness`` property on the :ref:`dataset source <dataset_source>` at runtime.
+* Added the :ref:`completeness <completeness_dtl_function>` DTL function.
 
 .. _changelog_2023_12_12:
 
