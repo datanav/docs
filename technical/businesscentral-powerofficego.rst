@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-19 00:00:01
+Generated: 2023-12-20 00:00:00
 
 Introduction.
 ------------
@@ -143,7 +143,7 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
    * - type
      - IsPerson
-     - "boolean"
+     - "if", "is-empty", true, "boolean"]
 
 
 Businesscentral Currencies to  Currency
@@ -209,7 +209,10 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
    * - type
      - IsPerson
-     - "boolean"
+     - "if", "is-empty", false, "boolean"]
+   * - website
+     - WebsiteUrl
+     - "string"
 
 
 Businesscentral Customers person to  Customers person
@@ -246,7 +249,7 @@ The following properties are synchronized between a Businesscentral Customers pe
      - "string"
    * - type
      - IsPerson
-     - "boolean"
+     - "if", "is-empty", true, "boolean"]
 
 
 Businesscentral Employee to  Employees
