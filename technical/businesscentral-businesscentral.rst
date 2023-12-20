@@ -2,12 +2,85 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-19 00:00:01
+Generated: 2023-12-20 00:00:00
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Businesscentral Contacts person to  Contacts person
+---------------------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Contacts person and a  Contacts person must be established.
+
+A Businesscentral Contacts person will merge with a  Contacts person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Contacts person Property
+     -  Contacts person Property
+   * - id
+     - id
+
+Once a link between a Businesscentral Contacts person and a  Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Contacts person and a  Contacts person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Contacts person Property
+     -  Contacts person Property
+     -  Data Type
+   * - addressLine1
+     - addressLine2
+     - "string"
+   * - addressLine2
+     - addressLine1
+     - "string"
+   * - mobilePhoneNumber
+     - phoneNumber
+     - "string"
+   * - phoneNumber
+     - mobilePhoneNumber
+     - "string"
+
+
+Businesscentral Contactsinformation person customer relation to  Contacts person
+--------------------------------------------------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Contactsinformation person customer relation and a  Contacts person must be established.
+
+A Businesscentral Contactsinformation person customer relation will merge with a  Contacts person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Contactsinformation person customer relation Property
+     -  Contacts person Property
+   * - contactId
+     - id
+
+Once a link between a Businesscentral Contactsinformation person customer relation and a  Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Contactsinformation person customer relation and a  Contacts person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Contactsinformation person customer relation Property
+     -  Contacts person Property
+     -  Data Type
+   * - contactId
+     - id
+     - "string"
+   * - contactName
+     - displayName
+     - "string"
+   * - contactName.contactName
+     - displayName
+     - "string"
+
 
 Businesscentral Items to  Items
 -------------------------------
