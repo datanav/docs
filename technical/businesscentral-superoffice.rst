@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-19 00:00:01
+Generated: 2023-12-20 00:00:00
 
 Introduction.
 ------------
@@ -144,6 +144,9 @@ The following properties are synchronized between a Businesscentral Customers co
      - "integer"
    * - phoneNumber
      - Phones.Value
+     - "string"
+   * - website
+     - Urls.Value
      - "string"
 
 
