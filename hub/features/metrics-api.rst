@@ -158,6 +158,10 @@ Note that metrics are not exposed for pipes that are disabled or have pump.mode=
      - Type
      - Description
 
+   * - ``sesam_pump_total_time``
+     - Gauge
+     - Runtime in seconds. 0.0 if the pipe has not run yet.
+
    * - ``sesam_pump_successful``
      - Gauge
      - Was the last pump run successful? 1.0 if successful and -1.0 if not successful and 0.0 if the pipe has not run yet.
