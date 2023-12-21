@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-20 00:00:00
+Generated: 2023-12-21 00:00:01
 
 Introduction.
 ------------
@@ -198,10 +198,28 @@ The following properties are synchronized between a Businesscentral Salesorderli
    * - Businesscentral Salesorderlines Property
      -  Quoteline Property
      -  Data Type
+   * - description
+     - Description
+     - "string"
+   * - description
+     - Name
+     - "string"
+   * - discountPercent
+     - DiscountPercent
+     - "integer"
    * - documentId
      - QuoteAlternativeId
      - "integer"
+   * - itemId
+     - ERPProductKey
+     - "string"
    * - quantity
      - Quantity
      - "integer"
+   * - taxPercent
+     - VAT
+     - "integer"
+   * - unitPrice
+     - UnitListPrice
+     - "string"
 
