@@ -52,7 +52,7 @@ Conditional properties
 
 A more complex way of conditionally setting property values can be achieved by using *conditional properties*.
 This construct is supported by the System, Pipe and service metadata entities and can be used to set
-one or more configuration property depending on a certain condition (typically set by an environment variable).
+one or more configuration properties depending on a certain condition (typically set by an environment variable).
 
 Example:
 
