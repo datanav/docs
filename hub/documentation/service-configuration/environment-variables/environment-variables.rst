@@ -90,10 +90,6 @@ It is possible to nest conditional properties within another conditional propert
 the configuration entity (but note the limitations below). Each conditional block are applied at the same level as where
 the conditional properties are defined.
 
-If a ``$conditional_properties`` element is misconfigured, i.e. missing the ``condition`` or ``alternatives`` property
-(or if they are of the wrong type), it will be silently ignored. The same applies if the condition property evaluates
-to a value that is not present as a key in the ``alternatives`` object.
-
 Note that there are some limitations to where the conditional property construct can be used:
 
  * The ``_id`` or ``type`` properties on the root level of a configuration entity can not be set in a
