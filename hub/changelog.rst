@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2023_12_22:
+
+2023-12-22
+----------
+
+* Added support for :ref:`conditional properties <conditional_properties>` for the System, Pipe and service metadata configuration entities.
+
 .. _changelog_2023_12_20:
 
 2023-12-20
