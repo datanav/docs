@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-01-03 00:00:00
+Generated: 2024-01-04 00:00:00
 
 Introduction.
 ------------
@@ -88,6 +88,18 @@ The following properties are synchronized between a Businesscentral Customers co
    * - address.postalCode
      - properties.zip
      - "string"
+   * - addressLine1
+     - properties.address
+     - "string"
+   * - addressLine2
+     - properties.address2
+     - "string"
+   * - city
+     - properties.city
+     - "string"
+   * - country
+     - properties.country
+     - "string"
    * - displayName
      - properties.name
      - "string"
@@ -96,6 +108,9 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
    * - phoneNumber
      - properties.phone
+     - "string"
+   * - postalCode
+     - properties.zip
      - "string"
 
 
