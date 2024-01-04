@@ -58,17 +58,17 @@ Type of sinks
    :maxdepth: 1
 
    Conditional sink <configuration-sinks-conditional>
+   CSV endpoint sink <configuration-sinks-csv>
    Dataset sink <configuration-sinks-dataset>
+   Elasticsearch sink <configuration-sinks-elasticsearch>
+   Email Message sink <configuration-sinks-email>
+   HTTP endpoint sink <configuration-sinks-http>
    JSON push sink <configuration-sinks-json>
+   Null sink <configuration-sinks-null>
+   REST sink <configuration-sinks-rest>
    SDShare push sink <configuration-sinks-sdshare>
    SMS message sink <configuration-sinks-sms>
    Solr sink <configuration-sinks-solr>
-   Elasticsearch sink <configuration-sinks-elasticsearch>
    SPARQL sink <configuration-sinks-sparql>
    SQL sink <configuration-sinks-sql>
-   Email Message sink <configuration-sinks-email>
-   Null sink <configuration-sinks-null>
-   HTTP endpoint sink <configuration-sinks-http>
-   CSV endpoint sink <configuration-sinks-csv>
    XML endpoint sink <configuration-sinks-xml>
-   REST sink <configuration-sinks-rest>

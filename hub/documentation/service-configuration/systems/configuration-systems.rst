@@ -87,18 +87,18 @@ Type of systems
 .. toctree::
    :maxdepth: 1
 
-   SQL systems <configuration-systems-sql>
-   Oracle system <configuration-systems-oracle>
-   Oracle TNS system <configuration-systems-oracle-tns>
+   Elasticsearch system <configuration-systems-elasticsearch>
+   LDAP system <configuration-systems-ldap>
    Legacy Microsoft SQL Server system <configuration-systems-mssql-legacy>
+   Microservice system <configuration-systems-microservice>
    Microsoft SQL Server system <configuration-systems-mssql>
    MySQL system <configuration-systems-mysql>
+   Oracle system <configuration-systems-oracle>
+   Oracle TNS system <configuration-systems-oracle-tns>
    PostgreSQL system <configuration-systems-postgresql>
-   LDAP system <configuration-systems-ldap>
+   REST system <configuration-systems-rest>
    SMTP system <configuration-systems-smtp>
+   SQL systems <configuration-systems-sql>
    Solr system <configuration-systems-solr>
-   Elasticsearch system <configuration-systems-elasticsearch>
    Twilio system <configuration-systems-twilio>
    URL system <configuration-systems-url>
-   REST system <configuration-systems-rest>
-   Microservice system <configuration-systems-microservice>

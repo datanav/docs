@@ -312,19 +312,19 @@ Type of sources
 .. toctree::
    :maxdepth: 1
 
-   Dataset source <configuration-sources-dataset>
-   Merge source <configuration-sources-merge>
-   Union datasets source <configuration-sources-union-datasets>
-   Merge datasets source <configuration-sources-merge-datasets>
-   Embedded source <configuration-sources-embedded>
-   SQL source <configuration-sources-sql>
    Conditional source <configuration-sources-conditional>
    CSV source <configuration-sources-csv>
-   RDF source <configuration-sources-rdf>
-   SDShare source <configuration-sources-sdshare>
-   LDAP source <configuration-sources-ldap>
-   JSON source <configuration-sources-json>
+   Dataset source <configuration-sources-dataset>
+   Embedded source <configuration-sources-embedded>
    Empty source <configuration-sources-empty>
    HTTP endpoint source <configuration-sources-http>
-   SPARQL source <configuration-sources-sparql>
+   JSON source <configuration-sources-json>
+   LDAP source <configuration-sources-ldap>
+   Merge source <configuration-sources-merge>
+   Merge datasets source <configuration-sources-merge-datasets>
+   RDF source <configuration-sources-rdf>
    REST source <configuration-sources-rest>
+   SDShare source <configuration-sources-sdshare>
+   SPARQL source <configuration-sources-sparql>
+   SQL source <configuration-sources-sql>
+   Union datasets source <configuration-sources-union-datasets>
