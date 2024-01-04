@@ -183,3 +183,43 @@ Misc
        |
        | Returns ``[[1, 3], [1, 4], [1, 5],``
        |         ``[2, 3], [2, 4], [2, 5]]``. The ``null`` value was ignored.
+
+
+
+.. _completeness_dtl_function:
+
+``completeness``
+----------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   VIA_DATASET_ID(string{1})
+       |   DATASET_ID(string{1})
+       |
+       | Looks up the :ref:`completeness value <completeness_feature>` of the dataset ``DATASET_ID`` via the dataset ``VIA_DATASET_ID``.
+         Completeness values are propagated from upstream to downstream pipes when the pipes run, so the completeness value of ``DATASET_ID``
+         can be different when accessed via different downstream datasets.
+       | This function returns a datetime object on success, or ``null`` if either of the datasets don't exist, or if
+         the dataset ``VIA_DATASET_ID`` doesn't have any record of the completeness of the dataset ``DATASET_ID``.
+       |
+     - | ``["completeness", "pipe1", "pipe1"]``
+       |
+       | Since ``VIA_DATASET_ID`` is the same as ``DATASET_ID`` this will give the up-to-date completeness-value of
+         the dataset ``pipe1``. (example: "~t2015-07-28T07:46:00Z").
+       |
+       | ``["completeness", "pipe-that-doesnt-have-pipe1-upstream", "pipe1"]``
+       |
+       | Returns ``null``, since the pipe that writes to the "pipe-that-doesnt-have-pipe1-upstream" hasn't heard
+         about the "pipe1" dataset.
+       |
+       | ``["completeness", "pipe-that-does-have-pipe1-upstream", "pipe1"]``
+       |
+       | Returns the last "pipe1" completeness value that the pipe writing the "pipe-that-does-have-pipe1-upstream" dataset has seen.
+       | This value can be older than the current completeness value of "pipe1", since the latest completeness value might not
+         have been propagated down to the "pipe-that-does-have-pipe1-upstream" pipe yet.
