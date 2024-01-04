@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-01-03 00:00:00
+Generated: 2024-01-04 00:00:00
 
 Introduction.
 ------------
@@ -143,7 +143,7 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
    * - type
      - IsPerson
-     - "if", "is-empty", true, "boolean"]
+     - "boolean"
 
 
 Businesscentral Currencies to  Currency
@@ -198,6 +198,18 @@ The following properties are synchronized between a Businesscentral Customers co
    * - address.postalCode
      - MailAddress.ZipCode
      - "string"
+   * - addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - city
+     - MailAddress.City
+     - "string"
+   * - country
+     - MailAddress.CountryCode
+     - "string"
    * - displayName
      - Name
      - "string"
@@ -207,9 +219,12 @@ The following properties are synchronized between a Businesscentral Customers co
    * - phoneNumber
      - PhoneNumber
      - "string"
+   * - postalCode
+     - MailAddress.ZipCode
+     - "string"
    * - type
      - IsPerson
-     - "if", "is-empty", false, "boolean"]
+     - "boolean"
    * - website
      - WebsiteUrl
      - "string"
@@ -232,11 +247,23 @@ The following properties are synchronized between a Businesscentral Customers pe
    * - address.city
      - MailAddress.City
      - "string"
-   * - address.countryLetterCode
-     - MailAddress.CountryCode
-     - "string"
    * - address.postalCode
      - MailAddress.ZipCode
+     - "string"
+   * - addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - addressLine2
+     - MailAddress.City
+     - "string"
+   * - city
+     - MailAddress.City
+     - "string"
+   * - country
+     - MailAddress.CountryCode
      - "string"
    * - email
      - EmailAddress
@@ -247,9 +274,12 @@ The following properties are synchronized between a Businesscentral Customers pe
    * - phoneNumber
      - PhoneNumber
      - "string"
+   * - postalCode
+     - MailAddress.ZipCode
+     - "string"
    * - type
      - IsPerson
-     - "if", "is-empty", true, "boolean"]
+     - "boolean"
 
 
 Businesscentral Employee to  Employees
@@ -269,6 +299,9 @@ The following properties are synchronized between a Businesscentral Employee and
    * - birthDate
      - DateOfBirth
      - "datetime-format","%Y-%m-%d","_."]
+   * - country
+     - MailAddress.CountryCode
+     - "string"
 
 
 Businesscentral Items to  Product
