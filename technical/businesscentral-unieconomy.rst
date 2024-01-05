@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-01-04 00:00:00
+Generated: 2024-01-05 00:00:01
 
 Introduction.
 ------------
@@ -26,6 +26,9 @@ The following properties are synchronized between a Businesscentral Customers co
    * - displayName
      - Name
      - "string"
+   * - id (Dependant on having wd:Q11994066 in type)
+     - OrganizationNumber
+     - "string"
 
 
 Businesscentral Customers company to  Customers
@@ -42,6 +45,9 @@ The following properties are synchronized between a Businesscentral Customers co
    * - Businesscentral Customers company Property
      -  Customers Property
      -  Data Type
+   * - id (Dependant on having wd:Q11994066 in type)
+     - OrgNumber
+     - "string"
    * - website
      - WebUrl
      - "string"
