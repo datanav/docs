@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-01-04 00:00:00
+Generated: 2024-01-05 00:00:01
 
 Introduction.
 ------------
@@ -106,6 +106,12 @@ The following properties are synchronized between a Businesscentral Items and a 
    * - Businesscentral Items Property
      -  Items Property
      -  Data Type
+   * - displayName
+     - displayName2
+     - "string"
+   * - displayName2
+     - displayName
+     - "string"
    * - itemCategoryId
      - taxGroupId
      - "string"
@@ -169,7 +175,7 @@ The following properties are synchronized between a Businesscentral Contacts per
      - email
      - "string"
    * - id
-     - id
+     - id (Dependant on having BusinessCentral-contact in type)
      - "string"
    * - phoneNumber
      - phoneNumber
