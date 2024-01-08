@@ -15,10 +15,9 @@ In order to connect your PowerOffice account to Sesam Talk you need to create a 
 #. Navigate to **Menu** then click on **Settings**
 #. Under System, click **Extensions**
 #. Click on **Add Extension**
-#. Pick **Custom** from the Extension menu
-#. Paste this key in the Application Key field : **109b9cac-bafd-45f0-a996-94169765502c**
-#. Copy your Client Key and store it somewhere
-#. Use the Client Key when you connect your PowerOffice to Sesam Talk, as shown bellow
+#. Select **Sesam Talk** from the list, this will generate your **Client Key**
+#. Copy your **Client Key** and store it somewhere
+#. Use the **Client Key** when you connect your PowerOffice to Sesam Talk, as shown bellow
 
 |
 
