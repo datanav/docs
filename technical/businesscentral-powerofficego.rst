@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-01-08 00:00:01
+Generated: 2024-01-09 00:00:00
 
 Introduction.
 ------------
@@ -301,6 +301,9 @@ The following properties are synchronized between a Businesscentral Employee and
      - "datetime-format","%Y-%m-%d","_."]
    * - country
      - MailAddress.CountryCode
+     - "string"
+   * - mobilePhone
+     - PhoneNumber
      - "string"
 
 
