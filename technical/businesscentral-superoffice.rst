@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-01-08 00:00:01
+Generated: 2024-01-09 00:00:00
 
 Introduction.
 ------------
@@ -13,7 +13,7 @@ Businesscentral Customers to SuperOffice Contact
 ------------------------------------------------
 Before any synchronization can take place, a link between a Businesscentral Customers and a SuperOffice Contact must be established.
 
-A new SuperOffice Contact will be created from a Businesscentral Customers if it is connected to a Businesscentral Contact, or Contacts-person that is synchronized into SuperOffice.
+A new SuperOffice Contact will be created from a Businesscentral Customers if it is connected to a Businesscentral Contact, Employee, or Contacts-person that is synchronized into SuperOffice.
 
 Once a link between a Businesscentral Customers and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -174,6 +174,49 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
    * - website
      - Urls.Value
+     - "string"
+
+
+Businesscentral Employee to  Person
+-----------------------------------
+Every Businesscentral Employee will be synchronized with a  Person.
+
+Once a link between a Businesscentral Employee and a  Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Employee and a  Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Employee Property
+     -  Person Property
+     -  Data Type
+   * - addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - birthDate
+     - BirthDate
+     - "datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
+   * - city
+     - Address.Street.City
+     - "string"
+   * - email
+     - Emails.Value
+     - "string"
+   * - mobilePhone
+     - MobilePhones.Value
+     - "string"
+   * - personalEmail
+     - Emails.Value
+     - "string"
+   * - phoneNumber
+     - OfficePhones.Value
+     - "string"
+   * - postalCode
+     - Address.Street.Zipcode
      - "string"
 
 
