@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-01-08 00:00:01
+Generated: 2024-01-09 00:00:00
 
 Introduction.
 ------------
@@ -25,5 +25,17 @@ The following properties are synchronized between a Businesscentral Employee and
      -  Data Type
    * - birthDate
      - date_of_birth
+     - "string"
+   * - email
+     - personal_email
+     - "string"
+   * - mobilePhone
+     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
+     - "string"
+   * - personalEmail
+     - personal_email
+     - "string"
+   * - phoneNumber
+     - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
      - "string"
 
