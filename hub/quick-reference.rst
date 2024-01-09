@@ -241,7 +241,8 @@ DTL Expression Functions
        :ref:`tan <tan_dtl_function>`
 
    * - Misc
-     - :ref:`fail! <fail_dtl_function>` ·
+     - :ref:`completeness <completeness_dtl_function>` ·
+       :ref:`fail! <fail_dtl_function>` ·
        :ref:`hash128 <hash128_dtl_function>` ·
        :ref:`is-changed <is_changed_dtl_function>` ·
        :ref:`literal <literal_dtl_function>` ·
