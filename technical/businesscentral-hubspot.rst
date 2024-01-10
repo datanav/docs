@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-01-09 00:00:00
+Generated: 2024-01-10 00:00:00
 
 Introduction.
 ------------
@@ -105,6 +105,9 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
    * - id
      - id
+     - "string"
+   * - id (Dependant on having  in typeDependant on having NO in type)
+     - sync_org_nr
      - "string"
    * - phoneNumber
      - properties.phone
