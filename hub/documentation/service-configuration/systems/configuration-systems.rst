@@ -25,6 +25,10 @@ Prototype
         "description": "This is a description of the system",
         "comment": "This is a comment",
         "worker_threads": 10,
+        "permissions": [
+           ["allow", ["group:Foo"], ["some_permission"]],
+           ["deny", ["group:OtherGroup"], ["some_other_permission"]]
+        ],
         "metadata": {
            "some_key": "some_value"
         }
@@ -79,6 +83,15 @@ Properties
      - Integer
      - The maximum number of concurrent pipes running using this system
      - 10
+     -
+
+   * - ``permissions``
+     - List of ACL elements
+     - This property should contain a list of ACL definitions (itself a 3-element list (tuple) of
+       "ALLOW"|"DENY",[list,of,groups,or,roles],[list,of,permissions]) that defines
+       which permissions should be applied to the system when it's uploaded and instantiated. See the example
+       configuration in the :ref:`pipe metadata <pipe_metadata>` section for how this should be formatted.
+     -
      -
 
 Type of systems
