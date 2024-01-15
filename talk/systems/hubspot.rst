@@ -45,3 +45,17 @@ Why is the address of my contact in HubSpot not up to date?
 In Hubspot the contact field for **address** is read-only. That means that we can not write data into this field. 
 
 If you want to change the address of a contact, you should do it in HubSpot.
+
+How to disable the synchronisation
+**********************************
+
+Follow these steps to disable the synchronisation of your HubSpot account:
+
+#. Log in to `Sesam Management Console <https://talk.sesam.io/>`_ 
+#. Select **HubSpot**
+#. Click on **Configuration** on the left menu
+#. Click on **Disconnect**
+
+.. note::
+
+    We suggest that you delete the **Wave by Sesam** application in HubSpot settings > Connected applications.
