@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2024_01_12:
+
+2024-01-12
+----------
+
+* Added the possibility to specify permissions to be applied to a system in a ``permissions`` :ref:`pipe property <pipe_properties>`.
+
 .. _changelog_2023_12_22:
 
 2023-12-22
