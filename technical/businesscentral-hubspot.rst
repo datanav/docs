@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-01-15 00:00:00
+Generated: 2024-01-16 00:00:00
 
 Introduction.
 ------------
@@ -139,6 +139,9 @@ The following properties are synchronized between a Businesscentral Employee and
      - "string"
    * - city
      - properties.city
+     - "string"
+   * - country
+     - properties.country
      - "string"
    * - email
      - properties.email
