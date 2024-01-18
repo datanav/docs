@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-01-17 00:00:00
+Generated: 2024-01-18 00:00:00
 
 Introduction.
 ------------
@@ -282,29 +282,20 @@ The following properties are synchronized between a Businesscentral Customers pe
      - "boolean"
 
 
-Businesscentral Employee to  Employees
---------------------------------------
-Every Businesscentral Employee will be synchronized with a  Employees.
+Businesscentral Employees to  Employees
+---------------------------------------
+Every Businesscentral Employees will be synchronized with a  Employees.
 
-Once a link between a Businesscentral Employee and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Employees and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Employee and a  Employees:
+The following properties are synchronized between a Businesscentral Employees and a  Employees:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Employee Property
+   * - Businesscentral Employees Property
      -  Employees Property
      -  Data Type
-   * - birthDate
-     - DateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
-   * - country
-     - MailAddress.CountryCode
-     - "string"
-   * - mobilePhone
-     - PhoneNumber
-     - "string"
 
 
 Businesscentral Items to  Product
