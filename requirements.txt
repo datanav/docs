@@ -4,8 +4,7 @@ myst-parser
 docutils
 
 #furo==2022.2.14.1
-pydata-sphinx-theme==0.8.0
-
+pydata-sphinx-theme
 sesamclient==0.2.68
 sphinx-argparse
 sphinx==5
@@ -13,9 +12,9 @@ sphinxcontrib-httpdomain
 sphinxcontrib-openapi
 
 # https://github.com/Tribler/tribler/issues/6624
-mistune==0.8.4
-sphinx-panels==0.6.0
-sphinx-notfound-page==0.8
-sphinx-copybutton==0.5.0
-sphinx-reredirects==0.0.1
-sphinx-jinja==2.0.2
+mistune
+sphinx-panels
+sphinx-notfound-page
+sphinx-copybutton
+sphinx-reredirects
+sphinx-jinja
