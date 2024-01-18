@@ -1,7 +1,7 @@
 cornice==1.1.0
 commonmark==0.9.1
 myst-parser==2.0.0
-docutils==0.16
+docutils==0.21
 
 #furo==2022.2.14.1
 pydata-sphinx-theme==0.8.0
