@@ -1,16 +1,16 @@
-cornice==1.1.0
-commonmark==0.9.1
-myst-parser==2.0.0
-docutils==0.21
+cornice
+commonmark
+myst-parser
+docutils
 
 #furo==2022.2.14.1
 pydata-sphinx-theme==0.8.0
 
 sesamclient==0.2.68
-sphinx-argparse==0.3.1
-Sphinx==7.2.6
-sphinxcontrib-httpdomain==1.8.0
-sphinxcontrib-openapi==0.7.0
+sphinx-argparse
+Sphinx
+sphinxcontrib-httpdomain
+sphinxcontrib-openapi
 
 # https://github.com/Tribler/tribler/issues/6624
 mistune==0.8.4
