@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-01-17 00:00:00
+Generated: 2024-01-18 00:00:00
 
 Introduction.
 ------------
@@ -158,6 +158,22 @@ The following properties are synchronized between a Businesscentral Employee and
    * - postalCode
      - properties.zip
      - "string"
+
+
+Businesscentral Employees to  Contact
+-------------------------------------
+Every Businesscentral Employees will be synchronized with a  Contact.
+
+Once a link between a Businesscentral Employees and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Employees and a  Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Employees Property
+     -  Contact Property
+     -  Data Type
 
 
 Businesscentral Items to  Product
