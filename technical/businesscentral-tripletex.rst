@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-01-17 00:00:00
+Generated: 2024-01-18 00:00:00
 
 Introduction.
 ------------
@@ -49,7 +49,7 @@ Businesscentral Customers to  Department
 ----------------------------------------
 Before any synchronization can take place, a link between a Businesscentral Customers and a  Department must be established.
 
-A new  Department will be created from a Businesscentral Customers if it is connected to a Businesscentral Employee that is synchronized into .
+A new  Department will be created from a Businesscentral Customers if it is connected to a Businesscentral Employee, or Employees that is synchronized into .
 
 Once a link between a Businesscentral Customers and a  Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -191,44 +191,20 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
 
 
-Businesscentral Employee to  Employee
--------------------------------------
-Every Businesscentral Employee will be synchronized with a  Employee.
+Businesscentral Employees to  Employee
+--------------------------------------
+Every Businesscentral Employees will be synchronized with a  Employee.
 
-Once a link between a Businesscentral Employee and a  Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Employees and a  Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Employee and a  Employee:
+The following properties are synchronized between a Businesscentral Employees and a  Employee:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Employee Property
+   * - Businesscentral Employees Property
      -  Employee Property
      -  Data Type
-   * - addressLine1
-     - address.addressLine1
-     - "string"
-   * - addressLine2
-     - address.addressLine2
-     - "string"
-   * - birthDate
-     - dateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
-   * - city
-     - address.city
-     - "string"
-   * - country
-     - address.country.id
-     - "integer"
-   * - mobilePhone
-     - phoneNumberMobile
-     - "string"
-   * - phoneNumber
-     - phoneNumberWork
-     - "string"
-   * - postalCode
-     - address.postalCode
-     - "string"
 
 
 Businesscentral Items to  Product
