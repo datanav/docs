@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-01-17 00:00:00
+Generated: 2024-01-18 00:00:00
 
 Introduction.
 ------------
@@ -13,7 +13,7 @@ Businesscentral Customers to SuperOffice Contact
 ------------------------------------------------
 Before any synchronization can take place, a link between a Businesscentral Customers and a SuperOffice Contact must be established.
 
-A new SuperOffice Contact will be created from a Businesscentral Customers if it is connected to a Businesscentral Contact, Employee, or Contacts-person that is synchronized into SuperOffice.
+A new SuperOffice Contact will be created from a Businesscentral Customers if it is connected to a Businesscentral Contact, Employee, Employees, or Contacts-person that is synchronized into SuperOffice.
 
 Once a link between a Businesscentral Customers and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -221,6 +221,22 @@ The following properties are synchronized between a Businesscentral Employee and
    * - postalCode
      - Address.Street.Zipcode
      - "string"
+
+
+Businesscentral Employees to  Person
+------------------------------------
+Every Businesscentral Employees will be synchronized with a  Person.
+
+Once a link between a Businesscentral Employees and a  Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Employees and a  Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Employees Property
+     -  Person Property
+     -  Data Type
 
 
 Businesscentral Items to  Product
