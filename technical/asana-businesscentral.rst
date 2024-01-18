@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-01-17 00:00:00
+Generated: 2024-01-18 00:00:00
 
 Introduction.
 ------------
@@ -41,24 +41,18 @@ The following properties are synchronized between a Asana Workspaces and a  Comp
      -  Data Type
 
 
-Asana Users to  Employee
-------------------------
-Every Asana Users will be synchronized with a  Employee.
+Asana Users to  Employees
+-------------------------
+Every Asana Users will be synchronized with a  Employees.
 
-Once a link between a Asana Users and a  Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Users and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Users and a  Employee:
+The following properties are synchronized between a Asana Users and a  Employees:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Users Property
-     -  Employee Property
+     -  Employees Property
      -  Data Type
-   * - email
-     - email
-     - "string"
-   * - email
-     - personalEmail
-     - "string"
 
