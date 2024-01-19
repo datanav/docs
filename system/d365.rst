@@ -34,6 +34,10 @@ Data types
      - true
      - false
 
+   * - :ref:`Task <datatype_task>`
+     - true
+     - false
+
 Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
