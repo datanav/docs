@@ -32,3 +32,7 @@ The side effects of this are:
 
 #. A Wave customer's contact information can not be removed by simply removing it from Wave, you also have to remove it from other conencted systems first.
 #. Changing a Wave customer's email could result in the merging of contacts on other systems. You can never change the contact entity through Wave GUI, only update it's metadata.
+
+Why is the order of my order lines different than in the other systems?
+***********************************************************************
+The order that the order lines appear in Wave is based on when they were created or updated. The most recent updated order line will appear as the last one in your Wave invoice draft. When creating a completely new order in a another system, all order lines will be given the same timestamp. This makes it impossible to determine in what sequence the order lines originally were created, resulting in a arbitrary succession of your order lines in Wave.
