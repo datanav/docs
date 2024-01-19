@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-01-18 00:00:00
+Generated: 2024-01-19 00:00:01
 
 Introduction.
 ------------
@@ -177,52 +177,6 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
 
 
-Businesscentral Employee to  Person
------------------------------------
-Every Businesscentral Employee will be synchronized with a  Person.
-
-Once a link between a Businesscentral Employee and a  Person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Employee and a  Person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Employee Property
-     -  Person Property
-     -  Data Type
-   * - addressLine1
-     - Address.Street.Address1
-     - "string"
-   * - addressLine2
-     - Address.Street.Address2
-     - "string"
-   * - birthDate
-     - BirthDate
-     - "datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
-   * - city
-     - Address.Street.City
-     - "string"
-   * - country
-     - Country.CountryId
-     - "integer"
-   * - email
-     - Emails.Value
-     - "string"
-   * - mobilePhone
-     - MobilePhones.Value
-     - "string"
-   * - personalEmail
-     - Emails.Value
-     - "string"
-   * - phoneNumber
-     - OfficePhones.Value
-     - "string"
-   * - postalCode
-     - Address.Street.Zipcode
-     - "string"
-
-
 Businesscentral Employees to  Person
 ------------------------------------
 Every Businesscentral Employees will be synchronized with a  Person.
@@ -298,6 +252,9 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - "string"
    * - discountPercent
      - DiscountPercent
+     - "integer"
+   * - discountPercent
+     - ERPDiscountPercent
      - "integer"
    * - documentId
      - QuoteAlternativeId
