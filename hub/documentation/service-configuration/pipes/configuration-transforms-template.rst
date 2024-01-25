@@ -210,6 +210,10 @@ transform-share-rest
 
 This template transform is used in a share pipe to perform CRUD operations against a REST system. It will perform an optimistic locking check to avoid overwriting changes that happened after the data was read from the system.
 
+.. NOTE::
+
+   If the source entity contains ``"$unsafe_skip_optimistic_locking": true`` then the entity will still be updated even if the comparison yields the result ``modified-in-system``. This is a mechanism to skip optimistic locking and it is primarily meant for use-cases when the data needs repairing. Use it with care.
+
 The configuration options for this template are:
 
 Prototype
