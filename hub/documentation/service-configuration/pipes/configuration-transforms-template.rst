@@ -283,7 +283,7 @@ Template properties
    * - ``operation_insert``
      - String
      - The name of the insert operation.
-     -
+     - ``insert``
      - No
 
    * - ``operation_update``
@@ -354,7 +354,9 @@ Template properties
 
    * - ``rewrite_rules_payload``
      - Object
-     - A dictionary of DTL named rules. This can be used to implement the ``rewrite_update_payload`` and ``rewrite_insert_payload`` named rules, which when defined will be used to rewrite the update and insert request payloads. These rules take precedence over the ``$payload`` property. It can also include other named rules referenced directly or indirectly by the base rules. The rule is passed the ``_S.`` entity and the original source entity can be found in ``_S.$source``. The rule should return a dict with the new payload inside the ``$payload`` property.
+     - A dictionary of DTL named rules. This can be used to implement the ``rewrite_update_payload`` and ``rewrite_insert_payload`` named rules, which when defined will be used to rewrite the update and insert request payloads. The rule is passed the ``_S.`` entity and the original source entity can be found in ``_S.$source``. These rules take precedence over the ``$payload`` property. It can also include other named rules referenced directly or indirectly by the base rules. The rule should return a dict with the new payload inside the ``$payload`` property.
+     
+       It can also be used to implement the ``rewrite_update_payload_after_patch`` named rule which will rewrite the update payload after client-side patching is performed. The rule is passed an entity which contains the client-side patched payload in ``_S._payload``. The original source entity can be found in ``_R._S.$source``. 
      -
      - No
 
