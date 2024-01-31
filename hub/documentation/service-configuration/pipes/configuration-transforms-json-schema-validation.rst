@@ -26,7 +26,20 @@ Properties
      - Object
      - The JSON schema to validate entities against.
      -
-     - Yes
+     - Yes, unless ``schema_url`` is specified
+
+   * - ``schema_url``
+     - String
+     - URL that points to an externally stored schema. Requires the ``system`` property to also be set. The retrieved
+       schema will be stored in the effective config of the pipe under ``schema``.
+     -
+     - Yes, unless ``schema`` is specified
+
+   * - ``system``
+     - String
+     - If using ``schema_url``, the ``system`` property needs to point to a :ref:`URL system <url_system>`.
+     -
+     - Yes, if ``schema_url`` is specified
 
    * - ``key_valid``
      - String
