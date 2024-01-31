@@ -7,8 +7,8 @@ Changelog
 ----------
 
 * Added a new property ``schema_url`` and ``system`` to the :ref:`JSON schema transform <json_schema_transform>`. The
-``schema_url`` can be used to avoid embedding the schema in your pipe configuration by pointing to an externally stored
-schema instead. If this is used, the ``system`` must be set, and it must point to a valid :ref:`URL system <url_system>`.
+  ``schema_url`` can be used to avoid embedding the schema in your pipe configuration by pointing to an externally stored
+  schema instead. If this is used, the ``system`` must be set, and it must point to a valid :ref:`URL system <url_system>`.
 
 .. _changelog_2024_01_12:
 
