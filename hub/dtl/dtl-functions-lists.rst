@@ -88,7 +88,7 @@ Lists
          where duplicates have been removed from VALUES. If FUNCTION is given, then
          function is evaluated for each value in VALUES, and the return
          value is used to check for duplicates. Note that even though FUNCTION is
-         given it is the value in VALUES that is returned.
+         given it is the value in VALUES that is returned. For duplicates the first value wins.
      - | ``["distinct", ["list", 4, 2, 5, 4, 3]]``
        |
        | Returns ``[4, 2, 5, 3]``.
@@ -96,6 +96,10 @@ Lists
        | ``["distinct", "_S.tags"]]``
        |
        | Returns a deduplicated list of tags.
+       |
+       | ``["distinct", ["upper", "_."], ["list", "a", "A", "B", "b"]]``
+       |
+       | Returns ``["a", "B"]``.
        |
        | ``["distinct", "_.ean", "_S.orders.line_item"]]``
        |
