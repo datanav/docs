@@ -60,8 +60,7 @@ The Wix Product description property is intended to be used for large amounts of
 Why aren’t Shipping Cost and Discount synchronized from Wix?
 ************************************************************* 
 
-Shipping Cost and Discount is not yet supported by the solution on Wix orders. If you require this, please reach out to us so that we can understand your requirements and look to support this.
-
+Shipping Cost and Discount is not yet supported by the solution on Wix orders. If you require this, please reach out to us so that we can understand your requirements and look to support this. 
 
 How do I edit the API permissions?
 ************************************
