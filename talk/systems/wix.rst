@@ -46,25 +46,25 @@ Frequently Asked Questions
 --------------------------
 
 Why are my ERP orders not created in Wix?
-*****************************************
+*************************************************
 
 The Wix API does not allow general updates of orders, so we do not write any orders as we are not able to keep them in sync after creation.
 
 We are looking into using the new Wix E-commerce API to provide this functionality in future releases.
 
 Why aren’t the Product descriptions synchronized to/from Wix?
-*****************************************
+*************************************************
 
 The Wix Product description property is intended to be used for large amounts of text and HTML formatting in order to look good in the web shop and is not supported in the Sesam Talk Model, nor in the CRM/ERP systems containing Products.
 
 Why aren’t Shipping Cost and Discount synchronized from Wix?
-***************************************** 
+************************************************* 
 
 Shipping Cost and Discount is not yet supported by the solution on Wix orders. If you require this, please reach out to us so that we can understand your requirements and look to support this.
 
 
 How do I edit the API permissions?
-**********************************
+*************************************************
 
 If you want to edit the permissions in your API-key, please follow these steps:
 
