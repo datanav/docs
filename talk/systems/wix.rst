@@ -62,10 +62,6 @@ Why aren’t Shipping Cost and Discount synchronized from Wix?
 
 Shipping Cost and Discount is not yet supported by the solution on Wix orders. If you require this, please reach out to us so that we can understand your requirements and look to support this.
 
-Why are my ERP orders not created in Wix?
-*****************************************
-
-The Wix API does not allow general updates of orders, so we do not write any orders as we are not able to keep them in sync after creation.
 
 How do I edit the API permissions?
 **********************************
