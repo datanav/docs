@@ -198,7 +198,7 @@ Properties
        if missing from the transform response. Note that this property can be defined
        in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The transform configuration
        will take precedence if defined.  The bound parameters available to this template are ``body``, ``url``,
-       ``requests_params``, ``properties``, ``entity``, ``source_entity`` and ``headers``. If the operation supports
+       ``request_params``, ``properties``, ``entity``, ``source_entity`` and ``headers``. If the operation supports
        paging then ``previous_body``, ``previous_request_headers``, ``previous_params`` and ``previous_headers``
        (response headers) are available for all page requests except the first. In addition ``page`` (integer, starting
        at 0) and ``is_first_page`` (a boolean flag) are available for all requests in paged operations.

@@ -295,7 +295,7 @@ A operation configuration looks like:
    * - ``next_page_link``
      - String
      - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with several named variables
-       values available to the template: ``body``, ``url``, ``requests_params``, ``request_headers`, ``properties``, ``since``
+       values available to the template: ``body``, ``url``, ``request_params``, ``request_headers`, ``properties``, ``since``
        (only for :ref:`REST sources <rest_source>`), ``entity``, ``source_entity`` (only for
        :ref:`REST transforms <rest_transform>`)  and ``response_headers``. Additionally, ``previous_body``,
        ``previous_request_headers``, ``previous_params`` and ``previous_headers`` (response headers)
@@ -386,7 +386,7 @@ A operation configuration looks like:
        entities if missing from the source system. Note that this property can be defined in the
        :ref:`REST source <rest_source>` configuration and :ref:`REST transform <rest_transform>` as well. It will be
        ignored by the :ref:`REST sink <rest_sink>`. The configuration in pipes will take precedence if both are defined.
-       The bound parameters available to this template are ``body``, ``url``, ``requests_params``, ``properties``, ``since``
+       The bound parameters available to this template are ``body``, ``url``, ``request_params``, ``properties``, ``since``
        (only for :ref:`REST sources <rest_source>`), ``entity``, ``source_entity`` (only for
        :ref:`REST transforms <rest_transform>`) and ``headers``. If the operation supports paging then ``previous_body``,
        ``previous_request_headers``, ``previous_params`` and ``previous_headers`` (response headers) are available for
@@ -426,7 +426,7 @@ A operation configuration looks like:
        ignored by the :ref:`REST sink <rest_sink>`. It is only evaluated when ``payload_property`` is set and the
        response content-type is recognized as JSON. For the :ref:`REST transforms <rest_transform>` the
        ``replace_entity`` property must be ``false`` (which is the default). The bound parameters available to this
-       template are ``body``, ``url``, ``requests_params``, ``properties``, ``since`` (only for :ref:`REST sources <rest_source>`),
+       template are ``body``, ``url``, ``request_params``, ``properties``, ``since`` (only for :ref:`REST sources <rest_source>`),
        ``entity``, ``source_entity`` (these two only for
        :ref:`REST transforms <rest_transform>`) and ``headers``. If the operation supports paging then ``previous_body``,
        ``previous_request_headers``, ``previous_params`` and ``previous_headers`` (response headers) are available for
