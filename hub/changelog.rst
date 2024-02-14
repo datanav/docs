@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2024_02_14:
+
+2024-02-14
+----------
+* Added the :ref:`trip! <dtl_transform-trip>` DTL transform function.
+
 .. _changelog_2024_01_31:
 
 2024-01-31
@@ -1164,7 +1170,7 @@ Changes to the user experience:
 
 2019-12-23
 ----------
-* Added the :ref:`fail! <fail_dtl_function>` DTL function.
+* Added the :ref:`fail! <dtl_transform-fail>` DTL transform function.
 
 2019-12-19
 ----------
