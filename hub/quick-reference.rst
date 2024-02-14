@@ -109,6 +109,11 @@ DTL Transform Functions
        :ref:`remove <dtl_transform-remove>` ·
        :ref:`rename <dtl_transform-rename>`
 
+   * - Special
+     -
+       :ref:`fail! <dtl_transform-fail>` ·
+       :ref:`trip! <dtl_transform-trip>`
+
 .. _quickref_dtl_expression_functions:
 
 DTL Expression Functions
@@ -242,7 +247,6 @@ DTL Expression Functions
 
    * - Misc
      - :ref:`completeness <completeness_dtl_function>` ·
-       :ref:`fail! <fail_dtl_function>` ·
        :ref:`hash128 <hash128_dtl_function>` ·
        :ref:`is-changed <is_changed_dtl_function>` ·
        :ref:`literal <literal_dtl_function>` ·

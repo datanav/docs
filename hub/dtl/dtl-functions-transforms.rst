@@ -977,3 +977,44 @@ modifying the target entity, and has no return value.
        | Result:
        | ``{"x:b": 2}``.
        | Renames the ``x:a`` property to ``x:b``.
+
+.. _dtl_transform-fail:
+
+``fail!``
+---------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   MESSAGE(string{1})
+       |
+       | A function that makes the pump fail. It can be used to conditionally fail the pump. A string error message can be specified in the first argument.
+     - | ``["fail!", "Processing stopped because of invalid input. Please review."]``
+       |
+       | Causes the pump to fail. The error message is reported in the `pump-failed` event in the pump execution dataset.
+
+
+.. _dtl_transform-trip:
+
+``trip!``
+---------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   MESSAGE(string{1})
+       |
+       | A function that makes the pump trip the sink dataset's circuit breaker. A string error message can be specified in the first argument.
+     - | ``["trip!", "Circuit breaker tripped because of invalid input. Please review and rollback or commit dataset."]``
+       |
+       | Causes the pump to fail and the sink dataset's circuit breaker to trip. The error message is reported in the `pump-failed` event in the pump execution dataset.
