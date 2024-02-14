@@ -39,7 +39,7 @@ Why is my list of products growing without me adding new products?
 
 This can happen if you have another integration running in parallel with Sesam Talk. For example if you are using HubSpot Data Sync (HSDS) alongside Sesam Talk to exchange data between Wave and HubSpot – both Sesam Talk and HSDS will detect products that the other service creates, and interpret this as a new product that needs to be inserted in the other system. The use of other integration tools that are overlapping the functionality of Sesam Talk is not recommended for these reasons.
  
-Please see `Co-existing <https://docs.sesam.io/talk/concepts.html>`_ with other integration services.
+Please see `Co-existing <https://docs.sesam.io/talk/co-existence/index.html>`_ with other integration services.
 
 
 Why is the order of my order lines different than in the other systems?
