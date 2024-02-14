@@ -1,8 +1,8 @@
 .. co-existing_with_other_integration_services:
 
-==============================
+===========================================
 Co-existing with other integration services
-==============================
+===========================================
 
 
 Having multiple integration/data sync services running between the same systems is generally not recommended as this can lead to an artificial influx in duplicate entities unless you configure the other services correctly.
