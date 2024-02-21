@@ -58,4 +58,4 @@ Follow these steps to disable the synchronisation of your HubSpot account:
 
 .. note::
 
-    We suggest that you delete the **Wave by Sesam** application in HubSpot settings > Connected applications.
+    We suggest that you delete the **Wave by Sesam** application in HubSpot settings > Connected applications after you have disconnected Hubspot.
