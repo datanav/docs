@@ -322,7 +322,7 @@ Properties
 The write-error entity
 ----------------------
 
-For retryable (write) errors, the entity has a similar form to the "read-error" entity, except irs ``_id`` property is
+For retryable (write) errors, the entity has a similar form to the "read-error" entity, except its ``_id`` property is
 computed from the entity that was unsuccessfully written. It also contains the complete entity as an embedded
 child entity.
 
