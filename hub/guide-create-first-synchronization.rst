@@ -25,7 +25,7 @@ In this guide we will show you how a general simplistic Sesam synchronization ma
 
 .. admonition:: Prerequisites
 
-    You need to complete the `Sign up tutorial <tutorial-signup>`_
+    You need to complete the :doc:`Signup tutorial <tutorial-signup>`
 
     In this guide, as in the main set of tutorials outside "Getting Started", we will use HubSpot as our baseline. 
 
