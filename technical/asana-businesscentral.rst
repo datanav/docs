@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-02-26 00:00:01
+Generated: 2024-02-27 00:00:01
 
 Introduction.
 ------------
@@ -63,6 +63,12 @@ The following properties are synchronized between a Asana Users and a  Employees
      - "string"
    * - name
      - displayName
+     - "string"
+   * - name
+     - givenName
+     - "string"
+   * - name
+     - surname
      - "string"
    * - workspaces.gid
      - jobTitle
