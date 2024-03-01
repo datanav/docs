@@ -70,8 +70,6 @@ The reccurance shedules are system and data-type dependent.
  
 
 
-
-
 .. toctree::
    :hidden:
 
