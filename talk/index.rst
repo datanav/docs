@@ -22,8 +22,7 @@ Selective data synchronization
 ===============================
 Selective data synchronization eliminates the need to process and transfer entire datasets, focusing solely on the modified or new data elements
 
-Unlike traditional methods that synchronize all data indiscriminately, this innovative technique focuses on synchronizing only the data that undergoes changes. More details about Selective data synchronization can be found :doc:`here<https://docs.sesam.io/talk/selective-data-sync/index.html>`.
- 
+Unlike traditional methods that synchronize all data indiscriminately, this innovative technique focuses on synchronizing only the data that undergoes changes. More details about Selective data synchronization can be found `here <https://docs.sesam.io/talk/selective-data-sync/index.html>`_. 
 
  
 
