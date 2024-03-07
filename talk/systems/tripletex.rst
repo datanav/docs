@@ -34,13 +34,18 @@ Follow these steps to create your employee token:
 #. Name your token
 #. Go back and paste the employee token into the API Key field in Sesam Talk
 
+.. important::
+This applies for Tripletex “production accounts” only.
+
 For more information please `read this documentation <https://hjelp.tripletex.no/hc/en/articles/4409557117713>`_
 
 Using test accounts in Tripletex
 --------------------------------
-If wish to connect a Tripletex test account, please follow `these instructions <https://developer.tripletex.no/docs/documentation/getting-started/1-creating-a-test-account/>`_ .
+If wish to connect a Tripletex test account, follow this link and follow the `instructions <https://api.tripletex.io/execute/integrationEnvironment?site=en>`_.
 
-You will be provided with your employee and consumer token as part of creating the test account. 
+At the end of this wizard you will be provided with your employee and consumer token as part of creating the test account. 
+These tokens are required for the Sesam Talk onboarding of your Tripletex test account.
+The Employee token generation method described above does not work for Tripletex test accounts.
 
 Tripletex merge criteria
 ------------------------
