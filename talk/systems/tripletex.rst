@@ -35,7 +35,8 @@ Follow these steps to create your employee token:
 #. Go back and paste the employee token into the API Key field in Sesam Talk
 
 .. important::
-This applies for Tripletex “production accounts” only.
+
+  This applies for Tripletex “production accounts” only.
 
 For more information please `read this documentation <https://hjelp.tripletex.no/hc/en/articles/4409557117713>`_
 
