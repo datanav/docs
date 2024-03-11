@@ -93,6 +93,9 @@ html: saas partnerdocx
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
 html_no_saas:
+	touch files/sesam-cloud-service-contract.pdf
+	touch files/sesam-cloud-service-contract.docx
+	touch files/partner-agreement.docx
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."

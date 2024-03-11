@@ -312,6 +312,7 @@ Type of sources
 .. toctree::
    :maxdepth: 1
 
+   Binary source <configuration-sources-binary>
    Conditional source <configuration-sources-conditional>
    CSV source <configuration-sources-csv>
    Dataset source <configuration-sources-dataset>
