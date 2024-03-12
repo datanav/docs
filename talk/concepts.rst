@@ -8,3 +8,4 @@ Concepts
    Merging <merging/index>
    Co-existing with other integration services <co-existence/index>
    Counting updates <counting-updates/index>
+   Re-authorisation <reauthorise/index>
