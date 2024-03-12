@@ -77,3 +77,8 @@ Why are my deleted HubSpot lineitems not deleted in PowerOffice order
 Sesam Talk does not delete data in HubSpot and PowerOffice. This means that deleting lineitems in either of the systems will not be reflected in the other system.
 
 To ensure data consistency, we recommend that you manually delete corresponding line items in both systems whenever adjustments are made to an order.
+
+Why are customers that share the same email address merged?
+***********************************************************
+
+We merge customers on email address to avoid duplicates when syncing with other systems. We do not expect multiple customers to share the same email address. If two customers share the same real contact person, we expect that there exist one contact person per customer. If that person is to be contacted on the same email regardless of the customer, we expect those contacts to share the same email address. When two contacts share the same email those will be merged and kept in sync, but the customers will remain separated.
