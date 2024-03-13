@@ -26,5 +26,5 @@ In addition to merge criteria, Sesam Talk also keeps tracks of the data we creat
 .. admonition::  Note:
    
    * Not all your data might have these merge criteria populated, i.e., you might have **System A** entities that exist in **System B** from before, but without matching merge criteria. In these cases, we would create duplicates for these.  
-   * Should entities form the same system share a merge critera, i.e. two companies share an email, they will be treated as the same company and be synchronized. 
+   * Should entities from the same system share a merge criteria, i.e. two companies share an email, they will be treated as the same company and be synchronized. This will happen regardless of how many systems are connected.
 
