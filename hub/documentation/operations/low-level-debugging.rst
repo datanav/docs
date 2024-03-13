@@ -3,8 +3,28 @@ Low-level debugging
 ===================
 
 This page contains tips and tricks for doing various low-level debugging tasks. This information is only relevant
-for system administrators who are hosting a sesam instance, since most of the techiques require access to the
+for system administrators who are hosting a sesam instance, since most of the techniques require access to the
 filesystem of the box that the sesam instance is running on.
+
+
+.. _api_logs_setting_loglevel:
+
+Changing the loglevel via  the "/api/logs" api endpoint
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The "/api/logs" api endpoint can be used to change the loglevel that a worker-node uses when writing to its "node.log"
+file.
+
+Example of how to enable DEBUG-level logging from the ```requests_oauthlib``` library in a worker-node::
+
+    $ export JWT=<jwt copied from a browser network log>
+    $ curl 'https://datahub-e0a07f91.sesam.cloud/_/a69ad5e5d08b/api/logs' -dloglevel=DEBUG -dlogger_name=requests_oauthlib -H "authorization: bearer $JWT"
+    {
+      "msg": "Log level updated"
+    }
+    $
+
+Note that this request must be done directly to the workernode; it doesn't work to do it against the sesam
+subscription service api.
 
 -------------------
 Profiling API calls
