@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2024_03_13:
+
+2024-03-13
+----------
+* Added documentation for how to :ref:`change the logging level for workernodes <api_logs_setting_loglevel>`.
+
 .. _changelog_2024_02_14:
 
 2024-02-14
