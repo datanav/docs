@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-03-13 00:00:01
+Generated: 2024-03-14 00:00:01
 
 Introduction.
 ------------
@@ -28,7 +28,7 @@ The following properties are synchronized between a Asana Projects and a  Projec
      - "string"
    * - owner.gid
      - ProjectManagerEmployeeId
-     - "string"
+     - "integer"
 
 
 Asana Users to  Employees
