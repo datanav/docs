@@ -983,7 +983,7 @@ Changes to the user experience:
 2021-03-12
 ----------
 
-* Notification status changes on `Status page <https://status.sesam.no>`_ is now fully automated.
+* Notification status changes on `Status page <https://status.sesam.io>`_ is now fully automated.
 
 .. _changelog_2021_03_05:
 
