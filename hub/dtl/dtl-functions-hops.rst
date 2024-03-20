@@ -64,7 +64,7 @@ Hops
 
        7. ``track-dependencies``: OPTIONAL. A boolean. The default is
           true. Can be used to disable
-          `dependency tracking <concepts.html#dependency-tracking>`_ for this
+          `dependency tracking <https://docs.sesam.io/hub/features/dependency-tracking.html>`_ for this
           particular HOP_SPEC.
 
        8. ``trace``: OPTIONAL. A string. The default is not set.
