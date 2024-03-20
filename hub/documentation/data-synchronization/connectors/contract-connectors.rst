@@ -374,8 +374,8 @@ For connectors that use ``oauth2`` authentication, the following secrets will be
    * - Property
      - Description
      - Type
-   * - ``oauth_access_key``
-     - The initial oauth2 access key obtained during onboarding.
+   * - ``oauth_access_token``
+     - The initial oauth2 access token obtained during onboarding.
      - String
    * - ``oauth_client_id``
      - The client id as provided in the connector configuration.
@@ -384,7 +384,7 @@ For connectors that use ``oauth2`` authentication, the following secrets will be
      - The client secret as provided in the connector configuration.
      - String
    * - ``oauth_refresh_token``
-     - The initial oauth2 refresh key obtained during onboarding.
+     - The initial oauth2 refresh token obtained during onboarding.
      - String
 
 Tripletex authentication
