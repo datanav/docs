@@ -1562,7 +1562,7 @@ Changes to the user experience:
 2017-06-20
 ----------
 * Added functionality for preventing *all* pipes from automatically running (useful in some debugging
-  scenarios). See the `Low level debugging <./low-level-debugging.html#preventing-pipes-from-automatically-running>`_ page for
+  scenarios). See the `Low level debugging <https://docs.sesam.io/hub/low-level-debugging.html>`_ page for
   details.
 
 2017-06-16

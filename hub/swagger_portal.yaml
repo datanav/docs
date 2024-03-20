@@ -2415,7 +2415,7 @@ paths:
           description:
             Specifies that the endpoint should only return entities newer than the specified 'since' value.
             The since-value should be set to the value of the "_updated"-attribute in the last seen entity.
-            See https://docs.sesam.io/configuration.html#continuation-support for details on how this works.
+            See https://docs.sesam.io/hub/features/continuation-support.html for details on how this works.
           required: false
           type: integer
       responses:
