@@ -2,7 +2,7 @@
 Connector Configuration
 =======================
 
-In a particular environment, connectors can be configured using the ``config.json`` file found in the `sesam-talk-config <https://github.com/datanav/sesam-talk-config/>`_ repository. This file has a property called ``connector_config`` whose value is the configuration of an embedded pipe with the same name. By editing the entities in the embedded source, the various connectors can be configured.
+In a particular environment, connectors can be configured using a ``config.json`` file. This file has a property called ``connector_config`` whose value is the configuration of an embedded pipe with the same name. By editing the entities in the embedded source, the various connectors can be configured.
 
 
 Properties
