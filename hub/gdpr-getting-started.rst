@@ -238,9 +238,9 @@ The data subject has the right to be forgotten (deleted) or have their data rect
 
 When a deletion or change request is submitted to a manually updated GDPR platform, an email will be sent to the address(es) listed as "Contact" in our uploaded "Purposes and Data types" excel sheet for the relevant data type(s). This recipient of this email needs to be a user in the Sesam portal assigned the "GDPR operations" role. The recipient of the request will then have to manually update the source systems as per the request. Then the GDPR operator will have to reupload a an excel sheet as if a new data access request has been submitted to reflect the changes.
 
-For an automated GDPR platform it is possible to process change and deletion requests automatically by triggering changes or deletions directly in the source systems. See the `GDPR platform developer documentation <https://docs.sesam.io/gdpr-platform-developer-docs.html#gdpr-platform-developer-docs>`_ for information about automation and the APIs offered for implementing such a mechanism.
+For an automated GDPR platform it is possible to process change and deletion requests automatically by triggering changes or deletions directly in the source systems. See the `GDPR platform developer documentation <https://docs.sesam.io/hub/gdpr-platform-developer-docs.html>`_ for information about automation and the APIs offered for implementing such a mechanism.
 
 GDPR unstructured data handling
 ===============================
 
-Up to this point we have been working with structured data. However, data is not always going to be structured in the real world. Fortunately, Sesam GDPR node also supports handling of GDPR unstructured data. Visit the `GDPR unstructured data support <https://docs.sesam.io/gdpr-platform-developer-docs.html#gdpr-unstructured-data>`_ section of this documentation to learn more about this.
+Up to this point we have been working with structured data. However, data is not always going to be structured in the real world. Fortunately, Sesam GDPR node also supports handling of GDPR unstructured data. Visit the `GDPR unstructured data support <https://docs.sesam.io/hub/gdpr-platform-developer-docs.html#gdpr-unstructured-data>`_ section of this documentation to learn more about this.
