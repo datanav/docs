@@ -349,3 +349,64 @@ supports webhooks, and the collect pipe will be set to run on a slower schedule 
 
 A custom value for the ``schedule_interval`` on the input pipe for a given datatype can be set under
 ``datatypes.<datatype>.schedule_interval`` in the manifest. This takes precedence over all the above options.
+
+.. _injected_secrets:
+
+Injected secrets
+================
+
+Some variables are injected as secrets. Those variables typically contain sensitive information, like api keys and oauth2 tokens.
+
+Api key
+-------
+
+For connectors that use ``api_key`` authentication, the key will be injected as a system secret called ``api_key``.
+
+Oauth2
+------
+
+For connectors that use ``oauth2`` authentication, the following secrets will be injected as system secrets:
+
+.. list-table::
+   :widths: 20, 30, 10
+   :header-rows: 1
+
+   * - Property
+     - Description
+     - Type
+   * - ``oauth_access_token``
+     - The initial oauth2 access token obtained during onboarding.
+     - String
+   * - ``oauth_client_id``
+     - The client id as provided in the connector configuration.
+     - String
+   * - ``oauth_client_secret``
+     - The client secret as provided in the connector configuration.
+     - String
+   * - ``oauth_refresh_token``
+     - The initial oauth2 refresh token obtained during onboarding.
+     - String
+
+Tripletex authentication
+------------------------
+
+Tripletex uses a custom style of authentication, and the following secrets will be injected as system secrets:
+
+.. list-table::
+   :widths: 20, 30, 10
+   :header-rows: 1
+
+   * - Property
+     - Description
+     - Type
+   * - ``consumer_token``
+     - The consumer token as provided in the connector configuration.
+     - String
+   * - ``employee_token``
+     - The employee token as obtained during the onboarding.
+     - String
+
+SuperOffice authentication
+--------------------------
+
+SuperOffice uses a variant of Oauth2 authentication, and their keep alive key will be injected as ``so_ticket`` in addition to the regular oauth secrets.
