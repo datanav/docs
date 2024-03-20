@@ -41,25 +41,6 @@ The configuration of the custom URL sink is very similar to the :ref:`custom URL
 
 |
 
-.. panels::
-    :body: text-left
-    :container: container-lg-12
-    :column: col-lg-6 p-1
-
-    :badge:`Tutorials, badge-success text-white`
-    
-    **Custom Data Sink - The URL System**
-
-    Look closer into how to create a custom data sink using the URL System. 
-
- 
-    .. link-button:: tutorial-custom-data-ssink-url-system.html
-        :type: url
-        :text: Start tutorial
-        :classes: btn-all-sections btn-all
-
-|
-
 Custom Data Sink - The Microservice system
 ------------------------------------------
 

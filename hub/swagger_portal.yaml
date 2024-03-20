@@ -1154,7 +1154,7 @@ paths:
       operationId: api.profile.get_notifications_summary_for_user
       description:
         Returns the status of all subscriptions and pipes with notification-rules that the user have access to.
-        This endpoint implements the Sesam "json-pull" protocol (https://docs.sesam.io/json-pull.html).
+        This endpoint implements the Sesam "json-pull" protocol (https://docs.sesam.io/hub/json-pull.html).
 
       produces:
         - application/json
@@ -1173,7 +1173,7 @@ paths:
           required: false
           type: integer
           description:
-            This is the 'since'-value in the sesam json-pull protocol (https://docs.sesam.io/json-pull.html)
+            This is the 'since'-value in the sesam json-pull protocol (https://docs.sesam.io/hub/json-pull.html)
 
         - name: deleted
           in: query
@@ -2447,7 +2447,7 @@ paths:
           description:
             Specifies that the endpoint should only return entities newer than the specified 'since' value.
             The since-value should be set to the value of the "_updated"-attribute in the last seen entity.
-            See https://docs.sesam.io/configuration.html#continuation-support for details on how this works.
+            See  for details on how this works.
           required: false
           type: string
       responses:
@@ -2554,7 +2554,7 @@ paths:
           description:
             Specifies that the endpoint should only return entities newer than the specified 'since' value.
             The since-value should be set to the value of the "_updated"-attribute in the last seen entity.
-            See https://docs.sesam.io/configuration.html#continuation-support for details on how this works.
+            See https://docs.sesam.io/hub/documentation/service-configuration/pipes/configuration-sources.html#continuation-support for details on how this works.
           required: false
           type: string
       responses:
@@ -2588,7 +2588,7 @@ paths:
           description:
             Specifies that the endpoint should only return entities newer than the specified 'since' value.
             The since-value should be set to the value of the "_updated"-attribute in the last seen entity.
-            See https://docs.sesam.io/configuration.html#continuation-support for details on how this works.
+            See https://docs.sesam.io/hub/documentation/service-configuration/pipes/configuration-sources.html#continuation-support for details on how this works.
           required: false
           type: string
       responses:

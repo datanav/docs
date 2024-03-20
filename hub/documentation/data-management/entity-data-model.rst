@@ -124,7 +124,7 @@ Entity fields starting with ``_`` are reserved. Any such fields, except ``_id`` 
        .. _tracked_field:
    * - ``_tracked``
      - If ``true`` then the entity was added to the dataset by
-       `dependency tracking <concepts.html#dependency-tracking>`_.
+       `dependency tracking <https://docs.sesam.io/hub/features/dependency-tracking.html>`_.
 
        Note that this property has been superceeded by a new way of
        doing dependency tracking that does not require modifying
