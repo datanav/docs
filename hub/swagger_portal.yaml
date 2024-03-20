@@ -1154,7 +1154,7 @@ paths:
       operationId: api.profile.get_notifications_summary_for_user
       description:
         Returns the status of all subscriptions and pipes with notification-rules that the user have access to.
-        This endpoint implements the Sesam "json-pull" protocol (https://docs.sesam.io/json-pull.html).
+        This endpoint implements the Sesam "json-pull" protocol (https://docs.sesam.io/hub/json-pull.html).
 
       produces:
         - application/json
@@ -1173,7 +1173,7 @@ paths:
           required: false
           type: integer
           description:
-            This is the 'since'-value in the sesam json-pull protocol (https://docs.sesam.io/json-pull.html)
+            This is the 'since'-value in the sesam json-pull protocol (https://docs.sesam.io/hub/json-pull.html)
 
         - name: deleted
           in: query
