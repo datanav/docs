@@ -432,7 +432,7 @@ Dictionaries
 
           Use this function instead of ``apply`` if you use ``hops`` inside
           the transformation rule. This is required so that
-          `dependency tracking <concepts.html#dependency-tracking>`_
+          `dependency tracking <https://docs.sesam.io/hub/features/dependency-tracking.html>`_
           can work. Calling ``apply`` on a rule that contains ``hops`` or
           ``apply-hops`` is not allowed.
 
