@@ -2,7 +2,7 @@
 The Connector Contract
 ======================
 
-This document describes the output of connectors and the input to connectors. The output is the dataset that the collector writes to when synchronizing entities from the system. The input is the desired state of the system and the input to the connector to make it so.
+This document describes the output of connectors and the input to connectors. The output is the dataset that the connector writes to when synchronizing entities from the system. The input is the desired state of the system and the input to the connector to make it so.
 
 
 .. _connector_contract_output:
