@@ -55,7 +55,7 @@ catalogue in the table below.
      - Major updates and planned maintenance / downtime is notified through the
        SESAM Service Desk.
    * - 6. System documentation for the Services
-     - SESAM is documented here: https://docs.sesam.io/overview.html
+     - SESAM is documented here: https://docs.sesam.io
    * - 7. Third party cloud services included in the Services
 
           *or*
