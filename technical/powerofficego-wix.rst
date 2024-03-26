@@ -2,41 +2,12 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:02
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Powerofficego Contactperson to  Members
----------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Contactperson and a  Members must be established.
-
-A Powerofficego Contactperson will merge with a  Members if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Contactperson Property
-     -  Members Property
-   * - emailAddress
-     - loginEmail
-
-Once a link between a Powerofficego Contactperson and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Contactperson and a  Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Contactperson Property
-     -  Members Property
-     -  Data Type
-   * - emailAddress
-     - loginEmail
-     - "string"
-
 
 Powerofficego Customers person to  Contacts
 -------------------------------------------
@@ -80,32 +51,6 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - MailAddress.ZipCode
      - info.addresses.items.address.postalCode
      - "string"
-
-
-Powerofficego Customers person to  Members
-------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Customers person and a  Members must be established.
-
-A Powerofficego Customers person will merge with a  Members if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers person Property
-     -  Members Property
-   * - EmailAddress
-     - loginEmail
-
-Once a link between a Powerofficego Customers person and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customers person and a  Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers person Property
-     -  Members Property
-     -  Data Type
 
 
 Powerofficego Customers to Wix Contacts
@@ -192,34 +137,15 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - lastName
      - info.name.last
      - "string"
+   * - phoneNumber
+     - primaryInfo.phone
+     - "string"
    * - residenceCountryCode
      - info.addresses.items.address.country
      - "string"
    * - zipCode
      - info.addresses.items.address.postalCode
      - "string"
-
-
-Powerofficego Product to  Inventory
------------------------------------
-Every Powerofficego Product will be synchronized with a  Inventory.
-
-Once a link between a Powerofficego Product and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Product and a  Inventory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Product Property
-     -  Inventory Property
-     -  Data Type
-   * - availableStock
-     - lastUpdated
-     - "string"
-   * - availableStock
-     - variants.quantity
-     - "integer"
 
 
 Powerofficego Product to Wix Products
@@ -236,6 +162,9 @@ The following properties are synchronized between a Powerofficego Product and a 
    * - Powerofficego Product Property
      - Wix Products Property
      - Wix Data Type
+   * - costPrice
+     - costAndProfitData.itemCost
+     - "decimal"
    * - costPrice
      - costRange.maxValue
      - "string"
@@ -276,6 +205,9 @@ The following properties are synchronized between a Powerofficego Suppliers pers
    * - Id
      - id
      - "string"
+   * - LastName
+     - info.name.last
+     - "string"
    * - MailAddress.AddressLine1
      - info.addresses.items.address.addressLine
      - "string"
@@ -290,5 +222,8 @@ The following properties are synchronized between a Powerofficego Suppliers pers
      - "string"
    * - MailAddress.ZipCode
      - info.addresses.items.address.postalCode
+     - "string"
+   * - PhoneNumber
+     - primaryInfo.phone
      - "string"
 
