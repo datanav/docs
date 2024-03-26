@@ -2,7 +2,7 @@
 Asana to Businesscentral Dataflow
 =================================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:16
 
 Introduction
 ------------
@@ -41,20 +41,20 @@ The following properties are synchronized between a Asana Workspaces and a  Comp
      -  Data Type
 
 
-Asana Users to  Employees
--------------------------
-Every Asana Users will be synchronized with a  Employees.
+Asana Users to Businesscentral Employees
+----------------------------------------
+Every Asana Users will be synchronized with a Businesscentral Employees.
 
-Once a link between a Asana Users and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Users and a Businesscentral Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Users and a  Employees:
+The following properties are synchronized between a Asana Users and a Businesscentral Employees:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Users Property
-     -  Employees Property
-     -  Data Type
+     - Businesscentral Employees Property
+     - Businesscentral Data Type
    * - email
      - email
      - "string"
