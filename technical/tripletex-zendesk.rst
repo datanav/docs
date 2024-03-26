@@ -2,7 +2,7 @@
 Tripletex to Zendesk Dataflow
 =============================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 14:30:19
 
 Introduction
 ------------
@@ -108,39 +108,39 @@ The following properties are synchronized between a Tripletex Employee and a Zen
      - "string"
 
 
-Tripletex Customer to  Organizations
-------------------------------------
-Every Tripletex Customer will be synchronized with a  Organizations.
+Tripletex Customer to Zendesk Organizations
+-------------------------------------------
+Every Tripletex Customer will be synchronized with a Zendesk Organizations.
 
-Once a link between a Tripletex Customer and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a  Organizations:
+The following properties are synchronized between a Tripletex Customer and a Zendesk Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     -  Organizations Property
-     -  Data Type
+     - Zendesk Organizations Property
+     - Zendesk Data Type
    * - name
      - name
      - "string"
 
 
-Tripletex Department to  Organizations
---------------------------------------
-Every Tripletex Department will be synchronized with a  Organizations.
+Tripletex Department to Zendesk Organizations
+---------------------------------------------
+Every Tripletex Department will be synchronized with a Zendesk Organizations.
 
-Once a link between a Tripletex Department and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a  Organizations:
+The following properties are synchronized between a Tripletex Department and a Zendesk Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     -  Organizations Property
-     -  Data Type
+     - Zendesk Organizations Property
+     - Zendesk Data Type
    * - name
      - name
      - "string"
