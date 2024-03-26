@@ -2,7 +2,7 @@
 Wave Financial to Hubspot Dataflow
 ==================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -368,7 +368,7 @@ The following properties are synchronized between a Wave Invoice and a Hubspot L
      - "string"
    * - items.quantity
      - properties.quantity
-     - ["string", ["integer", ["decimal", "_."]]]
+     - N/A
    * - items.unitPrice
      - properties.price
      - "string"
