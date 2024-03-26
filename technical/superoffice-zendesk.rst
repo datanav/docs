@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:02
 
 Introduction.
 ------------
@@ -46,38 +46,6 @@ The following properties are synchronized between a SuperOffice Person and a  Us
      - "string"
 
 
-SuperOffice User to  Users
---------------------------
-Before any synchronization can take place, a link between a SuperOffice User and a  Users must be established.
-
-A SuperOffice User will merge with a  Users if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice User Property
-     -  Users Property
-   * - personEmail
-     - email
-
-Once a link between a SuperOffice User and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice User and a  Users:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice User Property
-     -  Users Property
-     -  Data Type
-   * - contactId
-     - organization_id
-     - "string"
-   * - personEmail
-     - email
-     - "string"
-
-
 SuperOffice Contact to  Organizations
 -------------------------------------
 Every SuperOffice Contact will be synchronized with a  Organizations.
@@ -94,9 +62,6 @@ The following properties are synchronized between a SuperOffice Contact and a  O
      -  Data Type
    * - Name
      - name
-     - "string"
-   * - Urls.Value
-     - url
      - "string"
 
 
@@ -125,5 +90,40 @@ The following properties are synchronized between a SuperOffice Ticket and a  Ti
      - "string"
    * - Title
      - subject
+     - "string"
+
+
+SuperOffice User to  Users
+--------------------------
+Every SuperOffice User will be synchronized with a  Users.
+
+If a matching  Users already exists, the SuperOffice User will be merged with the existing one.
+If no matching  Users is found, a new  Users will be created.
+
+A SuperOffice User will merge with a  Users if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     -  Users Property
+   * - personEmail
+     - email
+
+Once a link between a SuperOffice User and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice User and a  Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     -  Users Property
+     -  Data Type
+   * - contactId
+     - organization_id
+     - "string"
+   * - personEmail
+     - email
      - "string"
 
