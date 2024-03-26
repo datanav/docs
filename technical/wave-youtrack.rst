@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -108,25 +108,6 @@ The following properties are synchronized between a Wave Customer and a  Groups:
    :header-rows: 1
 
    * - Wave Customer Property
-     -  Groups Property
-     -  Data Type
-   * - name
-     - name
-     - "string"
-
-
-Wave Vendor to  Groups
-----------------------
-Every Wave Vendor will be synchronized with a  Groups.
-
-Once a link between a Wave Vendor and a  Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a  Groups:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
      -  Groups Property
      -  Data Type
    * - name
