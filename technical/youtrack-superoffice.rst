@@ -2,40 +2,40 @@
 YouTrack to Superoffice Dataflow
 ================================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:16
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from YouTrack to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-YouTrack Users to  Person
--------------------------
-Every YouTrack Users will be synchronized with a  Person.
+YouTrack Users to Superoffice Person
+------------------------------------
+Every YouTrack Users will be synchronized with a Superoffice Person.
 
-If a matching  Person already exists, the YouTrack Users will be merged with the existing one.
-If no matching  Person is found, a new  Person will be created.
+If a matching Superoffice Person already exists, the YouTrack Users will be merged with the existing one.
+If no matching Superoffice Person is found, a new Superoffice Person will be created.
 
-A YouTrack Users will merge with a  Person if one of the following property combinations match:
+A YouTrack Users will merge with a Superoffice Person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     -  Person Property
+     - Superoffice Person Property
    * - profile.email.email
      - Emails.Value
 
-Once a link between a YouTrack Users and a  Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Users and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Users and a  Person:
+The following properties are synchronized between a YouTrack Users and a Superoffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     -  Person Property
-     -  Data Type
+     - Superoffice Person Property
+     - Superoffice Data Type
    * - profile.email
      - Emails.Value
      - "string"
