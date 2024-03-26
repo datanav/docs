@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:02
 
 Introduction.
 ------------
@@ -162,6 +162,15 @@ The following properties are synchronized between a SuperOffice Contact and a Hu
    * - Name
      - properties.name
      - "string"
+   * - OrgNr (Dependant on having NO in Country.TwoLetterISOCountry)
+     - properties.sesam_org_number_no
+     - "string"
+   * - OrgNr (Dependant on having SE in Country.TwoLetterISOCountry)
+     - properties.sesam_org_number_se
+     - "string"
+   * - OrgNr (Dependant on having  in Country.ThreeLetterISOCountryDependant on having NO in Country.ThreeLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountry)
+     - sync_org_nr
+     - "string"
    * - Phones.Value
      - properties.phone
      - "string"
@@ -273,6 +282,12 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - Description
      - properties.description
      - "string"
+   * - DiscountPercent
+     - properties.hs_discount_percentage
+     - "string"
+   * - ERPDiscountPercent
+     - properties.hs_discount_percentage
+     - "string"
    * - ERPProductKey
      - properties.hs_product_id
      - "string"
@@ -281,28 +296,9 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
    * - Quantity
      - properties.quantity
-     - "integer"
+     - "string", "integer", "decimal"]]
    * - UnitListPrice
      - properties.price
-     - "string"
-
-
-SuperOffice Quoteline to  Lineitemdealassociation
--------------------------------------------------
-Every SuperOffice Quoteline will be synchronized with a  Lineitemdealassociation.
-
-Once a link between a SuperOffice Quoteline and a  Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quoteline and a  Lineitemdealassociation:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quoteline Property
-     -  Lineitemdealassociation Property
-     -  Data Type
-   * - QuoteAlternativeId
-     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -326,6 +322,9 @@ The following properties are synchronized between a SuperOffice Sale and a  Deal
    * - Currency.Id
      - properties.deal_currency_code
      - "string"
+   * - Heading
+     - properties.dealname
+     - "string"
    * - SaleText
      - properties.dealname
      - "string"
@@ -337,24 +336,21 @@ The following properties are synchronized between a SuperOffice Sale and a  Deal
      - "string"
 
 
-SuperOffice Ticket to  Ticket
------------------------------
-Every SuperOffice Ticket will be synchronized with a  Ticket.
+SuperOffice User to  User
+-------------------------
+Every SuperOffice User will be synchronized with a  User.
 
-Once a link between a SuperOffice Ticket and a  Ticket is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice User and a  User is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Ticket and a  Ticket:
+The following properties are synchronized between a SuperOffice User and a  User:
 
 .. list-table::
    :header-rows: 1
 
-   * - SuperOffice Ticket Property
-     -  Ticket Property
+   * - SuperOffice User Property
+     -  User Property
      -  Data Type
-   * - OwnedBy.AssociateId
-     - properties.hubspot_owner_id
-     - "string"
-   * - Title
-     - properties.subject
+   * - personEmail
+     - email
      - "string"
 
