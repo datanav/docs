@@ -2,7 +2,7 @@
 Wave Financial to ZohoCRM Dataflow
 ==================================
 
-Generated: 2024-03-26 14:19:54
+Generated: 2024-03-26 14:20:08
 
 Introduction
 ------------
@@ -97,20 +97,20 @@ The following properties are synchronized between a Wave Customer and a  Account
      - "string"
 
 
-Wave Customer person to Zohocrm Contact
+Wave Customer person to ZohoCRM Contact
 ---------------------------------------
-Every Wave Customer person will be synchronized with a Zohocrm Contact.
+Every Wave Customer person will be synchronized with a ZohoCRM Contact.
 
-Once a link between a Wave Customer person and a Zohocrm Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer person and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a Zohocrm Contact:
+The following properties are synchronized between a Wave Customer person and a ZohoCRM Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     - Zohocrm Contact Property
-     - Zohocrm Data Type
+     - ZohoCRM Contact Property
+     - ZohoCRM Data Type
    * - address.city
      - Mailing_City
      - "string"
