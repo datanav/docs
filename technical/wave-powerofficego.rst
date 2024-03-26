@@ -2,7 +2,7 @@
 Wave Financial to Powerofficego Dataflow
 ========================================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -35,40 +35,40 @@ The following properties are synchronized between a Wave Customer person and a P
      - Powerofficego Data Type
    * - address.addressLine1
      - address1
-"string"
+     - "string"
    * - address.addressLine2
      - address2
-"string"
+     - "string"
    * - address.city
      - city
-"string"
+     - "string"
    * - address.country.code
      - residenceCountryCode
-"string"
+     - "string"
    * - address.countryCode
      - residenceCountryCode
-"string"
+     - "string"
    * - address.postalCode
      - zipCode
-"string"
+     - "string"
    * - id
      - id
-"integer"
+     - "integer"
    * - shippingDetails.address.addressLine1
      - address1
-"string"
+     - "string"
    * - shippingDetails.address.addressLine2
      - address2
-"string"
+     - "string"
    * - shippingDetails.address.city
      - city
-"string"
+     - "string"
    * - shippingDetails.address.country.code
      - residenceCountryCode
-"string"
+     - "string"
    * - shippingDetails.address.postalCode
      - zipCode
-"string"
+     - "string"
 
 
 Wave Customer to Powerofficego Customers person
@@ -89,46 +89,46 @@ The following properties are synchronized between a Wave Customer and a Poweroff
      - Powerofficego Data Type
    * - address.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - address.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - address.city
      - MailAddress.City
-"string"
+     - "string"
    * - address.country.code
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - address.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - email
      - EmailAddress
-"string"
+     - "string"
    * - firstName
      - FirstName
-"string"
+     - "string"
    * - id
      - Id
-"integer"
+     - "integer"
    * - lastName
      - LastName
-"string"
+     - "string"
    * - shippingDetails.address.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - shippingDetails.address.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - shippingDetails.address.city
      - MailAddress.City
-"string"
+     - "string"
    * - shippingDetails.address.country.code
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - shippingDetails.address.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
 
 
 Wave Vendor to Powerofficego Customers person
@@ -149,22 +149,22 @@ The following properties are synchronized between a Wave Vendor and a Poweroffic
      - Powerofficego Data Type
    * - address.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - address.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - address.city
      - MailAddress.City
-"string"
+     - "string"
    * - address.country.code
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - address.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - id
      - Id
-"integer"
+     - "integer"
 
 
 Wave Vendor to Powerofficego Customers
@@ -185,28 +185,28 @@ The following properties are synchronized between a Wave Vendor and a Poweroffic
      - Powerofficego Data Type
    * - address.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - address.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - address.city
      - MailAddress.City
-"string"
+     - "string"
    * - address.country.code
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - address.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - id
      - Id
-"integer"
+     - "integer"
    * - name
      - Name
-"string"
+     - "string"
    * - website
      - WebsiteUrl
-"string"
+     - "string"
 
 
 Wave Customer to Powerofficego Contactperson
@@ -238,58 +238,58 @@ The following properties are synchronized between a Wave Customer and a Poweroff
      - Powerofficego Data Type
    * - address.addressLine1
      - address1
-"string"
+     - "string"
    * - address.addressLine2
      - address2
-"string"
+     - "string"
    * - address.city
      - city
-"string"
+     - "string"
    * - address.country.code
      - residenceCountryCode
-"string"
+     - "string"
    * - address.countryCode
      - residenceCountryCode
-"string"
+     - "string"
    * - address.postalCode
      - zipCode
-"string"
+     - "string"
    * - email
      - emailAddress
-"string"
+     - "string"
    * - firstName
      - firstName
-"string"
+     - "string"
    * - id
      - id
-"integer"
+     - "integer"
    * - id
      - partyId
-"integer"
+     - "integer"
    * - lastName
      - lastName
-"string"
+     - "string"
    * - phone
      - phoneNumber
-"string"
+     - "string"
    * - shippingDetails.address.addressLine1
      - address1
-"string"
+     - "string"
    * - shippingDetails.address.addressLine2
      - address2
-"string"
+     - "string"
    * - shippingDetails.address.city
      - city
-"string"
+     - "string"
    * - shippingDetails.address.country.code
      - residenceCountryCode
-"string"
+     - "string"
    * - shippingDetails.address.postalCode
      - zipCode
-"string"
+     - "string"
    * - shippingDetails.phone
      - phoneNumber
-"string"
+     - "string"
 
 
 Wave Customer to Powerofficego Customers
@@ -308,64 +308,64 @@ The following properties are synchronized between a Wave Customer and a Poweroff
      - Powerofficego Data Type
    * - address.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - address.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - address.city
      - MailAddress.City
-"string"
+     - "string"
    * - address.country.code
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - address.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - email
      - EmailAddress
-"string"
+     - "string"
    * - firstName
      - FirstName
-"string"
+     - "string"
    * - id
      - Id
-"integer"
+     - "integer"
    * - lastName
      - LastName
-"string"
+     - "string"
    * - name
      - Name
-"string"
+     - "string"
    * - phone
      - Number
-"string"
+     - "string"
    * - phone
      - PhoneNumber
-"string"
+     - "string"
    * - shippingDetails.address.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - shippingDetails.address.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - shippingDetails.address.city
      - MailAddress.City
-"string"
+     - "string"
    * - shippingDetails.address.country.code
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - shippingDetails.address.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - shippingDetails.phone
      - Number
-"string"
+     - "string"
    * - shippingDetails.phone
      - PhoneNumber
-"string"
+     - "string"
    * - website
      - WebsiteUrl
-"string"
+     - "string"
 
 
 Wave Invoice to Powerofficego Salesorderlines
@@ -384,31 +384,31 @@ The following properties are synchronized between a Wave Invoice and a Poweroffi
      - Powerofficego Data Type
    * - id
      - sesam_SalesOrderId
-"string"
+     - "string"
    * - id
      - sesam_SalesOrdersId
-"string"
+     - "string"
    * - items.description
      - Description
-"string"
+     - "string"
    * - items.price
      - ProductUnitPrice
-["if", ["is-decimal", "_."], ["decimal", "_."], ["float", ["decimal", "_."]]]
+     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["float", ["decimal", "_."]]]
    * - items.price
      - SalesOrderLineUnitPrice
-"string"
+     - "string"
    * - items.product.id
      - ProductCode
-"string"
+     - "string"
    * - items.product.id
      - ProductId
-"integer"
+     - "integer"
    * - items.quantity
      - Quantity
-["integer", ["decimal", "_."]]
+     - ["integer", ["decimal", "_."]]
    * - total.value
      - TotalAmount
-"string"
+     - "string"
 
 
 Wave Invoice to Powerofficego Salesorders
@@ -427,28 +427,28 @@ The following properties are synchronized between a Wave Invoice and a Poweroffi
      - Powerofficego Data Type
    * - createdAt
      - CreatedDateTimeOffset
-"string"
+     - "string"
    * - currency.code
      - CurrencyCode
-"string"
+     - "string"
    * - customer.id
      - CustomerId
-"integer"
+     - "integer"
    * - customer.id
      - CustomerReferenceContactPersonId
-"string"
+     - "string"
    * - invoiceNumber
      - RelatedInvoiceNo
-"string"
+     - "string"
    * - poNumber
      - PurchaseOrderReference
-"string"
+     - "string"
    * - total.value
      - NetAmount
-"string"
+     - "string"
    * - total.value
      - TotalAmount
-"string"
+     - "string"
 
 
 Wave Product to Powerofficego Product
@@ -467,28 +467,28 @@ The following properties are synchronized between a Wave Product and a Poweroffi
      - Powerofficego Data Type
    * - description
      - Description
-"string"
+     - "string"
    * - description
      - description
-"string"
+     - "string"
    * - modifiedAt
      - LastChanged
-"string"
+     - "string"
    * - modifiedAt
      - lastChanged
-"string"
+     - "string"
    * - name
      - Name
-"string"
+     - "string"
    * - name
      - name
-"string"
+     - "string"
    * - unitPrice
      - SalesPrice
-"string"
+     - "string"
    * - unitPrice
      - salesPrice
-["if", ["is-decimal", "_."], ["decimal", "_."], "integer"]
+     - ["if", ["is-decimal", "_."], ["decimal", "_."], "integer"]
 
 
 Wave Vendor to Powerofficego Contactperson
@@ -520,35 +520,35 @@ The following properties are synchronized between a Wave Vendor and a Poweroffic
      - Powerofficego Data Type
    * - address.addressLine1
      - address1
-"string"
+     - "string"
    * - address.addressLine2
      - address2
-"string"
+     - "string"
    * - address.city
      - city
-"string"
+     - "string"
    * - address.country.code
      - residenceCountryCode
-"string"
+     - "string"
    * - address.postalCode
      - zipCode
-"string"
+     - "string"
    * - email
      - emailAddress
-"string"
+     - "string"
    * - firstName
      - firstName
-"string"
+     - "string"
    * - id
      - id
-"integer"
+     - "integer"
    * - id
      - partyId
-"integer"
+     - "integer"
    * - lastName
      - lastName
-"string"
+     - "string"
    * - phone
      - phoneNumber
-"string"
+     - "string"
 
