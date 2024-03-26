@@ -2,7 +2,7 @@
 Wave Financial to Hubspot Dataflow
 ==================================
 
-Generated: 2024-03-26 14:30:19
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -35,67 +35,67 @@ The following properties are synchronized between a Wave Customer and a Hubspot 
      - Hubspot Data Type
    * - address.addressLine1
      - properties.address
-     - "string"
+"string"
    * - address.city
      - properties.city
-     - "string"
+"string"
    * - address.country.code
      - properties.country
-     - "string"
+"string"
    * - address.countryCode
      - properties.country
-     - "string"
+"string"
    * - address.postalCode
      - properties.zip
-     - "string"
+"string"
    * - address.province.code
      - properties.state
-     - "string"
+"string"
    * - address.province.name
      - properties.country
-     - "string"
+"string"
    * - address.province.name
      - properties.state
-     - "string"
+"string"
    * - email
      - properties.email
-     - "string"
+"string"
    * - firstName
      - properties.firstname
-     - "string"
+"string"
    * - id
      - id
-     - "string"
+"string"
    * - lastName
      - properties.lastname
-     - "string"
+"string"
    * - mobile
      - properties.mobilephone
-     - "string"
+"string"
    * - phone
      - properties.phone
-     - "string"
+"string"
    * - shippingDetails.address.addressLine1
      - properties.address
-     - "string"
+"string"
    * - shippingDetails.address.city
      - properties.city
-     - "string"
+"string"
    * - shippingDetails.address.country.code
      - properties.country
-     - "string"
+"string"
    * - shippingDetails.address.postalCode
      - properties.zip
-     - "string"
+"string"
    * - shippingDetails.address.province.code
      - properties.state
-     - "string"
+"string"
    * - shippingDetails.address.province.name
      - properties.country
-     - "string"
+"string"
    * - shippingDetails.address.province.name
      - properties.state
-     - "string"
+"string"
 
 
 Wave Customer person to Hubspot Contact
@@ -124,70 +124,70 @@ The following properties are synchronized between a Wave Customer person and a H
      - Hubspot Data Type
    * - address.addressLine1
      - properties.address
-     - "string"
+"string"
    * - address.city
      - properties.city
-     - "string"
+"string"
    * - address.country.code
      - properties.country
-     - "string"
+"string"
    * - address.countryCode
      - properties.country
-     - "string"
+"string"
    * - address.postalCode
      - properties.zip
-     - "string"
+"string"
    * - address.province.code
      - properties.state
-     - "string"
+"string"
    * - address.province.name
      - properties.country
-     - "string"
+"string"
    * - address.province.name
      - properties.state
-     - "string"
+"string"
    * - email
      - properties.email
-     - "string"
+"string"
    * - firstName
      - properties.firstname
-     - "string"
+"string"
    * - id
      - id
-     - "string"
+"string"
    * - lastName
      - properties.lastname
-     - "string"
+"string"
    * - mobile
      - properties.mobilephone
-     - "string"
+"string"
    * - phone
      - properties.phone
-     - "string"
+"string"
    * - shippingDetails.address.addressLine1
      - properties.address
-     - "string"
+"string"
    * - shippingDetails.address.city
      - properties.city
-     - "string"
+"string"
    * - shippingDetails.address.country.code
      - properties.country
-     - "string"
+"string"
    * - shippingDetails.address.postalCode
      - properties.zip
-     - "string"
+"string"
    * - shippingDetails.address.province.code
      - properties.state
-     - "string"
+"string"
    * - shippingDetails.address.province.name
      - properties.country
-     - "string"
+"string"
    * - shippingDetails.address.province.name
      - properties.state
-     - "string"
+"string"
    * - shippingDetails.phone
      - properties.phone
-     - "string"
+"string"
 
 
 Wave Vendor to Hubspot Contact
@@ -216,43 +216,43 @@ The following properties are synchronized between a Wave Vendor and a Hubspot Co
      - Hubspot Data Type
    * - address.addressLine1
      - properties.address
-     - "string"
+"string"
    * - address.city
      - properties.city
-     - "string"
+"string"
    * - address.country.code
      - properties.country
-     - "string"
+"string"
    * - address.postalCode
      - properties.zip
-     - "string"
+"string"
    * - address.province.code
      - properties.state
-     - "string"
+"string"
    * - address.province.name
      - properties.country
-     - "string"
+"string"
    * - address.province.name
      - properties.state
-     - "string"
+"string"
    * - email
      - properties.email
-     - "string"
+"string"
    * - firstName
      - properties.firstname
-     - "string"
+"string"
    * - id
      - id
-     - "string"
+"string"
    * - lastName
      - properties.lastname
-     - "string"
+"string"
    * - mobile
      - properties.mobilephone
-     - "string"
+"string"
    * - phone
      - properties.phone
-     - "string"
+"string"
 
 
 Wave Customer to Hubspot Company
@@ -271,73 +271,73 @@ The following properties are synchronized between a Wave Customer and a Hubspot 
      - Hubspot Data Type
    * - address.addressLine1
      - properties.address
-     - "string"
+"string"
    * - address.addressLine2
      - properties.address2
-     - "string"
+"string"
    * - address.city
      - properties.city
-     - "string"
+"string"
    * - address.country.code
      - properties.country
-     - "string"
+"string"
    * - address.countryCode
      - properties.country
-     - "string"
+"string"
    * - address.postalCode
      - properties.zip
-     - "string"
+"string"
    * - address.province
      - properties.state
-     - "string"
+"string"
    * - address.province.code
      - properties.state
-     - "string"
+"string"
    * - address.province.name
      - properties.state
-     - "string"
+"string"
    * - id
      - id
-     - "string"
+"string"
    * - internalNotes
      - properties.description
-     - "string"
+"string"
    * - name
      - properties.name
-     - "string"
+"string"
    * - phone
      - properties.phone
-     - "string"
+"string"
    * - shippingDetails.address.addressLine1
      - properties.address
-     - "string"
+"string"
    * - shippingDetails.address.addressLine2
      - properties.address2
-     - "string"
+"string"
    * - shippingDetails.address.city
      - properties.city
-     - "string"
+"string"
    * - shippingDetails.address.country.code
      - properties.country
-     - "string"
+"string"
    * - shippingDetails.address.postalCode
      - properties.zip
-     - "string"
+"string"
    * - shippingDetails.address.province
      - properties.state
-     - "string"
+"string"
    * - shippingDetails.address.province.code
      - properties.state
-     - "string"
+"string"
    * - shippingDetails.address.province.name
      - properties.state
-     - "string"
+"string"
    * - shippingDetails.phone
      - properties.phone
-     - "string"
+"string"
    * - website
      - properties.website
-     - "string"
+"string"
 
 
 Wave Invoice to Hubspot Lineitem
@@ -356,22 +356,22 @@ The following properties are synchronized between a Wave Invoice and a Hubspot L
      - Hubspot Data Type
    * - items.description
      - properties.description
-     - "string"
+"string"
    * - items.description
      - properties.name
-     - "string"
+"string"
    * - items.price
      - properties.price
-     - "string"
+"string"
    * - items.product.id
      - properties.hs_product_id
-     - "string"
+"string"
    * - items.quantity
      - properties.quantity
-     - "string", "integer", "decimal"]]
+["string", ["integer", ["decimal", "_."]]]
    * - items.unitPrice
      - properties.price
-     - "string"
+"string"
 
 
 Wave Product to Hubspot Product
@@ -390,11 +390,11 @@ The following properties are synchronized between a Wave Product and a Hubspot P
      - Hubspot Data Type
    * - description
      - properties.description
-     - "string"
+"string"
    * - name
      - properties.name
-     - "string"
+"string"
    * - unitPrice
      - properties.price
-     - "string"
+"string"
 
