@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-03-26 17:54:01
+Generated: 2024-03-26 17:58:38
 
 Introduction
 ------------
@@ -47,7 +47,7 @@ The following properties are synchronized between a Tripletex Contact and a Trip
      - "string"
    * - phoneNumberMobile
      - phoneNumberMobile
-     - ["if",["matches","+*","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - N/A
    * - phoneNumberMobileCountry.id
      - phoneNumberMobileCountry.id
      - "string"
@@ -82,7 +82,7 @@ The following properties are synchronized between a Tripletex Contact and a Trip
      - Tripletex Data Type
    * - customer.id
      - department.id (Dependant on having wd:Q703534 in  )
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
    * - email
      - email
      - "string"
@@ -94,7 +94,7 @@ The following properties are synchronized between a Tripletex Contact and a Trip
      - "string"
    * - phoneNumberMobile
      - phoneNumberMobile
-     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - N/A
    * - phoneNumberMobileCountry.id
      - phoneNumberMobileCountry
      - "string"
@@ -296,7 +296,7 @@ The following properties are synchronized between a Tripletex Customer and a Tri
      - "string"
    * - organizationNumber
      - organizationNumber
-     - ["replace"," ","", ["string", "_."]]
+     - N/A
    * - overdueNoticeEmail
      - overdueNoticeEmail
      - "string"
@@ -462,7 +462,7 @@ The following properties are synchronized between a Tripletex Employee and a Tri
      - "string"
    * - phoneNumberMobile
      - phoneNumberMobile
-     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - N/A
    * - phoneNumberMobileCountry
      - phoneNumberMobileCountry.id
      - "string"
@@ -506,10 +506,10 @@ The following properties are synchronized between a Tripletex Employee and a Tri
      - Tripletex Data Type
    * - dateOfBirth
      - dateOfBirth
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - department.id
      - department.id
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
    * - email
      - email
      - "string"
@@ -678,7 +678,7 @@ The following properties are synchronized between a Tripletex Supplier and a Tri
      - "string"
    * - organizationNumber
      - organizationNumber
-     - ["replace"," ","", ["string", "_."]]
+     - N/A
    * - overdueNoticeEmail
      - overdueNoticeEmail
      - "string"
