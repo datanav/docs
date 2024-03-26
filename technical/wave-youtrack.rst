@@ -2,7 +2,7 @@
 Wave Financial to Youtrack Dataflow
 ===================================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 14:30:19
 
 Introduction
 ------------
@@ -96,20 +96,20 @@ The following properties are synchronized between a Wave Vendor and a Youtrack U
      - "string"
 
 
-Wave Customer to  Groups
-------------------------
-Every Wave Customer will be synchronized with a  Groups.
+Wave Customer to Youtrack Groups
+--------------------------------
+Every Wave Customer will be synchronized with a Youtrack Groups.
 
-Once a link between a Wave Customer and a  Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a  Groups:
+The following properties are synchronized between a Wave Customer and a Youtrack Groups:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     -  Groups Property
-     -  Data Type
+     - Youtrack Groups Property
+     - Youtrack Data Type
    * - name
      - name
      - "string"
