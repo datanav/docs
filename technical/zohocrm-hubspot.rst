@@ -2,7 +2,7 @@
 Zohocrm to Hubspot Dataflow
 ===========================
 
-Generated: 2024-03-26 14:19:29
+Generated: 2024-03-26 14:19:41
 
 Introduction
 ------------
@@ -11,7 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Zohocrm Deal to Hubspot Deal
 ----------------------------
-Every Zohocrm Deal will be synchronized with a Hubspot Deal.
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Hubspot Deal.
 
 Once a link between a Zohocrm Deal and a Hubspot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
 
