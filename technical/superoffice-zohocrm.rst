@@ -2,27 +2,27 @@
 SuperOffice to ZohoCRM Dataflow
 ===============================
 
-Generated: 2024-03-26 14:20:08
+Generated: 2024-03-26 14:20:39
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to ZohoCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-SuperOffice Contact to Zohocrm Account
+SuperOffice Contact to ZohoCRM Account
 --------------------------------------
-Every SuperOffice Contact will be synchronized with a Zohocrm Account.
+Every SuperOffice Contact will be synchronized with a ZohoCRM Account.
 
-Once a link between a SuperOffice Contact and a Zohocrm Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a Zohocrm Account:
+The following properties are synchronized between a SuperOffice Contact and a ZohoCRM Account:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - Zohocrm Account Property
-     - Zohocrm Data Type
+     - ZohoCRM Account Property
+     - ZohoCRM Data Type
    * - Address.Postal.City
      - Billing_City
      - "string"
@@ -64,58 +64,58 @@ The following properties are synchronized between a SuperOffice Contact and a Zo
      - "string"
 
 
-SuperOffice Contact to Zohocrm Contact
+SuperOffice Contact to ZohoCRM Contact
 --------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a Zohocrm Contact must be established.
+Before any synchronization can take place, a link between a SuperOffice Contact and a ZohoCRM Contact must be established.
 
-A new Zohocrm Contact will be created from a SuperOffice Contact if it is connected to a SuperOffice Sale that is synchronized into Zohocrm.
+A new ZohoCRM Contact will be created from a SuperOffice Contact if it is connected to a SuperOffice Sale that is synchronized into ZohoCRM.
 
-Once a link between a SuperOffice Contact and a Zohocrm Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a Zohocrm Contact:
+The following properties are synchronized between a SuperOffice Contact and a ZohoCRM Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - Zohocrm Contact Property
-     - Zohocrm Data Type
+     - ZohoCRM Contact Property
+     - ZohoCRM Data Type
 
 
-SuperOffice Person to Zohocrm Account
+SuperOffice Person to ZohoCRM Account
 -------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a Zohocrm Account must be established.
+Before any synchronization can take place, a link between a SuperOffice Person and a ZohoCRM Account must be established.
 
-A new Zohocrm Account will be created from a SuperOffice Person if it is connected to a SuperOffice Sale that is synchronized into Zohocrm.
+A new ZohoCRM Account will be created from a SuperOffice Person if it is connected to a SuperOffice Sale that is synchronized into ZohoCRM.
 
-Once a link between a SuperOffice Person and a Zohocrm Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a Zohocrm Account:
+The following properties are synchronized between a SuperOffice Person and a ZohoCRM Account:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - Zohocrm Account Property
-     - Zohocrm Data Type
+     - ZohoCRM Account Property
+     - ZohoCRM Data Type
 
 
-SuperOffice Person to Zohocrm Contact
+SuperOffice Person to ZohoCRM Contact
 -------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a Zohocrm Contact must be established.
+Before any synchronization can take place, a link between a SuperOffice Person and a ZohoCRM Contact must be established.
 
-A new Zohocrm Contact will be created from a SuperOffice Person if it is connected to a SuperOffice Sale that is synchronized into Zohocrm.
+A new ZohoCRM Contact will be created from a SuperOffice Person if it is connected to a SuperOffice Sale that is synchronized into ZohoCRM.
 
-Once a link between a SuperOffice Person and a Zohocrm Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a Zohocrm Contact:
+The following properties are synchronized between a SuperOffice Person and a ZohoCRM Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - Zohocrm Contact Property
-     - Zohocrm Data Type
+     - ZohoCRM Contact Property
+     - ZohoCRM Data Type
    * - Address.Street.City
      - Mailing_City
      - "string"
