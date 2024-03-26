@@ -2,7 +2,7 @@
 HubSpot to Powerofficego Dataflow
 =================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -49,7 +49,7 @@ The following properties are synchronized between a HubSpot Contact and a Powero
      - "string"
    * - properties.date_of_birth
      - dateOfBirth
-     - ["if",["gt",["abs",["datetime-diff", "year", "_.",["now"]]], 100], "1935-01-01",["datetime-format", "%Y-%m-%d", "_."]]
+     - N/A
    * - properties.email
      - emailAddress
      - "string"
@@ -232,7 +232,7 @@ The following properties are synchronized between a HubSpot Contact and a Powero
      - "string"
    * - properties.date_of_birth
      - DateOfBirth
-     - ["if",["gt",["abs",["datetime-diff", "year", "_.",["now"]]], 100], "1935-01-01",["datetime-format", "%Y-%m-%d", "_."]]
+     - N/A
    * - properties.email
      - EmailAddress
      - "string"
@@ -312,10 +312,10 @@ The following properties are synchronized between a HubSpot Lineitem and a Power
      - "string"
    * - properties.price
      - ProductUnitPrice
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["float", ["decimal", "_."]]]
+     - N/A
    * - properties.quantity
      - Quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
 
 
 HubSpot Product to Powerofficego Product
