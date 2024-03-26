@@ -2,7 +2,7 @@
 Wix.com to Wave Dataflow
 ========================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -27,31 +27,31 @@ The following properties are synchronized between a Wix.com Contacts and a Wave 
      - Wave Data Type
    * - info.name.first
      - firstName
-     - "string"
+"string"
    * - info.name.first
      - lastName
-     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
+["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
    * - info.name.first
      - name
-     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
+["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
    * - info.name.last
      - firstName
-     - "string"
+"string"
    * - info.name.last
      - lastName
-     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
+["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
    * - info.name.last
      - name
-     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
+["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
    * - primaryInfo.email
      - email
-     - "string"
+"string"
    * - primaryInfo.phone
      - mobile
-     - "string"
+"string"
    * - primaryInfo.phone
      - phone
-     - "string"
+"string"
 
 
 Wix.com Contacts to Wave Customer
@@ -72,22 +72,22 @@ The following properties are synchronized between a Wix.com Contacts and a Wave 
      - Wave Data Type
    * - info.name.first
      - firstName
-     - "string"
+"string"
    * - info.name.first
      - lastName
-     - "string"
+"string"
    * - info.name.last
      - firstName
-     - "string"
+"string"
    * - info.name.last
      - lastName
-     - "string"
+"string"
    * - primaryInfo.email
      - email
-     - "string"
+"string"
    * - primaryInfo.phone
      - mobile
-     - "string"
+"string"
 
 
 Wix.com Orders to Wave Invoice
@@ -106,61 +106,61 @@ The following properties are synchronized between a Wix.com Orders and a Wave In
      - Wave Data Type
    * - buyerInfo.contactId
      - customer.id
-     - "string"
+"string"
    * - buyerInfo.id
      - customer.id
-     - "string"
+"string"
    * - currency
      - currency.code
-     - "string"
+"string"
    * - dateCreated
      - invoiceDate
-     - "datetime-format","%Y-%m-%d","_."]
+["datetime-format","%Y-%m-%d","_."]
    * - lineItems.name
      - items.description
-     - "string"
+"string"
    * - lineItems.name
      - items.price
-     - "string"
+"string"
    * - lineItems.name
      - items.quantity
-     - "string", "integer", "decimal"]]
+["string", ["integer", ["decimal", "_."]]]
    * - lineItems.name.name
      - items.description
-     - "string"
+"string"
    * - lineItems.price
      - items.description
-     - "string"
+"string"
    * - lineItems.price
      - items.price
-     - "string"
+"string"
    * - lineItems.price
      - items.quantity
-     - "string", "integer", "decimal"]]
+["string", ["integer", ["decimal", "_."]]]
    * - lineItems.price
      - items.unitPrice
-     - "float"
+"float"
    * - lineItems.price.price
      - items.price
-     - "float"
+"float"
    * - lineItems.productId
      - items.product.id
-     - "string"
+"string"
    * - lineItems.productId.productId
      - items.product.id
-     - "string"
+"string"
    * - lineItems.quantity
      - items.description
-     - "string"
+"string"
    * - lineItems.quantity
      - items.price
-     - "string"
+"string"
    * - lineItems.quantity
      - items.quantity
-     - "string", "integer", "decimal"]]
+["string", ["integer", ["decimal", "_."]]]
    * - lineItems.quantity.quantity
      - items.quantity
-     - "float"
+"float"
 
 
 Wix.com Products to Wave Product
@@ -179,14 +179,14 @@ The following properties are synchronized between a Wix.com Products and a Wave 
      - Wave Data Type
    * - description
      - description
-     - "string"
+"string"
    * - name
      - name
-     - "string"
+"string"
    * - price.price
      - unitPrice
-     - "string"
+"string"
    * - priceData.price
      - unitPrice
-     - "string"
+"string"
 
