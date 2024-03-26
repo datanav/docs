@@ -2,7 +2,7 @@
 Wix.com to Powerofficego Dataflow
 =================================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -35,7 +35,7 @@ The following properties are synchronized between a Wix.com Members and a Powero
      - Powerofficego Data Type
    * - loginEmail
      - emailAddress
-"string"
+     - "string"
 
 
 Wix.com Contacts to Powerofficego Customers person
@@ -56,19 +56,19 @@ The following properties are synchronized between a Wix.com Contacts and a Power
      - Powerofficego Data Type
    * - info.addresses.items.address.country
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - info.name.first
      - FirstName
-"string"
+     - "string"
    * - info.name.last
      - LastName
-"string"
+     - "string"
    * - primaryInfo.email
      - EmailAddress
-"string"
+     - "string"
    * - primaryInfo.phone
      - PhoneNumber
-"string"
+     - "string"
 
 
 Wix.com Contacts to Powerofficego Customers
@@ -89,7 +89,7 @@ The following properties are synchronized between a Wix.com Contacts and a Power
      - Powerofficego Data Type
    * - info.addresses.items.address.country
      - MailAddress.CountryCode
-"string"
+     - "string"
 
 
 Wix.com Contacts to Powerofficego Contactperson
@@ -121,19 +121,19 @@ The following properties are synchronized between a Wix.com Contacts and a Power
      - Powerofficego Data Type
    * - info.addresses.items.address.country
      - residenceCountryCode
-"string"
+     - "string"
    * - info.name.first
      - firstName
-"string"
+     - "string"
    * - info.name.last
      - lastName
-"string"
+     - "string"
    * - primaryInfo.email
      - emailAddress
-"string"
+     - "string"
    * - primaryInfo.phone
      - phoneNumber
-"string"
+     - "string"
 
 
 Wix.com Orders to Powerofficego Salesorderlines
@@ -152,31 +152,31 @@ The following properties are synchronized between a Wix.com Orders and a Powerof
      - Powerofficego Data Type
    * - id
      - sesam_SalesOrderId
-"string"
+     - "string"
    * - id
      - sesam_SalesOrdersId
-"string"
+     - "string"
    * - lineItems.name
      - Description
-"string"
+     - "string"
    * - lineItems.price
      - ProductUnitPrice
-["if", ["is-decimal", "_."], ["decimal", "_."], ["float", ["decimal", "_."]]]
+     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["float", ["decimal", "_."]]]
    * - lineItems.price
      - SalesOrderLineUnitPrice
-"string"
+     - "string"
    * - lineItems.productId
      - ProductCode
-"string"
+     - "string"
    * - lineItems.productId
      - ProductId
-"integer"
+     - "integer"
    * - lineItems.quantity
      - Quantity
-["integer", ["decimal", "_."]]
+     - ["integer", ["decimal", "_."]]
    * - totals.total
      - TotalAmount
-"string"
+     - "string"
 
 
 Wix.com Orders to Powerofficego Salesorders
@@ -195,16 +195,16 @@ The following properties are synchronized between a Wix.com Orders and a Powerof
      - Powerofficego Data Type
    * - buyerInfo.id
      - CustomerId
-"integer"
+     - "integer"
    * - buyerInfo.id
      - CustomerReferenceContactPersonId
-"string"
+     - "string"
    * - currency
      - CurrencyCode
-"string"
+     - "string"
    * - totals.total
      - TotalAmount
-"string"
+     - "string"
 
 
 Wix.com Products to Powerofficego Product
@@ -223,20 +223,20 @@ The following properties are synchronized between a Wix.com Products and a Power
      - Powerofficego Data Type
    * - costAndProfitData.itemCost
      - costPrice
-["if", ["is-decimal", "_."], ["decimal", "_."], "integer"]
+     - ["if", ["is-decimal", "_."], ["decimal", "_."], "integer"]
    * - costRange.maxValue
      - costPrice
-["if", ["is-decimal", "_."], ["decimal", "_."], "integer"]
+     - ["if", ["is-decimal", "_."], ["decimal", "_."], "integer"]
    * - description
      - description
-"string"
+     - "string"
    * - name
      - name
-"string"
+     - "string"
    * - price.price
      - salesPrice
-"string"
+     - "string"
    * - priceData.price
      - salesPrice
-["if", ["is-decimal", "_."], ["decimal", "_."], "integer"]
+     - ["if", ["is-decimal", "_."], ["decimal", "_."], "integer"]
 
