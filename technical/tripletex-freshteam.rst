@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -61,7 +61,7 @@ The following properties are synchronized between a Tripletex Employee and a  Em
    * - dateOfBirth
      - date_of_birth
      - "string"
-   * - department.id
+   * - department.id (Dependant on having wd:Q703534 in  )
      - designation
      - "string"
    * - email
