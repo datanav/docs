@@ -2,37 +2,37 @@
 Tidsbanken to Unieconomy Dataflow
 =================================
 
-Generated: 2024-03-26 14:24:41
+Generated: 2024-03-26 14:25:09
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tidsbanken to Unieconomy. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tidsbanken Kunde to  Companies
-------------------------------
-Before any synchronization can take place, a link between a Tidsbanken Kunde and a  Companies must be established.
+Tidsbanken Kunde to Unieconomy Companies
+----------------------------------------
+Before any synchronization can take place, a link between a Tidsbanken Kunde and a Unieconomy Companies must be established.
 
-A Tidsbanken Kunde will merge with a  Companies if one of the following property combinations match:
+A Tidsbanken Kunde will merge with a Unieconomy Companies if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Kunde Property
-     -  Companies Property
+     - Unieconomy Companies Property
    * - Organisasjonsnummer
      - OrganizationNumber
 
-Once a link between a Tidsbanken Kunde and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Kunde and a Unieconomy Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Kunde and a  Companies:
+The following properties are synchronized between a Tidsbanken Kunde and a Unieconomy Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Kunde Property
-     -  Companies Property
-     -  Data Type
+     - Unieconomy Companies Property
+     - Unieconomy Data Type
    * - Navn
      - Name
      - "string"
@@ -60,33 +60,33 @@ The following properties are synchronized between a Tidsbanken Avdeling and a  D
      - "string"
 
 
-Tidsbanken Kunde to  Customers
-------------------------------
-Every Tidsbanken Kunde will be synchronized with a  Customers.
+Tidsbanken Kunde to Unieconomy Customers
+----------------------------------------
+Every Tidsbanken Kunde will be synchronized with a Unieconomy Customers.
 
-If a matching  Customers already exists, the Tidsbanken Kunde will be merged with the existing one.
-If no matching  Customers is found, a new  Customers will be created.
+If a matching Unieconomy Customers already exists, the Tidsbanken Kunde will be merged with the existing one.
+If no matching Unieconomy Customers is found, a new Unieconomy Customers will be created.
 
-A Tidsbanken Kunde will merge with a  Customers if one of the following property combinations match:
+A Tidsbanken Kunde will merge with a Unieconomy Customers if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Kunde Property
-     -  Customers Property
+     - Unieconomy Customers Property
    * - Organisasjonsnummer
      - OrgNumber
 
-Once a link between a Tidsbanken Kunde and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Kunde and a Unieconomy Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Kunde and a  Customers:
+The following properties are synchronized between a Tidsbanken Kunde and a Unieconomy Customers:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Kunde Property
-     -  Customers Property
-     -  Data Type
+     - Unieconomy Customers Property
+     - Unieconomy Data Type
    * - Organisasjonsnummer
      - OrgNumber
      - "string"
