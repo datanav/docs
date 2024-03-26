@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:02
 
 Introduction.
 ------------
@@ -65,37 +65,11 @@ The following properties are synchronized between a SuperOffice Person and a Wix
    * - MobilePhones.Value
      - primaryInfo.phone
      - "string"
+   * - OfficePhones.Value
+     - primaryInfo.phone
+     - "string"
    * - PersonId
      - id
-     - "string"
-
-
-SuperOffice Person to  Members
-------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a  Members must be established.
-
-A SuperOffice Person will merge with a  Members if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Person Property
-     -  Members Property
-   * - Emails.Value
-     - loginEmail
-
-Once a link between a SuperOffice Person and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Person and a  Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Person Property
-     -  Members Property
-     -  Data Type
-   * - Emails.Value
-     - loginEmail
      - "string"
 
 
@@ -134,35 +108,6 @@ The following properties are synchronized between a SuperOffice User and a  Cont
      - "string"
    * - personEmail
      - primaryInfo.email
-     - "string"
-
-
-SuperOffice User to  Members
-----------------------------
-Before any synchronization can take place, a link between a SuperOffice User and a  Members must be established.
-
-A SuperOffice User will merge with a  Members if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice User Property
-     -  Members Property
-   * - personEmail
-     - loginEmail
-
-Once a link between a SuperOffice User and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice User and a  Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice User Property
-     -  Members Property
-     -  Data Type
-   * - personEmail
-     - loginEmail
      - "string"
 
 
@@ -211,22 +156,6 @@ The following properties are synchronized between a SuperOffice Contact and a Wi
      - "string"
 
 
-SuperOffice Product to  Inventory
----------------------------------
-Every SuperOffice Product will be synchronized with a  Inventory.
-
-Once a link between a SuperOffice Product and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Product and a  Inventory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     -  Inventory Property
-     -  Data Type
-
-
 SuperOffice Product to Wix Products
 -----------------------------------
 Every SuperOffice Product will be synchronized with a Wix Products.
@@ -253,6 +182,9 @@ The following properties are synchronized between a SuperOffice Product and a Wi
    * - Name
      - name
      - "string"
+   * - UnitCost
+     - costAndProfitData.itemCost
+     - "decimal"
    * - UnitCost
      - costRange.maxValue
      - "string"
