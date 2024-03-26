@@ -2,7 +2,7 @@
 Wix.com to Businesscentral Dataflow
 ===================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -113,13 +113,13 @@ The following properties are synchronized between a Wix.com Orders and a Busines
      - "string"
    * - lineItems.name
      - discountPercent
-     - ["decimal", "_."]
+     - N/A
    * - lineItems.name
      - quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - lineItems.name
      - taxPercent
-     - ["decimal", "_."]
+     - N/A
    * - lineItems.name
      - unitPrice
      - "float"
@@ -131,13 +131,13 @@ The following properties are synchronized between a Wix.com Orders and a Busines
      - "string"
    * - lineItems.price
      - discountPercent
-     - ["decimal", "_."]
+     - N/A
    * - lineItems.price
      - quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - lineItems.price
      - taxPercent
-     - ["decimal", "_."]
+     - N/A
    * - lineItems.price
      - unitPrice
      - "float"
@@ -149,16 +149,16 @@ The following properties are synchronized between a Wix.com Orders and a Busines
      - "string"
    * - lineItems.quantity
      - discountPercent
-     - ["decimal", "_."]
+     - N/A
    * - lineItems.quantity
      - invoiceQuantity
      - "string"
    * - lineItems.quantity
      - quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - lineItems.quantity
      - taxPercent
-     - ["decimal", "_."]
+     - N/A
    * - lineItems.quantity
      - unitPrice
      - "float"
@@ -205,10 +205,10 @@ The following properties are synchronized between a Wix.com Products and a Busin
      - Businesscentral Data Type
    * - costAndProfitData.itemCost
      - unitCost
-     - ["decimal", "_."]
+     - N/A
    * - costRange.maxValue
      - unitCost
-     - ["decimal", "_."]
+     - N/A
    * - name
      - displayName
      - "string"
@@ -220,5 +220,5 @@ The following properties are synchronized between a Wix.com Products and a Busin
      - "string"
    * - priceData.price
      - unitPrice
-     - ["decimal", "_."]
+     - N/A
 
