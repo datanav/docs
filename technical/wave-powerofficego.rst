@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -71,50 +71,6 @@ The following properties are synchronized between a Wave Customer person and a  
      - "string"
 
 
-Wave Vendor to  Contactperson
------------------------------
-Before any synchronization can take place, a link between a Wave Vendor and a  Contactperson must be established.
-
-A Wave Vendor will merge with a  Contactperson if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     -  Contactperson Property
-   * - email
-     - emailAddress
-
-Once a link between a Wave Vendor and a  Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a  Contactperson:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     -  Contactperson Property
-     -  Data Type
-   * - address.addressLine1
-     - address1
-     - "string"
-   * - address.addressLine2
-     - address2
-     - "string"
-   * - address.city
-     - city
-     - "string"
-   * - address.country.code
-     - residenceCountryCode
-     - "string"
-   * - address.postalCode
-     - zipCode
-     - "string"
-   * - id
-     - id
-     - "integer"
-
-
 Wave Customer to  Customers person
 ----------------------------------
 Before any synchronization can take place, a link between a Wave Customer and a  Customers person must be established.
@@ -175,33 +131,82 @@ The following properties are synchronized between a Wave Customer and a  Custome
      - "string"
 
 
-Wave Currency to  Currency
---------------------------
-Every Wave Currency will be synchronized with a  Currency.
+Wave Vendor to  Customers person
+--------------------------------
+Before any synchronization can take place, a link between a Wave Vendor and a  Customers person must be established.
 
-If a matching  Currency already exists, the Wave Currency will be merged with the existing one.
-If no matching  Currency is found, a new  Currency will be created.
+A new  Customers person will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, or Customer-person that is synchronized into .
 
-A Wave Currency will merge with a  Currency if one of the following property combinations match:
+Once a link between a Wave Vendor and a  Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Currency Property
-     -  Currency Property
-   * - code
-     - code
-
-Once a link between a Wave Currency and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Currency and a  Currency:
+The following properties are synchronized between a Wave Vendor and a  Customers person:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Currency Property
-     -  Currency Property
+   * - Wave Vendor Property
+     -  Customers person Property
      -  Data Type
+   * - address.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - address.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - address.city
+     - MailAddress.City
+     - "string"
+   * - address.country.code
+     - MailAddress.CountryCode
+     - "string"
+   * - address.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - id
+     - Id
+     - "integer"
+
+
+Wave Vendor to  Customers
+-------------------------
+Before any synchronization can take place, a link between a Wave Vendor and a  Customers must be established.
+
+A new  Customers will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, or Customer-person that is synchronized into .
+
+Once a link between a Wave Vendor and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a  Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     -  Customers Property
+     -  Data Type
+   * - address.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - address.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - address.city
+     - MailAddress.City
+     - "string"
+   * - address.country.code
+     - MailAddress.CountryCode
+     - "string"
+   * - address.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - id
+     - Id
+     - "integer"
+   * - name
+     - Name
+     - "string"
+   * - website
+     - WebsiteUrl
+     - "string"
 
 
 Wave Customer to  Contactperson
@@ -388,7 +393,7 @@ The following properties are synchronized between a Wave Invoice and a  Salesord
      - "string"
    * - items.price
      - ProductUnitPrice
-     - "if", "is-decimal", "decimal", "integer"]
+     - "if", "is-decimal", "decimal", "float", "decimal"]]
    * - items.price
      - SalesOrderLineUnitPrice
      - "string"
@@ -400,7 +405,7 @@ The following properties are synchronized between a Wave Invoice and a  Salesord
      - "integer"
    * - items.quantity
      - Quantity
-     - "integer"
+     - "integer", "decimal"]
    * - total.value
      - TotalAmount
      - "string"
@@ -426,6 +431,9 @@ The following properties are synchronized between a Wave Invoice and a  Salesord
    * - currency.code
      - CurrencyCode
      - "string"
+   * - customer.id
+     - CustomerId
+     - "integer"
    * - customer.id
      - CustomerReferenceContactPersonId
      - "string"
@@ -481,4 +489,66 @@ The following properties are synchronized between a Wave Product and a  Product:
    * - unitPrice
      - salesPrice
      - "if", "is-decimal", "decimal", "integer"]
+
+
+Wave Vendor to  Contactperson
+-----------------------------
+Every Wave Vendor will be synchronized with a  Contactperson.
+
+If a matching  Contactperson already exists, the Wave Vendor will be merged with the existing one.
+If no matching  Contactperson is found, a new  Contactperson will be created.
+
+A Wave Vendor will merge with a  Contactperson if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     -  Contactperson Property
+   * - email
+     - emailAddress
+
+Once a link between a Wave Vendor and a  Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a  Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     -  Contactperson Property
+     -  Data Type
+   * - address.addressLine1
+     - address1
+     - "string"
+   * - address.addressLine2
+     - address2
+     - "string"
+   * - address.city
+     - city
+     - "string"
+   * - address.country.code
+     - residenceCountryCode
+     - "string"
+   * - address.postalCode
+     - zipCode
+     - "string"
+   * - email
+     - emailAddress
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - id
+     - partyId
+     - "integer"
+   * - lastName
+     - lastName
+     - "string"
+   * - phone
+     - phoneNumber
+     - "string"
 
