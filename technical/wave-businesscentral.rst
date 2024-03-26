@@ -2,7 +2,7 @@
 Wave Financial to Businesscentral Dataflow
 ==========================================
 
-Generated: 2024-03-26 14:30:19
+Generated: 2024-03-26 17:27:49
 
 Introduction
 ------------
@@ -27,55 +27,55 @@ The following properties are synchronized between a Wave Customer and a Business
      - Businesscentral Data Type
    * - address.addressLine1
      - addressLine1
-     - "string"
+"string"
    * - address.addressLine2
      - addressLine2
-     - "string"
+"string"
    * - address.city
      - address.city
-     - "string"
+"string"
    * - address.city
      - addressLine2
-     - "string"
+"string"
    * - address.city
      - city
-     - "string"
+"string"
    * - address.country.code
      - country
-     - "string"
+"string"
    * - address.postalCode
      - address.postalCode
-     - "string"
+"string"
    * - address.postalCode
      - postalCode
-     - "string"
+"string"
    * - id
      - id
-     - "string"
+"string"
    * - shippingDetails.address.addressLine1
      - addressLine1
-     - "string"
+"string"
    * - shippingDetails.address.addressLine2
      - addressLine2
-     - "string"
+"string"
    * - shippingDetails.address.city
      - address.city
-     - "string"
+"string"
    * - shippingDetails.address.city
      - addressLine2
-     - "string"
+"string"
    * - shippingDetails.address.city
      - city
-     - "string"
+"string"
    * - shippingDetails.address.country.code
      - country
-     - "string"
+"string"
    * - shippingDetails.address.postalCode
      - address.postalCode
-     - "string"
+"string"
    * - shippingDetails.address.postalCode
      - postalCode
-     - "string"
+"string"
 
 
 Wave Customer to Businesscentral Companies
@@ -110,49 +110,49 @@ The following properties are synchronized between a Wave Customer and a Business
      - Businesscentral Data Type
    * - address.addressLine1
      - addressLine1
-     - "string"
+"string"
    * - address.addressLine2
      - addressLine2
-     - "string"
+"string"
    * - address.city
      - city
-     - "string"
+"string"
    * - address.country.code
      - country
-     - "string"
+"string"
    * - address.postalCode
      - postalCode
-     - "string"
+"string"
    * - email
      - email
-     - "string"
+"string"
    * - firstName
      - displayName
-     - "string"
+"string"
    * - id
      - id
-     - "string"
+"string"
    * - lastName
      - displayName
-     - "string"
+"string"
    * - mobile
      - mobilePhoneNumber
-     - "string"
+"string"
    * - shippingDetails.address.addressLine1
      - addressLine1
-     - "string"
+"string"
    * - shippingDetails.address.addressLine2
      - addressLine2
-     - "string"
+"string"
    * - shippingDetails.address.city
      - city
-     - "string"
+"string"
    * - shippingDetails.address.country.code
      - country
-     - "string"
+"string"
    * - shippingDetails.address.postalCode
      - postalCode
-     - "string"
+"string"
 
 
 Wave Customer to Businesscentral Customers company
@@ -171,67 +171,67 @@ The following properties are synchronized between a Wave Customer and a Business
      - Businesscentral Data Type
    * - address.addressLine1
      - addressLine1
-     - "string"
+"string"
    * - address.addressLine2
      - addressLine2
-     - "string"
+"string"
    * - address.city
      - address.city
-     - "string"
+"string"
    * - address.city
      - city
-     - "string"
+"string"
    * - address.country.code
      - address.countryLetterCode
-     - "string"
+"string"
    * - address.country.code
      - country
-     - "string"
+"string"
    * - address.postalCode
      - address.postalCode
-     - "string"
+"string"
    * - address.postalCode
      - postalCode
-     - "string"
+"string"
    * - id
      - id
-     - "string"
+"string"
    * - name
      - displayName
-     - "string"
+"string"
    * - phone
      - phoneNumber
-     - "string"
+"string"
    * - shippingDetails.address.addressLine1
      - addressLine1
-     - "string"
+"string"
    * - shippingDetails.address.addressLine2
      - addressLine2
-     - "string"
+"string"
    * - shippingDetails.address.city
      - address.city
-     - "string"
+"string"
    * - shippingDetails.address.city
      - city
-     - "string"
+"string"
    * - shippingDetails.address.country.code
      - address.countryLetterCode
-     - "string"
+"string"
    * - shippingDetails.address.country.code
      - country
-     - "string"
+"string"
    * - shippingDetails.address.postalCode
      - address.postalCode
-     - "string"
+"string"
    * - shippingDetails.address.postalCode
      - postalCode
-     - "string"
+"string"
    * - shippingDetails.phone
      - phoneNumber
-     - "string"
+"string"
    * - website
      - website
-     - "string"
+"string"
 
 
 Wave Invoice to Businesscentral Salesorderlines
@@ -250,61 +250,61 @@ The following properties are synchronized between a Wave Invoice and a Businessc
      - Businesscentral Data Type
    * - id
      - documentId
-     - "string"
+"string"
    * - items.description
      - description
-     - "string"
+"string"
    * - items.description
      - discountPercent
-     - "decimal"
+["decimal", "_."]
    * - items.description
      - quantity
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - items.description
      - taxPercent
-     - "decimal"
+["decimal", "_."]
    * - items.description
      - unitPrice
-     - "float"
+"float"
    * - items.price
      - amountExcludingTax
-     - "string"
+"string"
    * - items.price
      - description
-     - "string"
+"string"
    * - items.price
      - discountPercent
-     - "decimal"
+["decimal", "_."]
    * - items.price
      - quantity
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - items.price
      - taxPercent
-     - "decimal"
+["decimal", "_."]
    * - items.price
      - unitPrice
-     - "float"
+"float"
    * - items.product.id
      - itemId
-     - "string"
+"string"
    * - items.quantity
      - description
-     - "string"
+"string"
    * - items.quantity
      - discountPercent
-     - "decimal"
+["decimal", "_."]
    * - items.quantity
      - invoiceQuantity
-     - "string"
+"string"
    * - items.quantity
      - quantity
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - items.quantity
      - taxPercent
-     - "decimal"
+["decimal", "_."]
    * - items.quantity
      - unitPrice
-     - "float"
+"float"
 
 
 Wave Invoice to Businesscentral Salesorders
@@ -323,13 +323,13 @@ The following properties are synchronized between a Wave Invoice and a Businessc
      - Businesscentral Data Type
    * - currency.code
      - currencyId
-     - "string"
+"string"
    * - customer.id
      - customerId
-     - "string"
+"string"
    * - total.value
      - totalAmountExcludingTax
-     - "string"
+"string"
 
 
 Wave Product to Businesscentral Items
@@ -348,16 +348,16 @@ The following properties are synchronized between a Wave Product and a Businessc
      - Businesscentral Data Type
    * - name
      - displayName
-     - "string"
+"string"
    * - name
      - displayName.string
-     - "string"
+"string"
    * - name
      - displayName2
-     - "string"
+"string"
    * - unitPrice
      - unitPrice
-     - "decimal"
+["decimal", "_."]
 
 
 Wave Vendor to Businesscentral Contacts person
@@ -376,35 +376,35 @@ The following properties are synchronized between a Wave Vendor and a Businessce
      - Businesscentral Data Type
    * - address.addressLine1
      - addressLine1
-     - "string"
+"string"
    * - address.addressLine2
      - addressLine2
-     - "string"
+"string"
    * - address.city
      - city
-     - "string"
+"string"
    * - address.country.code
      - country
-     - "string"
+"string"
    * - address.postalCode
      - postalCode
-     - "string"
+"string"
    * - email
      - email
-     - "string"
+"string"
    * - firstName
      - displayName
-     - "string"
+"string"
    * - id
      - id
-     - "string"
+"string"
    * - lastName
      - displayName
-     - "string"
+"string"
    * - mobile
      - mobilePhoneNumber
-     - "string"
+"string"
    * - phone
      - phoneNumber
-     - "string"
+"string"
 
