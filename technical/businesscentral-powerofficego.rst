@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-01-24 00:00:02
+Generated: 2024-03-26 00:00:00
 
 Introduction.
 ------------
@@ -103,6 +103,22 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
 
 
+Businesscentral Contacts person to  Customers
+---------------------------------------------
+Every Businesscentral Contacts person will be synchronized with a  Customers.
+
+Once a link between a Businesscentral Contacts person and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Contacts person and a  Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Contacts person Property
+     -  Customers Property
+     -  Data Type
+
+
 Businesscentral Contacts person to  Customers person
 ----------------------------------------------------
 Every Businesscentral Contacts person will be synchronized with a  Customers person.
@@ -143,36 +159,7 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
    * - type
      - IsPerson
-     - "boolean"
-
-
-Businesscentral Currencies to  Currency
----------------------------------------
-Every Businesscentral Currencies will be synchronized with a  Currency.
-
-If a matching  Currency already exists, the Businesscentral Currencies will be merged with the existing one.
-If no matching  Currency is found, a new  Currency will be created.
-
-A Businesscentral Currencies will merge with a  Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Currencies Property
-     -  Currency Property
-   * - code
-     - code
-
-Once a link between a Businesscentral Currencies and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Currencies and a  Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Currencies Property
-     -  Currency Property
-     -  Data Type
+     - "if", "is-boolean", "boolean"], "boolean", "string"]
 
 
 Businesscentral Customers company to  Customers
@@ -224,10 +211,26 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
    * - type
      - IsPerson
-     - "boolean"
+     - "if", "is-boolean", "boolean"], "boolean", "string"]
    * - website
      - WebsiteUrl
      - "string"
+
+
+Businesscentral Customers person to  Customers
+----------------------------------------------
+Every Businesscentral Customers person will be synchronized with a  Customers.
+
+Once a link between a Businesscentral Customers person and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers person and a  Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers person Property
+     -  Customers Property
+     -  Data Type
 
 
 Businesscentral Customers person to  Customers person
@@ -279,7 +282,7 @@ The following properties are synchronized between a Businesscentral Customers pe
      - "string"
    * - type
      - IsPerson
-     - "boolean"
+     - "if", "is-boolean", "boolean"], "boolean", "string"]
 
 
 Businesscentral Employees to  Employees
@@ -296,6 +299,27 @@ The following properties are synchronized between a Businesscentral Employees an
    * - Businesscentral Employees Property
      -  Employees Property
      -  Data Type
+   * - birthDate
+     - DateOfBirth
+     - "datetime-format","%Y-%m-%d","_."]
+   * - email
+     - EmailAddress
+     - "string"
+   * - givenName
+     - FirstName
+     - "string"
+   * - jobTitle
+     - DepartmentId (Dependant on having  in JobTitle)
+     - "string"
+   * - jobTitle
+     - JobTitle
+     - "string"
+   * - mobilePhone
+     - PhoneNumber
+     - "string"
+   * - surname
+     - LastName
+     - "string"
 
 
 Businesscentral Items to  Product
@@ -372,10 +396,13 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - "integer"
    * - quantity
      - Quantity
-     - "integer"
+     - "integer", "decimal"]
+   * - taxPercent
+     - VatId
+     - "string"
    * - unitPrice
      - ProductUnitPrice
-     - "if", "is-decimal", "decimal", "integer"]
+     - "if", "is-decimal", "decimal", "float", "decimal"]]
 
 
 Businesscentral Salesorders to  Salesorders
@@ -396,8 +423,11 @@ The following properties are synchronized between a Businesscentral Salesorders 
      - CurrencyCode
      - "string"
    * - customerId
+     - CustomerId
+     - "integer"
+   * - customerId
      - CustomerReferenceContactPersonId
-     - "string"
+     - "integer"
    * - orderDate
      - SalesOrderDate
      - "string"
