@@ -2,7 +2,7 @@
 Unieconomy to Superoffice Dataflow
 ==================================
 
-Generated: 2024-03-26 14:34:37
+Generated: 2024-03-26 14:34:55
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Unieconomy Companies and a S
    * - Unieconomy Companies Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - Name
+     - Name
+     - "string"
 
 
 Unieconomy Customers to Superoffice Contact
@@ -39,6 +42,9 @@ The following properties are synchronized between a Unieconomy Customers and a S
    * - Unieconomy Customers Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - WebUrl
+     - Urls.Value
+     - "string"
 
 
 Unieconomy Departments to Superoffice Contact
@@ -55,4 +61,7 @@ The following properties are synchronized between a Unieconomy Departments and a
    * - Unieconomy Departments Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - Name
+     - Name
+     - "string"
 
