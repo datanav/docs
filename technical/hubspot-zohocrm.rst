@@ -2,7 +2,7 @@
 HubSpot to ZohoCRM Dataflow
 ===========================
 
-Generated: 2024-03-26 14:20:39
+Generated: 2024-03-26 17:27:49
 
 Introduction
 ------------
@@ -25,88 +25,88 @@ The following properties are synchronized between a HubSpot Company and a ZohoCR
      - ZohoCRM Data Type
    * - properties.city
      - Billing_City
-     - "string"
+"string"
    * - properties.city
      - Shipping_City
-     - "string"
+"string"
    * - properties.country
      - Billing_Country
-     - "string"
+"string"
    * - properties.country
      - Industry
-     - "string"
+"string"
    * - properties.country
      - Mailing_Country
-     - "string"
+"string"
    * - properties.country
      - Other_Country
-     - "string"
+"string"
    * - properties.country
      - Shipping_Country
-     - "string"
+"string"
    * - properties.description
      - Created_Time
-     - "string"
+"string"
    * - properties.industry
      - Billing_Country
-     - "string"
+"string"
    * - properties.industry
      - Industry
-     - "string"
+"string"
    * - properties.industry
      - Mailing_Country
-     - "string"
+"string"
    * - properties.industry
      - Other_Country
-     - "string"
+"string"
    * - properties.industry
      - Shipping_Country
-     - "string"
+"string"
    * - properties.name
      - Account_Name
-     - "string"
+"string"
    * - properties.phone
      - Phone
-     - "string"
+"string"
    * - properties.state
      - Billing_Country
-     - "string"
+"string"
    * - properties.state
      - Billing_State
-     - "string"
+"string"
    * - properties.state
      - Industry
-     - "string"
+"string"
    * - properties.state
      - Shipping_Country
-     - "string"
+"string"
    * - properties.state
      - Shipping_State
-     - "string"
+"string"
    * - properties.type
      - Billing_Country
-     - "string"
+"string"
    * - properties.type
      - Industry
-     - "string"
+"string"
    * - properties.type
      - Mailing_Country
-     - "string"
+"string"
    * - properties.type
      - Other_Country
-     - "string"
+"string"
    * - properties.type
      - Shipping_Country
-     - "string"
+"string"
    * - properties.website
      - Website
-     - "string"
+"string"
    * - properties.zip
      - Billing_Code
-     - "string"
+"string"
    * - properties.zip
      - Shipping_Code
-     - "string"
+"string"
 
 
 HubSpot Company to ZohoCRM Contact
@@ -127,28 +127,28 @@ The following properties are synchronized between a HubSpot Company and a ZohoCR
      - ZohoCRM Data Type
    * - properties.country
      - Mailing_Country
-     - "string"
+"string"
    * - properties.country
      - Other_Country
-     - "string"
+"string"
    * - properties.industry
      - Mailing_Country
-     - "string"
+"string"
    * - properties.industry
      - Other_Country
-     - "string"
+"string"
    * - properties.state
      - Mailing_Country
-     - "string"
+"string"
    * - properties.state
      - Other_Country
-     - "string"
+"string"
    * - properties.type
      - Mailing_Country
-     - "string"
+"string"
    * - properties.type
      - Other_Country
-     - "string"
+"string"
 
 
 HubSpot Contact to ZohoCRM Account
@@ -187,49 +187,49 @@ The following properties are synchronized between a HubSpot Contact and a ZohoCR
      - ZohoCRM Data Type
    * - properties.city
      - Mailing_City
-     - "string"
+"string"
    * - properties.city
      - Other_City
-     - "string"
+"string"
    * - properties.country
      - Mailing_Country
-     - "string"
+"string"
    * - properties.country
      - Other_Country
-     - "string"
+"string"
    * - properties.email
      - Email
-     - "string"
+"string"
    * - properties.email
      - Secondary_Email
-     - "string"
+"string"
    * - properties.firstname
      - First_Name
-     - "string"
+"string"
    * - properties.lastname
      - Last_Name
-     - "string"
+"string"
    * - properties.mobilephone
      - Mobile
-     - "string"
+"string"
    * - properties.phone
      - Other_Phone
-     - "string"
+"string"
    * - properties.phone
      - Phone
-     - "string"
+"string"
    * - properties.state
      - Mailing_State
-     - "string"
+"string"
    * - properties.state
      - Other_State
-     - "string"
+"string"
    * - properties.zip
      - Mailing_Zip
-     - "string"
+"string"
    * - properties.zip
      - Other_Zip
-     - "string"
+"string"
 
 
 HubSpot Owner to ZohoCRM Contact
@@ -250,10 +250,10 @@ The following properties are synchronized between a HubSpot Owner and a ZohoCRM 
      - ZohoCRM Data Type
    * - firstName
      - First_Name
-     - "string"
+"string"
    * - lastName
      - Last_Name
-     - "string"
+"string"
 
 
 HubSpot Deal to ZohoCRM Deal
@@ -272,26 +272,26 @@ The following properties are synchronized between a HubSpot Deal and a ZohoCRM D
      - ZohoCRM Data Type
    * - properties.amount
      - Amount
-     - "string"
+"string"
    * - properties.closedate
      - Closing_Date
-     - "datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
+["datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
    * - properties.dealname
      - Deal_Name
-     - "string"
+"string"
    * - properties.dealstage
      - Probability
-     - "string"
+"string"
    * - properties.dealstage
      - Type
-     - "string"
+"string"
    * - properties.description
      - Deal_Name
-     - "string"
+"string"
    * - properties.hubspot_owner_id
      - Owner.id
-     - "string"
+"string"
    * - properties.pipeline
      - Stage
-     - "string"
+"string"
 
