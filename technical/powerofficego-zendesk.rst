@@ -2,7 +2,7 @@
 Powerofficego to Zendesk Dataflow
 =================================
 
-Generated: 2024-03-26 14:30:19
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -35,10 +35,10 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - Zendesk Data Type
    * - emailAddress
      - email
-     - "string"
+"string"
    * - partyId
      - organization_id
-     - "string"
+"string"
 
 
 Powerofficego Customers person to Zendesk Users
@@ -83,7 +83,7 @@ The following properties are synchronized between a Powerofficego Customers and 
      - Zendesk Data Type
    * - Name
      - name
-     - "string"
+"string"
 
 
 Powerofficego Departments to Zendesk Organizations
@@ -102,5 +102,5 @@ The following properties are synchronized between a Powerofficego Departments an
      - Zendesk Data Type
    * - Name
      - name
-     - "string"
+"string"
 
