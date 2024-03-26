@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:01
 
 Introduction.
 ------------
@@ -183,6 +183,15 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Number
      - properties.phone
      - "string"
+   * - OrganizationNumber (Dependant on having NO in MailAddress.CountryCode)
+     - properties.sesam_org_number_no
+     - "string"
+   * - OrganizationNumber (Dependant on having SE in MailAddress.CountryCode)
+     - properties.sesam_org_number_se
+     - "string"
+   * - OrganizationNumber (Dependant on having  in MailAddress.CountryCodeDependant on having NO in MailAddress.CountryCode)
+     - sync_org_nr
+     - "string"
    * - PhoneNumber
      - properties.phone
      - "string"
@@ -362,6 +371,9 @@ The following properties are synchronized between a Powerofficego Salesorderline
    * - Powerofficego Salesorderlines Property
      -  Lineitem Property
      -  Data Type
+   * - Allowance
+     - properties.hs_discount_percentage
+     - "string"
    * - Description
      - properties.name
      - "string"
@@ -376,27 +388,5 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - "string"
    * - Quantity
      - properties.quantity
-     - "integer"
-
-
-Powerofficego Salesorderlines to  Lineitemdealassociation
----------------------------------------------------------
-Every Powerofficego Salesorderlines will be synchronized with a  Lineitemdealassociation.
-
-Once a link between a Powerofficego Salesorderlines and a  Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorderlines and a  Lineitemdealassociation:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorderlines Property
-     -  Lineitemdealassociation Property
-     -  Data Type
-   * - sesam_SalesOrderId
-     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
-     - "string"
-   * - sesam_SalesOrdersId
-     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
-     - "string"
+     - "string", "integer", "decimal"]]
 
