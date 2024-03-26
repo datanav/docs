@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-30 00:01:11
+Generated: 2024-03-26 00:00:20
 
 Introduction.
 ------------
@@ -49,7 +49,7 @@ The following properties are synchronized between a HubSpot Contact and a  Conta
      - "string"
    * - properties.date_of_birth
      - dateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
+     - "if","gt","abs","datetime-diff", "year", "_.","now"]]], 100], "1935-01-01","datetime-format", "%Y-%m-%d"]
    * - properties.email
      - emailAddress
      - "string"
@@ -133,6 +133,12 @@ The following properties are synchronized between a HubSpot Company and a PowerO
      - "string"
    * - properties.phone
      - PhoneNumber
+     - "string"
+   * - properties.sesam_org_number_no
+     - OrganizationNumber (Dependant on having NO in MailAddress.CountryCode)
+     - "string"
+   * - properties.sesam_org_number_se
+     - OrganizationNumber (Dependant on having SE in MailAddress.CountryCode)
      - "string"
    * - properties.type
      - MailAddress.CountryCode
@@ -226,7 +232,7 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
      - "string"
    * - properties.date_of_birth
      - DateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
+     - "if","gt","abs","datetime-diff", "year", "_.","now"]]], 100], "1935-01-01","datetime-format", "%Y-%m-%d"]
    * - properties.email
      - EmailAddress
      - "string"
@@ -242,64 +248,6 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
    * - properties.zip
      - MailAddress.ZipCode
      - "string"
-
-
-HubSpot Account to  Currency
-----------------------------
-Every HubSpot Account will be synchronized with a  Currency.
-
-If a matching  Currency already exists, the HubSpot Account will be merged with the existing one.
-If no matching  Currency is found, a new  Currency will be created.
-
-A HubSpot Account will merge with a  Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Account Property
-     -  Currency Property
-   * - companyCurrency
-     - code
-
-Once a link between a HubSpot Account and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Account and a  Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Account Property
-     -  Currency Property
-     -  Data Type
-
-
-HubSpot Deal to  Currency
--------------------------
-Every HubSpot Deal will be synchronized with a  Currency.
-
-If a matching  Currency already exists, the HubSpot Deal will be merged with the existing one.
-If no matching  Currency is found, a new  Currency will be created.
-
-A HubSpot Deal will merge with a  Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     -  Currency Property
-   * - properties.deal_currency_code
-     - code
-
-Once a link between a HubSpot Deal and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Deal and a  Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     -  Currency Property
-     -  Data Type
 
 
 HubSpot Deal to  Salesorders
@@ -350,6 +298,9 @@ The following properties are synchronized between a HubSpot Lineitem and a  Sale
    * - HubSpot Lineitem Property
      -  Salesorderlines Property
      -  Data Type
+   * - properties.hs_discount_percentage
+     - Allowance
+     - "float"
    * - properties.hs_product_id
      - ProductCode
      - "string"
@@ -361,32 +312,10 @@ The following properties are synchronized between a HubSpot Lineitem and a  Sale
      - "string"
    * - properties.price
      - ProductUnitPrice
-     - "if", "is-decimal", "decimal", "integer"]
+     - "if", "is-decimal", "decimal", "float", "decimal"]]
    * - properties.quantity
      - Quantity
-     - "integer"
-
-
-HubSpot Lineitemdealassociation to  Salesorderlines
----------------------------------------------------
-Every HubSpot Lineitemdealassociation will be synchronized with a  Salesorderlines.
-
-Once a link between a HubSpot Lineitemdealassociation and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Lineitemdealassociation and a  Salesorderlines:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Lineitemdealassociation Property
-     -  Salesorderlines Property
-     -  Data Type
-   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
-     - sesam_SalesOrderId
-     - "string"
-   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
-     - sesam_SalesOrdersId
-     - "string"
+     - "integer", "decimal"]
 
 
 HubSpot Product to  Product
