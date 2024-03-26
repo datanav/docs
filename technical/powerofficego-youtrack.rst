@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:02
 
 Introduction.
 ------------
@@ -76,22 +76,6 @@ The following properties are synchronized between a Powerofficego Customers pers
      - "string"
 
 
-Powerofficego Currency to  Organizationroles
---------------------------------------------
-Every Powerofficego Currency will be synchronized with a  Organizationroles.
-
-Once a link between a Powerofficego Currency and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Currency and a  Organizationroles:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Currency Property
-     -  Organizationroles Property
-     -  Data Type
-
-
 Powerofficego Customers to  Groups
 ----------------------------------
 Every Powerofficego Customers will be synchronized with a  Groups.
@@ -130,18 +114,18 @@ The following properties are synchronized between a Powerofficego Departments an
      - "string"
 
 
-Powerofficego Productgroup to  Organizationroles
-------------------------------------------------
-Every Powerofficego Productgroup will be synchronized with a  Organizationroles.
+Powerofficego Projects to  Hubprojects
+--------------------------------------
+Every Powerofficego Projects will be synchronized with a  Hubprojects.
 
-Once a link between a Powerofficego Productgroup and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Projects and a  Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Productgroup and a  Organizationroles:
+The following properties are synchronized between a Powerofficego Projects and a  Hubprojects:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Productgroup Property
-     -  Organizationroles Property
+   * - Powerofficego Projects Property
+     -  Hubprojects Property
      -  Data Type
 
