@@ -2,7 +2,7 @@
 Zendesk to  Dataflow
 ====================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:04
 
 Introduction.
 ------------
@@ -66,24 +66,18 @@ The following properties are synchronized between a Zendesk Organizations and a 
      - "string"
 
 
-Zendesk Tickets to  Ticket
---------------------------
-Every Zendesk Tickets will be synchronized with a  Ticket.
+Zendesk Users to  User
+----------------------
+When a Zendesk User is of type Agent, it  will be synchronized with a  User.
 
-Once a link between a Zendesk Tickets and a  Ticket is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Users and a  User is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Tickets and a  Ticket:
+The following properties are synchronized between a Zendesk Users and a  User:
 
 .. list-table::
    :header-rows: 1
 
-   * - Zendesk Tickets Property
-     -  Ticket Property
+   * - Zendesk Users Property
+     -  User Property
      -  Data Type
-   * - requester_id
-     - properties.hubspot_owner_id
-     - "string"
-   * - subject
-     - properties.subject
-     - "string"
 
