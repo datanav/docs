@@ -2,7 +2,7 @@
 Businesscentral to Hubspot Dataflow
 ===================================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:16
 
 Introduction
 ------------
@@ -154,20 +154,20 @@ The following properties are synchronized between a Businesscentral Employees an
      - "string"
 
 
-Businesscentral Items to  Product
----------------------------------
-Every Businesscentral Items will be synchronized with a  Product.
+Businesscentral Items to Hubspot Product
+----------------------------------------
+Every Businesscentral Items will be synchronized with a Hubspot Product.
 
-Once a link between a Businesscentral Items and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Items and a Hubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Items and a  Product:
+The following properties are synchronized between a Businesscentral Items and a Hubspot Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Items Property
-     -  Product Property
-     -  Data Type
+     - Hubspot Product Property
+     - Hubspot Data Type
    * - displayName
      - properties.name
      - "string"
@@ -185,20 +185,20 @@ The following properties are synchronized between a Businesscentral Items and a 
      - "string"
 
 
-Businesscentral Salesorderlines to  Lineitem
---------------------------------------------
-Every Businesscentral Salesorderlines will be synchronized with a  Lineitem.
+Businesscentral Salesorderlines to Hubspot Lineitem
+---------------------------------------------------
+Every Businesscentral Salesorderlines will be synchronized with a Hubspot Lineitem.
 
-Once a link between a Businesscentral Salesorderlines and a  Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Salesorderlines and a Hubspot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorderlines and a  Lineitem:
+The following properties are synchronized between a Businesscentral Salesorderlines and a Hubspot Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Salesorderlines Property
-     -  Lineitem Property
-     -  Data Type
+     - Hubspot Lineitem Property
+     - Hubspot Data Type
    * - amountExcludingTax
      - properties.price
      - "string"
