@@ -2,7 +2,7 @@
 Wave Financial to Wave Dataflow
 ===============================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -27,88 +27,88 @@ The following properties are synchronized between a Wave Customer and a Wave Cus
      - Wave Data Type
    * - address.addressLine1
      - address.addressLine1
-"string"
+     - "string"
    * - address.addressLine1
      - shippingDetails.address.addressLine1
-"string"
+     - "string"
    * - address.addressLine2
      - address.addressLine2
-"string"
+     - "string"
    * - address.addressLine2
      - shippingDetails.address.addressLine2
-"string"
+     - "string"
    * - address.city
      - address.city
-"string"
+     - "string"
    * - address.city
      - shippingDetails.address.city
-"string"
+     - "string"
    * - address.country.code
      - address.country.code
-"string"
+     - "string"
    * - address.country.code
      - address.countryCode
-"string"
+     - "string"
    * - address.country.code
      - shippingDetails.address.country.code
-"string"
+     - "string"
    * - address.countryCode
      - address.country.code
-"string"
+     - "string"
    * - address.countryCode
      - address.countryCode
-"string"
+     - "string"
    * - address.postalCode
      - address.postalCode
-"string"
+     - "string"
    * - address.postalCode
      - shippingDetails.address.postalCode
-"string"
+     - "string"
    * - address.province.code
      - address.province.code
-"string"
+     - "string"
    * - address.province.code
      - shippingDetails.address.province.code
-"string"
+     - "string"
    * - shippingDetails.address.addressLine1
      - address.addressLine1
-"string"
+     - "string"
    * - shippingDetails.address.addressLine1
      - shippingDetails.address.addressLine1
-"string"
+     - "string"
    * - shippingDetails.address.addressLine2
      - address.addressLine2
-"string"
+     - "string"
    * - shippingDetails.address.addressLine2
      - shippingDetails.address.addressLine2
-"string"
+     - "string"
    * - shippingDetails.address.city
      - address.city
-"string"
+     - "string"
    * - shippingDetails.address.city
      - shippingDetails.address.city
-"string"
+     - "string"
    * - shippingDetails.address.country.code
      - address.country.code
-"string"
+     - "string"
    * - shippingDetails.address.country.code
      - address.countryCode
-"string"
+     - "string"
    * - shippingDetails.address.country.code
      - shippingDetails.address.country.code
-"string"
+     - "string"
    * - shippingDetails.address.postalCode
      - address.postalCode
-"string"
+     - "string"
    * - shippingDetails.address.postalCode
      - shippingDetails.address.postalCode
-"string"
+     - "string"
    * - shippingDetails.address.province.code
      - address.province.code
-"string"
+     - "string"
    * - shippingDetails.address.province.code
      - shippingDetails.address.province.code
-"string"
+     - "string"
 
 
 Wave Vendor to Wave Customer person
@@ -129,40 +129,40 @@ The following properties are synchronized between a Wave Vendor and a Wave Custo
      - Wave Data Type
    * - address.addressLine1
      - address.addressLine1
-"string"
+     - "string"
    * - address.addressLine1
      - shippingDetails.address.addressLine1
-"string"
+     - "string"
    * - address.addressLine2
      - address.addressLine2
-"string"
+     - "string"
    * - address.addressLine2
      - shippingDetails.address.addressLine2
-"string"
+     - "string"
    * - address.city
      - address.city
-"string"
+     - "string"
    * - address.city
      - shippingDetails.address.city
-"string"
+     - "string"
    * - address.country.code
      - address.country.code
-"string"
+     - "string"
    * - address.country.code
      - shippingDetails.address.country.code
-"string"
+     - "string"
    * - address.postalCode
      - address.postalCode
-"string"
+     - "string"
    * - address.postalCode
      - shippingDetails.address.postalCode
-"string"
+     - "string"
    * - address.province.code
      - address.province.code
-"string"
+     - "string"
    * - address.province.code
      - shippingDetails.address.province.code
-"string"
+     - "string"
 
 
 Wave Vendor to Wave Customer
@@ -183,65 +183,65 @@ The following properties are synchronized between a Wave Vendor and a Wave Custo
      - Wave Data Type
    * - address.addressLine1
      - address.addressLine1
-"string"
+     - "string"
    * - address.addressLine1
      - shippingDetails.address.addressLine1
-"string"
+     - "string"
    * - address.addressLine2
      - address.addressLine2
-"string"
+     - "string"
    * - address.addressLine2
      - shippingDetails.address.addressLine2
-"string"
+     - "string"
    * - address.city
      - address.city
-"string"
+     - "string"
    * - address.city
      - shippingDetails.address.city
-"string"
+     - "string"
    * - address.country.code
      - address.country.code
-"string"
+     - "string"
    * - address.country.code
      - shippingDetails.address.country.code
-"string"
+     - "string"
    * - address.postalCode
      - address.postalCode
-"string"
+     - "string"
    * - address.postalCode
      - shippingDetails.address.postalCode
-"string"
+     - "string"
    * - address.province.code
      - address.province.code
-"string"
+     - "string"
    * - address.province.code
      - shippingDetails.address.province.code
-"string"
+     - "string"
    * - email
      - email
-"string"
+     - "string"
    * - fax
      - fax
-"string"
+     - "string"
    * - firstName
      - firstName
-"string"
+     - "string"
    * - internalNotes
      - internalNotes
-"string"
+     - "string"
    * - lastName
      - lastName
-"string"
+     - "string"
    * - mobile
      - mobile
-"string"
+     - "string"
    * - name
      - name
-["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
+     - ["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
    * - tollFree
      - tollFree
-"string"
+     - "string"
    * - website
      - website
-"string"
+     - "string"
 
