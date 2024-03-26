@@ -2,7 +2,7 @@
 Tidsbanken to Powerofficego Dataflow
 ====================================
 
-Generated: 2024-03-26 14:23:23
+Generated: 2024-03-26 14:23:48
 
 Introduction
 ------------
@@ -37,9 +37,30 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Powe
      - Powerofficego Data Type
 
 
+Tidsbanken Kunde to Powerofficego Customers person
+--------------------------------------------------
+Before any synchronization can take place, a link between a Tidsbanken Kunde and a Powerofficego Customers person must be established.
+
+A new Powerofficego Customers person will be created from a Tidsbanken Kunde if it is connected to a Tidsbanken Prosjekt that is synchronized into Powerofficego.
+
+Once a link between a Tidsbanken Kunde and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Kunde and a Powerofficego Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Kunde Property
+     - Powerofficego Customers person Property
+     - Powerofficego Data Type
+
+
 Tidsbanken Ansatt to Powerofficego Employees
 --------------------------------------------
-Before any synchronization can take place, a link between a Tidsbanken Ansatt and a Powerofficego Employees must be established.
+Every Tidsbanken Ansatt will be synchronized with a Powerofficego Employees.
+
+If a matching Powerofficego Employees already exists, the Tidsbanken Ansatt will be merged with the existing one.
+If no matching Powerofficego Employees is found, a new Powerofficego Employees will be created.
 
 A Tidsbanken Ansatt will merge with a Powerofficego Employees if one of the following property combinations match:
 
@@ -63,9 +84,28 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Powe
      - Powerofficego Data Type
 
 
+Tidsbanken Avdeling to Powerofficego Departments
+------------------------------------------------
+Every Tidsbanken Avdeling will be synchronized with a Powerofficego Departments.
+
+Once a link between a Tidsbanken Avdeling and a Powerofficego Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Avdeling and a Powerofficego Departments:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     - Powerofficego Departments Property
+     - Powerofficego Data Type
+
+
 Tidsbanken Kunde to Powerofficego Customers
 -------------------------------------------
-Before any synchronization can take place, a link between a Tidsbanken Kunde and a Powerofficego Customers must be established.
+Every Tidsbanken Kunde will be synchronized with a Powerofficego Customers.
+
+If a matching Powerofficego Customers already exists, the Tidsbanken Kunde will be merged with the existing one.
+If no matching Powerofficego Customers is found, a new Powerofficego Customers will be created.
 
 A Tidsbanken Kunde will merge with a Powerofficego Customers if one of the following property combinations match:
 
@@ -86,5 +126,21 @@ The following properties are synchronized between a Tidsbanken Kunde and a Power
 
    * - Tidsbanken Kunde Property
      - Powerofficego Customers Property
+     - Powerofficego Data Type
+
+
+Tidsbanken Prosjekt to Powerofficego Projects
+---------------------------------------------
+Every Tidsbanken Prosjekt will be synchronized with a Powerofficego Projects.
+
+Once a link between a Tidsbanken Prosjekt and a Powerofficego Projects is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Prosjekt and a Powerofficego Projects:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Prosjekt Property
+     - Powerofficego Projects Property
      - Powerofficego Data Type
 
