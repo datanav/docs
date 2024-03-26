@@ -2,7 +2,7 @@
 Unieconomy to Unieconomy Dataflow
 =================================
 
-Generated: 2024-03-26 14:25:38
+Generated: 2024-03-26 14:26:08
 
 Introduction
 ------------
@@ -59,6 +59,9 @@ The following properties are synchronized between a Unieconomy Companies and a U
    * - Unieconomy Companies Property
      - Unieconomy Customers Property
      - Unieconomy Data Type
+   * - OrganizationNumber
+     - OrgNumber
+     - "string"
 
 
 Unieconomy Customers to Unieconomy Companies
@@ -85,6 +88,9 @@ The following properties are synchronized between a Unieconomy Customers and a U
    * - Unieconomy Customers Property
      - Unieconomy Companies Property
      - Unieconomy Data Type
+   * - OrgNumber
+     - OrganizationNumber
+     - "string"
 
 
 Unieconomy Customers to Unieconomy Customers
