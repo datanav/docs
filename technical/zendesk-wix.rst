@@ -2,7 +2,7 @@
 Zendesk to  Dataflow
 ====================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:04
 
 Introduction.
 ------------
@@ -39,33 +39,10 @@ The following properties are synchronized between a Zendesk Users and a  Contact
    * - email
      - primaryInfo.email
      - "string"
-
-
-Zendesk Users to  Members
--------------------------
-Before any synchronization can take place, a link between a Zendesk Users and a  Members must be established.
-
-A Zendesk Users will merge with a  Members if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Users Property
-     -  Members Property
-   * - email
-     - loginEmail
-
-Once a link between a Zendesk Users and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Users and a  Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Users Property
-     -  Members Property
-     -  Data Type
-   * - email
-     - loginEmail
+   * - name
+     - info.name.first
+     - "string"
+   * - name
+     - info.name.last
      - "string"
 
