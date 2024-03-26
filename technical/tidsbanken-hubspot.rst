@@ -2,7 +2,7 @@
 Tidsbanken to Hubspot Dataflow
 ==============================
 
-Generated: 2024-03-26 14:23:23
+Generated: 2024-03-26 14:24:14
 
 Introduction
 ------------
@@ -33,4 +33,28 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Hubs
    * - Tidsbanken Ansatt Property
      - Hubspot Contact Property
      - Hubspot Data Type
+   * - Adresse
+     - properties.address
+     - "string"
+   * - Etternavn
+     - properties.lastname
+     - "string"
+   * - Fodt
+     - properties.date_of_birth
+     - "string"
+   * - Fornavn
+     - properties.firstname
+     - "string"
+   * - Id
+     - id
+     - "string"
+   * - Mobil
+     - properties.mobilephone
+     - "string"
+   * - Postnummer
+     - properties.zip
+     - "string"
+   * - Poststed
+     - properties.city
+     - "string"
 
