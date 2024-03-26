@@ -2,7 +2,7 @@
 Wix.com to Hubspot Dataflow
 ===========================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -38,31 +38,31 @@ The following properties are synchronized between a Wix.com Contacts and a Hubsp
      - Hubspot Data Type
    * - info.addresses.items.address.countryFullname
      - properties.country
-"string"
+     - "string"
    * - info.addresses.items.address.countryFullname
      - properties.state
-"string"
+     - "string"
    * - info.emails
      - properties.email
-"string"
+     - "string"
    * - info.name.first
      - properties.firstname
-"string"
+     - "string"
    * - info.name.last
      - properties.lastname
-"string"
+     - "string"
    * - info.phones
      - properties.mobilephone
-"string"
+     - "string"
    * - primaryInfo.email
      - properties.email
-"string"
+     - "string"
    * - primaryInfo.phone
      - properties.mobilephone
-"string"
+     - "string"
    * - primaryInfo.phone
      - properties.phone
-"string"
+     - "string"
 
 
 Wix.com Members to Hubspot Contact
@@ -91,7 +91,7 @@ The following properties are synchronized between a Wix.com Members and a Hubspo
      - Hubspot Data Type
    * - loginEmail
      - properties.email
-"string"
+     - "string"
 
 
 Wix.com Orders to Hubspot Lineitem
@@ -110,28 +110,28 @@ The following properties are synchronized between a Wix.com Orders and a Hubspot
      - Hubspot Data Type
    * - lineItems.name
      - properties.name
-"string"
+     - "string"
    * - lineItems.name.name
      - properties.name
-"string"
+     - "string"
    * - lineItems.price
      - properties.price
-"string"
+     - "string"
    * - lineItems.price.price
      - properties.price
-"string"
+     - "string"
    * - lineItems.productId
      - properties.hs_product_id
-"string"
+     - "string"
    * - lineItems.productId.productId
      - properties.hs_product_id
-"string"
+     - "string"
    * - lineItems.quantity
      - properties.quantity
-["string", ["integer", ["decimal", "_."]]]
+     - ["string", ["integer", ["decimal", "_."]]]
    * - lineItems.quantity.quantity
      - properties.quantity
-"string"
+     - "string"
 
 
 Wix.com Products to Hubspot Product
@@ -150,23 +150,23 @@ The following properties are synchronized between a Wix.com Products and a Hubsp
      - Hubspot Data Type
    * - costAndProfitData.itemCost
      - properties.hs_cost_of_goods_sold
-"string"
+     - "string"
    * - costRange.maxValue
      - properties.hs_cost_of_goods_sold
-"string"
+     - "string"
    * - description
      - properties.description
-"string"
+     - "string"
    * - name
      - properties.name
-"string"
+     - "string"
    * - price.price
      - properties.price
-"string"
+     - "string"
    * - priceData.price
      - properties.price
-"string"
+     - "string"
    * - sku
      - properties.hs_sku
-"string"
+     - "string"
 
