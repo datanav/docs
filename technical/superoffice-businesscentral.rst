@@ -2,7 +2,7 @@
 SuperOffice to Businesscentral Dataflow
 =======================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -272,10 +272,10 @@ The following properties are synchronized between a SuperOffice Product and a Bu
      - "string"
    * - UnitCost
      - unitCost
-     - ["decimal", "_."]
+     - N/A
    * - UnitListPrice
      - unitPrice
-     - ["decimal", "_."]
+     - N/A
    * - VAT
      - itemCategoryId
      - "string"
@@ -306,10 +306,10 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
    * - DiscountPercent
      - discountPercent
-     - ["decimal", "_."]
+     - N/A
    * - ERPDiscountPercent
      - discountPercent
-     - ["decimal", "_."]
+     - N/A
    * - ERPProductKey
      - itemId
      - "string"
@@ -321,7 +321,7 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
    * - Quantity
      - quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - QuoteAlternativeId
      - documentId
      - "string"
@@ -333,5 +333,5 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "float"
    * - VAT
      - taxPercent
-     - ["decimal", "_."]
+     - N/A
 
