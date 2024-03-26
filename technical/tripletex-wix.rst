@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -61,46 +61,46 @@ The following properties are synchronized between a Tripletex Employee and a Wix
      - Wix Data Type
    * - address.addressLine1
      - info.addresses.items.address.addressLine
-     - "string"
+"string"
    * - address.addressLine2
      - info.addresses.items.address.addressLine2
-     - "string"
+"string"
    * - address.city
      - info.addresses.items.address.city
-     - "string"
+"string"
    * - address.postalCode
      - info.addresses.items.address.postalCode
-     - "string"
+"string"
    * - email
      - info.emails
-     - "string"
+"string"
    * - email
      - primaryInfo.email
-     - "string"
+"string"
    * - firstName
      - info.name.first
-     - "string"
+"string"
    * - firstName
      - info.name.last
-     - "string"
+"string"
    * - id
      - id
-     - "string"
+"string"
    * - lastName
      - info.name.first
-     - "string"
+"string"
    * - lastName
      - info.name.last
-     - "string"
+"string"
    * - phoneNumberMobile
      - info.phones
-     - "string"
+"string"
    * - phoneNumberMobile
      - primaryInfo.phone
-     - "string"
+"string"
    * - phoneNumberWork
      - primaryInfo.phone
-     - "string"
+"string"
 
 
 Tripletex Customer to Wix Contacts
@@ -121,43 +121,43 @@ The following properties are synchronized between a Tripletex Customer and a Wix
      - Wix Data Type
    * - deliveryAddress.addressLine1
      - info.addresses.items.address.addressLine
-     - "string"
+"string"
    * - deliveryAddress.addressLine2
      - info.addresses.items.address.addressLine2
-     - "string"
+"string"
    * - deliveryAddress.city
      - info.addresses.items.address.city
-     - "string"
+"string"
    * - deliveryAddress.postalCode
      - info.addresses.items.address.postalCode
-     - "string"
+"string"
    * - id
      - id
-     - "string"
+"string"
    * - physicalAddress.addressLine1
      - info.addresses.items.address.addressLine
-     - "string"
+"string"
    * - physicalAddress.addressLine2
      - info.addresses.items.address.addressLine2
-     - "string"
+"string"
    * - physicalAddress.city
      - info.addresses.items.address.city
-     - "string"
+"string"
    * - physicalAddress.postalCode
      - info.addresses.items.address.postalCode
-     - "string"
+"string"
    * - postalAddress.addressLine1
      - info.addresses.items.address.addressLine
-     - "string"
+"string"
    * - postalAddress.addressLine2
      - info.addresses.items.address.addressLine2
-     - "string"
+"string"
    * - postalAddress.city
      - info.addresses.items.address.city
-     - "string"
+"string"
    * - postalAddress.postalCode
      - info.addresses.items.address.postalCode
-     - "string"
+"string"
 
 
 Tripletex Contact to Wix Contacts
@@ -189,25 +189,25 @@ The following properties are synchronized between a Tripletex Contact and a Wix 
      - Wix Data Type
    * - email
      - info.emails
-     - "string"
+"string"
    * - email
      - primaryInfo.email
-     - "string"
+"string"
    * - firstName
      - info.name.first
-     - "string"
+"string"
    * - lastName
      - info.name.last
-     - "string"
+"string"
    * - phoneNumberMobile
      - info.phones
-     - "string"
+"string"
    * - phoneNumberMobile
      - primaryInfo.phone
-     - "string"
+"string"
    * - phoneNumberWork
      - primaryInfo.phone
-     - "string"
+"string"
 
 
 Tripletex Product to Wix Products
@@ -226,26 +226,26 @@ The following properties are synchronized between a Tripletex Product and a Wix 
      - Wix Data Type
    * - costExcludingVatCurrency
      - costAndProfitData.itemCost
-     - "decimal"
+["decimal", "_."]
    * - costExcludingVatCurrency
      - costRange.maxValue
-     - "string"
+"string"
    * - currency.id
      - price.currency
-     - "string"
+"string"
    * - currency.id
      - priceData.currency
-     - "string"
+"string"
    * - description
      - description
-     - "string"
+"string"
    * - name
      - name
-     - "string"
+"string"
    * - priceExcludingVatCurrency
      - price.price
-     - "string"
+"string"
    * - priceExcludingVatCurrency
      - priceData.price
-     - "decimal"
+["decimal", "_."]
 
