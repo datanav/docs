@@ -2,7 +2,7 @@
 Tripletex to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-03-26 17:30:44
+Generated: 2024-03-26 17:54:02
 
 Introduction
 ------------
@@ -552,7 +552,7 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
    * - isPrivateIndividual
      - IsPerson
-     - ["if", ["is-boolean", "boolean"], "boolean", "string"]
+     - ["if", ["is-boolean", ["boolean", "_."]], ["boolean", "_."], ["string", "_."]]
    * - phoneNumber
      - PhoneNumber
      - "string"
@@ -904,7 +904,7 @@ The following properties are synchronized between a Tripletex Orderline and a Po
      - "integer"
    * - unitCostCurrency
      - ProductUnitCost
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], "integer"]
+     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["integer", "_."]]
    * - unitPriceExcludingVatCurrency
      - ProductUnitPrice
      - ["if", ["is-decimal", "_."], ["decimal", "_."], ["float", ["decimal", "_."]]]
