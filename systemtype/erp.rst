@@ -138,6 +138,14 @@ Systems
         :text: Read more
         :classes: read-more
     ---
+    **Unieconomy**
+
+    
+    .. link-button:: system/unieconomy
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
     **Unit4**
 
     Unit4 develops and sells program modules within accounting, financial management, project control, logistics and payroll and personnel administration for Norwegian companies.
