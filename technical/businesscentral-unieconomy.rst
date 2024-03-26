@@ -2,7 +2,7 @@
 Businesscentral to Unieconomy Dataflow
 ======================================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -25,10 +25,10 @@ The following properties are synchronized between a Businesscentral Customers co
      - Unieconomy Data Type
    * - displayName
      - Name
-"string"
+     - "string"
    * - id (Dependant on having wd:Q11994066 in typeDependant on having wd:Q11994066 in type)
      - OrganizationNumber
-"string"
+     - "string"
 
 
 Businesscentral Customers company to Unieconomy Customers
@@ -47,8 +47,8 @@ The following properties are synchronized between a Businesscentral Customers co
      - Unieconomy Data Type
    * - id (Dependant on having wd:Q11994066 in typeDependant on having wd:Q11994066 in type)
      - OrgNumber
-"string"
+     - "string"
    * - website
      - WebUrl
-"string"
+     - "string"
 
