@@ -118,6 +118,14 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
         :text: Read more
         :classes: read-more
     ---
+    **Unieconomy**
+
+    
+    .. link-button:: system/unieconomy
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
     **VISMA**
 
     Visma is a accounting software that provides software and services that simplify and digitize business processes in the private and public sector.
