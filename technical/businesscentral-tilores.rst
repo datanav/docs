@@ -2,27 +2,27 @@
 Businesscentral to Tilores Dataflow
 ===================================
 
-Generated: 2024-03-26 14:24:41
+Generated: 2024-03-26 14:34:37
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to Tilores. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Contacts person to  Human
------------------------------------------
-Every Businesscentral Contacts person will be synchronized with a  Human.
+Businesscentral Contacts person to Tilores Human
+------------------------------------------------
+Every Businesscentral Contacts person will be synchronized with a Tilores Human.
 
-Once a link between a Businesscentral Contacts person and a  Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Contacts person and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Contacts person and a  Human:
+The following properties are synchronized between a Businesscentral Contacts person and a Tilores Human:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Contacts person Property
-     -  Human Property
-     -  Data Type
+     - Tilores Human Property
+     - Tilores Data Type
    * - city
      - city
      - "string"
@@ -43,20 +43,20 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
 
 
-Businesscentral Employees to  Human
------------------------------------
-Every Businesscentral Employees will be synchronized with a  Human.
+Businesscentral Employees to Tilores Human
+------------------------------------------
+Every Businesscentral Employees will be synchronized with a Tilores Human.
 
-Once a link between a Businesscentral Employees and a  Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Employees and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Employees and a  Human:
+The following properties are synchronized between a Businesscentral Employees and a Tilores Human:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Employees Property
-     -  Human Property
-     -  Data Type
+     - Tilores Human Property
+     - Tilores Data Type
    * - birthDate
      - dateOfBirth
      - "string"
