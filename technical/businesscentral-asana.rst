@@ -2,7 +2,7 @@
 Businesscentral to Asana Dataflow
 =================================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 17:27:49
 
 Introduction
 ------------
@@ -25,8 +25,8 @@ The following properties are synchronized between a Businesscentral Customers co
      - Asana Data Type
    * - displayName
      - name
-     - "string"
+"string"
    * - website
      - email_domains
-     - "string"
+"string"
 
