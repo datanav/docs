@@ -2,7 +2,7 @@
 ZohoCRM to Superoffice Dataflow
 ===============================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -25,46 +25,46 @@ The following properties are synchronized between a ZohoCRM Account and a Supero
      - Superoffice Data Type
    * - Account_Name
      - Name
-"string"
+     - "string"
    * - Billing_City
      - Address.Postal.City
-"string"
+     - "string"
    * - Billing_City
      - Address.Street.City
-"string"
+     - "string"
    * - Billing_Code
      - Address.Postal.Zipcode
-"string"
+     - "string"
    * - Billing_Code
      - Address.Street.Zipcode
-"string"
+     - "string"
    * - Billing_Country
      - Country.CountryId
-"integer"
+     - "integer"
    * - Phone
      - Phones.Value
-"string"
+     - "string"
    * - Shipping_City
      - Address.Postal.City
-"string"
+     - "string"
    * - Shipping_City
      - Address.Street.City
-"string"
+     - "string"
    * - Shipping_Code
      - Address.Postal.Zipcode
-"string"
+     - "string"
    * - Shipping_Code
      - Address.Street.Zipcode
-"string"
+     - "string"
    * - Shipping_Country
      - Country.CountryId
-"integer"
+     - "integer"
    * - Website
      - Urls.Value
-"string"
+     - "string"
    * - id
      - ContactId
-"integer"
+     - "integer"
 
 
 ZohoCRM Account to Superoffice Person
@@ -119,49 +119,49 @@ The following properties are synchronized between a ZohoCRM Contact and a Supero
      - Superoffice Data Type
    * - Email
      - Emails.Value
-"string"
+     - "string"
    * - First_Name
      - Firstname
-"string"
+     - "string"
    * - Home_Phone
      - PrivatePhones.Value
-"string"
+     - "string"
    * - Last_Name
      - Lastname
-"string"
+     - "string"
    * - Mailing_City
      - Address.Street.City
-"string"
+     - "string"
    * - Mailing_Country
      - Country.CountryId
-"integer"
+     - "integer"
    * - Mailing_Zip
      - Address.Street.Zipcode
-"string"
+     - "string"
    * - Mobile
      - MobilePhones.Value
-"string"
+     - "string"
    * - Other_City
      - Address.Street.City
-"string"
+     - "string"
    * - Other_Country
      - Country.CountryId
-"integer"
+     - "integer"
    * - Other_Phone
      - OfficePhones.Value
-"string"
+     - "string"
    * - Other_Zip
      - Address.Street.Zipcode
-"string"
+     - "string"
    * - Phone
      - OfficePhones.Value
-"string"
+     - "string"
    * - Secondary_Email
      - Emails.Value
-"string"
+     - "string"
    * - id
      - PersonId
-"integer"
+     - "integer"
 
 
 ZohoCRM Deal to Superoffice Sale
@@ -180,23 +180,23 @@ The following properties are synchronized between a ZohoCRM Deal and a Superoffi
      - Superoffice Data Type
    * - Account_Name.id
      - Contact.ContactId
-"integer"
+     - "integer"
    * - Account_Name.id
      - Person.PersonId
-"integer"
+     - "integer"
    * - Amount
      - Amount
-"float"
+     - "float"
    * - Closing_Date
      - Saledate
-["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+     - ["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
    * - Contact_Name.id
      - Contact.ContactId
-"integer"
+     - "integer"
    * - Contact_Name.id
      - Person.PersonId
-"integer"
+     - "integer"
    * - Deal_Name
      - Heading
-"string"
+     - "string"
 
