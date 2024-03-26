@@ -2,7 +2,7 @@
 Tidsbanken to Zendesk Dataflow
 ==============================
 
-Generated: 2024-03-26 14:23:23
+Generated: 2024-03-26 14:24:14
 
 Introduction
 ------------
@@ -33,4 +33,10 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Zend
    * - Tidsbanken Ansatt Property
      - Zendesk Users Property
      - Zendesk Data Type
+   * - Navn
+     - name
+     - "string"
+   * - TlfPrivat
+     - phone
+     - "string"
 
