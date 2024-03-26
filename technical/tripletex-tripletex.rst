@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -35,25 +35,25 @@ The following properties are synchronized between a Tripletex Contact and a Trip
      - Tripletex Data Type
    * - customer.id
      - customer.id
-"integer"
+     - "integer"
    * - email
      - email
-"string"
+     - "string"
    * - firstName
      - firstName
-"string"
+     - "string"
    * - lastName
      - lastName
-"string"
+     - "string"
    * - phoneNumberMobile
      - phoneNumberMobile
-["if",["matches","+*","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - ["if",["matches","+*","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
    * - phoneNumberMobileCountry.id
      - phoneNumberMobileCountry.id
-"string"
+     - "string"
    * - phoneNumberWork
      - phoneNumberWork
-"string"
+     - "string"
 
 
 Tripletex Contact to Tripletex Employee
@@ -82,28 +82,28 @@ The following properties are synchronized between a Tripletex Contact and a Trip
      - Tripletex Data Type
    * - customer.id
      - department.id (Dependant on having wd:Q703534 in  )
-["if", ["neq", "_.", "X"], "integer", "string"]
+     - ["if", ["neq", "_.", "X"], "integer", "string"]
    * - email
      - email
-"string"
+     - "string"
    * - firstName
      - firstName
-"string"
+     - "string"
    * - lastName
      - lastName
-"string"
+     - "string"
    * - phoneNumberMobile
      - phoneNumberMobile
-["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
    * - phoneNumberMobileCountry.id
      - phoneNumberMobileCountry
-"string"
+     - "string"
    * - phoneNumberMobileCountry.id
      - phoneNumberMobileCountry.id
-"integer"
+     - "integer"
    * - phoneNumberWork
      - phoneNumberWork
-"string"
+     - "string"
 
 
 Tripletex Customer person to Tripletex Contact
@@ -158,52 +158,52 @@ The following properties are synchronized between a Tripletex Customer person an
      - Tripletex Data Type
    * - deliveryAddress.addressLine1
      - address.addressLine1
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - address.addressLine2
-"string"
+     - "string"
    * - deliveryAddress.city
      - address.city
-"string"
+     - "string"
    * - deliveryAddress.country.id
      - address.country.id
-"integer"
+     - "integer"
    * - deliveryAddress.postalCode
      - address.postalCode
-"string"
+     - "string"
    * - id
      - id
-"integer"
+     - "integer"
    * - physicalAddress.addressLine1
      - address.addressLine1
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - address.addressLine2
-"string"
+     - "string"
    * - physicalAddress.city
      - address.city
-"string"
+     - "string"
    * - physicalAddress.country.id
      - address.country.id
-"integer"
+     - "integer"
    * - physicalAddress.postalCode
      - address.postalCode
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - address.addressLine1
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - address.addressLine2
-"string"
+     - "string"
    * - postalAddress.city
      - address.city
-"string"
+     - "string"
    * - postalAddress.country.id
      - address.country.id
-"integer"
+     - "integer"
    * - postalAddress.postalCode
      - address.postalCode
-"string"
+     - "string"
 
 
 Tripletex Customer to Tripletex Customer
@@ -236,166 +236,166 @@ The following properties are synchronized between a Tripletex Customer and a Tri
      - Tripletex Data Type
    * - accountManager.id
      - accountManager.id
-"integer"
+     - "integer"
    * - deliveryAddress.addressLine1
      - deliveryAddress.addressLine1
-"string"
+     - "string"
    * - deliveryAddress.addressLine1
      - physicalAddress.addressLine1
-"string"
+     - "string"
    * - deliveryAddress.addressLine1
      - postalAddress.addressLine1
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - deliveryAddress.addressLine2
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - physicalAddress.addressLine2
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - postalAddress.addressLine2
-"string"
+     - "string"
    * - deliveryAddress.city
      - deliveryAddress.city
-"string"
+     - "string"
    * - deliveryAddress.city
      - physicalAddress.city
-"string"
+     - "string"
    * - deliveryAddress.city
      - postalAddress.city
-"string"
+     - "string"
    * - deliveryAddress.country.id
      - deliveryAddress.country.id
-"string"
+     - "string"
    * - deliveryAddress.country.id
      - physicalAddress.country.id
-"integer"
+     - "integer"
    * - deliveryAddress.country.id
      - postalAddress.country.id
-"integer"
+     - "integer"
    * - deliveryAddress.postalCode
      - deliveryAddress.postalCode
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - physicalAddress.postalCode
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - postalAddress.postalCode
-"string"
+     - "string"
    * - email
      - email
-"string"
+     - "string"
    * - id
      - id
-"integer"
+     - "integer"
    * - invoiceEmail
      - invoiceEmail
-"string"
+     - "string"
    * - name
      - name
-"string"
+     - "string"
    * - organizationNumber
      - organizationNumber
-["replace"," ","", "string"]
+     - ["replace"," ","", "string"]
    * - overdueNoticeEmail
      - overdueNoticeEmail
-"string"
+     - "string"
    * - phoneNumber
      - phoneNumber
-"string"
+     - "string"
    * - phoneNumberMobile
      - phoneNumberMobile
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - deliveryAddress.addressLine1
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - physicalAddress.addressLine1
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - postalAddress.addressLine1
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - deliveryAddress.addressLine2
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - physicalAddress.addressLine2
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - postalAddress.addressLine2
-"string"
+     - "string"
    * - physicalAddress.city
      - deliveryAddress.city
-"string"
+     - "string"
    * - physicalAddress.city
      - physicalAddress.city
-"string"
+     - "string"
    * - physicalAddress.city
      - postalAddress.city
-"string"
+     - "string"
    * - physicalAddress.country.id
      - deliveryAddress.country.id
-"string"
+     - "string"
    * - physicalAddress.country.id
      - physicalAddress.country.id
-"integer"
+     - "integer"
    * - physicalAddress.country.id
      - postalAddress.country.id
-"integer"
+     - "integer"
    * - physicalAddress.postalCode
      - deliveryAddress.postalCode
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - physicalAddress.postalCode
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - postalAddress.postalCode
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - deliveryAddress.addressLine1
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - physicalAddress.addressLine1
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - postalAddress.addressLine1
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - deliveryAddress.addressLine2
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - physicalAddress.addressLine2
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - postalAddress.addressLine2
-"string"
+     - "string"
    * - postalAddress.city
      - deliveryAddress.city
-"string"
+     - "string"
    * - postalAddress.city
      - physicalAddress.city
-"string"
+     - "string"
    * - postalAddress.city
      - postalAddress.city
-"string"
+     - "string"
    * - postalAddress.country.id
      - deliveryAddress.country.id
-"string"
+     - "string"
    * - postalAddress.country.id
      - physicalAddress.country.id
-"integer"
+     - "integer"
    * - postalAddress.country.id
      - postalAddress.country.id
-"integer"
+     - "integer"
    * - postalAddress.postalCode
      - deliveryAddress.postalCode
-"string"
+     - "string"
    * - postalAddress.postalCode
      - physicalAddress.postalCode
-"string"
+     - "string"
    * - postalAddress.postalCode
      - postalAddress.postalCode
-"string"
+     - "string"
 
 
 Tripletex Department to Tripletex Employee
@@ -450,28 +450,28 @@ The following properties are synchronized between a Tripletex Employee and a Tri
      - Tripletex Data Type
    * - department.id (Dependant on having wd:Q703534 in  )
      - customer.id
-"integer"
+     - "integer"
    * - email
      - email
-"string"
+     - "string"
    * - firstName
      - firstName
-"string"
+     - "string"
    * - lastName
      - lastName
-"string"
+     - "string"
    * - phoneNumberMobile
      - phoneNumberMobile
-["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
    * - phoneNumberMobileCountry
      - phoneNumberMobileCountry.id
-"string"
+     - "string"
    * - phoneNumberMobileCountry.id
      - phoneNumberMobileCountry.id
-"string"
+     - "string"
    * - phoneNumberWork
      - phoneNumberWork
-"string"
+     - "string"
 
 
 Tripletex Employee to Tripletex Employee
@@ -506,19 +506,19 @@ The following properties are synchronized between a Tripletex Employee and a Tri
      - Tripletex Data Type
    * - dateOfBirth
      - dateOfBirth
-["datetime-format","%Y-%m-%d","_."]
+     - ["datetime-format","%Y-%m-%d","_."]
    * - department.id
      - department.id
-["if", ["neq", "_.", "X"], "integer", "string"]
+     - ["if", ["neq", "_.", "X"], "integer", "string"]
    * - email
      - email
-"string"
+     - "string"
    * - firstName
      - lastName
-"string"
+     - "string"
    * - lastName
      - firstName
-"string"
+     - "string"
 
 
 Tripletex Product to Tripletex Product
@@ -603,184 +603,184 @@ The following properties are synchronized between a Tripletex Supplier and a Tri
      - Tripletex Data Type
    * - deliveryAddress.addressLine1
      - deliveryAddress.addressLine1
-"string"
+     - "string"
    * - deliveryAddress.addressLine1
      - physicalAddress.addressLine1
-"string"
+     - "string"
    * - deliveryAddress.addressLine1
      - postalAddress.addressLine1
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - deliveryAddress.addressLine2
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - physicalAddress.addressLine2
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - postalAddress.addressLine2
-"string"
+     - "string"
    * - deliveryAddress.changes
      - deliveryAddress.city
-"string"
+     - "string"
    * - deliveryAddress.changes
      - physicalAddress.city
-"string"
+     - "string"
    * - deliveryAddress.changes
      - postalAddress.city
-"string"
+     - "string"
    * - deliveryAddress.city
      - deliveryAddress.city
-"string"
+     - "string"
    * - deliveryAddress.city
      - deliveryAddress.country.id
-"string"
+     - "string"
    * - deliveryAddress.city
      - physicalAddress.city
-"string"
+     - "string"
    * - deliveryAddress.city
      - physicalAddress.country.id
-"integer"
+     - "integer"
    * - deliveryAddress.city
      - postalAddress.city
-"string"
+     - "string"
    * - deliveryAddress.city
      - postalAddress.country.id
-"integer"
+     - "integer"
    * - deliveryAddress.country.id
      - deliveryAddress.country.id
-"string"
+     - "string"
    * - deliveryAddress.country.id
      - physicalAddress.country.id
-"integer"
+     - "integer"
    * - deliveryAddress.country.id
      - postalAddress.country.id
-"integer"
+     - "integer"
    * - deliveryAddress.postalCode
      - deliveryAddress.postalCode
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - physicalAddress.postalCode
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - postalAddress.postalCode
-"string"
+     - "string"
    * - email
      - email
-"string"
+     - "string"
    * - id
      - id
-"integer"
+     - "integer"
    * - invoiceEmail
      - invoiceEmail
-"string"
+     - "string"
    * - name
      - name
-"string"
+     - "string"
    * - organizationNumber
      - organizationNumber
-["replace"," ","", "string"]
+     - ["replace"," ","", "string"]
    * - overdueNoticeEmail
      - overdueNoticeEmail
-"string"
+     - "string"
    * - phoneNumber
      - phoneNumber
-"string"
+     - "string"
    * - phoneNumberMobile
      - phoneNumberMobile
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - deliveryAddress.addressLine1
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - physicalAddress.addressLine1
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - postalAddress.addressLine1
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - deliveryAddress.addressLine2
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - physicalAddress.addressLine2
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - postalAddress.addressLine2
-"string"
+     - "string"
    * - physicalAddress.city
      - deliveryAddress.city
-"string"
+     - "string"
    * - physicalAddress.city
      - physicalAddress.city
-"string"
+     - "string"
    * - physicalAddress.city
      - postalAddress.city
-"string"
+     - "string"
    * - physicalAddress.country.id
      - deliveryAddress.country.id
-"string"
+     - "string"
    * - physicalAddress.country.id
      - physicalAddress.country.id
-"integer"
+     - "integer"
    * - physicalAddress.country.id
      - postalAddress.country.id
-"integer"
+     - "integer"
    * - physicalAddress.postalCode
      - deliveryAddress.postalCode
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - physicalAddress.postalCode
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - postalAddress.postalCode
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - deliveryAddress.addressLine1
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - physicalAddress.addressLine1
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - postalAddress.addressLine1
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - deliveryAddress.addressLine2
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - physicalAddress.addressLine2
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - postalAddress.addressLine2
-"string"
+     - "string"
    * - postalAddress.city
      - deliveryAddress.city
-"string"
+     - "string"
    * - postalAddress.city
      - physicalAddress.city
-"string"
+     - "string"
    * - postalAddress.city
      - postalAddress.city
-"string"
+     - "string"
    * - postalAddress.country.id
      - deliveryAddress.country.id
-"string"
+     - "string"
    * - postalAddress.country.id
      - physicalAddress.country.id
-"integer"
+     - "integer"
    * - postalAddress.country.id
      - postalAddress.country.id
-"integer"
+     - "integer"
    * - postalAddress.postalCode
      - deliveryAddress.postalCode
-"string"
+     - "string"
    * - postalAddress.postalCode
      - physicalAddress.postalCode
-"string"
+     - "string"
    * - postalAddress.postalCode
      - postalAddress.postalCode
-"string"
+     - "string"
    * - url
      - website
-"string"
+     - "string"
 
 
 Tripletex Contact to Tripletex Customer person
@@ -801,13 +801,13 @@ The following properties are synchronized between a Tripletex Contact and a Trip
      - Tripletex Data Type
    * - email
      - email
-"string"
+     - "string"
    * - phoneNumberMobile
      - phoneNumberMobile
-"string"
+     - "string"
    * - phoneNumberWork
      - phoneNumber
-"string"
+     - "string"
 
 
 Tripletex Contact to Tripletex Customer
@@ -864,140 +864,140 @@ The following properties are synchronized between a Tripletex Customer and a Tri
      - Tripletex Data Type
    * - deliveryAddress.addressLine1
      - deliveryAddress.addressLine1
-"string"
+     - "string"
    * - deliveryAddress.addressLine1
      - physicalAddress.addressLine1
-"string"
+     - "string"
    * - deliveryAddress.addressLine1
      - postalAddress.addressLine1
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - deliveryAddress.addressLine2
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - physicalAddress.addressLine2
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - postalAddress.addressLine2
-"string"
+     - "string"
    * - deliveryAddress.city
      - deliveryAddress.city
-"string"
+     - "string"
    * - deliveryAddress.city
      - physicalAddress.city
-"string"
+     - "string"
    * - deliveryAddress.city
      - postalAddress.city
-"string"
+     - "string"
    * - deliveryAddress.country.id
      - deliveryAddress.country.id
-"string"
+     - "string"
    * - deliveryAddress.country.id
      - physicalAddress.country.id
-"integer"
+     - "integer"
    * - deliveryAddress.country.id
      - postalAddress.country.id
-"integer"
+     - "integer"
    * - deliveryAddress.postalCode
      - deliveryAddress.postalCode
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - physicalAddress.postalCode
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - postalAddress.postalCode
-"string"
+     - "string"
    * - id
      - id
-"integer"
+     - "integer"
    * - physicalAddress.addressLine1
      - deliveryAddress.addressLine1
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - physicalAddress.addressLine1
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - postalAddress.addressLine1
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - deliveryAddress.addressLine2
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - physicalAddress.addressLine2
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - postalAddress.addressLine2
-"string"
+     - "string"
    * - physicalAddress.city
      - deliveryAddress.city
-"string"
+     - "string"
    * - physicalAddress.city
      - physicalAddress.city
-"string"
+     - "string"
    * - physicalAddress.city
      - postalAddress.city
-"string"
+     - "string"
    * - physicalAddress.country.id
      - deliveryAddress.country.id
-"string"
+     - "string"
    * - physicalAddress.country.id
      - physicalAddress.country.id
-"integer"
+     - "integer"
    * - physicalAddress.country.id
      - postalAddress.country.id
-"integer"
+     - "integer"
    * - physicalAddress.postalCode
      - deliveryAddress.postalCode
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - physicalAddress.postalCode
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - postalAddress.postalCode
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - deliveryAddress.addressLine1
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - physicalAddress.addressLine1
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - postalAddress.addressLine1
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - deliveryAddress.addressLine2
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - physicalAddress.addressLine2
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - postalAddress.addressLine2
-"string"
+     - "string"
    * - postalAddress.city
      - deliveryAddress.city
-"string"
+     - "string"
    * - postalAddress.city
      - physicalAddress.city
-"string"
+     - "string"
    * - postalAddress.city
      - postalAddress.city
-"string"
+     - "string"
    * - postalAddress.country.id
      - deliveryAddress.country.id
-"string"
+     - "string"
    * - postalAddress.country.id
      - physicalAddress.country.id
-"integer"
+     - "integer"
    * - postalAddress.country.id
      - postalAddress.country.id
-"integer"
+     - "integer"
    * - postalAddress.postalCode
      - deliveryAddress.postalCode
-"string"
+     - "string"
    * - postalAddress.postalCode
      - physicalAddress.postalCode
-"string"
+     - "string"
    * - postalAddress.postalCode
      - postalAddress.postalCode
-"string"
+     - "string"
 
