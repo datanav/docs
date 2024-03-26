@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -66,6 +66,9 @@ The following properties are synchronized between a Wix.com Contacts and a  Cust
    * - primaryInfo.email
      - EmailAddress
      - "string"
+   * - primaryInfo.phone
+     - PhoneNumber
+     - "string"
 
 
 Wix.com Contacts to  Customers
@@ -128,57 +131,9 @@ The following properties are synchronized between a Wix.com Contacts and a  Cont
    * - primaryInfo.email
      - emailAddress
      - "string"
-
-
-Wix.com Currencies to  Currency
--------------------------------
-Every Wix.com Currencies will be synchronized with a  Currency.
-
-If a matching  Currency already exists, the Wix.com Currencies will be merged with the existing one.
-If no matching  Currency is found, a new  Currency will be created.
-
-A Wix.com Currencies will merge with a  Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Currencies Property
-     -  Currency Property
-   * - code
-     - code
-
-Once a link between a Wix.com Currencies and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Currencies and a  Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Currencies Property
-     -  Currency Property
-     -  Data Type
-
-
-Wix.com Inventory to  Product
------------------------------
-Every Wix.com Inventory will be synchronized with a  Product.
-
-Once a link between a Wix.com Inventory and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Inventory and a  Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Inventory Property
-     -  Product Property
-     -  Data Type
-   * - lastUpdated
-     - availableStock
+   * - primaryInfo.phone
+     - phoneNumber
      - "string"
-   * - variants.quantity
-     - availableStock
-     - "integer"
 
 
 Wix.com Orders to  Salesorderlines
@@ -206,7 +161,7 @@ The following properties are synchronized between a Wix.com Orders and a  Saleso
      - "string"
    * - lineItems.price
      - ProductUnitPrice
-     - "if", "is-decimal", "decimal", "integer"]
+     - "if", "is-decimal", "decimal", "float", "decimal"]]
    * - lineItems.price
      - SalesOrderLineUnitPrice
      - "string"
@@ -218,7 +173,7 @@ The following properties are synchronized between a Wix.com Orders and a  Saleso
      - "integer"
    * - lineItems.quantity
      - Quantity
-     - "integer"
+     - "integer", "decimal"]
    * - totals.total
      - TotalAmount
      - "string"
@@ -238,6 +193,9 @@ The following properties are synchronized between a Wix.com Orders and a  Saleso
    * - Wix.com Orders Property
      -  Salesorders Property
      -  Data Type
+   * - buyerInfo.id
+     - CustomerId
+     - "integer"
    * - buyerInfo.id
      - CustomerReferenceContactPersonId
      - "string"
@@ -263,6 +221,9 @@ The following properties are synchronized between a Wix.com Products and a  Prod
    * - Wix.com Products Property
      -  Product Property
      -  Data Type
+   * - costAndProfitData.itemCost
+     - costPrice
+     - "if", "is-decimal", "decimal", "integer"]
    * - costRange.maxValue
      - costPrice
      - "if", "is-decimal", "decimal", "integer"]
