@@ -2,7 +2,7 @@
 Asana to Businesscentral Dataflow
 =================================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -57,20 +57,20 @@ The following properties are synchronized between a Asana Users and a Businessce
      - Businesscentral Data Type
    * - email
      - email
-"string"
+     - "string"
    * - email
      - personalEmail
-"string"
+     - "string"
    * - name
      - displayName
-"string"
+     - "string"
    * - name
      - givenName
-"string"
+     - "string"
    * - name
      - surname
-"string"
+     - "string"
    * - workspaces.gid
      - jobTitle
-"string"
+     - "string"
 
