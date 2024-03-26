@@ -2,7 +2,7 @@
 Tripletex to Superoffice Dataflow
 =================================
 
-Generated: 2024-03-26 17:54:01
+Generated: 2024-03-26 17:58:38
 
 Introduction
 ------------
@@ -317,7 +317,7 @@ The following properties are synchronized between a Tripletex Employee and a Sup
      - "string"
    * - dateOfBirth
      - BirthDate
-     - ["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+     - N/A
    * - department.id (Dependant on having wd:Q703534 in  )
      - Contact.ContactId
      - "integer"
@@ -581,7 +581,7 @@ The following properties are synchronized between a Tripletex Orderline and a Su
      - "string"
    * - count
      - Quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - count
      - QuantityUnit
      - "integer"
@@ -623,7 +623,7 @@ The following properties are synchronized between a Tripletex Orderline and a Su
      - "integer"
    * - discount
      - ERPDiscountPercent
-     - ["decimal", "_."]
+     - N/A
    * - discount
      - Name
      - "string"
@@ -686,7 +686,7 @@ The following properties are synchronized between a Tripletex Orderline and a Su
      - "integer"
    * - unitPriceExcludingVatCurrency
      - UnitListPrice
-     - ["if-null", ["integer", ["string", "_."]], ["decimal", "_."]]
+     - N/A
    * - unitPriceExcludingVatCurrency
      - VAT
      - "integer"
@@ -747,7 +747,7 @@ The following properties are synchronized between a Tripletex Product and a Supe
      - "string"
    * - priceExcludingVatCurrency
      - UnitListPrice
-     - ["decimal", "_."]
+     - N/A
    * - productUnit.id
      - QuantityUnit
      - "string"
