@@ -2,7 +2,7 @@
 Tripletex to ZohoCRM Dataflow
 =============================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -25,70 +25,70 @@ The following properties are synchronized between a Tripletex Customer and a Zoh
      - ZohoCRM Data Type
    * - deliveryAddress.city
      - Billing_City
-"string"
+     - "string"
    * - deliveryAddress.city
      - Shipping_City
-"string"
+     - "string"
    * - deliveryAddress.country.id
      - Billing_Country
-"string"
+     - "string"
    * - deliveryAddress.country.id
      - Shipping_Country
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - Billing_Code
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - Shipping_Code
-"string"
+     - "string"
    * - name
      - Account_Name
-"string"
+     - "string"
    * - phoneNumber
      - Phone
-"string"
+     - "string"
    * - physicalAddress.city
      - Billing_City
-"string"
+     - "string"
    * - physicalAddress.city
      - Shipping_City
-"string"
+     - "string"
    * - physicalAddress.country.id
      - Billing_Country
-"string"
+     - "string"
    * - physicalAddress.country.id
      - Shipping_Country
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - Billing_Code
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - Shipping_Code
-"string"
+     - "string"
    * - postalAddress.city
      - Billing_City
-"string"
+     - "string"
    * - postalAddress.city
      - Shipping_City
-"string"
+     - "string"
    * - postalAddress.country.id
      - Billing_Country
-"string"
+     - "string"
    * - postalAddress.country.id
      - Shipping_Country
-"string"
+     - "string"
    * - postalAddress.postalCode
      - Billing_Code
-"string"
+     - "string"
    * - postalAddress.postalCode
      - Shipping_Code
-"string"
+     - "string"
    * - url
      - Website
-"string"
+     - "string"
    * - website
      - Website
-"string"
+     - "string"
 
 
 Tripletex Department to ZohoCRM Account
@@ -107,7 +107,7 @@ The following properties are synchronized between a Tripletex Department and a Z
      - ZohoCRM Data Type
    * - name
      - Account_Name
-"string"
+     - "string"
 
 
 Tripletex Customer person to ZohoCRM Contact
@@ -126,80 +126,80 @@ The following properties are synchronized between a Tripletex Customer person an
      - ZohoCRM Data Type
    * - deliveryAddress.city
      - Mailing_City
-"string"
+     - "string"
    * - deliveryAddress.city
      - Other_City
-"string"
+     - "string"
    * - deliveryAddress.country.id
      - Mailing_Country
-"string"
+     - "string"
    * - deliveryAddress.country.id
      - Other_Country
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - Mailing_Zip
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - Other_Zip
-"string"
+     - "string"
    * - email
      - Email
-"string"
+     - "string"
    * - email
      - Secondary_Email
-"string"
+     - "string"
    * - name
      - First_Name
-"string"
+     - "string"
    * - name
      - Full_Name
-"string"
+     - "string"
    * - name
      - Last_Name
-"string"
+     - "string"
    * - phoneNumber
      - Other_Phone
-"string"
+     - "string"
    * - phoneNumber
      - Phone
-"string"
+     - "string"
    * - phoneNumberMobile
      - Mobile
-"string"
+     - "string"
    * - physicalAddress.city
      - Mailing_City
-"string"
+     - "string"
    * - physicalAddress.city
      - Other_City
-"string"
+     - "string"
    * - physicalAddress.country.id
      - Mailing_Country
-"string"
+     - "string"
    * - physicalAddress.country.id
      - Other_Country
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - Mailing_Zip
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - Other_Zip
-"string"
+     - "string"
    * - postalAddress.city
      - Mailing_City
-"string"
+     - "string"
    * - postalAddress.city
      - Other_City
-"string"
+     - "string"
    * - postalAddress.country.id
      - Mailing_Country
-"string"
+     - "string"
    * - postalAddress.country.id
      - Other_Country
-"string"
+     - "string"
    * - postalAddress.postalCode
      - Mailing_Zip
-"string"
+     - "string"
    * - postalAddress.postalCode
      - Other_Zip
-"string"
+     - "string"
 
