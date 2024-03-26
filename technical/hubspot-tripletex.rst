@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-30 00:01:11
+Generated: 2024-03-26 00:00:20
 
 Introduction.
 ------------
@@ -102,7 +102,7 @@ The following properties are synchronized between a HubSpot Contact and a  Emplo
      - "string"
    * - properties.mobilephone
      - phoneNumberMobile
-     - "string"
+     - "if","matches","+* *","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
    * - properties.phone
      - phoneNumberWork
      - "string"
@@ -216,6 +216,81 @@ The following properties are synchronized between a HubSpot Company and a Triple
      - "string"
 
 
+HubSpot Company to Tripletex Customer person
+--------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Company and a Tripletex Customer person must be established.
+
+A new Tripletex Customer person will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Tripletex.
+
+Once a link between a HubSpot Company and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Company and a Tripletex Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Company Property
+     - Tripletex Customer person Property
+     - Tripletex Data Type
+   * - id
+     - id
+     - "integer"
+   * - properties.address
+     - deliveryAddress.addressLine1
+     - "string"
+   * - properties.address
+     - physicalAddress.addressLine1
+     - "string"
+   * - properties.address
+     - postalAddress.addressLine1
+     - "string"
+   * - properties.address2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - properties.address2
+     - physicalAddress.addressLine2
+     - "string"
+   * - properties.address2
+     - postalAddress.addressLine2
+     - "string"
+   * - properties.city
+     - deliveryAddress.city
+     - "string"
+   * - properties.city
+     - physicalAddress.city
+     - "string"
+   * - properties.city
+     - postalAddress.city
+     - "string"
+   * - properties.country
+     - deliveryAddress.country.id
+     - "string"
+   * - properties.country
+     - physicalAddress.country.id
+     - "integer"
+   * - properties.country
+     - postalAddress.country.id
+     - "integer"
+   * - properties.name
+     - name
+     - "string"
+   * - properties.phone
+     - phoneNumber
+     - "string"
+   * - properties.website
+     - website
+     - "string"
+   * - properties.zip
+     - deliveryAddress.postalCode
+     - "string"
+   * - properties.zip
+     - physicalAddress.postalCode
+     - "string"
+   * - properties.zip
+     - postalAddress.postalCode
+     - "string"
+
+
 HubSpot Contact to Tripletex Customer
 -------------------------------------
 Before any synchronization can take place, a link between a HubSpot Contact and a Tripletex Customer must be established.
@@ -232,6 +307,72 @@ The following properties are synchronized between a HubSpot Contact and a Triple
    * - HubSpot Contact Property
      - Tripletex Customer Property
      - Tripletex Data Type
+
+
+HubSpot Contact to Tripletex Customer person
+--------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a Tripletex Customer person must be established.
+
+A new Tripletex Customer person will be created from a HubSpot Contact if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Tripletex.
+
+Once a link between a HubSpot Contact and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a Tripletex Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - Tripletex Customer person Property
+     - Tripletex Data Type
+   * - id
+     - id
+     - "integer"
+   * - properties.address
+     - deliveryAddress.addressLine1
+     - "string"
+   * - properties.address
+     - physicalAddress.addressLine1
+     - "string"
+   * - properties.address
+     - postalAddress.addressLine1
+     - "string"
+   * - properties.city
+     - deliveryAddress.city
+     - "string"
+   * - properties.city
+     - physicalAddress.city
+     - "string"
+   * - properties.city
+     - postalAddress.city
+     - "string"
+   * - properties.country
+     - deliveryAddress.country.id
+     - "string"
+   * - properties.country
+     - physicalAddress.country.id
+     - "integer"
+   * - properties.country
+     - postalAddress.country.id
+     - "integer"
+   * - properties.email
+     - email
+     - "string"
+   * - properties.mobilephone
+     - phoneNumberMobile
+     - "string"
+   * - properties.phone
+     - phoneNumber
+     - "string"
+   * - properties.zip
+     - deliveryAddress.postalCode
+     - "string"
+   * - properties.zip
+     - physicalAddress.postalCode
+     - "string"
+   * - properties.zip
+     - postalAddress.postalCode
+     - "string"
 
 
 HubSpot Deal to  Order
@@ -279,6 +420,9 @@ The following properties are synchronized between a HubSpot Lineitem and a  Orde
    * - properties.description
      - description
      - "string"
+   * - properties.hs_discount_percentage
+     - discount
+     - "float"
    * - properties.hs_product_id
      - product.id
      - "integer"
@@ -290,26 +434,7 @@ The following properties are synchronized between a HubSpot Lineitem and a  Orde
      - "float"
    * - properties.quantity
      - count
-     - "float"
-
-
-HubSpot Lineitemdealassociation to  Orderline
----------------------------------------------
-Every HubSpot Lineitemdealassociation will be synchronized with a  Orderline.
-
-Once a link between a HubSpot Lineitemdealassociation and a  Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Lineitemdealassociation and a  Orderline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Lineitemdealassociation Property
-     -  Orderline Property
-     -  Data Type
-   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
-     - order.id
-     - "integer"
+     - "integer", "decimal"]
 
 
 HubSpot Product to  Product
