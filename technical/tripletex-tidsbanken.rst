@@ -1,38 +1,38 @@
-======================
-Tripletex to  Dataflow
-======================
+================================
+Tripletex to Tidsbanken Dataflow
+================================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:23:23
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Tidsbanken. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Contact to  Ansatt
-----------------------------
-Before any synchronization can take place, a link between a Tripletex Contact and a  Ansatt must be established.
+Tripletex Contact to Tidsbanken Ansatt
+--------------------------------------
+Before any synchronization can take place, a link between a Tripletex Contact and a Tidsbanken Ansatt must be established.
 
-A Tripletex Contact will merge with a  Ansatt if one of the following property combinations match:
+A Tripletex Contact will merge with a Tidsbanken Ansatt if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     -  Ansatt Property
+     - Tidsbanken Ansatt Property
    * - email
      - Epost
 
-Once a link between a Tripletex Contact and a  Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a  Ansatt:
+The following properties are synchronized between a Tripletex Contact and a Tidsbanken Ansatt:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     -  Ansatt Property
-     -  Data Type
+     - Tidsbanken Ansatt Property
+     - Tidsbanken Data Type
    * - customer.id
      - AvdelingId
      - "string"
@@ -53,30 +53,30 @@ The following properties are synchronized between a Tripletex Contact and a  Ans
      - "string"
 
 
-Tripletex Customer person to  Ansatt
-------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer person and a  Ansatt must be established.
+Tripletex Customer person to Tidsbanken Ansatt
+----------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer person and a Tidsbanken Ansatt must be established.
 
-A Tripletex Customer person will merge with a  Ansatt if one of the following property combinations match:
+A Tripletex Customer person will merge with a Tidsbanken Ansatt if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     -  Ansatt Property
+     - Tidsbanken Ansatt Property
    * - email
      - Epost
 
-Once a link between a Tripletex Customer person and a  Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a  Ansatt:
+The following properties are synchronized between a Tripletex Customer person and a Tidsbanken Ansatt:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     -  Ansatt Property
-     -  Data Type
+     - Tidsbanken Ansatt Property
+     - Tidsbanken Data Type
    * - deliveryAddress.addressLine1
      - Adresse
      - "string"
@@ -109,32 +109,32 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
 
 
-Tripletex Supplier to  Kunde
-----------------------------
-Before any synchronization can take place, a link between a Tripletex Supplier and a  Kunde must be established.
+Tripletex Supplier to Tidsbanken Kunde
+--------------------------------------
+Before any synchronization can take place, a link between a Tripletex Supplier and a Tidsbanken Kunde must be established.
 
-A Tripletex Supplier will merge with a  Kunde if one of the following property combinations match:
+A Tripletex Supplier will merge with a Tidsbanken Kunde if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Supplier Property
-     -  Kunde Property
+     - Tidsbanken Kunde Property
    * - email
      - Epost
    * - organizationNumber
      - Organisasjonsnummer
 
-Once a link between a Tripletex Supplier and a  Kunde is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Supplier and a Tidsbanken Kunde is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Supplier and a  Kunde:
+The following properties are synchronized between a Tripletex Supplier and a Tidsbanken Kunde:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Supplier Property
-     -  Kunde Property
-     -  Data Type
+     - Tidsbanken Kunde Property
+     - Tidsbanken Data Type
    * - deliveryAddress.addressLine1
      - Gateadresse
      - "string"
@@ -248,20 +248,20 @@ The following properties are synchronized between a Tripletex Supplier and a  Ku
      - "string"
 
 
-Tripletex Customer to  Kunde
-----------------------------
-removed person customers for now until that pattern is resolved, it  will be synchronized with a  Kunde.
+Tripletex Customer to Tidsbanken Kunde
+--------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Tidsbanken Kunde.
 
-If a matching  Kunde already exists, the Tripletex Customer will be merged with the existing one.
-If no matching  Kunde is found, a new  Kunde will be created.
+If a matching Tidsbanken Kunde already exists, the Tripletex Customer will be merged with the existing one.
+If no matching Tidsbanken Kunde is found, a new Tidsbanken Kunde will be created.
 
-A Tripletex Customer will merge with a  Kunde if one of the following property combinations match:
+A Tripletex Customer will merge with a Tidsbanken Kunde if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     -  Kunde Property
+     - Tidsbanken Kunde Property
    * - email
      - Epost
    * - customerNumber
@@ -269,16 +269,16 @@ A Tripletex Customer will merge with a  Kunde if one of the following property c
    * - organizationNumber
      - Organisasjonsnummer
 
-Once a link between a Tripletex Customer and a  Kunde is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Tidsbanken Kunde is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a  Kunde:
+The following properties are synchronized between a Tripletex Customer and a Tidsbanken Kunde:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     -  Kunde Property
-     -  Data Type
+     - Tidsbanken Kunde Property
+     - Tidsbanken Data Type
    * - customerNumber
      - sesam_kundeId
      - "string"
@@ -417,20 +417,20 @@ The following properties are synchronized between a Tripletex Department and a  
      - "string"
 
 
-Tripletex Employee to  Ansatt
------------------------------
-Every Tripletex Employee will be synchronized with a  Ansatt.
+Tripletex Employee to Tidsbanken Ansatt
+---------------------------------------
+Every Tripletex Employee will be synchronized with a Tidsbanken Ansatt.
 
-If a matching  Ansatt already exists, the Tripletex Employee will be merged with the existing one.
-If no matching  Ansatt is found, a new  Ansatt will be created.
+If a matching Tidsbanken Ansatt already exists, the Tripletex Employee will be merged with the existing one.
+If no matching Tidsbanken Ansatt is found, a new Tidsbanken Ansatt will be created.
 
-A Tripletex Employee will merge with a  Ansatt if one of the following property combinations match:
+A Tripletex Employee will merge with a Tidsbanken Ansatt if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     -  Ansatt Property
+     - Tidsbanken Ansatt Property
    * - email
      - Epost
    * - employeeNumber
@@ -438,16 +438,16 @@ A Tripletex Employee will merge with a  Ansatt if one of the following property 
    * - nationalIdentityNumber
      - Personnummer
 
-Once a link between a Tripletex Employee and a  Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a  Ansatt:
+The following properties are synchronized between a Tripletex Employee and a Tidsbanken Ansatt:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     -  Ansatt Property
-     -  Data Type
+     - Tidsbanken Ansatt Property
+     - Tidsbanken Data Type
    * - address.addressLine1
      - Adresse
      - "string"
