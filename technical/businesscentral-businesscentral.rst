@@ -2,7 +2,7 @@
 Businesscentral to Businesscentral Dataflow
 ===========================================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -35,19 +35,19 @@ The following properties are synchronized between a Businesscentral Contacts per
      - Businesscentral Data Type
    * - addressLine1
      - addressLine2
-"string"
+     - "string"
    * - addressLine2
      - addressLine1
-"string"
+     - "string"
    * - mobilePhoneNumber
      - mobilePhoneNumber
-"string"
+     - "string"
    * - mobilePhoneNumber
      - phoneNumber
-"string"
+     - "string"
    * - phoneNumber
      - mobilePhoneNumber
-"string"
+     - "string"
 
 
 Businesscentral Contactsinformation person customer relation to Businesscentral Contacts person
@@ -76,13 +76,13 @@ The following properties are synchronized between a Businesscentral Contactsinfo
      - Businesscentral Data Type
    * - contactId
      - id
-"string"
+     - "string"
    * - contactName
      - displayName
-"string"
+     - "string"
    * - contactName.contactName
      - displayName
-"string"
+     - "string"
 
 
 Businesscentral Items to Businesscentral Items
@@ -111,16 +111,16 @@ The following properties are synchronized between a Businesscentral Items and a 
      - Businesscentral Data Type
    * - displayName
      - displayName2
-"string"
+     - "string"
    * - displayName2
      - displayName
-"string"
+     - "string"
    * - itemCategoryId
      - taxGroupId
-"string"
+     - "string"
    * - taxGroupId
      - itemCategoryId
-"string"
+     - "string"
 
 
 Businesscentral Customers company to Businesscentral Companies
@@ -155,43 +155,43 @@ The following properties are synchronized between a Businesscentral Contacts per
      - Businesscentral Data Type
    * - addressLine1
      - addressLine1
-"string"
+     - "string"
    * - addressLine2
      - addressLine2
-"string"
+     - "string"
    * - city
      - address.city
-"string"
+     - "string"
    * - city
      - addressLine2
-"string"
+     - "string"
    * - city
      - city
-"string"
+     - "string"
    * - country
      - country
-"string"
+     - "string"
    * - displayName
      - displayName
-"string"
+     - "string"
    * - email
      - email
-"string"
+     - "string"
    * - id
      - id (Dependant on having BusinessCentral-contact in type)
-"string"
+     - "string"
    * - phoneNumber
      - phoneNumber
-"string"
+     - "string"
    * - postalCode
      - address.postalCode
-"string"
+     - "string"
    * - postalCode
      - postalCode
-"string"
+     - "string"
    * - type
      - type
-"string"
+     - "string"
 
 
 Businesscentral Customers person to Businesscentral Contacts person
@@ -210,32 +210,32 @@ The following properties are synchronized between a Businesscentral Customers pe
      - Businesscentral Data Type
    * - address.city
      - city
-"string"
+     - "string"
    * - address.postalCode
      - postalCode
-"string"
+     - "string"
    * - addressLine1
      - addressLine1
-"string"
+     - "string"
    * - addressLine2
      - addressLine2
-"string"
+     - "string"
    * - addressLine2
      - city
-"string"
+     - "string"
    * - city
      - city
-"string"
+     - "string"
    * - country
      - country
-"string"
+     - "string"
    * - id
      - id
-"string"
+     - "string"
    * - postalCode
      - postalCode
-"string"
+     - "string"
    * - type
      - type
-"string"
+     - "string"
 
