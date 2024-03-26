@@ -2,7 +2,7 @@
 Businesscentral to Superoffice Dataflow
 =======================================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -45,7 +45,7 @@ The following properties are synchronized between a Businesscentral Salesorders 
      - Superoffice Data Type
    * - totalAmountExcludingTax
      - TotalPrice
-"float"
+     - "float"
 
 
 Businesscentral Companies to Superoffice Contact
@@ -80,31 +80,31 @@ The following properties are synchronized between a Businesscentral Contacts per
      - Superoffice Data Type
    * - addressLine1
      - Address.Street.Address1
-"string"
+     - "string"
    * - addressLine2
      - Address.Street.Address2
-"string"
+     - "string"
    * - city
      - Address.Street.City
-"string"
+     - "string"
    * - country
      - Country.CountryId
-"integer"
+     - "integer"
    * - email
      - Emails.Value
-"string"
+     - "string"
    * - id
      - PersonId
-"integer"
+     - "integer"
    * - mobilePhoneNumber
      - MobilePhones.Value
-"string"
+     - "string"
    * - phoneNumber
      - OfficePhones.Value
-"string"
+     - "string"
    * - postalCode
      - Address.Street.Zipcode
-"string"
+     - "string"
 
 
 Businesscentral Customers company to Superoffice Contact
@@ -123,58 +123,58 @@ The following properties are synchronized between a Businesscentral Customers co
      - Superoffice Data Type
    * - address.city
      - Address.Postal.City
-"string"
+     - "string"
    * - address.city
      - Address.Street.City
-"string"
+     - "string"
    * - address.countryLetterCode
      - Country.CountryId
-"integer"
+     - "integer"
    * - address.postalCode
      - Address.Postal.Zipcode
-"string"
+     - "string"
    * - address.postalCode
      - Address.Street.Zipcode
-"string"
+     - "string"
    * - addressLine1
      - Address.Postal.Address1
-"string"
+     - "string"
    * - addressLine1
      - Address.Street.Address1
-"string"
+     - "string"
    * - addressLine2
      - Address.Postal.Address2
-"string"
+     - "string"
    * - addressLine2
      - Address.Street.Address2
-"string"
+     - "string"
    * - city
      - Address.Postal.City
-"string"
+     - "string"
    * - city
      - Address.Street.City
-"string"
+     - "string"
    * - country
      - Country.CountryId
-"integer"
+     - "integer"
    * - displayName
      - Name
-"string"
+     - "string"
    * - id
      - ContactId
-"integer"
+     - "integer"
    * - phoneNumber
      - Phones.Value
-"string"
+     - "string"
    * - postalCode
      - Address.Postal.Zipcode
-"string"
+     - "string"
    * - postalCode
      - Address.Street.Zipcode
-"string"
+     - "string"
    * - website
      - Urls.Value
-"string"
+     - "string"
 
 
 Businesscentral Employees to Superoffice Person
@@ -193,28 +193,28 @@ The following properties are synchronized between a Businesscentral Employees an
      - Superoffice Data Type
    * - birthDate
      - BirthDate
-["datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
+     - ["datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
    * - email
      - Emails.Value
-"string"
+     - "string"
    * - givenName
      - Firstname
-"string"
+     - "string"
    * - jobTitle
      - Contact.ContactId
-"integer"
+     - "integer"
    * - mobilePhone
      - MobilePhones.Value
-"string"
+     - "string"
    * - personalEmail
      - Emails.Value
-"string"
+     - "string"
    * - phoneNumber
      - OfficePhones.Value
-"string"
+     - "string"
    * - surname
      - Lastname
-"string"
+     - "string"
 
 
 Businesscentral Items to Superoffice Product
@@ -233,25 +233,25 @@ The following properties are synchronized between a Businesscentral Items and a 
      - Superoffice Data Type
    * - displayName
      - Name
-"string"
+     - "string"
    * - displayName.string
      - Name
-"string"
+     - "string"
    * - displayName2
      - Name
-"string"
+     - "string"
    * - itemCategoryId
      - ProductCategoryKey
-"string"
+     - "string"
    * - taxGroupCode
      - VAT
-["integer", ["decimal", "_."]]
+     - ["integer", ["decimal", "_."]]
    * - unitCost
      - UnitCost
-"string"
+     - "string"
    * - unitPrice
      - UnitListPrice
-["decimal", "_."]
+     - ["decimal", "_."]
 
 
 Businesscentral Salesorderlines to Superoffice Quoteline
@@ -270,29 +270,29 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - Superoffice Data Type
    * - description
      - Description
-"string"
+     - "string"
    * - description
      - Name
-"string"
+     - "string"
    * - discountPercent
      - DiscountPercent
-"integer"
+     - "integer"
    * - discountPercent
      - ERPDiscountPercent
-["decimal", "_."]
+     - ["decimal", "_."]
    * - documentId
      - QuoteAlternativeId
-"integer"
+     - "integer"
    * - itemId
      - ERPProductKey
-"string"
+     - "string"
    * - quantity
      - Quantity
-["integer", ["decimal", "_."]]
+     - ["integer", ["decimal", "_."]]
    * - taxPercent
      - VAT
-"integer"
+     - "integer"
    * - unitPrice
      - UnitListPrice
-["if-null", ["integer", "string"], ["decimal", "_."]]
+     - ["if-null", ["integer", "string"], ["decimal", "_."]]
 
