@@ -1,13 +1,13 @@
 =============================
-Tripletex to Zohocrm Dataflow
+Tripletex to ZohoCRM Dataflow
 =============================
 
-Generated: 2024-03-26 14:19:13
+Generated: 2024-03-26 14:19:54
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Zohocrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to ZohoCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Tripletex Customer to  Account
 ------------------------------
