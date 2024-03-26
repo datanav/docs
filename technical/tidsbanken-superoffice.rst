@@ -2,7 +2,7 @@
 Tidsbanken to Superoffice Dataflow
 ==================================
 
-Generated: 2024-03-26 14:23:23
+Generated: 2024-03-26 14:24:14
 
 Introduction
 ------------
@@ -33,6 +33,33 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Supe
    * - Tidsbanken Ansatt Property
      - Superoffice Person Property
      - Superoffice Data Type
+   * - Adresse
+     - Address.Street.Address1
+     - "string"
+   * - Etternavn
+     - Lastname
+     - "string"
+   * - Fodt
+     - BirthDate
+     - "datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
+   * - Fornavn
+     - Firstname
+     - "string"
+   * - Id
+     - PersonId
+     - "integer"
+   * - Mobil
+     - MobilePhones.Value
+     - "string"
+   * - Postnummer
+     - Address.Street.Zipcode
+     - "string"
+   * - Poststed
+     - Address.Street.City
+     - "string"
+   * - TlfPrivat
+     - PrivatePhones.Value
+     - "string"
 
 
 Tidsbanken Kunde to Superoffice Contact
@@ -59,4 +86,73 @@ The following properties are synchronized between a Tidsbanken Kunde and a Super
    * - Tidsbanken Kunde Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - Epost
+     - Emails.Value
+     - "string"
+   * - Gateadresse
+     - Address.Postal.Address1
+     - "string"
+   * - Gateadresse
+     - Address.Street.Address1
+     - "string"
+   * - Id
+     - ContactId
+     - "integer"
+   * - LevPostNr
+     - Address.Postal.Zipcode
+     - "string"
+   * - LevPostNr
+     - Address.Street.Zipcode
+     - "string"
+   * - LevPoststed
+     - Address.Postal.City
+     - "string"
+   * - LevPoststed
+     - Address.Street.City
+     - "string"
+   * - Leveringsadresse
+     - Address.Postal.Address1
+     - "string"
+   * - Leveringsadresse
+     - Address.Street.Address1
+     - "string"
+   * - Leveringsadresse2
+     - Address.Postal.Address2
+     - "string"
+   * - Leveringsadresse2
+     - Address.Street.Address2
+     - "string"
+   * - Navn
+     - Name
+     - "string"
+   * - Organisasjonsnummer
+     - OrgNr (Dependant on having NO in Country.TwoLetterISOCountryDependant on having wd:Q11994066 in Country.TwoLetterISOCountry)
+     - "string"
+   * - Postadresse
+     - Address.Postal.Address2
+     - "string"
+   * - Postadresse
+     - Address.Street.Address2
+     - "string"
+   * - Postnr
+     - Address.Postal.Zipcode
+     - "string"
+   * - Postnr
+     - Address.Street.Zipcode
+     - "string"
+   * - Poststed
+     - Address.Postal.City
+     - "string"
+   * - Poststed
+     - Address.Street.City
+     - "string"
+   * - Telefon
+     - Phones.Value
+     - "string"
+   * - Url
+     - Urls.Value
+     - "string"
+   * - sesam_kundeId
+     - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountry)
+     - "string"
 
