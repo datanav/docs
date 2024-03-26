@@ -2,7 +2,7 @@
 Businesscentral to Zendesk Dataflow
 ===================================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -41,5 +41,5 @@ The following properties are synchronized between a Businesscentral Customers co
      - Zendesk Data Type
    * - displayName
      - name
-"string"
+     - "string"
 
