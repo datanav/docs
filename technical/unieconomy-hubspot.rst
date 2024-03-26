@@ -2,7 +2,7 @@
 Unieconomy to Hubspot Dataflow
 ==============================
 
-Generated: 2024-03-26 14:34:37
+Generated: 2024-03-26 14:34:55
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Unieconomy Companies and a H
    * - Unieconomy Companies Property
      - Hubspot Company Property
      - Hubspot Data Type
+   * - Name
+     - properties.name
+     - "string"
 
 
 Unieconomy Customers to Hubspot Company
@@ -55,6 +58,12 @@ The following properties are synchronized between a Unieconomy Departments and a
    * - Unieconomy Departments Property
      - Hubspot Company Property
      - Hubspot Data Type
+   * - DepartmentNumber
+     - properties.description
+     - "string"
+   * - Name
+     - properties.name
+     - "string"
 
 
 Unieconomy Dimensions to Hubspot Dealcompanyassociationtype
