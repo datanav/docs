@@ -2,7 +2,7 @@
 Wix.com to Powerofficego Dataflow
 =================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -161,7 +161,7 @@ The following properties are synchronized between a Wix.com Orders and a Powerof
      - "string"
    * - lineItems.price
      - ProductUnitPrice
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["float", ["decimal", "_."]]]
+     - N/A
    * - lineItems.price
      - SalesOrderLineUnitPrice
      - "string"
@@ -173,7 +173,7 @@ The following properties are synchronized between a Wix.com Orders and a Powerof
      - "integer"
    * - lineItems.quantity
      - Quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - totals.total
      - TotalAmount
      - "string"
@@ -223,10 +223,10 @@ The following properties are synchronized between a Wix.com Products and a Power
      - Powerofficego Data Type
    * - costAndProfitData.itemCost
      - costPrice
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["integer", "_."]]
+     - N/A
    * - costRange.maxValue
      - costPrice
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["integer", "_."]]
+     - N/A
    * - description
      - description
      - "string"
@@ -238,5 +238,5 @@ The following properties are synchronized between a Wix.com Products and a Power
      - "string"
    * - priceData.price
      - salesPrice
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["integer", "_."]]
+     - N/A
 
