@@ -2,7 +2,7 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -206,13 +206,13 @@ The following properties are synchronized between a Wix.com Contacts and a Tripl
      - "string"
    * - info.phones
      - phoneNumberMobile
-     - ["if",["matches","+*","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - N/A
    * - primaryInfo.email
      - email
      - "string"
    * - primaryInfo.phone
      - phoneNumberMobile
-     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - N/A
    * - primaryInfo.phone
      - phoneNumberWork
      - "string"
@@ -265,7 +265,7 @@ The following properties are synchronized between a Wix.com Orders and a Triplet
      - "integer"
    * - lineItems.name
      - count
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - lineItems.name
      - description
      - "string"
@@ -283,7 +283,7 @@ The following properties are synchronized between a Wix.com Orders and a Triplet
      - "integer"
    * - lineItems.price
      - count
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - lineItems.price
      - description
      - "string"
@@ -304,7 +304,7 @@ The following properties are synchronized between a Wix.com Orders and a Triplet
      - "integer"
    * - lineItems.quantity
      - count
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - lineItems.quantity
      - description
      - "string"
