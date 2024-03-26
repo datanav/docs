@@ -2,7 +2,7 @@
 Tidsbanken to Powerofficego Dataflow
 ====================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -43,7 +43,7 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Powe
      - "string"
    * - Fodt
      - dateOfBirth
-     - ["if",["gt",["abs",["datetime-diff", "year", "_.",["now"]]], 100], "1935-01-01",["datetime-format", "%Y-%m-%d", "_."]]
+     - N/A
    * - Fornavn
      - firstName
      - "string"
@@ -114,7 +114,7 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Powe
      - "string"
    * - Fodt
      - DateOfBirth
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - Fornavn
      - FirstName
      - "string"
@@ -250,7 +250,7 @@ The following properties are synchronized between a Tidsbanken Prosjekt and a Po
      - "string"
    * - AvsluttetDato
      - EndDate
-     - ["datetime-format", "%Y-%m-%dT%H:%M:%S", "_."]
+     - N/A
    * - InterntProsjekt
      - IsInternal
      - "string"
@@ -262,5 +262,5 @@ The following properties are synchronized between a Tidsbanken Prosjekt and a Po
      - "string"
    * - StartDato
      - StartDate
-     - ["datetime-format", "%Y-%m-%dT%H:%M:%S", "_."]
+     - N/A
 
