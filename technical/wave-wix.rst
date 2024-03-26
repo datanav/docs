@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -35,31 +35,31 @@ The following properties are synchronized between a Wave Customer person and a W
      - Wix Data Type
    * - address.addressLine1
      - info.addresses.items.address.addressLine
-"string"
+     - "string"
    * - address.addressLine2
      - info.addresses.items.address.addressLine2
-"string"
+     - "string"
    * - address.city
      - info.addresses.items.address.city
-"string"
+     - "string"
    * - address.postalCode
      - info.addresses.items.address.postalCode
-"string"
+     - "string"
    * - id
      - id
-"string"
+     - "string"
    * - shippingDetails.address.addressLine1
      - info.addresses.items.address.addressLine
-"string"
+     - "string"
    * - shippingDetails.address.addressLine2
      - info.addresses.items.address.addressLine2
-"string"
+     - "string"
    * - shippingDetails.address.city
      - info.addresses.items.address.city
-"string"
+     - "string"
    * - shippingDetails.address.postalCode
      - info.addresses.items.address.postalCode
-"string"
+     - "string"
 
 
 Wave Customer to Wix Contacts
@@ -91,55 +91,55 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
      - Wix Data Type
    * - address.addressLine1
      - info.addresses.items.address.addressLine
-"string"
+     - "string"
    * - address.addressLine2
      - info.addresses.items.address.addressLine2
-"string"
+     - "string"
    * - address.city
      - info.addresses.items.address.city
-"string"
+     - "string"
    * - address.postalCode
      - info.addresses.items.address.postalCode
-"string"
+     - "string"
    * - email
      - info.emails
-"string"
+     - "string"
    * - email
      - primaryInfo.email
-"string"
+     - "string"
    * - firstName
      - info.name.first
-"string"
+     - "string"
    * - firstName
      - info.name.last
-"string"
+     - "string"
    * - id
      - id
-"string"
+     - "string"
    * - lastName
      - info.name.first
-"string"
+     - "string"
    * - lastName
      - info.name.last
-"string"
+     - "string"
    * - mobile
      - info.phones
-"string"
+     - "string"
    * - mobile
      - primaryInfo.phone
-"string"
+     - "string"
    * - shippingDetails.address.addressLine1
      - info.addresses.items.address.addressLine
-"string"
+     - "string"
    * - shippingDetails.address.addressLine2
      - info.addresses.items.address.addressLine2
-"string"
+     - "string"
    * - shippingDetails.address.city
      - info.addresses.items.address.city
-"string"
+     - "string"
    * - shippingDetails.address.postalCode
      - info.addresses.items.address.postalCode
-"string"
+     - "string"
 
 
 Wave Product to Wix Products
@@ -158,16 +158,16 @@ The following properties are synchronized between a Wave Product and a Wix Produ
      - Wix Data Type
    * - description
      - description
-"string"
+     - "string"
    * - name
      - name
-"string"
+     - "string"
    * - unitPrice
      - price.price
-"string"
+     - "string"
    * - unitPrice
      - priceData.price
-["decimal", "_."]
+     - ["decimal", "_."]
 
 
 Wave Vendor to Wix Contacts
@@ -199,44 +199,44 @@ The following properties are synchronized between a Wave Vendor and a Wix Contac
      - Wix Data Type
    * - address.addressLine1
      - info.addresses.items.address.addressLine
-"string"
+     - "string"
    * - address.addressLine2
      - info.addresses.items.address.addressLine2
-"string"
+     - "string"
    * - address.city
      - info.addresses.items.address.city
-"string"
+     - "string"
    * - address.postalCode
      - info.addresses.items.address.postalCode
-"string"
+     - "string"
    * - email
      - info.emails
-"string"
+     - "string"
    * - email
      - primaryInfo.email
-"string"
+     - "string"
    * - firstName
      - info.name.first
-"string"
+     - "string"
    * - firstName
      - info.name.last
-"string"
+     - "string"
    * - id
      - id
-"string"
+     - "string"
    * - lastName
      - info.name.first
-"string"
+     - "string"
    * - lastName
      - info.name.last
-"string"
+     - "string"
    * - mobile
      - info.phones
-"string"
+     - "string"
    * - mobile
      - primaryInfo.phone
-"string"
+     - "string"
    * - phone
      - primaryInfo.phone
-"string"
+     - "string"
 
