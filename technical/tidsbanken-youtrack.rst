@@ -2,7 +2,7 @@
 Tidsbanken to Youtrack Dataflow
 ===============================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -35,10 +35,10 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Yout
      - Youtrack Data Type
    * - Epost
      - profile.email.email
-"string"
+     - "string"
    * - Navn
      - name
-"string"
+     - "string"
 
 
 Tidsbanken Avdeling to Youtrack Groups
