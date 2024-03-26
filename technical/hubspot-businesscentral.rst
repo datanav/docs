@@ -2,7 +2,7 @@
 HubSpot to Businesscentral Dataflow
 ===================================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -27,40 +27,40 @@ The following properties are synchronized between a HubSpot Company and a Busine
      - Businesscentral Data Type
    * - id
      - id
-"string"
+     - "string"
    * - properties.address
      - addressLine1
-"string"
+     - "string"
    * - properties.address2
      - addressLine2
-"string"
+     - "string"
    * - properties.city
      - address.city
-"string"
+     - "string"
    * - properties.city
      - city
-"string"
+     - "string"
    * - properties.country
      - address.countryLetterCode
-"string"
+     - "string"
    * - properties.country
      - country
-"string"
+     - "string"
    * - properties.name
      - displayName
-"string"
+     - "string"
    * - properties.phone
      - phoneNumber
-"string"
+     - "string"
    * - properties.website
      - website
-"string"
+     - "string"
    * - properties.zip
      - address.postalCode
-"string"
+     - "string"
    * - properties.zip
      - postalCode
-"string"
+     - "string"
 
 
 HubSpot Company to Businesscentral Customers person
@@ -99,19 +99,19 @@ The following properties are synchronized between a HubSpot Contact and a Busine
      - Businesscentral Data Type
    * - id
      - id
-"string"
+     - "string"
    * - properties.address
      - addressLine1
-"string"
+     - "string"
    * - properties.city
      - city
-"string"
+     - "string"
    * - properties.country
      - country
-"string"
+     - "string"
    * - properties.zip
      - postalCode
-"string"
+     - "string"
 
 
 HubSpot Contact to Businesscentral Customers person
@@ -132,37 +132,37 @@ The following properties are synchronized between a HubSpot Contact and a Busine
      - Businesscentral Data Type
    * - id
      - id
-"string"
+     - "string"
    * - properties.address
      - addressLine1
-"string"
+     - "string"
    * - properties.city
      - address.city
-"string"
+     - "string"
    * - properties.city
      - addressLine2
-"string"
+     - "string"
    * - properties.city
      - city
-"string"
+     - "string"
    * - properties.country
      - country
-"string"
+     - "string"
    * - properties.email
      - email
-"string"
+     - "string"
    * - properties.email
      - id (Dependant on having wd:Q1273217 in type)
-"string"
+     - "string"
    * - properties.phone
      - phoneNumber
-"string"
+     - "string"
    * - properties.zip
      - address.postalCode
-"string"
+     - "string"
    * - properties.zip
      - postalCode
-"string"
+     - "string"
 
 
 HubSpot Company to Businesscentral Companies
@@ -197,28 +197,28 @@ The following properties are synchronized between a HubSpot Deal and a Businessc
      - Businesscentral Data Type
    * - properties.amount
      - totalAmountExcludingTax
-"string"
+     - "string"
    * - properties.closedate
      - orderDate
-["datetime-parse", "%Y-%m-%dT%H:%M:%S.%fZ", "_."]
+     - ["datetime-parse", "%Y-%m-%dT%H:%M:%S.%fZ", "_."]
    * - properties.closedate
      - requestedDeliveryDate
-["datetime-parse", "%Y-%m-%dT%H:%M:%S.%fZ", "_."]
+     - ["datetime-parse", "%Y-%m-%dT%H:%M:%S.%fZ", "_."]
    * - properties.deal_currency_code
      - billToCountry
-"string"
+     - "string"
    * - properties.deal_currency_code
      - billingPostalAddress.countryLetterCode
-"string"
+     - "string"
    * - properties.deal_currency_code
      - currencyId
-"string"
+     - "string"
    * - properties.deal_currency_code
      - shipToCountry
-"string"
+     - "string"
    * - properties.deal_currency_code
      - shippingPostalAddress.countryLetterCode
-"string"
+     - "string"
 
 
 HubSpot Lineitem to Businesscentral Salesorderlines
@@ -237,28 +237,28 @@ The following properties are synchronized between a HubSpot Lineitem and a Busin
      - Businesscentral Data Type
    * - properties.description
      - description
-"string"
+     - "string"
    * - properties.hs_discount_percentage
      - discountPercent
-["decimal", "_."]
+     - ["decimal", "_."]
    * - properties.hs_product_id
      - itemId
-"string"
+     - "string"
    * - properties.name
      - description
-"string"
+     - "string"
    * - properties.price
      - amountExcludingTax
-"string"
+     - "string"
    * - properties.price
      - unitPrice
-"float"
+     - "float"
    * - properties.quantity
      - invoiceQuantity
-"string"
+     - "string"
    * - properties.quantity
      - quantity
-["integer", ["decimal", "_."]]
+     - ["integer", ["decimal", "_."]]
 
 
 HubSpot Product to Businesscentral Items
@@ -277,17 +277,17 @@ The following properties are synchronized between a HubSpot Product and a Busine
      - Businesscentral Data Type
    * - properties.hs_cost_of_goods_sold
      - unitCost
-["decimal", "_."]
+     - ["decimal", "_."]
    * - properties.name
      - displayName
-"string"
+     - "string"
    * - properties.name
      - displayName.string
-"string"
+     - "string"
    * - properties.name
      - displayName2
-"string"
+     - "string"
    * - properties.price
      - unitPrice
-["decimal", "_."]
+     - ["decimal", "_."]
 
