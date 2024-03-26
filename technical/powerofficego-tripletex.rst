@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2024-03-26 17:30:44
+Generated: 2024-03-26 17:54:02
 
 Introduction
 ------------
@@ -61,7 +61,7 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
    * - partyId
      - department.id (Dependant on having wd:Q703534 in  )
-     - ["if", ["neq", "_.", "X"], "integer", "string"]
+     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
    * - phoneNumber
      - phoneNumberWork
      - "string"
@@ -502,7 +502,7 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - OrganizationNumber (Dependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCode)
      - organizationNumber
-     - ["replace"," ","", "string"]
+     - ["replace"," ","", ["string", "_."]]
    * - PhoneNumber
      - phoneNumber
      - "string"
@@ -565,7 +565,7 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - vatNumber (Dependant on having NO in mailAddress.countryCodeDependant on having NO in mailAddress.countryCode)
      - organizationNumber
-     - ["replace"," ","", "string"]
+     - ["replace"," ","", ["string", "_."]]
 
 
 Powerofficego Customers to Tripletex Customer person
@@ -641,7 +641,7 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - OrganizationNumber (Dependant on having NO in MailAddress.CountryCode)
      - organizationNumber
-     - ["replace"," ","", "string"]
+     - ["replace"," ","", ["string", "_."]]
    * - PhoneNumber
      - phoneNumber
      - "string"
@@ -701,10 +701,10 @@ The following properties are synchronized between a Powerofficego Employees and 
      - ["datetime-format","%Y-%m-%d","_."]
    * - DepartmendId
      - department.id
-     - ["if", ["neq", "_.", "X"], "integer", "string"]
+     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
    * - DepartmentId (Dependant on having wd:Q703534 in JobTitle)
      - department.id (Dependant on having wd:Q2366457 in  Dependant on having wd:Q2366457 in  )
-     - ["if", ["neq", "_.", "X"], "integer", "string"]
+     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
    * - EmailAddress
      - email
      - "string"
