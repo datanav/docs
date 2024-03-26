@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2023-11-30 00:02:08
+Generated: 2024-03-26 00:00:01
 
 Introduction.
 ------------
@@ -167,10 +167,6 @@ A Powerofficego Customers will merge with a SuperOffice Contact if one of the fo
      - SuperOffice Contact Property
    * - EmailAddress
      - Emails.Value
-   * - InvoiceEmailAddress
-     - Emails.Value
-   * - PaymentReminderEmailAddress
-     - Emails.Value
 
 Once a link between a Powerofficego Customers and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -234,10 +230,13 @@ The following properties are synchronized between a Powerofficego Customers and 
      - Name
      - "string"
    * - Number
+     - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountryDependant on having wd:Q852835 in Country.TwoLetterISOCountry)
+     - "string"
+   * - Number
      - Phones.Value
      - "string"
    * - OrganizationNumber
-     - OrgNr (Dependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountry)
+     - OrgNr (Dependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountry)
      - "string"
    * - PhoneNumber
      - Phones.Value
@@ -247,22 +246,28 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Product classification type to SuperOffice Listproducttypeitems
------------------------------------------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Product classification type and a SuperOffice Listproducttypeitems must be established.
+Powerofficego Salesorders to SuperOffice Quotealternative
+---------------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Salesorders and a SuperOffice Quotealternative must be established.
 
-A new SuperOffice Listproducttypeitems will be created from a Powerofficego Product classification type if it is connected to a Powerofficego Product that is synchronized into SuperOffice.
+A new SuperOffice Quotealternative will be created from a Powerofficego Salesorders if it is connected to a Powerofficego Salesorderline, or Salesorderlines that is synchronized into SuperOffice.
 
-Once a link between a Powerofficego Product classification type and a SuperOffice Listproducttypeitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Salesorders and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Product classification type and a SuperOffice Listproducttypeitems:
+The following properties are synchronized between a Powerofficego Salesorders and a SuperOffice Quotealternative:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Product classification type Property
-     - SuperOffice Listproducttypeitems Property
+   * - Powerofficego Salesorders Property
+     - SuperOffice Quotealternative Property
      - SuperOffice Data Type
+   * - NetAmount
+     - TotalPrice
+     - "float"
+   * - TotalAmount
+     - TotalPrice
+     - "float"
 
 
 Powerofficego Departments to  Contact
@@ -313,6 +318,9 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - FirstName
      - Firstname
      - "string"
+   * - JobTitle
+     - Contact.ContactId
+     - "integer"
    * - LastName
      - Lastname
      - "string"
@@ -331,22 +339,6 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - phoneNumber
      - MobilePhones.Value
      - "string"
-
-
-Powerofficego Product to  Listproducttypeitems
-----------------------------------------------
-Every Powerofficego Product will be synchronized with a  Listproducttypeitems.
-
-Once a link between a Powerofficego Product and a  Listproducttypeitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Product and a  Listproducttypeitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Product Property
-     -  Listproducttypeitems Property
-     -  Data Type
 
 
 Powerofficego Product to SuperOffice Product
@@ -419,21 +411,70 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "integer", "decimal"]
 
 
-Powerofficego Productgroup to  Listproductcategoryitems
--------------------------------------------------------
-Every Powerofficego Productgroup will be synchronized with a  Listproductcategoryitems.
+Powerofficego Quote to  Quotealternative
+----------------------------------------
+Every Powerofficego Quote will be synchronized with a  Quotealternative.
 
-Once a link between a Powerofficego Productgroup and a  Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Quote and a  Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Productgroup and a  Listproductcategoryitems:
+The following properties are synchronized between a Powerofficego Quote and a  Quotealternative:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Productgroup Property
-     -  Listproductcategoryitems Property
+   * - Powerofficego Quote Property
+     -  Quotealternative Property
      -  Data Type
-   * - Name
+   * - TotalAmount
+     - TotalPrice
+     - "float"
+
+
+Powerofficego Salesorderlines to  Quoteline
+-------------------------------------------
+Every Powerofficego Salesorderlines will be synchronized with a  Quoteline.
+
+Once a link between a Powerofficego Salesorderlines and a  Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorderlines and a  Quoteline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorderlines Property
+     -  Quoteline Property
+     -  Data Type
+   * - Allowance
+     - DiscountPercent
+     - "integer"
+   * - Allowance
+     - ERPDiscountPercent
+     - "decimal"
+   * - Description
      - Name
      - "string"
+   * - ProductId
+     - ERPProductKey
+     - "string"
+   * - ProductUnitPrice
+     - UnitListPrice
+     - "if-null", "integer", "string"], "decimal"]
+   * - Quantity
+     - Quantity
+     - "integer", "decimal"]
+   * - SortOrder
+     - Rank
+     - "integer"
+   * - TotalAmount
+     - TotalPrice
+     - "if-null", "integer", "string"], "decimal"]
+   * - VatId
+     - VAT
+     - "integer"
+   * - VatRate
+     - VAT
+     - "integer"
+   * - sesam_SalesOrderId
+     - QuoteAlternativeId
+     - "integer"
 
