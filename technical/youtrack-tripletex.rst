@@ -2,7 +2,7 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -65,7 +65,43 @@ The following properties are synchronized between a YouTrack Users and a  Employ
    * - YouTrack Users Property
      -  Employee Property
      -  Data Type
+   * - groups.id
+     - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - name
+     - firstName
+     - "string"
+   * - name
+     - lastName
+     - "string"
+   * - organizationRoles.id
+     - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+     - "if", "neq", "_.", "X"], "integer", "string"]
    * - profile.email.email
      - email
      - "string"
+   * - projectRoles.id
+     - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - sourcedOrganizationRoles.id
+     - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - sourcedProjectRoles.id
+     - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - teams.id
+     - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - transitiveGroups.id
+     - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - transitiveOrganizationRoles.id
+     - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - transitiveProjectRoles.id
+     - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - transitiveTeams.id
+     - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
+     - "if", "neq", "_.", "X"], "integer", "string"]
 
