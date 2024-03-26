@@ -2,7 +2,7 @@
 Zendesk to Youtrack Dataflow
 ============================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:16
 
 Introduction
 ------------
@@ -60,52 +60,52 @@ The following properties are synchronized between a Zendesk Tickets and a  Hubpr
      -  Data Type
 
 
-Zendesk Tickets to  Issues
---------------------------
-Every Zendesk Tickets will be synchronized with a  Issues.
+Zendesk Tickets to Youtrack Issues
+----------------------------------
+Every Zendesk Tickets will be synchronized with a Youtrack Issues.
 
-Once a link between a Zendesk Tickets and a  Issues is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Tickets and a Youtrack Issues is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Tickets and a  Issues:
+The following properties are synchronized between a Zendesk Tickets and a Youtrack Issues:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Tickets Property
-     -  Issues Property
-     -  Data Type
+     - Youtrack Issues Property
+     - Youtrack Data Type
    * - requester_id
      - reporter.id
      - "string"
 
 
-Zendesk Users to  Users
------------------------
-When a Zendesk User is of type Agent, it  will be synchronized with a  Users.
+Zendesk Users to Youtrack Users
+-------------------------------
+When a Zendesk User is of type Agent, it  will be synchronized with a Youtrack Users.
 
-If a matching  Users already exists, the Zendesk Users will be merged with the existing one.
-If no matching  Users is found, a new  Users will be created.
+If a matching Youtrack Users already exists, the Zendesk Users will be merged with the existing one.
+If no matching Youtrack Users is found, a new Youtrack Users will be created.
 
-A Zendesk Users will merge with a  Users if one of the following property combinations match:
+A Zendesk Users will merge with a Youtrack Users if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Users Property
-     -  Users Property
+     - Youtrack Users Property
    * - email
      - profile.email.email
 
-Once a link between a Zendesk Users and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Users and a Youtrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Users and a  Users:
+The following properties are synchronized between a Zendesk Users and a Youtrack Users:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Users Property
-     -  Users Property
-     -  Data Type
+     - Youtrack Users Property
+     - Youtrack Data Type
    * - email
      - profile.email
      - "string"
