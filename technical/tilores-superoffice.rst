@@ -2,7 +2,7 @@
 Tilores to Superoffice Dataflow
 ===============================
 
-Generated: 2024-03-26 14:34:37
+Generated: 2024-03-26 14:34:55
 
 Introduction
 ------------
@@ -23,4 +23,16 @@ The following properties are synchronized between a Tilores Human and a Superoff
    * - Tilores Human Property
      - Superoffice Person Property
      - Superoffice Data Type
+   * - dateOfBirth
+     - BirthDate
+     - "datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
+   * - email
+     - Emails.Value
+     - "string"
+   * - firstName
+     - Firstname
+     - "string"
+   * - lastName
+     - Lastname
+     - "string"
 
