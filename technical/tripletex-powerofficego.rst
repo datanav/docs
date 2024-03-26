@@ -2,37 +2,37 @@
 Tripletex to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:49
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Powerofficego. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Customer person to  Contactperson
--------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer person and a  Contactperson must be established.
+Tripletex Customer person to Powerofficego Contactperson
+--------------------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer person and a Powerofficego Contactperson must be established.
 
-A Tripletex Customer person will merge with a  Contactperson if one of the following property combinations match:
+A Tripletex Customer person will merge with a Powerofficego Contactperson if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     -  Contactperson Property
+     - Powerofficego Contactperson Property
    * - email
      - emailAddress
 
-Once a link between a Tripletex Customer person and a  Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a Powerofficego Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a  Contactperson:
+The following properties are synchronized between a Tripletex Customer person and a Powerofficego Contactperson:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     -  Contactperson Property
-     -  Data Type
+     - Powerofficego Contactperson Property
+     - Powerofficego Data Type
    * - deliveryAddress.addressLine1
      - address1
      - "string"
@@ -83,32 +83,32 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
 
 
-Tripletex Employee to  Contactperson
-------------------------------------
-Before any synchronization can take place, a link between a Tripletex Employee and a  Contactperson must be established.
+Tripletex Employee to Powerofficego Contactperson
+-------------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Employee and a Powerofficego Contactperson must be established.
 
-A Tripletex Employee will merge with a  Contactperson if one of the following property combinations match:
+A Tripletex Employee will merge with a Powerofficego Contactperson if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     -  Contactperson Property
+     - Powerofficego Contactperson Property
    * - email
      - emailAddress
    * - nationalIdentityNumber
      - SocialSecurityNumber
 
-Once a link between a Tripletex Employee and a  Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a Powerofficego Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a  Contactperson:
+The following properties are synchronized between a Tripletex Employee and a Powerofficego Contactperson:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     -  Contactperson Property
-     -  Data Type
+     - Powerofficego Contactperson Property
+     - Powerofficego Data Type
    * - address.addressLine1
      - address1
      - "string"
@@ -147,30 +147,30 @@ The following properties are synchronized between a Tripletex Employee and a  Co
      - "string"
 
 
-Tripletex Supplier to  Customers
---------------------------------
-Before any synchronization can take place, a link between a Tripletex Supplier and a  Customers must be established.
+Tripletex Supplier to Powerofficego Customers
+---------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Supplier and a Powerofficego Customers must be established.
 
-A Tripletex Supplier will merge with a  Customers if one of the following property combinations match:
+A Tripletex Supplier will merge with a Powerofficego Customers if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Supplier Property
-     -  Customers Property
+     - Powerofficego Customers Property
    * - email
      - EmailAddress
 
-Once a link between a Tripletex Supplier and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Supplier and a Powerofficego Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Supplier and a  Customers:
+The following properties are synchronized between a Tripletex Supplier and a Powerofficego Customers:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Supplier Property
-     -  Customers Property
-     -  Data Type
+     - Powerofficego Customers Property
+     - Powerofficego Data Type
    * - deliveryAddress.addressLine1
      - MailAddress.AddressLine1
      - "string"
@@ -248,22 +248,22 @@ The following properties are synchronized between a Tripletex Supplier and a  Cu
      - "string"
 
 
-Tripletex Contact to PowerOfficeGo Customers person
+Tripletex Contact to Powerofficego Customers person
 ---------------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Contact and a PowerOfficeGo Customers person must be established.
+Before any synchronization can take place, a link between a Tripletex Contact and a Powerofficego Customers person must be established.
 
-A new PowerOfficeGo Customers person will be created from a Tripletex Contact if it is connected to a Tripletex Order, Invoice, or Orderline that is synchronized into PowerOfficeGo.
+A new Powerofficego Customers person will be created from a Tripletex Contact if it is connected to a Tripletex Order, Invoice, or Orderline that is synchronized into Powerofficego.
 
-Once a link between a Tripletex Contact and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a PowerOfficeGo Customers person:
+The following properties are synchronized between a Tripletex Contact and a Powerofficego Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     - PowerOfficeGo Customers person Property
-     - PowerOfficeGo Data Type
+     - Powerofficego Customers person Property
+     - Powerofficego Data Type
    * - email
      - EmailAddress
      - "string"
@@ -278,58 +278,58 @@ The following properties are synchronized between a Tripletex Contact and a Powe
      - "string"
 
 
-Tripletex Contact to PowerOfficeGo Customers
+Tripletex Contact to Powerofficego Customers
 --------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Contact and a PowerOfficeGo Customers must be established.
+Before any synchronization can take place, a link between a Tripletex Contact and a Powerofficego Customers must be established.
 
-A new PowerOfficeGo Customers will be created from a Tripletex Contact if it is connected to a Tripletex Order, Invoice, or Orderline that is synchronized into PowerOfficeGo.
+A new Powerofficego Customers will be created from a Tripletex Contact if it is connected to a Tripletex Order, Invoice, or Orderline that is synchronized into Powerofficego.
 
-Once a link between a Tripletex Contact and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a Powerofficego Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a PowerOfficeGo Customers:
+The following properties are synchronized between a Tripletex Contact and a Powerofficego Customers:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     - PowerOfficeGo Customers Property
-     - PowerOfficeGo Data Type
+     - Powerofficego Customers Property
+     - Powerofficego Data Type
 
 
-Tripletex Customer to PowerOfficeGo Contactperson
+Tripletex Customer to Powerofficego Contactperson
 -------------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer and a PowerOfficeGo Contactperson must be established.
+Before any synchronization can take place, a link between a Tripletex Customer and a Powerofficego Contactperson must be established.
 
-A new PowerOfficeGo Contactperson will be created from a Tripletex Customer if it is connected to a Tripletex Order that is synchronized into PowerOfficeGo.
+A new Powerofficego Contactperson will be created from a Tripletex Customer if it is connected to a Tripletex Order that is synchronized into Powerofficego.
 
-Once a link between a Tripletex Customer and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Powerofficego Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a PowerOfficeGo Contactperson:
+The following properties are synchronized between a Tripletex Customer and a Powerofficego Contactperson:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     - PowerOfficeGo Contactperson Property
-     - PowerOfficeGo Data Type
+     - Powerofficego Contactperson Property
+     - Powerofficego Data Type
 
 
-Tripletex Customer to PowerOfficeGo Customers person
+Tripletex Customer to Powerofficego Customers person
 ----------------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer and a PowerOfficeGo Customers person must be established.
+Before any synchronization can take place, a link between a Tripletex Customer and a Powerofficego Customers person must be established.
 
-A new PowerOfficeGo Customers person will be created from a Tripletex Customer if it is connected to a Tripletex Order, Contact, Invoice, Project, Customer, Employee, Orderline, or Customer-person that is synchronized into PowerOfficeGo.
+A new Powerofficego Customers person will be created from a Tripletex Customer if it is connected to a Tripletex Order, Contact, Invoice, Project, Customer, Employee, Orderline, or Customer-person that is synchronized into Powerofficego.
 
-Once a link between a Tripletex Customer and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a PowerOfficeGo Customers person:
+The following properties are synchronized between a Tripletex Customer and a Powerofficego Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     - PowerOfficeGo Customers person Property
-     - PowerOfficeGo Data Type
+     - Powerofficego Customers person Property
+     - Powerofficego Data Type
    * - deliveryAddress.addressLine1
      - MailAddress.AddressLine1
      - "string"
@@ -380,33 +380,33 @@ The following properties are synchronized between a Tripletex Customer and a Pow
      - "string"
 
 
-Tripletex Contact to PowerOfficeGo Contactperson
+Tripletex Contact to Powerofficego Contactperson
 ------------------------------------------------
-Every Tripletex Contact will be synchronized with a PowerOfficeGo Contactperson.
+Every Tripletex Contact will be synchronized with a Powerofficego Contactperson.
 
-If a matching PowerOfficeGo Contactperson already exists, the Tripletex Contact will be merged with the existing one.
-If no matching PowerOfficeGo Contactperson is found, a new PowerOfficeGo Contactperson will be created.
+If a matching Powerofficego Contactperson already exists, the Tripletex Contact will be merged with the existing one.
+If no matching Powerofficego Contactperson is found, a new Powerofficego Contactperson will be created.
 
-A Tripletex Contact will merge with a PowerOfficeGo Contactperson if one of the following property combinations match:
+A Tripletex Contact will merge with a Powerofficego Contactperson if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     - PowerOfficeGo Contactperson Property
+     - Powerofficego Contactperson Property
    * - email
      - emailAddress
 
-Once a link between a Tripletex Contact and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a Powerofficego Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a PowerOfficeGo Contactperson:
+The following properties are synchronized between a Tripletex Contact and a Powerofficego Contactperson:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     - PowerOfficeGo Contactperson Property
-     - PowerOfficeGo Data Type
+     - Powerofficego Contactperson Property
+     - Powerofficego Data Type
    * - customer.id
      - partyCustomerCode
      - "string"
@@ -430,20 +430,20 @@ The following properties are synchronized between a Tripletex Contact and a Powe
      - "string"
 
 
-Tripletex Customer person to  Customers
----------------------------------------
-Every Tripletex Customer person will be synchronized with a  Customers.
+Tripletex Customer person to Powerofficego Customers
+----------------------------------------------------
+Every Tripletex Customer person will be synchronized with a Powerofficego Customers.
 
-Once a link between a Tripletex Customer person and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a Powerofficego Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a  Customers:
+The following properties are synchronized between a Tripletex Customer person and a Powerofficego Customers:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     -  Customers Property
-     -  Data Type
+     - Powerofficego Customers Property
+     - Powerofficego Data Type
    * - deliveryAddress.addressLine1
      - MailAddress.AddressLine1
      - "string"
@@ -512,20 +512,20 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
 
 
-Tripletex Customer person to  Customers person
-----------------------------------------------
-Every Tripletex Customer person will be synchronized with a  Customers person.
+Tripletex Customer person to Powerofficego Customers person
+-----------------------------------------------------------
+Every Tripletex Customer person will be synchronized with a Powerofficego Customers person.
 
-Once a link between a Tripletex Customer person and a  Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a  Customers person:
+The following properties are synchronized between a Tripletex Customer person and a Powerofficego Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     -  Customers person Property
-     -  Data Type
+     - Powerofficego Customers person Property
+     - Powerofficego Data Type
    * - deliveryAddress.addressLine1
      - MailAddress.AddressLine1
      - "string"
@@ -588,33 +588,33 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
 
 
-Tripletex Customer to PowerOfficeGo Customers
+Tripletex Customer to Powerofficego Customers
 ---------------------------------------------
-removed person customers for now until that pattern is resolved, it  will be synchronized with a PowerOfficeGo Customers.
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Powerofficego Customers.
 
-If a matching PowerOfficeGo Customers already exists, the Tripletex Customer will be merged with the existing one.
-If no matching PowerOfficeGo Customers is found, a new PowerOfficeGo Customers will be created.
+If a matching Powerofficego Customers already exists, the Tripletex Customer will be merged with the existing one.
+If no matching Powerofficego Customers is found, a new Powerofficego Customers will be created.
 
-A Tripletex Customer will merge with a PowerOfficeGo Customers if one of the following property combinations match:
+A Tripletex Customer will merge with a Powerofficego Customers if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     - PowerOfficeGo Customers Property
+     - Powerofficego Customers Property
    * - email
      - EmailAddress
 
-Once a link between a Tripletex Customer and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Powerofficego Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a PowerOfficeGo Customers:
+The following properties are synchronized between a Tripletex Customer and a Powerofficego Customers:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     - PowerOfficeGo Customers Property
-     - PowerOfficeGo Data Type
+     - Powerofficego Customers Property
+     - Powerofficego Data Type
    * - customerNumber
      - Number
      - "string"
@@ -722,20 +722,20 @@ The following properties are synchronized between a Tripletex Customer and a Pow
      - "string"
 
 
-Tripletex Department to  Departments
-------------------------------------
-Every Tripletex Department will be synchronized with a  Departments.
+Tripletex Department to Powerofficego Departments
+-------------------------------------------------
+Every Tripletex Department will be synchronized with a Powerofficego Departments.
 
-Once a link between a Tripletex Department and a  Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a Powerofficego Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a  Departments:
+The following properties are synchronized between a Tripletex Department and a Powerofficego Departments:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     -  Departments Property
-     -  Data Type
+     - Powerofficego Departments Property
+     - Powerofficego Data Type
    * - changes.timestamp
      - CreatedDateTimeOffset
      - "string"
@@ -744,33 +744,33 @@ The following properties are synchronized between a Tripletex Department and a  
      - "string"
 
 
-Tripletex Employee to  Employees
---------------------------------
-Every Tripletex Employee will be synchronized with a  Employees.
+Tripletex Employee to Powerofficego Employees
+---------------------------------------------
+Every Tripletex Employee will be synchronized with a Powerofficego Employees.
 
-If a matching  Employees already exists, the Tripletex Employee will be merged with the existing one.
-If no matching  Employees is found, a new  Employees will be created.
+If a matching Powerofficego Employees already exists, the Tripletex Employee will be merged with the existing one.
+If no matching Powerofficego Employees is found, a new Powerofficego Employees will be created.
 
-A Tripletex Employee will merge with a  Employees if one of the following property combinations match:
+A Tripletex Employee will merge with a Powerofficego Employees if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     -  Employees Property
+     - Powerofficego Employees Property
    * - employeeNumber
      - Number
 
-Once a link between a Tripletex Employee and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a Powerofficego Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a  Employees:
+The following properties are synchronized between a Tripletex Employee and a Powerofficego Employees:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     -  Employees Property
-     -  Data Type
+     - Powerofficego Employees Property
+     - Powerofficego Data Type
    * - changes.timestamp
      - EmployeeCreatedDateTimeOffset
      - "string"
@@ -821,20 +821,20 @@ The following properties are synchronized between a Tripletex Employee and a  Em
      - "string"
 
 
-Tripletex Order to PowerOfficeGo Salesorders
+Tripletex Order to Powerofficego Salesorders
 --------------------------------------------
-Every Tripletex Order will be synchronized with a PowerOfficeGo Salesorders.
+Every Tripletex Order will be synchronized with a Powerofficego Salesorders.
 
-Once a link between a Tripletex Order and a PowerOfficeGo Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Order and a Powerofficego Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Order and a PowerOfficeGo Salesorders:
+The following properties are synchronized between a Tripletex Order and a Powerofficego Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Order Property
-     - PowerOfficeGo Salesorders Property
-     - PowerOfficeGo Data Type
+     - Powerofficego Salesorders Property
+     - Powerofficego Data Type
    * - changes.timestamp
      - CreatedDateTimeOffset
      - "string"
@@ -864,20 +864,20 @@ The following properties are synchronized between a Tripletex Order and a PowerO
      - "string"
 
 
-Tripletex Orderline to  Salesorderlines
----------------------------------------
-Every Tripletex Orderline will be synchronized with a  Salesorderlines.
+Tripletex Orderline to Powerofficego Salesorderlines
+----------------------------------------------------
+Every Tripletex Orderline will be synchronized with a Powerofficego Salesorderlines.
 
-Once a link between a Tripletex Orderline and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Orderline and a Powerofficego Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Orderline and a  Salesorderlines:
+The following properties are synchronized between a Tripletex Orderline and a Powerofficego Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Orderline Property
-     -  Salesorderlines Property
-     -  Data Type
+     - Powerofficego Salesorderlines Property
+     - Powerofficego Data Type
    * - count
      - Quantity
      - "integer", "decimal"]
@@ -919,20 +919,20 @@ The following properties are synchronized between a Tripletex Orderline and a  S
      - "string"
 
 
-Tripletex Product to  Product
------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Product.
+Tripletex Product to Powerofficego Product
+------------------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Powerofficego Product.
 
-Once a link between a Tripletex Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Product and a Powerofficego Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Product and a  Product:
+The following properties are synchronized between a Tripletex Product and a Powerofficego Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     -  Product Property
-     -  Data Type
+     - Powerofficego Product Property
+     - Powerofficego Data Type
    * - costExcludingVatCurrency
      - CostPrice
      - "string"
@@ -986,20 +986,20 @@ The following properties are synchronized between a Tripletex Product and a  Pro
      - "string"
 
 
-Tripletex Project to  Projects
-------------------------------
-Every Tripletex Project will be synchronized with a  Projects.
+Tripletex Project to Powerofficego Projects
+-------------------------------------------
+Every Tripletex Project will be synchronized with a Powerofficego Projects.
 
-Once a link between a Tripletex Project and a  Projects is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Project and a Powerofficego Projects is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Project and a  Projects:
+The following properties are synchronized between a Tripletex Project and a Powerofficego Projects:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Project Property
-     -  Projects Property
-     -  Data Type
+     - Powerofficego Projects Property
+     - Powerofficego Data Type
    * - contact.id
      - ContactPersonId
      - "string"
