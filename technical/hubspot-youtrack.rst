@@ -2,7 +2,7 @@
 HubSpot to Youtrack Dataflow
 ============================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -35,13 +35,13 @@ The following properties are synchronized between a HubSpot Contact and a Youtra
      - Youtrack Data Type
    * - properties.email
      - profile.email
-"string"
+     - "string"
    * - properties.email
      - profile.email.email
-"string"
+     - "string"
    * - properties.work_email
      - profile.email.email
-"string"
+     - "string"
 
 
 HubSpot Company to Youtrack Groups
@@ -60,7 +60,7 @@ The following properties are synchronized between a HubSpot Company and a Youtra
      - Youtrack Data Type
    * - properties.name
      - name
-"string"
+     - "string"
 
 
 HubSpot Contactcompanyassociationtype to Youtrack Organizationroles
@@ -223,7 +223,7 @@ The following properties are synchronized between a HubSpot Ticket and a Youtrac
      - Youtrack Data Type
    * - properties.hubspot_owner_id
      - reporter.id
-"string"
+     - "string"
 
 
 HubSpot User to Youtrack Users
@@ -242,5 +242,5 @@ The following properties are synchronized between a HubSpot User and a Youtrack 
      - Youtrack Data Type
    * - email
      - profile.email.email
-"string"
+     - "string"
 
