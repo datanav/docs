@@ -2,7 +2,7 @@
 Wave Financial to Businesscentral Dataflow
 ==========================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -256,13 +256,13 @@ The following properties are synchronized between a Wave Invoice and a Businessc
      - "string"
    * - items.description
      - discountPercent
-     - ["decimal", "_."]
+     - N/A
    * - items.description
      - quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - items.description
      - taxPercent
-     - ["decimal", "_."]
+     - N/A
    * - items.description
      - unitPrice
      - "float"
@@ -274,13 +274,13 @@ The following properties are synchronized between a Wave Invoice and a Businessc
      - "string"
    * - items.price
      - discountPercent
-     - ["decimal", "_."]
+     - N/A
    * - items.price
      - quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - items.price
      - taxPercent
-     - ["decimal", "_."]
+     - N/A
    * - items.price
      - unitPrice
      - "float"
@@ -292,16 +292,16 @@ The following properties are synchronized between a Wave Invoice and a Businessc
      - "string"
    * - items.quantity
      - discountPercent
-     - ["decimal", "_."]
+     - N/A
    * - items.quantity
      - invoiceQuantity
      - "string"
    * - items.quantity
      - quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - items.quantity
      - taxPercent
-     - ["decimal", "_."]
+     - N/A
    * - items.quantity
      - unitPrice
      - "float"
@@ -357,7 +357,7 @@ The following properties are synchronized between a Wave Product and a Businessc
      - "string"
    * - unitPrice
      - unitPrice
-     - ["decimal", "_."]
+     - N/A
 
 
 Wave Vendor to Businesscentral Contacts person
