@@ -46,3 +46,11 @@ Other :ref:`Human Resource Management (HRM) <systemtypehrm>` Systems
         :text: Read more
         :classes: read-more
     ---
+    **Tidsbanken**
+
+    
+    .. link-button:: system/tidsbanken
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
