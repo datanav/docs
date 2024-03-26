@@ -2,7 +2,7 @@
 Freshteam to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -25,10 +25,10 @@ The following properties are synchronized between a Freshteam Department and a P
      - Powerofficego Data Type
    * - created_at
      - CreatedDateTimeOffset
-"string"
+     - "string"
    * - name
      - Name
-"string"
+     - "string"
 
 
 Freshteam Employee to Powerofficego Employees
@@ -60,98 +60,98 @@ The following properties are synchronized between a Freshteam Employee and a Pow
      - Powerofficego Data Type
    * - Billing_Country
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - Shipping_Country
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - address.city
      - MailAddress.City
-"string"
+     - "string"
    * - address.city
      - MailAddress.city
-"string"
+     - "string"
    * - address.country
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - address.country_code
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - address.country_code
      - MailAddress.countryCode
-"string"
+     - "string"
    * - address.zip_code
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - address.zip_code
      - MailAddress.zipCode
-"string"
+     - "string"
    * - communication_address.communication_city
      - MailAddress.City
-"string"
+     - "string"
    * - communication_address.communication_city
      - MailAddress.city
-"string"
+     - "string"
    * - communication_address.communication_country
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - communication_address.communication_country_code
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - communication_address.communication_country_code
      - MailAddress.countryCode
-"string"
+     - "string"
    * - communication_address.communication_zip_code
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - communication_address.communication_zip_code
      - MailAddress.zipCode
-"string"
+     - "string"
    * - created_at
      - EmployeeCreatedDateTimeOffset
-"string"
+     - "string"
    * - created_at
      - employeeCreatedDateTimeOffset
-"string"
+     - "string"
    * - date_of_birth
      - DateOfBirth
-["datetime-format","%Y-%m-%d","_."]
+     - ["datetime-format","%Y-%m-%d","_."]
    * - date_of_birth
      - dateOfBirth
-"string"
+     - "string"
    * - designation
      - DepartmentId (Dependant on having wd:Q703534 in JobTitle)
-"string"
+     - "string"
    * - designation
      - JobTitle
-"string"
+     - "string"
    * - employee_id
      - Number
-"string"
+     - "string"
    * - first_name
      - FirstName
-"string"
+     - "string"
    * - first_name
      - firstName
-"string"
+     - "string"
    * - id
      - Id
-"string"
+     - "string"
    * - last_name
      - LastName
-"string"
+     - "string"
    * - last_name
      - lastName
-"string"
+     - "string"
    * - official_email
      - EmailAddress
-"string"
+     - "string"
    * - official_email
      - emailAddress
-"string"
+     - "string"
    * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
      - PhoneNumber
-"string"
+     - "string"
    * - updated_at
      - LastChanged
-"string"
+     - "string"
 
