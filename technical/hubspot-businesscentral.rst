@@ -2,7 +2,7 @@
 HubSpot to Businesscentral Dataflow
 ===================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -200,10 +200,10 @@ The following properties are synchronized between a HubSpot Deal and a Businessc
      - "string"
    * - properties.closedate
      - orderDate
-     - ["datetime-parse", "%Y-%m-%dT%H:%M:%S.%fZ", "_."]
+     - N/A
    * - properties.closedate
      - requestedDeliveryDate
-     - ["datetime-parse", "%Y-%m-%dT%H:%M:%S.%fZ", "_."]
+     - N/A
    * - properties.deal_currency_code
      - billToCountry
      - "string"
@@ -240,7 +240,7 @@ The following properties are synchronized between a HubSpot Lineitem and a Busin
      - "string"
    * - properties.hs_discount_percentage
      - discountPercent
-     - ["decimal", "_."]
+     - N/A
    * - properties.hs_product_id
      - itemId
      - "string"
@@ -258,7 +258,7 @@ The following properties are synchronized between a HubSpot Lineitem and a Busin
      - "string"
    * - properties.quantity
      - quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
 
 
 HubSpot Product to Businesscentral Items
@@ -277,7 +277,7 @@ The following properties are synchronized between a HubSpot Product and a Busine
      - Businesscentral Data Type
    * - properties.hs_cost_of_goods_sold
      - unitCost
-     - ["decimal", "_."]
+     - N/A
    * - properties.name
      - displayName
      - "string"
@@ -289,5 +289,5 @@ The following properties are synchronized between a HubSpot Product and a Busine
      - "string"
    * - properties.price
      - unitPrice
-     - ["decimal", "_."]
+     - N/A
 
