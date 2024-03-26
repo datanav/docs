@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-01-24 00:00:02
+Generated: 2024-03-26 00:00:00
 
 Introduction.
 ------------
@@ -131,6 +131,27 @@ The following properties are synchronized between a Businesscentral Employees an
    * - Businesscentral Employees Property
      -  Contact Property
      -  Data Type
+   * - birthDate
+     - properties.date_of_birth
+     - "string"
+   * - email
+     - properties.email
+     - "string"
+   * - givenName
+     - properties.firstname
+     - "string"
+   * - mobilePhone
+     - properties.mobilephone
+     - "string"
+   * - personalEmail
+     - properties.email
+     - "string"
+   * - phoneNumber
+     - properties.phone
+     - "string"
+   * - surname
+     - properties.lastname
+     - "string"
 
 
 Businesscentral Items to  Product
@@ -198,7 +219,7 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - "string"
    * - quantity
      - properties.quantity
-     - "integer"
+     - "string", "integer", "decimal"]]
    * - unitPrice
      - properties.price
      - "string"
