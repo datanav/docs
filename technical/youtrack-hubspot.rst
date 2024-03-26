@@ -2,7 +2,7 @@
 YouTrack to Hubspot Dataflow
 ============================
 
-Generated: 2024-03-26 14:30:19
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -38,13 +38,13 @@ The following properties are synchronized between a YouTrack Users and a Hubspot
      - Hubspot Data Type
    * - profile.email
      - properties.email
-     - "string"
+"string"
    * - profile.email.email
      - properties.email
-     - "string"
+"string"
    * - profile.email.email
      - properties.work_email
-     - "string"
+"string"
 
 
 YouTrack Groups to Hubspot Company
@@ -63,7 +63,7 @@ The following properties are synchronized between a YouTrack Groups and a Hubspo
      - Hubspot Data Type
    * - name
      - properties.name
-     - "string"
+"string"
 
 
 YouTrack Organizations to Hubspot Company
@@ -82,10 +82,10 @@ The following properties are synchronized between a YouTrack Organizations and a
      - Hubspot Data Type
    * - description
      - properties.description
-     - "string"
+"string"
    * - name
      - properties.name
-     - "string"
+"string"
 
 
 YouTrack Usergroups to Hubspot Company
@@ -104,7 +104,7 @@ The following properties are synchronized between a YouTrack Usergroups and a Hu
      - Hubspot Data Type
    * - name
      - properties.name
-     - "string"
+"string"
 
 
 YouTrack Users to Hubspot User
@@ -123,5 +123,5 @@ The following properties are synchronized between a YouTrack Users and a Hubspot
      - Hubspot Data Type
    * - profile.email.email
      - email
-     - "string"
+"string"
 
