@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-30 00:01:11
+Generated: 2024-03-26 00:00:20
 
 Introduction.
 ------------
@@ -62,37 +62,11 @@ The following properties are synchronized between a HubSpot Contact and a Wix Co
    * - properties.mobilephone
      - primaryInfo.phone
      - "string"
+   * - properties.phone
+     - primaryInfo.phone
+     - "string"
    * - properties.zip
      - info.addresses.items.address.postalCode
-     - "string"
-
-
-HubSpot Contact to  Members
----------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a  Members must be established.
-
-A HubSpot Contact will merge with a  Members if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     -  Members Property
-   * - properties.email
-     - loginEmail
-
-Once a link between a HubSpot Contact and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contact and a  Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     -  Members Property
-     -  Data Type
-   * - properties.email
-     - loginEmail
      - "string"
 
 
@@ -141,22 +115,6 @@ The following properties are synchronized between a HubSpot Company and a Wix Co
      - "string"
 
 
-HubSpot Product to  Inventory
------------------------------
-Every HubSpot Product will be synchronized with a  Inventory.
-
-Once a link between a HubSpot Product and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Product and a  Inventory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Product Property
-     -  Inventory Property
-     -  Data Type
-
-
 HubSpot Product to Wix Products
 -------------------------------
 Every HubSpot Product will be synchronized with a Wix Products.
@@ -174,6 +132,9 @@ The following properties are synchronized between a HubSpot Product and a Wix Pr
    * - properties.description
      - description
      - "string"
+   * - properties.hs_cost_of_goods_sold
+     - costAndProfitData.itemCost
+     - "decimal"
    * - properties.hs_cost_of_goods_sold
      - costRange.maxValue
      - "string"
