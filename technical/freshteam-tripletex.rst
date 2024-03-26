@@ -2,7 +2,7 @@
 Freshteam to Tripletex Dataflow
 ===============================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -25,7 +25,7 @@ The following properties are synchronized between a Freshteam Department and a T
      - Tripletex Data Type
    * - name
      - name
-"string"
+     - "string"
 
 
 Freshteam Employee to Tripletex Employee
@@ -57,29 +57,29 @@ The following properties are synchronized between a Freshteam Employee and a Tri
      - Tripletex Data Type
    * - date_of_birth
      - dateOfBirth
-["datetime-format","%Y-%m-%d","_."]
+     - ["datetime-format","%Y-%m-%d","_."]
    * - designation
      - department.id (Dependant on having wd:Q703534 in  )
-["if", ["neq", "_.", "X"], "integer", "string"]
+     - ["if", ["neq", "_.", "X"], "integer", "string"]
    * - first_name
      - firstName
-"string"
+     - "string"
    * - last_name
      - lastName
-"string"
+     - "string"
    * - official_email
      - email
-"string"
+     - "string"
    * - personal_email
      - email
-"string"
+     - "string"
    * - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.name)
      - phoneNumberHome
-"string"
+     - "string"
    * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
      - phoneNumberMobile
-["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
    * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.name)
      - phoneNumberWork
-"string"
+     - "string"
 
