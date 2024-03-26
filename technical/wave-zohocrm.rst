@@ -2,7 +2,7 @@
 Wave Financial to ZohoCRM Dataflow
 ==================================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -25,76 +25,76 @@ The following properties are synchronized between a Wave Customer and a ZohoCRM 
      - ZohoCRM Data Type
    * - address.city
      - Billing_City
-"string"
+     - "string"
    * - address.city
      - Shipping_City
-"string"
+     - "string"
    * - address.country.code
      - Billing_Country
-"string"
+     - "string"
    * - address.country.code
      - Shipping_Country
-"string"
+     - "string"
    * - address.countryCode
      - Billing_Country
-"string"
+     - "string"
    * - address.countryCode
      - Shipping_Country
-"string"
+     - "string"
    * - address.postalCode
      - Billing_Code
-"string"
+     - "string"
    * - address.postalCode
      - Shipping_Code
-"string"
+     - "string"
    * - address.province.code
      - Billing_State
-"string"
+     - "string"
    * - address.province.code
      - Shipping_State
-"string"
+     - "string"
    * - fax
      - Fax
-"string"
+     - "string"
    * - internalNotes
      - Created_Time
-"string"
+     - "string"
    * - name
      - Account_Name
-"string"
+     - "string"
    * - phone
      - Phone
-"string"
+     - "string"
    * - shippingDetails.address.city
      - Billing_City
-"string"
+     - "string"
    * - shippingDetails.address.city
      - Shipping_City
-"string"
+     - "string"
    * - shippingDetails.address.country.code
      - Billing_Country
-"string"
+     - "string"
    * - shippingDetails.address.country.code
      - Shipping_Country
-"string"
+     - "string"
    * - shippingDetails.address.postalCode
      - Billing_Code
-"string"
+     - "string"
    * - shippingDetails.address.postalCode
      - Shipping_Code
-"string"
+     - "string"
    * - shippingDetails.address.province.code
      - Billing_State
-"string"
+     - "string"
    * - shippingDetails.address.province.code
      - Shipping_State
-"string"
+     - "string"
    * - shippingDetails.phone
      - Phone
-"string"
+     - "string"
    * - website
      - Website
-"string"
+     - "string"
 
 
 Wave Customer person to ZohoCRM Contact
@@ -113,146 +113,146 @@ The following properties are synchronized between a Wave Customer person and a Z
      - ZohoCRM Data Type
    * - address.city
      - Mailing_City
-"string"
+     - "string"
    * - address.city
      - Other_City
-"string"
+     - "string"
    * - address.city
      - Other_Country
-"string"
+     - "string"
    * - address.country.code
      - Mailing_Country
-"string"
+     - "string"
    * - address.country.code
      - Mailing_State
-"string"
+     - "string"
    * - address.country.code
      - Other_Country
-"string"
+     - "string"
    * - address.country.code
      - Other_State
-"string"
+     - "string"
    * - address.countryCode
      - Mailing_Country
-"string"
+     - "string"
    * - address.countryCode
      - Mailing_State
-"string"
+     - "string"
    * - address.countryCode
      - Other_Country
-"string"
+     - "string"
    * - address.countryCode
      - Other_State
-"string"
+     - "string"
    * - address.postalCode
      - Mailing_Country
-"string"
+     - "string"
    * - address.postalCode
      - Mailing_Zip
-"string"
+     - "string"
    * - address.postalCode
      - Other_Zip
-"string"
+     - "string"
    * - address.province
      - Mailing_State
-"string"
+     - "string"
    * - address.province
      - Other_State
-"string"
+     - "string"
    * - address.province.code
      - Mailing_State
-"string"
+     - "string"
    * - address.province.code
      - Other_State
-"string"
+     - "string"
    * - email
      - Email
-"string"
+     - "string"
    * - email
      - Secondary_Email
-"string"
+     - "string"
    * - firstName
      - First_Name
-"string"
+     - "string"
    * - firstName
      - Full_Name
-"string"
+     - "string"
    * - firstName
      - Last_Name
-"string"
+     - "string"
    * - lastName
      - First_Name
-"string"
+     - "string"
    * - lastName
      - Full_Name
-"string"
+     - "string"
    * - lastName
      - Last_Name
-"string"
+     - "string"
    * - mobile
      - Mobile
-"string"
+     - "string"
    * - name
      - First_Name
-"string"
+     - "string"
    * - name
      - Full_Name
-"string"
+     - "string"
    * - name
      - Last_Name
-"string"
+     - "string"
    * - phone
      - Other_Phone
-"string"
+     - "string"
    * - phone
      - Phone
-"string"
+     - "string"
    * - shippingDetails.address.city
      - Mailing_City
-"string"
+     - "string"
    * - shippingDetails.address.city
      - Other_City
-"string"
+     - "string"
    * - shippingDetails.address.city
      - Other_Country
-"string"
+     - "string"
    * - shippingDetails.address.country.code
      - Mailing_Country
-"string"
+     - "string"
    * - shippingDetails.address.country.code
      - Mailing_State
-"string"
+     - "string"
    * - shippingDetails.address.country.code
      - Other_Country
-"string"
+     - "string"
    * - shippingDetails.address.country.code
      - Other_State
-"string"
+     - "string"
    * - shippingDetails.address.postalCode
      - Mailing_Country
-"string"
+     - "string"
    * - shippingDetails.address.postalCode
      - Mailing_Zip
-"string"
+     - "string"
    * - shippingDetails.address.postalCode
      - Other_Zip
-"string"
+     - "string"
    * - shippingDetails.address.province
      - Mailing_State
-"string"
+     - "string"
    * - shippingDetails.address.province
      - Other_State
-"string"
+     - "string"
    * - shippingDetails.address.province.code
      - Mailing_State
-"string"
+     - "string"
    * - shippingDetails.address.province.code
      - Other_State
-"string"
+     - "string"
    * - shippingDetails.phone
      - Other_Phone
-"string"
+     - "string"
    * - shippingDetails.phone
      - Phone
-"string"
+     - "string"
 
