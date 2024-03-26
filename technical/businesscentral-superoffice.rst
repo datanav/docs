@@ -2,7 +2,7 @@
 Businesscentral to Superoffice Dataflow
 =======================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -193,7 +193,7 @@ The following properties are synchronized between a Businesscentral Employees an
      - Superoffice Data Type
    * - birthDate
      - BirthDate
-     - ["datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
+     - N/A
    * - email
      - Emails.Value
      - "string"
@@ -245,13 +245,13 @@ The following properties are synchronized between a Businesscentral Items and a 
      - "string"
    * - taxGroupCode
      - VAT
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - unitCost
      - UnitCost
      - "string"
    * - unitPrice
      - UnitListPrice
-     - ["decimal", "_."]
+     - N/A
 
 
 Businesscentral Salesorderlines to Superoffice Quoteline
@@ -279,7 +279,7 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - "integer"
    * - discountPercent
      - ERPDiscountPercent
-     - ["decimal", "_."]
+     - N/A
    * - documentId
      - QuoteAlternativeId
      - "integer"
@@ -288,11 +288,11 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - "string"
    * - quantity
      - Quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - taxPercent
      - VAT
      - "integer"
    * - unitPrice
      - UnitListPrice
-     - ["if-null", ["integer", ["string", "_."]], ["decimal", "_."]]
+     - N/A
 
