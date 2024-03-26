@@ -2,37 +2,37 @@
 Tripletex to Youtrack Dataflow
 ==============================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:16
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Youtrack. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Contact to  Users
----------------------------
-Before any synchronization can take place, a link between a Tripletex Contact and a  Users must be established.
+Tripletex Contact to Youtrack Users
+-----------------------------------
+Before any synchronization can take place, a link between a Tripletex Contact and a Youtrack Users must be established.
 
-A Tripletex Contact will merge with a  Users if one of the following property combinations match:
+A Tripletex Contact will merge with a Youtrack Users if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     -  Users Property
+     - Youtrack Users Property
    * - email
      - profile.email.email
 
-Once a link between a Tripletex Contact and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a Youtrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a  Users:
+The following properties are synchronized between a Tripletex Contact and a Youtrack Users:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     -  Users Property
-     -  Data Type
+     - Youtrack Users Property
+     - Youtrack Data Type
    * - email
      - profile.email
      - "string"
@@ -41,56 +41,56 @@ The following properties are synchronized between a Tripletex Contact and a  Use
      - "string"
 
 
-Tripletex Customer person to  Users
------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer person and a  Users must be established.
+Tripletex Customer person to Youtrack Users
+-------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer person and a Youtrack Users must be established.
 
-A Tripletex Customer person will merge with a  Users if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer person Property
-     -  Users Property
-   * - email
-     - profile.email.email
-
-Once a link between a Tripletex Customer person and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer person and a  Users:
+A Tripletex Customer person will merge with a Youtrack Users if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     -  Users Property
-     -  Data Type
-
-
-Tripletex Employee to  Users
-----------------------------
-Before any synchronization can take place, a link between a Tripletex Employee and a  Users must be established.
-
-A Tripletex Employee will merge with a  Users if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     -  Users Property
+     - Youtrack Users Property
    * - email
      - profile.email.email
 
-Once a link between a Tripletex Employee and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a Youtrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a  Users:
+The following properties are synchronized between a Tripletex Customer person and a Youtrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     - Youtrack Users Property
+     - Youtrack Data Type
+
+
+Tripletex Employee to Youtrack Users
+------------------------------------
+Before any synchronization can take place, a link between a Tripletex Employee and a Youtrack Users must be established.
+
+A Tripletex Employee will merge with a Youtrack Users if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     -  Users Property
-     -  Data Type
+     - Youtrack Users Property
+   * - email
+     - profile.email.email
+
+Once a link between a Tripletex Employee and a Youtrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a Youtrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - Youtrack Users Property
+     - Youtrack Data Type
    * - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
      - groups.id
      - "string"
