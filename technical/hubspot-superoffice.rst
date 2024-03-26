@@ -2,7 +2,7 @@
 HubSpot to Superoffice Dataflow
 ===============================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -38,37 +38,37 @@ The following properties are synchronized between a HubSpot Contact and a Supero
      - Superoffice Data Type
    * - id
      - PersonId
-"integer"
+     - "integer"
    * - properties.address
      - Address.Street.Address1
-"string"
+     - "string"
    * - properties.city
      - Address.Street.City
-"string"
+     - "string"
    * - properties.country
      - Country.CountryId
-"integer"
+     - "integer"
    * - properties.date_of_birth
      - BirthDate
-["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+     - ["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
    * - properties.email
      - Emails.Value
-"string"
+     - "string"
    * - properties.firstname
      - Firstname
-"string"
+     - "string"
    * - properties.lastname
      - Lastname
-"string"
+     - "string"
    * - properties.mobilephone
      - MobilePhones.Value
-"string"
+     - "string"
    * - properties.phone
      - OfficePhones.Value
-"string"
+     - "string"
    * - properties.zip
      - Address.Street.Zipcode
-"string"
+     - "string"
 
 
 HubSpot Company to Superoffice Contact
@@ -87,52 +87,52 @@ The following properties are synchronized between a HubSpot Company and a Supero
      - Superoffice Data Type
    * - id
      - ContactId
-"integer"
+     - "integer"
    * - properties.address
      - Address.Postal.Address1
-"string"
+     - "string"
    * - properties.address
      - Address.Street.Address1
-"string"
+     - "string"
    * - properties.address2
      - Address.Postal.Address2
-"string"
+     - "string"
    * - properties.address2
      - Address.Street.Address2
-"string"
+     - "string"
    * - properties.city
      - Address.Postal.City
-"string"
+     - "string"
    * - properties.city
      - Address.Street.City
-"string"
+     - "string"
    * - properties.country
      - Country.CountryId
-"integer"
+     - "integer"
    * - properties.name
      - Name
-"string"
+     - "string"
    * - properties.phone
      - Phones.Value
-"string"
+     - "string"
    * - properties.sesam_org_number_no
      - OrgNr (Dependant on having NO in Country.TwoLetterISOCountry)
-"string"
+     - "string"
    * - properties.sesam_org_number_se
      - OrgNr (Dependant on having SE in Country.TwoLetterISOCountry)
-"string"
+     - "string"
    * - properties.website
      - Domains
-["list", "_."]
+     - ["list", "_."]
    * - properties.website
      - Urls.Value
-"string"
+     - "string"
    * - properties.zip
      - Address.Postal.Zipcode
-"string"
+     - "string"
    * - properties.zip
      - Address.Street.Zipcode
-"string"
+     - "string"
 
 
 HubSpot Company to Superoffice Person
@@ -189,10 +189,10 @@ The following properties are synchronized between a HubSpot Pipelinedeal and a S
      - SuperOffice Data Type
    * - label
      - VATInfo
-"string"
+     - "string"
    * - stages.label
      - VATInfo
-"string"
+     - "string"
 
 
 HubSpot Contactcompanyassociation to Superoffice Person
@@ -211,10 +211,10 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
      - Superoffice Data Type
    * - sesam_simpleAssociationTypes
      - Contact.ContactId
-"integer"
+     - "integer"
    * - toObjectId (Dependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypes)
      - Contact.ContactId
-"integer"
+     - "integer"
 
 
 HubSpot User to Superoffice Person
@@ -249,22 +249,22 @@ The following properties are synchronized between a HubSpot Deal and a Superoffi
      - Superoffice Data Type
    * - properties.amount
      - Amount
-"float"
+     - "float"
    * - properties.closedate
      - Saledate
-["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+     - ["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
    * - properties.deal_currency_code
      - Currency.Id
-"integer"
+     - "integer"
    * - properties.dealname
      - Heading
-"string"
+     - "string"
    * - properties.dealname
      - SaleText
-"string"
+     - "string"
    * - properties.description
      - SaleText
-"string"
+     - "string"
 
 
 HubSpot Lineitem to Superoffice Quoteline
@@ -283,25 +283,25 @@ The following properties are synchronized between a HubSpot Lineitem and a Super
      - Superoffice Data Type
    * - properties.description
      - Description
-"string"
+     - "string"
    * - properties.hs_discount_percentage
      - DiscountPercent
-"integer"
+     - "integer"
    * - properties.hs_discount_percentage
      - ERPDiscountPercent
-["decimal", "_."]
+     - ["decimal", "_."]
    * - properties.hs_product_id
      - ERPProductKey
-"string"
+     - "string"
    * - properties.name
      - Name
-"string"
+     - "string"
    * - properties.price
      - UnitListPrice
-["if-null", ["integer", "string"], ["decimal", "_."]]
+     - ["if-null", ["integer", "string"], ["decimal", "_."]]
    * - properties.quantity
      - Quantity
-["integer", ["decimal", "_."]]
+     - ["integer", ["decimal", "_."]]
 
 
 HubSpot Product to Superoffice Product
@@ -320,16 +320,16 @@ The following properties are synchronized between a HubSpot Product and a Supero
      - Superoffice Data Type
    * - properties.description
      - Description
-"string"
+     - "string"
    * - properties.hs_cost_of_goods_sold
      - UnitCost
-"string"
+     - "string"
    * - properties.name
      - Name
-"string"
+     - "string"
    * - properties.price
      - UnitListPrice
-["decimal", "_."]
+     - ["decimal", "_."]
 
 
 HubSpot Quote to Superoffice Quotealternative
@@ -348,8 +348,8 @@ The following properties are synchronized between a HubSpot Quote and a Superoff
      - Superoffice Data Type
    * - properties.hs_quote_amount
      - TotalPrice
-"float"
+     - "float"
    * - properties.hs_title
      - Name
-"string"
+     - "string"
 
