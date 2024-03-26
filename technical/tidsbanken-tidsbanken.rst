@@ -2,7 +2,7 @@
 Tidsbanken to Tidsbanken Dataflow
 =================================
 
-Generated: 2024-03-26 14:23:23
+Generated: 2024-03-26 14:24:14
 
 Introduction
 ------------
@@ -67,4 +67,31 @@ The following properties are synchronized between a Tidsbanken Kunde and a Tidsb
    * - Tidsbanken Kunde Property
      - Tidsbanken Kunde Property
      - Tidsbanken Data Type
+   * - Gateadresse
+     - Leveringsadresse
+     - "string"
+   * - Id
+     - Id
+     - "string"
+   * - LevPostNr
+     - Postnr
+     - "string"
+   * - LevPoststed
+     - Poststed
+     - "string"
+   * - Leveringsadresse
+     - Gateadresse
+     - "string"
+   * - Leveringsadresse2
+     - Postadresse
+     - "string"
+   * - Postadresse
+     - Leveringsadresse2
+     - "string"
+   * - Postnr
+     - LevPostNr
+     - "string"
+   * - Poststed
+     - LevPoststed
+     - "string"
 
