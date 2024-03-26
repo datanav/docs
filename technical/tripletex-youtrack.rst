@@ -2,7 +2,7 @@
 Tripletex to Youtrack Dataflow
 ==============================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 14:30:19
 
 Introduction
 ------------
@@ -135,56 +135,56 @@ The following properties are synchronized between a Tripletex Employee and a You
      - "string"
 
 
-Tripletex Customer to  Groups
------------------------------
-Every Tripletex Customer will be synchronized with a  Groups.
+Tripletex Customer to Youtrack Groups
+-------------------------------------
+Every Tripletex Customer will be synchronized with a Youtrack Groups.
 
-Once a link between a Tripletex Customer and a  Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a  Groups:
+The following properties are synchronized between a Tripletex Customer and a Youtrack Groups:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     -  Groups Property
-     -  Data Type
+     - Youtrack Groups Property
+     - Youtrack Data Type
    * - name
      - name
      - "string"
 
 
-Tripletex Department to  Groups
--------------------------------
-Every Tripletex Department will be synchronized with a  Groups.
+Tripletex Department to Youtrack Groups
+---------------------------------------
+Every Tripletex Department will be synchronized with a Youtrack Groups.
 
-Once a link between a Tripletex Department and a  Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a  Groups:
+The following properties are synchronized between a Tripletex Department and a Youtrack Groups:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     -  Groups Property
-     -  Data Type
+     - Youtrack Groups Property
+     - Youtrack Data Type
    * - name
      - name
      - "string"
 
 
-Tripletex Project to  Hubprojects
----------------------------------
-Every Tripletex Project will be synchronized with a  Hubprojects.
+Tripletex Project to Youtrack Hubprojects
+-----------------------------------------
+Every Tripletex Project will be synchronized with a Youtrack Hubprojects.
 
-Once a link between a Tripletex Project and a  Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Project and a Youtrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Project and a  Hubprojects:
+The following properties are synchronized between a Tripletex Project and a Youtrack Hubprojects:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Project Property
-     -  Hubprojects Property
-     -  Data Type
+     - Youtrack Hubprojects Property
+     - Youtrack Data Type
 
