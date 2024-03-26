@@ -1,13 +1,13 @@
 ===============================
-Zohocrm to Superoffice Dataflow
+ZohoCRM to Superoffice Dataflow
 ===============================
 
-Generated: 2024-03-26 14:19:29
+Generated: 2024-03-26 14:19:54
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Zohocrm to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from ZohoCRM to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Zohocrm Account to Superoffice Contact
 --------------------------------------
@@ -25,6 +25,48 @@ The following properties are synchronized between a Zohocrm Account and a Supero
    * - Zohocrm Account Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - Account_Name
+     - Name
+     - "string"
+   * - Billing_City
+     - Address.Postal.City
+     - "string"
+   * - Billing_City
+     - Address.Street.City
+     - "string"
+   * - Billing_Code
+     - Address.Postal.Zipcode
+     - "string"
+   * - Billing_Code
+     - Address.Street.Zipcode
+     - "string"
+   * - Billing_Country
+     - Country.CountryId
+     - "integer"
+   * - Phone
+     - Phones.Value
+     - "string"
+   * - Shipping_City
+     - Address.Postal.City
+     - "string"
+   * - Shipping_City
+     - Address.Street.City
+     - "string"
+   * - Shipping_Code
+     - Address.Postal.Zipcode
+     - "string"
+   * - Shipping_Code
+     - Address.Street.Zipcode
+     - "string"
+   * - Shipping_Country
+     - Country.CountryId
+     - "integer"
+   * - Website
+     - Urls.Value
+     - "string"
+   * - id
+     - ContactId
+     - "integer"
 
 
 Zohocrm Account to Superoffice Person
@@ -79,6 +121,51 @@ The following properties are synchronized between a Zohocrm Contact and a Supero
    * - Zohocrm Contact Property
      - Superoffice Person Property
      - Superoffice Data Type
+   * - Email
+     - Emails.Value
+     - "string"
+   * - First_Name
+     - Firstname
+     - "string"
+   * - Home_Phone
+     - PrivatePhones.Value
+     - "string"
+   * - Last_Name
+     - Lastname
+     - "string"
+   * - Mailing_City
+     - Address.Street.City
+     - "string"
+   * - Mailing_Country
+     - Country.CountryId
+     - "integer"
+   * - Mailing_Zip
+     - Address.Street.Zipcode
+     - "string"
+   * - Mobile
+     - MobilePhones.Value
+     - "string"
+   * - Other_City
+     - Address.Street.City
+     - "string"
+   * - Other_Country
+     - Country.CountryId
+     - "integer"
+   * - Other_Phone
+     - OfficePhones.Value
+     - "string"
+   * - Other_Zip
+     - Address.Street.Zipcode
+     - "string"
+   * - Phone
+     - OfficePhones.Value
+     - "string"
+   * - Secondary_Email
+     - Emails.Value
+     - "string"
+   * - id
+     - PersonId
+     - "integer"
 
 
 Zohocrm Deal to Superoffice Sale
