@@ -102,7 +102,7 @@ Other :ref:`Customer Relationship Management (CRM) <systemtypecrm>` Systems
         :text: Read more
         :classes: read-more
     ---
-    **Zohocrm**
+    **ZohoCRM**
 
     
     .. link-button:: system/zohocrm
