@@ -2,7 +2,7 @@
 Wave Financial to Tidsbanken Dataflow
 =====================================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -35,25 +35,25 @@ The following properties are synchronized between a Wave Customer person and a T
      - Tidsbanken Data Type
    * - address.addressLine1
      - Adresse
-"string"
+     - "string"
    * - address.city
      - Poststed
-"string"
+     - "string"
    * - address.postalCode
      - Postnummer
-"string"
+     - "string"
    * - id
      - Id
-"integer"
+     - "integer"
    * - shippingDetails.address.addressLine1
      - Adresse
-"string"
+     - "string"
    * - shippingDetails.address.city
      - Poststed
-"string"
+     - "string"
    * - shippingDetails.address.postalCode
      - Postnummer
-"string"
+     - "string"
 
 
 Wave Customer to Tidsbanken Ansatt
@@ -82,25 +82,25 @@ The following properties are synchronized between a Wave Customer and a Tidsbank
      - Tidsbanken Data Type
    * - address.addressLine1
      - Adresse
-"string"
+     - "string"
    * - address.city
      - Poststed
-"string"
+     - "string"
    * - address.postalCode
      - Postnummer
-"string"
+     - "string"
    * - id
      - Id
-"integer"
+     - "integer"
    * - shippingDetails.address.addressLine1
      - Adresse
-"string"
+     - "string"
    * - shippingDetails.address.city
      - Poststed
-"string"
+     - "string"
    * - shippingDetails.address.postalCode
      - Postnummer
-"string"
+     - "string"
 
 
 Wave Vendor to Tidsbanken Ansatt
@@ -129,16 +129,16 @@ The following properties are synchronized between a Wave Vendor and a Tidsbanken
      - Tidsbanken Data Type
    * - address.addressLine1
      - Adresse
-"string"
+     - "string"
    * - address.city
      - Poststed
-"string"
+     - "string"
    * - address.postalCode
      - Postnummer
-"string"
+     - "string"
    * - id
      - Id
-"integer"
+     - "integer"
 
 
 Wave Customer to Tidsbanken Kunde
@@ -157,77 +157,77 @@ The following properties are synchronized between a Wave Customer and a Tidsbank
      - Tidsbanken Data Type
    * - address.addressLine1
      - Gateadresse
-"string"
+     - "string"
    * - address.addressLine1
      - Leveringsadresse
-"string"
+     - "string"
    * - address.addressLine1
      - Postadresse
-"string"
+     - "string"
    * - address.addressLine2
      - Gateadresse
-"string"
+     - "string"
    * - address.addressLine2
      - Leveringsadresse2
-"string"
+     - "string"
    * - address.addressLine2
      - Postadresse
-"string"
+     - "string"
    * - address.city
      - LevPoststed
-"string"
+     - "string"
    * - address.city
      - Poststed
-"string"
+     - "string"
    * - address.postalCode
      - LevPostNr
-"string"
+     - "string"
    * - address.postalCode
      - Postnr
-"string"
+     - "string"
    * - id
      - Id
-"string"
+     - "string"
    * - name
      - Navn
-"string"
+     - "string"
    * - phone
      - Telefon
-"string"
+     - "string"
    * - shippingDetails.address.addressLine1
      - Gateadresse
-"string"
+     - "string"
    * - shippingDetails.address.addressLine1
      - Leveringsadresse
-"string"
+     - "string"
    * - shippingDetails.address.addressLine1
      - Postadresse
-"string"
+     - "string"
    * - shippingDetails.address.addressLine2
      - Gateadresse
-"string"
+     - "string"
    * - shippingDetails.address.addressLine2
      - Leveringsadresse2
-"string"
+     - "string"
    * - shippingDetails.address.addressLine2
      - Postadresse
-"string"
+     - "string"
    * - shippingDetails.address.city
      - LevPoststed
-"string"
+     - "string"
    * - shippingDetails.address.city
      - Poststed
-"string"
+     - "string"
    * - shippingDetails.address.postalCode
      - LevPostNr
-"string"
+     - "string"
    * - shippingDetails.address.postalCode
      - Postnr
-"string"
+     - "string"
    * - shippingDetails.phone
      - Telefon
-"string"
+     - "string"
    * - website
      - Url
-"string"
+     - "string"
 
