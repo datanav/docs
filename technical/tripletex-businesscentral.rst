@@ -2,7 +2,7 @@
 Tripletex to Businesscentral Dataflow
 =====================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -470,10 +470,10 @@ The following properties are synchronized between a Tripletex Order and a Busine
      - "string"
    * - deliveryDate
      - requestedDeliveryDate
-     - ["datetime-parse", "%Y-%m-%dT%H:%M:%S.%fZ", "_."]
+     - N/A
    * - orderDate
      - orderDate
-     - ["datetime-parse", "%Y-%m-%dT%H:%M:%S.%fZ", "_."]
+     - N/A
    * - ourContactEmployee.id
      - salesperson
      - "string"
@@ -498,16 +498,16 @@ The following properties are synchronized between a Tripletex Orderline and a Bu
      - "string"
    * - count
      - discountPercent
-     - ["decimal", "_."]
+     - N/A
    * - count
      - invoiceQuantity
      - "string"
    * - count
      - quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - count
      - taxPercent
-     - ["decimal", "_."]
+     - N/A
    * - count
      - unitPrice
      - "float"
@@ -516,13 +516,13 @@ The following properties are synchronized between a Tripletex Orderline and a Bu
      - "string"
    * - description
      - discountPercent
-     - ["decimal", "_."]
+     - N/A
    * - description
      - quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - description
      - taxPercent
-     - ["decimal", "_."]
+     - N/A
    * - description
      - unitPrice
      - "float"
@@ -531,13 +531,13 @@ The following properties are synchronized between a Tripletex Orderline and a Bu
      - "string"
    * - discount
      - discountPercent
-     - ["decimal", "_."]
+     - N/A
    * - discount
      - quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - discount
      - taxPercent
-     - ["decimal", "_."]
+     - N/A
    * - discount
      - unitPrice
      - "float"
@@ -552,13 +552,13 @@ The following properties are synchronized between a Tripletex Orderline and a Bu
      - "string"
    * - unitCostCurrency
      - discountPercent
-     - ["decimal", "_."]
+     - N/A
    * - unitCostCurrency
      - quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - unitCostCurrency
      - taxPercent
-     - ["decimal", "_."]
+     - N/A
    * - unitCostCurrency
      - unitPrice
      - "float"
@@ -570,13 +570,13 @@ The following properties are synchronized between a Tripletex Orderline and a Bu
      - "string"
    * - unitPriceExcludingVatCurrency
      - discountPercent
-     - ["decimal", "_."]
+     - N/A
    * - unitPriceExcludingVatCurrency
      - quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - unitPriceExcludingVatCurrency
      - taxPercent
-     - ["decimal", "_."]
+     - N/A
    * - unitPriceExcludingVatCurrency
      - unitPrice
      - "float"
@@ -585,13 +585,13 @@ The following properties are synchronized between a Tripletex Orderline and a Bu
      - "string"
    * - vatType.id
      - discountPercent
-     - ["decimal", "_."]
+     - N/A
    * - vatType.id
      - quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - vatType.id
      - taxPercent
-     - ["decimal", "_."]
+     - N/A
    * - vatType.id
      - unitPrice
      - "float"
@@ -626,7 +626,7 @@ The following properties are synchronized between a Tripletex Product and a Busi
      - Businesscentral Data Type
    * - costExcludingVatCurrency
      - unitCost
-     - ["decimal", "_."]
+     - N/A
    * - ean
      - gtin
      - "string"
@@ -641,7 +641,7 @@ The following properties are synchronized between a Tripletex Product and a Busi
      - "string"
    * - priceExcludingVatCurrency
      - unitPrice
-     - ["decimal", "_."]
+     - N/A
    * - vatType.id
      - taxGroupCode
      - "string"
