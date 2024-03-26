@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-03-26 14:23:23
+Generated: 2024-03-26 14:23:48
 
 Introduction
 ------------
@@ -35,9 +35,28 @@ The following properties are synchronized between a Tidsbanken Kunde and a  Comp
      -  Data Type
 
 
+Tidsbanken Avdeling to  Departments
+-----------------------------------
+Every Tidsbanken Avdeling will be synchronized with a  Departments.
+
+Once a link between a Tidsbanken Avdeling and a  Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Avdeling and a  Departments:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     -  Departments Property
+     -  Data Type
+
+
 Tidsbanken Kunde to  Customers
 ------------------------------
-Before any synchronization can take place, a link between a Tidsbanken Kunde and a  Customers must be established.
+Every Tidsbanken Kunde will be synchronized with a  Customers.
+
+If a matching  Customers already exists, the Tidsbanken Kunde will be merged with the existing one.
+If no matching  Customers is found, a new  Customers will be created.
 
 A Tidsbanken Kunde will merge with a  Customers if one of the following property combinations match:
 
