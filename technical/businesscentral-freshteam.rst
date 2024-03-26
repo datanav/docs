@@ -2,7 +2,7 @@
 Businesscentral to Freshteam Dataflow
 =====================================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -25,29 +25,29 @@ The following properties are synchronized between a Businesscentral Employees an
      - Freshteam Data Type
    * - birthDate
      - date_of_birth
-"string"
+     - "string"
    * - email
      - official_email
-"string"
+     - "string"
    * - email
      - personal_email
-"string"
+     - "string"
    * - givenName
      - first_name
-"string"
+     - "string"
    * - jobTitle
      - designation
-"string"
+     - "string"
    * - mobilePhone
      - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
-"string"
+     - "string"
    * - personalEmail
      - personal_email
-"string"
+     - "string"
    * - phoneNumber
      - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
-"string"
+     - "string"
    * - surname
      - last_name
-"string"
+     - "string"
 
