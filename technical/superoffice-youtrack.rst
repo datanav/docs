@@ -2,7 +2,7 @@
 SuperOffice to Youtrack Dataflow
 ================================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 14:30:19
 
 Introduction
 ------------
@@ -41,20 +41,20 @@ The following properties are synchronized between a SuperOffice Person and a You
      - "string"
 
 
-SuperOffice Contact to  Groups
-------------------------------
-Every SuperOffice Contact will be synchronized with a  Groups.
+SuperOffice Contact to Youtrack Groups
+--------------------------------------
+Every SuperOffice Contact will be synchronized with a Youtrack Groups.
 
-Once a link between a SuperOffice Contact and a  Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a  Groups:
+The following properties are synchronized between a SuperOffice Contact and a Youtrack Groups:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     -  Groups Property
-     -  Data Type
+     - Youtrack Groups Property
+     - Youtrack Data Type
    * - Name
      - name
      - "string"
