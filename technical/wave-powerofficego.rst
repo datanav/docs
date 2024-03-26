@@ -2,7 +2,7 @@
 Wave Financial to Powerofficego Dataflow
 ========================================
 
-Generated: 2024-03-26 17:30:44
+Generated: 2024-03-26 17:54:02
 
 Introduction
 ------------
@@ -488,7 +488,7 @@ The following properties are synchronized between a Wave Product and a Poweroffi
      - "string"
    * - unitPrice
      - salesPrice
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], "integer"]
+     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["integer", "_."]]
 
 
 Wave Vendor to Powerofficego Contactperson
