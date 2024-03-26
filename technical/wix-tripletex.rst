@@ -2,7 +2,7 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -35,31 +35,31 @@ The following properties are synchronized between a Wix.com Contacts and a Tripl
      - Tripletex Data Type
    * - info.emails
      - email
-"string"
+     - "string"
    * - info.name.first
      - firstName
-"string"
+     - "string"
    * - info.name.first
      - lastName
-"string"
+     - "string"
    * - info.name.last
      - firstName
-"string"
+     - "string"
    * - info.name.last
      - lastName
-"string"
+     - "string"
    * - info.phones
      - phoneNumberMobile
-"string"
+     - "string"
    * - primaryInfo.email
      - email
-"string"
+     - "string"
    * - primaryInfo.phone
      - phoneNumberMobile
-"string"
+     - "string"
    * - primaryInfo.phone
      - phoneNumberWork
-"string"
+     - "string"
 
 
 Wix.com Members to Tripletex Contact
@@ -88,7 +88,7 @@ The following properties are synchronized between a Wix.com Members and a Triple
      - Tripletex Data Type
    * - loginEmail
      - email
-"string"
+     - "string"
 
 
 Wix.com Members to Tripletex Employee
@@ -117,7 +117,7 @@ The following properties are synchronized between a Wix.com Members and a Triple
      - Tripletex Data Type
    * - loginEmail
      - email
-"string"
+     - "string"
 
 
 Wix.com Contacts to Tripletex Customer person
@@ -138,16 +138,16 @@ The following properties are synchronized between a Wix.com Contacts and a Tripl
      - Tripletex Data Type
    * - info.name.first
      - name
-"string"
+     - "string"
    * - info.name.last
      - name
-"string"
+     - "string"
    * - primaryInfo.email
      - email
-"string"
+     - "string"
    * - primaryInfo.phone
      - phoneNumber
-"string"
+     - "string"
 
 
 Wix.com Contacts to Tripletex Customer
@@ -197,25 +197,25 @@ The following properties are synchronized between a Wix.com Contacts and a Tripl
      - Tripletex Data Type
    * - info.emails
      - email
-"string"
+     - "string"
    * - info.name.first
      - firstName
-"string"
+     - "string"
    * - info.name.last
      - lastName
-"string"
+     - "string"
    * - info.phones
      - phoneNumberMobile
-["if",["matches","+*","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - ["if",["matches","+*","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
    * - primaryInfo.email
      - email
-"string"
+     - "string"
    * - primaryInfo.phone
      - phoneNumberMobile
-["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
    * - primaryInfo.phone
      - phoneNumberWork
-"string"
+     - "string"
 
 
 Wix.com Orders to Tripletex Order
@@ -234,16 +234,16 @@ The following properties are synchronized between a Wix.com Orders and a Triplet
      - Tripletex Data Type
    * - buyerInfo.contactId
      - customer.id
-"integer"
+     - "integer"
    * - buyerInfo.id
      - contact.id
-"integer"
+     - "integer"
    * - buyerInfo.id
      - customer.id
-"integer"
+     - "integer"
    * - currency
      - currency.id
-"integer"
+     - "integer"
 
 
 Wix.com Orders to Tripletex Orderline
@@ -262,64 +262,64 @@ The following properties are synchronized between a Wix.com Orders and a Triplet
      - Tripletex Data Type
    * - id
      - order.id
-"integer"
+     - "integer"
    * - lineItems.name
      - count
-["integer", ["decimal", "_."]]
+     - ["integer", ["decimal", "_."]]
    * - lineItems.name
      - description
-"string"
+     - "string"
    * - lineItems.name
      - discount
-"float"
+     - "float"
    * - lineItems.name
      - unitCostCurrency
-"float"
+     - "float"
    * - lineItems.name
      - unitPriceExcludingVatCurrency
-"float"
+     - "float"
    * - lineItems.name
      - vatType.id
-"integer"
+     - "integer"
    * - lineItems.price
      - count
-["integer", ["decimal", "_."]]
+     - ["integer", ["decimal", "_."]]
    * - lineItems.price
      - description
-"string"
+     - "string"
    * - lineItems.price
      - discount
-"float"
+     - "float"
    * - lineItems.price
      - unitCostCurrency
-"float"
+     - "float"
    * - lineItems.price
      - unitPriceExcludingVatCurrency
-"float"
+     - "float"
    * - lineItems.price
      - vatType.id
-"integer"
+     - "integer"
    * - lineItems.productId
      - product.id
-"integer"
+     - "integer"
    * - lineItems.quantity
      - count
-["integer", ["decimal", "_."]]
+     - ["integer", ["decimal", "_."]]
    * - lineItems.quantity
      - description
-"string"
+     - "string"
    * - lineItems.quantity
      - discount
-"float"
+     - "float"
    * - lineItems.quantity
      - unitCostCurrency
-"float"
+     - "float"
    * - lineItems.quantity
      - unitPriceExcludingVatCurrency
-"float"
+     - "float"
    * - lineItems.quantity
      - vatType.id
-"integer"
+     - "integer"
 
 
 Wix.com Products to Tripletex Product
@@ -338,26 +338,26 @@ The following properties are synchronized between a Wix.com Products and a Tripl
      - Tripletex Data Type
    * - costAndProfitData.itemCost
      - costExcludingVatCurrency
-"float"
+     - "float"
    * - costRange.maxValue
      - costExcludingVatCurrency
-"integer"
+     - "integer"
    * - description
      - description
-"string"
+     - "string"
    * - name
      - name
-"string"
+     - "string"
    * - price.currency
      - currency.id
-"integer"
+     - "integer"
    * - price.price
      - priceExcludingVatCurrency
-"float"
+     - "float"
    * - priceData.currency
      - currency.id
-"integer"
+     - "integer"
    * - priceData.price
      - priceExcludingVatCurrency
-"float"
+     - "float"
 
