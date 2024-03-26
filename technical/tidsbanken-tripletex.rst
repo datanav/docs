@@ -2,7 +2,7 @@
 Tidsbanken to Tripletex Dataflow
 ================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -41,7 +41,7 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Trip
      - "string"
    * - Mobil
      - phoneNumberMobile
-     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - N/A
 
 
 Tidsbanken Kunde to Tripletex Customer person
@@ -173,7 +173,7 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Trip
      - "string"
    * - AvdelingId
      - department.id (Dependant on having wd:Q2366457 in  )
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
    * - Epost
      - email
      - "string"
@@ -182,7 +182,7 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Trip
      - "string"
    * - Fodt
      - dateOfBirth
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - Fornavn
      - firstName
      - "string"
@@ -191,7 +191,7 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Trip
      - "integer"
    * - Mobil
      - phoneNumberMobile
-     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - N/A
    * - Postnummer
      - address.postalCode
      - "string"
@@ -321,7 +321,7 @@ The following properties are synchronized between a Tidsbanken Kunde and a Tripl
      - "string"
    * - Organisasjonsnummer
      - organizationNumber
-     - ["replace"," ","", ["string", "_."]]
+     - N/A
    * - Postadresse
      - deliveryAddress.addressLine2
      - "string"
@@ -385,7 +385,7 @@ The following properties are synchronized between a Tidsbanken Prosjekt and a Tr
      - "string"
    * - AvsluttetDato
      - endDate
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - InterntProsjekt
      - isInternal
      - "string"
@@ -397,5 +397,5 @@ The following properties are synchronized between a Tidsbanken Prosjekt and a Tr
      - "string"
    * - StartDato
      - startDate
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
 
