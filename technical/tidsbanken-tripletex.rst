@@ -2,7 +2,7 @@
 Tidsbanken to Tripletex Dataflow
 ================================
 
-Generated: 2024-03-26 17:30:45
+Generated: 2024-03-26 17:54:02
 
 Introduction
 ------------
@@ -173,7 +173,7 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Trip
      - "string"
    * - AvdelingId
      - department.id (Dependant on having wd:Q2366457 in  )
-     - ["if", ["neq", "_.", "X"], "integer", "string"]
+     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
    * - Epost
      - email
      - "string"
@@ -321,7 +321,7 @@ The following properties are synchronized between a Tidsbanken Kunde and a Tripl
      - "string"
    * - Organisasjonsnummer
      - organizationNumber
-     - ["replace"," ","", "string"]
+     - ["replace"," ","", ["string", "_."]]
    * - Postadresse
      - deliveryAddress.addressLine2
      - "string"
