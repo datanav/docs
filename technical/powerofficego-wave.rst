@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -27,46 +27,46 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - Wave Data Type
    * - address1
      - address.addressLine1
-     - "string"
+"string"
    * - address1
      - shippingDetails.address.addressLine1
-     - "string"
+"string"
    * - address2
      - address.addressLine2
-     - "string"
+"string"
    * - address2
      - shippingDetails.address.addressLine2
-     - "string"
+"string"
    * - city
      - address.city
-     - "string"
+"string"
    * - city
      - shippingDetails.address.city
-     - "string"
+"string"
    * - emailAddress
      - email
-     - "string"
+"string"
    * - firstName
      - firstName
-     - "string"
+"string"
    * - lastName
      - lastName
-     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
+["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
    * - phoneNumber
      - phone
-     - "string"
+"string"
    * - residenceCountryCode
      - address.country.code
-     - "string"
+"string"
    * - residenceCountryCode
      - shippingDetails.address.country.code
-     - "string"
+"string"
    * - zipCode
      - address.postalCode
-     - "string"
+"string"
    * - zipCode
      - shippingDetails.address.postalCode
-     - "string"
+"string"
 
 
 Powerofficego Contactperson to Wave Customer
@@ -87,43 +87,43 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - Wave Data Type
    * - address1
      - address.addressLine1
-     - "string"
+"string"
    * - address1
      - shippingDetails.address.addressLine1
-     - "string"
+"string"
    * - address2
      - address.addressLine2
-     - "string"
+"string"
    * - address2
      - shippingDetails.address.addressLine2
-     - "string"
+"string"
    * - city
      - address.city
-     - "string"
+"string"
    * - city
      - shippingDetails.address.city
-     - "string"
+"string"
    * - emailAddress
      - email
-     - "string"
+"string"
    * - firstName
      - firstName
-     - "string"
+"string"
    * - lastName
      - lastName
-     - "string"
+"string"
    * - residenceCountryCode
      - address.country.code
-     - "string"
+"string"
    * - residenceCountryCode
      - shippingDetails.address.country.code
-     - "string"
+"string"
    * - zipCode
      - address.postalCode
-     - "string"
+"string"
    * - zipCode
      - shippingDetails.address.postalCode
-     - "string"
+"string"
 
 
 Powerofficego Customers to Wave Customer person
@@ -144,34 +144,34 @@ The following properties are synchronized between a Powerofficego Customers and 
      - Wave Data Type
    * - EmailAddress
      - email
-     - "string"
+"string"
    * - FirstName
      - firstName
-     - "string"
+"string"
    * - LastName
      - lastName
-     - "string"
+"string"
    * - MailAddress.AddressLine1
      - address.addressLine1
-     - "string"
+"string"
    * - MailAddress.AddressLine2
      - address.addressLine2
-     - "string"
+"string"
    * - MailAddress.City
      - address.city
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - address.country.code
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - address.postalCode
-     - "string"
+"string"
    * - PhoneNumber
      - phone
-     - "string"
+"string"
    * - WebsiteUrl
      - website
-     - "string"
+"string"
 
 
 Powerofficego Customers to Wave Customer
@@ -190,88 +190,88 @@ The following properties are synchronized between a Powerofficego Customers and 
      - Wave Data Type
    * - EmailAddress
      - email
-     - "string"
+"string"
    * - FirstName
      - firstName
-     - "string"
+"string"
    * - LastName
      - lastName
-     - "string"
+"string"
    * - MailAddress.AddressLine1
      - address.addressLine1
-     - "string"
+"string"
    * - MailAddress.AddressLine1
      - shippingDetails.address.addressLine1
-     - "string"
+"string"
    * - MailAddress.AddressLine2
      - address.addressLine2
-     - "string"
+"string"
    * - MailAddress.AddressLine2
      - shippingDetails.address.addressLine2
-     - "string"
+"string"
    * - MailAddress.City
      - address.city
-     - "string"
+"string"
    * - MailAddress.City
      - shippingDetails.address.city
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - address.country.code
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - shippingDetails.address.country.code
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - address.postalCode
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - shippingDetails.address.postalCode
-     - "string"
+"string"
    * - Name
      - name
-     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
+["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
    * - Number
      - phone
-     - "string"
+"string"
    * - PhoneNumber
      - phone
-     - "string"
+"string"
    * - WebsiteUrl
      - website
-     - "string"
+"string"
    * - emailAddress
      - email
-     - "string"
+"string"
    * - firstName
      - firstName
-     - "string"
+"string"
    * - legalName
      - name
-     - "string"
+"string"
    * - name
      - name
-     - "string"
+"string"
    * - phoneNumber
      - phone
-     - "string"
+"string"
    * - streetAddresses.address1
      - address.addressLine1
-     - "string"
+"string"
    * - streetAddresses.address2
      - address.addressLine2
-     - "string"
+"string"
    * - streetAddresses.city
      - address.city
-     - "string"
+"string"
    * - streetAddresses.countryCode
      - address.country.code
-     - "string"
+"string"
    * - streetAddresses.zipCode
      - address.postalCode
-     - "string"
+"string"
    * - websiteUrl
      - website
-     - "string"
+"string"
 
 
 Powerofficego Product to Wave Product
@@ -290,22 +290,22 @@ The following properties are synchronized between a Powerofficego Product and a 
      - Wave Data Type
    * - Description
      - description
-     - "string"
+"string"
    * - Name
      - name
-     - "string"
+"string"
    * - SalesPrice
      - unitPrice
-     - "string"
+"string"
    * - description
      - description
-     - "string"
+"string"
    * - name
      - name
-     - "string"
+"string"
    * - salesPrice
      - unitPrice
-     - "string"
+"string"
 
 
 Powerofficego Salesorders to Wave Invoice
@@ -324,14 +324,14 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - Wave Data Type
    * - CurrencyCode
      - currency.code
-     - "string"
+"string"
    * - CustomerId
      - customer.id
-     - "string"
+"string"
    * - CustomerReferenceContactPersonId
      - customer.id
-     - "string"
+"string"
    * - PurchaseOrderReference
      - poNumber
-     - "string"
+"string"
 
