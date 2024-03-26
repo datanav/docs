@@ -2,25 +2,25 @@
 Zendesk to  Dataflow
 ====================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:04
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Zendesk to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Zendesk Organizations to  Company
----------------------------------
-Every Zendesk Organizations will be synchronized with a  Company.
+Zendesk Organizations to  Companies
+-----------------------------------
+Every Zendesk Organizations will be synchronized with a  Companies.
 
-Once a link between a Zendesk Organizations and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Organizations and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Organizations and a  Company:
+The following properties are synchronized between a Zendesk Organizations and a  Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Organizations Property
-     -  Company Property
+     -  Companies Property
      -  Data Type
 
