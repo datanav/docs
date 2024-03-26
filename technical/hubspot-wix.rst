@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -134,7 +134,7 @@ The following properties are synchronized between a HubSpot Product and a Wix Pr
      - "string"
    * - properties.hs_cost_of_goods_sold
      - costAndProfitData.itemCost
-     - ["decimal", "_."]
+     - N/A
    * - properties.hs_cost_of_goods_sold
      - costRange.maxValue
      - "string"
@@ -149,5 +149,5 @@ The following properties are synchronized between a HubSpot Product and a Wix Pr
      - "string"
    * - properties.price
      - priceData.price
-     - ["decimal", "_."]
+     - N/A
 
