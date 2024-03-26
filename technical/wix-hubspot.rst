@@ -2,40 +2,40 @@
 Wix.com to Hubspot Dataflow
 ===========================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:16
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to Hubspot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wix.com Contacts to  Contact
-----------------------------
-Every Wix.com Contacts will be synchronized with a  Contact.
+Wix.com Contacts to Hubspot Contact
+-----------------------------------
+Every Wix.com Contacts will be synchronized with a Hubspot Contact.
 
-If a matching  Contact already exists, the Wix.com Contacts will be merged with the existing one.
-If no matching  Contact is found, a new  Contact will be created.
+If a matching Hubspot Contact already exists, the Wix.com Contacts will be merged with the existing one.
+If no matching Hubspot Contact is found, a new Hubspot Contact will be created.
 
-A Wix.com Contacts will merge with a  Contact if one of the following property combinations match:
+A Wix.com Contacts will merge with a Hubspot Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     -  Contact Property
+     - Hubspot Contact Property
    * - primaryInfo.email
      - properties.email
 
-Once a link between a Wix.com Contacts and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a  Contact:
+The following properties are synchronized between a Wix.com Contacts and a Hubspot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     -  Contact Property
-     -  Data Type
+     - Hubspot Contact Property
+     - Hubspot Data Type
    * - info.addresses.items.address.countryFullname
      - properties.country
      - "string"
@@ -65,49 +65,49 @@ The following properties are synchronized between a Wix.com Contacts and a  Cont
      - "string"
 
 
-Wix.com Members to  Contact
----------------------------
-Before any synchronization can take place, a link between a Wix.com Members and a  Contact must be established.
+Wix.com Members to Hubspot Contact
+----------------------------------
+Before any synchronization can take place, a link between a Wix.com Members and a Hubspot Contact must be established.
 
-A Wix.com Members will merge with a  Contact if one of the following property combinations match:
+A Wix.com Members will merge with a Hubspot Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Members Property
-     -  Contact Property
+     - Hubspot Contact Property
    * - loginEmail
      - properties.email
 
-Once a link between a Wix.com Members and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Members and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Members and a  Contact:
+The following properties are synchronized between a Wix.com Members and a Hubspot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Members Property
-     -  Contact Property
-     -  Data Type
+     - Hubspot Contact Property
+     - Hubspot Data Type
    * - loginEmail
      - properties.email
      - "string"
 
 
-Wix.com Orders to  Lineitem
----------------------------
-Every Wix.com Orders will be synchronized with a  Lineitem.
+Wix.com Orders to Hubspot Lineitem
+----------------------------------
+Every Wix.com Orders will be synchronized with a Hubspot Lineitem.
 
-Once a link between a Wix.com Orders and a  Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a Hubspot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a  Lineitem:
+The following properties are synchronized between a Wix.com Orders and a Hubspot Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     -  Lineitem Property
-     -  Data Type
+     - Hubspot Lineitem Property
+     - Hubspot Data Type
    * - lineItems.name
      - properties.name
      - "string"
@@ -134,20 +134,20 @@ The following properties are synchronized between a Wix.com Orders and a  Lineit
      - "string"
 
 
-Wix.com Products to  Product
-----------------------------
-Every Wix.com Products will be synchronized with a  Product.
+Wix.com Products to Hubspot Product
+-----------------------------------
+Every Wix.com Products will be synchronized with a Hubspot Product.
 
-Once a link between a Wix.com Products and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a Hubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a  Product:
+The following properties are synchronized between a Wix.com Products and a Hubspot Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     -  Product Property
-     -  Data Type
+     - Hubspot Product Property
+     - Hubspot Data Type
    * - costAndProfitData.itemCost
      - properties.hs_cost_of_goods_sold
      - "string"
