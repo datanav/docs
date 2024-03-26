@@ -2,7 +2,7 @@
 Tilores to Hubspot Dataflow
 ===========================
 
-Generated: 2024-03-26 14:34:37
+Generated: 2024-03-26 14:34:55
 
 Introduction
 ------------
@@ -23,4 +23,16 @@ The following properties are synchronized between a Tilores Human and a Hubspot 
    * - Tilores Human Property
      - Hubspot Contact Property
      - Hubspot Data Type
+   * - dateOfBirth
+     - properties.date_of_birth
+     - "string"
+   * - email
+     - properties.email
+     - "string"
+   * - firstName
+     - properties.firstname
+     - "string"
+   * - lastName
+     - properties.lastname
+     - "string"
 
