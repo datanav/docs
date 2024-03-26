@@ -2,7 +2,7 @@
 Wave Financial to Businesscentral Dataflow
 ==========================================
 
-Generated: 2024-03-26 14:15:49
+Generated: 2024-03-26 14:30:19
 
 Introduction
 ------------
@@ -78,20 +78,20 @@ The following properties are synchronized between a Wave Customer and a Business
      - "string"
 
 
-Wave Customer to  Companies
----------------------------
-Every Wave Customer will be synchronized with a  Companies.
+Wave Customer to Businesscentral Companies
+------------------------------------------
+Every Wave Customer will be synchronized with a Businesscentral Companies.
 
-Once a link between a Wave Customer and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Businesscentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a  Companies:
+The following properties are synchronized between a Wave Customer and a Businesscentral Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     -  Companies Property
-     -  Data Type
+     - Businesscentral Companies Property
+     - Businesscentral Data Type
 
 
 Wave Customer to Businesscentral Contacts person
