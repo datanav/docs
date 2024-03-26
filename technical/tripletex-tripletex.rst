@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-03-26 17:30:44
+Generated: 2024-03-26 17:54:01
 
 Introduction
 ------------
@@ -82,7 +82,7 @@ The following properties are synchronized between a Tripletex Contact and a Trip
      - Tripletex Data Type
    * - customer.id
      - department.id (Dependant on having wd:Q703534 in  )
-     - ["if", ["neq", "_.", "X"], "integer", "string"]
+     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
    * - email
      - email
      - "string"
@@ -296,7 +296,7 @@ The following properties are synchronized between a Tripletex Customer and a Tri
      - "string"
    * - organizationNumber
      - organizationNumber
-     - ["replace"," ","", "string"]
+     - ["replace"," ","", ["string", "_."]]
    * - overdueNoticeEmail
      - overdueNoticeEmail
      - "string"
@@ -509,7 +509,7 @@ The following properties are synchronized between a Tripletex Employee and a Tri
      - ["datetime-format","%Y-%m-%d","_."]
    * - department.id
      - department.id
-     - ["if", ["neq", "_.", "X"], "integer", "string"]
+     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
    * - email
      - email
      - "string"
@@ -678,7 +678,7 @@ The following properties are synchronized between a Tripletex Supplier and a Tri
      - "string"
    * - organizationNumber
      - organizationNumber
-     - ["replace"," ","", "string"]
+     - ["replace"," ","", ["string", "_."]]
    * - overdueNoticeEmail
      - overdueNoticeEmail
      - "string"
