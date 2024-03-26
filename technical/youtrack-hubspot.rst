@@ -2,40 +2,40 @@
 YouTrack to Hubspot Dataflow
 ============================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:16
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from YouTrack to Hubspot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-YouTrack Users to  Contact
---------------------------
-Every YouTrack Users will be synchronized with a  Contact.
+YouTrack Users to Hubspot Contact
+---------------------------------
+Every YouTrack Users will be synchronized with a Hubspot Contact.
 
-If a matching  Contact already exists, the YouTrack Users will be merged with the existing one.
-If no matching  Contact is found, a new  Contact will be created.
+If a matching Hubspot Contact already exists, the YouTrack Users will be merged with the existing one.
+If no matching Hubspot Contact is found, a new Hubspot Contact will be created.
 
-A YouTrack Users will merge with a  Contact if one of the following property combinations match:
+A YouTrack Users will merge with a Hubspot Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     -  Contact Property
+     - Hubspot Contact Property
    * - profile.email.email
      - properties.email
 
-Once a link between a YouTrack Users and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Users and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Users and a  Contact:
+The following properties are synchronized between a YouTrack Users and a Hubspot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     -  Contact Property
-     -  Data Type
+     - Hubspot Contact Property
+     - Hubspot Data Type
    * - profile.email
      - properties.email
      - "string"
@@ -107,20 +107,20 @@ The following properties are synchronized between a YouTrack Usergroups and a  C
      - "string"
 
 
-YouTrack Users to  User
------------------------
-Every YouTrack Users will be synchronized with a  User.
+YouTrack Users to Hubspot User
+------------------------------
+Every YouTrack Users will be synchronized with a Hubspot User.
 
-Once a link between a YouTrack Users and a  User is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Users and a Hubspot User is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Users and a  User:
+The following properties are synchronized between a YouTrack Users and a Hubspot User:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     -  User Property
-     -  Data Type
+     - Hubspot User Property
+     - Hubspot Data Type
    * - profile.email.email
      - email
      - "string"
