@@ -2,7 +2,7 @@
 ZohoCRM to Tilores Dataflow
 ===========================
 
-Generated: 2024-03-26 14:34:37
+Generated: 2024-03-26 14:34:55
 
 Introduction
 ------------
@@ -23,4 +23,37 @@ The following properties are synchronized between a ZohoCRM Contact and a Tilore
    * - ZohoCRM Contact Property
      - Tilores Human Property
      - Tilores Data Type
+   * - Email
+     - email
+     - "string"
+   * - First_Name
+     - firstName
+     - "string"
+   * - Last_Name
+     - lastName
+     - "string"
+   * - Mailing_City
+     - city
+     - "string"
+   * - Mailing_Street
+     - street
+     - "string"
+   * - Mailing_Zip
+     - postalCode
+     - "string"
+   * - Other_City
+     - city
+     - "string"
+   * - Other_Street
+     - street
+     - "string"
+   * - Other_Zip
+     - postalCode
+     - "string"
+   * - Secondary_Email
+     - email
+     - "string"
+   * - id
+     - id
+     - "string"
 
