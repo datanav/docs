@@ -2,7 +2,7 @@
 Businesscentral to Powerofficego Dataflow
 =========================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -159,7 +159,7 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
    * - type
      - IsPerson
-     - ["if", ["is-boolean", ["boolean", "_."]], ["boolean", "_."], ["string", "_."]]
+     - N/A
 
 
 Businesscentral Customers company to Powerofficego Customers
@@ -211,7 +211,7 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
    * - type
      - IsPerson
-     - ["if", ["is-boolean", ["boolean", "_."]], ["boolean", "_."], ["string", "_."]]
+     - N/A
    * - website
      - WebsiteUrl
      - "string"
@@ -282,7 +282,7 @@ The following properties are synchronized between a Businesscentral Customers pe
      - "string"
    * - type
      - IsPerson
-     - ["if", ["is-boolean", ["boolean", "_."]], ["boolean", "_."], ["string", "_."]]
+     - N/A
 
 
 Businesscentral Employees to Powerofficego Employees
@@ -301,7 +301,7 @@ The following properties are synchronized between a Businesscentral Employees an
      - Powerofficego Data Type
    * - birthDate
      - DateOfBirth
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - email
      - EmailAddress
      - "string"
@@ -356,10 +356,10 @@ The following properties are synchronized between a Businesscentral Items and a 
      - "string"
    * - unitCost
      - costPrice
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["integer", "_."]]
+     - N/A
    * - unitPrice
      - salesPrice
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["integer", "_."]]
+     - N/A
 
 
 Businesscentral Salesorderlines to Powerofficego Salesorderlines
@@ -378,7 +378,7 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - Powerofficego Data Type
    * - amountExcludingTax
      - ProductUnitPrice
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["integer", "_."]]
+     - N/A
    * - description
      - Description
      - "string"
@@ -396,13 +396,13 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - "integer"
    * - quantity
      - Quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - taxPercent
      - VatId
      - "string"
    * - unitPrice
      - ProductUnitPrice
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["float", ["decimal", "_."]]]
+     - N/A
 
 
 Businesscentral Salesorders to Powerofficego Salesorders
