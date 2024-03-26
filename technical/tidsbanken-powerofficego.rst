@@ -2,7 +2,7 @@
 Tidsbanken to Powerofficego Dataflow
 ====================================
 
-Generated: 2024-03-26 14:23:48
+Generated: 2024-03-26 14:24:14
 
 Introduction
 ------------
@@ -35,6 +35,27 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Powe
    * - Tidsbanken Ansatt Property
      - Powerofficego Contactperson Property
      - Powerofficego Data Type
+   * - Adresse
+     - address1
+     - "string"
+   * - Etternavn
+     - lastName
+     - "string"
+   * - Fodt
+     - dateOfBirth
+     - "if","gt","abs","datetime-diff", "year", "_.","now"]]], 100], "1935-01-01","datetime-format", "%Y-%m-%d"]
+   * - Fornavn
+     - firstName
+     - "string"
+   * - Id
+     - id
+     - "integer"
+   * - Postnummer
+     - zipCode
+     - "string"
+   * - Poststed
+     - city
+     - "string"
 
 
 Tidsbanken Kunde to Powerofficego Customers person
@@ -82,6 +103,30 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Powe
    * - Tidsbanken Ansatt Property
      - Powerofficego Employees Property
      - Powerofficego Data Type
+   * - AvdelingId
+     - DepartmentId
+     - "integer"
+   * - Epost
+     - EmailAddress
+     - "string"
+   * - Etternavn
+     - LastName
+     - "string"
+   * - Fodt
+     - DateOfBirth
+     - "datetime-format","%Y-%m-%d","_."]
+   * - Fornavn
+     - FirstName
+     - "string"
+   * - Mobil
+     - PhoneNumber
+     - "string"
+   * - Tittel
+     - JobTitle
+     - "string"
+   * - sesam_ansattId
+     - Number
+     - "string"
 
 
 Tidsbanken Avdeling to Powerofficego Departments
@@ -98,6 +143,9 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Po
    * - Tidsbanken Avdeling Property
      - Powerofficego Departments Property
      - Powerofficego Data Type
+   * - Navn
+     - Name
+     - "string"
 
 
 Tidsbanken Kunde to Powerofficego Customers
@@ -127,6 +175,54 @@ The following properties are synchronized between a Tidsbanken Kunde and a Power
    * - Tidsbanken Kunde Property
      - Powerofficego Customers Property
      - Powerofficego Data Type
+   * - Epost
+     - EmailAddress
+     - "string"
+   * - Gateadresse
+     - MailAddress.AddressLine1
+     - "string"
+   * - Id
+     - Id
+     - "integer"
+   * - LevPostNr
+     - MailAddress.ZipCode
+     - "string"
+   * - LevPoststed
+     - MailAddress.City
+     - "string"
+   * - Leveringsadresse
+     - MailAddress.AddressLine1
+     - "string"
+   * - Leveringsadresse2
+     - MailAddress.AddressLine2
+     - "string"
+   * - Navn
+     - Name
+     - "string"
+   * - Organisasjonsnummer
+     - OrganizationNumber (Dependant on having NO in MailAddress.CountryCodeDependant on having wd:Q11994066 in MailAddress.CountryCode)
+     - "string"
+   * - Postadresse
+     - MailAddress.AddressLine2
+     - "string"
+   * - Postnr
+     - MailAddress.ZipCode
+     - "string"
+   * - Poststed
+     - MailAddress.City
+     - "string"
+   * - Telefon
+     - PhoneNumber
+     - "string"
+   * - Url
+     - WebsiteUrl
+     - "string"
+   * - sesam_kundeId
+     - Number
+     - "string"
+   * - sesam_kundeId
+     - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCode)
+     - "string"
 
 
 Tidsbanken Prosjekt to Powerofficego Projects
@@ -143,4 +239,28 @@ The following properties are synchronized between a Tidsbanken Prosjekt and a Po
    * - Tidsbanken Prosjekt Property
      - Powerofficego Projects Property
      - Powerofficego Data Type
+   * - AnsvarligId
+     - ProjectManagerEmployeeId
+     - "integer"
+   * - AvdelingId
+     - DepartmentId
+     - "integer"
+   * - Avsluttet
+     - IsActive
+     - "string"
+   * - AvsluttetDato
+     - EndDate
+     - "datetime-format", "%Y-%m-%dT%H:%M:%S"
+   * - InterntProsjekt
+     - IsInternal
+     - "string"
+   * - KundeId
+     - CustomerId
+     - "integer"
+   * - Navn
+     - Name
+     - "string"
+   * - StartDato
+     - StartDate
+     - "datetime-format", "%Y-%m-%dT%H:%M:%S"
 
