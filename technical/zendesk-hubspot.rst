@@ -2,7 +2,7 @@
 Zendesk to Hubspot Dataflow
 ===========================
 
-Generated: 2024-03-26 14:30:19
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -38,10 +38,10 @@ The following properties are synchronized between a Zendesk Users and a Hubspot 
      - Hubspot Data Type
    * - email
      - properties.email
-     - "string"
+"string"
    * - role
      - properties.country
-     - "string"
+"string"
 
 
 Zendesk Organizations to Hubspot Company
@@ -60,10 +60,10 @@ The following properties are synchronized between a Zendesk Organizations and a 
      - Hubspot Data Type
    * - name
      - properties.name
-     - "string"
+"string"
    * - url
      - properties.website
-     - "string"
+"string"
 
 
 Zendesk Users to Hubspot User
