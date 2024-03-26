@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -50,6 +50,80 @@ The following properties are synchronized between a Tripletex Contact and a  Con
      - "string"
    * - phoneNumberWork
      - properties.phone
+     - "string"
+
+
+Tripletex Customer person to  Contact
+-------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer person and a  Contact must be established.
+
+A Tripletex Customer person will merge with a  Contact if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     -  Contact Property
+   * - email
+     - properties.email
+
+Once a link between a Tripletex Customer person and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a  Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     -  Contact Property
+     -  Data Type
+   * - deliveryAddress.addressLine1
+     - properties.address
+     - "string"
+   * - deliveryAddress.city
+     - properties.city
+     - "string"
+   * - deliveryAddress.country.id
+     - properties.country
+     - "string"
+   * - deliveryAddress.postalCode
+     - properties.zip
+     - "string"
+   * - email
+     - properties.email
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - phoneNumber
+     - properties.phone
+     - "string"
+   * - phoneNumberMobile
+     - properties.mobilephone
+     - "string"
+   * - physicalAddress.addressLine1
+     - properties.address
+     - "string"
+   * - physicalAddress.city
+     - properties.city
+     - "string"
+   * - physicalAddress.country.id
+     - properties.country
+     - "string"
+   * - physicalAddress.postalCode
+     - properties.zip
+     - "string"
+   * - postalAddress.addressLine1
+     - properties.address
+     - "string"
+   * - postalAddress.city
+     - properties.city
+     - "string"
+   * - postalAddress.country.id
+     - properties.country
+     - "string"
+   * - postalAddress.postalCode
+     - properties.zip
      - "string"
 
 
@@ -235,37 +309,21 @@ The following properties are synchronized between a Tripletex Orderline and a  L
      -  Data Type
    * - count
      - properties.quantity
-     - "integer"
+     - "string", "integer", "decimal"]]
    * - description
      - properties.description
      - "string"
    * - description
      - properties.name
      - "string"
+   * - discount
+     - properties.hs_discount_percentage
+     - "string"
    * - product.id
      - properties.hs_product_id
      - "string"
    * - unitPriceExcludingVatCurrency
      - properties.price
-     - "string"
-
-
-Tripletex Orderline to  Lineitemdealassociation
------------------------------------------------
-Every Tripletex Orderline will be synchronized with a  Lineitemdealassociation.
-
-Once a link between a Tripletex Orderline and a  Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Orderline and a  Lineitemdealassociation:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Orderline Property
-     -  Lineitemdealassociation Property
-     -  Data Type
-   * - order.id
-     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - "string"
 
 
