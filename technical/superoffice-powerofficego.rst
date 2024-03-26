@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:02
 
 Introduction.
 ------------
@@ -24,10 +24,6 @@ A SuperOffice Contact will merge with a PowerOfficeGo Customers if one of the fo
      - PowerOfficeGo Customers Property
    * - Emails.Value
      - EmailAddress
-   * - Emails.Value
-     - InvoiceEmailAddress
-   * - Emails.Value
-     - PaymentReminderEmailAddress
 
 Once a link between a SuperOffice Contact and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -85,7 +81,7 @@ The following properties are synchronized between a SuperOffice Contact and a Po
      - MailAddress.countryCode
      - "string"
    * - Country.ThreeLetterISOCountry
-     - OrganizationNumber (Dependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.CountryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCode)
+     - OrganizationNumber (Dependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.CountryCodeDependant on having wd:Q906278 in MailAddress.CountryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCode)
      - "string"
    * - Emails.Value
      - EmailAddress
@@ -96,8 +92,11 @@ The following properties are synchronized between a SuperOffice Contact and a Po
    * - Name
      - Name
      - "string"
+   * - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountryDependant on having wd:Q852835 in Country.TwoLetterISOCountry)
+     - Number
+     - "string"
    * - OrgNr
-     - OrganizationNumber (Dependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.CountryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCode)
+     - OrganizationNumber (Dependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.CountryCodeDependant on having  in MailAddress.CountryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCode)
      - "string"
    * - OrgNr (Dependant on having wd:Q1273217 in Country.ThreeLetterISOCountryDependant on having wd:Q1273217 in Country.TwoLetterISOCountry)
      - PaymentReminderEmailAddress
@@ -153,7 +152,7 @@ The following properties are synchronized between a SuperOffice Person and a  Co
      - "string"
    * - BirthDate
      - dateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
+     - "if","gt","abs","datetime-diff", "year", "_.","now"]]], 100], "1935-01-01","datetime-format", "%Y-%m-%d"]
    * - Contact.ContactId
      - partyId
      - "integer"
@@ -175,32 +174,6 @@ The following properties are synchronized between a SuperOffice Person and a  Co
    * - PersonId
      - id
      - "integer"
-
-
-SuperOffice Pricelist to  Currency
-----------------------------------
-Before any synchronization can take place, a link between a SuperOffice Pricelist and a  Currency must be established.
-
-A SuperOffice Pricelist will merge with a  Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Pricelist Property
-     -  Currency Property
-   * - Currency
-     - code
-
-Once a link between a SuperOffice Pricelist and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Pricelist and a  Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Pricelist Property
-     -  Currency Property
-     -  Data Type
 
 
 SuperOffice User to  Contactperson
@@ -337,7 +310,7 @@ The following properties are synchronized between a SuperOffice Person and a Pow
      - "string"
    * - BirthDate
      - DateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
+     - "if","gt","abs","datetime-diff", "year", "_.","now"]]], 100], "1935-01-01","datetime-format", "%Y-%m-%d"]
    * - Country.CountryId
      - MailAddress.CountryCode
      - "string"
@@ -397,73 +370,6 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
    * - sesam_SaleId (Dependant on having poweroffice-salesorder in sesam_AcceptedDependant on having poweroffice-salesorder in sesam_AcceptedDependant on having poweroffice-salesorder in sesam_AcceptedDependant on having poweroffice-salesorder in sesam_AcceptedDependant on having poweroffice-salesorder in sesam_Accepted)
      - Id
-     - "string"
-
-
-SuperOffice Listcurrencyitems to  Currency
-------------------------------------------
-Every SuperOffice Listcurrencyitems will be synchronized with a  Currency.
-
-If a matching  Currency already exists, the SuperOffice Listcurrencyitems will be merged with the existing one.
-If no matching  Currency is found, a new  Currency will be created.
-
-A SuperOffice Listcurrencyitems will merge with a  Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listcurrencyitems Property
-     -  Currency Property
-   * - Name
-     - code
-
-Once a link between a SuperOffice Listcurrencyitems and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listcurrencyitems and a  Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listcurrencyitems Property
-     -  Currency Property
-     -  Data Type
-
-
-SuperOffice Listproductcategoryitems to  Productgroup
------------------------------------------------------
-Every SuperOffice Listproductcategoryitems will be synchronized with a  Productgroup.
-
-Once a link between a SuperOffice Listproductcategoryitems and a  Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listproductcategoryitems and a  Productgroup:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listproductcategoryitems Property
-     -  Productgroup Property
-     -  Data Type
-   * - Name
-     - Name
-     - "string"
-
-
-SuperOffice Ownercontactlink to  Departments
---------------------------------------------
-Every SuperOffice Ownercontactlink will be synchronized with a  Departments.
-
-Once a link between a SuperOffice Ownercontactlink and a  Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Ownercontactlink and a  Departments:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Ownercontactlink Property
-     -  Departments Property
-     -  Data Type
-   * - name
-     - Name
      - "string"
 
 
@@ -540,6 +446,28 @@ The following properties are synchronized between a SuperOffice Product and a  P
      - "string"
 
 
+SuperOffice Project to  Projects
+--------------------------------
+Every SuperOffice Project will be synchronized with a  Projects.
+
+Once a link between a SuperOffice Project and a  Projects is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Project and a  Projects:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Project Property
+     -  Projects Property
+     -  Data Type
+   * - Associate.AssociateId
+     - ProjectManagerEmployeeId
+     - "integer"
+   * - Name
+     - Name
+     - "string"
+
+
 SuperOffice Quoteline to  Salesorderlines
 -----------------------------------------
 Every SuperOffice Quoteline will be synchronized with a  Salesorderlines.
@@ -560,6 +488,9 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - DiscountPercent
      - Discount
      - "string"
+   * - ERPDiscountPercent
+     - Allowance
+     - "float"
    * - ERPProductKey
      - ProductCode
      - "string"
@@ -571,7 +502,7 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
    * - Quantity
      - Quantity
-     - "integer"
+     - "integer", "decimal"]
    * - QuoteAlternativeId
      - sesam_SalesOrderId
      - "string"
@@ -586,51 +517,14 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
    * - UnitListPrice
      - ProductUnitPrice
-     - "if", "is-decimal", "decimal", "integer"]
+     - "if", "is-decimal", "decimal", "float", "decimal"]]
    * - UnitListPrice
      - SalesOrderLineUnitPrice
      - "string"
    * - VAT
+     - VatId
+     - "string"
+   * - VAT
      - VatReturnSpecification
-     - "string"
-
-
-SuperOffice User to  Employees
-------------------------------
-Every SuperOffice User will be synchronized with a  Employees.
-
-Once a link between a SuperOffice User and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice User and a  Employees:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice User Property
-     -  Employees Property
-     -  Data Type
-   * - contactCategory
-     - MailAddress.CountryCode
-     - "string"
-   * - contactCategory
-     - MailAddress.countryCode
-     - "string"
-   * - contactId
-     - DepartmendId
-     - "string"
-   * - contactId
-     - DepartmentId (Dependant on having wd:Q703534 in JobTitle)
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - lastName
-     - LastName
-     - "string"
-   * - lastName
-     - lastName
      - "string"
 
