@@ -2,7 +2,7 @@
 Unieconomy to ZohoCRM Dataflow
 ==============================
 
-Generated: 2024-03-26 14:34:37
+Generated: 2024-03-26 14:34:55
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Unieconomy Companies and a Z
    * - Unieconomy Companies Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - Name
+     - Account_Name
+     - "string"
 
 
 Unieconomy Customers to ZohoCRM Account
@@ -39,6 +42,9 @@ The following properties are synchronized between a Unieconomy Customers and a Z
    * - Unieconomy Customers Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - WebUrl
+     - Website
+     - "string"
 
 
 Unieconomy Departments to ZohoCRM Account
@@ -55,4 +61,10 @@ The following properties are synchronized between a Unieconomy Departments and a
    * - Unieconomy Departments Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - DepartmentNumber
+     - Created_Time
+     - "string"
+   * - Name
+     - Account_Name
+     - "string"
 
