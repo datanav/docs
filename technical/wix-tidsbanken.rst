@@ -2,7 +2,7 @@
 Wix.com to Tidsbanken Dataflow
 ==============================
 
-Generated: 2024-03-26 14:23:23
+Generated: 2024-03-26 17:27:49
 
 Introduction
 ------------
@@ -35,22 +35,22 @@ The following properties are synchronized between a Wix.com Contacts and a Tidsb
      - Tidsbanken Data Type
    * - info.name.first
      - Etternavn
-     - "string"
+"string"
    * - info.name.first
      - Fornavn
-     - "string"
+"string"
    * - info.name.first
      - Navn
-     - "string"
+"string"
    * - info.name.last
      - Etternavn
-     - "string"
+"string"
    * - info.name.last
      - Fornavn
-     - "string"
+"string"
    * - info.name.last
      - Navn
-     - "string"
+"string"
 
 
 Wix.com Members to Tidsbanken Ansatt
