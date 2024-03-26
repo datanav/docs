@@ -2,7 +2,7 @@
 Powerofficego to Powerofficego Dataflow
 =======================================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -63,25 +63,25 @@ The following properties are synchronized between a Powerofficego Customers pers
      - Powerofficego Data Type
    * - Id
      - id
-     - "integer"
+"integer"
    * - IsPerson
      - residenceCountryCode
-     - "string"
+"string"
    * - MailAddress.AddressLine1
      - address1
-     - "string"
+"string"
    * - MailAddress.AddressLine2
      - address2
-     - "string"
+"string"
    * - MailAddress.City
      - city
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - residenceCountryCode
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - zipCode
-     - "string"
+"string"
 
 
 Powerofficego Customers to Powerofficego Customers
@@ -110,10 +110,10 @@ The following properties are synchronized between a Powerofficego Customers and 
      - Powerofficego Data Type
    * - Number
      - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCodeDependant on having wd:Q852835 in MailAddress.CountryCode)
-     - "string"
+"string"
    * - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCodeDependant on having wd:Q852835 in MailAddress.CountryCode)
      - Number
-     - "string"
+"string"
 
 
 Powerofficego Employees to Powerofficego Employees
@@ -144,10 +144,10 @@ The following properties are synchronized between a Powerofficego Employees and 
      - Powerofficego Data Type
    * - DepartmentId (Dependant on having  in JobTitle)
      - JobTitle
-     - "string"
+"string"
    * - JobTitle
      - DepartmentId (Dependant on having  in JobTitle)
-     - "string"
+"string"
 
 
 Powerofficego Salesorders to Powerofficego Salesorders
@@ -176,10 +176,10 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - Powerofficego Data Type
    * - CustomerId
      - CustomerReferenceContactPersonId
-     - "integer"
+"integer"
    * - CustomerReferenceContactPersonId
      - CustomerId
-     - "integer"
+"integer"
 
 
 Powerofficego Contactperson to PowerOfficeGo Customers person
@@ -200,37 +200,37 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - PowerOfficeGo Data Type
    * - address1
      - MailAddress.AddressLine1
-     - "string"
+"string"
    * - address2
      - MailAddress.AddressLine2
-     - "string"
+"string"
    * - city
      - MailAddress.City
-     - "string"
+"string"
    * - dateOfBirth
      - DateOfBirth
-     - "if","gt","abs","datetime-diff", "year", "_.","now"]]], 100], "1935-01-01","datetime-format", "%Y-%m-%d"]
+["if",["gt",["abs",["datetime-diff", "year", "_.",["now"]]], 100], "1935-01-01",["datetime-format", "%Y-%m-%d", "_."]]
    * - emailAddress
      - EmailAddress
-     - "string"
+"string"
    * - firstName
      - FirstName
-     - "string"
+"string"
    * - id
      - Id
-     - "integer"
+"integer"
    * - lastName
      - LastName
-     - "string"
+"string"
    * - phoneNumber
      - PhoneNumber
-     - "string"
+"string"
    * - residenceCountryCode
      - MailAddress.CountryCode
-     - "string"
+"string"
    * - zipCode
      - MailAddress.ZipCode
-     - "string"
+"string"
 
 
 Powerofficego Contactperson to PowerOfficeGo Customers
@@ -251,7 +251,7 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - PowerOfficeGo Data Type
    * - residenceCountryCode
      - MailAddress.CountryCode
-     - "string"
+"string"
 
 
 Powerofficego Customers to PowerOfficeGo Contactperson
@@ -272,7 +272,7 @@ The following properties are synchronized between a Powerofficego Customers and 
      - PowerOfficeGo Data Type
    * - MailAddress.CountryCode
      - residenceCountryCode
-     - "string"
+"string"
 
 
 Powerofficego Customers person to Powerofficego Customers
@@ -307,34 +307,34 @@ The following properties are synchronized between a Powerofficego Customers and 
      - Powerofficego Data Type
    * - Id
      - Id
-     - "string"
+"string"
    * - IsPerson
      - IsPerson
-     - "string"
+"string"
    * - IsPerson
      - MailAddress.CountryCode
-     - "string"
+"string"
    * - MailAddress.AddressLine1
      - MailAddress.AddressLine1
-     - "string"
+"string"
    * - MailAddress.AddressLine2
      - MailAddress.AddressLine2
-     - "string"
+"string"
    * - MailAddress.City
      - MailAddress.City
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - IsPerson
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - MailAddress.CountryCode
-     - "string"
+"string"
    * - MailAddress.LastChangedDateTimeOffset
      - MailAddress.LastChangedDateTimeOffset
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - MailAddress.ZipCode
-     - "string"
+"string"
 
 
 Powerofficego Suppliers person to Powerofficego Contactperson
@@ -353,20 +353,20 @@ The following properties are synchronized between a Powerofficego Suppliers pers
      - Powerofficego Data Type
    * - DateOfBirth
      - dateOfBirth
-     - "if","gt","abs","datetime-diff", "year", "_.","now"]]], 100], "1935-01-01","datetime-format", "%Y-%m-%d"]
+["if",["gt",["abs",["datetime-diff", "year", "_.",["now"]]], 100], "1935-01-01",["datetime-format", "%Y-%m-%d", "_."]]
    * - EmailAddress
      - emailAddress
-     - "string"
+"string"
    * - FirstName
      - firstName
-     - "string"
+"string"
    * - LastName
      - lastName
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - residenceCountryCode
-     - "string"
+"string"
    * - PhoneNumber
      - phoneNumber
-     - "string"
+"string"
 
