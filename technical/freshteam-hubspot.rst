@@ -2,7 +2,7 @@
 Freshteam to Hubspot Dataflow
 =============================
 
-Generated: 2024-03-26 14:30:19
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -35,7 +35,7 @@ The following properties are synchronized between a Freshteam Employee and a Hub
      - Hubspot Data Type
    * - official_email
      - email
-     - "string"
+"string"
 
 
 Freshteam Department to Hubspot Company
@@ -54,7 +54,7 @@ The following properties are synchronized between a Freshteam Department and a H
      - Hubspot Data Type
    * - name
      - properties.name
-     - "string"
+"string"
 
 
 Freshteam Employee to Hubspot Contact
@@ -73,50 +73,50 @@ The following properties are synchronized between a Freshteam Employee and a Hub
      - Hubspot Data Type
    * - Billing_Country
      - properties.country
-     - "string"
+"string"
    * - Billing_Country
      - properties.state
-     - "string"
+"string"
    * - Shipping_Country
      - properties.country
-     - "string"
+"string"
    * - Shipping_Country
      - properties.state
-     - "string"
+"string"
    * - address.country
      - properties.country
-     - "string"
+"string"
    * - address.country
      - properties.state
-     - "string"
+"string"
    * - communication_address.communication_country
      - properties.country
-     - "string"
+"string"
    * - communication_address.communication_country
      - properties.state
-     - "string"
+"string"
    * - date_of_birth
      - properties.date_of_birth
-     - "string"
+"string"
    * - first_name
      - properties.firstname
-     - "string"
+"string"
    * - last_name
      - properties.lastname
-     - "string"
+"string"
    * - official_email
      - properties.email
-     - "string"
+"string"
    * - official_email
      - properties.work_email
-     - "string"
+"string"
    * - personal_email
      - properties.email
-     - "string"
+"string"
    * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
      - properties.mobilephone
-     - "string"
+"string"
    * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.name)
      - properties.phone
-     - "string"
+"string"
 
