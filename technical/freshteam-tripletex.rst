@@ -2,7 +2,7 @@
 Freshteam to  Dataflow
 ======================
 
-Generated: 2023-11-30 00:00:00
+Generated: 2024-03-26 00:00:01
 
 Introduction.
 ------------
@@ -59,7 +59,7 @@ The following properties are synchronized between a Freshteam Employee and a  Em
      - dateOfBirth
      - "datetime-format","%Y-%m-%d","_."]
    * - designation
-     - department.id
+     - department.id (Dependant on having wd:Q703534 in  )
      - "if", "neq", "_.", "X"], "integer", "string"]
    * - first_name
      - firstName
@@ -78,7 +78,7 @@ The following properties are synchronized between a Freshteam Employee and a  Em
      - "string"
    * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
      - phoneNumberMobile
-     - "string"
+     - "if","matches","+* *","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
    * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.name)
      - phoneNumberWork
      - "string"
