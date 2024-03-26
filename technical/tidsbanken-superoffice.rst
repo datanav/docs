@@ -2,7 +2,7 @@
 Tidsbanken to Superoffice Dataflow
 ==================================
 
-Generated: 2024-03-26 14:24:14
+Generated: 2024-03-26 14:34:37
 
 Introduction
 ------------
@@ -11,7 +11,10 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Tidsbanken Ansatt to Superoffice Person
 ---------------------------------------
-Before any synchronization can take place, a link between a Tidsbanken Ansatt and a Superoffice Person must be established.
+Every Tidsbanken Ansatt will be synchronized with a Superoffice Person.
+
+If a matching Superoffice Person already exists, the Tidsbanken Ansatt will be merged with the existing one.
+If no matching Superoffice Person is found, a new Superoffice Person will be created.
 
 A Tidsbanken Ansatt will merge with a Superoffice Person if one of the following property combinations match:
 
@@ -64,7 +67,10 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Supe
 
 Tidsbanken Kunde to Superoffice Contact
 ---------------------------------------
-Before any synchronization can take place, a link between a Tidsbanken Kunde and a Superoffice Contact must be established.
+Every Tidsbanken Kunde will be synchronized with a Superoffice Contact.
+
+If a matching Superoffice Contact already exists, the Tidsbanken Kunde will be merged with the existing one.
+If no matching Superoffice Contact is found, a new Superoffice Contact will be created.
 
 A Tidsbanken Kunde will merge with a Superoffice Contact if one of the following property combinations match:
 
@@ -155,4 +161,20 @@ The following properties are synchronized between a Tidsbanken Kunde and a Super
    * - sesam_kundeId
      - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountry)
      - "string"
+
+
+Tidsbanken Avdeling to Superoffice Contact
+------------------------------------------
+Every Tidsbanken Avdeling will be synchronized with a Superoffice Contact.
+
+Once a link between a Tidsbanken Avdeling and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Avdeling and a Superoffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     - Superoffice Contact Property
+     - Superoffice Data Type
 
