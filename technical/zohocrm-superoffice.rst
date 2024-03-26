@@ -2,7 +2,7 @@
 ZohoCRM to Superoffice Dataflow
 ===============================
 
-Generated: 2024-03-26 14:20:55
+Generated: 2024-03-26 14:34:37
 
 Introduction
 ------------
@@ -11,9 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 ZohoCRM Account to Superoffice Contact
 --------------------------------------
-Before any synchronization can take place, a link between a ZohoCRM Account and a Superoffice Contact must be established.
-
-A new Superoffice Contact will be created from a ZohoCRM Account if it is connected to a ZohoCRM Deal that is synchronized into Superoffice.
+Every ZohoCRM Account will be synchronized with a Superoffice Contact.
 
 Once a link between a ZohoCRM Account and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -107,9 +105,7 @@ The following properties are synchronized between a ZohoCRM Contact and a Supero
 
 ZohoCRM Contact to Superoffice Person
 -------------------------------------
-Before any synchronization can take place, a link between a ZohoCRM Contact and a Superoffice Person must be established.
-
-A new Superoffice Person will be created from a ZohoCRM Contact if it is connected to a ZohoCRM Deal that is synchronized into Superoffice.
+Every ZohoCRM Contact will be synchronized with a Superoffice Person.
 
 Once a link between a ZohoCRM Contact and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
