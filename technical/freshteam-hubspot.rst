@@ -2,37 +2,37 @@
 Freshteam to Hubspot Dataflow
 =============================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:16
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Freshteam to Hubspot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Freshteam Employee to  User
----------------------------
-Before any synchronization can take place, a link between a Freshteam Employee and a  User must be established.
+Freshteam Employee to Hubspot User
+----------------------------------
+Before any synchronization can take place, a link between a Freshteam Employee and a Hubspot User must be established.
 
-A Freshteam Employee will merge with a  User if one of the following property combinations match:
+A Freshteam Employee will merge with a Hubspot User if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Employee Property
-     -  User Property
+     - Hubspot User Property
    * - official_email
      - email
 
-Once a link between a Freshteam Employee and a  User is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Employee and a Hubspot User is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Employee and a  User:
+The following properties are synchronized between a Freshteam Employee and a Hubspot User:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Employee Property
-     -  User Property
-     -  Data Type
+     - Hubspot User Property
+     - Hubspot Data Type
    * - official_email
      - email
      - "string"
