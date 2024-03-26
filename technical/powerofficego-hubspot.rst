@@ -2,7 +2,7 @@
 Powerofficego to Hubspot Dataflow
 =================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -388,5 +388,5 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - "string"
    * - Quantity
      - properties.quantity
-     - ["string", ["integer", ["decimal", "_."]]]
+     - N/A
 
