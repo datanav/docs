@@ -2,7 +2,7 @@
 HubSpot to Youtrack Dataflow
 ============================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 14:30:19
 
 Introduction
 ------------
@@ -44,167 +44,167 @@ The following properties are synchronized between a HubSpot Contact and a Youtra
      - "string"
 
 
-HubSpot Company to  Groups
---------------------------
-Every HubSpot Company will be synchronized with a  Groups.
+HubSpot Company to Youtrack Groups
+----------------------------------
+Every HubSpot Company will be synchronized with a Youtrack Groups.
 
-Once a link between a HubSpot Company and a  Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a  Groups:
+The following properties are synchronized between a HubSpot Company and a Youtrack Groups:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     -  Groups Property
-     -  Data Type
+     - Youtrack Groups Property
+     - Youtrack Data Type
    * - properties.name
      - name
      - "string"
 
 
-HubSpot Contactcompanyassociationtype to  Organizationroles
------------------------------------------------------------
-Every HubSpot Contactcompanyassociationtype will be synchronized with a  Organizationroles.
+HubSpot Contactcompanyassociationtype to Youtrack Organizationroles
+-------------------------------------------------------------------
+Every HubSpot Contactcompanyassociationtype will be synchronized with a Youtrack Organizationroles.
 
-Once a link between a HubSpot Contactcompanyassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contactcompanyassociationtype and a Youtrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contactcompanyassociationtype and a  Organizationroles:
+The following properties are synchronized between a HubSpot Contactcompanyassociationtype and a Youtrack Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contactcompanyassociationtype Property
-     -  Organizationroles Property
-     -  Data Type
+     - Youtrack Organizationroles Property
+     - Youtrack Data Type
 
 
-HubSpot Dealcompanyassociationtype to  Organizationroles
---------------------------------------------------------
-Every HubSpot Dealcompanyassociationtype will be synchronized with a  Organizationroles.
+HubSpot Dealcompanyassociationtype to Youtrack Organizationroles
+----------------------------------------------------------------
+Every HubSpot Dealcompanyassociationtype will be synchronized with a Youtrack Organizationroles.
 
-Once a link between a HubSpot Dealcompanyassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Dealcompanyassociationtype and a Youtrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Dealcompanyassociationtype and a  Organizationroles:
+The following properties are synchronized between a HubSpot Dealcompanyassociationtype and a Youtrack Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Dealcompanyassociationtype Property
-     -  Organizationroles Property
-     -  Data Type
+     - Youtrack Organizationroles Property
+     - Youtrack Data Type
 
 
-HubSpot Dealcontactassociationtype to  Organizationroles
---------------------------------------------------------
-Every HubSpot Dealcontactassociationtype will be synchronized with a  Organizationroles.
+HubSpot Dealcontactassociationtype to Youtrack Organizationroles
+----------------------------------------------------------------
+Every HubSpot Dealcontactassociationtype will be synchronized with a Youtrack Organizationroles.
 
-Once a link between a HubSpot Dealcontactassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Dealcontactassociationtype and a Youtrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Dealcontactassociationtype and a  Organizationroles:
+The following properties are synchronized between a HubSpot Dealcontactassociationtype and a Youtrack Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Dealcontactassociationtype Property
-     -  Organizationroles Property
-     -  Data Type
+     - Youtrack Organizationroles Property
+     - Youtrack Data Type
 
 
-HubSpot Lineitemdealassociationtype to  Organizationroles
----------------------------------------------------------
-Every HubSpot Lineitemdealassociationtype will be synchronized with a  Organizationroles.
+HubSpot Lineitemdealassociationtype to Youtrack Organizationroles
+-----------------------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a Youtrack Organizationroles.
 
-Once a link between a HubSpot Lineitemdealassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitemdealassociationtype and a Youtrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a  Organizationroles:
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a Youtrack Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitemdealassociationtype Property
-     -  Organizationroles Property
-     -  Data Type
+     - Youtrack Organizationroles Property
+     - Youtrack Data Type
 
 
-HubSpot Lineitemquoteassociationtype to  Organizationroles
-----------------------------------------------------------
-Every HubSpot Lineitemquoteassociationtype will be synchronized with a  Organizationroles.
+HubSpot Lineitemquoteassociationtype to Youtrack Organizationroles
+------------------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a Youtrack Organizationroles.
 
-Once a link between a HubSpot Lineitemquoteassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitemquoteassociationtype and a Youtrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a  Organizationroles:
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a Youtrack Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitemquoteassociationtype Property
-     -  Organizationroles Property
-     -  Data Type
+     - Youtrack Organizationroles Property
+     - Youtrack Data Type
 
 
-HubSpot Quotecompanyassociationtype to  Organizationroles
----------------------------------------------------------
-Every HubSpot Quotecompanyassociationtype will be synchronized with a  Organizationroles.
+HubSpot Quotecompanyassociationtype to Youtrack Organizationroles
+-----------------------------------------------------------------
+Every HubSpot Quotecompanyassociationtype will be synchronized with a Youtrack Organizationroles.
 
-Once a link between a HubSpot Quotecompanyassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotecompanyassociationtype and a Youtrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotecompanyassociationtype and a  Organizationroles:
+The following properties are synchronized between a HubSpot Quotecompanyassociationtype and a Youtrack Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotecompanyassociationtype Property
-     -  Organizationroles Property
-     -  Data Type
+     - Youtrack Organizationroles Property
+     - Youtrack Data Type
 
 
-HubSpot Quotecontactassociationtype to  Organizationroles
----------------------------------------------------------
-Every HubSpot Quotecontactassociationtype will be synchronized with a  Organizationroles.
+HubSpot Quotecontactassociationtype to Youtrack Organizationroles
+-----------------------------------------------------------------
+Every HubSpot Quotecontactassociationtype will be synchronized with a Youtrack Organizationroles.
 
-Once a link between a HubSpot Quotecontactassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotecontactassociationtype and a Youtrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotecontactassociationtype and a  Organizationroles:
+The following properties are synchronized between a HubSpot Quotecontactassociationtype and a Youtrack Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotecontactassociationtype Property
-     -  Organizationroles Property
-     -  Data Type
+     - Youtrack Organizationroles Property
+     - Youtrack Data Type
 
 
-HubSpot Quotedealassociationtype to  Organizationroles
-------------------------------------------------------
-Every HubSpot Quotedealassociationtype will be synchronized with a  Organizationroles.
+HubSpot Quotedealassociationtype to Youtrack Organizationroles
+--------------------------------------------------------------
+Every HubSpot Quotedealassociationtype will be synchronized with a Youtrack Organizationroles.
 
-Once a link between a HubSpot Quotedealassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotedealassociationtype and a Youtrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotedealassociationtype and a  Organizationroles:
+The following properties are synchronized between a HubSpot Quotedealassociationtype and a Youtrack Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotedealassociationtype Property
-     -  Organizationroles Property
-     -  Data Type
+     - Youtrack Organizationroles Property
+     - Youtrack Data Type
 
 
-HubSpot Quotequotetemplateassociationtype to  Organizationroles
----------------------------------------------------------------
-Every HubSpot Quotequotetemplateassociationtype will be synchronized with a  Organizationroles.
+HubSpot Quotequotetemplateassociationtype to Youtrack Organizationroles
+-----------------------------------------------------------------------
+Every HubSpot Quotequotetemplateassociationtype will be synchronized with a Youtrack Organizationroles.
 
-Once a link between a HubSpot Quotequotetemplateassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotequotetemplateassociationtype and a Youtrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotequotetemplateassociationtype and a  Organizationroles:
+The following properties are synchronized between a HubSpot Quotequotetemplateassociationtype and a Youtrack Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotequotetemplateassociationtype Property
-     -  Organizationroles Property
-     -  Data Type
+     - Youtrack Organizationroles Property
+     - Youtrack Data Type
 
 
 HubSpot Ticket to Youtrack Issues
