@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -56,6 +56,89 @@ The following properties are synchronized between a Tripletex Contact and a Supe
      - "string"
 
 
+Tripletex Customer person to  Person
+------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer person and a  Person must be established.
+
+A Tripletex Customer person will merge with a  Person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     -  Person Property
+   * - email
+     - Emails.Value
+
+Once a link between a Tripletex Customer person and a  Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a  Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     -  Person Property
+     -  Data Type
+   * - deliveryAddress.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - deliveryAddress.city
+     - Address.Street.City
+     - "string"
+   * - deliveryAddress.country.id
+     - Country.CountryId
+     - "integer"
+   * - deliveryAddress.postalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - email
+     - Emails.Value
+     - "string"
+   * - id
+     - PersonId
+     - "integer"
+   * - phoneNumber
+     - OfficePhones.Value
+     - "string"
+   * - phoneNumberMobile
+     - MobilePhones.Value
+     - "string"
+   * - physicalAddress.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - physicalAddress.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - physicalAddress.city
+     - Address.Street.City
+     - "string"
+   * - physicalAddress.country.id
+     - Country.CountryId
+     - "integer"
+   * - physicalAddress.postalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - postalAddress.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - postalAddress.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - postalAddress.city
+     - Address.Street.City
+     - "string"
+   * - postalAddress.country.id
+     - Country.CountryId
+     - "integer"
+   * - postalAddress.postalCode
+     - Address.Street.Zipcode
+     - "string"
+
+
 Tripletex Customer to SuperOffice Contact
 -----------------------------------------
 Every Tripletex Customer will be synchronized with a SuperOffice Contact.
@@ -83,6 +166,9 @@ The following properties are synchronized between a Tripletex Customer and a Sup
    * - Tripletex Customer Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
+   * - customerNumber
+     - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountryDependant on having wd:Q852835 in Country.TwoLetterISOCountry)
+     - "string"
    * - deliveryAddress.addressLine1
      - Address.Postal.Address1
      - "string"
@@ -120,7 +206,7 @@ The following properties are synchronized between a Tripletex Customer and a Sup
      - Name
      - "string"
    * - organizationNumber
-     - OrgNr (Dependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountry)
+     - OrgNr (Dependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountry)
      - "string"
    * - phoneNumber
      - Phones.Value
@@ -232,7 +318,7 @@ The following properties are synchronized between a Tripletex Employee and a  Pe
    * - dateOfBirth
      - BirthDate
      - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
-   * - department.id
+   * - department.id (Dependant on having wd:Q703534 in  )
      - Contact.ContactId
      - "integer"
    * - email
@@ -329,6 +415,9 @@ The following properties are synchronized between a Tripletex Supplier and a Sup
    * - name
      - Name
      - "string"
+   * - organizationNumber
+     - OrgNr (Dependant on having NO in Country.TwoLetterISOCountry)
+     - "string"
    * - phoneNumber
      - Phones.Value
      - "string"
@@ -386,6 +475,9 @@ The following properties are synchronized between a Tripletex Supplier and a Sup
    * - postalAddress.postalCode
      - Address.Street.Zipcode
      - "string"
+   * - url
+     - Urls.Value
+     - "string"
 
 
 Tripletex Contact to SuperOffice Contact
@@ -424,39 +516,217 @@ The following properties are synchronized between a Tripletex Customer and a Sup
      - SuperOffice Data Type
 
 
-Tripletex Department to SuperOffice Contact
--------------------------------------------
-Every Tripletex Department will be synchronized with a SuperOffice Contact.
+Tripletex Order to  Quotealternative
+------------------------------------
+Before any synchronization can take place, a link between a Tripletex Order and a  Quotealternative must be established.
 
-Once a link between a Tripletex Department and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+A new  Quotealternative will be created from a Tripletex Order if it is connected to a Tripletex Orderline that is synchronized into .
 
-The following properties are synchronized between a Tripletex Department and a SuperOffice Contact:
+Once a link between a Tripletex Order and a  Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a  Quotealternative:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     -  Quotealternative Property
+     -  Data Type
+   * - invoiceComment
+     - Name
+     - "string"
+
+
+Tripletex Department to  Contact
+--------------------------------
+Every Tripletex Department will be synchronized with a  Contact.
+
+Once a link between a Tripletex Department and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a  Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
+     -  Contact Property
+     -  Data Type
+   * - departmentNumber
+     - OrgNr (Dependant on having wd:Q2366457 in Country.TwoLetterISOCountry)
+     - "string"
    * - name
      - Name
      - "string"
 
 
-Tripletex Product to SuperOffice Product
-----------------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a SuperOffice Product.
+Tripletex Orderline to  Quoteline
+---------------------------------
+Every Tripletex Orderline will be synchronized with a  Quoteline.
 
-Once a link between a Tripletex Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Orderline and a  Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Product and a SuperOffice Product:
+The following properties are synchronized between a Tripletex Orderline and a  Quoteline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     -  Quoteline Property
+     -  Data Type
+   * - count
+     - DiscountPercent
+     - "integer"
+   * - count
+     - Name
+     - "string"
+   * - count
+     - Quantity
+     - "integer", "decimal"]
+   * - count
+     - QuantityUnit
+     - "integer"
+   * - count
+     - Rank (Dependant on having  in Rank)
+     - "integer"
+   * - count
+     - UnitListPrice
+     - "string"
+   * - count
+     - VAT
+     - "integer"
+   * - description
+     - Description
+     - "string"
+   * - description
+     - DiscountPercent
+     - "integer"
+   * - description
+     - Name
+     - "string"
+   * - description
+     - Quantity
+     - "integer"
+   * - description
+     - QuantityUnit
+     - "integer"
+   * - description
+     - Rank (Dependant on having  in Rank)
+     - "integer"
+   * - description
+     - UnitListPrice
+     - "string"
+   * - description
+     - VAT
+     - "integer"
+   * - discount
+     - DiscountPercent
+     - "integer"
+   * - discount
+     - ERPDiscountPercent
+     - "decimal"
+   * - discount
+     - Name
+     - "string"
+   * - discount
+     - Quantity
+     - "integer"
+   * - discount
+     - QuantityUnit
+     - "integer"
+   * - discount
+     - Rank (Dependant on having  in Rank)
+     - "integer"
+   * - discount
+     - UnitListPrice
+     - "string"
+   * - discount
+     - VAT
+     - "integer"
+   * - order.id
+     - QuoteAlternativeId
+     - "integer"
+   * - product.id
+     - ERPProductKey
+     - "string"
+   * - unitCostCurrency
+     - DiscountPercent
+     - "integer"
+   * - unitCostCurrency
+     - Name
+     - "string"
+   * - unitCostCurrency
+     - Quantity
+     - "integer"
+   * - unitCostCurrency
+     - QuantityUnit
+     - "integer"
+   * - unitCostCurrency
+     - Rank (Dependant on having  in Rank)
+     - "integer"
+   * - unitCostCurrency
+     - UnitListPrice
+     - "string"
+   * - unitCostCurrency
+     - VAT
+     - "integer"
+   * - unitPriceExcludingVatCurrency
+     - DiscountPercent
+     - "integer"
+   * - unitPriceExcludingVatCurrency
+     - Name
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - Quantity
+     - "integer"
+   * - unitPriceExcludingVatCurrency
+     - QuantityUnit
+     - "integer"
+   * - unitPriceExcludingVatCurrency
+     - Rank (Dependant on having  in Rank)
+     - "integer"
+   * - unitPriceExcludingVatCurrency
+     - UnitListPrice
+     - "if-null", "integer", "string"], "decimal"]
+   * - unitPriceExcludingVatCurrency
+     - VAT
+     - "integer"
+   * - vatType.id
+     - DiscountPercent
+     - "integer"
+   * - vatType.id
+     - Name
+     - "string"
+   * - vatType.id
+     - Quantity
+     - "integer"
+   * - vatType.id
+     - QuantityUnit
+     - "integer"
+   * - vatType.id
+     - Rank (Dependant on having  in Rank)
+     - "integer"
+   * - vatType.id
+     - UnitListPrice
+     - "string"
+   * - vatType.id
+     - VAT
+     - "integer"
+
+
+Tripletex Product to  Product
+-----------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Product.
+
+Once a link between a Tripletex Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a  Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     - SuperOffice Product Property
-     - SuperOffice Data Type
+     -  Product Property
+     -  Data Type
    * - costExcludingVatCurrency
      - UnitCost
      - "string"
@@ -468,6 +738,9 @@ The following properties are synchronized between a Tripletex Product and a Supe
      - "string"
    * - name
      - Name
+     - "string"
+   * - number
+     - Code
      - "string"
    * - number
      - ERPProductKey
@@ -484,23 +757,4 @@ The following properties are synchronized between a Tripletex Product and a Supe
    * - vatType.id
      - VAT
      - "integer"
-
-
-Tripletex Productgroup to SuperOffice Listproductcategoryitems
---------------------------------------------------------------
-Every Tripletex Productgroup will be synchronized with a SuperOffice Listproductcategoryitems.
-
-Once a link between a Tripletex Productgroup and a SuperOffice Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Productgroup and a SuperOffice Listproductcategoryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productgroup Property
-     - SuperOffice Listproductcategoryitems Property
-     - SuperOffice Data Type
-   * - name
-     - Name
-     - "string"
 
