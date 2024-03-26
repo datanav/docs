@@ -2,7 +2,7 @@
 YouTrack to Tripletex Dataflow
 ==============================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -67,7 +67,7 @@ The following properties are synchronized between a YouTrack Users and a Triplet
      - Tripletex Data Type
    * - groups.id
      - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
    * - name
      - firstName
      - "string"
@@ -76,32 +76,32 @@ The following properties are synchronized between a YouTrack Users and a Triplet
      - "string"
    * - organizationRoles.id
      - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
    * - profile.email.email
      - email
      - "string"
    * - projectRoles.id
      - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
    * - sourcedOrganizationRoles.id
      - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
    * - sourcedProjectRoles.id
      - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
    * - teams.id
      - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
    * - transitiveGroups.id
      - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
    * - transitiveOrganizationRoles.id
      - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
    * - transitiveProjectRoles.id
      - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
    * - transitiveTeams.id
      - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
 
