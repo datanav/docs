@@ -2,7 +2,7 @@
 Businesscentral to Tripletex Dataflow
 =====================================
 
-Generated: 2024-03-26 14:15:49
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -79,13 +79,13 @@ The following properties are synchronized between a Businesscentral Contacts per
      - Tripletex Data Type
    * - email
      - email
-     - "string"
+"string"
    * - mobilePhoneNumber
      - phoneNumberMobile
-     - "if","matches","+* *","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
+["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
    * - phoneNumber
      - phoneNumberWork
-     - "string"
+"string"
 
 
 Businesscentral Contacts person to Tripletex Customer person
@@ -104,67 +104,67 @@ The following properties are synchronized between a Businesscentral Contacts per
      - Tripletex Data Type
    * - addressLine1
      - deliveryAddress.addressLine1
-     - "string"
+"string"
    * - addressLine1
      - physicalAddress.addressLine1
-     - "string"
+"string"
    * - addressLine1
      - postalAddress.addressLine1
-     - "string"
+"string"
    * - addressLine2
      - deliveryAddress.addressLine2
-     - "string"
+"string"
    * - addressLine2
      - physicalAddress.addressLine2
-     - "string"
+"string"
    * - addressLine2
      - postalAddress.addressLine2
-     - "string"
+"string"
    * - city
      - deliveryAddress.city
-     - "string"
+"string"
    * - city
      - physicalAddress.city
-     - "string"
+"string"
    * - city
      - postalAddress.city
-     - "string"
+"string"
    * - country
      - deliveryAddress.country.id
-     - "string"
+"string"
    * - country
      - physicalAddress.country.id
-     - "integer"
+"integer"
    * - country
      - postalAddress.country.id
-     - "integer"
+"integer"
    * - displayName
      - name
-     - "string"
+"string"
    * - email
      - email
-     - "string"
+"string"
    * - id
      - id
-     - "integer"
+"integer"
    * - mobilePhoneNumber
      - phoneNumberMobile
-     - "string"
+"string"
    * - phoneNumber
      - phoneNumber
-     - "string"
+"string"
    * - postalCode
      - deliveryAddress.postalCode
-     - "string"
+"string"
    * - postalCode
      - physicalAddress.postalCode
-     - "string"
+"string"
    * - postalCode
      - postalAddress.postalCode
-     - "string"
+"string"
    * - type
      - isPrivateIndividual
-     - "string"
+"string"
 
 
 Businesscentral Customers company to Tripletex Customer
@@ -183,94 +183,94 @@ The following properties are synchronized between a Businesscentral Customers co
      - Tripletex Data Type
    * - address.city
      - deliveryAddress.city
-     - "string"
+"string"
    * - address.city
      - physicalAddress.city
-     - "string"
+"string"
    * - address.city
      - postalAddress.city
-     - "string"
+"string"
    * - address.countryLetterCode
      - deliveryAddress.country.id
-     - "string"
+"string"
    * - address.countryLetterCode
      - physicalAddress.country.id
-     - "integer"
+"integer"
    * - address.countryLetterCode
      - postalAddress.country.id
-     - "integer"
+"integer"
    * - address.postalCode
      - deliveryAddress.postalCode
-     - "string"
+"string"
    * - address.postalCode
      - physicalAddress.postalCode
-     - "string"
+"string"
    * - address.postalCode
      - postalAddress.postalCode
-     - "string"
+"string"
    * - addressLine1
      - deliveryAddress.addressLine1
-     - "string"
+"string"
    * - addressLine1
      - physicalAddress.addressLine1
-     - "string"
+"string"
    * - addressLine1
      - postalAddress.addressLine1
-     - "string"
+"string"
    * - addressLine2
      - deliveryAddress.addressLine2
-     - "string"
+"string"
    * - addressLine2
      - physicalAddress.addressLine2
-     - "string"
+"string"
    * - addressLine2
      - postalAddress.addressLine2
-     - "string"
+"string"
    * - city
      - deliveryAddress.city
-     - "string"
+"string"
    * - city
      - physicalAddress.city
-     - "string"
+"string"
    * - city
      - postalAddress.city
-     - "string"
+"string"
    * - country
      - deliveryAddress.country.id
-     - "string"
+"string"
    * - country
      - invoiceSendMethod
-     - "string"
+"string"
    * - country
      - physicalAddress.country.id
-     - "integer"
+"integer"
    * - country
      - postalAddress.country.id
-     - "integer"
+"integer"
    * - displayName
      - name
-     - "string"
+"string"
    * - id
      - id
-     - "integer"
+"integer"
    * - phoneNumber
      - phoneNumber
-     - "string"
+"string"
    * - postalCode
      - deliveryAddress.postalCode
-     - "string"
+"string"
    * - postalCode
      - physicalAddress.postalCode
-     - "string"
+"string"
    * - postalCode
      - postalAddress.postalCode
-     - "string"
+"string"
    * - type
      - isPrivateIndividual
-     - "string"
+"string"
    * - website
      - website
-     - "string"
+"string"
 
 
 Businesscentral Customers person to Tripletex Customer person
@@ -289,64 +289,64 @@ The following properties are synchronized between a Businesscentral Customers pe
      - Tripletex Data Type
    * - addressLine1
      - deliveryAddress.addressLine1
-     - "string"
+"string"
    * - addressLine1
      - physicalAddress.addressLine1
-     - "string"
+"string"
    * - addressLine1
      - postalAddress.addressLine1
-     - "string"
+"string"
    * - addressLine2
      - deliveryAddress.addressLine2
-     - "string"
+"string"
    * - addressLine2
      - physicalAddress.addressLine2
-     - "string"
+"string"
    * - addressLine2
      - postalAddress.addressLine2
-     - "string"
+"string"
    * - city
      - deliveryAddress.city
-     - "string"
+"string"
    * - city
      - physicalAddress.city
-     - "string"
+"string"
    * - city
      - postalAddress.city
-     - "string"
+"string"
    * - country
      - deliveryAddress.country.id
-     - "string"
+"string"
    * - country
      - physicalAddress.country.id
-     - "integer"
+"integer"
    * - country
      - postalAddress.country.id
-     - "integer"
+"integer"
    * - displayName
      - name
-     - "string"
+"string"
    * - email
      - email
-     - "string"
+"string"
    * - id
      - id
-     - "integer"
+"integer"
    * - phoneNumber
      - phoneNumber
-     - "string"
+"string"
    * - postalCode
      - deliveryAddress.postalCode
-     - "string"
+"string"
    * - postalCode
      - physicalAddress.postalCode
-     - "string"
+"string"
    * - postalCode
      - postalAddress.postalCode
-     - "string"
+"string"
    * - type
      - isPrivateIndividual
-     - "string"
+"string"
 
 
 Businesscentral Employees to Tripletex Employee
@@ -365,34 +365,34 @@ The following properties are synchronized between a Businesscentral Employees an
      - Tripletex Data Type
    * - birthDate
      - dateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
+["datetime-format","%Y-%m-%d","_."]
    * - displayName
      - firstName
-     - "string"
+"string"
    * - displayName
      - lastName
-     - "string"
+"string"
    * - email
      - email
-     - "string"
+"string"
    * - givenName
      - firstName
-     - "string"
+"string"
    * - givenName
      - lastName
-     - "string"
+"string"
    * - mobilePhone
      - phoneNumberMobile
-     - "string"
+"string"
    * - phoneNumber
      - phoneNumberWork
-     - "string"
+"string"
    * - surname
      - firstName
-     - "string"
+"string"
    * - surname
      - lastName
-     - "string"
+"string"
 
 
 Businesscentral Items to Tripletex Product
@@ -424,28 +424,28 @@ The following properties are synchronized between a Businesscentral Items and a 
      - Tripletex Data Type
    * - displayName
      - name
-     - "string"
+"string"
    * - displayName.string
      - name
-     - "string"
+"string"
    * - displayName2
      - name
-     - "string"
+"string"
    * - gtin
      - ean
-     - "string"
+"string"
    * - inventory
      - stockOfGoods
-     - "integer"
+"integer"
    * - taxGroupCode
      - vatType.id
-     - "integer"
+"integer"
    * - unitCost
      - costExcludingVatCurrency
-     - "float"
+"float"
    * - unitPrice
      - priceExcludingVatCurrency
-     - "float"
+"float"
 
 
 Businesscentral Salesorderlines to Tripletex Orderline
@@ -464,106 +464,106 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - Tripletex Data Type
    * - amountExcludingTax
      - unitPriceExcludingVatCurrency
-     - "float"
+"float"
    * - description
      - count
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - description
      - description
-     - "string"
+"string"
    * - description
      - discount
-     - "float"
+"float"
    * - description
      - unitCostCurrency
-     - "float"
+"float"
    * - description
      - unitPriceExcludingVatCurrency
-     - "float"
+"float"
    * - description
      - vatType.id
-     - "integer"
+"integer"
    * - discountPercent
      - count
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - discountPercent
      - description
-     - "string"
+"string"
    * - discountPercent
      - discount
-     - "float"
+"float"
    * - discountPercent
      - unitCostCurrency
-     - "float"
+"float"
    * - discountPercent
      - unitPriceExcludingVatCurrency
-     - "float"
+"float"
    * - discountPercent
      - vatType.id
-     - "integer"
+"integer"
    * - documentId
      - order.id
-     - "integer"
+"integer"
    * - invoiceQuantity
      - count
-     - "float"
+"float"
    * - itemId
      - product.id
-     - "integer"
+"integer"
    * - quantity
      - count
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - quantity
      - description
-     - "string"
+"string"
    * - quantity
      - discount
-     - "float"
+"float"
    * - quantity
      - unitCostCurrency
-     - "float"
+"float"
    * - quantity
      - unitPriceExcludingVatCurrency
-     - "float"
+"float"
    * - quantity
      - vatType.id
-     - "integer"
+"integer"
    * - taxPercent
      - count
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - taxPercent
      - description
-     - "string"
+"string"
    * - taxPercent
      - discount
-     - "float"
+"float"
    * - taxPercent
      - unitCostCurrency
-     - "float"
+"float"
    * - taxPercent
      - unitPriceExcludingVatCurrency
-     - "float"
+"float"
    * - taxPercent
      - vatType.id
-     - "integer"
+"integer"
    * - unitPrice
      - count
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - unitPrice
      - description
-     - "string"
+"string"
    * - unitPrice
      - discount
-     - "float"
+"float"
    * - unitPrice
      - unitCostCurrency
-     - "float"
+"float"
    * - unitPrice
      - unitPriceExcludingVatCurrency
-     - "float"
+"float"
    * - unitPrice
      - vatType.id
-     - "integer"
+"integer"
 
 
 Businesscentral Salesorders to Tripletex Order
@@ -582,20 +582,20 @@ The following properties are synchronized between a Businesscentral Salesorders 
      - Tripletex Data Type
    * - currencyId
      - currency.id
-     - "integer"
+"integer"
    * - customerId
      - contact.id
-     - "integer"
+"integer"
    * - customerId
      - customer.id
-     - "integer"
+"integer"
    * - orderDate
      - orderDate
-     - "datetime-format","%Y-%m-%d","_."]
+["datetime-format","%Y-%m-%d","_."]
    * - requestedDeliveryDate
      - deliveryDate
-     - "datetime-format","%Y-%m-%d","_."]
+["datetime-format","%Y-%m-%d","_."]
    * - salesperson
      - ourContactEmployee.id
-     - "integer"
+"integer"
 
