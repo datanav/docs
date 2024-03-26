@@ -2,7 +2,7 @@
 Powerofficego to Freshteam Dataflow
 ===================================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -25,10 +25,10 @@ The following properties are synchronized between a Powerofficego Departments an
      - Freshteam Data Type
    * - CreatedDateTimeOffset
      - created_at
-     - "string"
+"string"
    * - Name
      - name
-     - "string"
+"string"
 
 
 Powerofficego Employees to Freshteam Employee
@@ -60,92 +60,92 @@ The following properties are synchronized between a Powerofficego Employees and 
      - Freshteam Data Type
    * - DateOfBirth
      - date_of_birth
-     - "string"
+"string"
    * - DepartmentId (Dependant on having wd:Q703534 in JobTitle)
      - designation
-     - "string"
+"string"
    * - EmailAddress
      - official_email
-     - "string"
+"string"
    * - EmailAddress
      - personal_email
-     - "string"
+"string"
    * - FirstName
      - first_name
-     - "string"
+"string"
    * - Id
      - id
-     - "string"
+"string"
    * - JobTitle
      - designation
-     - "string"
+"string"
    * - LastChanged
      - updated_at
-     - "string"
+"string"
    * - LastName
      - last_name
-     - "string"
+"string"
    * - MailAddress.City
      - address.city
-     - "string"
+"string"
    * - MailAddress.City
      - communication_address.communication_city
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - Billing_Country
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - Shipping_Country
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - address.country
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - address.country_code
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - communication_address.communication_country
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - communication_address.communication_country_code
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - address.zip_code
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - communication_address.communication_zip_code
-     - "string"
+"string"
    * - MailAddress.city
      - address.city
-     - "string"
+"string"
    * - MailAddress.city
      - communication_address.communication_city
-     - "string"
+"string"
    * - MailAddress.countryCode
      - address.country_code
-     - "string"
+"string"
    * - MailAddress.countryCode
      - communication_address.communication_country_code
-     - "string"
+"string"
    * - MailAddress.zipCode
      - address.zip_code
-     - "string"
+"string"
    * - MailAddress.zipCode
      - communication_address.communication_zip_code
-     - "string"
+"string"
    * - PhoneNumber
      - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
-     - "string"
+"string"
    * - dateOfBirth
      - date_of_birth
-     - "string"
+"string"
    * - emailAddress
      - official_email
-     - "string"
+"string"
    * - firstName
      - first_name
-     - "string"
+"string"
    * - lastName
      - last_name
-     - "string"
+"string"
 
