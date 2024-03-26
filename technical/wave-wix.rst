@@ -2,37 +2,37 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:16
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Wix. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Customer person to  Contacts
----------------------------------
-Before any synchronization can take place, a link between a Wave Customer person and a  Contacts must be established.
+Wave Customer person to Wix Contacts
+------------------------------------
+Before any synchronization can take place, a link between a Wave Customer person and a Wix Contacts must be established.
 
-A Wave Customer person will merge with a  Contacts if one of the following property combinations match:
+A Wave Customer person will merge with a Wix Contacts if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     -  Contacts Property
+     - Wix Contacts Property
    * - email
      - primaryInfo.email
 
-Once a link between a Wave Customer person and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer person and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a  Contacts:
+The following properties are synchronized between a Wave Customer person and a Wix Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     -  Contacts Property
-     -  Data Type
+     - Wix Contacts Property
+     - Wix Data Type
    * - address.addressLine1
      - info.addresses.items.address.addressLine
      - "string"
@@ -170,33 +170,33 @@ The following properties are synchronized between a Wave Product and a Wix Produ
      - "decimal"
 
 
-Wave Vendor to  Contacts
-------------------------
-Every Wave Vendor will be synchronized with a  Contacts.
+Wave Vendor to Wix Contacts
+---------------------------
+Every Wave Vendor will be synchronized with a Wix Contacts.
 
-If a matching  Contacts already exists, the Wave Vendor will be merged with the existing one.
-If no matching  Contacts is found, a new  Contacts will be created.
+If a matching Wix Contacts already exists, the Wave Vendor will be merged with the existing one.
+If no matching Wix Contacts is found, a new Wix Contacts will be created.
 
-A Wave Vendor will merge with a  Contacts if one of the following property combinations match:
+A Wave Vendor will merge with a Wix Contacts if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     -  Contacts Property
+     - Wix Contacts Property
    * - email
      - primaryInfo.email
 
-Once a link between a Wave Vendor and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a  Contacts:
+The following properties are synchronized between a Wave Vendor and a Wix Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     -  Contacts Property
-     -  Data Type
+     - Wix Contacts Property
+     - Wix Data Type
    * - address.addressLine1
      - info.addresses.items.address.addressLine
      - "string"
