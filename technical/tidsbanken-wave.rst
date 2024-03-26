@@ -2,7 +2,7 @@
 Tidsbanken to Wave Dataflow
 ===========================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -55,7 +55,7 @@ The following properties are synchronized between a Tidsbanken Kunde and a Wave 
      - "string"
    * - Navn
      - name
-     - ["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
+     - N/A
    * - Postadresse
      - address.addressLine2
      - "string"
