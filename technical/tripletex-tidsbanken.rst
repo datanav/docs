@@ -2,7 +2,7 @@
 Tripletex to Tidsbanken Dataflow
 ================================
 
-Generated: 2024-03-26 14:23:23
+Generated: 2024-03-26 14:23:48
 
 Introduction
 ------------
@@ -395,20 +395,20 @@ The following properties are synchronized between a Tripletex Customer and a Tid
      - "string"
 
 
-Tripletex Department to  Avdeling
----------------------------------
-Every Tripletex Department will be synchronized with a  Avdeling.
+Tripletex Department to Tidsbanken Avdeling
+-------------------------------------------
+Every Tripletex Department will be synchronized with a Tidsbanken Avdeling.
 
-Once a link between a Tripletex Department and a  Avdeling is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a Tidsbanken Avdeling is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a  Avdeling:
+The following properties are synchronized between a Tripletex Department and a Tidsbanken Avdeling:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     -  Avdeling Property
-     -  Data Type
+     - Tidsbanken Avdeling Property
+     - Tidsbanken Data Type
    * - departmentNumber
      - sesam_avdelingId
      - "string"
@@ -504,20 +504,20 @@ The following properties are synchronized between a Tripletex Employee and a Tid
      - "string"
 
 
-Tripletex Project to  Prosjekt
-------------------------------
-Every Tripletex Project will be synchronized with a  Prosjekt.
+Tripletex Project to Tidsbanken Prosjekt
+----------------------------------------
+Every Tripletex Project will be synchronized with a Tidsbanken Prosjekt.
 
-Once a link between a Tripletex Project and a  Prosjekt is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Project and a Tidsbanken Prosjekt is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Project and a  Prosjekt:
+The following properties are synchronized between a Tripletex Project and a Tidsbanken Prosjekt:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Project Property
-     -  Prosjekt Property
-     -  Data Type
+     - Tidsbanken Prosjekt Property
+     - Tidsbanken Data Type
    * - customer.id
      - KundeId
      - "string"
