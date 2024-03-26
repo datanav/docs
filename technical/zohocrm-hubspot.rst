@@ -2,7 +2,7 @@
 ZohoCRM to Hubspot Dataflow
 ===========================
 
-Generated: 2024-03-26 14:34:37
+Generated: 2024-03-26 14:34:55
 
 Introduction
 ------------
@@ -23,6 +23,42 @@ The following properties are synchronized between a ZohoCRM Account and a Hubspo
    * - ZohoCRM Account Property
      - Hubspot Company Property
      - Hubspot Data Type
+   * - Account_Name
+     - properties.name
+     - "string"
+   * - Billing_City
+     - properties.city
+     - "string"
+   * - Billing_Code
+     - properties.zip
+     - "string"
+   * - Billing_Country
+     - properties.country
+     - "string"
+   * - Billing_State
+     - properties.state
+     - "string"
+   * - Created_Time
+     - properties.description
+     - "string"
+   * - Phone
+     - properties.phone
+     - "string"
+   * - Shipping_City
+     - properties.city
+     - "string"
+   * - Shipping_Code
+     - properties.zip
+     - "string"
+   * - Shipping_Country
+     - properties.country
+     - "string"
+   * - Shipping_State
+     - properties.state
+     - "string"
+   * - id
+     - id
+     - "string"
 
 
 ZohoCRM Contact to Hubspot Contact
@@ -39,6 +75,54 @@ The following properties are synchronized between a ZohoCRM Contact and a Hubspo
    * - ZohoCRM Contact Property
      - Hubspot Contact Property
      - Hubspot Data Type
+   * - Email
+     - properties.email
+     - "string"
+   * - First_Name
+     - properties.firstname
+     - "string"
+   * - Last_Name
+     - properties.lastname
+     - "string"
+   * - Mailing_City
+     - properties.city
+     - "string"
+   * - Mailing_Country
+     - properties.country
+     - "string"
+   * - Mailing_State
+     - properties.state
+     - "string"
+   * - Mailing_Zip
+     - properties.zip
+     - "string"
+   * - Mobile
+     - properties.mobilephone
+     - "string"
+   * - Other_City
+     - properties.city
+     - "string"
+   * - Other_Country
+     - properties.country
+     - "string"
+   * - Other_Phone
+     - properties.phone
+     - "string"
+   * - Other_State
+     - properties.state
+     - "string"
+   * - Other_Zip
+     - properties.zip
+     - "string"
+   * - Phone
+     - properties.phone
+     - "string"
+   * - Secondary_Email
+     - properties.email
+     - "string"
+   * - id
+     - id
+     - "string"
 
 
 ZohoCRM Deal to Hubspot Deal
