@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -37,37 +37,37 @@ The following properties are synchronized between a HubSpot Contact and a Wix Co
      - Wix Data Type
    * - id
      - id
-     - "string"
+"string"
    * - properties.address
      - info.addresses.items.address.addressLine
-     - "string"
+"string"
    * - properties.city
      - info.addresses.items.address.city
-     - "string"
+"string"
    * - properties.email
      - info.emails
-     - "string"
+"string"
    * - properties.email
      - primaryInfo.email
-     - "string"
+"string"
    * - properties.firstname
      - info.name.first
-     - "string"
+"string"
    * - properties.lastname
      - info.name.last
-     - "string"
+"string"
    * - properties.mobilephone
      - info.phones
-     - "string"
+"string"
    * - properties.mobilephone
      - primaryInfo.phone
-     - "string"
+"string"
    * - properties.phone
      - primaryInfo.phone
-     - "string"
+"string"
    * - properties.zip
      - info.addresses.items.address.postalCode
-     - "string"
+"string"
 
 
 HubSpot Company to Wix Contacts
@@ -88,31 +88,31 @@ The following properties are synchronized between a HubSpot Company and a Wix Co
      - Wix Data Type
    * - id
      - id
-     - "string"
+"string"
    * - properties.address
      - info.addresses.items.address.addressLine
-     - "string"
+"string"
    * - properties.address2
      - info.addresses.items.address.addressLine2
-     - "string"
+"string"
    * - properties.city
      - info.addresses.items.address.city
-     - "string"
+"string"
    * - properties.country
      - info.addresses.items.address.countryFullname
-     - "string"
+"string"
    * - properties.industry
      - info.addresses.items.address.countryFullname
-     - "string"
+"string"
    * - properties.state
      - info.addresses.items.address.countryFullname
-     - "string"
+"string"
    * - properties.type
      - info.addresses.items.address.countryFullname
-     - "string"
+"string"
    * - properties.zip
      - info.addresses.items.address.postalCode
-     - "string"
+"string"
 
 
 HubSpot Product to Wix Products
@@ -131,23 +131,23 @@ The following properties are synchronized between a HubSpot Product and a Wix Pr
      - Wix Data Type
    * - properties.description
      - description
-     - "string"
+"string"
    * - properties.hs_cost_of_goods_sold
      - costAndProfitData.itemCost
-     - "decimal"
+["decimal", "_."]
    * - properties.hs_cost_of_goods_sold
      - costRange.maxValue
-     - "string"
+"string"
    * - properties.hs_sku
      - sku
-     - "string"
+"string"
    * - properties.name
      - name
-     - "string"
+"string"
    * - properties.price
      - price.price
-     - "string"
+"string"
    * - properties.price
      - priceData.price
-     - "decimal"
+["decimal", "_."]
 
