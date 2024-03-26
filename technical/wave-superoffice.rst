@@ -2,7 +2,7 @@
 Wave Financial to Superoffice Dataflow
 ======================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -312,7 +312,7 @@ The following properties are synchronized between a Wave Customer and a Superoff
      - "string"
    * - website
      - Domains
-     - ["list", "_."]
+     - N/A
    * - website
      - Urls.Value
      - "string"
@@ -424,16 +424,16 @@ The following properties are synchronized between a Wave Invoice and a Superoffi
      - "string"
    * - items.price
      - UnitListPrice
-     - ["if-null", ["integer", ["string", "_."]], ["decimal", "_."]]
+     - N/A
    * - items.product.id
      - ERPProductKey
      - "string"
    * - items.quantity
      - Quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - total.value
      - TotalPrice
-     - ["if-null", ["integer", ["string", "_."]], ["decimal", "_."]]
+     - N/A
 
 
 Wave Product to Superoffice Product
@@ -458,5 +458,5 @@ The following properties are synchronized between a Wave Product and a Superoffi
      - "string"
    * - unitPrice
      - UnitListPrice
-     - ["decimal", "_."]
+     - N/A
 
