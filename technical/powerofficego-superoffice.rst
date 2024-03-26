@@ -2,7 +2,7 @@
 Powerofficego to Superoffice Dataflow
 =====================================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -38,58 +38,58 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - Superoffice Data Type
    * - address1
      - Address.Postal.Address1
-"string"
+     - "string"
    * - address1
      - Address.Street.Address1
-"string"
+     - "string"
    * - address2
      - Address.Postal.Address2
-"string"
+     - "string"
    * - address2
      - Address.Street.Address2
-"string"
+     - "string"
    * - city
      - Address.Postal.City
-"string"
+     - "string"
    * - city
      - Address.Street.City
-"string"
+     - "string"
    * - dateOfBirth
      - BirthDate
-["datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
+     - ["datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
    * - emailAddress
      - Emails.Value
-"string"
+     - "string"
    * - firstName
      - Firstname
-"string"
+     - "string"
    * - id
      - PersonId
-"integer"
+     - "integer"
    * - lastName
      - Lastname
-"string"
+     - "string"
    * - partyCustomerCode
      - Contact.ContactId
-"integer"
+     - "integer"
    * - partyId
      - Contact.ContactId
-"integer"
+     - "integer"
    * - partySupplierCode
      - Contact.ContactId
-"integer"
+     - "integer"
    * - phoneNumber
      - OfficePhones.Value
-"string"
+     - "string"
    * - residenceCountryCode
      - Country.CountryId
-"integer"
+     - "integer"
    * - zipCode
      - Address.Postal.Zipcode
-"string"
+     - "string"
    * - zipCode
      - Address.Street.Zipcode
-"string"
+     - "string"
 
 
 Powerofficego Customers person to Superoffice Person
@@ -118,37 +118,37 @@ The following properties are synchronized between a Powerofficego Customers pers
      - Superoffice Data Type
    * - DateOfBirth
      - BirthDate
-["datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
+     - ["datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
    * - EmailAddress
      - Emails.Value
-"string"
+     - "string"
    * - FirstName
      - Firstname
-"string"
+     - "string"
    * - Id
      - PersonId
-"integer"
+     - "integer"
    * - LastName
      - Lastname
-"string"
+     - "string"
    * - MailAddress.AddressLine1
      - Address.Street.Address1
-"string"
+     - "string"
    * - MailAddress.AddressLine2
      - Address.Street.Address2
-"string"
+     - "string"
    * - MailAddress.City
      - Address.Street.City
-"string"
+     - "string"
    * - MailAddress.CountryCode
      - Country.CountryId
-"integer"
+     - "integer"
    * - MailAddress.ZipCode
      - Address.Street.Zipcode
-"string"
+     - "string"
    * - PhoneNumber
      - OfficePhones.Value
-"string"
+     - "string"
 
 
 Powerofficego Customers to Superoffice Contact
@@ -180,70 +180,70 @@ The following properties are synchronized between a Powerofficego Customers and 
      - Superoffice Data Type
    * - EmailAddress
      - Emails.Value
-"string"
+     - "string"
    * - Id
      - ContactId
-"integer"
+     - "integer"
    * - MailAddress.AddressLine1
      - Address.Postal.Address1
-"string"
+     - "string"
    * - MailAddress.AddressLine1
      - Address.Street.Address1
-"string"
+     - "string"
    * - MailAddress.AddressLine2
      - Address.Postal.Address2
-"string"
+     - "string"
    * - MailAddress.AddressLine2
      - Address.Street.Address2
-"string"
+     - "string"
    * - MailAddress.City
      - Address.Postal.City
-"string"
+     - "string"
    * - MailAddress.City
      - Address.Street.City
-"string"
+     - "string"
    * - MailAddress.CountryCode
      - Country.CountryId
-"integer"
+     - "integer"
    * - MailAddress.ZipCode
      - Address.Postal.Zipcode
-"string"
+     - "string"
    * - MailAddress.ZipCode
      - Address.Street.Zipcode
-"string"
+     - "string"
    * - MailAddress.addressLine1
      - Address.Postal.Address1
-"string"
+     - "string"
    * - MailAddress.addressLine2
      - Address.Postal.Address2
-"string"
+     - "string"
    * - MailAddress.city
      - Address.Postal.City
-"string"
+     - "string"
    * - MailAddress.countryCode
      - Country.CountryId
-"integer"
+     - "integer"
    * - MailAddress.zipCode
      - Address.Postal.Zipcode
-"string"
+     - "string"
    * - Name
      - Name
-"string"
+     - "string"
    * - Number
      - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountryDependant on having wd:Q852835 in Country.TwoLetterISOCountry)
-"string"
+     - "string"
    * - Number
      - Phones.Value
-"string"
+     - "string"
    * - OrganizationNumber
      - OrgNr (Dependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountry)
-"string"
+     - "string"
    * - PhoneNumber
      - Phones.Value
-"string"
+     - "string"
    * - WebsiteUrl
      - Urls.Value
-"string"
+     - "string"
 
 
 Powerofficego Salesorders to SuperOffice Quotealternative
@@ -264,10 +264,10 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - SuperOffice Data Type
    * - NetAmount
      - TotalPrice
-"float"
+     - "float"
    * - TotalAmount
      - TotalPrice
-"float"
+     - "float"
 
 
 Powerofficego Departments to Superoffice Contact
@@ -286,7 +286,7 @@ The following properties are synchronized between a Powerofficego Departments an
      - Superoffice Data Type
    * - Name
      - Name
-"string"
+     - "string"
 
 
 Powerofficego Employees to Superoffice Person
@@ -305,40 +305,40 @@ The following properties are synchronized between a Powerofficego Employees and 
      - Superoffice Data Type
    * - DateOfBirth
      - BirthDate
-["datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
+     - ["datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
    * - DepartmendId
      - Contact.ContactId
-"integer"
+     - "integer"
    * - DepartmentId (Dependant on having wd:Q703534 in JobTitle)
      - Contact.ContactId
-"integer"
+     - "integer"
    * - EmailAddress
      - Emails.Value
-"string"
+     - "string"
    * - FirstName
      - Firstname
-"string"
+     - "string"
    * - JobTitle
      - Contact.ContactId
-"integer"
+     - "integer"
    * - LastName
      - Lastname
-"string"
+     - "string"
    * - PhoneNumber
      - MobilePhones.Value
-"string"
+     - "string"
    * - dateOfBirth
      - BirthDate
-["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+     - ["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
    * - firstName
      - Firstname
-"string"
+     - "string"
    * - lastName
      - Lastname
-"string"
+     - "string"
    * - phoneNumber
      - MobilePhones.Value
-"string"
+     - "string"
 
 
 Powerofficego Product to Superoffice Product
@@ -357,58 +357,58 @@ The following properties are synchronized between a Powerofficego Product and a 
      - Superoffice Data Type
    * - CostPrice
      - UnitCost
-"string"
+     - "string"
    * - Description
      - Description
-"string"
+     - "string"
    * - Name
      - Name
-"string"
+     - "string"
    * - ProductGroupId
      - ProductCategoryKey
-"string"
+     - "string"
    * - SalesPrice
      - UnitListPrice
-["decimal", "_."]
+     - ["decimal", "_."]
    * - Type
      - ProductTypeKey
-"string"
+     - "string"
    * - Unit
      - QuantityUnit
-"string"
+     - "string"
    * - VatCode
      - VAT
-"integer"
+     - "integer"
    * - costPrice
      - UnitCost
-"string"
+     - "string"
    * - description
      - Description
-"string"
+     - "string"
    * - name
      - Name
-"string"
+     - "string"
    * - productGroupId
      - ProductCategoryKey
-"string"
+     - "string"
    * - salesPrice
      - UnitListPrice
-["decimal", "_."]
+     - ["decimal", "_."]
    * - type
      - ProductTypeKey
-"string"
+     - "string"
    * - unit
      - QuantityUnit
-"string"
+     - "string"
    * - unitOfMeasureCode
      - QuantityUnit
-"string"
+     - "string"
    * - unitOfMeasureCode
      - VAT
-"integer"
+     - "integer"
    * - vatCode
      - VAT
-["integer", ["decimal", "_."]]
+     - ["integer", ["decimal", "_."]]
 
 
 Powerofficego Quote to Superoffice Quotealternative
@@ -427,7 +427,7 @@ The following properties are synchronized between a Powerofficego Quote and a Su
      - Superoffice Data Type
    * - TotalAmount
      - TotalPrice
-"float"
+     - "float"
 
 
 Powerofficego Salesorderlines to Superoffice Quoteline
@@ -446,35 +446,35 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - Superoffice Data Type
    * - Allowance
      - DiscountPercent
-"integer"
+     - "integer"
    * - Allowance
      - ERPDiscountPercent
-["decimal", "_."]
+     - ["decimal", "_."]
    * - Description
      - Name
-"string"
+     - "string"
    * - ProductId
      - ERPProductKey
-"string"
+     - "string"
    * - ProductUnitPrice
      - UnitListPrice
-["if-null", ["integer", "string"], ["decimal", "_."]]
+     - ["if-null", ["integer", "string"], ["decimal", "_."]]
    * - Quantity
      - Quantity
-["integer", ["decimal", "_."]]
+     - ["integer", ["decimal", "_."]]
    * - SortOrder
      - Rank
-"integer"
+     - "integer"
    * - TotalAmount
      - TotalPrice
-["if-null", ["integer", "string"], ["decimal", "_."]]
+     - ["if-null", ["integer", "string"], ["decimal", "_."]]
    * - VatId
      - VAT
-"integer"
+     - "integer"
    * - VatRate
      - VAT
-"integer"
+     - "integer"
    * - sesam_SalesOrderId
      - QuoteAlternativeId
-"integer"
+     - "integer"
 
