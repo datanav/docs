@@ -2,7 +2,7 @@
 Freshteam to Freshteam Dataflow
 ===============================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -37,152 +37,152 @@ The following properties are synchronized between a Freshteam Employee and a Fre
      - Freshteam Data Type
    * - address.city
      - address.city
-     - "string"
+"string"
    * - address.city
      - communication_address.communication_city
-     - "string"
+"string"
    * - address.country
      - communication_address.communication_country
-     - "string"
+"string"
    * - address.country_code
      - address.country_code
-     - "string"
+"string"
    * - address.street
      - address.street
-     - "string"
+"string"
    * - address.street
      - communication_address.communication_street
-     - "string"
+"string"
    * - address.zip_code
      - address.zip_code
-     - "string"
+"string"
    * - address.zip_code
      - communication_address.communication_zip_code
-     - "string"
+"string"
    * - branch_id
      - branch_id
-     - "string"
+"string"
    * - branch_id
      - business_unit_id
-     - "string"
+"string"
    * - branch_id
      - department_id
-     - "string"
+"string"
    * - branch_id
      - hr_incharge_id
-     - "string"
+"string"
    * - branch_id
      - sub_department_id
-     - "string"
+"string"
    * - business_unit_id
      - branch_id
-     - "string"
+"string"
    * - business_unit_id
      - business_unit_id
-     - "string"
+"string"
    * - business_unit_id
      - department_id
-     - "string"
+"string"
    * - business_unit_id
      - hr_incharge_id
-     - "string"
+"string"
    * - business_unit_id
      - sub_department_id
-     - "string"
+"string"
    * - communication_address.communication_city
      - address.city
-     - "string"
+"string"
    * - communication_address.communication_city
      - communication_address.communication_city
-     - "string"
+"string"
    * - communication_address.communication_country
      - address.country
-     - "string"
+"string"
    * - communication_address.communication_country_code
      - communication_address.communication_country_code
-     - "string"
+"string"
    * - communication_address.communication_street
      - address.street
-     - "string"
+"string"
    * - communication_address.communication_street
      - communication_address.communication_street
-     - "string"
+"string"
    * - communication_address.communication_zip_code
      - address.zip_code
-     - "string"
+"string"
    * - communication_address.communication_zip_code
      - communication_address.communication_zip_code
-     - "string"
+"string"
    * - date_of_birth
      - date_of_birth
-     - "string"
+"string"
    * - department_id
      - branch_id
-     - "string"
+"string"
    * - department_id
      - business_unit_id
-     - "string"
+"string"
    * - department_id
      - department_id
-     - "string"
+"string"
    * - department_id
      - hr_incharge_id
-     - "string"
+"string"
    * - department_id
      - sub_department_id
-     - "string"
+"string"
    * - designation
      - designation
-     - "string"
+"string"
    * - first_name
      - first_name
-     - "string"
+"string"
    * - hr_incharge_id
      - branch_id
-     - "string"
+"string"
    * - hr_incharge_id
      - business_unit_id
-     - "string"
+"string"
    * - hr_incharge_id
      - department_id
-     - "string"
+"string"
    * - hr_incharge_id
      - hr_incharge_id
-     - "string"
+"string"
    * - hr_incharge_id
      - sub_department_id
-     - "string"
+"string"
    * - id
      - id
-     - "string"
+"string"
    * - last_name
      - last_name
-     - "string"
+"string"
    * - official_email
      - official_email
-     - "string"
+"string"
    * - personal_email
      - personal_email
-     - "string"
+"string"
    * - phone_numbers.number
      - phone_numbers.number (Dependant on having  in phone_numbers.nameDependant on having  in phone_numbers.name)
-     - "string"
+"string"
    * - sub_department_id
      - branch_id
-     - "string"
+"string"
    * - sub_department_id
      - business_unit_id
-     - "string"
+"string"
    * - sub_department_id
      - department_id
-     - "string"
+"string"
    * - sub_department_id
      - hr_incharge_id
-     - "string"
+"string"
    * - sub_department_id
      - sub_department_id
-     - "string"
+"string"
    * - updated_at
      - updated_at
-     - "string"
+"string"
 
