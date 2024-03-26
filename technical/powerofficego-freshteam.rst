@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:01
 
 Introduction.
 ------------
@@ -75,6 +75,9 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
    * - Id
      - id
+     - "string"
+   * - JobTitle
+     - designation
      - "string"
    * - LastChanged
      - updated_at
