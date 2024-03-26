@@ -2,27 +2,27 @@
 Asana to Superoffice Dataflow
 =============================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:30:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Asana to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Asana Teams to  Contact
------------------------
-Every Asana Teams will be synchronized with a  Contact.
+Asana Teams to Superoffice Contact
+----------------------------------
+Every Asana Teams will be synchronized with a Superoffice Contact.
 
-Once a link between a Asana Teams and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Teams and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Teams and a  Contact:
+The following properties are synchronized between a Asana Teams and a Superoffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Teams Property
-     -  Contact Property
-     -  Data Type
+     - Superoffice Contact Property
+     - Superoffice Data Type
    * - name
      - Name
      - "string"
@@ -34,20 +34,20 @@ The following properties are synchronized between a Asana Teams and a  Contact:
      - "string"
 
 
-Asana Workspaces to  Contact
-----------------------------
-Every Asana Workspaces will be synchronized with a  Contact.
+Asana Workspaces to Superoffice Contact
+---------------------------------------
+Every Asana Workspaces will be synchronized with a Superoffice Contact.
 
-Once a link between a Asana Workspaces and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Workspaces and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Workspaces and a  Contact:
+The following properties are synchronized between a Asana Workspaces and a Superoffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Workspaces Property
-     -  Contact Property
-     -  Data Type
+     - Superoffice Contact Property
+     - Superoffice Data Type
    * - email_domains
      - Domains
      - "list"
