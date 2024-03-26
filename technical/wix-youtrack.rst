@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -33,6 +33,12 @@ The following properties are synchronized between a Wix.com Contacts and a  User
    * - Wix.com Contacts Property
      -  Users Property
      -  Data Type
+   * - info.name.first
+     - name
+     - "string"
+   * - info.name.last
+     - name
+     - "string"
    * - primaryInfo.email
      - profile.email
      - "string"
