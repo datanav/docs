@@ -2,7 +2,7 @@
 Powerofficego to Businesscentral Dataflow
 =========================================
 
-Generated: 2024-03-26 14:15:49
+Generated: 2024-03-26 14:30:19
 
 Introduction
 ------------
@@ -102,36 +102,36 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
 
 
-Powerofficego Customers to  Companies
--------------------------------------
-Every Powerofficego Customers will be synchronized with a  Companies.
+Powerofficego Customers to Businesscentral Companies
+----------------------------------------------------
+Every Powerofficego Customers will be synchronized with a Businesscentral Companies.
 
-Once a link between a Powerofficego Customers and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers and a Businesscentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers and a  Companies:
+The following properties are synchronized between a Powerofficego Customers and a Businesscentral Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers Property
-     -  Companies Property
-     -  Data Type
+     - Businesscentral Companies Property
+     - Businesscentral Data Type
 
 
-Powerofficego Departments to  Companies
----------------------------------------
-Every Powerofficego Departments will be synchronized with a  Companies.
+Powerofficego Departments to Businesscentral Companies
+------------------------------------------------------
+Every Powerofficego Departments will be synchronized with a Businesscentral Companies.
 
-Once a link between a Powerofficego Departments and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Departments and a Businesscentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Departments and a  Companies:
+The following properties are synchronized between a Powerofficego Departments and a Businesscentral Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Departments Property
-     -  Companies Property
-     -  Data Type
+     - Businesscentral Companies Property
+     - Businesscentral Data Type
 
 
 Powerofficego Contactperson to Businesscentral Contacts person
