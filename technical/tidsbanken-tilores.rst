@@ -2,7 +2,7 @@
 Tidsbanken to Tilores Dataflow
 ==============================
 
-Generated: 2024-03-26 14:34:37
+Generated: 2024-03-26 14:34:55
 
 Introduction
 ------------
@@ -23,4 +23,22 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Tilo
    * - Tidsbanken Ansatt Property
      - Tilores Human Property
      - Tilores Data Type
+   * - Etternavn
+     - lastName
+     - "string"
+   * - Fodt
+     - dateOfBirth
+     - "string"
+   * - Fornavn
+     - firstName
+     - "string"
+   * - Id
+     - id
+     - "string"
+   * - Postnummer
+     - postalCode
+     - "string"
+   * - Poststed
+     - city
+     - "string"
 
