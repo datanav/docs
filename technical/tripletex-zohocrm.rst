@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -107,5 +107,99 @@ The following properties are synchronized between a Tripletex Department and a  
      -  Data Type
    * - name
      - Account_Name
+     - "string"
+
+
+Tripletex Customer person to  Contact
+-------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a  Contact.
+
+Once a link between a Tripletex Customer person and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a  Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     -  Contact Property
+     -  Data Type
+   * - deliveryAddress.city
+     - Mailing_City
+     - "string"
+   * - deliveryAddress.city
+     - Other_City
+     - "string"
+   * - deliveryAddress.country.id
+     - Mailing_Country
+     - "string"
+   * - deliveryAddress.country.id
+     - Other_Country
+     - "string"
+   * - deliveryAddress.postalCode
+     - Mailing_Zip
+     - "string"
+   * - deliveryAddress.postalCode
+     - Other_Zip
+     - "string"
+   * - email
+     - Email
+     - "string"
+   * - email
+     - Secondary_Email
+     - "string"
+   * - name
+     - First_Name
+     - "string"
+   * - name
+     - Full_Name
+     - "string"
+   * - name
+     - Last_Name
+     - "string"
+   * - phoneNumber
+     - Other_Phone
+     - "string"
+   * - phoneNumber
+     - Phone
+     - "string"
+   * - phoneNumberMobile
+     - Mobile
+     - "string"
+   * - physicalAddress.city
+     - Mailing_City
+     - "string"
+   * - physicalAddress.city
+     - Other_City
+     - "string"
+   * - physicalAddress.country.id
+     - Mailing_Country
+     - "string"
+   * - physicalAddress.country.id
+     - Other_Country
+     - "string"
+   * - physicalAddress.postalCode
+     - Mailing_Zip
+     - "string"
+   * - physicalAddress.postalCode
+     - Other_Zip
+     - "string"
+   * - postalAddress.city
+     - Mailing_City
+     - "string"
+   * - postalAddress.city
+     - Other_City
+     - "string"
+   * - postalAddress.country.id
+     - Mailing_Country
+     - "string"
+   * - postalAddress.country.id
+     - Other_Country
+     - "string"
+   * - postalAddress.postalCode
+     - Mailing_Zip
+     - "string"
+   * - postalAddress.postalCode
+     - Other_Zip
      - "string"
 
