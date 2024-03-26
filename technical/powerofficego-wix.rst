@@ -2,37 +2,37 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:16
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Wix. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Powerofficego Customers person to  Contacts
--------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Customers person and a  Contacts must be established.
+Powerofficego Customers person to Wix Contacts
+----------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers person and a Wix Contacts must be established.
 
-A Powerofficego Customers person will merge with a  Contacts if one of the following property combinations match:
+A Powerofficego Customers person will merge with a Wix Contacts if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers person Property
-     -  Contacts Property
+     - Wix Contacts Property
    * - EmailAddress
      - primaryInfo.email
 
-Once a link between a Powerofficego Customers person and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers person and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers person and a  Contacts:
+The following properties are synchronized between a Powerofficego Customers person and a Wix Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers person Property
-     -  Contacts Property
-     -  Data Type
+     - Wix Contacts Property
+     - Wix Data Type
    * - Id
      - id
      - "string"
@@ -182,20 +182,20 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "decimal"
 
 
-Powerofficego Suppliers person to  Contacts
--------------------------------------------
-Every Powerofficego Suppliers person will be synchronized with a  Contacts.
+Powerofficego Suppliers person to Wix Contacts
+----------------------------------------------
+Every Powerofficego Suppliers person will be synchronized with a Wix Contacts.
 
-Once a link between a Powerofficego Suppliers person and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Suppliers person and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Suppliers person and a  Contacts:
+The following properties are synchronized between a Powerofficego Suppliers person and a Wix Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Suppliers person Property
-     -  Contacts Property
-     -  Data Type
+     - Wix Contacts Property
+     - Wix Data Type
    * - EmailAddress
      - primaryInfo.email
      - "string"
