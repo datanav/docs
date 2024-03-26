@@ -2,7 +2,7 @@
 Asana to Tidsbanken Dataflow
 ============================
 
-Generated: 2024-03-26 14:23:23
+Generated: 2024-03-26 17:27:49
 
 Introduction
 ------------
@@ -25,13 +25,13 @@ The following properties are synchronized between a Asana Projects and a Tidsban
      - Tidsbanken Data Type
    * - completed_at
      - AvsluttetDato
-     - "string"
+"string"
    * - name
      - Navn
-     - "string"
+"string"
    * - owner.gid
      - AnsvarligId
-     - "integer"
+"integer"
 
 
 Asana Users to Tidsbanken Ansatt
@@ -50,11 +50,11 @@ The following properties are synchronized between a Asana Users and a Tidsbanken
      - Tidsbanken Data Type
    * - name
      - Navn
-     - "string"
+"string"
    * - workspaces.gid
      - AvdelingId
-     - "string"
+"string"
    * - workspaces.gid
      - Tittel
-     - "string"
+"string"
 
