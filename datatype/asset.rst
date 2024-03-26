@@ -131,6 +131,14 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+    **Zohocrm**
+
+    
+    .. link-button:: system/zohocrm
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
 
 :ref:`Enterprise Resource Planning (ERP) <systemtype_erp>`
 ==================================
