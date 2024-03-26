@@ -2,7 +2,7 @@
 Tripletex to Businesscentral Dataflow
 =====================================
 
-Generated: 2024-03-26 14:14:07
+Generated: 2024-03-26 14:14:14
 
 Introduction
 ------------
@@ -597,33 +597,33 @@ The following properties are synchronized between a Tripletex Orderline and a  S
      - "float"
 
 
-Tripletex Product to  Items
----------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Items.
+Tripletex Product to Businesscentral Items
+------------------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Businesscentral Items.
 
-If a matching  Items already exists, the Tripletex Product will be merged with the existing one.
-If no matching  Items is found, a new  Items will be created.
+If a matching Businesscentral Items already exists, the Tripletex Product will be merged with the existing one.
+If no matching Businesscentral Items is found, a new Businesscentral Items will be created.
 
-A Tripletex Product will merge with a  Items if one of the following property combinations match:
+A Tripletex Product will merge with a Businesscentral Items if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     -  Items Property
+     - Businesscentral Items Property
    * - ean
      - gtin
 
-Once a link between a Tripletex Product and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Product and a Businesscentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Product and a  Items:
+The following properties are synchronized between a Tripletex Product and a Businesscentral Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     -  Items Property
-     -  Data Type
+     - Businesscentral Items Property
+     - Businesscentral Data Type
    * - costExcludingVatCurrency
      - unitCost
      - "decimal"
