@@ -2,7 +2,7 @@
 Freshteam to  Dataflow
 ======================
 
-Generated: 2023-12-04 00:00:00
+Generated: 2024-03-26 00:00:01
 
 Introduction.
 ------------
@@ -69,6 +69,9 @@ The following properties are synchronized between a Freshteam Employee and a  Em
      - department_id
      - "string"
    * - branch_id
+     - hr_incharge_id
+     - "string"
+   * - branch_id
      - sub_department_id
      - "string"
    * - business_unit_id
@@ -79,6 +82,9 @@ The following properties are synchronized between a Freshteam Employee and a  Em
      - "string"
    * - business_unit_id
      - department_id
+     - "string"
+   * - business_unit_id
+     - hr_incharge_id
      - "string"
    * - business_unit_id
      - sub_department_id
@@ -120,6 +126,9 @@ The following properties are synchronized between a Freshteam Employee and a  Em
      - department_id
      - "string"
    * - department_id
+     - hr_incharge_id
+     - "string"
+   * - department_id
      - sub_department_id
      - "string"
    * - designation
@@ -129,7 +138,19 @@ The following properties are synchronized between a Freshteam Employee and a  Em
      - first_name
      - "string"
    * - hr_incharge_id
+     - branch_id
+     - "string"
+   * - hr_incharge_id
+     - business_unit_id
+     - "string"
+   * - hr_incharge_id
+     - department_id
+     - "string"
+   * - hr_incharge_id
      - hr_incharge_id
+     - "string"
+   * - hr_incharge_id
+     - sub_department_id
      - "string"
    * - id
      - id
@@ -154,6 +175,9 @@ The following properties are synchronized between a Freshteam Employee and a  Em
      - "string"
    * - sub_department_id
      - department_id
+     - "string"
+   * - sub_department_id
+     - hr_incharge_id
      - "string"
    * - sub_department_id
      - sub_department_id
