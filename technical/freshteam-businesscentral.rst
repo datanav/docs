@@ -2,7 +2,7 @@
 Freshteam to Businesscentral Dataflow
 =====================================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -41,50 +41,50 @@ The following properties are synchronized between a Freshteam Employee and a Bus
      - Businesscentral Data Type
    * - address.city
      - city
-"string"
+     - "string"
    * - address.country
      - country
-"string"
+     - "string"
    * - address.zip_code
      - postalCode
-"string"
+     - "string"
    * - communication_address.communication_city
      - city
-"string"
+     - "string"
    * - communication_address.communication_country
      - country
-"string"
+     - "string"
    * - communication_address.communication_zip_code
      - postalCode
-"string"
+     - "string"
    * - date_of_birth
      - birthDate
-"string"
+     - "string"
    * - designation
      - jobTitle
-"string"
+     - "string"
    * - first_name
      - givenName
-"string"
+     - "string"
    * - id
      - id
-"string"
+     - "string"
    * - last_name
      - surname
-"string"
+     - "string"
    * - official_email
      - email
-"string"
+     - "string"
    * - personal_email
      - email
-"string"
+     - "string"
    * - personal_email
      - personalEmail
-"string"
+     - "string"
    * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
      - mobilePhone
-"string"
+     - "string"
    * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
      - phoneNumber
-"string"
+     - "string"
 
