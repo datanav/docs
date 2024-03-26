@@ -1,13 +1,13 @@
-======================
-Freshteam to  Dataflow
-======================
+================================
+Freshteam to Tidsbanken Dataflow
+================================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:23:23
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Freshteam to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Freshteam to Tidsbanken. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Freshteam Department to  Avdeling
 ---------------------------------
@@ -28,33 +28,33 @@ The following properties are synchronized between a Freshteam Department and a  
      - "string"
 
 
-Freshteam Employee to  Ansatt
------------------------------
-Every Freshteam Employee will be synchronized with a  Ansatt.
+Freshteam Employee to Tidsbanken Ansatt
+---------------------------------------
+Every Freshteam Employee will be synchronized with a Tidsbanken Ansatt.
 
-If a matching  Ansatt already exists, the Freshteam Employee will be merged with the existing one.
-If no matching  Ansatt is found, a new  Ansatt will be created.
+If a matching Tidsbanken Ansatt already exists, the Freshteam Employee will be merged with the existing one.
+If no matching Tidsbanken Ansatt is found, a new Tidsbanken Ansatt will be created.
 
-A Freshteam Employee will merge with a  Ansatt if one of the following property combinations match:
+A Freshteam Employee will merge with a Tidsbanken Ansatt if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Employee Property
-     -  Ansatt Property
+     - Tidsbanken Ansatt Property
    * - employee_id
      - Id
 
-Once a link between a Freshteam Employee and a  Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Employee and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Employee and a  Ansatt:
+The following properties are synchronized between a Freshteam Employee and a Tidsbanken Ansatt:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Employee Property
-     -  Ansatt Property
-     -  Data Type
+     - Tidsbanken Ansatt Property
+     - Tidsbanken Data Type
    * - date_of_birth
      - Fodt
      - "string"
