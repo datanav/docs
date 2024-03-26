@@ -2,7 +2,7 @@
 Tidsbanken to Tripletex Dataflow
 ================================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -35,13 +35,13 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Trip
      - Tripletex Data Type
    * - Etternavn
      - lastName
-"string"
+     - "string"
    * - Fornavn
      - firstName
-"string"
+     - "string"
    * - Mobil
      - phoneNumberMobile
-["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
 
 
 Tidsbanken Kunde to Tripletex Customer person
@@ -62,79 +62,79 @@ The following properties are synchronized between a Tidsbanken Kunde and a Tripl
      - Tripletex Data Type
    * - Gateadresse
      - deliveryAddress.addressLine1
-"string"
+     - "string"
    * - Gateadresse
      - physicalAddress.addressLine1
-"string"
+     - "string"
    * - Gateadresse
      - postalAddress.addressLine1
-"string"
+     - "string"
    * - Id
      - id
-"integer"
+     - "integer"
    * - LevPostNr
      - deliveryAddress.postalCode
-"string"
+     - "string"
    * - LevPostNr
      - physicalAddress.postalCode
-"string"
+     - "string"
    * - LevPostNr
      - postalAddress.postalCode
-"string"
+     - "string"
    * - LevPoststed
      - deliveryAddress.city
-"string"
+     - "string"
    * - LevPoststed
      - physicalAddress.city
-"string"
+     - "string"
    * - LevPoststed
      - postalAddress.city
-"string"
+     - "string"
    * - Leveringsadresse
      - deliveryAddress.addressLine1
-"string"
+     - "string"
    * - Leveringsadresse
      - physicalAddress.addressLine1
-"string"
+     - "string"
    * - Leveringsadresse
      - postalAddress.addressLine1
-"string"
+     - "string"
    * - Leveringsadresse2
      - deliveryAddress.addressLine2
-"string"
+     - "string"
    * - Leveringsadresse2
      - physicalAddress.addressLine2
-"string"
+     - "string"
    * - Leveringsadresse2
      - postalAddress.addressLine2
-"string"
+     - "string"
    * - Postadresse
      - deliveryAddress.addressLine2
-"string"
+     - "string"
    * - Postadresse
      - physicalAddress.addressLine2
-"string"
+     - "string"
    * - Postadresse
      - postalAddress.addressLine2
-"string"
+     - "string"
    * - Postnr
      - deliveryAddress.postalCode
-"string"
+     - "string"
    * - Postnr
      - physicalAddress.postalCode
-"string"
+     - "string"
    * - Postnr
      - postalAddress.postalCode
-"string"
+     - "string"
    * - Poststed
      - deliveryAddress.city
-"string"
+     - "string"
    * - Poststed
      - physicalAddress.city
-"string"
+     - "string"
    * - Poststed
      - postalAddress.city
-"string"
+     - "string"
 
 
 Tidsbanken Ansatt to Tripletex Employee
@@ -170,40 +170,40 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Trip
      - Tripletex Data Type
    * - Adresse
      - address.addressLine1
-"string"
+     - "string"
    * - AvdelingId
      - department.id (Dependant on having wd:Q2366457 in  )
-["if", ["neq", "_.", "X"], "integer", "string"]
+     - ["if", ["neq", "_.", "X"], "integer", "string"]
    * - Epost
      - email
-"string"
+     - "string"
    * - Etternavn
      - lastName
-"string"
+     - "string"
    * - Fodt
      - dateOfBirth
-["datetime-format","%Y-%m-%d","_."]
+     - ["datetime-format","%Y-%m-%d","_."]
    * - Fornavn
      - firstName
-"string"
+     - "string"
    * - Id
      - id
-"integer"
+     - "integer"
    * - Mobil
      - phoneNumberMobile
-["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
    * - Postnummer
      - address.postalCode
-"string"
+     - "string"
    * - Poststed
      - address.city
-"string"
+     - "string"
    * - TlfPrivat
      - phoneNumberHome
-"string"
+     - "string"
    * - sesam_ansattId
      - employeeNumber
-"string"
+     - "string"
 
 
 Tidsbanken Avdeling to Tripletex Department
@@ -222,13 +222,13 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Tr
      - Tripletex Data Type
    * - Avdelingsleder
      - departmentManager.id
-"string"
+     - "string"
    * - Navn
      - name
-"string"
+     - "string"
    * - sesam_avdelingId
      - departmentNumber
-"string"
+     - "string"
 
 
 Tidsbanken Kunde to Tripletex Customer
@@ -264,100 +264,100 @@ The following properties are synchronized between a Tidsbanken Kunde and a Tripl
      - Tripletex Data Type
    * - Epost
      - email
-"string"
+     - "string"
    * - Gateadresse
      - deliveryAddress.addressLine1
-"string"
+     - "string"
    * - Gateadresse
      - physicalAddress.addressLine1
-"string"
+     - "string"
    * - Gateadresse
      - postalAddress.addressLine1
-"string"
+     - "string"
    * - Id
      - id
-"integer"
+     - "integer"
    * - LevPostNr
      - deliveryAddress.postalCode
-"string"
+     - "string"
    * - LevPostNr
      - physicalAddress.postalCode
-"string"
+     - "string"
    * - LevPostNr
      - postalAddress.postalCode
-"string"
+     - "string"
    * - LevPoststed
      - deliveryAddress.city
-"string"
+     - "string"
    * - LevPoststed
      - physicalAddress.city
-"string"
+     - "string"
    * - LevPoststed
      - postalAddress.city
-"string"
+     - "string"
    * - Leveringsadresse
      - deliveryAddress.addressLine1
-"string"
+     - "string"
    * - Leveringsadresse
      - physicalAddress.addressLine1
-"string"
+     - "string"
    * - Leveringsadresse
      - postalAddress.addressLine1
-"string"
+     - "string"
    * - Leveringsadresse2
      - deliveryAddress.addressLine2
-"string"
+     - "string"
    * - Leveringsadresse2
      - physicalAddress.addressLine2
-"string"
+     - "string"
    * - Leveringsadresse2
      - postalAddress.addressLine2
-"string"
+     - "string"
    * - Mobil
      - phoneNumberMobile
-"string"
+     - "string"
    * - Navn
      - name
-"string"
+     - "string"
    * - Organisasjonsnummer
      - organizationNumber
-["replace"," ","", "string"]
+     - ["replace"," ","", "string"]
    * - Postadresse
      - deliveryAddress.addressLine2
-"string"
+     - "string"
    * - Postadresse
      - physicalAddress.addressLine2
-"string"
+     - "string"
    * - Postadresse
      - postalAddress.addressLine2
-"string"
+     - "string"
    * - Postnr
      - deliveryAddress.postalCode
-"string"
+     - "string"
    * - Postnr
      - physicalAddress.postalCode
-"string"
+     - "string"
    * - Postnr
      - postalAddress.postalCode
-"string"
+     - "string"
    * - Poststed
      - deliveryAddress.city
-"string"
+     - "string"
    * - Poststed
      - physicalAddress.city
-"string"
+     - "string"
    * - Poststed
      - postalAddress.city
-"string"
+     - "string"
    * - Telefon
      - phoneNumber
-"string"
+     - "string"
    * - Url
      - website
-"string"
+     - "string"
    * - sesam_kundeId
      - customerNumber
-"string"
+     - "string"
 
 
 Tidsbanken Prosjekt to Tripletex Project
@@ -376,26 +376,26 @@ The following properties are synchronized between a Tidsbanken Prosjekt and a Tr
      - Tripletex Data Type
    * - AnsvarligId
      - projectManager.id
-"integer"
+     - "integer"
    * - AvdelingId
      - department.id
-"string"
+     - "string"
    * - Avsluttet
      - isClosed
-"string"
+     - "string"
    * - AvsluttetDato
      - endDate
-["datetime-format","%Y-%m-%d","_."]
+     - ["datetime-format","%Y-%m-%d","_."]
    * - InterntProsjekt
      - isInternal
-"string"
+     - "string"
    * - KundeId
      - customer.id
-"integer"
+     - "integer"
    * - Navn
      - name
-"string"
+     - "string"
    * - StartDato
      - startDate
-["datetime-format","%Y-%m-%d","_."]
+     - ["datetime-format","%Y-%m-%d","_."]
 
