@@ -351,6 +351,14 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+    **Tidsbanken**
+
+    
+    .. link-button:: system/tidsbanken
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
 
 :ref:`Identity and access management (IAM) <systemtype_iam>`
 ====================================
