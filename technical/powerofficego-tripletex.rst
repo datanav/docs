@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -46,7 +46,7 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
    * - dateOfBirth
      - dateOfBirth
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - emailAddress
      - email
      - "string"
@@ -61,7 +61,7 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
    * - partyId
      - department.id (Dependant on having wd:Q703534 in  )
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
    * - phoneNumber
      - phoneNumberWork
      - "string"
@@ -502,7 +502,7 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - OrganizationNumber (Dependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCode)
      - organizationNumber
-     - ["replace"," ","", ["string", "_."]]
+     - N/A
    * - PhoneNumber
      - phoneNumber
      - "string"
@@ -565,7 +565,7 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - vatNumber (Dependant on having NO in mailAddress.countryCodeDependant on having NO in mailAddress.countryCode)
      - organizationNumber
-     - ["replace"," ","", ["string", "_."]]
+     - N/A
 
 
 Powerofficego Customers to Tripletex Customer person
@@ -641,7 +641,7 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - OrganizationNumber (Dependant on having NO in MailAddress.CountryCode)
      - organizationNumber
-     - ["replace"," ","", ["string", "_."]]
+     - N/A
    * - PhoneNumber
      - phoneNumber
      - "string"
@@ -698,13 +698,13 @@ The following properties are synchronized between a Powerofficego Employees and 
      - Tripletex Data Type
    * - DateOfBirth
      - dateOfBirth
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - DepartmendId
      - department.id
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
    * - DepartmentId (Dependant on having wd:Q703534 in JobTitle)
      - department.id (Dependant on having wd:Q2366457 in  Dependant on having wd:Q2366457 in  )
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
    * - EmailAddress
      - email
      - "string"
@@ -719,10 +719,10 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
    * - PhoneNumber
      - phoneNumberMobile
-     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - N/A
    * - dateOfBirth
      - dateOfBirth
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - firstName
      - firstName
      - "string"
@@ -826,7 +826,7 @@ The following properties are synchronized between a Powerofficego Projects and a
      - "string"
    * - EndDate
      - endDate
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - IsActive
      - isClosed
      - "string"
@@ -844,7 +844,7 @@ The following properties are synchronized between a Powerofficego Projects and a
      - "integer"
    * - StartDate
      - startDate
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
 
 
 Powerofficego Salesorderlines to Tripletex Orderline
@@ -884,7 +884,7 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - "float"
    * - Quantity
      - count
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - SalesOrderLineUnitPrice
      - unitPriceExcludingVatCurrency
      - "float"
@@ -936,13 +936,13 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - "integer"
    * - OrderDate
      - orderDate
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - PurchaseOrderReference
      - reference
      - "string"
    * - SalesOrderDate
      - orderDate
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
 
 
 Powerofficego Suppliers person to Tripletex Contact
