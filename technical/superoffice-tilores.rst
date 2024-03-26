@@ -2,27 +2,27 @@
 SuperOffice to Tilores Dataflow
 ===============================
 
-Generated: 2024-03-26 14:24:41
+Generated: 2024-03-26 14:34:37
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Tilores. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-SuperOffice Person to  Human
-----------------------------
-Every SuperOffice Person will be synchronized with a  Human.
+SuperOffice Person to Tilores Human
+-----------------------------------
+Every SuperOffice Person will be synchronized with a Tilores Human.
 
-Once a link between a SuperOffice Person and a  Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a  Human:
+The following properties are synchronized between a SuperOffice Person and a Tilores Human:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     -  Human Property
-     -  Data Type
+     - Tilores Human Property
+     - Tilores Data Type
    * - Address.Postal.City
      - city
      - "string"
