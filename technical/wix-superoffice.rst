@@ -2,7 +2,7 @@
 Wix.com to Superoffice Dataflow
 ===============================
 
-Generated: 2024-03-26 14:15:49
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -38,25 +38,25 @@ The following properties are synchronized between a Wix.com Contacts and a Super
      - Superoffice Data Type
    * - info.emails
      - Emails.Value
-     - "string"
+"string"
    * - info.name.first
      - Firstname
-     - "string"
+"string"
    * - info.name.last
      - Lastname
-     - "string"
+"string"
    * - info.phones
      - MobilePhones.Value
-     - "string"
+"string"
    * - primaryInfo.email
      - Emails.Value
-     - "string"
+"string"
    * - primaryInfo.phone
      - MobilePhones.Value
-     - "string"
+"string"
    * - primaryInfo.phone
      - OfficePhones.Value
-     - "string"
+"string"
 
 
 Wix.com Members to Superoffice Person
@@ -85,7 +85,7 @@ The following properties are synchronized between a Wix.com Members and a Supero
      - Superoffice Data Type
    * - loginEmail
      - Emails.Value
-     - "string"
+"string"
 
 
 Wix.com Orders to Superoffice Quotealternative
@@ -106,7 +106,7 @@ The following properties are synchronized between a Wix.com Orders and a Superof
      - Superoffice Data Type
    * - totals.total
      - TotalPrice
-     - "float"
+"float"
 
 
 Wix.com Orders to Superoffice Quoteline
@@ -125,22 +125,22 @@ The following properties are synchronized between a Wix.com Orders and a Superof
      - Superoffice Data Type
    * - id
      - QuoteAlternativeId
-     - "integer"
+"integer"
    * - lineItems.name
      - Name
-     - "string"
+"string"
    * - lineItems.price
      - UnitListPrice
-     - "if-null", "integer", "string"], "decimal"]
+["if-null", ["integer", "string"], ["decimal", "_."]]
    * - lineItems.productId
      - ERPProductKey
-     - "string"
+"string"
    * - lineItems.quantity
      - Quantity
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - totals.total
      - TotalPrice
-     - "if-null", "integer", "string"], "decimal"]
+["if-null", ["integer", "string"], ["decimal", "_."]]
 
 
 Wix.com Products to Superoffice Product
@@ -159,26 +159,26 @@ The following properties are synchronized between a Wix.com Products and a Super
      - Superoffice Data Type
    * - costAndProfitData.itemCost
      - UnitCost
-     - "string"
+"string"
    * - costRange.maxValue
      - UnitCost
-     - "string"
+"string"
    * - description
      - Description
-     - "string"
+"string"
    * - name
      - Name
-     - "string"
+"string"
    * - price.currency
      - ERPPriceListKey
-     - "string"
+"string"
    * - price.price
      - UnitListPrice
-     - "decimal"
+["decimal", "_."]
    * - priceData.currency
      - ERPPriceListKey
-     - "string"
+"string"
    * - priceData.price
      - UnitListPrice
-     - "decimal"
+["decimal", "_."]
 
