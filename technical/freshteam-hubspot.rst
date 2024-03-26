@@ -2,7 +2,7 @@
 Freshteam to Hubspot Dataflow
 =============================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 14:30:19
 
 Introduction
 ------------
@@ -38,39 +38,39 @@ The following properties are synchronized between a Freshteam Employee and a Hub
      - "string"
 
 
-Freshteam Department to  Company
---------------------------------
-Every Freshteam Department will be synchronized with a  Company.
+Freshteam Department to Hubspot Company
+---------------------------------------
+Every Freshteam Department will be synchronized with a Hubspot Company.
 
-Once a link between a Freshteam Department and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Department and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Department and a  Company:
+The following properties are synchronized between a Freshteam Department and a Hubspot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Department Property
-     -  Company Property
-     -  Data Type
+     - Hubspot Company Property
+     - Hubspot Data Type
    * - name
      - properties.name
      - "string"
 
 
-Freshteam Employee to  Contact
-------------------------------
-Every Freshteam Employee will be synchronized with a  Contact.
+Freshteam Employee to Hubspot Contact
+-------------------------------------
+Every Freshteam Employee will be synchronized with a Hubspot Contact.
 
-Once a link between a Freshteam Employee and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Employee and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Employee and a  Contact:
+The following properties are synchronized between a Freshteam Employee and a Hubspot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Employee Property
-     -  Contact Property
-     -  Data Type
+     - Hubspot Contact Property
+     - Hubspot Data Type
    * - Billing_Country
      - properties.country
      - "string"
