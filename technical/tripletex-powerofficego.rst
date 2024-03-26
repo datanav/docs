@@ -2,7 +2,7 @@
 Tripletex to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -126,7 +126,7 @@ The following properties are synchronized between a Tripletex Employee and a Pow
      - "string"
    * - dateOfBirth
      - dateOfBirth
-     - ["if",["gt",["abs",["datetime-diff", "year", "_.",["now"]]], 100], "1935-01-01",["datetime-format", "%Y-%m-%d", "_."]]
+     - N/A
    * - department.id (Dependant on having wd:Q703534 in  )
      - partyId
      - "integer"
@@ -552,7 +552,7 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
    * - isPrivateIndividual
      - IsPerson
-     - ["if", ["is-boolean", ["boolean", "_."]], ["boolean", "_."], ["string", "_."]]
+     - N/A
    * - phoneNumber
      - PhoneNumber
      - "string"
@@ -779,7 +779,7 @@ The following properties are synchronized between a Tripletex Employee and a Pow
      - "string"
    * - dateOfBirth
      - DateOfBirth
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - dateOfBirth
      - dateOfBirth
      - "string"
@@ -880,7 +880,7 @@ The following properties are synchronized between a Tripletex Orderline and a Po
      - Powerofficego Data Type
    * - count
      - Quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - description
      - Description
      - "string"
@@ -904,10 +904,10 @@ The following properties are synchronized between a Tripletex Orderline and a Po
      - "integer"
    * - unitCostCurrency
      - ProductUnitCost
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["integer", "_."]]
+     - N/A
    * - unitPriceExcludingVatCurrency
      - ProductUnitPrice
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["float", ["decimal", "_."]]]
+     - N/A
    * - unitPriceExcludingVatCurrency
      - SalesOrderLineUnitPrice
      - "string"
