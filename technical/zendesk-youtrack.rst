@@ -2,7 +2,7 @@
 Zendesk to Youtrack Dataflow
 ============================
 
-Generated: 2024-03-26 14:30:19
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -25,7 +25,7 @@ The following properties are synchronized between a Zendesk Organizations and a 
      - Youtrack Data Type
    * - name
      - name
-     - "string"
+"string"
 
 
 Zendesk Ticketcomments to Youtrack Hubprojects
@@ -76,7 +76,7 @@ The following properties are synchronized between a Zendesk Tickets and a Youtra
      - Youtrack Data Type
    * - requester_id
      - reporter.id
-     - "string"
+"string"
 
 
 Zendesk Users to Youtrack Users
@@ -108,11 +108,11 @@ The following properties are synchronized between a Zendesk Users and a Youtrack
      - Youtrack Data Type
    * - email
      - profile.email
-     - "string"
+"string"
    * - email
      - profile.email.email
-     - "string"
+"string"
    * - name
      - name
-     - "string"
+"string"
 
