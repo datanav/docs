@@ -2,7 +2,7 @@
 YouTrack to Superoffice Dataflow
 ================================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 14:30:19
 
 Introduction
 ------------
@@ -44,58 +44,58 @@ The following properties are synchronized between a YouTrack Users and a Superof
      - "string"
 
 
-YouTrack Groups to  Contact
----------------------------
-Every YouTrack Groups will be synchronized with a  Contact.
+YouTrack Groups to Superoffice Contact
+--------------------------------------
+Every YouTrack Groups will be synchronized with a Superoffice Contact.
 
-Once a link between a YouTrack Groups and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Groups and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Groups and a  Contact:
+The following properties are synchronized between a YouTrack Groups and a Superoffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Groups Property
-     -  Contact Property
-     -  Data Type
+     - Superoffice Contact Property
+     - Superoffice Data Type
    * - name
      - Name
      - "string"
 
 
-YouTrack Organizations to  Contact
-----------------------------------
-Every YouTrack Organizations will be synchronized with a  Contact.
+YouTrack Organizations to Superoffice Contact
+---------------------------------------------
+Every YouTrack Organizations will be synchronized with a Superoffice Contact.
 
-Once a link between a YouTrack Organizations and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Organizations and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Organizations and a  Contact:
+The following properties are synchronized between a YouTrack Organizations and a Superoffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Organizations Property
-     -  Contact Property
-     -  Data Type
+     - Superoffice Contact Property
+     - Superoffice Data Type
    * - name
      - Name
      - "string"
 
 
-YouTrack Usergroups to  Contact
--------------------------------
-Every YouTrack Usergroups will be synchronized with a  Contact.
+YouTrack Usergroups to Superoffice Contact
+------------------------------------------
+Every YouTrack Usergroups will be synchronized with a Superoffice Contact.
 
-Once a link between a YouTrack Usergroups and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Usergroups and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Usergroups and a  Contact:
+The following properties are synchronized between a YouTrack Usergroups and a Superoffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Usergroups Property
-     -  Contact Property
-     -  Data Type
+     - Superoffice Contact Property
+     - Superoffice Data Type
    * - name
      - Name
      - "string"
