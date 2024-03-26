@@ -2,7 +2,7 @@
 Businesscentral to Superoffice Dataflow
 =======================================
 
-Generated: 2024-03-26 17:30:45
+Generated: 2024-03-26 17:54:02
 
 Introduction
 ------------
@@ -294,5 +294,5 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - "integer"
    * - unitPrice
      - UnitListPrice
-     - ["if-null", ["integer", "string"], ["decimal", "_."]]
+     - ["if-null", ["integer", ["string", "_."]], ["decimal", "_."]]
 
