@@ -2,7 +2,7 @@
 Wix.com to Businesscentral Dataflow
 ===================================
 
-Generated: 2024-03-26 14:15:49
+Generated: 2024-03-26 17:27:49
 
 Introduction
 ------------
@@ -45,19 +45,19 @@ The following properties are synchronized between a Wix.com Contacts and a Busin
      - Businesscentral Data Type
    * - info.name.first
      - displayName
-     - "string"
+"string"
    * - info.name.last
      - displayName
-     - "string"
+"string"
    * - primaryInfo.email
      - email
-     - "string"
+"string"
    * - primaryInfo.email
      - id (Dependant on having wd:Q1273217 in type)
-     - "string"
+"string"
    * - primaryInfo.phone
      - phoneNumber
-     - "string"
+"string"
 
 
 Wix.com Contacts to Businesscentral Contacts person
@@ -76,19 +76,19 @@ The following properties are synchronized between a Wix.com Contacts and a Busin
      - Businesscentral Data Type
    * - info.name.first
      - displayName
-     - "string"
+"string"
    * - info.name.last
      - displayName
-     - "string"
+"string"
    * - primaryInfo.email
      - email
-     - "string"
+"string"
    * - primaryInfo.phone
      - mobilePhoneNumber
-     - "string"
+"string"
    * - primaryInfo.phone
      - phoneNumber
-     - "string"
+"string"
 
 
 Wix.com Orders to Businesscentral Salesorderlines
@@ -107,61 +107,61 @@ The following properties are synchronized between a Wix.com Orders and a Busines
      - Businesscentral Data Type
    * - id
      - documentId
-     - "string"
+"string"
    * - lineItems.name
      - description
-     - "string"
+"string"
    * - lineItems.name
      - discountPercent
-     - "decimal"
+["decimal", "_."]
    * - lineItems.name
      - quantity
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - lineItems.name
      - taxPercent
-     - "decimal"
+["decimal", "_."]
    * - lineItems.name
      - unitPrice
-     - "float"
+"float"
    * - lineItems.price
      - amountExcludingTax
-     - "string"
+"string"
    * - lineItems.price
      - description
-     - "string"
+"string"
    * - lineItems.price
      - discountPercent
-     - "decimal"
+["decimal", "_."]
    * - lineItems.price
      - quantity
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - lineItems.price
      - taxPercent
-     - "decimal"
+["decimal", "_."]
    * - lineItems.price
      - unitPrice
-     - "float"
+"float"
    * - lineItems.productId
      - itemId
-     - "string"
+"string"
    * - lineItems.quantity
      - description
-     - "string"
+"string"
    * - lineItems.quantity
      - discountPercent
-     - "decimal"
+["decimal", "_."]
    * - lineItems.quantity
      - invoiceQuantity
-     - "string"
+"string"
    * - lineItems.quantity
      - quantity
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - lineItems.quantity
      - taxPercent
-     - "decimal"
+["decimal", "_."]
    * - lineItems.quantity
      - unitPrice
-     - "float"
+"float"
 
 
 Wix.com Orders to Businesscentral Salesorders
@@ -180,13 +180,13 @@ The following properties are synchronized between a Wix.com Orders and a Busines
      - Businesscentral Data Type
    * - buyerInfo.id
      - customerId
-     - "string"
+"string"
    * - currency
      - currencyId
-     - "string"
+"string"
    * - totals.total
      - totalAmountExcludingTax
-     - "string"
+"string"
 
 
 Wix.com Products to Businesscentral Items
@@ -205,20 +205,20 @@ The following properties are synchronized between a Wix.com Products and a Busin
      - Businesscentral Data Type
    * - costAndProfitData.itemCost
      - unitCost
-     - "decimal"
+["decimal", "_."]
    * - costRange.maxValue
      - unitCost
-     - "decimal"
+["decimal", "_."]
    * - name
      - displayName
-     - "string"
+"string"
    * - name
      - displayName.string
-     - "string"
+"string"
    * - name
      - displayName2
-     - "string"
+"string"
    * - priceData.price
      - unitPrice
-     - "decimal"
+["decimal", "_."]
 
