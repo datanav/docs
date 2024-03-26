@@ -1,38 +1,38 @@
-========================
-SuperOffice to  Dataflow
-========================
+==================================
+SuperOffice to Tidsbanken Dataflow
+==================================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:23:23
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Tidsbanken. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-SuperOffice Contact to  Kunde
------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a  Kunde must be established.
+SuperOffice Contact to Tidsbanken Kunde
+---------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Contact and a Tidsbanken Kunde must be established.
 
-A SuperOffice Contact will merge with a  Kunde if one of the following property combinations match:
+A SuperOffice Contact will merge with a Tidsbanken Kunde if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     -  Kunde Property
+     - Tidsbanken Kunde Property
    * - Emails.Value
      - Epost
 
-Once a link between a SuperOffice Contact and a  Kunde is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a Tidsbanken Kunde is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a  Kunde:
+The following properties are synchronized between a SuperOffice Contact and a Tidsbanken Kunde:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     -  Kunde Property
-     -  Data Type
+     - Tidsbanken Kunde Property
+     - Tidsbanken Data Type
    * - Address.Postal.Address1
      - Gateadresse
      - "string"
@@ -116,30 +116,30 @@ The following properties are synchronized between a SuperOffice Contact and a  K
      - "string"
 
 
-SuperOffice Person to  Ansatt
------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a  Ansatt must be established.
+SuperOffice Person to Tidsbanken Ansatt
+---------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a Tidsbanken Ansatt must be established.
 
-A SuperOffice Person will merge with a  Ansatt if one of the following property combinations match:
+A SuperOffice Person will merge with a Tidsbanken Ansatt if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     -  Ansatt Property
+     - Tidsbanken Ansatt Property
    * - Emails.Value
      - Epost
 
-Once a link between a SuperOffice Person and a  Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a  Ansatt:
+The following properties are synchronized between a SuperOffice Person and a Tidsbanken Ansatt:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     -  Ansatt Property
-     -  Data Type
+     - Tidsbanken Ansatt Property
+     - Tidsbanken Data Type
    * - Address.Street.Address1
      - Adresse
      - "string"
@@ -178,30 +178,30 @@ The following properties are synchronized between a SuperOffice Person and a  An
      - "string"
 
 
-SuperOffice User to  Ansatt
----------------------------
-Before any synchronization can take place, a link between a SuperOffice User and a  Ansatt must be established.
+SuperOffice User to Tidsbanken Ansatt
+-------------------------------------
+Before any synchronization can take place, a link between a SuperOffice User and a Tidsbanken Ansatt must be established.
 
-A SuperOffice User will merge with a  Ansatt if one of the following property combinations match:
+A SuperOffice User will merge with a Tidsbanken Ansatt if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     -  Ansatt Property
+     - Tidsbanken Ansatt Property
    * - personEmail
      - Epost
 
-Once a link between a SuperOffice User and a  Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice User and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice User and a  Ansatt:
+The following properties are synchronized between a SuperOffice User and a Tidsbanken Ansatt:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     -  Ansatt Property
-     -  Data Type
+     - Tidsbanken Ansatt Property
+     - Tidsbanken Data Type
    * - contactId
      - AvdelingId
      - "string"
