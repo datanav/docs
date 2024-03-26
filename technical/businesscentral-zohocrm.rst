@@ -2,7 +2,7 @@
 Businesscentral to ZohoCRM Dataflow
 ===================================
 
-Generated: 2024-03-26 14:34:37
+Generated: 2024-03-26 17:27:49
 
 Introduction
 ------------
@@ -41,55 +41,55 @@ The following properties are synchronized between a Businesscentral Customers co
      - ZohoCRM Data Type
    * - address.city
      - Billing_City
-     - "string"
+"string"
    * - address.city
      - Shipping_City
-     - "string"
+"string"
    * - address.countryLetterCode
      - Billing_Country
-     - "string"
+"string"
    * - address.countryLetterCode
      - Shipping_Country
-     - "string"
+"string"
    * - address.postalCode
      - Billing_Code
-     - "string"
+"string"
    * - address.postalCode
      - Shipping_Code
-     - "string"
+"string"
    * - address.street
      - Billing_Street
-     - "string"
+"string"
    * - address.street
      - Shipping_Street
-     - "string"
+"string"
    * - city
      - Billing_City
-     - "string"
+"string"
    * - city
      - Shipping_City
-     - "string"
+"string"
    * - country
      - Billing_Country
-     - "string"
+"string"
    * - country
      - Shipping_Country
-     - "string"
+"string"
    * - displayName
      - Account_Name
-     - "string"
+"string"
    * - phoneNumber
      - Phone
-     - "string"
+"string"
    * - postalCode
      - Billing_Code
-     - "string"
+"string"
    * - postalCode
      - Shipping_Code
-     - "string"
+"string"
    * - website
      - Website
-     - "string"
+"string"
 
 
 Businesscentral Customers person to ZohoCRM Contact
@@ -108,71 +108,71 @@ The following properties are synchronized between a Businesscentral Customers pe
      - ZohoCRM Data Type
    * - address.city
      - Mailing_City
-     - "string"
+"string"
    * - address.city
      - Other_City
-     - "string"
+"string"
    * - address.postalCode
      - Mailing_Zip
-     - "string"
+"string"
    * - address.postalCode
      - Other_Zip
-     - "string"
+"string"
    * - address.street
      - Mailing_Street
-     - "string"
+"string"
    * - address.street
      - Other_Street
-     - "string"
+"string"
    * - addressLine1
      - Mailing_Street
-     - "string"
+"string"
    * - addressLine1
      - Other_Street
-     - "string"
+"string"
    * - addressLine2
      - Mailing_City
-     - "string"
+"string"
    * - addressLine2
      - Other_City
-     - "string"
+"string"
    * - city
      - Mailing_City
-     - "string"
+"string"
    * - city
      - Other_City
-     - "string"
+"string"
    * - country
      - Mailing_Country
-     - "string"
+"string"
    * - country
      - Other_Country
-     - "string"
+"string"
    * - displayName
      - First_Name
-     - "string"
+"string"
    * - displayName
      - Full_Name
-     - "string"
+"string"
    * - displayName
      - Last_Name
-     - "string"
+"string"
    * - email
      - Email
-     - "string"
+"string"
    * - email
      - Secondary_Email
-     - "string"
+"string"
    * - phoneNumber
      - Other_Phone
-     - "string"
+"string"
    * - phoneNumber
      - Phone
-     - "string"
+"string"
    * - postalCode
      - Mailing_Zip
-     - "string"
+"string"
    * - postalCode
      - Other_Zip
-     - "string"
+"string"
 
