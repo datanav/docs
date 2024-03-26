@@ -2,7 +2,7 @@
 Tripletex to Unieconomy Dataflow
 ================================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -35,10 +35,10 @@ The following properties are synchronized between a Tripletex Customer and a Uni
      - Unieconomy Data Type
    * - name
      - Name
-"string"
+     - "string"
    * - organizationNumber
      - OrganizationNumber
-"string"
+     - "string"
 
 
 Tripletex Supplier to Unieconomy Companies
@@ -67,10 +67,10 @@ The following properties are synchronized between a Tripletex Supplier and a Uni
      - Unieconomy Data Type
    * - name
      - Name
-"string"
+     - "string"
    * - organizationNumber
      - OrganizationNumber
-"string"
+     - "string"
 
 
 Tripletex Supplier to Unieconomy Customers
@@ -99,10 +99,10 @@ The following properties are synchronized between a Tripletex Supplier and a Uni
      - Unieconomy Data Type
    * - organizationNumber
      - OrgNumber
-"string"
+     - "string"
    * - url
      - WebUrl
-"string"
+     - "string"
 
 
 Tripletex Customer to Unieconomy Customers
@@ -134,13 +134,13 @@ The following properties are synchronized between a Tripletex Customer and a Uni
      - Unieconomy Data Type
    * - organizationNumber
      - OrgNumber
-"string"
+     - "string"
    * - url
      - WebUrl
-"string"
+     - "string"
    * - website
      - WebUrl
-"string"
+     - "string"
 
 
 Tripletex Department to Unieconomy Departments
@@ -159,8 +159,8 @@ The following properties are synchronized between a Tripletex Department and a U
      - Unieconomy Data Type
    * - departmentNumber
      - DepartmentNumber
-"string"
+     - "string"
    * - name
      - Name
-"string"
+     - "string"
 
