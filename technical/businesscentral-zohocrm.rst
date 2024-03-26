@@ -2,43 +2,67 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2023-12-04 00:00:00
+Generated: 2024-03-26 00:00:01
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Company to  Account
------------------------------------
-Every Businesscentral Company will be synchronized with a  Account.
+Businesscentral Companies to  Account
+-------------------------------------
+Every Businesscentral Companies will be synchronized with a  Account.
 
-Once a link between a Businesscentral Company and a  Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Companies and a  Account is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Company and a  Account:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Company Property
-     -  Account Property
-     -  Data Type
-
-
-Businesscentral Contact company to  Account
--------------------------------------------
-Every Businesscentral Contact company will be synchronized with a  Account.
-
-Once a link between a Businesscentral Contact company and a  Account is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Contact company and a  Account:
+The following properties are synchronized between a Businesscentral Companies and a  Account:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Contact company Property
+   * - Businesscentral Companies Property
      -  Account Property
      -  Data Type
+
+
+Businesscentral Customers company to  Account
+---------------------------------------------
+Every Businesscentral Customers company will be synchronized with a  Account.
+
+Once a link between a Businesscentral Customers company and a  Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers company and a  Account:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers company Property
+     -  Account Property
+     -  Data Type
+   * - address.city
+     - Billing_City
+     - "string"
+   * - address.city
+     - Shipping_City
+     - "string"
+   * - address.countryLetterCode
+     - Billing_Country
+     - "string"
+   * - address.countryLetterCode
+     - Shipping_Country
+     - "string"
+   * - address.postalCode
+     - Billing_Code
+     - "string"
+   * - address.postalCode
+     - Shipping_Code
+     - "string"
+   * - address.street
+     - Billing_Street
+     - "string"
+   * - address.street
+     - Shipping_Street
+     - "string"
    * - city
      - Billing_City
      - "string"
@@ -51,6 +75,9 @@ The following properties are synchronized between a Businesscentral Contact comp
    * - country
      - Shipping_Country
      - "string"
+   * - displayName
+     - Account_Name
+     - "string"
    * - phoneNumber
      - Phone
      - "string"
@@ -59,5 +86,93 @@ The following properties are synchronized between a Businesscentral Contact comp
      - "string"
    * - postalCode
      - Shipping_Code
+     - "string"
+   * - website
+     - Website
+     - "string"
+
+
+Businesscentral Customers person to  Contact
+--------------------------------------------
+Every Businesscentral Customers person will be synchronized with a  Contact.
+
+Once a link between a Businesscentral Customers person and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers person and a  Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers person Property
+     -  Contact Property
+     -  Data Type
+   * - address.city
+     - Mailing_City
+     - "string"
+   * - address.city
+     - Other_City
+     - "string"
+   * - address.postalCode
+     - Mailing_Zip
+     - "string"
+   * - address.postalCode
+     - Other_Zip
+     - "string"
+   * - address.street
+     - Mailing_Street
+     - "string"
+   * - address.street
+     - Other_Street
+     - "string"
+   * - addressLine1
+     - Mailing_Street
+     - "string"
+   * - addressLine1
+     - Other_Street
+     - "string"
+   * - addressLine2
+     - Mailing_City
+     - "string"
+   * - addressLine2
+     - Other_City
+     - "string"
+   * - city
+     - Mailing_City
+     - "string"
+   * - city
+     - Other_City
+     - "string"
+   * - country
+     - Mailing_Country
+     - "string"
+   * - country
+     - Other_Country
+     - "string"
+   * - displayName
+     - First_Name
+     - "string"
+   * - displayName
+     - Full_Name
+     - "string"
+   * - displayName
+     - Last_Name
+     - "string"
+   * - email
+     - Email
+     - "string"
+   * - email
+     - Secondary_Email
+     - "string"
+   * - phoneNumber
+     - Other_Phone
+     - "string"
+   * - phoneNumber
+     - Phone
+     - "string"
+   * - postalCode
+     - Mailing_Zip
+     - "string"
+   * - postalCode
+     - Other_Zip
      - "string"
 
