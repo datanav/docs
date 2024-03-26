@@ -131,7 +131,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
-    **Zohocrm**
+    **ZohoCRM**
 
     
     .. link-button:: system/zohocrm
