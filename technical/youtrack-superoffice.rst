@@ -2,7 +2,7 @@
 YouTrack to Superoffice Dataflow
 ================================
 
-Generated: 2024-03-26 14:30:19
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -38,10 +38,10 @@ The following properties are synchronized between a YouTrack Users and a Superof
      - Superoffice Data Type
    * - profile.email
      - Emails.Value
-     - "string"
+"string"
    * - profile.email.email
      - Emails.Value
-     - "string"
+"string"
 
 
 YouTrack Groups to Superoffice Contact
@@ -60,7 +60,7 @@ The following properties are synchronized between a YouTrack Groups and a Supero
      - Superoffice Data Type
    * - name
      - Name
-     - "string"
+"string"
 
 
 YouTrack Organizations to Superoffice Contact
@@ -79,7 +79,7 @@ The following properties are synchronized between a YouTrack Organizations and a
      - Superoffice Data Type
    * - name
      - Name
-     - "string"
+"string"
 
 
 YouTrack Usergroups to Superoffice Contact
@@ -98,5 +98,5 @@ The following properties are synchronized between a YouTrack Usergroups and a Su
      - Superoffice Data Type
    * - name
      - Name
-     - "string"
+"string"
 
