@@ -2,7 +2,7 @@
 Tidsbanken to Wix Dataflow
 ==========================
 
-Generated: 2024-03-26 14:24:14
+Generated: 2024-03-26 17:27:49
 
 Introduction
 ------------
@@ -35,8 +35,8 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Wix 
      - Wix Data Type
    * - Etternavn
      - info.name.last
-     - "string"
+"string"
    * - Fornavn
      - info.name.first
-     - "string"
+"string"
 
