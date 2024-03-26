@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -37,40 +37,40 @@ The following properties are synchronized between a SuperOffice Person and a Wix
      - Wix Data Type
    * - Address.Street.Address1
      - info.addresses.items.address.addressLine
-     - "string"
+"string"
    * - Address.Street.Address2
      - info.addresses.items.address.addressLine2
-     - "string"
+"string"
    * - Address.Street.City
      - info.addresses.items.address.city
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - info.addresses.items.address.postalCode
-     - "string"
+"string"
    * - Emails.Value
      - info.emails
-     - "string"
+"string"
    * - Emails.Value
      - primaryInfo.email
-     - "string"
+"string"
    * - Firstname
      - info.name.first
-     - "string"
+"string"
    * - Lastname
      - info.name.last
-     - "string"
+"string"
    * - MobilePhones.Value
      - info.phones
-     - "string"
+"string"
    * - MobilePhones.Value
      - primaryInfo.phone
-     - "string"
+"string"
    * - OfficePhones.Value
      - primaryInfo.phone
-     - "string"
+"string"
    * - PersonId
      - id
-     - "string"
+"string"
 
 
 SuperOffice User to Wix Contacts
@@ -99,16 +99,16 @@ The following properties are synchronized between a SuperOffice User and a Wix C
      - Wix Data Type
    * - firstName
      - info.name.first
-     - "string"
+"string"
    * - lastName
      - info.name.last
-     - "string"
+"string"
    * - personEmail
      - info.emails
-     - "string"
+"string"
    * - personEmail
      - primaryInfo.email
-     - "string"
+"string"
 
 
 SuperOffice Contact to Wix Contacts
@@ -129,31 +129,31 @@ The following properties are synchronized between a SuperOffice Contact and a Wi
      - Wix Data Type
    * - Address.Postal.Address1
      - info.addresses.items.address.addressLine
-     - "string"
+"string"
    * - Address.Postal.Address2
      - info.addresses.items.address.addressLine2
-     - "string"
+"string"
    * - Address.Postal.City
      - info.addresses.items.address.city
-     - "string"
+"string"
    * - Address.Postal.Zipcode
      - info.addresses.items.address.postalCode
-     - "string"
+"string"
    * - Address.Street.Address1
      - info.addresses.items.address.addressLine
-     - "string"
+"string"
    * - Address.Street.Address2
      - info.addresses.items.address.addressLine2
-     - "string"
+"string"
    * - Address.Street.City
      - info.addresses.items.address.city
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - info.addresses.items.address.postalCode
-     - "string"
+"string"
    * - ContactId
      - id
-     - "string"
+"string"
 
 
 SuperOffice Product to Wix Products
@@ -172,26 +172,26 @@ The following properties are synchronized between a SuperOffice Product and a Wi
      - Wix Data Type
    * - Description
      - description
-     - "string"
+"string"
    * - ERPPriceListKey
      - price.currency
-     - "string"
+"string"
    * - ERPPriceListKey
      - priceData.currency
-     - "string"
+"string"
    * - Name
      - name
-     - "string"
+"string"
    * - UnitCost
      - costAndProfitData.itemCost
-     - "decimal"
+["decimal", "_."]
    * - UnitCost
      - costRange.maxValue
-     - "string"
+"string"
    * - UnitListPrice
      - price.price
-     - "string"
+"string"
    * - UnitListPrice
      - priceData.price
-     - "decimal"
+["decimal", "_."]
 
