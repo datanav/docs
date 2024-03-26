@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -108,5 +108,140 @@ The following properties are synchronized between a Wave Customer and a Wave Cus
      - "string"
    * - shippingDetails.address.province.code
      - shippingDetails.address.province.code
+     - "string"
+
+
+Wave Vendor to Wave Customer person
+-----------------------------------
+Before any synchronization can take place, a link between a Wave Vendor and a Wave Customer person must be established.
+
+A new Wave Customer person will be created from a Wave Vendor if it is connected to a Wave Vendor, Invoice, Business, or Customer that is synchronized into Wave.
+
+Once a link between a Wave Vendor and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a Wave Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - Wave Customer person Property
+     - Wave Data Type
+   * - address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - address.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - address.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - address.city
+     - address.city
+     - "string"
+   * - address.city
+     - shippingDetails.address.city
+     - "string"
+   * - address.country.code
+     - address.country.code
+     - "string"
+   * - address.country.code
+     - shippingDetails.address.country.code
+     - "string"
+   * - address.postalCode
+     - address.postalCode
+     - "string"
+   * - address.postalCode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - address.province.code
+     - address.province.code
+     - "string"
+   * - address.province.code
+     - shippingDetails.address.province.code
+     - "string"
+
+
+Wave Vendor to Wave Customer
+----------------------------
+Before any synchronization can take place, a link between a Wave Vendor and a Wave Customer must be established.
+
+A new Wave Customer will be created from a Wave Vendor if it is connected to a Wave Vendor, Invoice, Business, or Customer that is synchronized into Wave.
+
+Once a link between a Wave Vendor and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - Wave Customer Property
+     - Wave Data Type
+   * - address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - address.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - address.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - address.city
+     - address.city
+     - "string"
+   * - address.city
+     - shippingDetails.address.city
+     - "string"
+   * - address.country.code
+     - address.country.code
+     - "string"
+   * - address.country.code
+     - shippingDetails.address.country.code
+     - "string"
+   * - address.postalCode
+     - address.postalCode
+     - "string"
+   * - address.postalCode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - address.province.code
+     - address.province.code
+     - "string"
+   * - address.province.code
+     - shippingDetails.address.province.code
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - fax
+     - fax
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - internalNotes
+     - internalNotes
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - mobile
+     - mobile
+     - "string"
+   * - name
+     - name
+     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
+   * - tollFree
+     - tollFree
+     - "string"
+   * - website
+     - website
      - "string"
 
