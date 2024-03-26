@@ -2,7 +2,7 @@
 Wave Financial to Superoffice Dataflow
 ======================================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -35,55 +35,55 @@ The following properties are synchronized between a Wave Customer person and a S
      - Superoffice Data Type
    * - address.addressLine1
      - Address.Street.Address1
-"string"
+     - "string"
    * - address.addressLine2
      - Address.Street.Address2
-"string"
+     - "string"
    * - address.city
      - Address.Street.City
-"string"
+     - "string"
    * - address.country.code
      - Country.CountryId
-"integer"
+     - "integer"
    * - address.postalCode
      - Address.Street.Zipcode
-"string"
+     - "string"
    * - email
      - Emails.Value
-"string"
+     - "string"
    * - firstName
      - Firstname
-"string"
+     - "string"
    * - id
      - PersonId
-"integer"
+     - "integer"
    * - lastName
      - Lastname
-"string"
+     - "string"
    * - mobile
      - MobilePhones.Value
-"string"
+     - "string"
    * - phone
      - OfficePhones.Value
-"string"
+     - "string"
    * - shippingDetails.address.addressLine1
      - Address.Street.Address1
-"string"
+     - "string"
    * - shippingDetails.address.addressLine2
      - Address.Street.Address2
-"string"
+     - "string"
    * - shippingDetails.address.city
      - Address.Street.City
-"string"
+     - "string"
    * - shippingDetails.address.country.code
      - Country.CountryId
-"integer"
+     - "integer"
    * - shippingDetails.address.postalCode
      - Address.Street.Zipcode
-"string"
+     - "string"
    * - shippingDetails.phone
      - OfficePhones.Value
-"string"
+     - "string"
 
 
 Wave Customer to Superoffice Person
@@ -114,55 +114,55 @@ The following properties are synchronized between a Wave Customer and a Superoff
      - Superoffice Data Type
    * - address.addressLine1
      - Address.Street.Address1
-"string"
+     - "string"
    * - address.addressLine2
      - Address.Street.Address2
-"string"
+     - "string"
    * - address.city
      - Address.Street.City
-"string"
+     - "string"
    * - address.country.code
      - Country.CountryId
-"integer"
+     - "integer"
    * - address.postalCode
      - Address.Street.Zipcode
-"string"
+     - "string"
    * - email
      - Emails.Value
-"string"
+     - "string"
    * - firstName
      - Firstname
-"string"
+     - "string"
    * - id
      - Contact.ContactId
-"integer"
+     - "integer"
    * - id
      - PersonId
-"integer"
+     - "integer"
    * - lastName
      - Lastname
-"string"
+     - "string"
    * - mobile
      - MobilePhones.Value
-"string"
+     - "string"
    * - phone
      - OfficePhones.Value
-"string"
+     - "string"
    * - shippingDetails.address.addressLine1
      - Address.Street.Address1
-"string"
+     - "string"
    * - shippingDetails.address.addressLine2
      - Address.Street.Address2
-"string"
+     - "string"
    * - shippingDetails.address.city
      - Address.Street.City
-"string"
+     - "string"
    * - shippingDetails.address.country.code
      - Country.CountryId
-"integer"
+     - "integer"
    * - shippingDetails.address.postalCode
      - Address.Street.Zipcode
-"string"
+     - "string"
 
 
 Wave Vendor to Superoffice Person
@@ -191,40 +191,40 @@ The following properties are synchronized between a Wave Vendor and a Superoffic
      - Superoffice Data Type
    * - address.addressLine1
      - Address.Street.Address1
-"string"
+     - "string"
    * - address.addressLine2
      - Address.Street.Address2
-"string"
+     - "string"
    * - address.city
      - Address.Street.City
-"string"
+     - "string"
    * - address.country.code
      - Country.CountryId
-"integer"
+     - "integer"
    * - address.postalCode
      - Address.Street.Zipcode
-"string"
+     - "string"
    * - email
      - Emails.Value
-"string"
+     - "string"
    * - firstName
      - Firstname
-"string"
+     - "string"
    * - id
      - Contact.ContactId
-"integer"
+     - "integer"
    * - id
      - PersonId
-"integer"
+     - "integer"
    * - lastName
      - Lastname
-"string"
+     - "string"
    * - mobile
      - MobilePhones.Value
-"string"
+     - "string"
    * - phone
      - OfficePhones.Value
-"string"
+     - "string"
 
 
 Wave Customer to Superoffice Contact
@@ -243,79 +243,79 @@ The following properties are synchronized between a Wave Customer and a Superoff
      - Superoffice Data Type
    * - address.addressLine1
      - Address.Postal.Address1
-"string"
+     - "string"
    * - address.addressLine1
      - Address.Street.Address1
-"string"
+     - "string"
    * - address.addressLine2
      - Address.Postal.Address2
-"string"
+     - "string"
    * - address.addressLine2
      - Address.Street.Address2
-"string"
+     - "string"
    * - address.city
      - Address.Postal.City
-"string"
+     - "string"
    * - address.city
      - Address.Street.City
-"string"
+     - "string"
    * - address.country.code
      - Country.CountryId
-"integer"
+     - "integer"
    * - address.countryCode
      - Country.CountryId
-"integer"
+     - "integer"
    * - address.postalCode
      - Address.Postal.Zipcode
-"string"
+     - "string"
    * - address.postalCode
      - Address.Street.Zipcode
-"string"
+     - "string"
    * - id
      - ContactId
-"integer"
+     - "integer"
    * - name
      - Name
-"string"
+     - "string"
    * - phone
      - Phones.Value
-"string"
+     - "string"
    * - shippingDetails.address.addressLine1
      - Address.Postal.Address1
-"string"
+     - "string"
    * - shippingDetails.address.addressLine1
      - Address.Street.Address1
-"string"
+     - "string"
    * - shippingDetails.address.addressLine2
      - Address.Postal.Address2
-"string"
+     - "string"
    * - shippingDetails.address.addressLine2
      - Address.Street.Address2
-"string"
+     - "string"
    * - shippingDetails.address.city
      - Address.Postal.City
-"string"
+     - "string"
    * - shippingDetails.address.city
      - Address.Street.City
-"string"
+     - "string"
    * - shippingDetails.address.country.code
      - Country.CountryId
-"integer"
+     - "integer"
    * - shippingDetails.address.postalCode
      - Address.Postal.Zipcode
-"string"
+     - "string"
    * - shippingDetails.address.postalCode
      - Address.Street.Zipcode
-"string"
+     - "string"
    * - shippingDetails.phone
      - Phones.Value
-"string"
+     - "string"
    * - website
      - Domains
-["list", "_."]
+     - ["list", "_."]
    * - website
      - Urls.Value
-"string"
+     - "string"
 
 
 Wave Invoice to Superoffice Quotealternative
@@ -336,16 +336,16 @@ The following properties are synchronized between a Wave Invoice and a Superoffi
      - Superoffice Data Type
    * - memo
      - Description
-"string"
+     - "string"
    * - memo
      - Name
-"string"
+     - "string"
    * - title
      - Name
-"string"
+     - "string"
    * - total.value
      - TotalPrice
-"float"
+     - "float"
 
 
 Wave Vendor to Superoffice Contact
@@ -366,40 +366,40 @@ The following properties are synchronized between a Wave Vendor and a Superoffic
      - Superoffice Data Type
    * - address.addressLine1
      - Address.Postal.Address1
-"string"
+     - "string"
    * - address.addressLine1
      - Address.Street.Address1
-"string"
+     - "string"
    * - address.addressLine2
      - Address.Postal.Address2
-"string"
+     - "string"
    * - address.addressLine2
      - Address.Street.Address2
-"string"
+     - "string"
    * - address.city
      - Address.Postal.City
-"string"
+     - "string"
    * - address.city
      - Address.Street.City
-"string"
+     - "string"
    * - address.country.code
      - Country.CountryId
-"integer"
+     - "integer"
    * - address.postalCode
      - Address.Postal.Zipcode
-"string"
+     - "string"
    * - address.postalCode
      - Address.Street.Zipcode
-"string"
+     - "string"
    * - id
      - ContactId
-"integer"
+     - "integer"
    * - name
      - Name
-"string"
+     - "string"
    * - website
      - Urls.Value
-"string"
+     - "string"
 
 
 Wave Invoice to Superoffice Quoteline
@@ -418,22 +418,22 @@ The following properties are synchronized between a Wave Invoice and a Superoffi
      - Superoffice Data Type
    * - id
      - QuoteAlternativeId
-"integer"
+     - "integer"
    * - items.description
      - Description
-"string"
+     - "string"
    * - items.price
      - UnitListPrice
-["if-null", ["integer", "string"], ["decimal", "_."]]
+     - ["if-null", ["integer", "string"], ["decimal", "_."]]
    * - items.product.id
      - ERPProductKey
-"string"
+     - "string"
    * - items.quantity
      - Quantity
-["integer", ["decimal", "_."]]
+     - ["integer", ["decimal", "_."]]
    * - total.value
      - TotalPrice
-["if-null", ["integer", "string"], ["decimal", "_."]]
+     - ["if-null", ["integer", "string"], ["decimal", "_."]]
 
 
 Wave Product to Superoffice Product
@@ -452,11 +452,11 @@ The following properties are synchronized between a Wave Product and a Superoffi
      - Superoffice Data Type
    * - description
      - Description
-"string"
+     - "string"
    * - name
      - Name
-"string"
+     - "string"
    * - unitPrice
      - UnitListPrice
-["decimal", "_."]
+     - ["decimal", "_."]
 
