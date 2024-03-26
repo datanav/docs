@@ -2,7 +2,7 @@
 SuperOffice to Zendesk Dataflow
 ===============================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 14:30:19
 
 Introduction
 ------------
@@ -46,20 +46,20 @@ The following properties are synchronized between a SuperOffice Person and a Zen
      - "string"
 
 
-SuperOffice Contact to  Organizations
--------------------------------------
-Every SuperOffice Contact will be synchronized with a  Organizations.
+SuperOffice Contact to Zendesk Organizations
+--------------------------------------------
+Every SuperOffice Contact will be synchronized with a Zendesk Organizations.
 
-Once a link between a SuperOffice Contact and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a  Organizations:
+The following properties are synchronized between a SuperOffice Contact and a Zendesk Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     -  Organizations Property
-     -  Data Type
+     - Zendesk Organizations Property
+     - Zendesk Data Type
    * - Name
      - name
      - "string"
