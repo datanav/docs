@@ -2,7 +2,7 @@
 Tidsbanken to Wave Dataflow
 ===========================
 
-Generated: 2024-03-26 14:23:48
+Generated: 2024-03-26 14:24:14
 
 Introduction
 ------------
@@ -23,4 +23,61 @@ The following properties are synchronized between a Tidsbanken Kunde and a Wave 
    * - Tidsbanken Kunde Property
      - Wave Customer Property
      - Wave Data Type
+   * - Gateadresse
+     - address.addressLine1
+     - "string"
+   * - Gateadresse
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - LevPostNr
+     - address.postalCode
+     - "string"
+   * - LevPostNr
+     - shippingDetails.address.postalCode
+     - "string"
+   * - LevPoststed
+     - address.city
+     - "string"
+   * - LevPoststed
+     - shippingDetails.address.city
+     - "string"
+   * - Leveringsadresse
+     - address.addressLine1
+     - "string"
+   * - Leveringsadresse
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - Leveringsadresse2
+     - address.addressLine2
+     - "string"
+   * - Leveringsadresse2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - Navn
+     - name
+     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
+   * - Postadresse
+     - address.addressLine2
+     - "string"
+   * - Postadresse
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - Postnr
+     - address.postalCode
+     - "string"
+   * - Postnr
+     - shippingDetails.address.postalCode
+     - "string"
+   * - Poststed
+     - address.city
+     - "string"
+   * - Poststed
+     - shippingDetails.address.city
+     - "string"
+   * - Telefon
+     - phone
+     - "string"
+   * - Url
+     - website
+     - "string"
 
