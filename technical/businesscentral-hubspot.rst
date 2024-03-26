@@ -2,7 +2,7 @@
 Businesscentral to Hubspot Dataflow
 ===================================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -41,28 +41,28 @@ The following properties are synchronized between a Businesscentral Contacts per
      - Hubspot Data Type
    * - addressLine1
      - properties.address
-"string"
+     - "string"
    * - city
      - properties.city
-"string"
+     - "string"
    * - country
      - properties.country
-"string"
+     - "string"
    * - email
      - properties.email
-"string"
+     - "string"
    * - id
      - id
-"string"
+     - "string"
    * - mobilePhoneNumber
      - properties.mobilephone
-"string"
+     - "string"
    * - phoneNumber
      - properties.phone
-"string"
+     - "string"
    * - postalCode
      - properties.zip
-"string"
+     - "string"
 
 
 Businesscentral Customers company to Hubspot Company
@@ -81,40 +81,40 @@ The following properties are synchronized between a Businesscentral Customers co
      - Hubspot Data Type
    * - address.city
      - properties.city
-"string"
+     - "string"
    * - address.countryLetterCode
      - properties.country
-"string"
+     - "string"
    * - address.postalCode
      - properties.zip
-"string"
+     - "string"
    * - addressLine1
      - properties.address
-"string"
+     - "string"
    * - addressLine2
      - properties.address2
-"string"
+     - "string"
    * - city
      - properties.city
-"string"
+     - "string"
    * - country
      - properties.country
-"string"
+     - "string"
    * - displayName
      - properties.name
-"string"
+     - "string"
    * - id
      - id
-"string"
+     - "string"
    * - id (Dependant on having  in typeDependant on having NO in type)
      - sync_org_nr
-"string"
+     - "string"
    * - phoneNumber
      - properties.phone
-"string"
+     - "string"
    * - postalCode
      - properties.zip
-"string"
+     - "string"
 
 
 Businesscentral Employees to Hubspot Contact
@@ -133,25 +133,25 @@ The following properties are synchronized between a Businesscentral Employees an
      - Hubspot Data Type
    * - birthDate
      - properties.date_of_birth
-"string"
+     - "string"
    * - email
      - properties.email
-"string"
+     - "string"
    * - givenName
      - properties.firstname
-"string"
+     - "string"
    * - mobilePhone
      - properties.mobilephone
-"string"
+     - "string"
    * - personalEmail
      - properties.email
-"string"
+     - "string"
    * - phoneNumber
      - properties.phone
-"string"
+     - "string"
    * - surname
      - properties.lastname
-"string"
+     - "string"
 
 
 Businesscentral Items to Hubspot Product
@@ -170,19 +170,19 @@ The following properties are synchronized between a Businesscentral Items and a 
      - Hubspot Data Type
    * - displayName
      - properties.name
-"string"
+     - "string"
    * - displayName.string
      - properties.name
-"string"
+     - "string"
    * - displayName2
      - properties.name
-"string"
+     - "string"
    * - unitCost
      - properties.hs_cost_of_goods_sold
-"string"
+     - "string"
    * - unitPrice
      - properties.price
-"string"
+     - "string"
 
 
 Businesscentral Salesorderlines to Hubspot Lineitem
@@ -201,26 +201,26 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - Hubspot Data Type
    * - amountExcludingTax
      - properties.price
-"string"
+     - "string"
    * - description
      - properties.description
-"string"
+     - "string"
    * - description
      - properties.name
-"string"
+     - "string"
    * - discountPercent
      - properties.hs_discount_percentage
-"string"
+     - "string"
    * - invoiceQuantity
      - properties.quantity
-"integer"
+     - "integer"
    * - itemId
      - properties.hs_product_id
-"string"
+     - "string"
    * - quantity
      - properties.quantity
-["string", ["integer", ["decimal", "_."]]]
+     - ["string", ["integer", ["decimal", "_."]]]
    * - unitPrice
      - properties.price
-"string"
+     - "string"
 
