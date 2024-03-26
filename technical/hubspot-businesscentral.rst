@@ -2,29 +2,29 @@
 HubSpot to Businesscentral Dataflow
 ===================================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:49
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Businesscentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-HubSpot Company to  Customers company
--------------------------------------
-Before any synchronization can take place, a link between a HubSpot Company and a  Customers company must be established.
+HubSpot Company to Businesscentral Customers company
+----------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Company and a Businesscentral Customers company must be established.
 
-A new  Customers company will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into .
+A new Businesscentral Customers company will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into Businesscentral.
 
-Once a link between a HubSpot Company and a  Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a Businesscentral Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a  Customers company:
+The following properties are synchronized between a HubSpot Company and a Businesscentral Customers company:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     -  Customers company Property
-     -  Data Type
+     - Businesscentral Customers company Property
+     - Businesscentral Data Type
    * - id
      - id
      - "string"
@@ -63,40 +63,40 @@ The following properties are synchronized between a HubSpot Company and a  Custo
      - "string"
 
 
-HubSpot Company to  Customers person
-------------------------------------
-Before any synchronization can take place, a link between a HubSpot Company and a  Customers person must be established.
+HubSpot Company to Businesscentral Customers person
+---------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Company and a Businesscentral Customers person must be established.
 
-A new  Customers person will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into .
+A new Businesscentral Customers person will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into Businesscentral.
 
-Once a link between a HubSpot Company and a  Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a Businesscentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a  Customers person:
+The following properties are synchronized between a HubSpot Company and a Businesscentral Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     -  Customers person Property
-     -  Data Type
+     - Businesscentral Customers person Property
+     - Businesscentral Data Type
 
 
-HubSpot Contact to  Customers company
--------------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a  Customers company must be established.
+HubSpot Contact to Businesscentral Customers company
+----------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a Businesscentral Customers company must be established.
 
-A new  Customers company will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into .
+A new Businesscentral Customers company will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into Businesscentral.
 
-Once a link between a HubSpot Contact and a  Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contact and a Businesscentral Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contact and a  Customers company:
+The following properties are synchronized between a HubSpot Contact and a Businesscentral Customers company:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contact Property
-     -  Customers company Property
-     -  Data Type
+     - Businesscentral Customers company Property
+     - Businesscentral Data Type
    * - id
      - id
      - "string"
@@ -114,22 +114,22 @@ The following properties are synchronized between a HubSpot Contact and a  Custo
      - "string"
 
 
-HubSpot Contact to  Customers person
-------------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a  Customers person must be established.
+HubSpot Contact to Businesscentral Customers person
+---------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a Businesscentral Customers person must be established.
 
-A new  Customers person will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into .
+A new Businesscentral Customers person will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into Businesscentral.
 
-Once a link between a HubSpot Contact and a  Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contact and a Businesscentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contact and a  Customers person:
+The following properties are synchronized between a HubSpot Contact and a Businesscentral Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contact Property
-     -  Customers person Property
-     -  Data Type
+     - Businesscentral Customers person Property
+     - Businesscentral Data Type
    * - id
      - id
      - "string"
@@ -181,20 +181,20 @@ The following properties are synchronized between a HubSpot Company and a  Compa
      -  Data Type
 
 
-HubSpot Deal to  Salesorders
-----------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a  Salesorders.
+HubSpot Deal to Businesscentral Salesorders
+-------------------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Businesscentral Salesorders.
 
-Once a link between a HubSpot Deal and a  Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a Businesscentral Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a  Salesorders:
+The following properties are synchronized between a HubSpot Deal and a Businesscentral Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     -  Salesorders Property
-     -  Data Type
+     - Businesscentral Salesorders Property
+     - Businesscentral Data Type
    * - properties.amount
      - totalAmountExcludingTax
      - "string"
@@ -221,20 +221,20 @@ The following properties are synchronized between a HubSpot Deal and a  Salesord
      - "string"
 
 
-HubSpot Lineitem to  Salesorderlines
-------------------------------------
-Every HubSpot Lineitem will be synchronized with a  Salesorderlines.
+HubSpot Lineitem to Businesscentral Salesorderlines
+---------------------------------------------------
+Every HubSpot Lineitem will be synchronized with a Businesscentral Salesorderlines.
 
-Once a link between a HubSpot Lineitem and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitem and a Businesscentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitem and a  Salesorderlines:
+The following properties are synchronized between a HubSpot Lineitem and a Businesscentral Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitem Property
-     -  Salesorderlines Property
-     -  Data Type
+     - Businesscentral Salesorderlines Property
+     - Businesscentral Data Type
    * - properties.description
      - description
      - "string"
@@ -261,20 +261,20 @@ The following properties are synchronized between a HubSpot Lineitem and a  Sale
      - "integer", "decimal"]
 
 
-HubSpot Product to  Items
--------------------------
-Every HubSpot Product will be synchronized with a  Items.
+HubSpot Product to Businesscentral Items
+----------------------------------------
+Every HubSpot Product will be synchronized with a Businesscentral Items.
 
-Once a link between a HubSpot Product and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Product and a Businesscentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Product and a  Items:
+The following properties are synchronized between a HubSpot Product and a Businesscentral Items:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Product Property
-     -  Items Property
-     -  Data Type
+     - Businesscentral Items Property
+     - Businesscentral Data Type
    * - properties.hs_cost_of_goods_sold
      - unitCost
      - "decimal"
