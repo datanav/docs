@@ -2,7 +2,7 @@
 Unieconomy to Asana Dataflow
 ============================
 
-Generated: 2024-03-26 14:26:08
+Generated: 2024-03-26 17:27:49
 
 Introduction
 ------------
@@ -25,5 +25,5 @@ The following properties are synchronized between a Unieconomy Companies and a A
      - Asana Data Type
    * - Name
      - name
-     - "string"
+"string"
 
