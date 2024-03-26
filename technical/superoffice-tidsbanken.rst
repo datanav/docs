@@ -2,7 +2,7 @@
 SuperOffice to Tidsbanken Dataflow
 ==================================
 
-Generated: 2024-03-26 14:23:48
+Generated: 2024-03-26 17:27:49
 
 Introduction
 ------------
@@ -35,85 +35,85 @@ The following properties are synchronized between a SuperOffice Contact and a Ti
      - Tidsbanken Data Type
    * - Address.Postal.Address1
      - Gateadresse
-     - "string"
+"string"
    * - Address.Postal.Address1
      - Leveringsadresse
-     - "string"
+"string"
    * - Address.Postal.Address1
      - Postadresse
-     - "string"
+"string"
    * - Address.Postal.Address2
      - Gateadresse
-     - "string"
+"string"
    * - Address.Postal.Address2
      - Leveringsadresse2
-     - "string"
+"string"
    * - Address.Postal.Address2
      - Postadresse
-     - "string"
+"string"
    * - Address.Postal.City
      - LevPoststed
-     - "string"
+"string"
    * - Address.Postal.City
      - Poststed
-     - "string"
+"string"
    * - Address.Postal.Zipcode
      - LevPostNr
-     - "string"
+"string"
    * - Address.Postal.Zipcode
      - Postnr
-     - "string"
+"string"
    * - Address.Street.Address1
      - Gateadresse
-     - "string"
+"string"
    * - Address.Street.Address1
      - Leveringsadresse
-     - "string"
+"string"
    * - Address.Street.Address1
      - Postadresse
-     - "string"
+"string"
    * - Address.Street.Address2
      - Gateadresse
-     - "string"
+"string"
    * - Address.Street.Address2
      - Leveringsadresse2
-     - "string"
+"string"
    * - Address.Street.Address2
      - Postadresse
-     - "string"
+"string"
    * - Address.Street.City
      - LevPoststed
-     - "string"
+"string"
    * - Address.Street.City
      - Poststed
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - LevPostNr
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - Postnr
-     - "string"
+"string"
    * - ContactId
      - Id
-     - "string"
+"string"
    * - Emails.Value
      - Epost
-     - "string"
+"string"
    * - Name
      - Navn
-     - "string"
+"string"
    * - OrgNr (Dependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having wd:Q11994066 in Country.TwoLetterISOCountryDependant on having wd:Q11994066 in Country.TwoLetterISOCountry)
      - Organisasjonsnummer
-     - "string"
+"string"
    * - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountry)
      - sesam_kundeId
-     - "string"
+"string"
    * - Phones.Value
      - Telefon
-     - "string"
+"string"
    * - Urls.Value
      - Url
-     - "string"
+"string"
 
 
 SuperOffice Person to Tidsbanken Ansatt
@@ -142,40 +142,40 @@ The following properties are synchronized between a SuperOffice Person and a Tid
      - Tidsbanken Data Type
    * - Address.Street.Address1
      - Adresse
-     - "string"
+"string"
    * - Address.Street.City
      - Poststed
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - Postnummer
-     - "string"
+"string"
    * - BirthDate
      - Fodt
-     - "string"
+"string"
    * - Contact.ContactId
      - AvdelingId
-     - "string"
+"string"
    * - Contact.ContactId
      - Tittel
-     - "string"
+"string"
    * - Contact.ContactId
      - sesam_ansattId
-     - "integer"
+"integer"
    * - Firstname
      - Fornavn
-     - "string"
+"string"
    * - Lastname
      - Etternavn
-     - "string"
+"string"
    * - MobilePhones.Value
      - Mobil
-     - "string"
+"string"
    * - PersonId
      - Id
-     - "integer"
+"integer"
    * - PrivatePhones.Value
      - TlfPrivat
-     - "string"
+"string"
 
 
 SuperOffice User to Tidsbanken Ansatt
@@ -204,22 +204,22 @@ The following properties are synchronized between a SuperOffice User and a Tidsb
      - Tidsbanken Data Type
    * - contactId
      - AvdelingId
-     - "string"
+"string"
    * - contactId
      - Tittel
-     - "string"
+"string"
    * - contactId
      - sesam_ansattId
-     - "integer"
+"integer"
    * - firstName
      - Fornavn
-     - "string"
+"string"
    * - lastName
      - Etternavn
-     - "string"
+"string"
    * - personEmail
      - Epost
-     - "string"
+"string"
 
 
 SuperOffice Project to Tidsbanken Prosjekt
@@ -238,8 +238,8 @@ The following properties are synchronized between a SuperOffice Project and a Ti
      - Tidsbanken Data Type
    * - Associate.AssociateId
      - AnsvarligId
-     - "integer"
+"integer"
    * - Name
      - Navn
-     - "string"
+"string"
 
