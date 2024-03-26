@@ -2,7 +2,7 @@
 Wix.com to Superoffice Dataflow
 ===============================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -131,16 +131,16 @@ The following properties are synchronized between a Wix.com Orders and a Superof
      - "string"
    * - lineItems.price
      - UnitListPrice
-     - ["if-null", ["integer", ["string", "_."]], ["decimal", "_."]]
+     - N/A
    * - lineItems.productId
      - ERPProductKey
      - "string"
    * - lineItems.quantity
      - Quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - totals.total
      - TotalPrice
-     - ["if-null", ["integer", ["string", "_."]], ["decimal", "_."]]
+     - N/A
 
 
 Wix.com Products to Superoffice Product
@@ -174,11 +174,11 @@ The following properties are synchronized between a Wix.com Products and a Super
      - "string"
    * - price.price
      - UnitListPrice
-     - ["decimal", "_."]
+     - N/A
    * - priceData.currency
      - ERPPriceListKey
      - "string"
    * - priceData.price
      - UnitListPrice
-     - ["decimal", "_."]
+     - N/A
 
