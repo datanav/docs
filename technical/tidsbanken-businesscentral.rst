@@ -2,7 +2,7 @@
 Tidsbanken to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -57,37 +57,37 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Busi
      - Businesscentral Data Type
    * - Adresse
      - addressLine1
-"string"
+     - "string"
    * - Epost
      - email
-"string"
+     - "string"
    * - Etternavn
      - surname
-"string"
+     - "string"
    * - Fodt
      - birthDate
-"string"
+     - "string"
    * - Fornavn
      - givenName
-"string"
+     - "string"
    * - Id
      - id
-"string"
+     - "string"
    * - Mobil
      - mobilePhone
-"string"
+     - "string"
    * - Navn
      - displayName
-"string"
+     - "string"
    * - Postnummer
      - postalCode
-"string"
+     - "string"
    * - Poststed
      - city
-"string"
+     - "string"
    * - Tittel
      - jobTitle
-"string"
+     - "string"
 
 
 Tidsbanken Kunde to Businesscentral Customers company
@@ -106,38 +106,38 @@ The following properties are synchronized between a Tidsbanken Kunde and a Busin
      - Businesscentral Data Type
    * - Gateadresse
      - addressLine1
-"string"
+     - "string"
    * - Id
      - id
-"string"
+     - "string"
    * - LevPostNr
      - postalCode
-"string"
+     - "string"
    * - LevPoststed
      - city
-"string"
+     - "string"
    * - Leveringsadresse
      - addressLine1
-"string"
+     - "string"
    * - Leveringsadresse2
      - addressLine2
-"string"
+     - "string"
    * - Navn
      - displayName
-"string"
+     - "string"
    * - Postadresse
      - addressLine2
-"string"
+     - "string"
    * - Postnr
      - postalCode
-"string"
+     - "string"
    * - Poststed
      - city
-"string"
+     - "string"
    * - Telefon
      - phoneNumber
-"string"
+     - "string"
    * - Url
      - website
-"string"
+     - "string"
 
