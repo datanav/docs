@@ -2,40 +2,37 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Contact to  Members
------------------------------
-Before any synchronization can take place, a link between a Tripletex Contact and a  Members must be established.
+Tripletex Customer person to  Contacts
+--------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer person and a  Contacts must be established.
 
-A Tripletex Contact will merge with a  Members if one of the following property combinations match:
+A Tripletex Customer person will merge with a  Contacts if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Contact Property
-     -  Members Property
+   * - Tripletex Customer person Property
+     -  Contacts Property
    * - email
-     - loginEmail
+     - primaryInfo.email
 
-Once a link between a Tripletex Contact and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a  Members:
+The following properties are synchronized between a Tripletex Customer person and a  Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Contact Property
-     -  Members Property
+   * - Tripletex Customer person Property
+     -  Contacts Property
      -  Data Type
-   * - email
-     - loginEmail
-     - "string"
 
 
 Tripletex Employee to  Contacts
@@ -83,8 +80,14 @@ The following properties are synchronized between a Tripletex Employee and a  Co
    * - firstName
      - info.name.first
      - "string"
+   * - firstName
+     - info.name.last
+     - "string"
    * - id
      - id
+     - "string"
+   * - lastName
+     - info.name.first
      - "string"
    * - lastName
      - info.name.last
@@ -95,34 +98,8 @@ The following properties are synchronized between a Tripletex Employee and a  Co
    * - phoneNumberMobile
      - primaryInfo.phone
      - "string"
-
-
-Tripletex Employee to  Members
-------------------------------
-Before any synchronization can take place, a link between a Tripletex Employee and a  Members must be established.
-
-A Tripletex Employee will merge with a  Members if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     -  Members Property
-   * - email
-     - loginEmail
-
-Once a link between a Tripletex Employee and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Employee and a  Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     -  Members Property
-     -  Data Type
-   * - email
-     - loginEmail
+   * - phoneNumberWork
+     - primaryInfo.phone
      - "string"
 
 
@@ -228,28 +205,9 @@ The following properties are synchronized between a Tripletex Contact and a Wix 
    * - phoneNumberMobile
      - primaryInfo.phone
      - "string"
-
-
-Tripletex Product to  Inventory
--------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Inventory.
-
-Once a link between a Tripletex Product and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Product and a  Inventory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     -  Inventory Property
-     -  Data Type
-   * - stockOfGoods
-     - lastUpdated
+   * - phoneNumberWork
+     - primaryInfo.phone
      - "string"
-   * - stockOfGoods
-     - variants.quantity
-     - "integer"
 
 
 Tripletex Product to Wix Products
@@ -266,6 +224,9 @@ The following properties are synchronized between a Tripletex Product and a Wix 
    * - Tripletex Product Property
      - Wix Products Property
      - Wix Data Type
+   * - costExcludingVatCurrency
+     - costAndProfitData.itemCost
+     - "decimal"
    * - costExcludingVatCurrency
      - costRange.maxValue
      - "string"
