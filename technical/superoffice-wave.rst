@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -165,7 +165,7 @@ The following properties are synchronized between a SuperOffice Contact and a Wa
      - "string"
    * - Name
      - name
-     - ["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
+     - N/A
    * - Phones.Value
      - phone
      - "string"
@@ -234,7 +234,7 @@ The following properties are synchronized between a SuperOffice Person and a Wav
      - "string"
    * - Lastname
      - lastName
-     - ["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
+     - N/A
    * - MobilePhones.Value
      - mobile
      - "string"
