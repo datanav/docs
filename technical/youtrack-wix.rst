@@ -2,7 +2,7 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -33,42 +33,16 @@ The following properties are synchronized between a YouTrack Users and a  Contac
    * - YouTrack Users Property
      -  Contacts Property
      -  Data Type
+   * - name
+     - info.name.first
+     - "string"
+   * - name
+     - info.name.last
+     - "string"
    * - profile.email
      - primaryInfo.email
      - "string"
    * - profile.email.email
      - primaryInfo.email
-     - "string"
-
-
-YouTrack Users to  Members
---------------------------
-Before any synchronization can take place, a link between a YouTrack Users and a  Members must be established.
-
-A YouTrack Users will merge with a  Members if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Users Property
-     -  Members Property
-   * - profile.email.email
-     - loginEmail
-
-Once a link between a YouTrack Users and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Users and a  Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Users Property
-     -  Members Property
-     -  Data Type
-   * - profile.email
-     - loginEmail
-     - "string"
-   * - profile.email.email
-     - loginEmail
      - "string"
 
