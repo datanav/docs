@@ -2,7 +2,7 @@
 Powerofficego to Tilores Dataflow
 =================================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -25,31 +25,31 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - Tilores Data Type
    * - address1
      - street
-"string"
+     - "string"
    * - address2
      - street
-"string"
+     - "string"
    * - city
      - city
-"string"
+     - "string"
    * - dateOfBirth
      - dateOfBirth
-"string"
+     - "string"
    * - emailAddress
      - email
-"string"
+     - "string"
    * - firstName
      - firstName
-"string"
+     - "string"
    * - id
      - id
-"string"
+     - "string"
    * - lastName
      - lastName
-"string"
+     - "string"
    * - zipCode
      - postalCode
-"string"
+     - "string"
 
 
 Powerofficego Employees to Tilores Human
@@ -68,47 +68,47 @@ The following properties are synchronized between a Powerofficego Employees and 
      - Tilores Data Type
    * - DateOfBirth
      - dateOfBirth
-"string"
+     - "string"
    * - EmailAddress
      - email
-"string"
+     - "string"
    * - FirstName
      - firstName
-"string"
+     - "string"
    * - Id
      - id
-"string"
+     - "string"
    * - LastName
      - lastName
-"string"
+     - "string"
    * - MailAddress.City
      - city
-"string"
+     - "string"
    * - MailAddress.ZipCode
      - postalCode
-"string"
+     - "string"
    * - MailAddress.city
      - city
-"string"
+     - "string"
    * - MailAddress.zipCode
      - postalCode
-"string"
+     - "string"
    * - dateOfBirth
      - dateOfBirth
-"string"
+     - "string"
    * - firstName
      - firstName
-"string"
+     - "string"
    * - id
      - id
-"string"
+     - "string"
    * - lastName
      - lastName
-"string"
+     - "string"
    * - streetAddresses.city
      - city
-"string"
+     - "string"
    * - streetAddresses.zipCode
      - postalCode
-"string"
+     - "string"
 
