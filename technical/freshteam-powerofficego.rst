@@ -2,7 +2,7 @@
 Freshteam to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -114,7 +114,7 @@ The following properties are synchronized between a Freshteam Employee and a Pow
      - "string"
    * - date_of_birth
      - DateOfBirth
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - date_of_birth
      - dateOfBirth
      - "string"
