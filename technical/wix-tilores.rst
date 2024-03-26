@@ -2,27 +2,27 @@
 Wix.com to Tilores Dataflow
 ===========================
 
-Generated: 2024-03-26 14:24:41
+Generated: 2024-03-26 14:34:37
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to Tilores. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wix.com Contacts to  Human
---------------------------
-Every Wix.com Contacts will be synchronized with a  Human.
+Wix.com Contacts to Tilores Human
+---------------------------------
+Every Wix.com Contacts will be synchronized with a Tilores Human.
 
-Once a link between a Wix.com Contacts and a  Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a  Human:
+The following properties are synchronized between a Wix.com Contacts and a Tilores Human:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     -  Human Property
-     -  Data Type
+     - Tilores Human Property
+     - Tilores Data Type
    * - id
      - id
      - "string"
