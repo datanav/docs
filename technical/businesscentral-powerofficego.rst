@@ -2,7 +2,7 @@
 Businesscentral to Powerofficego Dataflow
 =========================================
 
-Generated: 2024-03-26 14:15:49
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -79,28 +79,28 @@ The following properties are synchronized between a Businesscentral Contacts per
      - Powerofficego Data Type
    * - addressLine1
      - address1
-     - "string"
+"string"
    * - addressLine2
      - address2
-     - "string"
+"string"
    * - city
      - city
-     - "string"
+"string"
    * - country
      - residenceCountryCode
-     - "string"
+"string"
    * - email
      - emailAddress
-     - "string"
+"string"
    * - id
      - id
-     - "integer"
+"integer"
    * - phoneNumber
      - phoneNumber
-     - "string"
+"string"
    * - postalCode
      - zipCode
-     - "string"
+"string"
 
 
 Businesscentral Contacts person to Powerofficego Customers
@@ -135,31 +135,31 @@ The following properties are synchronized between a Businesscentral Contacts per
      - Powerofficego Data Type
    * - addressLine1
      - MailAddress.AddressLine1
-     - "string"
+"string"
    * - addressLine2
      - MailAddress.AddressLine2
-     - "string"
+"string"
    * - city
      - MailAddress.City
-     - "string"
+"string"
    * - country
      - MailAddress.CountryCode
-     - "string"
+"string"
    * - email
      - EmailAddress
-     - "string"
+"string"
    * - id
      - Id
-     - "integer"
+"integer"
    * - phoneNumber
      - PhoneNumber
-     - "string"
+"string"
    * - postalCode
      - MailAddress.ZipCode
-     - "string"
+"string"
    * - type
      - IsPerson
-     - "if", "is-boolean", "boolean"], "boolean", "string"]
+["if", ["is-boolean", "boolean"], "boolean", "string"]
 
 
 Businesscentral Customers company to Powerofficego Customers
@@ -178,43 +178,43 @@ The following properties are synchronized between a Businesscentral Customers co
      - Powerofficego Data Type
    * - address.city
      - MailAddress.City
-     - "string"
+"string"
    * - address.countryLetterCode
      - MailAddress.CountryCode
-     - "string"
+"string"
    * - address.postalCode
      - MailAddress.ZipCode
-     - "string"
+"string"
    * - addressLine1
      - MailAddress.AddressLine1
-     - "string"
+"string"
    * - addressLine2
      - MailAddress.AddressLine2
-     - "string"
+"string"
    * - city
      - MailAddress.City
-     - "string"
+"string"
    * - country
      - MailAddress.CountryCode
-     - "string"
+"string"
    * - displayName
      - Name
-     - "string"
+"string"
    * - id
      - Id
-     - "integer"
+"integer"
    * - phoneNumber
      - PhoneNumber
-     - "string"
+"string"
    * - postalCode
      - MailAddress.ZipCode
-     - "string"
+"string"
    * - type
      - IsPerson
-     - "if", "is-boolean", "boolean"], "boolean", "string"]
+["if", ["is-boolean", "boolean"], "boolean", "string"]
    * - website
      - WebsiteUrl
-     - "string"
+"string"
 
 
 Businesscentral Customers person to Powerofficego Customers
@@ -249,40 +249,40 @@ The following properties are synchronized between a Businesscentral Customers pe
      - Powerofficego Data Type
    * - address.city
      - MailAddress.City
-     - "string"
+"string"
    * - address.postalCode
      - MailAddress.ZipCode
-     - "string"
+"string"
    * - addressLine1
      - MailAddress.AddressLine1
-     - "string"
+"string"
    * - addressLine2
      - MailAddress.AddressLine2
-     - "string"
+"string"
    * - addressLine2
      - MailAddress.City
-     - "string"
+"string"
    * - city
      - MailAddress.City
-     - "string"
+"string"
    * - country
      - MailAddress.CountryCode
-     - "string"
+"string"
    * - email
      - EmailAddress
-     - "string"
+"string"
    * - id
      - Id
-     - "integer"
+"integer"
    * - phoneNumber
      - PhoneNumber
-     - "string"
+"string"
    * - postalCode
      - MailAddress.ZipCode
-     - "string"
+"string"
    * - type
      - IsPerson
-     - "if", "is-boolean", "boolean"], "boolean", "string"]
+["if", ["is-boolean", "boolean"], "boolean", "string"]
 
 
 Businesscentral Employees to Powerofficego Employees
@@ -301,25 +301,25 @@ The following properties are synchronized between a Businesscentral Employees an
      - Powerofficego Data Type
    * - birthDate
      - DateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
+["datetime-format","%Y-%m-%d","_."]
    * - email
      - EmailAddress
-     - "string"
+"string"
    * - givenName
      - FirstName
-     - "string"
+"string"
    * - jobTitle
      - DepartmentId (Dependant on having  in JobTitle)
-     - "string"
+"string"
    * - jobTitle
      - JobTitle
-     - "string"
+"string"
    * - mobilePhone
      - PhoneNumber
-     - "string"
+"string"
    * - surname
      - LastName
-     - "string"
+"string"
 
 
 Businesscentral Items to Powerofficego Product
@@ -338,28 +338,28 @@ The following properties are synchronized between a Businesscentral Items and a 
      - Powerofficego Data Type
    * - displayName
      - name
-     - "string"
+"string"
    * - displayName.string
      - name
-     - "string"
+"string"
    * - displayName2
      - name
-     - "string"
+"string"
    * - gtin
      - gtin
-     - "string"
+"string"
    * - inventory
      - availableStock
-     - "integer"
+"integer"
    * - taxGroupCode
      - vatCode
-     - "string"
+"string"
    * - unitCost
      - costPrice
-     - "if", "is-decimal", "decimal", "integer"]
+["if", ["is-decimal", "_."], ["decimal", "_."], "integer"]
    * - unitPrice
      - salesPrice
-     - "if", "is-decimal", "decimal", "integer"]
+["if", ["is-decimal", "_."], ["decimal", "_."], "integer"]
 
 
 Businesscentral Salesorderlines to Powerofficego Salesorderlines
@@ -378,31 +378,31 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - Powerofficego Data Type
    * - amountExcludingTax
      - ProductUnitPrice
-     - "if", "is-decimal", "decimal", "integer"]
+["if", ["is-decimal", "_."], ["decimal", "_."], "integer"]
    * - description
      - Description
-     - "string"
+"string"
    * - discountPercent
      - Allowance
-     - "float"
+"float"
    * - documentId
      - sesam_SalesOrderId
-     - "string"
+"string"
    * - invoiceQuantity
      - Quantity
-     - "integer"
+"integer"
    * - itemId
      - ProductId
-     - "integer"
+"integer"
    * - quantity
      - Quantity
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - taxPercent
      - VatId
-     - "string"
+"string"
    * - unitPrice
      - ProductUnitPrice
-     - "if", "is-decimal", "decimal", "float", "decimal"]]
+["if", ["is-decimal", "_."], ["decimal", "_."], ["float", ["decimal", "_."]]]
 
 
 Businesscentral Salesorders to Powerofficego Salesorders
@@ -421,14 +421,14 @@ The following properties are synchronized between a Businesscentral Salesorders 
      - Powerofficego Data Type
    * - currencyId
      - CurrencyCode
-     - "string"
+"string"
    * - customerId
      - CustomerId
-     - "integer"
+"integer"
    * - customerId
      - CustomerReferenceContactPersonId
-     - "integer"
+"integer"
    * - orderDate
      - SalesOrderDate
-     - "string"
+"string"
 
