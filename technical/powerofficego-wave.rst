@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2023-11-30 00:01:11
+Generated: 2024-03-26 00:00:01
 
 Introduction.
 ------------
@@ -130,7 +130,7 @@ Powerofficego Customers to Wave Customer person
 -----------------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Customers and a Wave Customer person must be established.
 
-A new Wave Customer person will be created from a Powerofficego Customers if it is connected to a Powerofficego Customer, Customers, Employees, Suppliers, Salesorder, Departments, Salesorders, Contactperson, Salesorderlines, or Outgoinginvoices that is synchronized into Wave.
+A new Wave Customer person will be created from a Powerofficego Customers if it is connected to a Powerofficego Customer, Customers, Employees, Suppliers, Salesorder, Departments, Salesorders, Contactperson, Salesorderlines, Outgoinginvoices, or Customers-organisation that is synchronized into Wave.
 
 Once a link between a Powerofficego Customers and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -325,41 +325,13 @@ The following properties are synchronized between a Powerofficego Salesorders an
    * - CurrencyCode
      - currency.code
      - "string"
+   * - CustomerId
+     - customer.id
+     - "string"
    * - CustomerReferenceContactPersonId
      - customer.id
      - "string"
    * - PurchaseOrderReference
      - poNumber
-     - "string"
-
-
-Powerofficego Suppliers to  Vendor
-----------------------------------
-Every Powerofficego Suppliers will be synchronized with a  Vendor.
-
-Once a link between a Powerofficego Suppliers and a  Vendor is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Suppliers and a  Vendor:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Suppliers Property
-     -  Vendor Property
-     -  Data Type
-   * - FirstName
-     - firstName
-     - "string"
-   * - LastName
-     - firstName
-     - "string"
-   * - LegalName
-     - name
-     - "string"
-   * - PhoneNumber
-     - phone
-     - "string"
-   * - WebsiteUrl
-     - website
      - "string"
 
