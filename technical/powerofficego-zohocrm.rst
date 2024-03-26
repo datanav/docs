@@ -1,13 +1,13 @@
-==========================
-Powerofficego to  Dataflow
-==========================
+=================================
+Powerofficego to Zohocrm Dataflow
+=================================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:19:13
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Zohocrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Powerofficego Customers to  Account
 -----------------------------------
@@ -71,20 +71,20 @@ The following properties are synchronized between a Powerofficego Departments an
      - "string"
 
 
-Powerofficego Customers person to  Contact
-------------------------------------------
-Every Powerofficego Customers person will be synchronized with a  Contact.
+Powerofficego Customers person to Zohocrm Contact
+-------------------------------------------------
+Every Powerofficego Customers person will be synchronized with a Zohocrm Contact.
 
-Once a link between a Powerofficego Customers person and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers person and a Zohocrm Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers person and a  Contact:
+The following properties are synchronized between a Powerofficego Customers person and a Zohocrm Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers person Property
-     -  Contact Property
-     -  Data Type
+     - Zohocrm Contact Property
+     - Zohocrm Data Type
    * - EmailAddress
      - Email
      - "string"
