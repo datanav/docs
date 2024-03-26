@@ -2,40 +2,40 @@
 Zendesk to Superoffice Dataflow
 ===============================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:16
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Zendesk to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Zendesk Users to SuperOffice Person
+Zendesk Users to Superoffice Person
 -----------------------------------
-Every Zendesk Users will be synchronized with a SuperOffice Person.
+Every Zendesk Users will be synchronized with a Superoffice Person.
 
-If a matching SuperOffice Person already exists, the Zendesk Users will be merged with the existing one.
-If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
+If a matching Superoffice Person already exists, the Zendesk Users will be merged with the existing one.
+If no matching Superoffice Person is found, a new Superoffice Person will be created.
 
-A Zendesk Users will merge with a SuperOffice Person if one of the following property combinations match:
+A Zendesk Users will merge with a Superoffice Person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Users Property
-     - SuperOffice Person Property
+     - Superoffice Person Property
    * - email
      - Emails.Value
 
-Once a link between a Zendesk Users and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Users and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Users and a SuperOffice Person:
+The following properties are synchronized between a Zendesk Users and a Superoffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Users Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
+     - Superoffice Person Property
+     - Superoffice Data Type
    * - email
      - Emails.Value
      - "string"
