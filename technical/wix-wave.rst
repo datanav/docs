@@ -2,7 +2,7 @@
 Wix.com to Wave Dataflow
 ========================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -30,19 +30,19 @@ The following properties are synchronized between a Wix.com Contacts and a Wave 
      - "string"
    * - info.name.first
      - lastName
-     - ["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
+     - N/A
    * - info.name.first
      - name
-     - ["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
+     - N/A
    * - info.name.last
      - firstName
      - "string"
    * - info.name.last
      - lastName
-     - ["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
+     - N/A
    * - info.name.last
      - name
-     - ["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
+     - N/A
    * - primaryInfo.email
      - email
      - "string"
@@ -115,7 +115,7 @@ The following properties are synchronized between a Wix.com Orders and a Wave In
      - "string"
    * - dateCreated
      - invoiceDate
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - lineItems.name
      - items.description
      - "string"
@@ -124,7 +124,7 @@ The following properties are synchronized between a Wix.com Orders and a Wave In
      - "string"
    * - lineItems.name
      - items.quantity
-     - ["string", ["integer", ["decimal", "_."]]]
+     - N/A
    * - lineItems.name.name
      - items.description
      - "string"
@@ -136,7 +136,7 @@ The following properties are synchronized between a Wix.com Orders and a Wave In
      - "string"
    * - lineItems.price
      - items.quantity
-     - ["string", ["integer", ["decimal", "_."]]]
+     - N/A
    * - lineItems.price
      - items.unitPrice
      - "float"
@@ -157,7 +157,7 @@ The following properties are synchronized between a Wix.com Orders and a Wave In
      - "string"
    * - lineItems.quantity
      - items.quantity
-     - ["string", ["integer", ["decimal", "_."]]]
+     - N/A
    * - lineItems.quantity.quantity
      - items.quantity
      - "float"
