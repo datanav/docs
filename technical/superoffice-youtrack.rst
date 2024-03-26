@@ -2,7 +2,7 @@
 SuperOffice to Youtrack Dataflow
 ================================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -35,10 +35,10 @@ The following properties are synchronized between a SuperOffice Person and a You
      - Youtrack Data Type
    * - Emails.Value
      - profile.email
-"string"
+     - "string"
    * - Emails.Value
      - profile.email.email
-"string"
+     - "string"
 
 
 SuperOffice Contact to Youtrack Groups
@@ -57,7 +57,7 @@ The following properties are synchronized between a SuperOffice Contact and a Yo
      - Youtrack Data Type
    * - Name
      - name
-"string"
+     - "string"
 
 
 SuperOffice Ticket to Youtrack Issues
@@ -76,7 +76,7 @@ The following properties are synchronized between a SuperOffice Ticket and a You
      - Youtrack Data Type
    * - OwnedBy.AssociateId
      - reporter.id
-"string"
+     - "string"
 
 
 SuperOffice User to Youtrack Users
@@ -108,8 +108,8 @@ The following properties are synchronized between a SuperOffice User and a Youtr
      - Youtrack Data Type
    * - personEmail
      - profile.email
-"string"
+     - "string"
    * - personEmail
      - profile.email.email
-"string"
+     - "string"
 
