@@ -2,7 +2,7 @@
 Powerofficego to Businesscentral Dataflow
 =========================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -442,7 +442,7 @@ The following properties are synchronized between a Powerofficego Product and a 
      - Businesscentral Data Type
    * - costPrice
      - unitCost
-     - ["decimal", "_."]
+     - N/A
    * - gtin
      - gtin
      - "string"
@@ -457,7 +457,7 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "string"
    * - salesPrice
      - unitPrice
-     - ["decimal", "_."]
+     - N/A
    * - vatCode
      - taxGroupCode
      - "string"
@@ -479,7 +479,7 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - Businesscentral Data Type
    * - Allowance
      - discountPercent
-     - ["decimal", "_."]
+     - N/A
    * - Description
      - description
      - "string"
@@ -497,13 +497,13 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - "string"
    * - Quantity
      - quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - VatId
      - taxPercent
-     - ["decimal", "_."]
+     - N/A
    * - VatRate
      - taxPercent
-     - ["decimal", "_."]
+     - N/A
    * - sesam_SalesOrderId
      - documentId
      - "string"
@@ -534,7 +534,7 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - "string"
    * - SalesOrderDate
      - orderDate
-     - ["datetime-parse", "%Y-%m-%dT%H:%M:%S.%fZ", "_."]
+     - N/A
    * - TotalAmount
      - totalAmountExcludingTax
      - "string"
