@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -39,6 +39,12 @@ The following properties are synchronized between a Wix.com Contacts and a  Empl
    * - info.name.first
      - firstName
      - "string"
+   * - info.name.first
+     - lastName
+     - "string"
+   * - info.name.last
+     - firstName
+     - "string"
    * - info.name.last
      - lastName
      - "string"
@@ -50,6 +56,9 @@ The following properties are synchronized between a Wix.com Contacts and a  Empl
      - "string"
    * - primaryInfo.phone
      - phoneNumberMobile
+     - "string"
+   * - primaryInfo.phone
+     - phoneNumberWork
      - "string"
 
 
@@ -108,6 +117,36 @@ The following properties are synchronized between a Wix.com Members and a  Emplo
      -  Data Type
    * - loginEmail
      - email
+     - "string"
+
+
+Wix.com Contacts to  Customer person
+------------------------------------
+Before any synchronization can take place, a link between a Wix.com Contacts and a  Customer person must be established.
+
+A new  Customer person will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into .
+
+Once a link between a Wix.com Contacts and a  Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Contacts and a  Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Contacts Property
+     -  Customer person Property
+     -  Data Type
+   * - info.name.first
+     - name
+     - "string"
+   * - info.name.last
+     - name
+     - "string"
+   * - primaryInfo.email
+     - email
+     - "string"
+   * - primaryInfo.phone
+     - phoneNumber
      - "string"
 
 
@@ -174,28 +213,9 @@ The following properties are synchronized between a Wix.com Contacts and a  Cont
    * - primaryInfo.phone
      - phoneNumberMobile
      - "if","matches","+* *","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
-
-
-Wix.com Inventory to  Product
------------------------------
-Every Wix.com Inventory will be synchronized with a  Product.
-
-Once a link between a Wix.com Inventory and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Inventory and a  Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Inventory Property
-     -  Product Property
-     -  Data Type
-   * - lastUpdated
-     - stockOfGoods
-     - "integer"
-   * - variants.quantity
-     - stockOfGoods
-     - "integer"
+   * - primaryInfo.phone
+     - phoneNumberWork
+     - "string"
 
 
 Wix.com Orders to  Order
@@ -244,17 +264,62 @@ The following properties are synchronized between a Wix.com Orders and a  Orderl
      - order.id
      - "integer"
    * - lineItems.name
+     - count
+     - "integer", "decimal"]
+   * - lineItems.name
+     - description
+     - "string"
+   * - lineItems.name
+     - discount
+     - "float"
+   * - lineItems.name
+     - unitCostCurrency
+     - "float"
+   * - lineItems.name
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - lineItems.name
+     - vatType.id
+     - "integer"
+   * - lineItems.price
+     - count
+     - "integer", "decimal"]
+   * - lineItems.price
      - description
      - "string"
    * - lineItems.price
+     - discount
+     - "float"
+   * - lineItems.price
+     - unitCostCurrency
+     - "float"
+   * - lineItems.price
      - unitPriceExcludingVatCurrency
      - "float"
+   * - lineItems.price
+     - vatType.id
+     - "integer"
    * - lineItems.productId
      - product.id
      - "integer"
    * - lineItems.quantity
      - count
+     - "integer", "decimal"]
+   * - lineItems.quantity
+     - description
+     - "string"
+   * - lineItems.quantity
+     - discount
      - "float"
+   * - lineItems.quantity
+     - unitCostCurrency
+     - "float"
+   * - lineItems.quantity
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - lineItems.quantity
+     - vatType.id
+     - "integer"
 
 
 Wix.com Products to  Product
@@ -271,6 +336,9 @@ The following properties are synchronized between a Wix.com Products and a  Prod
    * - Wix.com Products Property
      -  Product Property
      -  Data Type
+   * - costAndProfitData.itemCost
+     - costExcludingVatCurrency
+     - "float"
    * - costRange.maxValue
      - costExcludingVatCurrency
      - "integer"
