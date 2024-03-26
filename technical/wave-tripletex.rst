@@ -2,7 +2,7 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2024-03-26 14:15:49
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -61,40 +61,40 @@ The following properties are synchronized between a Wave Customer person and a T
      - Tripletex Data Type
    * - address.addressLine1
      - address.addressLine1
-     - "string"
+"string"
    * - address.addressLine2
      - address.addressLine2
-     - "string"
+"string"
    * - address.city
      - address.city
-     - "string"
+"string"
    * - address.country.code
      - address.country.id
-     - "integer"
+"integer"
    * - address.countryCode
      - address.country.id
-     - "integer"
+"integer"
    * - address.postalCode
      - address.postalCode
-     - "string"
+"string"
    * - id
      - id
-     - "integer"
+"integer"
    * - shippingDetails.address.addressLine1
      - address.addressLine1
-     - "string"
+"string"
    * - shippingDetails.address.addressLine2
      - address.addressLine2
-     - "string"
+"string"
    * - shippingDetails.address.city
      - address.city
-     - "string"
+"string"
    * - shippingDetails.address.country.code
      - address.country.id
-     - "integer"
+"integer"
    * - shippingDetails.address.postalCode
      - address.postalCode
-     - "string"
+"string"
 
 
 Wave Customer to Tripletex Employee
@@ -123,52 +123,52 @@ The following properties are synchronized between a Wave Customer and a Triplete
      - Tripletex Data Type
    * - address.addressLine1
      - address.addressLine1
-     - "string"
+"string"
    * - address.addressLine2
      - address.addressLine2
-     - "string"
+"string"
    * - address.city
      - address.city
-     - "string"
+"string"
    * - address.country.code
      - address.country.id
-     - "integer"
+"integer"
    * - address.countryCode
      - address.country.id
-     - "integer"
+"integer"
    * - address.postalCode
      - address.postalCode
-     - "string"
+"string"
    * - firstName
      - firstName
-     - "string"
+"string"
    * - id
      - id
-     - "integer"
+"integer"
    * - lastName
      - lastName
-     - "string"
+"string"
    * - mobile
      - phoneNumberMobile
-     - "string"
+"string"
    * - phone
      - phoneNumberWork
-     - "string"
+"string"
    * - shippingDetails.address.addressLine1
      - address.addressLine1
-     - "string"
+"string"
    * - shippingDetails.address.addressLine2
      - address.addressLine2
-     - "string"
+"string"
    * - shippingDetails.address.city
      - address.city
-     - "string"
+"string"
    * - shippingDetails.address.country.code
      - address.country.id
-     - "integer"
+"integer"
    * - shippingDetails.address.postalCode
      - address.postalCode
-     - "string"
+"string"
 
 
 Wave Vendor to Tripletex Employee
@@ -197,34 +197,34 @@ The following properties are synchronized between a Wave Vendor and a Tripletex 
      - Tripletex Data Type
    * - address.addressLine1
      - address.addressLine1
-     - "string"
+"string"
    * - address.addressLine2
      - address.addressLine2
-     - "string"
+"string"
    * - address.city
      - address.city
-     - "string"
+"string"
    * - address.country.code
      - address.country.id
-     - "integer"
+"integer"
    * - address.postalCode
      - address.postalCode
-     - "string"
+"string"
    * - firstName
      - firstName
-     - "string"
+"string"
    * - id
      - id
-     - "integer"
+"integer"
    * - lastName
      - lastName
-     - "string"
+"string"
    * - mobile
      - phoneNumberMobile
-     - "string"
+"string"
    * - phone
      - phoneNumberWork
-     - "string"
+"string"
 
 
 Wave Customer to Tripletex Customer person
@@ -245,97 +245,97 @@ The following properties are synchronized between a Wave Customer and a Triplete
      - Tripletex Data Type
    * - address.addressLine1
      - deliveryAddress.addressLine1
-     - "string"
+"string"
    * - address.addressLine1
      - physicalAddress.addressLine1
-     - "string"
+"string"
    * - address.addressLine1
      - postalAddress.addressLine1
-     - "string"
+"string"
    * - address.addressLine2
      - deliveryAddress.addressLine2
-     - "string"
+"string"
    * - address.addressLine2
      - physicalAddress.addressLine2
-     - "string"
+"string"
    * - address.addressLine2
      - postalAddress.addressLine2
-     - "string"
+"string"
    * - address.city
      - deliveryAddress.city
-     - "string"
+"string"
    * - address.city
      - physicalAddress.city
-     - "string"
+"string"
    * - address.city
      - postalAddress.city
-     - "string"
+"string"
    * - address.country.code
      - deliveryAddress.country.id
-     - "string"
+"string"
    * - address.country.code
      - physicalAddress.country.id
-     - "integer"
+"integer"
    * - address.country.code
      - postalAddress.country.id
-     - "integer"
+"integer"
    * - address.postalCode
      - deliveryAddress.postalCode
-     - "string"
+"string"
    * - address.postalCode
      - physicalAddress.postalCode
-     - "string"
+"string"
    * - address.postalCode
      - postalAddress.postalCode
-     - "string"
+"string"
    * - id
      - id
-     - "integer"
+"integer"
    * - shippingDetails.address.addressLine1
      - deliveryAddress.addressLine1
-     - "string"
+"string"
    * - shippingDetails.address.addressLine1
      - physicalAddress.addressLine1
-     - "string"
+"string"
    * - shippingDetails.address.addressLine1
      - postalAddress.addressLine1
-     - "string"
+"string"
    * - shippingDetails.address.addressLine2
      - deliveryAddress.addressLine2
-     - "string"
+"string"
    * - shippingDetails.address.addressLine2
      - physicalAddress.addressLine2
-     - "string"
+"string"
    * - shippingDetails.address.addressLine2
      - postalAddress.addressLine2
-     - "string"
+"string"
    * - shippingDetails.address.city
      - deliveryAddress.city
-     - "string"
+"string"
    * - shippingDetails.address.city
      - physicalAddress.city
-     - "string"
+"string"
    * - shippingDetails.address.city
      - postalAddress.city
-     - "string"
+"string"
    * - shippingDetails.address.country.code
      - deliveryAddress.country.id
-     - "string"
+"string"
    * - shippingDetails.address.country.code
      - physicalAddress.country.id
-     - "integer"
+"integer"
    * - shippingDetails.address.country.code
      - postalAddress.country.id
-     - "integer"
+"integer"
    * - shippingDetails.address.postalCode
      - deliveryAddress.postalCode
-     - "string"
+"string"
    * - shippingDetails.address.postalCode
      - physicalAddress.postalCode
-     - "string"
+"string"
    * - shippingDetails.address.postalCode
      - postalAddress.postalCode
-     - "string"
+"string"
 
 
 Wave Vendor to Tripletex Customer person
@@ -356,52 +356,52 @@ The following properties are synchronized between a Wave Vendor and a Tripletex 
      - Tripletex Data Type
    * - address.addressLine1
      - deliveryAddress.addressLine1
-     - "string"
+"string"
    * - address.addressLine1
      - physicalAddress.addressLine1
-     - "string"
+"string"
    * - address.addressLine1
      - postalAddress.addressLine1
-     - "string"
+"string"
    * - address.addressLine2
      - deliveryAddress.addressLine2
-     - "string"
+"string"
    * - address.addressLine2
      - physicalAddress.addressLine2
-     - "string"
+"string"
    * - address.addressLine2
      - postalAddress.addressLine2
-     - "string"
+"string"
    * - address.city
      - deliveryAddress.city
-     - "string"
+"string"
    * - address.city
      - physicalAddress.city
-     - "string"
+"string"
    * - address.city
      - postalAddress.city
-     - "string"
+"string"
    * - address.country.code
      - deliveryAddress.country.id
-     - "string"
+"string"
    * - address.country.code
      - physicalAddress.country.id
-     - "integer"
+"integer"
    * - address.country.code
      - postalAddress.country.id
-     - "integer"
+"integer"
    * - address.postalCode
      - deliveryAddress.postalCode
-     - "string"
+"string"
    * - address.postalCode
      - physicalAddress.postalCode
-     - "string"
+"string"
    * - address.postalCode
      - postalAddress.postalCode
-     - "string"
+"string"
    * - id
      - id
-     - "integer"
+"integer"
 
 
 Wave Vendor to Tripletex Customer
@@ -422,58 +422,58 @@ The following properties are synchronized between a Wave Vendor and a Tripletex 
      - Tripletex Data Type
    * - address.addressLine1
      - deliveryAddress.addressLine1
-     - "string"
+"string"
    * - address.addressLine1
      - physicalAddress.addressLine1
-     - "string"
+"string"
    * - address.addressLine1
      - postalAddress.addressLine1
-     - "string"
+"string"
    * - address.addressLine2
      - deliveryAddress.addressLine2
-     - "string"
+"string"
    * - address.addressLine2
      - physicalAddress.addressLine2
-     - "string"
+"string"
    * - address.addressLine2
      - postalAddress.addressLine2
-     - "string"
+"string"
    * - address.city
      - deliveryAddress.city
-     - "string"
+"string"
    * - address.city
      - physicalAddress.city
-     - "string"
+"string"
    * - address.city
      - postalAddress.city
-     - "string"
+"string"
    * - address.country.code
      - deliveryAddress.country.id
-     - "string"
+"string"
    * - address.country.code
      - physicalAddress.country.id
-     - "integer"
+"integer"
    * - address.country.code
      - postalAddress.country.id
-     - "integer"
+"integer"
    * - address.postalCode
      - deliveryAddress.postalCode
-     - "string"
+"string"
    * - address.postalCode
      - physicalAddress.postalCode
-     - "string"
+"string"
    * - address.postalCode
      - postalAddress.postalCode
-     - "string"
+"string"
    * - id
      - id
-     - "integer"
+"integer"
    * - name
      - name
-     - "string"
+"string"
    * - website
      - website
-     - "string"
+"string"
 
 
 Wave Customer to Tripletex Contact
@@ -505,25 +505,25 @@ The following properties are synchronized between a Wave Customer and a Triplete
      - Tripletex Data Type
    * - email
      - email
-     - "string"
+"string"
    * - firstName
      - firstName
-     - "string"
+"string"
    * - id
      - customer.id
-     - "integer"
+"integer"
    * - lastName
      - lastName
-     - "string"
+"string"
    * - mobile
      - phoneNumberMobile
-     - "if","matches","+* *","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
+["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
    * - phone
      - phoneNumberWork
-     - "string"
+"string"
    * - shippingDetails.phone
      - phoneNumberWork
-     - "string"
+"string"
 
 
 Wave Customer to Tripletex Customer
@@ -542,121 +542,121 @@ The following properties are synchronized between a Wave Customer and a Triplete
      - Tripletex Data Type
    * - address.addressLine1
      - deliveryAddress.addressLine1
-     - "string"
+"string"
    * - address.addressLine1
      - physicalAddress.addressLine1
-     - "string"
+"string"
    * - address.addressLine1
      - postalAddress.addressLine1
-     - "string"
+"string"
    * - address.addressLine2
      - deliveryAddress.addressLine2
-     - "string"
+"string"
    * - address.addressLine2
      - physicalAddress.addressLine2
-     - "string"
+"string"
    * - address.addressLine2
      - postalAddress.addressLine2
-     - "string"
+"string"
    * - address.city
      - deliveryAddress.city
-     - "string"
+"string"
    * - address.city
      - physicalAddress.city
-     - "string"
+"string"
    * - address.city
      - postalAddress.city
-     - "string"
+"string"
    * - address.country.code
      - deliveryAddress.country.id
-     - "string"
+"string"
    * - address.country.code
      - physicalAddress.country.id
-     - "integer"
+"integer"
    * - address.country.code
      - postalAddress.country.id
-     - "integer"
+"integer"
    * - address.countryCode
      - deliveryAddress.country.id
-     - "string"
+"string"
    * - address.countryCode
      - physicalAddress.country.id
-     - "integer"
+"integer"
    * - address.countryCode
      - postalAddress.country.id
-     - "integer"
+"integer"
    * - address.postalCode
      - deliveryAddress.postalCode
-     - "string"
+"string"
    * - address.postalCode
      - physicalAddress.postalCode
-     - "string"
+"string"
    * - address.postalCode
      - postalAddress.postalCode
-     - "string"
+"string"
    * - id
      - id
-     - "integer"
+"integer"
    * - name
      - name
-     - "string"
+"string"
    * - phone
      - phoneNumber
-     - "string"
+"string"
    * - shippingDetails.address.addressLine1
      - deliveryAddress.addressLine1
-     - "string"
+"string"
    * - shippingDetails.address.addressLine1
      - physicalAddress.addressLine1
-     - "string"
+"string"
    * - shippingDetails.address.addressLine1
      - postalAddress.addressLine1
-     - "string"
+"string"
    * - shippingDetails.address.addressLine2
      - deliveryAddress.addressLine2
-     - "string"
+"string"
    * - shippingDetails.address.addressLine2
      - physicalAddress.addressLine2
-     - "string"
+"string"
    * - shippingDetails.address.addressLine2
      - postalAddress.addressLine2
-     - "string"
+"string"
    * - shippingDetails.address.city
      - deliveryAddress.city
-     - "string"
+"string"
    * - shippingDetails.address.city
      - physicalAddress.city
-     - "string"
+"string"
    * - shippingDetails.address.city
      - postalAddress.city
-     - "string"
+"string"
    * - shippingDetails.address.country.code
      - deliveryAddress.country.id
-     - "string"
+"string"
    * - shippingDetails.address.country.code
      - physicalAddress.country.id
-     - "integer"
+"integer"
    * - shippingDetails.address.country.code
      - postalAddress.country.id
-     - "integer"
+"integer"
    * - shippingDetails.address.postalCode
      - deliveryAddress.postalCode
-     - "string"
+"string"
    * - shippingDetails.address.postalCode
      - physicalAddress.postalCode
-     - "string"
+"string"
    * - shippingDetails.address.postalCode
      - postalAddress.postalCode
-     - "string"
+"string"
    * - shippingDetails.phone
      - phoneNumber
-     - "string"
+"string"
    * - website
      - url
-     - "string"
+"string"
    * - website
      - website
-     - "string"
+"string"
 
 
 Wave Invoice to Tripletex Order
@@ -675,19 +675,19 @@ The following properties are synchronized between a Wave Invoice and a Tripletex
      - Tripletex Data Type
    * - currency.code
      - currency.id
-     - "integer"
+"integer"
    * - customer.id
      - contact.id
-     - "integer"
+"integer"
    * - customer.id
      - customer.id
-     - "integer"
+"integer"
    * - poNumber
      - reference
-     - "string"
+"string"
    * - title
      - invoiceComment
-     - "string"
+"string"
 
 
 Wave Invoice to Tripletex Orderline
@@ -706,64 +706,64 @@ The following properties are synchronized between a Wave Invoice and a Tripletex
      - Tripletex Data Type
    * - id
      - order.id
-     - "integer"
+"integer"
    * - items.description
      - count
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - items.description
      - description
-     - "string"
+"string"
    * - items.description
      - discount
-     - "float"
+"float"
    * - items.description
      - unitCostCurrency
-     - "float"
+"float"
    * - items.description
      - unitPriceExcludingVatCurrency
-     - "float"
+"float"
    * - items.description
      - vatType.id
-     - "integer"
+"integer"
    * - items.price
      - count
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - items.price
      - description
-     - "string"
+"string"
    * - items.price
      - discount
-     - "float"
+"float"
    * - items.price
      - unitCostCurrency
-     - "float"
+"float"
    * - items.price
      - unitPriceExcludingVatCurrency
-     - "float"
+"float"
    * - items.price
      - vatType.id
-     - "integer"
+"integer"
    * - items.product.id
      - product.id
-     - "integer"
+"integer"
    * - items.quantity
      - count
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - items.quantity
      - description
-     - "string"
+"string"
    * - items.quantity
      - discount
-     - "float"
+"float"
    * - items.quantity
      - unitCostCurrency
-     - "float"
+"float"
    * - items.quantity
      - unitPriceExcludingVatCurrency
-     - "float"
+"float"
    * - items.quantity
      - vatType.id
-     - "integer"
+"integer"
 
 
 Wave Product to Tripletex Product
@@ -782,13 +782,13 @@ The following properties are synchronized between a Wave Product and a Tripletex
      - Tripletex Data Type
    * - description
      - description
-     - "string"
+"string"
    * - name
      - name
-     - "string"
+"string"
    * - unitPrice
      - priceExcludingVatCurrency
-     - "float"
+"float"
 
 
 Wave Vendor to Tripletex Contact
@@ -820,20 +820,20 @@ The following properties are synchronized between a Wave Vendor and a Tripletex 
      - Tripletex Data Type
    * - email
      - email
-     - "string"
+"string"
    * - firstName
      - firstName
-     - "string"
+"string"
    * - id
      - customer.id
-     - "integer"
+"integer"
    * - lastName
      - lastName
-     - "string"
+"string"
    * - mobile
      - phoneNumberMobile
-     - "if","matches","+* *","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
+["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
    * - phone
      - phoneNumberWork
-     - "string"
+"string"
 
