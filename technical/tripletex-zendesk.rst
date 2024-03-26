@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -41,6 +41,32 @@ The following properties are synchronized between a Tripletex Contact and a  Use
      - "string"
 
 
+Tripletex Customer person to  Users
+-----------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer person and a  Users must be established.
+
+A Tripletex Customer person will merge with a  Users if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     -  Users Property
+   * - email
+     - email
+
+Once a link between a Tripletex Customer person and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a  Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     -  Users Property
+     -  Data Type
+
+
 Tripletex Employee to  Users
 ----------------------------
 Before any synchronization can take place, a link between a Tripletex Employee and a  Users must be established.
@@ -65,11 +91,17 @@ The following properties are synchronized between a Tripletex Employee and a  Us
    * - Tripletex Employee Property
      -  Users Property
      -  Data Type
-   * - department.id
+   * - department.id (Dependant on having wd:Q703534 in  )
      - organization_id
      - "string"
    * - email
      - email
+     - "string"
+   * - firstName
+     - name
+     - "string"
+   * - lastName
+     - name
      - "string"
    * - phoneNumberHome
      - phone
