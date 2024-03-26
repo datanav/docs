@@ -2,7 +2,7 @@
 SuperOffice to Superoffice Dataflow
 ===================================
 
-Generated: 2024-03-26 17:58:19
+Generated: 2024-03-26 17:58:38
 
 Introduction
 ------------
@@ -106,7 +106,7 @@ The following properties are synchronized between a SuperOffice Contact and a Su
      - "string"
    * - Domains
      - Domains
-     - ["list", "_."]
+     - N/A
    * - Emails.Value
      - Emails.Value
      - "string"
@@ -209,7 +209,7 @@ The following properties are synchronized between a SuperOffice Person and a Sup
      - "string"
    * - BirthDate
      - BirthDate
-     - ["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+     - N/A
    * - Contact.ContactId
      - Contact.ContactId
      - "integer"
@@ -297,7 +297,7 @@ The following properties are synchronized between a SuperOffice Product and a Su
      - "string"
    * - UnitListPrice
      - UnitListPrice
-     - ["decimal", "_."]
+     - N/A
    * - Url
      - Url
      - "string"
@@ -388,7 +388,7 @@ The following properties are synchronized between a SuperOffice Sale and a Super
      - "string"
    * - Saledate
      - Saledate
-     - ["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+     - N/A
    * - Status
      - Status
      - "string"
