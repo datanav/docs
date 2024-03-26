@@ -2,7 +2,7 @@
 Tidsbanken to Freshteam Dataflow
 ================================
 
-Generated: 2024-03-26 14:23:23
+Generated: 2024-03-26 14:23:48
 
 Introduction
 ------------
@@ -11,7 +11,10 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Tidsbanken Ansatt to Freshteam Employee
 ---------------------------------------
-Before any synchronization can take place, a link between a Tidsbanken Ansatt and a Freshteam Employee must be established.
+Every Tidsbanken Ansatt will be synchronized with a Freshteam Employee.
+
+If a matching Freshteam Employee already exists, the Tidsbanken Ansatt will be merged with the existing one.
+If no matching Freshteam Employee is found, a new Freshteam Employee will be created.
 
 A Tidsbanken Ansatt will merge with a Freshteam Employee if one of the following property combinations match:
 
@@ -32,5 +35,21 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Fres
 
    * - Tidsbanken Ansatt Property
      - Freshteam Employee Property
+     - Freshteam Data Type
+
+
+Tidsbanken Avdeling to Freshteam Department
+-------------------------------------------
+Every Tidsbanken Avdeling will be synchronized with a Freshteam Department.
+
+Once a link between a Tidsbanken Avdeling and a Freshteam Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Avdeling and a Freshteam Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     - Freshteam Department Property
      - Freshteam Data Type
 
