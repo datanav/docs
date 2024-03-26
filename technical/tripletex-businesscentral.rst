@@ -2,47 +2,47 @@
 Tripletex to Businesscentral Dataflow
 =====================================
 
-Generated: 2024-03-26 14:14:20
+Generated: 2024-03-26 14:14:31
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Businesscentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Contact to  Customers company
----------------------------------------
-Before any synchronization can take place, a link between a Tripletex Contact and a  Customers company must be established.
+Tripletex Contact to Businesscentral Customers company
+------------------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Contact and a Businesscentral Customers company must be established.
 
-A new  Customers company will be created from a Tripletex Contact if it is connected to a Tripletex Order that is synchronized into .
+A new Businesscentral Customers company will be created from a Tripletex Contact if it is connected to a Tripletex Order that is synchronized into Businesscentral.
 
-Once a link between a Tripletex Contact and a  Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a Businesscentral Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a  Customers company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Contact Property
-     -  Customers company Property
-     -  Data Type
-
-
-Tripletex Contact to  Customers person
---------------------------------------
-Before any synchronization can take place, a link between a Tripletex Contact and a  Customers person must be established.
-
-A new  Customers person will be created from a Tripletex Contact if it is connected to a Tripletex Order that is synchronized into .
-
-Once a link between a Tripletex Contact and a  Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Contact and a  Customers person:
+The following properties are synchronized between a Tripletex Contact and a Businesscentral Customers company:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     -  Customers person Property
-     -  Data Type
+     - Businesscentral Customers company Property
+     - Businesscentral Data Type
+
+
+Tripletex Contact to Businesscentral Customers person
+-----------------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Contact and a Businesscentral Customers person must be established.
+
+A new Businesscentral Customers person will be created from a Tripletex Contact if it is connected to a Tripletex Order that is synchronized into Businesscentral.
+
+Once a link between a Tripletex Contact and a Businesscentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a Businesscentral Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Businesscentral Customers person Property
+     - Businesscentral Data Type
    * - email
      - email
      - "string"
@@ -54,22 +54,22 @@ The following properties are synchronized between a Tripletex Contact and a  Cus
      - "string"
 
 
-Tripletex Customer to  Customers person
----------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer and a  Customers person must be established.
+Tripletex Customer to Businesscentral Customers person
+------------------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a Businesscentral Customers person must be established.
 
-A new  Customers person will be created from a Tripletex Customer if it is connected to a Tripletex Order that is synchronized into .
+A new Businesscentral Customers person will be created from a Tripletex Customer if it is connected to a Tripletex Order that is synchronized into Businesscentral.
 
-Once a link between a Tripletex Customer and a  Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Businesscentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a  Customers person:
+The following properties are synchronized between a Tripletex Customer and a Businesscentral Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     -  Customers person Property
-     -  Data Type
+     - Businesscentral Customers person Property
+     - Businesscentral Data Type
 
 
 Tripletex Customer to  Companies
