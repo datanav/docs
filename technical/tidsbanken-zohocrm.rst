@@ -2,7 +2,7 @@
 Tidsbanken to ZohoCRM Dataflow
 ==============================
 
-Generated: 2024-03-26 14:34:37
+Generated: 2024-03-26 14:34:55
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Zo
    * - Tidsbanken Avdeling Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - Navn
+     - Account_Name
+     - "string"
 
 
 Tidsbanken Kunde to ZohoCRM Account
@@ -39,4 +42,37 @@ The following properties are synchronized between a Tidsbanken Kunde and a ZohoC
    * - Tidsbanken Kunde Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - LevPostNr
+     - Billing_Code
+     - "string"
+   * - LevPostNr
+     - Shipping_Code
+     - "string"
+   * - LevPoststed
+     - Billing_City
+     - "string"
+   * - LevPoststed
+     - Shipping_City
+     - "string"
+   * - Navn
+     - Account_Name
+     - "string"
+   * - Postnr
+     - Billing_Code
+     - "string"
+   * - Postnr
+     - Shipping_Code
+     - "string"
+   * - Poststed
+     - Billing_City
+     - "string"
+   * - Poststed
+     - Shipping_City
+     - "string"
+   * - Telefon
+     - Phone
+     - "string"
+   * - Url
+     - Website
+     - "string"
 
