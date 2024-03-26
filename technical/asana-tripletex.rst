@@ -2,7 +2,7 @@
 Asana to Tripletex Dataflow
 ===========================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -25,22 +25,22 @@ The following properties are synchronized between a Asana Projects and a Triplet
      - Tripletex Data Type
    * - completed_at
      - endDate
-["datetime-format","%Y-%m-%d","_."]
+     - ["datetime-format","%Y-%m-%d","_."]
    * - due_date
      - endDate
-["datetime-format","%Y-%m-%d","_."]
+     - ["datetime-format","%Y-%m-%d","_."]
    * - due_on
      - endDate
-["datetime-format","%Y-%m-%d","_."]
+     - ["datetime-format","%Y-%m-%d","_."]
    * - name
      - name
-"string"
+     - "string"
    * - owner.gid
      - projectManager.id
-"integer"
+     - "integer"
    * - start_on
      - startDate
-["datetime-format","%Y-%m-%d","_."]
+     - ["datetime-format","%Y-%m-%d","_."]
 
 
 Asana Users to Tripletex Employee
@@ -59,11 +59,11 @@ The following properties are synchronized between a Asana Users and a Tripletex 
      - Tripletex Data Type
    * - email
      - email
-"string"
+     - "string"
    * - name
      - firstName
-"string"
+     - "string"
    * - workspaces.gid
      - department.id
-["if", ["neq", "_.", "X"], "integer", "string"]
+     - ["if", ["neq", "_.", "X"], "integer", "string"]
 
