@@ -1,0 +1,548 @@
+======================
+Tripletex to  Dataflow
+======================
+
+Generated: 2024-03-26 14:14:24
+
+Introduction
+------------
+
+This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Contact to  Ansatt
+----------------------------
+Before any synchronization can take place, a link between a Tripletex Contact and a  Ansatt must be established.
+
+A Tripletex Contact will merge with a  Ansatt if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     -  Ansatt Property
+   * - email
+     - Epost
+
+Once a link between a Tripletex Contact and a  Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a  Ansatt:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     -  Ansatt Property
+     -  Data Type
+   * - customer.id
+     - AvdelingId
+     - "string"
+   * - customer.id
+     - Tittel
+     - "string"
+   * - customer.id
+     - sesam_ansattId
+     - "integer"
+   * - firstName
+     - Fornavn
+     - "string"
+   * - lastName
+     - Etternavn
+     - "string"
+   * - phoneNumberMobile
+     - Mobil
+     - "string"
+
+
+Tripletex Customer person to  Ansatt
+------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer person and a  Ansatt must be established.
+
+A Tripletex Customer person will merge with a  Ansatt if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     -  Ansatt Property
+   * - email
+     - Epost
+
+Once a link between a Tripletex Customer person and a  Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a  Ansatt:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     -  Ansatt Property
+     -  Data Type
+   * - deliveryAddress.addressLine1
+     - Adresse
+     - "string"
+   * - deliveryAddress.city
+     - Poststed
+     - "string"
+   * - deliveryAddress.postalCode
+     - Postnummer
+     - "string"
+   * - id
+     - Id
+     - "integer"
+   * - physicalAddress.addressLine1
+     - Adresse
+     - "string"
+   * - physicalAddress.city
+     - Poststed
+     - "string"
+   * - physicalAddress.postalCode
+     - Postnummer
+     - "string"
+   * - postalAddress.addressLine1
+     - Adresse
+     - "string"
+   * - postalAddress.city
+     - Poststed
+     - "string"
+   * - postalAddress.postalCode
+     - Postnummer
+     - "string"
+
+
+Tripletex Supplier to  Kunde
+----------------------------
+Before any synchronization can take place, a link between a Tripletex Supplier and a  Kunde must be established.
+
+A Tripletex Supplier will merge with a  Kunde if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Supplier Property
+     -  Kunde Property
+   * - email
+     - Epost
+   * - organizationNumber
+     - Organisasjonsnummer
+
+Once a link between a Tripletex Supplier and a  Kunde is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Supplier and a  Kunde:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Supplier Property
+     -  Kunde Property
+     -  Data Type
+   * - deliveryAddress.addressLine1
+     - Gateadresse
+     - "string"
+   * - deliveryAddress.addressLine1
+     - Leveringsadresse
+     - "string"
+   * - deliveryAddress.addressLine1
+     - Postadresse
+     - "string"
+   * - deliveryAddress.addressLine2
+     - Gateadresse
+     - "string"
+   * - deliveryAddress.addressLine2
+     - Leveringsadresse2
+     - "string"
+   * - deliveryAddress.addressLine2
+     - Postadresse
+     - "string"
+   * - deliveryAddress.city
+     - LevPoststed
+     - "string"
+   * - deliveryAddress.city
+     - Poststed
+     - "string"
+   * - deliveryAddress.postalCode
+     - LevPostNr
+     - "string"
+   * - deliveryAddress.postalCode
+     - Postnr
+     - "string"
+   * - email
+     - Epost
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - name
+     - Navn
+     - "string"
+   * - organizationNumber
+     - Organisasjonsnummer
+     - "string"
+   * - phoneNumber
+     - Telefon
+     - "string"
+   * - phoneNumberMobile
+     - Mobil
+     - "string"
+   * - physicalAddress.addressLine1
+     - Gateadresse
+     - "string"
+   * - physicalAddress.addressLine1
+     - Leveringsadresse
+     - "string"
+   * - physicalAddress.addressLine1
+     - Postadresse
+     - "string"
+   * - physicalAddress.addressLine2
+     - Gateadresse
+     - "string"
+   * - physicalAddress.addressLine2
+     - Leveringsadresse2
+     - "string"
+   * - physicalAddress.addressLine2
+     - Postadresse
+     - "string"
+   * - physicalAddress.city
+     - LevPoststed
+     - "string"
+   * - physicalAddress.city
+     - Poststed
+     - "string"
+   * - physicalAddress.postalCode
+     - LevPostNr
+     - "string"
+   * - physicalAddress.postalCode
+     - Postnr
+     - "string"
+   * - postalAddress.addressLine1
+     - Gateadresse
+     - "string"
+   * - postalAddress.addressLine1
+     - Leveringsadresse
+     - "string"
+   * - postalAddress.addressLine1
+     - Postadresse
+     - "string"
+   * - postalAddress.addressLine2
+     - Gateadresse
+     - "string"
+   * - postalAddress.addressLine2
+     - Leveringsadresse2
+     - "string"
+   * - postalAddress.addressLine2
+     - Postadresse
+     - "string"
+   * - postalAddress.city
+     - LevPoststed
+     - "string"
+   * - postalAddress.city
+     - Poststed
+     - "string"
+   * - postalAddress.postalCode
+     - LevPostNr
+     - "string"
+   * - postalAddress.postalCode
+     - Postnr
+     - "string"
+   * - url
+     - Url
+     - "string"
+
+
+Tripletex Customer to  Kunde
+----------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a  Kunde.
+
+If a matching  Kunde already exists, the Tripletex Customer will be merged with the existing one.
+If no matching  Kunde is found, a new  Kunde will be created.
+
+A Tripletex Customer will merge with a  Kunde if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     -  Kunde Property
+   * - email
+     - Epost
+   * - customerNumber
+     - Id
+   * - organizationNumber
+     - Organisasjonsnummer
+
+Once a link between a Tripletex Customer and a  Kunde is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a  Kunde:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     -  Kunde Property
+     -  Data Type
+   * - customerNumber
+     - sesam_kundeId
+     - "string"
+   * - deliveryAddress.addressLine1
+     - Gateadresse
+     - "string"
+   * - deliveryAddress.addressLine1
+     - Leveringsadresse
+     - "string"
+   * - deliveryAddress.addressLine1
+     - Postadresse
+     - "string"
+   * - deliveryAddress.addressLine2
+     - Gateadresse
+     - "string"
+   * - deliveryAddress.addressLine2
+     - Leveringsadresse2
+     - "string"
+   * - deliveryAddress.addressLine2
+     - Postadresse
+     - "string"
+   * - deliveryAddress.city
+     - LevPoststed
+     - "string"
+   * - deliveryAddress.city
+     - Poststed
+     - "string"
+   * - deliveryAddress.postalCode
+     - LevPostNr
+     - "string"
+   * - deliveryAddress.postalCode
+     - Postnr
+     - "string"
+   * - email
+     - Epost
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - name
+     - Navn
+     - "string"
+   * - organizationNumber
+     - Organisasjonsnummer
+     - "string"
+   * - phoneNumber
+     - Telefon
+     - "string"
+   * - phoneNumberMobile
+     - Mobil
+     - "string"
+   * - physicalAddress.addressLine1
+     - Gateadresse
+     - "string"
+   * - physicalAddress.addressLine1
+     - Leveringsadresse
+     - "string"
+   * - physicalAddress.addressLine1
+     - Postadresse
+     - "string"
+   * - physicalAddress.addressLine2
+     - Gateadresse
+     - "string"
+   * - physicalAddress.addressLine2
+     - Leveringsadresse2
+     - "string"
+   * - physicalAddress.addressLine2
+     - Postadresse
+     - "string"
+   * - physicalAddress.city
+     - LevPoststed
+     - "string"
+   * - physicalAddress.city
+     - Poststed
+     - "string"
+   * - physicalAddress.postalCode
+     - LevPostNr
+     - "string"
+   * - physicalAddress.postalCode
+     - Postnr
+     - "string"
+   * - postalAddress.addressLine1
+     - Gateadresse
+     - "string"
+   * - postalAddress.addressLine1
+     - Leveringsadresse
+     - "string"
+   * - postalAddress.addressLine1
+     - Postadresse
+     - "string"
+   * - postalAddress.addressLine2
+     - Gateadresse
+     - "string"
+   * - postalAddress.addressLine2
+     - Leveringsadresse2
+     - "string"
+   * - postalAddress.addressLine2
+     - Postadresse
+     - "string"
+   * - postalAddress.city
+     - LevPoststed
+     - "string"
+   * - postalAddress.city
+     - Poststed
+     - "string"
+   * - postalAddress.postalCode
+     - LevPostNr
+     - "string"
+   * - postalAddress.postalCode
+     - Postnr
+     - "string"
+   * - website
+     - Url
+     - "string"
+
+
+Tripletex Department to  Avdeling
+---------------------------------
+Every Tripletex Department will be synchronized with a  Avdeling.
+
+Once a link between a Tripletex Department and a  Avdeling is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a  Avdeling:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     -  Avdeling Property
+     -  Data Type
+   * - departmentNumber
+     - sesam_avdelingId
+     - "string"
+   * - name
+     - Navn
+     - "string"
+
+
+Tripletex Employee to  Ansatt
+-----------------------------
+Every Tripletex Employee will be synchronized with a  Ansatt.
+
+If a matching  Ansatt already exists, the Tripletex Employee will be merged with the existing one.
+If no matching  Ansatt is found, a new  Ansatt will be created.
+
+A Tripletex Employee will merge with a  Ansatt if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     -  Ansatt Property
+   * - email
+     - Epost
+   * - employeeNumber
+     - Id
+   * - nationalIdentityNumber
+     - Personnummer
+
+Once a link between a Tripletex Employee and a  Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a  Ansatt:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     -  Ansatt Property
+     -  Data Type
+   * - address.addressLine1
+     - Adresse
+     - "string"
+   * - address.city
+     - Poststed
+     - "string"
+   * - address.postalCode
+     - Postnummer
+     - "string"
+   * - dateOfBirth
+     - Fodt
+     - "string"
+   * - department.id (Dependant on having wd:Q703534 in  Dependant on having wd:Q703534 in  Dependant on having wd:Q2366457 in  Dependant on having wd:Q703534 in  )
+     - AvdelingId
+     - "string"
+   * - department.id
+     - Tittel
+     - "string"
+   * - email
+     - Epost
+     - "string"
+   * - employeeNumber
+     - Id
+     - "string"
+   * - employeeNumber
+     - sesam_ansattId
+     - "integer"
+   * - firstName
+     - Etternavn
+     - "string"
+   * - firstName
+     - Fornavn
+     - "string"
+   * - firstName
+     - Navn
+     - "string"
+   * - id
+     - Id
+     - "integer"
+   * - lastName
+     - Etternavn
+     - "string"
+   * - lastName
+     - Fornavn
+     - "string"
+   * - lastName
+     - Navn
+     - "string"
+   * - phoneNumberHome
+     - TlfPrivat
+     - "string"
+   * - phoneNumberMobile
+     - Mobil
+     - "string"
+
+
+Tripletex Project to  Prosjekt
+------------------------------
+Every Tripletex Project will be synchronized with a  Prosjekt.
+
+Once a link between a Tripletex Project and a  Prosjekt is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Project and a  Prosjekt:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Project Property
+     -  Prosjekt Property
+     -  Data Type
+   * - customer.id
+     - KundeId
+     - "string"
+   * - department.id
+     - AvdelingId
+     - "string"
+   * - endDate
+     - AvsluttetDato
+     - "string"
+   * - isClosed
+     - Avsluttet
+     - "string"
+   * - isClosed
+     - InterntProsjekt
+     - "string"
+   * - isInternal
+     - InterntProsjekt
+     - "string"
+   * - name
+     - Navn
+     - "string"
+   * - projectManager.id
+     - AnsvarligId
+     - "integer"
+   * - startDate
+     - StartDato
+     - "string"
+
