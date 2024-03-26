@@ -2,7 +2,7 @@
 Tripletex to Superoffice Dataflow
 =================================
 
-Generated: 2024-03-26 14:15:49
+Generated: 2024-03-26 14:30:19
 
 Introduction
 ------------
@@ -537,20 +537,20 @@ The following properties are synchronized between a Tripletex Order and a Supero
      - "string"
 
 
-Tripletex Department to  Contact
---------------------------------
-Every Tripletex Department will be synchronized with a  Contact.
+Tripletex Department to Superoffice Contact
+-------------------------------------------
+Every Tripletex Department will be synchronized with a Superoffice Contact.
 
-Once a link between a Tripletex Department and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a  Contact:
+The following properties are synchronized between a Tripletex Department and a Superoffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     -  Contact Property
-     -  Data Type
+     - Superoffice Contact Property
+     - Superoffice Data Type
    * - departmentNumber
      - OrgNr (Dependant on having wd:Q2366457 in Country.TwoLetterISOCountry)
      - "string"
