@@ -2,7 +2,7 @@
 Unieconomy to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-03-26 14:34:37
+Generated: 2024-03-26 17:27:49
 
 Introduction
 ------------
@@ -73,5 +73,5 @@ The following properties are synchronized between a Unieconomy Customers and a B
      - Businesscentral Data Type
    * - WebUrl
      - website
-     - "string"
+"string"
 
