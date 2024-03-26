@@ -2,12 +2,86 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Customer person to  Contactperson
+-------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer person and a  Contactperson must be established.
+
+A Tripletex Customer person will merge with a  Contactperson if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     -  Contactperson Property
+   * - email
+     - emailAddress
+
+Once a link between a Tripletex Customer person and a  Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a  Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     -  Contactperson Property
+     -  Data Type
+   * - deliveryAddress.addressLine1
+     - address1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - address2
+     - "string"
+   * - deliveryAddress.city
+     - city
+     - "string"
+   * - deliveryAddress.country.id
+     - residenceCountryCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - zipCode
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - physicalAddress.addressLine1
+     - address1
+     - "string"
+   * - physicalAddress.addressLine2
+     - address2
+     - "string"
+   * - physicalAddress.city
+     - city
+     - "string"
+   * - physicalAddress.country.id
+     - residenceCountryCode
+     - "string"
+   * - physicalAddress.postalCode
+     - zipCode
+     - "string"
+   * - postalAddress.addressLine1
+     - address1
+     - "string"
+   * - postalAddress.addressLine2
+     - address2
+     - "string"
+   * - postalAddress.city
+     - city
+     - "string"
+   * - postalAddress.country.id
+     - residenceCountryCode
+     - "string"
+   * - postalAddress.postalCode
+     - zipCode
+     - "string"
+
 
 Tripletex Employee to  Contactperson
 ------------------------------------
@@ -52,8 +126,8 @@ The following properties are synchronized between a Tripletex Employee and a  Co
      - "string"
    * - dateOfBirth
      - dateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
-   * - department.id
+     - "if","gt","abs","datetime-diff", "year", "_.","now"]]], 100], "1935-01-01","datetime-format", "%Y-%m-%d"]
+   * - department.id (Dependant on having wd:Q703534 in  )
      - partyId
      - "integer"
    * - email
@@ -86,10 +160,6 @@ A Tripletex Supplier will merge with a  Customers if one of the following proper
      -  Customers Property
    * - email
      - EmailAddress
-   * - email
-     - InvoiceEmailAddress
-   * - email
-     - PaymentReminderEmailAddress
 
 Once a link between a Tripletex Supplier and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -134,6 +204,9 @@ The following properties are synchronized between a Tripletex Supplier and a  Cu
    * - name
      - Name
      - "string"
+   * - organizationNumber
+     - OrganizationNumber (Dependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.CountryCode)
+     - "string"
    * - overdueNoticeEmail
      - PaymentReminderEmailAddress
      - "string"
@@ -169,6 +242,9 @@ The following properties are synchronized between a Tripletex Supplier and a  Cu
      - "string"
    * - postalAddress.postalCode
      - MailAddress.ZipCode
+     - "string"
+   * - url
+     - WebsiteUrl
      - "string"
 
 
@@ -242,7 +318,7 @@ Tripletex Customer to PowerOfficeGo Customers person
 ----------------------------------------------------
 Before any synchronization can take place, a link between a Tripletex Customer and a PowerOfficeGo Customers person must be established.
 
-A new PowerOfficeGo Customers person will be created from a Tripletex Customer if it is connected to a Tripletex Order, Contact, Invoice, Customer, Employee, or Orderline that is synchronized into PowerOfficeGo.
+A new PowerOfficeGo Customers person will be created from a Tripletex Customer if it is connected to a Tripletex Order, Contact, Invoice, Project, Customer, Employee, Orderline, or Customer-person that is synchronized into PowerOfficeGo.
 
 Once a link between a Tripletex Customer and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -304,45 +380,6 @@ The following properties are synchronized between a Tripletex Customer and a Pow
      - "string"
 
 
-Tripletex Department to PowerOfficeGo Customers person
-------------------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Department and a PowerOfficeGo Customers person must be established.
-
-A new PowerOfficeGo Customers person will be created from a Tripletex Department if it is connected to a Tripletex Contact, Customer, or Employee that is synchronized into PowerOfficeGo.
-
-Once a link between a Tripletex Department and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Department and a PowerOfficeGo Customers person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Department Property
-     - PowerOfficeGo Customers person Property
-     - PowerOfficeGo Data Type
-
-
-Tripletex Department to PowerOfficeGo Customers
------------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Department and a PowerOfficeGo Customers must be established.
-
-A new PowerOfficeGo Customers will be created from a Tripletex Department if it is connected to a Tripletex Contact, Customer, or Employee that is synchronized into PowerOfficeGo.
-
-Once a link between a Tripletex Department and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Department and a PowerOfficeGo Customers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Department Property
-     - PowerOfficeGo Customers Property
-     - PowerOfficeGo Data Type
-   * - name
-     - Name
-     - "string"
-
-
 Tripletex Contact to PowerOfficeGo Contactperson
 ------------------------------------------------
 Every Tripletex Contact will be synchronized with a PowerOfficeGo Contactperson.
@@ -393,33 +430,162 @@ The following properties are synchronized between a Tripletex Contact and a Powe
      - "string"
 
 
-Tripletex Currency to  Currency
--------------------------------
-Every Tripletex Currency will be synchronized with a  Currency.
+Tripletex Customer person to  Customers
+---------------------------------------
+Every Tripletex Customer person will be synchronized with a  Customers.
 
-If a matching  Currency already exists, the Tripletex Currency will be merged with the existing one.
-If no matching  Currency is found, a new  Currency will be created.
+Once a link between a Tripletex Customer person and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-A Tripletex Currency will merge with a  Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     -  Currency Property
-   * - code
-     - code
-
-Once a link between a Tripletex Currency and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Currency and a  Currency:
+The following properties are synchronized between a Tripletex Customer person and a  Customers:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Currency Property
-     -  Currency Property
+   * - Tripletex Customer person Property
+     -  Customers Property
      -  Data Type
+   * - deliveryAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - deliveryAddress.city
+     - MailAddress.City
+     - "string"
+   * - deliveryAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - email
+     - EmailAddress
+     - "string"
+   * - id
+     - Id
+     - "integer"
+   * - invoiceEmail
+     - InvoiceEmailAddress
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - organizationNumber
+     - OrganizationNumber (Dependant on having NO in MailAddress.CountryCode)
+     - "string"
+   * - phoneNumber
+     - PhoneNumber
+     - "string"
+   * - physicalAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - physicalAddress.city
+     - MailAddress.City
+     - "string"
+   * - physicalAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - physicalAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - postalAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - postalAddress.city
+     - MailAddress.City
+     - "string"
+   * - postalAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - postalAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - website
+     - WebsiteUrl
+     - "string"
+
+
+Tripletex Customer person to  Customers person
+----------------------------------------------
+Every Tripletex Customer person will be synchronized with a  Customers person.
+
+Once a link between a Tripletex Customer person and a  Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a  Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     -  Customers person Property
+     -  Data Type
+   * - deliveryAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - deliveryAddress.city
+     - MailAddress.City
+     - "string"
+   * - deliveryAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - email
+     - EmailAddress
+     - "string"
+   * - id
+     - Id
+     - "integer"
+   * - invoiceEmail
+     - InvoiceEmailAddress
+     - "string"
+   * - isPrivateIndividual
+     - IsPerson
+     - "if", "is-boolean", "boolean"], "boolean", "string"]
+   * - phoneNumber
+     - PhoneNumber
+     - "string"
+   * - physicalAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - physicalAddress.city
+     - MailAddress.City
+     - "string"
+   * - physicalAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - physicalAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - postalAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - postalAddress.city
+     - MailAddress.City
+     - "string"
+   * - postalAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - postalAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
 
 
 Tripletex Customer to PowerOfficeGo Customers
@@ -438,10 +604,6 @@ A Tripletex Customer will merge with a PowerOfficeGo Customers if one of the fol
      - PowerOfficeGo Customers Property
    * - email
      - EmailAddress
-   * - email
-     - InvoiceEmailAddress
-   * - email
-     - PaymentReminderEmailAddress
 
 Once a link between a Tripletex Customer and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -453,6 +615,12 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - Tripletex Customer Property
      - PowerOfficeGo Customers Property
      - PowerOfficeGo Data Type
+   * - customerNumber
+     - Number
+     - "string"
+   * - customerNumber
+     - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCodeDependant on having wd:Q852835 in MailAddress.CountryCodeDependant on having wd:Q852835 in MailAddress.CountryCode)
+     - "string"
    * - deliveryAddress.addressLine1
      - MailAddress.AddressLine1
      - "string"
@@ -483,11 +651,14 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - invoiceEmail
      - PaymentReminderEmailAddress
      - "string"
+   * - isPrivateIndividual
+     - IsPerson
+     - "boolean"
    * - name
      - Name
      - "string"
    * - organizationNumber
-     - OrganizationNumber (Dependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCode)
+     - OrganizationNumber (Dependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCode)
      - "string"
    * - overdueNoticeEmail
      - PaymentReminderEmailAddress
@@ -615,7 +786,7 @@ The following properties are synchronized between a Tripletex Employee and a  Em
    * - department.id
      - DepartmendId
      - "string"
-   * - department.id
+   * - department.id (Dependant on having wd:Q2366457 in  Dependant on having wd:Q2366457 in  )
      - DepartmentId (Dependant on having wd:Q703534 in JobTitle)
      - "string"
    * - email
@@ -668,11 +839,17 @@ The following properties are synchronized between a Tripletex Order and a PowerO
      - CreatedDateTimeOffset
      - "string"
    * - contact.id
+     - CustomerId
+     - "integer"
+   * - contact.id
      - CustomerReferenceContactPersonId
      - "string"
    * - currency.id
      - CurrencyCode
      - "string"
+   * - customer.id
+     - CustomerId
+     - "integer"
    * - customer.id
      - CustomerReferenceContactPersonId
      - "string"
@@ -703,7 +880,7 @@ The following properties are synchronized between a Tripletex Orderline and a  S
      -  Data Type
    * - count
      - Quantity
-     - "integer"
+     - "integer", "decimal"]
    * - description
      - Description
      - "string"
@@ -730,9 +907,12 @@ The following properties are synchronized between a Tripletex Orderline and a  S
      - "if", "is-decimal", "decimal", "integer"]
    * - unitPriceExcludingVatCurrency
      - ProductUnitPrice
-     - "if", "is-decimal", "decimal", "integer"]
+     - "if", "is-decimal", "decimal", "float", "decimal"]]
    * - unitPriceExcludingVatCurrency
      - SalesOrderLineUnitPrice
+     - "string"
+   * - vatType.id
+     - VatId
      - "string"
    * - vatType.id
      - VatReturnSpecification
@@ -806,21 +986,51 @@ The following properties are synchronized between a Tripletex Product and a  Pro
      - "string"
 
 
-Tripletex Productgroup to  Productgroup
----------------------------------------
-Every Tripletex Productgroup will be synchronized with a  Productgroup.
+Tripletex Project to  Projects
+------------------------------
+Every Tripletex Project will be synchronized with a  Projects.
 
-Once a link between a Tripletex Productgroup and a  Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Project and a  Projects is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Productgroup and a  Productgroup:
+The following properties are synchronized between a Tripletex Project and a  Projects:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Productgroup Property
-     -  Productgroup Property
+   * - Tripletex Project Property
+     -  Projects Property
      -  Data Type
+   * - contact.id
+     - ContactPersonId
+     - "string"
+   * - customer.id
+     - CustomerId
+     - "integer"
+   * - department.id
+     - DepartmentId
+     - "integer"
+   * - endDate
+     - EndDate
+     - "string"
+   * - isClosed
+     - IsActive
+     - "string"
+   * - isClosed
+     - IsInternal
+     - "string"
+   * - isInternal
+     - IsActive
+     - "string"
+   * - isInternal
+     - IsInternal
+     - "string"
    * - name
      - Name
+     - "string"
+   * - projectManager.id
+     - ProjectManagerEmployeeId
+     - "integer"
+   * - startDate
+     - StartDate
      - "string"
 
