@@ -2,43 +2,43 @@
 Businesscentral to Hubspot Dataflow
 ===================================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 14:30:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to Hubspot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Companies to  Company
--------------------------------------
-Every Businesscentral Companies will be synchronized with a  Company.
+Businesscentral Companies to Hubspot Company
+--------------------------------------------
+Every Businesscentral Companies will be synchronized with a Hubspot Company.
 
-Once a link between a Businesscentral Companies and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Companies and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Companies and a  Company:
+The following properties are synchronized between a Businesscentral Companies and a Hubspot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Companies Property
-     -  Company Property
-     -  Data Type
+     - Hubspot Company Property
+     - Hubspot Data Type
 
 
-Businesscentral Contacts person to  Contact
--------------------------------------------
-Every Businesscentral Contacts person will be synchronized with a  Contact.
+Businesscentral Contacts person to Hubspot Contact
+--------------------------------------------------
+Every Businesscentral Contacts person will be synchronized with a Hubspot Contact.
 
-Once a link between a Businesscentral Contacts person and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Contacts person and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Contacts person and a  Contact:
+The following properties are synchronized between a Businesscentral Contacts person and a Hubspot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Contacts person Property
-     -  Contact Property
-     -  Data Type
+     - Hubspot Contact Property
+     - Hubspot Data Type
    * - addressLine1
      - properties.address
      - "string"
@@ -65,20 +65,20 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
 
 
-Businesscentral Customers company to  Company
----------------------------------------------
-Every Businesscentral Customers company will be synchronized with a  Company.
+Businesscentral Customers company to Hubspot Company
+----------------------------------------------------
+Every Businesscentral Customers company will be synchronized with a Hubspot Company.
 
-Once a link between a Businesscentral Customers company and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Customers company and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers company and a  Company:
+The following properties are synchronized between a Businesscentral Customers company and a Hubspot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Customers company Property
-     -  Company Property
-     -  Data Type
+     - Hubspot Company Property
+     - Hubspot Data Type
    * - address.city
      - properties.city
      - "string"
@@ -117,20 +117,20 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
 
 
-Businesscentral Employees to  Contact
--------------------------------------
-Every Businesscentral Employees will be synchronized with a  Contact.
+Businesscentral Employees to Hubspot Contact
+--------------------------------------------
+Every Businesscentral Employees will be synchronized with a Hubspot Contact.
 
-Once a link between a Businesscentral Employees and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Employees and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Employees and a  Contact:
+The following properties are synchronized between a Businesscentral Employees and a Hubspot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Employees Property
-     -  Contact Property
-     -  Data Type
+     - Hubspot Contact Property
+     - Hubspot Data Type
    * - birthDate
      - properties.date_of_birth
      - "string"
