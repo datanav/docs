@@ -2,7 +2,7 @@
 SuperOffice to Superoffice Dataflow
 ===================================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -37,88 +37,88 @@ The following properties are synchronized between a SuperOffice Contact and a Su
      - Superoffice Data Type
    * - Address.Postal.Address1
      - Address.Postal.Address1
-"string"
+     - "string"
    * - Address.Postal.Address1
      - Address.Street.Address1
-"string"
+     - "string"
    * - Address.Postal.Address2
      - Address.Postal.Address2
-"string"
+     - "string"
    * - Address.Postal.Address2
      - Address.Street.Address2
-"string"
+     - "string"
    * - Address.Postal.Address3
      - Address.Postal.Address3
-"string"
+     - "string"
    * - Address.Postal.Address3
      - Address.Street.Address3
-"string"
+     - "string"
    * - Address.Postal.City
      - Address.Postal.City
-"string"
+     - "string"
    * - Address.Postal.City
      - Address.Street.City
-"string"
+     - "string"
    * - Address.Postal.Zipcode
      - Address.Postal.Zipcode
-"string"
+     - "string"
    * - Address.Postal.Zipcode
      - Address.Street.Zipcode
-"string"
+     - "string"
    * - Address.Street.Address1
      - Address.Postal.Address1
-"string"
+     - "string"
    * - Address.Street.Address1
      - Address.Street.Address1
-"string"
+     - "string"
    * - Address.Street.Address2
      - Address.Postal.Address2
-"string"
+     - "string"
    * - Address.Street.Address2
      - Address.Street.Address2
-"string"
+     - "string"
    * - Address.Street.Address3
      - Address.Postal.Address3
-"string"
+     - "string"
    * - Address.Street.Address3
      - Address.Street.Address3
-"string"
+     - "string"
    * - Address.Street.City
      - Address.Postal.City
-"string"
+     - "string"
    * - Address.Street.City
      - Address.Street.City
-"string"
+     - "string"
    * - Address.Street.Zipcode
      - Address.Postal.Zipcode
-"string"
+     - "string"
    * - Address.Street.Zipcode
      - Address.Street.Zipcode
-"string"
+     - "string"
    * - ContactId
      - ContactId
-"integer"
+     - "integer"
    * - Country.CountryId
      - Country.CountryId
-"integer"
+     - "integer"
    * - Country.ThreeLetterISOCountry
      - OrgNr (Dependant on having wd:Q906278 in Country.TwoLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountryDependant on having wd:Q906278 in Country.TwoLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountry)
-"string"
+     - "string"
    * - Domains
      - Domains
-["list", "_."]
+     - ["list", "_."]
    * - Emails.Value
      - Emails.Value
-"string"
+     - "string"
    * - Name
      - Name
-"string"
+     - "string"
    * - OrgNr
      - OrgNr (Dependant on having  in Country.ThreeLetterISOCountryDependant on having  in Country.ThreeLetterISOCountry)
-"string"
+     - "string"
    * - Phones.Value
      - Phones.Value
-"string"
+     - "string"
 
 
 SuperOffice Ownercontactlink to Superoffice Contact
@@ -147,10 +147,10 @@ The following properties are synchronized between a SuperOffice Ownercontactlink
      - Superoffice Data Type
    * - contact_id
      - ContactId
-"string"
+     - "string"
    * - name
      - Name
-"string"
+     - "string"
 
 
 SuperOffice Person to Superoffice Person
@@ -179,64 +179,64 @@ The following properties are synchronized between a SuperOffice Person and a Sup
      - Superoffice Data Type
    * - Address.Postal.Address1
      - Address.Postal.Address1
-"string"
+     - "string"
    * - Address.Postal.Address2
      - Address.Postal.Address2
-"string"
+     - "string"
    * - Address.Postal.Address3
      - Address.Postal.Address3
-"string"
+     - "string"
    * - Address.Postal.City
      - Address.Postal.City
-"string"
+     - "string"
    * - Address.Postal.Zipcode
      - Address.Postal.Zipcode
-"string"
+     - "string"
    * - Address.Street.Address1
      - Address.Street.Address1
-"string"
+     - "string"
    * - Address.Street.Address2
      - Address.Street.Address2
-"string"
+     - "string"
    * - Address.Street.Address3
      - Address.Street.Address3
-"string"
+     - "string"
    * - Address.Street.City
      - Address.Street.City
-"string"
+     - "string"
    * - Address.Street.Zipcode
      - Address.Street.Zipcode
-"string"
+     - "string"
    * - BirthDate
      - BirthDate
-["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+     - ["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
    * - Contact.ContactId
      - Contact.ContactId
-"integer"
+     - "integer"
    * - Country.CountryId
      - Country.CountryId
-"integer"
+     - "integer"
    * - Emails.Value
      - Emails.Value
-"string"
+     - "string"
    * - Firstname
      - Firstname
-"string"
+     - "string"
    * - Lastname
      - Lastname
-"string"
+     - "string"
    * - MobilePhones.Value
      - MobilePhones.Value
-"string"
+     - "string"
    * - OfficePhones.Value
      - OfficePhones.Value
-"string"
+     - "string"
    * - PersonId
      - PersonId
-"integer"
+     - "integer"
    * - PrivatePhones.Value
      - PrivatePhones.Value
-"string"
+     - "string"
 
 
 SuperOffice Product to Superoffice Product
@@ -267,43 +267,43 @@ The following properties are synchronized between a SuperOffice Product and a Su
      - Superoffice Data Type
    * - Description
      - Description
-"string"
+     - "string"
    * - ERPPriceListKey
      - ERPPriceListKey
-"string"
+     - "string"
    * - Name
      - Name
-"string"
+     - "string"
    * - ProductCategoryKey
      - ProductCategoryKey
-"string"
+     - "string"
    * - ProductFamilyKey
      - ProductFamilyKey
-"string"
+     - "string"
    * - ProductId
      - ProductId
-"integer"
+     - "integer"
    * - ProductTypeKey
      - ProductTypeKey
-"string"
+     - "string"
    * - QuantityUnit
      - QuantityUnit
-"string"
+     - "string"
    * - Supplier
      - Supplier
-"string"
+     - "string"
    * - UnitCost
      - UnitCost
-"string"
+     - "string"
    * - UnitListPrice
      - UnitListPrice
-["decimal", "_."]
+     - ["decimal", "_."]
    * - Url
      - Url
-"string"
+     - "string"
    * - VAT
      - VAT
-"integer"
+     - "integer"
 
 
 SuperOffice Quote to Superoffice Sale
@@ -332,7 +332,7 @@ The following properties are synchronized between a SuperOffice Quote and a Supe
      - Superoffice Data Type
    * - AcceptedQuoteAlternativeId
      - Status
-"string"
+     - "string"
 
 
 SuperOffice Sale to Superoffice Sale
@@ -361,37 +361,37 @@ The following properties are synchronized between a SuperOffice Sale and a Super
      - Superoffice Data Type
    * - Amount
      - Amount
-"float"
+     - "float"
    * - Contact.ContactId
      - Contact.ContactId
-"integer"
+     - "integer"
    * - Contact.ContactId
      - Person.PersonId
-"integer"
+     - "integer"
    * - Currency.Id
      - Currency.Id
-"integer"
+     - "integer"
    * - Heading
      - Heading
-"string"
+     - "string"
    * - Person.PersonId
      - Contact.ContactId
-"integer"
+     - "integer"
    * - Person.PersonId
      - Person.PersonId
-"integer"
+     - "integer"
    * - Project.ProjectId
      - Project.ProjectId
-"integer"
+     - "integer"
    * - SaleText
      - SaleText
-"string"
+     - "string"
    * - Saledate
      - Saledate
-["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+     - ["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
    * - Status
      - Status
-"string"
+     - "string"
 
 
 SuperOffice User to Superoffice Person
@@ -420,16 +420,16 @@ The following properties are synchronized between a SuperOffice User and a Super
      - Superoffice Data Type
    * - contactId
      - Contact.ContactId
-"integer"
+     - "integer"
    * - firstName
      - Firstname
-"string"
+     - "string"
    * - lastName
      - Lastname
-"string"
+     - "string"
    * - personEmail
      - Emails.Value
-"string"
+     - "string"
 
 
 SuperOffice Contact to Superoffice Person
