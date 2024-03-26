@@ -2,7 +2,7 @@
 SuperOffice to Tidsbanken Dataflow
 ==================================
 
-Generated: 2024-03-26 14:23:23
+Generated: 2024-03-26 14:23:48
 
 Introduction
 ------------
@@ -222,20 +222,20 @@ The following properties are synchronized between a SuperOffice User and a Tidsb
      - "string"
 
 
-SuperOffice Project to  Prosjekt
---------------------------------
-Every SuperOffice Project will be synchronized with a  Prosjekt.
+SuperOffice Project to Tidsbanken Prosjekt
+------------------------------------------
+Every SuperOffice Project will be synchronized with a Tidsbanken Prosjekt.
 
-Once a link between a SuperOffice Project and a  Prosjekt is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Project and a Tidsbanken Prosjekt is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Project and a  Prosjekt:
+The following properties are synchronized between a SuperOffice Project and a Tidsbanken Prosjekt:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Project Property
-     -  Prosjekt Property
-     -  Data Type
+     - Tidsbanken Prosjekt Property
+     - Tidsbanken Data Type
    * - Associate.AssociateId
      - AnsvarligId
      - "integer"
