@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -37,19 +37,19 @@ The following properties are synchronized between a HubSpot Contact and a Triple
      - Tripletex Data Type
    * - properties.email
      - email
-"string"
+     - "string"
    * - properties.firstname
      - firstName
-"string"
+     - "string"
    * - properties.lastname
      - lastName
-"string"
+     - "string"
    * - properties.mobilephone
      - phoneNumberMobile
-["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
    * - properties.phone
      - phoneNumberWork
-"string"
+     - "string"
 
 
 HubSpot Contact to Tripletex Employee
@@ -78,40 +78,40 @@ The following properties are synchronized between a HubSpot Contact and a Triple
      - Tripletex Data Type
    * - id
      - id
-"integer"
+     - "integer"
    * - properties.address
      - address.addressLine1
-"string"
+     - "string"
    * - properties.city
      - address.city
-"string"
+     - "string"
    * - properties.country
      - address.country.id
-"integer"
+     - "integer"
    * - properties.date_of_birth
      - dateOfBirth
-["datetime-format","%Y-%m-%d","_."]
+     - ["datetime-format","%Y-%m-%d","_."]
    * - properties.email
      - email
-"string"
+     - "string"
    * - properties.firstname
      - firstName
-"string"
+     - "string"
    * - properties.lastname
      - lastName
-"string"
+     - "string"
    * - properties.mobilephone
      - phoneNumberMobile
-["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
    * - properties.phone
      - phoneNumberWork
-"string"
+     - "string"
    * - properties.work_email
      - email
-"string"
+     - "string"
    * - properties.zip
      - address.postalCode
-"string"
+     - "string"
 
 
 HubSpot Company to Tripletex Contact
@@ -150,70 +150,70 @@ The following properties are synchronized between a HubSpot Company and a Triple
      - Tripletex Data Type
    * - id
      - id
-"integer"
+     - "integer"
    * - properties.address
      - deliveryAddress.addressLine1
-"string"
+     - "string"
    * - properties.address
      - physicalAddress.addressLine1
-"string"
+     - "string"
    * - properties.address
      - postalAddress.addressLine1
-"string"
+     - "string"
    * - properties.address2
      - deliveryAddress.addressLine2
-"string"
+     - "string"
    * - properties.address2
      - physicalAddress.addressLine2
-"string"
+     - "string"
    * - properties.address2
      - postalAddress.addressLine2
-"string"
+     - "string"
    * - properties.city
      - deliveryAddress.city
-"string"
+     - "string"
    * - properties.city
      - physicalAddress.city
-"string"
+     - "string"
    * - properties.city
      - postalAddress.city
-"string"
+     - "string"
    * - properties.country
      - deliveryAddress.country.id
-"string"
+     - "string"
    * - properties.country
      - physicalAddress.country.id
-"integer"
+     - "integer"
    * - properties.country
      - postalAddress.country.id
-"integer"
+     - "integer"
    * - properties.industry
      - isPrivateIndividual
-"string"
+     - "string"
    * - properties.name
      - name
-"string"
+     - "string"
    * - properties.phone
      - phoneNumber
-"string"
+     - "string"
    * - properties.type
      - isPrivateIndividual
-"string"
+     - "string"
    * - properties.website
      - url
-"string"
+     - "string"
    * - properties.website
      - website
-"string"
+     - "string"
    * - properties.zip
      - deliveryAddress.postalCode
-"string"
+     - "string"
    * - properties.zip
      - physicalAddress.postalCode
-"string"
+     - "string"
    * - properties.zip
      - postalAddress.postalCode
-"string"
+     - "string"
 
 
 HubSpot Company to Tripletex Customer person
@@ -234,61 +234,61 @@ The following properties are synchronized between a HubSpot Company and a Triple
      - Tripletex Data Type
    * - id
      - id
-"integer"
+     - "integer"
    * - properties.address
      - deliveryAddress.addressLine1
-"string"
+     - "string"
    * - properties.address
      - physicalAddress.addressLine1
-"string"
+     - "string"
    * - properties.address
      - postalAddress.addressLine1
-"string"
+     - "string"
    * - properties.address2
      - deliveryAddress.addressLine2
-"string"
+     - "string"
    * - properties.address2
      - physicalAddress.addressLine2
-"string"
+     - "string"
    * - properties.address2
      - postalAddress.addressLine2
-"string"
+     - "string"
    * - properties.city
      - deliveryAddress.city
-"string"
+     - "string"
    * - properties.city
      - physicalAddress.city
-"string"
+     - "string"
    * - properties.city
      - postalAddress.city
-"string"
+     - "string"
    * - properties.country
      - deliveryAddress.country.id
-"string"
+     - "string"
    * - properties.country
      - physicalAddress.country.id
-"integer"
+     - "integer"
    * - properties.country
      - postalAddress.country.id
-"integer"
+     - "integer"
    * - properties.name
      - name
-"string"
+     - "string"
    * - properties.phone
      - phoneNumber
-"string"
+     - "string"
    * - properties.website
      - website
-"string"
+     - "string"
    * - properties.zip
      - deliveryAddress.postalCode
-"string"
+     - "string"
    * - properties.zip
      - physicalAddress.postalCode
-"string"
+     - "string"
    * - properties.zip
      - postalAddress.postalCode
-"string"
+     - "string"
 
 
 HubSpot Contact to Tripletex Customer
@@ -327,52 +327,52 @@ The following properties are synchronized between a HubSpot Contact and a Triple
      - Tripletex Data Type
    * - id
      - id
-"integer"
+     - "integer"
    * - properties.address
      - deliveryAddress.addressLine1
-"string"
+     - "string"
    * - properties.address
      - physicalAddress.addressLine1
-"string"
+     - "string"
    * - properties.address
      - postalAddress.addressLine1
-"string"
+     - "string"
    * - properties.city
      - deliveryAddress.city
-"string"
+     - "string"
    * - properties.city
      - physicalAddress.city
-"string"
+     - "string"
    * - properties.city
      - postalAddress.city
-"string"
+     - "string"
    * - properties.country
      - deliveryAddress.country.id
-"string"
+     - "string"
    * - properties.country
      - physicalAddress.country.id
-"integer"
+     - "integer"
    * - properties.country
      - postalAddress.country.id
-"integer"
+     - "integer"
    * - properties.email
      - email
-"string"
+     - "string"
    * - properties.mobilephone
      - phoneNumberMobile
-"string"
+     - "string"
    * - properties.phone
      - phoneNumber
-"string"
+     - "string"
    * - properties.zip
      - deliveryAddress.postalCode
-"string"
+     - "string"
    * - properties.zip
      - physicalAddress.postalCode
-"string"
+     - "string"
    * - properties.zip
      - postalAddress.postalCode
-"string"
+     - "string"
 
 
 HubSpot Deal to Tripletex Order
@@ -391,16 +391,16 @@ The following properties are synchronized between a HubSpot Deal and a Tripletex
      - Tripletex Data Type
    * - properties.closedate
      - deliveryDate
-["datetime-format","%Y-%m-%d","_."]
+     - ["datetime-format","%Y-%m-%d","_."]
    * - properties.closedate
      - orderDate
-["datetime-format","%Y-%m-%d","_."]
+     - ["datetime-format","%Y-%m-%d","_."]
    * - properties.deal_currency_code
      - currency.id
-"integer"
+     - "integer"
    * - properties.dealname
      - invoiceComment
-"string"
+     - "string"
 
 
 HubSpot Lineitem to Tripletex Orderline
@@ -419,22 +419,22 @@ The following properties are synchronized between a HubSpot Lineitem and a Tripl
      - Tripletex Data Type
    * - properties.description
      - description
-"string"
+     - "string"
    * - properties.hs_discount_percentage
      - discount
-"float"
+     - "float"
    * - properties.hs_product_id
      - product.id
-"integer"
+     - "integer"
    * - properties.name
      - description
-"string"
+     - "string"
    * - properties.price
      - unitPriceExcludingVatCurrency
-"float"
+     - "float"
    * - properties.quantity
      - count
-["integer", ["decimal", "_."]]
+     - ["integer", ["decimal", "_."]]
 
 
 HubSpot Product to Tripletex Product
@@ -453,17 +453,17 @@ The following properties are synchronized between a HubSpot Product and a Triple
      - Tripletex Data Type
    * - properties.description
      - description
-"string"
+     - "string"
    * - properties.hs_cost_of_goods_sold
      - costExcludingVatCurrency
-"integer"
+     - "integer"
    * - properties.hs_sku
      - number
-"string"
+     - "string"
    * - properties.name
      - name
-"string"
+     - "string"
    * - properties.price
      - priceExcludingVatCurrency
-"float"
+     - "float"
 
