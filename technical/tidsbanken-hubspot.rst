@@ -2,7 +2,7 @@
 Tidsbanken to Hubspot Dataflow
 ==============================
 
-Generated: 2024-03-26 14:24:14
+Generated: 2024-03-26 14:34:37
 
 Introduction
 ------------
@@ -11,7 +11,10 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Tidsbanken Ansatt to Hubspot Contact
 ------------------------------------
-Before any synchronization can take place, a link between a Tidsbanken Ansatt and a Hubspot Contact must be established.
+Every Tidsbanken Ansatt will be synchronized with a Hubspot Contact.
+
+If a matching Hubspot Contact already exists, the Tidsbanken Ansatt will be merged with the existing one.
+If no matching Hubspot Contact is found, a new Hubspot Contact will be created.
 
 A Tidsbanken Ansatt will merge with a Hubspot Contact if one of the following property combinations match:
 
@@ -57,4 +60,36 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Hubs
    * - Poststed
      - properties.city
      - "string"
+
+
+Tidsbanken Avdeling to Hubspot Company
+--------------------------------------
+Every Tidsbanken Avdeling will be synchronized with a Hubspot Company.
+
+Once a link between a Tidsbanken Avdeling and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Avdeling and a Hubspot Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     - Hubspot Company Property
+     - Hubspot Data Type
+
+
+Tidsbanken Kunde to Hubspot Company
+-----------------------------------
+Every Tidsbanken Kunde will be synchronized with a Hubspot Company.
+
+Once a link between a Tidsbanken Kunde and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Kunde and a Hubspot Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Kunde Property
+     - Hubspot Company Property
+     - Hubspot Data Type
 
