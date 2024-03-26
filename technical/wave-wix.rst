@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -62,149 +62,6 @@ The following properties are synchronized between a Wave Customer person and a  
      - "string"
 
 
-Wave Customer person to  Members
---------------------------------
-Before any synchronization can take place, a link between a Wave Customer person and a  Members must be established.
-
-A Wave Customer person will merge with a  Members if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer person Property
-     -  Members Property
-   * - email
-     - loginEmail
-
-Once a link between a Wave Customer person and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer person and a  Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer person Property
-     -  Members Property
-     -  Data Type
-
-
-Wave Customer to  Members
--------------------------
-Before any synchronization can take place, a link between a Wave Customer and a  Members must be established.
-
-A Wave Customer will merge with a  Members if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     -  Members Property
-   * - email
-     - loginEmail
-
-Once a link between a Wave Customer and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a  Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     -  Members Property
-     -  Data Type
-   * - email
-     - loginEmail
-     - "string"
-
-
-Wave Vendor to  Contacts
-------------------------
-Before any synchronization can take place, a link between a Wave Vendor and a  Contacts must be established.
-
-A Wave Vendor will merge with a  Contacts if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     -  Contacts Property
-   * - email
-     - primaryInfo.email
-
-Once a link between a Wave Vendor and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a  Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     -  Contacts Property
-     -  Data Type
-   * - address.addressLine1
-     - info.addresses.items.address.addressLine
-     - "string"
-   * - address.addressLine2
-     - info.addresses.items.address.addressLine2
-     - "string"
-   * - address.city
-     - info.addresses.items.address.city
-     - "string"
-   * - address.postalCode
-     - info.addresses.items.address.postalCode
-     - "string"
-   * - email
-     - info.emails
-     - "string"
-   * - email
-     - primaryInfo.email
-     - "string"
-   * - firstName
-     - info.name.first
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - lastName
-     - info.name.last
-     - "string"
-   * - mobile
-     - info.phones
-     - "string"
-   * - mobile
-     - primaryInfo.phone
-     - "string"
-
-
-Wave Vendor to  Members
------------------------
-Before any synchronization can take place, a link between a Wave Vendor and a  Members must be established.
-
-A Wave Vendor will merge with a  Members if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     -  Members Property
-   * - email
-     - loginEmail
-
-Once a link between a Wave Vendor and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a  Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     -  Members Property
-     -  Data Type
-   * - email
-     - loginEmail
-     - "string"
-
-
 Wave Customer to Wix Contacts
 -----------------------------
 Every Wave Customer will be synchronized with a Wix Contacts.
@@ -253,8 +110,14 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
    * - firstName
      - info.name.first
      - "string"
+   * - firstName
+     - info.name.last
+     - "string"
    * - id
      - id
+     - "string"
+   * - lastName
+     - info.name.first
      - "string"
    * - lastName
      - info.name.last
@@ -277,22 +140,6 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
    * - shippingDetails.address.postalCode
      - info.addresses.items.address.postalCode
      - "string"
-
-
-Wave Product to  Inventory
---------------------------
-Every Wave Product will be synchronized with a  Inventory.
-
-Once a link between a Wave Product and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Product and a  Inventory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Product Property
-     -  Inventory Property
-     -  Data Type
 
 
 Wave Product to Wix Products
@@ -321,4 +168,75 @@ The following properties are synchronized between a Wave Product and a Wix Produ
    * - unitPrice
      - priceData.price
      - "decimal"
+
+
+Wave Vendor to  Contacts
+------------------------
+Every Wave Vendor will be synchronized with a  Contacts.
+
+If a matching  Contacts already exists, the Wave Vendor will be merged with the existing one.
+If no matching  Contacts is found, a new  Contacts will be created.
+
+A Wave Vendor will merge with a  Contacts if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     -  Contacts Property
+   * - email
+     - primaryInfo.email
+
+Once a link between a Wave Vendor and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a  Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     -  Contacts Property
+     -  Data Type
+   * - address.addressLine1
+     - info.addresses.items.address.addressLine
+     - "string"
+   * - address.addressLine2
+     - info.addresses.items.address.addressLine2
+     - "string"
+   * - address.city
+     - info.addresses.items.address.city
+     - "string"
+   * - address.postalCode
+     - info.addresses.items.address.postalCode
+     - "string"
+   * - email
+     - info.emails
+     - "string"
+   * - email
+     - primaryInfo.email
+     - "string"
+   * - firstName
+     - info.name.first
+     - "string"
+   * - firstName
+     - info.name.last
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - lastName
+     - info.name.first
+     - "string"
+   * - lastName
+     - info.name.last
+     - "string"
+   * - mobile
+     - info.phones
+     - "string"
+   * - mobile
+     - primaryInfo.phone
+     - "string"
+   * - phone
+     - primaryInfo.phone
+     - "string"
 
