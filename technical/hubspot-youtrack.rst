@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-30 00:21:07
+Generated: 2024-03-26 00:00:20
 
 Introduction.
 ------------
@@ -203,38 +203,6 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
    :header-rows: 1
 
    * - HubSpot Quotequotetemplateassociationtype Property
-     -  Organizationroles Property
-     -  Data Type
-
-
-HubSpot Ticket to  Hubprojects
-------------------------------
-Every HubSpot Ticket will be synchronized with a  Hubprojects.
-
-Once a link between a HubSpot Ticket and a  Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Ticket and a  Hubprojects:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Ticket Property
-     -  Hubprojects Property
-     -  Data Type
-
-
-HubSpot Ticketcompanyassociationtype to  Organizationroles
-----------------------------------------------------------
-Every HubSpot Ticketcompanyassociationtype will be synchronized with a  Organizationroles.
-
-Once a link between a HubSpot Ticketcompanyassociationtype and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Ticketcompanyassociationtype and a  Organizationroles:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Ticketcompanyassociationtype Property
      -  Organizationroles Property
      -  Data Type
 
