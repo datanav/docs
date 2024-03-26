@@ -2,7 +2,7 @@
 YouTrack to Wix Dataflow
 ========================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -35,14 +35,14 @@ The following properties are synchronized between a YouTrack Users and a Wix Con
      - Wix Data Type
    * - name
      - info.name.first
-"string"
+     - "string"
    * - name
      - info.name.last
-"string"
+     - "string"
    * - profile.email
      - primaryInfo.email
-"string"
+     - "string"
    * - profile.email.email
      - primaryInfo.email
-"string"
+     - "string"
 
