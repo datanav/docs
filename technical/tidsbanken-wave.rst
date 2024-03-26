@@ -2,7 +2,7 @@
 Tidsbanken to Wave Dataflow
 ===========================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -25,59 +25,59 @@ The following properties are synchronized between a Tidsbanken Kunde and a Wave 
      - Wave Data Type
    * - Gateadresse
      - address.addressLine1
-"string"
+     - "string"
    * - Gateadresse
      - shippingDetails.address.addressLine1
-"string"
+     - "string"
    * - LevPostNr
      - address.postalCode
-"string"
+     - "string"
    * - LevPostNr
      - shippingDetails.address.postalCode
-"string"
+     - "string"
    * - LevPoststed
      - address.city
-"string"
+     - "string"
    * - LevPoststed
      - shippingDetails.address.city
-"string"
+     - "string"
    * - Leveringsadresse
      - address.addressLine1
-"string"
+     - "string"
    * - Leveringsadresse
      - shippingDetails.address.addressLine1
-"string"
+     - "string"
    * - Leveringsadresse2
      - address.addressLine2
-"string"
+     - "string"
    * - Leveringsadresse2
      - shippingDetails.address.addressLine2
-"string"
+     - "string"
    * - Navn
      - name
-["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
+     - ["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
    * - Postadresse
      - address.addressLine2
-"string"
+     - "string"
    * - Postadresse
      - shippingDetails.address.addressLine2
-"string"
+     - "string"
    * - Postnr
      - address.postalCode
-"string"
+     - "string"
    * - Postnr
      - shippingDetails.address.postalCode
-"string"
+     - "string"
    * - Poststed
      - address.city
-"string"
+     - "string"
    * - Poststed
      - shippingDetails.address.city
-"string"
+     - "string"
    * - Telefon
      - phone
-"string"
+     - "string"
    * - Url
      - website
-"string"
+     - "string"
 
