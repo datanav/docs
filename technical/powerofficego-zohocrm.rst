@@ -2,7 +2,7 @@
 Powerofficego to ZohoCRM Dataflow
 =================================
 
-Generated: 2024-03-26 14:34:37
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -25,31 +25,31 @@ The following properties are synchronized between a Powerofficego Customers and 
      - ZohoCRM Data Type
    * - MailAddress.City
      - Billing_City
-     - "string"
+"string"
    * - MailAddress.City
      - Shipping_City
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - Billing_Country
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - Shipping_Country
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - Billing_Code
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - Shipping_Code
-     - "string"
+"string"
    * - Name
      - Account_Name
-     - "string"
+"string"
    * - PhoneNumber
      - Phone
-     - "string"
+"string"
    * - WebsiteUrl
      - Website
-     - "string"
+"string"
 
 
 Powerofficego Departments to ZohoCRM Account
@@ -68,7 +68,7 @@ The following properties are synchronized between a Powerofficego Departments an
      - ZohoCRM Data Type
    * - Name
      - Account_Name
-     - "string"
+"string"
 
 
 Powerofficego Customers person to ZohoCRM Contact
@@ -87,38 +87,38 @@ The following properties are synchronized between a Powerofficego Customers pers
      - ZohoCRM Data Type
    * - EmailAddress
      - Email
-     - "string"
+"string"
    * - EmailAddress
      - Secondary_Email
-     - "string"
+"string"
    * - FirstName
      - First_Name
-     - "string"
+"string"
    * - LastName
      - Last_Name
-     - "string"
+"string"
    * - MailAddress.City
      - Mailing_City
-     - "string"
+"string"
    * - MailAddress.City
      - Other_City
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - Mailing_Country
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - Other_Country
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - Mailing_Zip
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - Other_Zip
-     - "string"
+"string"
    * - PhoneNumber
      - Other_Phone
-     - "string"
+"string"
    * - PhoneNumber
      - Phone
-     - "string"
+"string"
 
