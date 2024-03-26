@@ -2,7 +2,7 @@
 Businesscentral to Superoffice Dataflow
 =======================================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:49
 
 Introduction
 ------------
@@ -27,22 +27,22 @@ The following properties are synchronized between a Businesscentral Customers an
      - SuperOffice Data Type
 
 
-Businesscentral Salesorders to  Quotealternative
-------------------------------------------------
-Before any synchronization can take place, a link between a Businesscentral Salesorders and a  Quotealternative must be established.
+Businesscentral Salesorders to Superoffice Quotealternative
+-----------------------------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Salesorders and a Superoffice Quotealternative must be established.
 
-A new  Quotealternative will be created from a Businesscentral Salesorders if it is connected to a Businesscentral Salesorderlines that is synchronized into .
+A new Superoffice Quotealternative will be created from a Businesscentral Salesorders if it is connected to a Businesscentral Salesorderlines that is synchronized into Superoffice.
 
-Once a link between a Businesscentral Salesorders and a  Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Salesorders and a Superoffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorders and a  Quotealternative:
+The following properties are synchronized between a Businesscentral Salesorders and a Superoffice Quotealternative:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Salesorders Property
-     -  Quotealternative Property
-     -  Data Type
+     - Superoffice Quotealternative Property
+     - Superoffice Data Type
    * - totalAmountExcludingTax
      - TotalPrice
      - "float"
@@ -217,20 +217,20 @@ The following properties are synchronized between a Businesscentral Employees an
      - "string"
 
 
-Businesscentral Items to  Product
----------------------------------
-Every Businesscentral Items will be synchronized with a  Product.
+Businesscentral Items to Superoffice Product
+--------------------------------------------
+Every Businesscentral Items will be synchronized with a Superoffice Product.
 
-Once a link between a Businesscentral Items and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Items and a Superoffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Items and a  Product:
+The following properties are synchronized between a Businesscentral Items and a Superoffice Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Items Property
-     -  Product Property
-     -  Data Type
+     - Superoffice Product Property
+     - Superoffice Data Type
    * - displayName
      - Name
      - "string"
@@ -254,20 +254,20 @@ The following properties are synchronized between a Businesscentral Items and a 
      - "decimal"
 
 
-Businesscentral Salesorderlines to  Quoteline
----------------------------------------------
-Every Businesscentral Salesorderlines will be synchronized with a  Quoteline.
+Businesscentral Salesorderlines to Superoffice Quoteline
+--------------------------------------------------------
+Every Businesscentral Salesorderlines will be synchronized with a Superoffice Quoteline.
 
-Once a link between a Businesscentral Salesorderlines and a  Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Salesorderlines and a Superoffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorderlines and a  Quoteline:
+The following properties are synchronized between a Businesscentral Salesorderlines and a Superoffice Quoteline:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Salesorderlines Property
-     -  Quoteline Property
-     -  Data Type
+     - Superoffice Quoteline Property
+     - Superoffice Data Type
    * - description
      - Description
      - "string"
