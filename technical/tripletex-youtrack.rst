@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -41,6 +41,32 @@ The following properties are synchronized between a Tripletex Contact and a  Use
      - "string"
 
 
+Tripletex Customer person to  Users
+-----------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer person and a  Users must be established.
+
+A Tripletex Customer person will merge with a  Users if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     -  Users Property
+   * - email
+     - profile.email.email
+
+Once a link between a Tripletex Customer person and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a  Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     -  Users Property
+     -  Data Type
+
+
 Tripletex Employee to  Users
 ----------------------------
 Before any synchronization can take place, a link between a Tripletex Employee and a  Users must be established.
@@ -65,8 +91,44 @@ The following properties are synchronized between a Tripletex Employee and a  Us
    * - Tripletex Employee Property
      -  Users Property
      -  Data Type
+   * - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
+     - groups.id
+     - "string"
+   * - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+     - organizationRoles.id
+     - "string"
+   * - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+     - projectRoles.id
+     - "string"
+   * - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+     - sourcedOrganizationRoles.id
+     - "string"
+   * - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+     - sourcedProjectRoles.id
+     - "string"
+   * - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
+     - teams.id
+     - "string"
+   * - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
+     - transitiveGroups.id
+     - "string"
+   * - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+     - transitiveOrganizationRoles.id
+     - "string"
+   * - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+     - transitiveProjectRoles.id
+     - "string"
+   * - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
+     - transitiveTeams.id
+     - "string"
    * - email
      - profile.email.email
+     - "string"
+   * - firstName
+     - name
+     - "string"
+   * - lastName
+     - name
      - "string"
    * - userType
      - userType.id
@@ -92,22 +154,6 @@ The following properties are synchronized between a Tripletex Customer and a  Gr
      - "string"
 
 
-Tripletex Customercategory to  Organizationroles
-------------------------------------------------
-Every Tripletex Customercategory will be synchronized with a  Organizationroles.
-
-Once a link between a Tripletex Customercategory and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customercategory and a  Organizationroles:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customercategory Property
-     -  Organizationroles Property
-     -  Data Type
-
-
 Tripletex Department to  Groups
 -------------------------------
 Every Tripletex Department will be synchronized with a  Groups.
@@ -127,38 +173,6 @@ The following properties are synchronized between a Tripletex Department and a  
      - "string"
 
 
-Tripletex Productgroup to  Organizationroles
---------------------------------------------
-Every Tripletex Productgroup will be synchronized with a  Organizationroles.
-
-Once a link between a Tripletex Productgroup and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Productgroup and a  Organizationroles:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productgroup Property
-     -  Organizationroles Property
-     -  Data Type
-
-
-Tripletex Productunit to  Organizationroles
--------------------------------------------
-Every Tripletex Productunit will be synchronized with a  Organizationroles.
-
-Once a link between a Tripletex Productunit and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Productunit and a  Organizationroles:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productunit Property
-     -  Organizationroles Property
-     -  Data Type
-
-
 Tripletex Project to  Hubprojects
 ---------------------------------
 Every Tripletex Project will be synchronized with a  Hubprojects.
@@ -172,21 +186,5 @@ The following properties are synchronized between a Tripletex Project and a  Hub
 
    * - Tripletex Project Property
      -  Hubprojects Property
-     -  Data Type
-
-
-Tripletex Projectcategory to  Organizationroles
------------------------------------------------
-Every Tripletex Projectcategory will be synchronized with a  Organizationroles.
-
-Once a link between a Tripletex Projectcategory and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Projectcategory and a  Organizationroles:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Projectcategory Property
-     -  Organizationroles Property
      -  Data Type
 
