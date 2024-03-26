@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:02
 
 Introduction.
 ------------
@@ -185,6 +185,9 @@ The following properties are synchronized between a SuperOffice Sale and a  Deal
      - "string"
    * - Contact.ContactId
      - Contact_Name.id
+     - "string"
+   * - Heading
+     - Deal_Name
      - "string"
    * - Person.PersonId
      - Account_Name.id
