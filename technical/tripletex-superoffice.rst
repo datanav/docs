@@ -2,40 +2,40 @@
 Tripletex to Superoffice Dataflow
 =================================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:49
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Contact to SuperOffice Person
+Tripletex Contact to Superoffice Person
 ---------------------------------------
-Every Tripletex Contact will be synchronized with a SuperOffice Person.
+Every Tripletex Contact will be synchronized with a Superoffice Person.
 
-If a matching SuperOffice Person already exists, the Tripletex Contact will be merged with the existing one.
-If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
+If a matching Superoffice Person already exists, the Tripletex Contact will be merged with the existing one.
+If no matching Superoffice Person is found, a new Superoffice Person will be created.
 
-A Tripletex Contact will merge with a SuperOffice Person if one of the following property combinations match:
+A Tripletex Contact will merge with a Superoffice Person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     - SuperOffice Person Property
+     - Superoffice Person Property
    * - email
      - Emails.Value
 
-Once a link between a Tripletex Contact and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a SuperOffice Person:
+The following properties are synchronized between a Tripletex Contact and a Superoffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
+     - Superoffice Person Property
+     - Superoffice Data Type
    * - customer.id
      - Contact.ContactId
      - "integer"
@@ -56,30 +56,30 @@ The following properties are synchronized between a Tripletex Contact and a Supe
      - "string"
 
 
-Tripletex Customer person to  Person
-------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer person and a  Person must be established.
+Tripletex Customer person to Superoffice Person
+-----------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer person and a Superoffice Person must be established.
 
-A Tripletex Customer person will merge with a  Person if one of the following property combinations match:
+A Tripletex Customer person will merge with a Superoffice Person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     -  Person Property
+     - Superoffice Person Property
    * - email
      - Emails.Value
 
-Once a link between a Tripletex Customer person and a  Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a  Person:
+The following properties are synchronized between a Tripletex Customer person and a Superoffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     -  Person Property
-     -  Data Type
+     - Superoffice Person Property
+     - Superoffice Data Type
    * - deliveryAddress.addressLine1
      - Address.Street.Address1
      - "string"
@@ -139,33 +139,33 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
 
 
-Tripletex Customer to SuperOffice Contact
+Tripletex Customer to Superoffice Contact
 -----------------------------------------
-Every Tripletex Customer will be synchronized with a SuperOffice Contact.
+Every Tripletex Customer will be synchronized with a Superoffice Contact.
 
-If a matching SuperOffice Contact already exists, the Tripletex Customer will be merged with the existing one.
-If no matching SuperOffice Contact is found, a new SuperOffice Contact will be created.
+If a matching Superoffice Contact already exists, the Tripletex Customer will be merged with the existing one.
+If no matching Superoffice Contact is found, a new Superoffice Contact will be created.
 
-A Tripletex Customer will merge with a SuperOffice Contact if one of the following property combinations match:
+A Tripletex Customer will merge with a Superoffice Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     - SuperOffice Contact Property
+     - Superoffice Contact Property
    * - email
      - Emails.Value
 
-Once a link between a Tripletex Customer and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a SuperOffice Contact:
+The following properties are synchronized between a Tripletex Customer and a Superoffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
+     - Superoffice Contact Property
+     - Superoffice Data Type
    * - customerNumber
      - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountryDependant on having wd:Q852835 in Country.TwoLetterISOCountry)
      - "string"
@@ -273,33 +273,33 @@ The following properties are synchronized between a Tripletex Customer and a Sup
      - "string"
 
 
-Tripletex Employee to  Person
------------------------------
-Every Tripletex Employee will be synchronized with a  Person.
+Tripletex Employee to Superoffice Person
+----------------------------------------
+Every Tripletex Employee will be synchronized with a Superoffice Person.
 
-If a matching  Person already exists, the Tripletex Employee will be merged with the existing one.
-If no matching  Person is found, a new  Person will be created.
+If a matching Superoffice Person already exists, the Tripletex Employee will be merged with the existing one.
+If no matching Superoffice Person is found, a new Superoffice Person will be created.
 
-A Tripletex Employee will merge with a  Person if one of the following property combinations match:
+A Tripletex Employee will merge with a Superoffice Person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     -  Person Property
+     - Superoffice Person Property
    * - email
      - Emails.Value
 
-Once a link between a Tripletex Employee and a  Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a  Person:
+The following properties are synchronized between a Tripletex Employee and a Superoffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     -  Person Property
-     -  Data Type
+     - Superoffice Person Property
+     - Superoffice Data Type
    * - address.addressLine1
      - Address.Street.Address1
      - "string"
@@ -344,32 +344,32 @@ The following properties are synchronized between a Tripletex Employee and a  Pe
      - "string"
 
 
-Tripletex Supplier to SuperOffice Contact
+Tripletex Supplier to Superoffice Contact
 -----------------------------------------
-Before any synchronization can take place, a link between a Tripletex Supplier and a SuperOffice Contact must be established.
+Before any synchronization can take place, a link between a Tripletex Supplier and a Superoffice Contact must be established.
 
-A new SuperOffice Contact will be created from a Tripletex Supplier if it is connected to a Tripletex Product, or Productgrouprelation that is synchronized into SuperOffice.
+A new Superoffice Contact will be created from a Tripletex Supplier if it is connected to a Tripletex Product, or Productgrouprelation that is synchronized into Superoffice.
 
-A Tripletex Supplier will merge with a SuperOffice Contact if one of the following property combinations match:
+A Tripletex Supplier will merge with a Superoffice Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Supplier Property
-     - SuperOffice Contact Property
+     - Superoffice Contact Property
    * - email
      - Emails.Value
 
-Once a link between a Tripletex Supplier and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Supplier and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Supplier and a SuperOffice Contact:
+The following properties are synchronized between a Tripletex Supplier and a Superoffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Supplier Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
+     - Superoffice Contact Property
+     - Superoffice Data Type
    * - deliveryAddress.addressLine1
      - Address.Postal.Address1
      - "string"
@@ -516,22 +516,22 @@ The following properties are synchronized between a Tripletex Customer and a Sup
      - SuperOffice Data Type
 
 
-Tripletex Order to  Quotealternative
-------------------------------------
-Before any synchronization can take place, a link between a Tripletex Order and a  Quotealternative must be established.
+Tripletex Order to Superoffice Quotealternative
+-----------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Order and a Superoffice Quotealternative must be established.
 
-A new  Quotealternative will be created from a Tripletex Order if it is connected to a Tripletex Orderline that is synchronized into .
+A new Superoffice Quotealternative will be created from a Tripletex Order if it is connected to a Tripletex Orderline that is synchronized into Superoffice.
 
-Once a link between a Tripletex Order and a  Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Order and a Superoffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Order and a  Quotealternative:
+The following properties are synchronized between a Tripletex Order and a Superoffice Quotealternative:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Order Property
-     -  Quotealternative Property
-     -  Data Type
+     - Superoffice Quotealternative Property
+     - Superoffice Data Type
    * - invoiceComment
      - Name
      - "string"
@@ -559,20 +559,20 @@ The following properties are synchronized between a Tripletex Department and a  
      - "string"
 
 
-Tripletex Orderline to  Quoteline
----------------------------------
-Every Tripletex Orderline will be synchronized with a  Quoteline.
+Tripletex Orderline to Superoffice Quoteline
+--------------------------------------------
+Every Tripletex Orderline will be synchronized with a Superoffice Quoteline.
 
-Once a link between a Tripletex Orderline and a  Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Orderline and a Superoffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Orderline and a  Quoteline:
+The following properties are synchronized between a Tripletex Orderline and a Superoffice Quoteline:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Orderline Property
-     -  Quoteline Property
-     -  Data Type
+     - Superoffice Quoteline Property
+     - Superoffice Data Type
    * - count
      - DiscountPercent
      - "integer"
@@ -713,20 +713,20 @@ The following properties are synchronized between a Tripletex Orderline and a  Q
      - "integer"
 
 
-Tripletex Product to  Product
------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Product.
+Tripletex Product to Superoffice Product
+----------------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Superoffice Product.
 
-Once a link between a Tripletex Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Product and a Superoffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Product and a  Product:
+The following properties are synchronized between a Tripletex Product and a Superoffice Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     -  Product Property
-     -  Data Type
+     - Superoffice Product Property
+     - Superoffice Data Type
    * - costExcludingVatCurrency
      - UnitCost
      - "string"
