@@ -2,7 +2,7 @@
 ZohoCRM to Superoffice Dataflow
 ===============================
 
-Generated: 2024-03-26 14:19:54
+Generated: 2024-03-26 14:20:39
 
 Introduction
 ------------
@@ -168,18 +168,18 @@ The following properties are synchronized between a Zohocrm Contact and a Supero
      - "integer"
 
 
-Zohocrm Deal to Superoffice Sale
+ZohoCRM Deal to Superoffice Sale
 --------------------------------
-Every Zohocrm Deal will be synchronized with a Superoffice Sale.
+Every ZohoCRM Deal will be synchronized with a Superoffice Sale.
 
-Once a link between a Zohocrm Deal and a Superoffice Sale is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Deal and a Superoffice Sale is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zohocrm Deal and a Superoffice Sale:
+The following properties are synchronized between a ZohoCRM Deal and a Superoffice Sale:
 
 .. list-table::
    :header-rows: 1
 
-   * - Zohocrm Deal Property
+   * - ZohoCRM Deal Property
      - Superoffice Sale Property
      - Superoffice Data Type
    * - Account_Name.id
