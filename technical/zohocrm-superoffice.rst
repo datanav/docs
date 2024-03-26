@@ -2,12 +2,84 @@
 Zohocrm to Superoffice Dataflow
 ===============================
 
-Generated: 2024-03-26 14:19:13
+Generated: 2024-03-26 14:19:29
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Zohocrm to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Zohocrm Account to Superoffice Contact
+--------------------------------------
+Before any synchronization can take place, a link between a Zohocrm Account and a Superoffice Contact must be established.
+
+A new Superoffice Contact will be created from a Zohocrm Account if it is connected to a Zohocrm Deal that is synchronized into Superoffice.
+
+Once a link between a Zohocrm Account and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zohocrm Account and a Superoffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zohocrm Account Property
+     - Superoffice Contact Property
+     - Superoffice Data Type
+
+
+Zohocrm Account to Superoffice Person
+-------------------------------------
+Before any synchronization can take place, a link between a Zohocrm Account and a Superoffice Person must be established.
+
+A new Superoffice Person will be created from a Zohocrm Account if it is connected to a Zohocrm Deal that is synchronized into Superoffice.
+
+Once a link between a Zohocrm Account and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zohocrm Account and a Superoffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zohocrm Account Property
+     - Superoffice Person Property
+     - Superoffice Data Type
+
+
+Zohocrm Contact to Superoffice Contact
+--------------------------------------
+Before any synchronization can take place, a link between a Zohocrm Contact and a Superoffice Contact must be established.
+
+A new Superoffice Contact will be created from a Zohocrm Contact if it is connected to a Zohocrm Deal that is synchronized into Superoffice.
+
+Once a link between a Zohocrm Contact and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zohocrm Contact and a Superoffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zohocrm Contact Property
+     - Superoffice Contact Property
+     - Superoffice Data Type
+
+
+Zohocrm Contact to Superoffice Person
+-------------------------------------
+Before any synchronization can take place, a link between a Zohocrm Contact and a Superoffice Person must be established.
+
+A new Superoffice Person will be created from a Zohocrm Contact if it is connected to a Zohocrm Deal that is synchronized into Superoffice.
+
+Once a link between a Zohocrm Contact and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zohocrm Contact and a Superoffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zohocrm Contact Property
+     - Superoffice Person Property
+     - Superoffice Data Type
+
 
 Zohocrm Deal to Superoffice Sale
 --------------------------------
@@ -23,4 +95,25 @@ The following properties are synchronized between a Zohocrm Deal and a Superoffi
    * - Zohocrm Deal Property
      - Superoffice Sale Property
      - Superoffice Data Type
+   * - Account_Name.id
+     - Contact.ContactId
+     - "integer"
+   * - Account_Name.id
+     - Person.PersonId
+     - "integer"
+   * - Amount
+     - Amount
+     - "float"
+   * - Closing_Date
+     - Saledate
+     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+   * - Contact_Name.id
+     - Contact.ContactId
+     - "integer"
+   * - Contact_Name.id
+     - Person.PersonId
+     - "integer"
+   * - Deal_Name
+     - Heading
+     - "string"
 
