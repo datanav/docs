@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2024-03-26 14:15:49
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -37,112 +37,112 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - Tripletex Data Type
    * - Address.Postal.Address1
      - deliveryAddress.addressLine1
-     - "string"
+"string"
    * - Address.Postal.Address1
      - physicalAddress.addressLine1
-     - "string"
+"string"
    * - Address.Postal.Address1
      - postalAddress.addressLine1
-     - "string"
+"string"
    * - Address.Postal.Address2
      - deliveryAddress.addressLine2
-     - "string"
+"string"
    * - Address.Postal.Address2
      - physicalAddress.addressLine2
-     - "string"
+"string"
    * - Address.Postal.Address2
      - postalAddress.addressLine2
-     - "string"
+"string"
    * - Address.Postal.City
      - deliveryAddress.city
-     - "string"
+"string"
    * - Address.Postal.City
      - physicalAddress.city
-     - "string"
+"string"
    * - Address.Postal.City
      - postalAddress.city
-     - "string"
+"string"
    * - Address.Postal.Zipcode
      - deliveryAddress.postalCode
-     - "string"
+"string"
    * - Address.Postal.Zipcode
      - physicalAddress.postalCode
-     - "string"
+"string"
    * - Address.Postal.Zipcode
      - postalAddress.postalCode
-     - "string"
+"string"
    * - Address.Street.Address1
      - deliveryAddress.addressLine1
-     - "string"
+"string"
    * - Address.Street.Address1
      - physicalAddress.addressLine1
-     - "string"
+"string"
    * - Address.Street.Address1
      - postalAddress.addressLine1
-     - "string"
+"string"
    * - Address.Street.Address2
      - deliveryAddress.addressLine2
-     - "string"
+"string"
    * - Address.Street.Address2
      - physicalAddress.addressLine2
-     - "string"
+"string"
    * - Address.Street.Address2
      - postalAddress.addressLine2
-     - "string"
+"string"
    * - Address.Street.City
      - deliveryAddress.city
-     - "string"
+"string"
    * - Address.Street.City
      - physicalAddress.city
-     - "string"
+"string"
    * - Address.Street.City
      - postalAddress.city
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - deliveryAddress.postalCode
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - physicalAddress.postalCode
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - postalAddress.postalCode
-     - "string"
+"string"
    * - Associate.AssociateId
      - accountManager.id
-     - "integer"
+"integer"
    * - ContactId
      - id
-     - "integer"
+"integer"
    * - Country.CountryId
      - deliveryAddress.country.id
-     - "string"
+"string"
    * - Country.CountryId
      - physicalAddress.country.id
-     - "integer"
+"integer"
    * - Country.CountryId
      - postalAddress.country.id
-     - "integer"
+"integer"
    * - Emails.Value
      - email
-     - "string"
+"string"
    * - Name
      - name
-     - "string"
+"string"
    * - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountryDependant on having wd:Q852835 in Country.TwoLetterISOCountry)
      - customerNumber
-     - "string"
+"string"
    * - OrgNr (Dependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountry)
      - organizationNumber
-     - "replace"," ","", "string"]
+["replace"," ","", "string"]
    * - Phones.Value
      - phoneNumber
-     - "string"
+"string"
    * - Urls.Value
      - url
-     - "string"
+"string"
    * - Urls.Value
      - website
-     - "string"
+"string"
 
 
 SuperOffice Person to Tripletex Contact
@@ -173,22 +173,22 @@ The following properties are synchronized between a SuperOffice Person and a Tri
      - Tripletex Data Type
    * - Contact.ContactId
      - customer.id
-     - "integer"
+"integer"
    * - Emails.Value
      - email
-     - "string"
+"string"
    * - Firstname
      - firstName
-     - "string"
+"string"
    * - Lastname
      - lastName
-     - "string"
+"string"
    * - MobilePhones.Value
      - phoneNumberMobile
-     - "if","matches","+* *","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
+["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
    * - OfficePhones.Value
      - phoneNumberWork
-     - "string"
+"string"
 
 
 SuperOffice Person to Tripletex Employee
@@ -217,46 +217,46 @@ The following properties are synchronized between a SuperOffice Person and a Tri
      - Tripletex Data Type
    * - Address.Street.Address1
      - address.addressLine1
-     - "string"
+"string"
    * - Address.Street.Address2
      - address.addressLine2
-     - "string"
+"string"
    * - Address.Street.City
      - address.city
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - address.postalCode
-     - "string"
+"string"
    * - BirthDate
      - dateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
+["datetime-format","%Y-%m-%d","_."]
    * - Contact.ContactId
      - department.id (Dependant on having wd:Q703534 in  )
-     - "if", "neq", "_.", "X"], "integer", "string"]
+["if", ["neq", "_.", "X"], "integer", "string"]
    * - Country.CountryId
      - address.country.id
-     - "integer"
+"integer"
    * - Emails.Value
      - email
-     - "string"
+"string"
    * - Firstname
      - firstName
-     - "string"
+"string"
    * - Lastname
      - lastName
-     - "string"
+"string"
    * - MobilePhones.Value
      - phoneNumberMobile
-     - "if","matches","+* *","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
+["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
    * - OfficePhones.Value
      - phoneNumberWork
-     - "string"
+"string"
    * - PersonId
      - id
-     - "integer"
+"integer"
    * - PrivatePhones.Value
      - phoneNumberHome
-     - "string"
+"string"
 
 
 SuperOffice User to Tripletex Contact
@@ -285,16 +285,16 @@ The following properties are synchronized between a SuperOffice User and a Tripl
      - Tripletex Data Type
    * - contactId
      - customer.id
-     - "integer"
+"integer"
    * - firstName
      - firstName
-     - "string"
+"string"
    * - lastName
      - lastName
-     - "string"
+"string"
    * - personEmail
      - email
-     - "string"
+"string"
 
 
 SuperOffice User to Tripletex Employee
@@ -323,16 +323,16 @@ The following properties are synchronized between a SuperOffice User and a Tripl
      - Tripletex Data Type
    * - contactId
      - department.id
-     - "if", "neq", "_.", "X"], "integer", "string"]
+["if", ["neq", "_.", "X"], "integer", "string"]
    * - firstName
      - firstName
-     - "string"
+"string"
    * - lastName
      - lastName
-     - "string"
+"string"
    * - personEmail
      - email
-     - "string"
+"string"
 
 
 SuperOffice Contact to Tripletex Contact
@@ -371,88 +371,88 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - Tripletex Data Type
    * - Address.Postal.Address1
      - deliveryAddress.addressLine1
-     - "string"
+"string"
    * - Address.Postal.Address1
      - physicalAddress.addressLine1
-     - "string"
+"string"
    * - Address.Postal.Address1
      - postalAddress.addressLine1
-     - "string"
+"string"
    * - Address.Postal.Address2
      - deliveryAddress.addressLine2
-     - "string"
+"string"
    * - Address.Postal.Address2
      - physicalAddress.addressLine2
-     - "string"
+"string"
    * - Address.Postal.Address2
      - postalAddress.addressLine2
-     - "string"
+"string"
    * - Address.Postal.City
      - deliveryAddress.city
-     - "string"
+"string"
    * - Address.Postal.City
      - physicalAddress.city
-     - "string"
+"string"
    * - Address.Postal.City
      - postalAddress.city
-     - "string"
+"string"
    * - Address.Postal.Zipcode
      - deliveryAddress.postalCode
-     - "string"
+"string"
    * - Address.Postal.Zipcode
      - physicalAddress.postalCode
-     - "string"
+"string"
    * - Address.Postal.Zipcode
      - postalAddress.postalCode
-     - "string"
+"string"
    * - Address.Street.Address1
      - deliveryAddress.addressLine1
-     - "string"
+"string"
    * - Address.Street.Address1
      - physicalAddress.addressLine1
-     - "string"
+"string"
    * - Address.Street.Address1
      - postalAddress.addressLine1
-     - "string"
+"string"
    * - Address.Street.Address2
      - deliveryAddress.addressLine2
-     - "string"
+"string"
    * - Address.Street.Address2
      - physicalAddress.addressLine2
-     - "string"
+"string"
    * - Address.Street.Address2
      - postalAddress.addressLine2
-     - "string"
+"string"
    * - Address.Street.City
      - deliveryAddress.city
-     - "string"
+"string"
    * - Address.Street.City
      - physicalAddress.city
-     - "string"
+"string"
    * - Address.Street.City
      - postalAddress.city
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - deliveryAddress.postalCode
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - physicalAddress.postalCode
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - postalAddress.postalCode
-     - "string"
+"string"
    * - ContactId
      - id
-     - "integer"
+"integer"
    * - Country.CountryId
      - deliveryAddress.country.id
-     - "string"
+"string"
    * - Country.CountryId
      - physicalAddress.country.id
-     - "integer"
+"integer"
    * - Country.CountryId
      - postalAddress.country.id
-     - "integer"
+"integer"
 
 
 SuperOffice Person to Tripletex Customer person
@@ -473,64 +473,64 @@ The following properties are synchronized between a SuperOffice Person and a Tri
      - Tripletex Data Type
    * - Address.Street.Address1
      - deliveryAddress.addressLine1
-     - "string"
+"string"
    * - Address.Street.Address1
      - physicalAddress.addressLine1
-     - "string"
+"string"
    * - Address.Street.Address1
      - postalAddress.addressLine1
-     - "string"
+"string"
    * - Address.Street.Address2
      - deliveryAddress.addressLine2
-     - "string"
+"string"
    * - Address.Street.Address2
      - physicalAddress.addressLine2
-     - "string"
+"string"
    * - Address.Street.Address2
      - postalAddress.addressLine2
-     - "string"
+"string"
    * - Address.Street.City
      - deliveryAddress.city
-     - "string"
+"string"
    * - Address.Street.City
      - physicalAddress.city
-     - "string"
+"string"
    * - Address.Street.City
      - postalAddress.city
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - deliveryAddress.postalCode
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - physicalAddress.postalCode
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - postalAddress.postalCode
-     - "string"
+"string"
    * - Associate.AssociateId
      - accountManager.id
-     - "integer"
+"integer"
    * - Country.CountryId
      - deliveryAddress.country.id
-     - "string"
+"string"
    * - Country.CountryId
      - physicalAddress.country.id
-     - "integer"
+"integer"
    * - Country.CountryId
      - postalAddress.country.id
-     - "integer"
+"integer"
    * - Emails.Value
      - email
-     - "string"
+"string"
    * - MobilePhones.Value
      - phoneNumberMobile
-     - "string"
+"string"
    * - OfficePhones.Value
      - phoneNumber
-     - "string"
+"string"
    * - PersonId
      - id
-     - "integer"
+"integer"
 
 
 SuperOffice Person to Tripletex Customer
@@ -569,7 +569,7 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - Tripletex Data Type
    * - Name
      - invoiceComment
-     - "string"
+"string"
 
 
 SuperOffice Product to Tripletex Product
@@ -588,34 +588,34 @@ The following properties are synchronized between a SuperOffice Product and a Tr
      - Tripletex Data Type
    * - Code
      - number
-     - "string"
+"string"
    * - Description
      - description
-     - "string"
+"string"
    * - ERPPriceListKey
      - currency.id
-     - "integer"
+"integer"
    * - ERPProductKey
      - number
-     - "string"
+"string"
    * - Name
      - name
-     - "string"
+"string"
    * - QuantityUnit
      - productUnit.id
-     - "integer"
+"integer"
    * - Supplier
      - supplier.id
-     - "integer"
+"integer"
    * - UnitCost
      - costExcludingVatCurrency
-     - "integer"
+"integer"
    * - UnitListPrice
      - priceExcludingVatCurrency
-     - "float"
+"float"
    * - VAT
      - vatType.id
-     - "integer"
+"integer"
 
 
 SuperOffice Project to Tripletex Project
@@ -634,19 +634,19 @@ The following properties are synchronized between a SuperOffice Project and a Tr
      - Tripletex Data Type
    * - Associate.AssociateId
      - projectManager.id
-     - "integer"
+"integer"
    * - EndDate
      - endDate
-     - "datetime-format","%Y-%m-%d","_."]
+["datetime-format","%Y-%m-%d","_."]
    * - Name
      - name
-     - "string"
+"string"
    * - NextMilestoneDate
      - startDate
-     - "datetime-format","%Y-%m-%d","_."]
+["datetime-format","%Y-%m-%d","_."]
    * - ProjectMembers.PersonId
      - contact.id
-     - "integer"
+"integer"
 
 
 SuperOffice Quoteline to Tripletex Orderline
@@ -665,140 +665,140 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - Tripletex Data Type
    * - Description
      - description
-     - "string"
+"string"
    * - DiscountPercent
      - count
-     - "float"
+"float"
    * - DiscountPercent
      - description
-     - "string"
+"string"
    * - DiscountPercent
      - discount
-     - "float"
+"float"
    * - DiscountPercent
      - unitCostCurrency
-     - "float"
+"float"
    * - DiscountPercent
      - unitPriceExcludingVatCurrency
-     - "float"
+"float"
    * - DiscountPercent
      - vatType.id
-     - "integer"
+"integer"
    * - ERPDiscountPercent
      - discount
-     - "float"
+"float"
    * - ERPProductKey
      - product.id
-     - "integer"
+"integer"
    * - Name
      - count
-     - "float"
+"float"
    * - Name
      - description
-     - "string"
+"string"
    * - Name
      - discount
-     - "float"
+"float"
    * - Name
      - unitCostCurrency
-     - "float"
+"float"
    * - Name
      - unitPriceExcludingVatCurrency
-     - "float"
+"float"
    * - Name
      - vatType.id
-     - "integer"
+"integer"
    * - Quantity
      - count
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - Quantity
      - description
-     - "string"
+"string"
    * - Quantity
      - discount
-     - "float"
+"float"
    * - Quantity
      - unitCostCurrency
-     - "float"
+"float"
    * - Quantity
      - unitPriceExcludingVatCurrency
-     - "float"
+"float"
    * - Quantity
      - vatType.id
-     - "integer"
+"integer"
    * - QuantityUnit
      - count
-     - "float"
+"float"
    * - QuantityUnit
      - description
-     - "string"
+"string"
    * - QuantityUnit
      - discount
-     - "float"
+"float"
    * - QuantityUnit
      - unitCostCurrency
-     - "float"
+"float"
    * - QuantityUnit
      - unitPriceExcludingVatCurrency
-     - "float"
+"float"
    * - QuantityUnit
      - vatType.id
-     - "integer"
+"integer"
    * - QuoteAlternativeId
      - order.id
-     - "integer"
+"integer"
    * - Rank (Dependant on having  in Rank)
      - count
-     - "float"
+"float"
    * - Rank (Dependant on having  in Rank)
      - description
-     - "string"
+"string"
    * - Rank (Dependant on having  in Rank)
      - discount
-     - "float"
+"float"
    * - Rank (Dependant on having  in Rank)
      - unitCostCurrency
-     - "float"
+"float"
    * - Rank (Dependant on having  in Rank)
      - unitPriceExcludingVatCurrency
-     - "float"
+"float"
    * - Rank (Dependant on having  in Rank)
      - vatType.id
-     - "integer"
+"integer"
    * - UnitListPrice
      - count
-     - "float"
+"float"
    * - UnitListPrice
      - description
-     - "string"
+"string"
    * - UnitListPrice
      - discount
-     - "float"
+"float"
    * - UnitListPrice
      - unitCostCurrency
-     - "float"
+"float"
    * - UnitListPrice
      - unitPriceExcludingVatCurrency
-     - "float"
+"float"
    * - UnitListPrice
      - vatType.id
-     - "integer"
+"integer"
    * - VAT
      - count
-     - "float"
+"float"
    * - VAT
      - description
-     - "string"
+"string"
    * - VAT
      - discount
-     - "float"
+"float"
    * - VAT
      - unitCostCurrency
-     - "float"
+"float"
    * - VAT
      - unitPriceExcludingVatCurrency
-     - "float"
+"float"
    * - VAT
      - vatType.id
-     - "integer"
+"integer"
 
