@@ -2,7 +2,7 @@
 ZohoCRM to Superoffice Dataflow
 ===============================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -189,7 +189,7 @@ The following properties are synchronized between a ZohoCRM Deal and a Superoffi
      - "float"
    * - Closing_Date
      - Saledate
-     - ["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+     - N/A
    * - Contact_Name.id
      - Contact.ContactId
      - "integer"
