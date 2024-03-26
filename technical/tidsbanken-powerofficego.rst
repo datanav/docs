@@ -2,7 +2,7 @@
 Tidsbanken to Powerofficego Dataflow
 ====================================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -37,25 +37,25 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Powe
      - Powerofficego Data Type
    * - Adresse
      - address1
-"string"
+     - "string"
    * - Etternavn
      - lastName
-"string"
+     - "string"
    * - Fodt
      - dateOfBirth
-["if",["gt",["abs",["datetime-diff", "year", "_.",["now"]]], 100], "1935-01-01",["datetime-format", "%Y-%m-%d", "_."]]
+     - ["if",["gt",["abs",["datetime-diff", "year", "_.",["now"]]], 100], "1935-01-01",["datetime-format", "%Y-%m-%d", "_."]]
    * - Fornavn
      - firstName
-"string"
+     - "string"
    * - Id
      - id
-"integer"
+     - "integer"
    * - Postnummer
      - zipCode
-"string"
+     - "string"
    * - Poststed
      - city
-"string"
+     - "string"
 
 
 Tidsbanken Kunde to Powerofficego Customers person
@@ -105,28 +105,28 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Powe
      - Powerofficego Data Type
    * - AvdelingId
      - DepartmentId
-"integer"
+     - "integer"
    * - Epost
      - EmailAddress
-"string"
+     - "string"
    * - Etternavn
      - LastName
-"string"
+     - "string"
    * - Fodt
      - DateOfBirth
-["datetime-format","%Y-%m-%d","_."]
+     - ["datetime-format","%Y-%m-%d","_."]
    * - Fornavn
      - FirstName
-"string"
+     - "string"
    * - Mobil
      - PhoneNumber
-"string"
+     - "string"
    * - Tittel
      - JobTitle
-"string"
+     - "string"
    * - sesam_ansattId
      - Number
-"string"
+     - "string"
 
 
 Tidsbanken Avdeling to Powerofficego Departments
@@ -145,7 +145,7 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Po
      - Powerofficego Data Type
    * - Navn
      - Name
-"string"
+     - "string"
 
 
 Tidsbanken Kunde to Powerofficego Customers
@@ -177,52 +177,52 @@ The following properties are synchronized between a Tidsbanken Kunde and a Power
      - Powerofficego Data Type
    * - Epost
      - EmailAddress
-"string"
+     - "string"
    * - Gateadresse
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - Id
      - Id
-"integer"
+     - "integer"
    * - LevPostNr
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - LevPoststed
      - MailAddress.City
-"string"
+     - "string"
    * - Leveringsadresse
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - Leveringsadresse2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - Navn
      - Name
-"string"
+     - "string"
    * - Organisasjonsnummer
      - OrganizationNumber (Dependant on having NO in MailAddress.CountryCodeDependant on having wd:Q11994066 in MailAddress.CountryCode)
-"string"
+     - "string"
    * - Postadresse
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - Postnr
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - Poststed
      - MailAddress.City
-"string"
+     - "string"
    * - Telefon
      - PhoneNumber
-"string"
+     - "string"
    * - Url
      - WebsiteUrl
-"string"
+     - "string"
    * - sesam_kundeId
      - Number
-"string"
+     - "string"
    * - sesam_kundeId
      - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCode)
-"string"
+     - "string"
 
 
 Tidsbanken Prosjekt to Powerofficego Projects
@@ -241,26 +241,26 @@ The following properties are synchronized between a Tidsbanken Prosjekt and a Po
      - Powerofficego Data Type
    * - AnsvarligId
      - ProjectManagerEmployeeId
-"integer"
+     - "integer"
    * - AvdelingId
      - DepartmentId
-"integer"
+     - "integer"
    * - Avsluttet
      - IsActive
-"string"
+     - "string"
    * - AvsluttetDato
      - EndDate
-["datetime-format", "%Y-%m-%dT%H:%M:%S", "_."]
+     - ["datetime-format", "%Y-%m-%dT%H:%M:%S", "_."]
    * - InterntProsjekt
      - IsInternal
-"string"
+     - "string"
    * - KundeId
      - CustomerId
-"integer"
+     - "integer"
    * - Navn
      - Name
-"string"
+     - "string"
    * - StartDato
      - StartDate
-["datetime-format", "%Y-%m-%dT%H:%M:%S", "_."]
+     - ["datetime-format", "%Y-%m-%dT%H:%M:%S", "_."]
 
