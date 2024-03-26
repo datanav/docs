@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -60,14 +60,14 @@ The following properties are synchronized between a Wix.com Contacts and a  Cont
    * - primaryInfo.phone
      - properties.mobilephone
      - "string"
+   * - primaryInfo.phone
+     - properties.phone
+     - "string"
 
 
 Wix.com Members to  Contact
 ---------------------------
-Every Wix.com Members will be synchronized with a  Contact.
-
-If a matching  Contact already exists, the Wix.com Members will be merged with the existing one.
-If no matching  Contact is found, a new  Contact will be created.
+Before any synchronization can take place, a link between a Wix.com Members and a  Contact must be established.
 
 A Wix.com Members will merge with a  Contact if one of the following property combinations match:
 
@@ -92,22 +92,6 @@ The following properties are synchronized between a Wix.com Members and a  Conta
    * - loginEmail
      - properties.email
      - "string"
-
-
-Wix.com Inventory to  Product
------------------------------
-Every Wix.com Inventory will be synchronized with a  Product.
-
-Once a link between a Wix.com Inventory and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Inventory and a  Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Inventory Property
-     -  Product Property
-     -  Data Type
 
 
 Wix.com Orders to  Lineitem
@@ -144,28 +128,9 @@ The following properties are synchronized between a Wix.com Orders and a  Lineit
      - "string"
    * - lineItems.quantity
      - properties.quantity
-     - "integer"
+     - "string", "integer", "decimal"]]
    * - lineItems.quantity.quantity
      - properties.quantity
-     - "string"
-
-
-Wix.com Orders to  Lineitemdealassociation
-------------------------------------------
-Every Wix.com Orders will be synchronized with a  Lineitemdealassociation.
-
-Once a link between a Wix.com Orders and a  Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Orders and a  Lineitemdealassociation:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Orders Property
-     -  Lineitemdealassociation Property
-     -  Data Type
-   * - id
-     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -183,6 +148,9 @@ The following properties are synchronized between a Wix.com Products and a  Prod
    * - Wix.com Products Property
      -  Product Property
      -  Data Type
+   * - costAndProfitData.itemCost
+     - properties.hs_cost_of_goods_sold
+     - "string"
    * - costRange.maxValue
      - properties.hs_cost_of_goods_sold
      - "string"
