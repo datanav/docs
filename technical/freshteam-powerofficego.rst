@@ -2,7 +2,7 @@
 Freshteam to  Dataflow
 ======================
 
-Generated: 2023-12-04 00:00:01
+Generated: 2024-03-26 00:00:01
 
 Introduction.
 ------------
@@ -120,6 +120,9 @@ The following properties are synchronized between a Freshteam Employee and a  Em
      - "string"
    * - designation
      - DepartmentId (Dependant on having wd:Q703534 in JobTitle)
+     - "string"
+   * - designation
+     - JobTitle
      - "string"
    * - employee_id
      - Number
