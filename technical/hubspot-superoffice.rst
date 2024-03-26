@@ -2,7 +2,7 @@
 HubSpot to Superoffice Dataflow
 ===============================
 
-Generated: 2024-03-26 17:54:01
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -50,7 +50,7 @@ The following properties are synchronized between a HubSpot Contact and a Supero
      - "integer"
    * - properties.date_of_birth
      - BirthDate
-     - ["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+     - N/A
    * - properties.email
      - Emails.Value
      - "string"
@@ -123,7 +123,7 @@ The following properties are synchronized between a HubSpot Company and a Supero
      - "string"
    * - properties.website
      - Domains
-     - ["list", "_."]
+     - N/A
    * - properties.website
      - Urls.Value
      - "string"
@@ -252,7 +252,7 @@ The following properties are synchronized between a HubSpot Deal and a Superoffi
      - "float"
    * - properties.closedate
      - Saledate
-     - ["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+     - N/A
    * - properties.deal_currency_code
      - Currency.Id
      - "integer"
@@ -289,7 +289,7 @@ The following properties are synchronized between a HubSpot Lineitem and a Super
      - "integer"
    * - properties.hs_discount_percentage
      - ERPDiscountPercent
-     - ["decimal", "_."]
+     - N/A
    * - properties.hs_product_id
      - ERPProductKey
      - "string"
@@ -298,10 +298,10 @@ The following properties are synchronized between a HubSpot Lineitem and a Super
      - "string"
    * - properties.price
      - UnitListPrice
-     - ["if-null", ["integer", ["string", "_."]], ["decimal", "_."]]
+     - N/A
    * - properties.quantity
      - Quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
 
 
 HubSpot Product to Superoffice Product
@@ -329,7 +329,7 @@ The following properties are synchronized between a HubSpot Product and a Supero
      - "string"
    * - properties.price
      - UnitListPrice
-     - ["decimal", "_."]
+     - N/A
 
 
 HubSpot Quote to Superoffice Quotealternative
