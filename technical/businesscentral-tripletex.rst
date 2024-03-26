@@ -2,7 +2,7 @@
 Businesscentral to Tripletex Dataflow
 =====================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -82,7 +82,7 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
    * - mobilePhoneNumber
      - phoneNumberMobile
-     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - N/A
    * - phoneNumber
      - phoneNumberWork
      - "string"
@@ -365,7 +365,7 @@ The following properties are synchronized between a Businesscentral Employees an
      - Tripletex Data Type
    * - birthDate
      - dateOfBirth
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - displayName
      - firstName
      - "string"
@@ -467,7 +467,7 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - "float"
    * - description
      - count
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - description
      - description
      - "string"
@@ -485,7 +485,7 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - "integer"
    * - discountPercent
      - count
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - discountPercent
      - description
      - "string"
@@ -512,7 +512,7 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - "integer"
    * - quantity
      - count
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - quantity
      - description
      - "string"
@@ -530,7 +530,7 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - "integer"
    * - taxPercent
      - count
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - taxPercent
      - description
      - "string"
@@ -548,7 +548,7 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - "integer"
    * - unitPrice
      - count
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - unitPrice
      - description
      - "string"
@@ -591,10 +591,10 @@ The following properties are synchronized between a Businesscentral Salesorders 
      - "integer"
    * - orderDate
      - orderDate
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - requestedDeliveryDate
      - deliveryDate
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - salesperson
      - ourContactEmployee.id
      - "integer"
