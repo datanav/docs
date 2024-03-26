@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -45,25 +45,6 @@ The following properties are synchronized between a Wix.com Contacts and a  Huma
      - lastName
      - "string"
    * - primaryInfo.email
-     - email
-     - "string"
-
-
-Wix.com Members to  Human
--------------------------
-Every Wix.com Members will be synchronized with a  Human.
-
-Once a link between a Wix.com Members and a  Human is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Members and a  Human:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Members Property
-     -  Human Property
-     -  Data Type
-   * - loginEmail
      - email
      - "string"
 
