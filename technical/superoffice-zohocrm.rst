@@ -1,13 +1,13 @@
-========================
-SuperOffice to  Dataflow
-========================
+===============================
+SuperOffice to Zohocrm Dataflow
+===============================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:19:13
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Zohocrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 SuperOffice Contact to  Account
 -------------------------------
@@ -163,20 +163,20 @@ The following properties are synchronized between a SuperOffice Person and a  Co
      - "string"
 
 
-SuperOffice Sale to  Deal
--------------------------
-Every SuperOffice Sale will be synchronized with a  Deal.
+SuperOffice Sale to Zohocrm Deal
+--------------------------------
+Every SuperOffice Sale will be synchronized with a Zohocrm Deal.
 
-Once a link between a SuperOffice Sale and a  Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Sale and a Zohocrm Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Sale and a  Deal:
+The following properties are synchronized between a SuperOffice Sale and a Zohocrm Deal:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Sale Property
-     -  Deal Property
-     -  Data Type
+     - Zohocrm Deal Property
+     - Zohocrm Data Type
    * - Amount
      - Amount
      - "string"
