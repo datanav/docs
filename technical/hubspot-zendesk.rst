@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2023-11-30 00:21:07
+Generated: 2024-03-26 00:00:20
 
 Introduction.
 ------------
@@ -89,4 +89,20 @@ The following properties are synchronized between a HubSpot Ticket and a  Ticket
    * - properties.subject
      - subject
      - "string"
+
+
+HubSpot User to  Users
+----------------------
+Every HubSpot User will be synchronized with a  Users.
+
+Once a link between a HubSpot User and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot User and a  Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot User Property
+     -  Users Property
+     -  Data Type
 
