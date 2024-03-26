@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2024-03-26 17:54:01
+Generated: 2024-03-26 17:58:38
 
 Introduction
 ------------
@@ -33,7 +33,7 @@ The following properties are synchronized between a Tripletex Contact and a Wave
      - "string"
    * - lastName
      - lastName
-     - ["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
+     - N/A
    * - phoneNumberMobile
      - mobile
      - "string"
