@@ -2,27 +2,27 @@
 HubSpot to Tilores Dataflow
 ===========================
 
-Generated: 2024-03-26 14:24:41
+Generated: 2024-03-26 14:34:37
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Tilores. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-HubSpot Contact to  Human
--------------------------
-Every HubSpot Contact will be synchronized with a  Human.
+HubSpot Contact to Tilores Human
+--------------------------------
+Every HubSpot Contact will be synchronized with a Tilores Human.
 
-Once a link between a HubSpot Contact and a  Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contact and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contact and a  Human:
+The following properties are synchronized between a HubSpot Contact and a Tilores Human:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contact Property
-     -  Human Property
-     -  Data Type
+     - Tilores Human Property
+     - Tilores Data Type
    * - id
      - id
      - "string"
@@ -46,34 +46,34 @@ The following properties are synchronized between a HubSpot Contact and a  Human
      - "string"
 
 
-HubSpot Contactcompanyassociation to  Human
--------------------------------------------
-Every HubSpot Contactcompanyassociation will be synchronized with a  Human.
+HubSpot Contactcompanyassociation to Tilores Human
+--------------------------------------------------
+Every HubSpot Contactcompanyassociation will be synchronized with a Tilores Human.
 
-Once a link between a HubSpot Contactcompanyassociation and a  Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contactcompanyassociation and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contactcompanyassociation and a  Human:
+The following properties are synchronized between a HubSpot Contactcompanyassociation and a Tilores Human:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contactcompanyassociation Property
-     -  Human Property
-     -  Data Type
+     - Tilores Human Property
+     - Tilores Data Type
 
 
-HubSpot User to  Human
-----------------------
-Every HubSpot User will be synchronized with a  Human.
+HubSpot User to Tilores Human
+-----------------------------
+Every HubSpot User will be synchronized with a Tilores Human.
 
-Once a link between a HubSpot User and a  Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot User and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot User and a  Human:
+The following properties are synchronized between a HubSpot User and a Tilores Human:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot User Property
-     -  Human Property
-     -  Data Type
+     - Tilores Human Property
+     - Tilores Data Type
 
