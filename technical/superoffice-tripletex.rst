@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2024-03-26 17:54:01
+Generated: 2024-03-26 17:58:38
 
 Introduction
 ------------
@@ -133,7 +133,7 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - "string"
    * - OrgNr (Dependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountry)
      - organizationNumber
-     - ["replace"," ","", ["string", "_."]]
+     - N/A
    * - Phones.Value
      - phoneNumber
      - "string"
@@ -185,7 +185,7 @@ The following properties are synchronized between a SuperOffice Person and a Tri
      - "string"
    * - MobilePhones.Value
      - phoneNumberMobile
-     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - N/A
    * - OfficePhones.Value
      - phoneNumberWork
      - "string"
@@ -229,10 +229,10 @@ The following properties are synchronized between a SuperOffice Person and a Tri
      - "string"
    * - BirthDate
      - dateOfBirth
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - Contact.ContactId
      - department.id (Dependant on having wd:Q703534 in  )
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
    * - Country.CountryId
      - address.country.id
      - "integer"
@@ -247,7 +247,7 @@ The following properties are synchronized between a SuperOffice Person and a Tri
      - "string"
    * - MobilePhones.Value
      - phoneNumberMobile
-     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - N/A
    * - OfficePhones.Value
      - phoneNumberWork
      - "string"
@@ -323,7 +323,7 @@ The following properties are synchronized between a SuperOffice User and a Tripl
      - Tripletex Data Type
    * - contactId
      - department.id
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
    * - firstName
      - firstName
      - "string"
@@ -637,13 +637,13 @@ The following properties are synchronized between a SuperOffice Project and a Tr
      - "integer"
    * - EndDate
      - endDate
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - Name
      - name
      - "string"
    * - NextMilestoneDate
      - startDate
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - ProjectMembers.PersonId
      - contact.id
      - "integer"
@@ -710,7 +710,7 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "integer"
    * - Quantity
      - count
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - Quantity
      - description
      - "string"
