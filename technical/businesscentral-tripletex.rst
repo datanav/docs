@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-01-24 00:00:02
+Generated: 2024-03-26 00:00:01
 
 Introduction.
 ------------
@@ -45,21 +45,21 @@ The following properties are synchronized between a Businesscentral Customers an
      -  Data Type
 
 
-Businesscentral Customers to  Department
-----------------------------------------
-Before any synchronization can take place, a link between a Businesscentral Customers and a  Department must be established.
+Businesscentral Customers to  Customer person
+---------------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Customers and a  Customer person must be established.
 
-A new  Department will be created from a Businesscentral Customers if it is connected to a Businesscentral Employee, or Employees that is synchronized into .
+A new  Customer person will be created from a Businesscentral Customers if it is connected to a Businesscentral Customers, Salesorders, Contact-person, or Contacts-person that is synchronized into .
 
-Once a link between a Businesscentral Customers and a  Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Customers and a  Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers and a  Department:
+The following properties are synchronized between a Businesscentral Customers and a  Customer person:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Customers Property
-     -  Department Property
+     -  Customer person Property
      -  Data Type
 
 
@@ -85,6 +85,85 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "if","matches","+* *","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
    * - phoneNumber
      - phoneNumberWork
+     - "string"
+
+
+Businesscentral Contacts person to  Customer person
+---------------------------------------------------
+Every Businesscentral Contacts person will be synchronized with a  Customer person.
+
+Once a link between a Businesscentral Contacts person and a  Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Contacts person and a  Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Contacts person Property
+     -  Customer person Property
+     -  Data Type
+   * - addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - city
+     - deliveryAddress.city
+     - "string"
+   * - city
+     - physicalAddress.city
+     - "string"
+   * - city
+     - postalAddress.city
+     - "string"
+   * - country
+     - deliveryAddress.country.id
+     - "string"
+   * - country
+     - physicalAddress.country.id
+     - "integer"
+   * - country
+     - postalAddress.country.id
+     - "integer"
+   * - displayName
+     - name
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - mobilePhoneNumber
+     - phoneNumberMobile
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - postalCode
+     - postalAddress.postalCode
+     - "string"
+   * - type
+     - isPrivateIndividual
      - "string"
 
 
@@ -186,8 +265,87 @@ The following properties are synchronized between a Businesscentral Customers co
    * - postalCode
      - postalAddress.postalCode
      - "string"
+   * - type
+     - isPrivateIndividual
+     - "string"
    * - website
      - website
+     - "string"
+
+
+Businesscentral Customers person to  Customer person
+----------------------------------------------------
+Every Businesscentral Customers person will be synchronized with a  Customer person.
+
+Once a link between a Businesscentral Customers person and a  Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers person and a  Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers person Property
+     -  Customer person Property
+     -  Data Type
+   * - addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - city
+     - deliveryAddress.city
+     - "string"
+   * - city
+     - physicalAddress.city
+     - "string"
+   * - city
+     - postalAddress.city
+     - "string"
+   * - country
+     - deliveryAddress.country.id
+     - "string"
+   * - country
+     - physicalAddress.country.id
+     - "integer"
+   * - country
+     - postalAddress.country.id
+     - "integer"
+   * - displayName
+     - name
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - postalCode
+     - postalAddress.postalCode
+     - "string"
+   * - type
+     - isPrivateIndividual
      - "string"
 
 
@@ -205,6 +363,36 @@ The following properties are synchronized between a Businesscentral Employees an
    * - Businesscentral Employees Property
      -  Employee Property
      -  Data Type
+   * - birthDate
+     - dateOfBirth
+     - "datetime-format","%Y-%m-%d","_."]
+   * - displayName
+     - firstName
+     - "string"
+   * - displayName
+     - lastName
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - givenName
+     - firstName
+     - "string"
+   * - givenName
+     - lastName
+     - "string"
+   * - mobilePhone
+     - phoneNumberMobile
+     - "string"
+   * - phoneNumber
+     - phoneNumberWork
+     - "string"
+   * - surname
+     - firstName
+     - "string"
+   * - surname
+     - lastName
+     - "string"
 
 
 Businesscentral Items to  Product
@@ -278,11 +466,41 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - unitPriceExcludingVatCurrency
      - "float"
    * - description
+     - count
+     - "integer", "decimal"]
+   * - description
+     - description
+     - "string"
+   * - description
+     - discount
+     - "float"
+   * - description
+     - unitCostCurrency
+     - "float"
+   * - description
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - description
+     - vatType.id
+     - "integer"
+   * - discountPercent
+     - count
+     - "integer", "decimal"]
+   * - discountPercent
      - description
      - "string"
    * - discountPercent
      - discount
      - "float"
+   * - discountPercent
+     - unitCostCurrency
+     - "float"
+   * - discountPercent
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - discountPercent
+     - vatType.id
+     - "integer"
    * - documentId
      - order.id
      - "integer"
@@ -294,13 +512,58 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - "integer"
    * - quantity
      - count
+     - "integer", "decimal"]
+   * - quantity
+     - description
+     - "string"
+   * - quantity
+     - discount
+     - "float"
+   * - quantity
+     - unitCostCurrency
+     - "float"
+   * - quantity
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - quantity
+     - vatType.id
+     - "integer"
+   * - taxPercent
+     - count
+     - "integer", "decimal"]
+   * - taxPercent
+     - description
+     - "string"
+   * - taxPercent
+     - discount
+     - "float"
+   * - taxPercent
+     - unitCostCurrency
+     - "float"
+   * - taxPercent
+     - unitPriceExcludingVatCurrency
      - "float"
    * - taxPercent
      - vatType.id
      - "integer"
    * - unitPrice
+     - count
+     - "integer", "decimal"]
+   * - unitPrice
+     - description
+     - "string"
+   * - unitPrice
+     - discount
+     - "float"
+   * - unitPrice
+     - unitCostCurrency
+     - "float"
+   * - unitPrice
      - unitPriceExcludingVatCurrency
      - "float"
+   * - unitPrice
+     - vatType.id
+     - "integer"
 
 
 Businesscentral Salesorders to  Order
