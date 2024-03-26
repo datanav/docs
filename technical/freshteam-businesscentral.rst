@@ -2,25 +2,89 @@
 Freshteam to  Dataflow
 ======================
 
-Generated: 2023-12-04 00:00:00
+Generated: 2024-03-26 00:00:01
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Freshteam to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Freshteam Department to  Company
---------------------------------
-Every Freshteam Department will be synchronized with a  Company.
+Freshteam Department to  Companies
+----------------------------------
+Every Freshteam Department will be synchronized with a  Companies.
 
-Once a link between a Freshteam Department and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Department and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Department and a  Company:
+The following properties are synchronized between a Freshteam Department and a  Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Department Property
-     -  Company Property
+     -  Companies Property
      -  Data Type
+
+
+Freshteam Employee to  Employees
+--------------------------------
+Every Freshteam Employee will be synchronized with a  Employees.
+
+Once a link between a Freshteam Employee and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Freshteam Employee and a  Employees:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Freshteam Employee Property
+     -  Employees Property
+     -  Data Type
+   * - address.city
+     - city
+     - "string"
+   * - address.country
+     - country
+     - "string"
+   * - address.zip_code
+     - postalCode
+     - "string"
+   * - communication_address.communication_city
+     - city
+     - "string"
+   * - communication_address.communication_country
+     - country
+     - "string"
+   * - communication_address.communication_zip_code
+     - postalCode
+     - "string"
+   * - date_of_birth
+     - birthDate
+     - "string"
+   * - designation
+     - jobTitle
+     - "string"
+   * - first_name
+     - givenName
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - last_name
+     - surname
+     - "string"
+   * - official_email
+     - email
+     - "string"
+   * - personal_email
+     - email
+     - "string"
+   * - personal_email
+     - personalEmail
+     - "string"
+   * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
+     - mobilePhone
+     - "string"
+   * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
+     - phoneNumber
+     - "string"
 
