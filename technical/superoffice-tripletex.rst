@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2024-03-26 17:30:44
+Generated: 2024-03-26 17:54:01
 
 Introduction
 ------------
@@ -133,7 +133,7 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - "string"
    * - OrgNr (Dependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountry)
      - organizationNumber
-     - ["replace"," ","", "string"]
+     - ["replace"," ","", ["string", "_."]]
    * - Phones.Value
      - phoneNumber
      - "string"
@@ -232,7 +232,7 @@ The following properties are synchronized between a SuperOffice Person and a Tri
      - ["datetime-format","%Y-%m-%d","_."]
    * - Contact.ContactId
      - department.id (Dependant on having wd:Q703534 in  )
-     - ["if", ["neq", "_.", "X"], "integer", "string"]
+     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
    * - Country.CountryId
      - address.country.id
      - "integer"
@@ -323,7 +323,7 @@ The following properties are synchronized between a SuperOffice User and a Tripl
      - Tripletex Data Type
    * - contactId
      - department.id
-     - ["if", ["neq", "_.", "X"], "integer", "string"]
+     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
    * - firstName
      - firstName
      - "string"
