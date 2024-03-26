@@ -2,7 +2,7 @@
 Wave Financial to Youtrack Dataflow
 ===================================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -35,7 +35,7 @@ The following properties are synchronized between a Wave Customer person and a Y
      - Youtrack Data Type
    * - email
      - profile.email
-"string"
+     - "string"
 
 
 Wave Customer to Youtrack Users
@@ -64,7 +64,7 @@ The following properties are synchronized between a Wave Customer and a Youtrack
      - Youtrack Data Type
    * - email
      - profile.email
-"string"
+     - "string"
 
 
 Wave Vendor to Youtrack Users
@@ -93,7 +93,7 @@ The following properties are synchronized between a Wave Vendor and a Youtrack U
      - Youtrack Data Type
    * - email
      - profile.email
-"string"
+     - "string"
 
 
 Wave Customer to Youtrack Groups
@@ -112,5 +112,5 @@ The following properties are synchronized between a Wave Customer and a Youtrack
      - Youtrack Data Type
    * - name
      - name
-"string"
+     - "string"
 
