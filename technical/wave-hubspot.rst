@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -340,58 +340,6 @@ The following properties are synchronized between a Wave Customer and a  Company
      - "string"
 
 
-Wave Vendor to  Company
------------------------
-Every Wave Vendor will be synchronized with a  Company.
-
-Once a link between a Wave Vendor and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     -  Company Property
-     -  Data Type
-   * - address.addressLine1
-     - properties.address
-     - "string"
-   * - address.addressLine2
-     - properties.address2
-     - "string"
-   * - address.city
-     - properties.city
-     - "string"
-   * - address.country.code
-     - properties.country
-     - "string"
-   * - address.postalCode
-     - properties.zip
-     - "string"
-   * - address.province.code
-     - properties.state
-     - "string"
-   * - address.province.name
-     - properties.state
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - internalNotes
-     - properties.description
-     - "string"
-   * - name
-     - properties.name
-     - "string"
-   * - phone
-     - properties.phone
-     - "string"
-   * - website
-     - properties.website
-     - "string"
-
-
 Wave Invoice to  Lineitem
 -------------------------
 Every Wave Invoice will be synchronized with a  Lineitem.
@@ -420,28 +368,9 @@ The following properties are synchronized between a Wave Invoice and a  Lineitem
      - "string"
    * - items.quantity
      - properties.quantity
-     - "integer"
+     - "string", "integer", "decimal"]]
    * - items.unitPrice
      - properties.price
-     - "string"
-
-
-Wave Invoice to  Lineitemdealassociation
-----------------------------------------
-Every Wave Invoice will be synchronized with a  Lineitemdealassociation.
-
-Once a link between a Wave Invoice and a  Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Invoice and a  Lineitemdealassociation:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Invoice Property
-     -  Lineitemdealassociation Property
-     -  Data Type
-   * - id
-     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - "string"
 
 
