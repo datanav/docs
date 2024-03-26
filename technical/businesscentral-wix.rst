@@ -2,7 +2,7 @@
 Businesscentral to Wix Dataflow
 ===============================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 17:27:49
 
 Introduction
 ------------
@@ -25,19 +25,19 @@ The following properties are synchronized between a Businesscentral Contacts per
      - Wix Data Type
    * - displayName
      - info.name.first
-     - "string"
+"string"
    * - displayName
      - info.name.last
-     - "string"
+"string"
    * - email
      - primaryInfo.email
-     - "string"
+"string"
    * - mobilePhoneNumber
      - primaryInfo.phone
-     - "string"
+"string"
    * - phoneNumber
      - primaryInfo.phone
-     - "string"
+"string"
 
 
 Businesscentral Items to Wix Products
@@ -56,20 +56,20 @@ The following properties are synchronized between a Businesscentral Items and a 
      - Wix Data Type
    * - displayName
      - name
-     - "string"
+"string"
    * - displayName.string
      - name
-     - "string"
+"string"
    * - displayName2
      - name
-     - "string"
+"string"
    * - unitCost
      - costAndProfitData.itemCost
-     - "decimal"
+["decimal", "_."]
    * - unitCost
      - costRange.maxValue
-     - "string"
+"string"
    * - unitPrice
      - priceData.price
-     - "decimal"
+["decimal", "_."]
 
