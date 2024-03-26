@@ -2,7 +2,7 @@
 Businesscentral to Wave Dataflow
 ================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -103,7 +103,7 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
    * - displayName
      - name
-     - ["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
+     - N/A
    * - phoneNumber
      - phone
      - "string"
