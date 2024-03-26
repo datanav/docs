@@ -2,7 +2,7 @@
 Powerofficego to Businesscentral Dataflow
 =========================================
 
-Generated: 2024-03-26 14:30:19
+Generated: 2024-03-26 17:27:49
 
 Introduction
 ------------
@@ -27,22 +27,22 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - Businesscentral Data Type
    * - address1
      - addressLine1
-     - "string"
+"string"
    * - address2
      - addressLine2
-     - "string"
+"string"
    * - city
      - city
-     - "string"
+"string"
    * - id
      - id
-     - "string"
+"string"
    * - residenceCountryCode
      - country
-     - "string"
+"string"
    * - zipCode
      - postalCode
-     - "string"
+"string"
 
 
 Powerofficego Contactperson to Businesscentral Customers person
@@ -63,43 +63,43 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - Businesscentral Data Type
    * - SocialSecurityNumber
      - id (Dependant on having wd:Q1140371 in type)
-     - "string"
+"string"
    * - address1
      - addressLine1
-     - "string"
+"string"
    * - address2
      - addressLine2
-     - "string"
+"string"
    * - city
      - address.city
-     - "string"
+"string"
    * - city
      - addressLine2
-     - "string"
+"string"
    * - city
      - city
-     - "string"
+"string"
    * - emailAddress
      - email
-     - "string"
+"string"
    * - emailAddress
      - id (Dependant on having wd:Q1273217 in type)
-     - "string"
+"string"
    * - id
      - id
-     - "string"
+"string"
    * - phoneNumber
      - phoneNumber
-     - "string"
+"string"
    * - residenceCountryCode
      - country
-     - "string"
+"string"
    * - zipCode
      - address.postalCode
-     - "string"
+"string"
    * - zipCode
      - postalCode
-     - "string"
+"string"
 
 
 Powerofficego Customers to Businesscentral Companies
@@ -150,28 +150,28 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - Businesscentral Data Type
    * - address1
      - addressLine1
-     - "string"
+"string"
    * - address2
      - addressLine2
-     - "string"
+"string"
    * - city
      - city
-     - "string"
+"string"
    * - emailAddress
      - email
-     - "string"
+"string"
    * - id
      - id
-     - "string"
+"string"
    * - phoneNumber
      - phoneNumber
-     - "string"
+"string"
    * - residenceCountryCode
      - country
-     - "string"
+"string"
    * - zipCode
      - postalCode
-     - "string"
+"string"
 
 
 Powerofficego Customers to Businesscentral Contacts person
@@ -190,7 +190,7 @@ The following properties are synchronized between a Powerofficego Customers and 
      - Businesscentral Data Type
    * - IsPerson
      - type
-     - "string"
+"string"
 
 
 Powerofficego Customers to Businesscentral Customers company
@@ -209,55 +209,55 @@ The following properties are synchronized between a Powerofficego Customers and 
      - Businesscentral Data Type
    * - EmailAddress
      - id (Dependant on having wd:Q1273217 in type)
-     - "string"
+"string"
    * - Id
      - id
-     - "string"
+"string"
    * - InvoiceEmailAddress
      - id (Dependant on having wd:Q1273217 in type)
-     - "string"
+"string"
    * - IsPerson
      - type
-     - "string"
+"string"
    * - MailAddress.AddressLine1
      - addressLine1
-     - "string"
+"string"
    * - MailAddress.AddressLine2
      - addressLine2
-     - "string"
+"string"
    * - MailAddress.City
      - address.city
-     - "string"
+"string"
    * - MailAddress.City
      - city
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - address.countryLetterCode
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - country
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - address.postalCode
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - postalCode
-     - "string"
+"string"
    * - Name
      - displayName
-     - "string"
+"string"
    * - OrganizationNumber
      - id (Dependant on having  in type)
-     - "string"
+"string"
    * - PaymentReminderEmailAddress
      - id (Dependant on having wd:Q1273217 in type)
-     - "string"
+"string"
    * - PhoneNumber
      - phoneNumber
-     - "string"
+"string"
    * - WebsiteUrl
      - website
-     - "string"
+"string"
 
 
 Powerofficego Customers to Businesscentral Customers person
@@ -292,25 +292,25 @@ The following properties are synchronized between a Powerofficego Customers pers
      - Businesscentral Data Type
    * - Id
      - id
-     - "string"
+"string"
    * - IsPerson
      - type
-     - "string"
+"string"
    * - MailAddress.AddressLine1
      - addressLine1
-     - "string"
+"string"
    * - MailAddress.AddressLine2
      - addressLine2
-     - "string"
+"string"
    * - MailAddress.City
      - city
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - country
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - postalCode
-     - "string"
+"string"
 
 
 Powerofficego Customers person to Businesscentral Customers person
@@ -329,43 +329,43 @@ The following properties are synchronized between a Powerofficego Customers pers
      - Businesscentral Data Type
    * - EmailAddress
      - email
-     - "string"
+"string"
    * - EmailAddress
      - id (Dependant on having wd:Q1273217 in type)
-     - "string"
+"string"
    * - Id
      - id
-     - "string"
+"string"
    * - IsPerson
      - type
-     - "string"
+"string"
    * - MailAddress.AddressLine1
      - addressLine1
-     - "string"
+"string"
    * - MailAddress.AddressLine2
      - addressLine2
-     - "string"
+"string"
    * - MailAddress.City
      - address.city
-     - "string"
+"string"
    * - MailAddress.City
      - addressLine2
-     - "string"
+"string"
    * - MailAddress.City
      - city
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - country
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - address.postalCode
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - postalCode
-     - "string"
+"string"
    * - PhoneNumber
      - phoneNumber
-     - "string"
+"string"
 
 
 Powerofficego Employees to Businesscentral Employees
@@ -384,46 +384,46 @@ The following properties are synchronized between a Powerofficego Employees and 
      - Businesscentral Data Type
    * - DateOfBirth
      - birthDate
-     - "string"
+"string"
    * - DepartmentId (Dependant on having  in JobTitle)
      - jobTitle
-     - "string"
+"string"
    * - EmailAddress
      - email
-     - "string"
+"string"
    * - EmailAddress
      - personalEmail
-     - "string"
+"string"
    * - FirstName
      - givenName
-     - "string"
+"string"
    * - Id
      - id
-     - "string"
+"string"
    * - JobTitle
      - jobTitle
-     - "string"
+"string"
    * - LastName
      - surname
-     - "string"
+"string"
    * - MailAddress.Address1
      - addressLine1
-     - "string"
+"string"
    * - MailAddress.Address2
      - addressLine2
-     - "string"
+"string"
    * - MailAddress.City
      - city
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - country
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - postalCode
-     - "string"
+"string"
    * - PhoneNumber
      - mobilePhone
-     - "string"
+"string"
 
 
 Powerofficego Product to Businesscentral Items
@@ -442,25 +442,25 @@ The following properties are synchronized between a Powerofficego Product and a 
      - Businesscentral Data Type
    * - costPrice
      - unitCost
-     - "decimal"
+["decimal", "_."]
    * - gtin
      - gtin
-     - "string"
+"string"
    * - name
      - displayName
-     - "string"
+"string"
    * - name
      - displayName.string
-     - "string"
+"string"
    * - name
      - displayName2
-     - "string"
+"string"
    * - salesPrice
      - unitPrice
-     - "decimal"
+["decimal", "_."]
    * - vatCode
      - taxGroupCode
-     - "string"
+"string"
 
 
 Powerofficego Salesorderlines to Businesscentral Salesorderlines
@@ -479,34 +479,34 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - Businesscentral Data Type
    * - Allowance
      - discountPercent
-     - "decimal"
+["decimal", "_."]
    * - Description
      - description
-     - "string"
+"string"
    * - ProductId
      - itemId
-     - "string"
+"string"
    * - ProductUnitPrice
      - amountExcludingTax
-     - "string"
+"string"
    * - ProductUnitPrice
      - unitPrice
-     - "float"
+"float"
    * - Quantity
      - invoiceQuantity
-     - "string"
+"string"
    * - Quantity
      - quantity
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - VatId
      - taxPercent
-     - "decimal"
+["decimal", "_."]
    * - VatRate
      - taxPercent
-     - "decimal"
+["decimal", "_."]
    * - sesam_SalesOrderId
      - documentId
-     - "string"
+"string"
 
 
 Powerofficego Salesorders to Businesscentral Salesorders
@@ -525,19 +525,19 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - Businesscentral Data Type
    * - CurrencyCode
      - currencyId
-     - "string"
+"string"
    * - CustomerId
      - customerId
-     - "string"
+"string"
    * - CustomerReferenceContactPersonId
      - customerId
-     - "string"
+"string"
    * - SalesOrderDate
      - orderDate
-     - "datetime-parse", "%Y-%m-%dT%H:%M:%S.%fZ"
+["datetime-parse", "%Y-%m-%dT%H:%M:%S.%fZ", "_."]
    * - TotalAmount
      - totalAmountExcludingTax
-     - "string"
+"string"
 
 
 Powerofficego Suppliers person to Businesscentral Contacts person
@@ -556,8 +556,8 @@ The following properties are synchronized between a Powerofficego Suppliers pers
      - Businesscentral Data Type
    * - EmailAddress
      - email
-     - "string"
+"string"
    * - PhoneNumber
      - phoneNumber
-     - "string"
+"string"
 
