@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -97,55 +97,6 @@ The following properties are synchronized between a Wave Customer and a  Account
      - "string"
 
 
-Wave Vendor to  Account
------------------------
-Every Wave Vendor will be synchronized with a  Account.
-
-Once a link between a Wave Vendor and a  Account is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a  Account:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     -  Account Property
-     -  Data Type
-   * - address.city
-     - Billing_City
-     - "string"
-   * - address.city
-     - Shipping_City
-     - "string"
-   * - address.country.code
-     - Billing_Country
-     - "string"
-   * - address.country.code
-     - Shipping_Country
-     - "string"
-   * - address.postalCode
-     - Billing_Code
-     - "string"
-   * - address.postalCode
-     - Shipping_Code
-     - "string"
-   * - address.province.code
-     - Billing_State
-     - "string"
-   * - address.province.code
-     - Shipping_State
-     - "string"
-   * - internalNotes
-     - Created_Time
-     - "string"
-   * - name
-     - Account_Name
-     - "string"
-   * - website
-     - Website
-     - "string"
-
-
 Wave Customer person to  Contact
 --------------------------------
 Every Wave Customer person will be synchronized with a  Contact.
@@ -223,6 +174,18 @@ The following properties are synchronized between a Wave Customer person and a  
    * - firstName
      - First_Name
      - "string"
+   * - firstName
+     - Full_Name
+     - "string"
+   * - firstName
+     - Last_Name
+     - "string"
+   * - lastName
+     - First_Name
+     - "string"
+   * - lastName
+     - Full_Name
+     - "string"
    * - lastName
      - Last_Name
      - "string"
@@ -230,7 +193,13 @@ The following properties are synchronized between a Wave Customer person and a  
      - Mobile
      - "string"
    * - name
+     - First_Name
+     - "string"
+   * - name
      - Full_Name
+     - "string"
+   * - name
+     - Last_Name
      - "string"
    * - phone
      - Other_Phone
