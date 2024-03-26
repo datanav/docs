@@ -2,7 +2,7 @@
 SuperOffice to Powerofficego Dataflow
 =====================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -152,7 +152,7 @@ The following properties are synchronized between a SuperOffice Person and a Pow
      - "string"
    * - BirthDate
      - dateOfBirth
-     - ["if",["gt",["abs",["datetime-diff", "year", "_.",["now"]]], 100], "1935-01-01",["datetime-format", "%Y-%m-%d", "_."]]
+     - N/A
    * - Contact.ContactId
      - partyId
      - "integer"
@@ -310,7 +310,7 @@ The following properties are synchronized between a SuperOffice Person and a Pow
      - "string"
    * - BirthDate
      - DateOfBirth
-     - ["if",["gt",["abs",["datetime-diff", "year", "_.",["now"]]], 100], "1935-01-01",["datetime-format", "%Y-%m-%d", "_."]]
+     - N/A
    * - Country.CountryId
      - MailAddress.CountryCode
      - "string"
@@ -425,13 +425,13 @@ The following properties are synchronized between a SuperOffice Product and a Po
      - "string"
    * - UnitCost
      - costPrice
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["integer", "_."]]
+     - N/A
    * - UnitListPrice
      - SalesPrice
      - "string"
    * - UnitListPrice
      - salesPrice
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["integer", "_."]]
+     - N/A
    * - VAT
      - VatCode
      - "string"
@@ -502,7 +502,7 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
    * - Quantity
      - Quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - QuoteAlternativeId
      - sesam_SalesOrderId
      - "string"
@@ -517,7 +517,7 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
    * - UnitListPrice
      - ProductUnitPrice
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["float", ["decimal", "_."]]]
+     - N/A
    * - UnitListPrice
      - SalesOrderLineUnitPrice
      - "string"
