@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -171,44 +171,6 @@ The following properties are synchronized between a Wave Customer and a  Employe
      - "string"
 
 
-Wave Vendor to  Contact
------------------------
-Before any synchronization can take place, a link between a Wave Vendor and a  Contact must be established.
-
-A Wave Vendor will merge with a  Contact if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     -  Contact Property
-   * - email
-     - email
-
-Once a link between a Wave Vendor and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a  Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     -  Contact Property
-     -  Data Type
-   * - firstName
-     - firstName
-     - "string"
-   * - lastName
-     - lastName
-     - "string"
-   * - mobile
-     - phoneNumberMobile
-     - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
-   * - phone
-     - phoneNumberWork
-     - "string"
-
-
 Wave Vendor to  Employee
 ------------------------
 Before any synchronization can take place, a link between a Wave Vendor and a  Employee must be established.
@@ -265,24 +227,252 @@ The following properties are synchronized between a Wave Vendor and a  Employee:
      - "string"
 
 
-Wave Customer to  Department
-----------------------------
-Before any synchronization can take place, a link between a Wave Customer and a  Department must be established.
+Wave Customer to  Customer person
+---------------------------------
+Before any synchronization can take place, a link between a Wave Customer and a  Customer person must be established.
 
-A new  Department will be created from a Wave Customer if it is connected to a Wave Vendor, Customer, or Customer-person that is synchronized into .
+A new  Customer person will be created from a Wave Customer if it is connected to a Wave Vendor, Invoice, Customer, or Customer-person that is synchronized into .
 
-Once a link between a Wave Customer and a  Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a  Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a  Department:
+The following properties are synchronized between a Wave Customer and a  Customer person:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     -  Department Property
+     -  Customer person Property
      -  Data Type
+   * - address.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - address.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - address.addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - address.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - address.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - address.addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - address.city
+     - deliveryAddress.city
+     - "string"
+   * - address.city
+     - physicalAddress.city
+     - "string"
+   * - address.city
+     - postalAddress.city
+     - "string"
+   * - address.country.code
+     - deliveryAddress.country.id
+     - "string"
+   * - address.country.code
+     - physicalAddress.country.id
+     - "integer"
+   * - address.country.code
+     - postalAddress.country.id
+     - "integer"
+   * - address.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - address.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - address.postalCode
+     - postalAddress.postalCode
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - shippingDetails.address.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - shippingDetails.address.city
+     - deliveryAddress.city
+     - "string"
+   * - shippingDetails.address.city
+     - physicalAddress.city
+     - "string"
+   * - shippingDetails.address.city
+     - postalAddress.city
+     - "string"
+   * - shippingDetails.address.country.code
+     - deliveryAddress.country.id
+     - "string"
+   * - shippingDetails.address.country.code
+     - physicalAddress.country.id
+     - "integer"
+   * - shippingDetails.address.country.code
+     - postalAddress.country.id
+     - "integer"
+   * - shippingDetails.address.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - shippingDetails.address.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - shippingDetails.address.postalCode
+     - postalAddress.postalCode
+     - "string"
+
+
+Wave Vendor to  Customer person
+-------------------------------
+Before any synchronization can take place, a link between a Wave Vendor and a  Customer person must be established.
+
+A new  Customer person will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, or Customer-person that is synchronized into .
+
+Once a link between a Wave Vendor and a  Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a  Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     -  Customer person Property
+     -  Data Type
+   * - address.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - address.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - address.addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - address.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - address.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - address.addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - address.city
+     - deliveryAddress.city
+     - "string"
+   * - address.city
+     - physicalAddress.city
+     - "string"
+   * - address.city
+     - postalAddress.city
+     - "string"
+   * - address.country.code
+     - deliveryAddress.country.id
+     - "string"
+   * - address.country.code
+     - physicalAddress.country.id
+     - "integer"
+   * - address.country.code
+     - postalAddress.country.id
+     - "integer"
+   * - address.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - address.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - address.postalCode
+     - postalAddress.postalCode
+     - "string"
+   * - id
+     - id
+     - "integer"
+
+
+Wave Vendor to  Customer
+------------------------
+Before any synchronization can take place, a link between a Wave Vendor and a  Customer must be established.
+
+A new  Customer will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, or Customer-person that is synchronized into .
+
+Once a link between a Wave Vendor and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a  Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     -  Customer Property
+     -  Data Type
+   * - address.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - address.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - address.addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - address.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - address.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - address.addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - address.city
+     - deliveryAddress.city
+     - "string"
+   * - address.city
+     - physicalAddress.city
+     - "string"
+   * - address.city
+     - postalAddress.city
+     - "string"
+   * - address.country.code
+     - deliveryAddress.country.id
+     - "string"
+   * - address.country.code
+     - physicalAddress.country.id
+     - "integer"
+   * - address.country.code
+     - postalAddress.country.id
+     - "integer"
+   * - address.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - address.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - address.postalCode
+     - postalAddress.postalCode
+     - "string"
+   * - id
+     - id
+     - "integer"
    * - name
      - name
+     - "string"
+   * - website
+     - website
      - "string"
 
 
@@ -518,17 +708,62 @@ The following properties are synchronized between a Wave Invoice and a  Orderlin
      - order.id
      - "integer"
    * - items.description
+     - count
+     - "integer", "decimal"]
+   * - items.description
+     - description
+     - "string"
+   * - items.description
+     - discount
+     - "float"
+   * - items.description
+     - unitCostCurrency
+     - "float"
+   * - items.description
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - items.description
+     - vatType.id
+     - "integer"
+   * - items.price
+     - count
+     - "integer", "decimal"]
+   * - items.price
      - description
      - "string"
    * - items.price
+     - discount
+     - "float"
+   * - items.price
+     - unitCostCurrency
+     - "float"
+   * - items.price
      - unitPriceExcludingVatCurrency
      - "float"
+   * - items.price
+     - vatType.id
+     - "integer"
    * - items.product.id
      - product.id
      - "integer"
    * - items.quantity
      - count
+     - "integer", "decimal"]
+   * - items.quantity
+     - description
+     - "string"
+   * - items.quantity
+     - discount
      - "float"
+   * - items.quantity
+     - unitCostCurrency
+     - "float"
+   * - items.quantity
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - items.quantity
+     - vatType.id
+     - "integer"
 
 
 Wave Product to  Product
@@ -554,4 +789,51 @@ The following properties are synchronized between a Wave Product and a  Product:
    * - unitPrice
      - priceExcludingVatCurrency
      - "float"
+
+
+Wave Vendor to  Contact
+-----------------------
+Every Wave Vendor will be synchronized with a  Contact.
+
+If a matching  Contact already exists, the Wave Vendor will be merged with the existing one.
+If no matching  Contact is found, a new  Contact will be created.
+
+A Wave Vendor will merge with a  Contact if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     -  Contact Property
+   * - email
+     - email
+
+Once a link between a Wave Vendor and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a  Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     -  Contact Property
+     -  Data Type
+   * - email
+     - email
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - customer.id
+     - "integer"
+   * - lastName
+     - lastName
+     - "string"
+   * - mobile
+     - phoneNumberMobile
+     - "if","matches","+* *","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
+   * - phone
+     - phoneNumberWork
+     - "string"
 
