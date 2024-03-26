@@ -2,7 +2,7 @@
 Tripletex to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -35,52 +35,52 @@ The following properties are synchronized between a Tripletex Customer person an
      - Powerofficego Data Type
    * - deliveryAddress.addressLine1
      - address1
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - address2
-"string"
+     - "string"
    * - deliveryAddress.city
      - city
-"string"
+     - "string"
    * - deliveryAddress.country.id
      - residenceCountryCode
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - zipCode
-"string"
+     - "string"
    * - id
      - id
-"integer"
+     - "integer"
    * - physicalAddress.addressLine1
      - address1
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - address2
-"string"
+     - "string"
    * - physicalAddress.city
      - city
-"string"
+     - "string"
    * - physicalAddress.country.id
      - residenceCountryCode
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - zipCode
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - address1
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - address2
-"string"
+     - "string"
    * - postalAddress.city
      - city
-"string"
+     - "string"
    * - postalAddress.country.id
      - residenceCountryCode
-"string"
+     - "string"
    * - postalAddress.postalCode
      - zipCode
-"string"
+     - "string"
 
 
 Tripletex Employee to Powerofficego Contactperson
@@ -111,40 +111,40 @@ The following properties are synchronized between a Tripletex Employee and a Pow
      - Powerofficego Data Type
    * - address.addressLine1
      - address1
-"string"
+     - "string"
    * - address.addressLine2
      - address2
-"string"
+     - "string"
    * - address.city
      - city
-"string"
+     - "string"
    * - address.country.id
      - residenceCountryCode
-"string"
+     - "string"
    * - address.postalCode
      - zipCode
-"string"
+     - "string"
    * - dateOfBirth
      - dateOfBirth
-["if",["gt",["abs",["datetime-diff", "year", "_.",["now"]]], 100], "1935-01-01",["datetime-format", "%Y-%m-%d", "_."]]
+     - ["if",["gt",["abs",["datetime-diff", "year", "_.",["now"]]], 100], "1935-01-01",["datetime-format", "%Y-%m-%d", "_."]]
    * - department.id (Dependant on having wd:Q703534 in  )
      - partyId
-"integer"
+     - "integer"
    * - email
      - emailAddress
-"string"
+     - "string"
    * - firstName
      - firstName
-"string"
+     - "string"
    * - id
      - id
-"integer"
+     - "integer"
    * - lastName
      - lastName
-"string"
+     - "string"
    * - phoneNumberWork
      - phoneNumber
-"string"
+     - "string"
 
 
 Tripletex Supplier to Powerofficego Customers
@@ -173,79 +173,79 @@ The following properties are synchronized between a Tripletex Supplier and a Pow
      - Powerofficego Data Type
    * - deliveryAddress.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - deliveryAddress.city
      - MailAddress.City
-"string"
+     - "string"
    * - deliveryAddress.country.id
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - email
      - EmailAddress
-"string"
+     - "string"
    * - email
      - PaymentReminderEmailAddress
-"string"
+     - "string"
    * - id
      - Id
-"integer"
+     - "integer"
    * - invoiceEmail
      - InvoiceEmailAddress
-"string"
+     - "string"
    * - invoiceEmail
      - PaymentReminderEmailAddress
-"string"
+     - "string"
    * - name
      - Name
-"string"
+     - "string"
    * - organizationNumber
      - OrganizationNumber (Dependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.CountryCode)
-"string"
+     - "string"
    * - overdueNoticeEmail
      - PaymentReminderEmailAddress
-"string"
+     - "string"
    * - phoneNumber
      - PhoneNumber
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - physicalAddress.city
      - MailAddress.City
-"string"
+     - "string"
    * - physicalAddress.country.id
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - postalAddress.city
      - MailAddress.City
-"string"
+     - "string"
    * - postalAddress.country.id
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - postalAddress.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - url
      - WebsiteUrl
-"string"
+     - "string"
 
 
 Tripletex Contact to Powerofficego Customers person
@@ -266,16 +266,16 @@ The following properties are synchronized between a Tripletex Contact and a Powe
      - Powerofficego Data Type
    * - email
      - EmailAddress
-"string"
+     - "string"
    * - firstName
      - FirstName
-"string"
+     - "string"
    * - lastName
      - LastName
-"string"
+     - "string"
    * - phoneNumberWork
      - PhoneNumber
-"string"
+     - "string"
 
 
 Tripletex Contact to Powerofficego Customers
@@ -332,52 +332,52 @@ The following properties are synchronized between a Tripletex Customer and a Pow
      - Powerofficego Data Type
    * - deliveryAddress.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - deliveryAddress.city
      - MailAddress.City
-"string"
+     - "string"
    * - deliveryAddress.country.id
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - id
      - Id
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - physicalAddress.city
      - MailAddress.City
-"string"
+     - "string"
    * - physicalAddress.country.id
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - postalAddress.city
      - MailAddress.City
-"string"
+     - "string"
    * - postalAddress.country.id
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - postalAddress.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
 
 
 Tripletex Contact to Powerofficego Contactperson
@@ -409,25 +409,25 @@ The following properties are synchronized between a Tripletex Contact and a Powe
      - Powerofficego Data Type
    * - customer.id
      - partyCustomerCode
-"string"
+     - "string"
    * - customer.id
      - partyId
-"string"
+     - "string"
    * - customer.id
      - partySupplierCode
-"string"
+     - "string"
    * - email
      - emailAddress
-"string"
+     - "string"
    * - firstName
      - firstName
-"string"
+     - "string"
    * - lastName
      - lastName
-"string"
+     - "string"
    * - phoneNumberWork
      - phoneNumber
-"string"
+     - "string"
 
 
 Tripletex Customer person to Powerofficego Customers
@@ -446,70 +446,70 @@ The following properties are synchronized between a Tripletex Customer person an
      - Powerofficego Data Type
    * - deliveryAddress.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - deliveryAddress.city
      - MailAddress.City
-"string"
+     - "string"
    * - deliveryAddress.country.id
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - email
      - EmailAddress
-"string"
+     - "string"
    * - id
      - Id
-"integer"
+     - "integer"
    * - invoiceEmail
      - InvoiceEmailAddress
-"string"
+     - "string"
    * - name
      - Name
-"string"
+     - "string"
    * - organizationNumber
      - OrganizationNumber (Dependant on having NO in MailAddress.CountryCode)
-"string"
+     - "string"
    * - phoneNumber
      - PhoneNumber
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - physicalAddress.city
      - MailAddress.City
-"string"
+     - "string"
    * - physicalAddress.country.id
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - postalAddress.city
      - MailAddress.City
-"string"
+     - "string"
    * - postalAddress.country.id
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - postalAddress.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - website
      - WebsiteUrl
-"string"
+     - "string"
 
 
 Tripletex Customer person to Powerofficego Customers person
@@ -528,64 +528,64 @@ The following properties are synchronized between a Tripletex Customer person an
      - Powerofficego Data Type
    * - deliveryAddress.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - deliveryAddress.city
      - MailAddress.City
-"string"
+     - "string"
    * - deliveryAddress.country.id
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - email
      - EmailAddress
-"string"
+     - "string"
    * - id
      - Id
-"integer"
+     - "integer"
    * - invoiceEmail
      - InvoiceEmailAddress
-"string"
+     - "string"
    * - isPrivateIndividual
      - IsPerson
-["if", ["is-boolean", "boolean"], "boolean", "string"]
+     - ["if", ["is-boolean", "boolean"], "boolean", "string"]
    * - phoneNumber
      - PhoneNumber
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - physicalAddress.city
      - MailAddress.City
-"string"
+     - "string"
    * - physicalAddress.country.id
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - postalAddress.city
      - MailAddress.City
-"string"
+     - "string"
    * - postalAddress.country.id
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - postalAddress.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
 
 
 Tripletex Customer to Powerofficego Customers
@@ -617,109 +617,109 @@ The following properties are synchronized between a Tripletex Customer and a Pow
      - Powerofficego Data Type
    * - customerNumber
      - Number
-"string"
+     - "string"
    * - customerNumber
      - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCodeDependant on having wd:Q852835 in MailAddress.CountryCodeDependant on having wd:Q852835 in MailAddress.CountryCode)
-"string"
+     - "string"
    * - deliveryAddress.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - deliveryAddress.city
      - MailAddress.City
-"string"
+     - "string"
    * - deliveryAddress.country.id
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - email
      - EmailAddress
-"string"
+     - "string"
    * - email
      - PaymentReminderEmailAddress
-"string"
+     - "string"
    * - id
      - Id
-"string"
+     - "string"
    * - invoiceEmail
      - InvoiceEmailAddress
-"string"
+     - "string"
    * - invoiceEmail
      - PaymentReminderEmailAddress
-"string"
+     - "string"
    * - isPrivateIndividual
      - IsPerson
-"boolean"
+     - "boolean"
    * - name
      - Name
-"string"
+     - "string"
    * - organizationNumber
      - OrganizationNumber (Dependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCode)
-"string"
+     - "string"
    * - overdueNoticeEmail
      - PaymentReminderEmailAddress
-"string"
+     - "string"
    * - phoneNumber
      - Number
-"string"
+     - "string"
    * - phoneNumber
      - PhoneNumber
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - physicalAddress.city
      - MailAddress.City
-"string"
+     - "string"
    * - physicalAddress.country.id
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - MailAddress.addressLine1
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - MailAddress.addressLine2
-"string"
+     - "string"
    * - postalAddress.city
      - MailAddress.City
-"string"
+     - "string"
    * - postalAddress.city
      - MailAddress.city
-"string"
+     - "string"
    * - postalAddress.country.id
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - postalAddress.country.id
      - MailAddress.countryCode
-"string"
+     - "string"
    * - postalAddress.postalCode
      - MailAddress.ZipCode
-"string"
+     - "string"
    * - postalAddress.postalCode
      - MailAddress.zipCode
-"string"
+     - "string"
    * - url
      - WebsiteUrl
-"string"
+     - "string"
    * - website
      - WebsiteUrl
-"string"
+     - "string"
 
 
 Tripletex Department to Powerofficego Departments
@@ -738,10 +738,10 @@ The following properties are synchronized between a Tripletex Department and a P
      - Powerofficego Data Type
    * - changes.timestamp
      - CreatedDateTimeOffset
-"string"
+     - "string"
    * - name
      - Name
-"string"
+     - "string"
 
 
 Tripletex Employee to Powerofficego Employees
@@ -773,52 +773,52 @@ The following properties are synchronized between a Tripletex Employee and a Pow
      - Powerofficego Data Type
    * - changes.timestamp
      - EmployeeCreatedDateTimeOffset
-"string"
+     - "string"
    * - changes.timestamp
      - employeeCreatedDateTimeOffset
-"string"
+     - "string"
    * - dateOfBirth
      - DateOfBirth
-["datetime-format","%Y-%m-%d","_."]
+     - ["datetime-format","%Y-%m-%d","_."]
    * - dateOfBirth
      - dateOfBirth
-"string"
+     - "string"
    * - department.id
      - DepartmendId
-"string"
+     - "string"
    * - department.id (Dependant on having wd:Q2366457 in  Dependant on having wd:Q2366457 in  )
      - DepartmentId (Dependant on having wd:Q703534 in JobTitle)
-"string"
+     - "string"
    * - email
      - EmailAddress
-"string"
+     - "string"
    * - employeeNumber
      - Number
-"string"
+     - "string"
    * - firstName
      - FirstName
-"string"
+     - "string"
    * - firstName
      - firstName
-"string"
+     - "string"
    * - lastName
      - LastName
-"string"
+     - "string"
    * - lastName
      - lastName
-"string"
+     - "string"
    * - phoneNumberMobile
      - PhoneNumber
-"string"
+     - "string"
    * - phoneNumberMobile
      - phoneNumber
-"string"
+     - "string"
    * - userType
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - userType
      - MailAddress.countryCode
-"string"
+     - "string"
 
 
 Tripletex Order to Powerofficego Salesorders
@@ -837,31 +837,31 @@ The following properties are synchronized between a Tripletex Order and a Powero
      - Powerofficego Data Type
    * - changes.timestamp
      - CreatedDateTimeOffset
-"string"
+     - "string"
    * - contact.id
      - CustomerId
-"integer"
+     - "integer"
    * - contact.id
      - CustomerReferenceContactPersonId
-"string"
+     - "string"
    * - currency.id
      - CurrencyCode
-"string"
+     - "string"
    * - customer.id
      - CustomerId
-"integer"
+     - "integer"
    * - customer.id
      - CustomerReferenceContactPersonId
-"string"
+     - "string"
    * - orderDate
      - OrderDate
-"string"
+     - "string"
    * - orderDate
      - SalesOrderDate
-"string"
+     - "string"
    * - reference
      - PurchaseOrderReference
-"string"
+     - "string"
 
 
 Tripletex Orderline to Powerofficego Salesorderlines
@@ -880,43 +880,43 @@ The following properties are synchronized between a Tripletex Orderline and a Po
      - Powerofficego Data Type
    * - count
      - Quantity
-["integer", ["decimal", "_."]]
+     - ["integer", ["decimal", "_."]]
    * - description
      - Description
-"string"
+     - "string"
    * - discount
      - Allowance
-"float"
+     - "float"
    * - discount
      - Discount
-"string"
+     - "string"
    * - order.id
      - sesam_SalesOrderId
-"string"
+     - "string"
    * - order.id
      - sesam_SalesOrdersId
-"string"
+     - "string"
    * - product.id
      - ProductCode
-"string"
+     - "string"
    * - product.id
      - ProductId
-"integer"
+     - "integer"
    * - unitCostCurrency
      - ProductUnitCost
-["if", ["is-decimal", "_."], ["decimal", "_."], "integer"]
+     - ["if", ["is-decimal", "_."], ["decimal", "_."], "integer"]
    * - unitPriceExcludingVatCurrency
      - ProductUnitPrice
-["if", ["is-decimal", "_."], ["decimal", "_."], ["float", ["decimal", "_."]]]
+     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["float", ["decimal", "_."]]]
    * - unitPriceExcludingVatCurrency
      - SalesOrderLineUnitPrice
-"string"
+     - "string"
    * - vatType.id
      - VatId
-"string"
+     - "string"
    * - vatType.id
      - VatReturnSpecification
-"string"
+     - "string"
 
 
 Tripletex Product to Powerofficego Product
@@ -935,55 +935,55 @@ The following properties are synchronized between a Tripletex Product and a Powe
      - Powerofficego Data Type
    * - costExcludingVatCurrency
      - CostPrice
-"string"
+     - "string"
    * - costExcludingVatCurrency
      - costPrice
-"string"
+     - "string"
    * - description
      - Description
-"string"
+     - "string"
    * - description
      - description
-"string"
+     - "string"
    * - ean
      - Gtin
-"string"
+     - "string"
    * - ean
      - gtin
-"string"
+     - "string"
    * - name
      - Name
-"string"
+     - "string"
    * - name
      - name
-"string"
+     - "string"
    * - priceExcludingVatCurrency
      - SalesPrice
-"string"
+     - "string"
    * - priceExcludingVatCurrency
      - salesPrice
-"string"
+     - "string"
    * - productUnit.id
      - Unit
-"string"
+     - "string"
    * - productUnit.id
      - unit
-"string"
+     - "string"
    * - productUnit.id
      - unitOfMeasureCode
-"string"
+     - "string"
    * - stockOfGoods
      - AvailableStock
-"string"
+     - "string"
    * - stockOfGoods
      - availableStock
-"integer"
+     - "integer"
    * - vatType.id
      - VatCode
-"string"
+     - "string"
    * - vatType.id
      - vatCode
-"string"
+     - "string"
 
 
 Tripletex Project to Powerofficego Projects
@@ -1002,35 +1002,35 @@ The following properties are synchronized between a Tripletex Project and a Powe
      - Powerofficego Data Type
    * - contact.id
      - ContactPersonId
-"string"
+     - "string"
    * - customer.id
      - CustomerId
-"integer"
+     - "integer"
    * - department.id
      - DepartmentId
-"integer"
+     - "integer"
    * - endDate
      - EndDate
-"string"
+     - "string"
    * - isClosed
      - IsActive
-"string"
+     - "string"
    * - isClosed
      - IsInternal
-"string"
+     - "string"
    * - isInternal
      - IsActive
-"string"
+     - "string"
    * - isInternal
      - IsInternal
-"string"
+     - "string"
    * - name
      - Name
-"string"
+     - "string"
    * - projectManager.id
      - ProjectManagerEmployeeId
-"integer"
+     - "integer"
    * - startDate
      - StartDate
-"string"
+     - "string"
 
