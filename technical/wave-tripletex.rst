@@ -2,7 +2,7 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -517,7 +517,7 @@ The following properties are synchronized between a Wave Customer and a Triplete
      - "string"
    * - mobile
      - phoneNumberMobile
-     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - N/A
    * - phone
      - phoneNumberWork
      - "string"
@@ -709,7 +709,7 @@ The following properties are synchronized between a Wave Invoice and a Tripletex
      - "integer"
    * - items.description
      - count
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - items.description
      - description
      - "string"
@@ -727,7 +727,7 @@ The following properties are synchronized between a Wave Invoice and a Tripletex
      - "integer"
    * - items.price
      - count
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - items.price
      - description
      - "string"
@@ -748,7 +748,7 @@ The following properties are synchronized between a Wave Invoice and a Tripletex
      - "integer"
    * - items.quantity
      - count
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - items.quantity
      - description
      - "string"
@@ -832,7 +832,7 @@ The following properties are synchronized between a Wave Vendor and a Tripletex 
      - "string"
    * - mobile
      - phoneNumberMobile
-     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - N/A
    * - phone
      - phoneNumberWork
      - "string"
