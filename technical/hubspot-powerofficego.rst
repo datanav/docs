@@ -2,7 +2,7 @@
 HubSpot to Powerofficego Dataflow
 =================================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -37,34 +37,34 @@ The following properties are synchronized between a HubSpot Contact and a Powero
      - Powerofficego Data Type
    * - id
      - id
-"integer"
+     - "integer"
    * - properties.address
      - address1
-"string"
+     - "string"
    * - properties.city
      - city
-"string"
+     - "string"
    * - properties.country
      - residenceCountryCode
-"string"
+     - "string"
    * - properties.date_of_birth
      - dateOfBirth
-["if",["gt",["abs",["datetime-diff", "year", "_.",["now"]]], 100], "1935-01-01",["datetime-format", "%Y-%m-%d", "_."]]
+     - ["if",["gt",["abs",["datetime-diff", "year", "_.",["now"]]], 100], "1935-01-01",["datetime-format", "%Y-%m-%d", "_."]]
    * - properties.email
      - emailAddress
-"string"
+     - "string"
    * - properties.firstname
      - firstName
-"string"
+     - "string"
    * - properties.lastname
      - lastName
-"string"
+     - "string"
    * - properties.phone
      - phoneNumber
-"string"
+     - "string"
    * - properties.zip
      - zipCode
-"string"
+     - "string"
 
 
 HubSpot Company to Powerofficego Contactperson
@@ -103,55 +103,55 @@ The following properties are synchronized between a HubSpot Company and a Powero
      - Powerofficego Data Type
    * - id
      - Id
-"integer"
+     - "integer"
    * - properties.address
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - properties.address2
      - MailAddress.AddressLine2
-"string"
+     - "string"
    * - properties.city
      - MailAddress.City
-"string"
+     - "string"
    * - properties.country
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - properties.country
      - MailAddress.countryCode
-"string"
+     - "string"
    * - properties.industry
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - properties.industry
      - MailAddress.countryCode
-"string"
+     - "string"
    * - properties.name
      - Name
-"string"
+     - "string"
    * - properties.phone
      - Number
-"string"
+     - "string"
    * - properties.phone
      - PhoneNumber
-"string"
+     - "string"
    * - properties.sesam_org_number_no
      - OrganizationNumber (Dependant on having NO in MailAddress.CountryCode)
-"string"
+     - "string"
    * - properties.sesam_org_number_se
      - OrganizationNumber (Dependant on having SE in MailAddress.CountryCode)
-"string"
+     - "string"
    * - properties.type
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - properties.type
      - MailAddress.countryCode
-"string"
+     - "string"
    * - properties.website
      - WebsiteUrl
-"string"
+     - "string"
    * - properties.zip
      - MailAddress.ZipCode
-"string"
+     - "string"
 
 
 HubSpot Company to Powerofficego Customers person
@@ -172,13 +172,13 @@ The following properties are synchronized between a HubSpot Company and a Powero
      - Powerofficego Data Type
    * - properties.country
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - properties.industry
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - properties.type
      - MailAddress.CountryCode
-"string"
+     - "string"
 
 
 HubSpot Contact to Powerofficego Customers
@@ -199,7 +199,7 @@ The following properties are synchronized between a HubSpot Contact and a Powero
      - Powerofficego Data Type
    * - properties.country
      - MailAddress.CountryCode
-"string"
+     - "string"
 
 
 HubSpot Contact to Powerofficego Customers person
@@ -220,34 +220,34 @@ The following properties are synchronized between a HubSpot Contact and a Powero
      - Powerofficego Data Type
    * - id
      - Id
-"integer"
+     - "integer"
    * - properties.address
      - MailAddress.AddressLine1
-"string"
+     - "string"
    * - properties.city
      - MailAddress.City
-"string"
+     - "string"
    * - properties.country
      - MailAddress.CountryCode
-"string"
+     - "string"
    * - properties.date_of_birth
      - DateOfBirth
-["if",["gt",["abs",["datetime-diff", "year", "_.",["now"]]], 100], "1935-01-01",["datetime-format", "%Y-%m-%d", "_."]]
+     - ["if",["gt",["abs",["datetime-diff", "year", "_.",["now"]]], 100], "1935-01-01",["datetime-format", "%Y-%m-%d", "_."]]
    * - properties.email
      - EmailAddress
-"string"
+     - "string"
    * - properties.firstname
      - FirstName
-"string"
+     - "string"
    * - properties.lastname
      - LastName
-"string"
+     - "string"
    * - properties.phone
      - PhoneNumber
-"string"
+     - "string"
    * - properties.zip
      - MailAddress.ZipCode
-"string"
+     - "string"
 
 
 HubSpot Deal to Powerofficego Salesorders
@@ -266,22 +266,22 @@ The following properties are synchronized between a HubSpot Deal and a Poweroffi
      - Powerofficego Data Type
    * - properties.amount
      - NetAmount
-"string"
+     - "string"
    * - properties.amount
      - TotalAmount
-"string"
+     - "string"
    * - properties.closedate
      - OrderDate
-"string"
+     - "string"
    * - properties.closedate
      - SalesOrderDate
-"string"
+     - "string"
    * - properties.createdate
      - CreatedDateTimeOffset
-"string"
+     - "string"
    * - properties.deal_currency_code
      - CurrencyCode
-"string"
+     - "string"
 
 
 HubSpot Lineitem to Powerofficego Salesorderlines
@@ -300,22 +300,22 @@ The following properties are synchronized between a HubSpot Lineitem and a Power
      - Powerofficego Data Type
    * - properties.hs_discount_percentage
      - Allowance
-"float"
+     - "float"
    * - properties.hs_product_id
      - ProductCode
-"string"
+     - "string"
    * - properties.hs_product_id
      - ProductId
-"integer"
+     - "integer"
    * - properties.name
      - Description
-"string"
+     - "string"
    * - properties.price
      - ProductUnitPrice
-["if", ["is-decimal", "_."], ["decimal", "_."], ["float", ["decimal", "_."]]]
+     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["float", ["decimal", "_."]]]
    * - properties.quantity
      - Quantity
-["integer", ["decimal", "_."]]
+     - ["integer", ["decimal", "_."]]
 
 
 HubSpot Product to Powerofficego Product
@@ -334,26 +334,26 @@ The following properties are synchronized between a HubSpot Product and a Powero
      - Powerofficego Data Type
    * - properties.description
      - Description
-"string"
+     - "string"
    * - properties.description
      - description
-"string"
+     - "string"
    * - properties.hs_cost_of_goods_sold
      - CostPrice
-"string"
+     - "string"
    * - properties.hs_cost_of_goods_sold
      - costPrice
-"string"
+     - "string"
    * - properties.name
      - Name
-"string"
+     - "string"
    * - properties.name
      - name
-"string"
+     - "string"
    * - properties.price
      - SalesPrice
-"string"
+     - "string"
    * - properties.price
      - salesPrice
-"string"
+     - "string"
 
