@@ -2,7 +2,7 @@
 Powerofficego to Tidsbanken Dataflow
 ====================================
 
-Generated: 2024-03-26 14:23:23
+Generated: 2024-03-26 14:23:48
 
 Introduction
 ------------
@@ -188,20 +188,20 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Departments to  Avdeling
---------------------------------------
-Every Powerofficego Departments will be synchronized with a  Avdeling.
+Powerofficego Departments to Tidsbanken Avdeling
+------------------------------------------------
+Every Powerofficego Departments will be synchronized with a Tidsbanken Avdeling.
 
-Once a link between a Powerofficego Departments and a  Avdeling is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Departments and a Tidsbanken Avdeling is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Departments and a  Avdeling:
+The following properties are synchronized between a Powerofficego Departments and a Tidsbanken Avdeling:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Departments Property
-     -  Avdeling Property
-     -  Data Type
+     - Tidsbanken Avdeling Property
+     - Tidsbanken Data Type
    * - Name
      - Navn
      - "string"
@@ -269,20 +269,20 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
 
 
-Powerofficego Projects to  Prosjekt
------------------------------------
-Every Powerofficego Projects will be synchronized with a  Prosjekt.
+Powerofficego Projects to Tidsbanken Prosjekt
+---------------------------------------------
+Every Powerofficego Projects will be synchronized with a Tidsbanken Prosjekt.
 
-Once a link between a Powerofficego Projects and a  Prosjekt is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Projects and a Tidsbanken Prosjekt is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Projects and a  Prosjekt:
+The following properties are synchronized between a Powerofficego Projects and a Tidsbanken Prosjekt:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Projects Property
-     -  Prosjekt Property
-     -  Data Type
+     - Tidsbanken Prosjekt Property
+     - Tidsbanken Data Type
    * - CustomerId
      - KundeId
      - "string"
