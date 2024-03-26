@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -35,22 +35,22 @@ The following properties are synchronized between a Powerofficego Customers pers
      - Wix Data Type
    * - Id
      - id
-     - "string"
+"string"
    * - MailAddress.AddressLine1
      - info.addresses.items.address.addressLine
-     - "string"
+"string"
    * - MailAddress.AddressLine2
      - info.addresses.items.address.addressLine2
-     - "string"
+"string"
    * - MailAddress.City
      - info.addresses.items.address.city
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - info.addresses.items.address.country
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - info.addresses.items.address.postalCode
-     - "string"
+"string"
 
 
 Powerofficego Customers to Wix Contacts
@@ -71,22 +71,22 @@ The following properties are synchronized between a Powerofficego Customers and 
      - Wix Data Type
    * - Id
      - id
-     - "string"
+"string"
    * - MailAddress.AddressLine1
      - info.addresses.items.address.addressLine
-     - "string"
+"string"
    * - MailAddress.AddressLine2
      - info.addresses.items.address.addressLine2
-     - "string"
+"string"
    * - MailAddress.City
      - info.addresses.items.address.city
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - info.addresses.items.address.country
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - info.addresses.items.address.postalCode
-     - "string"
+"string"
 
 
 Powerofficego Contactperson to Wix Contacts
@@ -118,34 +118,34 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - Wix Data Type
    * - address1
      - info.addresses.items.address.addressLine
-     - "string"
+"string"
    * - address2
      - info.addresses.items.address.addressLine2
-     - "string"
+"string"
    * - city
      - info.addresses.items.address.city
-     - "string"
+"string"
    * - emailAddress
      - primaryInfo.email
-     - "string"
+"string"
    * - firstName
      - info.name.first
-     - "string"
+"string"
    * - id
      - id
-     - "string"
+"string"
    * - lastName
      - info.name.last
-     - "string"
+"string"
    * - phoneNumber
      - primaryInfo.phone
-     - "string"
+"string"
    * - residenceCountryCode
      - info.addresses.items.address.country
-     - "string"
+"string"
    * - zipCode
      - info.addresses.items.address.postalCode
-     - "string"
+"string"
 
 
 Powerofficego Product to Wix Products
@@ -164,22 +164,22 @@ The following properties are synchronized between a Powerofficego Product and a 
      - Wix Data Type
    * - costPrice
      - costAndProfitData.itemCost
-     - "decimal"
+["decimal", "_."]
    * - costPrice
      - costRange.maxValue
-     - "string"
+"string"
    * - description
      - description
-     - "string"
+"string"
    * - name
      - name
-     - "string"
+"string"
    * - salesPrice
      - price.price
-     - "string"
+"string"
    * - salesPrice
      - priceData.price
-     - "decimal"
+["decimal", "_."]
 
 
 Powerofficego Suppliers person to Wix Contacts
@@ -198,32 +198,32 @@ The following properties are synchronized between a Powerofficego Suppliers pers
      - Wix Data Type
    * - EmailAddress
      - primaryInfo.email
-     - "string"
+"string"
    * - FirstName
      - info.name.first
-     - "string"
+"string"
    * - Id
      - id
-     - "string"
+"string"
    * - LastName
      - info.name.last
-     - "string"
+"string"
    * - MailAddress.AddressLine1
      - info.addresses.items.address.addressLine
-     - "string"
+"string"
    * - MailAddress.AddressLine2
      - info.addresses.items.address.addressLine2
-     - "string"
+"string"
    * - MailAddress.City
      - info.addresses.items.address.city
-     - "string"
+"string"
    * - MailAddress.CountryCode
      - info.addresses.items.address.country
-     - "string"
+"string"
    * - MailAddress.ZipCode
      - info.addresses.items.address.postalCode
-     - "string"
+"string"
    * - PhoneNumber
      - primaryInfo.phone
-     - "string"
+"string"
 
