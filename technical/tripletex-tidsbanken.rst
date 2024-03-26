@@ -2,7 +2,7 @@
 Tripletex to Tidsbanken Dataflow
 ================================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -35,22 +35,22 @@ The following properties are synchronized between a Tripletex Contact and a Tids
      - Tidsbanken Data Type
    * - customer.id
      - AvdelingId
-"string"
+     - "string"
    * - customer.id
      - Tittel
-"string"
+     - "string"
    * - customer.id
      - sesam_ansattId
-"integer"
+     - "integer"
    * - firstName
      - Fornavn
-"string"
+     - "string"
    * - lastName
      - Etternavn
-"string"
+     - "string"
    * - phoneNumberMobile
      - Mobil
-"string"
+     - "string"
 
 
 Tripletex Customer person to Tidsbanken Ansatt
@@ -79,34 +79,34 @@ The following properties are synchronized between a Tripletex Customer person an
      - Tidsbanken Data Type
    * - deliveryAddress.addressLine1
      - Adresse
-"string"
+     - "string"
    * - deliveryAddress.city
      - Poststed
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - Postnummer
-"string"
+     - "string"
    * - id
      - Id
-"integer"
+     - "integer"
    * - physicalAddress.addressLine1
      - Adresse
-"string"
+     - "string"
    * - physicalAddress.city
      - Poststed
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - Postnummer
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - Adresse
-"string"
+     - "string"
    * - postalAddress.city
      - Poststed
-"string"
+     - "string"
    * - postalAddress.postalCode
      - Postnummer
-"string"
+     - "string"
 
 
 Tripletex Supplier to Tidsbanken Kunde
@@ -137,115 +137,115 @@ The following properties are synchronized between a Tripletex Supplier and a Tid
      - Tidsbanken Data Type
    * - deliveryAddress.addressLine1
      - Gateadresse
-"string"
+     - "string"
    * - deliveryAddress.addressLine1
      - Leveringsadresse
-"string"
+     - "string"
    * - deliveryAddress.addressLine1
      - Postadresse
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - Gateadresse
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - Leveringsadresse2
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - Postadresse
-"string"
+     - "string"
    * - deliveryAddress.city
      - LevPoststed
-"string"
+     - "string"
    * - deliveryAddress.city
      - Poststed
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - LevPostNr
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - Postnr
-"string"
+     - "string"
    * - email
      - Epost
-"string"
+     - "string"
    * - id
      - Id
-"string"
+     - "string"
    * - name
      - Navn
-"string"
+     - "string"
    * - organizationNumber
      - Organisasjonsnummer
-"string"
+     - "string"
    * - phoneNumber
      - Telefon
-"string"
+     - "string"
    * - phoneNumberMobile
      - Mobil
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - Gateadresse
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - Leveringsadresse
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - Postadresse
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - Gateadresse
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - Leveringsadresse2
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - Postadresse
-"string"
+     - "string"
    * - physicalAddress.city
      - LevPoststed
-"string"
+     - "string"
    * - physicalAddress.city
      - Poststed
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - LevPostNr
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - Postnr
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - Gateadresse
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - Leveringsadresse
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - Postadresse
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - Gateadresse
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - Leveringsadresse2
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - Postadresse
-"string"
+     - "string"
    * - postalAddress.city
      - LevPoststed
-"string"
+     - "string"
    * - postalAddress.city
      - Poststed
-"string"
+     - "string"
    * - postalAddress.postalCode
      - LevPostNr
-"string"
+     - "string"
    * - postalAddress.postalCode
      - Postnr
-"string"
+     - "string"
    * - url
      - Url
-"string"
+     - "string"
 
 
 Tripletex Customer to Tidsbanken Kunde
@@ -281,118 +281,118 @@ The following properties are synchronized between a Tripletex Customer and a Tid
      - Tidsbanken Data Type
    * - customerNumber
      - sesam_kundeId
-"string"
+     - "string"
    * - deliveryAddress.addressLine1
      - Gateadresse
-"string"
+     - "string"
    * - deliveryAddress.addressLine1
      - Leveringsadresse
-"string"
+     - "string"
    * - deliveryAddress.addressLine1
      - Postadresse
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - Gateadresse
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - Leveringsadresse2
-"string"
+     - "string"
    * - deliveryAddress.addressLine2
      - Postadresse
-"string"
+     - "string"
    * - deliveryAddress.city
      - LevPoststed
-"string"
+     - "string"
    * - deliveryAddress.city
      - Poststed
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - LevPostNr
-"string"
+     - "string"
    * - deliveryAddress.postalCode
      - Postnr
-"string"
+     - "string"
    * - email
      - Epost
-"string"
+     - "string"
    * - id
      - Id
-"string"
+     - "string"
    * - name
      - Navn
-"string"
+     - "string"
    * - organizationNumber
      - Organisasjonsnummer
-"string"
+     - "string"
    * - phoneNumber
      - Telefon
-"string"
+     - "string"
    * - phoneNumberMobile
      - Mobil
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - Gateadresse
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - Leveringsadresse
-"string"
+     - "string"
    * - physicalAddress.addressLine1
      - Postadresse
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - Gateadresse
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - Leveringsadresse2
-"string"
+     - "string"
    * - physicalAddress.addressLine2
      - Postadresse
-"string"
+     - "string"
    * - physicalAddress.city
      - LevPoststed
-"string"
+     - "string"
    * - physicalAddress.city
      - Poststed
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - LevPostNr
-"string"
+     - "string"
    * - physicalAddress.postalCode
      - Postnr
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - Gateadresse
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - Leveringsadresse
-"string"
+     - "string"
    * - postalAddress.addressLine1
      - Postadresse
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - Gateadresse
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - Leveringsadresse2
-"string"
+     - "string"
    * - postalAddress.addressLine2
      - Postadresse
-"string"
+     - "string"
    * - postalAddress.city
      - LevPoststed
-"string"
+     - "string"
    * - postalAddress.city
      - Poststed
-"string"
+     - "string"
    * - postalAddress.postalCode
      - LevPostNr
-"string"
+     - "string"
    * - postalAddress.postalCode
      - Postnr
-"string"
+     - "string"
    * - website
      - Url
-"string"
+     - "string"
 
 
 Tripletex Department to Tidsbanken Avdeling
@@ -411,10 +411,10 @@ The following properties are synchronized between a Tripletex Department and a T
      - Tidsbanken Data Type
    * - departmentNumber
      - sesam_avdelingId
-"string"
+     - "string"
    * - name
      - Navn
-"string"
+     - "string"
 
 
 Tripletex Employee to Tidsbanken Ansatt
@@ -450,58 +450,58 @@ The following properties are synchronized between a Tripletex Employee and a Tid
      - Tidsbanken Data Type
    * - address.addressLine1
      - Adresse
-"string"
+     - "string"
    * - address.city
      - Poststed
-"string"
+     - "string"
    * - address.postalCode
      - Postnummer
-"string"
+     - "string"
    * - dateOfBirth
      - Fodt
-"string"
+     - "string"
    * - department.id (Dependant on having wd:Q703534 in  Dependant on having wd:Q703534 in  Dependant on having wd:Q2366457 in  Dependant on having wd:Q703534 in  )
      - AvdelingId
-"string"
+     - "string"
    * - department.id
      - Tittel
-"string"
+     - "string"
    * - email
      - Epost
-"string"
+     - "string"
    * - employeeNumber
      - Id
-"string"
+     - "string"
    * - employeeNumber
      - sesam_ansattId
-"integer"
+     - "integer"
    * - firstName
      - Etternavn
-"string"
+     - "string"
    * - firstName
      - Fornavn
-"string"
+     - "string"
    * - firstName
      - Navn
-"string"
+     - "string"
    * - id
      - Id
-"integer"
+     - "integer"
    * - lastName
      - Etternavn
-"string"
+     - "string"
    * - lastName
      - Fornavn
-"string"
+     - "string"
    * - lastName
      - Navn
-"string"
+     - "string"
    * - phoneNumberHome
      - TlfPrivat
-"string"
+     - "string"
    * - phoneNumberMobile
      - Mobil
-"string"
+     - "string"
 
 
 Tripletex Project to Tidsbanken Prosjekt
@@ -520,29 +520,29 @@ The following properties are synchronized between a Tripletex Project and a Tids
      - Tidsbanken Data Type
    * - customer.id
      - KundeId
-"string"
+     - "string"
    * - department.id
      - AvdelingId
-"string"
+     - "string"
    * - endDate
      - AvsluttetDato
-"string"
+     - "string"
    * - isClosed
      - Avsluttet
-"string"
+     - "string"
    * - isClosed
      - InterntProsjekt
-"string"
+     - "string"
    * - isInternal
      - InterntProsjekt
-"string"
+     - "string"
    * - name
      - Navn
-"string"
+     - "string"
    * - projectManager.id
      - AnsvarligId
-"integer"
+     - "integer"
    * - startDate
      - StartDato
-"string"
+     - "string"
 
