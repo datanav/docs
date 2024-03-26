@@ -2,27 +2,27 @@
 Freshteam to Tidsbanken Dataflow
 ================================
 
-Generated: 2024-03-26 14:23:23
+Generated: 2024-03-26 14:23:48
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Freshteam to Tidsbanken. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Freshteam Department to  Avdeling
----------------------------------
-Every Freshteam Department will be synchronized with a  Avdeling.
+Freshteam Department to Tidsbanken Avdeling
+-------------------------------------------
+Every Freshteam Department will be synchronized with a Tidsbanken Avdeling.
 
-Once a link between a Freshteam Department and a  Avdeling is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Department and a Tidsbanken Avdeling is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Department and a  Avdeling:
+The following properties are synchronized between a Freshteam Department and a Tidsbanken Avdeling:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Department Property
-     -  Avdeling Property
-     -  Data Type
+     - Tidsbanken Avdeling Property
+     - Tidsbanken Data Type
    * - name
      - Navn
      - "string"
