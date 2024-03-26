@@ -2,7 +2,7 @@
 Tidsbanken to Superoffice Dataflow
 ==================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -44,7 +44,7 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Supe
      - "string"
    * - Fodt
      - BirthDate
-     - ["datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
+     - N/A
    * - Fornavn
      - Firstname
      - "string"
