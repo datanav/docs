@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-01-24 00:00:02
+Generated: 2024-03-26 00:00:01
 
 Introduction.
 ------------
@@ -57,4 +57,28 @@ The following properties are synchronized between a Businesscentral Employees an
    * - Businesscentral Employees Property
      -  Human Property
      -  Data Type
+   * - birthDate
+     - dateOfBirth
+     - "string"
+   * - city
+     - city
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - givenName
+     - firstName
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - personalEmail
+     - email
+     - "string"
+   * - postalCode
+     - postalCode
+     - "string"
+   * - surname
+     - lastName
+     - "string"
 
