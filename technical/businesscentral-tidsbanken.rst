@@ -2,7 +2,7 @@
 Businesscentral to Tidsbanken Dataflow
 ======================================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -25,46 +25,46 @@ The following properties are synchronized between a Businesscentral Customers co
      - Tidsbanken Data Type
    * - addressLine1
      - Gateadresse
-"string"
+     - "string"
    * - addressLine1
      - Leveringsadresse
-"string"
+     - "string"
    * - addressLine1
      - Postadresse
-"string"
+     - "string"
    * - addressLine2
      - Gateadresse
-"string"
+     - "string"
    * - addressLine2
      - Leveringsadresse2
-"string"
+     - "string"
    * - addressLine2
      - Postadresse
-"string"
+     - "string"
    * - city
      - LevPoststed
-"string"
+     - "string"
    * - city
      - Poststed
-"string"
+     - "string"
    * - displayName
      - Navn
-"string"
+     - "string"
    * - id
      - Id
-"string"
+     - "string"
    * - phoneNumber
      - Telefon
-"string"
+     - "string"
    * - postalCode
      - LevPostNr
-"string"
+     - "string"
    * - postalCode
      - Postnr
-"string"
+     - "string"
    * - website
      - Url
-"string"
+     - "string"
 
 
 Businesscentral Employees to Tidsbanken Ansatt
@@ -83,44 +83,44 @@ The following properties are synchronized between a Businesscentral Employees an
      - Tidsbanken Data Type
    * - birthDate
      - Fodt
-"string"
+     - "string"
    * - displayName
      - Etternavn
-"string"
+     - "string"
    * - displayName
      - Fornavn
-"string"
+     - "string"
    * - displayName
      - Navn
-"string"
+     - "string"
    * - email
      - Epost
-"string"
+     - "string"
    * - givenName
      - Etternavn
-"string"
+     - "string"
    * - givenName
      - Fornavn
-"string"
+     - "string"
    * - givenName
      - Navn
-"string"
+     - "string"
    * - jobTitle
      - AvdelingId
-"string"
+     - "string"
    * - jobTitle
      - Tittel
-"string"
+     - "string"
    * - mobilePhone
      - Mobil
-"string"
+     - "string"
    * - surname
      - Etternavn
-"string"
+     - "string"
    * - surname
      - Fornavn
-"string"
+     - "string"
    * - surname
      - Navn
-"string"
+     - "string"
 
