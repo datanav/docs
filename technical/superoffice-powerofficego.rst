@@ -2,39 +2,39 @@
 SuperOffice to Powerofficego Dataflow
 =====================================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:16:07
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Powerofficego. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-SuperOffice Contact to PowerOfficeGo Customers
+SuperOffice Contact to Powerofficego Customers
 ----------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a PowerOfficeGo Customers must be established.
+Before any synchronization can take place, a link between a SuperOffice Contact and a Powerofficego Customers must be established.
 
-A new PowerOfficeGo Customers will be created from a SuperOffice Contact if it is connected to a SuperOffice User, Person, Contact, Quoteline, or Quotealternative that is synchronized into PowerOfficeGo.
+A new Powerofficego Customers will be created from a SuperOffice Contact if it is connected to a SuperOffice User, Person, Contact, Quoteline, or Quotealternative that is synchronized into Powerofficego.
 
-A SuperOffice Contact will merge with a PowerOfficeGo Customers if one of the following property combinations match:
+A SuperOffice Contact will merge with a Powerofficego Customers if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - PowerOfficeGo Customers Property
+     - Powerofficego Customers Property
    * - Emails.Value
      - EmailAddress
 
-Once a link between a SuperOffice Contact and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a Powerofficego Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a PowerOfficeGo Customers:
+The following properties are synchronized between a SuperOffice Contact and a Powerofficego Customers:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - PowerOfficeGo Customers Property
-     - PowerOfficeGo Data Type
+     - Powerofficego Customers Property
+     - Powerofficego Data Type
    * - Address.Postal.Address1
      - MailAddress.AddressLine1
      - "string"
@@ -112,32 +112,32 @@ The following properties are synchronized between a SuperOffice Contact and a Po
      - "string"
 
 
-SuperOffice Person to  Contactperson
-------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a  Contactperson must be established.
+SuperOffice Person to Powerofficego Contactperson
+-------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a Powerofficego Contactperson must be established.
 
-A new  Contactperson will be created from a SuperOffice Person if it is connected to a SuperOffice Quotealternative that is synchronized into .
+A new Powerofficego Contactperson will be created from a SuperOffice Person if it is connected to a SuperOffice Quotealternative that is synchronized into Powerofficego.
 
-A SuperOffice Person will merge with a  Contactperson if one of the following property combinations match:
+A SuperOffice Person will merge with a Powerofficego Contactperson if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     -  Contactperson Property
+     - Powerofficego Contactperson Property
    * - Emails.Value
      - emailAddress
 
-Once a link between a SuperOffice Person and a  Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a Powerofficego Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a  Contactperson:
+The following properties are synchronized between a SuperOffice Person and a Powerofficego Contactperson:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     -  Contactperson Property
-     -  Data Type
+     - Powerofficego Contactperson Property
+     - Powerofficego Data Type
    * - Address.Street.Address1
      - address1
      - "string"
@@ -176,30 +176,30 @@ The following properties are synchronized between a SuperOffice Person and a  Co
      - "integer"
 
 
-SuperOffice User to  Contactperson
-----------------------------------
-Before any synchronization can take place, a link between a SuperOffice User and a  Contactperson must be established.
+SuperOffice User to Powerofficego Contactperson
+-----------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice User and a Powerofficego Contactperson must be established.
 
-A SuperOffice User will merge with a  Contactperson if one of the following property combinations match:
+A SuperOffice User will merge with a Powerofficego Contactperson if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     -  Contactperson Property
+     - Powerofficego Contactperson Property
    * - personEmail
      - emailAddress
 
-Once a link between a SuperOffice User and a  Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice User and a Powerofficego Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice User and a  Contactperson:
+The following properties are synchronized between a SuperOffice User and a Powerofficego Contactperson:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     -  Contactperson Property
-     -  Data Type
+     - Powerofficego Contactperson Property
+     - Powerofficego Data Type
    * - contactId
      - partyId
      - "integer"
@@ -214,40 +214,40 @@ The following properties are synchronized between a SuperOffice User and a  Cont
      - "string"
 
 
-SuperOffice Contact to  Contactperson
--------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a  Contactperson must be established.
+SuperOffice Contact to Powerofficego Contactperson
+--------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Contact and a Powerofficego Contactperson must be established.
 
-A new  Contactperson will be created from a SuperOffice Contact if it is connected to a SuperOffice Quotealternative that is synchronized into .
+A new Powerofficego Contactperson will be created from a SuperOffice Contact if it is connected to a SuperOffice Quotealternative that is synchronized into Powerofficego.
 
-Once a link between a SuperOffice Contact and a  Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a Powerofficego Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a  Contactperson:
+The following properties are synchronized between a SuperOffice Contact and a Powerofficego Contactperson:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     -  Contactperson Property
-     -  Data Type
+     - Powerofficego Contactperson Property
+     - Powerofficego Data Type
 
 
-SuperOffice Contact to PowerOfficeGo Customers person
+SuperOffice Contact to Powerofficego Customers person
 -----------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a PowerOfficeGo Customers person must be established.
+Before any synchronization can take place, a link between a SuperOffice Contact and a Powerofficego Customers person must be established.
 
-A new PowerOfficeGo Customers person will be created from a SuperOffice Contact if it is connected to a SuperOffice User, Person, Contact, Quoteline, or Quotealternative that is synchronized into PowerOfficeGo.
+A new Powerofficego Customers person will be created from a SuperOffice Contact if it is connected to a SuperOffice User, Person, Contact, Quoteline, or Quotealternative that is synchronized into Powerofficego.
 
-Once a link between a SuperOffice Contact and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a PowerOfficeGo Customers person:
+The following properties are synchronized between a SuperOffice Contact and a Powerofficego Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - PowerOfficeGo Customers person Property
-     - PowerOfficeGo Data Type
+     - Powerofficego Customers person Property
+     - Powerofficego Data Type
    * - Address.Postal.Address1
      - MailAddress.AddressLine1
      - "string"
@@ -349,22 +349,22 @@ The following properties are synchronized between a SuperOffice Person and a Pow
      - PowerOfficeGo Data Type
 
 
-SuperOffice Quotealternative to  Salesorders
---------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Quotealternative and a  Salesorders must be established.
+SuperOffice Quotealternative to Powerofficego Salesorders
+---------------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Powerofficego Salesorders must be established.
 
-A new  Salesorders will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into .
+A new Powerofficego Salesorders will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into Powerofficego.
 
-Once a link between a SuperOffice Quotealternative and a  Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quotealternative and a Powerofficego Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quotealternative and a  Salesorders:
+The following properties are synchronized between a SuperOffice Quotealternative and a Powerofficego Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quotealternative Property
-     -  Salesorders Property
-     -  Data Type
+     - Powerofficego Salesorders Property
+     - Powerofficego Data Type
    * - TotalPrice
      - TotalAmount
      - "string"
@@ -373,20 +373,20 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
 
 
-SuperOffice Product to  Product
--------------------------------
-Every SuperOffice Product will be synchronized with a  Product.
+SuperOffice Product to Powerofficego Product
+--------------------------------------------
+Every SuperOffice Product will be synchronized with a Powerofficego Product.
 
-Once a link between a SuperOffice Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Product and a Powerofficego Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Product and a  Product:
+The following properties are synchronized between a SuperOffice Product and a Powerofficego Product:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Product Property
-     -  Product Property
-     -  Data Type
+     - Powerofficego Product Property
+     - Powerofficego Data Type
    * - Description
      - Description
      - "string"
@@ -446,20 +446,20 @@ The following properties are synchronized between a SuperOffice Product and a  P
      - "string"
 
 
-SuperOffice Project to  Projects
---------------------------------
-Every SuperOffice Project will be synchronized with a  Projects.
+SuperOffice Project to Powerofficego Projects
+---------------------------------------------
+Every SuperOffice Project will be synchronized with a Powerofficego Projects.
 
-Once a link between a SuperOffice Project and a  Projects is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Project and a Powerofficego Projects is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Project and a  Projects:
+The following properties are synchronized between a SuperOffice Project and a Powerofficego Projects:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Project Property
-     -  Projects Property
-     -  Data Type
+     - Powerofficego Projects Property
+     - Powerofficego Data Type
    * - Associate.AssociateId
      - ProjectManagerEmployeeId
      - "integer"
@@ -468,20 +468,20 @@ The following properties are synchronized between a SuperOffice Project and a  P
      - "string"
 
 
-SuperOffice Quoteline to  Salesorderlines
------------------------------------------
-Every SuperOffice Quoteline will be synchronized with a  Salesorderlines.
+SuperOffice Quoteline to Powerofficego Salesorderlines
+------------------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Powerofficego Salesorderlines.
 
-Once a link between a SuperOffice Quoteline and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quoteline and a Powerofficego Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quoteline and a  Salesorderlines:
+The following properties are synchronized between a SuperOffice Quoteline and a Powerofficego Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quoteline Property
-     -  Salesorderlines Property
-     -  Data Type
+     - Powerofficego Salesorderlines Property
+     - Powerofficego Data Type
    * - DiscountPercent
      - Allowance
      - "float"
