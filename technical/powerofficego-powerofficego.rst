@@ -2,7 +2,7 @@
 Powerofficego to Powerofficego Dataflow
 =======================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -209,7 +209,7 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
    * - dateOfBirth
      - DateOfBirth
-     - ["if",["gt",["abs",["datetime-diff", "year", "_.",["now"]]], 100], "1935-01-01",["datetime-format", "%Y-%m-%d", "_."]]
+     - N/A
    * - emailAddress
      - EmailAddress
      - "string"
@@ -353,7 +353,7 @@ The following properties are synchronized between a Powerofficego Suppliers pers
      - Powerofficego Data Type
    * - DateOfBirth
      - dateOfBirth
-     - ["if",["gt",["abs",["datetime-diff", "year", "_.",["now"]]], 100], "1935-01-01",["datetime-format", "%Y-%m-%d", "_."]]
+     - N/A
    * - EmailAddress
      - emailAddress
      - "string"
