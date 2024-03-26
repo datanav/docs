@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:16
 
 Introduction
 ------------
@@ -73,30 +73,30 @@ The following properties are synchronized between a SuperOffice Person and a Wix
      - "string"
 
 
-SuperOffice User to  Contacts
------------------------------
-Before any synchronization can take place, a link between a SuperOffice User and a  Contacts must be established.
+SuperOffice User to Wix Contacts
+--------------------------------
+Before any synchronization can take place, a link between a SuperOffice User and a Wix Contacts must be established.
 
-A SuperOffice User will merge with a  Contacts if one of the following property combinations match:
+A SuperOffice User will merge with a Wix Contacts if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     -  Contacts Property
+     - Wix Contacts Property
    * - personEmail
      - primaryInfo.email
 
-Once a link between a SuperOffice User and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice User and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice User and a  Contacts:
+The following properties are synchronized between a SuperOffice User and a Wix Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     -  Contacts Property
-     -  Data Type
+     - Wix Contacts Property
+     - Wix Data Type
    * - firstName
      - info.name.first
      - "string"
