@@ -2,7 +2,7 @@
 Tidsbanken to Zendesk Dataflow
 ==============================
 
-Generated: 2024-03-26 14:24:14
+Generated: 2024-03-26 14:34:37
 
 Introduction
 ------------
@@ -39,4 +39,36 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Zend
    * - TlfPrivat
      - phone
      - "string"
+
+
+Tidsbanken Avdeling to Zendesk Organizations
+--------------------------------------------
+Every Tidsbanken Avdeling will be synchronized with a Zendesk Organizations.
+
+Once a link between a Tidsbanken Avdeling and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Avdeling and a Zendesk Organizations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     - Zendesk Organizations Property
+     - Zendesk Data Type
+
+
+Tidsbanken Kunde to Zendesk Organizations
+-----------------------------------------
+Every Tidsbanken Kunde will be synchronized with a Zendesk Organizations.
+
+Once a link between a Tidsbanken Kunde and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Kunde and a Zendesk Organizations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Kunde Property
+     - Zendesk Organizations Property
+     - Zendesk Data Type
 
