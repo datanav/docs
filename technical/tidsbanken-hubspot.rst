@@ -2,7 +2,7 @@
 Tidsbanken to Hubspot Dataflow
 ==============================
 
-Generated: 2024-03-26 14:34:37
+Generated: 2024-03-26 14:34:55
 
 Introduction
 ------------
@@ -76,6 +76,9 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Hu
    * - Tidsbanken Avdeling Property
      - Hubspot Company Property
      - Hubspot Data Type
+   * - Navn
+     - properties.name
+     - "string"
 
 
 Tidsbanken Kunde to Hubspot Company
@@ -92,4 +95,37 @@ The following properties are synchronized between a Tidsbanken Kunde and a Hubsp
    * - Tidsbanken Kunde Property
      - Hubspot Company Property
      - Hubspot Data Type
+   * - Gateadresse
+     - properties.address
+     - "string"
+   * - Id
+     - id
+     - "string"
+   * - LevPostNr
+     - properties.zip
+     - "string"
+   * - LevPoststed
+     - properties.city
+     - "string"
+   * - Leveringsadresse
+     - properties.address
+     - "string"
+   * - Leveringsadresse2
+     - properties.address2
+     - "string"
+   * - Navn
+     - properties.name
+     - "string"
+   * - Postadresse
+     - properties.address2
+     - "string"
+   * - Postnr
+     - properties.zip
+     - "string"
+   * - Poststed
+     - properties.city
+     - "string"
+   * - Telefon
+     - properties.phone
+     - "string"
 
