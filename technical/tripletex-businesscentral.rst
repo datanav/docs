@@ -2,7 +2,7 @@
 Tripletex to Businesscentral Dataflow
 =====================================
 
-Generated: 2024-03-26 14:14:31
+Generated: 2024-03-26 14:24:41
 
 Introduction
 ------------
@@ -72,20 +72,20 @@ The following properties are synchronized between a Tripletex Customer and a Bus
      - Businesscentral Data Type
 
 
-Tripletex Customer to  Companies
---------------------------------
-Every Tripletex Customer will be synchronized with a  Companies.
+Tripletex Customer to Businesscentral Companies
+-----------------------------------------------
+Every Tripletex Customer will be synchronized with a Businesscentral Companies.
 
-Once a link between a Tripletex Customer and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Businesscentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a  Companies:
+The following properties are synchronized between a Tripletex Customer and a Businesscentral Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     -  Companies Property
-     -  Data Type
+     - Businesscentral Companies Property
+     - Businesscentral Data Type
 
 
 Tripletex Department to  Companies
