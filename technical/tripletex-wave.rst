@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -79,7 +79,7 @@ Tripletex Customer to Wave Customer person
 ------------------------------------------
 Before any synchronization can take place, a link between a Tripletex Customer and a Wave Customer person must be established.
 
-A new Wave Customer person will be created from a Tripletex Customer if it is connected to a Tripletex Order, Contact, Invoice, Customer, Employee, Supplier, Orderline, or Department that is synchronized into Wave.
+A new Wave Customer person will be created from a Tripletex Customer if it is connected to a Tripletex Order, Contact, Invoice, Customer, Employee, Supplier, Orderline, Department, Customer-human, or Customer-person that is synchronized into Wave.
 
 Once a link between a Tripletex Customer and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -193,45 +193,6 @@ The following properties are synchronized between a Tripletex Customer and a Wav
    * - postalAddress.postalCode
      - shippingDetails.address.postalCode
      - "string"
-
-
-Tripletex Department to Wave Customer person
---------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Department and a Wave Customer person must be established.
-
-A new Wave Customer person will be created from a Tripletex Department if it is connected to a Tripletex Contact, Customer, Employee, Supplier, or Department that is synchronized into Wave.
-
-Once a link between a Tripletex Department and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Department and a Wave Customer person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Department Property
-     - Wave Customer person Property
-     - Wave Data Type
-
-
-Tripletex Department to Wave Customer
--------------------------------------
-Before any synchronization can take place, a link between a Tripletex Department and a Wave Customer must be established.
-
-A new Wave Customer will be created from a Tripletex Department if it is connected to a Tripletex Contact, Customer, Employee, Supplier, or Department that is synchronized into Wave.
-
-Once a link between a Tripletex Department and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Department and a Wave Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Department Property
-     - Wave Customer Property
-     - Wave Data Type
-   * - name
-     - name
-     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
 
 
 Tripletex Customer to Wave Customer
@@ -417,78 +378,5 @@ The following properties are synchronized between a Tripletex Product and a Wave
      - "string"
    * - priceExcludingVatCurrency
      - unitPrice
-     - "string"
-
-
-Tripletex Supplier to  Vendor
------------------------------
-Every Tripletex Supplier will be synchronized with a  Vendor.
-
-Once a link between a Tripletex Supplier and a  Vendor is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Supplier and a  Vendor:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Supplier Property
-     -  Vendor Property
-     -  Data Type
-   * - deliveryAddress.addressLine1
-     - address.addressLine1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - address.addressLine2
-     - "string"
-   * - deliveryAddress.changes
-     - address.city
-     - "string"
-   * - deliveryAddress.city
-     - address.city
-     - "string"
-   * - deliveryAddress.city
-     - address.country.code
-     - "string"
-   * - deliveryAddress.country.id
-     - address.country.code
-     - "string"
-   * - deliveryAddress.postalCode
-     - address.postalCode
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - phoneNumber
-     - phone
-     - "string"
-   * - physicalAddress.addressLine1
-     - address.addressLine1
-     - "string"
-   * - physicalAddress.addressLine2
-     - address.addressLine2
-     - "string"
-   * - physicalAddress.city
-     - address.city
-     - "string"
-   * - physicalAddress.country.id
-     - address.country.code
-     - "string"
-   * - physicalAddress.postalCode
-     - address.postalCode
-     - "string"
-   * - postalAddress.addressLine1
-     - address.addressLine1
-     - "string"
-   * - postalAddress.addressLine2
-     - address.addressLine2
-     - "string"
-   * - postalAddress.city
-     - address.city
-     - "string"
-   * - postalAddress.country.id
-     - address.country.code
-     - "string"
-   * - postalAddress.postalCode
-     - address.postalCode
      - "string"
 
