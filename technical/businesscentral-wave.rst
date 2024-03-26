@@ -2,7 +2,7 @@
 Businesscentral to Wave Dataflow
 ================================
 
-Generated: 2024-03-26 17:27:49
+Generated: 2024-03-26 17:30:45
 
 Introduction
 ------------
@@ -61,61 +61,61 @@ The following properties are synchronized between a Businesscentral Customers co
      - Wave Data Type
    * - address.city
      - address.city
-"string"
+     - "string"
    * - address.city
      - shippingDetails.address.city
-"string"
+     - "string"
    * - address.countryLetterCode
      - address.country.code
-"string"
+     - "string"
    * - address.countryLetterCode
      - shippingDetails.address.country.code
-"string"
+     - "string"
    * - address.postalCode
      - address.postalCode
-"string"
+     - "string"
    * - address.postalCode
      - shippingDetails.address.postalCode
-"string"
+     - "string"
    * - addressLine1
      - address.addressLine1
-"string"
+     - "string"
    * - addressLine1
      - shippingDetails.address.addressLine1
-"string"
+     - "string"
    * - addressLine2
      - address.addressLine2
-"string"
+     - "string"
    * - addressLine2
      - shippingDetails.address.addressLine2
-"string"
+     - "string"
    * - city
      - address.city
-"string"
+     - "string"
    * - city
      - shippingDetails.address.city
-"string"
+     - "string"
    * - country
      - address.country.code
-"string"
+     - "string"
    * - country
      - shippingDetails.address.country.code
-"string"
+     - "string"
    * - displayName
      - name
-["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
+     - ["if",["or",["is-empty","_."],["eq","","_."]],"-","_."]
    * - phoneNumber
      - phone
-"string"
+     - "string"
    * - postalCode
      - address.postalCode
-"string"
+     - "string"
    * - postalCode
      - shippingDetails.address.postalCode
-"string"
+     - "string"
    * - website
      - website
-"string"
+     - "string"
 
 
 Businesscentral Items to Wave Product
@@ -134,16 +134,16 @@ The following properties are synchronized between a Businesscentral Items and a 
      - Wave Data Type
    * - displayName
      - name
-"string"
+     - "string"
    * - displayName.string
      - name
-"string"
+     - "string"
    * - displayName2
      - name
-"string"
+     - "string"
    * - unitPrice
      - unitPrice
-"string"
+     - "string"
 
 
 Businesscentral Salesorders to Wave Invoice
@@ -162,8 +162,8 @@ The following properties are synchronized between a Businesscentral Salesorders 
      - Wave Data Type
    * - currencyId
      - currency.code
-"string"
+     - "string"
    * - customerId
      - customer.id
-"string"
+     - "string"
 
