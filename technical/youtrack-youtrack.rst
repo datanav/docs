@@ -2,7 +2,7 @@
 YouTrack to Youtrack Dataflow
 =============================
 
-Generated: 2024-03-26 14:30:40
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -35,16 +35,16 @@ The following properties are synchronized between a YouTrack Hubprojects and a Y
      - Youtrack Data Type
    * - organization.id
      - team.id
-     - "string"
+"string"
    * - owner.id
      - transitiveProjectRoles.id
-     - "string"
+"string"
    * - team.id
      - organization.id
-     - "string"
+"string"
    * - transitiveProjectRoles.id
      - owner.id
-     - "string"
+"string"
 
 
 YouTrack Users to Youtrack Users
@@ -73,130 +73,130 @@ The following properties are synchronized between a YouTrack Users and a Youtrac
      - Youtrack Data Type
    * - groups.id
      - teams.id
-     - "string"
+"string"
    * - groups.id
      - transitiveGroups.id
-     - "string"
+"string"
    * - groups.id
      - transitiveTeams.id
-     - "string"
+"string"
    * - organizationRoles.id
      - projectRoles.id
-     - "string"
+"string"
    * - organizationRoles.id
      - sourcedOrganizationRoles.id
-     - "string"
+"string"
    * - organizationRoles.id
      - sourcedProjectRoles.id
-     - "string"
+"string"
    * - organizationRoles.id
      - transitiveOrganizationRoles.id
-     - "string"
+"string"
    * - organizationRoles.id
      - transitiveProjectRoles.id
-     - "string"
+"string"
    * - projectRoles.id
      - organizationRoles.id
-     - "string"
+"string"
    * - projectRoles.id
      - sourcedOrganizationRoles.id
-     - "string"
+"string"
    * - projectRoles.id
      - sourcedProjectRoles.id
-     - "string"
+"string"
    * - projectRoles.id
      - transitiveOrganizationRoles.id
-     - "string"
+"string"
    * - projectRoles.id
      - transitiveProjectRoles.id
-     - "string"
+"string"
    * - sourcedOrganizationRoles.id
      - organizationRoles.id
-     - "string"
+"string"
    * - sourcedOrganizationRoles.id
      - projectRoles.id
-     - "string"
+"string"
    * - sourcedOrganizationRoles.id
      - sourcedProjectRoles.id
-     - "string"
+"string"
    * - sourcedOrganizationRoles.id
      - transitiveOrganizationRoles.id
-     - "string"
+"string"
    * - sourcedOrganizationRoles.id
      - transitiveProjectRoles.id
-     - "string"
+"string"
    * - sourcedProjectRoles.id
      - organizationRoles.id
-     - "string"
+"string"
    * - sourcedProjectRoles.id
      - projectRoles.id
-     - "string"
+"string"
    * - sourcedProjectRoles.id
      - sourcedOrganizationRoles.id
-     - "string"
+"string"
    * - sourcedProjectRoles.id
      - transitiveOrganizationRoles.id
-     - "string"
+"string"
    * - sourcedProjectRoles.id
      - transitiveProjectRoles.id
-     - "string"
+"string"
    * - teams.id
      - groups.id
-     - "string"
+"string"
    * - teams.id
      - transitiveGroups.id
-     - "string"
+"string"
    * - teams.id
      - transitiveTeams.id
-     - "string"
+"string"
    * - transitiveGroups.id
      - groups.id
-     - "string"
+"string"
    * - transitiveGroups.id
      - teams.id
-     - "string"
+"string"
    * - transitiveGroups.id
      - transitiveTeams.id
-     - "string"
+"string"
    * - transitiveOrganizationRoles.id
      - organizationRoles.id
-     - "string"
+"string"
    * - transitiveOrganizationRoles.id
      - projectRoles.id
-     - "string"
+"string"
    * - transitiveOrganizationRoles.id
      - sourcedOrganizationRoles.id
-     - "string"
+"string"
    * - transitiveOrganizationRoles.id
      - sourcedProjectRoles.id
-     - "string"
+"string"
    * - transitiveOrganizationRoles.id
      - transitiveProjectRoles.id
-     - "string"
+"string"
    * - transitiveProjectRoles.id
      - organizationRoles.id
-     - "string"
+"string"
    * - transitiveProjectRoles.id
      - projectRoles.id
-     - "string"
+"string"
    * - transitiveProjectRoles.id
      - sourcedOrganizationRoles.id
-     - "string"
+"string"
    * - transitiveProjectRoles.id
      - sourcedProjectRoles.id
-     - "string"
+"string"
    * - transitiveProjectRoles.id
      - transitiveOrganizationRoles.id
-     - "string"
+"string"
    * - transitiveTeams.id
      - groups.id
-     - "string"
+"string"
    * - transitiveTeams.id
      - teams.id
-     - "string"
+"string"
    * - transitiveTeams.id
      - transitiveGroups.id
-     - "string"
+"string"
 
 
 YouTrack Groups to Youtrack Usergroups
@@ -395,67 +395,67 @@ The following properties are synchronized between a YouTrack Issues and a Youtra
      - Youtrack Data Type
    * - attachments.id
      - owner.id
-     - "string"
+"string"
    * - attachments.id
      - projectRoles.id
-     - "string"
+"string"
    * - attachments.id
      - projectType.id
-     - "string"
+"string"
    * - attachments.id
      - resources.id
-     - "string"
+"string"
    * - attachments.id
      - team.id
-     - "string"
+"string"
    * - attachments.id
      - transitiveProjectRoles.id
-     - "string"
+"string"
    * - comments.id
      - owner.id
-     - "string"
+"string"
    * - comments.id
      - projectRoles.id
-     - "string"
+"string"
    * - comments.id
      - projectType.id
-     - "string"
+"string"
    * - comments.id
      - resources.id
-     - "string"
+"string"
    * - comments.id
      - team.id
-     - "string"
+"string"
    * - comments.id
      - transitiveProjectRoles.id
-     - "string"
+"string"
    * - created
      - creationTime
-     - "string"
+"string"
    * - externalIssue.id
      - projectType.id
-     - "string"
+"string"
    * - links.id
      - projectType.id
-     - "string"
+"string"
    * - parent.id
      - projectType.id
-     - "string"
+"string"
    * - project.id
      - projectType.id
-     - "string"
+"string"
    * - reporter.id
      - owner.id
-     - "string"
+"string"
    * - reporter.id
      - team.id
-     - "string"
+"string"
    * - reporter.id
      - transitiveProjectRoles.id
-     - "string"
+"string"
    * - subtasks.id
      - projectType.id
-     - "string"
+"string"
 
 
 YouTrack Organizations to Youtrack Groups
@@ -474,7 +474,7 @@ The following properties are synchronized between a YouTrack Organizations and a
      - Youtrack Data Type
    * - name
      - name
-     - "string"
+"string"
 
 
 YouTrack Projectroles to Youtrack Hubprojects
@@ -493,22 +493,22 @@ The following properties are synchronized between a YouTrack Projectroles and a 
      - Youtrack Data Type
    * - owner.id
      - owner.id
-     - "string"
+"string"
    * - owner.id
      - team.id
-     - "string"
+"string"
    * - owner.id
      - transitiveProjectRoles.id
-     - "string"
+"string"
    * - project.id
      - projectType.id
-     - "string"
+"string"
    * - role.id
      - projectRoles.id
-     - "string"
+"string"
    * - role.id
      - team.id
-     - "string"
+"string"
 
 
 YouTrack Roles to Youtrack Organizationroles
@@ -543,7 +543,7 @@ The following properties are synchronized between a YouTrack Usergroups and a Yo
      - Youtrack Data Type
    * - name
      - name
-     - "string"
+"string"
 
 
 YouTrack Workitems to Youtrack Hubprojects
@@ -562,17 +562,17 @@ The following properties are synchronized between a YouTrack Workitems and a You
      - Youtrack Data Type
    * - author.id
      - owner.id
-     - "string"
+"string"
    * - author.id
      - transitiveProjectRoles.id
-     - "string"
+"string"
    * - creator.id
      - owner.id
-     - "string"
+"string"
    * - creator.id
      - transitiveProjectRoles.id
-     - "string"
+"string"
    * - updated
      - creationTime
-     - "string"
+"string"
 
