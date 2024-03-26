@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -46,7 +46,7 @@ The following properties are synchronized between a HubSpot Contact and a Triple
      - "string"
    * - properties.mobilephone
      - phoneNumberMobile
-     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - N/A
    * - properties.phone
      - phoneNumberWork
      - "string"
@@ -90,7 +90,7 @@ The following properties are synchronized between a HubSpot Contact and a Triple
      - "integer"
    * - properties.date_of_birth
      - dateOfBirth
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - properties.email
      - email
      - "string"
@@ -102,7 +102,7 @@ The following properties are synchronized between a HubSpot Contact and a Triple
      - "string"
    * - properties.mobilephone
      - phoneNumberMobile
-     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - N/A
    * - properties.phone
      - phoneNumberWork
      - "string"
@@ -391,10 +391,10 @@ The following properties are synchronized between a HubSpot Deal and a Tripletex
      - Tripletex Data Type
    * - properties.closedate
      - deliveryDate
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - properties.closedate
      - orderDate
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - properties.deal_currency_code
      - currency.id
      - "integer"
@@ -434,7 +434,7 @@ The following properties are synchronized between a HubSpot Lineitem and a Tripl
      - "float"
    * - properties.quantity
      - count
-     - ["integer", ["decimal", "_."]]
+     - N/A
 
 
 HubSpot Product to Tripletex Product
