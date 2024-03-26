@@ -2,7 +2,7 @@
 Asana to Youtrack Dataflow
 ==========================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -57,7 +57,7 @@ The following properties are synchronized between a Asana Teams and a Youtrack G
      - Youtrack Data Type
    * - name
      - name
-"string"
+     - "string"
 
 
 Asana Workspaces to Youtrack Groups
@@ -76,5 +76,5 @@ The following properties are synchronized between a Asana Workspaces and a Youtr
      - Youtrack Data Type
    * - name
      - name
-"string"
+     - "string"
 
