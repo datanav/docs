@@ -2,51 +2,9 @@
 Zendesk to  Dataflow
 ====================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:04
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Zendesk to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Zendesk Organizations to Wave Customer person
----------------------------------------------
-Before any synchronization can take place, a link between a Zendesk Organizations and a Wave Customer person must be established.
-
-A new Wave Customer person will be created from a Zendesk Organizations if it is connected to a Zendesk Users, Organisations, or Organizations that is synchronized into Wave.
-
-Once a link between a Zendesk Organizations and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Organizations and a Wave Customer person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Organizations Property
-     - Wave Customer person Property
-     - Wave Data Type
-
-
-Zendesk Organizations to Wave Customer
---------------------------------------
-Before any synchronization can take place, a link between a Zendesk Organizations and a Wave Customer must be established.
-
-A new Wave Customer will be created from a Zendesk Organizations if it is connected to a Zendesk Users, Organisations, or Organizations that is synchronized into Wave.
-
-Once a link between a Zendesk Organizations and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Organizations and a Wave Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Organizations Property
-     - Wave Customer Property
-     - Wave Data Type
-   * - name
-     - name
-     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
-   * - url
-     - website
-     - "string"
-
