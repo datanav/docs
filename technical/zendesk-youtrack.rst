@@ -2,62 +2,62 @@
 Zendesk to Youtrack Dataflow
 ============================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 14:30:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Zendesk to Youtrack. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Zendesk Organizations to  Groups
---------------------------------
-Every Zendesk Organizations will be synchronized with a  Groups.
+Zendesk Organizations to Youtrack Groups
+----------------------------------------
+Every Zendesk Organizations will be synchronized with a Youtrack Groups.
 
-Once a link between a Zendesk Organizations and a  Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Organizations and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Organizations and a  Groups:
+The following properties are synchronized between a Zendesk Organizations and a Youtrack Groups:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Organizations Property
-     -  Groups Property
-     -  Data Type
+     - Youtrack Groups Property
+     - Youtrack Data Type
    * - name
      - name
      - "string"
 
 
-Zendesk Ticketcomments to  Hubprojects
---------------------------------------
-Every Zendesk Ticketcomments will be synchronized with a  Hubprojects.
+Zendesk Ticketcomments to Youtrack Hubprojects
+----------------------------------------------
+Every Zendesk Ticketcomments will be synchronized with a Youtrack Hubprojects.
 
-Once a link between a Zendesk Ticketcomments and a  Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Ticketcomments and a Youtrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Ticketcomments and a  Hubprojects:
+The following properties are synchronized between a Zendesk Ticketcomments and a Youtrack Hubprojects:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Ticketcomments Property
-     -  Hubprojects Property
-     -  Data Type
+     - Youtrack Hubprojects Property
+     - Youtrack Data Type
 
 
-Zendesk Tickets to  Hubprojects
--------------------------------
-Every Zendesk Tickets will be synchronized with a  Hubprojects.
+Zendesk Tickets to Youtrack Hubprojects
+---------------------------------------
+Every Zendesk Tickets will be synchronized with a Youtrack Hubprojects.
 
-Once a link between a Zendesk Tickets and a  Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Tickets and a Youtrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Tickets and a  Hubprojects:
+The following properties are synchronized between a Zendesk Tickets and a Youtrack Hubprojects:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Tickets Property
-     -  Hubprojects Property
-     -  Data Type
+     - Youtrack Hubprojects Property
+     - Youtrack Data Type
 
 
 Zendesk Tickets to Youtrack Issues
