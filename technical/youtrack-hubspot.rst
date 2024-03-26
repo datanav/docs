@@ -2,7 +2,7 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -104,25 +104,6 @@ The following properties are synchronized between a YouTrack Usergroups and a  C
      -  Data Type
    * - name
      - properties.name
-     - "string"
-
-
-YouTrack Issues to  Ticket
---------------------------
-Every YouTrack Issues will be synchronized with a  Ticket.
-
-Once a link between a YouTrack Issues and a  Ticket is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Issues and a  Ticket:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Issues Property
-     -  Ticket Property
-     -  Data Type
-   * - reporter.id
-     - properties.hubspot_owner_id
      - "string"
 
 
