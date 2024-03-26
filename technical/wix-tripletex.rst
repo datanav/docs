@@ -2,37 +2,37 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:49
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wix.com Contacts to  Employee
------------------------------
-Before any synchronization can take place, a link between a Wix.com Contacts and a  Employee must be established.
+Wix.com Contacts to Tripletex Employee
+--------------------------------------
+Before any synchronization can take place, a link between a Wix.com Contacts and a Tripletex Employee must be established.
 
-A Wix.com Contacts will merge with a  Employee if one of the following property combinations match:
+A Wix.com Contacts will merge with a Tripletex Employee if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     -  Employee Property
+     - Tripletex Employee Property
    * - primaryInfo.email
      - email
 
-Once a link between a Wix.com Contacts and a  Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a  Employee:
+The following properties are synchronized between a Wix.com Contacts and a Tripletex Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     -  Employee Property
-     -  Data Type
+     - Tripletex Employee Property
+     - Tripletex Data Type
    * - info.emails
      - email
      - "string"
@@ -62,80 +62,80 @@ The following properties are synchronized between a Wix.com Contacts and a  Empl
      - "string"
 
 
-Wix.com Members to  Contact
----------------------------
-Before any synchronization can take place, a link between a Wix.com Members and a  Contact must be established.
-
-A Wix.com Members will merge with a  Contact if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Members Property
-     -  Contact Property
-   * - loginEmail
-     - email
-
-Once a link between a Wix.com Members and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Members and a  Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Members Property
-     -  Contact Property
-     -  Data Type
-   * - loginEmail
-     - email
-     - "string"
-
-
-Wix.com Members to  Employee
-----------------------------
-Before any synchronization can take place, a link between a Wix.com Members and a  Employee must be established.
-
-A Wix.com Members will merge with a  Employee if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Members Property
-     -  Employee Property
-   * - loginEmail
-     - email
-
-Once a link between a Wix.com Members and a  Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Members and a  Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Members Property
-     -  Employee Property
-     -  Data Type
-   * - loginEmail
-     - email
-     - "string"
-
-
-Wix.com Contacts to  Customer person
+Wix.com Members to Tripletex Contact
 ------------------------------------
-Before any synchronization can take place, a link between a Wix.com Contacts and a  Customer person must be established.
+Before any synchronization can take place, a link between a Wix.com Members and a Tripletex Contact must be established.
 
-A new  Customer person will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into .
+A Wix.com Members will merge with a Tripletex Contact if one of the following property combinations match:
 
-Once a link between a Wix.com Contacts and a  Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+.. list-table::
+   :header-rows: 1
 
-The following properties are synchronized between a Wix.com Contacts and a  Customer person:
+   * - Wix.com Members Property
+     - Tripletex Contact Property
+   * - loginEmail
+     - email
+
+Once a link between a Wix.com Members and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Members and a Tripletex Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
+     - Tripletex Contact Property
+     - Tripletex Data Type
+   * - loginEmail
+     - email
+     - "string"
+
+
+Wix.com Members to Tripletex Employee
+-------------------------------------
+Before any synchronization can take place, a link between a Wix.com Members and a Tripletex Employee must be established.
+
+A Wix.com Members will merge with a Tripletex Employee if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
+     - Tripletex Employee Property
+   * - loginEmail
+     - email
+
+Once a link between a Wix.com Members and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Members and a Tripletex Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
+     - Tripletex Employee Property
+     - Tripletex Data Type
+   * - loginEmail
+     - email
+     - "string"
+
+
+Wix.com Contacts to Tripletex Customer person
+---------------------------------------------
+Before any synchronization can take place, a link between a Wix.com Contacts and a Tripletex Customer person must be established.
+
+A new Tripletex Customer person will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into Tripletex.
+
+Once a link between a Wix.com Contacts and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Contacts and a Tripletex Customer person:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     -  Customer person Property
-     -  Data Type
+     - Tripletex Customer person Property
+     - Tripletex Data Type
    * - info.name.first
      - name
      - "string"
@@ -150,51 +150,51 @@ The following properties are synchronized between a Wix.com Contacts and a  Cust
      - "string"
 
 
-Wix.com Contacts to  Customer
------------------------------
-Before any synchronization can take place, a link between a Wix.com Contacts and a  Customer must be established.
+Wix.com Contacts to Tripletex Customer
+--------------------------------------
+Before any synchronization can take place, a link between a Wix.com Contacts and a Tripletex Customer must be established.
 
-A new  Customer will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into .
+A new Tripletex Customer will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into Tripletex.
 
-Once a link between a Wix.com Contacts and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a  Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Contacts Property
-     -  Customer Property
-     -  Data Type
-
-
-Wix.com Contacts to  Contact
-----------------------------
-Every Wix.com Contacts will be synchronized with a  Contact.
-
-If a matching  Contact already exists, the Wix.com Contacts will be merged with the existing one.
-If no matching  Contact is found, a new  Contact will be created.
-
-A Wix.com Contacts will merge with a  Contact if one of the following property combinations match:
+The following properties are synchronized between a Wix.com Contacts and a Tripletex Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     -  Contact Property
+     - Tripletex Customer Property
+     - Tripletex Data Type
+
+
+Wix.com Contacts to Tripletex Contact
+-------------------------------------
+Every Wix.com Contacts will be synchronized with a Tripletex Contact.
+
+If a matching Tripletex Contact already exists, the Wix.com Contacts will be merged with the existing one.
+If no matching Tripletex Contact is found, a new Tripletex Contact will be created.
+
+A Wix.com Contacts will merge with a Tripletex Contact if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Contacts Property
+     - Tripletex Contact Property
    * - primaryInfo.email
      - email
 
-Once a link between a Wix.com Contacts and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a  Contact:
+The following properties are synchronized between a Wix.com Contacts and a Tripletex Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     -  Contact Property
-     -  Data Type
+     - Tripletex Contact Property
+     - Tripletex Data Type
    * - info.emails
      - email
      - "string"
@@ -218,20 +218,20 @@ The following properties are synchronized between a Wix.com Contacts and a  Cont
      - "string"
 
 
-Wix.com Orders to  Order
-------------------------
-Every Wix.com Orders will be synchronized with a  Order.
+Wix.com Orders to Tripletex Order
+---------------------------------
+Every Wix.com Orders will be synchronized with a Tripletex Order.
 
-Once a link between a Wix.com Orders and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a  Order:
+The following properties are synchronized between a Wix.com Orders and a Tripletex Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     -  Order Property
-     -  Data Type
+     - Tripletex Order Property
+     - Tripletex Data Type
    * - buyerInfo.contactId
      - customer.id
      - "integer"
@@ -246,20 +246,20 @@ The following properties are synchronized between a Wix.com Orders and a  Order:
      - "integer"
 
 
-Wix.com Orders to  Orderline
-----------------------------
-Every Wix.com Orders will be synchronized with a  Orderline.
+Wix.com Orders to Tripletex Orderline
+-------------------------------------
+Every Wix.com Orders will be synchronized with a Tripletex Orderline.
 
-Once a link between a Wix.com Orders and a  Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a  Orderline:
+The following properties are synchronized between a Wix.com Orders and a Tripletex Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     -  Orderline Property
-     -  Data Type
+     - Tripletex Orderline Property
+     - Tripletex Data Type
    * - id
      - order.id
      - "integer"
@@ -322,20 +322,20 @@ The following properties are synchronized between a Wix.com Orders and a  Orderl
      - "integer"
 
 
-Wix.com Products to  Product
-----------------------------
-Every Wix.com Products will be synchronized with a  Product.
+Wix.com Products to Tripletex Product
+-------------------------------------
+Every Wix.com Products will be synchronized with a Tripletex Product.
 
-Once a link between a Wix.com Products and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a  Product:
+The following properties are synchronized between a Wix.com Products and a Tripletex Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     -  Product Property
-     -  Data Type
+     - Tripletex Product Property
+     - Tripletex Data Type
    * - costAndProfitData.itemCost
      - costExcludingVatCurrency
      - "float"
