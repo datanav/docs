@@ -2,81 +2,81 @@
 Businesscentral to Powerofficego Dataflow
 =========================================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:49
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to Powerofficego. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Customers to  Contactperson
--------------------------------------------
-Before any synchronization can take place, a link between a Businesscentral Customers and a  Contactperson must be established.
+Businesscentral Customers to Powerofficego Contactperson
+--------------------------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Customers and a Powerofficego Contactperson must be established.
 
-A new  Contactperson will be created from a Businesscentral Customers if it is connected to a Businesscentral Salesorders that is synchronized into .
+A new Powerofficego Contactperson will be created from a Businesscentral Customers if it is connected to a Businesscentral Salesorders that is synchronized into Powerofficego.
 
-Once a link between a Businesscentral Customers and a  Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Customers and a Powerofficego Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers and a  Contactperson:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Customers Property
-     -  Contactperson Property
-     -  Data Type
-
-
-Businesscentral Customers to  Customers
----------------------------------------
-Before any synchronization can take place, a link between a Businesscentral Customers and a  Customers must be established.
-
-A new  Customers will be created from a Businesscentral Customers if it is connected to a Businesscentral Customers, Salesorders, Contact-person, or Contacts-person that is synchronized into .
-
-Once a link between a Businesscentral Customers and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Customers and a  Customers:
+The following properties are synchronized between a Businesscentral Customers and a Powerofficego Contactperson:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Customers Property
-     -  Customers Property
-     -  Data Type
+     - Powerofficego Contactperson Property
+     - Powerofficego Data Type
 
 
-Businesscentral Customers to  Customers person
-----------------------------------------------
-Before any synchronization can take place, a link between a Businesscentral Customers and a  Customers person must be established.
+Businesscentral Customers to Powerofficego Customers
+----------------------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Customers and a Powerofficego Customers must be established.
 
-A new  Customers person will be created from a Businesscentral Customers if it is connected to a Businesscentral Customers, Salesorders, Contact-person, or Contacts-person that is synchronized into .
+A new Powerofficego Customers will be created from a Businesscentral Customers if it is connected to a Businesscentral Customers, Salesorders, Contact-person, or Contacts-person that is synchronized into Powerofficego.
 
-Once a link between a Businesscentral Customers and a  Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Customers and a Powerofficego Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers and a  Customers person:
+The following properties are synchronized between a Businesscentral Customers and a Powerofficego Customers:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Customers Property
-     -  Customers person Property
-     -  Data Type
+     - Powerofficego Customers Property
+     - Powerofficego Data Type
 
 
-Businesscentral Contacts person to  Contactperson
--------------------------------------------------
-Every Businesscentral Contacts person will be synchronized with a  Contactperson.
+Businesscentral Customers to Powerofficego Customers person
+-----------------------------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Customers and a Powerofficego Customers person must be established.
 
-Once a link between a Businesscentral Contacts person and a  Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+A new Powerofficego Customers person will be created from a Businesscentral Customers if it is connected to a Businesscentral Customers, Salesorders, Contact-person, or Contacts-person that is synchronized into Powerofficego.
 
-The following properties are synchronized between a Businesscentral Contacts person and a  Contactperson:
+Once a link between a Businesscentral Customers and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers and a Powerofficego Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers Property
+     - Powerofficego Customers person Property
+     - Powerofficego Data Type
+
+
+Businesscentral Contacts person to Powerofficego Contactperson
+--------------------------------------------------------------
+Every Businesscentral Contacts person will be synchronized with a Powerofficego Contactperson.
+
+Once a link between a Businesscentral Contacts person and a Powerofficego Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Contacts person and a Powerofficego Contactperson:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Contacts person Property
-     -  Contactperson Property
-     -  Data Type
+     - Powerofficego Contactperson Property
+     - Powerofficego Data Type
    * - addressLine1
      - address1
      - "string"
@@ -103,36 +103,36 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
 
 
-Businesscentral Contacts person to  Customers
----------------------------------------------
-Every Businesscentral Contacts person will be synchronized with a  Customers.
+Businesscentral Contacts person to Powerofficego Customers
+----------------------------------------------------------
+Every Businesscentral Contacts person will be synchronized with a Powerofficego Customers.
 
-Once a link between a Businesscentral Contacts person and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Contacts person and a Powerofficego Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Contacts person and a  Customers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Contacts person Property
-     -  Customers Property
-     -  Data Type
-
-
-Businesscentral Contacts person to  Customers person
-----------------------------------------------------
-Every Businesscentral Contacts person will be synchronized with a  Customers person.
-
-Once a link between a Businesscentral Contacts person and a  Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Contacts person and a  Customers person:
+The following properties are synchronized between a Businesscentral Contacts person and a Powerofficego Customers:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Contacts person Property
-     -  Customers person Property
-     -  Data Type
+     - Powerofficego Customers Property
+     - Powerofficego Data Type
+
+
+Businesscentral Contacts person to Powerofficego Customers person
+-----------------------------------------------------------------
+Every Businesscentral Contacts person will be synchronized with a Powerofficego Customers person.
+
+Once a link between a Businesscentral Contacts person and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Contacts person and a Powerofficego Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Contacts person Property
+     - Powerofficego Customers person Property
+     - Powerofficego Data Type
    * - addressLine1
      - MailAddress.AddressLine1
      - "string"
@@ -162,20 +162,20 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "if", "is-boolean", "boolean"], "boolean", "string"]
 
 
-Businesscentral Customers company to  Customers
------------------------------------------------
-Every Businesscentral Customers company will be synchronized with a  Customers.
+Businesscentral Customers company to Powerofficego Customers
+------------------------------------------------------------
+Every Businesscentral Customers company will be synchronized with a Powerofficego Customers.
 
-Once a link between a Businesscentral Customers company and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Customers company and a Powerofficego Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers company and a  Customers:
+The following properties are synchronized between a Businesscentral Customers company and a Powerofficego Customers:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Customers company Property
-     -  Customers Property
-     -  Data Type
+     - Powerofficego Customers Property
+     - Powerofficego Data Type
    * - address.city
      - MailAddress.City
      - "string"
@@ -217,36 +217,36 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
 
 
-Businesscentral Customers person to  Customers
-----------------------------------------------
-Every Businesscentral Customers person will be synchronized with a  Customers.
+Businesscentral Customers person to Powerofficego Customers
+-----------------------------------------------------------
+Every Businesscentral Customers person will be synchronized with a Powerofficego Customers.
 
-Once a link between a Businesscentral Customers person and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Customers person and a Powerofficego Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers person and a  Customers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Customers person Property
-     -  Customers Property
-     -  Data Type
-
-
-Businesscentral Customers person to  Customers person
------------------------------------------------------
-Every Businesscentral Customers person will be synchronized with a  Customers person.
-
-Once a link between a Businesscentral Customers person and a  Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Customers person and a  Customers person:
+The following properties are synchronized between a Businesscentral Customers person and a Powerofficego Customers:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Customers person Property
-     -  Customers person Property
-     -  Data Type
+     - Powerofficego Customers Property
+     - Powerofficego Data Type
+
+
+Businesscentral Customers person to Powerofficego Customers person
+------------------------------------------------------------------
+Every Businesscentral Customers person will be synchronized with a Powerofficego Customers person.
+
+Once a link between a Businesscentral Customers person and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers person and a Powerofficego Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers person Property
+     - Powerofficego Customers person Property
+     - Powerofficego Data Type
    * - address.city
      - MailAddress.City
      - "string"
@@ -285,20 +285,20 @@ The following properties are synchronized between a Businesscentral Customers pe
      - "if", "is-boolean", "boolean"], "boolean", "string"]
 
 
-Businesscentral Employees to  Employees
----------------------------------------
-Every Businesscentral Employees will be synchronized with a  Employees.
+Businesscentral Employees to Powerofficego Employees
+----------------------------------------------------
+Every Businesscentral Employees will be synchronized with a Powerofficego Employees.
 
-Once a link between a Businesscentral Employees and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Employees and a Powerofficego Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Employees and a  Employees:
+The following properties are synchronized between a Businesscentral Employees and a Powerofficego Employees:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Employees Property
-     -  Employees Property
-     -  Data Type
+     - Powerofficego Employees Property
+     - Powerofficego Data Type
    * - birthDate
      - DateOfBirth
      - "datetime-format","%Y-%m-%d","_."]
@@ -322,20 +322,20 @@ The following properties are synchronized between a Businesscentral Employees an
      - "string"
 
 
-Businesscentral Items to  Product
----------------------------------
-Every Businesscentral Items will be synchronized with a  Product.
+Businesscentral Items to Powerofficego Product
+----------------------------------------------
+Every Businesscentral Items will be synchronized with a Powerofficego Product.
 
-Once a link between a Businesscentral Items and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Items and a Powerofficego Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Items and a  Product:
+The following properties are synchronized between a Businesscentral Items and a Powerofficego Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Items Property
-     -  Product Property
-     -  Data Type
+     - Powerofficego Product Property
+     - Powerofficego Data Type
    * - displayName
      - name
      - "string"
@@ -362,20 +362,20 @@ The following properties are synchronized between a Businesscentral Items and a 
      - "if", "is-decimal", "decimal", "integer"]
 
 
-Businesscentral Salesorderlines to  Salesorderlines
----------------------------------------------------
-Every Businesscentral Salesorderlines will be synchronized with a  Salesorderlines.
+Businesscentral Salesorderlines to Powerofficego Salesorderlines
+----------------------------------------------------------------
+Every Businesscentral Salesorderlines will be synchronized with a Powerofficego Salesorderlines.
 
-Once a link between a Businesscentral Salesorderlines and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Salesorderlines and a Powerofficego Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorderlines and a  Salesorderlines:
+The following properties are synchronized between a Businesscentral Salesorderlines and a Powerofficego Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Salesorderlines Property
-     -  Salesorderlines Property
-     -  Data Type
+     - Powerofficego Salesorderlines Property
+     - Powerofficego Data Type
    * - amountExcludingTax
      - ProductUnitPrice
      - "if", "is-decimal", "decimal", "integer"]
@@ -405,20 +405,20 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - "if", "is-decimal", "decimal", "float", "decimal"]]
 
 
-Businesscentral Salesorders to  Salesorders
--------------------------------------------
-Every Businesscentral Salesorders will be synchronized with a  Salesorders.
+Businesscentral Salesorders to Powerofficego Salesorders
+--------------------------------------------------------
+Every Businesscentral Salesorders will be synchronized with a Powerofficego Salesorders.
 
-Once a link between a Businesscentral Salesorders and a  Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Salesorders and a Powerofficego Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorders and a  Salesorders:
+The following properties are synchronized between a Businesscentral Salesorders and a Powerofficego Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Salesorders Property
-     -  Salesorders Property
-     -  Data Type
+     - Powerofficego Salesorders Property
+     - Powerofficego Data Type
    * - currencyId
      - CurrencyCode
      - "string"
