@@ -1,38 +1,38 @@
-===========================
-Wave Financial to  Dataflow
-===========================
+=====================================
+Wave Financial to Tidsbanken Dataflow
+=====================================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:23:23
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Tidsbanken. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Customer person to  Ansatt
--------------------------------
-Before any synchronization can take place, a link between a Wave Customer person and a  Ansatt must be established.
+Wave Customer person to Tidsbanken Ansatt
+-----------------------------------------
+Before any synchronization can take place, a link between a Wave Customer person and a Tidsbanken Ansatt must be established.
 
-A Wave Customer person will merge with a  Ansatt if one of the following property combinations match:
+A Wave Customer person will merge with a Tidsbanken Ansatt if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     -  Ansatt Property
+     - Tidsbanken Ansatt Property
    * - email
      - Epost
 
-Once a link between a Wave Customer person and a  Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer person and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a  Ansatt:
+The following properties are synchronized between a Wave Customer person and a Tidsbanken Ansatt:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     -  Ansatt Property
-     -  Data Type
+     - Tidsbanken Ansatt Property
+     - Tidsbanken Data Type
    * - address.addressLine1
      - Adresse
      - "string"
@@ -56,30 +56,30 @@ The following properties are synchronized between a Wave Customer person and a  
      - "string"
 
 
-Wave Customer to  Ansatt
-------------------------
-Before any synchronization can take place, a link between a Wave Customer and a  Ansatt must be established.
+Wave Customer to Tidsbanken Ansatt
+----------------------------------
+Before any synchronization can take place, a link between a Wave Customer and a Tidsbanken Ansatt must be established.
 
-A Wave Customer will merge with a  Ansatt if one of the following property combinations match:
+A Wave Customer will merge with a Tidsbanken Ansatt if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     -  Ansatt Property
+     - Tidsbanken Ansatt Property
    * - email
      - Epost
 
-Once a link between a Wave Customer and a  Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a  Ansatt:
+The following properties are synchronized between a Wave Customer and a Tidsbanken Ansatt:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     -  Ansatt Property
-     -  Data Type
+     - Tidsbanken Ansatt Property
+     - Tidsbanken Data Type
    * - address.addressLine1
      - Adresse
      - "string"
@@ -103,30 +103,30 @@ The following properties are synchronized between a Wave Customer and a  Ansatt:
      - "string"
 
 
-Wave Vendor to  Ansatt
-----------------------
-Before any synchronization can take place, a link between a Wave Vendor and a  Ansatt must be established.
+Wave Vendor to Tidsbanken Ansatt
+--------------------------------
+Before any synchronization can take place, a link between a Wave Vendor and a Tidsbanken Ansatt must be established.
 
-A Wave Vendor will merge with a  Ansatt if one of the following property combinations match:
+A Wave Vendor will merge with a Tidsbanken Ansatt if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     -  Ansatt Property
+     - Tidsbanken Ansatt Property
    * - email
      - Epost
 
-Once a link between a Wave Vendor and a  Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a  Ansatt:
+The following properties are synchronized between a Wave Vendor and a Tidsbanken Ansatt:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     -  Ansatt Property
-     -  Data Type
+     - Tidsbanken Ansatt Property
+     - Tidsbanken Data Type
    * - address.addressLine1
      - Adresse
      - "string"
