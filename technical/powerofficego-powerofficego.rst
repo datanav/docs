@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:01
 
 Introduction.
 ------------
@@ -34,32 +34,6 @@ The following properties are synchronized between a Powerofficego Contactperson 
 
    * - Powerofficego Contactperson Property
      -  Contactperson Property
-     -  Data Type
-
-
-Powerofficego Currency to  Currency
------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Currency and a  Currency must be established.
-
-A Powerofficego Currency will merge with a  Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Currency Property
-     -  Currency Property
-   * - code
-     - code
-
-Once a link between a Powerofficego Currency and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Currency and a  Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Currency Property
-     -  Currency Property
      -  Data Type
 
 
@@ -123,22 +97,6 @@ A Powerofficego Customers will merge with a  Customers if one of the following p
      -  Customers Property
    * - EmailAddress
      - EmailAddress
-   * - EmailAddress
-     - InvoiceEmailAddress
-   * - InvoiceEmailAddress
-     - EmailAddress
-   * - InvoiceEmailAddress
-     - InvoiceEmailAddress
-   * - EmailAddress
-     - PaymentReminderEmailAddress
-   * - PaymentReminderEmailAddress
-     - EmailAddress
-   * - InvoiceEmailAddress
-     - PaymentReminderEmailAddress
-   * - PaymentReminderEmailAddress
-     - InvoiceEmailAddress
-   * - PaymentReminderEmailAddress
-     - PaymentReminderEmailAddress
 
 Once a link between a Powerofficego Customers and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -150,6 +108,12 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      -  Customers Property
      -  Data Type
+   * - Number
+     - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCodeDependant on having wd:Q852835 in MailAddress.CountryCode)
+     - "string"
+   * - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCodeDependant on having wd:Q852835 in MailAddress.CountryCode)
+     - Number
+     - "string"
 
 
 Powerofficego Employees to  Employees
@@ -178,6 +142,12 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - Powerofficego Employees Property
      -  Employees Property
      -  Data Type
+   * - DepartmentId (Dependant on having  in JobTitle)
+     - JobTitle
+     - "string"
+   * - JobTitle
+     - DepartmentId (Dependant on having  in JobTitle)
+     - "string"
 
 
 Powerofficego Salesorders to  Salesorders
@@ -204,6 +174,12 @@ The following properties are synchronized between a Powerofficego Salesorders an
    * - Powerofficego Salesorders Property
      -  Salesorders Property
      -  Data Type
+   * - CustomerId
+     - CustomerReferenceContactPersonId
+     - "integer"
+   * - CustomerReferenceContactPersonId
+     - CustomerId
+     - "integer"
 
 
 Powerofficego Contactperson to PowerOfficeGo Customers person
@@ -233,7 +209,7 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
    * - dateOfBirth
      - DateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
+     - "if","gt","abs","datetime-diff", "year", "_.","now"]]], 100], "1935-01-01","datetime-format", "%Y-%m-%d"]
    * - emailAddress
      - EmailAddress
      - "string"
@@ -299,11 +275,25 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
+Powerofficego Customers person to  Customers
+--------------------------------------------
+Every Powerofficego Customers person will be synchronized with a  Customers.
+
+Once a link between a Powerofficego Customers person and a  Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers person and a  Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers person Property
+     -  Customers Property
+     -  Data Type
+
+
 Powerofficego Customers to PowerOfficeGo Customers person
 ---------------------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Customers and a PowerOfficeGo Customers person must be established.
-
-A new PowerOfficeGo Customers person will be created from a Powerofficego Customers if it is connected to a Powerofficego Customer, Customers, Suppliers, Salesorder, Salesorders, Contactperson, Salesorderline, Outgoinginvoice, Salesorderlines, Customers-person, or Suppliers-person that is synchronized into PowerOfficeGo.
+Every Powerofficego Customers will be synchronized with a PowerOfficeGo Customers person.
 
 Once a link between a Powerofficego Customers and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -363,12 +353,15 @@ The following properties are synchronized between a Powerofficego Suppliers pers
      -  Data Type
    * - DateOfBirth
      - dateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
+     - "if","gt","abs","datetime-diff", "year", "_.","now"]]], 100], "1935-01-01","datetime-format", "%Y-%m-%d"]
    * - EmailAddress
      - emailAddress
      - "string"
    * - FirstName
      - firstName
+     - "string"
+   * - LastName
+     - lastName
      - "string"
    * - MailAddress.CountryCode
      - residenceCountryCode
