@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:02
 
 Introduction.
 ------------
@@ -128,7 +128,10 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
    * - Name
      - name
      - "string"
-   * - OrgNr (Dependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountry)
+   * - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountryDependant on having wd:Q852835 in Country.TwoLetterISOCountry)
+     - customerNumber
+     - "string"
+   * - OrgNr (Dependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountry)
      - organizationNumber
      - "replace"," ","", "string"]
    * - Phones.Value
@@ -146,7 +149,7 @@ SuperOffice Person to Tripletex Contact
 ---------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Person and a Tripletex Contact must be established.
 
-A new Tripletex Contact will be created from a SuperOffice Person if it is connected to a SuperOffice Sale, Quote, Project, Quoteline, or Quotealternative that is synchronized into Tripletex.
+A new Tripletex Contact will be created from a SuperOffice Person if it is connected to a SuperOffice Sale, Quote, Quoteline, or Quotealternative that is synchronized into Tripletex.
 
 A SuperOffice Person will merge with a Tripletex Contact if one of the following property combinations match:
 
@@ -228,7 +231,7 @@ The following properties are synchronized between a SuperOffice Person and a  Em
      - dateOfBirth
      - "datetime-format","%Y-%m-%d","_."]
    * - Contact.ContactId
-     - department.id
+     - department.id (Dependant on having wd:Q703534 in  )
      - "if", "neq", "_.", "X"], "integer", "string"]
    * - Country.CountryId
      - address.country.id
@@ -244,7 +247,7 @@ The following properties are synchronized between a SuperOffice Person and a  Em
      - "string"
    * - MobilePhones.Value
      - phoneNumberMobile
-     - "string"
+     - "if","matches","+* *","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
    * - OfficePhones.Value
      - phoneNumberWork
      - "string"
@@ -294,6 +297,44 @@ The following properties are synchronized between a SuperOffice User and a  Cont
      - "string"
 
 
+SuperOffice User to  Employee
+-----------------------------
+Before any synchronization can take place, a link between a SuperOffice User and a  Employee must be established.
+
+A SuperOffice User will merge with a  Employee if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     -  Employee Property
+   * - personEmail
+     - email
+
+Once a link between a SuperOffice User and a  Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice User and a  Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     -  Employee Property
+     -  Data Type
+   * - contactId
+     - department.id
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - personEmail
+     - email
+     - "string"
+
+
 SuperOffice Contact to Tripletex Contact
 ----------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Contact and a Tripletex Contact must be established.
@@ -312,25 +353,184 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - Tripletex Data Type
 
 
-SuperOffice Contact to  Department
-----------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a  Department must be established.
+SuperOffice Contact to Tripletex Customer person
+------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Contact and a Tripletex Customer person must be established.
 
-A new  Department will be created from a SuperOffice Contact if it is connected to a SuperOffice User, or Person that is synchronized into .
+A new Tripletex Customer person will be created from a SuperOffice Contact if it is connected to a SuperOffice Sale, User, Quote, Person, Contact, Quoteline, or Quotealternative that is synchronized into Tripletex.
 
-Once a link between a SuperOffice Contact and a  Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a  Department:
+The following properties are synchronized between a SuperOffice Contact and a Tripletex Customer person:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     -  Department Property
-     -  Data Type
-   * - Name
-     - name
+     - Tripletex Customer person Property
+     - Tripletex Data Type
+   * - Address.Postal.Address1
+     - deliveryAddress.addressLine1
      - "string"
+   * - Address.Postal.Address1
+     - physicalAddress.addressLine1
+     - "string"
+   * - Address.Postal.Address1
+     - postalAddress.addressLine1
+     - "string"
+   * - Address.Postal.Address2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - Address.Postal.Address2
+     - physicalAddress.addressLine2
+     - "string"
+   * - Address.Postal.Address2
+     - postalAddress.addressLine2
+     - "string"
+   * - Address.Postal.City
+     - deliveryAddress.city
+     - "string"
+   * - Address.Postal.City
+     - physicalAddress.city
+     - "string"
+   * - Address.Postal.City
+     - postalAddress.city
+     - "string"
+   * - Address.Postal.Zipcode
+     - deliveryAddress.postalCode
+     - "string"
+   * - Address.Postal.Zipcode
+     - physicalAddress.postalCode
+     - "string"
+   * - Address.Postal.Zipcode
+     - postalAddress.postalCode
+     - "string"
+   * - Address.Street.Address1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - Address.Street.Address1
+     - physicalAddress.addressLine1
+     - "string"
+   * - Address.Street.Address1
+     - postalAddress.addressLine1
+     - "string"
+   * - Address.Street.Address2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - Address.Street.Address2
+     - physicalAddress.addressLine2
+     - "string"
+   * - Address.Street.Address2
+     - postalAddress.addressLine2
+     - "string"
+   * - Address.Street.City
+     - deliveryAddress.city
+     - "string"
+   * - Address.Street.City
+     - physicalAddress.city
+     - "string"
+   * - Address.Street.City
+     - postalAddress.city
+     - "string"
+   * - Address.Street.Zipcode
+     - deliveryAddress.postalCode
+     - "string"
+   * - Address.Street.Zipcode
+     - physicalAddress.postalCode
+     - "string"
+   * - Address.Street.Zipcode
+     - postalAddress.postalCode
+     - "string"
+   * - ContactId
+     - id
+     - "integer"
+   * - Country.CountryId
+     - deliveryAddress.country.id
+     - "string"
+   * - Country.CountryId
+     - physicalAddress.country.id
+     - "integer"
+   * - Country.CountryId
+     - postalAddress.country.id
+     - "integer"
+
+
+SuperOffice Person to Tripletex Customer person
+-----------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a Tripletex Customer person must be established.
+
+A new Tripletex Customer person will be created from a SuperOffice Person if it is connected to a SuperOffice Sale, Quote, Quoteline, or Quotealternative that is synchronized into Tripletex.
+
+Once a link between a SuperOffice Person and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Person and a Tripletex Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - Tripletex Customer person Property
+     - Tripletex Data Type
+   * - Address.Street.Address1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - Address.Street.Address1
+     - physicalAddress.addressLine1
+     - "string"
+   * - Address.Street.Address1
+     - postalAddress.addressLine1
+     - "string"
+   * - Address.Street.Address2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - Address.Street.Address2
+     - physicalAddress.addressLine2
+     - "string"
+   * - Address.Street.Address2
+     - postalAddress.addressLine2
+     - "string"
+   * - Address.Street.City
+     - deliveryAddress.city
+     - "string"
+   * - Address.Street.City
+     - physicalAddress.city
+     - "string"
+   * - Address.Street.City
+     - postalAddress.city
+     - "string"
+   * - Address.Street.Zipcode
+     - deliveryAddress.postalCode
+     - "string"
+   * - Address.Street.Zipcode
+     - physicalAddress.postalCode
+     - "string"
+   * - Address.Street.Zipcode
+     - postalAddress.postalCode
+     - "string"
+   * - Associate.AssociateId
+     - accountManager.id
+     - "integer"
+   * - Country.CountryId
+     - deliveryAddress.country.id
+     - "string"
+   * - Country.CountryId
+     - physicalAddress.country.id
+     - "integer"
+   * - Country.CountryId
+     - postalAddress.country.id
+     - "integer"
+   * - Emails.Value
+     - email
+     - "string"
+   * - MobilePhones.Value
+     - phoneNumberMobile
+     - "string"
+   * - OfficePhones.Value
+     - phoneNumber
+     - "string"
+   * - PersonId
+     - id
+     - "integer"
 
 
 SuperOffice Person to Tripletex Customer
@@ -372,44 +572,6 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
 
 
-SuperOffice Listproductcategoryitems to  Productgroup
------------------------------------------------------
-Every SuperOffice Listproductcategoryitems will be synchronized with a  Productgroup.
-
-Once a link between a SuperOffice Listproductcategoryitems and a  Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listproductcategoryitems and a  Productgroup:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listproductcategoryitems Property
-     -  Productgroup Property
-     -  Data Type
-   * - Name
-     - name
-     - "string"
-
-
-SuperOffice Ownercontactlink to  Department
--------------------------------------------
-Every SuperOffice Ownercontactlink will be synchronized with a  Department.
-
-Once a link between a SuperOffice Ownercontactlink and a  Department is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Ownercontactlink and a  Department:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Ownercontactlink Property
-     -  Department Property
-     -  Data Type
-   * - name
-     - name
-     - "string"
-
-
 SuperOffice Product to  Product
 -------------------------------
 Every SuperOffice Product will be synchronized with a  Product.
@@ -424,6 +586,9 @@ The following properties are synchronized between a SuperOffice Product and a  P
    * - SuperOffice Product Property
      -  Product Property
      -  Data Type
+   * - Code
+     - number
+     - "string"
    * - Description
      - description
      - "string"
@@ -519,6 +684,9 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - DiscountPercent
      - vatType.id
      - "integer"
+   * - ERPDiscountPercent
+     - discount
+     - "float"
    * - ERPProductKey
      - product.id
      - "integer"
@@ -542,7 +710,7 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "integer"
    * - Quantity
      - count
-     - "float"
+     - "integer", "decimal"]
    * - Quantity
      - description
      - "string"
@@ -633,45 +801,4 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - VAT
      - vatType.id
      - "integer"
-
-
-SuperOffice User to  Employee
------------------------------
-Every SuperOffice User will be synchronized with a  Employee.
-
-If a matching  Employee already exists, the SuperOffice User will be merged with the existing one.
-If no matching  Employee is found, a new  Employee will be created.
-
-A SuperOffice User will merge with a  Employee if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice User Property
-     -  Employee Property
-   * - personEmail
-     - email
-
-Once a link between a SuperOffice User and a  Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice User and a  Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice User Property
-     -  Employee Property
-     -  Data Type
-   * - contactId
-     - department.id
-     - "if", "neq", "_.", "X"], "integer", "string"]
-   * - firstName
-     - firstName
-     - "string"
-   * - lastName
-     - lastName
-     - "string"
-   * - personEmail
-     - email
-     - "string"
 
