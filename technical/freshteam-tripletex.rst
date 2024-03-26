@@ -2,7 +2,7 @@
 Freshteam to Tripletex Dataflow
 ===============================
 
-Generated: 2024-03-26 17:54:01
+Generated: 2024-03-26 17:58:38
 
 Introduction
 ------------
@@ -57,10 +57,10 @@ The following properties are synchronized between a Freshteam Employee and a Tri
      - Tripletex Data Type
    * - date_of_birth
      - dateOfBirth
-     - ["datetime-format","%Y-%m-%d","_."]
+     - N/A
    * - designation
      - department.id (Dependant on having wd:Q703534 in  )
-     - ["if", ["neq", "_.", "X"], ["integer", "_."], ["string", "_."]]
+     - N/A
    * - first_name
      - firstName
      - "string"
@@ -78,7 +78,7 @@ The following properties are synchronized between a Freshteam Employee and a Tri
      - "string"
    * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
      - phoneNumberMobile
-     - ["if",["matches","+* *","_."],["join"," ",["slice", 1,["split", " ","_."]]],"_."]
+     - N/A
    * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.name)
      - phoneNumberWork
      - "string"
