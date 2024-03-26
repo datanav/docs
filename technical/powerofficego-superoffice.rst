@@ -2,7 +2,7 @@
 Powerofficego to Superoffice Dataflow
 =====================================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -56,7 +56,7 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
    * - dateOfBirth
      - BirthDate
-     - ["datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
+     - N/A
    * - emailAddress
      - Emails.Value
      - "string"
@@ -118,7 +118,7 @@ The following properties are synchronized between a Powerofficego Customers pers
      - Superoffice Data Type
    * - DateOfBirth
      - BirthDate
-     - ["datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
+     - N/A
    * - EmailAddress
      - Emails.Value
      - "string"
@@ -305,7 +305,7 @@ The following properties are synchronized between a Powerofficego Employees and 
      - Superoffice Data Type
    * - DateOfBirth
      - BirthDate
-     - ["datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
+     - N/A
    * - DepartmendId
      - Contact.ContactId
      - "integer"
@@ -329,7 +329,7 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
    * - dateOfBirth
      - BirthDate
-     - ["datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+     - N/A
    * - firstName
      - Firstname
      - "string"
@@ -369,7 +369,7 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "string"
    * - SalesPrice
      - UnitListPrice
-     - ["decimal", "_."]
+     - N/A
    * - Type
      - ProductTypeKey
      - "string"
@@ -393,7 +393,7 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "string"
    * - salesPrice
      - UnitListPrice
-     - ["decimal", "_."]
+     - N/A
    * - type
      - ProductTypeKey
      - "string"
@@ -408,7 +408,7 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "integer"
    * - vatCode
      - VAT
-     - ["integer", ["decimal", "_."]]
+     - N/A
 
 
 Powerofficego Quote to Superoffice Quotealternative
@@ -449,7 +449,7 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - "integer"
    * - Allowance
      - ERPDiscountPercent
-     - ["decimal", "_."]
+     - N/A
    * - Description
      - Name
      - "string"
@@ -458,16 +458,16 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - "string"
    * - ProductUnitPrice
      - UnitListPrice
-     - ["if-null", ["integer", ["string", "_."]], ["decimal", "_."]]
+     - N/A
    * - Quantity
      - Quantity
-     - ["integer", ["decimal", "_."]]
+     - N/A
    * - SortOrder
      - Rank
      - "integer"
    * - TotalAmount
      - TotalPrice
-     - ["if-null", ["integer", ["string", "_."]], ["decimal", "_."]]
+     - N/A
    * - VatId
      - VAT
      - "integer"
