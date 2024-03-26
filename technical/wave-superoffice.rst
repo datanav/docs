@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -318,20 +318,52 @@ The following properties are synchronized between a Wave Customer and a SuperOff
      - "string"
 
 
-Wave Vendor to  Contact
------------------------
-Every Wave Vendor will be synchronized with a  Contact.
+Wave Invoice to  Quotealternative
+---------------------------------
+Before any synchronization can take place, a link between a Wave Invoice and a  Quotealternative must be established.
 
-Once a link between a Wave Vendor and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+A new  Quotealternative will be created from a Wave Invoice if it is connected to a Wave Invoice that is synchronized into .
 
-The following properties are synchronized between a Wave Vendor and a  Contact:
+Once a link between a Wave Invoice and a  Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a  Quotealternative:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     -  Quotealternative Property
+     -  Data Type
+   * - memo
+     - Description
+     - "string"
+   * - memo
+     - Name
+     - "string"
+   * - title
+     - Name
+     - "string"
+   * - total.value
+     - TotalPrice
+     - "float"
+
+
+Wave Vendor to SuperOffice Contact
+----------------------------------
+Before any synchronization can take place, a link between a Wave Vendor and a SuperOffice Contact must be established.
+
+A new SuperOffice Contact will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, or Customer-person that is synchronized into SuperOffice.
+
+Once a link between a Wave Vendor and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     -  Contact Property
-     -  Data Type
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
    * - address.addressLine1
      - Address.Postal.Address1
      - "string"
@@ -365,15 +397,43 @@ The following properties are synchronized between a Wave Vendor and a  Contact:
    * - name
      - Name
      - "string"
-   * - phone
-     - Phones.Value
-     - "string"
-   * - website
-     - Domains
-     - "list"
    * - website
      - Urls.Value
      - "string"
+
+
+Wave Invoice to  Quoteline
+--------------------------
+Every Wave Invoice will be synchronized with a  Quoteline.
+
+Once a link between a Wave Invoice and a  Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a  Quoteline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     -  Quoteline Property
+     -  Data Type
+   * - id
+     - QuoteAlternativeId
+     - "integer"
+   * - items.description
+     - Description
+     - "string"
+   * - items.price
+     - UnitListPrice
+     - "if-null", "integer", "string"], "decimal"]
+   * - items.product.id
+     - ERPProductKey
+     - "string"
+   * - items.quantity
+     - Quantity
+     - "integer", "decimal"]
+   * - total.value
+     - TotalPrice
+     - "if-null", "integer", "string"], "decimal"]
 
 
 Wave Product to  Product
