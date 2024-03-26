@@ -2,7 +2,7 @@
 Wave Financial to Hubspot Dataflow
 ==================================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 14:30:19
 
 Introduction
 ------------
@@ -255,20 +255,20 @@ The following properties are synchronized between a Wave Vendor and a Hubspot Co
      - "string"
 
 
-Wave Customer to  Company
--------------------------
-Every Wave Customer will be synchronized with a  Company.
+Wave Customer to Hubspot Company
+--------------------------------
+Every Wave Customer will be synchronized with a Hubspot Company.
 
-Once a link between a Wave Customer and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a  Company:
+The following properties are synchronized between a Wave Customer and a Hubspot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     -  Company Property
-     -  Data Type
+     - Hubspot Company Property
+     - Hubspot Data Type
    * - address.addressLine1
      - properties.address
      - "string"
