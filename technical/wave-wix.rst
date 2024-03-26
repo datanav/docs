@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2024-03-26 17:54:02
+Generated: 2024-03-26 17:58:39
 
 Introduction
 ------------
@@ -167,7 +167,7 @@ The following properties are synchronized between a Wave Product and a Wix Produ
      - "string"
    * - unitPrice
      - priceData.price
-     - ["decimal", "_."]
+     - N/A
 
 
 Wave Vendor to Wix Contacts
