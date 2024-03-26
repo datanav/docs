@@ -2,7 +2,7 @@
 Businesscentral to Powerofficego Dataflow
 =========================================
 
-Generated: 2024-03-26 17:30:44
+Generated: 2024-03-26 17:54:02
 
 Introduction
 ------------
@@ -159,7 +159,7 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
    * - type
      - IsPerson
-     - ["if", ["is-boolean", "boolean"], "boolean", "string"]
+     - ["if", ["is-boolean", ["boolean", "_."]], ["boolean", "_."], ["string", "_."]]
 
 
 Businesscentral Customers company to Powerofficego Customers
@@ -211,7 +211,7 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
    * - type
      - IsPerson
-     - ["if", ["is-boolean", "boolean"], "boolean", "string"]
+     - ["if", ["is-boolean", ["boolean", "_."]], ["boolean", "_."], ["string", "_."]]
    * - website
      - WebsiteUrl
      - "string"
@@ -282,7 +282,7 @@ The following properties are synchronized between a Businesscentral Customers pe
      - "string"
    * - type
      - IsPerson
-     - ["if", ["is-boolean", "boolean"], "boolean", "string"]
+     - ["if", ["is-boolean", ["boolean", "_."]], ["boolean", "_."], ["string", "_."]]
 
 
 Businesscentral Employees to Powerofficego Employees
@@ -356,10 +356,10 @@ The following properties are synchronized between a Businesscentral Items and a 
      - "string"
    * - unitCost
      - costPrice
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], "integer"]
+     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["integer", "_."]]
    * - unitPrice
      - salesPrice
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], "integer"]
+     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["integer", "_."]]
 
 
 Businesscentral Salesorderlines to Powerofficego Salesorderlines
@@ -378,7 +378,7 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - Powerofficego Data Type
    * - amountExcludingTax
      - ProductUnitPrice
-     - ["if", ["is-decimal", "_."], ["decimal", "_."], "integer"]
+     - ["if", ["is-decimal", "_."], ["decimal", "_."], ["integer", "_."]]
    * - description
      - Description
      - "string"
