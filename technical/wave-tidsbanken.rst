@@ -2,7 +2,7 @@
 Wave Financial to Tidsbanken Dataflow
 =====================================
 
-Generated: 2024-03-26 14:23:23
+Generated: 2024-03-26 14:23:48
 
 Introduction
 ------------
@@ -141,20 +141,20 @@ The following properties are synchronized between a Wave Vendor and a Tidsbanken
      - "integer"
 
 
-Wave Customer to  Kunde
------------------------
-Every Wave Customer will be synchronized with a  Kunde.
+Wave Customer to Tidsbanken Kunde
+---------------------------------
+Every Wave Customer will be synchronized with a Tidsbanken Kunde.
 
-Once a link between a Wave Customer and a  Kunde is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Tidsbanken Kunde is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a  Kunde:
+The following properties are synchronized between a Wave Customer and a Tidsbanken Kunde:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     -  Kunde Property
-     -  Data Type
+     - Tidsbanken Kunde Property
+     - Tidsbanken Data Type
    * - address.addressLine1
      - Gateadresse
      - "string"
