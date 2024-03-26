@@ -2,7 +2,7 @@
 YouTrack to Youtrack Dataflow
 =============================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 14:30:19
 
 Introduction
 ------------
@@ -379,20 +379,20 @@ The following properties are synchronized between a YouTrack Usersyoutrack and a
      - YouTrack Data Type
 
 
-YouTrack Issues to  Hubprojects
--------------------------------
-Every YouTrack Issues will be synchronized with a  Hubprojects.
+YouTrack Issues to Youtrack Hubprojects
+---------------------------------------
+Every YouTrack Issues will be synchronized with a Youtrack Hubprojects.
 
-Once a link between a YouTrack Issues and a  Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Issues and a Youtrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Issues and a  Hubprojects:
+The following properties are synchronized between a YouTrack Issues and a Youtrack Hubprojects:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Issues Property
-     -  Hubprojects Property
-     -  Data Type
+     - Youtrack Hubprojects Property
+     - Youtrack Data Type
    * - attachments.id
      - owner.id
      - "string"
@@ -458,39 +458,39 @@ The following properties are synchronized between a YouTrack Issues and a  Hubpr
      - "string"
 
 
-YouTrack Organizations to  Groups
----------------------------------
-Every YouTrack Organizations will be synchronized with a  Groups.
+YouTrack Organizations to Youtrack Groups
+-----------------------------------------
+Every YouTrack Organizations will be synchronized with a Youtrack Groups.
 
-Once a link between a YouTrack Organizations and a  Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Organizations and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Organizations and a  Groups:
+The following properties are synchronized between a YouTrack Organizations and a Youtrack Groups:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Organizations Property
-     -  Groups Property
-     -  Data Type
+     - Youtrack Groups Property
+     - Youtrack Data Type
    * - name
      - name
      - "string"
 
 
-YouTrack Projectroles to  Hubprojects
--------------------------------------
-Every YouTrack Projectroles will be synchronized with a  Hubprojects.
+YouTrack Projectroles to Youtrack Hubprojects
+---------------------------------------------
+Every YouTrack Projectroles will be synchronized with a Youtrack Hubprojects.
 
-Once a link between a YouTrack Projectroles and a  Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Projectroles and a Youtrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Projectroles and a  Hubprojects:
+The following properties are synchronized between a YouTrack Projectroles and a Youtrack Hubprojects:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Projectroles Property
-     -  Hubprojects Property
-     -  Data Type
+     - Youtrack Hubprojects Property
+     - Youtrack Data Type
    * - owner.id
      - owner.id
      - "string"
@@ -511,55 +511,55 @@ The following properties are synchronized between a YouTrack Projectroles and a 
      - "string"
 
 
-YouTrack Roles to  Organizationroles
-------------------------------------
-Every YouTrack Roles will be synchronized with a  Organizationroles.
+YouTrack Roles to Youtrack Organizationroles
+--------------------------------------------
+Every YouTrack Roles will be synchronized with a Youtrack Organizationroles.
 
-Once a link between a YouTrack Roles and a  Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Roles and a Youtrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Roles and a  Organizationroles:
+The following properties are synchronized between a YouTrack Roles and a Youtrack Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Roles Property
-     -  Organizationroles Property
-     -  Data Type
+     - Youtrack Organizationroles Property
+     - Youtrack Data Type
 
 
-YouTrack Usergroups to  Groups
-------------------------------
-Every YouTrack Usergroups will be synchronized with a  Groups.
+YouTrack Usergroups to Youtrack Groups
+--------------------------------------
+Every YouTrack Usergroups will be synchronized with a Youtrack Groups.
 
-Once a link between a YouTrack Usergroups and a  Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Usergroups and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Usergroups and a  Groups:
+The following properties are synchronized between a YouTrack Usergroups and a Youtrack Groups:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Usergroups Property
-     -  Groups Property
-     -  Data Type
+     - Youtrack Groups Property
+     - Youtrack Data Type
    * - name
      - name
      - "string"
 
 
-YouTrack Workitems to  Hubprojects
-----------------------------------
-Every YouTrack Workitems will be synchronized with a  Hubprojects.
+YouTrack Workitems to Youtrack Hubprojects
+------------------------------------------
+Every YouTrack Workitems will be synchronized with a Youtrack Hubprojects.
 
-Once a link between a YouTrack Workitems and a  Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Workitems and a Youtrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Workitems and a  Hubprojects:
+The following properties are synchronized between a YouTrack Workitems and a Youtrack Hubprojects:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Workitems Property
-     -  Hubprojects Property
-     -  Data Type
+     - Youtrack Hubprojects Property
+     - Youtrack Data Type
    * - author.id
      - owner.id
      - "string"
