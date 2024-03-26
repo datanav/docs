@@ -2,27 +2,27 @@
 Freshteam to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-03-26 14:14:24
+Generated: 2024-03-26 14:15:16
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Freshteam to Powerofficego. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Freshteam Department to  Departments
-------------------------------------
-Every Freshteam Department will be synchronized with a  Departments.
+Freshteam Department to Powerofficego Departments
+-------------------------------------------------
+Every Freshteam Department will be synchronized with a Powerofficego Departments.
 
-Once a link between a Freshteam Department and a  Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Department and a Powerofficego Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Department and a  Departments:
+The following properties are synchronized between a Freshteam Department and a Powerofficego Departments:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Department Property
-     -  Departments Property
-     -  Data Type
+     - Powerofficego Departments Property
+     - Powerofficego Data Type
    * - created_at
      - CreatedDateTimeOffset
      - "string"
@@ -31,33 +31,33 @@ The following properties are synchronized between a Freshteam Department and a  
      - "string"
 
 
-Freshteam Employee to  Employees
---------------------------------
-Every Freshteam Employee will be synchronized with a  Employees.
+Freshteam Employee to Powerofficego Employees
+---------------------------------------------
+Every Freshteam Employee will be synchronized with a Powerofficego Employees.
 
-If a matching  Employees already exists, the Freshteam Employee will be merged with the existing one.
-If no matching  Employees is found, a new  Employees will be created.
+If a matching Powerofficego Employees already exists, the Freshteam Employee will be merged with the existing one.
+If no matching Powerofficego Employees is found, a new Powerofficego Employees will be created.
 
-A Freshteam Employee will merge with a  Employees if one of the following property combinations match:
+A Freshteam Employee will merge with a Powerofficego Employees if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Employee Property
-     -  Employees Property
+     - Powerofficego Employees Property
    * - employee_id
      - Number
 
-Once a link between a Freshteam Employee and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Employee and a Powerofficego Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Employee and a  Employees:
+The following properties are synchronized between a Freshteam Employee and a Powerofficego Employees:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Employee Property
-     -  Employees Property
-     -  Data Type
+     - Powerofficego Employees Property
+     - Powerofficego Data Type
    * - Billing_Country
      - MailAddress.CountryCode
      - "string"
