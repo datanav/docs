@@ -2,7 +2,7 @@
 Tidsbanken to Youtrack Dataflow
 ===============================
 
-Generated: 2024-03-26 14:24:14
+Generated: 2024-03-26 14:34:37
 
 Introduction
 ------------
@@ -39,4 +39,52 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Yout
    * - Navn
      - name
      - "string"
+
+
+Tidsbanken Avdeling to Youtrack Groups
+--------------------------------------
+Every Tidsbanken Avdeling will be synchronized with a Youtrack Groups.
+
+Once a link between a Tidsbanken Avdeling and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Avdeling and a Youtrack Groups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     - Youtrack Groups Property
+     - Youtrack Data Type
+
+
+Tidsbanken Kunde to Youtrack Groups
+-----------------------------------
+Every Tidsbanken Kunde will be synchronized with a Youtrack Groups.
+
+Once a link between a Tidsbanken Kunde and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Kunde and a Youtrack Groups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Kunde Property
+     - Youtrack Groups Property
+     - Youtrack Data Type
+
+
+Tidsbanken Prosjekt to Youtrack Hubprojects
+-------------------------------------------
+Every Tidsbanken Prosjekt will be synchronized with a Youtrack Hubprojects.
+
+Once a link between a Tidsbanken Prosjekt and a Youtrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Prosjekt and a Youtrack Hubprojects:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Prosjekt Property
+     - Youtrack Hubprojects Property
+     - Youtrack Data Type
 
