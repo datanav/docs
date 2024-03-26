@@ -2,7 +2,7 @@
 Powerofficego to Hubspot Dataflow
 =================================
 
-Generated: 2024-03-26 14:15:49
+Generated: 2024-03-26 14:30:19
 
 Introduction
 ------------
@@ -221,39 +221,39 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Departments to  Company
--------------------------------------
-Every Powerofficego Departments will be synchronized with a  Company.
+Powerofficego Departments to Hubspot Company
+--------------------------------------------
+Every Powerofficego Departments will be synchronized with a Hubspot Company.
 
-Once a link between a Powerofficego Departments and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Departments and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Departments and a  Company:
+The following properties are synchronized between a Powerofficego Departments and a Hubspot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Departments Property
-     -  Company Property
-     -  Data Type
+     - Hubspot Company Property
+     - Hubspot Data Type
    * - Name
      - properties.name
      - "string"
 
 
-Powerofficego Employees to  Contact
------------------------------------
-Every Powerofficego Employees will be synchronized with a  Contact.
+Powerofficego Employees to Hubspot Contact
+------------------------------------------
+Every Powerofficego Employees will be synchronized with a Hubspot Contact.
 
-Once a link between a Powerofficego Employees and a  Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Employees and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Employees and a  Contact:
+The following properties are synchronized between a Powerofficego Employees and a Hubspot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Employees Property
-     -  Contact Property
-     -  Data Type
+     - Hubspot Contact Property
+     - Hubspot Data Type
    * - DateOfBirth
      - properties.date_of_birth
      - "string"
