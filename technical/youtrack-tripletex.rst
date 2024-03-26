@@ -2,7 +2,7 @@
 YouTrack to Tripletex Dataflow
 ==============================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -35,10 +35,10 @@ The following properties are synchronized between a YouTrack Users and a Triplet
      - Tripletex Data Type
    * - profile.email
      - email
-     - "string"
+"string"
    * - profile.email.email
      - email
-     - "string"
+"string"
 
 
 YouTrack Users to Tripletex Employee
@@ -67,41 +67,41 @@ The following properties are synchronized between a YouTrack Users and a Triplet
      - Tripletex Data Type
    * - groups.id
      - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
-     - "if", "neq", "_.", "X"], "integer", "string"]
+["if", ["neq", "_.", "X"], "integer", "string"]
    * - name
      - firstName
-     - "string"
+"string"
    * - name
      - lastName
-     - "string"
+"string"
    * - organizationRoles.id
      - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
-     - "if", "neq", "_.", "X"], "integer", "string"]
+["if", ["neq", "_.", "X"], "integer", "string"]
    * - profile.email.email
      - email
-     - "string"
+"string"
    * - projectRoles.id
      - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
-     - "if", "neq", "_.", "X"], "integer", "string"]
+["if", ["neq", "_.", "X"], "integer", "string"]
    * - sourcedOrganizationRoles.id
      - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
-     - "if", "neq", "_.", "X"], "integer", "string"]
+["if", ["neq", "_.", "X"], "integer", "string"]
    * - sourcedProjectRoles.id
      - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
-     - "if", "neq", "_.", "X"], "integer", "string"]
+["if", ["neq", "_.", "X"], "integer", "string"]
    * - teams.id
      - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
-     - "if", "neq", "_.", "X"], "integer", "string"]
+["if", ["neq", "_.", "X"], "integer", "string"]
    * - transitiveGroups.id
      - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
-     - "if", "neq", "_.", "X"], "integer", "string"]
+["if", ["neq", "_.", "X"], "integer", "string"]
    * - transitiveOrganizationRoles.id
      - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
-     - "if", "neq", "_.", "X"], "integer", "string"]
+["if", ["neq", "_.", "X"], "integer", "string"]
    * - transitiveProjectRoles.id
      - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
-     - "if", "neq", "_.", "X"], "integer", "string"]
+["if", ["neq", "_.", "X"], "integer", "string"]
    * - transitiveTeams.id
      - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
-     - "if", "neq", "_.", "X"], "integer", "string"]
+["if", ["neq", "_.", "X"], "integer", "string"]
 
