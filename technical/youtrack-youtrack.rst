@@ -2,7 +2,7 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -72,6 +72,9 @@ The following properties are synchronized between a YouTrack Users and a  Users:
      -  Users Property
      -  Data Type
    * - groups.id
+     - teams.id
+     - "string"
+   * - groups.id
      - transitiveGroups.id
      - "string"
    * - groups.id
@@ -137,8 +140,20 @@ The following properties are synchronized between a YouTrack Users and a  Users:
    * - sourcedProjectRoles.id
      - transitiveProjectRoles.id
      - "string"
+   * - teams.id
+     - groups.id
+     - "string"
+   * - teams.id
+     - transitiveGroups.id
+     - "string"
+   * - teams.id
+     - transitiveTeams.id
+     - "string"
    * - transitiveGroups.id
      - groups.id
+     - "string"
+   * - transitiveGroups.id
+     - teams.id
      - "string"
    * - transitiveGroups.id
      - transitiveTeams.id
@@ -175,6 +190,9 @@ The following properties are synchronized between a YouTrack Users and a  Users:
      - "string"
    * - transitiveTeams.id
      - groups.id
+     - "string"
+   * - transitiveTeams.id
+     - teams.id
      - "string"
    * - transitiveTeams.id
      - transitiveGroups.id
@@ -542,6 +560,18 @@ The following properties are synchronized between a YouTrack Workitems and a  Hu
    * - YouTrack Workitems Property
      -  Hubprojects Property
      -  Data Type
+   * - author.id
+     - owner.id
+     - "string"
+   * - author.id
+     - transitiveProjectRoles.id
+     - "string"
+   * - creator.id
+     - owner.id
+     - "string"
+   * - creator.id
+     - transitiveProjectRoles.id
+     - "string"
    * - updated
      - creationTime
      - "string"
