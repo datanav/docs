@@ -2,7 +2,7 @@
 Tripletex to Freshteam Dataflow
 ===============================
 
-Generated: 2024-03-26 14:15:16
+Generated: 2024-03-26 17:27:48
 
 Introduction
 ------------
@@ -25,10 +25,10 @@ The following properties are synchronized between a Tripletex Department and a F
      - Freshteam Data Type
    * - changes.timestamp
      - created_at
-     - "string"
+"string"
    * - name
      - name
-     - "string"
+"string"
 
 
 Tripletex Employee to Freshteam Employee
@@ -60,32 +60,32 @@ The following properties are synchronized between a Tripletex Employee and a Fre
      - Freshteam Data Type
    * - dateOfBirth
      - date_of_birth
-     - "string"
+"string"
    * - department.id (Dependant on having wd:Q703534 in  )
      - designation
-     - "string"
+"string"
    * - email
      - official_email
-     - "string"
+"string"
    * - email
      - personal_email
-     - "string"
+"string"
    * - firstName
      - first_name
-     - "string"
+"string"
    * - id
      - id
-     - "string"
+"string"
    * - lastName
      - last_name
-     - "string"
+"string"
    * - phoneNumberHome
      - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.name)
-     - "string"
+"string"
    * - phoneNumberMobile
      - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
-     - "string"
+"string"
    * - phoneNumberWork
      - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.name)
-     - "string"
+"string"
 
