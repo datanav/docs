@@ -2,7 +2,7 @@
 Zendesk to Wix Dataflow
 =======================
 
-Generated: 2024-03-26 17:27:48
+Generated: 2024-03-26 17:30:44
 
 Introduction
 ------------
@@ -35,14 +35,14 @@ The following properties are synchronized between a Zendesk Users and a Wix Cont
      - Wix Data Type
    * - email
      - info.emails
-"string"
+     - "string"
    * - email
      - primaryInfo.email
-"string"
+     - "string"
    * - name
      - info.name.first
-"string"
+     - "string"
    * - name
      - info.name.last
-"string"
+     - "string"
 
