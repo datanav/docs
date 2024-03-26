@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2023-11-30 00:00:01
+Generated: 2024-03-26 00:00:03
 
 Introduction.
 ------------
@@ -28,14 +28,29 @@ The following properties are synchronized between a Wix.com Contacts and a Wave 
    * - info.name.first
      - firstName
      - "string"
+   * - info.name.first
+     - lastName
+     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
+   * - info.name.first
+     - name
+     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
+   * - info.name.last
+     - firstName
+     - "string"
    * - info.name.last
      - lastName
+     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
+   * - info.name.last
+     - name
      - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
    * - primaryInfo.email
      - email
      - "string"
    * - primaryInfo.phone
      - mobile
+     - "string"
+   * - primaryInfo.phone
+     - phone
      - "string"
 
 
@@ -58,6 +73,12 @@ The following properties are synchronized between a Wix.com Contacts and a Wave 
    * - info.name.first
      - firstName
      - "string"
+   * - info.name.first
+     - lastName
+     - "string"
+   * - info.name.last
+     - firstName
+     - "string"
    * - info.name.last
      - lastName
      - "string"
@@ -67,22 +88,6 @@ The following properties are synchronized between a Wix.com Contacts and a Wave 
    * - primaryInfo.phone
      - mobile
      - "string"
-
-
-Wix.com Inventory to  Product
------------------------------
-Every Wix.com Inventory will be synchronized with a  Product.
-
-Once a link between a Wix.com Inventory and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Inventory and a  Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Inventory Property
-     -  Product Property
-     -  Data Type
 
 
 Wix.com Orders to Wave Invoice
@@ -114,12 +119,24 @@ The following properties are synchronized between a Wix.com Orders and a Wave In
    * - lineItems.name
      - items.description
      - "string"
+   * - lineItems.name
+     - items.price
+     - "string"
+   * - lineItems.name
+     - items.quantity
+     - "string", "integer", "decimal"]]
    * - lineItems.name.name
      - items.description
      - "string"
    * - lineItems.price
+     - items.description
+     - "string"
+   * - lineItems.price
      - items.price
-     - "float"
+     - "string"
+   * - lineItems.price
+     - items.quantity
+     - "string", "integer", "decimal"]]
    * - lineItems.price
      - items.unitPrice
      - "float"
@@ -133,8 +150,14 @@ The following properties are synchronized between a Wix.com Orders and a Wave In
      - items.product.id
      - "string"
    * - lineItems.quantity
+     - items.description
+     - "string"
+   * - lineItems.quantity
+     - items.price
+     - "string"
+   * - lineItems.quantity
      - items.quantity
-     - "float"
+     - "string", "integer", "decimal"]]
    * - lineItems.quantity.quantity
      - items.quantity
      - "float"
