@@ -2,7 +2,7 @@
 Unieconomy to Tidsbanken Dataflow
 =================================
 
-Generated: 2024-03-26 14:25:38
+Generated: 2024-03-26 14:26:08
 
 Introduction
 ------------
@@ -33,11 +33,17 @@ The following properties are synchronized between a Unieconomy Companies and a T
    * - Unieconomy Companies Property
      - Tidsbanken Kunde Property
      - Tidsbanken Data Type
+   * - Name
+     - Navn
+     - "string"
 
 
 Unieconomy Customers to Tidsbanken Kunde
 ----------------------------------------
-Before any synchronization can take place, a link between a Unieconomy Customers and a Tidsbanken Kunde must be established.
+Every Unieconomy Customers will be synchronized with a Tidsbanken Kunde.
+
+If a matching Tidsbanken Kunde already exists, the Unieconomy Customers will be merged with the existing one.
+If no matching Tidsbanken Kunde is found, a new Tidsbanken Kunde will be created.
 
 A Unieconomy Customers will merge with a Tidsbanken Kunde if one of the following property combinations match:
 
@@ -59,4 +65,26 @@ The following properties are synchronized between a Unieconomy Customers and a T
    * - Unieconomy Customers Property
      - Tidsbanken Kunde Property
      - Tidsbanken Data Type
+   * - WebUrl
+     - Url
+     - "string"
+
+
+Unieconomy Departments to Tidsbanken Avdeling
+---------------------------------------------
+Every Unieconomy Departments will be synchronized with a Tidsbanken Avdeling.
+
+Once a link between a Unieconomy Departments and a Tidsbanken Avdeling is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Departments and a Tidsbanken Avdeling:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Departments Property
+     - Tidsbanken Avdeling Property
+     - Tidsbanken Data Type
+   * - Name
+     - Navn
+     - "string"
 
