@@ -2,7 +2,7 @@
 Tidsbanken to Superoffice Dataflow
 ==================================
 
-Generated: 2024-03-26 14:34:37
+Generated: 2024-03-26 14:34:55
 
 Introduction
 ------------
@@ -177,4 +177,34 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Su
    * - Tidsbanken Avdeling Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - Adresse
+     - Address.Postal.Address1
+     - "string"
+   * - Adresse
+     - Address.Street.Address1
+     - "string"
+   * - Id
+     - ContactId
+     - "integer"
+   * - Navn
+     - Name
+     - "string"
+   * - Organisasjonsnr
+     - OrgNr (Dependant on having wd:Q11994066 in Country.TwoLetterISOCountry)
+     - "string"
+   * - Postnr
+     - Address.Postal.Zipcode
+     - "string"
+   * - Postnr
+     - Address.Street.Zipcode
+     - "string"
+   * - Poststed
+     - Address.Postal.City
+     - "string"
+   * - Poststed
+     - Address.Street.City
+     - "string"
+   * - sesam_avdelingId
+     - OrgNr (Dependant on having wd:Q2366457 in Country.TwoLetterISOCountry)
+     - "string"
 
