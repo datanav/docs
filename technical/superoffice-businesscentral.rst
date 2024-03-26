@@ -2,7 +2,7 @@
 SuperOffice to Businesscentral Dataflow
 =======================================
 
-Generated: 2024-03-26 14:30:19
+Generated: 2024-03-26 17:27:49
 
 Introduction
 ------------
@@ -27,64 +27,64 @@ The following properties are synchronized between a SuperOffice Contact and a Bu
      - Businesscentral Data Type
    * - Address.Postal.Address1
      - addressLine1
-     - "string"
+"string"
    * - Address.Postal.Address2
      - addressLine2
-     - "string"
+"string"
    * - Address.Postal.City
      - address.city
-     - "string"
+"string"
    * - Address.Postal.City
      - city
-     - "string"
+"string"
    * - Address.Postal.Zipcode
      - address.postalCode
-     - "string"
+"string"
    * - Address.Postal.Zipcode
      - postalCode
-     - "string"
+"string"
    * - Address.Street.Address1
      - addressLine1
-     - "string"
+"string"
    * - Address.Street.Address2
      - addressLine2
-     - "string"
+"string"
    * - Address.Street.City
      - address.city
-     - "string"
+"string"
    * - Address.Street.City
      - city
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - address.postalCode
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - postalCode
-     - "string"
+"string"
    * - ContactId
      - id
-     - "string"
+"string"
    * - Country.CountryId
      - address.countryLetterCode
-     - "string"
+"string"
    * - Country.CountryId
      - country
-     - "string"
+"string"
    * - Emails.Value
      - id (Dependant on having wd:Q1273217 in type)
-     - "string"
+"string"
    * - Name
      - displayName
-     - "string"
+"string"
    * - OrgNr
      - id (Dependant on having  in typeDependant on having  in type)
-     - "string"
+"string"
    * - Phones.Value
      - phoneNumber
-     - "string"
+"string"
    * - Urls.Value
      - website
-     - "string"
+"string"
 
 
 SuperOffice Contact to Businesscentral Customers person
@@ -123,22 +123,22 @@ The following properties are synchronized between a SuperOffice Person and a Bus
      - Businesscentral Data Type
    * - Address.Street.Address1
      - addressLine1
-     - "string"
+"string"
    * - Address.Street.Address2
      - addressLine2
-     - "string"
+"string"
    * - Address.Street.City
      - city
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - postalCode
-     - "string"
+"string"
    * - Country.CountryId
      - country
-     - "string"
+"string"
    * - PersonId
      - id
-     - "string"
+"string"
 
 
 SuperOffice Person to Businesscentral Customers person
@@ -159,40 +159,40 @@ The following properties are synchronized between a SuperOffice Person and a Bus
      - Businesscentral Data Type
    * - Address.Street.Address1
      - addressLine1
-     - "string"
+"string"
    * - Address.Street.Address2
      - addressLine2
-     - "string"
+"string"
    * - Address.Street.City
      - address.city
-     - "string"
+"string"
    * - Address.Street.City
      - addressLine2
-     - "string"
+"string"
    * - Address.Street.City
      - city
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - address.postalCode
-     - "string"
+"string"
    * - Address.Street.Zipcode
      - postalCode
-     - "string"
+"string"
    * - Country.CountryId
      - country
-     - "string"
+"string"
    * - Emails.Value
      - email
-     - "string"
+"string"
    * - Emails.Value
      - id (Dependant on having wd:Q1273217 in type)
-     - "string"
+"string"
    * - OfficePhones.Value
      - phoneNumber
-     - "string"
+"string"
    * - PersonId
      - id
-     - "string"
+"string"
 
 
 SuperOffice Quotealternative to Businesscentral Salesorders
@@ -213,19 +213,19 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - Businesscentral Data Type
    * - TotalPrice
      - totalAmountExcludingTax
-     - "string"
+"string"
    * - VAT
      - billToCountry
-     - "string"
+"string"
    * - VAT
      - billingPostalAddress.countryLetterCode
-     - "string"
+"string"
    * - VAT
      - shipToCountry
-     - "string"
+"string"
    * - VAT
      - shippingPostalAddress.countryLetterCode
-     - "string"
+"string"
 
 
 SuperOffice Contact to Businesscentral Companies
@@ -260,31 +260,31 @@ The following properties are synchronized between a SuperOffice Product and a Bu
      - Businesscentral Data Type
    * - Name
      - displayName
-     - "string"
+"string"
    * - Name
      - displayName.string
-     - "string"
+"string"
    * - Name
      - displayName2
-     - "string"
+"string"
    * - ProductCategoryKey
      - itemCategoryId
-     - "string"
+"string"
    * - UnitCost
      - unitCost
-     - "decimal"
+["decimal", "_."]
    * - UnitListPrice
      - unitPrice
-     - "decimal"
+["decimal", "_."]
    * - VAT
      - itemCategoryId
-     - "string"
+"string"
    * - VAT
      - taxGroupCode
-     - "string"
+"string"
    * - VAT
      - taxGroupId
-     - "string"
+"string"
 
 
 SuperOffice Quoteline to Businesscentral Salesorderlines
@@ -303,35 +303,35 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - Businesscentral Data Type
    * - Description
      - description
-     - "string"
+"string"
    * - DiscountPercent
      - discountPercent
-     - "decimal"
+["decimal", "_."]
    * - ERPDiscountPercent
      - discountPercent
-     - "decimal"
+["decimal", "_."]
    * - ERPProductKey
      - itemId
-     - "string"
+"string"
    * - Name
      - description
-     - "string"
+"string"
    * - Quantity
      - invoiceQuantity
-     - "string"
+"string"
    * - Quantity
      - quantity
-     - "integer", "decimal"]
+["integer", ["decimal", "_."]]
    * - QuoteAlternativeId
      - documentId
-     - "string"
+"string"
    * - UnitListPrice
      - amountExcludingTax
-     - "string"
+"string"
    * - UnitListPrice
      - unitPrice
-     - "float"
+"float"
    * - VAT
      - taxPercent
-     - "decimal"
+["decimal", "_."]
 
