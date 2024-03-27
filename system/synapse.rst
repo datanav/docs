@@ -18,6 +18,10 @@ Data types
      - Input
      - Output
 
+   * - :ref:`Classification <datatype_classification>`
+     - false
+     - true
+
    * - :ref:`Organisation <datatype_organisation>`
      - false
      - true
