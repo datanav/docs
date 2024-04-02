@@ -2,7 +2,7 @@
 YouTrack to Hubspot Dataflow
 ============================
 
-Generated: 2024-04-02 00:00:00
+Generated: 2024-04-02 07:56:49
 
 Introduction
 ------------
@@ -66,6 +66,22 @@ The following properties are synchronized between a YouTrack Groups and a Hubspo
      - "string"
 
 
+YouTrack Organizationroles to Hubspot Contactcompanyassociationtype
+-------------------------------------------------------------------
+Every YouTrack Organizationroles will be synchronized with a Hubspot Contactcompanyassociationtype.
+
+Once a link between a YouTrack Organizationroles and a Hubspot Contactcompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Organizationroles and a Hubspot Contactcompanyassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Organizationroles Property
+     - Hubspot Contactcompanyassociationtype Property
+     - Hubspot Data Type
+
+
 YouTrack Organizations to Hubspot Company
 -----------------------------------------
 Every YouTrack Organizations will be synchronized with a Hubspot Company.
@@ -86,6 +102,22 @@ The following properties are synchronized between a YouTrack Organizations and a
    * - name
      - properties.name
      - "string"
+
+
+YouTrack Roles to Hubspot Contactcompanyassociationtype
+-------------------------------------------------------
+Every YouTrack Roles will be synchronized with a Hubspot Contactcompanyassociationtype.
+
+Once a link between a YouTrack Roles and a Hubspot Contactcompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Roles and a Hubspot Contactcompanyassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Roles Property
+     - Hubspot Contactcompanyassociationtype Property
+     - Hubspot Data Type
 
 
 YouTrack Usergroups to Hubspot Company
