@@ -2,7 +2,7 @@
 HubSpot to Hubspot Dataflow
 ===========================
 
-Generated: 2024-04-02 00:00:41
+Generated: 2024-04-02 07:54:51
 
 Introduction
 ------------
@@ -1658,6 +1658,25 @@ The following properties are synchronized between a HubSpot Contact and a Hubspo
    * - HubSpot Contact Property
      - Hubspot Company Property
      - Hubspot Data Type
+
+
+HubSpot Dealcompanyassociationtype to Hubspot Contactcompanyassociationtype
+---------------------------------------------------------------------------
+Every HubSpot Dealcompanyassociationtype will be synchronized with a Hubspot Contactcompanyassociationtype.
+
+Once a link between a HubSpot Dealcompanyassociationtype and a Hubspot Contactcompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcompanyassociationtype and a Hubspot Contactcompanyassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcompanyassociationtype Property
+     - Hubspot Contactcompanyassociationtype Property
+     - Hubspot Data Type
+   * - label
+     - label
+     - "string"
 
 
 HubSpot User to Hubspot Contact
