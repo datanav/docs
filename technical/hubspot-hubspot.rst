@@ -2,7 +2,7 @@
 HubSpot to Hubspot Dataflow
 ===========================
 
-Generated: 2024-04-02 07:54:51
+Generated: 2024-04-02 07:56:49
 
 Introduction
 ------------
@@ -1672,6 +1672,139 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    :header-rows: 1
 
    * - HubSpot Dealcompanyassociationtype Property
+     - Hubspot Contactcompanyassociationtype Property
+     - Hubspot Data Type
+   * - label
+     - label
+     - "string"
+
+
+HubSpot Dealcontactassociationtype to Hubspot Contactcompanyassociationtype
+---------------------------------------------------------------------------
+Every HubSpot Dealcontactassociationtype will be synchronized with a Hubspot Contactcompanyassociationtype.
+
+Once a link between a HubSpot Dealcontactassociationtype and a Hubspot Contactcompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcontactassociationtype and a Hubspot Contactcompanyassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcontactassociationtype Property
+     - Hubspot Contactcompanyassociationtype Property
+     - Hubspot Data Type
+   * - label
+     - label
+     - "string"
+
+
+HubSpot Lineitemdealassociationtype to Hubspot Contactcompanyassociationtype
+----------------------------------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a Hubspot Contactcompanyassociationtype.
+
+Once a link between a HubSpot Lineitemdealassociationtype and a Hubspot Contactcompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a Hubspot Contactcompanyassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociationtype Property
+     - Hubspot Contactcompanyassociationtype Property
+     - Hubspot Data Type
+   * - label
+     - label
+     - "string"
+
+
+HubSpot Lineitemquoteassociationtype to Hubspot Contactcompanyassociationtype
+-----------------------------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a Hubspot Contactcompanyassociationtype.
+
+Once a link between a HubSpot Lineitemquoteassociationtype and a Hubspot Contactcompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a Hubspot Contactcompanyassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociationtype Property
+     - Hubspot Contactcompanyassociationtype Property
+     - Hubspot Data Type
+   * - label
+     - label
+     - "string"
+
+
+HubSpot Quotecompanyassociationtype to Hubspot Contactcompanyassociationtype
+----------------------------------------------------------------------------
+Every HubSpot Quotecompanyassociationtype will be synchronized with a Hubspot Contactcompanyassociationtype.
+
+Once a link between a HubSpot Quotecompanyassociationtype and a Hubspot Contactcompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecompanyassociationtype and a Hubspot Contactcompanyassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecompanyassociationtype Property
+     - Hubspot Contactcompanyassociationtype Property
+     - Hubspot Data Type
+   * - label
+     - label
+     - "string"
+
+
+HubSpot Quotecontactassociationtype to Hubspot Contactcompanyassociationtype
+----------------------------------------------------------------------------
+Every HubSpot Quotecontactassociationtype will be synchronized with a Hubspot Contactcompanyassociationtype.
+
+Once a link between a HubSpot Quotecontactassociationtype and a Hubspot Contactcompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecontactassociationtype and a Hubspot Contactcompanyassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecontactassociationtype Property
+     - Hubspot Contactcompanyassociationtype Property
+     - Hubspot Data Type
+   * - label
+     - label
+     - "string"
+
+
+HubSpot Quotedealassociationtype to Hubspot Contactcompanyassociationtype
+-------------------------------------------------------------------------
+Every HubSpot Quotedealassociationtype will be synchronized with a Hubspot Contactcompanyassociationtype.
+
+Once a link between a HubSpot Quotedealassociationtype and a Hubspot Contactcompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotedealassociationtype and a Hubspot Contactcompanyassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotedealassociationtype Property
+     - Hubspot Contactcompanyassociationtype Property
+     - Hubspot Data Type
+   * - label
+     - label
+     - "string"
+
+
+HubSpot Quotequotetemplateassociationtype to Hubspot Contactcompanyassociationtype
+----------------------------------------------------------------------------------
+Every HubSpot Quotequotetemplateassociationtype will be synchronized with a Hubspot Contactcompanyassociationtype.
+
+Once a link between a HubSpot Quotequotetemplateassociationtype and a Hubspot Contactcompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotequotetemplateassociationtype and a Hubspot Contactcompanyassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotequotetemplateassociationtype Property
      - Hubspot Contactcompanyassociationtype Property
      - Hubspot Data Type
    * - label
