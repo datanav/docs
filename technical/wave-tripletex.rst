@@ -2,7 +2,7 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2024-04-03 00:00:01
+Generated: 2024-04-03 10:04:53
 
 Introduction
 ------------
@@ -94,6 +94,46 @@ The following properties are synchronized between a Wave Customer person and a T
      - "integer"
    * - shippingDetails.address.postalCode
      - address.postalCode
+     - "string"
+
+
+Wave Customer to Tripletex Contact
+----------------------------------
+Before any synchronization can take place, a link between a Wave Customer and a Tripletex Contact must be established.
+
+A new Tripletex Contact will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into Tripletex.
+
+A Wave Customer will merge with a Tripletex Contact if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Tripletex Contact Property
+   * - email
+     - email
+
+Once a link between a Wave Customer and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Tripletex Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Tripletex Contact Property
+     - Tripletex Data Type
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - mobile
+     - phoneNumberMobile
+     - N/A
+   * - phone
+     - phoneNumberWork
      - "string"
 
 
@@ -473,56 +513,6 @@ The following properties are synchronized between a Wave Vendor and a Tripletex 
      - "string"
    * - website
      - website
-     - "string"
-
-
-Wave Customer to Tripletex Contact
-----------------------------------
-Every Wave Customer will be synchronized with a Tripletex Contact.
-
-If a matching Tripletex Contact already exists, the Wave Customer will be merged with the existing one.
-If no matching Tripletex Contact is found, a new Tripletex Contact will be created.
-
-A Wave Customer will merge with a Tripletex Contact if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Tripletex Contact Property
-   * - email
-     - email
-
-Once a link between a Wave Customer and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a Tripletex Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Tripletex Contact Property
-     - Tripletex Data Type
-   * - email
-     - email
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - id
-     - customer.id
-     - "integer"
-   * - lastName
-     - lastName
-     - "string"
-   * - mobile
-     - phoneNumberMobile
-     - N/A
-   * - phone
-     - phoneNumberWork
-     - "string"
-   * - shippingDetails.phone
-     - phoneNumberWork
      - "string"
 
 
