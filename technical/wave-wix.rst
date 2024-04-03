@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2024-04-03 00:00:01
+Generated: 2024-04-03 10:04:53
 
 Introduction
 ------------
@@ -64,10 +64,9 @@ The following properties are synchronized between a Wave Customer person and a W
 
 Wave Customer to Wix Contacts
 -----------------------------
-Every Wave Customer will be synchronized with a Wix Contacts.
+Before any synchronization can take place, a link between a Wave Customer and a Wix Contacts must be established.
 
-If a matching Wix Contacts already exists, the Wave Customer will be merged with the existing one.
-If no matching Wix Contacts is found, a new Wix Contacts will be created.
+A new Wix Contacts will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into Wix.
 
 A Wave Customer will merge with a Wix Contacts if one of the following property combinations match:
 
@@ -89,18 +88,6 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
    * - Wave Customer Property
      - Wix Contacts Property
      - Wix Data Type
-   * - address.addressLine1
-     - info.addresses.items.address.addressLine
-     - "string"
-   * - address.addressLine2
-     - info.addresses.items.address.addressLine2
-     - "string"
-   * - address.city
-     - info.addresses.items.address.city
-     - "string"
-   * - address.postalCode
-     - info.addresses.items.address.postalCode
-     - "string"
    * - email
      - info.emails
      - "string"
@@ -108,15 +95,6 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
      - primaryInfo.email
      - "string"
    * - firstName
-     - info.name.first
-     - "string"
-   * - firstName
-     - info.name.last
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - lastName
      - info.name.first
      - "string"
    * - lastName
@@ -127,18 +105,6 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
      - "string"
    * - mobile
      - primaryInfo.phone
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - info.addresses.items.address.addressLine
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - info.addresses.items.address.addressLine2
-     - "string"
-   * - shippingDetails.address.city
-     - info.addresses.items.address.city
-     - "string"
-   * - shippingDetails.address.postalCode
-     - info.addresses.items.address.postalCode
      - "string"
 
 
