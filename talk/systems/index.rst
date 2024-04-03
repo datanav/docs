@@ -11,6 +11,7 @@ Sesam Talk support systems across a range of categories. You can read more about
    hubspot
    poweroffice
    superoffice
+   tidsbanken
    tripletex
    wave
    wix
