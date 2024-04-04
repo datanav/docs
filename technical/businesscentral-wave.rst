@@ -2,7 +2,7 @@
 Businesscentral to Wave Dataflow
 ================================
 
-Generated: 2024-04-04 00:00:02
+Generated: 2024-04-04 00:01:42
 
 Introduction
 ------------
@@ -13,7 +13,7 @@ Businesscentral Customers to Wave Customer
 ------------------------------------------
 Before any synchronization can take place, a link between a Businesscentral Customers and a Wave Customer must be established.
 
-A new Wave Customer will be created from a Businesscentral Customers if it is connected to a Businesscentral Customers, Salesorders, or Customers-company that is synchronized into Wave.
+A new Wave Customer will be created from a Businesscentral Customers if it is connected to a Businesscentral Salesorders that is synchronized into Wave.
 
 Once a link between a Businesscentral Customers and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -31,7 +31,7 @@ Businesscentral Customers to Wave Customer person
 -------------------------------------------------
 Before any synchronization can take place, a link between a Businesscentral Customers and a Wave Customer person must be established.
 
-A new Wave Customer person will be created from a Businesscentral Customers if it is connected to a Businesscentral Customers, Salesorders, or Customers-company that is synchronized into Wave.
+A new Wave Customer person will be created from a Businesscentral Customers if it is connected to a Businesscentral Salesorders that is synchronized into Wave.
 
 Once a link between a Businesscentral Customers and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
