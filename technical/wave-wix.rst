@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2024-04-04 00:00:02
+Generated: 2024-04-04 00:01:26
 
 Introduction
 ------------
@@ -68,16 +68,6 @@ Before any synchronization can take place, a link between a Wave Customer and a 
 
 A new Wix Contacts will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into Wix.
 
-A Wave Customer will merge with a Wix Contacts if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Wix Contacts Property
-   * - email
-     - primaryInfo.email
-
 Once a link between a Wave Customer and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
 The following properties are synchronized between a Wave Customer and a Wix Contacts:
@@ -88,24 +78,6 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
    * - Wave Customer Property
      - Wix Contacts Property
      - Wix Data Type
-   * - email
-     - info.emails
-     - "string"
-   * - email
-     - primaryInfo.email
-     - "string"
-   * - firstName
-     - info.name.first
-     - "string"
-   * - lastName
-     - info.name.last
-     - "string"
-   * - mobile
-     - info.phones
-     - "string"
-   * - mobile
-     - primaryInfo.phone
-     - "string"
 
 
 Wave Product to Wix Products
