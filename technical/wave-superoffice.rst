@@ -2,7 +2,7 @@
 Wave Financial to Superoffice Dataflow
 ======================================
 
-Generated: 2024-04-05 00:00:02
+Generated: 2024-04-05 11:28:26
 
 Introduction
 ------------
@@ -83,6 +83,85 @@ The following properties are synchronized between a Wave Customer person and a S
      - "string"
    * - shippingDetails.phone
      - OfficePhones.Value
+     - "string"
+
+
+Wave Customer to Superoffice Person
+-----------------------------------
+Before any synchronization can take place, a link between a Wave Customer and a Superoffice Person must be established.
+
+A new Superoffice Person will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into Superoffice.
+
+A Wave Customer will merge with a Superoffice Person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Superoffice Person Property
+   * - email
+     - Emails.Value
+
+Once a link between a Wave Customer and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Superoffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Superoffice Person Property
+     - Superoffice Data Type
+   * - address.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - address.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - address.city
+     - Address.Street.City
+     - "string"
+   * - address.country.code
+     - Country.CountryId
+     - "integer"
+   * - address.postalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - email
+     - Emails.Value
+     - "string"
+   * - firstName
+     - Firstname
+     - "string"
+   * - id
+     - Contact.ContactId
+     - "integer"
+   * - id
+     - PersonId
+     - "integer"
+   * - lastName
+     - Lastname
+     - "string"
+   * - mobile
+     - MobilePhones.Value
+     - "string"
+   * - phone
+     - OfficePhones.Value
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - shippingDetails.address.city
+     - Address.Street.City
+     - "string"
+   * - shippingDetails.address.country.code
+     - Country.CountryId
+     - "integer"
+   * - shippingDetails.address.postalCode
+     - Address.Street.Zipcode
      - "string"
 
 
@@ -239,22 +318,95 @@ The following properties are synchronized between a Wave Customer and a SuperOff
      - "string"
 
 
-Wave Customer to SuperOffice Person
------------------------------------
-Before any synchronization can take place, a link between a Wave Customer and a SuperOffice Person must be established.
+Wave Customer to Superoffice Contact
+------------------------------------
+Every Wave Customer will be synchronized with a Superoffice Contact.
 
-A new SuperOffice Person will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into SuperOffice.
+Once a link between a Wave Customer and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-Once a link between a Wave Customer and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a SuperOffice Person:
+The following properties are synchronized between a Wave Customer and a Superoffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
+     - Superoffice Contact Property
+     - Superoffice Data Type
+   * - address.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - address.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - address.addressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - address.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - address.city
+     - Address.Postal.City
+     - "string"
+   * - address.city
+     - Address.Street.City
+     - "string"
+   * - address.country.code
+     - Country.CountryId
+     - "integer"
+   * - address.countryCode
+     - Country.CountryId
+     - "integer"
+   * - address.postalCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - address.postalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - id
+     - ContactId
+     - "integer"
+   * - name
+     - Name
+     - "string"
+   * - phone
+     - Phones.Value
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - shippingDetails.address.city
+     - Address.Postal.City
+     - "string"
+   * - shippingDetails.address.city
+     - Address.Street.City
+     - "string"
+   * - shippingDetails.address.country.code
+     - Country.CountryId
+     - "integer"
+   * - shippingDetails.address.postalCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - shippingDetails.address.postalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - shippingDetails.phone
+     - Phones.Value
+     - "string"
+   * - website
+     - Domains
+     - N/A
+   * - website
+     - Urls.Value
+     - "string"
 
 
 Wave Invoice to Superoffice Quotealternative
