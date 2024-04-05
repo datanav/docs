@@ -2,7 +2,7 @@
 Wave Financial to Zendesk Dataflow
 ==================================
 
-Generated: 2024-04-05 00:00:02
+Generated: 2024-04-05 11:28:23
 
 Introduction
 ------------
@@ -35,6 +35,35 @@ The following properties are synchronized between a Wave Customer person and a Z
      - Zendesk Data Type
    * - name
      - name
+     - "string"
+
+
+Wave Customer to Zendesk Users
+------------------------------
+Before any synchronization can take place, a link between a Wave Customer and a Zendesk Users must be established.
+
+A Wave Customer will merge with a Zendesk Users if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Zendesk Users Property
+   * - email
+     - email
+
+Once a link between a Wave Customer and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Zendesk Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Zendesk Users Property
+     - Zendesk Data Type
+   * - id
+     - organization_id
      - "string"
 
 
