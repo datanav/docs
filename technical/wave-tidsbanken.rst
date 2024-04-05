@@ -2,7 +2,7 @@
 Wave Financial to Tidsbanken Dataflow
 =====================================
 
-Generated: 2024-04-05 00:00:03
+Generated: 2024-04-05 11:28:23
 
 Introduction
 ------------
@@ -31,6 +31,53 @@ The following properties are synchronized between a Wave Customer person and a T
    :header-rows: 1
 
    * - Wave Customer person Property
+     - Tidsbanken Ansatt Property
+     - Tidsbanken Data Type
+   * - address.addressLine1
+     - Adresse
+     - "string"
+   * - address.city
+     - Poststed
+     - "string"
+   * - address.postalCode
+     - Postnummer
+     - "string"
+   * - id
+     - Id
+     - "integer"
+   * - shippingDetails.address.addressLine1
+     - Adresse
+     - "string"
+   * - shippingDetails.address.city
+     - Poststed
+     - "string"
+   * - shippingDetails.address.postalCode
+     - Postnummer
+     - "string"
+
+
+Wave Customer to Tidsbanken Ansatt
+----------------------------------
+Before any synchronization can take place, a link between a Wave Customer and a Tidsbanken Ansatt must be established.
+
+A Wave Customer will merge with a Tidsbanken Ansatt if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Tidsbanken Ansatt Property
+   * - email
+     - Epost
+
+Once a link between a Wave Customer and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Tidsbanken Ansatt:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
    * - address.addressLine1
