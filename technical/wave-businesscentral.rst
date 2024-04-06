@@ -2,7 +2,7 @@
 Wave Financial to Businesscentral Dataflow
 ==========================================
 
-Generated: 2024-04-05 11:28:23
+Generated: 2024-04-06 00:00:00
 
 Introduction
 ------------
