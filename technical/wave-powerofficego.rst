@@ -2,7 +2,7 @@
 Wave Financial to Powerofficego Dataflow
 ========================================
 
-Generated: 2024-04-06 00:00:00
+Generated: 2024-04-06 00:01:31
 
 Introduction
 ------------
@@ -68,66 +68,6 @@ The following properties are synchronized between a Wave Customer person and a P
      - "string"
    * - shippingDetails.address.postalCode
      - zipCode
-     - "string"
-
-
-Wave Customer to Powerofficego Customers person
------------------------------------------------
-Before any synchronization can take place, a link between a Wave Customer and a Powerofficego Customers person must be established.
-
-A new Powerofficego Customers person will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into Powerofficego.
-
-Once a link between a Wave Customer and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a Powerofficego Customers person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Powerofficego Customers person Property
-     - Powerofficego Data Type
-   * - address.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - address.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - address.city
-     - MailAddress.City
-     - "string"
-   * - address.country.code
-     - MailAddress.CountryCode
-     - "string"
-   * - address.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - email
-     - EmailAddress
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - id
-     - Id
-     - "integer"
-   * - lastName
-     - LastName
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - shippingDetails.address.city
-     - MailAddress.City
-     - "string"
-   * - shippingDetails.address.country.code
-     - MailAddress.CountryCode
-     - "string"
-   * - shippingDetails.address.postalCode
-     - MailAddress.ZipCode
      - "string"
 
 
