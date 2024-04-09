@@ -2,7 +2,7 @@
 Wix.com to Wave Dataflow
 ========================
 
-Generated: 2024-04-09 00:00:03
+Generated: 2024-04-09 12:18:39
 
 Introduction
 ------------
@@ -14,6 +14,16 @@ Wix.com Contacts to Wave Customer person
 Before any synchronization can take place, a link between a Wix.com Contacts and a Wave Customer person must be established.
 
 A new Wave Customer person will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into Wave.
+
+A Wix.com Contacts will merge with a Wave Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Contacts Property
+     - Wave Customer person Property
+   * - primaryInfo.email
+     - email
 
 Once a link between a Wix.com Contacts and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -52,6 +62,32 @@ The following properties are synchronized between a Wix.com Contacts and a Wave 
    * - primaryInfo.phone
      - phone
      - "string"
+
+
+Wix.com Members to Wave Customer person
+---------------------------------------
+Before any synchronization can take place, a link between a Wix.com Members and a Wave Customer person must be established.
+
+A Wix.com Members will merge with a Wave Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
+     - Wave Customer person Property
+   * - loginEmail
+     - email
+
+Once a link between a Wix.com Members and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Members and a Wave Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
+     - Wave Customer person Property
+     - Wave Data Type
 
 
 Wix.com Contacts to Wave Customer
