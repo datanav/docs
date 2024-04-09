@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2024-04-09 00:00:02
+Generated: 2024-04-09 12:25:26
 
 Introduction
 ------------
@@ -33,6 +33,12 @@ The following properties are synchronized between a Tripletex Customer person an
    * - Tripletex Customer person Property
      - Wix Contacts Property
      - Wix Data Type
+   * - email
+     - primaryInfo.email
+     - "string"
+   * - phoneNumber
+     - primaryInfo.phone
+     - "string"
 
 
 Tripletex Employee to Wix Contacts
