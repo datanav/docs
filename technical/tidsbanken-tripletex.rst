@@ -2,7 +2,7 @@
 Tidsbanken to Tripletex Dataflow
 ================================
 
-Generated: 2024-04-09 00:00:05
+Generated: 2024-04-09 12:18:39
 
 Introduction
 ------------
@@ -42,6 +42,32 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Trip
    * - Mobil
      - phoneNumberMobile
      - N/A
+
+
+Tidsbanken Ansatt to Tripletex Customer person
+----------------------------------------------
+Before any synchronization can take place, a link between a Tidsbanken Ansatt and a Tripletex Customer person must be established.
+
+A Tidsbanken Ansatt will merge with a Tripletex Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Ansatt Property
+     - Tripletex Customer person Property
+   * - Epost
+     - email
+
+Once a link between a Tidsbanken Ansatt and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Ansatt and a Tripletex Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Ansatt Property
+     - Tripletex Customer person Property
+     - Tripletex Data Type
 
 
 Tidsbanken Kunde to Tripletex Customer person
