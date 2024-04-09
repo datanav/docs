@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2024-04-09 00:01:02
+Generated: 2024-04-09 12:18:39
 
 Introduction
 ------------
@@ -49,6 +49,82 @@ The following properties are synchronized between a HubSpot Contact and a Triple
      - N/A
    * - properties.phone
      - phoneNumberWork
+     - "string"
+
+
+HubSpot Contact to Tripletex Customer person
+--------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a Tripletex Customer person must be established.
+
+A new Tripletex Customer person will be created from a HubSpot Contact if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Tripletex.
+
+A HubSpot Contact will merge with a Tripletex Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - Tripletex Customer person Property
+   * - properties.email
+     - email
+
+Once a link between a HubSpot Contact and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a Tripletex Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - Tripletex Customer person Property
+     - Tripletex Data Type
+   * - id
+     - id
+     - "integer"
+   * - properties.address
+     - deliveryAddress.addressLine1
+     - "string"
+   * - properties.address
+     - physicalAddress.addressLine1
+     - "string"
+   * - properties.address
+     - postalAddress.addressLine1
+     - "string"
+   * - properties.city
+     - deliveryAddress.city
+     - "string"
+   * - properties.city
+     - physicalAddress.city
+     - "string"
+   * - properties.city
+     - postalAddress.city
+     - "string"
+   * - properties.country
+     - deliveryAddress.country.id
+     - "string"
+   * - properties.country
+     - physicalAddress.country.id
+     - "integer"
+   * - properties.country
+     - postalAddress.country.id
+     - "integer"
+   * - properties.email
+     - email
+     - "string"
+   * - properties.mobilephone
+     - phoneNumberMobile
+     - "string"
+   * - properties.phone
+     - phoneNumber
+     - "string"
+   * - properties.zip
+     - deliveryAddress.postalCode
+     - "string"
+   * - properties.zip
+     - physicalAddress.postalCode
+     - "string"
+   * - properties.zip
+     - postalAddress.postalCode
      - "string"
 
 
@@ -307,72 +383,6 @@ The following properties are synchronized between a HubSpot Contact and a Triple
    * - HubSpot Contact Property
      - Tripletex Customer Property
      - Tripletex Data Type
-
-
-HubSpot Contact to Tripletex Customer person
---------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a Tripletex Customer person must be established.
-
-A new Tripletex Customer person will be created from a HubSpot Contact if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Tripletex.
-
-Once a link between a HubSpot Contact and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contact and a Tripletex Customer person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     - Tripletex Customer person Property
-     - Tripletex Data Type
-   * - id
-     - id
-     - "integer"
-   * - properties.address
-     - deliveryAddress.addressLine1
-     - "string"
-   * - properties.address
-     - physicalAddress.addressLine1
-     - "string"
-   * - properties.address
-     - postalAddress.addressLine1
-     - "string"
-   * - properties.city
-     - deliveryAddress.city
-     - "string"
-   * - properties.city
-     - physicalAddress.city
-     - "string"
-   * - properties.city
-     - postalAddress.city
-     - "string"
-   * - properties.country
-     - deliveryAddress.country.id
-     - "string"
-   * - properties.country
-     - physicalAddress.country.id
-     - "integer"
-   * - properties.country
-     - postalAddress.country.id
-     - "integer"
-   * - properties.email
-     - email
-     - "string"
-   * - properties.mobilephone
-     - phoneNumberMobile
-     - "string"
-   * - properties.phone
-     - phoneNumber
-     - "string"
-   * - properties.zip
-     - deliveryAddress.postalCode
-     - "string"
-   * - properties.zip
-     - physicalAddress.postalCode
-     - "string"
-   * - properties.zip
-     - postalAddress.postalCode
-     - "string"
 
 
 HubSpot Deal to Tripletex Order
