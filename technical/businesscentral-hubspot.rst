@@ -2,7 +2,7 @@
 Businesscentral to Hubspot Dataflow
 ===================================
 
-Generated: 2024-04-09 00:00:03
+Generated: 2024-04-09 12:51:25
 
 Introduction
 ------------
@@ -108,6 +108,43 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
    * - id (Dependant on having  in typeDependant on having NO in type)
      - sync_org_nr
+     - "string"
+   * - phoneNumber
+     - properties.phone
+     - "string"
+   * - postalCode
+     - properties.zip
+     - "string"
+
+
+Businesscentral Customers person to Hubspot Contact
+---------------------------------------------------
+Every Businesscentral Customers person will be synchronized with a Hubspot Contact.
+
+Once a link between a Businesscentral Customers person and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers person and a Hubspot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers person Property
+     - Hubspot Contact Property
+     - Hubspot Data Type
+   * - addressLine1
+     - properties.address
+     - "string"
+   * - city
+     - properties.city
+     - "string"
+   * - country
+     - properties.country
+     - "string"
+   * - email
+     - properties.email
+     - "string"
+   * - id
+     - id
      - "string"
    * - phoneNumber
      - properties.phone
