@@ -2,7 +2,7 @@
 Wave Financial to Powerofficego Dataflow
 ========================================
 
-Generated: 2024-04-09 00:00:03
+Generated: 2024-04-09 12:18:39
 
 Introduction
 ------------
@@ -77,6 +77,16 @@ Before any synchronization can take place, a link between a Wave Customer and a 
 
 A new Powerofficego Customers person will be created from a Wave Customer if it is connected to a Wave Vendor, Invoice, Customer, or Customer-person that is synchronized into Powerofficego.
 
+A Wave Customer will merge with a Powerofficego Customers person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Powerofficego Customers person Property
+   * - email
+     - EmailAddress
+
 Once a link between a Wave Customer and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
 The following properties are synchronized between a Wave Customer and a Powerofficego Customers person:
@@ -136,6 +146,16 @@ Wave Vendor to Powerofficego Customers person
 Before any synchronization can take place, a link between a Wave Vendor and a Powerofficego Customers person must be established.
 
 A new Powerofficego Customers person will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, or Customer-person that is synchronized into Powerofficego.
+
+A Wave Vendor will merge with a Powerofficego Customers person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - Powerofficego Customers person Property
+   * - email
+     - EmailAddress
 
 Once a link between a Wave Vendor and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -207,6 +227,35 @@ The following properties are synchronized between a Wave Vendor and a Poweroffic
    * - website
      - WebsiteUrl
      - "string"
+
+
+Wave Customer person to Powerofficego Customers person
+------------------------------------------------------
+Every Wave Customer person will be synchronized with a Powerofficego Customers person.
+
+If a matching Powerofficego Customers person already exists, the Wave Customer person will be merged with the existing one.
+If no matching Powerofficego Customers person is found, a new Powerofficego Customers person will be created.
+
+A Wave Customer person will merge with a Powerofficego Customers person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - Powerofficego Customers person Property
+   * - email
+     - EmailAddress
+
+Once a link between a Wave Customer person and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer person and a Powerofficego Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - Powerofficego Customers person Property
+     - Powerofficego Data Type
 
 
 Wave Customer to Powerofficego Contactperson
