@@ -2,7 +2,7 @@
 Tripletex to Youtrack Dataflow
 ==============================
 
-Generated: 2024-04-09 00:00:02
+Generated: 2024-04-09 12:25:26
 
 Introduction
 ------------
@@ -65,6 +65,9 @@ The following properties are synchronized between a Tripletex Customer person an
    * - Tripletex Customer person Property
      - Youtrack Users Property
      - Youtrack Data Type
+   * - name
+     - name
+     - "string"
 
 
 Tripletex Employee to Youtrack Users
