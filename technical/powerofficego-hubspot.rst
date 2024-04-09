@@ -2,7 +2,7 @@
 Powerofficego to Hubspot Dataflow
 =================================
 
-Generated: 2024-04-09 00:00:04
+Generated: 2024-04-09 12:47:22
 
 Introduction
 ------------
@@ -73,7 +73,10 @@ The following properties are synchronized between a Powerofficego Contactperson 
 
 Powerofficego Customers person to Hubspot Contact
 -------------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Customers person and a Hubspot Contact must be established.
+Every Powerofficego Customers person will be synchronized with a Hubspot Contact.
+
+If a matching Hubspot Contact already exists, the Powerofficego Customers person will be merged with the existing one.
+If no matching Hubspot Contact is found, a new Hubspot Contact will be created.
 
 A Powerofficego Customers person will merge with a Hubspot Contact if one of the following property combinations match:
 
