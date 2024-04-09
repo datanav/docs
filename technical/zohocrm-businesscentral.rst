@@ -2,7 +2,7 @@
 ZohoCRM to Businesscentral Dataflow
 ===================================
 
-Generated: 2024-04-09 00:00:05
+Generated: 2024-04-09 12:18:39
 
 Introduction
 ------------
@@ -22,5 +22,21 @@ The following properties are synchronized between a ZohoCRM Account and a Busine
 
    * - ZohoCRM Account Property
      - Businesscentral Companies Property
+     - Businesscentral Data Type
+
+
+ZohoCRM Contact to Businesscentral Customers person
+---------------------------------------------------
+Every ZohoCRM Contact will be synchronized with a Businesscentral Customers person.
+
+Once a link between a ZohoCRM Contact and a Businesscentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Contact and a Businesscentral Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Contact Property
+     - Businesscentral Customers person Property
      - Businesscentral Data Type
 
