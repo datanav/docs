@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2024-04-09 00:02:27
+Generated: 2024-04-09 12:18:39
 
 Introduction
 ------------
@@ -191,6 +191,94 @@ The following properties are synchronized between a SuperOffice Person and a Tri
      - "string"
 
 
+SuperOffice Person to Tripletex Customer person
+-----------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a Tripletex Customer person must be established.
+
+A new Tripletex Customer person will be created from a SuperOffice Person if it is connected to a SuperOffice Sale, Quote, Quoteline, or Quotealternative that is synchronized into Tripletex.
+
+A SuperOffice Person will merge with a Tripletex Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - Tripletex Customer person Property
+   * - Emails.Value
+     - email
+
+Once a link between a SuperOffice Person and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Person and a Tripletex Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - Tripletex Customer person Property
+     - Tripletex Data Type
+   * - Address.Street.Address1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - Address.Street.Address1
+     - physicalAddress.addressLine1
+     - "string"
+   * - Address.Street.Address1
+     - postalAddress.addressLine1
+     - "string"
+   * - Address.Street.Address2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - Address.Street.Address2
+     - physicalAddress.addressLine2
+     - "string"
+   * - Address.Street.Address2
+     - postalAddress.addressLine2
+     - "string"
+   * - Address.Street.City
+     - deliveryAddress.city
+     - "string"
+   * - Address.Street.City
+     - physicalAddress.city
+     - "string"
+   * - Address.Street.City
+     - postalAddress.city
+     - "string"
+   * - Address.Street.Zipcode
+     - deliveryAddress.postalCode
+     - "string"
+   * - Address.Street.Zipcode
+     - physicalAddress.postalCode
+     - "string"
+   * - Address.Street.Zipcode
+     - postalAddress.postalCode
+     - "string"
+   * - Associate.AssociateId
+     - accountManager.id
+     - "integer"
+   * - Country.CountryId
+     - deliveryAddress.country.id
+     - "string"
+   * - Country.CountryId
+     - physicalAddress.country.id
+     - "integer"
+   * - Country.CountryId
+     - postalAddress.country.id
+     - "integer"
+   * - Emails.Value
+     - email
+     - "string"
+   * - MobilePhones.Value
+     - phoneNumberMobile
+     - "string"
+   * - OfficePhones.Value
+     - phoneNumber
+     - "string"
+   * - PersonId
+     - id
+     - "integer"
+
+
 SuperOffice Person to Tripletex Employee
 ----------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Person and a Tripletex Employee must be established.
@@ -295,6 +383,32 @@ The following properties are synchronized between a SuperOffice User and a Tripl
    * - personEmail
      - email
      - "string"
+
+
+SuperOffice User to Tripletex Customer person
+---------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice User and a Tripletex Customer person must be established.
+
+A SuperOffice User will merge with a Tripletex Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - Tripletex Customer person Property
+   * - personEmail
+     - email
+
+Once a link between a SuperOffice User and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice User and a Tripletex Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - Tripletex Customer person Property
+     - Tripletex Data Type
 
 
 SuperOffice User to Tripletex Employee
@@ -452,84 +566,6 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - "integer"
    * - Country.CountryId
      - postalAddress.country.id
-     - "integer"
-
-
-SuperOffice Person to Tripletex Customer person
------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a Tripletex Customer person must be established.
-
-A new Tripletex Customer person will be created from a SuperOffice Person if it is connected to a SuperOffice Sale, Quote, Quoteline, or Quotealternative that is synchronized into Tripletex.
-
-Once a link between a SuperOffice Person and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Person and a Tripletex Customer person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Person Property
-     - Tripletex Customer person Property
-     - Tripletex Data Type
-   * - Address.Street.Address1
-     - deliveryAddress.addressLine1
-     - "string"
-   * - Address.Street.Address1
-     - physicalAddress.addressLine1
-     - "string"
-   * - Address.Street.Address1
-     - postalAddress.addressLine1
-     - "string"
-   * - Address.Street.Address2
-     - deliveryAddress.addressLine2
-     - "string"
-   * - Address.Street.Address2
-     - physicalAddress.addressLine2
-     - "string"
-   * - Address.Street.Address2
-     - postalAddress.addressLine2
-     - "string"
-   * - Address.Street.City
-     - deliveryAddress.city
-     - "string"
-   * - Address.Street.City
-     - physicalAddress.city
-     - "string"
-   * - Address.Street.City
-     - postalAddress.city
-     - "string"
-   * - Address.Street.Zipcode
-     - deliveryAddress.postalCode
-     - "string"
-   * - Address.Street.Zipcode
-     - physicalAddress.postalCode
-     - "string"
-   * - Address.Street.Zipcode
-     - postalAddress.postalCode
-     - "string"
-   * - Associate.AssociateId
-     - accountManager.id
-     - "integer"
-   * - Country.CountryId
-     - deliveryAddress.country.id
-     - "string"
-   * - Country.CountryId
-     - physicalAddress.country.id
-     - "integer"
-   * - Country.CountryId
-     - postalAddress.country.id
-     - "integer"
-   * - Emails.Value
-     - email
-     - "string"
-   * - MobilePhones.Value
-     - phoneNumberMobile
-     - "string"
-   * - OfficePhones.Value
-     - phoneNumber
-     - "string"
-   * - PersonId
-     - id
      - "integer"
 
 
