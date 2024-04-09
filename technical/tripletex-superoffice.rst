@@ -2,7 +2,7 @@
 Tripletex to Superoffice Dataflow
 =================================
 
-Generated: 2024-04-09 13:23:02
+Generated: 2024-04-09 14:21:25
 
 Introduction
 ------------
@@ -499,6 +499,24 @@ The following properties are synchronized between a Tripletex Contact and a Supe
    * - Tripletex Contact Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
+
+
+Tripletex Customer person to Superoffice Contact
+------------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer person and a Superoffice Contact must be established.
+
+A new Superoffice Contact will be created from a Tripletex Customer person if it is connected to a Tripletex Contact, Customer, Employee, or Customer-person that is synchronized into Superoffice.
+
+Once a link between a Tripletex Customer person and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a Superoffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     - Superoffice Contact Property
+     - Superoffice Data Type
 
 
 Tripletex Customer to SuperOffice Person
