@@ -2,7 +2,7 @@
 Tripletex to Superoffice Dataflow
 =================================
 
-Generated: 2024-04-09 14:21:25
+Generated: 2024-04-09 14:22:10
 
 Introduction
 ------------
@@ -517,6 +517,90 @@ The following properties are synchronized between a Tripletex Customer person an
    * - Tripletex Customer person Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - deliveryAddress.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - deliveryAddress.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - deliveryAddress.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - deliveryAddress.city
+     - Address.Postal.City
+     - "string"
+   * - deliveryAddress.city
+     - Address.Street.City
+     - "string"
+   * - deliveryAddress.country.id
+     - Country.CountryId
+     - "integer"
+   * - deliveryAddress.postalCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - deliveryAddress.postalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - id
+     - ContactId
+     - "integer"
+   * - physicalAddress.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - physicalAddress.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - physicalAddress.addressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - physicalAddress.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - physicalAddress.city
+     - Address.Postal.City
+     - "string"
+   * - physicalAddress.city
+     - Address.Street.City
+     - "string"
+   * - physicalAddress.country.id
+     - Country.CountryId
+     - "integer"
+   * - physicalAddress.postalCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - physicalAddress.postalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - postalAddress.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - postalAddress.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - postalAddress.addressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - postalAddress.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - postalAddress.city
+     - Address.Postal.City
+     - "string"
+   * - postalAddress.city
+     - Address.Street.City
+     - "string"
+   * - postalAddress.country.id
+     - Country.CountryId
+     - "integer"
+   * - postalAddress.postalCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - postalAddress.postalCode
+     - Address.Street.Zipcode
+     - "string"
 
 
 Tripletex Customer to SuperOffice Person
