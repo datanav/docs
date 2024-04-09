@@ -2,7 +2,7 @@
 Powerofficego to Businesscentral Dataflow
 =========================================
 
-Generated: 2024-04-09 00:00:04
+Generated: 2024-04-09 12:25:21
 
 Introduction
 ------------
@@ -290,6 +290,9 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - Powerofficego Customers person Property
      - Businesscentral Contacts person Property
      - Businesscentral Data Type
+   * - EmailAddress
+     - email
+     - "string"
    * - Id
      - id
      - "string"
@@ -310,6 +313,9 @@ The following properties are synchronized between a Powerofficego Customers pers
      - "string"
    * - MailAddress.ZipCode
      - postalCode
+     - "string"
+   * - PhoneNumber
+     - phoneNumber
      - "string"
 
 
