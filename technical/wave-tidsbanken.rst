@@ -2,7 +2,7 @@
 Wave Financial to Tidsbanken Dataflow
 =====================================
 
-Generated: 2024-04-09 00:00:05
+Generated: 2024-04-09 12:25:26
 
 Introduction
 ------------
@@ -42,9 +42,21 @@ The following properties are synchronized between a Wave Customer person and a T
    * - address.postalCode
      - Postnummer
      - "string"
+   * - firstName
+     - Fornavn
+     - "string"
    * - id
      - Id
      - "integer"
+   * - lastName
+     - Etternavn
+     - "string"
+   * - mobile
+     - Mobil
+     - "string"
+   * - name
+     - Navn
+     - "string"
    * - shippingDetails.address.addressLine1
      - Adresse
      - "string"
