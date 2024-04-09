@@ -2,7 +2,7 @@
 Tripletex to Tidsbanken Dataflow
 ================================
 
-Generated: 2024-04-09 00:00:05
+Generated: 2024-04-09 12:25:26
 
 Introduction
 ------------
@@ -89,6 +89,12 @@ The following properties are synchronized between a Tripletex Customer person an
    * - id
      - Id
      - "integer"
+   * - name
+     - Navn
+     - "string"
+   * - phoneNumberMobile
+     - Mobil
+     - "string"
    * - physicalAddress.addressLine1
      - Adresse
      - "string"
