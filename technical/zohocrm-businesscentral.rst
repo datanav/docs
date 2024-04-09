@@ -2,7 +2,7 @@
 ZohoCRM to Businesscentral Dataflow
 ===================================
 
-Generated: 2024-04-09 12:18:39
+Generated: 2024-04-09 12:25:45
 
 Introduction
 ------------
@@ -39,4 +39,40 @@ The following properties are synchronized between a ZohoCRM Contact and a Busine
    * - ZohoCRM Contact Property
      - Businesscentral Customers person Property
      - Businesscentral Data Type
+   * - Email
+     - email
+     - "string"
+   * - Full_Name
+     - displayName
+     - "string"
+   * - Mailing_City
+     - city
+     - "string"
+   * - Mailing_Country
+     - country
+     - "string"
+   * - Mailing_Zip
+     - postalCode
+     - "string"
+   * - Other_City
+     - city
+     - "string"
+   * - Other_Country
+     - country
+     - "string"
+   * - Other_Phone
+     - phoneNumber
+     - "string"
+   * - Other_Zip
+     - postalCode
+     - "string"
+   * - Phone
+     - phoneNumber
+     - "string"
+   * - Secondary_Email
+     - email
+     - "string"
+   * - id
+     - id
+     - "string"
 
