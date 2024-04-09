@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2024-04-09 12:18:39
+Generated: 2024-04-09 12:25:45
 
 Introduction
 ------------
@@ -109,6 +109,15 @@ The following properties are synchronized between a SuperOffice User and a Wave 
    * - SuperOffice User Property
      - Wave Customer person Property
      - Wave Data Type
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - N/A
+   * - personEmail
+     - email
+     - "string"
 
 
 SuperOffice Contact to Wave Customer person
