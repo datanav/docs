@@ -2,7 +2,7 @@
 HubSpot to Powerofficego Dataflow
 =================================
 
-Generated: 2024-04-09 00:01:02
+Generated: 2024-04-09 12:18:39
 
 Introduction
 ------------
@@ -64,6 +64,64 @@ The following properties are synchronized between a HubSpot Contact and a Powero
      - "string"
    * - properties.zip
      - zipCode
+     - "string"
+
+
+HubSpot Contact to Powerofficego Customers person
+-------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a Powerofficego Customers person must be established.
+
+A new Powerofficego Customers person will be created from a HubSpot Contact if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Powerofficego.
+
+A HubSpot Contact will merge with a Powerofficego Customers person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - Powerofficego Customers person Property
+   * - properties.email
+     - EmailAddress
+
+Once a link between a HubSpot Contact and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a Powerofficego Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - Powerofficego Customers person Property
+     - Powerofficego Data Type
+   * - id
+     - Id
+     - "integer"
+   * - properties.address
+     - MailAddress.AddressLine1
+     - "string"
+   * - properties.city
+     - MailAddress.City
+     - "string"
+   * - properties.country
+     - MailAddress.CountryCode
+     - "string"
+   * - properties.date_of_birth
+     - DateOfBirth
+     - N/A
+   * - properties.email
+     - EmailAddress
+     - "string"
+   * - properties.firstname
+     - FirstName
+     - "string"
+   * - properties.lastname
+     - LastName
+     - "string"
+   * - properties.phone
+     - PhoneNumber
+     - "string"
+   * - properties.zip
+     - MailAddress.ZipCode
      - "string"
 
 
@@ -199,54 +257,6 @@ The following properties are synchronized between a HubSpot Contact and a Powero
      - Powerofficego Data Type
    * - properties.country
      - MailAddress.CountryCode
-     - "string"
-
-
-HubSpot Contact to Powerofficego Customers person
--------------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a Powerofficego Customers person must be established.
-
-A new Powerofficego Customers person will be created from a HubSpot Contact if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Powerofficego.
-
-Once a link between a HubSpot Contact and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contact and a Powerofficego Customers person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     - Powerofficego Customers person Property
-     - Powerofficego Data Type
-   * - id
-     - Id
-     - "integer"
-   * - properties.address
-     - MailAddress.AddressLine1
-     - "string"
-   * - properties.city
-     - MailAddress.City
-     - "string"
-   * - properties.country
-     - MailAddress.CountryCode
-     - "string"
-   * - properties.date_of_birth
-     - DateOfBirth
-     - N/A
-   * - properties.email
-     - EmailAddress
-     - "string"
-   * - properties.firstname
-     - FirstName
-     - "string"
-   * - properties.lastname
-     - LastName
-     - "string"
-   * - properties.phone
-     - PhoneNumber
-     - "string"
-   * - properties.zip
-     - MailAddress.ZipCode
      - "string"
 
 
