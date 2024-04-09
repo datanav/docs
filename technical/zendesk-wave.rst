@@ -2,7 +2,7 @@
 Zendesk to Wave Dataflow
 ========================
 
-Generated: 2024-04-09 12:18:39
+Generated: 2024-04-09 12:25:45
 
 Introduction
 ------------
@@ -33,4 +33,10 @@ The following properties are synchronized between a Zendesk Users and a Wave Cus
    * - Zendesk Users Property
      - Wave Customer person Property
      - Wave Data Type
+   * - email
+     - email
+     - "string"
+   * - name
+     - name
+     - N/A
 
