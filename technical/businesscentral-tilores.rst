@@ -2,7 +2,7 @@
 Businesscentral to Tilores Dataflow
 ===================================
 
-Generated: 2024-04-09 00:00:05
+Generated: 2024-04-09 13:52:19
 
 Introduction
 ------------
@@ -37,6 +37,34 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
    * - phoneNumber
      - phoneNumber
+     - "string"
+   * - postalCode
+     - postalCode
+     - "string"
+
+
+Businesscentral Customers person to Tilores Human
+-------------------------------------------------
+Every Businesscentral Customers person will be synchronized with a Tilores Human.
+
+Once a link between a Businesscentral Customers person and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers person and a Tilores Human:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers person Property
+     - Tilores Human Property
+     - Tilores Data Type
+   * - city
+     - city
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - id
+     - id
      - "string"
    * - postalCode
      - postalCode
