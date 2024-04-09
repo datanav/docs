@@ -2,18 +2,54 @@
 Wave Financial to Wave Dataflow
 ===============================
 
-Generated: 2024-04-09 00:00:03
+Generated: 2024-04-09 12:18:39
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
+Wave Customer person to Wave Customer person
+--------------------------------------------
+Before any synchronization can take place, a link between a Wave Customer person and a Wave Customer person must be established.
+
+A Wave Customer person will merge with a Wave Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - Wave Customer person Property
+   * - email
+     - email
+
+Once a link between a Wave Customer person and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer person and a Wave Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - Wave Customer person Property
+     - Wave Data Type
+
+
 Wave Customer to Wave Customer person
 -------------------------------------
 Before any synchronization can take place, a link between a Wave Customer and a Wave Customer person must be established.
 
 A new Wave Customer person will be created from a Wave Customer if it is connected to a Wave Vendor, Invoice, Business, or Customer that is synchronized into Wave.
+
+A Wave Customer will merge with a Wave Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Wave Customer person Property
+   * - email
+     - email
 
 Once a link between a Wave Customer and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -116,6 +152,16 @@ Wave Vendor to Wave Customer person
 Before any synchronization can take place, a link between a Wave Vendor and a Wave Customer person must be established.
 
 A new Wave Customer person will be created from a Wave Vendor if it is connected to a Wave Vendor, Invoice, Business, or Customer that is synchronized into Wave.
+
+A Wave Vendor will merge with a Wave Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - Wave Customer person Property
+   * - email
+     - email
 
 Once a link between a Wave Vendor and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
