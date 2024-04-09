@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2024-04-09 12:25:45
+Generated: 2024-04-09 14:21:25
 
 Introduction
 ------------
@@ -151,6 +151,24 @@ The following properties are synchronized between a Tripletex Contact and a Wave
    * - phoneNumberMobile
      - mobile
      - "string"
+
+
+Tripletex Customer person to Wave Customer
+------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer person and a Wave Customer must be established.
+
+A new Wave Customer will be created from a Tripletex Customer person if it is connected to a Tripletex Contact, Customer, or Customer-person that is synchronized into Wave.
+
+Once a link between a Tripletex Customer person and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     - Wave Customer Property
+     - Wave Data Type
 
 
 Tripletex Customer to Wave Customer person
