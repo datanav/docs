@@ -2,12 +2,52 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2024-04-09 00:00:03
+Generated: 2024-04-09 12:18:39
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wix.com Contacts to Tripletex Customer person
+---------------------------------------------
+Before any synchronization can take place, a link between a Wix.com Contacts and a Tripletex Customer person must be established.
+
+A new Tripletex Customer person will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into Tripletex.
+
+A Wix.com Contacts will merge with a Tripletex Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Contacts Property
+     - Tripletex Customer person Property
+   * - primaryInfo.email
+     - email
+
+Once a link between a Wix.com Contacts and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Contacts and a Tripletex Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Contacts Property
+     - Tripletex Customer person Property
+     - Tripletex Data Type
+   * - info.name.first
+     - name
+     - "string"
+   * - info.name.last
+     - name
+     - "string"
+   * - primaryInfo.email
+     - email
+     - "string"
+   * - primaryInfo.phone
+     - phoneNumber
+     - "string"
+
 
 Wix.com Contacts to Tripletex Employee
 --------------------------------------
@@ -91,6 +131,32 @@ The following properties are synchronized between a Wix.com Members and a Triple
      - "string"
 
 
+Wix.com Members to Tripletex Customer person
+--------------------------------------------
+Before any synchronization can take place, a link between a Wix.com Members and a Tripletex Customer person must be established.
+
+A Wix.com Members will merge with a Tripletex Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
+     - Tripletex Customer person Property
+   * - loginEmail
+     - email
+
+Once a link between a Wix.com Members and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Members and a Tripletex Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
+     - Tripletex Customer person Property
+     - Tripletex Data Type
+
+
 Wix.com Members to Tripletex Employee
 -------------------------------------
 Before any synchronization can take place, a link between a Wix.com Members and a Tripletex Employee must be established.
@@ -117,36 +183,6 @@ The following properties are synchronized between a Wix.com Members and a Triple
      - Tripletex Data Type
    * - loginEmail
      - email
-     - "string"
-
-
-Wix.com Contacts to Tripletex Customer person
----------------------------------------------
-Before any synchronization can take place, a link between a Wix.com Contacts and a Tripletex Customer person must be established.
-
-A new Tripletex Customer person will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into Tripletex.
-
-Once a link between a Wix.com Contacts and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Contacts and a Tripletex Customer person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Contacts Property
-     - Tripletex Customer person Property
-     - Tripletex Data Type
-   * - info.name.first
-     - name
-     - "string"
-   * - info.name.last
-     - name
-     - "string"
-   * - primaryInfo.email
-     - email
-     - "string"
-   * - primaryInfo.phone
-     - phoneNumber
      - "string"
 
 
