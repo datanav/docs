@@ -2,7 +2,7 @@
 Wave Financial to Powerofficego Dataflow
 ========================================
 
-Generated: 2024-04-09 12:18:39
+Generated: 2024-04-09 12:25:26
 
 Introduction
 ------------
@@ -51,9 +51,21 @@ The following properties are synchronized between a Wave Customer person and a P
    * - address.postalCode
      - zipCode
      - "string"
+   * - email
+     - emailAddress
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
    * - id
      - id
      - "integer"
+   * - lastName
+     - lastName
+     - "string"
+   * - phone
+     - phoneNumber
+     - "string"
    * - shippingDetails.address.addressLine1
      - address1
      - "string"
@@ -68,6 +80,9 @@ The following properties are synchronized between a Wave Customer person and a P
      - "string"
    * - shippingDetails.address.postalCode
      - zipCode
+     - "string"
+   * - shippingDetails.phone
+     - phoneNumber
      - "string"
 
 
@@ -318,9 +333,6 @@ The following properties are synchronized between a Wave Customer and a Poweroff
    * - lastName
      - lastName
      - "string"
-   * - phone
-     - phoneNumber
-     - "string"
    * - shippingDetails.address.addressLine1
      - address1
      - "string"
@@ -335,9 +347,6 @@ The following properties are synchronized between a Wave Customer and a Poweroff
      - "string"
    * - shippingDetails.address.postalCode
      - zipCode
-     - "string"
-   * - shippingDetails.phone
-     - phoneNumber
      - "string"
 
 
