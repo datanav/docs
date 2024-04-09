@@ -2,7 +2,7 @@
 Businesscentral to Wave Dataflow
 ================================
 
-Generated: 2024-04-09 12:18:39
+Generated: 2024-04-09 12:25:45
 
 Introduction
 ------------
@@ -132,6 +132,45 @@ The following properties are synchronized between a Businesscentral Customers pe
    * - Businesscentral Customers person Property
      - Wave Customer person Property
      - Wave Data Type
+   * - addressLine1
+     - address.addressLine1
+     - "string"
+   * - addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - addressLine2
+     - address.addressLine2
+     - "string"
+   * - addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - city
+     - address.city
+     - "string"
+   * - city
+     - shippingDetails.address.city
+     - "string"
+   * - country
+     - address.country.code
+     - "string"
+   * - country
+     - shippingDetails.address.country.code
+     - "string"
+   * - displayName
+     - name
+     - N/A
+   * - email
+     - email
+     - "string"
+   * - phoneNumber
+     - phone
+     - "string"
+   * - postalCode
+     - address.postalCode
+     - "string"
+   * - postalCode
+     - shippingDetails.address.postalCode
+     - "string"
 
 
 Businesscentral Items to Wave Product
