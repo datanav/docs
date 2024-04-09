@@ -2,7 +2,7 @@
 Tidsbanken to Tripletex Dataflow
 ================================
 
-Generated: 2024-04-09 12:18:39
+Generated: 2024-04-09 12:25:45
 
 Introduction
 ------------
@@ -68,6 +68,42 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Trip
    * - Tidsbanken Ansatt Property
      - Tripletex Customer person Property
      - Tripletex Data Type
+   * - Adresse
+     - deliveryAddress.addressLine1
+     - "string"
+   * - Adresse
+     - physicalAddress.addressLine1
+     - "string"
+   * - Adresse
+     - postalAddress.addressLine1
+     - "string"
+   * - Id
+     - id
+     - "integer"
+   * - Mobil
+     - phoneNumberMobile
+     - "string"
+   * - Navn
+     - name
+     - "string"
+   * - Postnummer
+     - deliveryAddress.postalCode
+     - "string"
+   * - Postnummer
+     - physicalAddress.postalCode
+     - "string"
+   * - Postnummer
+     - postalAddress.postalCode
+     - "string"
+   * - Poststed
+     - deliveryAddress.city
+     - "string"
+   * - Poststed
+     - physicalAddress.city
+     - "string"
+   * - Poststed
+     - postalAddress.city
+     - "string"
 
 
 Tidsbanken Kunde to Tripletex Customer person
