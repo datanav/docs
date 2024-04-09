@@ -2,7 +2,7 @@
 Wave Financial to Tilores Dataflow
 ==================================
 
-Generated: 2024-04-09 14:21:30
+Generated: 2024-04-09 14:22:10
 
 Introduction
 ------------
@@ -23,4 +23,28 @@ The following properties are synchronized between a Wave Customer person and a T
    * - Wave Customer person Property
      - Tilores Human Property
      - Tilores Data Type
+   * - address.city
+     - city
+     - "string"
+   * - address.postalCode
+     - postalCode
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - shippingDetails.address.city
+     - city
+     - "string"
+   * - shippingDetails.address.postalCode
+     - postalCode
+     - "string"
 
