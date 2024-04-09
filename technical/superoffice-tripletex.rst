@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2024-04-09 12:18:39
+Generated: 2024-04-09 12:25:45
 
 Introduction
 ------------
@@ -409,6 +409,9 @@ The following properties are synchronized between a SuperOffice User and a Tripl
    * - SuperOffice User Property
      - Tripletex Customer person Property
      - Tripletex Data Type
+   * - personEmail
+     - email
+     - "string"
 
 
 SuperOffice User to Tripletex Employee
