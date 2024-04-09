@@ -2,7 +2,7 @@
 Tidsbanken to Wave Dataflow
 ===========================
 
-Generated: 2024-04-09 12:18:39
+Generated: 2024-04-09 12:25:45
 
 Introduction
 ------------
@@ -33,6 +33,36 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Wave
    * - Tidsbanken Ansatt Property
      - Wave Customer person Property
      - Wave Data Type
+   * - Adresse
+     - address.addressLine1
+     - "string"
+   * - Adresse
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - Etternavn
+     - lastName
+     - N/A
+   * - Fornavn
+     - firstName
+     - "string"
+   * - Mobil
+     - mobile
+     - "string"
+   * - Navn
+     - name
+     - N/A
+   * - Postnummer
+     - address.postalCode
+     - "string"
+   * - Postnummer
+     - shippingDetails.address.postalCode
+     - "string"
+   * - Poststed
+     - address.city
+     - "string"
+   * - Poststed
+     - shippingDetails.address.city
+     - "string"
 
 
 Tidsbanken Kunde to Wave Customer
