@@ -2,7 +2,7 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2024-04-09 12:18:39
+Generated: 2024-04-09 12:25:26
 
 Introduction
 ------------
@@ -33,6 +33,24 @@ The following properties are synchronized between a Wave Customer person and a T
    * - Wave Customer person Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - email
+     - email
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - mobile
+     - phoneNumberMobile
+     - N/A
+   * - phone
+     - phoneNumberWork
+     - "string"
+   * - shippingDetails.phone
+     - phoneNumberWork
+     - "string"
 
 
 Wave Customer person to Tripletex Employee
@@ -77,9 +95,21 @@ The following properties are synchronized between a Wave Customer person and a T
    * - address.postalCode
      - address.postalCode
      - "string"
+   * - firstName
+     - firstName
+     - "string"
    * - id
      - id
      - "integer"
+   * - lastName
+     - lastName
+     - "string"
+   * - mobile
+     - phoneNumberMobile
+     - N/A
+   * - phone
+     - phoneNumberWork
+     - "string"
    * - shippingDetails.address.addressLine1
      - address.addressLine1
      - "string"
@@ -94,6 +124,9 @@ The following properties are synchronized between a Wave Customer person and a T
      - "integer"
    * - shippingDetails.address.postalCode
      - address.postalCode
+     - "string"
+   * - shippingDetails.phone
+     - phoneNumberWork
      - "string"
 
 
@@ -568,9 +601,6 @@ The following properties are synchronized between a Wave Customer and a Triplete
      - phoneNumberMobile
      - N/A
    * - phone
-     - phoneNumberWork
-     - "string"
-   * - shippingDetails.phone
      - phoneNumberWork
      - "string"
 
