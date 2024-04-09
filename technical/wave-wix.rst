@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2024-04-09 00:00:03
+Generated: 2024-04-09 12:25:26
 
 Introduction
 ------------
@@ -45,8 +45,20 @@ The following properties are synchronized between a Wave Customer person and a W
    * - address.postalCode
      - info.addresses.items.address.postalCode
      - "string"
+   * - email
+     - primaryInfo.email
+     - "string"
+   * - firstName
+     - info.name.first
+     - "string"
    * - id
      - id
+     - "string"
+   * - lastName
+     - info.name.last
+     - "string"
+   * - phone
+     - primaryInfo.phone
      - "string"
    * - shippingDetails.address.addressLine1
      - info.addresses.items.address.addressLine
@@ -59,6 +71,9 @@ The following properties are synchronized between a Wave Customer person and a W
      - "string"
    * - shippingDetails.address.postalCode
      - info.addresses.items.address.postalCode
+     - "string"
+   * - shippingDetails.phone
+     - primaryInfo.phone
      - "string"
 
 
