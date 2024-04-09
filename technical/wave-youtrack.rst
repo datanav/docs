@@ -2,7 +2,7 @@
 Wave Financial to Youtrack Dataflow
 ===================================
 
-Generated: 2024-04-09 00:00:03
+Generated: 2024-04-09 12:25:26
 
 Introduction
 ------------
@@ -35,6 +35,9 @@ The following properties are synchronized between a Wave Customer person and a Y
      - Youtrack Data Type
    * - email
      - profile.email
+     - "string"
+   * - name
+     - name
      - "string"
 
 
