@@ -2,12 +2,88 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2024-04-09 00:01:02
+Generated: 2024-04-09 12:18:39
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+HubSpot Contact to Wave Customer person
+---------------------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a Wave Customer person must be established.
+
+A new Wave Customer person will be created from a HubSpot Contact if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Wave.
+
+A HubSpot Contact will merge with a Wave Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - Wave Customer person Property
+   * - properties.email
+     - email
+
+Once a link between a HubSpot Contact and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a Wave Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - Wave Customer person Property
+     - Wave Data Type
+   * - properties.address
+     - address.addressLine1
+     - "string"
+   * - properties.address
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - properties.city
+     - address.city
+     - "string"
+   * - properties.city
+     - shippingDetails.address.city
+     - "string"
+   * - properties.country
+     - address.country.code
+     - "string"
+   * - properties.country
+     - address.countryCode
+     - "string"
+   * - properties.country
+     - shippingDetails.address.country.code
+     - "string"
+   * - properties.email
+     - email
+     - "string"
+   * - properties.firstname
+     - firstName
+     - "string"
+   * - properties.lastname
+     - lastName
+     - N/A
+   * - properties.mobilephone
+     - mobile
+     - "string"
+   * - properties.phone
+     - phone
+     - "string"
+   * - properties.state
+     - address.province.code
+     - "string"
+   * - properties.state
+     - shippingDetails.address.province.code
+     - "string"
+   * - properties.zip
+     - address.postalCode
+     - "string"
+   * - properties.zip
+     - shippingDetails.address.postalCode
+     - "string"
+
 
 HubSpot Company to Wave Customer
 --------------------------------
@@ -189,72 +265,6 @@ The following properties are synchronized between a HubSpot Contact and a Wave C
      - "string"
    * - properties.mobilephone
      - mobile
-     - "string"
-   * - properties.state
-     - address.province.code
-     - "string"
-   * - properties.state
-     - shippingDetails.address.province.code
-     - "string"
-   * - properties.zip
-     - address.postalCode
-     - "string"
-   * - properties.zip
-     - shippingDetails.address.postalCode
-     - "string"
-
-
-HubSpot Contact to Wave Customer person
----------------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a Wave Customer person must be established.
-
-A new Wave Customer person will be created from a HubSpot Contact if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Wave.
-
-Once a link between a HubSpot Contact and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contact and a Wave Customer person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     - Wave Customer person Property
-     - Wave Data Type
-   * - properties.address
-     - address.addressLine1
-     - "string"
-   * - properties.address
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - properties.city
-     - address.city
-     - "string"
-   * - properties.city
-     - shippingDetails.address.city
-     - "string"
-   * - properties.country
-     - address.country.code
-     - "string"
-   * - properties.country
-     - address.countryCode
-     - "string"
-   * - properties.country
-     - shippingDetails.address.country.code
-     - "string"
-   * - properties.email
-     - email
-     - "string"
-   * - properties.firstname
-     - firstName
-     - "string"
-   * - properties.lastname
-     - lastName
-     - N/A
-   * - properties.mobilephone
-     - mobile
-     - "string"
-   * - properties.phone
-     - phone
      - "string"
    * - properties.state
      - address.province.code
