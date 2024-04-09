@@ -2,12 +2,55 @@
 Wix.com to Powerofficego Dataflow
 =================================
 
-Generated: 2024-04-09 00:00:03
+Generated: 2024-04-09 12:18:39
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to Powerofficego. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wix.com Contacts to Powerofficego Customers person
+--------------------------------------------------
+Before any synchronization can take place, a link between a Wix.com Contacts and a Powerofficego Customers person must be established.
+
+A new Powerofficego Customers person will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into Powerofficego.
+
+A Wix.com Contacts will merge with a Powerofficego Customers person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Contacts Property
+     - Powerofficego Customers person Property
+   * - primaryInfo.email
+     - EmailAddress
+
+Once a link between a Wix.com Contacts and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Contacts and a Powerofficego Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Contacts Property
+     - Powerofficego Customers person Property
+     - Powerofficego Data Type
+   * - info.addresses.items.address.country
+     - MailAddress.CountryCode
+     - "string"
+   * - info.name.first
+     - FirstName
+     - "string"
+   * - info.name.last
+     - LastName
+     - "string"
+   * - primaryInfo.email
+     - EmailAddress
+     - "string"
+   * - primaryInfo.phone
+     - PhoneNumber
+     - "string"
+
 
 Wix.com Members to Powerofficego Contactperson
 ----------------------------------------------
@@ -38,37 +81,30 @@ The following properties are synchronized between a Wix.com Members and a Powero
      - "string"
 
 
-Wix.com Contacts to Powerofficego Customers person
---------------------------------------------------
-Before any synchronization can take place, a link between a Wix.com Contacts and a Powerofficego Customers person must be established.
+Wix.com Members to Powerofficego Customers person
+-------------------------------------------------
+Before any synchronization can take place, a link between a Wix.com Members and a Powerofficego Customers person must be established.
 
-A new Powerofficego Customers person will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into Powerofficego.
-
-Once a link between a Wix.com Contacts and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Contacts and a Powerofficego Customers person:
+A Wix.com Members will merge with a Powerofficego Customers person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wix.com Contacts Property
+   * - Wix.com Members Property
+     - Powerofficego Customers person Property
+   * - loginEmail
+     - EmailAddress
+
+Once a link between a Wix.com Members and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Members and a Powerofficego Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
      - Powerofficego Customers person Property
      - Powerofficego Data Type
-   * - info.addresses.items.address.country
-     - MailAddress.CountryCode
-     - "string"
-   * - info.name.first
-     - FirstName
-     - "string"
-   * - info.name.last
-     - LastName
-     - "string"
-   * - primaryInfo.email
-     - EmailAddress
-     - "string"
-   * - primaryInfo.phone
-     - PhoneNumber
-     - "string"
 
 
 Wix.com Contacts to Powerofficego Customers
