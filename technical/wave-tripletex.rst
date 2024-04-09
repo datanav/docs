@@ -2,7 +2,7 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2024-04-09 00:00:03
+Generated: 2024-04-09 12:18:39
 
 Introduction
 ------------
@@ -97,141 +97,21 @@ The following properties are synchronized between a Wave Customer person and a T
      - "string"
 
 
-Wave Customer to Tripletex Employee
------------------------------------
-Before any synchronization can take place, a link between a Wave Customer and a Tripletex Employee must be established.
-
-A Wave Customer will merge with a Tripletex Employee if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Tripletex Employee Property
-   * - email
-     - email
-
-Once a link between a Wave Customer and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a Tripletex Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Tripletex Employee Property
-     - Tripletex Data Type
-   * - address.addressLine1
-     - address.addressLine1
-     - "string"
-   * - address.addressLine2
-     - address.addressLine2
-     - "string"
-   * - address.city
-     - address.city
-     - "string"
-   * - address.country.code
-     - address.country.id
-     - "integer"
-   * - address.countryCode
-     - address.country.id
-     - "integer"
-   * - address.postalCode
-     - address.postalCode
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - id
-     - id
-     - "integer"
-   * - lastName
-     - lastName
-     - "string"
-   * - mobile
-     - phoneNumberMobile
-     - "string"
-   * - phone
-     - phoneNumberWork
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - address.addressLine1
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - address.addressLine2
-     - "string"
-   * - shippingDetails.address.city
-     - address.city
-     - "string"
-   * - shippingDetails.address.country.code
-     - address.country.id
-     - "integer"
-   * - shippingDetails.address.postalCode
-     - address.postalCode
-     - "string"
-
-
-Wave Vendor to Tripletex Employee
----------------------------------
-Before any synchronization can take place, a link between a Wave Vendor and a Tripletex Employee must be established.
-
-A Wave Vendor will merge with a Tripletex Employee if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     - Tripletex Employee Property
-   * - email
-     - email
-
-Once a link between a Wave Vendor and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a Tripletex Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     - Tripletex Employee Property
-     - Tripletex Data Type
-   * - address.addressLine1
-     - address.addressLine1
-     - "string"
-   * - address.addressLine2
-     - address.addressLine2
-     - "string"
-   * - address.city
-     - address.city
-     - "string"
-   * - address.country.code
-     - address.country.id
-     - "integer"
-   * - address.postalCode
-     - address.postalCode
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - id
-     - id
-     - "integer"
-   * - lastName
-     - lastName
-     - "string"
-   * - mobile
-     - phoneNumberMobile
-     - "string"
-   * - phone
-     - phoneNumberWork
-     - "string"
-
-
 Wave Customer to Tripletex Customer person
 ------------------------------------------
 Before any synchronization can take place, a link between a Wave Customer and a Tripletex Customer person must be established.
 
 A new Tripletex Customer person will be created from a Wave Customer if it is connected to a Wave Vendor, Invoice, Customer, or Customer-person that is synchronized into Tripletex.
+
+A Wave Customer will merge with a Tripletex Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Tripletex Customer person Property
+   * - email
+     - email
 
 Once a link between a Wave Customer and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -338,11 +218,95 @@ The following properties are synchronized between a Wave Customer and a Triplete
      - "string"
 
 
+Wave Customer to Tripletex Employee
+-----------------------------------
+Before any synchronization can take place, a link between a Wave Customer and a Tripletex Employee must be established.
+
+A Wave Customer will merge with a Tripletex Employee if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Tripletex Employee Property
+   * - email
+     - email
+
+Once a link between a Wave Customer and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Tripletex Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Tripletex Employee Property
+     - Tripletex Data Type
+   * - address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - address.city
+     - address.city
+     - "string"
+   * - address.country.code
+     - address.country.id
+     - "integer"
+   * - address.countryCode
+     - address.country.id
+     - "integer"
+   * - address.postalCode
+     - address.postalCode
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - lastName
+     - lastName
+     - "string"
+   * - mobile
+     - phoneNumberMobile
+     - "string"
+   * - phone
+     - phoneNumberWork
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - shippingDetails.address.city
+     - address.city
+     - "string"
+   * - shippingDetails.address.country.code
+     - address.country.id
+     - "integer"
+   * - shippingDetails.address.postalCode
+     - address.postalCode
+     - "string"
+
+
 Wave Vendor to Tripletex Customer person
 ----------------------------------------
 Before any synchronization can take place, a link between a Wave Vendor and a Tripletex Customer person must be established.
 
 A new Tripletex Customer person will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, or Customer-person that is synchronized into Tripletex.
+
+A Wave Vendor will merge with a Tripletex Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - Tripletex Customer person Property
+   * - email
+     - email
 
 Once a link between a Wave Vendor and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -402,6 +366,62 @@ The following properties are synchronized between a Wave Vendor and a Tripletex 
    * - id
      - id
      - "integer"
+
+
+Wave Vendor to Tripletex Employee
+---------------------------------
+Before any synchronization can take place, a link between a Wave Vendor and a Tripletex Employee must be established.
+
+A Wave Vendor will merge with a Tripletex Employee if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - Tripletex Employee Property
+   * - email
+     - email
+
+Once a link between a Wave Vendor and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a Tripletex Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - Tripletex Employee Property
+     - Tripletex Data Type
+   * - address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - address.city
+     - address.city
+     - "string"
+   * - address.country.code
+     - address.country.id
+     - "integer"
+   * - address.postalCode
+     - address.postalCode
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - lastName
+     - lastName
+     - "string"
+   * - mobile
+     - phoneNumberMobile
+     - "string"
+   * - phone
+     - phoneNumberWork
+     - "string"
 
 
 Wave Vendor to Tripletex Customer
@@ -474,6 +494,35 @@ The following properties are synchronized between a Wave Vendor and a Tripletex 
    * - website
      - website
      - "string"
+
+
+Wave Customer person to Tripletex Customer person
+-------------------------------------------------
+Every Wave Customer person will be synchronized with a Tripletex Customer person.
+
+If a matching Tripletex Customer person already exists, the Wave Customer person will be merged with the existing one.
+If no matching Tripletex Customer person is found, a new Tripletex Customer person will be created.
+
+A Wave Customer person will merge with a Tripletex Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - Tripletex Customer person Property
+   * - email
+     - email
+
+Once a link between a Wave Customer person and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer person and a Tripletex Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - Tripletex Customer person Property
+     - Tripletex Data Type
 
 
 Wave Customer to Tripletex Contact
