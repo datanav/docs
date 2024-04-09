@@ -2,7 +2,7 @@
 Businesscentral to Superoffice Dataflow
 =======================================
 
-Generated: 2024-04-09 00:00:04
+Generated: 2024-04-09 13:08:29
 
 Introduction
 ------------
@@ -13,7 +13,7 @@ Businesscentral Customers to SuperOffice Contact
 ------------------------------------------------
 Before any synchronization can take place, a link between a Businesscentral Customers and a SuperOffice Contact must be established.
 
-A new SuperOffice Contact will be created from a Businesscentral Customers if it is connected to a Businesscentral Contact, Employee, Employees, or Contacts-person that is synchronized into SuperOffice.
+A new SuperOffice Contact will be created from a Businesscentral Customers if it is connected to a Businesscentral Contact, Employee, Employees, Contacts-person, or Customers-person that is synchronized into SuperOffice.
 
 Once a link between a Businesscentral Customers and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -174,6 +174,46 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
    * - website
      - Urls.Value
+     - "string"
+
+
+Businesscentral Customers person to Superoffice Person
+------------------------------------------------------
+Every Businesscentral Customers person will be synchronized with a Superoffice Person.
+
+Once a link between a Businesscentral Customers person and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers person and a Superoffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers person Property
+     - Superoffice Person Property
+     - Superoffice Data Type
+   * - addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - city
+     - Address.Street.City
+     - "string"
+   * - country
+     - Country.CountryId
+     - "integer"
+   * - email
+     - Emails.Value
+     - "string"
+   * - id
+     - PersonId
+     - "integer"
+   * - phoneNumber
+     - OfficePhones.Value
+     - "string"
+   * - postalCode
+     - Address.Street.Zipcode
      - "string"
 
 
