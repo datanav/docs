@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-04-09 00:02:27
+Generated: 2024-04-09 12:18:39
 
 Introduction
 ------------
@@ -53,6 +53,43 @@ The following properties are synchronized between a Tripletex Contact and a Trip
      - "string"
    * - phoneNumberWork
      - phoneNumberWork
+     - "string"
+
+
+Tripletex Contact to Tripletex Customer person
+----------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Contact and a Tripletex Customer person must be established.
+
+A new Tripletex Customer person will be created from a Tripletex Contact if it is connected to a Tripletex Order, or Orderline that is synchronized into Tripletex.
+
+A Tripletex Contact will merge with a Tripletex Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Tripletex Customer person Property
+   * - email
+     - email
+
+Once a link between a Tripletex Contact and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a Tripletex Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Tripletex Customer person Property
+     - Tripletex Data Type
+   * - email
+     - email
+     - "string"
+   * - phoneNumberMobile
+     - phoneNumberMobile
+     - "string"
+   * - phoneNumberWork
+     - phoneNumber
      - "string"
 
 
@@ -130,6 +167,125 @@ The following properties are synchronized between a Tripletex Customer person an
    * - Tripletex Customer person Property
      - Tripletex Contact Property
      - Tripletex Data Type
+
+
+Tripletex Customer person to Tripletex Customer person
+------------------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer person and a Tripletex Customer person must be established.
+
+A Tripletex Customer person will merge with a Tripletex Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     - Tripletex Customer person Property
+   * - email
+     - email
+
+Once a link between a Tripletex Customer person and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a Tripletex Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     - Tripletex Customer person Property
+     - Tripletex Data Type
+   * - deliveryAddress.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - deliveryAddress.addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - deliveryAddress.addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - deliveryAddress.city
+     - physicalAddress.city
+     - "string"
+   * - deliveryAddress.city
+     - postalAddress.city
+     - "string"
+   * - deliveryAddress.country.id
+     - physicalAddress.country.id
+     - "integer"
+   * - deliveryAddress.country.id
+     - postalAddress.country.id
+     - "integer"
+   * - deliveryAddress.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - postalAddress.postalCode
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - physicalAddress.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - physicalAddress.addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - physicalAddress.addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - physicalAddress.city
+     - deliveryAddress.city
+     - "string"
+   * - physicalAddress.city
+     - postalAddress.city
+     - "string"
+   * - physicalAddress.country.id
+     - deliveryAddress.country.id
+     - "string"
+   * - physicalAddress.country.id
+     - postalAddress.country.id
+     - "integer"
+   * - physicalAddress.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - physicalAddress.postalCode
+     - postalAddress.postalCode
+     - "string"
+   * - postalAddress.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - postalAddress.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - postalAddress.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - postalAddress.city
+     - deliveryAddress.city
+     - "string"
+   * - postalAddress.city
+     - physicalAddress.city
+     - "string"
+   * - postalAddress.country.id
+     - deliveryAddress.country.id
+     - "string"
+   * - postalAddress.country.id
+     - physicalAddress.country.id
+     - "integer"
+   * - postalAddress.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - postalAddress.postalCode
+     - physicalAddress.postalCode
+     - "string"
 
 
 Tripletex Customer person to Tripletex Employee
@@ -474,6 +630,32 @@ The following properties are synchronized between a Tripletex Employee and a Tri
      - "string"
 
 
+Tripletex Employee to Tripletex Customer person
+-----------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Employee and a Tripletex Customer person must be established.
+
+A Tripletex Employee will merge with a Tripletex Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - Tripletex Customer person Property
+   * - email
+     - email
+
+Once a link between a Tripletex Employee and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a Tripletex Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - Tripletex Customer person Property
+     - Tripletex Data Type
+
+
 Tripletex Employee to Tripletex Employee
 ----------------------------------------
 Before any synchronization can take place, a link between a Tripletex Employee and a Tripletex Employee must be established.
@@ -780,33 +962,6 @@ The following properties are synchronized between a Tripletex Supplier and a Tri
      - "string"
    * - url
      - website
-     - "string"
-
-
-Tripletex Contact to Tripletex Customer person
-----------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Contact and a Tripletex Customer person must be established.
-
-A new Tripletex Customer person will be created from a Tripletex Contact if it is connected to a Tripletex Order, or Orderline that is synchronized into Tripletex.
-
-Once a link between a Tripletex Contact and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Contact and a Tripletex Customer person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Contact Property
-     - Tripletex Customer person Property
-     - Tripletex Data Type
-   * - email
-     - email
-     - "string"
-   * - phoneNumberMobile
-     - phoneNumberMobile
-     - "string"
-   * - phoneNumberWork
-     - phoneNumber
      - "string"
 
 
