@@ -2,7 +2,7 @@
 Powerofficego to Tidsbanken Dataflow
 ====================================
 
-Generated: 2024-04-09 00:00:05
+Generated: 2024-04-09 12:25:26
 
 Introduction
 ------------
@@ -91,9 +91,18 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - Powerofficego Customers person Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
+   * - DateOfBirth
+     - Fodt
+     - "string"
+   * - FirstName
+     - Fornavn
+     - "string"
    * - Id
      - Id
      - "integer"
+   * - LastName
+     - Etternavn
+     - "string"
    * - MailAddress.AddressLine1
      - Adresse
      - "string"
