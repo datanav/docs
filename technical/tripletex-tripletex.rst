@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-04-09 12:25:26
+Generated: 2024-04-09 12:25:45
 
 Introduction
 ------------
@@ -672,6 +672,63 @@ The following properties are synchronized between a Tripletex Employee and a Tri
    * - Tripletex Employee Property
      - Tripletex Customer person Property
      - Tripletex Data Type
+   * - address.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - address.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - address.addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - address.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - address.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - address.addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - address.city
+     - deliveryAddress.city
+     - "string"
+   * - address.city
+     - physicalAddress.city
+     - "string"
+   * - address.city
+     - postalAddress.city
+     - "string"
+   * - address.country.id
+     - deliveryAddress.country.id
+     - "string"
+   * - address.country.id
+     - physicalAddress.country.id
+     - "integer"
+   * - address.country.id
+     - postalAddress.country.id
+     - "integer"
+   * - address.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - address.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - address.postalCode
+     - postalAddress.postalCode
+     - "string"
+   * - department.id (Dependant on having wd:Q7590 in  )
+     - invoiceSendMethod
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - phoneNumberMobile
+     - phoneNumberMobile
+     - "string"
+   * - phoneNumberWork
+     - phoneNumber
+     - "string"
 
 
 Tripletex Employee to Tripletex Employee
