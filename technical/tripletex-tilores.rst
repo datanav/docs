@@ -2,7 +2,7 @@
 Tripletex to Tilores Dataflow
 =============================
 
-Generated: 2024-04-09 00:00:05
+Generated: 2024-04-09 14:06:54
 
 Introduction
 ------------
@@ -35,6 +35,22 @@ The following properties are synchronized between a Tripletex Contact and a Tilo
    * - phoneNumberMobileCountry.id
      - phoneNumber
      - "string"
+
+
+Tripletex Customer person to Tilores Human
+------------------------------------------
+Every Tripletex Customer person will be synchronized with a Tilores Human.
+
+Once a link between a Tripletex Customer person and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a Tilores Human:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     - Tilores Human Property
+     - Tilores Data Type
 
 
 Tripletex Employee to Tilores Human
