@@ -2,7 +2,7 @@
 Tripletex to Tilores Dataflow
 =============================
 
-Generated: 2024-04-09 14:06:54
+Generated: 2024-04-09 14:07:00
 
 Introduction
 ------------
@@ -51,6 +51,30 @@ The following properties are synchronized between a Tripletex Customer person an
    * - Tripletex Customer person Property
      - Tilores Human Property
      - Tilores Data Type
+   * - deliveryAddress.city
+     - city
+     - "string"
+   * - deliveryAddress.postalCode
+     - postalCode
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - physicalAddress.city
+     - city
+     - "string"
+   * - physicalAddress.postalCode
+     - postalCode
+     - "string"
+   * - postalAddress.city
+     - city
+     - "string"
+   * - postalAddress.postalCode
+     - postalCode
+     - "string"
 
 
 Tripletex Employee to Tilores Human
