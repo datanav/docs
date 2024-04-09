@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-04-09 12:18:39
+Generated: 2024-04-09 12:25:26
 
 Introduction
 ------------
@@ -167,6 +167,15 @@ The following properties are synchronized between a Tripletex Customer person an
    * - Tripletex Customer person Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - email
+     - email
+     - "string"
+   * - phoneNumber
+     - phoneNumberWork
+     - "string"
+   * - phoneNumberMobile
+     - phoneNumberMobile
+     - N/A
 
 
 Tripletex Customer person to Tripletex Customer person
@@ -330,6 +339,15 @@ The following properties are synchronized between a Tripletex Customer person an
    * - id
      - id
      - "integer"
+   * - invoiceSendMethod
+     - department.id (Dependant on having wd:Q7590 in  )
+     - N/A
+   * - phoneNumber
+     - phoneNumberWork
+     - "string"
+   * - phoneNumberMobile
+     - phoneNumberMobile
+     - N/A
    * - physicalAddress.addressLine1
      - address.addressLine1
      - "string"
