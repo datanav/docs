@@ -2,7 +2,7 @@
 Tripletex to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-04-09 12:18:39
+Generated: 2024-04-09 12:25:26
 
 Introduction
 ------------
@@ -88,9 +88,15 @@ The following properties are synchronized between a Tripletex Customer person an
    * - deliveryAddress.postalCode
      - zipCode
      - "string"
+   * - email
+     - emailAddress
+     - "string"
    * - id
      - id
      - "integer"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
    * - physicalAddress.addressLine1
      - address1
      - "string"
