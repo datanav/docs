@@ -2,7 +2,7 @@
 Tripletex to Zendesk Dataflow
 =============================
 
-Generated: 2024-04-09 00:00:02
+Generated: 2024-04-09 12:25:26
 
 Introduction
 ------------
@@ -65,6 +65,15 @@ The following properties are synchronized between a Tripletex Customer person an
    * - Tripletex Customer person Property
      - Zendesk Users Property
      - Zendesk Data Type
+   * - email
+     - email
+     - "string"
+   * - isPrivateIndividual
+     - role
+     - "string"
+   * - name
+     - name
+     - "string"
 
 
 Tripletex Employee to Zendesk Users
