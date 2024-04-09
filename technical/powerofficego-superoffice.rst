@@ -2,7 +2,7 @@
 Powerofficego to Superoffice Dataflow
 =====================================
 
-Generated: 2024-04-09 00:00:04
+Generated: 2024-04-09 12:48:40
 
 Introduction
 ------------
@@ -94,7 +94,10 @@ The following properties are synchronized between a Powerofficego Contactperson 
 
 Powerofficego Customers person to Superoffice Person
 ----------------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Customers person and a Superoffice Person must be established.
+Every Powerofficego Customers person will be synchronized with a Superoffice Person.
+
+If a matching Superoffice Person already exists, the Powerofficego Customers person will be merged with the existing one.
+If no matching Superoffice Person is found, a new Superoffice Person will be created.
 
 A Powerofficego Customers person will merge with a Superoffice Person if one of the following property combinations match:
 
