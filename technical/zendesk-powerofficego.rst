@@ -2,7 +2,7 @@
 Zendesk to Powerofficego Dataflow
 =================================
 
-Generated: 2024-04-09 00:00:02
+Generated: 2024-04-09 12:18:39
 
 Introduction
 ------------
@@ -39,4 +39,30 @@ The following properties are synchronized between a Zendesk Users and a Poweroff
    * - organization_id
      - partyId
      - "integer"
+
+
+Zendesk Users to Powerofficego Customers person
+-----------------------------------------------
+Before any synchronization can take place, a link between a Zendesk Users and a Powerofficego Customers person must be established.
+
+A Zendesk Users will merge with a Powerofficego Customers person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Users Property
+     - Powerofficego Customers person Property
+   * - email
+     - EmailAddress
+
+Once a link between a Zendesk Users and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Users and a Powerofficego Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Users Property
+     - Powerofficego Customers person Property
+     - Powerofficego Data Type
 
