@@ -2,7 +2,7 @@
 Tripletex to Businesscentral Dataflow
 =====================================
 
-Generated: 2024-04-09 00:00:02
+Generated: 2024-04-09 12:25:26
 
 Introduction
 ------------
@@ -267,11 +267,23 @@ The following properties are synchronized between a Tripletex Customer person an
    * - deliveryAddress.postalCode
      - postalCode
      - "string"
+   * - email
+     - email
+     - "string"
    * - id
      - id
      - "string"
    * - isPrivateIndividual
      - type
+     - "string"
+   * - name
+     - displayName
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - phoneNumberMobile
+     - mobilePhoneNumber
      - "string"
    * - physicalAddress.addressLine1
      - addressLine1
