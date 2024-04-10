@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2024-04-10 08:20:48
+Generated: 2024-04-10 08:25:33
 
 Introduction
 ------------
@@ -76,6 +76,108 @@ The following properties are synchronized between a Tripletex Customer person an
    * - Tripletex Customer person Property
      - Wave Customer person Property
      - Wave Data Type
+   * - deliveryAddress.addressLine1
+     - address.addressLine1
+     - "string"
+   * - deliveryAddress.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - address.addressLine2
+     - "string"
+   * - deliveryAddress.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - deliveryAddress.city
+     - address.city
+     - "string"
+   * - deliveryAddress.city
+     - shippingDetails.address.city
+     - "string"
+   * - deliveryAddress.country.id
+     - address.country.code
+     - "string"
+   * - deliveryAddress.country.id
+     - shippingDetails.address.country.code
+     - "string"
+   * - deliveryAddress.postalCode
+     - address.postalCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - name
+     - name
+     - N/A
+   * - phoneNumber
+     - phone
+     - "string"
+   * - phoneNumberMobile
+     - mobile
+     - "string"
+   * - physicalAddress.addressLine1
+     - address.addressLine1
+     - "string"
+   * - physicalAddress.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - address.addressLine2
+     - "string"
+   * - physicalAddress.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - physicalAddress.city
+     - address.city
+     - "string"
+   * - physicalAddress.city
+     - shippingDetails.address.city
+     - "string"
+   * - physicalAddress.country.id
+     - address.country.code
+     - "string"
+   * - physicalAddress.country.id
+     - shippingDetails.address.country.code
+     - "string"
+   * - physicalAddress.postalCode
+     - address.postalCode
+     - "string"
+   * - physicalAddress.postalCode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - postalAddress.addressLine1
+     - address.addressLine1
+     - "string"
+   * - postalAddress.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - address.addressLine2
+     - "string"
+   * - postalAddress.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - postalAddress.city
+     - address.city
+     - "string"
+   * - postalAddress.city
+     - shippingDetails.address.city
+     - "string"
+   * - postalAddress.country.id
+     - address.country.code
+     - "string"
+   * - postalAddress.country.id
+     - shippingDetails.address.country.code
+     - "string"
+   * - postalAddress.postalCode
+     - address.postalCode
+     - "string"
+   * - postalAddress.postalCode
+     - shippingDetails.address.postalCode
+     - "string"
 
 
 Tripletex Employee to Wave Customer person
