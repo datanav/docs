@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2024-04-10 08:25:33
+Generated: 2024-04-10 10:13:52
 
 Introduction
 ------------
@@ -49,134 +49,6 @@ The following properties are synchronized between a Tripletex Contact and a Wave
      - "string"
    * - phoneNumberWork
      - phone
-     - "string"
-
-
-Tripletex Customer person to Wave Customer person
--------------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer person and a Wave Customer person must be established.
-
-A Tripletex Customer person will merge with a Wave Customer person if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer person Property
-     - Wave Customer person Property
-   * - email
-     - email
-
-Once a link between a Tripletex Customer person and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer person and a Wave Customer person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer person Property
-     - Wave Customer person Property
-     - Wave Data Type
-   * - deliveryAddress.addressLine1
-     - address.addressLine1
-     - "string"
-   * - deliveryAddress.addressLine1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - address.addressLine2
-     - "string"
-   * - deliveryAddress.addressLine2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - deliveryAddress.city
-     - address.city
-     - "string"
-   * - deliveryAddress.city
-     - shippingDetails.address.city
-     - "string"
-   * - deliveryAddress.country.id
-     - address.country.code
-     - "string"
-   * - deliveryAddress.country.id
-     - shippingDetails.address.country.code
-     - "string"
-   * - deliveryAddress.postalCode
-     - address.postalCode
-     - "string"
-   * - deliveryAddress.postalCode
-     - shippingDetails.address.postalCode
-     - "string"
-   * - email
-     - email
-     - "string"
-   * - name
-     - name
-     - N/A
-   * - phoneNumber
-     - phone
-     - "string"
-   * - phoneNumberMobile
-     - mobile
-     - "string"
-   * - physicalAddress.addressLine1
-     - address.addressLine1
-     - "string"
-   * - physicalAddress.addressLine1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - physicalAddress.addressLine2
-     - address.addressLine2
-     - "string"
-   * - physicalAddress.addressLine2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - physicalAddress.city
-     - address.city
-     - "string"
-   * - physicalAddress.city
-     - shippingDetails.address.city
-     - "string"
-   * - physicalAddress.country.id
-     - address.country.code
-     - "string"
-   * - physicalAddress.country.id
-     - shippingDetails.address.country.code
-     - "string"
-   * - physicalAddress.postalCode
-     - address.postalCode
-     - "string"
-   * - physicalAddress.postalCode
-     - shippingDetails.address.postalCode
-     - "string"
-   * - postalAddress.addressLine1
-     - address.addressLine1
-     - "string"
-   * - postalAddress.addressLine1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - postalAddress.addressLine2
-     - address.addressLine2
-     - "string"
-   * - postalAddress.addressLine2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - postalAddress.city
-     - address.city
-     - "string"
-   * - postalAddress.city
-     - shippingDetails.address.city
-     - "string"
-   * - postalAddress.country.id
-     - address.country.code
-     - "string"
-   * - postalAddress.country.id
-     - shippingDetails.address.country.code
-     - "string"
-   * - postalAddress.postalCode
-     - address.postalCode
-     - "string"
-   * - postalAddress.postalCode
-     - shippingDetails.address.postalCode
      - "string"
 
 
@@ -389,6 +261,137 @@ The following properties are synchronized between a Tripletex Customer and a Wav
      - "string"
    * - postalAddress.country.id
      - address.countryCode
+     - "string"
+   * - postalAddress.country.id
+     - shippingDetails.address.country.code
+     - "string"
+   * - postalAddress.postalCode
+     - address.postalCode
+     - "string"
+   * - postalAddress.postalCode
+     - shippingDetails.address.postalCode
+     - "string"
+
+
+Tripletex Customer person to Wave Customer person
+-------------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Wave Customer person.
+
+If a matching Wave Customer person already exists, the Tripletex Customer person will be merged with the existing one.
+If no matching Wave Customer person is found, a new Wave Customer person will be created.
+
+A Tripletex Customer person will merge with a Wave Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     - Wave Customer person Property
+   * - email
+     - email
+
+Once a link between a Tripletex Customer person and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a Wave Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     - Wave Customer person Property
+     - Wave Data Type
+   * - deliveryAddress.addressLine1
+     - address.addressLine1
+     - "string"
+   * - deliveryAddress.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - address.addressLine2
+     - "string"
+   * - deliveryAddress.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - deliveryAddress.city
+     - address.city
+     - "string"
+   * - deliveryAddress.city
+     - shippingDetails.address.city
+     - "string"
+   * - deliveryAddress.country.id
+     - address.country.code
+     - "string"
+   * - deliveryAddress.country.id
+     - shippingDetails.address.country.code
+     - "string"
+   * - deliveryAddress.postalCode
+     - address.postalCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - name
+     - name
+     - N/A
+   * - phoneNumber
+     - phone
+     - "string"
+   * - phoneNumberMobile
+     - mobile
+     - "string"
+   * - physicalAddress.addressLine1
+     - address.addressLine1
+     - "string"
+   * - physicalAddress.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - address.addressLine2
+     - "string"
+   * - physicalAddress.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - physicalAddress.city
+     - address.city
+     - "string"
+   * - physicalAddress.city
+     - shippingDetails.address.city
+     - "string"
+   * - physicalAddress.country.id
+     - address.country.code
+     - "string"
+   * - physicalAddress.country.id
+     - shippingDetails.address.country.code
+     - "string"
+   * - physicalAddress.postalCode
+     - address.postalCode
+     - "string"
+   * - physicalAddress.postalCode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - postalAddress.addressLine1
+     - address.addressLine1
+     - "string"
+   * - postalAddress.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - address.addressLine2
+     - "string"
+   * - postalAddress.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - postalAddress.city
+     - address.city
+     - "string"
+   * - postalAddress.city
+     - shippingDetails.address.city
+     - "string"
+   * - postalAddress.country.id
+     - address.country.code
      - "string"
    * - postalAddress.country.id
      - shippingDetails.address.country.code
