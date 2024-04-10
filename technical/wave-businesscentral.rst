@@ -2,7 +2,7 @@
 Wave Financial to Businesscentral Dataflow
 ==========================================
 
-Generated: 2024-04-10 08:20:48
+Generated: 2024-04-10 10:13:33
 
 Introduction
 ------------
@@ -231,6 +231,67 @@ The following properties are synchronized between a Wave Customer and a Business
      - "string"
    * - website
      - website
+     - "string"
+
+
+Wave Customer person to Businesscentral Customers person
+--------------------------------------------------------
+Every Wave Customer person will be synchronized with a Businesscentral Customers person.
+
+Once a link between a Wave Customer person and a Businesscentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer person and a Businesscentral Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - Businesscentral Customers person Property
+     - Businesscentral Data Type
+   * - address.addressLine1
+     - addressLine1
+     - "string"
+   * - address.addressLine2
+     - addressLine2
+     - "string"
+   * - address.city
+     - city
+     - "string"
+   * - address.country.code
+     - country
+     - "string"
+   * - address.postalCode
+     - postalCode
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - name
+     - displayName
+     - "string"
+   * - phone
+     - phoneNumber
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - addressLine1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - addressLine2
+     - "string"
+   * - shippingDetails.address.city
+     - city
+     - "string"
+   * - shippingDetails.address.country.code
+     - country
+     - "string"
+   * - shippingDetails.address.postalCode
+     - postalCode
+     - "string"
+   * - shippingDetails.phone
+     - phoneNumber
      - "string"
 
 
