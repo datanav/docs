@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2024-04-10 08:25:33
+Generated: 2024-04-10 10:13:53
 
 Introduction
 ------------
@@ -76,74 +76,6 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
    * - zipCode
      - shippingDetails.address.postalCode
-     - "string"
-
-
-Powerofficego Customers person to Wave Customer person
-------------------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Customers person and a Wave Customer person must be established.
-
-A Powerofficego Customers person will merge with a Wave Customer person if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers person Property
-     - Wave Customer person Property
-   * - EmailAddress
-     - email
-
-Once a link between a Powerofficego Customers person and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customers person and a Wave Customer person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers person Property
-     - Wave Customer person Property
-     - Wave Data Type
-   * - EmailAddress
-     - email
-     - "string"
-   * - FirstName
-     - firstName
-     - "string"
-   * - LastName
-     - lastName
-     - N/A
-   * - MailAddress.AddressLine1
-     - address.addressLine1
-     - "string"
-   * - MailAddress.AddressLine1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - MailAddress.AddressLine2
-     - address.addressLine2
-     - "string"
-   * - MailAddress.AddressLine2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - MailAddress.City
-     - address.city
-     - "string"
-   * - MailAddress.City
-     - shippingDetails.address.city
-     - "string"
-   * - MailAddress.CountryCode
-     - address.country.code
-     - "string"
-   * - MailAddress.CountryCode
-     - shippingDetails.address.country.code
-     - "string"
-   * - MailAddress.ZipCode
-     - address.postalCode
-     - "string"
-   * - MailAddress.ZipCode
-     - shippingDetails.address.postalCode
-     - "string"
-   * - PhoneNumber
-     - phone
      - "string"
 
 
@@ -249,6 +181,77 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - WebsiteUrl
      - website
+     - "string"
+
+
+Powerofficego Customers person to Wave Customer person
+------------------------------------------------------
+Every Powerofficego Customers person will be synchronized with a Wave Customer person.
+
+If a matching Wave Customer person already exists, the Powerofficego Customers person will be merged with the existing one.
+If no matching Wave Customer person is found, a new Wave Customer person will be created.
+
+A Powerofficego Customers person will merge with a Wave Customer person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers person Property
+     - Wave Customer person Property
+   * - EmailAddress
+     - email
+
+Once a link between a Powerofficego Customers person and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers person and a Wave Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers person Property
+     - Wave Customer person Property
+     - Wave Data Type
+   * - EmailAddress
+     - email
+     - "string"
+   * - FirstName
+     - firstName
+     - "string"
+   * - LastName
+     - lastName
+     - N/A
+   * - MailAddress.AddressLine1
+     - address.addressLine1
+     - "string"
+   * - MailAddress.AddressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - MailAddress.AddressLine2
+     - address.addressLine2
+     - "string"
+   * - MailAddress.AddressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - MailAddress.City
+     - address.city
+     - "string"
+   * - MailAddress.City
+     - shippingDetails.address.city
+     - "string"
+   * - MailAddress.CountryCode
+     - address.country.code
+     - "string"
+   * - MailAddress.CountryCode
+     - shippingDetails.address.country.code
+     - "string"
+   * - MailAddress.ZipCode
+     - address.postalCode
+     - "string"
+   * - MailAddress.ZipCode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - PhoneNumber
+     - phone
      - "string"
 
 
