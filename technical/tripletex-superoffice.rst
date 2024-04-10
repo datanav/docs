@@ -2,7 +2,7 @@
 Tripletex to Superoffice Dataflow
 =================================
 
-Generated: 2024-04-10 00:00:00
+Generated: 2024-04-10 00:01:57
 
 Introduction
 ------------
@@ -499,108 +499,6 @@ The following properties are synchronized between a Tripletex Contact and a Supe
    * - Tripletex Contact Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
-
-
-Tripletex Customer person to Superoffice Contact
-------------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer person and a Superoffice Contact must be established.
-
-A new Superoffice Contact will be created from a Tripletex Customer person if it is connected to a Tripletex Contact, Customer, Employee, or Customer-person that is synchronized into Superoffice.
-
-Once a link between a Tripletex Customer person and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer person and a Superoffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer person Property
-     - Superoffice Contact Property
-     - Superoffice Data Type
-   * - deliveryAddress.addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - deliveryAddress.addressLine1
-     - Address.Street.Address1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - deliveryAddress.addressLine2
-     - Address.Street.Address2
-     - "string"
-   * - deliveryAddress.city
-     - Address.Postal.City
-     - "string"
-   * - deliveryAddress.city
-     - Address.Street.City
-     - "string"
-   * - deliveryAddress.country.id
-     - Country.CountryId
-     - "integer"
-   * - deliveryAddress.postalCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - deliveryAddress.postalCode
-     - Address.Street.Zipcode
-     - "string"
-   * - id
-     - ContactId
-     - "integer"
-   * - physicalAddress.addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - physicalAddress.addressLine1
-     - Address.Street.Address1
-     - "string"
-   * - physicalAddress.addressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - physicalAddress.addressLine2
-     - Address.Street.Address2
-     - "string"
-   * - physicalAddress.city
-     - Address.Postal.City
-     - "string"
-   * - physicalAddress.city
-     - Address.Street.City
-     - "string"
-   * - physicalAddress.country.id
-     - Country.CountryId
-     - "integer"
-   * - physicalAddress.postalCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - physicalAddress.postalCode
-     - Address.Street.Zipcode
-     - "string"
-   * - postalAddress.addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - postalAddress.addressLine1
-     - Address.Street.Address1
-     - "string"
-   * - postalAddress.addressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - postalAddress.addressLine2
-     - Address.Street.Address2
-     - "string"
-   * - postalAddress.city
-     - Address.Postal.City
-     - "string"
-   * - postalAddress.city
-     - Address.Street.City
-     - "string"
-   * - postalAddress.country.id
-     - Country.CountryId
-     - "integer"
-   * - postalAddress.postalCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - postalAddress.postalCode
-     - Address.Street.Zipcode
-     - "string"
 
 
 Tripletex Customer to SuperOffice Person
