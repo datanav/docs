@@ -2,7 +2,7 @@
 Wave Financial to Hubspot Dataflow
 ==================================
 
-Generated: 2024-04-11 00:00:01
+Generated: 2024-04-11 15:19:20
 
 Introduction
 ------------
@@ -301,6 +301,9 @@ The following properties are synchronized between a Wave Customer and a Hubspot 
      - "string"
    * - id
      - id
+     - "string"
+   * - id
+     - properties.description
      - "string"
    * - internalNotes
      - properties.description
