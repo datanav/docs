@@ -18,10 +18,6 @@ Data types
      - Input
      - Output
 
-   * - :ref:`Accounting <datatype_accounting>`
-     - true
-     - false
-
    * - :ref:`Person <datatype_human>`
      - true
      - true
