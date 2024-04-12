@@ -18,10 +18,6 @@ Data types
      - Input
      - Output
 
-   * - :ref:`Accounting <datatype_accounting>`
-     - false
-     - true
-
    * - :ref:`Asset <datatype_asset>`
      - false
      - true
