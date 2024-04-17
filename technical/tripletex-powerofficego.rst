@@ -2,7 +2,7 @@
 Tripletex to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-04-17 11:24:20
+Generated: 2024-04-17 11:36:20
 
 Introduction
 ------------
@@ -1099,7 +1099,7 @@ The following properties are synchronized between a Tripletex Project and a Powe
      - "string"
    * - hierarchyLevel
      - sesam_hierarchy_level
-     - N/A
+     - "string"
    * - isClosed
      - IsActive
      - "string"
