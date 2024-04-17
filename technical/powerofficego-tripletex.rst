@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2024-04-17 00:00:01
+Generated: 2024-04-17 10:37:21
 
 Introduction
 ------------
@@ -895,6 +895,9 @@ The following properties are synchronized between a Powerofficego Projects and a
    * - StartDate
      - startDate
      - N/A
+   * - sesam_hierarchy_level
+     - hierarchyLevel
+     - "string"
 
 
 Powerofficego Salesorderlines to Tripletex Orderline
