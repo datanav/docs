@@ -2,7 +2,7 @@
 Tidsbanken to Tripletex Dataflow
 ================================
 
-Generated: 2024-04-18 00:00:01
+Generated: 2024-04-18 12:55:37
 
 Introduction
 ------------
@@ -271,6 +271,19 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Trip
 Tidsbanken Avdeling to Tripletex Department
 -------------------------------------------
 Every Tidsbanken Avdeling will be synchronized with a Tripletex Department.
+
+If a matching Tripletex Department already exists, the Tidsbanken Avdeling will be merged with the existing one.
+If no matching Tripletex Department is found, a new Tripletex Department will be created.
+
+A Tidsbanken Avdeling will merge with a Tripletex Department if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     - Tripletex Department Property
+   * - Id
+     - departmentNumber
 
 Once a link between a Tidsbanken Avdeling and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
