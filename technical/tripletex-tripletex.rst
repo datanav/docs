@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-04-18 00:02:10
+Generated: 2024-04-18 12:55:37
 
 Introduction
 ------------
@@ -570,6 +570,32 @@ The following properties are synchronized between a Tripletex Customer and a Tri
    * - postalAddress.postalCode
      - postalAddress.postalCode
      - "string"
+
+
+Tripletex Department to Tripletex Department
+--------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Department and a Tripletex Department must be established.
+
+A Tripletex Department will merge with a Tripletex Department if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - Tripletex Department Property
+   * - departmentNumber
+     - departmentNumber
+
+Once a link between a Tripletex Department and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a Tripletex Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - Tripletex Department Property
+     - Tripletex Data Type
 
 
 Tripletex Department to Tripletex Employee
