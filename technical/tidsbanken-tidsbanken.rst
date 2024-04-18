@@ -2,7 +2,7 @@
 Tidsbanken to Tidsbanken Dataflow
 =================================
 
-Generated: 2024-04-18 00:00:01
+Generated: 2024-04-18 12:54:43
 
 Introduction
 ------------
@@ -36,6 +36,32 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Tids
 
    * - Tidsbanken Ansatt Property
      - Tidsbanken Ansatt Property
+     - Tidsbanken Data Type
+
+
+Tidsbanken Avdeling to Tidsbanken Avdeling
+------------------------------------------
+Before any synchronization can take place, a link between a Tidsbanken Avdeling and a Tidsbanken Avdeling must be established.
+
+A Tidsbanken Avdeling will merge with a Tidsbanken Avdeling if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     - Tidsbanken Avdeling Property
+   * - Id
+     - Id
+
+Once a link between a Tidsbanken Avdeling and a Tidsbanken Avdeling is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Avdeling and a Tidsbanken Avdeling:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     - Tidsbanken Avdeling Property
      - Tidsbanken Data Type
 
 
