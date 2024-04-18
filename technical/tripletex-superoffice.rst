@@ -2,7 +2,7 @@
 Tripletex to Superoffice Dataflow
 =================================
 
-Generated: 2024-04-18 00:00:00
+Generated: 2024-04-18 12:54:36
 
 Introduction
 ------------
@@ -555,7 +555,7 @@ The following properties are synchronized between a Tripletex Department and a S
      - Superoffice Contact Property
      - Superoffice Data Type
    * - departmentNumber
-     - OrgNr (Dependant on having wd:Q2366457 in Country.TwoLetterISOCountry)
+     - OrgNr (Dependant on having wd:Q2366457 in Country.TwoLetterISOCountryDependant on having wd:Q2366457 in Country.TwoLetterISOCountry)
      - "string"
    * - name
      - Name
