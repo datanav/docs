@@ -2,7 +2,7 @@
 Businesscentral to Businesscentral Dataflow
 ===========================================
 
-Generated: 2024-04-18 00:00:00
+Generated: 2024-04-19 00:00:02
 
 Introduction
 ------------
