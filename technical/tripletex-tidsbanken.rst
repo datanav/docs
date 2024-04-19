@@ -2,7 +2,7 @@
 Tripletex to Tidsbanken Dataflow
 ================================
 
-Generated: 2024-04-18 12:55:37
+Generated: 2024-04-19 00:00:02
 
 Introduction
 ------------
