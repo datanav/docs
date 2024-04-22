@@ -2,7 +2,7 @@
 Tidsbanken to Tripletex Dataflow
 ================================
 
-Generated: 2024-04-22 00:00:00
+Generated: 2024-04-22 14:18:01
 
 Introduction
 ------------
@@ -454,7 +454,7 @@ The following properties are synchronized between a Tidsbanken Prosjekt and a Tr
      - "integer"
    * - AvdelingId
      - department.id
-     - "string"
+     - "integer"
    * - Avsluttet
      - isClosed
      - "string"
