@@ -2,7 +2,7 @@
 Tripletex to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-04-22 00:21:49
+Generated: 2024-04-22 13:45:58
 
 Introduction
 ------------
@@ -1115,6 +1115,9 @@ The following properties are synchronized between a Tripletex Project and a Powe
    * - isInternal
      - IsInternal
      - "string"
+   * - mainProject.id
+     - ParentProjectId
+     - "integer"
    * - name
      - Name
      - "string"
