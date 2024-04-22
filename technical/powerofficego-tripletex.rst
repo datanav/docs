@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2024-04-22 14:16:02
+Generated: 2024-04-22 14:18:01
 
 Introduction
 ------------
@@ -870,7 +870,7 @@ The following properties are synchronized between a Powerofficego Projects and a
      - "integer"
    * - DepartmentId
      - department.id
-     - "string"
+     - "integer"
    * - EndDate
      - endDate
      - N/A
