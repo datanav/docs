@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2024-04-22 11:26:02
+Generated: 2024-04-22 13:45:58
 
 Introduction
 ------------
@@ -887,6 +887,9 @@ The following properties are synchronized between a Powerofficego Projects and a
      - name
      - "string"
    * - ParentProjectCode
+     - mainProject.id
+     - "string"
+   * - ParentProjectId
      - mainProject.id
      - "string"
    * - ProjectManagerEmployeeId
