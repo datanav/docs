@@ -2,7 +2,7 @@
 Tripletex to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-04-22 13:45:58
+Generated: 2024-04-22 14:44:02
 
 Introduction
 ------------
@@ -1087,7 +1087,7 @@ The following properties are synchronized between a Tripletex Project and a Powe
      - Powerofficego Data Type
    * - contact.id
      - ContactPersonId
-     - "string"
+     - "integer"
    * - customer.id
      - CustomerId
      - "integer"
