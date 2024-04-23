@@ -118,3 +118,7 @@ There are two ways to work around this problem:
 or
 
 #. Add enough information in the CRM product (if the system supports this) so that it merges with an existing product in Tripletex.
+
+Synchronisation of Products
+***************************************************
+Sesam Talk synchronises all products from Tripletex, active and non-active.
