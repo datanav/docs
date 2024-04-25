@@ -2,7 +2,7 @@
 Freshteam to  Dataflow
 ======================
 
-Generated: 2024-04-25 18:19:25
+Generated: 2024-04-25 18:21:45
 
 Introduction
 ------------
@@ -25,5 +25,8 @@ The following properties are synchronized between a Freshteam Employee and a  Cu
      -  Data Type
    * - personal_email
      - email
+     - "string"
+   * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
+     - phone
      - "string"
 
