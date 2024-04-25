@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-04-25 18:22:13
+Generated: 2024-04-25 18:22:35
 
 Introduction
 ------------
@@ -23,4 +23,49 @@ The following properties are synchronized between a Wave Customer person and a  
    * - Wave Customer person Property
      -  Customer Property
      -  Data Type
+   * - address.addressLine1
+     - addresses.address1
+     - "string"
+   * - address.addressLine2
+     - addresses.address2
+     - "string"
+   * - address.city
+     - addresses.city
+     - "string"
+   * - address.country.code
+     - addresses.country
+     - "string"
+   * - address.postalCode
+     - addresses.zip
+     - "string"
+   * - address.province.code
+     - addresses.province_code
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - phone
+     - phone
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - addresses.address1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - addresses.address2
+     - "string"
+   * - shippingDetails.address.city
+     - addresses.city
+     - "string"
+   * - shippingDetails.address.country.code
+     - addresses.country
+     - "string"
+   * - shippingDetails.address.postalCode
+     - addresses.zip
+     - "string"
+   * - shippingDetails.address.province.code
+     - addresses.province_code
+     - "string"
+   * - shippingDetails.phone
+     - phone
+     - "string"
 
