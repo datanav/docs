@@ -2,7 +2,7 @@
 Freshteam to  Dataflow
 ======================
 
-Generated: 2024-04-25 18:18:59
+Generated: 2024-04-25 18:19:25
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Freshteam Employee and a  Cu
    * - Freshteam Employee Property
      -  Customer Property
      -  Data Type
+   * - personal_email
+     - email
+     - "string"
 
