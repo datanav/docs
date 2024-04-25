@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-04-25 18:22:13
+Generated: 2024-04-25 18:22:35
 
 Introduction
 ------------
@@ -23,4 +23,55 @@ The following properties are synchronized between a Tripletex Customer person an
    * - Tripletex Customer person Property
      -  Customer Property
      -  Data Type
+   * - deliveryAddress.addressLine1
+     - addresses.address1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - addresses.address2
+     - "string"
+   * - deliveryAddress.city
+     - addresses.city
+     - "string"
+   * - deliveryAddress.country.id
+     - addresses.country
+     - "string"
+   * - deliveryAddress.postalCode
+     - addresses.zip
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - phoneNumber
+     - phone
+     - "string"
+   * - physicalAddress.addressLine1
+     - addresses.address1
+     - "string"
+   * - physicalAddress.addressLine2
+     - addresses.address2
+     - "string"
+   * - physicalAddress.city
+     - addresses.city
+     - "string"
+   * - physicalAddress.country.id
+     - addresses.country
+     - "string"
+   * - physicalAddress.postalCode
+     - addresses.zip
+     - "string"
+   * - postalAddress.addressLine1
+     - addresses.address1
+     - "string"
+   * - postalAddress.addressLine2
+     - addresses.address2
+     - "string"
+   * - postalAddress.city
+     - addresses.city
+     - "string"
+   * - postalAddress.country.id
+     - addresses.country
+     - "string"
+   * - postalAddress.postalCode
+     - addresses.zip
+     - "string"
 
