@@ -2,7 +2,7 @@
 Powerofficego to Superoffice Dataflow
 =====================================
 
-Generated: 2024-04-30 00:00:00
+Generated: 2024-04-30 12:57:00
 
 Introduction
 ------------
@@ -287,6 +287,9 @@ The following properties are synchronized between a Powerofficego Departments an
    * - Powerofficego Departments Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - Code
+     - OrgNr (Dependant on having wd:Q2366457 in Country.TwoLetterISOCountry)
+     - "string"
    * - Name
      - Name
      - "string"
