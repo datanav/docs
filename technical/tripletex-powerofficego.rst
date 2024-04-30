@@ -2,7 +2,7 @@
 Tripletex to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-04-30 00:00:00
+Generated: 2024-04-30 12:20:14
 
 Introduction
 ------------
@@ -823,6 +823,9 @@ The following properties are synchronized between a Tripletex Department and a P
      - Powerofficego Data Type
    * - changes.timestamp
      - CreatedDateTimeOffset
+     - "string"
+   * - departmentNumber
+     - Code
      - "string"
    * - name
      - Name
