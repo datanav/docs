@@ -2,7 +2,7 @@
 Tidsbanken to Powerofficego Dataflow
 ====================================
 
-Generated: 2024-04-30 12:20:02
+Generated: 2024-04-30 12:20:59
 
 Introduction
 ------------
@@ -179,6 +179,19 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Powe
 Tidsbanken Avdeling to Powerofficego Departments
 ------------------------------------------------
 Every Tidsbanken Avdeling will be synchronized with a Powerofficego Departments.
+
+If a matching Powerofficego Departments already exists, the Tidsbanken Avdeling will be merged with the existing one.
+If no matching Powerofficego Departments is found, a new Powerofficego Departments will be created.
+
+A Tidsbanken Avdeling will merge with a Powerofficego Departments if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     - Powerofficego Departments Property
+   * - Id
+     - Code
 
 Once a link between a Tidsbanken Avdeling and a Powerofficego Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
