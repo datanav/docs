@@ -2,7 +2,7 @@
 Tidsbanken to Powerofficego Dataflow
 ====================================
 
-Generated: 2024-04-30 00:00:00
+Generated: 2024-04-30 12:20:02
 
 Introduction
 ------------
@@ -190,6 +190,9 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Po
    * - Tidsbanken Avdeling Property
      - Powerofficego Departments Property
      - Powerofficego Data Type
+   * - Id
+     - Code
+     - "string"
    * - Navn
      - Name
      - "string"
