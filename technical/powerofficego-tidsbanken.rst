@@ -2,7 +2,7 @@
 Powerofficego to Tidsbanken Dataflow
 ====================================
 
-Generated: 2024-04-30 12:20:59
+Generated: 2024-04-30 12:57:14
 
 Introduction
 ------------
@@ -224,6 +224,9 @@ The following properties are synchronized between a Powerofficego Departments an
    * - Powerofficego Departments Property
      - Tidsbanken Avdeling Property
      - Tidsbanken Data Type
+   * - Code
+     - sesam_avdelingId
+     - "string"
    * - Name
      - Navn
      - "string"
