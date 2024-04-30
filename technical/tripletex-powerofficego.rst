@@ -2,7 +2,7 @@
 Tripletex to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-04-30 12:20:14
+Generated: 2024-04-30 12:20:59
 
 Introduction
 ------------
@@ -810,6 +810,19 @@ The following properties are synchronized between a Tripletex Customer and a Pow
 Tripletex Department to Powerofficego Departments
 -------------------------------------------------
 Every Tripletex Department will be synchronized with a Powerofficego Departments.
+
+If a matching Powerofficego Departments already exists, the Tripletex Department will be merged with the existing one.
+If no matching Powerofficego Departments is found, a new Powerofficego Departments will be created.
+
+A Tripletex Department will merge with a Powerofficego Departments if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - Powerofficego Departments Property
+   * - departmentNumber
+     - Code
 
 Once a link between a Tripletex Department and a Powerofficego Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
