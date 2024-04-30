@@ -2,7 +2,7 @@
 Powerofficego to Powerofficego Dataflow
 =======================================
 
-Generated: 2024-04-30 00:00:00
+Generated: 2024-04-30 12:20:59
 
 Introduction
 ------------
@@ -216,6 +216,32 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCodeDependant on having wd:Q852835 in MailAddress.CountryCode)
      - Number
      - "string"
+
+
+Powerofficego Departments to Powerofficego Departments
+------------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Departments and a Powerofficego Departments must be established.
+
+A Powerofficego Departments will merge with a Powerofficego Departments if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Departments Property
+     - Powerofficego Departments Property
+   * - Code
+     - Code
+
+Once a link between a Powerofficego Departments and a Powerofficego Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Departments and a Powerofficego Departments:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Departments Property
+     - Powerofficego Departments Property
+     - Powerofficego Data Type
 
 
 Powerofficego Employees to Powerofficego Employees
