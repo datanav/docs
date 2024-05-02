@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-05-02 00:00:01
+Generated: 2024-05-02 07:13:05
 
 Introduction
 ------------
@@ -44,4 +44,20 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - PhoneNumber
      - phone
      - "string"
+
+
+Powerofficego Product to  Product
+---------------------------------
+Every Powerofficego Product will be synchronized with a  Product.
+
+Once a link between a Powerofficego Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product and a  Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     -  Product Property
+     -  Data Type
 
