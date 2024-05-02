@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-05-02 00:00:01
+Generated: 2024-05-02 07:13:05
 
 Introduction
 ------------
@@ -74,4 +74,20 @@ The following properties are synchronized between a Tripletex Customer person an
    * - postalAddress.postalCode
      - addresses.zip
      - "string"
+
+
+Tripletex Product to  Product
+-----------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Product.
+
+Once a link between a Tripletex Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a  Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     -  Product Property
+     -  Data Type
 
