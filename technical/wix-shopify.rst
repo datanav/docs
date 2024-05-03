@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-05-03 12:07:04
+Generated: 2024-05-03 12:08:22
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Wix.com Products and a  Inve
    * - Wix.com Products Property
      -  Inventoryitem Property
      -  Data Type
+   * - costAndProfitData.itemCost
+     - cost
+     - "string"
+   * - costRange.maxValue
+     - cost
+     - "string"
 
 
 Wix.com Products to  Product
