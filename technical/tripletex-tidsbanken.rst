@@ -2,7 +2,7 @@
 Tripletex to Tidsbanken Dataflow
 ================================
 
-Generated: 2024-05-03 00:00:04
+Generated: 2024-05-03 10:06:15
 
 Introduction
 ------------
@@ -520,6 +520,9 @@ The following properties are synchronized between a Tripletex Employee and a Tid
      - "string"
    * - phoneNumberMobile
      - Mobil
+     - "string"
+   * - sesam_employment_status
+     - Aktiv
      - "string"
 
 
