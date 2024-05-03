@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-05-03 12:14:07
+Generated: 2024-05-03 12:15:07
 
 Introduction
 ------------
@@ -100,6 +100,21 @@ The following properties are synchronized between a Wave Invoice and a  Order:
    * - Wave Invoice Property
      -  Order Property
      -  Data Type
+   * - currency.code
+     - currency
+     - "string"
+   * - customer.id
+     - customer.id
+     - "string"
+   * - items.price
+     - line_items.price
+     - "string"
+   * - items.quantity
+     - line_items.quantity
+     - "string"
+   * - total.value
+     - current_total_price
+     - "string"
 
 
 Wave Product to  Product
