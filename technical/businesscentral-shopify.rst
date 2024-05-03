@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-05-03 12:33:58
+Generated: 2024-05-03 12:37:26
 
 Introduction
 ------------
@@ -117,6 +117,9 @@ The following properties are synchronized between a Businesscentral Salesorders 
      - billing_address.country
      - "string"
    * - billToCountry
+     - billing_address.country_code
+     - "string"
+   * - billToCountry
      - shipping_address.country
      - "string"
    * - billToCountry
@@ -154,6 +157,9 @@ The following properties are synchronized between a Businesscentral Salesorders 
      - "string"
    * - shipToCountry
      - billing_address.country
+     - "string"
+   * - shipToCountry
+     - billing_address.country_code
      - "string"
    * - shipToCountry
      - shipping_address.country
