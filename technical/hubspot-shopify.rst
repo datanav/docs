@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-05-03 12:14:07
+Generated: 2024-05-03 12:15:07
 
 Introduction
 ------------
@@ -42,6 +42,12 @@ The following properties are synchronized between a HubSpot Deal and a  Order:
    * - HubSpot Deal Property
      -  Order Property
      -  Data Type
+   * - properties.amount
+     - current_total_price
+     - "string"
+   * - properties.deal_currency_code
+     - currency
+     - "string"
 
 
 HubSpot Product to  Product
