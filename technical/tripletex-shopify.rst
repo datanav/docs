@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-05-03 12:15:07
+Generated: 2024-05-03 12:26:07
 
 Introduction
 ------------
@@ -117,6 +117,9 @@ The following properties are synchronized between a Tripletex Order and a  Order
      - "string"
    * - customer.id
      - customer.id
+     - "string"
+   * - reference
+     - po_number
      - "string"
 
 
