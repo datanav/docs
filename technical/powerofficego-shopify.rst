@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-05-03 12:15:07
+Generated: 2024-05-03 12:26:07
 
 Introduction
 ------------
@@ -106,5 +106,11 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - "string"
    * - NetAmount
      - current_total_price
+     - "string"
+   * - NetAmount
+     - total_price
+     - "string"
+   * - PurchaseOrderReference
+     - po_number
      - "string"
 
