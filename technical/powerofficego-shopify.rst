@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-05-03 12:07:04
+Generated: 2024-05-03 12:08:22
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Powerofficego Product and a 
    * - Powerofficego Product Property
      -  Inventoryitem Property
      -  Data Type
+   * - costPrice
+     - cost
+     - "string"
 
 
 Powerofficego Customers person to  Customer
