@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-05-03 12:15:07
+Generated: 2024-05-03 12:26:05
 
 Introduction
 ------------
@@ -139,5 +139,8 @@ The following properties are synchronized between a Businesscentral Salesorders 
      - "string"
    * - totalAmountExcludingTax
      - current_total_price
+     - "string"
+   * - totalAmountExcludingTax
+     - total_price
      - "string"
 
