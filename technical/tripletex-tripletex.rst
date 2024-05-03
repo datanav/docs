@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-05-03 00:02:01
+Generated: 2024-05-03 09:36:06
 
 Introduction
 ------------
@@ -802,6 +802,32 @@ The following properties are synchronized between a Tripletex Employee and a Tri
    * - lastName
      - firstName
      - "string"
+
+
+Tripletex Employment to Tripletex Employee
+------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Employment and a Tripletex Employee must be established.
+
+A Tripletex Employment will merge with a Tripletex Employee if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employment Property
+     - Tripletex Employee Property
+   * - 
+     - id
+
+Once a link between a Tripletex Employment and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employment and a Tripletex Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employment Property
+     - Tripletex Employee Property
+     - Tripletex Data Type
 
 
 Tripletex Product to Tripletex Product
