@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-05-03 12:07:04
+Generated: 2024-05-03 12:08:22
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Tripletex Product and a  Inv
    * - Tripletex Product Property
      -  Inventoryitem Property
      -  Data Type
+   * - costExcludingVatCurrency
+     - cost
+     - "string"
 
 
 Tripletex Customer person to  Customer
