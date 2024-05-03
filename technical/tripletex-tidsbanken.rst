@@ -2,7 +2,7 @@
 Tripletex to Tidsbanken Dataflow
 ================================
 
-Generated: 2024-05-03 10:06:15
+Generated: 2024-05-03 11:05:12
 
 Introduction
 ------------
@@ -523,7 +523,7 @@ The following properties are synchronized between a Tripletex Employee and a Tid
      - "string"
    * - sesam_employment_status
      - Aktiv
-     - "string"
+     - "boolean"
 
 
 Tripletex Project to Tidsbanken Prosjekt
