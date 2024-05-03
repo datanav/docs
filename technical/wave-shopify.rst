@@ -2,12 +2,28 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-05-03 00:00:04
+Generated: 2024-05-03 12:07:04
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wave Product to  Inventoryitem
+------------------------------
+Every Wave Product will be synchronized with a  Inventoryitem.
+
+Once a link between a Wave Product and a  Inventoryitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Product and a  Inventoryitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Product Property
+     -  Inventoryitem Property
+     -  Data Type
+
 
 Wave Customer person to  Customer
 ---------------------------------
