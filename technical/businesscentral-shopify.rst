@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-05-03 12:14:07
+Generated: 2024-05-03 12:15:07
 
 Introduction
 ------------
@@ -95,4 +95,49 @@ The following properties are synchronized between a Businesscentral Salesorders 
    * - Businesscentral Salesorders Property
      -  Order Property
      -  Data Type
+   * - billToAddressLine1
+     - shipping_address.address1
+     - "string"
+   * - billToAddressLine2
+     - shipping_address.address2
+     - "string"
+   * - billToCity
+     - shipping_address.city
+     - "string"
+   * - billToCountry
+     - shipping_address.country
+     - "string"
+   * - billToCountry
+     - shipping_address.country_code
+     - "string"
+   * - billToPostCode
+     - shipping_address.zip
+     - "string"
+   * - currencyId
+     - currency
+     - "string"
+   * - customerId
+     - customer.id
+     - "string"
+   * - shipToAddressLine1
+     - shipping_address.address1
+     - "string"
+   * - shipToAddressLine2
+     - shipping_address.address2
+     - "string"
+   * - shipToCity
+     - shipping_address.city
+     - "string"
+   * - shipToCountry
+     - shipping_address.country
+     - "string"
+   * - shipToCountry
+     - shipping_address.country_code
+     - "string"
+   * - shipToPostCode
+     - shipping_address.zip
+     - "string"
+   * - totalAmountExcludingTax
+     - current_total_price
+     - "string"
 
