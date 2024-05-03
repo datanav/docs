@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-05-03 10:06:15
+Generated: 2024-05-03 10:07:00
 
 Introduction
 ------------
@@ -816,6 +816,8 @@ A Tripletex Employment will merge with a Tripletex Employee if one of the follow
    * - Tripletex Employment Property
      - Tripletex Employee Property
    * - 
+     - id
+   * - employee.id
      - id
 
 Once a link between a Tripletex Employment and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
