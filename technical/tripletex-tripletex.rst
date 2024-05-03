@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-05-03 09:36:06
+Generated: 2024-05-03 10:06:15
 
 Introduction
 ------------
@@ -828,6 +828,9 @@ The following properties are synchronized between a Tripletex Employment and a T
    * - Tripletex Employment Property
      - Tripletex Employee Property
      - Tripletex Data Type
+   * - sesam_employment_status
+     - sesam_employment_status
+     - "string"
 
 
 Tripletex Product to Tripletex Product
