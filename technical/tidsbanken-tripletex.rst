@@ -2,7 +2,7 @@
 Tidsbanken to Tripletex Dataflow
 ================================
 
-Generated: 2024-05-03 10:06:17
+Generated: 2024-05-03 10:38:15
 
 Introduction
 ------------
@@ -235,7 +235,7 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Trip
      - "string"
    * - Aktiv
      - sesam_employment_status
-     - "string"
+     - "boolean"
    * - AvdelingId
      - department.id (Dependant on having wd:Q2366457 in  )
      - N/A
