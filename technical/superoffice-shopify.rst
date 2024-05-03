@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-05-03 12:07:04
+Generated: 2024-05-03 12:08:22
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a SuperOffice Product and a  I
    * - SuperOffice Product Property
      -  Inventoryitem Property
      -  Data Type
+   * - UnitCost
+     - cost
+     - "string"
 
 
 SuperOffice Product to  Product
