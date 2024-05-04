@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-05-04 00:00:01
+Generated: 2024-05-04 00:03:59
 
 Introduction
 ------------
@@ -815,8 +815,6 @@ A Tripletex Employment will merge with a Tripletex Employee if one of the follow
 
    * - Tripletex Employment Property
      - Tripletex Employee Property
-   * - 
-     - id
    * - employee.id
      - id
 
