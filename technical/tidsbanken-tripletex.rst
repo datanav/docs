@@ -2,7 +2,7 @@
 Tidsbanken to Tripletex Dataflow
 ================================
 
-Generated: 2024-05-06 00:00:01
+Generated: 2024-05-06 12:35:58
 
 Introduction
 ------------
@@ -303,6 +303,9 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Tr
      - "string"
    * - Navn
      - name
+     - "string"
+   * - Synlig
+     - isInactive
      - "string"
    * - sesam_avdelingId
      - departmentNumber
