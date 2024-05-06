@@ -2,7 +2,7 @@
 Powerofficego to Tidsbanken Dataflow
 ====================================
 
-Generated: 2024-05-06 06:25:02
+Generated: 2024-05-06 10:59:00
 
 Introduction
 ------------
@@ -229,7 +229,7 @@ The following properties are synchronized between a Powerofficego Departments an
      - "string"
    * - IsActive
      - Synlig
-     - "boolean"
+     - "string"
    * - Name
      - Navn
      - "string"
