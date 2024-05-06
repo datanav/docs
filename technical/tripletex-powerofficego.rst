@@ -2,7 +2,7 @@
 Tripletex to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-05-06 00:00:00
+Generated: 2024-05-06 12:35:58
 
 Introduction
 ------------
@@ -839,6 +839,9 @@ The following properties are synchronized between a Tripletex Department and a P
      - "string"
    * - departmentNumber
      - Code
+     - "string"
+   * - isInactive
+     - IsActive
      - "string"
    * - name
      - Name
