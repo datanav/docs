@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-05-06 00:00:01
+Generated: 2024-05-06 06:37:02
 
 Introduction
 ------------
@@ -42,4 +42,10 @@ The following properties are synchronized between a SuperOffice Product and a  P
    * - SuperOffice Product Property
      -  Product Property
      -  Data Type
+   * - Name
+     - variants.title
+     - "string"
+   * - UnitListPrice
+     - variants.price
+     - "string"
 
