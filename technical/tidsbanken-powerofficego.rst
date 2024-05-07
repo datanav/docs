@@ -2,7 +2,7 @@
 Tidsbanken to Powerofficego Dataflow
 ====================================
 
-Generated: 2024-05-07 00:00:01
+Generated: 2024-05-07 10:45:26
 
 Introduction
 ------------
@@ -150,6 +150,9 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Powe
    * - Tidsbanken Ansatt Property
      - Powerofficego Employees Property
      - Powerofficego Data Type
+   * - Aktiv
+     - IsArchived
+     - "boolean"
    * - AvdelingId
      - DepartmentId
      - "integer"
