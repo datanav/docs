@@ -2,7 +2,7 @@
 Tripletex to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-05-07 10:45:26
+Generated: 2024-05-07 11:20:32
 
 Introduction
 ------------
@@ -920,6 +920,9 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - phoneNumberMobile
      - phoneNumber
      - "string"
+   * - sesam_employment_status
+     - IsArchived
+     - "boolean"
    * - userType
      - MailAddress.CountryCode
      - "string"
