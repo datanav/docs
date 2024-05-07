@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2024-05-07 00:00:01
+Generated: 2024-05-07 10:43:17
 
 Introduction
 ------------
@@ -777,6 +777,9 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - FirstName
      - firstName
      - "string"
+   * - IsArchived
+     - department.id (Dependant on having wd:Q29415466 in  )
+     - N/A
    * - LastName
      - lastName
      - "string"
