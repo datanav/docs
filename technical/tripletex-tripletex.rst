@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-05-07 10:57:23
+Generated: 2024-05-07 11:20:30
 
 Introduction
 ------------
@@ -793,6 +793,9 @@ The following properties are synchronized between a Tripletex Employee and a Tri
    * - department.id
      - department.id
      - N/A
+   * - department.id (Dependant on having wd:Q29415466 in  )
+     - sesam_employment_status
+     - "boolean"
    * - email
      - email
      - "string"
@@ -802,6 +805,9 @@ The following properties are synchronized between a Tripletex Employee and a Tri
    * - lastName
      - firstName
      - "string"
+   * - sesam_employment_status
+     - department.id (Dependant on having wd:Q29415466 in  )
+     - N/A
 
 
 Tripletex Employment to Tripletex Employee
