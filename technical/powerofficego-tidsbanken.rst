@@ -2,7 +2,7 @@
 Powerofficego to Tidsbanken Dataflow
 ====================================
 
-Generated: 2024-05-07 00:00:01
+Generated: 2024-05-07 10:45:26
 
 Introduction
 ------------
@@ -277,6 +277,9 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - FirstName
      - Fornavn
      - "string"
+   * - IsArchived
+     - Aktiv
+     - "boolean"
    * - JobTitle
      - AvdelingId
      - "string"
