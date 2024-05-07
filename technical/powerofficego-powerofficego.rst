@@ -2,7 +2,7 @@
 Powerofficego to Powerofficego Dataflow
 =======================================
 
-Generated: 2024-05-07 00:00:01
+Generated: 2024-05-07 10:45:23
 
 Introduction
 ------------
@@ -273,6 +273,9 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - DepartmentId (Dependant on having  in JobTitle)
      - JobTitle
      - "string"
+   * - IsArchived
+     - IsArchived
+     - "boolean"
    * - JobTitle
      - DepartmentId (Dependant on having  in JobTitle)
      - "string"
