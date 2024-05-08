@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2024-05-08 00:00:02
+Generated: 2024-05-08 07:37:00
 
 Introduction
 ------------
@@ -778,7 +778,7 @@ The following properties are synchronized between a Powerofficego Employees and 
      - firstName
      - "string"
    * - IsArchived
-     - department.id (Dependant on having wd:Q29415466 in  Dependant on having wd:Q29415466 in  )
+     - department.id (Dependant on having wd:Q29415466 in  Dependant on having wd:Q29415466 in  Dependant on having wd:Q29415492 in  )
      - N/A
    * - IsArchived
      - sesam_employment_status
