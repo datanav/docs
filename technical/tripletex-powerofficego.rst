@@ -2,7 +2,7 @@
 Tripletex to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-05-08 00:00:01
+Generated: 2024-05-08 07:37:00
 
 Introduction
 ------------
@@ -893,7 +893,7 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - department.id (Dependant on having wd:Q2366457 in  Dependant on having wd:Q2366457 in  )
      - DepartmentId (Dependant on having wd:Q703534 in JobTitle)
      - "string"
-   * - department.id (Dependant on having wd:Q29415466 in  Dependant on having wd:Q29415466 in  )
+   * - department.id (Dependant on having wd:Q29415466 in  Dependant on having wd:Q29415466 in  Dependant on having wd:Q29415492 in  )
      - IsArchived
      - "boolean"
    * - email
