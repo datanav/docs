@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-05-08 07:37:00
+Generated: 2024-05-08 07:37:55
 
 Introduction
 ------------
@@ -835,7 +835,7 @@ The following properties are synchronized between a Tripletex Employment and a T
      - Tripletex Employee Property
      - Tripletex Data Type
    * - sesam_employment_status
-     - department.id (Dependant on having wd:Q29415466 in  )
+     - department.id (Dependant on having wd:Q29415466 in  Dependant on having wd:Q29415492 in  )
      - N/A
    * - sesam_employment_status
      - sesam_employment_status
