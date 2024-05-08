@@ -2,7 +2,7 @@
 Tripletex to Tidsbanken Dataflow
 ================================
 
-Generated: 2024-05-08 00:00:03
+Generated: 2024-05-08 07:37:00
 
 Introduction
 ------------
@@ -482,7 +482,7 @@ The following properties are synchronized between a Tripletex Employee and a Tid
    * - dateOfBirth
      - Fodt
      - "string"
-   * - department.id (Dependant on having wd:Q29415466 in  )
+   * - department.id (Dependant on having wd:Q29415466 in  Dependant on having wd:Q29415492 in  )
      - Aktiv
      - "boolean"
    * - department.id (Dependant on having wd:Q703534 in  Dependant on having wd:Q703534 in  Dependant on having wd:Q2366457 in  Dependant on having wd:Q703534 in  )
