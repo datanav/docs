@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-05-16 00:00:05
+Generated: 2024-05-16 07:10:06
 
 Introduction
 ------------
@@ -28,6 +28,9 @@ The following properties are synchronized between a Wix.com Products and a  Inve
      - "string"
    * - costRange.maxValue
      - cost
+     - "string"
+   * - sku
+     - sku
      - "string"
 
 
