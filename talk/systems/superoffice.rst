@@ -22,6 +22,11 @@ To sync the Account Manager from SuperOffice to Tripletex, please enable **Depar
     :align: left
     :alt: Enable departments in Tripletex
 
+Why aren't my SuperOffice "Sales" syncing with ERP?
+***************************************************
+
+For a SuperOffice 'Sale' to be considered an order by Talk (and consequently synced to ERP), it must be in the 'Sales Stage Sold' and include an Accepted/Sold Quote alternative. The easiest way to achieve this is by using the 'Place Order' button in SuperOffice and selecting 'Mark sale as sold'.
+
 Why do I sometimes have to re-authorise?
 ****************************************
 
