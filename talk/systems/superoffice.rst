@@ -30,4 +30,4 @@ For a SuperOffice 'Sale' to be considered an order by Talk (and consequently syn
 Why do I sometimes have to re-authorise?
 ****************************************
 
-SuperOffice uses a token concept called SOTicket, which will expire if it's not used every 6 hours. If Sesam Talk is having operational issues that last more than 6 hours, the token will expire and the user will have to re-authorise to provide us with a new valid token. For more information see `SuperOffice System User <https://docs.superoffice.com/en/authentication/online/auth-application/index.html?tabs=rest>_`.
+SuperOffice uses a token concept called SOTicket, which will expire if it's not used every 6 hours. If Sesam Talk is having operational issues that last more than 6 hours, the token will expire and the user will have to re-authorise to provide us with a new valid token. For more information see `SuperOffice System User <https://docs.superoffice.com/en/authentication/online/auth-application/index.html?tabs=rest>`_.
