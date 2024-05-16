@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-05-16 00:00:46
+Generated: 2024-05-16 07:10:06
 
 Introduction
 ------------
@@ -25,6 +25,9 @@ The following properties are synchronized between a HubSpot Product and a  Inven
      -  Data Type
    * - properties.hs_cost_of_goods_sold
      - cost
+     - "string"
+   * - properties.hs_sku
+     - sku
      - "string"
 
 
