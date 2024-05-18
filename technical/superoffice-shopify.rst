@@ -2,7 +2,7 @@
 SuperOffice to Shopify Dataflow
 ===============================
 
-Generated: 2024-05-18 18:18:53
+Generated: 2024-05-18 18:19:25
 
 Introduction
 ------------
@@ -28,20 +28,20 @@ The following properties are synchronized between a SuperOffice Product and a  I
      - "string"
 
 
-SuperOffice Product to  Product
--------------------------------
-Every SuperOffice Product will be synchronized with a  Product.
+SuperOffice Product to Shopify Product
+--------------------------------------
+Every SuperOffice Product will be synchronized with a Shopify Product.
 
-Once a link between a SuperOffice Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Product and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Product and a  Product:
+The following properties are synchronized between a SuperOffice Product and a Shopify Product:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Product Property
-     -  Product Property
-     -  Data Type
+     - Shopify Product Property
+     - Shopify Data Type
    * - Name
      - variants.title
      - "string"
