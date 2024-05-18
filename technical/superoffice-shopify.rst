@@ -1,13 +1,13 @@
-========================
-SuperOffice to  Dataflow
-========================
+===============================
+SuperOffice to Shopify Dataflow
+===============================
 
-Generated: 2024-05-18 00:00:01
+Generated: 2024-05-18 18:18:53
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Shopify. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 SuperOffice Product to  Inventoryitem
 -------------------------------------
