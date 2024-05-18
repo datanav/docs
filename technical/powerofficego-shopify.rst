@@ -2,7 +2,7 @@
 Powerofficego to Shopify Dataflow
 =================================
 
-Generated: 2024-05-18 18:18:53
+Generated: 2024-05-18 18:19:25
 
 Introduction
 ------------
@@ -28,20 +28,20 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "string"
 
 
-Powerofficego Customers person to  Customer
--------------------------------------------
-Every Powerofficego Customers person will be synchronized with a  Customer.
+Powerofficego Customers person to Shopify Customer
+--------------------------------------------------
+Every Powerofficego Customers person will be synchronized with a Shopify Customer.
 
-Once a link between a Powerofficego Customers person and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers person and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers person and a  Customer:
+The following properties are synchronized between a Powerofficego Customers person and a Shopify Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers person Property
-     -  Customer Property
-     -  Data Type
+     - Shopify Customer Property
+     - Shopify Data Type
    * - EmailAddress
      - email
      - "string"
@@ -68,20 +68,20 @@ The following properties are synchronized between a Powerofficego Customers pers
      - "string"
 
 
-Powerofficego Product to  Product
----------------------------------
-Every Powerofficego Product will be synchronized with a  Product.
+Powerofficego Product to Shopify Product
+----------------------------------------
+Every Powerofficego Product will be synchronized with a Shopify Product.
 
-Once a link between a Powerofficego Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Product and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Product and a  Product:
+The following properties are synchronized between a Powerofficego Product and a Shopify Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Product Property
-     -  Product Property
-     -  Data Type
+     - Shopify Product Property
+     - Shopify Data Type
    * - name
      - variants.title
      - "string"
@@ -90,20 +90,20 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "string"
 
 
-Powerofficego Salesorders to  Order
------------------------------------
-Every Powerofficego Salesorders will be synchronized with a  Order.
+Powerofficego Salesorders to Shopify Order
+------------------------------------------
+Every Powerofficego Salesorders will be synchronized with a Shopify Order.
 
-Once a link between a Powerofficego Salesorders and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Salesorders and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Salesorders and a  Order:
+The following properties are synchronized between a Powerofficego Salesorders and a Shopify Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Salesorders Property
-     -  Order Property
-     -  Data Type
+     - Shopify Order Property
+     - Shopify Data Type
    * - CurrencyCode
      - currency
      - "string"
