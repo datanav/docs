@@ -2,27 +2,27 @@
 Businesscentral to Shopify Dataflow
 ===================================
 
-Generated: 2024-05-18 18:18:52
+Generated: 2024-05-18 18:18:55
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to Shopify. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Items to  Inventoryitem
----------------------------------------
-Every Businesscentral Items will be synchronized with a  Inventoryitem.
+Businesscentral Items to Shopify Inventoryitem
+----------------------------------------------
+Every Businesscentral Items will be synchronized with a Shopify Inventoryitem.
 
-Once a link between a Businesscentral Items and a  Inventoryitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Items and a Shopify Inventoryitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Items and a  Inventoryitem:
+The following properties are synchronized between a Businesscentral Items and a Shopify Inventoryitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Items Property
-     -  Inventoryitem Property
-     -  Data Type
+     - Shopify Inventoryitem Property
+     - Shopify Data Type
    * - unitCost
      - cost
      - "string"
