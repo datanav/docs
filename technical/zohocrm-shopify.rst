@@ -2,27 +2,27 @@
 ZohoCRM to Shopify Dataflow
 ===========================
 
-Generated: 2024-05-18 18:18:53
+Generated: 2024-05-18 18:19:25
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from ZohoCRM to Shopify. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-ZohoCRM Contact to  Customer
-----------------------------
-Every ZohoCRM Contact will be synchronized with a  Customer.
+ZohoCRM Contact to Shopify Customer
+-----------------------------------
+Every ZohoCRM Contact will be synchronized with a Shopify Customer.
 
-Once a link between a ZohoCRM Contact and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Contact and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Contact and a  Customer:
+The following properties are synchronized between a ZohoCRM Contact and a Shopify Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Contact Property
-     -  Customer Property
-     -  Data Type
+     - Shopify Customer Property
+     - Shopify Data Type
    * - Email
      - email
      - "string"
