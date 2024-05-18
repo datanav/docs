@@ -2,7 +2,7 @@
 Wix.com to Shopify Dataflow
 ===========================
 
-Generated: 2024-05-18 18:18:53
+Generated: 2024-05-18 18:19:25
 
 Introduction
 ------------
@@ -34,20 +34,20 @@ The following properties are synchronized between a Wix.com Products and a  Inve
      - "string"
 
 
-Wix.com Orders to  Order
-------------------------
-Every Wix.com Orders will be synchronized with a  Order.
+Wix.com Orders to Shopify Order
+-------------------------------
+Every Wix.com Orders will be synchronized with a Shopify Order.
 
-Once a link between a Wix.com Orders and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a  Order:
+The following properties are synchronized between a Wix.com Orders and a Shopify Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     -  Order Property
-     -  Data Type
+     - Shopify Order Property
+     - Shopify Data Type
    * - buyerInfo.id
      - customer.id
      - "string"
@@ -71,20 +71,20 @@ The following properties are synchronized between a Wix.com Orders and a  Order:
      - "string"
 
 
-Wix.com Products to  Product
-----------------------------
-Every Wix.com Products will be synchronized with a  Product.
+Wix.com Products to Shopify Product
+-----------------------------------
+Every Wix.com Products will be synchronized with a Shopify Product.
 
-Once a link between a Wix.com Products and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a  Product:
+The following properties are synchronized between a Wix.com Products and a Shopify Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     -  Product Property
-     -  Data Type
+     - Shopify Product Property
+     - Shopify Data Type
    * - name
      - variants.title
      - "string"
