@@ -2,7 +2,7 @@
 Tripletex to Shopify Dataflow
 =============================
 
-Generated: 2024-05-18 18:18:53
+Generated: 2024-05-18 18:19:25
 
 Introduction
 ------------
@@ -28,20 +28,20 @@ The following properties are synchronized between a Tripletex Product and a  Inv
      - "string"
 
 
-Tripletex Customer person to  Customer
---------------------------------------
-removed person customers for now until that pattern is resolved, it  will be synchronized with a  Customer.
+Tripletex Customer person to Shopify Customer
+---------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Shopify Customer.
 
-Once a link between a Tripletex Customer person and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a  Customer:
+The following properties are synchronized between a Tripletex Customer person and a Shopify Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     -  Customer Property
-     -  Data Type
+     - Shopify Customer Property
+     - Shopify Data Type
    * - deliveryAddress.addressLine1
      - addresses.address1
      - "string"
@@ -98,20 +98,20 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
 
 
-Tripletex Order to  Order
--------------------------
-Every Tripletex Order will be synchronized with a  Order.
+Tripletex Order to Shopify Order
+--------------------------------
+Every Tripletex Order will be synchronized with a Shopify Order.
 
-Once a link between a Tripletex Order and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Order and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Order and a  Order:
+The following properties are synchronized between a Tripletex Order and a Shopify Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Order Property
-     -  Order Property
-     -  Data Type
+     - Shopify Order Property
+     - Shopify Data Type
    * - contact.id
      - customer.id
      - "string"
@@ -126,20 +126,20 @@ The following properties are synchronized between a Tripletex Order and a  Order
      - "string"
 
 
-Tripletex Product to  Product
------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Product.
+Tripletex Product to Shopify Product
+------------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Shopify Product.
 
-Once a link between a Tripletex Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Product and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Product and a  Product:
+The following properties are synchronized between a Tripletex Product and a Shopify Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     -  Product Property
-     -  Data Type
+     - Shopify Product Property
+     - Shopify Data Type
    * - name
      - variants.title
      - "string"
