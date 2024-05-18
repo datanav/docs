@@ -2,7 +2,7 @@
 Wave Financial to Shopify Dataflow
 ==================================
 
-Generated: 2024-05-18 18:18:53
+Generated: 2024-05-18 18:19:25
 
 Introduction
 ------------
@@ -25,20 +25,20 @@ The following properties are synchronized between a Wave Product and a  Inventor
      -  Data Type
 
 
-Wave Customer person to  Customer
----------------------------------
-Every Wave Customer person will be synchronized with a  Customer.
+Wave Customer person to Shopify Customer
+----------------------------------------
+Every Wave Customer person will be synchronized with a Shopify Customer.
 
-Once a link between a Wave Customer person and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer person and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a  Customer:
+The following properties are synchronized between a Wave Customer person and a Shopify Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     -  Customer Property
-     -  Data Type
+     - Shopify Customer Property
+     - Shopify Data Type
    * - address.addressLine1
      - addresses.address1
      - "string"
@@ -89,20 +89,20 @@ The following properties are synchronized between a Wave Customer person and a  
      - "string"
 
 
-Wave Invoice to  Order
-----------------------
-Every Wave Invoice will be synchronized with a  Order.
+Wave Invoice to Shopify Order
+-----------------------------
+Every Wave Invoice will be synchronized with a Shopify Order.
 
-Once a link between a Wave Invoice and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a  Order:
+The following properties are synchronized between a Wave Invoice and a Shopify Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     -  Order Property
-     -  Data Type
+     - Shopify Order Property
+     - Shopify Data Type
    * - currency.code
      - currency
      - "string"
@@ -129,20 +129,20 @@ The following properties are synchronized between a Wave Invoice and a  Order:
      - "string"
 
 
-Wave Product to  Product
-------------------------
-Every Wave Product will be synchronized with a  Product.
+Wave Product to Shopify Product
+-------------------------------
+Every Wave Product will be synchronized with a Shopify Product.
 
-Once a link between a Wave Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a  Product:
+The following properties are synchronized between a Wave Product and a Shopify Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Product Property
-     -  Product Property
-     -  Data Type
+     - Shopify Product Property
+     - Shopify Data Type
    * - name
      - variants.title
      - "string"
