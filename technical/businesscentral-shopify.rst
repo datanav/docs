@@ -2,7 +2,7 @@
 Businesscentral to Shopify Dataflow
 ===================================
 
-Generated: 2024-05-18 18:18:38
+Generated: 2024-05-18 18:18:52
 
 Introduction
 ------------
@@ -28,20 +28,20 @@ The following properties are synchronized between a Businesscentral Items and a 
      - "string"
 
 
-Businesscentral Customers person to  Customer
----------------------------------------------
-Every Businesscentral Customers person will be synchronized with a  Customer.
+Businesscentral Customers person to Shopify Customer
+----------------------------------------------------
+Every Businesscentral Customers person will be synchronized with a Shopify Customer.
 
-Once a link between a Businesscentral Customers person and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Customers person and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers person and a  Customer:
+The following properties are synchronized between a Businesscentral Customers person and a Shopify Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Customers person Property
-     -  Customer Property
-     -  Data Type
+     - Shopify Customer Property
+     - Shopify Data Type
    * - addressLine1
      - addresses.address1
      - "string"
@@ -68,20 +68,20 @@ The following properties are synchronized between a Businesscentral Customers pe
      - "string"
 
 
-Businesscentral Items to  Product
----------------------------------
-Every Businesscentral Items will be synchronized with a  Product.
+Businesscentral Items to Shopify Product
+----------------------------------------
+Every Businesscentral Items will be synchronized with a Shopify Product.
 
-Once a link between a Businesscentral Items and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Items and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Items and a  Product:
+The following properties are synchronized between a Businesscentral Items and a Shopify Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Items Property
-     -  Product Property
-     -  Data Type
+     - Shopify Product Property
+     - Shopify Data Type
    * - displayName
      - variants.title
      - "string"
@@ -90,20 +90,20 @@ The following properties are synchronized between a Businesscentral Items and a 
      - "string"
 
 
-Businesscentral Salesorders to  Order
--------------------------------------
-Every Businesscentral Salesorders will be synchronized with a  Order.
+Businesscentral Salesorders to Shopify Order
+--------------------------------------------
+Every Businesscentral Salesorders will be synchronized with a Shopify Order.
 
-Once a link between a Businesscentral Salesorders and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Salesorders and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorders and a  Order:
+The following properties are synchronized between a Businesscentral Salesorders and a Shopify Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Salesorders Property
-     -  Order Property
-     -  Data Type
+     - Shopify Order Property
+     - Shopify Data Type
    * - billToAddressLine1
      - billing_address.address1
      - "string"
