@@ -28,7 +28,7 @@ Systems
 
     **Shopify**
 
-    Wix.com is a leading cloud-based development platform. 
+    Shopify is an e-commerce platform that allows individuals and businesses to create online stores and manage their sales, products, and customer relationships.
     .. link-button:: system/shopify
         :type: ref
         :text: Read more
