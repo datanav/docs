@@ -2,7 +2,7 @@
 HubSpot to Shopify Dataflow
 ===========================
 
-Generated: 2024-05-18 18:18:53
+Generated: 2024-05-18 18:19:25
 
 Introduction
 ------------
@@ -31,20 +31,20 @@ The following properties are synchronized between a HubSpot Product and a  Inven
      - "string"
 
 
-HubSpot Deal to  Order
-----------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a  Order.
+HubSpot Deal to Shopify Order
+-----------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Shopify Order.
 
-Once a link between a HubSpot Deal and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a  Order:
+The following properties are synchronized between a HubSpot Deal and a Shopify Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     -  Order Property
-     -  Data Type
+     - Shopify Order Property
+     - Shopify Data Type
    * - properties.amount
      - current_total_price
      - "string"
@@ -59,20 +59,20 @@ The following properties are synchronized between a HubSpot Deal and a  Order:
      - "string"
 
 
-HubSpot Product to  Product
----------------------------
-Every HubSpot Product will be synchronized with a  Product.
+HubSpot Product to Shopify Product
+----------------------------------
+Every HubSpot Product will be synchronized with a Shopify Product.
 
-Once a link between a HubSpot Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Product and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Product and a  Product:
+The following properties are synchronized between a HubSpot Product and a Shopify Product:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Product Property
-     -  Product Property
-     -  Data Type
+     - Shopify Product Property
+     - Shopify Data Type
    * - properties.name
      - variants.title
      - "string"
