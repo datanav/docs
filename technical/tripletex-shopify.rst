@@ -2,27 +2,27 @@
 Tripletex to Shopify Dataflow
 =============================
 
-Generated: 2024-05-18 18:19:25
+Generated: 2024-05-18 18:20:35
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Shopify. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Product to  Inventoryitem
------------------------------------
-Every Tripletex Product will be synchronized with a  Inventoryitem.
+Tripletex Product to Shopify Inventoryitem
+------------------------------------------
+Every Tripletex Product will be synchronized with a Shopify Inventoryitem.
 
-Once a link between a Tripletex Product and a  Inventoryitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Product and a Shopify Inventoryitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Product and a  Inventoryitem:
+The following properties are synchronized between a Tripletex Product and a Shopify Inventoryitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     -  Inventoryitem Property
-     -  Data Type
+     - Shopify Inventoryitem Property
+     - Shopify Data Type
    * - costExcludingVatCurrency
      - cost
      - "string"
