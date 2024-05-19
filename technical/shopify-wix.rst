@@ -2,7 +2,7 @@
 Shopify to Wix Dataflow
 =======================
 
-Generated: 2024-05-18 18:20:18
+Generated: 2024-05-19 00:00:03
 
 Introduction
 ------------
