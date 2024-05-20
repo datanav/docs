@@ -2,7 +2,7 @@
 Shopify to Difi Dataflow
 ========================
 
-Generated: 2024-05-19 00:00:03
+Generated: 2024-05-20 00:00:02
 
 Introduction
 ------------
