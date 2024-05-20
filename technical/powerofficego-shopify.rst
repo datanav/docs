@@ -2,7 +2,7 @@
 Powerofficego to Shopify Dataflow
 =================================
 
-Generated: 2024-05-20 00:00:02
+Generated: 2024-05-20 00:00:09
 
 Introduction
 ------------
