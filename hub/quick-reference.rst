@@ -112,6 +112,7 @@ DTL Transform Functions
    * - Special
      -
        :ref:`fail! <dtl_transform-fail>` ·
+       :ref:`sleep! <dtl_transform-sleep>` ·
        :ref:`trip! <dtl_transform-trip>`
 
 .. _quickref_dtl_expression_functions:

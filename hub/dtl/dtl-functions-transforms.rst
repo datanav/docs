@@ -998,6 +998,26 @@ modifying the target entity, and has no return value.
        |
        | Causes the pump to fail. The error message is reported in the `pump-failed` event in the pump execution dataset.
 
+.. _dtl_transform-sleep:
+
+``sleep!``
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   PERIOD(integer{1})
+       |
+       | A function that makes the processing to pause for the given time. The time period is specified in seconds. Use this function with care as it may block other pipes if it pauses for too long.
+     - | ``["sleep!", 10]``
+       |
+       | The processing pauses for 10 seconds.
+
 
 .. _dtl_transform-trip:
 
