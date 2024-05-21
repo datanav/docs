@@ -2,7 +2,7 @@
 SuperOffice to Superoffice Dataflow
 ===================================
 
-Generated: 2024-05-21 00:00:01
+Generated: 2024-05-21 12:59:30
 
 Introduction
 ------------
@@ -100,7 +100,7 @@ The following properties are synchronized between a SuperOffice Contact and a Su
      - "integer"
    * - Country.CountryId
      - Country.CountryId
-     - "integer"
+     - N/A
    * - Country.ThreeLetterISOCountry
      - OrgNr (Dependant on having wd:Q906278 in Country.TwoLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountryDependant on having wd:Q906278 in Country.TwoLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountry)
      - "string"
