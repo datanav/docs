@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2024_05_21:
+
+2024-05-21
+----------
+* Added the :ref:`sleep! <dtl_transform-sleep>` DTL transform function.
+
 .. _changelog_2024_03_13:
 
 2024-03-13
