@@ -19,7 +19,7 @@ Data types
      - Output
 
    * - :ref:`Asset <datatype_asset>`
-     - false
+     - true
      - true
 
    * - :ref:`Classification <datatype_classification>`
