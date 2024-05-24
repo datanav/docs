@@ -2,7 +2,7 @@
 Tidsbanken to Hubspot Dataflow
 ==============================
 
-Generated: 2024-05-24 00:00:00
+Generated: 2024-05-24 12:02:44
 
 Introduction
 ------------
@@ -127,5 +127,8 @@ The following properties are synchronized between a Tidsbanken Kunde and a Hubsp
      - "string"
    * - Telefon
      - properties.phone
+     - "string"
+   * - Url
+     - properties.website
      - "string"
 
