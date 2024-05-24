@@ -2,7 +2,7 @@
 ZohoCRM to Hubspot Dataflow
 ===========================
 
-Generated: 2024-05-24 00:00:00
+Generated: 2024-05-24 12:02:44
 
 Introduction
 ------------
@@ -55,6 +55,9 @@ The following properties are synchronized between a ZohoCRM Account and a Hubspo
      - "string"
    * - Shipping_State
      - properties.state
+     - "string"
+   * - Website
+     - properties.website
      - "string"
    * - id
      - id
