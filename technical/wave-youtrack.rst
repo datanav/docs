@@ -2,7 +2,7 @@
 Wave Financial to Youtrack Dataflow
 ===================================
 
-Generated: 2024-05-27 00:00:01
+Generated: 2024-05-27 12:42:38
 
 Introduction
 ------------
@@ -116,4 +116,20 @@ The following properties are synchronized between a Wave Customer and a Youtrack
    * - name
      - name
      - "string"
+
+
+Wave User to Youtrack Users
+---------------------------
+Every Wave User will be synchronized with a Youtrack Users.
+
+Once a link between a Wave User and a Youtrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave User and a Youtrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave User Property
+     - Youtrack Users Property
+     - Youtrack Data Type
 
