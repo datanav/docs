@@ -2,7 +2,7 @@
 Wave Financial to Hubspot Dataflow
 ==================================
 
-Generated: 2024-05-27 00:00:01
+Generated: 2024-05-27 12:42:38
 
 Introduction
 ------------
@@ -403,4 +403,20 @@ The following properties are synchronized between a Wave Product and a Hubspot P
    * - unitPrice
      - properties.price
      - "string"
+
+
+Wave User to Hubspot User
+-------------------------
+Every Wave User will be synchronized with a Hubspot User.
+
+Once a link between a Wave User and a Hubspot User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave User and a Hubspot User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave User Property
+     - Hubspot User Property
+     - Hubspot Data Type
 
