@@ -2,7 +2,7 @@
 Powerofficego to Wikidata Dataflow
 ==================================
 
-Generated: 2024-05-27 00:00:02
+Generated: 2024-05-28 00:00:00
 
 Introduction
 ------------
