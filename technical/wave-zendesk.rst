@@ -2,7 +2,7 @@
 Wave Financial to Zendesk Dataflow
 ==================================
 
-Generated: 2024-05-28 00:00:00
+Generated: 2024-05-28 13:27:45
 
 Introduction
 ------------
@@ -132,4 +132,7 @@ The following properties are synchronized between a Wave User and a Zendesk User
    * - Wave User Property
      - Zendesk Users Property
      - Zendesk Data Type
+   * - defaultEmail
+     - email
+     - "string"
 
