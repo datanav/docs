@@ -35,8 +35,9 @@ Why do I get company duplicates in HubSpot when I connect other systems?
 
 HubSpot does not have a unique identifier for companies that is safe enough to perform a merge of companies. In other words, we are unable to safely merge companies in HubSpot and duplicates might appear over time.
 
+Please see `this section <https://docs.sesam.io/talk/merging/index.html#company-duplicates-when-onboarding-hubspot>`_ for instructions on how how to utilize the Hubspot deduplication feature together with Talk to avoid duplicates during onboarding.
+    
 .. note ::
-
     Remember that we **do not delete** data from your systems. You will need to manage deduplication in your other systems, if duplication accurs.
 
 Why is the address of my contact in HubSpot not up to date?
