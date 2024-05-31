@@ -1,0 +1,2 @@
+Business Central FAQ
+====================

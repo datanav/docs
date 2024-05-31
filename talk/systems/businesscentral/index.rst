@@ -1,14 +1,10 @@
-.. _talk_businesscentral:
-
-Talk for Business Central 
-=========================
+Business Central 
+=================
 
 Introduction
 ------------
 
-Welcome to Talk for Business Central documentation! 
-
-By connecting Business Central to Talk, organizations can streamline their data management processes and enhance efficiency across their organization. Let's explore the main benefits and supported data types of the Talk for Business Central Connector.
+By connecting Business Central to Talk, organizations can streamline their data management processes and enhance efficiency across their organization. 
 
 Main Benefits
 -------------
@@ -36,4 +32,10 @@ The Talk for Business Central Connector supports bidirectional synchronization o
 Conclusion
 ----------
 
-The Talk for Business Central Connector empowers users to streamline their data management processes, improve efficiency, and unlock new levels of productivity. With automated data synchronization, enhanced data quality, seamless integration, and comprehensive order visibility, Talk revolutionizes the way Business Central users manage their data. Experience the power of Talk's Business Central Connector and elevate your data management to the next level today!
+The Talk for Business Central Connector empowers users to streamline their data management processes, improve efficiency, and unlock new levels of productivity. With automated data synchronization, enhanced data quality, seamless integration, and comprehensive order visibility, Talk revolutionizes the way Business Central users manage their data. 
+
+
+.. toctree::
+   :maxdepth: 2
+   
+   faq/index
