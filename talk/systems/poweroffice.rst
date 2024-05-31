@@ -82,3 +82,7 @@ Why are customers that share the same email address merged?
 ***********************************************************
 
 We merge customers on email address to avoid duplicates when syncing with other systems. We do not expect multiple customers to share the same email address. If two customers share the same real contact person, we expect that there exist one contact person per customer. If that person is to be contacted on the same email regardless of the customer, we expect those contacts to share the same email address. When two contacts share the same email those will be merged and kept in sync, but the customers will remain separated.
+
+Synchronisation of Products
+***************************************************
+Sesam Talk synchronises all products from PowerOffice, active and non-active.

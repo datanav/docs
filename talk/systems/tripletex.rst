@@ -24,6 +24,9 @@ Tripletex
 
 Find your employee token
 ------------------------
+ .. note::
+    This applies for Tripletex “production accounts” only.
+
 The employee token can be created by the account administrator in Tripletex under the User Settings page, then in the tab "API access" 
 
 Follow these steps to create your employee token:
@@ -34,9 +37,30 @@ Follow these steps to create your employee token:
 #. Name your token
 #. Go back and paste the employee token into the API Key field in Sesam Talk
 
-.. important::
+.. image:: images/TT-API1.png
+    :width: 800px
+    :align: left
+    :alt: Choose Company/Selskap
 
-  This applies for Tripletex “production accounts” only.
+.. image:: images/TT-API2.png
+    :width: 800px
+    :align: left
+    :alt: Select a admin user
+
+.. image:: images/TT-API3.png
+   :width: 800px
+   :align: left
+   :alt: Select API Access/API Tilgang
+
+.. image:: images/TT-API5.png
+   :width: 800px
+   :align: left
+   :alt: 1 New Key, 2 Adapted Setup, 3 All Access, 4 SesamTalk, 5 Add a name, 6 Create key
+
+.. image:: images/TT-API6.png
+   :width: 800px
+   :align: left
+   :alt: Copy the generated API Key. To be used in onboarding. 
 
 For more information please `read this documentation <https://hjelp.tripletex.no/hc/en/articles/4409557117713>`_.
 
@@ -94,3 +118,7 @@ There are two ways to work around this problem:
 or
 
 #. Add enough information in the CRM product (if the system supports this) so that it merges with an existing product in Tripletex.
+
+Synchronisation of Products
+***************************************************
+Sesam Talk synchronises all products from Tripletex, active and non-active.
