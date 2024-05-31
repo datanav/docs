@@ -36,6 +36,7 @@ The Talk for Business Central Connector empowers users to streamline their data 
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
+   :hidden:
    
    faq/index
