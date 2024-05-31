@@ -8,7 +8,7 @@ Sesam Talk support systems across a range of categories. You can read more about
 .. toctree::
    :maxdepth: 2
      
-   businesscentral
+   businesscentral/index
    hubspot
    poweroffice
    superoffice
