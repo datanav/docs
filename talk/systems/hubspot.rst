@@ -23,17 +23,13 @@ Hubspot
 Frequently Asked Questions
 --------------------------
 
-Why is website of a company not being updated from other connected systems?
-***************************************************************************
-
-In Hubspot the company field for **website** is read-only. That means that we can not write new domains into this field. 
-
-If you want to change the domain name of a company, you should do it in HubSpot.
 
 Why do I get company duplicates in HubSpot when I connect other systems?
 ************************************************************************
 
 HubSpot does not have a unique identifier for companies that is safe enough to perform a merge of companies. In other words, we are unable to safely merge companies in HubSpot and duplicates might appear over time.
+
+Please see `this section <https://docs.sesam.io/talk/merging/index.html#company-duplicates-when-onboarding-hubspot>`_ for instructions on how how to utilize the Hubspot deduplication feature together with Talk to avoid duplicates during onboarding.
 
 .. note ::
 
