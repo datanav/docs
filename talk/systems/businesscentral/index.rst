@@ -34,8 +34,3 @@ Conclusion
 
 The Talk for Business Central Connector empowers users to streamline their data management processes, improve efficiency, and unlock new levels of productivity. With automated data synchronization, enhanced data quality, seamless integration, and comprehensive order visibility, Talk revolutionizes the way Business Central users manage their data. 
 
-
-.. toctree::
-   :maxdepth: 2
-   
-   faq/index
