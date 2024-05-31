@@ -1,4 +1,5 @@
-=========================
+.. _talk_businesscentral:
+
 Talk for Business Central 
 =========================
 
