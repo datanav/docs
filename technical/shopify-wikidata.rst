@@ -2,7 +2,7 @@
 Shopify to Wikidata Dataflow
 ============================
 
-Generated: 2024-06-01 00:00:02
+Generated: 2024-06-02 00:00:04
 
 Introduction
 ------------
