@@ -2,7 +2,7 @@
 SuperOffice to Wikidata Dataflow
 ================================
 
-Generated: 2024-06-10 00:00:02
+Generated: 2024-06-10 00:00:14
 
 Introduction
 ------------
