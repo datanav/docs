@@ -11,8 +11,7 @@ Sesam.io AS (also referred to as “SESAM” or “We”), organization number
 922 409 676, is an Integration Platform that uses a unique Datahub
 approach for collecting, connecting and sharing data.
 
-To exercise your rights as a Data Subject, please use our `Data Access
-Portal <https://me.sesam.io>`_.
+To exercise your rights as a Data Subject, please contact `Support <https://support.sesam.io>`_.
 
 Our Privacy Policies were last updated September 2020.
 
@@ -52,8 +51,7 @@ about our company and our services, including information about SESAM
 and upcoming events, and/or our GDPR product and GDPR compliance.
 
 At any time, you have the right to stop us from contacting you for
-marketing purposes by withdrawing your consent in our `Data Access
-Portal <https://me.sesam.io>`_.
+marketing purposes by withdrawing your consent contact `Support <https://support.sesam.io>`_.
 
 Sharing and disclosure
 ----------------------
@@ -99,8 +97,8 @@ data. For your protection, we may require proof of identity including
 proper verification and confirmation of your identity.
 
 At any time, you are entitled to have your rights enforced. If you
-choose to exercise your rights as a Data Subject, please use our `Data Access
-Portal <https://me.sesam.io>`_.
+choose to exercise your rights as a Data Subject, please contact 
+`Support <https://support.sesam.io>`_.
 
 The right to lodge compliant with a supervisory authority
 ---------------------------------------------------------
@@ -132,8 +130,8 @@ In this policy, we aim to demonstrate our commitment to protect our
 users ́ and/or visitors ́ privacy. The document comprises the processing
 of Personal Data provided to SESAM.
 
-To exercise your rights as a Data Subject, please use our `Data Access
-Portal <https://me.sesam.io>`_.
+To exercise your rights as a Data Subject, please contact 
+`Support <https://support.sesam.io>`_.
 
 Personal and other data collected
 ---------------------------------
@@ -204,8 +202,8 @@ SESAM aims to provide transparency for the exercising of your rights.
 Based on your request to us, we will provide information on action taken
 without undue delay, and in any event within one month of the request.
 
-To exercise your rights as a Data Subject, please use our `Data Access
-Portal <https://me.sesam.io>`_.
+To exercise your rights as a Data Subject, please contact 
+`Support <https://support.sesam.io>`_.
 
 Right of access
 ---------------
@@ -321,8 +319,7 @@ Privacy Policy and The Terms of Service Agreement, including the Data
 Processing Agreement, the relevant privacy provisions of the latter take
 precedence.
 
-To exercise your rights as a Data Subject, please use our `Data Access
-Portal <https://me.sesam.io>`_.
+To exercise your rights as a Data Subject, please use contact `Support <https://support.sesam.io>`_.
 
 Legal basis and purpose for processing
 --------------------------------------
@@ -531,8 +528,8 @@ about job candidates, including information provided by the applicants
 as well as information collected from third party sources and
 recruiters.
 
-To exercise your rights as a Data Subject, please use our `Data Access
-Portal <https://me.sesam.io>`_.
+To exercise your rights as a Data Subject, please contact 
+`Support <https://support.sesam.io>`_.
 
 What we collect and why we collect it
 -------------------------------------
@@ -638,7 +635,7 @@ or erasure of Personal Data, restriction of the processing, as well as
 the right to data portability.
 
 You are entitled to have your rights enforced. At any time, you can
-choose to send a request, by following the directions `here <https://me.sesam.io>`_.
+choose to send a request to `Support <https://support.sesam.io>`_.
 
 The right to lodge a complaint with a supervisory authority
 -----------------------------------------------------------
