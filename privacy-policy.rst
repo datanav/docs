@@ -202,7 +202,7 @@ SESAM aims to provide transparency for the exercising of your rights.
 Based on your request to us, we will provide information on action taken
 without undue delay, and in any event within one month of the request.
 
-To exercise your rights as a Data Subject, please use contact 
+To exercise your rights as a Data Subject, please contact 
 `Support <https://support.sesam.io>`_.
 
 Right of access
