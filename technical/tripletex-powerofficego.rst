@@ -2,7 +2,7 @@
 Tripletex to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-06-13 15:13:26
+Generated: 2024-06-13 15:13:31
 
 Introduction
 ------------
@@ -586,7 +586,7 @@ The following properties are synchronized between a Tripletex Customer person an
 
 Tripletex Customer person to Powerofficego Customers person
 -----------------------------------------------------------
-removed person customers for now until that pattern is resolved, it  will be synchronized with a Powerofficego Customers person.
+Every Tripletex Customer person will be synchronized with a Powerofficego Customers person.
 
 If a matching Powerofficego Customers person already exists, the Tripletex Customer person will be merged with the existing one.
 If no matching Powerofficego Customers person is found, a new Powerofficego Customers person will be created.
