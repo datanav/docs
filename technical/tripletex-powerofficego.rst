@@ -2,7 +2,7 @@
 Tripletex to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-06-16 16:39:30
+Generated: 2024-06-17 00:00:00
 
 Introduction
 ------------
