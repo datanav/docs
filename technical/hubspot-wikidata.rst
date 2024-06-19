@@ -2,7 +2,7 @@
 HubSpot to Wikidata Dataflow
 ============================
 
-Generated: 2024-06-18 00:00:55
+Generated: 2024-06-19 00:00:04
 
 Introduction
 ------------
