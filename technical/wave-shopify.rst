@@ -2,7 +2,7 @@
 Wave Financial to Shopify Dataflow
 ==================================
 
-Generated: 2024-06-18 00:00:03
+Generated: 2024-06-19 00:00:04
 
 Introduction
 ------------
