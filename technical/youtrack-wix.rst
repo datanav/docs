@@ -2,7 +2,7 @@
 YouTrack to Wix Dataflow
 ========================
 
-Generated: 2024-06-20 00:00:02
+Generated: 2024-06-20 08:40:04
 
 Introduction
 ------------
