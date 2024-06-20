@@ -2,7 +2,7 @@
 Wix.com to Youtrack Dataflow
 ============================
 
-Generated: 2024-06-20 00:00:01
+Generated: 2024-06-20 08:40:03
 
 Introduction
 ------------
