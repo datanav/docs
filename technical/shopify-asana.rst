@@ -2,7 +2,7 @@
 Shopify to Asana Dataflow
 =========================
 
-Generated: 2024-06-19 00:00:04
+Generated: 2024-06-20 00:00:03
 
 Introduction
 ------------
