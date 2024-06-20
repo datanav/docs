@@ -2,7 +2,7 @@
 Tilores to Shopify Dataflow
 ===========================
 
-Generated: 2024-06-20 00:00:03
+Generated: 2024-06-20 08:40:10
 
 Introduction
 ------------
