@@ -2,7 +2,7 @@
 Wave Financial to Businesscentral Dataflow
 ==========================================
 
-Generated: 2024-06-27 07:14:18
+Generated: 2024-06-27 07:16:14
 
 Introduction
 ------------
@@ -225,56 +225,6 @@ The following properties are synchronized between a Wave Customer and a Business
      - "string"
    * - shippingDetails.address.postalCode
      - postalCode
-     - "string"
-   * - shippingDetails.phone
-     - phoneNumber
-     - "string"
-   * - website
-     - website
-     - "string"
-
-
-Wave Customer contact to Businesscentral Contacts person
---------------------------------------------------------
-Every Wave Customer contact will be synchronized with a Businesscentral Contacts person.
-
-Once a link between a Wave Customer contact and a Businesscentral Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer contact and a Businesscentral Contacts person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer contact Property
-     - Businesscentral Contacts person Property
-     - Businesscentral Data Type
-   * - email
-     - email
-     - "string"
-   * - mobile
-     - mobilePhoneNumber
-     - "string"
-
-
-Wave Customer organisation to Businesscentral Customers company
----------------------------------------------------------------
-Every Wave Customer organisation will be synchronized with a Businesscentral Customers company.
-
-Once a link between a Wave Customer organisation and a Businesscentral Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer organisation and a Businesscentral Customers company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer organisation Property
-     - Businesscentral Customers company Property
-     - Businesscentral Data Type
-   * - name
-     - displayName
-     - "string"
-   * - phone
-     - phoneNumber
      - "string"
    * - shippingDetails.phone
      - phoneNumber
