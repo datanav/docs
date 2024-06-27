@@ -2,63 +2,12 @@
 Wave Financial to Businesscentral Dataflow
 ==========================================
 
-Generated: 2024-06-27 07:13:59
+Generated: 2024-06-27 07:14:18
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Businesscentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Wave Customer to Businesscentral Customers company
---------------------------------------------------
-Before any synchronization can take place, a link between a Wave Customer and a Businesscentral Customers company must be established.
-
-A new Businesscentral Customers company will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into Businesscentral.
-
-Once a link between a Wave Customer and a Businesscentral Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a Businesscentral Customers company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Businesscentral Customers company Property
-     - Businesscentral Data Type
-   * - address.addressLine1
-     - addressLine1
-     - "string"
-   * - address.addressLine2
-     - addressLine2
-     - "string"
-   * - address.city
-     - city
-     - "string"
-   * - address.country.code
-     - country
-     - "string"
-   * - address.postalCode
-     - postalCode
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - addressLine1
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - addressLine2
-     - "string"
-   * - shippingDetails.address.city
-     - city
-     - "string"
-   * - shippingDetails.address.country.code
-     - country
-     - "string"
-   * - shippingDetails.address.postalCode
-     - postalCode
-     - "string"
-
 
 Wave Customer to Businesscentral Customers person
 -------------------------------------------------
@@ -143,6 +92,146 @@ The following properties are synchronized between a Wave Customer and a Business
    * - Wave Customer Property
      - Businesscentral Companies Property
      - Businesscentral Data Type
+
+
+Wave Customer to Businesscentral Contacts person
+------------------------------------------------
+Every Wave Customer will be synchronized with a Businesscentral Contacts person.
+
+Once a link between a Wave Customer and a Businesscentral Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Businesscentral Contacts person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Businesscentral Contacts person Property
+     - Businesscentral Data Type
+   * - address.addressLine1
+     - addressLine1
+     - "string"
+   * - address.addressLine2
+     - addressLine2
+     - "string"
+   * - address.city
+     - city
+     - "string"
+   * - address.country.code
+     - country
+     - "string"
+   * - address.postalCode
+     - postalCode
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - firstName
+     - displayName
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - lastName
+     - displayName
+     - "string"
+   * - mobile
+     - mobilePhoneNumber
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - addressLine1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - addressLine2
+     - "string"
+   * - shippingDetails.address.city
+     - city
+     - "string"
+   * - shippingDetails.address.country.code
+     - country
+     - "string"
+   * - shippingDetails.address.postalCode
+     - postalCode
+     - "string"
+
+
+Wave Customer to Businesscentral Customers company
+--------------------------------------------------
+Every Wave Customer will be synchronized with a Businesscentral Customers company.
+
+Once a link between a Wave Customer and a Businesscentral Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Businesscentral Customers company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Businesscentral Customers company Property
+     - Businesscentral Data Type
+   * - address.addressLine1
+     - addressLine1
+     - "string"
+   * - address.addressLine2
+     - addressLine2
+     - "string"
+   * - address.city
+     - address.city
+     - "string"
+   * - address.city
+     - city
+     - "string"
+   * - address.country.code
+     - address.countryLetterCode
+     - "string"
+   * - address.country.code
+     - country
+     - "string"
+   * - address.postalCode
+     - address.postalCode
+     - "string"
+   * - address.postalCode
+     - postalCode
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - name
+     - displayName
+     - "string"
+   * - phone
+     - phoneNumber
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - addressLine1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - addressLine2
+     - "string"
+   * - shippingDetails.address.city
+     - address.city
+     - "string"
+   * - shippingDetails.address.city
+     - city
+     - "string"
+   * - shippingDetails.address.country.code
+     - address.countryLetterCode
+     - "string"
+   * - shippingDetails.address.country.code
+     - country
+     - "string"
+   * - shippingDetails.address.postalCode
+     - address.postalCode
+     - "string"
+   * - shippingDetails.address.postalCode
+     - postalCode
+     - "string"
+   * - shippingDetails.phone
+     - phoneNumber
+     - "string"
+   * - website
+     - website
+     - "string"
 
 
 Wave Customer contact to Businesscentral Contacts person
