@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2024-06-27 07:12:28
+Generated: 2024-06-27 07:13:45
 
 Introduction
 ------------
@@ -436,6 +436,15 @@ The following properties are synchronized between a Tripletex Customer and a Wav
    * - Tripletex Customer Property
      - Wave Customer organisation Property
      - Wave Data Type
+   * - name
+     - name
+     - N/A
+   * - phoneNumber
+     - phone
+     - "string"
+   * - website
+     - website
+     - "string"
 
 
 Tripletex Order to Wave Invoice
