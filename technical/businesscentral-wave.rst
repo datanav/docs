@@ -2,7 +2,7 @@
 Businesscentral to Wave Dataflow
 ================================
 
-Generated: 2024-06-27 07:12:28
+Generated: 2024-06-27 07:13:59
 
 Introduction
 ------------
@@ -77,6 +77,15 @@ The following properties are synchronized between a Businesscentral Customers co
    * - Businesscentral Customers company Property
      - Wave Customer organisation Property
      - Wave Data Type
+   * - displayName
+     - name
+     - N/A
+   * - phoneNumber
+     - phone
+     - "string"
+   * - website
+     - website
+     - "string"
 
 
 Businesscentral Customers person to Wave Customer person
