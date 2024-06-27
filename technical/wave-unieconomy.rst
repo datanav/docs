@@ -2,12 +2,28 @@
 Wave Financial to Unieconomy Dataflow
 =====================================
 
-Generated: 2024-06-27 00:00:00
+Generated: 2024-06-27 07:11:13
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Unieconomy. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wave Customer organisation to Unieconomy Customers
+--------------------------------------------------
+Every Wave Customer organisation will be synchronized with a Unieconomy Customers.
+
+Once a link between a Wave Customer organisation and a Unieconomy Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer organisation and a Unieconomy Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer organisation Property
+     - Unieconomy Customers Property
+     - Unieconomy Data Type
+
 
 Wave Customer to Unieconomy Customers
 -------------------------------------
