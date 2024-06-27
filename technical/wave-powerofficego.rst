@@ -2,12 +2,38 @@
 Wave Financial to Powerofficego Dataflow
 ========================================
 
-Generated: 2024-06-27 07:14:18
+Generated: 2024-06-27 07:16:14
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Powerofficego. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wave Customer contact to Powerofficego Contactperson
+----------------------------------------------------
+Before any synchronization can take place, a link between a Wave Customer contact and a Powerofficego Contactperson must be established.
+
+A Wave Customer contact will merge with a Powerofficego Contactperson if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer contact Property
+     - Powerofficego Contactperson Property
+   * - email
+     - emailAddress
+
+Once a link between a Wave Customer contact and a Powerofficego Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer contact and a Powerofficego Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer contact Property
+     - Powerofficego Contactperson Property
+     - Powerofficego Data Type
+
 
 Wave Customer contact to Powerofficego Customers person
 -------------------------------------------------------
@@ -264,75 +290,6 @@ The following properties are synchronized between a Wave Vendor and a Poweroffic
      - "integer"
    * - name
      - Name
-     - "string"
-   * - website
-     - WebsiteUrl
-     - "string"
-
-
-Wave Customer contact to Powerofficego Contactperson
-----------------------------------------------------
-Every Wave Customer contact will be synchronized with a Powerofficego Contactperson.
-
-If a matching Powerofficego Contactperson already exists, the Wave Customer contact will be merged with the existing one.
-If no matching Powerofficego Contactperson is found, a new Powerofficego Contactperson will be created.
-
-A Wave Customer contact will merge with a Powerofficego Contactperson if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer contact Property
-     - Powerofficego Contactperson Property
-   * - email
-     - emailAddress
-
-Once a link between a Wave Customer contact and a Powerofficego Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer contact and a Powerofficego Contactperson:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer contact Property
-     - Powerofficego Contactperson Property
-     - Powerofficego Data Type
-   * - email
-     - emailAddress
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - id
-     - partyId
-     - "integer"
-   * - lastName
-     - lastName
-     - "string"
-
-
-Wave Customer organisation to Powerofficego Customers
------------------------------------------------------
-Every Wave Customer organisation will be synchronized with a Powerofficego Customers.
-
-Once a link between a Wave Customer organisation and a Powerofficego Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer organisation and a Powerofficego Customers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer organisation Property
-     - Powerofficego Customers Property
-     - Powerofficego Data Type
-   * - name
-     - Name
-     - "string"
-   * - phone
-     - PhoneNumber
-     - "string"
-   * - shippingDetails.phone
-     - PhoneNumber
      - "string"
    * - website
      - WebsiteUrl
