@@ -2,7 +2,7 @@
 Wave Financial to Tidsbanken Dataflow
 =====================================
 
-Generated: 2024-06-27 07:14:18
+Generated: 2024-06-27 07:16:14
 
 Introduction
 ------------
@@ -177,34 +177,6 @@ The following properties are synchronized between a Wave Vendor and a Tidsbanken
    * - id
      - Id
      - "integer"
-
-
-Wave Customer organisation to Tidsbanken Kunde
-----------------------------------------------
-Every Wave Customer organisation will be synchronized with a Tidsbanken Kunde.
-
-Once a link between a Wave Customer organisation and a Tidsbanken Kunde is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer organisation and a Tidsbanken Kunde:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer organisation Property
-     - Tidsbanken Kunde Property
-     - Tidsbanken Data Type
-   * - name
-     - Navn
-     - "string"
-   * - phone
-     - Telefon
-     - "string"
-   * - shippingDetails.phone
-     - Telefon
-     - "string"
-   * - website
-     - Url
-     - "string"
 
 
 Wave Customer to Tidsbanken Kunde
