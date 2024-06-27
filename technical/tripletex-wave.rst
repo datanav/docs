@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2024-06-27 07:15:48
+Generated: 2024-06-27 07:16:14
 
 Introduction
 ------------
@@ -546,31 +546,6 @@ The following properties are synchronized between a Tripletex Customer and a Wav
      - "string"
    * - url
      - website
-     - "string"
-   * - website
-     - website
-     - "string"
-
-
-Tripletex Customer to Wave Customer organisation
-------------------------------------------------
-removed person customers for now until that pattern is resolved, it  will be synchronized with a Wave Customer organisation.
-
-Once a link between a Tripletex Customer and a Wave Customer organisation is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer and a Wave Customer organisation:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer Property
-     - Wave Customer organisation Property
-     - Wave Data Type
-   * - name
-     - name
-     - N/A
-   * - phoneNumber
-     - phone
      - "string"
    * - website
      - website
