@@ -2,7 +2,7 @@
 Tidsbanken to Wave Dataflow
 ===========================
 
-Generated: 2024-06-27 00:00:00
+Generated: 2024-06-27 07:12:28
 
 Introduction
 ------------
@@ -65,75 +65,18 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Wave
      - "string"
 
 
-Tidsbanken Kunde to Wave Customer
----------------------------------
-Every Tidsbanken Kunde will be synchronized with a Wave Customer.
+Tidsbanken Kunde to Wave Customer organisation
+----------------------------------------------
+Every Tidsbanken Kunde will be synchronized with a Wave Customer organisation.
 
-Once a link between a Tidsbanken Kunde and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Kunde and a Wave Customer organisation is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Kunde and a Wave Customer:
+The following properties are synchronized between a Tidsbanken Kunde and a Wave Customer organisation:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Kunde Property
-     - Wave Customer Property
+     - Wave Customer organisation Property
      - Wave Data Type
-   * - Gateadresse
-     - address.addressLine1
-     - "string"
-   * - Gateadresse
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - LevPostNr
-     - address.postalCode
-     - "string"
-   * - LevPostNr
-     - shippingDetails.address.postalCode
-     - "string"
-   * - LevPoststed
-     - address.city
-     - "string"
-   * - LevPoststed
-     - shippingDetails.address.city
-     - "string"
-   * - Leveringsadresse
-     - address.addressLine1
-     - "string"
-   * - Leveringsadresse
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - Leveringsadresse2
-     - address.addressLine2
-     - "string"
-   * - Leveringsadresse2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - Navn
-     - name
-     - N/A
-   * - Postadresse
-     - address.addressLine2
-     - "string"
-   * - Postadresse
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - Postnr
-     - address.postalCode
-     - "string"
-   * - Postnr
-     - shippingDetails.address.postalCode
-     - "string"
-   * - Poststed
-     - address.city
-     - "string"
-   * - Poststed
-     - shippingDetails.address.city
-     - "string"
-   * - Telefon
-     - phone
-     - "string"
-   * - Url
-     - website
-     - "string"
 
