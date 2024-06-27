@@ -2,7 +2,7 @@
 Wave Financial to Hubspot Dataflow
 ==================================
 
-Generated: 2024-06-27 07:11:13
+Generated: 2024-06-27 07:12:20
 
 Introduction
 ------------
@@ -33,6 +33,18 @@ The following properties are synchronized between a Wave Customer contact and a 
    * - Wave Customer contact Property
      - Hubspot Contact Property
      - Hubspot Data Type
+   * - email
+     - properties.email
+     - "string"
+   * - firstName
+     - properties.firstname
+     - "string"
+   * - lastName
+     - properties.lastname
+     - "string"
+   * - mobile
+     - properties.mobilephone
+     - "string"
 
 
 Wave Customer to Hubspot Contact
