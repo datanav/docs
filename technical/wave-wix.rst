@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2024-06-27 07:12:28
+Generated: 2024-06-27 07:14:18
 
 Introduction
 ------------
@@ -77,52 +77,6 @@ The following properties are synchronized between a Wave Customer person and a W
      - "string"
 
 
-Wave Customer to Wix Contacts
------------------------------
-Before any synchronization can take place, a link between a Wave Customer and a Wix Contacts must be established.
-
-A new Wix Contacts will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into Wix.
-
-A Wave Customer will merge with a Wix Contacts if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Wix Contacts Property
-   * - email
-     - primaryInfo.email
-
-Once a link between a Wave Customer and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a Wix Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Wix Contacts Property
-     - Wix Data Type
-   * - email
-     - info.emails
-     - "string"
-   * - email
-     - primaryInfo.email
-     - "string"
-   * - firstName
-     - info.name.first
-     - "string"
-   * - lastName
-     - info.name.last
-     - "string"
-   * - mobile
-     - info.phones
-     - "string"
-   * - mobile
-     - primaryInfo.phone
-     - "string"
-
-
 Wave Customer contact to Wix Contacts
 -------------------------------------
 Every Wave Customer contact will be synchronized with a Wix Contacts.
@@ -158,6 +112,86 @@ The following properties are synchronized between a Wave Customer contact and a 
      - "string"
    * - lastName
      - info.name.last
+     - "string"
+
+
+Wave Customer to Wix Contacts
+-----------------------------
+Every Wave Customer will be synchronized with a Wix Contacts.
+
+If a matching Wix Contacts already exists, the Wave Customer will be merged with the existing one.
+If no matching Wix Contacts is found, a new Wix Contacts will be created.
+
+A Wave Customer will merge with a Wix Contacts if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Wix Contacts Property
+   * - email
+     - primaryInfo.email
+
+Once a link between a Wave Customer and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Wix Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Wix Contacts Property
+     - Wix Data Type
+   * - address.addressLine1
+     - info.addresses.items.address.addressLine
+     - "string"
+   * - address.addressLine2
+     - info.addresses.items.address.addressLine2
+     - "string"
+   * - address.city
+     - info.addresses.items.address.city
+     - "string"
+   * - address.postalCode
+     - info.addresses.items.address.postalCode
+     - "string"
+   * - email
+     - info.emails
+     - "string"
+   * - email
+     - primaryInfo.email
+     - "string"
+   * - firstName
+     - info.name.first
+     - "string"
+   * - firstName
+     - info.name.last
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - lastName
+     - info.name.first
+     - "string"
+   * - lastName
+     - info.name.last
+     - "string"
+   * - mobile
+     - info.phones
+     - "string"
+   * - mobile
+     - primaryInfo.phone
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - info.addresses.items.address.addressLine
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - info.addresses.items.address.addressLine2
+     - "string"
+   * - shippingDetails.address.city
+     - info.addresses.items.address.city
+     - "string"
+   * - shippingDetails.address.postalCode
+     - info.addresses.items.address.postalCode
      - "string"
 
 
