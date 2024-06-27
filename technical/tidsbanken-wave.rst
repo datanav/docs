@@ -2,7 +2,7 @@
 Tidsbanken to Wave Dataflow
 ===========================
 
-Generated: 2024-06-27 07:15:48
+Generated: 2024-06-27 07:16:14
 
 Introduction
 ------------
@@ -130,31 +130,6 @@ The following properties are synchronized between a Tidsbanken Kunde and a Wave 
    * - Poststed
      - shippingDetails.address.city
      - "string"
-   * - Telefon
-     - phone
-     - "string"
-   * - Url
-     - website
-     - "string"
-
-
-Tidsbanken Kunde to Wave Customer organisation
-----------------------------------------------
-Every Tidsbanken Kunde will be synchronized with a Wave Customer organisation.
-
-Once a link between a Tidsbanken Kunde and a Wave Customer organisation is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tidsbanken Kunde and a Wave Customer organisation:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Kunde Property
-     - Wave Customer organisation Property
-     - Wave Data Type
-   * - Navn
-     - name
-     - N/A
    * - Telefon
      - phone
      - "string"
