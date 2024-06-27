@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2024-06-27 00:00:00
+Generated: 2024-06-27 07:11:22
 
 Introduction
 ------------
@@ -118,6 +118,24 @@ The following properties are synchronized between a SuperOffice User and a Wave 
    * - personEmail
      - email
      - "string"
+
+
+SuperOffice Contact to Wave Customer organisation
+-------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Contact and a Wave Customer organisation must be established.
+
+A new Wave Customer organisation will be created from a SuperOffice Contact if it is connected to a SuperOffice Quotealternative that is synchronized into Wave.
+
+Once a link between a SuperOffice Contact and a Wave Customer organisation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Contact and a Wave Customer organisation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Contact Property
+     - Wave Customer organisation Property
+     - Wave Data Type
 
 
 SuperOffice Contact to Wave Customer person
@@ -286,6 +304,24 @@ The following properties are synchronized between a SuperOffice Contact and a Wa
    * - Urls.Value
      - website
      - "string"
+
+
+SuperOffice Person to Wave Customer organisation
+------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a Wave Customer organisation must be established.
+
+A new Wave Customer organisation will be created from a SuperOffice Person if it is connected to a SuperOffice Quotealternative that is synchronized into Wave.
+
+Once a link between a SuperOffice Person and a Wave Customer organisation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Person and a Wave Customer organisation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - Wave Customer organisation Property
+     - Wave Data Type
 
 
 SuperOffice Person to Wave Customer
