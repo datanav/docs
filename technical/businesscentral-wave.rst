@@ -2,7 +2,7 @@
 Businesscentral to Wave Dataflow
 ================================
 
-Generated: 2024-06-27 07:15:48
+Generated: 2024-06-27 07:16:14
 
 Introduction
 ------------
@@ -130,31 +130,6 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
    * - postalCode
      - shippingDetails.address.postalCode
-     - "string"
-   * - website
-     - website
-     - "string"
-
-
-Businesscentral Customers company to Wave Customer organisation
----------------------------------------------------------------
-Every Businesscentral Customers company will be synchronized with a Wave Customer organisation.
-
-Once a link between a Businesscentral Customers company and a Wave Customer organisation is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Customers company and a Wave Customer organisation:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Customers company Property
-     - Wave Customer organisation Property
-     - Wave Data Type
-   * - displayName
-     - name
-     - N/A
-   * - phoneNumber
-     - phone
      - "string"
    * - website
      - website
