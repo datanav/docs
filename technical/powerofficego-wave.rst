@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2024-06-27 07:11:22
+Generated: 2024-06-27 07:12:28
 
 Introduction
 ------------
@@ -154,24 +154,6 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
 
 
-Powerofficego Customers to Wave Customer organisation
------------------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Customers and a Wave Customer organisation must be established.
-
-A new Wave Customer organisation will be created from a Powerofficego Customers if it is connected to a Powerofficego Salesorders that is synchronized into Wave.
-
-Once a link between a Powerofficego Customers and a Wave Customer organisation is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customers and a Wave Customer organisation:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers Property
-     - Wave Customer organisation Property
-     - Wave Data Type
-
-
 Powerofficego Customers to Wave Customer person
 -----------------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Customers and a Wave Customer person must be established.
@@ -291,104 +273,20 @@ The following properties are synchronized between a Powerofficego Customers pers
      - "string"
 
 
-Powerofficego Customers to Wave Customer
-----------------------------------------
-Every Powerofficego Customers will be synchronized with a Wave Customer.
+Powerofficego Customers to Wave Customer organisation
+-----------------------------------------------------
+Every Powerofficego Customers will be synchronized with a Wave Customer organisation.
 
-Once a link between a Powerofficego Customers and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers and a Wave Customer organisation is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers and a Wave Customer:
+The following properties are synchronized between a Powerofficego Customers and a Wave Customer organisation:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers Property
-     - Wave Customer Property
+     - Wave Customer organisation Property
      - Wave Data Type
-   * - EmailAddress
-     - email
-     - "string"
-   * - FirstName
-     - firstName
-     - "string"
-   * - LastName
-     - lastName
-     - "string"
-   * - MailAddress.AddressLine1
-     - address.addressLine1
-     - "string"
-   * - MailAddress.AddressLine1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - MailAddress.AddressLine2
-     - address.addressLine2
-     - "string"
-   * - MailAddress.AddressLine2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - MailAddress.City
-     - address.city
-     - "string"
-   * - MailAddress.City
-     - shippingDetails.address.city
-     - "string"
-   * - MailAddress.CountryCode
-     - address.country.code
-     - "string"
-   * - MailAddress.CountryCode
-     - shippingDetails.address.country.code
-     - "string"
-   * - MailAddress.ZipCode
-     - address.postalCode
-     - "string"
-   * - MailAddress.ZipCode
-     - shippingDetails.address.postalCode
-     - "string"
-   * - Name
-     - name
-     - N/A
-   * - Number
-     - phone
-     - "string"
-   * - PhoneNumber
-     - phone
-     - "string"
-   * - WebsiteUrl
-     - website
-     - "string"
-   * - emailAddress
-     - email
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - legalName
-     - name
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - phoneNumber
-     - phone
-     - "string"
-   * - streetAddresses.address1
-     - address.addressLine1
-     - "string"
-   * - streetAddresses.address2
-     - address.addressLine2
-     - "string"
-   * - streetAddresses.city
-     - address.city
-     - "string"
-   * - streetAddresses.countryCode
-     - address.country.code
-     - "string"
-   * - streetAddresses.zipCode
-     - address.postalCode
-     - "string"
-   * - websiteUrl
-     - website
-     - "string"
 
 
 Powerofficego Product to Wave Product
