@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2024-06-27 00:00:00
+Generated: 2024-06-27 07:11:22
 
 Introduction
 ------------
@@ -79,6 +79,24 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
 
 
+Powerofficego Contactperson to Wave Customer organisation
+---------------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Contactperson and a Wave Customer organisation must be established.
+
+A new Wave Customer organisation will be created from a Powerofficego Contactperson if it is connected to a Powerofficego Salesorders that is synchronized into Wave.
+
+Once a link between a Powerofficego Contactperson and a Wave Customer organisation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Contactperson and a Wave Customer organisation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     - Wave Customer organisation Property
+     - Wave Data Type
+
+
 Powerofficego Contactperson to Wave Customer
 --------------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Contactperson and a Wave Customer must be established.
@@ -134,6 +152,24 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - zipCode
      - shippingDetails.address.postalCode
      - "string"
+
+
+Powerofficego Customers to Wave Customer organisation
+-----------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers and a Wave Customer organisation must be established.
+
+A new Wave Customer organisation will be created from a Powerofficego Customers if it is connected to a Powerofficego Salesorders that is synchronized into Wave.
+
+Once a link between a Powerofficego Customers and a Wave Customer organisation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a Wave Customer organisation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - Wave Customer organisation Property
+     - Wave Data Type
 
 
 Powerofficego Customers to Wave Customer person
