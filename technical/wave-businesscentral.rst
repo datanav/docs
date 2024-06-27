@@ -2,7 +2,7 @@
 Wave Financial to Businesscentral Dataflow
 ==========================================
 
-Generated: 2024-06-27 07:11:13
+Generated: 2024-06-27 07:11:19
 
 Introduction
 ------------
@@ -248,6 +248,9 @@ The following properties are synchronized between a Wave Customer contact and a 
    * - Wave Customer contact Property
      - Businesscentral Contacts person Property
      - Businesscentral Data Type
+   * - email
+     - email
+     - "string"
 
 
 Wave Customer organisation to Businesscentral Customers company
