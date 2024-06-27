@@ -2,7 +2,7 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2024-06-27 07:11:13
+Generated: 2024-06-27 07:11:22
 
 Introduction
 ------------
@@ -186,7 +186,7 @@ Wave Customer to Tripletex Customer person
 ------------------------------------------
 Before any synchronization can take place, a link between a Wave Customer and a Tripletex Customer person must be established.
 
-A new Tripletex Customer person will be created from a Wave Customer if it is connected to a Wave Vendor, Invoice, Customer, or Customer-person that is synchronized into Tripletex.
+A new Tripletex Customer person will be created from a Wave Customer if it is connected to a Wave Vendor, Invoice, Customer, Customer-person, or Customer-contact that is synchronized into Tripletex.
 
 A Wave Customer will merge with a Tripletex Customer person if one of the following property combinations match:
 
@@ -381,7 +381,7 @@ Wave Vendor to Tripletex Customer person
 ----------------------------------------
 Before any synchronization can take place, a link between a Wave Vendor and a Tripletex Customer person must be established.
 
-A new Tripletex Customer person will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, or Customer-person that is synchronized into Tripletex.
+A new Tripletex Customer person will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, Customer-person, or Customer-contact that is synchronized into Tripletex.
 
 A Wave Vendor will merge with a Tripletex Customer person if one of the following property combinations match:
 
@@ -513,7 +513,7 @@ Wave Vendor to Tripletex Customer
 ---------------------------------
 Before any synchronization can take place, a link between a Wave Vendor and a Tripletex Customer must be established.
 
-A new Tripletex Customer will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, or Customer-person that is synchronized into Tripletex.
+A new Tripletex Customer will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, Customer-person, or Customer-contact that is synchronized into Tripletex.
 
 Once a link between a Wave Vendor and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
