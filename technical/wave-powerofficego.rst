@@ -2,7 +2,7 @@
 Wave Financial to Powerofficego Dataflow
 ========================================
 
-Generated: 2024-06-27 07:11:13
+Generated: 2024-06-27 07:11:22
 
 Introduction
 ------------
@@ -116,7 +116,7 @@ Wave Customer to Powerofficego Customers person
 -----------------------------------------------
 Before any synchronization can take place, a link between a Wave Customer and a Powerofficego Customers person must be established.
 
-A new Powerofficego Customers person will be created from a Wave Customer if it is connected to a Wave Vendor, Invoice, Customer, or Customer-person that is synchronized into Powerofficego.
+A new Powerofficego Customers person will be created from a Wave Customer if it is connected to a Wave Vendor, Invoice, Customer, Customer-person, or Customer-contact that is synchronized into Powerofficego.
 
 A Wave Customer will merge with a Powerofficego Customers person if one of the following property combinations match:
 
@@ -186,7 +186,7 @@ Wave Vendor to Powerofficego Customers person
 ---------------------------------------------
 Before any synchronization can take place, a link between a Wave Vendor and a Powerofficego Customers person must be established.
 
-A new Powerofficego Customers person will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, or Customer-person that is synchronized into Powerofficego.
+A new Powerofficego Customers person will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, Customer-person, or Customer-contact that is synchronized into Powerofficego.
 
 A Wave Vendor will merge with a Powerofficego Customers person if one of the following property combinations match:
 
@@ -232,7 +232,7 @@ Wave Vendor to Powerofficego Customers
 --------------------------------------
 Before any synchronization can take place, a link between a Wave Vendor and a Powerofficego Customers must be established.
 
-A new Powerofficego Customers will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, or Customer-person that is synchronized into Powerofficego.
+A new Powerofficego Customers will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, Customer-person, or Customer-contact that is synchronized into Powerofficego.
 
 Once a link between a Wave Vendor and a Powerofficego Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
