@@ -2,7 +2,7 @@
 Businesscentral to Wave Dataflow
 ================================
 
-Generated: 2024-06-27 07:13:59
+Generated: 2024-06-27 07:15:48
 
 Introduction
 ------------
@@ -61,6 +61,79 @@ The following properties are synchronized between a Businesscentral Customers an
    * - Businesscentral Customers Property
      - Wave Customer person Property
      - Wave Data Type
+
+
+Businesscentral Customers company to Wave Customer
+--------------------------------------------------
+Every Businesscentral Customers company will be synchronized with a Wave Customer.
+
+Once a link between a Businesscentral Customers company and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers company and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers company Property
+     - Wave Customer Property
+     - Wave Data Type
+   * - address.city
+     - address.city
+     - "string"
+   * - address.city
+     - shippingDetails.address.city
+     - "string"
+   * - address.countryLetterCode
+     - address.country.code
+     - "string"
+   * - address.countryLetterCode
+     - shippingDetails.address.country.code
+     - "string"
+   * - address.postalCode
+     - address.postalCode
+     - "string"
+   * - address.postalCode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - addressLine1
+     - address.addressLine1
+     - "string"
+   * - addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - addressLine2
+     - address.addressLine2
+     - "string"
+   * - addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - city
+     - address.city
+     - "string"
+   * - city
+     - shippingDetails.address.city
+     - "string"
+   * - country
+     - address.country.code
+     - "string"
+   * - country
+     - shippingDetails.address.country.code
+     - "string"
+   * - displayName
+     - name
+     - N/A
+   * - phoneNumber
+     - phone
+     - "string"
+   * - postalCode
+     - address.postalCode
+     - "string"
+   * - postalCode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - website
+     - website
+     - "string"
 
 
 Businesscentral Customers company to Wave Customer organisation
