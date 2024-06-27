@@ -198,6 +198,22 @@ Note that metrics are not exposed for pipes that are disabled or have pump.mode=
      - Counter
      - The number of entities deletion tracked
 
+   * - ``sesam_pump_scrape_time``
+     - Gauge
+     - The time when the metrics got scraped by the Prometheus client. The unit is the number of seconds since epoch.
+
+   * - ``sesam_pump_last_completed_time``
+     - Gauge
+     - The time when the pump last completed or failed. The unit is the number of seconds since epoch.
+
+   * - ``sesam_pump_scheduled_time``
+     - Gauge
+     - The time when the pump is next scheduled to run. The unit is the number of seconds since epoch.
+
+   * - ``sesam_pump_previous_scheduled_time``
+     - Gauge
+     - The time when the pump was previously scheduled to run. In practice this is the run before the one scheduled at ``sesam_pump_scheduled_time``. The unit is the number of seconds since epoch.
+
 
 Monitoring
 ==========
