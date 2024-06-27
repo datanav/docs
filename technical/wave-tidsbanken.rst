@@ -2,7 +2,7 @@
 Wave Financial to Tidsbanken Dataflow
 =====================================
 
-Generated: 2024-06-27 07:11:13
+Generated: 2024-06-27 07:12:20
 
 Introduction
 ------------
@@ -193,6 +193,18 @@ The following properties are synchronized between a Wave Customer organisation a
    * - Wave Customer organisation Property
      - Tidsbanken Kunde Property
      - Tidsbanken Data Type
+   * - name
+     - Navn
+     - "string"
+   * - phone
+     - Telefon
+     - "string"
+   * - shippingDetails.phone
+     - Telefon
+     - "string"
+   * - website
+     - Url
+     - "string"
 
 
 Wave Customer to Tidsbanken Kunde
