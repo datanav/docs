@@ -2,7 +2,7 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2024-06-28 00:00:01
+Generated: 2024-06-28 00:00:45
 
 Introduction
 ------------
@@ -163,36 +163,6 @@ The following properties are synchronized between a HubSpot Company and a Wave C
      - "string"
 
 
-HubSpot Company to Wave Customer organisation
----------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Company and a Wave Customer organisation must be established.
-
-A new Wave Customer organisation will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into Wave.
-
-Once a link between a HubSpot Company and a Wave Customer organisation is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Company and a Wave Customer organisation:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Company Property
-     - Wave Customer organisation Property
-     - Wave Data Type
-   * - properties.description
-     - internalNotes
-     - "string"
-   * - properties.name
-     - name
-     - N/A
-   * - properties.phone
-     - phone
-     - "string"
-   * - properties.website
-     - website
-     - "string"
-
-
 HubSpot Company to Wave Customer person
 ---------------------------------------
 Before any synchronization can take place, a link between a HubSpot Company and a Wave Customer person must be established.
@@ -311,24 +281,6 @@ The following properties are synchronized between a HubSpot Contact and a Wave C
    * - properties.zip
      - shippingDetails.address.postalCode
      - "string"
-
-
-HubSpot Contact to Wave Customer organisation
----------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a Wave Customer organisation must be established.
-
-A new Wave Customer organisation will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into Wave.
-
-Once a link between a HubSpot Contact and a Wave Customer organisation is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contact and a Wave Customer organisation:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     - Wave Customer organisation Property
-     - Wave Data Type
 
 
 HubSpot Deal to Wave Invoice
