@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2024-06-28 00:00:01
+Generated: 2024-06-28 00:00:45
 
 Introduction
 ------------
@@ -118,24 +118,6 @@ The following properties are synchronized between a Tripletex Employee and a Wav
    * - phoneNumberWork
      - phone
      - "string"
-
-
-Tripletex Contact to Wave Customer organisation
------------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Contact and a Wave Customer organisation must be established.
-
-A new Wave Customer organisation will be created from a Tripletex Contact if it is connected to a Tripletex Order that is synchronized into Wave.
-
-Once a link between a Tripletex Contact and a Wave Customer organisation is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Contact and a Wave Customer organisation:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Contact Property
-     - Wave Customer organisation Property
-     - Wave Data Type
 
 
 Tripletex Contact to Wave Customer
