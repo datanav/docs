@@ -2,7 +2,7 @@
 Businesscentral to Wave Dataflow
 ================================
 
-Generated: 2024-06-28 00:00:01
+Generated: 2024-06-28 00:00:45
 
 Introduction
 ------------
@@ -24,24 +24,6 @@ The following properties are synchronized between a Businesscentral Customers an
 
    * - Businesscentral Customers Property
      - Wave Customer Property
-     - Wave Data Type
-
-
-Businesscentral Customers to Wave Customer organisation
--------------------------------------------------------
-Before any synchronization can take place, a link between a Businesscentral Customers and a Wave Customer organisation must be established.
-
-A new Wave Customer organisation will be created from a Businesscentral Customers if it is connected to a Businesscentral Salesorders that is synchronized into Wave.
-
-Once a link between a Businesscentral Customers and a Wave Customer organisation is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Customers and a Wave Customer organisation:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Customers Property
-     - Wave Customer organisation Property
      - Wave Data Type
 
 
