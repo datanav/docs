@@ -2,38 +2,12 @@
 Wave Financial to Tidsbanken Dataflow
 =====================================
 
-Generated: 2024-06-28 00:00:01
+Generated: 2024-06-28 00:00:45
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Tidsbanken. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Wave Customer contact to Tidsbanken Ansatt
-------------------------------------------
-Before any synchronization can take place, a link between a Wave Customer contact and a Tidsbanken Ansatt must be established.
-
-A Wave Customer contact will merge with a Tidsbanken Ansatt if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer contact Property
-     - Tidsbanken Ansatt Property
-   * - email
-     - Epost
-
-Once a link between a Wave Customer contact and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer contact and a Tidsbanken Ansatt:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer contact Property
-     - Tidsbanken Ansatt Property
-     - Tidsbanken Data Type
-
 
 Wave Customer person to Tidsbanken Ansatt
 -----------------------------------------
