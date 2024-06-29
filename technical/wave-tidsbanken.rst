@@ -2,7 +2,7 @@
 Wave Financial to Tidsbanken Dataflow
 =====================================
 
-Generated: 2024-06-28 00:00:45
+Generated: 2024-06-29 00:00:01
 
 Introduction
 ------------
