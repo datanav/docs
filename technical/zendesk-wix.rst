@@ -2,7 +2,7 @@
 Zendesk to Wix Dataflow
 =======================
 
-Generated: 2024-06-29 00:00:00
+Generated: 2024-06-30 00:00:01
 
 Introduction
 ------------
