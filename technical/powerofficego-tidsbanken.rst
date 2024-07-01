@@ -2,7 +2,7 @@
 Powerofficego to Tidsbanken Dataflow
 ====================================
 
-Generated: 2024-06-30 00:00:01
+Generated: 2024-07-01 00:00:01
 
 Introduction
 ------------
