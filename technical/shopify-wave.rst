@@ -2,7 +2,7 @@
 Shopify to Wave Dataflow
 ========================
 
-Generated: 2024-07-02 11:45:45
+Generated: 2024-07-02 12:15:45
 
 Introduction
 ------------
@@ -98,6 +98,12 @@ The following properties are synchronized between a Shopify Customer and a Wave 
    * - email
      - email
      - "string"
+   * - first_name
+     - firstName
+     - "string"
+   * - last_name
+     - lastName
+     - N/A
    * - phone
      - phone
      - "string"
