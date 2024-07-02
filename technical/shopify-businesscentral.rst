@@ -2,7 +2,7 @@
 Shopify to Businesscentral Dataflow
 ===================================
 
-Generated: 2024-07-02 11:44:40
+Generated: 2024-07-02 11:45:45
 
 Introduction
 ------------
@@ -40,6 +40,18 @@ The following properties are synchronized between a Shopify Customer and a Busin
      - "string"
    * - default_address.address1
      - addressLine1
+     - "string"
+   * - default_address.address2
+     - addressLine2
+     - "string"
+   * - default_address.city
+     - city
+     - "string"
+   * - default_address.country
+     - country
+     - "string"
+   * - default_address.zip
+     - postalCode
      - "string"
    * - email
      - email
