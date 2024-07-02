@@ -2,7 +2,7 @@
 Shopify to Wave Dataflow
 ========================
 
-Generated: 2024-07-02 11:44:40
+Generated: 2024-07-02 11:45:45
 
 Introduction
 ------------
@@ -64,6 +64,36 @@ The following properties are synchronized between a Shopify Customer and a Wave 
      - "string"
    * - default_address.address1
      - shippingDetails.address.addressLine1
+     - "string"
+   * - default_address.address2
+     - address.addressLine2
+     - "string"
+   * - default_address.address2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - default_address.city
+     - address.city
+     - "string"
+   * - default_address.city
+     - shippingDetails.address.city
+     - "string"
+   * - default_address.country
+     - address.country.code
+     - "string"
+   * - default_address.country
+     - shippingDetails.address.country.code
+     - "string"
+   * - default_address.province_code
+     - address.province.code
+     - "string"
+   * - default_address.province_code
+     - shippingDetails.address.province.code
+     - "string"
+   * - default_address.zip
+     - address.postalCode
+     - "string"
+   * - default_address.zip
+     - shippingDetails.address.postalCode
      - "string"
    * - email
      - email
