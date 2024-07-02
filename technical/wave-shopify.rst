@@ -2,7 +2,7 @@
 Wave Financial to Shopify Dataflow
 ==================================
 
-Generated: 2024-07-02 11:43:49
+Generated: 2024-07-02 11:45:45
 
 Introduction
 ------------
@@ -48,17 +48,32 @@ The following properties are synchronized between a Wave Customer person and a S
    * - address.addressLine2
      - addresses.address2
      - "string"
+   * - address.addressLine2
+     - default_address.address2
+     - "string"
    * - address.city
      - addresses.city
+     - "string"
+   * - address.city
+     - default_address.city
      - "string"
    * - address.country.code
      - addresses.country
      - "string"
+   * - address.country.code
+     - default_address.country
+     - "string"
    * - address.postalCode
      - addresses.zip
      - "string"
+   * - address.postalCode
+     - default_address.zip
+     - "string"
    * - address.province.code
      - addresses.province_code
+     - "string"
+   * - address.province.code
+     - default_address.province_code
      - "string"
    * - email
      - email
@@ -78,17 +93,32 @@ The following properties are synchronized between a Wave Customer person and a S
    * - shippingDetails.address.addressLine2
      - addresses.address2
      - "string"
+   * - shippingDetails.address.addressLine2
+     - default_address.address2
+     - "string"
    * - shippingDetails.address.city
      - addresses.city
+     - "string"
+   * - shippingDetails.address.city
+     - default_address.city
      - "string"
    * - shippingDetails.address.country.code
      - addresses.country
      - "string"
+   * - shippingDetails.address.country.code
+     - default_address.country
+     - "string"
    * - shippingDetails.address.postalCode
      - addresses.zip
      - "string"
+   * - shippingDetails.address.postalCode
+     - default_address.zip
+     - "string"
    * - shippingDetails.address.province.code
      - addresses.province_code
+     - "string"
+   * - shippingDetails.address.province.code
+     - default_address.province_code
      - "string"
    * - shippingDetails.phone
      - phone
