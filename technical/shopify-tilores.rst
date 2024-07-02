@@ -2,7 +2,7 @@
 Shopify to Tilores Dataflow
 ===========================
 
-Generated: 2024-07-02 00:00:02
+Generated: 2024-07-02 11:45:45
 
 Introduction
 ------------
@@ -27,6 +27,12 @@ The following properties are synchronized between a Shopify Customer and a Tilor
      - city
      - "string"
    * - addresses.zip
+     - postalCode
+     - "string"
+   * - default_address.city
+     - city
+     - "string"
+   * - default_address.zip
      - postalCode
      - "string"
    * - email
