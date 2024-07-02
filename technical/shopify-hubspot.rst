@@ -2,7 +2,7 @@
 Shopify to Hubspot Dataflow
 ===========================
 
-Generated: 2024-07-02 11:45:45
+Generated: 2024-07-02 12:15:10
 
 Introduction
 ------------
@@ -55,6 +55,9 @@ The following properties are synchronized between a Shopify Customer and a Hubsp
      - "string"
    * - email
      - properties.email
+     - "string"
+   * - first_name
+     - properties.firstname
      - "string"
    * - id
      - id
