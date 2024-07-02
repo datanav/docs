@@ -2,7 +2,7 @@
 Tripletex to Shopify Dataflow
 =============================
 
-Generated: 2024-07-02 00:00:02
+Generated: 2024-07-02 11:43:49
 
 Introduction
 ------------
@@ -45,6 +45,9 @@ The following properties are synchronized between a Tripletex Customer person an
    * - deliveryAddress.addressLine1
      - addresses.address1
      - "string"
+   * - deliveryAddress.addressLine1
+     - default_address.address1
+     - "string"
    * - deliveryAddress.addressLine2
      - addresses.address2
      - "string"
@@ -69,6 +72,9 @@ The following properties are synchronized between a Tripletex Customer person an
    * - physicalAddress.addressLine1
      - addresses.address1
      - "string"
+   * - physicalAddress.addressLine1
+     - default_address.address1
+     - "string"
    * - physicalAddress.addressLine2
      - addresses.address2
      - "string"
@@ -83,6 +89,9 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
    * - postalAddress.addressLine1
      - addresses.address1
+     - "string"
+   * - postalAddress.addressLine1
+     - default_address.address1
      - "string"
    * - postalAddress.addressLine2
      - addresses.address2
