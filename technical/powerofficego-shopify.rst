@@ -2,7 +2,7 @@
 Powerofficego to Shopify Dataflow
 =================================
 
-Generated: 2024-07-02 11:45:45
+Generated: 2024-07-02 12:15:45
 
 Introduction
 ------------
@@ -45,8 +45,14 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - EmailAddress
      - email
      - "string"
+   * - FirstName
+     - first_name
+     - "string"
    * - Id
      - id
+     - "string"
+   * - LastName
+     - last_name
      - "string"
    * - MailAddress.AddressLine1
      - addresses.address1
