@@ -2,7 +2,7 @@
 Tripletex to Shopify Dataflow
 =============================
 
-Generated: 2024-07-02 11:43:49
+Generated: 2024-07-02 11:45:45
 
 Introduction
 ------------
@@ -51,14 +51,26 @@ The following properties are synchronized between a Tripletex Customer person an
    * - deliveryAddress.addressLine2
      - addresses.address2
      - "string"
+   * - deliveryAddress.addressLine2
+     - default_address.address2
+     - "string"
    * - deliveryAddress.city
      - addresses.city
+     - "string"
+   * - deliveryAddress.city
+     - default_address.city
      - "string"
    * - deliveryAddress.country.id
      - addresses.country
      - "string"
+   * - deliveryAddress.country.id
+     - default_address.country
+     - "string"
    * - deliveryAddress.postalCode
      - addresses.zip
+     - "string"
+   * - deliveryAddress.postalCode
+     - default_address.zip
      - "string"
    * - email
      - email
@@ -78,14 +90,26 @@ The following properties are synchronized between a Tripletex Customer person an
    * - physicalAddress.addressLine2
      - addresses.address2
      - "string"
+   * - physicalAddress.addressLine2
+     - default_address.address2
+     - "string"
    * - physicalAddress.city
      - addresses.city
+     - "string"
+   * - physicalAddress.city
+     - default_address.city
      - "string"
    * - physicalAddress.country.id
      - addresses.country
      - "string"
+   * - physicalAddress.country.id
+     - default_address.country
+     - "string"
    * - physicalAddress.postalCode
      - addresses.zip
+     - "string"
+   * - physicalAddress.postalCode
+     - default_address.zip
      - "string"
    * - postalAddress.addressLine1
      - addresses.address1
@@ -96,14 +120,26 @@ The following properties are synchronized between a Tripletex Customer person an
    * - postalAddress.addressLine2
      - addresses.address2
      - "string"
+   * - postalAddress.addressLine2
+     - default_address.address2
+     - "string"
    * - postalAddress.city
      - addresses.city
+     - "string"
+   * - postalAddress.city
+     - default_address.city
      - "string"
    * - postalAddress.country.id
      - addresses.country
      - "string"
+   * - postalAddress.country.id
+     - default_address.country
+     - "string"
    * - postalAddress.postalCode
      - addresses.zip
+     - "string"
+   * - postalAddress.postalCode
+     - default_address.zip
      - "string"
 
 
