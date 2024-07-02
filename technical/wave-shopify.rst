@@ -2,7 +2,7 @@
 Wave Financial to Shopify Dataflow
 ==================================
 
-Generated: 2024-07-02 00:00:02
+Generated: 2024-07-02 11:43:49
 
 Introduction
 ------------
@@ -42,6 +42,9 @@ The following properties are synchronized between a Wave Customer person and a S
    * - address.addressLine1
      - addresses.address1
      - "string"
+   * - address.addressLine1
+     - default_address.address1
+     - "string"
    * - address.addressLine2
      - addresses.address2
      - "string"
@@ -68,6 +71,9 @@ The following properties are synchronized between a Wave Customer person and a S
      - "string"
    * - shippingDetails.address.addressLine1
      - addresses.address1
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - default_address.address1
      - "string"
    * - shippingDetails.address.addressLine2
      - addresses.address2
