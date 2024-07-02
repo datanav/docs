@@ -2,7 +2,7 @@
 Shopify to ZohoCRM Dataflow
 ===========================
 
-Generated: 2024-07-02 11:45:45
+Generated: 2024-07-02 12:15:45
 
 Introduction
 ------------
@@ -76,6 +76,12 @@ The following properties are synchronized between a Shopify Customer and a ZohoC
      - "string"
    * - email
      - Secondary_Email
+     - "string"
+   * - first_name
+     - First_Name
+     - "string"
+   * - last_name
+     - Last_Name
      - "string"
    * - phone
      - Other_Phone
