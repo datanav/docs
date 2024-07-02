@@ -2,7 +2,7 @@
 Businesscentral to Shopify Dataflow
 ===================================
 
-Generated: 2024-07-02 11:43:15
+Generated: 2024-07-02 11:45:45
 
 Introduction
 ------------
@@ -51,11 +51,20 @@ The following properties are synchronized between a Businesscentral Customers pe
    * - addressLine2
      - addresses.address2
      - "string"
+   * - addressLine2
+     - default_address.address2
+     - "string"
    * - city
      - addresses.city
      - "string"
+   * - city
+     - default_address.city
+     - "string"
    * - country
      - addresses.country
+     - "string"
+   * - country
+     - default_address.country
      - "string"
    * - email
      - email
@@ -68,6 +77,9 @@ The following properties are synchronized between a Businesscentral Customers pe
      - "string"
    * - postalCode
      - addresses.zip
+     - "string"
+   * - postalCode
+     - default_address.zip
      - "string"
 
 
