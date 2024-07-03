@@ -2,12 +2,30 @@
 Wave Financial to Shopify Dataflow
 ==================================
 
-Generated: 2024-07-03 00:00:00
+Generated: 2024-07-03 10:52:14
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Shopify. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wave Customer to Shopify Customer
+---------------------------------
+Before any synchronization can take place, a link between a Wave Customer and a Shopify Customer must be established.
+
+A new Shopify Customer will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into Shopify.
+
+Once a link between a Wave Customer and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Shopify Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Shopify Customer Property
+     - Shopify Data Type
+
 
 Wave Product to Shopify Inventoryitem
 -------------------------------------
