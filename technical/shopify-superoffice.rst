@@ -2,12 +2,30 @@
 Shopify to Superoffice Dataflow
 ===============================
 
-Generated: 2024-07-03 06:56:22
+Generated: 2024-07-03 06:58:17
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Shopify Order to Superoffice Quotealternative
+---------------------------------------------
+Before any synchronization can take place, a link between a Shopify Order and a Superoffice Quotealternative must be established.
+
+A new Superoffice Quotealternative will be created from a Shopify Order if it is connected to a Shopify Order that is synchronized into Superoffice.
+
+Once a link between a Shopify Order and a Superoffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a Superoffice Quotealternative:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - Superoffice Quotealternative Property
+     - Superoffice Data Type
+
 
 Shopify Customer to Superoffice Person
 --------------------------------------
