@@ -2,7 +2,7 @@
 Shopify to Superoffice Dataflow
 ===============================
 
-Generated: 2024-07-03 06:56:17
+Generated: 2024-07-03 06:56:22
 
 Introduction
 ------------
@@ -84,6 +84,18 @@ The following properties are synchronized between a Shopify Order and a Superoff
    * - Shopify Order Property
      - Superoffice Quoteline Property
      - Superoffice Data Type
+   * - line_items.price
+     - UnitListPrice
+     - N/A
+   * - line_items.quantity
+     - Quantity
+     - N/A
+   * - line_items.title
+     - Name
+     - "string"
+   * - line_items.total_discount
+     - ERPDiscountPercent
+     - "integer"
 
 
 Shopify Product to Superoffice Product
