@@ -2,7 +2,7 @@
 Shopify to Tripletex Dataflow
 =============================
 
-Generated: 2024-07-03 00:00:00
+Generated: 2024-07-03 06:56:17
 
 Introduction
 ------------
@@ -150,6 +150,22 @@ The following properties are synchronized between a Shopify Order and a Triplete
    * - po_number
      - reference
      - "string"
+
+
+Shopify Order to Tripletex Orderline
+------------------------------------
+Every Shopify Order will be synchronized with a Tripletex Orderline.
+
+Once a link between a Shopify Order and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a Tripletex Orderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - Tripletex Orderline Property
+     - Tripletex Data Type
 
 
 Shopify Product to Tripletex Product
