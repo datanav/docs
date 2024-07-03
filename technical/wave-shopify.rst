@@ -2,7 +2,7 @@
 Wave Financial to Shopify Dataflow
 ==================================
 
-Generated: 2024-07-03 10:52:14
+Generated: 2024-07-03 10:52:20
 
 Introduction
 ------------
@@ -25,6 +25,42 @@ The following properties are synchronized between a Wave Customer and a Shopify 
    * - Wave Customer Property
      - Shopify Customer Property
      - Shopify Data Type
+   * - address.addressLine1
+     - default_address.address1
+     - "string"
+   * - address.addressLine2
+     - default_address.address2
+     - "string"
+   * - address.city
+     - default_address.city
+     - "string"
+   * - address.country.code
+     - default_address.country
+     - "string"
+   * - address.postalCode
+     - default_address.zip
+     - "string"
+   * - address.province.code
+     - default_address.province_code
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - default_address.address1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - default_address.address2
+     - "string"
+   * - shippingDetails.address.city
+     - default_address.city
+     - "string"
+   * - shippingDetails.address.country.code
+     - default_address.country
+     - "string"
+   * - shippingDetails.address.postalCode
+     - default_address.zip
+     - "string"
+   * - shippingDetails.address.province.code
+     - default_address.province_code
+     - "string"
 
 
 Wave Product to Shopify Inventoryitem
