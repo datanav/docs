@@ -2,7 +2,7 @@
 Shopify to Tripletex Dataflow
 =============================
 
-Generated: 2024-07-02 11:45:45
+Generated: 2024-07-03 00:00:00
 
 Introduction
 ------------
