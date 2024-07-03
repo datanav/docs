@@ -2,7 +2,7 @@
 SuperOffice to Shopify Dataflow
 ===============================
 
-Generated: 2024-07-03 06:56:17
+Generated: 2024-07-03 06:56:22
 
 Introduction
 ------------
@@ -64,4 +64,19 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - Shopify Order Property
      - Shopify Data Type
+   * - DiscountPercent
+     - line_items.total_discount
+     - "string"
+   * - ERPDiscountPercent
+     - line_items.total_discount
+     - "string"
+   * - Name
+     - line_items.title
+     - "string"
+   * - Quantity
+     - line_items.quantity
+     - "string"
+   * - UnitListPrice
+     - line_items.price
+     - "string"
 
