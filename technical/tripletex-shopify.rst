@@ -2,12 +2,48 @@
 Tripletex to Shopify Dataflow
 =============================
 
-Generated: 2024-07-03 06:58:26
+Generated: 2024-07-03 10:52:14
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Shopify. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Contact to Shopify Customer
+-------------------------------------
+Before any synchronization can take place, a link between a Tripletex Contact and a Shopify Customer must be established.
+
+A new Shopify Customer will be created from a Tripletex Contact if it is connected to a Tripletex Order that is synchronized into Shopify.
+
+Once a link between a Tripletex Contact and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a Shopify Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Shopify Customer Property
+     - Shopify Data Type
+
+
+Tripletex Customer to Shopify Customer
+--------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a Shopify Customer must be established.
+
+A new Shopify Customer will be created from a Tripletex Customer if it is connected to a Tripletex Order that is synchronized into Shopify.
+
+Once a link between a Tripletex Customer and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a Shopify Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - Shopify Customer Property
+     - Shopify Data Type
+
 
 Tripletex Product to Shopify Inventoryitem
 ------------------------------------------
