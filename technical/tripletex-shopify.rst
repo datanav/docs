@@ -2,7 +2,7 @@
 Tripletex to Shopify Dataflow
 =============================
 
-Generated: 2024-07-03 10:52:20
+Generated: 2024-07-03 13:34:07
 
 Introduction
 ------------
@@ -278,6 +278,9 @@ The following properties are synchronized between a Tripletex Product and a Shop
    * - Tripletex Product Property
      - Shopify Product Property
      - Shopify Data Type
+   * - name
+     - title
+     - "string"
    * - name
      - variants.title
      - "string"
