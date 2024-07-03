@@ -2,7 +2,7 @@
 Shopify to Superoffice Dataflow
 ===============================
 
-Generated: 2024-07-03 06:58:17
+Generated: 2024-07-03 06:58:31
 
 Introduction
 ------------
@@ -25,6 +25,12 @@ The following properties are synchronized between a Shopify Order and a Superoff
    * - Shopify Order Property
      - Superoffice Quotealternative Property
      - Superoffice Data Type
+   * - current_total_price
+     - TotalPrice
+     - "float"
+   * - total_price
+     - TotalPrice
+     - "float"
 
 
 Shopify Customer to Superoffice Person
