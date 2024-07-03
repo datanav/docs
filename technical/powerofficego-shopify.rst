@@ -2,7 +2,7 @@
 Powerofficego to Shopify Dataflow
 =================================
 
-Generated: 2024-07-03 06:56:22
+Generated: 2024-07-03 06:58:26
 
 Introduction
 ------------
@@ -108,40 +108,6 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "string"
    * - salesPrice
      - variants.price
-     - "string"
-
-
-Powerofficego Salesorderlines to Shopify Order
-----------------------------------------------
-Every Powerofficego Salesorderlines will be synchronized with a Shopify Order.
-
-Once a link between a Powerofficego Salesorderlines and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorderlines and a Shopify Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorderlines Property
-     - Shopify Order Property
-     - Shopify Data Type
-   * - Allowance
-     - line_items.total_discount
-     - "string"
-   * - Description
-     - line_items.title
-     - "string"
-   * - ProductUnitPrice
-     - line_items.price
-     - "string"
-   * - Quantity
-     - line_items.quantity
-     - "string"
-   * - TotalAmount
-     - current_total_price
-     - "string"
-   * - TotalAmount
-     - total_price
      - "string"
 
 
