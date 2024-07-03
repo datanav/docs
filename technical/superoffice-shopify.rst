@@ -2,7 +2,7 @@
 SuperOffice to Shopify Dataflow
 ===============================
 
-Generated: 2024-07-03 06:58:17
+Generated: 2024-07-03 06:58:26
 
 Introduction
 ------------
@@ -13,7 +13,7 @@ SuperOffice Quotealternative to Shopify Order
 ---------------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Shopify Order must be established.
 
-A new Shopify Order will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into Shopify.
+A new Shopify Order will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline, or Quotealternative that is synchronized into Shopify.
 
 Once a link between a SuperOffice Quotealternative and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -65,36 +65,5 @@ The following properties are synchronized between a SuperOffice Product and a Sh
      - "string"
    * - UnitListPrice
      - variants.price
-     - "string"
-
-
-SuperOffice Quoteline to Shopify Order
---------------------------------------
-Every SuperOffice Quoteline will be synchronized with a Shopify Order.
-
-Once a link between a SuperOffice Quoteline and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quoteline and a Shopify Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quoteline Property
-     - Shopify Order Property
-     - Shopify Data Type
-   * - DiscountPercent
-     - line_items.total_discount
-     - "string"
-   * - ERPDiscountPercent
-     - line_items.total_discount
-     - "string"
-   * - Name
-     - line_items.title
-     - "string"
-   * - Quantity
-     - line_items.quantity
-     - "string"
-   * - UnitListPrice
-     - line_items.price
      - "string"
 
