@@ -2,7 +2,7 @@
 Shopify to Hubspot Dataflow
 ===========================
 
-Generated: 2024-07-03 06:56:17
+Generated: 2024-07-03 06:56:22
 
 Introduction
 ------------
@@ -84,6 +84,18 @@ The following properties are synchronized between a Shopify Order and a Hubspot 
    * - Shopify Order Property
      - Hubspot Lineitem Property
      - Hubspot Data Type
+   * - line_items.price
+     - properties.price
+     - "string"
+   * - line_items.quantity
+     - properties.quantity
+     - N/A
+   * - line_items.title
+     - properties.name
+     - "string"
+   * - line_items.total_discount
+     - properties.hs_discount_percentage
+     - "string"
 
 
 Shopify Product to Hubspot Product
