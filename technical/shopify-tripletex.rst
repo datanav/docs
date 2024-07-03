@@ -2,12 +2,48 @@
 Shopify to Tripletex Dataflow
 =============================
 
-Generated: 2024-07-03 06:56:22
+Generated: 2024-07-03 10:52:14
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Shopify Customer to Tripletex Contact
+-------------------------------------
+Before any synchronization can take place, a link between a Shopify Customer and a Tripletex Contact must be established.
+
+A new Tripletex Contact will be created from a Shopify Customer if it is connected to a Shopify Order that is synchronized into Tripletex.
+
+Once a link between a Shopify Customer and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Customer and a Tripletex Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Customer Property
+     - Tripletex Contact Property
+     - Tripletex Data Type
+
+
+Shopify Customer to Tripletex Customer
+--------------------------------------
+Before any synchronization can take place, a link between a Shopify Customer and a Tripletex Customer must be established.
+
+A new Tripletex Customer will be created from a Shopify Customer if it is connected to a Shopify Order that is synchronized into Tripletex.
+
+Once a link between a Shopify Customer and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Customer and a Tripletex Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Customer Property
+     - Tripletex Customer Property
+     - Tripletex Data Type
+
 
 Shopify Customer to Tripletex Customer person
 ---------------------------------------------
