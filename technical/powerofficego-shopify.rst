@@ -2,12 +2,48 @@
 Powerofficego to Shopify Dataflow
 =================================
 
-Generated: 2024-07-03 06:58:26
+Generated: 2024-07-03 10:52:14
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Shopify. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Powerofficego Contactperson to Shopify Customer
+-----------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Contactperson and a Shopify Customer must be established.
+
+A new Shopify Customer will be created from a Powerofficego Contactperson if it is connected to a Powerofficego Salesorders that is synchronized into Shopify.
+
+Once a link between a Powerofficego Contactperson and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Contactperson and a Shopify Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     - Shopify Customer Property
+     - Shopify Data Type
+
+
+Powerofficego Customers to Shopify Customer
+-------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers and a Shopify Customer must be established.
+
+A new Shopify Customer will be created from a Powerofficego Customers if it is connected to a Powerofficego Salesorders that is synchronized into Shopify.
+
+Once a link between a Powerofficego Customers and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a Shopify Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - Shopify Customer Property
+     - Shopify Data Type
+
 
 Powerofficego Product to Shopify Inventoryitem
 ----------------------------------------------
