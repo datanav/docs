@@ -2,12 +2,30 @@
 Shopify to Businesscentral Dataflow
 ===================================
 
-Generated: 2024-07-03 06:56:19
+Generated: 2024-07-03 10:52:14
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Businesscentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Shopify Customer to Businesscentral Customers company
+-----------------------------------------------------
+Before any synchronization can take place, a link between a Shopify Customer and a Businesscentral Customers company must be established.
+
+A new Businesscentral Customers company will be created from a Shopify Customer if it is connected to a Shopify Order that is synchronized into Businesscentral.
+
+Once a link between a Shopify Customer and a Businesscentral Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Customer and a Businesscentral Customers company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Customer Property
+     - Businesscentral Customers company Property
+     - Businesscentral Data Type
+
 
 Shopify Customer to Businesscentral Customers person
 ----------------------------------------------------
