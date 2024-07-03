@@ -2,7 +2,7 @@
 Shopify to Hubspot Dataflow
 ===========================
 
-Generated: 2024-07-03 00:00:00
+Generated: 2024-07-03 06:56:17
 
 Introduction
 ------------
@@ -68,6 +68,22 @@ The following properties are synchronized between a Shopify Customer and a Hubsp
    * - phone
      - properties.phone
      - "string"
+
+
+Shopify Order to Hubspot Lineitem
+---------------------------------
+Every Shopify Order will be synchronized with a Hubspot Lineitem.
+
+Once a link between a Shopify Order and a Hubspot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a Hubspot Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - Hubspot Lineitem Property
+     - Hubspot Data Type
 
 
 Shopify Product to Hubspot Product
