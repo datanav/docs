@@ -2,7 +2,7 @@
 Wix.com to Shopify Dataflow
 ===========================
 
-Generated: 2024-07-03 10:52:14
+Generated: 2024-07-03 10:52:20
 
 Introduction
 ------------
@@ -25,6 +25,18 @@ The following properties are synchronized between a Wix.com Contacts and a Shopi
    * - Wix.com Contacts Property
      - Shopify Customer Property
      - Shopify Data Type
+   * - info.name.first
+     - first_name
+     - "string"
+   * - info.name.last
+     - last_name
+     - "string"
+   * - primaryInfo.email
+     - email
+     - "string"
+   * - primaryInfo.phone
+     - phone
+     - "string"
 
 
 Wix.com Products to Shopify Inventoryitem
