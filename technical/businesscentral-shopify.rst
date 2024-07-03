@@ -2,7 +2,7 @@
 Businesscentral to Shopify Dataflow
 ===================================
 
-Generated: 2024-07-03 06:56:17
+Generated: 2024-07-03 06:56:22
 
 Introduction
 ------------
@@ -119,6 +119,18 @@ The following properties are synchronized between a Businesscentral Salesorderli
    * - Businesscentral Salesorderlines Property
      - Shopify Order Property
      - Shopify Data Type
+   * - description
+     - line_items.title
+     - "string"
+   * - discountPercent
+     - line_items.total_discount
+     - "string"
+   * - quantity
+     - line_items.quantity
+     - "string"
+   * - unitPrice
+     - line_items.price
+     - "string"
 
 
 Businesscentral Salesorders to Shopify Order
