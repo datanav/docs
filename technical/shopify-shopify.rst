@@ -2,7 +2,7 @@
 Shopify to Shopify Dataflow
 ===========================
 
-Generated: 2024-07-03 11:37:11
+Generated: 2024-07-03 11:38:26
 
 Introduction
 ------------
@@ -144,5 +144,21 @@ The following properties are synchronized between a Shopify Variant and a Shopif
 
    * - Shopify Variant Property
      - Shopify Variant Property
+     - Shopify Data Type
+
+
+Shopify Variant to Shopify Inventoryitem
+----------------------------------------
+Every Shopify Variant will be synchronized with a Shopify Inventoryitem.
+
+Once a link between a Shopify Variant and a Shopify Inventoryitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Variant and a Shopify Inventoryitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Variant Property
+     - Shopify Inventoryitem Property
      - Shopify Data Type
 
