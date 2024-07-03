@@ -2,12 +2,48 @@
 Shopify to Powerofficego Dataflow
 =================================
 
-Generated: 2024-07-03 06:56:22
+Generated: 2024-07-03 10:52:14
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Powerofficego. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Shopify Customer to Powerofficego Contactperson
+-----------------------------------------------
+Before any synchronization can take place, a link between a Shopify Customer and a Powerofficego Contactperson must be established.
+
+A new Powerofficego Contactperson will be created from a Shopify Customer if it is connected to a Shopify Order that is synchronized into Powerofficego.
+
+Once a link between a Shopify Customer and a Powerofficego Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Customer and a Powerofficego Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Customer Property
+     - Powerofficego Contactperson Property
+     - Powerofficego Data Type
+
+
+Shopify Customer to Powerofficego Customers
+-------------------------------------------
+Before any synchronization can take place, a link between a Shopify Customer and a Powerofficego Customers must be established.
+
+A new Powerofficego Customers will be created from a Shopify Customer if it is connected to a Shopify Order that is synchronized into Powerofficego.
+
+Once a link between a Shopify Customer and a Powerofficego Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Customer and a Powerofficego Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Customer Property
+     - Powerofficego Customers Property
+     - Powerofficego Data Type
+
 
 Shopify Customer to Powerofficego Customers person
 --------------------------------------------------
