@@ -2,7 +2,7 @@
 Tripletex to Shopify Dataflow
 =============================
 
-Generated: 2024-07-03 06:56:17
+Generated: 2024-07-03 06:56:22
 
 Introduction
 ------------
@@ -185,6 +185,18 @@ The following properties are synchronized between a Tripletex Orderline and a Sh
    * - Tripletex Orderline Property
      - Shopify Order Property
      - Shopify Data Type
+   * - count
+     - line_items.quantity
+     - "string"
+   * - currency.id
+     - currency
+     - "string"
+   * - discount
+     - line_items.total_discount
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - line_items.price
+     - "string"
 
 
 Tripletex Product to Shopify Product
