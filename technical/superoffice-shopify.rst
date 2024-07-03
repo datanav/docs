@@ -2,7 +2,7 @@
 SuperOffice to Shopify Dataflow
 ===============================
 
-Generated: 2024-07-03 00:00:00
+Generated: 2024-07-03 06:56:17
 
 Introduction
 ------------
@@ -48,4 +48,20 @@ The following properties are synchronized between a SuperOffice Product and a Sh
    * - UnitListPrice
      - variants.price
      - "string"
+
+
+SuperOffice Quoteline to Shopify Order
+--------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Shopify Order.
+
+Once a link between a SuperOffice Quoteline and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a Shopify Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     - Shopify Order Property
+     - Shopify Data Type
 
