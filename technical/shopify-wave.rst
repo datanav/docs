@@ -2,7 +2,7 @@
 Shopify to Wave Dataflow
 ========================
 
-Generated: 2024-07-03 10:52:20
+Generated: 2024-07-03 13:34:07
 
 Introduction
 ------------
@@ -220,6 +220,9 @@ The following properties are synchronized between a Shopify Product and a Wave P
    * - Shopify Product Property
      - Wave Product Property
      - Wave Data Type
+   * - title
+     - name
+     - "string"
    * - variants.price
      - unitPrice
      - "string"
