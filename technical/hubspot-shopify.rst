@@ -2,7 +2,7 @@
 HubSpot to Shopify Dataflow
 ===========================
 
-Generated: 2024-07-03 10:52:14
+Generated: 2024-07-03 10:52:20
 
 Introduction
 ------------
@@ -43,6 +43,18 @@ The following properties are synchronized between a HubSpot Contact and a Shopif
    * - HubSpot Contact Property
      - Shopify Customer Property
      - Shopify Data Type
+   * - properties.email
+     - email
+     - "string"
+   * - properties.firstname
+     - first_name
+     - "string"
+   * - properties.lastname
+     - last_name
+     - "string"
+   * - properties.phone
+     - phone
+     - "string"
 
 
 HubSpot Product to Shopify Inventoryitem
