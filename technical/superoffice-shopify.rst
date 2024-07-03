@@ -2,7 +2,7 @@
 SuperOffice to Shopify Dataflow
 ===============================
 
-Generated: 2024-07-03 06:58:26
+Generated: 2024-07-03 06:58:31
 
 Introduction
 ------------
@@ -25,6 +25,12 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - SuperOffice Quotealternative Property
      - Shopify Order Property
      - Shopify Data Type
+   * - TotalPrice
+     - current_total_price
+     - "string"
+   * - TotalPrice
+     - total_price
+     - "string"
 
 
 SuperOffice Product to Shopify Inventoryitem
