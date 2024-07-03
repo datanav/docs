@@ -2,7 +2,7 @@
 Wix.com to Tilores Dataflow
 ===========================
 
-Generated: 2024-07-02 00:00:02
+Generated: 2024-07-03 00:00:00
 
 Introduction
 ------------
