@@ -2,7 +2,7 @@
 SuperOffice to Shopify Dataflow
 ===============================
 
-Generated: 2024-07-03 10:52:14
+Generated: 2024-07-03 10:52:17
 
 Introduction
 ------------
@@ -43,6 +43,18 @@ The following properties are synchronized between a SuperOffice Person and a Sho
    * - SuperOffice Person Property
      - Shopify Customer Property
      - Shopify Data Type
+   * - Emails.Value
+     - email
+     - "string"
+   * - Firstname
+     - first_name
+     - "string"
+   * - Lastname
+     - last_name
+     - "string"
+   * - OfficePhones.Value
+     - phone
+     - "string"
 
 
 SuperOffice Quotealternative to Shopify Order
