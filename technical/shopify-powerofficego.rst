@@ -2,7 +2,7 @@
 Shopify to Powerofficego Dataflow
 =================================
 
-Generated: 2024-07-03 06:56:17
+Generated: 2024-07-03 06:56:22
 
 Introduction
 ------------
@@ -84,6 +84,18 @@ The following properties are synchronized between a Shopify Order and a Poweroff
    * - Shopify Order Property
      - Powerofficego Salesorderlines Property
      - Powerofficego Data Type
+   * - line_items.price
+     - ProductUnitPrice
+     - N/A
+   * - line_items.quantity
+     - Quantity
+     - N/A
+   * - line_items.title
+     - Description
+     - "string"
+   * - line_items.total_discount
+     - Allowance
+     - "float"
 
 
 Shopify Order to Powerofficego Salesorders
