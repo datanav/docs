@@ -2,7 +2,7 @@
 Shopify to Superoffice Dataflow
 ===============================
 
-Generated: 2024-07-03 06:58:31
+Generated: 2024-07-03 13:34:07
 
 Introduction
 ------------
@@ -136,6 +136,9 @@ The following properties are synchronized between a Shopify Product and a Supero
    * - Shopify Product Property
      - Superoffice Product Property
      - Superoffice Data Type
+   * - title
+     - Name
+     - "string"
    * - variants.price
      - UnitListPrice
      - N/A
