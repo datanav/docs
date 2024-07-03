@@ -2,7 +2,7 @@
 Shopify to Businesscentral Dataflow
 ===================================
 
-Generated: 2024-07-03 00:00:00
+Generated: 2024-07-03 06:56:19
 
 Introduction
 ------------
@@ -62,6 +62,34 @@ The following properties are synchronized between a Shopify Customer and a Busin
    * - phone
      - phoneNumber
      - "string"
+
+
+Shopify Order to Businesscentral Salesorderlines
+------------------------------------------------
+Every Shopify Order will be synchronized with a Businesscentral Salesorderlines.
+
+Once a link between a Shopify Order and a Businesscentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a Businesscentral Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - Businesscentral Salesorderlines Property
+     - Businesscentral Data Type
+   * - line_items.price
+     - unitPrice
+     - "float"
+   * - line_items.quantity
+     - quantity
+     - N/A
+   * - line_items.title
+     - description
+     - "string"
+   * - line_items.total_discount
+     - discountPercent
+     - N/A
 
 
 Shopify Order to Businesscentral Salesorders
