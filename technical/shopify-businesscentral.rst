@@ -2,7 +2,7 @@
 Shopify to Businesscentral Dataflow
 ===================================
 
-Generated: 2024-07-03 10:52:14
+Generated: 2024-07-03 13:34:07
 
 Introduction
 ------------
@@ -212,6 +212,9 @@ The following properties are synchronized between a Shopify Product and a Busine
    * - Shopify Product Property
      - Businesscentral Items Property
      - Businesscentral Data Type
+   * - title
+     - displayName
+     - "string"
    * - variants.price
      - unitPrice
      - N/A
