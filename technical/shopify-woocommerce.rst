@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-07-04 09:43:05
+Generated: 2024-07-04 09:43:23
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Shopify Product and a  Produ
    * - Shopify Product Property
      -  Products Property
      -  Data Type
+   * - title
+     - name
+     - "string"
 
