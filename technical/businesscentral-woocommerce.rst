@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-07-04 09:43:00
+Generated: 2024-07-04 09:57:14
 
 Introduction
 ------------
@@ -32,4 +32,20 @@ The following properties are synchronized between a Businesscentral Items and a 
    * - unitPrice
      - sale_price
      - "string"
+
+
+Businesscentral Salesorders to  Orders
+--------------------------------------
+Every Businesscentral Salesorders will be synchronized with a  Orders.
+
+Once a link between a Businesscentral Salesorders and a  Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorders and a  Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorders Property
+     -  Orders Property
+     -  Data Type
 
