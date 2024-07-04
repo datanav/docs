@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-07-04 09:58:36
+Generated: 2024-07-04 10:07:18
 
 Introduction
 ------------
@@ -67,6 +67,18 @@ The following properties are synchronized between a Shopify Order and a  Orders:
      - "string"
    * - id
      - id
+     - "string"
+   * - line_items.price
+     - line_items.price
+     - "string"
+   * - line_items.product_id
+     - line_items.product_id
+     - "string"
+   * - line_items.quantity
+     - line_items.quantity
+     - "string"
+   * - line_items.title
+     - line_items.name
      - "string"
    * - shipping_address.address1
      - billing.address_1
