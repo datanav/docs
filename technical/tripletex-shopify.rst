@@ -2,7 +2,7 @@
 Tripletex to Shopify Dataflow
 =============================
 
-Generated: 2024-07-04 00:00:00
+Generated: 2024-07-04 00:01:27
 
 Introduction
 ------------
@@ -13,7 +13,7 @@ Tripletex Contact to Shopify Customer
 -------------------------------------
 Before any synchronization can take place, a link between a Tripletex Contact and a Shopify Customer must be established.
 
-A new Shopify Customer will be created from a Tripletex Contact if it is connected to a Tripletex Order that is synchronized into Shopify.
+A new Shopify Customer will be created from a Tripletex Contact if it is connected to a Tripletex Order, or Orderline that is synchronized into Shopify.
 
 Once a link between a Tripletex Contact and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -43,7 +43,7 @@ Tripletex Customer to Shopify Customer
 --------------------------------------
 Before any synchronization can take place, a link between a Tripletex Customer and a Shopify Customer must be established.
 
-A new Shopify Customer will be created from a Tripletex Customer if it is connected to a Tripletex Order that is synchronized into Shopify.
+A new Shopify Customer will be created from a Tripletex Customer if it is connected to a Tripletex Order, or Orderline that is synchronized into Shopify.
 
 Once a link between a Tripletex Customer and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
