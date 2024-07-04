@@ -2,7 +2,7 @@
 Shopify to Superoffice Dataflow
 ===============================
 
-Generated: 2024-07-04 00:00:00
+Generated: 2024-07-04 08:59:00
 
 Introduction
 ------------
@@ -108,6 +108,9 @@ The following properties are synchronized between a Shopify Order and a Superoff
    * - Shopify Order Property
      - Superoffice Quoteline Property
      - Superoffice Data Type
+   * - id
+     - QuoteAlternativeId
+     - "integer"
    * - line_items.price
      - UnitListPrice
      - N/A
