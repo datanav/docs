@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-07-04 09:43:05
+Generated: 2024-07-04 09:43:23
 
 Introduction
 ------------
@@ -23,4 +23,10 @@ The following properties are synchronized between a Wave Product and a  Products
    * - Wave Product Property
      -  Products Property
      -  Data Type
+   * - name
+     - name
+     - "string"
+   * - unitPrice
+     - sale_price
+     - "string"
 
