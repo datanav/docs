@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-07-04 09:57:14
+Generated: 2024-07-04 09:58:36
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Wix.com Orders and a  Orders
    * - Wix.com Orders Property
      -  Orders Property
      -  Data Type
+   * - buyerInfo.id
+     - customer_id
+     - "string"
+   * - currency
+     - currency
+     - "string"
 
 
 Wix.com Products to  Products
