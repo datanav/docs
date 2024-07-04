@@ -2,7 +2,7 @@
 HubSpot to Shopify Dataflow
 ===========================
 
-Generated: 2024-07-04 00:00:00
+Generated: 2024-07-04 00:01:27
 
 Introduction
 ------------
@@ -13,7 +13,7 @@ HubSpot Company to Shopify Customer
 -----------------------------------
 Before any synchronization can take place, a link between a HubSpot Company and a Shopify Customer must be established.
 
-A new Shopify Customer will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into Shopify.
+A new Shopify Customer will be created from a HubSpot Company if it is connected to a HubSpot Deal, or Lineitem that is synchronized into Shopify.
 
 Once a link between a HubSpot Company and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -31,7 +31,7 @@ HubSpot Contact to Shopify Customer
 -----------------------------------
 Before any synchronization can take place, a link between a HubSpot Contact and a Shopify Customer must be established.
 
-A new Shopify Customer will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into Shopify.
+A new Shopify Customer will be created from a HubSpot Contact if it is connected to a HubSpot Deal, or Lineitem that is synchronized into Shopify.
 
 Once a link between a HubSpot Contact and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
