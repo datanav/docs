@@ -2,7 +2,7 @@
 Shopify to Shopify Dataflow
 ===========================
 
-Generated: 2024-07-04 00:00:00
+Generated: 2024-07-04 00:00:45
 
 Introduction
 ------------
@@ -37,51 +37,9 @@ The following properties are synchronized between a Shopify Inventoryitem and a 
      - Shopify Data Type
 
 
-Shopify Inventoryitem to Shopify Product
-----------------------------------------
-Before any synchronization can take place, a link between a Shopify Inventoryitem and a Shopify Product must be established.
-
-A Shopify Inventoryitem will merge with a Shopify Product if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Inventoryitem Property
-     - Shopify Product Property
-   * - id
-     - variants.inventory_item_id
-
-Once a link between a Shopify Inventoryitem and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Inventoryitem and a Shopify Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Inventoryitem Property
-     - Shopify Product Property
-     - Shopify Data Type
-   * - id
-     - variants.inventory_item_id
-     - "string"
-
-
 Shopify Product to Shopify Inventoryitem
 ----------------------------------------
 Every Shopify Product will be synchronized with a Shopify Inventoryitem.
-
-If a matching Shopify Inventoryitem already exists, the Shopify Product will be merged with the existing one.
-If no matching Shopify Inventoryitem is found, a new Shopify Inventoryitem will be created.
-
-A Shopify Product will merge with a Shopify Inventoryitem if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product Property
-     - Shopify Inventoryitem Property
-   * - variants.inventory_item_id
-     - id
 
 Once a link between a Shopify Product and a Shopify Inventoryitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -92,64 +50,6 @@ The following properties are synchronized between a Shopify Product and a Shopif
 
    * - Shopify Product Property
      - Shopify Inventoryitem Property
-     - Shopify Data Type
-
-
-Shopify Product to Shopify Product
-----------------------------------
-Before any synchronization can take place, a link between a Shopify Product and a Shopify Product must be established.
-
-A Shopify Product will merge with a Shopify Product if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product Property
-     - Shopify Product Property
-   * - variants.inventory_item_id
-     - variants.inventory_item_id
-
-Once a link between a Shopify Product and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Product and a Shopify Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product Property
-     - Shopify Product Property
-     - Shopify Data Type
-   * - title
-     - variants.title
-     - "string"
-   * - variants.title
-     - title
-     - "string"
-
-
-Shopify Variant to Shopify Variant
-----------------------------------
-Before any synchronization can take place, a link between a Shopify Variant and a Shopify Variant must be established.
-
-A Shopify Variant will merge with a Shopify Variant if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Variant Property
-     - Shopify Variant Property
-   * - 
-     - 
-
-Once a link between a Shopify Variant and a Shopify Variant is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Variant and a Shopify Variant:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Variant Property
-     - Shopify Variant Property
      - Shopify Data Type
 
 
