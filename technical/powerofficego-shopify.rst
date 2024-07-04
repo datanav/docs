@@ -2,7 +2,7 @@
 Powerofficego to Shopify Dataflow
 =================================
 
-Generated: 2024-07-04 00:00:00
+Generated: 2024-07-04 00:01:27
 
 Introduction
 ------------
@@ -13,7 +13,7 @@ Powerofficego Contactperson to Shopify Customer
 -----------------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Contactperson and a Shopify Customer must be established.
 
-A new Shopify Customer will be created from a Powerofficego Contactperson if it is connected to a Powerofficego Salesorders that is synchronized into Shopify.
+A new Shopify Customer will be created from a Powerofficego Contactperson if it is connected to a Powerofficego Salesorders, or Salesorderlines that is synchronized into Shopify.
 
 Once a link between a Powerofficego Contactperson and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -43,7 +43,7 @@ Powerofficego Customers to Shopify Customer
 -------------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Customers and a Shopify Customer must be established.
 
-A new Shopify Customer will be created from a Powerofficego Customers if it is connected to a Powerofficego Salesorders that is synchronized into Shopify.
+A new Shopify Customer will be created from a Powerofficego Customers if it is connected to a Powerofficego Salesorders, or Salesorderlines that is synchronized into Shopify.
 
 Once a link between a Powerofficego Customers and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
