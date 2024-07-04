@@ -2,7 +2,7 @@
 Businesscentral to Shopify Dataflow
 ===================================
 
-Generated: 2024-07-04 00:00:00
+Generated: 2024-07-04 00:01:27
 
 Introduction
 ------------
@@ -13,7 +13,7 @@ Businesscentral Customers to Shopify Customer
 ---------------------------------------------
 Before any synchronization can take place, a link between a Businesscentral Customers and a Shopify Customer must be established.
 
-A new Shopify Customer will be created from a Businesscentral Customers if it is connected to a Businesscentral Salesorders that is synchronized into Shopify.
+A new Shopify Customer will be created from a Businesscentral Customers if it is connected to a Businesscentral Salesorders, or Salesorderlines that is synchronized into Shopify.
 
 Once a link between a Businesscentral Customers and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
