@@ -2,7 +2,7 @@
 Shopify to Tripletex Dataflow
 =============================
 
-Generated: 2024-07-04 00:00:00
+Generated: 2024-07-04 08:59:00
 
 Introduction
 ------------
@@ -262,6 +262,9 @@ The following properties are synchronized between a Shopify Order and a Triplete
    * - Shopify Order Property
      - Tripletex Orderline Property
      - Tripletex Data Type
+   * - id
+     - order.id
+     - "integer"
    * - line_items.price
      - unitPriceExcludingVatCurrency
      - "float"
