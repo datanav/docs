@@ -2,7 +2,7 @@
 Tripletex to Businesscentral Dataflow
 =====================================
 
-Generated: 2024-07-05 22:19:18
+Generated: 2024-07-05 22:38:45
 
 Introduction
 ------------
@@ -319,7 +319,7 @@ The following properties are synchronized between a Tripletex Customer person an
 
 Tripletex Customer person to Businesscentral Customers person
 -------------------------------------------------------------
-Every Tripletex Customer person will be synchronized with a Businesscentral Customers person.
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Businesscentral Customers person.
 
 Once a link between a Tripletex Customer person and a Businesscentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
