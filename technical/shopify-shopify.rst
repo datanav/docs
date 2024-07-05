@@ -2,7 +2,7 @@
 Shopify to Shopify Dataflow
 ===========================
 
-Generated: 2024-07-05 00:00:01
+Generated: 2024-07-05 00:00:44
 
 Introduction
 ------------
@@ -132,8 +132,6 @@ A Shopify Variant will merge with a Shopify Variant if one of the following prop
 
    * - Shopify Variant Property
      - Shopify Variant Property
-   * - 
-     - 
    * - product_id
      - product_id
 
