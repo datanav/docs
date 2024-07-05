@@ -2,7 +2,7 @@
 Shopify to Superoffice Dataflow
 ===============================
 
-Generated: 2024-07-04 08:59:00
+Generated: 2024-07-05 00:00:01
 
 Introduction
 ------------
