@@ -2,7 +2,7 @@
 Businesscentral to Youtrack Dataflow
 ====================================
 
-Generated: 2024-07-10 00:00:01
+Generated: 2024-07-11 00:00:02
 
 Introduction
 ------------
