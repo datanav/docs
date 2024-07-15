@@ -21,7 +21,7 @@ Secondary Indexes
 
 Maintenance of secondary indexes is fully automated by Sesam. Indexes are implicitly declared when you reference a join expression on two dataset in :ref:`hops <hops>`, in :ref:`subset <concepts-subsets>` definitions or when you explicitly define them on the :ref:`dataset sink <dataset_sink>`. For :ref:`hops <hops>` the indexes are used to perform :ref:`joins <joins>` between datasets. For subsets the index is used to expose a subset of entities on the dataset as if it was a dataset inside a dataset.
 
-:: NOTE
+.. note::
 
    Orphaned indexes must be deleted in the user interface or via the API currently.
 
