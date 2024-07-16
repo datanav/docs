@@ -2,7 +2,7 @@
 Businesscentral to Wikidata Dataflow
 ====================================
 
-Generated: 2024-07-15 00:00:02
+Generated: 2024-07-16 00:00:00
 
 Introduction
 ------------
