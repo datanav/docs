@@ -2,7 +2,7 @@
 Powerofficego to Businesscentral Dataflow
 =========================================
 
-Generated: 2024-07-24 00:00:00
+Generated: 2024-07-25 00:00:00
 
 Introduction
 ------------
