@@ -2,7 +2,7 @@
 Shopify to Wix Dataflow
 =======================
 
-Generated: 2024-08-08 00:00:01
+Generated: 2024-08-08 17:23:53
 
 Introduction
 ------------
@@ -29,6 +29,9 @@ The following properties are synchronized between a Shopify Product and a Wix Pr
    * - variants.price
      - priceData.price
      - N/A
+   * - variants.sku
+     - sku
+     - "string"
    * - variants.title
      - name
      - "string"
