@@ -2,7 +2,7 @@
 Shopify to Tripletex Dataflow
 =============================
 
-Generated: 2024-08-08 00:00:01
+Generated: 2024-08-08 07:30:59
 
 Introduction
 ------------
@@ -25,6 +25,9 @@ The following properties are synchronized between a Shopify Customer and a Tripl
    * - Shopify Customer Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - default_address.phone
+     - phoneNumberWork
+     - "string"
    * - email
      - email
      - "string"
