@@ -2,7 +2,7 @@
 Shopify to Tripletex Dataflow
 =============================
 
-Generated: 2024-08-08 07:30:59
+Generated: 2024-08-08 07:31:06
 
 Introduction
 ------------
@@ -37,6 +37,9 @@ The following properties are synchronized between a Shopify Customer and a Tripl
    * - last_name
      - lastName
      - "string"
+   * - phone
+     - phoneNumberMobile
+     - N/A
    * - phone
      - phoneNumberWork
      - "string"
