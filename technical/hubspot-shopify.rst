@@ -2,7 +2,7 @@
 HubSpot to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-08 07:31:39
+Generated: 2024-08-08 17:23:53
 
 Introduction
 ------------
@@ -127,6 +127,9 @@ The following properties are synchronized between a HubSpot Product and a Shopif
    * - HubSpot Product Property
      - Shopify Product Property
      - Shopify Data Type
+   * - properties.hs_sku
+     - variants.sku
+     - "string"
    * - properties.name
      - title
      - "string"
