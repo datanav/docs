@@ -2,7 +2,7 @@
 SuperOffice to Shopify Dataflow
 ===============================
 
-Generated: 2024-08-08 00:00:01
+Generated: 2024-08-08 07:31:39
 
 Introduction
 ------------
@@ -51,6 +51,12 @@ The following properties are synchronized between a SuperOffice Person and a Sho
      - "string"
    * - Lastname
      - last_name
+     - "string"
+   * - MobilePhones.Value
+     - phone
+     - "string"
+   * - OfficePhones.Value
+     - default_address.phone
      - "string"
    * - OfficePhones.Value
      - phone
