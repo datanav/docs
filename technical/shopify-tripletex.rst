@@ -2,7 +2,7 @@
 Shopify to Tripletex Dataflow
 =============================
 
-Generated: 2024-08-08 07:31:06
+Generated: 2024-08-08 07:31:39
 
 Introduction
 ------------
@@ -206,6 +206,9 @@ The following properties are synchronized between a Shopify Customer and a Tripl
    * - default_address.country
      - postalAddress.country.id
      - "integer"
+   * - default_address.phone
+     - phoneNumber
+     - "string"
    * - default_address.zip
      - deliveryAddress.postalCode
      - "string"
@@ -223,6 +226,9 @@ The following properties are synchronized between a Shopify Customer and a Tripl
      - "integer"
    * - phone
      - phoneNumber
+     - "string"
+   * - phone
+     - phoneNumberMobile
      - "string"
 
 
