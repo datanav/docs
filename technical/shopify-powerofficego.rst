@@ -2,7 +2,7 @@
 Shopify to Powerofficego Dataflow
 =================================
 
-Generated: 2024-08-08 07:30:54
+Generated: 2024-08-08 07:31:39
 
 Introduction
 ------------
@@ -100,6 +100,9 @@ The following properties are synchronized between a Shopify Customer and a Power
      - "string"
    * - default_address.country
      - MailAddress.CountryCode
+     - "string"
+   * - default_address.phone
+     - PhoneNumber
      - "string"
    * - default_address.zip
      - MailAddress.ZipCode
