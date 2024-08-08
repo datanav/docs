@@ -2,7 +2,7 @@
 Businesscentral to Shopify Dataflow
 ===================================
 
-Generated: 2024-08-08 00:00:01
+Generated: 2024-08-08 07:31:39
 
 Introduction
 ------------
@@ -89,6 +89,9 @@ The following properties are synchronized between a Businesscentral Customers pe
      - "string"
    * - id
      - id
+     - "string"
+   * - phoneNumber
+     - default_address.phone
      - "string"
    * - phoneNumber
      - phone
