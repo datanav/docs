@@ -2,7 +2,7 @@
 Wave Financial to Shopify Dataflow
 ==================================
 
-Generated: 2024-08-08 00:00:01
+Generated: 2024-08-08 07:31:39
 
 Introduction
 ------------
@@ -141,6 +141,12 @@ The following properties are synchronized between a Wave Customer person and a S
    * - lastName
      - last_name
      - "string"
+   * - mobile
+     - phone
+     - "string"
+   * - phone
+     - default_address.phone
+     - "string"
    * - phone
      - phone
      - "string"
@@ -179,6 +185,9 @@ The following properties are synchronized between a Wave Customer person and a S
      - "string"
    * - shippingDetails.address.province.code
      - default_address.province_code
+     - "string"
+   * - shippingDetails.phone
+     - default_address.phone
      - "string"
    * - shippingDetails.phone
      - phone
