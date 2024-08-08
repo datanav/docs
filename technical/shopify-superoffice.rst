@@ -2,7 +2,7 @@
 Shopify to Superoffice Dataflow
 ===============================
 
-Generated: 2024-08-08 00:00:01
+Generated: 2024-08-08 07:31:39
 
 Introduction
 ------------
@@ -74,6 +74,9 @@ The following properties are synchronized between a Shopify Customer and a Super
    * - default_address.country
      - Country.CountryId
      - "integer"
+   * - default_address.phone
+     - OfficePhones.Value
+     - "string"
    * - default_address.zip
      - Address.Street.Zipcode
      - "string"
@@ -88,6 +91,9 @@ The following properties are synchronized between a Shopify Customer and a Super
      - "integer"
    * - last_name
      - Lastname
+     - "string"
+   * - phone
+     - MobilePhones.Value
      - "string"
    * - phone
      - OfficePhones.Value
