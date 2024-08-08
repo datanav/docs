@@ -2,7 +2,7 @@
 Shopify to ZohoCRM Dataflow
 ===========================
 
-Generated: 2024-08-08 00:00:01
+Generated: 2024-08-08 07:31:39
 
 Introduction
 ------------
@@ -59,6 +59,12 @@ The following properties are synchronized between a Shopify Customer and a ZohoC
    * - default_address.country
      - Other_Country
      - "string"
+   * - default_address.phone
+     - Other_Phone
+     - "string"
+   * - default_address.phone
+     - Phone
+     - "string"
    * - default_address.province_code
      - Mailing_State
      - "string"
@@ -82,6 +88,9 @@ The following properties are synchronized between a Shopify Customer and a ZohoC
      - "string"
    * - last_name
      - Last_Name
+     - "string"
+   * - phone
+     - Mobile
      - "string"
    * - phone
      - Other_Phone
