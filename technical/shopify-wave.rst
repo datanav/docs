@@ -2,7 +2,7 @@
 Shopify to Wave Dataflow
 ========================
 
-Generated: 2024-08-08 00:00:01
+Generated: 2024-08-08 07:31:39
 
 Introduction
 ------------
@@ -69,6 +69,9 @@ The following properties are synchronized between a Shopify Customer and a Wave 
      - "string"
    * - last_name
      - lastName
+     - "string"
+   * - phone
+     - mobile
      - "string"
 
 
@@ -146,6 +149,9 @@ The following properties are synchronized between a Shopify Customer and a Wave 
    * - default_address.country
      - shippingDetails.address.country.code
      - "string"
+   * - default_address.phone
+     - phone
+     - "string"
    * - default_address.province_code
      - address.province.code
      - "string"
@@ -167,6 +173,9 @@ The following properties are synchronized between a Shopify Customer and a Wave 
    * - last_name
      - lastName
      - N/A
+   * - phone
+     - mobile
+     - "string"
    * - phone
      - phone
      - "string"
