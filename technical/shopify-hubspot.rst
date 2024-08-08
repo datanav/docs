@@ -2,7 +2,7 @@
 Shopify to Hubspot Dataflow
 ===========================
 
-Generated: 2024-08-08 07:31:39
+Generated: 2024-08-08 17:23:53
 
 Introduction
 ------------
@@ -123,6 +123,9 @@ The following properties are synchronized between a Shopify Product and a Hubspo
      - "string"
    * - variants.price
      - properties.price
+     - "string"
+   * - variants.sku
+     - properties.hs_sku
      - "string"
    * - variants.title
      - properties.name
