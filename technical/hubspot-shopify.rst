@@ -2,7 +2,7 @@
 HubSpot to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-08 00:00:31
+Generated: 2024-08-08 07:31:39
 
 Introduction
 ------------
@@ -51,6 +51,12 @@ The following properties are synchronized between a HubSpot Contact and a Shopif
      - "string"
    * - properties.lastname
      - last_name
+     - "string"
+   * - properties.mobilephone
+     - phone
+     - "string"
+   * - properties.phone
+     - default_address.phone
      - "string"
    * - properties.phone
      - phone
