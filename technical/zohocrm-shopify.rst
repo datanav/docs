@@ -2,7 +2,7 @@
 ZohoCRM to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-08 00:00:01
+Generated: 2024-08-08 07:31:39
 
 Introduction
 ------------
@@ -56,6 +56,9 @@ The following properties are synchronized between a ZohoCRM Contact and a Shopif
    * - Mailing_Zip
      - default_address.zip
      - "string"
+   * - Mobile
+     - phone
+     - "string"
    * - Other_City
      - addresses.city
      - "string"
@@ -67,6 +70,9 @@ The following properties are synchronized between a ZohoCRM Contact and a Shopif
      - "string"
    * - Other_Country
      - default_address.country
+     - "string"
+   * - Other_Phone
+     - default_address.phone
      - "string"
    * - Other_Phone
      - phone
@@ -82,6 +88,9 @@ The following properties are synchronized between a ZohoCRM Contact and a Shopif
      - "string"
    * - Other_Zip
      - default_address.zip
+     - "string"
+   * - Phone
+     - default_address.phone
      - "string"
    * - Phone
      - phone
