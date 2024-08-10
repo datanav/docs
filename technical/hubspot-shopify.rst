@@ -2,7 +2,7 @@
 HubSpot to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-10 00:00:34
+Generated: 2024-08-10 00:14:45
 
 Introduction
 ------------
@@ -60,28 +60,6 @@ The following properties are synchronized between a HubSpot Contact and a Shopif
      - "string"
    * - properties.phone
      - phone
-     - "string"
-
-
-HubSpot Product to Shopify Inventoryitem
-----------------------------------------
-Every HubSpot Product will be synchronized with a Shopify Inventoryitem.
-
-Once a link between a HubSpot Product and a Shopify Inventoryitem is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Product and a Shopify Inventoryitem:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Product Property
-     - Shopify Inventoryitem Property
-     - Shopify Data Type
-   * - properties.hs_cost_of_goods_sold
-     - cost
-     - "string"
-   * - properties.hs_sku
-     - sku
      - "string"
 
 
