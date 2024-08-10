@@ -2,7 +2,7 @@
 Shopify to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-10 00:00:00
+Generated: 2024-08-10 00:00:49
 
 Introduction
 ------------
@@ -67,90 +67,6 @@ The following properties are synchronized between a Shopify Product and a Shopif
    * - variants.title
      - title
      - "string"
-
-
-Shopify Product to Shopify Variant
-----------------------------------
-Before any synchronization can take place, a link between a Shopify Product and a Shopify Variant must be established.
-
-A Shopify Product will merge with a Shopify Variant if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product Property
-     - Shopify Variant Property
-   * - id
-     - product_id
-
-Once a link between a Shopify Product and a Shopify Variant is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Product and a Shopify Variant:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product Property
-     - Shopify Variant Property
-     - Shopify Data Type
-   * - variants.sku
-     - sku
-     - "string"
-
-
-Shopify Variant to Shopify Product
-----------------------------------
-Before any synchronization can take place, a link between a Shopify Variant and a Shopify Product must be established.
-
-A Shopify Variant will merge with a Shopify Product if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Variant Property
-     - Shopify Product Property
-   * - product_id
-     - id
-
-Once a link between a Shopify Variant and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Variant and a Shopify Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Variant Property
-     - Shopify Product Property
-     - Shopify Data Type
-   * - sku
-     - variants.sku
-     - "string"
-
-
-Shopify Variant to Shopify Variant
-----------------------------------
-Before any synchronization can take place, a link between a Shopify Variant and a Shopify Variant must be established.
-
-A Shopify Variant will merge with a Shopify Variant if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Variant Property
-     - Shopify Variant Property
-   * - product_id
-     - product_id
-
-Once a link between a Shopify Variant and a Shopify Variant is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Variant and a Shopify Variant:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Variant Property
-     - Shopify Variant Property
-     - Shopify Data Type
 
 
 Shopify Product to Shopify Inventoryitem
