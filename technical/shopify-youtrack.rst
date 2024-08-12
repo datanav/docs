@@ -2,7 +2,7 @@
 Shopify to Youtrack Dataflow
 ============================
 
-Generated: 2024-08-11 00:00:02
+Generated: 2024-08-12 00:00:01
 
 Introduction
 ------------
