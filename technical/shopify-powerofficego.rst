@@ -2,7 +2,7 @@
 Shopify to Powerofficego Dataflow
 =================================
 
-Generated: 2024-08-12 00:00:01
+Generated: 2024-08-12 08:28:57
 
 Introduction
 ------------
@@ -169,6 +169,9 @@ The following properties are synchronized between a Shopify Order and a Poweroff
    * - Shopify Order Property
      - Powerofficego Salesorders Property
      - Powerofficego Data Type
+   * - created_at
+     - SalesOrderDate
+     - "string"
    * - currency
      - CurrencyCode
      - "string"
