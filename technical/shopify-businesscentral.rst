@@ -2,7 +2,7 @@
 Shopify to Businesscentral Dataflow
 ===================================
 
-Generated: 2024-08-12 00:00:01
+Generated: 2024-08-12 08:28:55
 
 Introduction
 ------------
@@ -160,6 +160,9 @@ The following properties are synchronized between a Shopify Order and a Business
    * - billing_address.zip
      - shipToPostCode
      - "string"
+   * - created_at
+     - orderDate
+     - N/A
    * - currency
      - currencyId
      - "string"
