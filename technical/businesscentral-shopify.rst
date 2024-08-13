@@ -2,7 +2,7 @@
 Businesscentral to Shopify Dataflow
 ===================================
 
-Generated: 2024-08-13 00:00:00
+Generated: 2024-08-13 00:15:53
 
 Introduction
 ------------
@@ -25,25 +25,6 @@ The following properties are synchronized between a Businesscentral Customers an
    * - Businesscentral Customers Property
      - Shopify Customer Property
      - Shopify Data Type
-
-
-Businesscentral Items to Shopify Inventoryitem
-----------------------------------------------
-Every Businesscentral Items will be synchronized with a Shopify Inventoryitem.
-
-Once a link between a Businesscentral Items and a Shopify Inventoryitem is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Items and a Shopify Inventoryitem:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Items Property
-     - Shopify Inventoryitem Property
-     - Shopify Data Type
-   * - unitCost
-     - cost
-     - "string"
 
 
 Businesscentral Customers person to Shopify Customer
