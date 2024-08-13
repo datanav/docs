@@ -2,7 +2,7 @@
 Wave Financial to Shopify Dataflow
 ==================================
 
-Generated: 2024-08-13 00:00:00
+Generated: 2024-08-13 00:15:53
 
 Introduction
 ------------
@@ -61,22 +61,6 @@ The following properties are synchronized between a Wave Customer and a Shopify 
    * - shippingDetails.address.province.code
      - default_address.province_code
      - "string"
-
-
-Wave Product to Shopify Inventoryitem
--------------------------------------
-Every Wave Product will be synchronized with a Shopify Inventoryitem.
-
-Once a link between a Wave Product and a Shopify Inventoryitem is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Product and a Shopify Inventoryitem:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Product Property
-     - Shopify Inventoryitem Property
-     - Shopify Data Type
 
 
 Wave Customer person to Shopify Customer
