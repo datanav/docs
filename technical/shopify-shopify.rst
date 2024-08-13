@@ -2,7 +2,7 @@
 Shopify to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-13 00:00:00
+Generated: 2024-08-13 00:15:53
 
 Introduction
 ------------
@@ -71,10 +71,7 @@ The following properties are synchronized between a Shopify Inventoryitem and a 
 
 Shopify Product to Shopify Inventoryitem
 ----------------------------------------
-Every Shopify Product will be synchronized with a Shopify Inventoryitem.
-
-If a matching Shopify Inventoryitem already exists, the Shopify Product will be merged with the existing one.
-If no matching Shopify Inventoryitem is found, a new Shopify Inventoryitem will be created.
+Before any synchronization can take place, a link between a Shopify Product and a Shopify Inventoryitem must be established.
 
 A Shopify Product will merge with a Shopify Inventoryitem if one of the following property combinations match:
 
