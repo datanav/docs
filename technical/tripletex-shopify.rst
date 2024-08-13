@@ -2,7 +2,7 @@
 Tripletex to Shopify Dataflow
 =============================
 
-Generated: 2024-08-13 00:00:00
+Generated: 2024-08-13 00:15:53
 
 Introduction
 ------------
@@ -105,25 +105,6 @@ The following properties are synchronized between a Tripletex Customer and a Sho
      - "string"
    * - postalAddress.postalCode
      - default_address.zip
-     - "string"
-
-
-Tripletex Product to Shopify Inventoryitem
-------------------------------------------
-Every Tripletex Product will be synchronized with a Shopify Inventoryitem.
-
-Once a link between a Tripletex Product and a Shopify Inventoryitem is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Product and a Shopify Inventoryitem:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     - Shopify Inventoryitem Property
-     - Shopify Data Type
-   * - costExcludingVatCurrency
-     - cost
      - "string"
 
 
