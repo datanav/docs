@@ -2,7 +2,7 @@
 Tripletex to Businesscentral Dataflow
 =====================================
 
-Generated: 2024-08-14 18:35:26
+Generated: 2024-08-14 18:40:32
 
 Introduction
 ------------
