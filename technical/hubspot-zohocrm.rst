@@ -2,7 +2,7 @@
 HubSpot to ZohoCRM Dataflow
 ===========================
 
-Generated: 2024-08-17 00:14:05
+Generated: 2024-08-17 00:27:16
 
 Introduction
 ------------
@@ -11,9 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 HubSpot Company to ZohoCRM Account
 ----------------------------------
-Before any synchronization can take place, a link between a HubSpot Company and a ZohoCRM Account must be established.
-
-A new ZohoCRM Account will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into ZohoCRM.
+Every HubSpot Company will be synchronized with a ZohoCRM Account.
 
 Once a link between a HubSpot Company and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
 
