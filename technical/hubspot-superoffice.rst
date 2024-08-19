@@ -2,7 +2,7 @@
 HubSpot to Superoffice Dataflow
 ===============================
 
-Generated: 2024-08-19 00:13:54
+Generated: 2024-08-19 00:27:06
 
 Introduction
 ------------
@@ -11,9 +11,10 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 HubSpot Contact to Superoffice Person
 -------------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a Superoffice Person must be established.
+Every HubSpot Contact will be synchronized with a Superoffice Person.
 
-A new Superoffice Person will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into Superoffice.
+If a matching Superoffice Person already exists, the HubSpot Contact will be merged with the existing one.
+If no matching Superoffice Person is found, a new Superoffice Person will be created.
 
 A HubSpot Contact will merge with a Superoffice Person if one of the following property combinations match:
 
@@ -72,9 +73,7 @@ The following properties are synchronized between a HubSpot Contact and a Supero
 
 HubSpot Company to Superoffice Contact
 --------------------------------------
-Before any synchronization can take place, a link between a HubSpot Company and a Superoffice Contact must be established.
-
-A new Superoffice Contact will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into Superoffice.
+Every HubSpot Company will be synchronized with a Superoffice Contact.
 
 Once a link between a HubSpot Company and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -194,6 +193,44 @@ The following properties are synchronized between a HubSpot Pipelinedeal and a S
    * - stages.label
      - VATInfo
      - "string"
+
+
+HubSpot Contactcompanyassociation to Superoffice Person
+-------------------------------------------------------
+Every HubSpot Contactcompanyassociation will be synchronized with a Superoffice Person.
+
+Once a link between a HubSpot Contactcompanyassociation and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contactcompanyassociation and a Superoffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contactcompanyassociation Property
+     - Superoffice Person Property
+     - Superoffice Data Type
+   * - sesam_simpleAssociationTypes
+     - Contact.ContactId
+     - "integer"
+   * - toObjectId (Dependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypes)
+     - Contact.ContactId
+     - "integer"
+
+
+HubSpot User to Superoffice Person
+----------------------------------
+Every HubSpot User will be synchronized with a Superoffice Person.
+
+Once a link between a HubSpot User and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot User and a Superoffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot User Property
+     - Superoffice Person Property
+     - Superoffice Data Type
 
 
 HubSpot Deal to Superoffice Sale
