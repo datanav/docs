@@ -65,7 +65,7 @@ in the subscription "subA":
       in the http response. If not, the Sesam node sends a "403 Forbidden" http response instead.
 
 Role-based access overview
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +------------------------+---------+-------------+------------------+-----------+
 | Feature                | Admin   | Developer   | User             | Guest     |
