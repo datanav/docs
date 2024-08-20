@@ -2,7 +2,7 @@
 HubSpot to Businesscentral Dataflow
 ===================================
 
-Generated: 2024-08-20 00:00:40
+Generated: 2024-08-20 00:13:17
 
 Introduction
 ------------
@@ -163,22 +163,6 @@ The following properties are synchronized between a HubSpot Contact and a Busine
    * - properties.zip
      - postalCode
      - "string"
-
-
-HubSpot Company to Businesscentral Companies
---------------------------------------------
-Every HubSpot Company will be synchronized with a Businesscentral Companies.
-
-Once a link between a HubSpot Company and a Businesscentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Company and a Businesscentral Companies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Company Property
-     - Businesscentral Companies Property
-     - Businesscentral Data Type
 
 
 HubSpot Deal to Businesscentral Salesorders
