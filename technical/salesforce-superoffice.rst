@@ -2,7 +2,7 @@
 Salesforce to Superoffice Dataflow
 ==================================
 
-Generated: 2024-08-22 14:35:35
+Generated: 2024-08-22 14:36:57
 
 Introduction
 ------------
@@ -34,6 +34,9 @@ The following properties are synchronized between a Salesforce Contact and a Sup
      - "string"
    * - HomePhone
      - OfficePhones.Value
+     - "string"
+   * - HomePhone
+     - PrivatePhones.Value
      - "string"
    * - LastName
      - Lastname
