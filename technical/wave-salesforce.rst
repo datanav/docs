@@ -2,7 +2,7 @@
 Wave Financial to Salesforce Dataflow
 =====================================
 
-Generated: 2024-08-22 13:34:48
+Generated: 2024-08-22 13:53:58
 
 Introduction
 ------------
@@ -23,11 +23,32 @@ The following properties are synchronized between a Wave Customer and a Salesfor
    * - Wave Customer Property
      - Salesforce Contact Property
      - Salesforce Data Type
+   * - address.city
+     - MailingCity
+     - "string"
+   * - address.postalCode
+     - MailingPostalCode
+     - "string"
+   * - address.province.code
+     - MailingState
+     - "string"
    * - firstName
      - FirstName
      - "string"
+   * - id
+     - Id
+     - "string"
    * - lastName
      - LastName
+     - "string"
+   * - shippingDetails.address.city
+     - MailingCity
+     - "string"
+   * - shippingDetails.address.postalCode
+     - MailingPostalCode
+     - "string"
+   * - shippingDetails.address.province.code
+     - MailingState
      - "string"
 
 
@@ -45,8 +66,20 @@ The following properties are synchronized between a Wave Vendor and a Salesforce
    * - Wave Vendor Property
      - Salesforce Contact Property
      - Salesforce Data Type
+   * - address.city
+     - MailingCity
+     - "string"
+   * - address.postalCode
+     - MailingPostalCode
+     - "string"
+   * - address.province.code
+     - MailingState
+     - "string"
    * - firstName
      - FirstName
+     - "string"
+   * - id
+     - Id
      - "string"
    * - lastName
      - LastName
