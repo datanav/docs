@@ -2,7 +2,7 @@
 Shopify to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-22 07:35:55
+Generated: 2024-08-22 07:36:44
 
 Introduction
 ------------
@@ -67,6 +67,32 @@ The following properties are synchronized between a Shopify Inventoryitem and a 
    * - sku
      - variants.sku
      - "string"
+
+
+Shopify Inventoryitem to Shopify Product variant
+------------------------------------------------
+Before any synchronization can take place, a link between a Shopify Inventoryitem and a Shopify Product variant must be established.
+
+A Shopify Inventoryitem will merge with a Shopify Product variant if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Inventoryitem Property
+     - Shopify Product variant Property
+   * - id
+     - variants.inventory_item_id
+
+Once a link between a Shopify Inventoryitem and a Shopify Product variant is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Inventoryitem and a Shopify Product variant:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Inventoryitem Property
+     - Shopify Product variant Property
+     - Shopify Data Type
 
 
 Shopify Product to Shopify Inventoryitem
@@ -157,4 +183,30 @@ The following properties are synchronized between a Shopify Product variant and 
    * - variants.sku
      - sku
      - "string"
+
+
+Shopify Product variant to Shopify Product variant
+--------------------------------------------------
+Before any synchronization can take place, a link between a Shopify Product variant and a Shopify Product variant must be established.
+
+A Shopify Product variant will merge with a Shopify Product variant if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Product variant Property
+     - Shopify Product variant Property
+   * - variants.inventory_item_id
+     - variants.inventory_item_id
+
+Once a link between a Shopify Product variant and a Shopify Product variant is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Product variant and a Shopify Product variant:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Product variant Property
+     - Shopify Product variant Property
+     - Shopify Data Type
 
