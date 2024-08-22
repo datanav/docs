@@ -2,7 +2,7 @@
 Shopify to Wave Dataflow
 ========================
 
-Generated: 2024-08-22 13:08:46
+Generated: 2024-08-22 13:13:50
 
 Introduction
 ------------
@@ -212,25 +212,6 @@ The following properties are synchronized between a Shopify Order and a Wave Inv
      - "string"
    * - po_number
      - poNumber
-     - "string"
-
-
-Shopify Product variant to Wave Product
----------------------------------------
-Every Shopify Product variant will be synchronized with a Wave Product.
-
-Once a link between a Shopify Product variant and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Product variant and a Wave Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product variant Property
-     - Wave Product Property
-     - Wave Data Type
-   * - variants.price
-     - unitPrice
      - "string"
 
 
