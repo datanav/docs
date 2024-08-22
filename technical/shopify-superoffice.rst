@@ -2,7 +2,7 @@
 Shopify to Superoffice Dataflow
 ===============================
 
-Generated: 2024-08-22 07:35:43
+Generated: 2024-08-22 07:35:55
 
 Introduction
 ------------
@@ -170,4 +170,7 @@ The following properties are synchronized between a Shopify Product variant and 
    * - Shopify Product variant Property
      - Superoffice Product Property
      - Superoffice Data Type
+   * - variants.price
+     - UnitListPrice
+     - N/A
 
