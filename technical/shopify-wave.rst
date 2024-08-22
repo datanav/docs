@@ -2,7 +2,7 @@
 Shopify to Wave Dataflow
 ========================
 
-Generated: 2024-08-22 13:08:39
+Generated: 2024-08-22 13:08:46
 
 Introduction
 ------------
@@ -72,33 +72,6 @@ The following properties are synchronized between a Shopify Customer and a Wave 
      - "string"
    * - phone
      - mobile
-     - "string"
-
-
-Shopify Product to Wave Product
--------------------------------
-Before any synchronization can take place, a link between a Shopify Product and a Wave Product must be established.
-
-A new Wave Product will be created from a Shopify Product if it is connected to a Shopify Order that is synchronized into Wave.
-
-Once a link between a Shopify Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Product and a Wave Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product Property
-     - Wave Product Property
-     - Wave Data Type
-   * - title
-     - name
-     - "string"
-   * - variants.price
-     - unitPrice
-     - "string"
-   * - variants.title
-     - description
      - "string"
 
 
@@ -258,5 +231,33 @@ The following properties are synchronized between a Shopify Product variant and 
      - Wave Data Type
    * - variants.price
      - unitPrice
+     - "string"
+
+
+Shopify Product to Wave Product
+-------------------------------
+Every Shopify Product will be synchronized with a Wave Product.
+
+Once a link between a Shopify Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Product and a Wave Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Product Property
+     - Wave Product Property
+     - Wave Data Type
+   * - title
+     - name
+     - "string"
+   * - variants.price
+     - unitPrice
+     - "string"
+   * - variants.title
+     - description
+     - "string"
+   * - variants.title
+     - name
      - "string"
 
