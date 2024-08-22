@@ -2,7 +2,7 @@
 Wix.com to Salesforce Dataflow
 ==============================
 
-Generated: 2024-08-22 14:32:32
+Generated: 2024-08-22 14:35:35
 
 Introduction
 ------------
@@ -31,5 +31,11 @@ The following properties are synchronized between a Wix.com Contacts and a Sales
      - "string"
    * - primaryInfo.email
      - Email
+     - "string"
+   * - primaryInfo.phone
+     - HomePhone
+     - "string"
+   * - primaryInfo.phone
+     - Phone
      - "string"
 
