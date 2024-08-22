@@ -2,7 +2,7 @@
 Salesforce to Tilores Dataflow
 ==============================
 
-Generated: 2024-08-22 14:08:08
+Generated: 2024-08-22 14:32:32
 
 Introduction
 ------------
@@ -25,6 +25,9 @@ The following properties are synchronized between a Salesforce Contact and a Til
      - Tilores Data Type
    * - Birthdate
      - dateOfBirth
+     - "string"
+   * - Email
+     - email
      - "string"
    * - FirstName
      - firstName
