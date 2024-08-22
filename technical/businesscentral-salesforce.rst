@@ -2,7 +2,7 @@
 Businesscentral to Salesforce Dataflow
 ======================================
 
-Generated: 2024-08-22 14:32:32
+Generated: 2024-08-22 14:35:35
 
 Introduction
 ------------
@@ -31,6 +31,15 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
    * - id
      - Id
+     - "string"
+   * - mobilePhoneNumber
+     - MobilePhone
+     - "string"
+   * - phoneNumber
+     - HomePhone
+     - "string"
+   * - phoneNumber
+     - Phone
      - "string"
    * - postalCode
      - MailingPostalCode
