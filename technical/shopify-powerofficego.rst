@@ -2,7 +2,7 @@
 Shopify to Powerofficego Dataflow
 =================================
 
-Generated: 2024-08-22 13:08:39
+Generated: 2024-08-22 13:08:46
 
 Introduction
 ------------
@@ -58,36 +58,6 @@ The following properties are synchronized between a Shopify Customer and a Power
    * - Shopify Customer Property
      - Powerofficego Customers Property
      - Powerofficego Data Type
-
-
-Shopify Product to Powerofficego Product
-----------------------------------------
-Before any synchronization can take place, a link between a Shopify Product and a Powerofficego Product must be established.
-
-A new Powerofficego Product will be created from a Shopify Product if it is connected to a Shopify Order that is synchronized into Powerofficego.
-
-Once a link between a Shopify Product and a Powerofficego Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Product and a Powerofficego Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product Property
-     - Powerofficego Product Property
-     - Powerofficego Data Type
-   * - title
-     - name
-     - "string"
-   * - variants.inventory_quantity
-     - availableStock
-     - "integer"
-   * - variants.price
-     - salesPrice
-     - N/A
-   * - variants.title
-     - description
-     - "string"
 
 
 Shopify Customer to Powerofficego Customers person
@@ -213,6 +183,37 @@ The following properties are synchronized between a Shopify Order and a Poweroff
      - "integer"
    * - po_number
      - PurchaseOrderReference
+     - "string"
+
+
+Shopify Product to Powerofficego Product
+----------------------------------------
+Every Shopify Product will be synchronized with a Powerofficego Product.
+
+Once a link between a Shopify Product and a Powerofficego Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Product and a Powerofficego Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Product Property
+     - Powerofficego Product Property
+     - Powerofficego Data Type
+   * - title
+     - name
+     - "string"
+   * - variants.inventory_quantity
+     - availableStock
+     - "integer"
+   * - variants.price
+     - salesPrice
+     - N/A
+   * - variants.title
+     - description
+     - "string"
+   * - variants.title
+     - name
      - "string"
 
 
