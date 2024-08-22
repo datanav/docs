@@ -2,7 +2,7 @@
 Tripletex to Shopify Dataflow
 =============================
 
-Generated: 2024-08-22 13:09:56
+Generated: 2024-08-22 13:13:50
 
 Introduction
 ------------
@@ -285,24 +285,5 @@ The following properties are synchronized between a Tripletex Product and a Shop
      - "string"
    * - stockOfGoods
      - variants.inventory_quantity
-     - "string"
-
-
-Tripletex Product to Shopify Product variant
---------------------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Shopify Product variant.
-
-Once a link between a Tripletex Product and a Shopify Product variant is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Product and a Shopify Product variant:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     - Shopify Product variant Property
-     - Shopify Data Type
-   * - priceExcludingVatCurrency
-     - variants.price
      - "string"
 
