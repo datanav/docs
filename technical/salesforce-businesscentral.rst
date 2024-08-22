@@ -2,7 +2,7 @@
 Salesforce to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-08-22 14:32:32
+Generated: 2024-08-22 14:35:35
 
 Introduction
 ------------
@@ -25,5 +25,14 @@ The following properties are synchronized between a Salesforce Contact and a Bus
      - Businesscentral Data Type
    * - Email
      - email
+     - "string"
+   * - HomePhone
+     - phoneNumber
+     - "string"
+   * - MobilePhone
+     - mobilePhoneNumber
+     - "string"
+   * - Phone
+     - phoneNumber
      - "string"
 
