@@ -2,7 +2,7 @@
 Salesforce to Wix Dataflow
 ==========================
 
-Generated: 2024-08-22 14:32:32
+Generated: 2024-08-22 14:35:35
 
 Introduction
 ------------
@@ -29,7 +29,13 @@ The following properties are synchronized between a Salesforce Contact and a Wix
    * - FirstName
      - info.name.first
      - "string"
+   * - HomePhone
+     - primaryInfo.phone
+     - "string"
    * - LastName
      - info.name.last
+     - "string"
+   * - Phone
+     - primaryInfo.phone
      - "string"
 
