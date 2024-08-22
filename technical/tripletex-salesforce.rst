@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-08-22 13:34:48
+Generated: 2024-08-22 14:32:32
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Tripletex Contact and a Sale
    * - Tripletex Contact Property
      - Salesforce Contact Property
      - Salesforce Data Type
+   * - email
+     - Email
+     - "string"
    * - firstName
      - FirstName
      - "string"
