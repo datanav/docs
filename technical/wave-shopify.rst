@@ -2,7 +2,7 @@
 Wave Financial to Shopify Dataflow
 ==================================
 
-Generated: 2024-08-22 13:09:56
+Generated: 2024-08-22 13:13:50
 
 Introduction
 ------------
@@ -241,25 +241,6 @@ The following properties are synchronized between a Wave Product and a Shopify P
    * - name
      - variants.title
      - "string"
-   * - unitPrice
-     - variants.price
-     - "string"
-
-
-Wave Product to Shopify Product variant
----------------------------------------
-Every Wave Product will be synchronized with a Shopify Product variant.
-
-Once a link between a Wave Product and a Shopify Product variant is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Product and a Shopify Product variant:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Product Property
-     - Shopify Product variant Property
-     - Shopify Data Type
    * - unitPrice
      - variants.price
      - "string"
