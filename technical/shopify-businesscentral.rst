@@ -2,7 +2,7 @@
 Shopify to Businesscentral Dataflow
 ===================================
 
-Generated: 2024-08-21 08:49:03
+Generated: 2024-08-22 00:00:01
 
 Introduction
 ------------
