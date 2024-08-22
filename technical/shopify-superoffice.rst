@@ -2,7 +2,7 @@
 Shopify to Superoffice Dataflow
 ===============================
 
-Generated: 2024-08-22 07:35:55
+Generated: 2024-08-22 07:43:52
 
 Introduction
 ------------
@@ -31,6 +31,24 @@ The following properties are synchronized between a Shopify Order and a Superoff
    * - total_price
      - TotalPrice
      - "float"
+
+
+Shopify Product to Superoffice Product
+--------------------------------------
+Before any synchronization can take place, a link between a Shopify Product and a Superoffice Product must be established.
+
+A new Superoffice Product will be created from a Shopify Product if it is connected to a Shopify Order that is synchronized into Superoffice.
+
+Once a link between a Shopify Product and a Superoffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Product and a Superoffice Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Product Property
+     - Superoffice Product Property
+     - Superoffice Data Type
 
 
 Shopify Customer to Superoffice Person
@@ -129,31 +147,6 @@ The following properties are synchronized between a Shopify Order and a Superoff
    * - line_items.total_discount
      - ERPDiscountPercent
      - "integer"
-
-
-Shopify Product to Superoffice Product
---------------------------------------
-Every Shopify Product will be synchronized with a Superoffice Product.
-
-Once a link between a Shopify Product and a Superoffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Product and a Superoffice Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product Property
-     - Superoffice Product Property
-     - Superoffice Data Type
-   * - title
-     - Name
-     - "string"
-   * - variants.price
-     - UnitListPrice
-     - N/A
-   * - variants.title
-     - Name
-     - "string"
 
 
 Shopify Product variant to Superoffice Product
