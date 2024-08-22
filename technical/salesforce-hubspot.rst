@@ -2,7 +2,7 @@
 Salesforce to Hubspot Dataflow
 ==============================
 
-Generated: 2024-08-22 13:39:49
+Generated: 2024-08-22 14:31:52
 
 Introduction
 ------------
@@ -25,6 +25,9 @@ The following properties are synchronized between a Salesforce Contact and a Hub
      - Hubspot Data Type
    * - Birthdate
      - properties.date_of_birth
+     - "string"
+   * - Email
+     - properties.email
      - "string"
    * - FirstName
      - properties.firstname
