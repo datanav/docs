@@ -2,7 +2,7 @@
 Powerofficego to Salesforce Dataflow
 ====================================
 
-Generated: 2024-08-22 13:53:58
+Generated: 2024-08-22 14:06:50
 
 Introduction
 ------------
@@ -71,6 +71,9 @@ The following properties are synchronized between a Powerofficego Suppliers pers
      - "string"
    * - MailAddress.City
      - MailingCity
+     - "string"
+   * - MailAddress.CountryCode
+     - MailingCountryCode
      - "string"
    * - MailAddress.ZipCode
      - MailingPostalCode
