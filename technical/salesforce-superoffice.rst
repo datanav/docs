@@ -2,7 +2,7 @@
 Salesforce to Superoffice Dataflow
 ==================================
 
-Generated: 2024-08-22 13:54:35
+Generated: 2024-08-22 13:54:38
 
 Introduction
 ------------
@@ -23,4 +23,13 @@ The following properties are synchronized between a Salesforce Contact and a Sup
    * - Salesforce Contact Property
      - Superoffice Person Property
      - Superoffice Data Type
+   * - Birthdate
+     - BirthDate
+     - N/A
+   * - FirstName
+     - Firstname
+     - "string"
+   * - LastName
+     - Lastname
+     - "string"
 
