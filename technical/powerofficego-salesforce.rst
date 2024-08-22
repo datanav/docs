@@ -2,7 +2,7 @@
 Powerofficego to Salesforce Dataflow
 ====================================
 
-Generated: 2024-08-22 13:34:48
+Generated: 2024-08-22 13:53:58
 
 Introduction
 ------------
@@ -23,14 +23,23 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - Powerofficego Contactperson Property
      - Salesforce Contact Property
      - Salesforce Data Type
+   * - city
+     - MailingCity
+     - "string"
    * - dateOfBirth
      - Birthdate
      - "string"
    * - firstName
      - FirstName
      - "string"
+   * - id
+     - Id
+     - "string"
    * - lastName
      - LastName
+     - "string"
+   * - zipCode
+     - MailingPostalCode
      - "string"
 
 
@@ -54,7 +63,16 @@ The following properties are synchronized between a Powerofficego Suppliers pers
    * - FirstName
      - FirstName
      - "string"
+   * - Id
+     - Id
+     - "string"
    * - LastName
      - LastName
+     - "string"
+   * - MailAddress.City
+     - MailingCity
+     - "string"
+   * - MailAddress.ZipCode
+     - MailingPostalCode
      - "string"
 
