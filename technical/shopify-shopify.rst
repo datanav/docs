@@ -2,7 +2,7 @@
 Shopify to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-22 07:36:44
+Generated: 2024-08-22 07:36:55
 
 Introduction
 ------------
@@ -93,6 +93,9 @@ The following properties are synchronized between a Shopify Inventoryitem and a 
    * - Shopify Inventoryitem Property
      - Shopify Product variant Property
      - Shopify Data Type
+   * - sku
+     - variants.sku
+     - "string"
 
 
 Shopify Product to Shopify Inventoryitem
