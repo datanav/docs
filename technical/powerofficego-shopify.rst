@@ -2,7 +2,7 @@
 Powerofficego to Shopify Dataflow
 =================================
 
-Generated: 2024-08-22 07:34:59
+Generated: 2024-08-22 07:36:55
 
 Introduction
 ------------
@@ -58,27 +58,6 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      - Shopify Customer Property
      - Shopify Data Type
-
-
-Powerofficego Product to Shopify Product variant
-------------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Product and a Shopify Product variant must be established.
-
-A new Shopify Product variant will be created from a Powerofficego Product if it is connected to a Powerofficego Salesorders that is synchronized into Shopify.
-
-Once a link between a Powerofficego Product and a Shopify Product variant is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Product and a Shopify Product variant:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Product Property
-     - Shopify Product variant Property
-     - Shopify Data Type
-   * - salesPrice
-     - variants.price
-     - "string"
 
 
 Powerofficego Customers person to Shopify Customer
@@ -165,6 +144,25 @@ The following properties are synchronized between a Powerofficego Product and a 
    * - name
      - variants.title
      - "string"
+   * - salesPrice
+     - variants.price
+     - "string"
+
+
+Powerofficego Product to Shopify Product variant
+------------------------------------------------
+Every Powerofficego Product will be synchronized with a Shopify Product variant.
+
+Once a link between a Powerofficego Product and a Shopify Product variant is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product and a Shopify Product variant:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     - Shopify Product variant Property
+     - Shopify Data Type
    * - salesPrice
      - variants.price
      - "string"
