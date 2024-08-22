@@ -2,7 +2,7 @@
 Shopify to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-22 07:36:55
+Generated: 2024-08-22 13:08:42
 
 Introduction
 ------------
@@ -109,6 +109,8 @@ A Shopify Product will merge with a Shopify Inventoryitem if one of the followin
 
    * - Shopify Product Property
      - Shopify Inventoryitem Property
+   * - variants.sku
+     - sku
    * - variants.inventory_item_id
      - id
 
