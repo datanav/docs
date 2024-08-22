@@ -2,7 +2,7 @@
 Shopify to Superoffice Dataflow
 ===============================
 
-Generated: 2024-08-22 13:08:46
+Generated: 2024-08-22 13:13:50
 
 Introduction
 ------------
@@ -157,23 +157,4 @@ The following properties are synchronized between a Shopify Product and a Supero
    * - variants.title
      - Name
      - "string"
-
-
-Shopify Product variant to Superoffice Product
-----------------------------------------------
-Every Shopify Product variant will be synchronized with a Superoffice Product.
-
-Once a link between a Shopify Product variant and a Superoffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Product variant and a Superoffice Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product variant Property
-     - Superoffice Product Property
-     - Superoffice Data Type
-   * - variants.price
-     - UnitListPrice
-     - N/A
 
