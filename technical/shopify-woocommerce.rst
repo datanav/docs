@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-22 13:08:46
+Generated: 2024-08-22 13:13:50
 
 Introduction
 ------------
@@ -118,28 +118,6 @@ The following properties are synchronized between a Shopify Order and a  Orders:
      - "string"
    * - shipping_address.zip
      - shipping.postcode
-     - "string"
-
-
-Shopify Product variant to  Products
-------------------------------------
-Every Shopify Product variant will be synchronized with a  Products.
-
-Once a link between a Shopify Product variant and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Product variant and a  Products:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product variant Property
-     -  Products Property
-     -  Data Type
-   * - variants.price
-     - sale_price
-     - "string"
-   * - variants.sku
-     - sku
      - "string"
 
 
