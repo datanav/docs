@@ -2,7 +2,7 @@
 Shopify to Businesscentral Dataflow
 ===================================
 
-Generated: 2024-08-22 13:08:42
+Generated: 2024-08-22 13:13:50
 
 Introduction
 ------------
@@ -233,23 +233,4 @@ The following properties are synchronized between a Shopify Product and a Busine
    * - variants.title
      - displayName
      - "string"
-
-
-Shopify Product variant to Businesscentral Items
-------------------------------------------------
-Every Shopify Product variant will be synchronized with a Businesscentral Items.
-
-Once a link between a Shopify Product variant and a Businesscentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Product variant and a Businesscentral Items:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product variant Property
-     - Businesscentral Items Property
-     - Businesscentral Data Type
-   * - variants.price
-     - unitPrice
-     - N/A
 
