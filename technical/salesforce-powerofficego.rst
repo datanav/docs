@@ -2,7 +2,7 @@
 Salesforce to Powerofficego Dataflow
 ====================================
 
-Generated: 2024-08-22 14:32:32
+Generated: 2024-08-22 14:35:35
 
 Introduction
 ------------
@@ -32,7 +32,13 @@ The following properties are synchronized between a Salesforce Contact and a Pow
    * - FirstName
      - firstName
      - "string"
+   * - HomePhone
+     - phoneNumber
+     - "string"
    * - LastName
      - lastName
+     - "string"
+   * - Phone
+     - phoneNumber
      - "string"
 
