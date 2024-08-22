@@ -2,7 +2,7 @@
 HubSpot to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-22 07:34:59
+Generated: 2024-08-22 07:36:55
 
 Introduction
 ------------
@@ -63,30 +63,6 @@ The following properties are synchronized between a HubSpot Contact and a Shopif
      - "string"
 
 
-HubSpot Product to Shopify Product variant
-------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Product and a Shopify Product variant must be established.
-
-A new Shopify Product variant will be created from a HubSpot Product if it is connected to a HubSpot Deal that is synchronized into Shopify.
-
-Once a link between a HubSpot Product and a Shopify Product variant is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Product and a Shopify Product variant:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Product Property
-     - Shopify Product variant Property
-     - Shopify Data Type
-   * - properties.hs_sku
-     - variants.sku
-     - "string"
-   * - properties.price
-     - variants.price
-     - "string"
-
-
 HubSpot Deal to Shopify Order
 -----------------------------
 When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Shopify Order.
@@ -137,6 +113,28 @@ The following properties are synchronized between a HubSpot Product and a Shopif
      - "string"
    * - properties.name
      - variants.title
+     - "string"
+   * - properties.price
+     - variants.price
+     - "string"
+
+
+HubSpot Product to Shopify Product variant
+------------------------------------------
+Every HubSpot Product will be synchronized with a Shopify Product variant.
+
+Once a link between a HubSpot Product and a Shopify Product variant is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a Shopify Product variant:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     - Shopify Product variant Property
+     - Shopify Data Type
+   * - properties.hs_sku
+     - variants.sku
      - "string"
    * - properties.price
      - variants.price
