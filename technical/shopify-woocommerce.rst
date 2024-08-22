@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-22 07:35:43
+Generated: 2024-08-22 07:35:55
 
 Introduction
 ------------
@@ -135,6 +135,12 @@ The following properties are synchronized between a Shopify Product variant and 
    * - Shopify Product variant Property
      -  Products Property
      -  Data Type
+   * - variants.price
+     - sale_price
+     - "string"
+   * - variants.sku
+     - sku
+     - "string"
 
 
 Shopify Product to  Products
