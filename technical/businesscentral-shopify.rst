@@ -2,7 +2,7 @@
 Businesscentral to Shopify Dataflow
 ===================================
 
-Generated: 2024-08-22 00:00:01
+Generated: 2024-08-22 00:01:29
 
 Introduction
 ------------
@@ -24,24 +24,6 @@ The following properties are synchronized between a Businesscentral Customers an
 
    * - Businesscentral Customers Property
      - Shopify Customer Property
-     - Shopify Data Type
-
-
-Businesscentral Itemcategories to Shopify Product
--------------------------------------------------
-Before any synchronization can take place, a link between a Businesscentral Itemcategories and a Shopify Product must be established.
-
-A new Shopify Product will be created from a Businesscentral Itemcategories if it is connected to a Businesscentral Items, or Itemcategories that is synchronized into Shopify.
-
-Once a link between a Businesscentral Itemcategories and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Itemcategories and a Shopify Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Itemcategories Property
-     - Shopify Product Property
      - Shopify Data Type
 
 
