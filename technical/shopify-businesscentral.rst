@@ -2,7 +2,7 @@
 Shopify to Businesscentral Dataflow
 ===================================
 
-Generated: 2024-08-22 13:07:50
+Generated: 2024-08-22 13:08:42
 
 Introduction
 ------------
@@ -25,30 +25,6 @@ The following properties are synchronized between a Shopify Customer and a Busin
    * - Shopify Customer Property
      - Businesscentral Customers company Property
      - Businesscentral Data Type
-
-
-Shopify Product to Businesscentral Items
-----------------------------------------
-Before any synchronization can take place, a link between a Shopify Product and a Businesscentral Items must be established.
-
-A new Businesscentral Items will be created from a Shopify Product if it is connected to a Shopify Order that is synchronized into Businesscentral.
-
-Once a link between a Shopify Product and a Businesscentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Product and a Businesscentral Items:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product Property
-     - Businesscentral Items Property
-     - Businesscentral Data Type
-   * - title
-     - displayName
-     - "string"
-   * - variants.price
-     - unitPrice
-     - N/A
 
 
 Shopify Customer to Businesscentral Customers person
@@ -228,6 +204,34 @@ The following properties are synchronized between a Shopify Order and a Business
      - "string"
    * - shipping_address.zip
      - shipToPostCode
+     - "string"
+
+
+Shopify Product to Businesscentral Items
+----------------------------------------
+Every Shopify Product will be synchronized with a Businesscentral Items.
+
+Once a link between a Shopify Product and a Businesscentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Product and a Businesscentral Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Product Property
+     - Businesscentral Items Property
+     - Businesscentral Data Type
+   * - title
+     - displayName
+     - "string"
+   * - variants.price
+     - unitPrice
+     - N/A
+   * - variants.product_id
+     - itemCategoryId
+     - "string"
+   * - variants.title
+     - displayName
      - "string"
 
 
