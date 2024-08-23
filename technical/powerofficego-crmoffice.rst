@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-23 12:35:42
+Generated: 2024-08-23 13:09:54
 
 Introduction
 ------------
@@ -73,6 +73,25 @@ The following properties are synchronized between a Powerofficego Product and a 
    * - Powerofficego Product Property
      -  Companies Property
      -  Data Type
+
+
+Powerofficego Projects to  Activities
+-------------------------------------
+Every Powerofficego Projects will be synchronized with a  Activities.
+
+Once a link between a Powerofficego Projects and a  Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Projects and a  Activities:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Projects Property
+     -  Activities Property
+     -  Data Type
+   * - Name
+     - subject
+     - "string"
 
 
 Powerofficego Contactperson to  Contacts
