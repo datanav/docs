@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-23 12:35:42
+Generated: 2024-08-23 13:09:52
 
 Introduction
 ------------
@@ -32,4 +32,20 @@ The following properties are synchronized between a Tidsbanken Ansatt and a  Con
    * - Mobil
      - mobilePhone
      - "string"
+
+
+Tidsbanken Prosjekt to  Activities
+----------------------------------
+Every Tidsbanken Prosjekt will be synchronized with a  Activities.
+
+Once a link between a Tidsbanken Prosjekt and a  Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Prosjekt and a  Activities:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Prosjekt Property
+     -  Activities Property
+     -  Data Type
 
