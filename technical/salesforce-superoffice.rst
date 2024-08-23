@@ -2,7 +2,7 @@
 Salesforce to Superoffice Dataflow
 ==================================
 
-Generated: 2024-08-23 08:51:52
+Generated: 2024-08-23 08:53:26
 
 Introduction
 ------------
@@ -46,6 +46,28 @@ The following properties are synchronized between a Salesforce Contact and a Sup
      - "string"
    * - Phone
      - OfficePhones.Value
+     - "string"
+
+
+Salesforce Organization to Superoffice Contact
+----------------------------------------------
+Every Salesforce Organization will be synchronized with a Superoffice Contact.
+
+Once a link between a Salesforce Organization and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Organization and a Superoffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Organization Property
+     - Superoffice Contact Property
+     - Superoffice Data Type
+   * - Name	
+     - Name
+     - "string"
+   * - Phone	
+     - Phones.Value
      - "string"
 
 
