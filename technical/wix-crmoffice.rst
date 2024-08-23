@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-08-23 12:00:56
+Generated: 2024-08-23 12:35:42
 
 Introduction
 ------------
@@ -44,5 +44,8 @@ The following properties are synchronized between a Wix.com Contacts and a  Cont
      - "string"
    * - info.name.last
      - familyName
+     - "string"
+   * - primaryInfo.phone
+     - directPhone
      - "string"
 
