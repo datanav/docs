@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-23 13:09:52
+Generated: 2024-08-23 13:11:06
 
 Introduction
 ------------
@@ -48,4 +48,16 @@ The following properties are synchronized between a Tidsbanken Prosjekt and a  A
    * - Tidsbanken Prosjekt Property
      -  Activities Property
      -  Data Type
+   * - AnsvarligId
+     - ownerId
+     - "string"
+   * - FerdigDato
+     - endsAt
+     - "string"
+   * - Navn
+     - subject
+     - "string"
+   * - StartDato
+     - startsAt
+     - "string"
 
