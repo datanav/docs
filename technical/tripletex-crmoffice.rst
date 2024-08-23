@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-23 10:54:34
+Generated: 2024-08-23 12:00:18
 
 Introduction
 ------------
@@ -22,5 +22,21 @@ The following properties are synchronized between a Tripletex Product and a  Com
 
    * - Tripletex Product Property
      -  Companies Property
+     -  Data Type
+
+
+Tripletex Contact to  Contacts
+------------------------------
+Every Tripletex Contact will be synchronized with a  Contacts.
+
+Once a link between a Tripletex Contact and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a  Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     -  Contacts Property
      -  Data Type
 
