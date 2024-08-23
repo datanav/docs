@@ -2,7 +2,7 @@
 Tripletex to Shopify Dataflow
 =============================
 
-Generated: 2024-08-23 08:04:17
+Generated: 2024-08-23 10:56:14
 
 Introduction
 ------------
@@ -282,5 +282,8 @@ The following properties are synchronized between a Tripletex Product and a Shop
      - "string"
    * - stockOfGoods
      - variants.inventory_quantity
+     - "string"
+   * - stockOfGoods
+     - variants.inventory_quantity.inventory_quantity
      - "string"
 
