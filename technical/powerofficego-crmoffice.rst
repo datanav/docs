@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-23 10:54:34
+Generated: 2024-08-23 12:00:18
 
 Introduction
 ------------
@@ -22,5 +22,37 @@ The following properties are synchronized between a Powerofficego Product and a 
 
    * - Powerofficego Product Property
      -  Companies Property
+     -  Data Type
+
+
+Powerofficego Contactperson to  Contacts
+----------------------------------------
+Every Powerofficego Contactperson will be synchronized with a  Contacts.
+
+Once a link between a Powerofficego Contactperson and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Contactperson and a  Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     -  Contacts Property
+     -  Data Type
+
+
+Powerofficego Suppliers person to  Contacts
+-------------------------------------------
+Every Powerofficego Suppliers person will be synchronized with a  Contacts.
+
+Once a link between a Powerofficego Suppliers person and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Suppliers person and a  Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Suppliers person Property
+     -  Contacts Property
      -  Data Type
 
