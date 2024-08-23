@@ -2,7 +2,7 @@
 Shopify to Powerofficego Dataflow
 =================================
 
-Generated: 2024-08-23 08:04:17
+Generated: 2024-08-23 10:54:52
 
 Introduction
 ------------
@@ -222,6 +222,9 @@ The following properties are synchronized between a Shopify Sesamproduct and a P
      - name
      - "string"
    * - variants.inventory_quantity
+     - availableStock
+     - "integer"
+   * - variants.inventory_quantity.inventory_quantity
      - availableStock
      - "integer"
    * - variants.price
