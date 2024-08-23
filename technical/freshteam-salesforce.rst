@@ -2,7 +2,7 @@
 Freshteam to Salesforce Dataflow
 ================================
 
-Generated: 2024-08-23 09:01:46
+Generated: 2024-08-23 09:01:50
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Freshteam Department and a S
    * - Freshteam Department Property
      - Salesforce Organization Property
      - Salesforce Data Type
+   * - name
+     - Name	
+     - "string"
 
