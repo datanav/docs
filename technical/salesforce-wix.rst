@@ -2,7 +2,7 @@
 Salesforce to Wix Dataflow
 ==========================
 
-Generated: 2024-08-23 00:00:32
+Generated: 2024-08-23 08:50:18
 
 Introduction
 ------------
@@ -37,5 +37,24 @@ The following properties are synchronized between a Salesforce Contact and a Wix
      - "string"
    * - Phone
      - primaryInfo.phone
+     - "string"
+
+
+Salesforce Product2 to Wix Products
+-----------------------------------
+Every Salesforce Product2 will be synchronized with a Wix Products.
+
+Once a link between a Salesforce Product2 and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Product2 and a Wix Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Product2 Property
+     - Wix Products Property
+     - Wix Data Type
+   * - Name	
+     - name
      - "string"
 
