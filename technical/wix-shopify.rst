@@ -2,7 +2,7 @@
 Wix.com to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-23 00:00:45
+Generated: 2024-08-23 08:00:24
 
 Introduction
 ------------
@@ -105,4 +105,20 @@ The following properties are synchronized between a Wix.com Products and a Shopi
    * - sku
      - variants.sku
      - "string"
+
+
+Wix.com Products to Shopify Sesamproduct
+----------------------------------------
+Every Wix.com Products will be synchronized with a Shopify Sesamproduct.
+
+Once a link between a Wix.com Products and a Shopify Sesamproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a Shopify Sesamproduct:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
+     - Shopify Sesamproduct Property
+     - Shopify Data Type
 
