@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-23 12:00:18
+Generated: 2024-08-23 12:00:56
 
 Introduction
 ------------
@@ -39,4 +39,10 @@ The following properties are synchronized between a Tripletex Contact and a  Con
    * - Tripletex Contact Property
      -  Contacts Property
      -  Data Type
+   * - firstName
+     - givenName
+     - "string"
+   * - lastName
+     - familyName
+     - "string"
 
