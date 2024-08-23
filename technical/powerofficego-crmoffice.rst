@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-23 12:00:18
+Generated: 2024-08-23 12:00:56
 
 Introduction
 ------------
@@ -39,6 +39,12 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - Powerofficego Contactperson Property
      -  Contacts Property
      -  Data Type
+   * - firstName
+     - givenName
+     - "string"
+   * - lastName
+     - familyName
+     - "string"
 
 
 Powerofficego Suppliers person to  Contacts
@@ -55,4 +61,10 @@ The following properties are synchronized between a Powerofficego Suppliers pers
    * - Powerofficego Suppliers person Property
      -  Contacts Property
      -  Data Type
+   * - FirstName
+     - givenName
+     - "string"
+   * - LastName
+     - familyName
+     - "string"
 
