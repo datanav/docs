@@ -2,7 +2,7 @@
 Salesforce to Hubspot Dataflow
 ==============================
 
-Generated: 2024-08-23 08:38:31
+Generated: 2024-08-23 08:50:18
 
 Introduction
 ------------
@@ -65,5 +65,27 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
    * - Phone	
      - properties.phone
+     - "string"
+
+
+Salesforce Product2 to Hubspot Product
+--------------------------------------
+Every Salesforce Product2 will be synchronized with a Hubspot Product.
+
+Once a link between a Salesforce Product2 and a Hubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Product2 and a Hubspot Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Product2 Property
+     - Hubspot Product Property
+     - Hubspot Data Type
+   * - Description	
+     - properties.description
+     - "string"
+   * - Name	
+     - properties.name
      - "string"
 
