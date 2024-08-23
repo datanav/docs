@@ -2,7 +2,7 @@
 Tripletex to Shopify Dataflow
 =============================
 
-Generated: 2024-08-23 08:00:35
+Generated: 2024-08-23 08:04:17
 
 Introduction
 ------------
@@ -254,37 +254,6 @@ The following properties are synchronized between a Tripletex Order and a Shopif
      - "string"
    * - reference
      - po_number
-     - "string"
-
-
-Tripletex Product to Shopify Product
-------------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Shopify Product.
-
-Once a link between a Tripletex Product and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Product and a Shopify Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     - Shopify Product Property
-     - Shopify Data Type
-   * - description
-     - variants.title
-     - "string"
-   * - name
-     - title
-     - "string"
-   * - name
-     - variants.title
-     - "string"
-   * - priceExcludingVatCurrency
-     - variants.price
-     - "string"
-   * - stockOfGoods
-     - variants.inventory_quantity
      - "string"
 
 
