@@ -2,7 +2,7 @@
 Salesforce to Superoffice Dataflow
 ==================================
 
-Generated: 2024-08-23 08:50:18
+Generated: 2024-08-23 08:51:52
 
 Introduction
 ------------
@@ -65,6 +65,9 @@ The following properties are synchronized between a Salesforce Product2 and a Su
      - Superoffice Data Type
    * - Description	
      - Description
+     - "string"
+   * - DisplayUrl	
+     - Url
      - "string"
    * - Name	
      - Name
