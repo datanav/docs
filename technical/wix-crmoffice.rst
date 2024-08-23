@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-08-23 10:54:34
+Generated: 2024-08-23 12:00:18
 
 Introduction
 ------------
@@ -22,5 +22,21 @@ The following properties are synchronized between a Wix.com Products and a  Comp
 
    * - Wix.com Products Property
      -  Companies Property
+     -  Data Type
+
+
+Wix.com Contacts to  Contacts
+-----------------------------
+Every Wix.com Contacts will be synchronized with a  Contacts.
+
+Once a link between a Wix.com Contacts and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Contacts and a  Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Contacts Property
+     -  Contacts Property
      -  Data Type
 
