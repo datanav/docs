@@ -2,12 +2,30 @@
 Shopify to Hubspot Dataflow
 ===========================
 
-Generated: 2024-08-23 07:59:18
+Generated: 2024-08-23 08:04:17
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Hubspot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Shopify Product to Hubspot Product
+----------------------------------
+Before any synchronization can take place, a link between a Shopify Product and a Hubspot Product must be established.
+
+A new Hubspot Product will be created from a Shopify Product if it is connected to a Shopify Order that is synchronized into Hubspot.
+
+Once a link between a Shopify Product and a Hubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Product and a Hubspot Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Product Property
+     - Hubspot Product Property
+     - Hubspot Data Type
+
 
 Shopify Customer to Hubspot Contact
 -----------------------------------
@@ -101,37 +119,6 @@ The following properties are synchronized between a Shopify Order and a Hubspot 
      - "string"
    * - line_items.total_discount
      - properties.hs_discount_percentage
-     - "string"
-
-
-Shopify Product to Hubspot Product
-----------------------------------
-Every Shopify Product will be synchronized with a Hubspot Product.
-
-Once a link between a Shopify Product and a Hubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Product and a Hubspot Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product Property
-     - Hubspot Product Property
-     - Hubspot Data Type
-   * - title
-     - properties.name
-     - "string"
-   * - variants.price
-     - properties.price
-     - "string"
-   * - variants.sku
-     - properties.hs_sku
-     - "string"
-   * - variants.title
-     - properties.description
-     - "string"
-   * - variants.title
-     - properties.name
      - "string"
 
 
