@@ -2,7 +2,7 @@
 Freshteam to  Dataflow
 ======================
 
-Generated: 2024-08-23 12:33:25
+Generated: 2024-08-23 12:35:42
 
 Introduction
 ------------
@@ -28,5 +28,11 @@ The following properties are synchronized between a Freshteam Employee and a  Co
      - "string"
    * - last_name
      - familyName
+     - "string"
+   * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
+     - directPhone
+     - "string"
+   * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
+     - mobilePhone
      - "string"
 
