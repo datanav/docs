@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-23 10:39:26
+Generated: 2024-08-23 10:56:14
 
 Introduction
 ------------
@@ -39,4 +39,16 @@ The following properties are synchronized between a Businesscentral Customers co
    * - Businesscentral Customers company Property
      -  Companies Property
      -  Data Type
+   * - city
+     - postAddress.postalArea
+     - "string"
+   * - country
+     - postAddress.country
+     - "string"
+   * - country
+     - visitAddress.country
+     - "string"
+   * - postalCode
+     - postAddress.postCode
+     - "string"
 
