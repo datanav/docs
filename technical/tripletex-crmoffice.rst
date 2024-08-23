@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-23 12:48:53
+Generated: 2024-08-23 13:09:52
 
 Introduction
 ------------
@@ -72,6 +72,22 @@ The following properties are synchronized between a Tripletex Product and a  Com
 
    * - Tripletex Product Property
      -  Companies Property
+     -  Data Type
+
+
+Tripletex Project to  Activities
+--------------------------------
+Every Tripletex Project will be synchronized with a  Activities.
+
+Once a link between a Tripletex Project and a  Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Project and a  Activities:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Project Property
+     -  Activities Property
      -  Data Type
 
 
