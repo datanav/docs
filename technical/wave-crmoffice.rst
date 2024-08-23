@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-08-23 12:33:25
+Generated: 2024-08-23 12:35:42
 
 Introduction
 ------------
@@ -28,6 +28,15 @@ The following properties are synchronized between a Wave Customer person and a  
      - "string"
    * - lastName
      - familyName
+     - "string"
+   * - mobile
+     - mobilePhone
+     - "string"
+   * - phone
+     - directPhone
+     - "string"
+   * - shippingDetails.phone
+     - directPhone
      - "string"
 
 
@@ -67,6 +76,9 @@ The following properties are synchronized between a Wave Customer and a  Contact
    * - lastName
      - familyName
      - "string"
+   * - mobile
+     - mobilePhone
+     - "string"
 
 
 Wave Vendor to  Contacts
@@ -88,5 +100,11 @@ The following properties are synchronized between a Wave Vendor and a  Contacts:
      - "string"
    * - lastName
      - familyName
+     - "string"
+   * - mobile
+     - mobilePhone
+     - "string"
+   * - phone
+     - directPhone
      - "string"
 
