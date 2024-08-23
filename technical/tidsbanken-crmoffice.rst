@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-23 12:33:25
+Generated: 2024-08-23 12:35:42
 
 Introduction
 ------------
@@ -28,5 +28,8 @@ The following properties are synchronized between a Tidsbanken Ansatt and a  Con
      - "string"
    * - Fornavn
      - givenName
+     - "string"
+   * - Mobil
+     - mobilePhone
      - "string"
 
