@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-08-23 12:51:57
+Generated: 2024-08-23 13:05:40
 
 Introduction
 ------------
@@ -28,5 +28,24 @@ The following properties are synchronized between a Asana Projects and a  Activi
      - "string"
    * - owner.gid
      - ownerId
+     - "string"
+
+
+Asana Tasks to  Activities
+--------------------------
+Every Asana Tasks will be synchronized with a  Activities.
+
+Once a link between a Asana Tasks and a  Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Asana Tasks and a  Activities:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Asana Tasks Property
+     -  Activities Property
+     -  Data Type
+   * - name
+     - subject
      - "string"
 
