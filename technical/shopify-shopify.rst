@@ -2,7 +2,7 @@
 Shopify to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-23 08:51:58
+Generated: 2024-08-23 10:54:57
 
 Introduction
 ------------
@@ -86,6 +86,8 @@ A Shopify Inventoryitem will merge with a Shopify Sesamproduct if one of the fol
      - variants.sku
    * - id
      - variants.inventory_item_id
+   * - id
+     - variants.inventory_item_id.inventory_item_id
 
 Once a link between a Shopify Inventoryitem and a Shopify Sesamproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -182,6 +184,8 @@ A Shopify Sesamproduct will merge with a Shopify Inventoryitem if one of the fol
      - sku
    * - variants.inventory_item_id
      - id
+   * - variants.inventory_item_id.inventory_item_id
+     - id
 
 Once a link between a Shopify Sesamproduct and a Shopify Inventoryitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -215,6 +219,8 @@ A Shopify Sesamproduct will merge with a Shopify Sesamproduct if one of the foll
      - variants.sku
    * - variants.inventory_item_id
      - variants.inventory_item_id
+   * - variants.inventory_item_id.inventory_item_id
+     - variants.inventory_item_id.inventory_item_id
 
 Once a link between a Shopify Sesamproduct and a Shopify Sesamproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
 
