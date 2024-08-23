@@ -2,7 +2,7 @@
 Zendesk to  Dataflow
 ====================
 
-Generated: 2024-08-23 12:33:23
+Generated: 2024-08-23 12:37:57
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Zendesk Users and a  Contact
    * - Zendesk Users Property
      -  Contacts Property
      -  Data Type
+   * - organization_id
+     - company.id
+     - "string"
 
