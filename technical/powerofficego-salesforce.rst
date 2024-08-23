@@ -2,12 +2,44 @@
 Powerofficego to Salesforce Dataflow
 ====================================
 
-Generated: 2024-08-23 08:51:18
+Generated: 2024-08-23 09:01:46
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Powerofficego Customers to Salesforce Organization
+--------------------------------------------------
+Every Powerofficego Customers will be synchronized with a Salesforce Organization.
+
+Once a link between a Powerofficego Customers and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a Salesforce Organization:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - Salesforce Organization Property
+     - Salesforce Data Type
+
+
+Powerofficego Departments to Salesforce Organization
+----------------------------------------------------
+Every Powerofficego Departments will be synchronized with a Salesforce Organization.
+
+Once a link between a Powerofficego Departments and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Departments and a Salesforce Organization:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Departments Property
+     - Salesforce Organization Property
+     - Salesforce Data Type
+
 
 Powerofficego Contactperson to Salesforce Contact
 -------------------------------------------------
