@@ -2,7 +2,7 @@
 Wave Financial to Salesforce Dataflow
 =====================================
 
-Generated: 2024-08-23 00:00:02
+Generated: 2024-08-23 08:51:10
 
 Introduction
 ------------
@@ -62,6 +62,22 @@ The following properties are synchronized between a Wave Customer and a Salesfor
    * - shippingDetails.address.province.code
      - MailingState
      - "string"
+
+
+Wave Product to Salesforce Product2
+-----------------------------------
+Every Wave Product will be synchronized with a Salesforce Product2.
+
+Once a link between a Wave Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Product and a Salesforce Product2:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Product Property
+     - Salesforce Product2 Property
+     - Salesforce Data Type
 
 
 Wave Vendor to Salesforce Contact
