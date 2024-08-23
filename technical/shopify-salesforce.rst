@@ -2,7 +2,7 @@
 Shopify to Salesforce Dataflow
 ==============================
 
-Generated: 2024-08-23 09:20:20
+Generated: 2024-08-23 13:22:34
 
 Introduction
 ------------
@@ -21,6 +21,22 @@ The following properties are synchronized between a Shopify Inventoryitem and a 
    :header-rows: 1
 
    * - Shopify Inventoryitem Property
+     - Salesforce Product2 Property
+     - Salesforce Data Type
+
+
+Shopify Product to Salesforce Product2
+--------------------------------------
+Every Shopify Product will be synchronized with a Salesforce Product2.
+
+Once a link between a Shopify Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Product and a Salesforce Product2:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
 
