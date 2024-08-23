@@ -2,7 +2,7 @@
 Zendesk to  Dataflow
 ====================
 
-Generated: 2024-08-23 13:09:52
+Generated: 2024-08-23 13:11:06
 
 Introduction
 ------------
@@ -39,6 +39,12 @@ The following properties are synchronized between a Zendesk Tickets and a  Activ
    * - Zendesk Tickets Property
      -  Activities Property
      -  Data Type
+   * - requester_id
+     - ownerId
+     - "string"
+   * - subject
+     - subject
+     - "string"
 
 
 Zendesk Users to  Contacts
