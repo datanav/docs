@@ -2,7 +2,7 @@
 Powerofficego to Salesforce Dataflow
 ====================================
 
-Generated: 2024-08-23 09:01:46
+Generated: 2024-08-23 09:01:50
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      - Salesforce Organization Property
      - Salesforce Data Type
+   * - Name
+     - Name	
+     - "string"
+   * - PhoneNumber
+     - Phone	
+     - "string"
 
 
 Powerofficego Departments to Salesforce Organization
@@ -39,6 +45,9 @@ The following properties are synchronized between a Powerofficego Departments an
    * - Powerofficego Departments Property
      - Salesforce Organization Property
      - Salesforce Data Type
+   * - Name
+     - Name	
+     - "string"
 
 
 Powerofficego Contactperson to Salesforce Contact
