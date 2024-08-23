@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-08-23 00:00:02
+Generated: 2024-08-23 08:51:10
 
 Introduction
 ------------
@@ -41,4 +41,20 @@ The following properties are synchronized between a Tripletex Contact and a Sale
    * - phoneNumberWork
      - Phone
      - "string"
+
+
+Tripletex Product to Salesforce Product2
+----------------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Salesforce Product2.
+
+Once a link between a Tripletex Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a Salesforce Product2:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - Salesforce Product2 Property
+     - Salesforce Data Type
 
