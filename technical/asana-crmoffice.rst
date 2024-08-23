@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-08-23 12:50:45
+Generated: 2024-08-23 12:51:57
 
 Introduction
 ------------
@@ -25,5 +25,8 @@ The following properties are synchronized between a Asana Projects and a  Activi
      -  Data Type
    * - name
      - subject
+     - "string"
+   * - owner.gid
+     - ownerId
      - "string"
 
