@@ -2,7 +2,7 @@
 Businesscentral to Salesforce Dataflow
 ======================================
 
-Generated: 2024-08-23 08:25:22
+Generated: 2024-08-23 08:25:59
 
 Introduction
 ------------
@@ -63,10 +63,16 @@ The following properties are synchronized between a Businesscentral Customers co
    * - city
      - City
      - "string"
+   * - country
+     - Country
+     - "string"
    * - displayName
      - Name	
      - "string"
    * - phoneNumber
      - Phone	
+     - "string"
+   * - postalCode
+     - PostalCode	
      - "string"
 
