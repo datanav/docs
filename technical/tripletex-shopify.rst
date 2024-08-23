@@ -2,7 +2,7 @@
 Tripletex to Shopify Dataflow
 =============================
 
-Generated: 2024-08-23 00:00:45
+Generated: 2024-08-23 08:00:24
 
 Introduction
 ------------
@@ -286,4 +286,20 @@ The following properties are synchronized between a Tripletex Product and a Shop
    * - stockOfGoods
      - variants.inventory_quantity
      - "string"
+
+
+Tripletex Product to Shopify Sesamproduct
+-----------------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Shopify Sesamproduct.
+
+Once a link between a Tripletex Product and a Shopify Sesamproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a Shopify Sesamproduct:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - Shopify Sesamproduct Property
+     - Shopify Data Type
 
