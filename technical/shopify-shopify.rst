@@ -2,7 +2,7 @@
 Shopify to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-23 08:00:06
+Generated: 2024-08-23 08:51:58
 
 Introduction
 ------------
@@ -209,6 +209,8 @@ A Shopify Sesamproduct will merge with a Shopify Sesamproduct if one of the foll
 
    * - Shopify Sesamproduct Property
      - Shopify Sesamproduct Property
+   * - id
+     - id
    * - variants.sku
      - variants.sku
    * - variants.inventory_item_id
