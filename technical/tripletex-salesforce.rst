@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-08-23 09:01:46
+Generated: 2024-08-23 09:01:50
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Tripletex Customer and a Sal
    * - Tripletex Customer Property
      - Salesforce Organization Property
      - Salesforce Data Type
+   * - name
+     - Name	
+     - "string"
+   * - phoneNumber
+     - Phone	
+     - "string"
 
 
 Tripletex Department to Salesforce Organization
@@ -39,6 +45,9 @@ The following properties are synchronized between a Tripletex Department and a S
    * - Tripletex Department Property
      - Salesforce Organization Property
      - Salesforce Data Type
+   * - name
+     - Name	
+     - "string"
 
 
 Tripletex Contact to Salesforce Contact
