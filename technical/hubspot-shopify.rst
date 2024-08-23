@@ -2,7 +2,7 @@
 HubSpot to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-23 08:00:35
+Generated: 2024-08-23 08:04:17
 
 Introduction
 ------------
@@ -88,37 +88,6 @@ The following properties are synchronized between a HubSpot Deal and a Shopify O
      - "string"
    * - properties.dealname
      - name
-     - "string"
-
-
-HubSpot Product to Shopify Product
-----------------------------------
-Every HubSpot Product will be synchronized with a Shopify Product.
-
-Once a link between a HubSpot Product and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Product and a Shopify Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Product Property
-     - Shopify Product Property
-     - Shopify Data Type
-   * - properties.description
-     - variants.title
-     - "string"
-   * - properties.hs_sku
-     - variants.sku
-     - "string"
-   * - properties.name
-     - title
-     - "string"
-   * - properties.name
-     - variants.title
-     - "string"
-   * - properties.price
-     - variants.price
      - "string"
 
 
