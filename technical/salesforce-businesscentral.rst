@@ -2,7 +2,7 @@
 Salesforce to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-08-23 08:33:35
+Generated: 2024-08-23 08:50:18
 
 Introduction
 ------------
@@ -50,5 +50,24 @@ The following properties are synchronized between a Salesforce Contact and a Bus
      - "string"
    * - Phone
      - phoneNumber
+     - "string"
+
+
+Salesforce Product2 to Businesscentral Items
+--------------------------------------------
+Every Salesforce Product2 will be synchronized with a Businesscentral Items.
+
+Once a link between a Salesforce Product2 and a Businesscentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Product2 and a Businesscentral Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Product2 Property
+     - Businesscentral Items Property
+     - Businesscentral Data Type
+   * - Name	
+     - displayName
      - "string"
 
