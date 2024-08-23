@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-23 12:33:25
+Generated: 2024-08-23 12:35:42
 
 Introduction
 ------------
@@ -28,6 +28,12 @@ The following properties are synchronized between a SuperOffice Person and a  Co
      - "string"
    * - Lastname
      - familyName
+     - "string"
+   * - MobilePhones.Value
+     - mobilePhone
+     - "string"
+   * - OfficePhones.Value
+     - directPhone
      - "string"
 
 
