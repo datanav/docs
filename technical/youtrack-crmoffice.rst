@@ -2,7 +2,7 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2024-08-23 13:09:56
+Generated: 2024-08-23 13:11:06
 
 Introduction
 ------------
@@ -93,6 +93,9 @@ The following properties are synchronized between a YouTrack Issues and a  Activ
    * - YouTrack Issues Property
      -  Activities Property
      -  Data Type
+   * - reporter.id
+     - ownerId
+     - "string"
 
 
 YouTrack Projectroles to  Activities
