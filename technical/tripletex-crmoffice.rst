@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-23 12:48:17
+Generated: 2024-08-23 12:48:53
 
 Introduction
 ------------
@@ -89,6 +89,9 @@ The following properties are synchronized between a Tripletex Activity and a  Ac
    * - Tripletex Activity Property
      -  Activities Property
      -  Data Type
+   * - name
+     - subject
+     - "string"
 
 
 Tripletex Contact to  Contacts
