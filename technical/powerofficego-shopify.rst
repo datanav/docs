@@ -2,7 +2,7 @@
 Powerofficego to Shopify Dataflow
 =================================
 
-Generated: 2024-08-23 08:04:17
+Generated: 2024-08-23 10:56:14
 
 Introduction
 ------------
@@ -140,6 +140,9 @@ The following properties are synchronized between a Powerofficego Product and a 
      - Shopify Data Type
    * - availableStock
      - variants.inventory_quantity
+     - "string"
+   * - availableStock
+     - variants.inventory_quantity.inventory_quantity
      - "string"
    * - description
      - variants.title
