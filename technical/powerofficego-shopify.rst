@@ -2,7 +2,7 @@
 Powerofficego to Shopify Dataflow
 =================================
 
-Generated: 2024-08-23 00:00:45
+Generated: 2024-08-23 08:00:24
 
 Introduction
 ------------
@@ -153,6 +153,22 @@ The following properties are synchronized between a Powerofficego Product and a 
    * - salesPrice
      - variants.price
      - "string"
+
+
+Powerofficego Product to Shopify Sesamproduct
+---------------------------------------------
+Every Powerofficego Product will be synchronized with a Shopify Sesamproduct.
+
+Once a link between a Powerofficego Product and a Shopify Sesamproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product and a Shopify Sesamproduct:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     - Shopify Sesamproduct Property
+     - Shopify Data Type
 
 
 Powerofficego Salesorders to Shopify Order
