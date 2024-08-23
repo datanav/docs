@@ -2,7 +2,7 @@
 Wix.com to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-23 08:00:35
+Generated: 2024-08-23 08:04:17
 
 Introduction
 ------------
@@ -76,34 +76,6 @@ The following properties are synchronized between a Wix.com Orders and a Shopify
      - "string"
    * - totals.total
      - total_price
-     - "string"
-
-
-Wix.com Products to Shopify Product
------------------------------------
-Every Wix.com Products will be synchronized with a Shopify Product.
-
-Once a link between a Wix.com Products and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Products and a Shopify Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Products Property
-     - Shopify Product Property
-     - Shopify Data Type
-   * - name
-     - title
-     - "string"
-   * - name
-     - variants.title
-     - "string"
-   * - priceData.price
-     - variants.price
-     - "string"
-   * - sku
-     - variants.sku
      - "string"
 
 
