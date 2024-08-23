@@ -2,7 +2,7 @@
 Shopify to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-23 07:59:49
+Generated: 2024-08-23 07:59:56
 
 Introduction
 ------------
@@ -69,6 +69,34 @@ The following properties are synchronized between a Shopify Inventoryitem and a 
    * - sku
      - variants.sku
      - "string"
+
+
+Shopify Inventoryitem to Shopify Sesamproduct
+---------------------------------------------
+Before any synchronization can take place, a link between a Shopify Inventoryitem and a Shopify Sesamproduct must be established.
+
+A Shopify Inventoryitem will merge with a Shopify Sesamproduct if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Inventoryitem Property
+     - Shopify Sesamproduct Property
+   * - sku
+     - variants.sku
+   * - id
+     - variants.inventory_item_id
+
+Once a link between a Shopify Inventoryitem and a Shopify Sesamproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Inventoryitem and a Shopify Sesamproduct:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Inventoryitem Property
+     - Shopify Sesamproduct Property
+     - Shopify Data Type
 
 
 Shopify Product to Shopify Inventoryitem
@@ -165,4 +193,32 @@ The following properties are synchronized between a Shopify Sesamproduct and a S
    * - variants.sku
      - sku
      - "string"
+
+
+Shopify Sesamproduct to Shopify Sesamproduct
+--------------------------------------------
+Before any synchronization can take place, a link between a Shopify Sesamproduct and a Shopify Sesamproduct must be established.
+
+A Shopify Sesamproduct will merge with a Shopify Sesamproduct if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Sesamproduct Property
+     - Shopify Sesamproduct Property
+   * - variants.sku
+     - variants.sku
+   * - variants.inventory_item_id
+     - variants.inventory_item_id
+
+Once a link between a Shopify Sesamproduct and a Shopify Sesamproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Sesamproduct and a Shopify Sesamproduct:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Sesamproduct Property
+     - Shopify Sesamproduct Property
+     - Shopify Data Type
 
