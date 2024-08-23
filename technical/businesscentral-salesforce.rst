@@ -2,7 +2,7 @@
 Businesscentral to Salesforce Dataflow
 ======================================
 
-Generated: 2024-08-23 00:00:01
+Generated: 2024-08-23 08:18:07
 
 Introduction
 ------------
@@ -44,4 +44,20 @@ The following properties are synchronized between a Businesscentral Contacts per
    * - postalCode
      - MailingPostalCode
      - "string"
+
+
+Businesscentral Customers company to Salesforce Organization
+------------------------------------------------------------
+Every Businesscentral Customers company will be synchronized with a Salesforce Organization.
+
+Once a link between a Businesscentral Customers company and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers company and a Salesforce Organization:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers company Property
+     - Salesforce Organization Property
+     - Salesforce Data Type
 
