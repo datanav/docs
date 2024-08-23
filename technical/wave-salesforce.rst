@@ -2,7 +2,7 @@
 Wave Financial to Salesforce Dataflow
 =====================================
 
-Generated: 2024-08-23 09:01:46
+Generated: 2024-08-23 09:01:50
 
 Introduction
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a Wave Customer and a Salesfor
    * - Wave Customer Property
      - Salesforce Organization Property
      - Salesforce Data Type
+   * - fax
+     - Fax	
+     - "string"
+   * - name
+     - Name	
+     - "string"
+   * - phone
+     - Phone	
+     - "string"
+   * - shippingDetails.phone
+     - Phone	
+     - "string"
 
 
 Wave Customer to Salesforce Contact
