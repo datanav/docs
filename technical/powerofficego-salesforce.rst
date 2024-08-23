@@ -2,7 +2,7 @@
 Powerofficego to Salesforce Dataflow
 ====================================
 
-Generated: 2024-08-23 08:51:10
+Generated: 2024-08-23 08:51:18
 
 Introduction
 ------------
@@ -66,6 +66,12 @@ The following properties are synchronized between a Powerofficego Product and a 
    * - Powerofficego Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
+   * - description
+     - Description	
+     - "string"
+   * - name
+     - Name	
+     - "string"
 
 
 Powerofficego Suppliers person to Salesforce Contact
