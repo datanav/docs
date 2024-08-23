@@ -2,7 +2,7 @@
 Powerofficego to Shopify Dataflow
 =================================
 
-Generated: 2024-08-23 08:00:35
+Generated: 2024-08-23 08:04:17
 
 Introduction
 ------------
@@ -121,37 +121,6 @@ The following properties are synchronized between a Powerofficego Customers pers
      - "string"
    * - PhoneNumber
      - phone
-     - "string"
-
-
-Powerofficego Product to Shopify Product
-----------------------------------------
-Every Powerofficego Product will be synchronized with a Shopify Product.
-
-Once a link between a Powerofficego Product and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Product and a Shopify Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Product Property
-     - Shopify Product Property
-     - Shopify Data Type
-   * - availableStock
-     - variants.inventory_quantity
-     - "string"
-   * - description
-     - variants.title
-     - "string"
-   * - name
-     - title
-     - "string"
-   * - name
-     - variants.title
-     - "string"
-   * - salesPrice
-     - variants.price
      - "string"
 
 
