@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-23 12:35:42
+Generated: 2024-08-23 13:10:50
 
 Introduction
 ------------
@@ -49,6 +49,22 @@ The following properties are synchronized between a Shopify Inventoryitem and a 
    :header-rows: 1
 
    * - Shopify Inventoryitem Property
+     -  Companies Property
+     -  Data Type
+
+
+Shopify Product to  Companies
+-----------------------------
+Every Shopify Product will be synchronized with a  Companies.
+
+Once a link between a Shopify Product and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Product and a  Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Product Property
      -  Companies Property
      -  Data Type
 
