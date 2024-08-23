@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-23 13:09:54
+Generated: 2024-08-23 13:11:06
 
 Introduction
 ------------
@@ -91,6 +91,12 @@ The following properties are synchronized between a Powerofficego Projects and a
      -  Data Type
    * - Name
      - subject
+     - "string"
+   * - ProjectManagerEmployeeId
+     - ownerId
+     - "string"
+   * - StartDate
+     - startsAt
      - "string"
 
 
