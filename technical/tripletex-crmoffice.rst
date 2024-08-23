@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-23 13:09:52
+Generated: 2024-08-23 13:11:06
 
 Introduction
 ------------
@@ -89,6 +89,15 @@ The following properties are synchronized between a Tripletex Project and a  Act
    * - Tripletex Project Property
      -  Activities Property
      -  Data Type
+   * - name
+     - subject
+     - "string"
+   * - projectManager.id
+     - ownerId
+     - "string"
+   * - startDate
+     - startsAt
+     - "string"
 
 
 Tripletex Activity to  Activities
