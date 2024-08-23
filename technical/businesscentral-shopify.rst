@@ -2,7 +2,7 @@
 Businesscentral to Shopify Dataflow
 ===================================
 
-Generated: 2024-08-23 08:04:17
+Generated: 2024-08-23 10:55:09
 
 Introduction
 ------------
@@ -104,6 +104,9 @@ The following properties are synchronized between a Businesscentral Items and a 
      - "string"
    * - inventory
      - variants.inventory_quantity
+     - "string"
+   * - inventory
+     - variants.inventory_quantity.inventory_quantity
      - "string"
    * - unitPrice
      - variants.price
