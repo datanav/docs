@@ -2,7 +2,7 @@
 Shopify to Wave Dataflow
 ========================
 
-Generated: 2024-08-23 00:00:45
+Generated: 2024-08-23 07:59:10
 
 Introduction
 ------------
@@ -241,4 +241,20 @@ The following properties are synchronized between a Shopify Product and a Wave P
    * - variants.title
      - name
      - "string"
+
+
+Shopify Sesamproduct to Wave Product
+------------------------------------
+Every Shopify Sesamproduct will be synchronized with a Wave Product.
+
+Once a link between a Shopify Sesamproduct and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Sesamproduct and a Wave Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Sesamproduct Property
+     - Wave Product Property
+     - Wave Data Type
 
