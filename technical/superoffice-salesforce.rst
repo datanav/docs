@@ -2,7 +2,7 @@
 SuperOffice to Salesforce Dataflow
 ==================================
 
-Generated: 2024-08-23 09:01:46
+Generated: 2024-08-23 09:01:50
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a SuperOffice Contact and a Sa
    * - SuperOffice Contact Property
      - Salesforce Organization Property
      - Salesforce Data Type
+   * - Name
+     - Name	
+     - "string"
+   * - Phones.Value
+     - Phone	
+     - "string"
 
 
 SuperOffice Product to Salesforce Product2
