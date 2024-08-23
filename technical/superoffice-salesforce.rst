@@ -2,7 +2,7 @@
 SuperOffice to Salesforce Dataflow
 ==================================
 
-Generated: 2024-08-23 08:51:18
+Generated: 2024-08-23 08:51:52
 
 Introduction
 ------------
@@ -28,5 +28,8 @@ The following properties are synchronized between a SuperOffice Product and a Sa
      - "string"
    * - Name
      - Name	
+     - "string"
+   * - Url
+     - DisplayUrl	
      - "string"
 
