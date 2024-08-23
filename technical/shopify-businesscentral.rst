@@ -2,7 +2,7 @@
 Shopify to Businesscentral Dataflow
 ===================================
 
-Generated: 2024-08-23 00:00:45
+Generated: 2024-08-23 07:59:07
 
 Introduction
 ------------
@@ -233,4 +233,20 @@ The following properties are synchronized between a Shopify Product and a Busine
    * - variants.title
      - displayName
      - "string"
+
+
+Shopify Sesamproduct to Businesscentral Items
+---------------------------------------------
+Every Shopify Sesamproduct will be synchronized with a Businesscentral Items.
+
+Once a link between a Shopify Sesamproduct and a Businesscentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Sesamproduct and a Businesscentral Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Sesamproduct Property
+     - Businesscentral Items Property
+     - Businesscentral Data Type
 
