@@ -2,7 +2,7 @@
 Salesforce to ZohoCRM Dataflow
 ==============================
 
-Generated: 2024-08-23 09:01:46
+Generated: 2024-08-23 09:01:50
 
 Introduction
 ------------
@@ -23,4 +23,13 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - Fax	
+     - Fax
+     - "string"
+   * - Name	
+     - Account_Name
+     - "string"
+   * - Phone	
+     - Phone
+     - "string"
 
