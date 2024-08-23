@@ -2,7 +2,7 @@
 Wix.com to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-23 08:00:24
+Generated: 2024-08-23 08:00:35
 
 Introduction
 ------------
@@ -121,4 +121,13 @@ The following properties are synchronized between a Wix.com Products and a Shopi
    * - Wix.com Products Property
      - Shopify Sesamproduct Property
      - Shopify Data Type
+   * - name
+     - title
+     - "string"
+   * - priceData.price
+     - variants.price
+     - "string"
+   * - sku
+     - variants.sku
+     - "string"
 
