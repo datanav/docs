@@ -2,7 +2,7 @@
 Unieconomy to Salesforce Dataflow
 =================================
 
-Generated: 2024-08-23 09:01:46
+Generated: 2024-08-23 09:01:50
 
 Introduction
 ------------
@@ -39,6 +39,9 @@ The following properties are synchronized between a Unieconomy Departments and a
    * - Unieconomy Departments Property
      - Salesforce Organization Property
      - Salesforce Data Type
+   * - Name
+     - Name	
+     - "string"
 
 
 Unieconomy Companies to Salesforce Organization
