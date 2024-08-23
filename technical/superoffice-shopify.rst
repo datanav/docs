@@ -2,7 +2,7 @@
 SuperOffice to Shopify Dataflow
 ===============================
 
-Generated: 2024-08-23 08:00:35
+Generated: 2024-08-23 08:04:17
 
 Introduction
 ------------
@@ -84,34 +84,6 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
    * - TotalPrice
      - total_price
-     - "string"
-
-
-SuperOffice Product to Shopify Product
---------------------------------------
-Every SuperOffice Product will be synchronized with a Shopify Product.
-
-Once a link between a SuperOffice Product and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Product and a Shopify Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - Shopify Product Property
-     - Shopify Data Type
-   * - Description
-     - variants.title
-     - "string"
-   * - Name
-     - title
-     - "string"
-   * - Name
-     - variants.title
-     - "string"
-   * - UnitListPrice
-     - variants.price
      - "string"
 
 
