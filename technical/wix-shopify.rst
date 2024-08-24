@@ -2,7 +2,7 @@
 Wix.com to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-24 00:00:03
+Generated: 2024-08-24 00:00:53
 
 Introduction
 ------------
@@ -40,6 +40,24 @@ The following properties are synchronized between a Wix.com Contacts and a Shopi
    * - primaryInfo.phone
      - phone
      - "string"
+
+
+Wix.com Products to Shopify Product
+-----------------------------------
+Before any synchronization can take place, a link between a Wix.com Products and a Shopify Product must be established.
+
+A new Shopify Product will be created from a Wix.com Products if it is connected to a Wix.com Wix-orders that is synchronized into Shopify.
+
+Once a link between a Wix.com Products and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a Shopify Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
+     - Shopify Product Property
+     - Shopify Data Type
 
 
 Wix.com Orders to Shopify Order
