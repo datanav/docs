@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-08-24 08:12:20
+Generated: 2024-08-24 08:14:15
 
 Introduction
 ------------
@@ -23,23 +23,4 @@ The following properties are synchronized between a Salesforce Product2 and a  P
    * - Salesforce Product2 Property
      -  Product Property
      -  Data Type
-
-
-Salesforce Product2 to  Products
---------------------------------
-Every Salesforce Product2 will be synchronized with a  Products.
-
-Once a link between a Salesforce Product2 and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Product2 and a  Products:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Product2 Property
-     -  Products Property
-     -  Data Type
-   * - Name	
-     - name
-     - "string"
 
