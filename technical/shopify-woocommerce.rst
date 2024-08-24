@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-24 00:00:03
+Generated: 2024-08-24 08:12:20
 
 Introduction
 ------------
@@ -24,6 +24,22 @@ The following properties are synchronized between a Shopify Product and a  Produ
 
    * - Shopify Product Property
      -  Products Property
+     -  Data Type
+
+
+Shopify Order to  Order
+-----------------------
+Every Shopify Order will be synchronized with a  Order.
+
+Once a link between a Shopify Order and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     -  Order Property
      -  Data Type
 
 
@@ -137,6 +153,22 @@ The following properties are synchronized between a Shopify Order and a  Orders:
    * - shipping_address.zip
      - shipping.postcode
      - "string"
+
+
+Shopify Sesamproduct to  Product
+--------------------------------
+Every Shopify Sesamproduct will be synchronized with a  Product.
+
+Once a link between a Shopify Sesamproduct and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Sesamproduct and a  Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Sesamproduct Property
+     -  Product Property
+     -  Data Type
 
 
 Shopify Sesamproduct to  Products
