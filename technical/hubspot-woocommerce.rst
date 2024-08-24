@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-24 08:14:15
+Generated: 2024-08-24 08:15:00
 
 Introduction
 ------------
@@ -42,4 +42,16 @@ The following properties are synchronized between a HubSpot Product and a  Produ
    * - HubSpot Product Property
      -  Product Property
      -  Data Type
+   * - properties.hs_cost_of_goods_sold
+     - price
+     - "string"
+   * - properties.hs_sku
+     - sku
+     - "string"
+   * - properties.name
+     - name
+     - "string"
+   * - properties.price
+     - sale_price
+     - "string"
 
