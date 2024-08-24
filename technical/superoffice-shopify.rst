@@ -2,7 +2,7 @@
 SuperOffice to Shopify Dataflow
 ===============================
 
-Generated: 2024-08-24 00:00:03
+Generated: 2024-08-24 00:00:53
 
 Introduction
 ------------
@@ -61,6 +61,24 @@ The following properties are synchronized between a SuperOffice Person and a Sho
    * - OfficePhones.Value
      - phone
      - "string"
+
+
+SuperOffice Product to Shopify Product
+--------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Product and a Shopify Product must be established.
+
+A new Shopify Product will be created from a SuperOffice Product if it is connected to a SuperOffice Quoteline, or Quotealternative that is synchronized into Shopify.
+
+Once a link between a SuperOffice Product and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a Shopify Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Shopify Product Property
+     - Shopify Data Type
 
 
 SuperOffice Quotealternative to Shopify Order
