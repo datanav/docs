@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-24 08:12:20
+Generated: 2024-08-24 08:14:15
 
 Introduction
 ------------
@@ -25,31 +25,6 @@ The following properties are synchronized between a Tripletex Order and a  Order
      -  Data Type
 
 
-Tripletex Order to  Orders
---------------------------
-Every Tripletex Order will be synchronized with a  Orders.
-
-Once a link between a Tripletex Order and a  Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Order and a  Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Order Property
-     -  Orders Property
-     -  Data Type
-   * - contact.id
-     - customer_id
-     - "string"
-   * - currency.id
-     - currency
-     - "string"
-   * - customer.id
-     - customer_id
-     - "string"
-
-
 Tripletex Product to  Product
 -----------------------------
 preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Product.
@@ -64,29 +39,4 @@ The following properties are synchronized between a Tripletex Product and a  Pro
    * - Tripletex Product Property
      -  Product Property
      -  Data Type
-
-
-Tripletex Product to  Products
-------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Products.
-
-Once a link between a Tripletex Product and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Product and a  Products:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     -  Products Property
-     -  Data Type
-   * - costExcludingVatCurrency
-     - price
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - priceExcludingVatCurrency
-     - sale_price
-     - "string"
 
