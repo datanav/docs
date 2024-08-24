@@ -2,7 +2,7 @@
 Shopify to Shopify Dataflow
 ===========================
 
-Generated: 2024-08-24 00:00:03
+Generated: 2024-08-24 00:00:53
 
 Introduction
 ------------
@@ -37,40 +37,6 @@ The following properties are synchronized between a Shopify Inventoryitem and a 
      - Shopify Data Type
 
 
-Shopify Inventoryitem to Shopify Product
-----------------------------------------
-Before any synchronization can take place, a link between a Shopify Inventoryitem and a Shopify Product must be established.
-
-A Shopify Inventoryitem will merge with a Shopify Product if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Inventoryitem Property
-     - Shopify Product Property
-   * - sku
-     - variants.sku
-   * - id
-     - variants.inventory_item_id
-
-Once a link between a Shopify Inventoryitem and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Inventoryitem and a Shopify Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Inventoryitem Property
-     - Shopify Product Property
-     - Shopify Data Type
-   * - id
-     - variants.inventory_item_id
-     - "string"
-   * - sku
-     - variants.sku
-     - "string"
-
-
 Shopify Inventoryitem to Shopify Sesamproduct
 ---------------------------------------------
 Before any synchronization can take place, a link between a Shopify Inventoryitem and a Shopify Sesamproduct must be established.
@@ -86,8 +52,6 @@ A Shopify Inventoryitem will merge with a Shopify Sesamproduct if one of the fol
      - variants.sku
    * - id
      - variants.inventory_item_id
-   * - id
-     - variants.inventory_item_id.inventory_item_id
 
 Once a link between a Shopify Inventoryitem and a Shopify Sesamproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -107,71 +71,6 @@ The following properties are synchronized between a Shopify Inventoryitem and a 
      - "string"
 
 
-Shopify Product to Shopify Inventoryitem
-----------------------------------------
-Before any synchronization can take place, a link between a Shopify Product and a Shopify Inventoryitem must be established.
-
-A Shopify Product will merge with a Shopify Inventoryitem if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product Property
-     - Shopify Inventoryitem Property
-   * - variants.sku
-     - sku
-   * - variants.inventory_item_id
-     - id
-
-Once a link between a Shopify Product and a Shopify Inventoryitem is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Product and a Shopify Inventoryitem:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product Property
-     - Shopify Inventoryitem Property
-     - Shopify Data Type
-   * - variants.sku
-     - sku
-     - "string"
-
-
-Shopify Product to Shopify Product
-----------------------------------
-Before any synchronization can take place, a link between a Shopify Product and a Shopify Product must be established.
-
-A Shopify Product will merge with a Shopify Product if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product Property
-     - Shopify Product Property
-   * - variants.sku
-     - variants.sku
-   * - variants.inventory_item_id
-     - variants.inventory_item_id
-
-Once a link between a Shopify Product and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Product and a Shopify Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product Property
-     - Shopify Product Property
-     - Shopify Data Type
-   * - title
-     - variants.title
-     - "string"
-   * - variants.title
-     - title
-     - "string"
-
-
 Shopify Sesamproduct to Shopify Inventoryitem
 ---------------------------------------------
 Before any synchronization can take place, a link between a Shopify Sesamproduct and a Shopify Inventoryitem must be established.
@@ -186,8 +85,6 @@ A Shopify Sesamproduct will merge with a Shopify Inventoryitem if one of the fol
    * - variants.sku
      - sku
    * - variants.inventory_item_id
-     - id
-   * - variants.inventory_item_id.inventory_item_id
      - id
 
 Once a link between a Shopify Sesamproduct and a Shopify Inventoryitem is established, it will keep in sync between the two systems, regardless of where it is edited.
@@ -219,14 +116,10 @@ A Shopify Sesamproduct will merge with a Shopify Sesamproduct if one of the foll
 
    * - Shopify Sesamproduct Property
      - Shopify Sesamproduct Property
-   * - id
-     - id
    * - variants.sku
      - variants.sku
    * - variants.inventory_item_id
      - variants.inventory_item_id
-   * - variants.inventory_item_id.inventory_item_id
-     - variants.inventory_item_id.inventory_item_id
 
 Once a link between a Shopify Sesamproduct and a Shopify Sesamproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
 
