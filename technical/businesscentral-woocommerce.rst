@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-24 08:12:20
+Generated: 2024-08-24 08:14:15
 
 Introduction
 ------------
@@ -25,31 +25,6 @@ The following properties are synchronized between a Businesscentral Items and a 
      -  Data Type
 
 
-Businesscentral Items to  Products
-----------------------------------
-Every Businesscentral Items will be synchronized with a  Products.
-
-Once a link between a Businesscentral Items and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Items and a  Products:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Items Property
-     -  Products Property
-     -  Data Type
-   * - displayName
-     - name
-     - "string"
-   * - unitCost
-     - price
-     - "string"
-   * - unitPrice
-     - sale_price
-     - "string"
-
-
 Businesscentral Salesorders to  Order
 -------------------------------------
 Every Businesscentral Salesorders will be synchronized with a  Order.
@@ -64,89 +39,4 @@ The following properties are synchronized between a Businesscentral Salesorders 
    * - Businesscentral Salesorders Property
      -  Order Property
      -  Data Type
-
-
-Businesscentral Salesorders to  Orders
---------------------------------------
-Every Businesscentral Salesorders will be synchronized with a  Orders.
-
-Once a link between a Businesscentral Salesorders and a  Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Salesorders and a  Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Salesorders Property
-     -  Orders Property
-     -  Data Type
-   * - billToAddressLine1
-     - billing.address_1
-     - "string"
-   * - billToAddressLine1
-     - shipping.address_1
-     - "string"
-   * - billToAddressLine2
-     - billing.address_2
-     - "string"
-   * - billToAddressLine2
-     - shipping.address_2
-     - "string"
-   * - billToCity
-     - billing.city
-     - "string"
-   * - billToCity
-     - shipping.city
-     - "string"
-   * - billToCountry
-     - billing.country
-     - "string"
-   * - billToCountry
-     - shipping.country
-     - "string"
-   * - billToPostCode
-     - billing.postcode
-     - "string"
-   * - billToPostCode
-     - shipping.postcode
-     - "string"
-   * - currencyId
-     - currency
-     - "string"
-   * - customerId
-     - customer_id
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - shipToAddressLine1
-     - billing.address_1
-     - "string"
-   * - shipToAddressLine1
-     - shipping.address_1
-     - "string"
-   * - shipToAddressLine2
-     - billing.address_2
-     - "string"
-   * - shipToAddressLine2
-     - shipping.address_2
-     - "string"
-   * - shipToCity
-     - billing.city
-     - "string"
-   * - shipToCity
-     - shipping.city
-     - "string"
-   * - shipToCountry
-     - billing.country
-     - "string"
-   * - shipToCountry
-     - shipping.country
-     - "string"
-   * - shipToPostCode
-     - billing.postcode
-     - "string"
-   * - shipToPostCode
-     - shipping.postcode
-     - "string"
 
