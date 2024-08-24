@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-24 08:14:15
+Generated: 2024-08-24 08:15:00
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Businesscentral Items and a 
    * - Businesscentral Items Property
      -  Product Property
      -  Data Type
+   * - displayName
+     - name
+     - "string"
+   * - unitCost
+     - price
+     - "string"
+   * - unitPrice
+     - sale_price
+     - "string"
 
 
 Businesscentral Salesorders to  Order
@@ -39,4 +48,73 @@ The following properties are synchronized between a Businesscentral Salesorders 
    * - Businesscentral Salesorders Property
      -  Order Property
      -  Data Type
+   * - billToAddressLine1
+     - billing.address_1
+     - "string"
+   * - billToAddressLine1
+     - shipping.address_1
+     - "string"
+   * - billToAddressLine2
+     - billing.address_2
+     - "string"
+   * - billToAddressLine2
+     - shipping.address_2
+     - "string"
+   * - billToCity
+     - billing.city
+     - "string"
+   * - billToCity
+     - shipping.city
+     - "string"
+   * - billToCountry
+     - billing.country
+     - "string"
+   * - billToCountry
+     - shipping.country
+     - "string"
+   * - billToPostCode
+     - billing.postcode
+     - "string"
+   * - billToPostCode
+     - shipping.postcode
+     - "string"
+   * - currencyId
+     - currency
+     - "string"
+   * - customerId
+     - customer_id
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - shipToAddressLine1
+     - billing.address_1
+     - "string"
+   * - shipToAddressLine1
+     - shipping.address_1
+     - "string"
+   * - shipToAddressLine2
+     - billing.address_2
+     - "string"
+   * - shipToAddressLine2
+     - shipping.address_2
+     - "string"
+   * - shipToCity
+     - billing.city
+     - "string"
+   * - shipToCity
+     - shipping.city
+     - "string"
+   * - shipToCountry
+     - billing.country
+     - "string"
+   * - shipToCountry
+     - shipping.country
+     - "string"
+   * - shipToPostCode
+     - billing.postcode
+     - "string"
+   * - shipToPostCode
+     - shipping.postcode
+     - "string"
 
