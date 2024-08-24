@@ -2,7 +2,7 @@
 Shopify to Wave Dataflow
 ========================
 
-Generated: 2024-08-23 08:04:17
+Generated: 2024-08-24 00:00:03
 
 Introduction
 ------------
