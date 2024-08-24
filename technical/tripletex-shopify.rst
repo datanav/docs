@@ -2,7 +2,7 @@
 Tripletex to Shopify Dataflow
 =============================
 
-Generated: 2024-08-24 00:00:03
+Generated: 2024-08-24 00:00:53
 
 Introduction
 ------------
@@ -106,6 +106,24 @@ The following properties are synchronized between a Tripletex Customer and a Sho
    * - postalAddress.postalCode
      - default_address.zip
      - "string"
+
+
+Tripletex Product to Shopify Product
+------------------------------------
+Before any synchronization can take place, a link between a Tripletex Product and a Shopify Product must be established.
+
+A new Shopify Product will be created from a Tripletex Product if it is connected to a Tripletex Order, or Orderline that is synchronized into Shopify.
+
+Once a link between a Tripletex Product and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a Shopify Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - Shopify Product Property
+     - Shopify Data Type
 
 
 Tripletex Customer person to Shopify Customer
