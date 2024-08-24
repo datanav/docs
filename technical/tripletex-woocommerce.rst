@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-24 08:14:15
+Generated: 2024-08-24 08:15:00
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Tripletex Order and a  Order
    * - Tripletex Order Property
      -  Order Property
      -  Data Type
+   * - contact.id
+     - customer_id
+     - "string"
+   * - currency.id
+     - currency
+     - "string"
+   * - customer.id
+     - customer_id
+     - "string"
 
 
 Tripletex Product to  Product
@@ -39,4 +48,13 @@ The following properties are synchronized between a Tripletex Product and a  Pro
    * - Tripletex Product Property
      -  Product Property
      -  Data Type
+   * - costExcludingVatCurrency
+     - price
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - priceExcludingVatCurrency
+     - sale_price
+     - "string"
 
