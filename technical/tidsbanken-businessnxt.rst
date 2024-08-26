@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-26 15:42:44
+Generated: 2024-08-26 15:42:47
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Tidsbanken Avdeling and a  C
    * - Tidsbanken Avdeling Property
      -  Company Property
      -  Data Type
+   * - Navn
+     - name
+     - "string"
+   * - Organisasjonsnr
+     - companyBusinessNo (Dependant on having wd:Q11994066 in countryIsoCode)
+     - "string"
+   * - sesam_avdelingId
+     - companyBusinessNo (Dependant on having wd:Q2366457 in countryIsoCode)
+     - "string"
 
 
 Tidsbanken Kunde to  Company
@@ -39,4 +48,13 @@ The following properties are synchronized between a Tidsbanken Kunde and a  Comp
    * - Tidsbanken Kunde Property
      -  Company Property
      -  Data Type
+   * - Navn
+     - name
+     - "string"
+   * - Organisasjonsnummer
+     - companyBusinessNo (Dependant on having NO in countryIsoCodeDependant on having wd:Q11994066 in countryIsoCode)
+     - "string"
+   * - sesam_kundeId
+     - companyBusinessNo (Dependant on having wd:Q852835 in countryIsoCode)
+     - "string"
 
