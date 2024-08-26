@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-26 15:42:44
+Generated: 2024-08-26 15:42:47
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a SuperOffice Contact and a  C
    * - SuperOffice Contact Property
      -  Company Property
      -  Data Type
+   * - Country.ThreeLetterISOCountry
+     - companyBusinessNo (Dependant on having wd:Q906278 in countryIsoCode)
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - OrgNr
+     - companyBusinessNo (Dependant on having  in countryIsoCode)
+     - "string"
 
 
 SuperOffice Listcountryitems to  Country
