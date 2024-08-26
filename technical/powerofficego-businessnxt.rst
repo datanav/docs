@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-26 15:42:44
+Generated: 2024-08-26 15:42:47
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      -  Company Property
      -  Data Type
+   * - Name
+     - name
+     - "string"
+   * - Number
+     - companyBusinessNo (Dependant on having wd:Q852835 in countryIsoCode)
+     - "string"
+   * - OrganizationNumber
+     - companyBusinessNo (Dependant on having  in countryIsoCode)
+     - "string"
 
 
 Powerofficego Departments to  Company
@@ -39,6 +48,12 @@ The following properties are synchronized between a Powerofficego Departments an
    * - Powerofficego Departments Property
      -  Company Property
      -  Data Type
+   * - Code
+     - companyBusinessNo (Dependant on having wd:Q2366457 in countryIsoCode)
+     - "string"
+   * - Name
+     - name
+     - "string"
 
 
 Powerofficego Contactperson to  Country
