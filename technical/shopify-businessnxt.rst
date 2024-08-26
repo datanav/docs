@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-26 15:26:44
+Generated: 2024-08-26 15:45:37
 
 Introduction
 ------------
@@ -32,6 +32,22 @@ The following properties are synchronized between a Shopify Customer and a  Coun
    * - default_address.country_name
      - name
      - "string"
+
+
+Shopify Customer to  Currency
+-----------------------------
+Every Shopify Customer will be synchronized with a  Currency.
+
+Once a link between a Shopify Customer and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Customer and a  Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Customer Property
+     -  Currency Property
+     -  Data Type
 
 
 Shopify Order to  Country
