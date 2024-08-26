@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-26 15:42:44
+Generated: 2024-08-26 15:42:47
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a HubSpot Company and a  Compa
    * - HubSpot Company Property
      -  Company Property
      -  Data Type
+   * - properties.name
+     - name
+     - "string"
 
 
 HubSpot Contactcompanyassociationtype to  Country
@@ -39,6 +42,9 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
    * - HubSpot Contactcompanyassociationtype Property
      -  Country Property
      -  Data Type
+   * - label
+     - name
+     - "string"
 
 
 HubSpot Company to  Country
