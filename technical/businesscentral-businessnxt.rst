@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-26 15:45:37
+Generated: 2024-08-26 15:46:59
 
 Introduction
 ------------
@@ -39,6 +39,9 @@ The following properties are synchronized between a Businesscentral Currencies a
    * - Businesscentral Currencies Property
      -  Currency Property
      -  Data Type
+   * - code
+     - isoCode
+     - "string"
 
 
 Businesscentral Customers company to  Company
