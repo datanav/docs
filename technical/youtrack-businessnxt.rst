@@ -2,7 +2,7 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2024-08-26 15:42:44
+Generated: 2024-08-26 15:50:42
 
 Introduction
 ------------
@@ -25,6 +25,22 @@ The following properties are synchronized between a YouTrack Groups and a  Compa
      -  Data Type
 
 
+YouTrack Organizationroles to  Country
+--------------------------------------
+Every YouTrack Organizationroles will be synchronized with a  Country.
+
+Once a link between a YouTrack Organizationroles and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Organizationroles and a  Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Organizationroles Property
+     -  Country Property
+     -  Data Type
+
+
 YouTrack Organizations to  Company
 ----------------------------------
 Every YouTrack Organizations will be synchronized with a  Company.
@@ -38,6 +54,22 @@ The following properties are synchronized between a YouTrack Organizations and a
 
    * - YouTrack Organizations Property
      -  Company Property
+     -  Data Type
+
+
+YouTrack Roles to  Country
+--------------------------
+Every YouTrack Roles will be synchronized with a  Country.
+
+Once a link between a YouTrack Roles and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Roles and a  Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Roles Property
+     -  Country Property
      -  Data Type
 
 
