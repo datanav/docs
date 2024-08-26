@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-26 15:45:37
+Generated: 2024-08-26 15:47:03
 
 Introduction
 ------------
@@ -70,4 +70,7 @@ The following properties are synchronized between a SuperOffice Listcurrencyitem
    * - SuperOffice Listcurrencyitems Property
      -  Currency Property
      -  Data Type
+   * - Name
+     - isoCode
+     - "string"
 
