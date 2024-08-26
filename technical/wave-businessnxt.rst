@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-08-26 15:45:37
+Generated: 2024-08-26 15:51:51
 
 Introduction
 ------------
@@ -64,4 +64,7 @@ The following properties are synchronized between a Wave Currency and a  Currenc
    * - Wave Currency Property
      -  Currency Property
      -  Data Type
+   * - name
+     - name
+     - "string"
 
