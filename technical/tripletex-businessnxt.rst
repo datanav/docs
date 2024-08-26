@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-26 15:45:37
+Generated: 2024-08-26 15:51:51
 
 Introduction
 ------------
@@ -92,4 +92,7 @@ The following properties are synchronized between a Tripletex Currency and a  Cu
    * - Tripletex Currency Property
      -  Currency Property
      -  Data Type
+   * - displayName
+     - name
+     - "string"
 
