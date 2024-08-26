@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-08-26 15:26:44
+Generated: 2024-08-26 15:26:47
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Wave Country and a  Country:
    * - Wave Country Property
      -  Country Property
      -  Data Type
+   * - currency.code
+     - currencyNo
+     - "string"
    * - name
      - name
      - "string"
