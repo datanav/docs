@@ -2,7 +2,7 @@
 Unieconomy to  Dataflow
 =======================
 
-Generated: 2024-08-26 15:47:03
+Generated: 2024-08-26 15:51:51
 
 Introduction
 ------------
@@ -98,5 +98,8 @@ The following properties are synchronized between a Unieconomy Currencycodes and
      -  Data Type
    * - Code
      - isoCode
+     - "string"
+   * - Name
+     - name
      - "string"
 
