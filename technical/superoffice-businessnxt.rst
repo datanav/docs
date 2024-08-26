@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-26 15:42:47
+Generated: 2024-08-26 15:45:37
 
 Introduction
 ------------
@@ -54,4 +54,20 @@ The following properties are synchronized between a SuperOffice Listcountryitems
    * - TwoLetterISOCountry
      - isoCode
      - "string"
+
+
+SuperOffice Listcurrencyitems to  Currency
+------------------------------------------
+Every SuperOffice Listcurrencyitems will be synchronized with a  Currency.
+
+Once a link between a SuperOffice Listcurrencyitems and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Listcurrencyitems and a  Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Listcurrencyitems Property
+     -  Currency Property
+     -  Data Type
 
