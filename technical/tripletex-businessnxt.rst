@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-26 15:42:44
+Generated: 2024-08-26 15:42:47
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Tripletex Customer and a  Co
    * - Tripletex Customer Property
      -  Company Property
      -  Data Type
+   * - customerNumber
+     - companyBusinessNo (Dependant on having wd:Q852835 in countryIsoCode)
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - organizationNumber
+     - companyBusinessNo (Dependant on having NO in countryIsoCode)
+     - "string"
 
 
 Tripletex Department to  Company
@@ -39,6 +48,12 @@ The following properties are synchronized between a Tripletex Department and a  
    * - Tripletex Department Property
      -  Company Property
      -  Data Type
+   * - departmentNumber
+     - companyBusinessNo (Dependant on having wd:Q2366457 in countryIsoCode)
+     - "string"
+   * - name
+     - name
+     - "string"
 
 
 Tripletex Country to  Country
