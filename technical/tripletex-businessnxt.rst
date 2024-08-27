@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-27 11:46:17
+Generated: 2024-08-27 11:48:16
 
 Introduction
 ------------
@@ -202,4 +202,20 @@ The following properties are synchronized between a Tripletex Product and a  Pro
    * - stockOfGoods
      - quantityPerUnit
      - "string"
+
+
+Tripletex Productgroup to  Productcategory
+------------------------------------------
+Every Tripletex Productgroup will be synchronized with a  Productcategory.
+
+Once a link between a Tripletex Productgroup and a  Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Productgroup and a  Productcategory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Productgroup Property
+     -  Productcategory Property
+     -  Data Type
 
