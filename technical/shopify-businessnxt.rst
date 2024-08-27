@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-27 11:05:02
+Generated: 2024-08-27 11:46:17
 
 Introduction
 ------------
@@ -89,6 +89,22 @@ The following properties are synchronized between a Shopify Customer and a  Curr
    * - default_address.country_name
      - name
      - "string"
+
+
+Shopify Customer to  Productcategory
+------------------------------------
+Every Shopify Customer will be synchronized with a  Productcategory.
+
+Once a link between a Shopify Customer and a  Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Customer and a  Productcategory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Customer Property
+     -  Productcategory Property
+     -  Data Type
 
 
 Shopify Order to  Country
