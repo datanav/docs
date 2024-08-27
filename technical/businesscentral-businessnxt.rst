@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-27 09:38:13
+Generated: 2024-08-27 10:30:17
 
 Introduction
 ------------
@@ -149,6 +149,22 @@ The following properties are synchronized between a Businesscentral Salesorders 
    * - shipToCountry
      - isoCode
      - "string"
+
+
+Businesscentral Salesorders to  Order
+-------------------------------------
+Every Businesscentral Salesorders will be synchronized with a  Order.
+
+Once a link between a Businesscentral Salesorders and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorders and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorders Property
+     -  Order Property
+     -  Data Type
 
 
 Businesscentral Salesquotes to  Country
