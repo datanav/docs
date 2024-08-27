@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-27 12:27:38
+Generated: 2024-08-27 13:20:18
 
 Introduction
 ------------
@@ -177,6 +177,22 @@ The following properties are synchronized between a Tripletex Order and a  Order
    * - orderDate
      - orderDate
      - "string"
+
+
+Tripletex Orderline to  Orderline
+---------------------------------
+Every Tripletex Orderline will be synchronized with a  Orderline.
+
+Once a link between a Tripletex Orderline and a  Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a  Orderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     -  Orderline Property
+     -  Data Type
 
 
 Tripletex Product to  Product
