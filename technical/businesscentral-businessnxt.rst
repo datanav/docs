@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-27 00:00:02
+Generated: 2024-08-27 07:25:50
 
 Introduction
 ------------
@@ -22,6 +22,22 @@ The following properties are synchronized between a Businesscentral Companies an
 
    * - Businesscentral Companies Property
      -  Company Property
+     -  Data Type
+
+
+Businesscentral Currencies to  Address
+--------------------------------------
+Every Businesscentral Currencies will be synchronized with a  Address.
+
+Once a link between a Businesscentral Currencies and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Currencies and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Currencies Property
+     -  Address Property
      -  Data Type
 
 
