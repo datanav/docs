@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-27 07:25:50
+Generated: 2024-08-27 07:30:50
 
 Introduction
 ------------
@@ -54,6 +54,22 @@ The following properties are synchronized between a Powerofficego Departments an
    * - Name
      - name
      - "string"
+
+
+Powerofficego Contactperson to  Address
+---------------------------------------
+Every Powerofficego Contactperson will be synchronized with a  Address.
+
+Once a link between a Powerofficego Contactperson and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Contactperson and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     -  Address Property
+     -  Data Type
 
 
 Powerofficego Contactperson to  Country
@@ -124,6 +140,38 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - MailAddress.CountryCode
      - isoCode
      - "string"
+
+
+Powerofficego Customers person to  Address
+------------------------------------------
+Every Powerofficego Customers person will be synchronized with a  Address.
+
+Once a link between a Powerofficego Customers person and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers person and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers person Property
+     -  Address Property
+     -  Data Type
+
+
+Powerofficego Location to  Address
+----------------------------------
+Every Powerofficego Location will be synchronized with a  Address.
+
+Once a link between a Powerofficego Location and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Location and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Location Property
+     -  Address Property
+     -  Data Type
 
 
 Powerofficego Location to  Country
