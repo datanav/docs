@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-27 11:48:29
+Generated: 2024-08-27 11:52:19
 
 Introduction
 ------------
@@ -95,25 +95,6 @@ The following properties are synchronized between a Businesscentral Currencies a
      - "string"
 
 
-Businesscentral Currencies to  Productcategory
-----------------------------------------------
-Every Businesscentral Currencies will be synchronized with a  Productcategory.
-
-Once a link between a Businesscentral Currencies and a  Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Currencies and a  Productcategory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Currencies Property
-     -  Productcategory Property
-     -  Data Type
-   * - displayName
-     - text
-     - "string"
-
-
 Businesscentral Customers company to  Address
 ---------------------------------------------
 Every Businesscentral Customers company will be synchronized with a  Address.
@@ -175,6 +156,22 @@ The following properties are synchronized between a Businesscentral Itemcategori
    * - displayName
      - text
      - "string"
+
+
+Businesscentral Items to  Alternativeproduct
+--------------------------------------------
+Every Businesscentral Items will be synchronized with a  Alternativeproduct.
+
+Once a link between a Businesscentral Items and a  Alternativeproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Items and a  Alternativeproduct:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Items Property
+     -  Alternativeproduct Property
+     -  Data Type
 
 
 Businesscentral Items to  Product
