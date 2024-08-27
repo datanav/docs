@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-27 07:25:50
+Generated: 2024-08-27 07:30:50
 
 Introduction
 ------------
@@ -63,6 +63,22 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
      - "string"
 
 
+HubSpot Dealcompanyassociationtype to  Address
+----------------------------------------------
+Every HubSpot Dealcompanyassociationtype will be synchronized with a  Address.
+
+Once a link between a HubSpot Dealcompanyassociationtype and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcompanyassociationtype and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcompanyassociationtype Property
+     -  Address Property
+     -  Data Type
+
+
 HubSpot Dealcompanyassociationtype to  Country
 ----------------------------------------------
 Every HubSpot Dealcompanyassociationtype will be synchronized with a  Country.
@@ -80,6 +96,22 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - label
      - name
      - "string"
+
+
+HubSpot Dealcontactassociationtype to  Address
+----------------------------------------------
+Every HubSpot Dealcontactassociationtype will be synchronized with a  Address.
+
+Once a link between a HubSpot Dealcontactassociationtype and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcontactassociationtype and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcontactassociationtype Property
+     -  Address Property
+     -  Data Type
 
 
 HubSpot Dealcontactassociationtype to  Country
@@ -101,6 +133,22 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
      - "string"
 
 
+HubSpot Lineitemdealassociationtype to  Address
+-----------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a  Address.
+
+Once a link between a HubSpot Lineitemdealassociationtype and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociationtype Property
+     -  Address Property
+     -  Data Type
+
+
 HubSpot Lineitemdealassociationtype to  Country
 -----------------------------------------------
 Every HubSpot Lineitemdealassociationtype will be synchronized with a  Country.
@@ -118,6 +166,22 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - label
      - name
      - "string"
+
+
+HubSpot Lineitemquoteassociationtype to  Address
+------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a  Address.
+
+Once a link between a HubSpot Lineitemquoteassociationtype and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociationtype Property
+     -  Address Property
+     -  Data Type
 
 
 HubSpot Lineitemquoteassociationtype to  Country
@@ -139,6 +203,22 @@ The following properties are synchronized between a HubSpot Lineitemquoteassocia
      - "string"
 
 
+HubSpot Quotecompanyassociationtype to  Address
+-----------------------------------------------
+Every HubSpot Quotecompanyassociationtype will be synchronized with a  Address.
+
+Once a link between a HubSpot Quotecompanyassociationtype and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecompanyassociationtype and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecompanyassociationtype Property
+     -  Address Property
+     -  Data Type
+
+
 HubSpot Quotecompanyassociationtype to  Country
 -----------------------------------------------
 Every HubSpot Quotecompanyassociationtype will be synchronized with a  Country.
@@ -156,6 +236,22 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
    * - label
      - name
      - "string"
+
+
+HubSpot Quotecontactassociationtype to  Address
+-----------------------------------------------
+Every HubSpot Quotecontactassociationtype will be synchronized with a  Address.
+
+Once a link between a HubSpot Quotecontactassociationtype and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecontactassociationtype and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecontactassociationtype Property
+     -  Address Property
+     -  Data Type
 
 
 HubSpot Quotecontactassociationtype to  Country
@@ -177,6 +273,22 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
      - "string"
 
 
+HubSpot Quotedealassociationtype to  Address
+--------------------------------------------
+Every HubSpot Quotedealassociationtype will be synchronized with a  Address.
+
+Once a link between a HubSpot Quotedealassociationtype and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotedealassociationtype and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotedealassociationtype Property
+     -  Address Property
+     -  Data Type
+
+
 HubSpot Quotedealassociationtype to  Country
 --------------------------------------------
 Every HubSpot Quotedealassociationtype will be synchronized with a  Country.
@@ -194,6 +306,22 @@ The following properties are synchronized between a HubSpot Quotedealassociation
    * - label
      - name
      - "string"
+
+
+HubSpot Quotequotetemplateassociationtype to  Address
+-----------------------------------------------------
+Every HubSpot Quotequotetemplateassociationtype will be synchronized with a  Address.
+
+Once a link between a HubSpot Quotequotetemplateassociationtype and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotequotetemplateassociationtype and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotequotetemplateassociationtype Property
+     -  Address Property
+     -  Data Type
 
 
 HubSpot Quotequotetemplateassociationtype to  Country
@@ -276,6 +404,22 @@ The following properties are synchronized between a HubSpot Company and a  Count
    * - properties.type
      - name
      - "string"
+
+
+HubSpot Contact to  Address
+---------------------------
+Every HubSpot Contact will be synchronized with a  Address.
+
+Once a link between a HubSpot Contact and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     -  Address Property
+     -  Data Type
 
 
 HubSpot Deal to  Address
