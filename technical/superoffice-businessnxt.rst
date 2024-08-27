@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-27 08:40:15
+Generated: 2024-08-27 08:52:50
 
 Introduction
 ------------
@@ -72,42 +72,5 @@ The following properties are synchronized between a SuperOffice Listcurrencyitem
      -  Data Type
    * - Name
      - isoCode
-     - "string"
-
-
-SuperOffice Person to  Address
-------------------------------
-Every SuperOffice Person will be synchronized with a  Address.
-
-Once a link between a SuperOffice Person and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Person and a  Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Person Property
-     -  Address Property
-     -  Data Type
-   * - Address.Street.Address1
-     - addressLine1
-     - "string"
-   * - Address.Street.Address2
-     - addressLine2
-     - "string"
-   * - Address.Street.Address3
-     - addressLine3
-     - "string"
-   * - Address.Street.City
-     - postalArea
-     - "string"
-   * - Address.Street.Zipcode
-     - postCode
-     - "string"
-   * - Country.CountryId
-     - countryNo
-     - "string"
-   * - PersonId
-     - companyNo
      - "string"
 
