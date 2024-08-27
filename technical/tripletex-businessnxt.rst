@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-27 11:55:17
+Generated: 2024-08-27 12:02:26
 
 Introduction
 ------------
@@ -163,22 +163,6 @@ The following properties are synchronized between a Tripletex Order and a  Order
      - "string"
 
 
-Tripletex Product to  Alternativeproduct
-----------------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Alternativeproduct.
-
-Once a link between a Tripletex Product and a  Alternativeproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Product and a  Alternativeproduct:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     -  Alternativeproduct Property
-     -  Data Type
-
-
 Tripletex Product to  Product
 -----------------------------
 preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Product.
@@ -221,20 +205,4 @@ The following properties are synchronized between a Tripletex Productgroup and a
    * - name
      - text
      - "string"
-
-
-Tripletex Productgroup to  Vat
-------------------------------
-Every Tripletex Productgroup will be synchronized with a  Vat.
-
-Once a link between a Tripletex Productgroup and a  Vat is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Productgroup and a  Vat:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productgroup Property
-     -  Vat Property
-     -  Data Type
 
