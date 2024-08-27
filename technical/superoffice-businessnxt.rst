@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-27 11:55:17
+Generated: 2024-08-27 11:56:59
 
 Introduction
 ------------
@@ -133,6 +133,9 @@ The following properties are synchronized between a SuperOffice Listproductcateg
    * - SuperOffice Listproductcategoryitems Property
      -  Vat Property
      -  Data Type
+   * - Tooltip
+     - description
+     - "string"
 
 
 SuperOffice Product to  Alternativeproduct
