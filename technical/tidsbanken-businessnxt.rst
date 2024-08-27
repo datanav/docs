@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-27 00:00:02
+Generated: 2024-08-27 07:30:50
 
 Introduction
 ------------
@@ -57,4 +57,20 @@ The following properties are synchronized between a Tidsbanken Kunde and a  Comp
    * - sesam_kundeId
      - companyBusinessNo (Dependant on having wd:Q852835 in countryIsoCode)
      - "string"
+
+
+Tidsbanken Ansatt to  Address
+-----------------------------
+Every Tidsbanken Ansatt will be synchronized with a  Address.
+
+Once a link between a Tidsbanken Ansatt and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Ansatt and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Ansatt Property
+     -  Address Property
+     -  Data Type
 
