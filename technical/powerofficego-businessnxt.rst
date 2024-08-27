@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-27 08:40:15
+Generated: 2024-08-27 08:52:50
 
 Introduction
 ------------
@@ -53,40 +53,6 @@ The following properties are synchronized between a Powerofficego Departments an
      - "string"
    * - Name
      - name
-     - "string"
-
-
-Powerofficego Contactperson to  Address
----------------------------------------
-Every Powerofficego Contactperson will be synchronized with a  Address.
-
-Once a link between a Powerofficego Contactperson and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Contactperson and a  Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Contactperson Property
-     -  Address Property
-     -  Data Type
-   * - address1
-     - addressLine1
-     - "string"
-   * - address2
-     - addressLine2
-     - "string"
-   * - city
-     - postalArea
-     - "string"
-   * - id
-     - companyNo
-     - "string"
-   * - residenceCountryCode
-     - countryNo
-     - "string"
-   * - zipCode
-     - postCode
      - "string"
 
 
@@ -144,72 +110,20 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Customers person to  Address
-------------------------------------------
-Every Powerofficego Customers person will be synchronized with a  Address.
+Powerofficego Departments to  Address
+-------------------------------------
+Every Powerofficego Departments will be synchronized with a  Address.
 
-Once a link between a Powerofficego Customers person and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Departments and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers person and a  Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers person Property
-     -  Address Property
-     -  Data Type
-   * - Id
-     - companyNo
-     - "string"
-   * - MailAddress.AddressLine1
-     - addressLine1
-     - "string"
-   * - MailAddress.AddressLine2
-     - addressLine2
-     - "string"
-   * - MailAddress.City
-     - postalArea
-     - "string"
-   * - MailAddress.CountryCode
-     - countryNo
-     - "string"
-   * - MailAddress.ZipCode
-     - postCode
-     - "string"
-
-
-Powerofficego Location to  Address
-----------------------------------
-Every Powerofficego Location will be synchronized with a  Address.
-
-Once a link between a Powerofficego Location and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Location and a  Address:
+The following properties are synchronized between a Powerofficego Departments and a  Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Location Property
+   * - Powerofficego Departments Property
      -  Address Property
      -  Data Type
-   * - address1
-     - addressLine1
-     - "string"
-   * - address2
-     - addressLine2
-     - "string"
-   * - address3
-     - addressLine3
-     - "string"
-   * - city
-     - postalArea
-     - "string"
-   * - countryCode
-     - countryNo
-     - "string"
-   * - zipCode
-     - postCode
-     - "string"
 
 
 Powerofficego Location to  Country
