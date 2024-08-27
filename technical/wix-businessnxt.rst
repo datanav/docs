@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-08-27 10:30:17
+Generated: 2024-08-27 11:14:01
 
 Introduction
 ------------
@@ -39,6 +39,9 @@ The following properties are synchronized between a Wix.com Orders and a  Order:
    * - Wix.com Orders Property
      -  Order Property
      -  Data Type
+   * - billingInfo.paidDate
+     - settlementDate
+     - "string"
 
 
 Wix.com Products to  Product
