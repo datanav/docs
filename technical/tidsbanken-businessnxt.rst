@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-27 09:38:13
+Generated: 2024-08-27 09:38:16
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Tidsbanken Avdeling and a  A
    * - Tidsbanken Avdeling Property
      -  Address Property
      -  Data Type
+   * - Navn
+     - name
+     - "string"
 
 
 Tidsbanken Avdeling to  Company
@@ -64,6 +67,15 @@ The following properties are synchronized between a Tidsbanken Kunde and a  Addr
    * - Tidsbanken Kunde Property
      -  Address Property
      -  Data Type
+   * - Mobil
+     - mobilePhone
+     - "string"
+   * - Navn
+     - name
+     - "string"
+   * - Telefon
+     - phone
+     - "string"
 
 
 Tidsbanken Kunde to  Company
