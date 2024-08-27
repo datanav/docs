@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-27 08:10:03
+Generated: 2024-08-27 08:11:17
 
 Introduction
 ------------
@@ -41,6 +41,9 @@ The following properties are synchronized between a Businesscentral Contacts per
      -  Data Type
    * - addressLine1
      - addressLine1
+     - "string"
+   * - addressLine2
+     - addressLine2
      - "string"
    * - id
      - companyNo
@@ -102,6 +105,12 @@ The following properties are synchronized between a Businesscentral Customers pe
    * - Businesscentral Customers person Property
      -  Address Property
      -  Data Type
+   * - addressLine1
+     - addressLine1
+     - "string"
+   * - addressLine2
+     - addressLine2
+     - "string"
    * - id
      - companyNo
      - "string"
