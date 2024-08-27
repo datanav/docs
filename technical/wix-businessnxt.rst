@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-08-27 07:32:45
+Generated: 2024-08-27 09:25:50
 
 Introduction
 ------------
@@ -22,5 +22,21 @@ The following properties are synchronized between a Wix.com Currencies and a  Cu
 
    * - Wix.com Currencies Property
      -  Currency Property
+     -  Data Type
+
+
+Wix.com Products to  Product
+----------------------------
+Every Wix.com Products will be synchronized with a  Product.
+
+Once a link between a Wix.com Products and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a  Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
+     -  Product Property
      -  Data Type
 
