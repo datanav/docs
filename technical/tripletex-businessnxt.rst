@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-27 11:05:02
+Generated: 2024-08-27 11:12:01
 
 Introduction
 ------------
@@ -155,6 +155,9 @@ The following properties are synchronized between a Tripletex Order and a  Order
    * - Tripletex Order Property
      -  Order Property
      -  Data Type
+   * - deliveryDate
+     - dueDate
+     - "string"
    * - orderDate
      - orderDate
      - "string"
