@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-08-27 11:52:19
+Generated: 2024-08-27 12:02:26
 
 Introduction
 ------------
@@ -45,22 +45,6 @@ The following properties are synchronized between a Wix.com Orders and a  Order:
    * - dateCreated
      - invoiceDate
      - "string"
-
-
-Wix.com Products to  Alternativeproduct
----------------------------------------
-Every Wix.com Products will be synchronized with a  Alternativeproduct.
-
-Once a link between a Wix.com Products and a  Alternativeproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Products and a  Alternativeproduct:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Products Property
-     -  Alternativeproduct Property
-     -  Data Type
 
 
 Wix.com Products to  Product
