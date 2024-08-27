@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-27 12:27:38
+Generated: 2024-08-27 12:27:42
 
 Introduction
 ------------
@@ -70,6 +70,12 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - SuperOffice Quotealternative Property
      -  Order Property
      -  Data Type
+   * - DiscountPercent
+     - totalDiscountAmountInCurrency
+     - "string"
+   * - VAT
+     - taxCode
+     - "string"
 
 
 SuperOffice Quoteline to  Order
@@ -102,6 +108,15 @@ The following properties are synchronized between a SuperOffice Sale and a  Orde
    * - SuperOffice Sale Property
      -  Order Property
      -  Data Type
+   * - Heading
+     - name
+     - "string"
+   * - Saledate
+     - dueDate
+     - "string"
+   * - Saledate
+     - orderDate
+     - "string"
 
 
 SuperOffice Listcountryitems to  Country
