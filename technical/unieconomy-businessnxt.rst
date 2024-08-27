@@ -2,7 +2,7 @@
 Unieconomy to  Dataflow
 =======================
 
-Generated: 2024-08-27 09:38:13
+Generated: 2024-08-27 09:38:16
 
 Introduction
 ------------
@@ -55,6 +55,9 @@ The following properties are synchronized between a Unieconomy Departments and a
    * - Unieconomy Departments Property
      -  Address Property
      -  Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Unieconomy Departments to  Company
