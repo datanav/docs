@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-08-27 12:27:38
+Generated: 2024-08-27 12:27:42
 
 Introduction
 ------------
@@ -67,6 +67,12 @@ The following properties are synchronized between a ZohoCRM Deal and a  Order:
    * - ZohoCRM Deal Property
      -  Order Property
      -  Data Type
+   * - Closing_Date
+     - orderDate
+     - "string"
+   * - Deal_Name
+     - name
+     - "string"
 
 
 ZohoCRM Account to  Country
