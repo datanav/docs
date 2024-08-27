@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-27 10:46:00
+Generated: 2024-08-27 11:05:02
 
 Introduction
 ------------
@@ -133,6 +133,9 @@ The following properties are synchronized between a Shopify Order and a  Order:
    * - Shopify Order Property
      -  Order Property
      -  Data Type
+   * - created_at
+     - orderDate
+     - "string"
    * - name
      - name
      - "string"
