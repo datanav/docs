@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-27 09:22:50
+Generated: 2024-08-27 09:25:52
 
 Introduction
 ------------
@@ -140,6 +140,25 @@ The following properties are synchronized between a Powerofficego Outgoinginvoic
    * - Powerofficego Outgoinginvoices Property
      -  Country Property
      -  Data Type
+
+
+Powerofficego Product to  Product
+---------------------------------
+Every Powerofficego Product will be synchronized with a  Product.
+
+Once a link between a Powerofficego Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product and a  Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     -  Product Property
+     -  Data Type
+   * - description
+     - description
+     - "string"
 
 
 Powerofficego Suppliers to  Country
