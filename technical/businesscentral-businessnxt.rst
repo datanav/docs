@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-27 09:27:01
+Generated: 2024-08-27 09:32:49
 
 Introduction
 ------------
@@ -89,22 +89,6 @@ The following properties are synchronized between a Businesscentral Customers co
    * - displayName
      - name
      - "string"
-
-
-Businesscentral Customers company to  Product
----------------------------------------------
-Every Businesscentral Customers company will be synchronized with a  Product.
-
-Once a link between a Businesscentral Customers company and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Customers company and a  Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Customers company Property
-     -  Product Property
-     -  Data Type
 
 
 Businesscentral Items to  Product
