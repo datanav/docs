@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-27 12:27:38
+Generated: 2024-08-27 12:27:42
 
 Introduction
 ------------
@@ -319,6 +319,9 @@ The following properties are synchronized between a HubSpot Quote and a  Order:
    * - HubSpot Quote Property
      -  Order Property
      -  Data Type
+   * - properties.hs_title
+     - name
+     - "string"
 
 
 HubSpot Quotecompanyassociation to  Order
