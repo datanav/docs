@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-08-27 11:17:00
+Generated: 2024-08-27 11:46:17
 
 Introduction
 ------------
@@ -95,6 +95,22 @@ The following properties are synchronized between a Wave Currency and a  Currenc
    * - name
      - name
      - "string"
+
+
+Wave Currency to  Productcategory
+---------------------------------
+Every Wave Currency will be synchronized with a  Productcategory.
+
+Once a link between a Wave Currency and a  Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Currency and a  Productcategory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Currency Property
+     -  Productcategory Property
+     -  Data Type
 
 
 Wave Invoice to  Order
