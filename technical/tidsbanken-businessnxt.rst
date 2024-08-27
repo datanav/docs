@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-27 08:38:30
+Generated: 2024-08-27 08:52:50
 
 Introduction
 ------------
@@ -59,30 +59,18 @@ The following properties are synchronized between a Tidsbanken Kunde and a  Comp
      - "string"
 
 
-Tidsbanken Ansatt to  Address
------------------------------
-Every Tidsbanken Ansatt will be synchronized with a  Address.
+Tidsbanken Avdeling to  Address
+-------------------------------
+Every Tidsbanken Avdeling will be synchronized with a  Address.
 
-Once a link between a Tidsbanken Ansatt and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Avdeling and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Ansatt and a  Address:
+The following properties are synchronized between a Tidsbanken Avdeling and a  Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tidsbanken Ansatt Property
+   * - Tidsbanken Avdeling Property
      -  Address Property
      -  Data Type
-   * - Adresse
-     - addressLine1
-     - "string"
-   * - Id
-     - companyNo
-     - "string"
-   * - Postnummer
-     - postCode
-     - "string"
-   * - Poststed
-     - postalArea
-     - "string"
 
