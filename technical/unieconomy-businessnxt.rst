@@ -2,7 +2,7 @@
 Unieconomy to  Dataflow
 =======================
 
-Generated: 2024-08-27 07:25:50
+Generated: 2024-08-27 07:32:45
 
 Introduction
 ------------
@@ -80,22 +80,6 @@ The following properties are synchronized between a Unieconomy Countries and a  
    * - Name
      - name
      - "string"
-
-
-Unieconomy Currencycodes to  Address
-------------------------------------
-Every Unieconomy Currencycodes will be synchronized with a  Address.
-
-Once a link between a Unieconomy Currencycodes and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Unieconomy Currencycodes and a  Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Unieconomy Currencycodes Property
-     -  Address Property
-     -  Data Type
 
 
 Unieconomy Currencycodes to  Currency
