@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-27 11:47:58
+Generated: 2024-08-27 11:52:19
 
 Introduction
 ------------
@@ -400,22 +400,6 @@ The following properties are synchronized between a HubSpot Account and a  Curre
      - "string"
 
 
-HubSpot Account to  Productcategory
------------------------------------
-Every HubSpot Account will be synchronized with a  Productcategory.
-
-Once a link between a HubSpot Account and a  Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Account and a  Productcategory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Account Property
-     -  Productcategory Property
-     -  Data Type
-
-
 HubSpot Company to  Country
 ---------------------------
 Every HubSpot Company will be synchronized with a  Country.
@@ -488,19 +472,19 @@ The following properties are synchronized between a HubSpot Deal and a  Order:
      - "string"
 
 
-HubSpot Deal to  Productcategory
---------------------------------
-Every HubSpot Deal will be synchronized with a  Productcategory.
+HubSpot Product to  Alternativeproduct
+--------------------------------------
+Every HubSpot Product will be synchronized with a  Alternativeproduct.
 
-Once a link between a HubSpot Deal and a  Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Product and a  Alternativeproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a  Productcategory:
+The following properties are synchronized between a HubSpot Product and a  Alternativeproduct:
 
 .. list-table::
    :header-rows: 1
 
-   * - HubSpot Deal Property
-     -  Productcategory Property
+   * - HubSpot Product Property
+     -  Alternativeproduct Property
      -  Data Type
 
 
