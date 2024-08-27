@@ -2,7 +2,7 @@
 Unieconomy to  Dataflow
 =======================
 
-Generated: 2024-08-27 09:18:52
+Generated: 2024-08-27 09:22:50
 
 Introduction
 ------------
@@ -118,25 +118,6 @@ The following properties are synchronized between a Unieconomy Currencycodes and
    * - Code
      - isoCode
      - "string"
-   * - Name
-     - name
-     - "string"
-
-
-Unieconomy Departments to  Address
-----------------------------------
-Every Unieconomy Departments will be synchronized with a  Address.
-
-Once a link between a Unieconomy Departments and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Unieconomy Departments and a  Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Unieconomy Departments Property
-     -  Address Property
-     -  Data Type
    * - Name
      - name
      - "string"
