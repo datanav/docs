@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-08-27 00:00:02
+Generated: 2024-08-27 07:30:50
 
 Introduction
 ------------
@@ -51,6 +51,22 @@ The following properties are synchronized between a ZohoCRM Account and a  Count
    * - Shipping_Country
      - name
      - "string"
+
+
+ZohoCRM Contact to  Address
+---------------------------
+Every ZohoCRM Contact will be synchronized with a  Address.
+
+Once a link between a ZohoCRM Contact and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Contact and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Contact Property
+     -  Address Property
+     -  Data Type
 
 
 ZohoCRM Contact to  Country
