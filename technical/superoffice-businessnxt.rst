@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-27 07:32:45
+Generated: 2024-08-27 08:11:17
 
 Introduction
 ------------
@@ -89,6 +89,15 @@ The following properties are synchronized between a SuperOffice Person and a  Ad
    * - SuperOffice Person Property
      -  Address Property
      -  Data Type
+   * - Address.Street.Address1
+     - addressLine1
+     - "string"
+   * - Address.Street.Address2
+     - addressLine2
+     - "string"
+   * - Address.Street.Address3
+     - addressLine3
+     - "string"
    * - PersonId
      - companyNo
      - "string"
