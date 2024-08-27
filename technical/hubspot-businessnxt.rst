@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-27 00:07:54
+Generated: 2024-08-27 07:25:50
 
 Introduction
 ------------
@@ -26,6 +26,22 @@ The following properties are synchronized between a HubSpot Company and a  Compa
    * - properties.name
      - name
      - "string"
+
+
+HubSpot Contactcompanyassociationtype to  Address
+-------------------------------------------------
+Every HubSpot Contactcompanyassociationtype will be synchronized with a  Address.
+
+Once a link between a HubSpot Contactcompanyassociationtype and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contactcompanyassociationtype and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contactcompanyassociationtype Property
+     -  Address Property
+     -  Data Type
 
 
 HubSpot Contactcompanyassociationtype to  Country
@@ -199,6 +215,22 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
      - "string"
 
 
+HubSpot Account to  Address
+---------------------------
+Every HubSpot Account will be synchronized with a  Address.
+
+Once a link between a HubSpot Account and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Account and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Account Property
+     -  Address Property
+     -  Data Type
+
+
 HubSpot Account to  Currency
 ----------------------------
 Every HubSpot Account will be synchronized with a  Currency.
@@ -244,6 +276,22 @@ The following properties are synchronized between a HubSpot Company and a  Count
    * - properties.type
      - name
      - "string"
+
+
+HubSpot Deal to  Address
+------------------------
+Every HubSpot Deal will be synchronized with a  Address.
+
+Once a link between a HubSpot Deal and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     -  Address Property
+     -  Data Type
 
 
 HubSpot Deal to  Currency
