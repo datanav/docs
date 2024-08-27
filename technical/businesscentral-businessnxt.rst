@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-27 12:02:26
+Generated: 2024-08-27 13:20:18
 
 Introduction
 ------------
@@ -178,6 +178,22 @@ The following properties are synchronized between a Businesscentral Items and a 
    * - unitPrice
      - priceQuantity
      - "string"
+
+
+Businesscentral Salesorderlines to  Orderline
+---------------------------------------------
+Every Businesscentral Salesorderlines will be synchronized with a  Orderline.
+
+Once a link between a Businesscentral Salesorderlines and a  Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorderlines and a  Orderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorderlines Property
+     -  Orderline Property
+     -  Data Type
 
 
 Businesscentral Salesorders to  Country
