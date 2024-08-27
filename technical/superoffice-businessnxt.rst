@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-27 08:38:30
+Generated: 2024-08-27 08:40:15
 
 Introduction
 ------------
@@ -103,6 +103,9 @@ The following properties are synchronized between a SuperOffice Person and a  Ad
      - "string"
    * - Address.Street.Zipcode
      - postCode
+     - "string"
+   * - Country.CountryId
+     - countryNo
      - "string"
    * - PersonId
      - companyNo
