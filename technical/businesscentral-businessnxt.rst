@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-27 11:47:58
+Generated: 2024-08-27 11:48:13
 
 Introduction
 ------------
@@ -156,6 +156,22 @@ The following properties are synchronized between a Businesscentral Customers co
    * - displayName
      - name
      - "string"
+
+
+Businesscentral Itemcategories to  Productcategory
+--------------------------------------------------
+Every Businesscentral Itemcategories will be synchronized with a  Productcategory.
+
+Once a link between a Businesscentral Itemcategories and a  Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Itemcategories and a  Productcategory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Itemcategories Property
+     -  Productcategory Property
+     -  Data Type
 
 
 Businesscentral Items to  Product
