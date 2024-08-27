@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-08-27 12:02:26
+Generated: 2024-08-27 13:20:18
 
 Introduction
 ------------
@@ -45,6 +45,22 @@ The following properties are synchronized between a Wix.com Orders and a  Order:
    * - dateCreated
      - invoiceDate
      - "string"
+
+
+Wix.com Orders to  Orderline
+----------------------------
+Every Wix.com Orders will be synchronized with a  Orderline.
+
+Once a link between a Wix.com Orders and a  Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Orders and a  Orderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Orders Property
+     -  Orderline Property
+     -  Data Type
 
 
 Wix.com Products to  Product
