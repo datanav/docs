@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-27 11:55:13
+Generated: 2024-08-27 12:02:26
 
 Introduction
 ------------
@@ -156,38 +156,6 @@ The following properties are synchronized between a Businesscentral Itemcategori
    * - displayName
      - text
      - "string"
-
-
-Businesscentral Itemcategories to  Vat
---------------------------------------
-Every Businesscentral Itemcategories will be synchronized with a  Vat.
-
-Once a link between a Businesscentral Itemcategories and a  Vat is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Itemcategories and a  Vat:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Itemcategories Property
-     -  Vat Property
-     -  Data Type
-
-
-Businesscentral Items to  Alternativeproduct
---------------------------------------------
-Every Businesscentral Items will be synchronized with a  Alternativeproduct.
-
-Once a link between a Businesscentral Items and a  Alternativeproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Items and a  Alternativeproduct:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Items Property
-     -  Alternativeproduct Property
-     -  Data Type
 
 
 Businesscentral Items to  Product
