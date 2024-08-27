@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-27 09:22:50
+Generated: 2024-08-27 09:25:52
 
 Introduction
 ------------
@@ -94,5 +94,24 @@ The following properties are synchronized between a Tripletex Currency and a  Cu
      -  Data Type
    * - displayName
      - name
+     - "string"
+
+
+Tripletex Product to  Product
+-----------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Product.
+
+Once a link between a Tripletex Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a  Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     -  Product Property
+     -  Data Type
+   * - description
+     - description
      - "string"
 
