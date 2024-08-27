@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-08-27 13:20:18
+Generated: 2024-08-27 13:40:06
 
 Introduction
 ------------
@@ -61,6 +61,9 @@ The following properties are synchronized between a Wix.com Orders and a  Orderl
    * - Wix.com Orders Property
      -  Orderline Property
      -  Data Type
+   * - id
+     - orderNo
+     - "string"
 
 
 Wix.com Products to  Product
