@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-27 11:52:19
+Generated: 2024-08-27 11:55:17
 
 Introduction
 ------------
@@ -117,6 +117,22 @@ The following properties are synchronized between a SuperOffice Listproductcateg
    * - Tooltip
      - description
      - "string"
+
+
+SuperOffice Listproductcategoryitems to  Vat
+--------------------------------------------
+Every SuperOffice Listproductcategoryitems will be synchronized with a  Vat.
+
+Once a link between a SuperOffice Listproductcategoryitems and a  Vat is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Listproductcategoryitems and a  Vat:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Listproductcategoryitems Property
+     -  Vat Property
+     -  Data Type
 
 
 SuperOffice Product to  Alternativeproduct
