@@ -2,7 +2,7 @@
 Unieconomy to  Dataflow
 =======================
 
-Generated: 2024-08-27 11:48:29
+Generated: 2024-08-27 11:52:19
 
 Introduction
 ------------
@@ -155,24 +155,5 @@ The following properties are synchronized between a Unieconomy Currencycodes and
      - "string"
    * - Name
      - name
-     - "string"
-
-
-Unieconomy Currencycodes to  Productcategory
---------------------------------------------
-Every Unieconomy Currencycodes will be synchronized with a  Productcategory.
-
-Once a link between a Unieconomy Currencycodes and a  Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Unieconomy Currencycodes and a  Productcategory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Unieconomy Currencycodes Property
-     -  Productcategory Property
-     -  Data Type
-   * - Name
-     - text
      - "string"
 
