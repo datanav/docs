@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-27 11:48:29
+Generated: 2024-08-27 11:52:19
 
 Introduction
 ------------
@@ -148,22 +148,6 @@ The following properties are synchronized between a Powerofficego Currency and a
      -  Data Type
 
 
-Powerofficego Currency to  Productcategory
-------------------------------------------
-Every Powerofficego Currency will be synchronized with a  Productcategory.
-
-Once a link between a Powerofficego Currency and a  Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Currency and a  Productcategory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Currency Property
-     -  Productcategory Property
-     -  Data Type
-
-
 Powerofficego Customers to  Country
 -----------------------------------
 Every Powerofficego Customers will be synchronized with a  Country.
@@ -212,6 +196,22 @@ The following properties are synchronized between a Powerofficego Outgoinginvoic
 
    * - Powerofficego Outgoinginvoices Property
      -  Country Property
+     -  Data Type
+
+
+Powerofficego Product to  Alternativeproduct
+--------------------------------------------
+Every Powerofficego Product will be synchronized with a  Alternativeproduct.
+
+Once a link between a Powerofficego Product and a  Alternativeproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product and a  Alternativeproduct:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     -  Alternativeproduct Property
      -  Data Type
 
 
