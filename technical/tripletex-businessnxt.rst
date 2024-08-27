@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-27 09:01:36
+Generated: 2024-08-27 09:22:50
 
 Introduction
 ------------
@@ -93,25 +93,6 @@ The following properties are synchronized between a Tripletex Currency and a  Cu
      -  Currency Property
      -  Data Type
    * - displayName
-     - name
-     - "string"
-
-
-Tripletex Department to  Address
---------------------------------
-Every Tripletex Department will be synchronized with a  Address.
-
-Once a link between a Tripletex Department and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Department and a  Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Department Property
-     -  Address Property
-     -  Data Type
-   * - name
      - name
      - "string"
 
