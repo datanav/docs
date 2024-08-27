@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-27 08:38:30
+Generated: 2024-08-27 08:40:15
 
 Introduction
 ------------
@@ -81,6 +81,9 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
    * - id
      - companyNo
+     - "string"
+   * - residenceCountryCode
+     - countryNo
      - "string"
    * - zipCode
      - postCode
@@ -167,6 +170,9 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - MailAddress.City
      - postalArea
      - "string"
+   * - MailAddress.CountryCode
+     - countryNo
+     - "string"
    * - MailAddress.ZipCode
      - postCode
      - "string"
@@ -197,6 +203,9 @@ The following properties are synchronized between a Powerofficego Location and a
      - "string"
    * - city
      - postalArea
+     - "string"
+   * - countryCode
+     - countryNo
      - "string"
    * - zipCode
      - postCode
