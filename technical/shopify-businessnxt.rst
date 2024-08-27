@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-27 07:32:45
+Generated: 2024-08-27 09:25:52
 
 Introduction
 ------------
@@ -84,5 +84,24 @@ The following properties are synchronized between a Shopify Order and a  Country
      - "string"
    * - shipping_address.country_code
      - isoCode
+     - "string"
+
+
+Shopify Sesamproduct to  Product
+--------------------------------
+Every Shopify Sesamproduct will be synchronized with a  Product.
+
+Once a link between a Shopify Sesamproduct and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Sesamproduct and a  Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Sesamproduct Property
+     -  Product Property
+     -  Data Type
+   * - variants.title
+     - description
      - "string"
 
