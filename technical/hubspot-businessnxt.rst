@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-27 07:32:09
+Generated: 2024-08-27 07:32:45
 
 Introduction
 ------------
@@ -343,22 +343,6 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
      - "string"
 
 
-HubSpot Account to  Address
----------------------------
-Every HubSpot Account will be synchronized with a  Address.
-
-Once a link between a HubSpot Account and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Account and a  Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Account Property
-     -  Address Property
-     -  Data Type
-
-
 HubSpot Account to  Currency
 ----------------------------
 Every HubSpot Account will be synchronized with a  Currency.
@@ -423,22 +407,6 @@ The following properties are synchronized between a HubSpot Contact and a  Addre
    * - id
      - companyNo
      - "string"
-
-
-HubSpot Deal to  Address
-------------------------
-Every HubSpot Deal will be synchronized with a  Address.
-
-Once a link between a HubSpot Deal and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Deal and a  Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     -  Address Property
-     -  Data Type
 
 
 HubSpot Deal to  Currency
