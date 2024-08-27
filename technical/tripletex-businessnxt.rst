@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-27 00:00:02
+Generated: 2024-08-27 07:25:50
 
 Introduction
 ------------
@@ -76,6 +76,22 @@ The following properties are synchronized between a Tripletex Country and a  Cou
    * - name
      - name
      - "string"
+
+
+Tripletex Currency to  Address
+------------------------------
+Every Tripletex Currency will be synchronized with a  Address.
+
+Once a link between a Tripletex Currency and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Currency and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Currency Property
+     -  Address Property
+     -  Data Type
 
 
 Tripletex Currency to  Currency
