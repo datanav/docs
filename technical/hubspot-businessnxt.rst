@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-27 12:18:56
+Generated: 2024-08-27 12:27:38
 
 Introduction
 ------------
@@ -203,6 +203,22 @@ The following properties are synchronized between a HubSpot Lineitem and a  Orde
      -  Data Type
 
 
+HubSpot Lineitemdealassociation to  Order
+-----------------------------------------
+Every HubSpot Lineitemdealassociation will be synchronized with a  Order.
+
+Once a link between a HubSpot Lineitemdealassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
+     -  Order Property
+     -  Data Type
+
+
 HubSpot Lineitemdealassociationtype to  Address
 -----------------------------------------------
 Every HubSpot Lineitemdealassociationtype will be synchronized with a  Address.
@@ -236,6 +252,22 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - label
      - name
      - "string"
+
+
+HubSpot Lineitemquoteassociation to  Order
+------------------------------------------
+Every HubSpot Lineitemquoteassociation will be synchronized with a  Order.
+
+Once a link between a HubSpot Lineitemquoteassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociation and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociation Property
+     -  Order Property
+     -  Data Type
 
 
 HubSpot Lineitemquoteassociationtype to  Address
@@ -273,6 +305,38 @@ The following properties are synchronized between a HubSpot Lineitemquoteassocia
      - "string"
 
 
+HubSpot Quote to  Order
+-----------------------
+Every HubSpot Quote will be synchronized with a  Order.
+
+Once a link between a HubSpot Quote and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quote and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quote Property
+     -  Order Property
+     -  Data Type
+
+
+HubSpot Quotecompanyassociation to  Order
+-----------------------------------------
+Every HubSpot Quotecompanyassociation will be synchronized with a  Order.
+
+Once a link between a HubSpot Quotecompanyassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecompanyassociation and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecompanyassociation Property
+     -  Order Property
+     -  Data Type
+
+
 HubSpot Quotecompanyassociationtype to  Address
 -----------------------------------------------
 Every HubSpot Quotecompanyassociationtype will be synchronized with a  Address.
@@ -306,6 +370,22 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
    * - label
      - name
      - "string"
+
+
+HubSpot Quotecontactassociation to  Order
+-----------------------------------------
+Every HubSpot Quotecontactassociation will be synchronized with a  Order.
+
+Once a link between a HubSpot Quotecontactassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecontactassociation and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecontactassociation Property
+     -  Order Property
+     -  Data Type
 
 
 HubSpot Quotecontactassociationtype to  Address
@@ -343,6 +423,22 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
      - "string"
 
 
+HubSpot Quotedealassociation to  Order
+--------------------------------------
+Every HubSpot Quotedealassociation will be synchronized with a  Order.
+
+Once a link between a HubSpot Quotedealassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotedealassociation and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotedealassociation Property
+     -  Order Property
+     -  Data Type
+
+
 HubSpot Quotedealassociationtype to  Address
 --------------------------------------------
 Every HubSpot Quotedealassociationtype will be synchronized with a  Address.
@@ -376,6 +472,22 @@ The following properties are synchronized between a HubSpot Quotedealassociation
    * - label
      - name
      - "string"
+
+
+HubSpot Quotequotetemplateassociation to  Order
+-----------------------------------------------
+Every HubSpot Quotequotetemplateassociation will be synchronized with a  Order.
+
+Once a link between a HubSpot Quotequotetemplateassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotequotetemplateassociation and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotequotetemplateassociation Property
+     -  Order Property
+     -  Data Type
 
 
 HubSpot Quotequotetemplateassociationtype to  Address
