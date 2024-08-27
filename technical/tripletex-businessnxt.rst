@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-27 11:48:29
+Generated: 2024-08-27 11:52:19
 
 Introduction
 ------------
@@ -141,28 +141,6 @@ The following properties are synchronized between a Tripletex Currency and a  Cu
      - "string"
 
 
-Tripletex Currency to  Productcategory
---------------------------------------
-Every Tripletex Currency will be synchronized with a  Productcategory.
-
-Once a link between a Tripletex Currency and a  Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Currency and a  Productcategory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     -  Productcategory Property
-     -  Data Type
-   * - description
-     - description
-     - "string"
-   * - displayName
-     - text
-     - "string"
-
-
 Tripletex Order to  Order
 -------------------------
 Every Tripletex Order will be synchronized with a  Order.
@@ -183,6 +161,22 @@ The following properties are synchronized between a Tripletex Order and a  Order
    * - orderDate
      - orderDate
      - "string"
+
+
+Tripletex Product to  Alternativeproduct
+----------------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Alternativeproduct.
+
+Once a link between a Tripletex Product and a  Alternativeproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a  Alternativeproduct:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     -  Alternativeproduct Property
+     -  Data Type
 
 
 Tripletex Product to  Product
