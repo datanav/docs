@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-27 07:30:50
+Generated: 2024-08-27 07:30:53
 
 Introduction
 ------------
@@ -39,6 +39,9 @@ The following properties are synchronized between a Businesscentral Contacts per
    * - Businesscentral Contacts person Property
      -  Address Property
      -  Data Type
+   * - id
+     - companyNo
+     - "string"
 
 
 Businesscentral Currencies to  Address
