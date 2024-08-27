@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-27 11:52:19
+Generated: 2024-08-27 12:02:26
 
 Introduction
 ------------
@@ -139,22 +139,6 @@ The following properties are synchronized between a Shopify Order and a  Order:
    * - name
      - name
      - "string"
-
-
-Shopify Sesamproduct to  Alternativeproduct
--------------------------------------------
-Every Shopify Sesamproduct will be synchronized with a  Alternativeproduct.
-
-Once a link between a Shopify Sesamproduct and a  Alternativeproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Sesamproduct and a  Alternativeproduct:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Sesamproduct Property
-     -  Alternativeproduct Property
-     -  Data Type
 
 
 Shopify Sesamproduct to  Product
