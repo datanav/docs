@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-27 12:02:26
+Generated: 2024-08-27 13:20:18
 
 Introduction
 ------------
@@ -139,6 +139,22 @@ The following properties are synchronized between a Shopify Order and a  Order:
    * - name
      - name
      - "string"
+
+
+Shopify Order to  Orderline
+---------------------------
+Every Shopify Order will be synchronized with a  Orderline.
+
+Once a link between a Shopify Order and a  Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a  Orderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     -  Orderline Property
+     -  Data Type
 
 
 Shopify Sesamproduct to  Product
