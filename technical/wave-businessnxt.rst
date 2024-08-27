@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-08-27 08:40:15
+Generated: 2024-08-27 08:52:50
 
 Introduction
 ------------
@@ -66,88 +66,5 @@ The following properties are synchronized between a Wave Currency and a  Currenc
      -  Data Type
    * - name
      - name
-     - "string"
-
-
-Wave Customer person to  Address
---------------------------------
-Every Wave Customer person will be synchronized with a  Address.
-
-Once a link between a Wave Customer person and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer person and a  Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer person Property
-     -  Address Property
-     -  Data Type
-   * - address.addressLine1
-     - addressLine1
-     - "string"
-   * - address.addressLine2
-     - addressLine2
-     - "string"
-   * - address.city
-     - postalArea
-     - "string"
-   * - address.country.code
-     - countryNo
-     - "string"
-   * - address.postalCode
-     - postCode
-     - "string"
-   * - id
-     - companyNo
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - addressLine1
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - addressLine2
-     - "string"
-   * - shippingDetails.address.city
-     - postalArea
-     - "string"
-   * - shippingDetails.address.country.code
-     - countryNo
-     - "string"
-   * - shippingDetails.address.postalCode
-     - postCode
-     - "string"
-
-
-Wave Vendor to  Address
------------------------
-Every Wave Vendor will be synchronized with a  Address.
-
-Once a link between a Wave Vendor and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a  Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     -  Address Property
-     -  Data Type
-   * - address.addressLine1
-     - addressLine1
-     - "string"
-   * - address.addressLine2
-     - addressLine2
-     - "string"
-   * - address.city
-     - postalArea
-     - "string"
-   * - address.country.code
-     - countryNo
-     - "string"
-   * - address.postalCode
-     - postCode
-     - "string"
-   * - id
-     - companyNo
      - "string"
 
