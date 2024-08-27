@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-27 08:11:17
+Generated: 2024-08-27 08:38:30
 
 Introduction
 ------------
@@ -78,5 +78,11 @@ The following properties are synchronized between a Tidsbanken Ansatt and a  Add
      - "string"
    * - Id
      - companyNo
+     - "string"
+   * - Postnummer
+     - postCode
+     - "string"
+   * - Poststed
+     - postalArea
      - "string"
 
