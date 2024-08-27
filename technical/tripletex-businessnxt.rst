@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-27 09:38:16
+Generated: 2024-08-27 10:30:17
 
 Introduction
 ------------
@@ -139,6 +139,22 @@ The following properties are synchronized between a Tripletex Currency and a  Cu
    * - displayName
      - name
      - "string"
+
+
+Tripletex Order to  Order
+-------------------------
+Every Tripletex Order will be synchronized with a  Order.
+
+Once a link between a Tripletex Order and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     -  Order Property
+     -  Data Type
 
 
 Tripletex Product to  Product
