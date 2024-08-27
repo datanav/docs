@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-08-27 09:38:13
+Generated: 2024-08-27 09:38:16
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a ZohoCRM Account and a  Addre
    * - ZohoCRM Account Property
      -  Address Property
      -  Data Type
+   * - Account_Name
+     - name
+     - "string"
+   * - Fax
+     - fax
+     - "string"
+   * - Phone
+     - phone
+     - "string"
 
 
 ZohoCRM Account to  Company
