@@ -2,7 +2,7 @@
 Unieconomy to  Dataflow
 =======================
 
-Generated: 2024-08-27 09:01:36
+Generated: 2024-08-27 09:18:52
 
 Introduction
 ------------
@@ -38,6 +38,25 @@ The following properties are synchronized between a Unieconomy Departments and a
 
    * - Unieconomy Departments Property
      -  Company Property
+     -  Data Type
+   * - Name
+     - name
+     - "string"
+
+
+Unieconomy Companies to  Address
+--------------------------------
+Every Unieconomy Companies will be synchronized with a  Address.
+
+Once a link between a Unieconomy Companies and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Companies and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Companies Property
+     -  Address Property
      -  Data Type
    * - Name
      - name
