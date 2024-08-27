@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-27 08:40:15
+Generated: 2024-08-27 08:52:50
 
 Introduction
 ------------
@@ -387,37 +387,6 @@ The following properties are synchronized between a HubSpot Company and a  Count
      - "string"
    * - properties.type
      - name
-     - "string"
-
-
-HubSpot Contact to  Address
----------------------------
-Every HubSpot Contact will be synchronized with a  Address.
-
-Once a link between a HubSpot Contact and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contact and a  Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     -  Address Property
-     -  Data Type
-   * - id
-     - companyNo
-     - "string"
-   * - properties.address
-     - addressLine1
-     - "string"
-   * - properties.city
-     - postalArea
-     - "string"
-   * - properties.country
-     - countryNo
-     - "string"
-   * - properties.zip
-     - postCode
      - "string"
 
 
