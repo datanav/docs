@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-27 09:25:52
+Generated: 2024-08-27 09:27:01
 
 Introduction
 ------------
@@ -113,5 +113,11 @@ The following properties are synchronized between a Tripletex Product and a  Pro
      -  Data Type
    * - description
      - description
+     - "string"
+   * - priceExcludingVatCurrency
+     - priceQuantity
+     - "string"
+   * - stockOfGoods
+     - quantityPerUnit
      - "string"
 
