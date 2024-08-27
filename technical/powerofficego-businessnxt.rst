@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-27 11:52:19
+Generated: 2024-08-27 11:55:17
 
 Introduction
 ------------
@@ -257,6 +257,22 @@ The following properties are synchronized between a Powerofficego Productgroup a
    * - name
      - text
      - "string"
+
+
+Powerofficego Productgroup to  Vat
+----------------------------------
+Every Powerofficego Productgroup will be synchronized with a  Vat.
+
+Once a link between a Powerofficego Productgroup and a  Vat is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Productgroup and a  Vat:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Productgroup Property
+     -  Vat Property
+     -  Data Type
 
 
 Powerofficego Salesorders to  Order
