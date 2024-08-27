@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-27 12:02:26
+Generated: 2024-08-27 12:03:29
 
 Introduction
 ------------
@@ -134,6 +134,22 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - label
      - name
      - "string"
+
+
+HubSpot Dealcontactassociation to  Order
+----------------------------------------
+Every HubSpot Dealcontactassociation will be synchronized with a  Order.
+
+Once a link between a HubSpot Dealcontactassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcontactassociation and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcontactassociation Property
+     -  Order Property
+     -  Data Type
 
 
 HubSpot Dealcontactassociationtype to  Address
