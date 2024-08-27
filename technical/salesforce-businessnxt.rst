@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-08-27 08:40:15
+Generated: 2024-08-27 08:52:50
 
 Introduction
 ------------
@@ -25,31 +25,6 @@ The following properties are synchronized between a Salesforce Contact and a  Co
      -  Data Type
    * - MailingCountry
      - name
-     - "string"
-
-
-Salesforce Organization to  Address
------------------------------------
-Every Salesforce Organization will be synchronized with a  Address.
-
-Once a link between a Salesforce Organization and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Organization and a  Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Organization Property
-     -  Address Property
-     -  Data Type
-   * - City
-     - postalArea
-     - "string"
-   * - Country
-     - countryNo
-     - "string"
-   * - PostalCode	
-     - postCode
      - "string"
 
 
