@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-27 09:38:16
+Generated: 2024-08-27 11:46:17
 
 Introduction
 ------------
@@ -95,6 +95,22 @@ The following properties are synchronized between a SuperOffice Listcurrencyitem
    * - Name
      - isoCode
      - "string"
+
+
+SuperOffice Listcurrencyitems to  Productcategory
+-------------------------------------------------
+Every SuperOffice Listcurrencyitems will be synchronized with a  Productcategory.
+
+Once a link between a SuperOffice Listcurrencyitems and a  Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Listcurrencyitems and a  Productcategory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Listcurrencyitems Property
+     -  Productcategory Property
+     -  Data Type
 
 
 SuperOffice Product to  Product
