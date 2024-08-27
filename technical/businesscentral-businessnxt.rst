@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-27 10:46:05
+Generated: 2024-08-27 11:05:02
 
 Introduction
 ------------
@@ -181,6 +181,9 @@ The following properties are synchronized between a Businesscentral Salesorders 
    * - Businesscentral Salesorders Property
      -  Order Property
      -  Data Type
+   * - orderDate
+     - orderDate
+     - "string"
 
 
 Businesscentral Salesquotes to  Country
