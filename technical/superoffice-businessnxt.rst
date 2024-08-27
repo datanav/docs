@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-27 11:48:16
+Generated: 2024-08-27 11:48:29
 
 Introduction
 ------------
@@ -111,6 +111,9 @@ The following properties are synchronized between a SuperOffice Listcurrencyitem
    * - SuperOffice Listcurrencyitems Property
      -  Productcategory Property
      -  Data Type
+   * - Tooltip
+     - description
+     - "string"
 
 
 SuperOffice Listproductcategoryitems to  Productcategory
@@ -127,6 +130,12 @@ The following properties are synchronized between a SuperOffice Listproductcateg
    * - SuperOffice Listproductcategoryitems Property
      -  Productcategory Property
      -  Data Type
+   * - Name
+     - text
+     - "string"
+   * - Tooltip
+     - description
+     - "string"
 
 
 SuperOffice Product to  Product
