@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-27 07:32:45
+Generated: 2024-08-27 08:11:17
 
 Introduction
 ------------
@@ -406,6 +406,9 @@ The following properties are synchronized between a HubSpot Contact and a  Addre
      -  Data Type
    * - id
      - companyNo
+     - "string"
+   * - properties.address
+     - addressLine1
      - "string"
 
 
