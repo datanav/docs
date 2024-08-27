@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-27 09:25:50
+Generated: 2024-08-27 09:27:01
 
 Introduction
 ------------
@@ -121,6 +121,12 @@ The following properties are synchronized between a Businesscentral Items and a 
    * - Businesscentral Items Property
      -  Product Property
      -  Data Type
+   * - inventory
+     - quantityPerUnit
+     - "string"
+   * - unitPrice
+     - priceQuantity
+     - "string"
 
 
 Businesscentral Salesorders to  Country
