@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-27 11:12:01
+Generated: 2024-08-27 11:17:02
 
 Introduction
 ------------
@@ -53,6 +53,22 @@ The following properties are synchronized between a Businesscentral Salesorderli
    :header-rows: 1
 
    * - Businesscentral Salesorderlines Property
+     -  Order Property
+     -  Data Type
+
+
+Businesscentral Salesquotes to  Order
+-------------------------------------
+Every Businesscentral Salesquotes will be synchronized with a  Order.
+
+Once a link between a Businesscentral Salesquotes and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesquotes and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesquotes Property
      -  Order Property
      -  Data Type
 
