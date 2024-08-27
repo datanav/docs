@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-27 08:40:15
+Generated: 2024-08-27 08:52:50
 
 Introduction
 ------------
@@ -97,100 +97,18 @@ The following properties are synchronized between a Tripletex Currency and a  Cu
      - "string"
 
 
-Tripletex Customer person to  Address
--------------------------------------
-Every Tripletex Customer person will be synchronized with a  Address.
+Tripletex Department to  Address
+--------------------------------
+Every Tripletex Department will be synchronized with a  Address.
 
-Once a link between a Tripletex Customer person and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a  Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer person Property
-     -  Address Property
-     -  Data Type
-   * - deliveryAddress.addressLine1
-     - addressLine1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - addressLine2
-     - "string"
-   * - deliveryAddress.city
-     - postalArea
-     - "string"
-   * - deliveryAddress.country.id
-     - countryNo
-     - "string"
-   * - deliveryAddress.postalCode
-     - postCode
-     - "string"
-   * - id
-     - companyNo
-     - "string"
-   * - physicalAddress.addressLine1
-     - addressLine1
-     - "string"
-   * - physicalAddress.addressLine2
-     - addressLine2
-     - "string"
-   * - physicalAddress.city
-     - postalArea
-     - "string"
-   * - physicalAddress.country.id
-     - countryNo
-     - "string"
-   * - physicalAddress.postalCode
-     - postCode
-     - "string"
-   * - postalAddress.addressLine1
-     - addressLine1
-     - "string"
-   * - postalAddress.addressLine2
-     - addressLine2
-     - "string"
-   * - postalAddress.city
-     - postalArea
-     - "string"
-   * - postalAddress.country.id
-     - countryNo
-     - "string"
-   * - postalAddress.postalCode
-     - postCode
-     - "string"
-
-
-Tripletex Employee to  Address
-------------------------------
-Every Tripletex Employee will be synchronized with a  Address.
-
-Once a link between a Tripletex Employee and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Employee and a  Address:
+The following properties are synchronized between a Tripletex Department and a  Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Employee Property
+   * - Tripletex Department Property
      -  Address Property
      -  Data Type
-   * - address.addressLine1
-     - addressLine1
-     - "string"
-   * - address.addressLine2
-     - addressLine2
-     - "string"
-   * - address.city
-     - postalArea
-     - "string"
-   * - address.country.id
-     - countryNo
-     - "string"
-   * - address.postalCode
-     - postCode
-     - "string"
-   * - id
-     - companyNo
-     - "string"
 
