@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-27 11:05:02
+Generated: 2024-08-27 11:46:17
 
 Introduction
 ------------
@@ -145,6 +145,22 @@ The following properties are synchronized between a Powerofficego Currency and a
 
    * - Powerofficego Currency Property
      -  Currency Property
+     -  Data Type
+
+
+Powerofficego Currency to  Productcategory
+------------------------------------------
+Every Powerofficego Currency will be synchronized with a  Productcategory.
+
+Once a link between a Powerofficego Currency and a  Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Currency and a  Productcategory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Currency Property
+     -  Productcategory Property
      -  Data Type
 
 
