@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-27 10:19:52
+Generated: 2024-08-27 10:30:17
 
 Introduction
 ------------
@@ -117,6 +117,22 @@ The following properties are synchronized between a Shopify Order and a  Country
    * - shipping_address.country_code
      - isoCode
      - "string"
+
+
+Shopify Order to  Order
+-----------------------
+Every Shopify Order will be synchronized with a  Order.
+
+Once a link between a Shopify Order and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     -  Order Property
+     -  Data Type
 
 
 Shopify Sesamproduct to  Product
