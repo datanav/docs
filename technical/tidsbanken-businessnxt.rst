@@ -2,12 +2,28 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-27 09:22:50
+Generated: 2024-08-27 09:38:13
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tidsbanken to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tidsbanken Avdeling to  Address
+-------------------------------
+Every Tidsbanken Avdeling will be synchronized with a  Address.
+
+Once a link between a Tidsbanken Avdeling and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Avdeling and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     -  Address Property
+     -  Data Type
+
 
 Tidsbanken Avdeling to  Company
 -------------------------------
@@ -32,6 +48,22 @@ The following properties are synchronized between a Tidsbanken Avdeling and a  C
    * - sesam_avdelingId
      - companyBusinessNo (Dependant on having wd:Q2366457 in countryIsoCode)
      - "string"
+
+
+Tidsbanken Kunde to  Address
+----------------------------
+Every Tidsbanken Kunde will be synchronized with a  Address.
+
+Once a link between a Tidsbanken Kunde and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Kunde and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Kunde Property
+     -  Address Property
+     -  Data Type
 
 
 Tidsbanken Kunde to  Company
