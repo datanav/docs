@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-27 00:00:02
+Generated: 2024-08-27 07:25:50
 
 Introduction
 ------------
@@ -73,6 +73,22 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - residenceCountryCode
      - isoCode
      - "string"
+
+
+Powerofficego Currency to  Address
+----------------------------------
+Every Powerofficego Currency will be synchronized with a  Address.
+
+Once a link between a Powerofficego Currency and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Currency and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Currency Property
+     -  Address Property
+     -  Data Type
 
 
 Powerofficego Currency to  Currency
