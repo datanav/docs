@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-27 07:32:09
+Generated: 2024-08-27 08:11:17
 
 Introduction
 ------------
@@ -73,6 +73,9 @@ The following properties are synchronized between a Tidsbanken Ansatt and a  Add
    * - Tidsbanken Ansatt Property
      -  Address Property
      -  Data Type
+   * - Adresse
+     - addressLine1
+     - "string"
    * - Id
      - companyNo
      - "string"
