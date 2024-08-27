@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-27 11:52:19
+Generated: 2024-08-27 12:02:26
 
 Introduction
 ------------
@@ -470,22 +470,6 @@ The following properties are synchronized between a HubSpot Deal and a  Order:
    * - properties.dealname
      - name
      - "string"
-
-
-HubSpot Product to  Alternativeproduct
---------------------------------------
-Every HubSpot Product will be synchronized with a  Alternativeproduct.
-
-Once a link between a HubSpot Product and a  Alternativeproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Product and a  Alternativeproduct:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Product Property
-     -  Alternativeproduct Property
-     -  Data Type
 
 
 HubSpot Product to  Product
