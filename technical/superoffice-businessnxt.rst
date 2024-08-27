@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-27 12:27:42
+Generated: 2024-08-27 13:20:18
 
 Introduction
 ------------
@@ -205,4 +205,20 @@ The following properties are synchronized between a SuperOffice Product and a  P
    * - Url
      - webPage
      - "string"
+
+
+SuperOffice Quoteline to  Orderline
+-----------------------------------
+Every SuperOffice Quoteline will be synchronized with a  Orderline.
+
+Once a link between a SuperOffice Quoteline and a  Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a  Orderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     -  Orderline Property
+     -  Data Type
 
