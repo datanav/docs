@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-08-27 07:32:09
+Generated: 2024-08-27 07:32:45
 
 Introduction
 ------------
@@ -48,22 +48,6 @@ The following properties are synchronized between a Wave Country and a  Country:
    * - name
      - name
      - "string"
-
-
-Wave Currency to  Address
--------------------------
-Every Wave Currency will be synchronized with a  Address.
-
-Once a link between a Wave Currency and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Currency and a  Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Currency Property
-     -  Address Property
-     -  Data Type
 
 
 Wave Currency to  Currency
