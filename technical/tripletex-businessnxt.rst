@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-27 07:25:50
+Generated: 2024-08-27 07:30:50
 
 Introduction
 ------------
@@ -111,4 +111,36 @@ The following properties are synchronized between a Tripletex Currency and a  Cu
    * - displayName
      - name
      - "string"
+
+
+Tripletex Customer person to  Address
+-------------------------------------
+Every Tripletex Customer person will be synchronized with a  Address.
+
+Once a link between a Tripletex Customer person and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     -  Address Property
+     -  Data Type
+
+
+Tripletex Employee to  Address
+------------------------------
+Every Tripletex Employee will be synchronized with a  Address.
+
+Once a link between a Tripletex Employee and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a  Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     -  Address Property
+     -  Data Type
 
