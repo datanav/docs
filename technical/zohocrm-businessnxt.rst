@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-08-27 09:38:16
+Generated: 2024-08-27 12:27:38
 
 Introduction
 ------------
@@ -51,6 +51,22 @@ The following properties are synchronized between a ZohoCRM Account and a  Compa
    * - Account_Name
      - name
      - "string"
+
+
+ZohoCRM Deal to  Order
+----------------------
+Every ZohoCRM Deal will be synchronized with a  Order.
+
+Once a link between a ZohoCRM Deal and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Deal and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Deal Property
+     -  Order Property
+     -  Data Type
 
 
 ZohoCRM Account to  Country
