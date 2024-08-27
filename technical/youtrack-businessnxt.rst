@@ -2,7 +2,7 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2024-08-27 09:38:13
+Generated: 2024-08-27 09:38:16
 
 Introduction
 ------------
@@ -151,6 +151,12 @@ The following properties are synchronized between a YouTrack Usergroups and a  A
    * - YouTrack Usergroups Property
      -  Address Property
      -  Data Type
+   * - parent.id
+     - companyNo
+     - "string"
+   * - subgroups.id
+     - companyNo
+     - "string"
 
 
 YouTrack Usergroups to  Company
