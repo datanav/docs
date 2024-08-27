@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-27 11:48:16
+Generated: 2024-08-27 11:48:29
 
 Introduction
 ------------
@@ -254,6 +254,9 @@ The following properties are synchronized between a Powerofficego Productgroup a
    * - Powerofficego Productgroup Property
      -  Productcategory Property
      -  Data Type
+   * - name
+     - text
+     - "string"
 
 
 Powerofficego Salesorders to  Order
