@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-27 11:48:16
+Generated: 2024-08-27 11:48:29
 
 Introduction
 ------------
@@ -155,6 +155,12 @@ The following properties are synchronized between a Tripletex Currency and a  Pr
    * - Tripletex Currency Property
      -  Productcategory Property
      -  Data Type
+   * - description
+     - description
+     - "string"
+   * - displayName
+     - text
+     - "string"
 
 
 Tripletex Order to  Order
@@ -218,4 +224,7 @@ The following properties are synchronized between a Tripletex Productgroup and a
    * - Tripletex Productgroup Property
      -  Productcategory Property
      -  Data Type
+   * - name
+     - text
+     - "string"
 
