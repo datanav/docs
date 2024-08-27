@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-27 08:52:50
+Generated: 2024-08-27 09:01:36
 
 Introduction
 ------------
@@ -73,4 +73,7 @@ The following properties are synchronized between a Tidsbanken Avdeling and a  A
    * - Tidsbanken Avdeling Property
      -  Address Property
      -  Data Type
+   * - Navn
+     - name
+     - "string"
 
