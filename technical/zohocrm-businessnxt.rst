@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-08-27 08:38:30
+Generated: 2024-08-27 08:40:15
 
 Introduction
 ------------
@@ -70,11 +70,17 @@ The following properties are synchronized between a ZohoCRM Contact and a  Addre
    * - Mailing_City
      - postalArea
      - "string"
+   * - Mailing_Country
+     - countryNo
+     - "string"
    * - Mailing_Zip
      - postCode
      - "string"
    * - Other_City
      - postalArea
+     - "string"
+   * - Other_Country
+     - countryNo
      - "string"
    * - Other_Zip
      - postCode
