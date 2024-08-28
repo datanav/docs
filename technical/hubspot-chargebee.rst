@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-28 10:47:36
+Generated: 2024-08-28 10:47:44
 
 Introduction
 ------------
@@ -42,6 +42,15 @@ The following properties are synchronized between a HubSpot Contact and a  Custo
    * - HubSpot Contact Property
      -  Customer Property
      -  Data Type
+   * - properties.email
+     - email
+     - "string"
+   * - properties.firstname
+     - first_name
+     - "string"
+   * - properties.lastname
+     - last_name
+     - "string"
 
 
 HubSpot Contactcompanyassociation to  Customer
