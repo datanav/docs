@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-28 07:48:19
+Generated: 2024-08-28 07:51:21
 
 Introduction
 ------------
@@ -23,6 +23,54 @@ The following properties are synchronized between a Tripletex Customer and a  Cu
    * - Tripletex Customer Property
      -  Customers company Property
      -  Data Type
+   * - deliveryAddress.addressLine1
+     - address1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - address2
+     - "string"
+   * - deliveryAddress.city
+     - city
+     - "string"
+   * - deliveryAddress.country.id
+     - country
+     - "string"
+   * - deliveryAddress.postalCode
+     - postal_code
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - physicalAddress.addressLine1
+     - address1
+     - "string"
+   * - physicalAddress.addressLine2
+     - address2
+     - "string"
+   * - physicalAddress.city
+     - city
+     - "string"
+   * - physicalAddress.country.id
+     - country
+     - "string"
+   * - physicalAddress.postalCode
+     - postal_code
+     - "string"
+   * - postalAddress.addressLine1
+     - address1
+     - "string"
+   * - postalAddress.addressLine2
+     - address2
+     - "string"
+   * - postalAddress.city
+     - city
+     - "string"
+   * - postalAddress.country.id
+     - country
+     - "string"
+   * - postalAddress.postalCode
+     - postal_code
+     - "string"
 
 
 Tripletex Customer person to  Customers person
@@ -45,16 +93,43 @@ The following properties are synchronized between a Tripletex Customer person an
    * - deliveryAddress.addressLine2
      - address2
      - "string"
+   * - deliveryAddress.city
+     - city
+     - "string"
+   * - deliveryAddress.country.id
+     - country
+     - "string"
+   * - deliveryAddress.postalCode
+     - postal_code
+     - "string"
    * - physicalAddress.addressLine1
      - address1
      - "string"
    * - physicalAddress.addressLine2
      - address2
      - "string"
+   * - physicalAddress.city
+     - city
+     - "string"
+   * - physicalAddress.country.id
+     - country
+     - "string"
+   * - physicalAddress.postalCode
+     - postal_code
+     - "string"
    * - postalAddress.addressLine1
      - address1
      - "string"
    * - postalAddress.addressLine2
      - address2
+     - "string"
+   * - postalAddress.city
+     - city
+     - "string"
+   * - postalAddress.country.id
+     - country
+     - "string"
+   * - postalAddress.postalCode
+     - postal_code
      - "string"
 
