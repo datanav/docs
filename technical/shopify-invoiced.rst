@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-28 08:16:18
+Generated: 2024-08-28 08:30:18
 
 Introduction
 ------------
@@ -73,4 +73,20 @@ The following properties are synchronized between a Shopify Order and a  Lineite
    * - line_items.total_discount
      - items.discounts
      - "string"
+
+
+Shopify Sesamproduct to  Items
+------------------------------
+Every Shopify Sesamproduct will be synchronized with a  Items.
+
+Once a link between a Shopify Sesamproduct and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Sesamproduct and a  Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Sesamproduct Property
+     -  Items Property
+     -  Data Type
 
