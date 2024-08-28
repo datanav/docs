@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-28 12:31:08
+Generated: 2024-08-28 12:40:01
 
 Introduction
 ------------
@@ -110,6 +110,22 @@ The following properties are synchronized between a Tripletex Employee and a  Cu
    * - lastName
      - last_name
      - "string"
+
+
+Tripletex Orderline to  Order
+-----------------------------
+Every Tripletex Orderline will be synchronized with a  Order.
+
+Once a link between a Tripletex Orderline and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     -  Order Property
+     -  Data Type
 
 
 Tripletex Customer person to  Customer
