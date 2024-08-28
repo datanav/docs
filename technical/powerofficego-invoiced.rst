@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-28 08:12:21
+Generated: 2024-08-28 08:16:18
 
 Introduction
 ------------
@@ -59,6 +59,34 @@ The following properties are synchronized between a Powerofficego Customers pers
      - "string"
    * - MailAddress.ZipCode
      - postal_code
+     - "string"
+
+
+Powerofficego Salesorderlines to  Lineitem
+------------------------------------------
+Every Powerofficego Salesorderlines will be synchronized with a  Lineitem.
+
+Once a link between a Powerofficego Salesorderlines and a  Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorderlines and a  Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorderlines Property
+     -  Lineitem Property
+     -  Data Type
+   * - Allowance
+     - items.discounts
+     - "string"
+   * - Description
+     - items.name
+     - "string"
+   * - ProductUnitPrice
+     - items.amount
+     - "string"
+   * - Quantity
+     - items.quantity
      - "string"
 
 
