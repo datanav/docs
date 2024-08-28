@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-28 10:47:44
+Generated: 2024-08-28 12:18:16
 
 Introduction
 ------------
@@ -82,5 +82,21 @@ The following properties are synchronized between a HubSpot User and a  Customer
 
    * - HubSpot User Property
      -  Customer Property
+     -  Data Type
+
+
+HubSpot Deal to  Order
+----------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a  Order.
+
+Once a link between a HubSpot Deal and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     -  Order Property
      -  Data Type
 
