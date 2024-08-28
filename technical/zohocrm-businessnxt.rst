@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-08-28 00:01:04
+Generated: 2024-08-28 00:21:39
 
 Introduction
 ------------
@@ -31,25 +31,6 @@ The following properties are synchronized between a ZohoCRM Account and a  Addre
      - "string"
    * - Phone
      - phone
-     - "string"
-
-
-ZohoCRM Account to  Company
----------------------------
-Every ZohoCRM Account will be synchronized with a  Company.
-
-Once a link between a ZohoCRM Account and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ZohoCRM Account and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ZohoCRM Account Property
-     -  Company Property
-     -  Data Type
-   * - Account_Name
-     - name
      - "string"
 
 
