@@ -2,7 +2,7 @@
 Zendesk to  Dataflow
 ====================
 
-Generated: 2024-08-28 09:40:20
+Generated: 2024-08-28 10:47:36
 
 Introduction
 ------------
@@ -26,4 +26,20 @@ The following properties are synchronized between a Zendesk Organizations and a 
    * - name
      - name
      - "string"
+
+
+Zendesk Users to  Customer
+--------------------------
+Every Zendesk Users will be synchronized with a  Customer.
+
+Once a link between a Zendesk Users and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Users and a  Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Users Property
+     -  Customer Property
+     -  Data Type
 
