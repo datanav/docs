@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-28 08:12:21
+Generated: 2024-08-28 08:16:18
 
 Introduction
 ------------
@@ -62,6 +62,34 @@ The following properties are synchronized between a Businesscentral Customers pe
      - "string"
    * - postalCode
      - postal_code
+     - "string"
+
+
+Businesscentral Salesorderlines to  Lineitem
+--------------------------------------------
+Every Businesscentral Salesorderlines will be synchronized with a  Lineitem.
+
+Once a link between a Businesscentral Salesorderlines and a  Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorderlines and a  Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorderlines Property
+     -  Lineitem Property
+     -  Data Type
+   * - description
+     - items.name
+     - "string"
+   * - discountPercent
+     - items.discounts
+     - "string"
+   * - quantity
+     - items.quantity
+     - "string"
+   * - unitPrice
+     - items.amount
      - "string"
 
 
