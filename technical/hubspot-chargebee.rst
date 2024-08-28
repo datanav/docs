@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-28 09:40:20
+Generated: 2024-08-28 10:47:36
 
 Introduction
 ------------
@@ -26,4 +26,52 @@ The following properties are synchronized between a HubSpot Company and a  Busin
    * - properties.name
      - name
      - "string"
+
+
+HubSpot Contact to  Customer
+----------------------------
+Every HubSpot Contact will be synchronized with a  Customer.
+
+Once a link between a HubSpot Contact and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a  Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     -  Customer Property
+     -  Data Type
+
+
+HubSpot Contactcompanyassociation to  Customer
+----------------------------------------------
+Every HubSpot Contactcompanyassociation will be synchronized with a  Customer.
+
+Once a link between a HubSpot Contactcompanyassociation and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contactcompanyassociation and a  Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contactcompanyassociation Property
+     -  Customer Property
+     -  Data Type
+
+
+HubSpot User to  Customer
+-------------------------
+Every HubSpot User will be synchronized with a  Customer.
+
+Once a link between a HubSpot User and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot User and a  Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot User Property
+     -  Customer Property
+     -  Data Type
 
