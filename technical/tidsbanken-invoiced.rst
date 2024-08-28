@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-28 07:50:19
+Generated: 2024-08-28 07:50:43
 
 Introduction
 ------------
@@ -25,5 +25,8 @@ The following properties are synchronized between a Tidsbanken Kunde and a  Cust
      -  Data Type
    * - Gateadresse
      - address1
+     - "string"
+   * - Id
+     - id
      - "string"
 
