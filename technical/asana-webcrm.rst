@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-08-28 09:40:45
+Generated: 2024-08-28 09:48:01
 
 Introduction
 ------------
@@ -26,6 +26,25 @@ The following properties are synchronized between a Asana Teams and a  Organisat
    * - description
      - OrganisationCompanyDescription
      - "string"
+   * - name
+     - OrganisationName
+     - "string"
+
+
+Asana Workspaces to  Organisations
+----------------------------------
+Every Asana Workspaces will be synchronized with a  Organisations.
+
+Once a link between a Asana Workspaces and a  Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Asana Workspaces and a  Organisations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Asana Workspaces Property
+     -  Organisations Property
+     -  Data Type
    * - name
      - OrganisationName
      - "string"
