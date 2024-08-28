@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-28 12:18:16
+Generated: 2024-08-28 12:31:02
 
 Introduction
 ------------
@@ -32,6 +32,24 @@ The following properties are synchronized between a Tripletex Contact and a  Cus
    * - lastName
      - last_name
      - "string"
+
+
+Tripletex Customer to  Customer
+-------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a  Customer must be established.
+
+A new  Customer will be created from a Tripletex Customer if it is connected to a Tripletex Order that is synchronized into .
+
+Once a link between a Tripletex Customer and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a  Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     -  Customer Property
+     -  Data Type
 
 
 Tripletex Customer to  Business_entity
