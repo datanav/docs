@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-08-28 10:47:36
+Generated: 2024-08-28 10:47:44
 
 Introduction
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a Salesforce Contact and a  Cu
    * - Salesforce Contact Property
      -  Customer Property
      -  Data Type
+   * - Email
+     - email
+     - "string"
+   * - FirstName
+     - first_name
+     - "string"
+   * - LastName
+     - last_name
+     - "string"
+   * - MailingCountry
+     - billing_address.country
+     - "string"
 
 
 Salesforce Organization to  Business_entity
