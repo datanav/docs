@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-28 12:53:07
+Generated: 2024-08-28 12:56:10
 
 Introduction
 ------------
@@ -129,6 +129,9 @@ The following properties are synchronized between a Tripletex Orderline and a  O
    * - count
      - order_line_items.amount
      - "string"
+   * - currency.id
+     - currency_code
+     - "string"
    * - description
      - order_line_items.description
      - "string"
@@ -175,6 +178,9 @@ The following properties are synchronized between a Tripletex Order and a  Order
      -  Data Type
    * - contact.id
      - customer_id
+     - "string"
+   * - currency.id
+     - currency_code
      - "string"
    * - customer.id
      - customer_id
