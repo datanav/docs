@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-28 12:40:06
+Generated: 2024-08-28 12:53:07
 
 Introduction
 ------------
@@ -101,6 +101,18 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      -  Order Property
      -  Data Type
+   * - Description
+     - order_line_items.description
+     - "string"
+   * - Quantity
+     - order_line_items.amount
+     - "string"
+   * - UnitListPrice
+     - order_line_items.unit_price
+     - "string"
+   * - VAT
+     - order_line_items.tax_amount
+     - "string"
 
 
 SuperOffice Sale to  Order
