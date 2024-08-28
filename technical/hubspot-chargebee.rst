@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-28 12:40:06
+Generated: 2024-08-28 12:53:07
 
 Introduction
 ------------
@@ -151,6 +151,15 @@ The following properties are synchronized between a HubSpot Lineitem and a  Orde
    * - HubSpot Lineitem Property
      -  Order Property
      -  Data Type
+   * - properties.description
+     - order_line_items.description
+     - "string"
+   * - properties.price
+     - order_line_items.unit_price
+     - "string"
+   * - properties.quantity
+     - order_line_items.amount
+     - "string"
 
 
 HubSpot Lineitemdealassociation to  Order
