@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-28 10:47:36
+Generated: 2024-08-28 10:47:44
 
 Introduction
 ------------
@@ -42,4 +42,13 @@ The following properties are synchronized between a SuperOffice Person and a  Cu
    * - SuperOffice Person Property
      -  Customer Property
      -  Data Type
+   * - Emails.Value
+     - email
+     - "string"
+   * - Firstname
+     - first_name
+     - "string"
+   * - Lastname
+     - last_name
+     - "string"
 
