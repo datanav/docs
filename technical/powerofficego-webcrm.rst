@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-28 10:47:44
+Generated: 2024-08-28 12:21:17
 
 Introduction
 ------------
@@ -48,4 +48,36 @@ The following properties are synchronized between a Powerofficego Departments an
    * - Name
      - OrganisationName
      - "string"
+
+
+Powerofficego Contactperson to  Persons
+---------------------------------------
+Every Powerofficego Contactperson will be synchronized with a  Persons.
+
+Once a link between a Powerofficego Contactperson and a  Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Contactperson and a  Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     -  Persons Property
+     -  Data Type
+
+
+Powerofficego Suppliers person to  Persons
+------------------------------------------
+Every Powerofficego Suppliers person will be synchronized with a  Persons.
+
+Once a link between a Powerofficego Suppliers person and a  Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Suppliers person and a  Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Suppliers person Property
+     -  Persons Property
+     -  Data Type
 
