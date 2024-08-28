@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-28 12:31:02
+Generated: 2024-08-28 12:31:11
 
 Introduction
 ------------
@@ -25,6 +25,18 @@ The following properties are synchronized between a HubSpot Company and a  Custo
    * - HubSpot Company Property
      -  Customer Property
      -  Data Type
+   * - properties.country
+     - billing_address.country
+     - "string"
+   * - properties.industry
+     - billing_address.country
+     - "string"
+   * - properties.state
+     - billing_address.country
+     - "string"
+   * - properties.type
+     - billing_address.country
+     - "string"
 
 
 HubSpot Contact to  Customer
