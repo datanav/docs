@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-28 07:52:54
+Generated: 2024-08-28 07:54:12
 
 Introduction
 ------------
@@ -53,6 +53,9 @@ The following properties are synchronized between a Businesscentral Customers pe
      - "string"
    * - country
      - country
+     - "string"
+   * - id
+     - id
      - "string"
    * - postalCode
      - postal_code
