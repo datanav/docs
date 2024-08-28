@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-28 00:01:04
+Generated: 2024-08-28 00:21:39
 
 Introduction
 ------------
@@ -28,31 +28,6 @@ The following properties are synchronized between a SuperOffice Contact and a  A
      - "string"
    * - Phones.Value
      - phone
-     - "string"
-
-
-SuperOffice Contact to  Company
--------------------------------
-Every SuperOffice Contact will be synchronized with a  Company.
-
-Once a link between a SuperOffice Contact and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Contact and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Contact Property
-     -  Company Property
-     -  Data Type
-   * - Country.ThreeLetterISOCountry
-     - companyBusinessNo (Dependant on having wd:Q906278 in countryIsoCode)
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - OrgNr
-     - companyBusinessNo (Dependant on having  in countryIsoCode)
      - "string"
 
 
