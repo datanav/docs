@@ -2,12 +2,30 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-28 12:24:46
+Generated: 2024-08-28 12:31:02
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Businesscentral Customers to  Customer
+--------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Customers and a  Customer must be established.
+
+A new  Customer will be created from a Businesscentral Customers if it is connected to a Businesscentral Salesorders, or Salesorderlines that is synchronized into .
+
+Once a link between a Businesscentral Customers and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers and a  Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers Property
+     -  Customer Property
+     -  Data Type
+
 
 Businesscentral Companies to  Business_entity
 ---------------------------------------------
@@ -153,4 +171,7 @@ The following properties are synchronized between a Businesscentral Salesorders 
    * - Businesscentral Salesorders Property
      -  Order Property
      -  Data Type
+   * - customerId
+     - customer_id
+     - "string"
 
