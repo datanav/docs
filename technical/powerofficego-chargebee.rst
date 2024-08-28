@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-28 09:23:19
+Generated: 2024-08-28 09:26:22
 
 Introduction
 ------------
@@ -21,6 +21,22 @@ The following properties are synchronized between a Powerofficego Customers and 
    :header-rows: 1
 
    * - Powerofficego Customers Property
+     -  Customer Property
+     -  Data Type
+
+
+Powerofficego Customers person to  Customer
+-------------------------------------------
+Every Powerofficego Customers person will be synchronized with a  Customer.
+
+Once a link between a Powerofficego Customers person and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers person and a  Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers person Property
      -  Customer Property
      -  Data Type
 
