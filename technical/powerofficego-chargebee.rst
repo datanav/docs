@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-28 10:47:44
+Generated: 2024-08-28 12:18:16
 
 Introduction
 ------------
@@ -120,4 +120,20 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - LastName
      - last_name
      - "string"
+
+
+Powerofficego Salesorders to  Order
+-----------------------------------
+Every Powerofficego Salesorders will be synchronized with a  Order.
+
+Once a link between a Powerofficego Salesorders and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorders and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorders Property
+     -  Order Property
+     -  Data Type
 
