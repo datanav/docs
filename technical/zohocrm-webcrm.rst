@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-08-28 10:47:36
+Generated: 2024-08-28 10:47:44
 
 Introduction
 ------------
@@ -23,4 +23,46 @@ The following properties are synchronized between a ZohoCRM Account and a  Organ
    * - ZohoCRM Account Property
      -  Organisations Property
      -  Data Type
+   * - Account_Name
+     - OrganisationName
+     - "string"
+   * - Billing_City
+     - OrganisationCity
+     - "string"
+   * - Billing_City
+     - OrganisationDeliveryCity
+     - "string"
+   * - Billing_Code
+     - OrganisationDeliveryPostCode
+     - "string"
+   * - Billing_Code
+     - OrganisationPostCode
+     - "string"
+   * - Billing_State
+     - OrganisationDeliveryState
+     - "string"
+   * - Created_Time
+     - OrganisationCompanyDescription
+     - "string"
+   * - Phone
+     - OrganisationTelephone
+     - "string"
+   * - Shipping_City
+     - OrganisationCity
+     - "string"
+   * - Shipping_City
+     - OrganisationDeliveryCity
+     - "string"
+   * - Shipping_Code
+     - OrganisationDeliveryPostCode
+     - "string"
+   * - Shipping_Code
+     - OrganisationPostCode
+     - "string"
+   * - Shipping_State
+     - OrganisationDeliveryState
+     - "string"
+   * - id
+     - OrganisationId
+     - "string"
 
