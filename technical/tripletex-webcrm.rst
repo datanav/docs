@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-28 10:47:36
+Generated: 2024-08-28 10:47:44
 
 Introduction
 ------------
@@ -23,6 +23,69 @@ The following properties are synchronized between a Tripletex Customer and a  Or
    * - Tripletex Customer Property
      -  Organisations Property
      -  Data Type
+   * - deliveryAddress.addressLine1
+     - OrganisationAddress
+     - "string"
+   * - deliveryAddress.addressLine1
+     - OrganisationDeliveryAddress
+     - "string"
+   * - deliveryAddress.city
+     - OrganisationCity
+     - "string"
+   * - deliveryAddress.city
+     - OrganisationDeliveryCity
+     - "string"
+   * - deliveryAddress.postalCode
+     - OrganisationDeliveryPostCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - OrganisationPostCode
+     - "string"
+   * - id
+     - OrganisationId
+     - "string"
+   * - name
+     - OrganisationName
+     - "string"
+   * - phoneNumber
+     - OrganisationTelephone
+     - "string"
+   * - physicalAddress.addressLine1
+     - OrganisationAddress
+     - "string"
+   * - physicalAddress.addressLine1
+     - OrganisationDeliveryAddress
+     - "string"
+   * - physicalAddress.city
+     - OrganisationCity
+     - "string"
+   * - physicalAddress.city
+     - OrganisationDeliveryCity
+     - "string"
+   * - physicalAddress.postalCode
+     - OrganisationDeliveryPostCode
+     - "string"
+   * - physicalAddress.postalCode
+     - OrganisationPostCode
+     - "string"
+   * - postalAddress.addressLine1
+     - OrganisationAddress
+     - "string"
+   * - postalAddress.addressLine1
+     - OrganisationDeliveryAddress
+     - "string"
+   * - postalAddress.city
+     - OrganisationCity
+     - "string"
+   * - postalAddress.city
+     - OrganisationDeliveryCity
+     - "string"
+   * - postalAddress.postalCode
+     - OrganisationDeliveryPostCode
+     - "string"
+   * - postalAddress.postalCode
+     - OrganisationPostCode
+     - "string"
 
 
 Tripletex Department to  Organisations
@@ -39,4 +102,7 @@ The following properties are synchronized between a Tripletex Department and a  
    * - Tripletex Department Property
      -  Organisations Property
      -  Data Type
+   * - name
+     - OrganisationName
+     - "string"
 
