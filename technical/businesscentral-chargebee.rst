@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-28 12:53:07
+Generated: 2024-08-28 12:56:10
 
 Introduction
 ------------
@@ -196,6 +196,9 @@ The following properties are synchronized between a Businesscentral Salesorders 
    * - Businesscentral Salesorders Property
      -  Order Property
      -  Data Type
+   * - currencyId
+     - currency_code
+     - "string"
    * - customerId
      - customer_id
      - "string"
