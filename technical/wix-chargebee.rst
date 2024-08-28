@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-08-28 10:47:44
+Generated: 2024-08-28 12:18:16
 
 Introduction
 ------------
@@ -32,4 +32,20 @@ The following properties are synchronized between a Wix.com Contacts and a  Cust
    * - primaryInfo.email
      - email
      - "string"
+
+
+Wix.com Orders to  Order
+------------------------
+Every Wix.com Orders will be synchronized with a  Order.
+
+Once a link between a Wix.com Orders and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Orders and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Orders Property
+     -  Order Property
+     -  Data Type
 
