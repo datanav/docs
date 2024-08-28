@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-28 12:40:01
+Generated: 2024-08-28 12:40:06
 
 Introduction
 ------------
@@ -13,7 +13,7 @@ Businesscentral Customers to  Customer
 --------------------------------------
 Before any synchronization can take place, a link between a Businesscentral Customers and a  Customer must be established.
 
-A new  Customer will be created from a Businesscentral Customers if it is connected to a Businesscentral Salesorders, or Salesorderlines that is synchronized into .
+A new  Customer will be created from a Businesscentral Customers if it is connected to a Businesscentral Salesorders, Salesquotes, or Salesorderlines that is synchronized into .
 
 Once a link between a Businesscentral Customers and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
