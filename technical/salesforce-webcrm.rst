@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-08-28 12:21:17
+Generated: 2024-08-28 12:32:24
 
 Introduction
 ------------
@@ -44,5 +44,21 @@ The following properties are synchronized between a Salesforce Contact and a  Pe
 
    * - Salesforce Contact Property
      -  Persons Property
+     -  Data Type
+
+
+Salesforce Product2 to  Products
+--------------------------------
+Every Salesforce Product2 will be synchronized with a  Products.
+
+Once a link between a Salesforce Product2 and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Product2 and a  Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Product2 Property
+     -  Products Property
      -  Data Type
 
