@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-08-28 10:47:36
+Generated: 2024-08-28 10:47:44
 
 Introduction
 ------------
@@ -23,4 +23,61 @@ The following properties are synchronized between a Wave Customer and a  Organis
    * - Wave Customer Property
      -  Organisations Property
      -  Data Type
+   * - address.addressLine1
+     - OrganisationAddress
+     - "string"
+   * - address.addressLine1
+     - OrganisationDeliveryAddress
+     - "string"
+   * - address.city
+     - OrganisationCity
+     - "string"
+   * - address.city
+     - OrganisationDeliveryCity
+     - "string"
+   * - address.postalCode
+     - OrganisationDeliveryPostCode
+     - "string"
+   * - address.postalCode
+     - OrganisationPostCode
+     - "string"
+   * - address.province.code
+     - OrganisationDeliveryState
+     - "string"
+   * - id
+     - OrganisationId
+     - "string"
+   * - internalNotes
+     - OrganisationCompanyDescription
+     - "string"
+   * - name
+     - OrganisationName
+     - "string"
+   * - phone
+     - OrganisationTelephone
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - OrganisationAddress
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - OrganisationDeliveryAddress
+     - "string"
+   * - shippingDetails.address.city
+     - OrganisationCity
+     - "string"
+   * - shippingDetails.address.city
+     - OrganisationDeliveryCity
+     - "string"
+   * - shippingDetails.address.postalCode
+     - OrganisationDeliveryPostCode
+     - "string"
+   * - shippingDetails.address.postalCode
+     - OrganisationPostCode
+     - "string"
+   * - shippingDetails.address.province.code
+     - OrganisationDeliveryState
+     - "string"
+   * - shippingDetails.phone
+     - OrganisationTelephone
+     - "string"
 
