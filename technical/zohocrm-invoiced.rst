@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-08-28 07:51:21
+Generated: 2024-08-28 07:54:12
 
 Introduction
 ------------
@@ -40,5 +40,8 @@ The following properties are synchronized between a ZohoCRM Contact and a  Custo
      - "string"
    * - Other_Zip
      - postal_code
+     - "string"
+   * - id
+     - id
      - "string"
 
