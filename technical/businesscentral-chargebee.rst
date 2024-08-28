@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-28 09:16:19
+Generated: 2024-08-28 09:20:18
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Businesscentral Customers co
    * - Businesscentral Customers company Property
      -  Business_entity Property
      -  Data Type
+   * - displayName
+     - name
+     - "string"
 
