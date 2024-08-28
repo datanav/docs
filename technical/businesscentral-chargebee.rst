@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-28 12:40:06
+Generated: 2024-08-28 12:52:58
 
 Introduction
 ------------
@@ -101,6 +101,9 @@ The following properties are synchronized between a Businesscentral Salesorderli
    * - Businesscentral Salesorderlines Property
      -  Order Property
      -  Data Type
+   * - quantity
+     - order_line_items.amount
+     - "string"
 
 
 Businesscentral Salesorderlines to  Subscription
