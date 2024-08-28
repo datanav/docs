@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-08-28 08:00:26
+Generated: 2024-08-28 08:12:21
 
 Introduction
 ------------
@@ -77,5 +77,27 @@ The following properties are synchronized between a Wave Customer person and a  
      - "string"
    * - shippingDetails.address.postalCode
      - postal_code
+     - "string"
+
+
+Wave Invoice to  Invoices
+-------------------------
+Every Wave Invoice will be synchronized with a  Invoices.
+
+Once a link between a Wave Invoice and a  Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a  Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     -  Invoices Property
+     -  Data Type
+   * - currency.code
+     - currency
+     - "string"
+   * - customer.id
+     - customer
      - "string"
 
