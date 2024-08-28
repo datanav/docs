@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-28 08:00:01
+Generated: 2024-08-28 08:12:21
 
 Introduction
 ------------
@@ -62,5 +62,27 @@ The following properties are synchronized between a Businesscentral Customers pe
      - "string"
    * - postalCode
      - postal_code
+     - "string"
+
+
+Businesscentral Salesorders to  Invoices
+----------------------------------------
+Every Businesscentral Salesorders will be synchronized with a  Invoices.
+
+Once a link between a Businesscentral Salesorders and a  Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorders and a  Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorders Property
+     -  Invoices Property
+     -  Data Type
+   * - currencyId
+     - currency
+     - "string"
+   * - customerId
+     - customer
      - "string"
 
