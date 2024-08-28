@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-08-28 00:00:01
+Generated: 2024-08-28 00:21:39
 
 Introduction
 ------------
@@ -22,25 +22,6 @@ The following properties are synchronized between a Asana Teams and a  Address:
 
    * - Asana Teams Property
      -  Address Property
-     -  Data Type
-   * - name
-     - name
-     - "string"
-
-
-Asana Teams to  Company
------------------------
-Every Asana Teams will be synchronized with a  Company.
-
-Once a link between a Asana Teams and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Asana Teams and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Asana Teams Property
-     -  Company Property
      -  Data Type
    * - name
      - name
