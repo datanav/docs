@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-28 10:47:36
+Generated: 2024-08-28 10:47:44
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Tripletex Contact and a  Cus
    * - Tripletex Contact Property
      -  Customer Property
      -  Data Type
+   * - email
+     - email
+     - "string"
+   * - firstName
+     - first_name
+     - "string"
+   * - lastName
+     - last_name
+     - "string"
 
 
 Tripletex Customer to  Business_entity
@@ -77,6 +86,12 @@ The following properties are synchronized between a Tripletex Employee and a  Cu
    * - Tripletex Employee Property
      -  Customer Property
      -  Data Type
+   * - firstName
+     - first_name
+     - "string"
+   * - lastName
+     - last_name
+     - "string"
 
 
 Tripletex Customer person to  Customer
