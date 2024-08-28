@@ -2,7 +2,7 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2024-08-28 10:47:44
+Generated: 2024-08-28 12:32:24
 
 Introduction
 ------------
@@ -57,5 +57,21 @@ The following properties are synchronized between a YouTrack Usergroups and a  O
 
    * - YouTrack Usergroups Property
      -  Organisations Property
+     -  Data Type
+
+
+YouTrack Users to  Users
+------------------------
+Every YouTrack Users will be synchronized with a  Users.
+
+Once a link between a YouTrack Users and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Users and a  Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Users Property
+     -  Users Property
      -  Data Type
 
