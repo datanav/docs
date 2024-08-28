@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-28 12:53:07
+Generated: 2024-08-28 12:56:03
 
 Introduction
 ------------
@@ -131,6 +131,9 @@ The following properties are synchronized between a SuperOffice Sale and a  Orde
      -  Data Type
    * - Contact.ContactId
      - customer_id
+     - "string"
+   * - Currency.Id
+     - currency_code
      - "string"
    * - Person.PersonId
      - customer_id
