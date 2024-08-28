@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-28 08:30:18
+Generated: 2024-08-28 08:30:34
 
 Introduction
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a SuperOffice Product and a  I
    * - SuperOffice Product Property
      -  Items Property
      -  Data Type
+   * - Description
+     - description
+     - "string"
+   * - ERPPriceListKey
+     - currency
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - UnitCost
+     - unit_cost
+     - "string"
 
 
 SuperOffice Quoteline to  Lineitem
