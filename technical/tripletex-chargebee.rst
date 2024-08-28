@@ -2,12 +2,28 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-28 09:40:20
+Generated: 2024-08-28 10:47:36
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Contact to  Customer
+------------------------------
+Every Tripletex Contact will be synchronized with a  Customer.
+
+Once a link between a Tripletex Contact and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a  Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     -  Customer Property
+     -  Data Type
+
 
 Tripletex Customer to  Business_entity
 --------------------------------------
@@ -45,6 +61,22 @@ The following properties are synchronized between a Tripletex Department and a  
    * - name
      - name
      - "string"
+
+
+Tripletex Employee to  Customer
+-------------------------------
+Every Tripletex Employee will be synchronized with a  Customer.
+
+Once a link between a Tripletex Employee and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a  Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     -  Customer Property
+     -  Data Type
 
 
 Tripletex Customer person to  Customer
