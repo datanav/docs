@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-28 08:12:21
+Generated: 2024-08-28 08:16:18
 
 Introduction
 ------------
@@ -165,5 +165,33 @@ The following properties are synchronized between a Tripletex Order and a  Invoi
      - "string"
    * - customer.id
      - customer
+     - "string"
+
+
+Tripletex Orderline to  Lineitem
+--------------------------------
+Every Tripletex Orderline will be synchronized with a  Lineitem.
+
+Once a link between a Tripletex Orderline and a  Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a  Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     -  Lineitem Property
+     -  Data Type
+   * - count
+     - items.quantity
+     - "string"
+   * - description
+     - items.description
+     - "string"
+   * - discount
+     - items.discounts
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - items.amount
      - "string"
 
