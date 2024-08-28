@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-28 10:47:44
+Generated: 2024-08-28 12:32:24
 
 Introduction
 ------------
@@ -68,4 +68,36 @@ The following properties are synchronized between a SuperOffice Contact and a  O
    * - Phones.Value
      - OrganisationTelephone
      - "string"
+
+
+SuperOffice Product to  Products
+--------------------------------
+Every SuperOffice Product will be synchronized with a  Products.
+
+Once a link between a SuperOffice Product and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a  Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     -  Products Property
+     -  Data Type
+
+
+SuperOffice User to  Users
+--------------------------
+Every SuperOffice User will be synchronized with a  Users.
+
+Once a link between a SuperOffice User and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice User and a  Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     -  Users Property
+     -  Data Type
 
