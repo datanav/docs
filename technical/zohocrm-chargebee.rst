@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-08-28 12:40:06
+Generated: 2024-08-28 12:40:10
 
 Introduction
 ------------
@@ -25,6 +25,15 @@ The following properties are synchronized between a ZohoCRM Account and a  Custo
    * - ZohoCRM Account Property
      -  Customer Property
      -  Data Type
+   * - Billing_Country
+     - billing_address.country
+     - "string"
+   * - Industry
+     - billing_address.country
+     - "string"
+   * - Shipping_Country
+     - billing_address.country
+     - "string"
 
 
 ZohoCRM Account to  Business_entity
