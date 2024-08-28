@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-28 10:47:36
+Generated: 2024-08-28 10:47:44
 
 Introduction
 ------------
@@ -23,6 +23,30 @@ The following properties are synchronized between a Tidsbanken Avdeling and a  O
    * - Tidsbanken Avdeling Property
      -  Organisations Property
      -  Data Type
+   * - Adresse
+     - OrganisationAddress
+     - "string"
+   * - Adresse
+     - OrganisationDeliveryAddress
+     - "string"
+   * - Id
+     - OrganisationId
+     - "string"
+   * - Navn
+     - OrganisationName
+     - "string"
+   * - Postnr
+     - OrganisationDeliveryPostCode
+     - "string"
+   * - Postnr
+     - OrganisationPostCode
+     - "string"
+   * - Poststed
+     - OrganisationCity
+     - "string"
+   * - Poststed
+     - OrganisationDeliveryCity
+     - "string"
 
 
 Tidsbanken Kunde to  Organisations
@@ -39,4 +63,49 @@ The following properties are synchronized between a Tidsbanken Kunde and a  Orga
    * - Tidsbanken Kunde Property
      -  Organisations Property
      -  Data Type
+   * - Gateadresse
+     - OrganisationAddress
+     - "string"
+   * - Gateadresse
+     - OrganisationDeliveryAddress
+     - "string"
+   * - Id
+     - OrganisationId
+     - "string"
+   * - LevPostNr
+     - OrganisationDeliveryPostCode
+     - "string"
+   * - LevPostNr
+     - OrganisationPostCode
+     - "string"
+   * - LevPoststed
+     - OrganisationCity
+     - "string"
+   * - LevPoststed
+     - OrganisationDeliveryCity
+     - "string"
+   * - Leveringsadresse
+     - OrganisationAddress
+     - "string"
+   * - Leveringsadresse
+     - OrganisationDeliveryAddress
+     - "string"
+   * - Navn
+     - OrganisationName
+     - "string"
+   * - Postnr
+     - OrganisationDeliveryPostCode
+     - "string"
+   * - Postnr
+     - OrganisationPostCode
+     - "string"
+   * - Poststed
+     - OrganisationCity
+     - "string"
+   * - Poststed
+     - OrganisationDeliveryCity
+     - "string"
+   * - Telefon
+     - OrganisationTelephone
+     - "string"
 
