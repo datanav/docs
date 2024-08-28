@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-08-28 09:40:20
+Generated: 2024-08-28 10:29:31
 
 Introduction
 ------------
@@ -50,6 +50,12 @@ The following properties are synchronized between a ZohoCRM Contact and a  Custo
      - "string"
    * - Last_Name
      - last_name
+     - "string"
+   * - Mailing_Country
+     - billing_address.country
+     - "string"
+   * - Other_Country
+     - billing_address.country
      - "string"
    * - Secondary_Email
      - email
