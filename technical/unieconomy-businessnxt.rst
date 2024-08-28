@@ -2,7 +2,7 @@
 Unieconomy to  Dataflow
 =======================
 
-Generated: 2024-08-28 00:01:04
+Generated: 2024-08-28 00:21:39
 
 Introduction
 ------------
@@ -25,22 +25,6 @@ The following properties are synchronized between a Unieconomy Customers and a  
      -  Data Type
 
 
-Unieconomy Customers to  Company
---------------------------------
-Every Unieconomy Customers will be synchronized with a  Company.
-
-Once a link between a Unieconomy Customers and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Unieconomy Customers and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Unieconomy Customers Property
-     -  Company Property
-     -  Data Type
-
-
 Unieconomy Departments to  Address
 ----------------------------------
 Every Unieconomy Departments will be synchronized with a  Address.
@@ -54,25 +38,6 @@ The following properties are synchronized between a Unieconomy Departments and a
 
    * - Unieconomy Departments Property
      -  Address Property
-     -  Data Type
-   * - Name
-     - name
-     - "string"
-
-
-Unieconomy Departments to  Company
-----------------------------------
-Every Unieconomy Departments will be synchronized with a  Company.
-
-Once a link between a Unieconomy Departments and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Unieconomy Departments and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Unieconomy Departments Property
-     -  Company Property
      -  Data Type
    * - Name
      - name
