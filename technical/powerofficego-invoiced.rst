@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-28 07:54:12
+Generated: 2024-08-28 08:12:21
 
 Introduction
 ------------
@@ -59,5 +59,30 @@ The following properties are synchronized between a Powerofficego Customers pers
      - "string"
    * - MailAddress.ZipCode
      - postal_code
+     - "string"
+
+
+Powerofficego Salesorders to  Invoices
+--------------------------------------
+Every Powerofficego Salesorders will be synchronized with a  Invoices.
+
+Once a link between a Powerofficego Salesorders and a  Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorders and a  Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorders Property
+     -  Invoices Property
+     -  Data Type
+   * - CurrencyCode
+     - currency
+     - "string"
+   * - CustomerId
+     - customer
+     - "string"
+   * - CustomerReferenceContactPersonId
+     - customer
      - "string"
 
