@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-28 00:01:04
+Generated: 2024-08-28 00:21:39
 
 Introduction
 ------------
@@ -34,31 +34,6 @@ The following properties are synchronized between a Tripletex Customer and a  Ad
      - "string"
 
 
-Tripletex Customer to  Company
-------------------------------
-Every Tripletex Customer will be synchronized with a  Company.
-
-Once a link between a Tripletex Customer and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer Property
-     -  Company Property
-     -  Data Type
-   * - customerNumber
-     - companyBusinessNo (Dependant on having wd:Q852835 in countryIsoCode)
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - organizationNumber
-     - companyBusinessNo (Dependant on having NO in countryIsoCode)
-     - "string"
-
-
 Tripletex Department to  Address
 --------------------------------
 Every Tripletex Department will be synchronized with a  Address.
@@ -73,28 +48,6 @@ The following properties are synchronized between a Tripletex Department and a  
    * - Tripletex Department Property
      -  Address Property
      -  Data Type
-   * - name
-     - name
-     - "string"
-
-
-Tripletex Department to  Company
---------------------------------
-Every Tripletex Department will be synchronized with a  Company.
-
-Once a link between a Tripletex Department and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Department and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Department Property
-     -  Company Property
-     -  Data Type
-   * - departmentNumber
-     - companyBusinessNo (Dependant on having wd:Q2366457 in countryIsoCode)
-     - "string"
    * - name
      - name
      - "string"
