@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-28 12:52:58
+Generated: 2024-08-28 12:53:07
 
 Introduction
 ------------
@@ -103,6 +103,12 @@ The following properties are synchronized between a Businesscentral Salesorderli
      -  Data Type
    * - quantity
      - order_line_items.amount
+     - "string"
+   * - taxPercent
+     - order_line_items.tax_amount
+     - "string"
+   * - unitPrice
+     - order_line_items.unit_price
      - "string"
 
 
