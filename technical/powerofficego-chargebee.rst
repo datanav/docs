@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-28 12:40:01
+Generated: 2024-08-28 12:40:06
 
 Introduction
 ------------
@@ -38,7 +38,7 @@ Powerofficego Customers to  Customer
 ------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Customers and a  Customer must be established.
 
-A new  Customer will be created from a Powerofficego Customers if it is connected to a Powerofficego Salesorders that is synchronized into .
+A new  Customer will be created from a Powerofficego Customers if it is connected to a Powerofficego Salesorders, or Salesorderlines that is synchronized into .
 
 Once a link between a Powerofficego Customers and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
