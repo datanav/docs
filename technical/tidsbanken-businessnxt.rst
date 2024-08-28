@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-28 00:01:04
+Generated: 2024-08-28 00:21:39
 
 Introduction
 ------------
@@ -28,31 +28,6 @@ The following properties are synchronized between a Tidsbanken Avdeling and a  A
      - "string"
 
 
-Tidsbanken Avdeling to  Company
--------------------------------
-Every Tidsbanken Avdeling will be synchronized with a  Company.
-
-Once a link between a Tidsbanken Avdeling and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tidsbanken Avdeling and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Avdeling Property
-     -  Company Property
-     -  Data Type
-   * - Navn
-     - name
-     - "string"
-   * - Organisasjonsnr
-     - companyBusinessNo (Dependant on having wd:Q11994066 in countryIsoCode)
-     - "string"
-   * - sesam_avdelingId
-     - companyBusinessNo (Dependant on having wd:Q2366457 in countryIsoCode)
-     - "string"
-
-
 Tidsbanken Kunde to  Address
 ----------------------------
 Every Tidsbanken Kunde will be synchronized with a  Address.
@@ -75,30 +50,5 @@ The following properties are synchronized between a Tidsbanken Kunde and a  Addr
      - "string"
    * - Telefon
      - phone
-     - "string"
-
-
-Tidsbanken Kunde to  Company
-----------------------------
-Every Tidsbanken Kunde will be synchronized with a  Company.
-
-Once a link between a Tidsbanken Kunde and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tidsbanken Kunde and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Kunde Property
-     -  Company Property
-     -  Data Type
-   * - Navn
-     - name
-     - "string"
-   * - Organisasjonsnummer
-     - companyBusinessNo (Dependant on having NO in countryIsoCodeDependant on having wd:Q11994066 in countryIsoCode)
-     - "string"
-   * - sesam_kundeId
-     - companyBusinessNo (Dependant on having wd:Q852835 in countryIsoCode)
      - "string"
 
