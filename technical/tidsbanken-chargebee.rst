@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-28 10:47:36
+Generated: 2024-08-28 10:47:44
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Tidsbanken Ansatt and a  Cus
    * - Tidsbanken Ansatt Property
      -  Customer Property
      -  Data Type
+   * - Etternavn
+     - last_name
+     - "string"
+   * - Fornavn
+     - first_name
+     - "string"
 
 
 Tidsbanken Avdeling to  Business_entity
