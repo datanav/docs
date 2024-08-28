@@ -1,5 +1,6 @@
+##########
 Sesam Talk
-==========
+##########
 
 Sesam Talk is a Universal Semantic Data Synchronization service created and operated by Sesam.io. It leverages our extensive expertise in data synchronization and data modeling and is built on top of the proven Sesam Data Hub technology. Sesam Talk offers an innovative solution for synchronizing data across multiple cloud services, specifically developed for SaaS companies and their users. This is a complete managed service that includes everything from migration and setup to user interface customization, operations, and support. Sesam Talk enables users to synchronize data between different :doc:`systems <systems/index>` in a simple way, without the need for IT intervention or technical expertise. The solution is designed to provide users with a user-friendly and risk-free way to handle data synchronization, contributing to an improved user experience and increased adoption rates of SaaS platforms. 
 
