@@ -2,30 +2,29 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-28 12:18:16
+Generated: 2024-08-28 12:31:02
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-HubSpot Company to  Business_entity
------------------------------------
-Every HubSpot Company will be synchronized with a  Business_entity.
+HubSpot Company to  Customer
+----------------------------
+Before any synchronization can take place, a link between a HubSpot Company and a  Customer must be established.
 
-Once a link between a HubSpot Company and a  Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+A new  Customer will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into .
 
-The following properties are synchronized between a HubSpot Company and a  Business_entity:
+Once a link between a HubSpot Company and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Company and a  Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     -  Business_entity Property
+     -  Customer Property
      -  Data Type
-   * - properties.name
-     - name
-     - "string"
 
 
 HubSpot Contact to  Customer
@@ -50,6 +49,25 @@ The following properties are synchronized between a HubSpot Contact and a  Custo
      - "string"
    * - properties.lastname
      - last_name
+     - "string"
+
+
+HubSpot Company to  Business_entity
+-----------------------------------
+Every HubSpot Company will be synchronized with a  Business_entity.
+
+Once a link between a HubSpot Company and a  Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Company and a  Business_entity:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Company Property
+     -  Business_entity Property
+     -  Data Type
+   * - properties.name
+     - name
      - "string"
 
 
