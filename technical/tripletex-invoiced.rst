@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-28 08:30:18
+Generated: 2024-08-28 08:30:34
 
 Introduction
 ------------
@@ -210,4 +210,16 @@ The following properties are synchronized between a Tripletex Product and a  Ite
    * - Tripletex Product Property
      -  Items Property
      -  Data Type
+   * - costExcludingVatCurrency
+     - unit_cost
+     - "string"
+   * - currency.id
+     - currency
+     - "string"
+   * - description
+     - description
+     - "string"
+   * - name
+     - name
+     - "string"
 
