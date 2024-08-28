@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-28 08:12:21
+Generated: 2024-08-28 08:16:18
 
 Introduction
 ------------
@@ -44,5 +44,33 @@ The following properties are synchronized between a Shopify Order and a  Invoice
      - "string"
    * - customer.id
      - customer
+     - "string"
+
+
+Shopify Order to  Lineitem
+--------------------------
+Every Shopify Order will be synchronized with a  Lineitem.
+
+Once a link between a Shopify Order and a  Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a  Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     -  Lineitem Property
+     -  Data Type
+   * - line_items.price
+     - items.amount
+     - "string"
+   * - line_items.quantity
+     - items.quantity
+     - "string"
+   * - line_items.title
+     - items.name
+     - "string"
+   * - line_items.total_discount
+     - items.discounts
      - "string"
 
