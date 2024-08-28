@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-28 07:42:30
+Generated: 2024-08-28 08:12:21
 
 Introduction
 ------------
@@ -23,4 +23,26 @@ The following properties are synchronized between a Shopify Customer and a  Cust
    * - Shopify Customer Property
      -  Customers person Property
      -  Data Type
+
+
+Shopify Order to  Invoices
+--------------------------
+Every Shopify Order will be synchronized with a  Invoices.
+
+Once a link between a Shopify Order and a  Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a  Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     -  Invoices Property
+     -  Data Type
+   * - currency
+     - currency
+     - "string"
+   * - customer.id
+     - customer
+     - "string"
 
