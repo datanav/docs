@@ -2,7 +2,7 @@
 Freshteam to  Dataflow
 ======================
 
-Generated: 2024-08-28 00:01:04
+Generated: 2024-08-28 00:21:39
 
 Introduction
 ------------
@@ -22,25 +22,6 @@ The following properties are synchronized between a Freshteam Department and a  
 
    * - Freshteam Department Property
      -  Address Property
-     -  Data Type
-   * - name
-     - name
-     - "string"
-
-
-Freshteam Department to  Company
---------------------------------
-Every Freshteam Department will be synchronized with a  Company.
-
-Once a link between a Freshteam Department and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Freshteam Department and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Freshteam Department Property
-     -  Company Property
      -  Data Type
    * - name
      - name
