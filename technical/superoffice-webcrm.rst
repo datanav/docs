@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-28 10:47:36
+Generated: 2024-08-28 10:47:44
 
 Introduction
 ------------
@@ -23,4 +23,49 @@ The following properties are synchronized between a SuperOffice Contact and a  O
    * - SuperOffice Contact Property
      -  Organisations Property
      -  Data Type
+   * - Address.Postal.Address1
+     - OrganisationAddress
+     - "string"
+   * - Address.Postal.Address1
+     - OrganisationDeliveryAddress
+     - "string"
+   * - Address.Postal.City
+     - OrganisationCity
+     - "string"
+   * - Address.Postal.City
+     - OrganisationDeliveryCity
+     - "string"
+   * - Address.Postal.Zipcode
+     - OrganisationDeliveryPostCode
+     - "string"
+   * - Address.Postal.Zipcode
+     - OrganisationPostCode
+     - "string"
+   * - Address.Street.Address1
+     - OrganisationAddress
+     - "string"
+   * - Address.Street.Address1
+     - OrganisationDeliveryAddress
+     - "string"
+   * - Address.Street.City
+     - OrganisationCity
+     - "string"
+   * - Address.Street.City
+     - OrganisationDeliveryCity
+     - "string"
+   * - Address.Street.Zipcode
+     - OrganisationDeliveryPostCode
+     - "string"
+   * - Address.Street.Zipcode
+     - OrganisationPostCode
+     - "string"
+   * - ContactId
+     - OrganisationId
+     - "string"
+   * - Name
+     - OrganisationName
+     - "string"
+   * - Phones.Value
+     - OrganisationTelephone
+     - "string"
 
