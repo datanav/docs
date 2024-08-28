@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-08-28 07:41:20
+Generated: 2024-08-28 07:42:30
 
 Introduction
 ------------
@@ -22,5 +22,21 @@ The following properties are synchronized between a Wave Customer and a  Custome
 
    * - Wave Customer Property
      -  Customers company Property
+     -  Data Type
+
+
+Wave Customer person to  Customers person
+-----------------------------------------
+Every Wave Customer person will be synchronized with a  Customers person.
+
+Once a link between a Wave Customer person and a  Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer person and a  Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     -  Customers person Property
      -  Data Type
 
