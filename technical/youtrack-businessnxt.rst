@@ -2,7 +2,7 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2024-08-28 00:00:01
+Generated: 2024-08-28 00:21:39
 
 Introduction
 ------------
@@ -21,38 +21,6 @@ The following properties are synchronized between a YouTrack Groups and a  Addre
    :header-rows: 1
 
    * - YouTrack Groups Property
-     -  Address Property
-     -  Data Type
-
-
-YouTrack Groups to  Company
----------------------------
-Every YouTrack Groups will be synchronized with a  Company.
-
-Once a link between a YouTrack Groups and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Groups and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Groups Property
-     -  Company Property
-     -  Data Type
-
-
-YouTrack Organizationroles to  Address
---------------------------------------
-Every YouTrack Organizationroles will be synchronized with a  Address.
-
-Once a link between a YouTrack Organizationroles and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Organizationroles and a  Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Organizationroles Property
      -  Address Property
      -  Data Type
 
@@ -85,38 +53,6 @@ The following properties are synchronized between a YouTrack Organizations and a
    :header-rows: 1
 
    * - YouTrack Organizations Property
-     -  Address Property
-     -  Data Type
-
-
-YouTrack Organizations to  Company
-----------------------------------
-Every YouTrack Organizations will be synchronized with a  Company.
-
-Once a link between a YouTrack Organizations and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Organizations and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Organizations Property
-     -  Company Property
-     -  Data Type
-
-
-YouTrack Roles to  Address
---------------------------
-Every YouTrack Roles will be synchronized with a  Address.
-
-Once a link between a YouTrack Roles and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Roles and a  Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Roles Property
      -  Address Property
      -  Data Type
 
@@ -157,20 +93,4 @@ The following properties are synchronized between a YouTrack Usergroups and a  A
    * - subgroups.id
      - companyNo
      - "string"
-
-
-YouTrack Usergroups to  Company
--------------------------------
-Every YouTrack Usergroups will be synchronized with a  Company.
-
-Once a link between a YouTrack Usergroups and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Usergroups and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Usergroups Property
-     -  Company Property
-     -  Data Type
 
