@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-08-28 09:16:42
+Generated: 2024-08-28 09:20:03
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Asana Teams and a  Business_
    * - Asana Teams Property
      -  Business_entity Property
      -  Data Type
+   * - name
+     - name
+     - "string"
 
 
 Asana Workspaces to  Business_entity
