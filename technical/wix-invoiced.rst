@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-08-28 08:30:18
+Generated: 2024-08-28 08:30:34
 
 Introduction
 ------------
@@ -70,4 +70,16 @@ The following properties are synchronized between a Wix.com Products and a  Item
    * - Wix.com Products Property
      -  Items Property
      -  Data Type
+   * - costAndProfitData.itemCost
+     - unit_cost
+     - "string"
+   * - costRange.maxValue
+     - unit_cost
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - priceData.currency
+     - currency
+     - "string"
 
