@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-28 09:26:22
+Generated: 2024-08-28 09:28:19
 
 Introduction
 ------------
@@ -39,4 +39,7 @@ The following properties are synchronized between a Tripletex Customer person an
    * - Tripletex Customer person Property
      -  Customer Property
      -  Data Type
+   * - email
+     - email
+     - "string"
 
