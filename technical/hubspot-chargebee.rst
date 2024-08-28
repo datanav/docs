@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-28 12:31:11
+Generated: 2024-08-28 12:40:03
 
 Introduction
 ------------
@@ -96,6 +96,184 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
 
    * - HubSpot Contactcompanyassociation Property
      -  Customer Property
+     -  Data Type
+
+
+HubSpot Dealcompanyassociation to  Order
+----------------------------------------
+Every HubSpot Dealcompanyassociation will be synchronized with a  Order.
+
+Once a link between a HubSpot Dealcompanyassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcompanyassociation and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcompanyassociation Property
+     -  Order Property
+     -  Data Type
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - customer_id
+     - "string"
+
+
+HubSpot Dealcontactassociation to  Order
+----------------------------------------
+Every HubSpot Dealcontactassociation will be synchronized with a  Order.
+
+Once a link between a HubSpot Dealcontactassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcontactassociation and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcontactassociation Property
+     -  Order Property
+     -  Data Type
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - customer_id
+     - "string"
+
+
+HubSpot Lineitem to  Order
+--------------------------
+Every HubSpot Lineitem will be synchronized with a  Order.
+
+Once a link between a HubSpot Lineitem and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     -  Order Property
+     -  Data Type
+
+
+HubSpot Lineitemdealassociation to  Order
+-----------------------------------------
+Every HubSpot Lineitemdealassociation will be synchronized with a  Order.
+
+Once a link between a HubSpot Lineitemdealassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
+     -  Order Property
+     -  Data Type
+
+
+HubSpot Lineitemquoteassociation to  Order
+------------------------------------------
+Every HubSpot Lineitemquoteassociation will be synchronized with a  Order.
+
+Once a link between a HubSpot Lineitemquoteassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociation and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociation Property
+     -  Order Property
+     -  Data Type
+
+
+HubSpot Quote to  Order
+-----------------------
+Every HubSpot Quote will be synchronized with a  Order.
+
+Once a link between a HubSpot Quote and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quote and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quote Property
+     -  Order Property
+     -  Data Type
+   * - associations.companies.results.id
+     - customer_id
+     - "string"
+   * - associations.contacts.results.id
+     - customer_id
+     - "string"
+
+
+HubSpot Quotecompanyassociation to  Order
+-----------------------------------------
+Every HubSpot Quotecompanyassociation will be synchronized with a  Order.
+
+Once a link between a HubSpot Quotecompanyassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecompanyassociation and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecompanyassociation Property
+     -  Order Property
+     -  Data Type
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - customer_id
+     - "string"
+
+
+HubSpot Quotecontactassociation to  Order
+-----------------------------------------
+Every HubSpot Quotecontactassociation will be synchronized with a  Order.
+
+Once a link between a HubSpot Quotecontactassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecontactassociation and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecontactassociation Property
+     -  Order Property
+     -  Data Type
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - customer_id
+     - "string"
+
+
+HubSpot Quotedealassociation to  Order
+--------------------------------------
+Every HubSpot Quotedealassociation will be synchronized with a  Order.
+
+Once a link between a HubSpot Quotedealassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotedealassociation and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotedealassociation Property
+     -  Order Property
+     -  Data Type
+
+
+HubSpot Quotequotetemplateassociation to  Order
+-----------------------------------------------
+Every HubSpot Quotequotetemplateassociation will be synchronized with a  Order.
+
+Once a link between a HubSpot Quotequotetemplateassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotequotetemplateassociation and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotequotetemplateassociation Property
+     -  Order Property
      -  Data Type
 
 
