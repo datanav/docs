@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-08-28 09:40:20
+Generated: 2024-08-28 12:18:16
 
 Introduction
 ------------
@@ -51,4 +51,20 @@ The following properties are synchronized between a Wave Customer person and a  
    * - lastName
      - last_name
      - "string"
+
+
+Wave Invoice to  Order
+----------------------
+Every Wave Invoice will be synchronized with a  Order.
+
+Once a link between a Wave Invoice and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     -  Order Property
+     -  Data Type
 
