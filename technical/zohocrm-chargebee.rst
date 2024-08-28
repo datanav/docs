@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-08-28 10:29:31
+Generated: 2024-08-28 12:40:03
 
 Introduction
 ------------
@@ -25,6 +25,28 @@ The following properties are synchronized between a ZohoCRM Account and a  Busin
      -  Data Type
    * - Account_Name
      - name
+     - "string"
+
+
+ZohoCRM Deal to  Order
+----------------------
+Every ZohoCRM Deal will be synchronized with a  Order.
+
+Once a link between a ZohoCRM Deal and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Deal and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Deal Property
+     -  Order Property
+     -  Data Type
+   * - Account_Name.id
+     - customer_id
+     - "string"
+   * - Contact_Name.id
+     - customer_id
      - "string"
 
 
