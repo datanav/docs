@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-28 10:47:44
+Generated: 2024-08-28 12:32:24
 
 Introduction
 ------------
@@ -32,4 +32,36 @@ The following properties are synchronized between a HubSpot Company and a  Organ
    * - properties.phone
      - OrganisationTelephone
      - "string"
+
+
+HubSpot Product to  Products
+----------------------------
+Every HubSpot Product will be synchronized with a  Products.
+
+Once a link between a HubSpot Product and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a  Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     -  Products Property
+     -  Data Type
+
+
+HubSpot User to  Users
+----------------------
+Every HubSpot User will be synchronized with a  Users.
+
+Once a link between a HubSpot User and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot User and a  Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot User Property
+     -  Users Property
+     -  Data Type
 
