@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-28 08:30:18
+Generated: 2024-08-28 08:30:34
 
 Introduction
 ------------
@@ -76,6 +76,15 @@ The following properties are synchronized between a Powerofficego Product and a 
    * - Powerofficego Product Property
      -  Items Property
      -  Data Type
+   * - costPrice
+     - unit_cost
+     - "string"
+   * - description
+     - description
+     - "string"
+   * - name
+     - name
+     - "string"
 
 
 Powerofficego Salesorderlines to  Lineitem
