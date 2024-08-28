@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-08-28 00:01:04
+Generated: 2024-08-28 00:21:39
 
 Introduction
 ------------
@@ -34,25 +34,6 @@ The following properties are synchronized between a Wave Customer and a  Address
      - "string"
    * - shippingDetails.phone
      - phone
-     - "string"
-
-
-Wave Customer to  Company
--------------------------
-Every Wave Customer will be synchronized with a  Company.
-
-Once a link between a Wave Customer and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     -  Company Property
-     -  Data Type
-   * - name
-     - name
      - "string"
 
 
