@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-28 08:30:28
+Generated: 2024-08-28 08:30:34
 
 Introduction
 ------------
@@ -81,6 +81,9 @@ The following properties are synchronized between a Businesscentral Items and a 
      -  Data Type
    * - displayName
      - name
+     - "string"
+   * - unitCost
+     - unit_cost
      - "string"
 
 
