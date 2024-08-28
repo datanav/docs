@@ -2,7 +2,7 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2024-08-28 09:40:20
+Generated: 2024-08-28 10:47:36
 
 Introduction
 ------------
@@ -54,5 +54,21 @@ The following properties are synchronized between a YouTrack Usergroups and a  B
 
    * - YouTrack Usergroups Property
      -  Business_entity Property
+     -  Data Type
+
+
+YouTrack Users to  Customer
+---------------------------
+Every YouTrack Users will be synchronized with a  Customer.
+
+Once a link between a YouTrack Users and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Users and a  Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Users Property
+     -  Customer Property
      -  Data Type
 
