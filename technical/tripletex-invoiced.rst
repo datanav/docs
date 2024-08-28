@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-28 08:00:26
+Generated: 2024-08-28 08:12:21
 
 Introduction
 ------------
@@ -140,5 +140,30 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
    * - postalAddress.postalCode
      - postal_code
+     - "string"
+
+
+Tripletex Order to  Invoices
+----------------------------
+Every Tripletex Order will be synchronized with a  Invoices.
+
+Once a link between a Tripletex Order and a  Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a  Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     -  Invoices Property
+     -  Data Type
+   * - contact.id
+     - customer
+     - "string"
+   * - currency.id
+     - currency
+     - "string"
+   * - customer.id
+     - customer
      - "string"
 
