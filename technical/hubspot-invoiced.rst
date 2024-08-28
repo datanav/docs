@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-28 08:16:18
+Generated: 2024-08-28 08:30:18
 
 Introduction
 ------------
@@ -57,4 +57,20 @@ The following properties are synchronized between a HubSpot Lineitem and a  Line
    * - properties.quantity
      - items.quantity
      - "string"
+
+
+HubSpot Product to  Items
+-------------------------
+Every HubSpot Product will be synchronized with a  Items.
+
+Once a link between a HubSpot Product and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a  Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     -  Items Property
+     -  Data Type
 
