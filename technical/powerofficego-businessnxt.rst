@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-28 00:01:04
+Generated: 2024-08-28 00:21:39
 
 Introduction
 ------------
@@ -31,31 +31,6 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Customers to  Company
------------------------------------
-Every Powerofficego Customers will be synchronized with a  Company.
-
-Once a link between a Powerofficego Customers and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customers and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers Property
-     -  Company Property
-     -  Data Type
-   * - Name
-     - name
-     - "string"
-   * - Number
-     - companyBusinessNo (Dependant on having wd:Q852835 in countryIsoCode)
-     - "string"
-   * - OrganizationNumber
-     - companyBusinessNo (Dependant on having  in countryIsoCode)
-     - "string"
-
-
 Powerofficego Departments to  Address
 -------------------------------------
 Every Powerofficego Departments will be synchronized with a  Address.
@@ -70,28 +45,6 @@ The following properties are synchronized between a Powerofficego Departments an
    * - Powerofficego Departments Property
      -  Address Property
      -  Data Type
-   * - Name
-     - name
-     - "string"
-
-
-Powerofficego Departments to  Company
--------------------------------------
-Every Powerofficego Departments will be synchronized with a  Company.
-
-Once a link between a Powerofficego Departments and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Departments and a  Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Departments Property
-     -  Company Property
-     -  Data Type
-   * - Code
-     - companyBusinessNo (Dependant on having wd:Q2366457 in countryIsoCode)
-     - "string"
    * - Name
      - name
      - "string"
