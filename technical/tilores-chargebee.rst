@@ -2,7 +2,7 @@
 Tilores to  Dataflow
 ====================
 
-Generated: 2024-08-28 10:47:36
+Generated: 2024-08-28 10:47:44
 
 Introduction
 ------------
@@ -23,4 +23,13 @@ The following properties are synchronized between a Tilores Human and a  Custome
    * - Tilores Human Property
      -  Customer Property
      -  Data Type
+   * - email
+     - email
+     - "string"
+   * - firstName
+     - first_name
+     - "string"
+   * - lastName
+     - last_name
+     - "string"
 
