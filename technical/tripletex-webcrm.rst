@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-28 10:47:44
+Generated: 2024-08-28 12:21:17
 
 Introduction
 ------------
@@ -105,4 +105,20 @@ The following properties are synchronized between a Tripletex Department and a  
    * - name
      - OrganisationName
      - "string"
+
+
+Tripletex Contact to  Persons
+-----------------------------
+Every Tripletex Contact will be synchronized with a  Persons.
+
+Once a link between a Tripletex Contact and a  Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a  Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     -  Persons Property
+     -  Data Type
 
