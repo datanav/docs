@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-28 09:23:19
+Generated: 2024-08-28 09:26:22
 
 Introduction
 ------------
@@ -21,6 +21,22 @@ The following properties are synchronized between a Tripletex Customer and a  Cu
    :header-rows: 1
 
    * - Tripletex Customer Property
+     -  Customer Property
+     -  Data Type
+
+
+Tripletex Customer person to  Customer
+--------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a  Customer.
+
+Once a link between a Tripletex Customer person and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a  Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
      -  Customer Property
      -  Data Type
 
