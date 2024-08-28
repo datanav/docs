@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-28 10:47:44
+Generated: 2024-08-28 12:40:03
 
 Introduction
 ------------
@@ -50,5 +50,59 @@ The following properties are synchronized between a SuperOffice Person and a  Cu
      - "string"
    * - Lastname
      - last_name
+     - "string"
+
+
+SuperOffice Quotealternative to  Order
+--------------------------------------
+Every SuperOffice Quotealternative will be synchronized with a  Order.
+
+Once a link between a SuperOffice Quotealternative and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quotealternative Property
+     -  Order Property
+     -  Data Type
+
+
+SuperOffice Quoteline to  Order
+-------------------------------
+Every SuperOffice Quoteline will be synchronized with a  Order.
+
+Once a link between a SuperOffice Quoteline and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     -  Order Property
+     -  Data Type
+
+
+SuperOffice Sale to  Order
+--------------------------
+Every SuperOffice Sale will be synchronized with a  Order.
+
+Once a link between a SuperOffice Sale and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Sale and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Sale Property
+     -  Order Property
+     -  Data Type
+   * - Contact.ContactId
+     - customer_id
+     - "string"
+   * - Person.PersonId
+     - customer_id
      - "string"
 
