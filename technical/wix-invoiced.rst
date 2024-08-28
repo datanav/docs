@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-08-28 08:12:21
+Generated: 2024-08-28 08:16:18
 
 Introduction
 ------------
@@ -28,5 +28,30 @@ The following properties are synchronized between a Wix.com Orders and a  Invoic
      - "string"
    * - currency
      - currency
+     - "string"
+
+
+Wix.com Orders to  Lineitem
+---------------------------
+Every Wix.com Orders will be synchronized with a  Lineitem.
+
+Once a link between a Wix.com Orders and a  Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Orders and a  Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Orders Property
+     -  Lineitem Property
+     -  Data Type
+   * - lineItems.name
+     - items.name
+     - "string"
+   * - lineItems.price
+     - items.amount
+     - "string"
+   * - lineItems.quantity
+     - items.quantity
      - "string"
 
