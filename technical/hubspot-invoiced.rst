@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-28 08:12:21
+Generated: 2024-08-28 08:16:18
 
 Introduction
 ------------
@@ -25,5 +25,36 @@ The following properties are synchronized between a HubSpot Deal and a  Invoices
      -  Data Type
    * - properties.deal_currency_code
      - currency
+     - "string"
+
+
+HubSpot Lineitem to  Lineitem
+-----------------------------
+Every HubSpot Lineitem will be synchronized with a  Lineitem.
+
+Once a link between a HubSpot Lineitem and a  Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a  Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     -  Lineitem Property
+     -  Data Type
+   * - properties.description
+     - items.description
+     - "string"
+   * - properties.hs_discount_percentage
+     - items.discounts
+     - "string"
+   * - properties.name
+     - items.name
+     - "string"
+   * - properties.price
+     - items.amount
+     - "string"
+   * - properties.quantity
+     - items.quantity
      - "string"
 
