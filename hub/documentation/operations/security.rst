@@ -2,9 +2,8 @@
 Security
 ========
 
-------------
 Introduction
-------------
+============
 
 There are two different security domains in Sesam.
 
@@ -21,9 +20,8 @@ These two domains are explained in more detail below.
 
 .. _security_subscriptions_users_roles_and_permissions:
 
--------------------------------------------
 Subscriptions, Users, Roles and Permissions
--------------------------------------------
+===========================================
 
 The ability to perform actions in the Sesam Portal is controlled by assigning Roles to Users.
 The Roles is assigned in the scope of a specific Subscription, so a User can have different Roles
@@ -65,7 +63,7 @@ in the subscription "subA":
       in the http response. If not, the Sesam node sends a "403 Forbidden" http response instead.
 
 Role-based access overview
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+==========================
 
 +------------------------+---------+-------------+------------------+-----------+
 | Feature                | Admin   | Developer   | User             | Guest     |
@@ -93,9 +91,27 @@ Role-based access overview
 | Upload license         | Yes     | No          | No               | No        |
 +------------------------+---------+-------------+------------------+-----------+
 
+Pipe permissions
+----------------
+
+.. code-block:: json
+    
+    "permissions": [
+       ["allow", ["group:Developer"], ["read_config","write_config","run_pump_operation","read_data","write_data"]]   
+   ]
+
+System permissions
+------------------
+
+.. code-block:: json
+    
+    "permissions": [
+       ["allow", ["group:Developer"], ["read_data","write_data","read_config","write_config","read_proxy","write_proxy"]]
+   
+   ]
 
 Sesam node runtime
-~~~~~~~~~~~~~~~~~~
+==================
 When a user creates a pipe, the pipe inherits the roles of that user. The list of roles is
 stored as part of the pipe-config. At runtime, a permission-check is made to check if the pipe is
 allowed to do what it is attempting to do. This includes checking if the pipe is allowed to read
@@ -107,12 +123,11 @@ page in the GUI.
 
 .. _secrets_manager:
 
--------------------
 The secrets manager
--------------------
+===================
 
 Managing secrets
-~~~~~~~~~~~~~~~~
+----------------
 
 System configuration properties that contain secrets are managed by the Sesam Secrets manager API. See the
 :ref:`API reference <api-reference>` for its documentation.
@@ -120,7 +135,7 @@ System configuration properties that contain secrets are managed by the Sesam Se
 You can use this API to upload or delete secrets to be used in :ref:`system components configuration <system_section>`.
 The secrets should be in a JSON document as either a list of objects or a single object:
 
-::
+.. code-block:: json
 
   {
     "secret-property": "secret-value",
@@ -162,7 +177,7 @@ you must store them in a secure fashion off-site.
 
 
 The lifetime of secrets
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 Global secrets lives until they are explicitly deleted.
 
@@ -171,14 +186,14 @@ a System, you have to upload all the System-local secrets again.
 
 
 Using secrets
-~~~~~~~~~~~~~
+-------------
 
 Once you have uploaded your secrets to the Secrets manager, you can start using them in your :ref:`system configuration <system_section>`
 by substituting the configuration property value(s) using a special syntax.
 
 An example: given a existing system configuration:
 
-::
+.. code-block:: json
 
    {
      "_id": "my-system",
@@ -191,7 +206,7 @@ An example: given a existing system configuration:
 
 Extract the secret properties into a separate JSON document, and give them names you can remember:
 
-::
+.. code-block:: json
 
   {
       "my-system-host": "my-db-server",
@@ -203,7 +218,7 @@ Save the JSON document to a .json file and store it securely off site. Then uplo
 sesam api. You can then substitute the original secret values in the system configuration with the substitution keys
 using the "$SECRET(key)" syntax:
 
-::
+.. code-block:: json
 
    {
      "_id": "my-system",
@@ -219,7 +234,7 @@ the API (or log files).
 
 You can also compose a property that consists of several secrets:
 
-::
+.. code-block:: json
 
    {
      "_id": "my-system",
@@ -228,8 +243,9 @@ You can also compose a property that consists of several secrets:
      "..": ".."
    }
 
-Note that when using properties that contain multiple secrets, you cannot nest secret values inside each other, and the
-resulting property will always be a string. Secrets can be combined with environment variables, but they cannot be nested.
-See the chapter on :ref:`configuration environment variables <environment_variables>` for details.
+.. note::
+  When using properties that contain multiple secrets, you cannot nest secret values inside each other, and the
+  resulting property will always be a string. Secrets can be combined with environment variables, but they cannot be nested.
+  See the chapter on :ref:`configuration environment variables <environment_variables>` for details.
 
-Secrets applies only to System configuration entities.
+  Secrets applies only to System configuration entities.
