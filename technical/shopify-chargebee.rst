@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-28 09:28:19
+Generated: 2024-08-28 10:28:04
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Shopify Customer and a  Cust
    * - Shopify Customer Property
      -  Customer Property
      -  Data Type
+   * - default_address.country_name
+     - billing_address.country
+     - "string"
    * - email
      - email
      - "string"
