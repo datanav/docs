@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-28 07:50:43
+Generated: 2024-08-28 07:51:21
 
 Introduction
 ------------
@@ -28,5 +28,26 @@ The following properties are synchronized between a Tidsbanken Kunde and a  Cust
      - "string"
    * - Id
      - id
+     - "string"
+   * - LevPostNr
+     - postal_code
+     - "string"
+   * - LevPoststed
+     - city
+     - "string"
+   * - Leveringsadresse
+     - address1
+     - "string"
+   * - Leveringsadresse2
+     - address2
+     - "string"
+   * - Postadresse
+     - address2
+     - "string"
+   * - Postnr
+     - postal_code
+     - "string"
+   * - Poststed
+     - city
      - "string"
 
