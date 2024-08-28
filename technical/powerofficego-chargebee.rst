@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-28 12:31:02
+Generated: 2024-08-28 12:31:08
 
 Introduction
 ------------
@@ -154,4 +154,10 @@ The following properties are synchronized between a Powerofficego Salesorders an
    * - Powerofficego Salesorders Property
      -  Order Property
      -  Data Type
+   * - CustomerId
+     - customer_id
+     - "string"
+   * - CustomerReferenceContactPersonId
+     - customer_id
+     - "string"
 
