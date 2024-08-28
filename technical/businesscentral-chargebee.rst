@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-28 10:47:44
+Generated: 2024-08-28 10:54:43
 
 Introduction
 ------------
@@ -67,6 +67,22 @@ The following properties are synchronized between a Businesscentral Employees an
    * - surname
      - last_name
      - "string"
+
+
+Businesscentral Salesorderlines to  Subscription
+------------------------------------------------
+Every Businesscentral Salesorderlines will be synchronized with a  Subscription.
+
+Once a link between a Businesscentral Salesorderlines and a  Subscription is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorderlines and a  Subscription:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorderlines Property
+     -  Subscription Property
+     -  Data Type
 
 
 Businesscentral Customers company to  Business_entity
