@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-28 08:16:18
+Generated: 2024-08-28 08:30:18
 
 Introduction
 ------------
@@ -194,4 +194,20 @@ The following properties are synchronized between a Tripletex Orderline and a  L
    * - unitPriceExcludingVatCurrency
      - items.amount
      - "string"
+
+
+Tripletex Product to  Items
+---------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Items.
+
+Once a link between a Tripletex Product and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a  Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     -  Items Property
+     -  Data Type
 
