@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-08-29 11:02:03
+Generated: 2024-08-29 11:05:01
 
 Introduction
 ------------
@@ -25,6 +25,9 @@ The following properties are synchronized between a Asana Teams and a  Accounts:
      -  Data Type
    * - name
      - Name
+     - "string"
+   * - permalink_url
+     - Website
      - "string"
 
 
