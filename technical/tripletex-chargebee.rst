@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 09:28:40
+Generated: 2024-08-29 10:28:41
 
 Introduction
 ------------
@@ -232,41 +232,6 @@ The following properties are synchronized between a Tripletex Product and a  Ite
 
    * - Tripletex Product Property
      -  Item Property
-     -  Data Type
-   * - name
-     - name
-     - "string"
-
-
-Tripletex Productgroup to  Currency
------------------------------------
-Every Tripletex Productgroup will be synchronized with a  Currency.
-
-Once a link between a Tripletex Productgroup and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Productgroup and a  Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productgroup Property
-     -  Currency Property
-     -  Data Type
-
-
-Tripletex Productgroup to  Item_family
---------------------------------------
-Every Tripletex Productgroup will be synchronized with a  Item_family.
-
-Once a link between a Tripletex Productgroup and a  Item_family is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Productgroup and a  Item_family:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productgroup Property
-     -  Item_family Property
      -  Data Type
    * - name
      - name
