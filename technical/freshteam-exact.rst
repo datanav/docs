@@ -2,7 +2,7 @@
 Freshteam to  Dataflow
 ======================
 
-Generated: 2024-08-29 13:15:04
+Generated: 2024-08-29 13:19:10
 
 Introduction
 ------------
@@ -96,6 +96,9 @@ The following properties are synchronized between a Freshteam Employee and a  Em
      -  Data Type
    * - date_of_birth
      - BirthDate
+     - "string"
+   * - first_name
+     - FirstName
      - "string"
    * - last_name
      - LastName
