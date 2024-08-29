@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-29 10:36:42
+Generated: 2024-08-29 10:37:37
 
 Introduction
 ------------
@@ -44,4 +44,20 @@ The following properties are synchronized between a Tidsbanken Ansatt and a  Con
    * - Poststed
      - City
      - "string"
+
+
+Tidsbanken Ansatt to  Addresses
+-------------------------------
+Every Tidsbanken Ansatt will be synchronized with a  Addresses.
+
+Once a link between a Tidsbanken Ansatt and a  Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Ansatt and a  Addresses:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Ansatt Property
+     -  Addresses Property
+     -  Data Type
 
