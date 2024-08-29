@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 11:28:41
+Generated: 2024-08-29 11:44:41
 
 Introduction
 ------------
@@ -112,6 +112,38 @@ The following properties are synchronized between a Tripletex Employee and a  Co
    * - phoneNumberWork
      - Phone
      - "string"
+
+
+Tripletex Order to  Quotations
+------------------------------
+Every Tripletex Order will be synchronized with a  Quotations.
+
+Once a link between a Tripletex Order and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     -  Quotations Property
+     -  Data Type
+
+
+Tripletex Orderline to  Quotations
+----------------------------------
+Every Tripletex Orderline will be synchronized with a  Quotations.
+
+Once a link between a Tripletex Orderline and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     -  Quotations Property
+     -  Data Type
 
 
 Tripletex Contact to  Contacts
