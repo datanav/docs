@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 12:49:37
+Generated: 2024-08-29 12:52:26
 
 Introduction
 ------------
@@ -369,6 +369,21 @@ The following properties are synchronized between a Tripletex Employee and a  Em
    * - Tripletex Employee Property
      -  Employees Property
      -  Data Type
+   * - address.addressLine1
+     - AddressStreet
+     - "string"
+   * - address.addressLine2
+     - AddressLine2
+     - "string"
+   * - address.city
+     - City
+     - "string"
+   * - address.country.id
+     - Country
+     - "string"
+   * - address.postalCode
+     - Postcode
+     - "string"
    * - id
      - ID
      - "string"
