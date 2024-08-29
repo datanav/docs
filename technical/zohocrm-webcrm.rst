@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-08-28 10:47:44
+Generated: 2024-08-29 08:04:11
 
 Introduction
 ------------
@@ -65,4 +65,20 @@ The following properties are synchronized between a ZohoCRM Account and a  Organ
    * - id
      - OrganisationId
      - "string"
+
+
+ZohoCRM Deal to  Opportunities
+------------------------------
+Every ZohoCRM Deal will be synchronized with a  Opportunities.
+
+Once a link between a ZohoCRM Deal and a  Opportunities is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Deal and a  Opportunities:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Deal Property
+     -  Opportunities Property
+     -  Data Type
 
