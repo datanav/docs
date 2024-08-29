@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-29 08:04:11
+Generated: 2024-08-29 09:15:41
 
 Introduction
 ------------
@@ -319,4 +319,20 @@ The following properties are synchronized between a HubSpot Deal and a  Order:
    * - properties.deal_currency_code
      - currency_code
      - "string"
+
+
+HubSpot Product to  Item
+------------------------
+Every HubSpot Product will be synchronized with a  Item.
+
+Once a link between a HubSpot Product and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a  Item:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     -  Item Property
+     -  Data Type
 
