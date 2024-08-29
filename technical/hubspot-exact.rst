@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-29 12:40:42
+Generated: 2024-08-29 12:48:38
 
 Introduction
 ------------
@@ -483,25 +483,6 @@ The following properties are synchronized between a HubSpot Account and a  Curre
      - "string"
 
 
-HubSpot Account to  Employees
------------------------------
-Every HubSpot Account will be synchronized with a  Employees.
-
-Once a link between a HubSpot Account and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Account and a  Employees:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Account Property
-     -  Employees Property
-     -  Data Type
-   * - accountType
-     - Code
-     - "string"
-
-
 HubSpot Contact to  Addresses
 -----------------------------
 Every HubSpot Contact will be synchronized with a  Addresses.
@@ -540,25 +521,6 @@ The following properties are synchronized between a HubSpot Deal and a  Currenci
 
    * - HubSpot Deal Property
      -  Currencies Property
-     -  Data Type
-   * - properties.deal_currency_code
-     - Code
-     - "string"
-
-
-HubSpot Deal to  Employees
---------------------------
-Every HubSpot Deal will be synchronized with a  Employees.
-
-Once a link between a HubSpot Deal and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Deal and a  Employees:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     -  Employees Property
      -  Data Type
    * - properties.deal_currency_code
      - Code
