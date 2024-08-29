@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-29 14:06:40
+Generated: 2024-08-29 14:15:49
 
 Introduction
 ------------
@@ -252,6 +252,9 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      -  Salesorderlines Property
      -  Data Type
+   * - ERPProductKey
+     - Item
+     - "string"
    * - QuoteAlternativeId
      - OrderID
      - "string"
