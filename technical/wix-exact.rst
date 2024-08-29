@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-08-29 12:48:38
+Generated: 2024-08-29 13:45:43
 
 Introduction
 ------------
@@ -51,4 +51,23 @@ The following properties are synchronized between a Wix.com Currencies and a  Cu
    * - Wix.com Currencies Property
      -  Currencies Property
      -  Data Type
+
+
+Wix.com Orders to  Salesorders
+------------------------------
+Every Wix.com Orders will be synchronized with a  Salesorders.
+
+Once a link between a Wix.com Orders and a  Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Orders and a  Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Orders Property
+     -  Salesorders Property
+     -  Data Type
+   * - currency
+     - Currency
+     - "string"
 
