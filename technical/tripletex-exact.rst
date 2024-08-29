@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 11:44:41
+Generated: 2024-08-29 11:44:44
 
 Introduction
 ------------
@@ -128,6 +128,9 @@ The following properties are synchronized between a Tripletex Order and a  Quota
    * - Tripletex Order Property
      -  Quotations Property
      -  Data Type
+   * - currency.id
+     - Currency
+     - "string"
 
 
 Tripletex Orderline to  Quotations
@@ -144,6 +147,9 @@ The following properties are synchronized between a Tripletex Orderline and a  Q
    * - Tripletex Orderline Property
      -  Quotations Property
      -  Data Type
+   * - currency.id
+     - Currency
+     - "string"
 
 
 Tripletex Contact to  Contacts
