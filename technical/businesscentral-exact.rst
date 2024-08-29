@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-29 13:12:09
+Generated: 2024-08-29 13:14:49
 
 Introduction
 ------------
@@ -345,5 +345,8 @@ The following properties are synchronized between a Businesscentral Employees an
      - "string"
    * - phoneNumber
      - Phone
+     - "string"
+   * - surname
+     - LastName
      - "string"
 
