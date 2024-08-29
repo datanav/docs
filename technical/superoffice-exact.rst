@@ -2,12 +2,30 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-29 14:05:53
+Generated: 2024-08-29 14:06:37
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+SuperOffice Quotealternative to  Salesorders
+--------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Quotealternative and a  Salesorders must be established.
+
+A new  Salesorders will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into .
+
+Once a link between a SuperOffice Quotealternative and a  Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a  Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quotealternative Property
+     -  Salesorders Property
+     -  Data Type
+
 
 SuperOffice Contact to  Accounts
 --------------------------------
