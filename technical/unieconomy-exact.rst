@@ -2,7 +2,7 @@
 Unieconomy to  Dataflow
 =======================
 
-Generated: 2024-08-29 10:51:41
+Generated: 2024-08-29 10:54:40
 
 Introduction
 ------------
@@ -21,6 +21,22 @@ The following properties are synchronized between a Unieconomy Companies and a  
    :header-rows: 1
 
    * - Unieconomy Companies Property
+     -  Accounts Property
+     -  Data Type
+
+
+Unieconomy Customers to  Accounts
+---------------------------------
+Every Unieconomy Customers will be synchronized with a  Accounts.
+
+Once a link between a Unieconomy Customers and a  Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Customers and a  Accounts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Customers Property
      -  Accounts Property
      -  Data Type
 
