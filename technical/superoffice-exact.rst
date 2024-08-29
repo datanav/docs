@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-29 14:06:37
+Generated: 2024-08-29 14:06:40
 
 Introduction
 ------------
@@ -25,6 +25,12 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - SuperOffice Quotealternative Property
      -  Salesorders Property
      -  Data Type
+   * - DiscountPercent
+     - Discount
+     - "string"
+   * - Name
+     - Description
+     - "string"
 
 
 SuperOffice Contact to  Accounts
