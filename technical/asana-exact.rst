@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-08-29 11:00:42
+Generated: 2024-08-29 11:02:03
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Asana Teams and a  Accounts:
    * - Asana Teams Property
      -  Accounts Property
      -  Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Asana Workspaces to  Accounts
@@ -39,4 +42,7 @@ The following properties are synchronized between a Asana Workspaces and a  Acco
    * - Asana Workspaces Property
      -  Accounts Property
      -  Data Type
+   * - name
+     - Name
+     - "string"
 
