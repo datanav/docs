@@ -2,7 +2,7 @@
 Freshteam to  Dataflow
 ======================
 
-Generated: 2024-08-29 13:07:54
+Generated: 2024-08-29 13:09:07
 
 Introduction
 ------------
@@ -99,5 +99,8 @@ The following properties are synchronized between a Freshteam Employee and a  Em
      - "string"
    * - official_email
      - BusinessEmail
+     - "string"
+   * - personal_email
+     - Email
      - "string"
 
