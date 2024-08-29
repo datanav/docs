@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-29 10:54:40
+Generated: 2024-08-29 10:55:20
 
 Introduction
 ------------
@@ -82,4 +82,22 @@ The following properties are synchronized between a Tidsbanken Kunde and a  Acco
    * - Tidsbanken Kunde Property
      -  Accounts Property
      -  Data Type
+   * - Gateadresse
+     - AddressLine1
+     - "string"
+   * - LevPoststed
+     - City
+     - "string"
+   * - Leveringsadresse
+     - AddressLine1
+     - "string"
+   * - Leveringsadresse2
+     - AddressLine2
+     - "string"
+   * - Postadresse
+     - AddressLine2
+     - "string"
+   * - Poststed
+     - City
+     - "string"
 
