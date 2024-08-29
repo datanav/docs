@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 13:19:10
+Generated: 2024-08-29 13:45:43
 
 Introduction
 ------------
@@ -407,5 +407,24 @@ The following properties are synchronized between a Tripletex Employee and a  Em
      - "string"
    * - phoneNumberWork
      - Phone
+     - "string"
+
+
+Tripletex Order to  Salesorders
+-------------------------------
+Every Tripletex Order will be synchronized with a  Salesorders.
+
+Once a link between a Tripletex Order and a  Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a  Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     -  Salesorders Property
+     -  Data Type
+   * - currency.id
+     - Currency
      - "string"
 
