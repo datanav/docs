@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-29 11:02:03
+Generated: 2024-08-29 11:05:19
 
 Introduction
 ------------
@@ -35,6 +35,9 @@ The following properties are synchronized between a SuperOffice Contact and a  A
    * - Address.Postal.City
      - City
      - "string"
+   * - Address.Postal.Zipcode
+     - Postcode
+     - "string"
    * - Address.Street.Address1
      - AddressLine1
      - "string"
@@ -47,11 +50,20 @@ The following properties are synchronized between a SuperOffice Contact and a  A
    * - Address.Street.City
      - City
      - "string"
+   * - Address.Street.Zipcode
+     - Postcode
+     - "string"
    * - Country.CountryId
      - Country
      - "string"
    * - Name
      - Name
+     - "string"
+   * - Phones.Value
+     - Phone
+     - "string"
+   * - Urls.Value
+     - Website
      - "string"
 
 
