@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-29 13:48:55
+Generated: 2024-08-29 13:54:55
 
 Introduction
 ------------
@@ -549,6 +549,9 @@ The following properties are synchronized between a HubSpot Deal and a  Salesord
      - "string"
    * - properties.deal_currency_code
      - Currency
+     - "string"
+   * - properties.description
+     - Description
      - "string"
 
 
