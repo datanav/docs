@@ -2,12 +2,44 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-29 10:35:42
+Generated: 2024-08-29 10:36:33
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Businesscentral Customers person to  Contacts
+---------------------------------------------
+Every Businesscentral Customers person will be synchronized with a  Contacts.
+
+Once a link between a Businesscentral Customers person and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers person and a  Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers person Property
+     -  Contacts Property
+     -  Data Type
+
+
+Businesscentral Employees to  Contacts
+--------------------------------------
+Every Businesscentral Employees will be synchronized with a  Contacts.
+
+Once a link between a Businesscentral Employees and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Employees and a  Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Employees Property
+     -  Contacts Property
+     -  Data Type
+
 
 Businesscentral Contacts person to  Contacts
 --------------------------------------------
