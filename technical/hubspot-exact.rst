@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-29 11:02:03
+Generated: 2024-08-29 11:05:19
 
 Introduction
 ------------
@@ -37,6 +37,15 @@ The following properties are synchronized between a HubSpot Company and a  Accou
      - "string"
    * - properties.name
      - Name
+     - "string"
+   * - properties.phone
+     - Phone
+     - "string"
+   * - properties.website
+     - Website
+     - "string"
+   * - properties.zip
+     - Postcode
      - "string"
 
 
