@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-29 11:00:44
+Generated: 2024-08-29 11:02:03
 
 Introduction
 ------------
@@ -49,6 +49,9 @@ The following properties are synchronized between a SuperOffice Contact and a  A
      - "string"
    * - Country.CountryId
      - Country
+     - "string"
+   * - Name
+     - Name
      - "string"
 
 
