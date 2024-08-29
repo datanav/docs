@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-28 12:32:24
+Generated: 2024-08-29 08:04:11
 
 Introduction
 ------------
@@ -83,6 +83,38 @@ The following properties are synchronized between a SuperOffice Product and a  P
 
    * - SuperOffice Product Property
      -  Products Property
+     -  Data Type
+
+
+SuperOffice Quoteline to  Quotationline
+---------------------------------------
+Every SuperOffice Quoteline will be synchronized with a  Quotationline.
+
+Once a link between a SuperOffice Quoteline and a  Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a  Quotationline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     -  Quotationline Property
+     -  Data Type
+
+
+SuperOffice Sale to  Opportunities
+----------------------------------
+Every SuperOffice Sale will be synchronized with a  Opportunities.
+
+Once a link between a SuperOffice Sale and a  Opportunities is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Sale and a  Opportunities:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Sale Property
+     -  Opportunities Property
      -  Data Type
 
 
