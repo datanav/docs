@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-29 09:15:41
+Generated: 2024-08-29 09:16:48
 
 Introduction
 ------------
@@ -79,4 +79,7 @@ The following properties are synchronized between a Shopify Sesamproduct and a  
    * - Shopify Sesamproduct Property
      -  Item Property
      -  Data Type
+   * - title
+     - name
+     - "string"
 
