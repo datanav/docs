@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-29 11:44:41
+Generated: 2024-08-29 11:44:44
 
 Introduction
 ------------
@@ -60,4 +60,13 @@ The following properties are synchronized between a Shopify Order and a  Quotati
    * - Shopify Order Property
      -  Quotations Property
      -  Data Type
+   * - currency
+     - Currency
+     - "string"
+   * - customer.id
+     - DeliveryAddress
+     - "string"
+   * - id
+     - DeliveryAddress
+     - "string"
 
