@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-29 14:05:53
+Generated: 2024-08-29 14:08:41
 
 Introduction
 ------------
@@ -371,22 +371,6 @@ The following properties are synchronized between a Businesscentral Salesorderli
    * - documentId
      - OrderID
      - "string"
-
-
-Businesscentral Salesorders to  Salesorderlines
------------------------------------------------
-Every Businesscentral Salesorders will be synchronized with a  Salesorderlines.
-
-Once a link between a Businesscentral Salesorders and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Salesorders and a  Salesorderlines:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Salesorders Property
-     -  Salesorderlines Property
-     -  Data Type
 
 
 Businesscentral Salesorders to  Salesorders
