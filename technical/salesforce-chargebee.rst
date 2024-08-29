@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-08-29 09:15:41
+Generated: 2024-08-29 09:16:48
 
 Introduction
 ------------
@@ -70,4 +70,7 @@ The following properties are synchronized between a Salesforce Product2 and a  I
    * - Salesforce Product2 Property
      -  Item Property
      -  Data Type
+   * - Name	
+     - name
+     - "string"
 
