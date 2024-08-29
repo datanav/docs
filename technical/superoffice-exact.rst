@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-29 11:44:41
+Generated: 2024-08-29 11:44:44
 
 Introduction
 ------------
@@ -137,6 +137,9 @@ The following properties are synchronized between a SuperOffice Sale and a  Quot
    * - SuperOffice Sale Property
      -  Quotations Property
      -  Data Type
+   * - Currency.Id
+     - Currency
+     - "string"
 
 
 SuperOffice Person to  Addresses
