@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-29 09:18:41
+Generated: 2024-08-29 09:21:41
 
 Introduction
 ------------
@@ -115,6 +115,22 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
 
 
+Powerofficego Salesorderlines to  Item
+--------------------------------------
+Every Powerofficego Salesorderlines will be synchronized with a  Item.
+
+Once a link between a Powerofficego Salesorderlines and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorderlines and a  Item:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorderlines Property
+     -  Item Property
+     -  Data Type
+
+
 Powerofficego Salesorderlines to  Order
 ---------------------------------------
 Every Powerofficego Salesorderlines will be synchronized with a  Order.
@@ -138,6 +154,22 @@ The following properties are synchronized between a Powerofficego Salesorderline
    * - VatRate
      - order_line_items.tax_amount
      - "string"
+
+
+Powerofficego Salesorders to  Item
+----------------------------------
+Every Powerofficego Salesorders will be synchronized with a  Item.
+
+Once a link between a Powerofficego Salesorders and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorders and a  Item:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorders Property
+     -  Item Property
+     -  Data Type
 
 
 Powerofficego Customers person to  Customer
