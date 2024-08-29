@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-29 12:49:37
+Generated: 2024-08-29 13:04:00
 
 Introduction
 ------------
@@ -303,6 +303,9 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - Powerofficego Employees Property
      -  Employees Property
      -  Data Type
+   * - DateOfBirth
+     - BirthDate
+     - "string"
 
 
 Powerofficego Location to  Addresses
