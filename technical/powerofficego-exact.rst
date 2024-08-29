@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-29 14:02:41
+Generated: 2024-08-29 14:03:35
 
 Introduction
 ------------
@@ -367,6 +367,22 @@ The following properties are synchronized between a Powerofficego Quote and a  Q
 
    * - Powerofficego Quote Property
      -  Quotations Property
+     -  Data Type
+
+
+Powerofficego Salesorderlines to  Salesorderlines
+-------------------------------------------------
+Every Powerofficego Salesorderlines will be synchronized with a  Salesorderlines.
+
+Once a link between a Powerofficego Salesorderlines and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorderlines and a  Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorderlines Property
+     -  Salesorderlines Property
      -  Data Type
 
 
