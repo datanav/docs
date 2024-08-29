@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-29 11:46:54
+Generated: 2024-08-29 11:47:52
 
 Introduction
 ------------
@@ -190,4 +190,7 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - SuperOffice Quotealternative Property
      -  Quotations Property
      -  Data Type
+   * - Name
+     - Description
+     - "string"
 
