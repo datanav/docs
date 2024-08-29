@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-29 11:30:51
+Generated: 2024-08-29 11:44:41
 
 Introduction
 ------------
@@ -102,6 +102,166 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
 
    * - HubSpot Contactcompanyassociation Property
      -  Contacts Property
+     -  Data Type
+
+
+HubSpot Deal to  Quotations
+---------------------------
+Every HubSpot Deal will be synchronized with a  Quotations.
+
+Once a link between a HubSpot Deal and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     -  Quotations Property
+     -  Data Type
+
+
+HubSpot Dealcompanyassociation to  Quotations
+---------------------------------------------
+Every HubSpot Dealcompanyassociation will be synchronized with a  Quotations.
+
+Once a link between a HubSpot Dealcompanyassociation and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcompanyassociation and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcompanyassociation Property
+     -  Quotations Property
+     -  Data Type
+
+
+HubSpot Dealcontactassociation to  Quotations
+---------------------------------------------
+Every HubSpot Dealcontactassociation will be synchronized with a  Quotations.
+
+Once a link between a HubSpot Dealcontactassociation and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcontactassociation and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcontactassociation Property
+     -  Quotations Property
+     -  Data Type
+
+
+HubSpot Lineitem to  Quotations
+-------------------------------
+Every HubSpot Lineitem will be synchronized with a  Quotations.
+
+Once a link between a HubSpot Lineitem and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     -  Quotations Property
+     -  Data Type
+
+
+HubSpot Lineitemdealassociation to  Quotations
+----------------------------------------------
+Every HubSpot Lineitemdealassociation will be synchronized with a  Quotations.
+
+Once a link between a HubSpot Lineitemdealassociation and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
+     -  Quotations Property
+     -  Data Type
+
+
+HubSpot Lineitemquoteassociation to  Quotations
+-----------------------------------------------
+Every HubSpot Lineitemquoteassociation will be synchronized with a  Quotations.
+
+Once a link between a HubSpot Lineitemquoteassociation and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociation and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociation Property
+     -  Quotations Property
+     -  Data Type
+
+
+HubSpot Quotecompanyassociation to  Quotations
+----------------------------------------------
+Every HubSpot Quotecompanyassociation will be synchronized with a  Quotations.
+
+Once a link between a HubSpot Quotecompanyassociation and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecompanyassociation and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecompanyassociation Property
+     -  Quotations Property
+     -  Data Type
+
+
+HubSpot Quotecontactassociation to  Quotations
+----------------------------------------------
+Every HubSpot Quotecontactassociation will be synchronized with a  Quotations.
+
+Once a link between a HubSpot Quotecontactassociation and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecontactassociation and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecontactassociation Property
+     -  Quotations Property
+     -  Data Type
+
+
+HubSpot Quotedealassociation to  Quotations
+-------------------------------------------
+Every HubSpot Quotedealassociation will be synchronized with a  Quotations.
+
+Once a link between a HubSpot Quotedealassociation and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotedealassociation and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotedealassociation Property
+     -  Quotations Property
+     -  Data Type
+
+
+HubSpot Quotequotetemplateassociation to  Quotations
+----------------------------------------------------
+Every HubSpot Quotequotetemplateassociation will be synchronized with a  Quotations.
+
+Once a link between a HubSpot Quotequotetemplateassociation and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotequotetemplateassociation and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotequotetemplateassociation Property
+     -  Quotations Property
      -  Data Type
 
 
