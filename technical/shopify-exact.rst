@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-29 14:02:41
+Generated: 2024-08-29 14:05:53
 
 Introduction
 ------------
@@ -104,6 +104,9 @@ The following properties are synchronized between a Shopify Order and a  Salesor
    * - Shopify Order Property
      -  Salesorderlines Property
      -  Data Type
+   * - id
+     - OrderID
+     - "string"
 
 
 Shopify Order to  Salesorders
