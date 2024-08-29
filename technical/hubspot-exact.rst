@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-29 12:18:40
+Generated: 2024-08-29 12:24:42
 
 Introduction
 ------------
@@ -103,6 +103,25 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
    * - HubSpot Contactcompanyassociation Property
      -  Contacts Property
      -  Data Type
+
+
+HubSpot Contactcompanyassociationtype to  Currencies
+----------------------------------------------------
+Every HubSpot Contactcompanyassociationtype will be synchronized with a  Currencies.
+
+Once a link between a HubSpot Contactcompanyassociationtype and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contactcompanyassociationtype and a  Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contactcompanyassociationtype Property
+     -  Currencies Property
+     -  Data Type
+   * - label
+     - Description
+     - "string"
 
 
 HubSpot Deal to  Quotations
