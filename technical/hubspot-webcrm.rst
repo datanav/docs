@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-28 12:32:24
+Generated: 2024-08-29 08:04:11
 
 Introduction
 ------------
@@ -32,6 +32,38 @@ The following properties are synchronized between a HubSpot Company and a  Organ
    * - properties.phone
      - OrganisationTelephone
      - "string"
+
+
+HubSpot Deal to  Opportunities
+------------------------------
+Every HubSpot Deal will be synchronized with a  Opportunities.
+
+Once a link between a HubSpot Deal and a  Opportunities is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a  Opportunities:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     -  Opportunities Property
+     -  Data Type
+
+
+HubSpot Lineitem to  Quotationline
+----------------------------------
+Every HubSpot Lineitem will be synchronized with a  Quotationline.
+
+Once a link between a HubSpot Lineitem and a  Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a  Quotationline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     -  Quotationline Property
+     -  Data Type
 
 
 HubSpot Product to  Products
