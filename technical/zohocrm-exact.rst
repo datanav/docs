@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-08-29 10:36:33
+Generated: 2024-08-29 10:36:42
 
 Introduction
 ------------
@@ -23,4 +23,40 @@ The following properties are synchronized between a ZohoCRM Contact and a  Conta
    * - ZohoCRM Contact Property
      -  Contacts Property
      -  Data Type
+   * - Email
+     - Email
+     - "string"
+   * - First_Name
+     - FirstName
+     - "string"
+   * - Full_Name
+     - FullName
+     - "string"
+   * - Last_Name
+     - LastName
+     - "string"
+   * - Mailing_City
+     - City
+     - "string"
+   * - Mailing_Country
+     - Country
+     - "string"
+   * - Mobile
+     - Mobile
+     - "string"
+   * - Other_City
+     - City
+     - "string"
+   * - Other_Country
+     - Country
+     - "string"
+   * - Other_Phone
+     - Phone
+     - "string"
+   * - Phone
+     - Phone
+     - "string"
+   * - Secondary_Email
+     - Email
+     - "string"
 
