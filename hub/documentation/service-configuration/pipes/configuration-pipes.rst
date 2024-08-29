@@ -111,7 +111,7 @@ Properties
      - This property should contain a list of ACL definitions (itself a 3-element list (tuple) of
        "ALLOW"|"DENY",[list,of,groups,or,roles],[list,of,permissions]) that defines
        which permissions should be applied to the pipe when it's uploaded and instantiated. See the example configuration
-       below for how this should be formatted.
+       below for how this should be formatted. You will find the list of pipe and system :ref:`permissions here <pipe_permissions>`.
      -
      -
 

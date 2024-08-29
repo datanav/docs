@@ -91,6 +91,8 @@ Role-based access overview
 | Upload license         | Yes     | No          | No               | No        |
 +------------------------+---------+-------------+------------------+-----------+
 
+.. _pipe_permissions:
+
 Pipe permissions
 ----------------
 
