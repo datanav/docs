@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-29 10:55:11
+Generated: 2024-08-29 10:55:20
 
 Introduction
 ------------
@@ -164,6 +164,15 @@ The following properties are synchronized between a Businesscentral Customers co
      -  Data Type
    * - addressLine1
      - AddressLine1
+     - "string"
+   * - addressLine2
+     - AddressLine2
+     - "string"
+   * - city
+     - City
+     - "string"
+   * - country
+     - Country
      - "string"
 
 
