@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-29 13:12:09
+Generated: 2024-08-29 13:15:04
 
 Introduction
 ------------
@@ -311,6 +311,9 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
    * - EmailAddress
      - Email
+     - "string"
+   * - LastName
+     - LastName
      - "string"
    * - PhoneNumber
      - BusinessMobile
