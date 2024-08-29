@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-29 09:21:41
+Generated: 2024-08-29 09:23:42
 
 Introduction
 ------------
@@ -185,6 +185,28 @@ The following properties are synchronized between a SuperOffice Sale and a  Orde
      - "string"
    * - Person.PersonId
      - customer_id
+     - "string"
+
+
+SuperOffice Listproductcategoryitems to  Item_family
+----------------------------------------------------
+Every SuperOffice Listproductcategoryitems will be synchronized with a  Item_family.
+
+Once a link between a SuperOffice Listproductcategoryitems and a  Item_family is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Listproductcategoryitems and a  Item_family:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Listproductcategoryitems Property
+     -  Item_family Property
+     -  Data Type
+   * - Name
+     - name
+     - "string"
+   * - Tooltip
+     - description
      - "string"
 
 
