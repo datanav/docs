@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-29 10:36:33
+Generated: 2024-08-29 10:36:42
 
 Introduction
 ------------
@@ -23,6 +23,27 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - Powerofficego Customers person Property
      -  Contacts Property
      -  Data Type
+   * - DateOfBirth
+     - BirthDate
+     - "string"
+   * - EmailAddress
+     - Email
+     - "string"
+   * - FirstName
+     - FirstName
+     - "string"
+   * - LastName
+     - LastName
+     - "string"
+   * - MailAddress.City
+     - City
+     - "string"
+   * - MailAddress.CountryCode
+     - Country
+     - "string"
+   * - PhoneNumber
+     - Phone
+     - "string"
 
 
 Powerofficego Employees to  Contacts
@@ -39,6 +60,30 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - Powerofficego Employees Property
      -  Contacts Property
      -  Data Type
+   * - DateOfBirth
+     - BirthDate
+     - "string"
+   * - EmailAddress
+     - BusinessEmail
+     - "string"
+   * - EmailAddress
+     - Email
+     - "string"
+   * - FirstName
+     - FirstName
+     - "string"
+   * - LastName
+     - LastName
+     - "string"
+   * - MailAddress.City
+     - City
+     - "string"
+   * - MailAddress.CountryCode
+     - Country
+     - "string"
+   * - PhoneNumber
+     - Mobile
+     - "string"
 
 
 Powerofficego Contactperson to  Contacts
