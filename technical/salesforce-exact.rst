@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-08-29 10:40:21
+Generated: 2024-08-29 10:51:41
 
 Introduction
 ------------
@@ -47,6 +47,22 @@ The following properties are synchronized between a Salesforce Contact and a  Co
    * - Phone
      - Phone
      - "string"
+
+
+Salesforce Organization to  Accounts
+------------------------------------
+Every Salesforce Organization will be synchronized with a  Accounts.
+
+Once a link between a Salesforce Organization and a  Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Organization and a  Accounts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Organization Property
+     -  Accounts Property
+     -  Data Type
 
 
 Salesforce Organization to  Addresses
