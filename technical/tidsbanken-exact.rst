@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-29 10:36:33
+Generated: 2024-08-29 10:36:42
 
 Introduction
 ------------
@@ -23,4 +23,25 @@ The following properties are synchronized between a Tidsbanken Ansatt and a  Con
    * - Tidsbanken Ansatt Property
      -  Contacts Property
      -  Data Type
+   * - Epost
+     - BusinessEmail
+     - "string"
+   * - Etternavn
+     - LastName
+     - "string"
+   * - Fodt
+     - BirthDate
+     - "string"
+   * - Fornavn
+     - FirstName
+     - "string"
+   * - Mobil
+     - Mobile
+     - "string"
+   * - Navn
+     - FullName
+     - "string"
+   * - Poststed
+     - City
+     - "string"
 
