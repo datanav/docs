@@ -2,7 +2,7 @@
 Zendesk to  Dataflow
 ====================
 
-Generated: 2024-08-29 10:36:33
+Generated: 2024-08-29 10:36:42
 
 Introduction
 ------------
@@ -23,4 +23,10 @@ The following properties are synchronized between a Zendesk Users and a  Contact
    * - Zendesk Users Property
      -  Contacts Property
      -  Data Type
+   * - email
+     - Email
+     - "string"
+   * - name
+     - FullName
+     - "string"
 
