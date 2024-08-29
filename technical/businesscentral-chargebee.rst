@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-28 12:56:10
+Generated: 2024-08-29 08:04:11
 
 Introduction
 ------------
@@ -110,22 +110,6 @@ The following properties are synchronized between a Businesscentral Salesorderli
    * - unitPrice
      - order_line_items.unit_price
      - "string"
-
-
-Businesscentral Salesorderlines to  Subscription
-------------------------------------------------
-Every Businesscentral Salesorderlines will be synchronized with a  Subscription.
-
-Once a link between a Businesscentral Salesorderlines and a  Subscription is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Salesorderlines and a  Subscription:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Salesorderlines Property
-     -  Subscription Property
-     -  Data Type
 
 
 Businesscentral Salesquotes to  Order
