@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-29 09:35:40
+Generated: 2024-08-29 09:41:40
 
 Introduction
 ------------
@@ -166,6 +166,22 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
      - "string"
 
 
+HubSpot Dealcompanyassociationtype to  Currency
+-----------------------------------------------
+Every HubSpot Dealcompanyassociationtype will be synchronized with a  Currency.
+
+Once a link between a HubSpot Dealcompanyassociationtype and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcompanyassociationtype and a  Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcompanyassociationtype Property
+     -  Currency Property
+     -  Data Type
+
+
 HubSpot Dealcontactassociation to  Item
 ---------------------------------------
 Every HubSpot Dealcontactassociation will be synchronized with a  Item.
@@ -199,6 +215,22 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customer_id
      - "string"
+
+
+HubSpot Dealcontactassociationtype to  Currency
+-----------------------------------------------
+Every HubSpot Dealcontactassociationtype will be synchronized with a  Currency.
+
+Once a link between a HubSpot Dealcontactassociationtype and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcontactassociationtype and a  Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcontactassociationtype Property
+     -  Currency Property
+     -  Data Type
 
 
 HubSpot Lineitem to  Item
@@ -274,6 +306,22 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
      -  Data Type
 
 
+HubSpot Lineitemdealassociationtype to  Currency
+------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a  Currency.
+
+Once a link between a HubSpot Lineitemdealassociationtype and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a  Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociationtype Property
+     -  Currency Property
+     -  Data Type
+
+
 HubSpot Lineitemquoteassociation to  Item
 -----------------------------------------
 Every HubSpot Lineitemquoteassociation will be synchronized with a  Item.
@@ -303,6 +351,22 @@ The following properties are synchronized between a HubSpot Lineitemquoteassocia
 
    * - HubSpot Lineitemquoteassociation Property
      -  Order Property
+     -  Data Type
+
+
+HubSpot Lineitemquoteassociationtype to  Currency
+-------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a  Currency.
+
+Once a link between a HubSpot Lineitemquoteassociationtype and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a  Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociationtype Property
+     -  Currency Property
      -  Data Type
 
 
@@ -379,6 +443,22 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
      - "string"
 
 
+HubSpot Quotecompanyassociationtype to  Currency
+------------------------------------------------
+Every HubSpot Quotecompanyassociationtype will be synchronized with a  Currency.
+
+Once a link between a HubSpot Quotecompanyassociationtype and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecompanyassociationtype and a  Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecompanyassociationtype Property
+     -  Currency Property
+     -  Data Type
+
+
 HubSpot Quotecontactassociation to  Item
 ----------------------------------------
 Every HubSpot Quotecontactassociation will be synchronized with a  Item.
@@ -414,6 +494,22 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
      - "string"
 
 
+HubSpot Quotecontactassociationtype to  Currency
+------------------------------------------------
+Every HubSpot Quotecontactassociationtype will be synchronized with a  Currency.
+
+Once a link between a HubSpot Quotecontactassociationtype and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecontactassociationtype and a  Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecontactassociationtype Property
+     -  Currency Property
+     -  Data Type
+
+
 HubSpot Quotedealassociation to  Item
 -------------------------------------
 Every HubSpot Quotedealassociation will be synchronized with a  Item.
@@ -446,6 +542,22 @@ The following properties are synchronized between a HubSpot Quotedealassociation
      -  Data Type
 
 
+HubSpot Quotedealassociationtype to  Currency
+---------------------------------------------
+Every HubSpot Quotedealassociationtype will be synchronized with a  Currency.
+
+Once a link between a HubSpot Quotedealassociationtype and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotedealassociationtype and a  Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotedealassociationtype Property
+     -  Currency Property
+     -  Data Type
+
+
 HubSpot Quotequotetemplateassociation to  Item
 ----------------------------------------------
 Every HubSpot Quotequotetemplateassociation will be synchronized with a  Item.
@@ -475,6 +587,22 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
 
    * - HubSpot Quotequotetemplateassociation Property
      -  Order Property
+     -  Data Type
+
+
+HubSpot Quotequotetemplateassociationtype to  Currency
+------------------------------------------------------
+Every HubSpot Quotequotetemplateassociationtype will be synchronized with a  Currency.
+
+Once a link between a HubSpot Quotequotetemplateassociationtype and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotequotetemplateassociationtype and a  Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotequotetemplateassociationtype Property
+     -  Currency Property
      -  Data Type
 
 
