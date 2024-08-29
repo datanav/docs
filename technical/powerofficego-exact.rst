@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-29 10:36:42
+Generated: 2024-08-29 10:37:37
 
 Introduction
 ------------
@@ -86,6 +86,22 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
 
 
+Powerofficego Contactperson to  Addresses
+-----------------------------------------
+Every Powerofficego Contactperson will be synchronized with a  Addresses.
+
+Once a link between a Powerofficego Contactperson and a  Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Contactperson and a  Addresses:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     -  Addresses Property
+     -  Data Type
+
+
 Powerofficego Contactperson to  Contacts
 ----------------------------------------
 Every Powerofficego Contactperson will be synchronized with a  Contacts.
@@ -121,6 +137,38 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - residenceCountryCode
      - Country
      - "string"
+
+
+Powerofficego Customers person to  Addresses
+--------------------------------------------
+Every Powerofficego Customers person will be synchronized with a  Addresses.
+
+Once a link between a Powerofficego Customers person and a  Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers person and a  Addresses:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers person Property
+     -  Addresses Property
+     -  Data Type
+
+
+Powerofficego Location to  Addresses
+------------------------------------
+Every Powerofficego Location will be synchronized with a  Addresses.
+
+Once a link between a Powerofficego Location and a  Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Location and a  Addresses:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Location Property
+     -  Addresses Property
+     -  Data Type
 
 
 Powerofficego Suppliers person to  Contacts
