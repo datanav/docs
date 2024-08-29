@@ -2,7 +2,7 @@
 Powerofficego to Shopify Dataflow
 =================================
 
-Generated: 2024-08-29 08:00:40
+Generated: 2024-08-29 12:41:54
 
 Introduction
 ------------
@@ -167,6 +167,9 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "string"
    * - name
      - title
+     - "string"
+   * - salesPrice
+     - sesam_priceExclVAT
      - "string"
    * - salesPrice
      - variants.price
