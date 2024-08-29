@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-29 11:47:52
+Generated: 2024-08-29 12:09:40
 
 Introduction
 ------------
@@ -174,6 +174,22 @@ The following properties are synchronized between a SuperOffice Person and a  Ad
    * - Country.CountryId
      - Country
      - "string"
+
+
+SuperOffice Quotealternative to  Currencies
+-------------------------------------------
+Every SuperOffice Quotealternative will be synchronized with a  Currencies.
+
+Once a link between a SuperOffice Quotealternative and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a  Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quotealternative Property
+     -  Currencies Property
+     -  Data Type
 
 
 SuperOffice Quotealternative to  Quotations
