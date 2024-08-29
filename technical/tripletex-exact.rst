@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 12:43:42
+Generated: 2024-08-29 12:48:25
 
 Introduction
 ------------
@@ -385,4 +385,7 @@ The following properties are synchronized between a Tripletex Employee and a  Em
    * - Tripletex Employee Property
      -  Employees Property
      -  Data Type
+   * - id
+     - ID
+     - "string"
 
