@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-29 12:43:42
+Generated: 2024-08-29 12:48:19
 
 Introduction
 ------------
@@ -110,6 +110,9 @@ The following properties are synchronized between a Tidsbanken Ansatt and a  Emp
    * - Tidsbanken Ansatt Property
      -  Employees Property
      -  Data Type
+   * - Id
+     - ID
+     - "string"
 
 
 Tidsbanken Kunde to  Accounts
