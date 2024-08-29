@@ -2,7 +2,7 @@
 Freshteam to  Dataflow
 ======================
 
-Generated: 2024-08-29 13:12:09
+Generated: 2024-08-29 13:15:04
 
 Introduction
 ------------
@@ -97,6 +97,9 @@ The following properties are synchronized between a Freshteam Employee and a  Em
    * - date_of_birth
      - BirthDate
      - "string"
+   * - last_name
+     - LastName
+     - "string"
    * - official_email
      - BusinessEmail
      - "string"
@@ -106,7 +109,7 @@ The following properties are synchronized between a Freshteam Employee and a  Em
    * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
      - BusinessMobile
      - "string"
-   * - phone_numbers.number (Dependant on having  in phone_numbers.name)
+   * - phone_numbers.number (Dependant on having  in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.name)
      - Mobile
      - "string"
    * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
