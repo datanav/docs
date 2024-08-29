@@ -2,7 +2,7 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2024-08-29 08:00:41
+Generated: 2024-08-29 09:41:40
 
 Introduction
 ------------
@@ -25,6 +25,22 @@ The following properties are synchronized between a YouTrack Groups and a  Busin
      -  Data Type
 
 
+YouTrack Organizationroles to  Currency
+---------------------------------------
+Every YouTrack Organizationroles will be synchronized with a  Currency.
+
+Once a link between a YouTrack Organizationroles and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Organizationroles and a  Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Organizationroles Property
+     -  Currency Property
+     -  Data Type
+
+
 YouTrack Organizations to  Business_entity
 ------------------------------------------
 Every YouTrack Organizations will be synchronized with a  Business_entity.
@@ -38,6 +54,22 @@ The following properties are synchronized between a YouTrack Organizations and a
 
    * - YouTrack Organizations Property
      -  Business_entity Property
+     -  Data Type
+
+
+YouTrack Roles to  Currency
+---------------------------
+Every YouTrack Roles will be synchronized with a  Currency.
+
+Once a link between a YouTrack Roles and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Roles and a  Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Roles Property
+     -  Currency Property
      -  Data Type
 
 
