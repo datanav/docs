@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 11:22:41
+Generated: 2024-08-29 11:28:41
 
 Introduction
 ------------
@@ -213,22 +213,6 @@ The following properties are synchronized between a Tripletex Customer and a  Ac
    * - website
      - Website
      - "string"
-
-
-Tripletex Customer to  Quotations
----------------------------------
-removed person customers for now until that pattern is resolved, it  will be synchronized with a  Quotations.
-
-Once a link between a Tripletex Customer and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer and a  Quotations:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer Property
-     -  Quotations Property
-     -  Data Type
 
 
 Tripletex Customer person to  Addresses
