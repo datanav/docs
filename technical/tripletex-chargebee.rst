@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 08:04:11
+Generated: 2024-08-29 09:15:41
 
 Introduction
 ------------
@@ -185,4 +185,20 @@ The following properties are synchronized between a Tripletex Order and a  Order
    * - customer.id
      - customer_id
      - "string"
+
+
+Tripletex Product to  Item
+--------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Item.
+
+Once a link between a Tripletex Product and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a  Item:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     -  Item Property
+     -  Data Type
 
