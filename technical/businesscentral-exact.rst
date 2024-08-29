@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-29 11:22:41
+Generated: 2024-08-29 11:28:41
 
 Introduction
 ------------
@@ -205,22 +205,6 @@ The following properties are synchronized between a Businesscentral Customers co
    * - website
      - Website
      - "string"
-
-
-Businesscentral Customers company to  Quotations
-------------------------------------------------
-Every Businesscentral Customers company will be synchronized with a  Quotations.
-
-Once a link between a Businesscentral Customers company and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Customers company and a  Quotations:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Customers company Property
-     -  Quotations Property
-     -  Data Type
 
 
 Businesscentral Customers person to  Addresses
