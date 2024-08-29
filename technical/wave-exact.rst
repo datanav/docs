@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-08-29 11:50:49
+Generated: 2024-08-29 12:11:42
 
 Introduction
 ------------
@@ -79,6 +79,25 @@ The following properties are synchronized between a Wave Invoice and a  Quotatio
      - DueDate
      - "string"
    * - memo
+     - Description
+     - "string"
+
+
+Wave Currency to  Currencies
+----------------------------
+Every Wave Currency will be synchronized with a  Currencies.
+
+Once a link between a Wave Currency and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Currency and a  Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Currency Property
+     -  Currencies Property
+     -  Data Type
+   * - name
      - Description
      - "string"
 
