@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-08-29 13:54:55
+Generated: 2024-08-29 14:02:42
 
 Introduction
 ------------
@@ -238,6 +238,22 @@ The following properties are synchronized between a Wave Customer person and a  
    * - shippingDetails.address.country.code
      - Country
      - "string"
+
+
+Wave Invoice to  Salesorderlines
+--------------------------------
+Every Wave Invoice will be synchronized with a  Salesorderlines.
+
+Once a link between a Wave Invoice and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a  Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     -  Salesorderlines Property
+     -  Data Type
 
 
 Wave Invoice to  Salesorders
