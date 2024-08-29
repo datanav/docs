@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-29 11:44:41
+Generated: 2024-08-29 11:44:44
 
 Introduction
 ------------
@@ -132,6 +132,12 @@ The following properties are synchronized between a Businesscentral Salesorders 
    * - Businesscentral Salesorders Property
      -  Quotations Property
      -  Data Type
+   * - currencyId
+     - Currency
+     - "string"
+   * - id
+     - DeliveryAddress
+     - "string"
 
 
 Businesscentral Salesquotes to  Quotations
@@ -148,6 +154,9 @@ The following properties are synchronized between a Businesscentral Salesquotes 
    * - Businesscentral Salesquotes Property
      -  Quotations Property
      -  Data Type
+   * - id
+     - DeliveryAddress
+     - "string"
 
 
 Businesscentral Contacts person to  Addresses
