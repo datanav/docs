@@ -2,12 +2,40 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-29 10:40:21
+Generated: 2024-08-29 11:00:44
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+HubSpot Company to  Accounts
+----------------------------
+Every HubSpot Company will be synchronized with a  Accounts.
+
+Once a link between a HubSpot Company and a  Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Company and a  Accounts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Company Property
+     -  Accounts Property
+     -  Data Type
+   * - properties.address
+     - AddressLine1
+     - "string"
+   * - properties.address2
+     - AddressLine2
+     - "string"
+   * - properties.city
+     - City
+     - "string"
+   * - properties.country
+     - Country
+     - "string"
+
 
 HubSpot Contact to  Contacts
 ----------------------------
