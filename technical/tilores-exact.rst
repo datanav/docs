@@ -2,7 +2,7 @@
 Tilores to  Dataflow
 ====================
 
-Generated: 2024-08-29 10:36:33
+Generated: 2024-08-29 10:36:42
 
 Introduction
 ------------
@@ -23,4 +23,19 @@ The following properties are synchronized between a Tilores Human and a  Contact
    * - Tilores Human Property
      -  Contacts Property
      -  Data Type
+   * - city
+     - City
+     - "string"
+   * - dateOfBirth
+     - BirthDate
+     - "string"
+   * - email
+     - Email
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - lastName
+     - LastName
+     - "string"
 
