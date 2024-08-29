@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-29 12:52:12
+Generated: 2024-08-29 12:52:26
 
 Introduction
 ------------
@@ -115,6 +115,12 @@ The following properties are synchronized between a Tidsbanken Ansatt and a  Emp
      - "string"
    * - Id
      - ID
+     - "string"
+   * - Postnummer
+     - Postcode
+     - "string"
+   * - Poststed
+     - City
      - "string"
 
 
