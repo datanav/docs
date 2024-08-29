@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-29 11:46:54
+Generated: 2024-08-29 12:11:42
 
 Introduction
 ------------
@@ -221,6 +221,28 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
    * - phoneNumber
      - Phone
+     - "string"
+
+
+Businesscentral Currencies to  Currencies
+-----------------------------------------
+Every Businesscentral Currencies will be synchronized with a  Currencies.
+
+Once a link between a Businesscentral Currencies and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Currencies and a  Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Currencies Property
+     -  Currencies Property
+     -  Data Type
+   * - code
+     - Code
+     - "string"
+   * - displayName
+     - Description
      - "string"
 
 
