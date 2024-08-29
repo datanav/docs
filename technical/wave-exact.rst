@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-08-29 11:28:41
+Generated: 2024-08-29 11:44:41
 
 Introduction
 ------------
@@ -56,6 +56,22 @@ The following properties are synchronized between a Wave Customer person and a  
    * - shippingDetails.phone
      - Phone
      - "string"
+
+
+Wave Invoice to  Quotations
+---------------------------
+Every Wave Invoice will be synchronized with a  Quotations.
+
+Once a link between a Wave Invoice and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     -  Quotations Property
+     -  Data Type
 
 
 Wave Customer to  Accounts
