@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-08-29 11:44:44
+Generated: 2024-08-29 11:47:52
 
 Introduction
 ------------
@@ -74,6 +74,9 @@ The following properties are synchronized between a Wave Invoice and a  Quotatio
      -  Data Type
    * - currency.code
      - Currency
+     - "string"
+   * - memo
+     - Description
      - "string"
 
 
