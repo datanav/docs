@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-29 14:08:41
+Generated: 2024-08-29 14:15:49
 
 Introduction
 ------------
@@ -384,6 +384,12 @@ The following properties are synchronized between a Powerofficego Salesorderline
    * - Powerofficego Salesorderlines Property
      -  Salesorderlines Property
      -  Data Type
+   * - ProductId
+     - Item
+     - "string"
+   * - ProductUnitCost
+     - CostPriceFC
+     - "string"
    * - sesam_SalesOrderId
      - OrderID
      - "string"
