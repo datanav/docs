@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-29 11:44:41
+Generated: 2024-08-29 11:44:44
 
 Introduction
 ------------
@@ -119,6 +119,9 @@ The following properties are synchronized between a HubSpot Deal and a  Quotatio
    * - HubSpot Deal Property
      -  Quotations Property
      -  Data Type
+   * - properties.deal_currency_code
+     - Currency
+     - "string"
 
 
 HubSpot Dealcompanyassociation to  Quotations
