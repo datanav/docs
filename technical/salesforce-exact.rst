@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-08-29 11:00:44
+Generated: 2024-08-29 11:02:03
 
 Introduction
 ------------
@@ -28,6 +28,9 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
    * - Country
      - Country
+     - "string"
+   * - Name	
+     - Name
      - "string"
 
 
