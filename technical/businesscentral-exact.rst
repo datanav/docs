@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-29 10:36:42
+Generated: 2024-08-29 10:37:37
 
 Introduction
 ------------
@@ -86,6 +86,22 @@ The following properties are synchronized between a Businesscentral Employees an
      - "string"
 
 
+Businesscentral Contacts person to  Addresses
+---------------------------------------------
+Every Businesscentral Contacts person will be synchronized with a  Addresses.
+
+Once a link between a Businesscentral Contacts person and a  Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Contacts person and a  Addresses:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Contacts person Property
+     -  Addresses Property
+     -  Data Type
+
+
 Businesscentral Contacts person to  Contacts
 --------------------------------------------
 Every Businesscentral Contacts person will be synchronized with a  Contacts.
@@ -118,4 +134,20 @@ The following properties are synchronized between a Businesscentral Contacts per
    * - phoneNumber
      - Phone
      - "string"
+
+
+Businesscentral Customers person to  Addresses
+----------------------------------------------
+Every Businesscentral Customers person will be synchronized with a  Addresses.
+
+Once a link between a Businesscentral Customers person and a  Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers person and a  Addresses:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers person Property
+     -  Addresses Property
+     -  Data Type
 
