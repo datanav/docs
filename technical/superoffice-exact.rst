@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-29 12:48:38
+Generated: 2024-08-29 14:03:35
 
 Introduction
 ------------
@@ -212,4 +212,20 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - Name
      - Description
      - "string"
+
+
+SuperOffice Quoteline to  Salesorderlines
+-----------------------------------------
+Every SuperOffice Quoteline will be synchronized with a  Salesorderlines.
+
+Once a link between a SuperOffice Quoteline and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a  Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     -  Salesorderlines Property
+     -  Data Type
 
