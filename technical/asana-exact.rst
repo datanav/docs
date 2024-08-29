@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-08-29 12:49:37
+Generated: 2024-08-29 13:09:07
 
 Introduction
 ------------
@@ -67,4 +67,7 @@ The following properties are synchronized between a Asana Users and a  Employees
    * - Asana Users Property
      -  Employees Property
      -  Data Type
+   * - email
+     - Email
+     - "string"
 
