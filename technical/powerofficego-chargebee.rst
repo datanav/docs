@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-29 09:23:42
+Generated: 2024-08-29 09:28:42
 
 Introduction
 ------------
@@ -216,20 +216,23 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "string"
 
 
-Powerofficego Product to  Item_family
--------------------------------------
-Every Powerofficego Product will be synchronized with a  Item_family.
+Powerofficego Productgroup to  Currency
+---------------------------------------
+Every Powerofficego Productgroup will be synchronized with a  Currency.
 
-Once a link between a Powerofficego Product and a  Item_family is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Productgroup and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Product and a  Item_family:
+The following properties are synchronized between a Powerofficego Productgroup and a  Currency:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Product Property
-     -  Item_family Property
+   * - Powerofficego Productgroup Property
+     -  Currency Property
      -  Data Type
+   * - code
+     - currency_code
+     - "string"
 
 
 Powerofficego Productgroup to  Item_family
