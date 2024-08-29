@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-29 14:03:35
+Generated: 2024-08-29 14:08:41
 
 Introduction
 ------------
@@ -525,22 +525,6 @@ The following properties are synchronized between a HubSpot Deal and a  Currenci
    * - properties.deal_currency_code
      - Code
      - "string"
-
-
-HubSpot Deal to  Salesorderlines
---------------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a  Salesorderlines.
-
-Once a link between a HubSpot Deal and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Deal and a  Salesorderlines:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     -  Salesorderlines Property
-     -  Data Type
 
 
 HubSpot Deal to  Salesorders
