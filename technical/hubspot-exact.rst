@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-29 11:46:54
+Generated: 2024-08-29 11:47:45
 
 Introduction
 ------------
@@ -124,6 +124,9 @@ The following properties are synchronized between a HubSpot Deal and a  Quotatio
      - "string"
    * - properties.deal_currency_code
      - Currency
+     - "string"
+   * - properties.description
+     - Description
      - "string"
 
 
