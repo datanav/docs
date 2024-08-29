@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-29 11:44:44
+Generated: 2024-08-29 12:11:42
 
 Introduction
 ------------
@@ -68,5 +68,24 @@ The following properties are synchronized between a Shopify Order and a  Quotati
      - "string"
    * - id
      - DeliveryAddress
+     - "string"
+
+
+Shopify Customer to  Currencies
+-------------------------------
+Every Shopify Customer will be synchronized with a  Currencies.
+
+Once a link between a Shopify Customer and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Customer and a  Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Customer Property
+     -  Currencies Property
+     -  Data Type
+   * - default_address.country_name
+     - Description
      - "string"
 
