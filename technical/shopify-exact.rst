@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-29 13:48:55
+Generated: 2024-08-29 14:02:41
 
 Introduction
 ------------
@@ -88,6 +88,22 @@ The following properties are synchronized between a Shopify Customer and a  Curr
    * - default_address.country_name
      - Description
      - "string"
+
+
+Shopify Order to  Salesorderlines
+---------------------------------
+Every Shopify Order will be synchronized with a  Salesorderlines.
+
+Once a link between a Shopify Order and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a  Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     -  Salesorderlines Property
+     -  Data Type
 
 
 Shopify Order to  Salesorders
