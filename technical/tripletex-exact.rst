@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 10:40:21
+Generated: 2024-08-29 10:54:40
 
 Introduction
 ------------
@@ -124,6 +124,22 @@ The following properties are synchronized between a Tripletex Contact and a  Con
    * - phoneNumberWork
      - Phone
      - "string"
+
+
+Tripletex Customer to  Accounts
+-------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a  Accounts.
+
+Once a link between a Tripletex Customer and a  Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a  Accounts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     -  Accounts Property
+     -  Data Type
 
 
 Tripletex Customer person to  Addresses
