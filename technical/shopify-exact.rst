@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-29 13:45:43
+Generated: 2024-08-29 13:48:55
 
 Introduction
 ------------
@@ -104,6 +104,9 @@ The following properties are synchronized between a Shopify Order and a  Salesor
    * - Shopify Order Property
      -  Salesorders Property
      -  Data Type
+   * - created_at
+     - OrderDate
+     - "string"
    * - currency
      - Currency
      - "string"
