@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-08-29 11:05:01
+Generated: 2024-08-29 11:05:19
 
 Introduction
 ------------
@@ -45,6 +45,9 @@ The following properties are synchronized between a Asana Workspaces and a  Acco
    * - Asana Workspaces Property
      -  Accounts Property
      -  Data Type
+   * - email_domains
+     - Website
+     - "string"
    * - name
      - Name
      - "string"
