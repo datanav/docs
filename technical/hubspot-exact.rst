@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-29 14:08:41
+Generated: 2024-08-29 14:15:49
 
 Introduction
 ------------
@@ -569,6 +569,9 @@ The following properties are synchronized between a HubSpot Lineitem and a  Sale
    * - HubSpot Lineitem Property
      -  Salesorderlines Property
      -  Data Type
+   * - properties.hs_product_id
+     - Item
+     - "string"
 
 
 HubSpot Quote to  Quotations
