@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-29 09:23:42
+Generated: 2024-08-29 09:28:40
 
 Introduction
 ------------
@@ -188,6 +188,22 @@ The following properties are synchronized between a SuperOffice Sale and a  Orde
      - "string"
 
 
+SuperOffice Listproductcategoryitems to  Currency
+-------------------------------------------------
+Every SuperOffice Listproductcategoryitems will be synchronized with a  Currency.
+
+Once a link between a SuperOffice Listproductcategoryitems and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Listproductcategoryitems and a  Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Listproductcategoryitems Property
+     -  Currency Property
+     -  Data Type
+
+
 SuperOffice Listproductcategoryitems to  Item_family
 ----------------------------------------------------
 Every SuperOffice Listproductcategoryitems will be synchronized with a  Item_family.
@@ -227,20 +243,4 @@ The following properties are synchronized between a SuperOffice Product and a  I
    * - Name
      - name
      - "string"
-
-
-SuperOffice Product to  Item_family
------------------------------------
-Every SuperOffice Product will be synchronized with a  Item_family.
-
-Once a link between a SuperOffice Product and a  Item_family is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Product and a  Item_family:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     -  Item_family Property
-     -  Data Type
 
