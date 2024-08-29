@@ -2,7 +2,7 @@
 Unieconomy to  Dataflow
 =======================
 
-Generated: 2024-08-29 11:05:19
+Generated: 2024-08-29 11:22:41
 
 Introduction
 ------------
@@ -67,4 +67,20 @@ The following properties are synchronized between a Unieconomy Customers and a  
    * - WebUrl
      - Website
      - "string"
+
+
+Unieconomy Customers to  Quotations
+-----------------------------------
+Every Unieconomy Customers will be synchronized with a  Quotations.
+
+Once a link between a Unieconomy Customers and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Customers and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Customers Property
+     -  Quotations Property
+     -  Data Type
 
