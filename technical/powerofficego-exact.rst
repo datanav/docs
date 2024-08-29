@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-29 13:45:43
+Generated: 2024-08-29 13:48:55
 
 Introduction
 ------------
@@ -386,6 +386,9 @@ The following properties are synchronized between a Powerofficego Salesorders an
      -  Data Type
    * - CurrencyCode
      - Currency
+     - "string"
+   * - SalesOrderDate
+     - OrderDate
      - "string"
 
 
