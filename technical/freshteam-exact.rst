@@ -2,7 +2,7 @@
 Freshteam to  Dataflow
 ======================
 
-Generated: 2024-08-29 11:02:03
+Generated: 2024-08-29 12:43:42
 
 Introduction
 ------------
@@ -78,4 +78,20 @@ The following properties are synchronized between a Freshteam Employee and a  Co
    * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
      - Phone
      - "string"
+
+
+Freshteam Employee to  Employees
+--------------------------------
+Every Freshteam Employee will be synchronized with a  Employees.
+
+Once a link between a Freshteam Employee and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Freshteam Employee and a  Employees:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Freshteam Employee Property
+     -  Employees Property
+     -  Data Type
 
