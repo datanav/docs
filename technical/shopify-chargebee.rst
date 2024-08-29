@@ -2,12 +2,28 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-29 09:28:40
+Generated: 2024-08-29 09:32:40
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Shopify Inventoryitem to  Item
+------------------------------
+Every Shopify Inventoryitem will be synchronized with a  Item.
+
+Once a link between a Shopify Inventoryitem and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Inventoryitem and a  Item:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Inventoryitem Property
+     -  Item Property
+     -  Data Type
+
 
 Shopify Order to  Item
 ----------------------
@@ -21,6 +37,22 @@ The following properties are synchronized between a Shopify Order and a  Item:
    :header-rows: 1
 
    * - Shopify Order Property
+     -  Item Property
+     -  Data Type
+
+
+Shopify Product to  Item
+------------------------
+Every Shopify Product will be synchronized with a  Item.
+
+Once a link between a Shopify Product and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Product and a  Item:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Product Property
      -  Item Property
      -  Data Type
 
