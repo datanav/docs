@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-29 12:09:40
+Generated: 2024-08-29 12:11:42
 
 Introduction
 ------------
@@ -293,6 +293,25 @@ The following properties are synchronized between a HubSpot User and a  Contacts
      - "string"
 
 
+HubSpot Account to  Currencies
+------------------------------
+Every HubSpot Account will be synchronized with a  Currencies.
+
+Once a link between a HubSpot Account and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Account and a  Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Account Property
+     -  Currencies Property
+     -  Data Type
+   * - accountType
+     - Code
+     - "string"
+
+
 HubSpot Contact to  Addresses
 -----------------------------
 Every HubSpot Contact will be synchronized with a  Addresses.
@@ -315,6 +334,25 @@ The following properties are synchronized between a HubSpot Contact and a  Addre
      - "string"
    * - properties.country
      - Country
+     - "string"
+
+
+HubSpot Deal to  Currencies
+---------------------------
+Every HubSpot Deal will be synchronized with a  Currencies.
+
+Once a link between a HubSpot Deal and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a  Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     -  Currencies Property
+     -  Data Type
+   * - properties.deal_currency_code
+     - Code
      - "string"
 
 
