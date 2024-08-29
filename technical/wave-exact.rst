@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-08-29 14:02:42
+Generated: 2024-08-29 14:05:53
 
 Introduction
 ------------
@@ -254,6 +254,9 @@ The following properties are synchronized between a Wave Invoice and a  Salesord
    * - Wave Invoice Property
      -  Salesorderlines Property
      -  Data Type
+   * - id
+     - OrderID
+     - "string"
 
 
 Wave Invoice to  Salesorders
