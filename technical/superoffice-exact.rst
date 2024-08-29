@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-29 12:40:42
+Generated: 2024-08-29 12:48:38
 
 Introduction
 ------------
@@ -158,25 +158,6 @@ The following properties are synchronized between a SuperOffice Listcurrencyitem
 
    * - SuperOffice Listcurrencyitems Property
      -  Currencies Property
-     -  Data Type
-   * - Name
-     - Code
-     - "string"
-
-
-SuperOffice Listcurrencyitems to  Employees
--------------------------------------------
-Every SuperOffice Listcurrencyitems will be synchronized with a  Employees.
-
-Once a link between a SuperOffice Listcurrencyitems and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listcurrencyitems and a  Employees:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listcurrencyitems Property
-     -  Employees Property
      -  Data Type
    * - Name
      - Code
