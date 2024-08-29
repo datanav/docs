@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-29 10:40:21
+Generated: 2024-08-29 10:54:40
 
 Introduction
 ------------
@@ -149,6 +149,22 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - residenceCountryCode
      - Country
      - "string"
+
+
+Powerofficego Customers to  Accounts
+------------------------------------
+Every Powerofficego Customers will be synchronized with a  Accounts.
+
+Once a link between a Powerofficego Customers and a  Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a  Accounts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     -  Accounts Property
+     -  Data Type
 
 
 Powerofficego Customers person to  Addresses
