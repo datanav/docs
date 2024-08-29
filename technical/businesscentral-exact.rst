@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-29 12:43:42
+Generated: 2024-08-29 12:48:38
 
 Introduction
 ------------
@@ -246,25 +246,6 @@ The following properties are synchronized between a Businesscentral Currencies a
      - "string"
 
 
-Businesscentral Currencies to  Employees
-----------------------------------------
-Every Businesscentral Currencies will be synchronized with a  Employees.
-
-Once a link between a Businesscentral Currencies and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Currencies and a  Employees:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Currencies Property
-     -  Employees Property
-     -  Data Type
-   * - code
-     - Code
-     - "string"
-
-
 Businesscentral Customers company to  Accounts
 ----------------------------------------------
 Every Businesscentral Customers company will be synchronized with a  Accounts.
@@ -334,20 +315,4 @@ The following properties are synchronized between a Businesscentral Customers pe
    * - country
      - Country
      - "string"
-
-
-Businesscentral Employees to  Employees
----------------------------------------
-Every Businesscentral Employees will be synchronized with a  Employees.
-
-Once a link between a Businesscentral Employees and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Employees and a  Employees:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Employees Property
-     -  Employees Property
-     -  Data Type
 
