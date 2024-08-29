@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 10:36:42
+Generated: 2024-08-29 10:37:37
 
 Introduction
 ------------
@@ -124,4 +124,36 @@ The following properties are synchronized between a Tripletex Contact and a  Con
    * - phoneNumberWork
      - Phone
      - "string"
+
+
+Tripletex Customer person to  Addresses
+---------------------------------------
+Every Tripletex Customer person will be synchronized with a  Addresses.
+
+Once a link between a Tripletex Customer person and a  Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a  Addresses:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     -  Addresses Property
+     -  Data Type
+
+
+Tripletex Employee to  Addresses
+--------------------------------
+Every Tripletex Employee will be synchronized with a  Addresses.
+
+Once a link between a Tripletex Employee and a  Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a  Addresses:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     -  Addresses Property
+     -  Data Type
 
