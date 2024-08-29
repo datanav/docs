@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-08-29 09:16:48
+Generated: 2024-08-29 09:18:41
 
 Introduction
 ------------
@@ -79,4 +79,20 @@ The following properties are synchronized between a Wix.com Products and a  Item
    * - name
      - name
      - "string"
+
+
+Wix.com Products to  Item_family
+--------------------------------
+Every Wix.com Products will be synchronized with a  Item_family.
+
+Once a link between a Wix.com Products and a  Item_family is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a  Item_family:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
+     -  Item_family Property
+     -  Data Type
 
