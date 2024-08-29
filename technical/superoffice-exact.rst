@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-29 10:36:42
+Generated: 2024-08-29 10:37:37
 
 Introduction
 ------------
@@ -47,4 +47,20 @@ The following properties are synchronized between a SuperOffice Person and a  Co
    * - OfficePhones.Value
      - Phone
      - "string"
+
+
+SuperOffice Person to  Addresses
+--------------------------------
+Every SuperOffice Person will be synchronized with a  Addresses.
+
+Once a link between a SuperOffice Person and a  Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Person and a  Addresses:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     -  Addresses Property
+     -  Data Type
 
