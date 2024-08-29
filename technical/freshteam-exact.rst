@@ -2,7 +2,7 @@
 Freshteam to  Dataflow
 ======================
 
-Generated: 2024-08-29 11:00:42
+Generated: 2024-08-29 11:02:03
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Freshteam Department and a  
    * - Freshteam Department Property
      -  Accounts Property
      -  Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Freshteam Employee to  Contacts
