@@ -2,7 +2,7 @@
 Freshteam to  Dataflow
 ======================
 
-Generated: 2024-08-29 10:36:33
+Generated: 2024-08-29 10:36:42
 
 Introduction
 ------------
@@ -23,4 +23,40 @@ The following properties are synchronized between a Freshteam Employee and a  Co
    * - Freshteam Employee Property
      -  Contacts Property
      -  Data Type
+   * - address.city
+     - City
+     - "string"
+   * - address.country
+     - Country
+     - "string"
+   * - communication_address.communication_city
+     - City
+     - "string"
+   * - communication_address.communication_country
+     - Country
+     - "string"
+   * - date_of_birth
+     - BirthDate
+     - "string"
+   * - first_name
+     - FirstName
+     - "string"
+   * - last_name
+     - LastName
+     - "string"
+   * - official_email
+     - BusinessEmail
+     - "string"
+   * - personal_email
+     - Email
+     - "string"
+   * - phone_numbers.number (Dependant on having wd:Q4830453 in phone_numbers.name)
+     - BusinessMobile
+     - "string"
+   * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
+     - Mobile
+     - "string"
+   * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
+     - Phone
+     - "string"
 
