@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-29 11:05:19
+Generated: 2024-08-29 11:25:41
 
 Introduction
 ------------
@@ -147,4 +147,20 @@ The following properties are synchronized between a HubSpot Contact and a  Addre
    * - properties.country
      - Country
      - "string"
+
+
+HubSpot Quote to  Quotations
+----------------------------
+Every HubSpot Quote will be synchronized with a  Quotations.
+
+Once a link between a HubSpot Quote and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quote and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quote Property
+     -  Quotations Property
+     -  Data Type
 
