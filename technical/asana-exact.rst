@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-08-29 10:58:42
+Generated: 2024-08-29 11:00:42
 
 Introduction
 ------------
@@ -21,6 +21,22 @@ The following properties are synchronized between a Asana Teams and a  Accounts:
    :header-rows: 1
 
    * - Asana Teams Property
+     -  Accounts Property
+     -  Data Type
+
+
+Asana Workspaces to  Accounts
+-----------------------------
+Every Asana Workspaces will be synchronized with a  Accounts.
+
+Once a link between a Asana Workspaces and a  Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Asana Workspaces and a  Accounts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Asana Workspaces Property
      -  Accounts Property
      -  Data Type
 
