@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-29 11:00:44
+Generated: 2024-08-29 11:02:03
 
 Introduction
 ------------
@@ -63,6 +63,9 @@ The following properties are synchronized between a Tidsbanken Avdeling and a  A
    * - Adresse
      - AddressLine1
      - "string"
+   * - Navn
+     - Name
+     - "string"
    * - Poststed
      - City
      - "string"
@@ -115,6 +118,9 @@ The following properties are synchronized between a Tidsbanken Kunde and a  Acco
      - "string"
    * - Leveringsadresse2
      - AddressLine2
+     - "string"
+   * - Navn
+     - Name
      - "string"
    * - Postadresse
      - AddressLine2
