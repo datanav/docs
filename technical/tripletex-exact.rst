@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 12:52:26
+Generated: 2024-08-29 13:04:00
 
 Introduction
 ------------
@@ -383,6 +383,9 @@ The following properties are synchronized between a Tripletex Employee and a  Em
      - "string"
    * - address.postalCode
      - Postcode
+     - "string"
+   * - dateOfBirth
+     - BirthDate
      - "string"
    * - id
      - ID
