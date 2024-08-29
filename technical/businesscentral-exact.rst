@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-29 14:08:41
+Generated: 2024-08-29 14:15:49
 
 Introduction
 ------------
@@ -370,6 +370,9 @@ The following properties are synchronized between a Businesscentral Salesorderli
      -  Data Type
    * - documentId
      - OrderID
+     - "string"
+   * - itemId
+     - Item
      - "string"
 
 
