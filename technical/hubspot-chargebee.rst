@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-29 09:21:41
+Generated: 2024-08-29 09:28:40
 
 Introduction
 ------------
@@ -514,20 +514,4 @@ The following properties are synchronized between a HubSpot Product and a  Item:
    * - properties.name
      - name
      - "string"
-
-
-HubSpot Product to  Item_family
--------------------------------
-Every HubSpot Product will be synchronized with a  Item_family.
-
-Once a link between a HubSpot Product and a  Item_family is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Product and a  Item_family:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Product Property
-     -  Item_family Property
-     -  Data Type
 
