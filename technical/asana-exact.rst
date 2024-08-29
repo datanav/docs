@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-08-29 12:48:38
+Generated: 2024-08-29 12:49:37
 
 Introduction
 ------------
@@ -51,4 +51,20 @@ The following properties are synchronized between a Asana Workspaces and a  Acco
    * - name
      - Name
      - "string"
+
+
+Asana Users to  Employees
+-------------------------
+Every Asana Users will be synchronized with a  Employees.
+
+Once a link between a Asana Users and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Asana Users and a  Employees:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Asana Users Property
+     -  Employees Property
+     -  Data Type
 
