@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-29 10:55:20
+Generated: 2024-08-29 11:00:42
 
 Introduction
 ------------
@@ -44,6 +44,22 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - PhoneNumber
      - Phone
      - "string"
+
+
+Powerofficego Departments to  Accounts
+--------------------------------------
+Every Powerofficego Departments will be synchronized with a  Accounts.
+
+Once a link between a Powerofficego Departments and a  Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Departments and a  Accounts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Departments Property
+     -  Accounts Property
+     -  Data Type
 
 
 Powerofficego Employees to  Contacts
