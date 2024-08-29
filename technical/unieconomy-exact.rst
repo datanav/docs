@@ -2,7 +2,7 @@
 Unieconomy to  Dataflow
 =======================
 
-Generated: 2024-08-29 11:28:41
+Generated: 2024-08-29 12:11:42
 
 Introduction
 ------------
@@ -44,6 +44,28 @@ The following properties are synchronized between a Unieconomy Departments and a
      -  Data Type
    * - Name
      - Name
+     - "string"
+
+
+Unieconomy Currencycodes to  Currencies
+---------------------------------------
+Every Unieconomy Currencycodes will be synchronized with a  Currencies.
+
+Once a link between a Unieconomy Currencycodes and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Currencycodes and a  Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Currencycodes Property
+     -  Currencies Property
+     -  Data Type
+   * - Code
+     - Code
+     - "string"
+   * - Name
+     - Description
      - "string"
 
 
