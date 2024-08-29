@@ -2,7 +2,7 @@
 Shopify to Hubspot Dataflow
 ===========================
 
-Generated: 2024-08-29 08:00:40
+Generated: 2024-08-29 12:41:54
 
 Introduction
 ------------
@@ -136,6 +136,9 @@ The following properties are synchronized between a Shopify Sesamproduct and a H
    * - Shopify Sesamproduct Property
      - Hubspot Product Property
      - Hubspot Data Type
+   * - sesam_priceExclVAT
+     - properties.price
+     - "string"
    * - title
      - properties.name
      - "string"
