@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-28 12:32:24
+Generated: 2024-08-29 08:04:11
 
 Introduction
 ------------
@@ -76,5 +76,21 @@ The following properties are synchronized between a Businesscentral Items and a 
 
    * - Businesscentral Items Property
      -  Products Property
+     -  Data Type
+
+
+Businesscentral Salesorderlines to  Quotationline
+-------------------------------------------------
+Every Businesscentral Salesorderlines will be synchronized with a  Quotationline.
+
+Once a link between a Businesscentral Salesorderlines and a  Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorderlines and a  Quotationline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorderlines Property
+     -  Quotationline Property
      -  Data Type
 
