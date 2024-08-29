@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-29 11:22:41
+Generated: 2024-08-29 11:25:41
 
 Introduction
 ------------
@@ -283,6 +283,22 @@ The following properties are synchronized between a Powerofficego Location and a
    * - countryCode
      - Country
      - "string"
+
+
+Powerofficego Quote to  Quotations
+----------------------------------
+Every Powerofficego Quote will be synchronized with a  Quotations.
+
+Once a link between a Powerofficego Quote and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Quote and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Quote Property
+     -  Quotations Property
+     -  Data Type
 
 
 Powerofficego Suppliers person to  Contacts
