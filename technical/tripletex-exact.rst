@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 10:36:33
+Generated: 2024-08-29 10:36:42
 
 Introduction
 ------------
@@ -23,6 +23,36 @@ The following properties are synchronized between a Tripletex Customer person an
    * - Tripletex Customer person Property
      -  Contacts Property
      -  Data Type
+   * - deliveryAddress.city
+     - City
+     - "string"
+   * - deliveryAddress.country.id
+     - Country
+     - "string"
+   * - email
+     - Email
+     - "string"
+   * - name
+     - FullName
+     - "string"
+   * - phoneNumber
+     - Phone
+     - "string"
+   * - phoneNumberMobile
+     - Mobile
+     - "string"
+   * - physicalAddress.city
+     - City
+     - "string"
+   * - physicalAddress.country.id
+     - Country
+     - "string"
+   * - postalAddress.city
+     - City
+     - "string"
+   * - postalAddress.country.id
+     - Country
+     - "string"
 
 
 Tripletex Employee to  Contacts
@@ -39,6 +69,30 @@ The following properties are synchronized between a Tripletex Employee and a  Co
    * - Tripletex Employee Property
      -  Contacts Property
      -  Data Type
+   * - address.city
+     - City
+     - "string"
+   * - address.country.id
+     - Country
+     - "string"
+   * - dateOfBirth
+     - BirthDate
+     - "string"
+   * - email
+     - BusinessEmail
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - lastName
+     - LastName
+     - "string"
+   * - phoneNumberMobile
+     - Mobile
+     - "string"
+   * - phoneNumberWork
+     - Phone
+     - "string"
 
 
 Tripletex Contact to  Contacts
