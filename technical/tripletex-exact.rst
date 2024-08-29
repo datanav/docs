@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 11:46:54
+Generated: 2024-08-29 12:11:42
 
 Introduction
 ------------
@@ -183,6 +183,25 @@ The following properties are synchronized between a Tripletex Contact and a  Con
      - "string"
    * - phoneNumberWork
      - Phone
+     - "string"
+
+
+Tripletex Currency to  Currencies
+---------------------------------
+Every Tripletex Currency will be synchronized with a  Currencies.
+
+Once a link between a Tripletex Currency and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Currency and a  Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Currency Property
+     -  Currencies Property
+     -  Data Type
+   * - displayName
+     - Description
      - "string"
 
 
