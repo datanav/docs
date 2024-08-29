@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-08-29 11:25:41
+Generated: 2024-08-29 11:30:51
 
 Introduction
 ------------
@@ -163,4 +163,7 @@ The following properties are synchronized between a HubSpot Quote and a  Quotati
    * - HubSpot Quote Property
      -  Quotations Property
      -  Data Type
+   * - properties.hs_expiration_date
+     - CloseDate
+     - "string"
 
