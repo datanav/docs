@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-29 14:02:41
+Generated: 2024-08-29 14:03:35
 
 Introduction
 ------------
@@ -352,6 +352,22 @@ The following properties are synchronized between a Businesscentral Employees an
    * - surname
      - LastName
      - "string"
+
+
+Businesscentral Salesorderlines to  Salesorderlines
+---------------------------------------------------
+Every Businesscentral Salesorderlines will be synchronized with a  Salesorderlines.
+
+Once a link between a Businesscentral Salesorderlines and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorderlines and a  Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorderlines Property
+     -  Salesorderlines Property
+     -  Data Type
 
 
 Businesscentral Salesorders to  Salesorderlines
