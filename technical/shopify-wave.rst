@@ -2,7 +2,7 @@
 Shopify to Wave Dataflow
 ========================
 
-Generated: 2024-08-29 08:00:40
+Generated: 2024-08-29 12:41:54
 
 Introduction
 ------------
@@ -247,6 +247,9 @@ The following properties are synchronized between a Shopify Sesamproduct and a W
    * - Shopify Sesamproduct Property
      - Wave Product Property
      - Wave Data Type
+   * - sesam_priceExclVAT
+     - unitPrice
+     - "string"
    * - title
      - name
      - "string"
