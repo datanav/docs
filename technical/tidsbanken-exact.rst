@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-29 13:15:04
+Generated: 2024-08-29 13:19:10
 
 Introduction
 ------------
@@ -121,6 +121,9 @@ The following properties are synchronized between a Tidsbanken Ansatt and a  Emp
      - "string"
    * - Fodt
      - BirthDate
+     - "string"
+   * - Fornavn
+     - FirstName
      - "string"
    * - Id
      - ID
