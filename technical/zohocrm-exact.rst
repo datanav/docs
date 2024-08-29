@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-08-29 11:02:03
+Generated: 2024-08-29 11:05:19
 
 Introduction
 ------------
@@ -29,14 +29,26 @@ The following properties are synchronized between a ZohoCRM Account and a  Accou
    * - Billing_City
      - City
      - "string"
+   * - Billing_Code
+     - Postcode
+     - "string"
    * - Billing_Country
      - Country
+     - "string"
+   * - Phone
+     - Phone
      - "string"
    * - Shipping_City
      - City
      - "string"
+   * - Shipping_Code
+     - Postcode
+     - "string"
    * - Shipping_Country
      - Country
+     - "string"
+   * - Website
+     - Website
      - "string"
 
 
