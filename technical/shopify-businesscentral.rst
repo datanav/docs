@@ -2,7 +2,7 @@
 Shopify to Businesscentral Dataflow
 ===================================
 
-Generated: 2024-08-29 08:00:40
+Generated: 2024-08-29 12:41:52
 
 Introduction
 ------------
@@ -239,6 +239,9 @@ The following properties are synchronized between a Shopify Sesamproduct and a B
    * - Shopify Sesamproduct Property
      - Businesscentral Items Property
      - Businesscentral Data Type
+   * - sesam_priceExclVAT
+     - unitPrice
+     - N/A
    * - title
      - displayName
      - "string"
