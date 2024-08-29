@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 12:48:38
+Generated: 2024-08-29 12:49:37
 
 Introduction
 ------------
@@ -352,5 +352,24 @@ The following properties are synchronized between a Tripletex Employee and a  Ad
      - "string"
    * - address.country.id
      - Country
+     - "string"
+
+
+Tripletex Employee to  Employees
+--------------------------------
+Every Tripletex Employee will be synchronized with a  Employees.
+
+Once a link between a Tripletex Employee and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a  Employees:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     -  Employees Property
+     -  Data Type
+   * - id
+     - ID
      - "string"
 
