@@ -2,7 +2,7 @@
 Wave Financial to Shopify Dataflow
 ==================================
 
-Generated: 2024-08-29 08:00:40
+Generated: 2024-08-29 12:41:54
 
 Introduction
 ------------
@@ -255,6 +255,9 @@ The following properties are synchronized between a Wave Product and a Shopify S
      - "string"
    * - name
      - title
+     - "string"
+   * - unitPrice
+     - sesam_priceExclVAT
      - "string"
    * - unitPrice
      - variants.price
