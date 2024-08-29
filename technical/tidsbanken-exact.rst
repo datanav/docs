@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-29 12:48:38
+Generated: 2024-08-29 12:49:37
 
 Introduction
 ------------
@@ -93,6 +93,25 @@ The following properties are synchronized between a Tidsbanken Ansatt and a  Add
      - "string"
    * - Poststed
      - City
+     - "string"
+
+
+Tidsbanken Ansatt to  Employees
+-------------------------------
+Every Tidsbanken Ansatt will be synchronized with a  Employees.
+
+Once a link between a Tidsbanken Ansatt and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Ansatt and a  Employees:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Ansatt Property
+     -  Employees Property
+     -  Data Type
+   * - Id
+     - ID
      - "string"
 
 
