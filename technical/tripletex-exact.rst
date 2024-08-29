@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 14:03:35
+Generated: 2024-08-29 14:05:53
 
 Introduction
 ------------
@@ -465,4 +465,7 @@ The following properties are synchronized between a Tripletex Orderline and a  S
    * - Tripletex Orderline Property
      -  Salesorderlines Property
      -  Data Type
+   * - order.id
+     - OrderID
+     - "string"
 
