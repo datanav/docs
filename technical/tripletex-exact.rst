@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 13:07:54
+Generated: 2024-08-29 13:12:09
 
 Introduction
 ------------
@@ -392,5 +392,11 @@ The following properties are synchronized between a Tripletex Employee and a  Em
      - "string"
    * - id
      - ID
+     - "string"
+   * - phoneNumberMobile
+     - BusinessMobile
+     - "string"
+   * - phoneNumberWork
+     - Phone
      - "string"
 
