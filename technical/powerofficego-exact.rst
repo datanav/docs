@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-29 12:43:42
+Generated: 2024-08-29 12:48:38
 
 Introduction
 ------------
@@ -221,22 +221,6 @@ The following properties are synchronized between a Powerofficego Currency and a
      -  Data Type
 
 
-Powerofficego Currency to  Employees
-------------------------------------
-Every Powerofficego Currency will be synchronized with a  Employees.
-
-Once a link between a Powerofficego Currency and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Currency and a  Employees:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Currency Property
-     -  Employees Property
-     -  Data Type
-
-
 Powerofficego Customers to  Accounts
 ------------------------------------
 Every Powerofficego Customers will be synchronized with a  Accounts.
@@ -303,22 +287,6 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - MailAddress.CountryCode
      - Country
      - "string"
-
-
-Powerofficego Employees to  Employees
--------------------------------------
-Every Powerofficego Employees will be synchronized with a  Employees.
-
-Once a link between a Powerofficego Employees and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Employees and a  Employees:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Employees Property
-     -  Employees Property
-     -  Data Type
 
 
 Powerofficego Location to  Addresses
