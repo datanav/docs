@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-29 09:15:41
+Generated: 2024-08-29 09:16:33
 
 Introduction
 ------------
@@ -85,6 +85,22 @@ The following properties are synchronized between a Businesscentral Employees an
    * - surname
      - last_name
      - "string"
+
+
+Businesscentral Salesorderlines to  Item
+----------------------------------------
+Every Businesscentral Salesorderlines will be synchronized with a  Item.
+
+Once a link between a Businesscentral Salesorderlines and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorderlines and a  Item:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorderlines Property
+     -  Item Property
+     -  Data Type
 
 
 Businesscentral Salesorderlines to  Order
