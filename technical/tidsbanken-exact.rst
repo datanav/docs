@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-08-29 10:55:20
+Generated: 2024-08-29 11:00:44
 
 Introduction
 ------------
@@ -40,6 +40,28 @@ The following properties are synchronized between a Tidsbanken Ansatt and a  Con
      - "string"
    * - Navn
      - FullName
+     - "string"
+   * - Poststed
+     - City
+     - "string"
+
+
+Tidsbanken Avdeling to  Accounts
+--------------------------------
+Every Tidsbanken Avdeling will be synchronized with a  Accounts.
+
+Once a link between a Tidsbanken Avdeling and a  Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Avdeling and a  Accounts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     -  Accounts Property
+     -  Data Type
+   * - Adresse
+     - AddressLine1
      - "string"
    * - Poststed
      - City
