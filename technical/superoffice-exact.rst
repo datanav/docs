@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-29 11:25:41
+Generated: 2024-08-29 11:44:41
 
 Introduction
 ------------
@@ -105,6 +105,38 @@ The following properties are synchronized between a SuperOffice Person and a  Co
    * - OfficePhones.Value
      - Phone
      - "string"
+
+
+SuperOffice Quoteline to  Quotations
+------------------------------------
+Every SuperOffice Quoteline will be synchronized with a  Quotations.
+
+Once a link between a SuperOffice Quoteline and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     -  Quotations Property
+     -  Data Type
+
+
+SuperOffice Sale to  Quotations
+-------------------------------
+Every SuperOffice Sale will be synchronized with a  Quotations.
+
+Once a link between a SuperOffice Sale and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Sale and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Sale Property
+     -  Quotations Property
+     -  Data Type
 
 
 SuperOffice Person to  Addresses
