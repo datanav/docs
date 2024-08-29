@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-08-29 11:44:44
+Generated: 2024-08-29 12:09:40
 
 Introduction
 ------------
@@ -302,6 +302,22 @@ The following properties are synchronized between a Powerofficego Location and a
    * - countryCode
      - Country
      - "string"
+
+
+Powerofficego Quote to  Currencies
+----------------------------------
+Every Powerofficego Quote will be synchronized with a  Currencies.
+
+Once a link between a Powerofficego Quote and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Quote and a  Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Quote Property
+     -  Currencies Property
+     -  Data Type
 
 
 Powerofficego Quote to  Quotations
