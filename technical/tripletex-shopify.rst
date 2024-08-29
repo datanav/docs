@@ -2,7 +2,7 @@
 Tripletex to Shopify Dataflow
 =============================
 
-Generated: 2024-08-29 08:00:40
+Generated: 2024-08-29 12:41:54
 
 Introduction
 ------------
@@ -294,6 +294,9 @@ The following properties are synchronized between a Tripletex Product and a Shop
      - "string"
    * - name
      - title
+     - "string"
+   * - priceExcludingVatCurrency
+     - sesam_priceExclVAT
      - "string"
    * - priceExcludingVatCurrency
      - variants.price
