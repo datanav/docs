@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-29 11:44:44
+Generated: 2024-08-29 11:46:54
 
 Introduction
 ------------
@@ -137,6 +137,9 @@ The following properties are synchronized between a Businesscentral Salesorders 
      - "string"
    * - id
      - DeliveryAddress
+     - "string"
+   * - requestedDeliveryDate
+     - DeliveryDate
      - "string"
 
 
