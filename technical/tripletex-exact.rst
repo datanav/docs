@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 11:00:42
+Generated: 2024-08-29 11:02:03
 
 Introduction
 ------------
@@ -69,6 +69,9 @@ The following properties are synchronized between a Tripletex Department and a  
    * - Tripletex Department Property
      -  Accounts Property
      -  Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Tripletex Employee to  Contacts
@@ -167,6 +170,9 @@ The following properties are synchronized between a Tripletex Customer and a  Ac
      - "string"
    * - deliveryAddress.country.id
      - Country
+     - "string"
+   * - name
+     - Name
      - "string"
    * - physicalAddress.addressLine1
      - AddressLine1
