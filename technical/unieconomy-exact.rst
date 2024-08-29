@@ -2,7 +2,7 @@
 Unieconomy to  Dataflow
 =======================
 
-Generated: 2024-08-29 10:58:42
+Generated: 2024-08-29 10:58:50
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Unieconomy Customers and a  
    * - Unieconomy Customers Property
      -  Accounts Property
      -  Data Type
+   * - CurrencyCodeID
+     - Currency
+     - "string"
 
