@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 13:15:04
+Generated: 2024-08-29 13:19:10
 
 Introduction
 ------------
@@ -389,6 +389,9 @@ The following properties are synchronized between a Tripletex Employee and a  Em
      - "string"
    * - email
      - BusinessEmail
+     - "string"
+   * - firstName
+     - FirstName
      - "string"
    * - id
      - ID
