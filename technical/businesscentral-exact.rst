@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-08-29 11:36:41
+Generated: 2024-08-29 11:44:41
 
 Introduction
 ------------
@@ -114,6 +114,38 @@ The following properties are synchronized between a Businesscentral Salesorderli
    :header-rows: 1
 
    * - Businesscentral Salesorderlines Property
+     -  Quotations Property
+     -  Data Type
+
+
+Businesscentral Salesorders to  Quotations
+------------------------------------------
+Every Businesscentral Salesorders will be synchronized with a  Quotations.
+
+Once a link between a Businesscentral Salesorders and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorders and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorders Property
+     -  Quotations Property
+     -  Data Type
+
+
+Businesscentral Salesquotes to  Quotations
+------------------------------------------
+Every Businesscentral Salesquotes will be synchronized with a  Quotations.
+
+Once a link between a Businesscentral Salesquotes and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesquotes and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesquotes Property
      -  Quotations Property
      -  Data Type
 
