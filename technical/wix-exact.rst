@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-08-29 12:11:40
+Generated: 2024-08-29 12:40:40
 
 Introduction
 ------------
@@ -50,5 +50,21 @@ The following properties are synchronized between a Wix.com Currencies and a  Cu
 
    * - Wix.com Currencies Property
      -  Currencies Property
+     -  Data Type
+
+
+Wix.com Currencies to  Employees
+--------------------------------
+Every Wix.com Currencies will be synchronized with a  Employees.
+
+Once a link between a Wix.com Currencies and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Currencies and a  Employees:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Currencies Property
+     -  Employees Property
      -  Data Type
 
