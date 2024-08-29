@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-08-29 10:51:41
+Generated: 2024-08-29 10:55:20
 
 Introduction
 ------------
@@ -63,6 +63,12 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      -  Accounts Property
      -  Data Type
+   * - City
+     - City
+     - "string"
+   * - Country
+     - Country
+     - "string"
 
 
 Salesforce Organization to  Addresses
