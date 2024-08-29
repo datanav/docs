@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-08-29 11:05:19
+Generated: 2024-08-29 11:22:41
 
 Introduction
 ------------
@@ -154,6 +154,22 @@ The following properties are synchronized between a Wave Customer and a  Contact
    * - shippingDetails.address.country.code
      - Country
      - "string"
+
+
+Wave Customer to  Quotations
+----------------------------
+Every Wave Customer will be synchronized with a  Quotations.
+
+Once a link between a Wave Customer and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a  Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     -  Quotations Property
+     -  Data Type
 
 
 Wave Customer person to  Addresses
