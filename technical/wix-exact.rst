@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-08-29 10:35:42
+Generated: 2024-08-29 12:11:40
 
 Introduction
 ------------
@@ -35,4 +35,20 @@ The following properties are synchronized between a Wix.com Contacts and a  Cont
    * - primaryInfo.phone
      - Phone
      - "string"
+
+
+Wix.com Currencies to  Currencies
+---------------------------------
+Every Wix.com Currencies will be synchronized with a  Currencies.
+
+Once a link between a Wix.com Currencies and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Currencies and a  Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Currencies Property
+     -  Currencies Property
+     -  Data Type
 
