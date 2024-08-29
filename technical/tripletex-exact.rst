@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-08-29 11:02:03
+Generated: 2024-08-29 11:05:19
 
 Introduction
 ------------
@@ -171,8 +171,14 @@ The following properties are synchronized between a Tripletex Customer and a  Ac
    * - deliveryAddress.country.id
      - Country
      - "string"
+   * - deliveryAddress.postalCode
+     - Postcode
+     - "string"
    * - name
      - Name
+     - "string"
+   * - phoneNumber
+     - Phone
      - "string"
    * - physicalAddress.addressLine1
      - AddressLine1
@@ -186,6 +192,9 @@ The following properties are synchronized between a Tripletex Customer and a  Ac
    * - physicalAddress.country.id
      - Country
      - "string"
+   * - physicalAddress.postalCode
+     - Postcode
+     - "string"
    * - postalAddress.addressLine1
      - AddressLine1
      - "string"
@@ -197,6 +206,12 @@ The following properties are synchronized between a Tripletex Customer and a  Ac
      - "string"
    * - postalAddress.country.id
      - Country
+     - "string"
+   * - postalAddress.postalCode
+     - Postcode
+     - "string"
+   * - website
+     - Website
      - "string"
 
 
