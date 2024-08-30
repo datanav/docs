@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-08-30 00:00:00
+Generated: 2024-08-30 00:10:41
 
 Introduction
 ------------
@@ -21,22 +21,6 @@ The following properties are synchronized between a Shopify Inventoryitem and a 
    :header-rows: 1
 
    * - Shopify Inventoryitem Property
-     -  Item Property
-     -  Data Type
-
-
-Shopify Order to  Item
-----------------------
-Every Shopify Order will be synchronized with a  Item.
-
-Once a link between a Shopify Order and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Order and a  Item:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Order Property
      -  Item Property
      -  Data Type
 
