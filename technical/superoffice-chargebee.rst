@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-08-30 00:00:00
+Generated: 2024-08-30 00:10:41
 
 Introduction
 ------------
@@ -71,22 +71,6 @@ The following properties are synchronized between a SuperOffice Contact and a  B
      - "string"
 
 
-SuperOffice Quotealternative to  Item
--------------------------------------
-Every SuperOffice Quotealternative will be synchronized with a  Item.
-
-Once a link between a SuperOffice Quotealternative and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quotealternative and a  Item:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quotealternative Property
-     -  Item Property
-     -  Data Type
-
-
 SuperOffice Quotealternative to  Order
 --------------------------------------
 Every SuperOffice Quotealternative will be synchronized with a  Order.
@@ -100,22 +84,6 @@ The following properties are synchronized between a SuperOffice Quotealternative
 
    * - SuperOffice Quotealternative Property
      -  Order Property
-     -  Data Type
-
-
-SuperOffice Quoteline to  Item
-------------------------------
-Every SuperOffice Quoteline will be synchronized with a  Item.
-
-Once a link between a SuperOffice Quoteline and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quoteline and a  Item:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quoteline Property
-     -  Item Property
      -  Data Type
 
 
@@ -145,22 +113,6 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - VAT
      - order_line_items.tax_amount
      - "string"
-
-
-SuperOffice Sale to  Item
--------------------------
-Every SuperOffice Sale will be synchronized with a  Item.
-
-Once a link between a SuperOffice Sale and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Sale and a  Item:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Sale Property
-     -  Item Property
-     -  Data Type
 
 
 SuperOffice Sale to  Order
