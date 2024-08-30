@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-08-30 00:00:00
+Generated: 2024-08-30 00:10:41
 
 Introduction
 ------------
@@ -44,22 +44,6 @@ The following properties are synchronized between a Wave Customer and a  Busines
    * - name
      - name
      - "string"
-
-
-Wave Invoice to  Item
----------------------
-Every Wave Invoice will be synchronized with a  Item.
-
-Once a link between a Wave Invoice and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Invoice and a  Item:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Invoice Property
-     -  Item Property
-     -  Data Type
 
 
 Wave Customer person to  Customer
