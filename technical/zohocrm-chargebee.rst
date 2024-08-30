@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-08-30 00:00:00
+Generated: 2024-08-30 00:10:41
 
 Introduction
 ------------
@@ -53,22 +53,6 @@ The following properties are synchronized between a ZohoCRM Account and a  Busin
    * - Account_Name
      - name
      - "string"
-
-
-ZohoCRM Deal to  Item
----------------------
-Every ZohoCRM Deal will be synchronized with a  Item.
-
-Once a link between a ZohoCRM Deal and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ZohoCRM Deal and a  Item:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ZohoCRM Deal Property
-     -  Item Property
-     -  Data Type
 
 
 ZohoCRM Deal to  Order
