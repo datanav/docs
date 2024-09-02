@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-09-02 11:04:41
+Generated: 2024-09-02 11:39:41
 
 Introduction
 ------------
@@ -297,6 +297,22 @@ The following properties are synchronized between a Wave Product and a  Items:
 
    * - Wave Product Property
      -  Items Property
+     -  Data Type
+
+
+Wave Product to  Vatcodes
+-------------------------
+Every Wave Product will be synchronized with a  Vatcodes.
+
+Once a link between a Wave Product and a  Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Product and a  Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Product Property
+     -  Vatcodes Property
      -  Data Type
 
 
