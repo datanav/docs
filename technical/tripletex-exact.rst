@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-02 10:58:33
+Generated: 2024-09-02 10:58:40
 
 Introduction
 ------------
@@ -474,6 +474,15 @@ The following properties are synchronized between a Tripletex Invoice and a  Ite
    * - Tripletex Invoice Property
      -  Items Property
      -  Data Type
+   * - invoiceDate
+     - InvoiceDate
+     - "string"
+   * - invoiceDueDate
+     - DueDate
+     - "string"
+   * - invoiceNumber
+     - InvoiceNumber
+     - "string"
 
 
 Tripletex Invoice to  Salesinvoices
