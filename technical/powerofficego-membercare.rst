@@ -2,12 +2,31 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-09-02 12:11:09
+Generated: 2024-09-02 14:00:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Powerofficego Contactperson to  Companycategories
+-------------------------------------------------
+Every Powerofficego Contactperson will be synchronized with a  Companycategories.
+
+Once a link between a Powerofficego Contactperson and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Contactperson and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     -  Companycategories Property
+     -  Data Type
+   * - residenceCountryCode
+     - iso2Letter
+     - "string"
+
 
 Powerofficego Contactperson to  Countries
 -----------------------------------------
@@ -24,6 +43,25 @@ The following properties are synchronized between a Powerofficego Contactperson 
      -  Countries Property
      -  Data Type
    * - residenceCountryCode
+     - iso2Letter
+     - "string"
+
+
+Powerofficego Customers to  Companycategories
+---------------------------------------------
+Every Powerofficego Customers will be synchronized with a  Companycategories.
+
+Once a link between a Powerofficego Customers and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     -  Companycategories Property
+     -  Data Type
+   * - MailAddress.CountryCode
      - iso2Letter
      - "string"
 
@@ -47,6 +85,22 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
+Powerofficego Location to  Companycategories
+--------------------------------------------
+Every Powerofficego Location will be synchronized with a  Companycategories.
+
+Once a link between a Powerofficego Location and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Location and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Location Property
+     -  Companycategories Property
+     -  Data Type
+
+
 Powerofficego Location to  Countries
 ------------------------------------
 Every Powerofficego Location will be synchronized with a  Countries.
@@ -60,6 +114,22 @@ The following properties are synchronized between a Powerofficego Location and a
 
    * - Powerofficego Location Property
      -  Countries Property
+     -  Data Type
+
+
+Powerofficego Outgoinginvoices to  Companycategories
+----------------------------------------------------
+Every Powerofficego Outgoinginvoices will be synchronized with a  Companycategories.
+
+Once a link between a Powerofficego Outgoinginvoices and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Outgoinginvoices and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Outgoinginvoices Property
+     -  Companycategories Property
      -  Data Type
 
 
@@ -79,6 +149,22 @@ The following properties are synchronized between a Powerofficego Outgoinginvoic
      -  Data Type
 
 
+Powerofficego Suppliers to  Companycategories
+---------------------------------------------
+Every Powerofficego Suppliers will be synchronized with a  Companycategories.
+
+Once a link between a Powerofficego Suppliers and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Suppliers and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Suppliers Property
+     -  Companycategories Property
+     -  Data Type
+
+
 Powerofficego Suppliers to  Countries
 -------------------------------------
 Every Powerofficego Suppliers will be synchronized with a  Countries.
@@ -92,6 +178,22 @@ The following properties are synchronized between a Powerofficego Suppliers and 
 
    * - Powerofficego Suppliers Property
      -  Countries Property
+     -  Data Type
+
+
+Powerofficego Suppliers person to  Companycategories
+----------------------------------------------------
+Every Powerofficego Suppliers person will be synchronized with a  Companycategories.
+
+Once a link between a Powerofficego Suppliers person and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Suppliers person and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Suppliers person Property
+     -  Companycategories Property
      -  Data Type
 
 
