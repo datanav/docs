@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-09-02 00:00:00
+Generated: 2024-09-02 08:11:38
 
 Introduction
 ------------
@@ -84,6 +84,15 @@ The following properties are synchronized between a SuperOffice Product and a  P
    * - SuperOffice Product Property
      -  Products Property
      -  Data Type
+   * - UnitCost
+     - ProductCostPrice
+     - "string"
+   * - UnitListPrice
+     - ProductPrice
+     - "string"
+   * - VAT
+     - ProductVatCode
+     - "string"
 
 
 SuperOffice Quoteline to  Quotationline
@@ -100,6 +109,24 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      -  Quotationline Property
      -  Data Type
+   * - DiscountPercent
+     - QuotationLineDiscount
+     - "string"
+   * - ERPDiscountPercent
+     - QuotationLineDiscount
+     - "string"
+   * - Quantity
+     - QuotationLineQuantity
+     - "string"
+   * - QuoteAlternativeId
+     - QuotationLineOpportunityId
+     - "string"
+   * - UnitListPrice
+     - QuotationLinePrice
+     - "string"
+   * - VAT
+     - QuotationLineVatPercentage
+     - "string"
 
 
 SuperOffice Sale to  Opportunities
@@ -116,6 +143,15 @@ The following properties are synchronized between a SuperOffice Sale and a  Oppo
    * - SuperOffice Sale Property
      -  Opportunities Property
      -  Data Type
+   * - Contact.ContactId
+     - OpportunityOrganisationId
+     - "string"
+   * - Currency.Id
+     - OpportunityCurrencyName
+     - "string"
+   * - Person.PersonId
+     - OpportunityOrganisationId
+     - "string"
 
 
 SuperOffice User to  Users
@@ -132,4 +168,7 @@ The following properties are synchronized between a SuperOffice User and a  User
    * - SuperOffice User Property
      -  Users Property
      -  Data Type
+   * - personEmail
+     - UserEmail
+     - "string"
 
