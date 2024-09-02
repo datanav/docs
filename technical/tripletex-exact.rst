@@ -2,12 +2,30 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-02 10:42:35
+Generated: 2024-09-02 10:57:42
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Product to  Items
+---------------------------
+Before any synchronization can take place, a link between a Tripletex Product and a  Items must be established.
+
+A new  Items will be created from a Tripletex Product if it is connected to a Tripletex Orderline that is synchronized into .
+
+Once a link between a Tripletex Product and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a  Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     -  Items Property
+     -  Data Type
+
 
 Tripletex Customer person to  Contacts
 --------------------------------------
