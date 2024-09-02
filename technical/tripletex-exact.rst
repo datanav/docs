@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-02 08:56:50
+Generated: 2024-09-02 08:59:54
 
 Introduction
 ------------
@@ -426,6 +426,9 @@ The following properties are synchronized between a Tripletex Invoice and a  Sal
      -  Data Type
    * - currency.id
      - Currency
+     - "string"
+   * - invoiceDate
+     - InvoiceDate
      - "string"
    * - invoiceDueDate
      - DueDate
