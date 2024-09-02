@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-09-02 13:38:44
+Generated: 2024-09-02 13:39:34
 
 Introduction
 ------------
@@ -41,6 +41,24 @@ The following properties are synchronized between a Wave Customer and a  Compani
    * - shippingDetails.address.postalCode
      - address.zip_code
      - "string"
+
+
+Wave Vendor to  Companies
+-------------------------
+Before any synchronization can take place, a link between a Wave Vendor and a  Companies must be established.
+
+A new  Companies will be created from a Wave Vendor if it is connected to a Wave Customer-person that is synchronized into .
+
+Once a link between a Wave Vendor and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a  Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     -  Companies Property
+     -  Data Type
 
 
 Wave Customer person to  Contacts
