@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-09-02 13:38:41
+Generated: 2024-09-02 13:38:44
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Tidsbanken Ansatt and a  Con
    * - Tidsbanken Ansatt Property
      -  Contacts Property
      -  Data Type
+   * - Fodt
+     - birthday
+     - "string"
 
 
 Tidsbanken Avdeling to  Companies
@@ -39,6 +42,9 @@ The following properties are synchronized between a Tidsbanken Avdeling and a  C
    * - Tidsbanken Avdeling Property
      -  Companies Property
      -  Data Type
+   * - Navn
+     - company_name
+     - "string"
 
 
 Tidsbanken Kunde to  Companies
@@ -55,4 +61,22 @@ The following properties are synchronized between a Tidsbanken Kunde and a  Comp
    * - Tidsbanken Kunde Property
      -  Companies Property
      -  Data Type
+   * - Id
+     - id
+     - "string"
+   * - LevPostNr
+     - address.zip_code
+     - "string"
+   * - LevPoststed
+     - address.locality
+     - "string"
+   * - Navn
+     - company_name
+     - "string"
+   * - Postnr
+     - address.zip_code
+     - "string"
+   * - Poststed
+     - address.locality
+     - "string"
 
