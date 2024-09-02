@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-02 14:08:40
+Generated: 2024-09-02 14:08:43
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Tripletex Customer and a  Co
    * - Tripletex Customer Property
      -  Companies Property
      -  Data Type
+   * - name
+     - companyName
+     - "string"
+   * - website
+     - url
+     - "string"
 
 
 Tripletex Department to  Companies
@@ -39,6 +45,9 @@ The following properties are synchronized between a Tripletex Department and a  
    * - Tripletex Department Property
      -  Companies Property
      -  Data Type
+   * - name
+     - companyName
+     - "string"
 
 
 Tripletex Country to  Companycategories
