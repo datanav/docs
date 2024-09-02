@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-09-02 10:57:42
+Generated: 2024-09-02 11:04:41
 
 Introduction
 ------------
@@ -147,4 +147,20 @@ The following properties are synchronized between a Shopify Order and a  Salesor
    * - currency
      - Currency
      - "string"
+
+
+Shopify Sesamproduct to  Items
+------------------------------
+Every Shopify Sesamproduct will be synchronized with a  Items.
+
+Once a link between a Shopify Sesamproduct and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Sesamproduct and a  Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Sesamproduct Property
+     -  Items Property
+     -  Data Type
 
