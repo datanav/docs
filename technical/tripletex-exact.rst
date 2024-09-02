@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-02 09:18:42
+Generated: 2024-09-02 10:41:42
 
 Introduction
 ------------
@@ -324,6 +324,25 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
    * - postalAddress.country.id
      - Country
+     - "string"
+
+
+Tripletex Department to  Departments
+------------------------------------
+Every Tripletex Department will be synchronized with a  Departments.
+
+Once a link between a Tripletex Department and a  Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a  Departments:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     -  Departments Property
+     -  Data Type
+   * - departmentNumber
+     - Code
      - "string"
 
 
