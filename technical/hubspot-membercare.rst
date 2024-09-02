@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-09-02 12:10:41
+Generated: 2024-09-02 12:11:09
 
 Introduction
 ------------
@@ -23,4 +23,16 @@ The following properties are synchronized between a HubSpot Company and a  Count
    * - HubSpot Company Property
      -  Countries Property
      -  Data Type
+   * - properties.country
+     - name
+     - "string"
+   * - properties.industry
+     - name
+     - "string"
+   * - properties.state
+     - name
+     - "string"
+   * - properties.type
+     - name
+     - "string"
 
