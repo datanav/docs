@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-09-02 14:08:43
+Generated: 2024-09-02 14:18:40
 
 Introduction
 ------------
@@ -31,31 +31,6 @@ The following properties are synchronized between a ZohoCRM Account and a  Compa
      - "string"
 
 
-ZohoCRM Account to  Companycategories
--------------------------------------
-Every ZohoCRM Account will be synchronized with a  Companycategories.
-
-Once a link between a ZohoCRM Account and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ZohoCRM Account and a  Companycategories:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ZohoCRM Account Property
-     -  Companycategories Property
-     -  Data Type
-   * - Billing_Country
-     - name
-     - "string"
-   * - Industry
-     - name
-     - "string"
-   * - Shipping_Country
-     - name
-     - "string"
-
-
 ZohoCRM Account to  Countries
 -----------------------------
 Every ZohoCRM Account will be synchronized with a  Countries.
@@ -77,28 +52,6 @@ The following properties are synchronized between a ZohoCRM Account and a  Count
      - name
      - "string"
    * - Shipping_Country
-     - name
-     - "string"
-
-
-ZohoCRM Contact to  Companycategories
--------------------------------------
-Every ZohoCRM Contact will be synchronized with a  Companycategories.
-
-Once a link between a ZohoCRM Contact and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ZohoCRM Contact and a  Companycategories:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ZohoCRM Contact Property
-     -  Companycategories Property
-     -  Data Type
-   * - Mailing_Country
-     - name
-     - "string"
-   * - Other_Country
      - name
      - "string"
 
