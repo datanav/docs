@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-09-02 13:38:41
+Generated: 2024-09-02 13:38:44
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Salesforce Contact and a  Co
    * - Salesforce Contact Property
      -  Contacts Property
      -  Data Type
+   * - Birthdate
+     - birthday
+     - "string"
+   * - Name
+     - family_name
+     - "string"
+   * - Name
+     - given_name
+     - "string"
 
 
 Salesforce Organization to  Companies
@@ -39,6 +48,9 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      -  Companies Property
      -  Data Type
+   * - Name	
+     - company_name
+     - "string"
 
 
 Salesforce Product2 to  Product
