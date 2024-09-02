@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-09-02 00:00:00
+Generated: 2024-09-02 08:10:56
 
 Introduction
 ------------
@@ -61,6 +61,9 @@ The following properties are synchronized between a Businesscentral Contacts per
    * - Businesscentral Contacts person Property
      -  Persons Property
      -  Data Type
+   * - displayName
+     - PersonName
+     - "string"
 
 
 Businesscentral Items to  Products
