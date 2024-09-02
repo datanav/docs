@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-09-02 00:00:16
+Generated: 2024-09-02 08:11:38
 
 Introduction
 ------------
@@ -48,6 +48,15 @@ The following properties are synchronized between a HubSpot Deal and a  Opportun
    * - HubSpot Deal Property
      -  Opportunities Property
      -  Data Type
+   * - properties.deal_currency_code
+     - OpportunityCurrencyName
+     - "string"
+   * - properties.description
+     - OpportunityCurrencySymbol
+     - "string"
+   * - properties.hubspot_owner_id
+     - OpportunityPersonId
+     - "string"
 
 
 HubSpot Lineitem to  Quotationline
@@ -64,6 +73,15 @@ The following properties are synchronized between a HubSpot Lineitem and a  Quot
    * - HubSpot Lineitem Property
      -  Quotationline Property
      -  Data Type
+   * - properties.hs_discount_percentage
+     - QuotationLineDiscount
+     - "string"
+   * - properties.price
+     - QuotationLinePrice
+     - "string"
+   * - properties.quantity
+     - QuotationLineQuantity
+     - "string"
 
 
 HubSpot Product to  Products
@@ -80,6 +98,12 @@ The following properties are synchronized between a HubSpot Product and a  Produ
    * - HubSpot Product Property
      -  Products Property
      -  Data Type
+   * - properties.hs_cost_of_goods_sold
+     - ProductCostPrice
+     - "string"
+   * - properties.price
+     - ProductPrice
+     - "string"
 
 
 HubSpot User to  Users
@@ -96,4 +120,7 @@ The following properties are synchronized between a HubSpot User and a  Users:
    * - HubSpot User Property
      -  Users Property
      -  Data Type
+   * - email
+     - UserEmail
+     - "string"
 
