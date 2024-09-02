@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-09-02 11:39:43
+Generated: 2024-09-02 11:43:43
 
 Introduction
 ------------
@@ -276,6 +276,25 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
 
 
+SuperOffice Quotealternative to  Vatcodes
+-----------------------------------------
+Every SuperOffice Quotealternative will be synchronized with a  Vatcodes.
+
+Once a link between a SuperOffice Quotealternative and a  Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a  Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quotealternative Property
+     -  Vatcodes Property
+     -  Data Type
+   * - VAT
+     - Code
+     - "string"
+
+
 SuperOffice Quoteline to  Salesorderlines
 -----------------------------------------
 Every SuperOffice Quoteline will be synchronized with a  Salesorderlines.
@@ -295,5 +314,24 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
    * - QuoteAlternativeId
      - OrderID
+     - "string"
+
+
+SuperOffice Quoteline to  Vatcodes
+----------------------------------
+Every SuperOffice Quoteline will be synchronized with a  Vatcodes.
+
+Once a link between a SuperOffice Quoteline and a  Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a  Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     -  Vatcodes Property
+     -  Data Type
+   * - VAT
+     - Code
      - "string"
 
