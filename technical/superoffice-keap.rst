@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-09-02 13:38:41
+Generated: 2024-09-02 13:38:44
 
 Introduction
 ------------
@@ -23,6 +23,24 @@ The following properties are synchronized between a SuperOffice Contact and a  C
    * - SuperOffice Contact Property
      -  Companies Property
      -  Data Type
+   * - Address.Postal.City
+     - address.locality
+     - "string"
+   * - Address.Postal.Zipcode
+     - address.zip_code
+     - "string"
+   * - Address.Street.City
+     - address.locality
+     - "string"
+   * - Address.Street.Zipcode
+     - address.zip_code
+     - "string"
+   * - ContactId
+     - id
+     - "string"
+   * - Name
+     - company_name
+     - "string"
 
 
 SuperOffice Person to  Contacts
@@ -39,6 +57,9 @@ The following properties are synchronized between a SuperOffice Person and a  Co
    * - SuperOffice Person Property
      -  Contacts Property
      -  Data Type
+   * - BirthDate
+     - birthday
+     - "string"
 
 
 SuperOffice Product to  Product
