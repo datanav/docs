@@ -2,7 +2,7 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2024-09-02 14:08:40
+Generated: 2024-09-02 14:24:40
 
 Introduction
 ------------
@@ -22,6 +22,22 @@ The following properties are synchronized between a YouTrack Groups and a  Compa
 
    * - YouTrack Groups Property
      -  Companies Property
+     -  Data Type
+
+
+YouTrack Organizationroles to  Companycategories
+------------------------------------------------
+Every YouTrack Organizationroles will be synchronized with a  Companycategories.
+
+Once a link between a YouTrack Organizationroles and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Organizationroles and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Organizationroles Property
+     -  Companycategories Property
      -  Data Type
 
 
@@ -54,6 +70,22 @@ The following properties are synchronized between a YouTrack Organizations and a
 
    * - YouTrack Organizations Property
      -  Companies Property
+     -  Data Type
+
+
+YouTrack Roles to  Companycategories
+------------------------------------
+Every YouTrack Roles will be synchronized with a  Companycategories.
+
+Once a link between a YouTrack Roles and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Roles and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Roles Property
+     -  Companycategories Property
      -  Data Type
 
 
