@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-09-02 00:00:00
+Generated: 2024-09-02 08:11:38
 
 Introduction
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a Shopify Order and a  Quotati
    * - Shopify Order Property
      -  Quotationline Property
      -  Data Type
+   * - id
+     - QuotationLineOpportunityId
+     - "string"
+   * - line_items.price
+     - QuotationLinePrice
+     - "string"
+   * - line_items.quantity
+     - QuotationLineQuantity
+     - "string"
+   * - line_items.total_discount
+     - QuotationLineDiscount
+     - "string"
 
 
 Shopify Sesamproduct to  Products
@@ -39,4 +51,10 @@ The following properties are synchronized between a Shopify Sesamproduct and a  
    * - Shopify Sesamproduct Property
      -  Products Property
      -  Data Type
+   * - sesam_priceExclVAT
+     - ProductPrice
+     - "string"
+   * - variants.inventory_quantity
+     - ProductQuantity
+     - "string"
 
