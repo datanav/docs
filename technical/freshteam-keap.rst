@@ -2,7 +2,7 @@
 Freshteam to  Dataflow
 ======================
 
-Generated: 2024-09-02 13:35:41
+Generated: 2024-09-02 13:38:41
 
 Introduction
 ------------
@@ -26,4 +26,20 @@ The following properties are synchronized between a Freshteam Department and a  
    * - name
      - company_name
      - "string"
+
+
+Freshteam Employee to  Contacts
+-------------------------------
+Every Freshteam Employee will be synchronized with a  Contacts.
+
+Once a link between a Freshteam Employee and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Freshteam Employee and a  Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Freshteam Employee Property
+     -  Contacts Property
+     -  Data Type
 
