@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-02 11:08:36
+Generated: 2024-09-02 11:27:36
 
 Introduction
 ------------
@@ -533,5 +533,21 @@ The following properties are synchronized between a Tripletex Product and a  Ite
 
    * - Tripletex Product Property
      -  Items Property
+     -  Data Type
+
+
+Tripletex Productunit to  Units
+-------------------------------
+Every Tripletex Productunit will be synchronized with a  Units.
+
+Once a link between a Tripletex Productunit and a  Units is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Productunit and a  Units:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Productunit Property
+     -  Units Property
      -  Data Type
 
