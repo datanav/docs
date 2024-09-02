@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-09-02 11:04:41
+Generated: 2024-09-02 11:05:49
 
 Introduction
 ------------
@@ -23,4 +23,13 @@ The following properties are synchronized between a Wix.com Products and a  Prod
    * - Wix.com Products Property
      -  Products Property
      -  Data Type
+   * - name
+     - product_name
+     - "string"
+   * - priceData.price
+     - product_price
+     - "string"
+   * - sku
+     - sku
+     - "string"
 
