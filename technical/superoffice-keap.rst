@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-09-02 11:18:37
+Generated: 2024-09-02 11:18:42
 
 Introduction
 ------------
@@ -48,4 +48,7 @@ The following properties are synchronized between a SuperOffice Sale and a  Oppo
    * - SuperOffice Sale Property
      -  Opportunity Property
      -  Data Type
+   * - Heading
+     - opportunity_title
+     - "string"
 
