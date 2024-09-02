@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-09-02 13:38:41
+Generated: 2024-09-02 13:38:44
 
 Introduction
 ------------
@@ -23,6 +23,24 @@ The following properties are synchronized between a ZohoCRM Account and a  Compa
    * - ZohoCRM Account Property
      -  Companies Property
      -  Data Type
+   * - Account_Name
+     - company_name
+     - "string"
+   * - Billing_City
+     - address.locality
+     - "string"
+   * - Billing_Code
+     - address.zip_code
+     - "string"
+   * - Shipping_City
+     - address.locality
+     - "string"
+   * - Shipping_Code
+     - address.zip_code
+     - "string"
+   * - id
+     - id
+     - "string"
 
 
 ZohoCRM Contact to  Contacts
