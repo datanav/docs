@@ -2,12 +2,30 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-09-02 00:00:00
+Generated: 2024-09-02 10:57:42
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wix.com Products to  Items
+--------------------------
+Before any synchronization can take place, a link between a Wix.com Products and a  Items must be established.
+
+A new  Items will be created from a Wix.com Products if it is connected to a Wix.com Wix-orders that is synchronized into .
+
+Once a link between a Wix.com Products and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a  Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
+     -  Items Property
+     -  Data Type
+
 
 Wix.com Contacts to  Contacts
 -----------------------------
