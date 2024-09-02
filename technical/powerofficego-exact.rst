@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-09-02 11:04:41
+Generated: 2024-09-02 11:27:36
 
 Introduction
 ------------
@@ -399,6 +399,22 @@ The following properties are synchronized between a Powerofficego Product and a 
 
    * - Powerofficego Product Property
      -  Items Property
+     -  Data Type
+
+
+Powerofficego Product to  Units
+-------------------------------
+Every Powerofficego Product will be synchronized with a  Units.
+
+Once a link between a Powerofficego Product and a  Units is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product and a  Units:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     -  Units Property
      -  Data Type
 
 
