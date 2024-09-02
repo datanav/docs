@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-09-02 13:56:03
+Generated: 2024-09-02 14:00:41
 
 Introduction
 ------------
@@ -34,6 +34,28 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
 
 
+Businesscentral Salesorders to  Companycategories
+-------------------------------------------------
+Every Businesscentral Salesorders will be synchronized with a  Companycategories.
+
+Once a link between a Businesscentral Salesorders and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorders and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorders Property
+     -  Companycategories Property
+     -  Data Type
+   * - billToCountry
+     - iso2Letter
+     - "string"
+   * - shipToCountry
+     - iso2Letter
+     - "string"
+
+
 Businesscentral Salesorders to  Countries
 -----------------------------------------
 Every Businesscentral Salesorders will be synchronized with a  Countries.
@@ -53,6 +75,28 @@ The following properties are synchronized between a Businesscentral Salesorders 
      - "string"
    * - shipToCountry
      - iso2Letter
+     - "string"
+
+
+Businesscentral Salesquotes to  Companycategories
+-------------------------------------------------
+Every Businesscentral Salesquotes will be synchronized with a  Companycategories.
+
+Once a link between a Businesscentral Salesquotes and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesquotes and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesquotes Property
+     -  Companycategories Property
+     -  Data Type
+   * - billToCountry
+     - name
+     - "string"
+   * - shipToCountry
+     - name
      - "string"
 
 
