@@ -2,7 +2,7 @@
 Unieconomy to  Dataflow
 =======================
 
-Generated: 2024-09-02 14:08:40
+Generated: 2024-09-02 14:08:43
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Unieconomy Customers and a  
    * - Unieconomy Customers Property
      -  Companies Property
      -  Data Type
+   * - WebUrl
+     - url
+     - "string"
 
 
 Unieconomy Departments to  Companies
@@ -39,6 +42,9 @@ The following properties are synchronized between a Unieconomy Departments and a
    * - Unieconomy Departments Property
      -  Companies Property
      -  Data Type
+   * - Name
+     - companyName
+     - "string"
 
 
 Unieconomy Companies to  Companies
