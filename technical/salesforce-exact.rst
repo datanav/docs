@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-09-02 11:06:55
+Generated: 2024-09-02 11:07:39
 
 Introduction
 ------------
@@ -77,6 +77,12 @@ The following properties are synchronized between a Salesforce Contact and a  Co
      - "string"
    * - Name
      - FirstName
+     - "string"
+   * - Name
+     - FullName
+     - "string"
+   * - Name
+     - LastName
      - "string"
    * - Phone
      - Phone
