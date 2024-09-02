@@ -2,7 +2,7 @@
 Unieconomy to  Dataflow
 =======================
 
-Generated: 2024-09-02 00:00:00
+Generated: 2024-09-02 10:41:40
 
 Introduction
 ------------
@@ -89,4 +89,20 @@ The following properties are synchronized between a Unieconomy Customers and a  
    * - WebUrl
      - Website
      - "string"
+
+
+Unieconomy Departments to  Departments
+--------------------------------------
+Every Unieconomy Departments will be synchronized with a  Departments.
+
+Once a link between a Unieconomy Departments and a  Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Departments and a  Departments:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Departments Property
+     -  Departments Property
+     -  Data Type
 
