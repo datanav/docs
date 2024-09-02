@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-09-02 00:00:00
+Generated: 2024-09-02 08:11:38
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Wix.com Contacts and a  Pers
    * - Wix.com Contacts Property
      -  Persons Property
      -  Data Type
+   * - info.name.first
+     - PersonFirstName
+     - "string"
+   * - info.name.last
+     - PersonLastName
+     - "string"
+   * - primaryInfo.phone
+     - PersonDirectPhone
+     - "string"
 
 
 Wix.com Orders to  Quotationline
@@ -39,6 +48,15 @@ The following properties are synchronized between a Wix.com Orders and a  Quotat
    * - Wix.com Orders Property
      -  Quotationline Property
      -  Data Type
+   * - id
+     - QuotationLineOpportunityId
+     - "string"
+   * - lineItems.price
+     - QuotationLinePrice
+     - "string"
+   * - lineItems.quantity
+     - QuotationLineQuantity
+     - "string"
 
 
 Wix.com Products to  Products
@@ -55,4 +73,13 @@ The following properties are synchronized between a Wix.com Products and a  Prod
    * - Wix.com Products Property
      -  Products Property
      -  Data Type
+   * - costAndProfitData.itemCost
+     - ProductCostPrice
+     - "string"
+   * - costRange.maxValue
+     - ProductCostPrice
+     - "string"
+   * - priceData.price
+     - ProductPrice
+     - "string"
 
