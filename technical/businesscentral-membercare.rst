@@ -2,9 +2,41 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-09-02 12:05:42
+Generated: 2024-09-02 12:10:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Businesscentral Salesorders to  Countries
+-----------------------------------------
+Every Businesscentral Salesorders will be synchronized with a  Countries.
+
+Once a link between a Businesscentral Salesorders and a  Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorders and a  Countries:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorders Property
+     -  Countries Property
+     -  Data Type
+
+
+Businesscentral Salesquotes to  Countries
+-----------------------------------------
+Every Businesscentral Salesquotes will be synchronized with a  Countries.
+
+Once a link between a Businesscentral Salesquotes and a  Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesquotes and a  Countries:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesquotes Property
+     -  Countries Property
+     -  Data Type
+
