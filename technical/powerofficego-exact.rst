@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-09-02 00:00:00
+Generated: 2024-09-02 10:41:42
 
 Introduction
 ------------
@@ -286,6 +286,25 @@ The following properties are synchronized between a Powerofficego Customers pers
      - "string"
    * - MailAddress.CountryCode
      - Country
+     - "string"
+
+
+Powerofficego Departments to  Departments
+-----------------------------------------
+Every Powerofficego Departments will be synchronized with a  Departments.
+
+Once a link between a Powerofficego Departments and a  Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Departments and a  Departments:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Departments Property
+     -  Departments Property
+     -  Data Type
+   * - Code
+     - Code
      - "string"
 
 
