@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-09-02 14:18:40
+Generated: 2024-09-02 14:24:40
 
 Introduction
 ------------
@@ -66,6 +66,22 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
      - "string"
 
 
+HubSpot Dealcompanyassociationtype to  Companycategories
+--------------------------------------------------------
+Every HubSpot Dealcompanyassociationtype will be synchronized with a  Companycategories.
+
+Once a link between a HubSpot Dealcompanyassociationtype and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcompanyassociationtype and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcompanyassociationtype Property
+     -  Companycategories Property
+     -  Data Type
+
+
 HubSpot Dealcompanyassociationtype to  Countries
 ------------------------------------------------
 Every HubSpot Dealcompanyassociationtype will be synchronized with a  Countries.
@@ -83,6 +99,22 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - label
      - name
      - "string"
+
+
+HubSpot Dealcontactassociationtype to  Companycategories
+--------------------------------------------------------
+Every HubSpot Dealcontactassociationtype will be synchronized with a  Companycategories.
+
+Once a link between a HubSpot Dealcontactassociationtype and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcontactassociationtype and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcontactassociationtype Property
+     -  Companycategories Property
+     -  Data Type
 
 
 HubSpot Dealcontactassociationtype to  Countries
@@ -104,6 +136,22 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
      - "string"
 
 
+HubSpot Lineitemdealassociationtype to  Companycategories
+---------------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a  Companycategories.
+
+Once a link between a HubSpot Lineitemdealassociationtype and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociationtype Property
+     -  Companycategories Property
+     -  Data Type
+
+
 HubSpot Lineitemdealassociationtype to  Countries
 -------------------------------------------------
 Every HubSpot Lineitemdealassociationtype will be synchronized with a  Countries.
@@ -121,6 +169,22 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - label
      - name
      - "string"
+
+
+HubSpot Lineitemquoteassociationtype to  Companycategories
+----------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a  Companycategories.
+
+Once a link between a HubSpot Lineitemquoteassociationtype and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociationtype Property
+     -  Companycategories Property
+     -  Data Type
 
 
 HubSpot Lineitemquoteassociationtype to  Countries
@@ -142,6 +206,22 @@ The following properties are synchronized between a HubSpot Lineitemquoteassocia
      - "string"
 
 
+HubSpot Quotecompanyassociationtype to  Companycategories
+---------------------------------------------------------
+Every HubSpot Quotecompanyassociationtype will be synchronized with a  Companycategories.
+
+Once a link between a HubSpot Quotecompanyassociationtype and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecompanyassociationtype and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecompanyassociationtype Property
+     -  Companycategories Property
+     -  Data Type
+
+
 HubSpot Quotecompanyassociationtype to  Countries
 -------------------------------------------------
 Every HubSpot Quotecompanyassociationtype will be synchronized with a  Countries.
@@ -159,6 +239,22 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
    * - label
      - name
      - "string"
+
+
+HubSpot Quotecontactassociationtype to  Companycategories
+---------------------------------------------------------
+Every HubSpot Quotecontactassociationtype will be synchronized with a  Companycategories.
+
+Once a link between a HubSpot Quotecontactassociationtype and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecontactassociationtype and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecontactassociationtype Property
+     -  Companycategories Property
+     -  Data Type
 
 
 HubSpot Quotecontactassociationtype to  Countries
@@ -180,6 +276,22 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
      - "string"
 
 
+HubSpot Quotedealassociationtype to  Companycategories
+------------------------------------------------------
+Every HubSpot Quotedealassociationtype will be synchronized with a  Companycategories.
+
+Once a link between a HubSpot Quotedealassociationtype and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotedealassociationtype and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotedealassociationtype Property
+     -  Companycategories Property
+     -  Data Type
+
+
 HubSpot Quotedealassociationtype to  Countries
 ----------------------------------------------
 Every HubSpot Quotedealassociationtype will be synchronized with a  Countries.
@@ -197,6 +309,22 @@ The following properties are synchronized between a HubSpot Quotedealassociation
    * - label
      - name
      - "string"
+
+
+HubSpot Quotequotetemplateassociationtype to  Companycategories
+---------------------------------------------------------------
+Every HubSpot Quotequotetemplateassociationtype will be synchronized with a  Companycategories.
+
+Once a link between a HubSpot Quotequotetemplateassociationtype and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotequotetemplateassociationtype and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotequotetemplateassociationtype Property
+     -  Companycategories Property
+     -  Data Type
 
 
 HubSpot Quotequotetemplateassociationtype to  Countries
