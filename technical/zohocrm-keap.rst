@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-09-02 11:18:42
+Generated: 2024-09-02 11:18:50
 
 Introduction
 ------------
@@ -25,5 +25,8 @@ The following properties are synchronized between a ZohoCRM Deal and a  Opportun
      -  Data Type
    * - Deal_Name
      - opportunity_title
+     - "string"
+   * - Owner.id
+     - contact.id
      - "string"
 
