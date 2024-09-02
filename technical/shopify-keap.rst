@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-09-02 11:18:37
+Generated: 2024-09-02 13:38:41
 
 Introduction
 ------------
@@ -58,6 +58,22 @@ The following properties are synchronized between a Shopify Inventoryitem and a 
 
    * - Shopify Inventoryitem Property
      -  Products Property
+     -  Data Type
+
+
+Shopify Customer to  Contacts
+-----------------------------
+Every Shopify Customer will be synchronized with a  Contacts.
+
+Once a link between a Shopify Customer and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Customer and a  Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Customer Property
+     -  Contacts Property
      -  Data Type
 
 
