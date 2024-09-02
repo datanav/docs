@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-09-02 10:41:42
+Generated: 2024-09-02 10:42:35
 
 Introduction
 ------------
@@ -292,6 +292,19 @@ The following properties are synchronized between a Powerofficego Customers pers
 Powerofficego Departments to  Departments
 -----------------------------------------
 Every Powerofficego Departments will be synchronized with a  Departments.
+
+If a matching  Departments already exists, the Powerofficego Departments will be merged with the existing one.
+If no matching  Departments is found, a new  Departments will be created.
+
+A Powerofficego Departments will merge with a  Departments if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Departments Property
+     -  Departments Property
+   * - Code
+     - Code
 
 Once a link between a Powerofficego Departments and a  Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
