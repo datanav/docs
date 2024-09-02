@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-02 10:59:58
+Generated: 2024-09-02 11:00:08
 
 Introduction
 ------------
@@ -481,7 +481,16 @@ The following properties are synchronized between a Tripletex Invoice and a  Ite
      - InvoiceDate
      - "string"
    * - invoiceDueDate
+     - Description
+     - "string"
+   * - invoiceDueDate
      - DueDate
+     - "string"
+   * - invoiceDueDate
+     - StatisticalUnits
+     - "string"
+   * - invoiceNumber
+     - FreeBoolField_04
      - "string"
    * - invoiceNumber
      - InvoiceNumber
