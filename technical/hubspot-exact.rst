@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-09-02 11:04:41
+Generated: 2024-09-02 11:39:41
 
 Introduction
 ------------
@@ -587,6 +587,22 @@ The following properties are synchronized between a HubSpot Product and a  Items
 
    * - HubSpot Product Property
      -  Items Property
+     -  Data Type
+
+
+HubSpot Product to  Vatcodes
+----------------------------
+Every HubSpot Product will be synchronized with a  Vatcodes.
+
+Once a link between a HubSpot Product and a  Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a  Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     -  Vatcodes Property
      -  Data Type
 
 
