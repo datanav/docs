@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-02 09:01:50
+Generated: 2024-09-02 09:08:40
 
 Introduction
 ------------
@@ -408,6 +408,22 @@ The following properties are synchronized between a Tripletex Employee and a  Em
    * - phoneNumberWork
      - Phone
      - "string"
+
+
+Tripletex Invoice to  Salesinvoicelines
+---------------------------------------
+Every Tripletex Invoice will be synchronized with a  Salesinvoicelines.
+
+Once a link between a Tripletex Invoice and a  Salesinvoicelines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Invoice and a  Salesinvoicelines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Invoice Property
+     -  Salesinvoicelines Property
+     -  Data Type
 
 
 Tripletex Invoice to  Salesinvoices
