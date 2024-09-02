@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-09-02 12:10:41
+Generated: 2024-09-02 12:11:09
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Shopify Customer and a  Coun
    * - Shopify Customer Property
      -  Countries Property
      -  Data Type
+   * - currency
+     - iso2Letter
+     - "string"
+   * - default_address.country_code
+     - iso2Letter
+     - "string"
+   * - default_address.country_name
+     - name
+     - "string"
 
 
 Shopify Order to  Countries
@@ -39,4 +48,16 @@ The following properties are synchronized between a Shopify Order and a  Countri
    * - Shopify Order Property
      -  Countries Property
      -  Data Type
+   * - billing_address.country
+     - name
+     - "string"
+   * - billing_address.country_code
+     - iso2Letter
+     - "string"
+   * - shipping_address.country
+     - name
+     - "string"
+   * - shipping_address.country_code
+     - iso2Letter
+     - "string"
 
