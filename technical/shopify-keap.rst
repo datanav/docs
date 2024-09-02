@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-09-02 11:07:36
+Generated: 2024-09-02 11:16:41
 
 Introduction
 ------------
@@ -33,6 +33,31 @@ The following properties are synchronized between a Shopify Inventoryitem and a 
    * - Shopify Inventoryitem Property
      -  Products Property
      -  Data Type
+
+
+Shopify Sesamproduct to  Product
+--------------------------------
+Every Shopify Sesamproduct will be synchronized with a  Product.
+
+Once a link between a Shopify Sesamproduct and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Sesamproduct and a  Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Sesamproduct Property
+     -  Product Property
+     -  Data Type
+   * - sesam_priceExclVAT
+     - product_price
+     - "string"
+   * - title
+     - product_name
+     - "string"
+   * - variants.title
+     - product_desc
+     - "string"
 
 
 Shopify Sesamproduct to  Products
