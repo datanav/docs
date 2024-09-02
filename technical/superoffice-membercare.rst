@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-09-02 14:08:43
+Generated: 2024-09-02 14:18:40
 
 Introduction
 ------------
@@ -28,34 +28,6 @@ The following properties are synchronized between a SuperOffice Contact and a  C
      - "string"
    * - Urls.Value
      - url
-     - "string"
-
-
-SuperOffice Listcountryitems to  Companycategories
---------------------------------------------------
-Every SuperOffice Listcountryitems will be synchronized with a  Companycategories.
-
-Once a link between a SuperOffice Listcountryitems and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listcountryitems and a  Companycategories:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listcountryitems Property
-     -  Companycategories Property
-     -  Data Type
-   * - Name
-     - name
-     - "string"
-   * - ThreeLetterISOCountry
-     - iso3Letter
-     - "string"
-   * - Tooltip
-     - description
-     - "string"
-   * - TwoLetterISOCountry
-     - iso2Letter
      - "string"
 
 
