@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-09-02 14:08:40
+Generated: 2024-09-02 14:08:43
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a HubSpot Company and a  Compa
    * - HubSpot Company Property
      -  Companies Property
      -  Data Type
+   * - properties.name
+     - companyName
+     - "string"
+   * - properties.website
+     - url
+     - "string"
 
 
 HubSpot Contactcompanyassociationtype to  Countries
@@ -39,6 +45,9 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
    * - HubSpot Contactcompanyassociationtype Property
      -  Countries Property
      -  Data Type
+   * - label
+     - name
+     - "string"
 
 
 HubSpot Dealcompanyassociationtype to  Countries
@@ -55,6 +64,9 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - HubSpot Dealcompanyassociationtype Property
      -  Countries Property
      -  Data Type
+   * - label
+     - name
+     - "string"
 
 
 HubSpot Dealcontactassociationtype to  Countries
@@ -71,6 +83,9 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - HubSpot Dealcontactassociationtype Property
      -  Countries Property
      -  Data Type
+   * - label
+     - name
+     - "string"
 
 
 HubSpot Lineitemdealassociationtype to  Countries
@@ -87,6 +102,9 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - HubSpot Lineitemdealassociationtype Property
      -  Countries Property
      -  Data Type
+   * - label
+     - name
+     - "string"
 
 
 HubSpot Lineitemquoteassociationtype to  Countries
@@ -103,6 +121,9 @@ The following properties are synchronized between a HubSpot Lineitemquoteassocia
    * - HubSpot Lineitemquoteassociationtype Property
      -  Countries Property
      -  Data Type
+   * - label
+     - name
+     - "string"
 
 
 HubSpot Quotecompanyassociationtype to  Countries
@@ -119,6 +140,9 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
    * - HubSpot Quotecompanyassociationtype Property
      -  Countries Property
      -  Data Type
+   * - label
+     - name
+     - "string"
 
 
 HubSpot Quotecontactassociationtype to  Countries
@@ -135,6 +159,9 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
    * - HubSpot Quotecontactassociationtype Property
      -  Countries Property
      -  Data Type
+   * - label
+     - name
+     - "string"
 
 
 HubSpot Quotedealassociationtype to  Countries
@@ -151,6 +178,9 @@ The following properties are synchronized between a HubSpot Quotedealassociation
    * - HubSpot Quotedealassociationtype Property
      -  Countries Property
      -  Data Type
+   * - label
+     - name
+     - "string"
 
 
 HubSpot Quotequotetemplateassociationtype to  Countries
@@ -167,6 +197,9 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
    * - HubSpot Quotequotetemplateassociationtype Property
      -  Countries Property
      -  Data Type
+   * - label
+     - name
+     - "string"
 
 
 HubSpot Company to  Companycategories
