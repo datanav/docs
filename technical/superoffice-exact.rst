@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-09-02 11:04:41
+Generated: 2024-09-02 11:14:52
 
 Introduction
 ------------
@@ -233,6 +233,9 @@ The following properties are synchronized between a SuperOffice Product and a  I
    * - SuperOffice Product Property
      -  Items Property
      -  Data Type
+   * - Code
+     - Code
+     - "string"
 
 
 SuperOffice Quotealternative to  Quotations
