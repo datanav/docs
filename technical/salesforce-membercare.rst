@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-09-02 13:32:40
+Generated: 2024-09-02 13:46:53
 
 Introduction
 ------------
@@ -44,5 +44,8 @@ The following properties are synchronized between a Salesforce Organization and 
      -  Data Type
    * - Name	
      - name
+     - "string"
+   * - Street	
+     - addresses.street
      - "string"
 
