@@ -2,30 +2,12 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-09-02 10:57:42
+Generated: 2024-09-02 11:04:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-SuperOffice Product to  Items
------------------------------
-Before any synchronization can take place, a link between a SuperOffice Product and a  Items must be established.
-
-A new  Items will be created from a SuperOffice Product if it is connected to a SuperOffice Quoteline that is synchronized into .
-
-Once a link between a SuperOffice Product and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Product and a  Items:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     -  Items Property
-     -  Data Type
-
 
 SuperOffice Quotealternative to  Salesorders
 --------------------------------------------
@@ -235,6 +217,22 @@ The following properties are synchronized between a SuperOffice Person and a  Ad
    * - Country.CountryId
      - Country
      - "string"
+
+
+SuperOffice Product to  Items
+-----------------------------
+Every SuperOffice Product will be synchronized with a  Items.
+
+Once a link between a SuperOffice Product and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a  Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     -  Items Property
+     -  Data Type
 
 
 SuperOffice Quotealternative to  Quotations
