@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-09-02 13:32:33
+Generated: 2024-09-02 13:32:40
 
 Introduction
 ------------
@@ -42,4 +42,7 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      -  Companies Property
      -  Data Type
+   * - Name	
+     - name
+     - "string"
 
