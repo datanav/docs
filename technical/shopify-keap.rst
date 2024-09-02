@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-09-02 11:17:33
+Generated: 2024-09-02 11:18:37
 
 Introduction
 ------------
@@ -93,47 +93,6 @@ The following properties are synchronized between a Shopify Sesamproduct and a  
      - "string"
    * - title
      - product_name
-     - "string"
-   * - variants.title
-     - product_desc
-     - "string"
-
-
-Shopify Sesamproduct to  Products
----------------------------------
-Every Shopify Sesamproduct will be synchronized with a  Products.
-
-If a matching  Products already exists, the Shopify Sesamproduct will be merged with the existing one.
-If no matching  Products is found, a new  Products will be created.
-
-A Shopify Sesamproduct will merge with a  Products if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Sesamproduct Property
-     -  Products Property
-   * - variants.sku
-     - sku
-
-Once a link between a Shopify Sesamproduct and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Sesamproduct and a  Products:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Sesamproduct Property
-     -  Products Property
-     -  Data Type
-   * - sesam_priceExclVAT
-     - product_price
-     - "string"
-   * - title
-     - product_name
-     - "string"
-   * - variants.sku
-     - sku
      - "string"
    * - variants.title
      - product_desc
