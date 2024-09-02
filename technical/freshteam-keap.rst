@@ -2,7 +2,7 @@
 Freshteam to  Dataflow
 ======================
 
-Generated: 2024-09-02 13:38:41
+Generated: 2024-09-02 13:38:44
 
 Introduction
 ------------
@@ -42,4 +42,7 @@ The following properties are synchronized between a Freshteam Employee and a  Co
    * - Freshteam Employee Property
      -  Contacts Property
      -  Data Type
+   * - date_of_birth
+     - birthday
+     - "string"
 
