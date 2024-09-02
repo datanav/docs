@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-02 11:39:41
+Generated: 2024-09-02 11:43:43
 
 Introduction
 ------------
@@ -571,5 +571,24 @@ The following properties are synchronized between a Tripletex Productunit and a 
      - "string"
    * - name
      - Description
+     - "string"
+
+
+Tripletex Vattype to  Vatcodes
+------------------------------
+Every Tripletex Vattype will be synchronized with a  Vatcodes.
+
+Once a link between a Tripletex Vattype and a  Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Vattype and a  Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Vattype Property
+     -  Vatcodes Property
+     -  Data Type
+   * - number
+     - Code
      - "string"
 
