@@ -2,7 +2,7 @@
 Unieconomy to  Dataflow
 =======================
 
-Generated: 2024-09-02 13:56:03
+Generated: 2024-09-02 14:00:41
 
 Introduction
 ------------
@@ -26,6 +26,25 @@ The following properties are synchronized between a Unieconomy Companies and a  
    * - Name
      - companyName
      - "string"
+   * - Name
+     - name
+     - "string"
+
+
+Unieconomy Countries to  Companycategories
+------------------------------------------
+Every Unieconomy Countries will be synchronized with a  Companycategories.
+
+Once a link between a Unieconomy Countries and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Countries and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Countries Property
+     -  Companycategories Property
+     -  Data Type
    * - Name
      - name
      - "string"
