@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-09-02 12:11:09
+Generated: 2024-09-02 13:32:33
 
 Introduction
 ------------
@@ -26,4 +26,20 @@ The following properties are synchronized between a Salesforce Contact and a  Co
    * - MailingCountry
      - name
      - "string"
+
+
+Salesforce Organization to  Companies
+-------------------------------------
+Every Salesforce Organization will be synchronized with a  Companies.
+
+Once a link between a Salesforce Organization and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Organization and a  Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Organization Property
+     -  Companies Property
+     -  Data Type
 
