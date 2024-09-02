@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-09-02 13:38:41
+Generated: 2024-09-02 13:38:44
 
 Introduction
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a HubSpot Company and a  Compa
    * - HubSpot Company Property
      -  Companies Property
      -  Data Type
+   * - id
+     - id
+     - "string"
+   * - properties.city
+     - address.locality
+     - "string"
+   * - properties.name
+     - company_name
+     - "string"
+   * - properties.zip
+     - address.zip_code
+     - "string"
 
 
 HubSpot Contact to  Contacts
@@ -39,6 +51,9 @@ The following properties are synchronized between a HubSpot Contact and a  Conta
    * - HubSpot Contact Property
      -  Contacts Property
      -  Data Type
+   * - properties.date_of_birth
+     - birthday
+     - "string"
 
 
 HubSpot Contactcompanyassociation to  Contacts
