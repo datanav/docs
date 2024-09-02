@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-09-02 08:11:13
+Generated: 2024-09-02 08:11:38
 
 Introduction
 ------------
@@ -86,6 +86,15 @@ The following properties are synchronized between a Businesscentral Items and a 
    * - Businesscentral Items Property
      -  Products Property
      -  Data Type
+   * - inventory
+     - ProductQuantity
+     - "string"
+   * - unitCost
+     - ProductCostPrice
+     - "string"
+   * - unitPrice
+     - ProductPrice
+     - "string"
 
 
 Businesscentral Salesorderlines to  Quotationline
@@ -102,4 +111,19 @@ The following properties are synchronized between a Businesscentral Salesorderli
    * - Businesscentral Salesorderlines Property
      -  Quotationline Property
      -  Data Type
+   * - discountPercent
+     - QuotationLineDiscount
+     - "string"
+   * - documentId
+     - QuotationLineOpportunityId
+     - "string"
+   * - quantity
+     - QuotationLineQuantity
+     - "string"
+   * - taxPercent
+     - QuotationLineVatPercentage
+     - "string"
+   * - unitPrice
+     - QuotationLinePrice
+     - "string"
 
