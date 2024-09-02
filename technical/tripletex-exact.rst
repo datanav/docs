@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-02 11:04:41
+Generated: 2024-09-02 11:08:36
 
 Introduction
 ------------
@@ -439,43 +439,6 @@ The following properties are synchronized between a Tripletex Employee and a  Em
      - "string"
    * - phoneNumberWork
      - Phone
-     - "string"
-
-
-Tripletex Invoice to  Items
----------------------------
-Every Tripletex Invoice will be synchronized with a  Items.
-
-Once a link between a Tripletex Invoice and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Invoice and a  Items:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Invoice Property
-     -  Items Property
-     -  Data Type
-   * - invoiceDate
-     - FreeBoolField_03
-     - "string"
-   * - invoiceDate
-     - InvoiceDate
-     - "string"
-   * - invoiceDueDate
-     - Description
-     - "string"
-   * - invoiceDueDate
-     - DueDate
-     - "string"
-   * - invoiceDueDate
-     - StatisticalUnits
-     - "string"
-   * - invoiceNumber
-     - FreeBoolField_04
-     - "string"
-   * - invoiceNumber
-     - InvoiceNumber
      - "string"
 
 
