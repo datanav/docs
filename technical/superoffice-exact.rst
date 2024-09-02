@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-09-02 11:14:52
+Generated: 2024-09-02 11:39:43
 
 Introduction
 ------------
@@ -232,6 +232,25 @@ The following properties are synchronized between a SuperOffice Product and a  I
 
    * - SuperOffice Product Property
      -  Items Property
+     -  Data Type
+   * - Code
+     - Code
+     - "string"
+
+
+SuperOffice Product to  Vatcodes
+--------------------------------
+Every SuperOffice Product will be synchronized with a  Vatcodes.
+
+Once a link between a SuperOffice Product and a  Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a  Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     -  Vatcodes Property
      -  Data Type
    * - Code
      - Code
