@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-09-02 11:04:41
+Generated: 2024-09-02 11:39:41
 
 Introduction
 ------------
@@ -367,6 +367,22 @@ The following properties are synchronized between a Businesscentral Items and a 
 
    * - Businesscentral Items Property
      -  Items Property
+     -  Data Type
+
+
+Businesscentral Items to  Vatcodes
+----------------------------------
+Every Businesscentral Items will be synchronized with a  Vatcodes.
+
+Once a link between a Businesscentral Items and a  Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Items and a  Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Items Property
+     -  Vatcodes Property
      -  Data Type
 
 
