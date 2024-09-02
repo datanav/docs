@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-02 12:10:41
+Generated: 2024-09-02 12:11:09
 
 Introduction
 ------------
@@ -23,4 +23,13 @@ The following properties are synchronized between a Tripletex Country and a  Cou
    * - Tripletex Country Property
      -  Countries Property
      -  Data Type
+   * - isoAlpha2Code
+     - iso2Letter
+     - "string"
+   * - isoAlpha3Code
+     - iso3Letter
+     - "string"
+   * - name
+     - name
+     - "string"
 
