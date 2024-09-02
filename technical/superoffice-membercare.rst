@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-09-02 12:10:41
+Generated: 2024-09-02 12:11:09
 
 Introduction
 ------------
@@ -23,4 +23,13 @@ The following properties are synchronized between a SuperOffice Listcountryitems
    * - SuperOffice Listcountryitems Property
      -  Countries Property
      -  Data Type
+   * - Name
+     - name
+     - "string"
+   * - ThreeLetterISOCountry
+     - iso3Letter
+     - "string"
+   * - TwoLetterISOCountry
+     - iso2Letter
+     - "string"
 
