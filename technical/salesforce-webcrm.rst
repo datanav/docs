@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-09-02 00:00:16
+Generated: 2024-09-02 08:11:38
 
 Introduction
 ------------
@@ -45,6 +45,21 @@ The following properties are synchronized between a Salesforce Contact and a  Pe
    * - Salesforce Contact Property
      -  Persons Property
      -  Data Type
+   * - Birthdate
+     - document_number
+     - "string"
+   * - FirstName
+     - PersonFirstName
+     - "string"
+   * - LastName
+     - PersonLastName
+     - "string"
+   * - MobilePhone
+     - PersonMobilePhone
+     - "string"
+   * - Phone
+     - PersonDirectPhone
+     - "string"
 
 
 Salesforce Product2 to  Products
