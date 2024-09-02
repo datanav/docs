@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-09-02 00:00:16
+Generated: 2024-09-02 11:04:41
 
 Introduction
 ------------
@@ -100,4 +100,20 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Country
      - Country
      - "string"
+
+
+Salesforce Product2 to  Items
+-----------------------------
+Every Salesforce Product2 will be synchronized with a  Items.
+
+Once a link between a Salesforce Product2 and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Product2 and a  Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Product2 Property
+     -  Items Property
+     -  Data Type
 
