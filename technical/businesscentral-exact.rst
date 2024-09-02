@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-09-02 11:39:41
+Generated: 2024-09-02 11:43:41
 
 Introduction
 ------------
@@ -406,6 +406,22 @@ The following properties are synchronized between a Businesscentral Salesorderli
    * - itemId
      - Item
      - "string"
+
+
+Businesscentral Salesorderlines to  Vatcodes
+--------------------------------------------
+Every Businesscentral Salesorderlines will be synchronized with a  Vatcodes.
+
+Once a link between a Businesscentral Salesorderlines and a  Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorderlines and a  Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorderlines Property
+     -  Vatcodes Property
+     -  Data Type
 
 
 Businesscentral Salesorders to  Salesorders
