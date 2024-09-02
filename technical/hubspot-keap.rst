@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-09-02 11:18:42
+Generated: 2024-09-02 11:18:50
 
 Introduction
 ------------
@@ -25,6 +25,9 @@ The following properties are synchronized between a HubSpot Deal and a  Opportun
      -  Data Type
    * - properties.dealname
      - opportunity_title
+     - "string"
+   * - properties.hubspot_owner_id
+     - contact.id
      - "string"
 
 
