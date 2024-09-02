@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-09-02 12:07:41
+Generated: 2024-09-02 12:07:44
 
 Introduction
 ------------
@@ -42,4 +42,7 @@ The following properties are synchronized between a Asana Workspaces and a  Comp
    * - Asana Workspaces Property
      -  Companies Property
      -  Data Type
+   * - name
+     - company_name
+     - "string"
 
