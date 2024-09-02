@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-09-02 11:39:41
+Generated: 2024-09-02 11:43:41
 
 Introduction
 ------------
@@ -532,4 +532,20 @@ The following properties are synchronized between a Powerofficego Suppliers pers
    * - PhoneNumber
      - Phone
      - "string"
+
+
+Powerofficego Vatcodes to  Vatcodes
+-----------------------------------
+Every Powerofficego Vatcodes will be synchronized with a  Vatcodes.
+
+Once a link between a Powerofficego Vatcodes and a  Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Vatcodes and a  Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Vatcodes Property
+     -  Vatcodes Property
+     -  Data Type
 
