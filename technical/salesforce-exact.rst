@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-09-02 11:07:39
+Generated: 2024-09-02 11:39:41
 
 Introduction
 ------------
@@ -124,5 +124,21 @@ The following properties are synchronized between a Salesforce Product2 and a  I
 
    * - Salesforce Product2 Property
      -  Items Property
+     -  Data Type
+
+
+Salesforce Product2 to  Vatcodes
+--------------------------------
+Every Salesforce Product2 will be synchronized with a  Vatcodes.
+
+Once a link between a Salesforce Product2 and a  Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Product2 and a  Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Product2 Property
+     -  Vatcodes Property
      -  Data Type
 
