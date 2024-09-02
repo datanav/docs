@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-09-02 08:11:30
+Generated: 2024-09-02 08:11:38
 
 Introduction
 ------------
@@ -70,6 +70,15 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - firstName
      - PersonFirstName
      - "string"
+   * - lastName
+     - PersonLastName
+     - "string"
+   * - partyId
+     - PersonOrganisationId
+     - "string"
+   * - phoneNumber
+     - PersonDirectPhone
+     - "string"
 
 
 Powerofficego Product to  Products
@@ -86,6 +95,18 @@ The following properties are synchronized between a Powerofficego Product and a 
    * - Powerofficego Product Property
      -  Products Property
      -  Data Type
+   * - availableStock
+     - ProductQuantity
+     - "string"
+   * - costPrice
+     - ProductCostPrice
+     - "string"
+   * - salesPrice
+     - ProductPrice
+     - "string"
+   * - vatCode
+     - ProductVatCode
+     - "string"
 
 
 Powerofficego Salesorderlines to  Quotationline
@@ -102,6 +123,24 @@ The following properties are synchronized between a Powerofficego Salesorderline
    * - Powerofficego Salesorderlines Property
      -  Quotationline Property
      -  Data Type
+   * - Allowance
+     - QuotationLineDiscount
+     - "string"
+   * - ProductUnitCost
+     - QuotationLineCostPrice
+     - "string"
+   * - ProductUnitPrice
+     - QuotationLinePrice
+     - "string"
+   * - Quantity
+     - QuotationLineQuantity
+     - "string"
+   * - VatRate
+     - QuotationLineVatPercentage
+     - "string"
+   * - sesam_SalesOrderId
+     - QuotationLineOpportunityId
+     - "string"
 
 
 Powerofficego Suppliers person to  Persons
@@ -118,4 +157,16 @@ The following properties are synchronized between a Powerofficego Suppliers pers
    * - Powerofficego Suppliers person Property
      -  Persons Property
      -  Data Type
+   * - DateOfBirth
+     - document_number
+     - "string"
+   * - FirstName
+     - PersonFirstName
+     - "string"
+   * - LastName
+     - PersonLastName
+     - "string"
+   * - PhoneNumber
+     - PersonDirectPhone
+     - "string"
 
