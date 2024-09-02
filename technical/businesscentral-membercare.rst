@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-09-02 12:10:45
+Generated: 2024-09-02 12:11:09
 
 Introduction
 ------------
@@ -26,6 +26,9 @@ The following properties are synchronized between a Businesscentral Salesorders 
    * - billToCountry
      - iso2Letter
      - "string"
+   * - shipToCountry
+     - iso2Letter
+     - "string"
 
 
 Businesscentral Salesquotes to  Countries
@@ -42,4 +45,10 @@ The following properties are synchronized between a Businesscentral Salesquotes 
    * - Businesscentral Salesquotes Property
      -  Countries Property
      -  Data Type
+   * - billToCountry
+     - name
+     - "string"
+   * - shipToCountry
+     - name
+     - "string"
 
