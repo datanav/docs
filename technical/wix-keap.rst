@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-09-02 11:16:41
+Generated: 2024-09-02 11:18:37
 
 Introduction
 ------------
@@ -28,30 +28,5 @@ The following properties are synchronized between a Wix.com Products and a  Prod
      - "string"
    * - priceData.price
      - product_price
-     - "string"
-
-
-Wix.com Products to  Products
------------------------------
-Every Wix.com Products will be synchronized with a  Products.
-
-Once a link between a Wix.com Products and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Products and a  Products:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Products Property
-     -  Products Property
-     -  Data Type
-   * - name
-     - product_name
-     - "string"
-   * - priceData.price
-     - product_price
-     - "string"
-   * - sku
-     - sku
      - "string"
 
