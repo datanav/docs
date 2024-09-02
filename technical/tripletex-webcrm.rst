@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-02 00:00:00
+Generated: 2024-09-02 08:11:38
 
 Introduction
 ------------
@@ -121,6 +121,21 @@ The following properties are synchronized between a Tripletex Contact and a  Per
    * - Tripletex Contact Property
      -  Persons Property
      -  Data Type
+   * - customer.id
+     - PersonOrganisationId
+     - "string"
+   * - firstName
+     - PersonFirstName
+     - "string"
+   * - lastName
+     - PersonLastName
+     - "string"
+   * - phoneNumberMobile
+     - PersonMobilePhone
+     - "string"
+   * - phoneNumberWork
+     - PersonDirectPhone
+     - "string"
 
 
 Tripletex Orderline to  Quotationline
@@ -137,6 +152,24 @@ The following properties are synchronized between a Tripletex Orderline and a  Q
    * - Tripletex Orderline Property
      -  Quotationline Property
      -  Data Type
+   * - count
+     - QuotationLineQuantity
+     - "string"
+   * - discount
+     - QuotationLineDiscount
+     - "string"
+   * - order.id
+     - QuotationLineOpportunityId
+     - "string"
+   * - unitCostCurrency
+     - QuotationLineCostPrice
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - QuotationLinePrice
+     - "string"
+   * - vatType.id
+     - QuotationLineVatPercentage
+     - "string"
 
 
 Tripletex Product to  Products
@@ -153,4 +186,16 @@ The following properties are synchronized between a Tripletex Product and a  Pro
    * - Tripletex Product Property
      -  Products Property
      -  Data Type
+   * - costExcludingVatCurrency
+     - ProductCostPrice
+     - "string"
+   * - priceExcludingVatCurrency
+     - ProductPrice
+     - "string"
+   * - stockOfGoods
+     - ProductQuantity
+     - "string"
+   * - vatType.id
+     - ProductVatCode
+     - "string"
 
