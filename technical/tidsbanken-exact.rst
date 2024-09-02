@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-09-02 10:41:42
+Generated: 2024-09-02 10:42:35
 
 Introduction
 ------------
@@ -145,6 +145,19 @@ The following properties are synchronized between a Tidsbanken Ansatt and a  Emp
 Tidsbanken Avdeling to  Departments
 -----------------------------------
 Every Tidsbanken Avdeling will be synchronized with a  Departments.
+
+If a matching  Departments already exists, the Tidsbanken Avdeling will be merged with the existing one.
+If no matching  Departments is found, a new  Departments will be created.
+
+A Tidsbanken Avdeling will merge with a  Departments if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     -  Departments Property
+   * - Id
+     - Code
 
 Once a link between a Tidsbanken Avdeling and a  Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
