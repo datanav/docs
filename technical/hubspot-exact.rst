@@ -2,30 +2,12 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-09-02 10:57:42
+Generated: 2024-09-02 11:04:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-HubSpot Product to  Items
--------------------------
-Before any synchronization can take place, a link between a HubSpot Product and a  Items must be established.
-
-A new  Items will be created from a HubSpot Product if it is connected to a HubSpot Lineitem that is synchronized into .
-
-Once a link between a HubSpot Product and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Product and a  Items:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Product Property
-     -  Items Property
-     -  Data Type
-
 
 HubSpot Company to  Accounts
 ----------------------------
@@ -590,6 +572,22 @@ The following properties are synchronized between a HubSpot Lineitem and a  Sale
    * - properties.hs_product_id
      - Item
      - "string"
+
+
+HubSpot Product to  Items
+-------------------------
+Every HubSpot Product will be synchronized with a  Items.
+
+Once a link between a HubSpot Product and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a  Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     -  Items Property
+     -  Data Type
 
 
 HubSpot Quote to  Quotations
