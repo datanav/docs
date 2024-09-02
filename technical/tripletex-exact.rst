@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-02 11:27:36
+Generated: 2024-09-02 11:30:51
 
 Introduction
 ------------
@@ -550,4 +550,7 @@ The following properties are synchronized between a Tripletex Productunit and a 
    * - Tripletex Productunit Property
      -  Units Property
      -  Data Type
+   * - commonCode
+     - Code
+     - "string"
 
