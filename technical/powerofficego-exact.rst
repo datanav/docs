@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-09-02 11:27:36
+Generated: 2024-09-02 11:39:41
 
 Introduction
 ------------
@@ -415,6 +415,22 @@ The following properties are synchronized between a Powerofficego Product and a 
 
    * - Powerofficego Product Property
      -  Units Property
+     -  Data Type
+
+
+Powerofficego Product to  Vatcodes
+----------------------------------
+Every Powerofficego Product will be synchronized with a  Vatcodes.
+
+Once a link between a Powerofficego Product and a  Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product and a  Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     -  Vatcodes Property
      -  Data Type
 
 
