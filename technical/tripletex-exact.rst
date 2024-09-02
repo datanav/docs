@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-02 10:41:42
+Generated: 2024-09-02 10:42:35
 
 Introduction
 ------------
@@ -330,6 +330,19 @@ The following properties are synchronized between a Tripletex Customer person an
 Tripletex Department to  Departments
 ------------------------------------
 Every Tripletex Department will be synchronized with a  Departments.
+
+If a matching  Departments already exists, the Tripletex Department will be merged with the existing one.
+If no matching  Departments is found, a new  Departments will be created.
+
+A Tripletex Department will merge with a  Departments if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     -  Departments Property
+   * - departmentNumber
+     - Code
 
 Once a link between a Tripletex Department and a  Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
