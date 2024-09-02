@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-09-02 13:06:40
+Generated: 2024-09-02 13:07:34
 
 Introduction
 ------------
@@ -13,7 +13,7 @@ Businesscentral Customers to  Companies
 ---------------------------------------
 Before any synchronization can take place, a link between a Businesscentral Customers and a  Companies must be established.
 
-A new  Companies will be created from a Businesscentral Customers if it is connected to a Businesscentral Contacts-person that is synchronized into .
+A new  Companies will be created from a Businesscentral Customers if it is connected to a Businesscentral Contacts-person, or Customers-person that is synchronized into .
 
 Once a link between a Businesscentral Customers and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
