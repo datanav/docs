@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-09-02 12:10:41
+Generated: 2024-09-02 12:11:09
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - Powerofficego Contactperson Property
      -  Countries Property
      -  Data Type
+   * - residenceCountryCode
+     - iso2Letter
+     - "string"
 
 
 Powerofficego Customers to  Countries
@@ -39,6 +42,9 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      -  Countries Property
      -  Data Type
+   * - MailAddress.CountryCode
+     - iso2Letter
+     - "string"
 
 
 Powerofficego Location to  Countries
