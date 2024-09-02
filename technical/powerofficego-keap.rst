@@ -2,31 +2,12 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-09-02 13:38:44
+Generated: 2024-09-02 13:39:34
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Powerofficego Contactperson to  Contacts
-----------------------------------------
-Every Powerofficego Contactperson will be synchronized with a  Contacts.
-
-Once a link between a Powerofficego Contactperson and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Contactperson and a  Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Contactperson Property
-     -  Contacts Property
-     -  Data Type
-   * - dateOfBirth
-     - birthday
-     - "string"
-
 
 Powerofficego Customers to  Companies
 -------------------------------------
@@ -53,6 +34,25 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - Name
      - company_name
+     - "string"
+
+
+Powerofficego Contactperson to  Contacts
+----------------------------------------
+Every Powerofficego Contactperson will be synchronized with a  Contacts.
+
+Once a link between a Powerofficego Contactperson and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Contactperson and a  Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     -  Contacts Property
+     -  Data Type
+   * - dateOfBirth
+     - birthday
      - "string"
 
 
