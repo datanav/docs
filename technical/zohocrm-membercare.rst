@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-09-02 12:10:41
+Generated: 2024-09-02 12:11:09
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a ZohoCRM Account and a  Count
    * - ZohoCRM Account Property
      -  Countries Property
      -  Data Type
+   * - Billing_Country
+     - name
+     - "string"
+   * - Industry
+     - name
+     - "string"
+   * - Shipping_Country
+     - name
+     - "string"
 
 
 ZohoCRM Contact to  Countries
@@ -39,4 +48,10 @@ The following properties are synchronized between a ZohoCRM Contact and a  Count
    * - ZohoCRM Contact Property
      -  Countries Property
      -  Data Type
+   * - Mailing_Country
+     - name
+     - "string"
+   * - Other_Country
+     - name
+     - "string"
 
