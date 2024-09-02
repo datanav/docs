@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-09-02 11:48:40
+Generated: 2024-09-02 13:38:41
 
 Introduction
 ------------
@@ -11,9 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Shopify Product to  Items
 -------------------------
-Before any synchronization can take place, a link between a Shopify Product and a  Items must be established.
-
-A new  Items will be created from a Shopify Product if it is connected to a Shopify Order that is synchronized into .
+Every Shopify Product will be synchronized with a  Items.
 
 Once a link between a Shopify Product and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -62,6 +60,22 @@ The following properties are synchronized between a Shopify Customer and a  Cont
    * - phone
      - Mobile
      - "string"
+
+
+Shopify Inventoryitem to  Items
+-------------------------------
+Every Shopify Inventoryitem will be synchronized with a  Items.
+
+Once a link between a Shopify Inventoryitem and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Inventoryitem and a  Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Inventoryitem Property
+     -  Items Property
+     -  Data Type
 
 
 Shopify Order to  Quotations
