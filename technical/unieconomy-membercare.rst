@@ -2,7 +2,7 @@
 Unieconomy to  Dataflow
 =======================
 
-Generated: 2024-09-02 12:10:41
+Generated: 2024-09-02 12:11:09
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Unieconomy Countries and a  
    * - Unieconomy Countries Property
      -  Countries Property
      -  Data Type
+   * - Name
+     - name
+     - "string"
 
