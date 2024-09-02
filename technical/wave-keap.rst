@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-09-02 11:16:41
+Generated: 2024-09-02 11:18:37
 
 Introduction
 ------------
@@ -22,31 +22,6 @@ The following properties are synchronized between a Wave Product and a  Product:
 
    * - Wave Product Property
      -  Product Property
-     -  Data Type
-   * - description
-     - product_desc
-     - "string"
-   * - name
-     - product_name
-     - "string"
-   * - unitPrice
-     - product_price
-     - "string"
-
-
-Wave Product to  Products
--------------------------
-Every Wave Product will be synchronized with a  Products.
-
-Once a link between a Wave Product and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Product and a  Products:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Product Property
-     -  Products Property
      -  Data Type
    * - description
      - product_desc
