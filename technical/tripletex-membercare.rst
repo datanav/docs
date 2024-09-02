@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-02 14:08:43
+Generated: 2024-09-02 14:18:40
 
 Introduction
 ------------
@@ -47,31 +47,6 @@ The following properties are synchronized between a Tripletex Department and a  
      -  Data Type
    * - name
      - companyName
-     - "string"
-
-
-Tripletex Country to  Companycategories
----------------------------------------
-Every Tripletex Country will be synchronized with a  Companycategories.
-
-Once a link between a Tripletex Country and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Country and a  Companycategories:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Country Property
-     -  Companycategories Property
-     -  Data Type
-   * - isoAlpha2Code
-     - iso2Letter
-     - "string"
-   * - isoAlpha3Code
-     - iso3Letter
-     - "string"
-   * - name
-     - name
      - "string"
 
 
