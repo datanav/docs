@@ -2,7 +2,7 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2024-09-02 00:00:00
+Generated: 2024-09-02 08:11:38
 
 Introduction
 ------------
@@ -74,4 +74,7 @@ The following properties are synchronized between a YouTrack Users and a  Users:
    * - YouTrack Users Property
      -  Users Property
      -  Data Type
+   * - profile.email.email
+     - UserEmail
+     - "string"
 
