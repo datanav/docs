@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-09-02 11:39:41
+Generated: 2024-09-02 11:48:40
 
 Introduction
 ------------
@@ -162,21 +162,5 @@ The following properties are synchronized between a Shopify Sesamproduct and a  
 
    * - Shopify Sesamproduct Property
      -  Items Property
-     -  Data Type
-
-
-Shopify Sesamproduct to  Vatcodes
----------------------------------
-Every Shopify Sesamproduct will be synchronized with a  Vatcodes.
-
-Once a link between a Shopify Sesamproduct and a  Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Sesamproduct and a  Vatcodes:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Sesamproduct Property
-     -  Vatcodes Property
      -  Data Type
 
