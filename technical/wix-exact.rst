@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-09-02 11:39:41
+Generated: 2024-09-02 11:48:40
 
 Introduction
 ------------
@@ -107,21 +107,5 @@ The following properties are synchronized between a Wix.com Products and a  Item
 
    * - Wix.com Products Property
      -  Items Property
-     -  Data Type
-
-
-Wix.com Products to  Vatcodes
------------------------------
-Every Wix.com Products will be synchronized with a  Vatcodes.
-
-Once a link between a Wix.com Products and a  Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Products and a  Vatcodes:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Products Property
-     -  Vatcodes Property
      -  Data Type
 
