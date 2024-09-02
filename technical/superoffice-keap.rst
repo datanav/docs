@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-09-02 11:16:41
+Generated: 2024-09-02 11:18:37
 
 Introduction
 ------------
@@ -34,27 +34,18 @@ The following properties are synchronized between a SuperOffice Product and a  P
      - "string"
 
 
-SuperOffice Product to  Products
+SuperOffice Sale to  Opportunity
 --------------------------------
-Every SuperOffice Product will be synchronized with a  Products.
+Every SuperOffice Sale will be synchronized with a  Opportunity.
 
-Once a link between a SuperOffice Product and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Sale and a  Opportunity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Product and a  Products:
+The following properties are synchronized between a SuperOffice Sale and a  Opportunity:
 
 .. list-table::
    :header-rows: 1
 
-   * - SuperOffice Product Property
-     -  Products Property
+   * - SuperOffice Sale Property
+     -  Opportunity Property
      -  Data Type
-   * - Description
-     - product_desc
-     - "string"
-   * - Name
-     - product_name
-     - "string"
-   * - UnitListPrice
-     - product_price
-     - "string"
 
