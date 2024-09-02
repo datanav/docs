@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-09-02 11:43:41
+Generated: 2024-09-02 11:43:46
 
 Introduction
 ------------
@@ -548,4 +548,7 @@ The following properties are synchronized between a Powerofficego Vatcodes and a
    * - Powerofficego Vatcodes Property
      -  Vatcodes Property
      -  Data Type
+   * - Description
+     - Description
+     - "string"
 
