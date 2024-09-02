@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-09-02 00:00:00
+Generated: 2024-09-02 08:11:38
 
 Introduction
 ------------
@@ -96,6 +96,18 @@ The following properties are synchronized between a Wave Customer and a  Persons
    * - Wave Customer Property
      -  Persons Property
      -  Data Type
+   * - firstName
+     - PersonFirstName
+     - "string"
+   * - id
+     - PersonOrganisationId
+     - "string"
+   * - lastName
+     - PersonLastName
+     - "string"
+   * - mobile
+     - PersonMobilePhone
+     - "string"
 
 
 Wave Invoice to  Quotationline
@@ -112,6 +124,15 @@ The following properties are synchronized between a Wave Invoice and a  Quotatio
    * - Wave Invoice Property
      -  Quotationline Property
      -  Data Type
+   * - id
+     - QuotationLineOpportunityId
+     - "string"
+   * - items.price
+     - QuotationLinePrice
+     - "string"
+   * - items.quantity
+     - QuotationLineQuantity
+     - "string"
 
 
 Wave Product to  Products
@@ -128,6 +149,9 @@ The following properties are synchronized between a Wave Product and a  Products
    * - Wave Product Property
      -  Products Property
      -  Data Type
+   * - unitPrice
+     - ProductPrice
+     - "string"
 
 
 Wave User to  Users
@@ -160,4 +184,19 @@ The following properties are synchronized between a Wave Vendor and a  Persons:
    * - Wave Vendor Property
      -  Persons Property
      -  Data Type
+   * - firstName
+     - PersonFirstName
+     - "string"
+   * - id
+     - PersonOrganisationId
+     - "string"
+   * - lastName
+     - PersonLastName
+     - "string"
+   * - mobile
+     - PersonMobilePhone
+     - "string"
+   * - phone
+     - PersonDirectPhone
+     - "string"
 
