@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-02 08:52:34
+Generated: 2024-09-02 08:52:41
 
 Introduction
 ------------
@@ -424,6 +424,9 @@ The following properties are synchronized between a Tripletex Invoice and a  Sal
    * - Tripletex Invoice Property
      -  Salesinvoices Property
      -  Data Type
+   * - currency.id
+     - Currency
+     - "string"
 
 
 Tripletex Order to  Salesorders
