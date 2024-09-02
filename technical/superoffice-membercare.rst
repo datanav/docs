@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-09-02 14:08:40
+Generated: 2024-09-02 14:08:43
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a SuperOffice Contact and a  C
    * - SuperOffice Contact Property
      -  Companies Property
      -  Data Type
+   * - Name
+     - companyName
+     - "string"
+   * - Urls.Value
+     - url
+     - "string"
 
 
 SuperOffice Listcountryitems to  Companycategories
