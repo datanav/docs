@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-09-02 00:00:00
+Generated: 2024-09-02 08:11:18
 
 Introduction
 ------------
@@ -64,6 +64,9 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - Powerofficego Contactperson Property
      -  Persons Property
      -  Data Type
+   * - dateOfBirth
+     - document_number
+     - "string"
 
 
 Powerofficego Product to  Products
