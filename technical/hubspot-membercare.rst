@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-09-02 14:08:43
+Generated: 2024-09-02 14:18:40
 
 Introduction
 ------------
@@ -29,6 +29,22 @@ The following properties are synchronized between a HubSpot Company and a  Compa
    * - properties.website
      - url
      - "string"
+
+
+HubSpot Contactcompanyassociationtype to  Companycategories
+-----------------------------------------------------------
+Every HubSpot Contactcompanyassociationtype will be synchronized with a  Companycategories.
+
+Once a link between a HubSpot Contactcompanyassociationtype and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contactcompanyassociationtype and a  Companycategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contactcompanyassociationtype Property
+     -  Companycategories Property
+     -  Data Type
 
 
 HubSpot Contactcompanyassociationtype to  Countries
@@ -198,34 +214,6 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
      -  Countries Property
      -  Data Type
    * - label
-     - name
-     - "string"
-
-
-HubSpot Company to  Companycategories
--------------------------------------
-Every HubSpot Company will be synchronized with a  Companycategories.
-
-Once a link between a HubSpot Company and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Company and a  Companycategories:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Company Property
-     -  Companycategories Property
-     -  Data Type
-   * - properties.country
-     - name
-     - "string"
-   * - properties.industry
-     - name
-     - "string"
-   * - properties.state
-     - name
-     - "string"
-   * - properties.type
      - name
      - "string"
 
