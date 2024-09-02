@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-02 11:04:41
+Generated: 2024-09-02 11:05:49
 
 Introduction
 ------------
@@ -23,4 +23,13 @@ The following properties are synchronized between a Tripletex Product and a  Pro
    * - Tripletex Product Property
      -  Products Property
      -  Data Type
+   * - description
+     - product_desc
+     - "string"
+   * - name
+     - product_name
+     - "string"
+   * - priceExcludingVatCurrency
+     - product_price
+     - "string"
 
