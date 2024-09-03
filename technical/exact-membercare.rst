@@ -2,7 +2,7 @@
 Exact to  Dataflow
 ==================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Exact Addresses and a  Count
    * - Exact Addresses Property
      -  Countries Property
      -  Data Type
+   * - CountryName
+     - name
+     - "string"
 
