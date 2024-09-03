@@ -2,7 +2,7 @@
 Asana to Chargebee Dataflow
 ===========================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -28,20 +28,20 @@ The following properties are synchronized between a Asana Teams and a  Business_
      - "string"
 
 
-Asana Workspaces to  Business_entity
-------------------------------------
-Every Asana Workspaces will be synchronized with a  Business_entity.
+Asana Workspaces to Chargebee Business_entity
+---------------------------------------------
+Every Asana Workspaces will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Asana Workspaces and a  Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Workspaces and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Workspaces and a  Business_entity:
+The following properties are synchronized between a Asana Workspaces and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Workspaces Property
-     -  Business_entity Property
-     -  Data Type
+     - Chargebee Business_entity Property
+     - Chargebee Data Type
    * - name
      - name
      - "string"
