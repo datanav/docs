@@ -2,7 +2,7 @@
 Woocommerce to  Dataflow
 ========================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -23,6 +23,39 @@ The following properties are synchronized between a Woocommerce Customer and a  
    * - Woocommerce Customer Property
      -  Customer Property
      -  Data Type
+   * - billing.address_1
+     - billing_address.line1
+     - "string"
+   * - billing.city
+     - billing_address.city
+     - "string"
+   * - billing.country
+     - billing_address.country
+     - "string"
+   * - billing.postcode
+     - billing_address.zip
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - last_name
+     - last_name
+     - "string"
+   * - shipping.address_1
+     - billing_address.line1
+     - "string"
+   * - shipping.city
+     - billing_address.city
+     - "string"
+   * - shipping.country
+     - billing_address.country
+     - "string"
+   * - shipping.postcode
+     - billing_address.zip
+     - "string"
 
 
 Woocommerce Order to  Order
@@ -39,6 +72,18 @@ The following properties are synchronized between a Woocommerce Order and a  Ord
    * - Woocommerce Order Property
      -  Order Property
      -  Data Type
+   * - currency
+     - currency_code
+     - "string"
+   * - customer_id
+     - customer_id
+     - "string"
+   * - line_items.price
+     - order_line_items.unit_price
+     - "string"
+   * - line_items.quantity
+     - order_line_items.amount
+     - "string"
 
 
 Woocommerce Product to  Item
