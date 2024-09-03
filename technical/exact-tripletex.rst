@@ -2,7 +2,7 @@
 Exact to Tripletex Dataflow
 ===========================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Exact Accounts and a Triplet
    * - Exact Accounts Property
      - Tripletex Customer Property
      - Tripletex Data Type
+   * - Name
+     - name
+     - "string"
+   * - Website
+     - website
+     - "string"
 
 
 Exact Contacts to Tripletex Contact
@@ -68,6 +74,9 @@ The following properties are synchronized between a Exact Departments and a Trip
    * - Exact Departments Property
      - Tripletex Department Property
      - Tripletex Data Type
+   * - Code
+     - departmentNumber
+     - "string"
 
 
 Exact Employees to Tripletex Employee
@@ -84,6 +93,21 @@ The following properties are synchronized between a Exact Employees and a Triple
    * - Exact Employees Property
      - Tripletex Employee Property
      - Tripletex Data Type
+   * - BirthDate
+     - dateOfBirth
+     - N/A
+   * - City
+     - address.city
+     - "string"
+   * - Country
+     - address.country.id
+     - "integer"
+   * - ID
+     - id
+     - "integer"
+   * - Postcode
+     - address.postalCode
+     - "string"
 
 
 Exact Items to Tripletex Product
@@ -132,4 +156,7 @@ The following properties are synchronized between a Exact Salesorders and a Trip
    * - Exact Salesorders Property
      - Tripletex Order Property
      - Tripletex Data Type
+   * - Currency
+     - currency.id
+     - "integer"
 
