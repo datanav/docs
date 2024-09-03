@@ -2,27 +2,27 @@
 Tilores to Exact Dataflow
 =========================
 
-Generated: 2024-09-03 08:14:49
+Generated: 2024-09-03 08:20:40
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tilores to Exact. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tilores Human to  Contacts
---------------------------
-Every Tilores Human will be synchronized with a  Contacts.
+Tilores Human to Exact Contacts
+-------------------------------
+Every Tilores Human will be synchronized with a Exact Contacts.
 
-Once a link between a Tilores Human and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tilores Human and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tilores Human and a  Contacts:
+The following properties are synchronized between a Tilores Human and a Exact Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Tilores Human Property
-     -  Contacts Property
-     -  Data Type
+     - Exact Contacts Property
+     - Exact Data Type
    * - city
      - City
      - "string"
