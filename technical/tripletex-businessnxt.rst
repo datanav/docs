@@ -2,27 +2,27 @@
 Tripletex to Businessnxt Dataflow
 =================================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Businessnxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Customer to  Address
-------------------------------
-Every Tripletex Customer will be synchronized with a  Address.
+Tripletex Customer to Businessnxt Address
+-----------------------------------------
+Every Tripletex Customer will be synchronized with a Businessnxt Address.
 
-Once a link between a Tripletex Customer and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a  Address:
+The following properties are synchronized between a Tripletex Customer and a Businessnxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     -  Address Property
-     -  Data Type
+     - Businessnxt Address Property
+     - Businessnxt Data Type
    * - name
      - name
      - "string"
@@ -34,39 +34,39 @@ The following properties are synchronized between a Tripletex Customer and a  Ad
      - "string"
 
 
-Tripletex Department to  Address
---------------------------------
-Every Tripletex Department will be synchronized with a  Address.
+Tripletex Department to Businessnxt Address
+-------------------------------------------
+Every Tripletex Department will be synchronized with a Businessnxt Address.
 
-Once a link between a Tripletex Department and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a  Address:
+The following properties are synchronized between a Tripletex Department and a Businessnxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     -  Address Property
-     -  Data Type
+     - Businessnxt Address Property
+     - Businessnxt Data Type
    * - name
      - name
      - "string"
 
 
-Tripletex Orderline to  Order
------------------------------
-Every Tripletex Orderline will be synchronized with a  Order.
+Tripletex Orderline to Businessnxt Order
+----------------------------------------
+Every Tripletex Orderline will be synchronized with a Businessnxt Order.
 
-Once a link between a Tripletex Orderline and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Orderline and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Orderline and a  Order:
+The following properties are synchronized between a Tripletex Orderline and a Businessnxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Orderline Property
-     -  Order Property
-     -  Data Type
+     - Businessnxt Order Property
+     - Businessnxt Data Type
 
 
 Tripletex Country to Businessnxt Country
