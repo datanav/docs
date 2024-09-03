@@ -2,7 +2,7 @@
 Membercare to Webcrm Dataflow
 =============================
 
-Generated: 2024-09-03 09:11:47
+Generated: 2024-09-03 13:28:36
 
 Introduction
 ------------
@@ -26,4 +26,20 @@ The following properties are synchronized between a Membercare Companies and a W
    * - companyName
      - OrganisationName
      - "string"
+
+
+Membercare Invoices to Webcrm Quotationline
+-------------------------------------------
+Every Membercare Invoices will be synchronized with a Webcrm Quotationline.
+
+Once a link between a Membercare Invoices and a Webcrm Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Invoices and a Webcrm Quotationline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Invoices Property
+     - Webcrm Quotationline Property
+     - Webcrm Data Type
 
