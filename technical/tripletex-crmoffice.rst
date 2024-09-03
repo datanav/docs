@@ -2,7 +2,7 @@
 Tripletex to Crmoffice Dataflow
 ===============================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -100,39 +100,39 @@ The following properties are synchronized between a Tripletex Project and a  Act
      - "string"
 
 
-Tripletex Activity to  Activities
----------------------------------
-Every Tripletex Activity will be synchronized with a  Activities.
+Tripletex Activity to Crmoffice Activities
+------------------------------------------
+Every Tripletex Activity will be synchronized with a Crmoffice Activities.
 
-Once a link between a Tripletex Activity and a  Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Activity and a Crmoffice Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Activity and a  Activities:
+The following properties are synchronized between a Tripletex Activity and a Crmoffice Activities:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Activity Property
-     -  Activities Property
-     -  Data Type
+     - Crmoffice Activities Property
+     - Crmoffice Data Type
    * - name
      - subject
      - "string"
 
 
-Tripletex Contact to  Contacts
-------------------------------
-Every Tripletex Contact will be synchronized with a  Contacts.
+Tripletex Contact to Crmoffice Contacts
+---------------------------------------
+Every Tripletex Contact will be synchronized with a Crmoffice Contacts.
 
-Once a link between a Tripletex Contact and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a  Contacts:
+The following properties are synchronized between a Tripletex Contact and a Crmoffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     -  Contacts Property
-     -  Data Type
+     - Crmoffice Contacts Property
+     - Crmoffice Data Type
    * - firstName
      - givenName
      - "string"
