@@ -2,7 +2,7 @@
 Businessnxt to Zendesk Dataflow
 ===============================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Businessnxt Address and a Ze
    * - Businessnxt Address Property
      - Zendesk Organizations Property
      - Zendesk Data Type
+   * - name
+     - name
+     - "string"
 
 
 Businessnxt Company to Zendesk Organizations
@@ -39,4 +42,7 @@ The following properties are synchronized between a Businessnxt Company and a Ze
    * - Businessnxt Company Property
      - Zendesk Organizations Property
      - Zendesk Data Type
+   * - name
+     - name
+     - "string"
 
