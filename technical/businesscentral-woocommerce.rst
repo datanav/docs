@@ -2,27 +2,27 @@
 Businesscentral to Woocommerce Dataflow
 =======================================
 
-Generated: 2024-09-03 08:14:49
+Generated: 2024-09-03 08:16:35
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to Woocommerce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Items to  Product
----------------------------------
-Every Businesscentral Items will be synchronized with a  Product.
+Businesscentral Items to Woocommerce Product
+--------------------------------------------
+Every Businesscentral Items will be synchronized with a Woocommerce Product.
 
-Once a link between a Businesscentral Items and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Items and a Woocommerce Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Items and a  Product:
+The following properties are synchronized between a Businesscentral Items and a Woocommerce Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Items Property
-     -  Product Property
-     -  Data Type
+     - Woocommerce Product Property
+     - Woocommerce Data Type
    * - displayName
      - name
      - "string"
@@ -34,20 +34,20 @@ The following properties are synchronized between a Businesscentral Items and a 
      - "string"
 
 
-Businesscentral Salesorders to  Order
--------------------------------------
-Every Businesscentral Salesorders will be synchronized with a  Order.
+Businesscentral Salesorders to Woocommerce Order
+------------------------------------------------
+Every Businesscentral Salesorders will be synchronized with a Woocommerce Order.
 
-Once a link between a Businesscentral Salesorders and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Salesorders and a Woocommerce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorders and a  Order:
+The following properties are synchronized between a Businesscentral Salesorders and a Woocommerce Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Salesorders Property
-     -  Order Property
-     -  Data Type
+     - Woocommerce Order Property
+     - Woocommerce Data Type
    * - billToAddressLine1
      - billing.address_1
      - "string"
