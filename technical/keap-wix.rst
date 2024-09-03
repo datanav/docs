@@ -2,7 +2,7 @@
 Keap to Wix Dataflow
 ====================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:57:55
 
 Introduction
 ------------
@@ -23,4 +23,10 @@ The following properties are synchronized between a Keap Product and a Wix Produ
    * - Keap Product Property
      - Wix Products Property
      - Wix Data Type
+   * - product_name
+     - name
+     - "string"
+   * - product_price
+     - priceData.price
+     - N/A
 
