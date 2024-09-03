@@ -2,7 +2,7 @@
 Businessnxt to  Dataflow
 ========================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:57:55
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Businessnxt Order and a  Inv
    * - Businessnxt Order Property
      -  Invoices Property
      -  Data Type
+   * - totalDiscountAmountInCurrency
+     - discounts
+     - "string"
 
 
 Businessnxt Orderline to  Lineitem
@@ -55,4 +58,7 @@ The following properties are synchronized between a Businessnxt Product and a  I
    * - Businessnxt Product Property
      -  Items Property
      -  Data Type
+   * - description
+     - description
+     - "string"
 
