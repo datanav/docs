@@ -2,7 +2,7 @@
 Asana to Membercare Dataflow
 ============================
 
-Generated: 2024-09-03 14:17:35
+Generated: 2024-09-03 14:28:41
 
 Introduction
 ------------
@@ -57,20 +57,4 @@ The following properties are synchronized between a Asana Workspaces and a Membe
    * - name
      - name
      - "string"
-
-
-Asana Workspaces to Membercare Organizations
---------------------------------------------
-Every Asana Workspaces will be synchronized with a Membercare Organizations.
-
-Once a link between a Asana Workspaces and a Membercare Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Asana Workspaces and a Membercare Organizations:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Asana Workspaces Property
-     - Membercare Organizations Property
-     - Membercare Data Type
 
