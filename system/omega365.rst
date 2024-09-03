@@ -46,6 +46,14 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
         :text: Read more
         :classes: read-more
     ---
+    **Businessnxt**
+
+    
+    .. link-button:: system/businessnxt
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
     **Microsoft Dynamics 365**
 
     Microsoft Dynamics 365 is a product line of enterprise resource planning (ERP) and customer relationship management (CRM) intelligent business applications.
@@ -54,10 +62,26 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
         :text: Read more
         :classes: read-more
     ---
+    **Exact**
+
+    
+    .. link-button:: system/exact
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
     **IFS**
 
     A multinational enterprise software for companies who manufacture and distribute goods, offers IFS cloud which promises class-leading FSM, ERP and EAM in one product.
     .. link-button:: system/ifs
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **Invoiced**
+
+    
+    .. link-button:: system/invoiced
         :type: ref
         :text: Read more
         :classes: read-more
