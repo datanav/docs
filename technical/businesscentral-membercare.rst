@@ -2,7 +2,7 @@
 Businesscentral to Membercare Dataflow
 ======================================
 
-Generated: 2024-09-03 13:24:01
+Generated: 2024-09-03 14:17:35
 
 Introduction
 ------------
@@ -102,6 +102,22 @@ The following properties are synchronized between a Businesscentral Customers co
    * - website
      - url
      - "string"
+
+
+Businesscentral Customers company to Membercare Organizations
+-------------------------------------------------------------
+Every Businesscentral Customers company will be synchronized with a Membercare Organizations.
+
+Once a link between a Businesscentral Customers company and a Membercare Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers company and a Membercare Organizations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers company Property
+     - Membercare Organizations Property
+     - Membercare Data Type
 
 
 Businesscentral Salesorders to Membercare Countries
