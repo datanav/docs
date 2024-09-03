@@ -2,27 +2,27 @@
 Wave Financial to Exact Dataflow
 ================================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:20:40
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Exact. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Customer person to  Contacts
----------------------------------
-Every Wave Customer person will be synchronized with a  Contacts.
+Wave Customer person to Exact Contacts
+--------------------------------------
+Every Wave Customer person will be synchronized with a Exact Contacts.
 
-Once a link between a Wave Customer person and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer person and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a  Contacts:
+The following properties are synchronized between a Wave Customer person and a Exact Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     -  Contacts Property
-     -  Data Type
+     - Exact Contacts Property
+     - Exact Data Type
    * - address.city
      - City
      - "string"
@@ -58,20 +58,20 @@ The following properties are synchronized between a Wave Customer person and a  
      - "string"
 
 
-Wave Invoice to  Quotations
----------------------------
-Every Wave Invoice will be synchronized with a  Quotations.
+Wave Invoice to Exact Quotations
+--------------------------------
+Every Wave Invoice will be synchronized with a Exact Quotations.
 
-Once a link between a Wave Invoice and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a  Quotations:
+The following properties are synchronized between a Wave Invoice and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
    * - currency.code
      - Currency
      - "string"
