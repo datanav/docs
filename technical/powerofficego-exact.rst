@@ -2,27 +2,27 @@
 Powerofficego to Exact Dataflow
 ===============================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:20:40
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Exact. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Powerofficego Customers person to  Contacts
--------------------------------------------
-Every Powerofficego Customers person will be synchronized with a  Contacts.
+Powerofficego Customers person to Exact Contacts
+------------------------------------------------
+Every Powerofficego Customers person will be synchronized with a Exact Contacts.
 
-Once a link between a Powerofficego Customers person and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers person and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers person and a  Contacts:
+The following properties are synchronized between a Powerofficego Customers person and a Exact Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers person Property
-     -  Contacts Property
-     -  Data Type
+     - Exact Contacts Property
+     - Exact Data Type
    * - DateOfBirth
      - BirthDate
      - "string"
@@ -46,39 +46,39 @@ The following properties are synchronized between a Powerofficego Customers pers
      - "string"
 
 
-Powerofficego Departments to  Accounts
---------------------------------------
-Every Powerofficego Departments will be synchronized with a  Accounts.
+Powerofficego Departments to Exact Accounts
+-------------------------------------------
+Every Powerofficego Departments will be synchronized with a Exact Accounts.
 
-Once a link between a Powerofficego Departments and a  Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Departments and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Departments and a  Accounts:
+The following properties are synchronized between a Powerofficego Departments and a Exact Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Departments Property
-     -  Accounts Property
-     -  Data Type
+     - Exact Accounts Property
+     - Exact Data Type
    * - Name
      - Name
      - "string"
 
 
-Powerofficego Employees to  Contacts
-------------------------------------
-Every Powerofficego Employees will be synchronized with a  Contacts.
+Powerofficego Employees to Exact Contacts
+-----------------------------------------
+Every Powerofficego Employees will be synchronized with a Exact Contacts.
 
-Once a link between a Powerofficego Employees and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Employees and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Employees and a  Contacts:
+The following properties are synchronized between a Powerofficego Employees and a Exact Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Employees Property
-     -  Contacts Property
-     -  Data Type
+     - Exact Contacts Property
+     - Exact Data Type
    * - DateOfBirth
      - BirthDate
      - "string"
@@ -105,36 +105,36 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
 
 
-Powerofficego Salesorderlines to  Quotations
---------------------------------------------
-Every Powerofficego Salesorderlines will be synchronized with a  Quotations.
+Powerofficego Salesorderlines to Exact Quotations
+-------------------------------------------------
+Every Powerofficego Salesorderlines will be synchronized with a Exact Quotations.
 
-Once a link between a Powerofficego Salesorderlines and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Salesorderlines and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Salesorderlines and a  Quotations:
+The following properties are synchronized between a Powerofficego Salesorderlines and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Salesorderlines Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
 
 
-Powerofficego Salesorders to  Quotations
-----------------------------------------
-Every Powerofficego Salesorders will be synchronized with a  Quotations.
+Powerofficego Salesorders to Exact Quotations
+---------------------------------------------
+Every Powerofficego Salesorders will be synchronized with a Exact Quotations.
 
-Once a link between a Powerofficego Salesorders and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Salesorders and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Salesorders and a  Quotations:
+The following properties are synchronized between a Powerofficego Salesorders and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Salesorders Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
    * - CurrencyCode
      - Currency
      - "string"
