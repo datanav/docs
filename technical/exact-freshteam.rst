@@ -2,7 +2,7 @@
 Exact to Freshteam Dataflow
 ===========================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -39,4 +39,7 @@ The following properties are synchronized between a Exact Employees and a Fresht
    * - Exact Employees Property
      - Freshteam Employee Property
      - Freshteam Data Type
+   * - BirthDate
+     - date_of_birth
+     - "string"
 
