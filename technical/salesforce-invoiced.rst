@@ -1,13 +1,13 @@
-=======================
-Salesforce to  Dataflow
-=======================
+===============================
+Salesforce to Invoiced Dataflow
+===============================
 
-Generated: 2024-09-03 00:00:17
+Generated: 2024-09-03 09:00:40
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Invoiced. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Salesforce Product2 to  Items
 -----------------------------
