@@ -2,7 +2,7 @@
 Keap to Exact Dataflow
 ======================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Keap Companies and a Exact A
    * - Keap Companies Property
      - Exact Accounts Property
      - Exact Data Type
+   * - company_name
+     - Name
+     - "string"
+   * - phone_number.number
+     - Phone
+     - "string"
 
 
 Keap Contacts to Exact Contacts
@@ -39,6 +45,27 @@ The following properties are synchronized between a Keap Contacts and a Exact Co
    * - Keap Contacts Property
      - Exact Contacts Property
      - Exact Data Type
+   * - birthday
+     - BirthDate
+     - "string"
+   * - family_name
+     - FirstName
+     - "string"
+   * - family_name
+     - FullName
+     - "string"
+   * - family_name
+     - LastName
+     - "string"
+   * - given_name
+     - FirstName
+     - "string"
+   * - given_name
+     - FullName
+     - "string"
+   * - given_name
+     - LastName
+     - "string"
 
 
 Keap Opportunity to Exact Quotations
