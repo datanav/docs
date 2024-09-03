@@ -2,27 +2,27 @@
 Woocommerce to Businessnxt Dataflow
 ===================================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Woocommerce to Businessnxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Woocommerce Order to  Currency
-------------------------------
-Every Woocommerce Order will be synchronized with a  Currency.
+Woocommerce Order to Businessnxt Currency
+-----------------------------------------
+Every Woocommerce Order will be synchronized with a Businessnxt Currency.
 
-Once a link between a Woocommerce Order and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Woocommerce Order and a Businessnxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Order and a  Currency:
+The following properties are synchronized between a Woocommerce Order and a Businessnxt Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Woocommerce Order Property
-     -  Currency Property
-     -  Data Type
+     - Businessnxt Currency Property
+     - Businessnxt Data Type
    * - billing.country
      - isoCode
      - "string"
@@ -31,58 +31,58 @@ The following properties are synchronized between a Woocommerce Order and a  Cur
      - "string"
 
 
-Woocommerce Order to  Order
----------------------------
-Every Woocommerce Order will be synchronized with a  Order.
+Woocommerce Order to Businessnxt Order
+--------------------------------------
+Every Woocommerce Order will be synchronized with a Businessnxt Order.
 
-Once a link between a Woocommerce Order and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Woocommerce Order and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Order and a  Order:
+The following properties are synchronized between a Woocommerce Order and a Businessnxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Woocommerce Order Property
-     -  Order Property
-     -  Data Type
+     - Businessnxt Order Property
+     - Businessnxt Data Type
    * - discount_total
      - totalDiscountAmountInCurrency
      - "string"
 
 
-Woocommerce Order to  Orderline
--------------------------------
-Every Woocommerce Order will be synchronized with a  Orderline.
+Woocommerce Order to Businessnxt Orderline
+------------------------------------------
+Every Woocommerce Order will be synchronized with a Businessnxt Orderline.
 
-Once a link between a Woocommerce Order and a  Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Woocommerce Order and a Businessnxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Order and a  Orderline:
+The following properties are synchronized between a Woocommerce Order and a Businessnxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - Woocommerce Order Property
-     -  Orderline Property
-     -  Data Type
+     - Businessnxt Orderline Property
+     - Businessnxt Data Type
    * - id
      - orderNo
      - "string"
 
 
-Woocommerce Product to  Product
--------------------------------
-Every Woocommerce Product will be synchronized with a  Product.
+Woocommerce Product to Businessnxt Product
+------------------------------------------
+Every Woocommerce Product will be synchronized with a Businessnxt Product.
 
-Once a link between a Woocommerce Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Woocommerce Product and a Businessnxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Product and a  Product:
+The following properties are synchronized between a Woocommerce Product and a Businessnxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Woocommerce Product Property
-     -  Product Property
-     -  Data Type
+     - Businessnxt Product Property
+     - Businessnxt Data Type
    * - sale_price
      - priceQuantity
      - "string"
