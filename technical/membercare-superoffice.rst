@@ -2,7 +2,7 @@
 Membercare to Superoffice Dataflow
 ==================================
 
-Generated: 2024-09-03 13:28:36
+Generated: 2024-09-03 13:28:39
 
 Introduction
 ------------
@@ -45,4 +45,13 @@ The following properties are synchronized between a Membercare Invoices and a Su
    * - Membercare Invoices Property
      - Superoffice Quoteline Property
      - Superoffice Data Type
+   * - invoiceItems.description
+     - Description
+     - "string"
+   * - invoiceItems.quantity
+     - Quantity
+     - N/A
+   * - invoiceItems.unitPrice
+     - UnitListPrice
+     - N/A
 
