@@ -2,7 +2,7 @@
 Exact to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-03 08:20:40
+Generated: 2024-09-03 08:20:45
 
 Introduction
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a Exact Accounts and a Salesfo
    * - Exact Accounts Property
      - Salesforce Organization Property
      - Salesforce Data Type
+   * - City
+     - City
+     - "string"
+   * - Country
+     - Country
+     - "string"
+   * - Name
+     - Name	
+     - "string"
+   * - Postcode
+     - PostalCode	
+     - "string"
 
 
 Exact Departments to Salesforce Organization
