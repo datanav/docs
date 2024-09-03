@@ -2,7 +2,7 @@
 Keap to Tilores Dataflow
 ========================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Keap Contacts and a Tilores 
    * - Keap Contacts Property
      - Tilores Human Property
      - Tilores Data Type
+   * - birthday
+     - dateOfBirth
+     - "string"
 
