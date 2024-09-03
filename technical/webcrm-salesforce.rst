@@ -2,7 +2,7 @@
 Webcrm to Salesforce Dataflow
 =============================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Webcrm Organisations and a S
    * - Webcrm Organisations Property
      - Salesforce Organization Property
      - Salesforce Data Type
+   * - OrganisationName
+     - Name	
+     - "string"
+   * - OrganisationTelephone
+     - Phone	
+     - "string"
 
 
 Webcrm Persons to Salesforce Contact
