@@ -2,7 +2,7 @@
 Chargebee to Hubspot Dataflow
 =============================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Chargebee Business_entity an
    * - Chargebee Business_entity Property
      - Hubspot Company Property
      - Hubspot Data Type
+   * - name
+     - properties.name
+     - "string"
 
 
 Chargebee Customer to Hubspot Contact
@@ -39,6 +42,15 @@ The following properties are synchronized between a Chargebee Customer and a Hub
    * - Chargebee Customer Property
      - Hubspot Contact Property
      - Hubspot Data Type
+   * - email
+     - properties.email
+     - "string"
+   * - first_name
+     - properties.firstname
+     - "string"
+   * - last_name
+     - properties.lastname
+     - "string"
 
 
 Chargebee Item to Hubspot Product
