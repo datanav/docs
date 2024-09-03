@@ -2,78 +2,78 @@
 Businessnxt to Membercare Dataflow
 ==================================
 
-Generated: 2024-09-03 09:05:50
+Generated: 2024-09-03 09:11:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businessnxt to Membercare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businessnxt Country to  Companycategories
------------------------------------------
-Every Businessnxt Country will be synchronized with a  Companycategories.
+Businessnxt Country to Membercare Companycategories
+---------------------------------------------------
+Every Businessnxt Country will be synchronized with a Membercare Companycategories.
 
-Once a link between a Businessnxt Country and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businessnxt Country and a Membercare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Country and a  Companycategories:
+The following properties are synchronized between a Businessnxt Country and a Membercare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
    * - Businessnxt Country Property
-     -  Companycategories Property
-     -  Data Type
+     - Membercare Companycategories Property
+     - Membercare Data Type
 
 
-Businessnxt Currency to  Companycategories
-------------------------------------------
-Every Businessnxt Currency will be synchronized with a  Companycategories.
+Businessnxt Currency to Membercare Companycategories
+----------------------------------------------------
+Every Businessnxt Currency will be synchronized with a Membercare Companycategories.
 
-Once a link between a Businessnxt Currency and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businessnxt Currency and a Membercare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Currency and a  Companycategories:
+The following properties are synchronized between a Businessnxt Currency and a Membercare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
    * - Businessnxt Currency Property
-     -  Companycategories Property
-     -  Data Type
+     - Membercare Companycategories Property
+     - Membercare Data Type
 
 
-Businessnxt Productcategory to  Companycategories
--------------------------------------------------
-Every Businessnxt Productcategory will be synchronized with a  Companycategories.
+Businessnxt Productcategory to Membercare Companycategories
+-----------------------------------------------------------
+Every Businessnxt Productcategory will be synchronized with a Membercare Companycategories.
 
-Once a link between a Businessnxt Productcategory and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businessnxt Productcategory and a Membercare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Productcategory and a  Companycategories:
+The following properties are synchronized between a Businessnxt Productcategory and a Membercare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
    * - Businessnxt Productcategory Property
-     -  Companycategories Property
-     -  Data Type
+     - Membercare Companycategories Property
+     - Membercare Data Type
    * - description
      - description
      - "string"
 
 
-Businessnxt Vat to  Companycategories
--------------------------------------
-Every Businessnxt Vat will be synchronized with a  Companycategories.
+Businessnxt Vat to Membercare Companycategories
+-----------------------------------------------
+Every Businessnxt Vat will be synchronized with a Membercare Companycategories.
 
-Once a link between a Businessnxt Vat and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businessnxt Vat and a Membercare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Vat and a  Companycategories:
+The following properties are synchronized between a Businessnxt Vat and a Membercare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
    * - Businessnxt Vat Property
-     -  Companycategories Property
-     -  Data Type
+     - Membercare Companycategories Property
+     - Membercare Data Type
    * - description
      - description
      - "string"
