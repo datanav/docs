@@ -2,7 +2,7 @@
 Shopify to Businessnxt Dataflow
 ===============================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -41,20 +41,20 @@ The following properties are synchronized between a Shopify Product and a  Produ
      -  Data Type
 
 
-Shopify Customer to  Country
-----------------------------
-Every Shopify Customer will be synchronized with a  Country.
+Shopify Customer to Businessnxt Country
+---------------------------------------
+Every Shopify Customer will be synchronized with a Businessnxt Country.
 
-Once a link between a Shopify Customer and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Customer and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Customer and a  Country:
+The following properties are synchronized between a Shopify Customer and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Customer Property
-     -  Country Property
-     -  Data Type
+     - Businessnxt Country Property
+     - Businessnxt Data Type
    * - currency
      - isoCode
      - "string"
@@ -66,20 +66,20 @@ The following properties are synchronized between a Shopify Customer and a  Coun
      - "string"
 
 
-Shopify Customer to  Currency
------------------------------
-Every Shopify Customer will be synchronized with a  Currency.
+Shopify Customer to Businessnxt Currency
+----------------------------------------
+Every Shopify Customer will be synchronized with a Businessnxt Currency.
 
-Once a link between a Shopify Customer and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Customer and a Businessnxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Customer and a  Currency:
+The following properties are synchronized between a Shopify Customer and a Businessnxt Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Customer Property
-     -  Currency Property
-     -  Data Type
+     - Businessnxt Currency Property
+     - Businessnxt Data Type
    * - currency
      - isoCode
      - "string"
@@ -91,20 +91,20 @@ The following properties are synchronized between a Shopify Customer and a  Curr
      - "string"
 
 
-Shopify Order to  Country
--------------------------
-Every Shopify Order will be synchronized with a  Country.
+Shopify Order to Businessnxt Country
+------------------------------------
+Every Shopify Order will be synchronized with a Businessnxt Country.
 
-Once a link between a Shopify Order and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a  Country:
+The following properties are synchronized between a Shopify Order and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     -  Country Property
-     -  Data Type
+     - Businessnxt Country Property
+     - Businessnxt Data Type
    * - billing_address.country
      - name
      - "string"
@@ -119,20 +119,20 @@ The following properties are synchronized between a Shopify Order and a  Country
      - "string"
 
 
-Shopify Order to  Order
------------------------
-Every Shopify Order will be synchronized with a  Order.
+Shopify Order to Businessnxt Order
+----------------------------------
+Every Shopify Order will be synchronized with a Businessnxt Order.
 
-Once a link between a Shopify Order and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a  Order:
+The following properties are synchronized between a Shopify Order and a Businessnxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     -  Order Property
-     -  Data Type
+     - Businessnxt Order Property
+     - Businessnxt Data Type
    * - created_at
      - orderDate
      - "string"
@@ -141,39 +141,39 @@ The following properties are synchronized between a Shopify Order and a  Order:
      - "string"
 
 
-Shopify Order to  Orderline
----------------------------
-Every Shopify Order will be synchronized with a  Orderline.
+Shopify Order to Businessnxt Orderline
+--------------------------------------
+Every Shopify Order will be synchronized with a Businessnxt Orderline.
 
-Once a link between a Shopify Order and a  Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a Businessnxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a  Orderline:
+The following properties are synchronized between a Shopify Order and a Businessnxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     -  Orderline Property
-     -  Data Type
+     - Businessnxt Orderline Property
+     - Businessnxt Data Type
    * - id
      - orderNo
      - "string"
 
 
-Shopify Sesamproduct to  Product
---------------------------------
-Every Shopify Sesamproduct will be synchronized with a  Product.
+Shopify Sesamproduct to Businessnxt Product
+-------------------------------------------
+Every Shopify Sesamproduct will be synchronized with a Businessnxt Product.
 
-Once a link between a Shopify Sesamproduct and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Sesamproduct and a Businessnxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Sesamproduct and a  Product:
+The following properties are synchronized between a Shopify Sesamproduct and a Businessnxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Sesamproduct Property
-     -  Product Property
-     -  Data Type
+     - Businessnxt Product Property
+     - Businessnxt Data Type
    * - sesam_priceExclVAT
      - priceQuantity
      - "string"
