@@ -2,7 +2,7 @@
 Exact to  Dataflow
 ==================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Exact Accounts and a  Custom
    * - Exact Accounts Property
      -  Customers company Property
      -  Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Exact Items to  Items
@@ -71,4 +74,10 @@ The following properties are synchronized between a Exact Salesorders and a  Inv
    * - Exact Salesorders Property
      -  Invoices Property
      -  Data Type
+   * - Currency
+     - currency
+     - "string"
+   * - Discount
+     - discounts
+     - "string"
 
