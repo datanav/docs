@@ -2,7 +2,7 @@
 Webcrm to Hubspot Dataflow
 ==========================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Webcrm Organisations and a H
    * - Webcrm Organisations Property
      - Hubspot Company Property
      - Hubspot Data Type
+   * - OrganisationCompanyDescription
+     - properties.description
+     - "string"
+   * - OrganisationName
+     - properties.name
+     - "string"
+   * - OrganisationTelephone
+     - properties.phone
+     - "string"
 
 
 Webcrm Persons to Hubspot Contact
@@ -39,6 +48,21 @@ The following properties are synchronized between a Webcrm Persons and a Hubspot
    * - Webcrm Persons Property
      - Hubspot Contact Property
      - Hubspot Data Type
+   * - PersonDirectPhone
+     - properties.phone
+     - "string"
+   * - PersonFirstName
+     - properties.firstname
+     - "string"
+   * - PersonLastName
+     - properties.lastname
+     - "string"
+   * - PersonMobilePhone
+     - properties.mobilephone
+     - "string"
+   * - document_number
+     - properties.date_of_birth
+     - "string"
 
 
 Webcrm Users to Hubspot Contact
@@ -55,6 +79,12 @@ The following properties are synchronized between a Webcrm Users and a Hubspot C
    * - Webcrm Users Property
      - Hubspot Contact Property
      - Hubspot Data Type
+   * - UserMobilePhone
+     - properties.mobilephone
+     - "string"
+   * - UserTelephone
+     - properties.phone
+     - "string"
 
 
 Webcrm Opportunities to Hubspot Deal
