@@ -2,27 +2,27 @@
 SuperOffice to Invoiced Dataflow
 ================================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Invoiced. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-SuperOffice Product to  Items
------------------------------
-Every SuperOffice Product will be synchronized with a  Items.
+SuperOffice Product to Invoiced Items
+-------------------------------------
+Every SuperOffice Product will be synchronized with a Invoiced Items.
 
-Once a link between a SuperOffice Product and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Product and a Invoiced Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Product and a  Items:
+The following properties are synchronized between a SuperOffice Product and a Invoiced Items:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Product Property
-     -  Items Property
-     -  Data Type
+     - Invoiced Items Property
+     - Invoiced Data Type
    * - Description
      - description
      - "string"
@@ -37,20 +37,20 @@ The following properties are synchronized between a SuperOffice Product and a  I
      - "string"
 
 
-SuperOffice Quoteline to  Lineitem
-----------------------------------
-Every SuperOffice Quoteline will be synchronized with a  Lineitem.
+SuperOffice Quoteline to Invoiced Lineitem
+------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Invoiced Lineitem.
 
-Once a link between a SuperOffice Quoteline and a  Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quoteline and a Invoiced Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quoteline and a  Lineitem:
+The following properties are synchronized between a SuperOffice Quoteline and a Invoiced Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quoteline Property
-     -  Lineitem Property
-     -  Data Type
+     - Invoiced Lineitem Property
+     - Invoiced Data Type
    * - Description
      - items.description
      - "string"
