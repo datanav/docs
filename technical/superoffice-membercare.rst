@@ -2,7 +2,7 @@
 SuperOffice to Membercare Dataflow
 ==================================
 
-Generated: 2024-09-03 13:10:23
+Generated: 2024-09-03 13:15:40
 
 Introduction
 ------------
@@ -56,6 +56,267 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
    * - sesam_Accepted
      - deliverProductsTo
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.addressDescription
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.addressLineOne
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.addressType
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.attention
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.careOf
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.country
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.end
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.floor
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.formattedAddress
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.id
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.lastChange
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.letter
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.location
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.municipality
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.number
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.postOfficeBox
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.postalCode
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.start
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.street
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.streetAndZipOneLine
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.suite
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.url
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.addresses.zipCityCountry
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.anonymizedOn
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.businessNumbers.debtorLink
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.businessNumbers.productionNumber
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.businessNumbers.registrationNumberCVR
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.businessNumbers.registrationNumberNorwegianCompanyNumber
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.businessNumbers.registrationNumberSwedishCompanyNumber
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.businessNumbers.registrationNumberVAT
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.businessNumbers.registrationNumbersRUT
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.businessNumbers.registrationNumbersSE
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.businessNumbers.url
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.closeDate
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.closeReason.description
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.closeReason.id
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.closeReason.url
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.closeReason.valid
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.contacts.end
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.contacts.id
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.contacts.lastChange
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.contacts.start
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.contacts.type
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.contacts.url
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.contacts.value
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.customFieldValues
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.dafualtPayerRule
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.debtorAccountNumber
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.defaultAddressType
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.defaultPayerLink
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.ean
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.einvoiceEan
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.einvoiceEmail
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.emailForInvoices
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.externalId
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.financeType
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.honorific
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.invoiceDistributionPreference
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.invoicesLink
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.lastChange
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberType
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberships.affiliateDate
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberships.affiliationReason 
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberships.affiliationSource 
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberships.applicationDate
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberships.applicationProcessDate
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberships.applicationStatus
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberships.applicationStatusComment
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberships.closeDate
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberships.description
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberships.disaffiliateDate
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberships.disaffiliateReason 
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberships.enableGeographic
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberships.feeExempt
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberships.id
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberships.member 
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberships.membershipCategory 
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberships.membershipWeights 
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.memberships.url
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.name
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.name1
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.name2
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.sendInvoicesTo
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.sendMailTo
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.socialSecurityNumber.iso2Letter
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.socialSecurityNumber.number
+     - "string"
+   * - sesam_Accepted
+     - deliverProductsTo.url
      - "string"
    * - sesam_Accepted
      - eInvoiceInfo.accountingNo
@@ -590,6 +851,267 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
    * - sesam_Accepted
      - sendInvoiceTo
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.addressDescription
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.addressLineOne
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.addressType
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.attention
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.careOf
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.country
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.end
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.floor
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.formattedAddress
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.id
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.lastChange
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.letter
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.location
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.municipality
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.number
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.postOfficeBox
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.postalCode
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.start
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.street
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.streetAndZipOneLine
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.suite
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.url
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.addresses.zipCityCountry
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.anonymizedOn
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.businessNumbers.debtorLink
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.businessNumbers.productionNumber
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.businessNumbers.registrationNumberCVR
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.businessNumbers.registrationNumberNorwegianCompanyNumber
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.businessNumbers.registrationNumberSwedishCompanyNumber
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.businessNumbers.registrationNumberVAT
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.businessNumbers.registrationNumbersRUT
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.businessNumbers.registrationNumbersSE
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.businessNumbers.url
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.closeDate
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.closeReason.description
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.closeReason.id
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.closeReason.url
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.closeReason.valid
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.contacts.end
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.contacts.id
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.contacts.lastChange
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.contacts.start
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.contacts.type
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.contacts.url
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.contacts.value
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.customFieldValues
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.dafualtPayerRule
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.debtorAccountNumber
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.defaultAddressType
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.defaultPayerLink
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.ean
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.einvoiceEan
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.einvoiceEmail
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.emailForInvoices
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.externalId
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.financeType
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.honorific
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.invoiceDistributionPreference
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.invoicesLink
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.lastChange
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberType
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberships.affiliateDate
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberships.affiliationReason 
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberships.affiliationSource 
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberships.applicationDate
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberships.applicationProcessDate
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberships.applicationStatus
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberships.applicationStatusComment
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberships.closeDate
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberships.description
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberships.disaffiliateDate
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberships.disaffiliateReason 
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberships.enableGeographic
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberships.feeExempt
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberships.id
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberships.member 
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberships.membershipCategory 
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberships.membershipWeights 
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.memberships.url
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.name
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.name1
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.name2
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.sendInvoicesTo
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.sendMailTo
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.socialSecurityNumber.iso2Letter
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.socialSecurityNumber.number
+     - "string"
+   * - sesam_Accepted
+     - sendInvoiceTo.url
      - "string"
    * - sesam_Accepted
      - source
