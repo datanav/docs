@@ -2,7 +2,7 @@
 Powerofficego to Membercare Dataflow
 ====================================
 
-Generated: 2024-09-03 13:24:01
+Generated: 2024-09-03 14:23:40
 
 Introduction
 ------------
@@ -124,6 +124,22 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - MailAddress.CountryCode
      - iso2Letter
      - "string"
+
+
+Powerofficego Departments to Membercare Organizations
+-----------------------------------------------------
+Every Powerofficego Departments will be synchronized with a Membercare Organizations.
+
+Once a link between a Powerofficego Departments and a Membercare Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Departments and a Membercare Organizations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Departments Property
+     - Membercare Organizations Property
+     - Membercare Data Type
 
 
 Powerofficego Location to Membercare Countries
