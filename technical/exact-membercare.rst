@@ -2,7 +2,7 @@
 Exact to Membercare Dataflow
 ============================
 
-Generated: 2024-09-03 10:41:40
+Generated: 2024-09-03 13:37:56
 
 Introduction
 ------------
@@ -124,6 +124,9 @@ The following properties are synchronized between a Exact Salesorderlines and a 
    * - Exact Salesorderlines Property
      - Membercare Invoices Property
      - Membercare Data Type
+   * - Quantity
+     - id
+     - "string"
 
 
 Exact Salesorders to Membercare Invoices
