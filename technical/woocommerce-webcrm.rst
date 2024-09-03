@@ -2,7 +2,7 @@
 Woocommerce to  Dataflow
 ========================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -23,6 +23,21 @@ The following properties are synchronized between a Woocommerce Order and a  Quo
    * - Woocommerce Order Property
      -  Quotationline Property
      -  Data Type
+   * - line_items.sku
+     - QuotationLineCostPrice
+     - "string"
+   * - line_items.sku
+     - QuotationLineDiscount
+     - "string"
+   * - line_items.sku
+     - QuotationLinePrice
+     - "string"
+   * - line_items.sku
+     - QuotationLineQuantity
+     - "string"
+   * - line_items.sku
+     - QuotationLineVatPercentage
+     - "string"
 
 
 Woocommerce Product to  Products
@@ -39,4 +54,10 @@ The following properties are synchronized between a Woocommerce Product and a  P
    * - Woocommerce Product Property
      -  Products Property
      -  Data Type
+   * - price
+     - ProductCostPrice
+     - "string"
+   * - sale_price
+     - ProductPrice
+     - "string"
 
