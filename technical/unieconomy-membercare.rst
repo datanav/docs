@@ -2,7 +2,7 @@
 Unieconomy to Membercare Dataflow
 =================================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -47,20 +47,20 @@ The following properties are synchronized between a Unieconomy Departments and a
      - "string"
 
 
-Unieconomy Companies to  Companies
-----------------------------------
-Every Unieconomy Companies will be synchronized with a  Companies.
+Unieconomy Companies to Membercare Companies
+--------------------------------------------
+Every Unieconomy Companies will be synchronized with a Membercare Companies.
 
-Once a link between a Unieconomy Companies and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Companies and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Companies and a  Companies:
+The following properties are synchronized between a Unieconomy Companies and a Membercare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Companies Property
-     -  Companies Property
-     -  Data Type
+     - Membercare Companies Property
+     - Membercare Data Type
    * - Name
      - companyName
      - "string"
@@ -69,20 +69,20 @@ The following properties are synchronized between a Unieconomy Companies and a  
      - "string"
 
 
-Unieconomy Countries to  Countries
-----------------------------------
-Every Unieconomy Countries will be synchronized with a  Countries.
+Unieconomy Countries to Membercare Countries
+--------------------------------------------
+Every Unieconomy Countries will be synchronized with a Membercare Countries.
 
-Once a link between a Unieconomy Countries and a  Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Countries and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Countries and a  Countries:
+The following properties are synchronized between a Unieconomy Countries and a Membercare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Countries Property
-     -  Countries Property
-     -  Data Type
+     - Membercare Countries Property
+     - Membercare Data Type
    * - Name
      - name
      - "string"
