@@ -2,27 +2,27 @@
 Exact to Businessnxt Dataflow
 =============================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Exact to Businessnxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Exact Accounts to  Address
---------------------------
-Every Exact Accounts will be synchronized with a  Address.
+Exact Accounts to Businessnxt Address
+-------------------------------------
+Every Exact Accounts will be synchronized with a Businessnxt Address.
 
-Once a link between a Exact Accounts and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Accounts and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Accounts and a  Address:
+The following properties are synchronized between a Exact Accounts and a Businessnxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Accounts Property
-     -  Address Property
-     -  Data Type
+     - Businessnxt Address Property
+     - Businessnxt Data Type
    * - City
      - postalArea
      - "string"
@@ -43,138 +43,138 @@ The following properties are synchronized between a Exact Accounts and a  Addres
      - "string"
 
 
-Exact Currencies to  Country
-----------------------------
-Every Exact Currencies will be synchronized with a  Country.
+Exact Currencies to Businessnxt Country
+---------------------------------------
+Every Exact Currencies will be synchronized with a Businessnxt Country.
 
-Once a link between a Exact Currencies and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Currencies and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Currencies and a  Country:
+The following properties are synchronized between a Exact Currencies and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Currencies Property
-     -  Country Property
-     -  Data Type
+     - Businessnxt Country Property
+     - Businessnxt Data Type
    * - Description
      - name
      - "string"
 
 
-Exact Departments to  Address
------------------------------
-Every Exact Departments will be synchronized with a  Address.
+Exact Departments to Businessnxt Address
+----------------------------------------
+Every Exact Departments will be synchronized with a Businessnxt Address.
 
-Once a link between a Exact Departments and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Departments and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Departments and a  Address:
+The following properties are synchronized between a Exact Departments and a Businessnxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Departments Property
-     -  Address Property
-     -  Data Type
+     - Businessnxt Address Property
+     - Businessnxt Data Type
 
 
-Exact Divisions to  Address
----------------------------
-Every Exact Divisions will be synchronized with a  Address.
+Exact Divisions to Businessnxt Address
+--------------------------------------
+Every Exact Divisions will be synchronized with a Businessnxt Address.
 
-Once a link between a Exact Divisions and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Divisions and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Divisions and a  Address:
+The following properties are synchronized between a Exact Divisions and a Businessnxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Divisions Property
-     -  Address Property
-     -  Data Type
+     - Businessnxt Address Property
+     - Businessnxt Data Type
 
 
-Exact Quotations to  Order
---------------------------
-Every Exact Quotations will be synchronized with a  Order.
+Exact Quotations to Businessnxt Order
+-------------------------------------
+Every Exact Quotations will be synchronized with a Businessnxt Order.
 
-Once a link between a Exact Quotations and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Quotations and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Quotations and a  Order:
+The following properties are synchronized between a Exact Quotations and a Businessnxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Quotations Property
-     -  Order Property
-     -  Data Type
+     - Businessnxt Order Property
+     - Businessnxt Data Type
 
 
-Exact Salesinvoices to  Order
------------------------------
-Every Exact Salesinvoices will be synchronized with a  Order.
+Exact Salesinvoices to Businessnxt Order
+----------------------------------------
+Every Exact Salesinvoices will be synchronized with a Businessnxt Order.
 
-Once a link between a Exact Salesinvoices and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Salesinvoices and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Salesinvoices and a  Order:
+The following properties are synchronized between a Exact Salesinvoices and a Businessnxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Salesinvoices Property
-     -  Order Property
-     -  Data Type
+     - Businessnxt Order Property
+     - Businessnxt Data Type
 
 
-Exact Salesorderlines to  Order
--------------------------------
-Every Exact Salesorderlines will be synchronized with a  Order.
+Exact Salesorderlines to Businessnxt Order
+------------------------------------------
+Every Exact Salesorderlines will be synchronized with a Businessnxt Order.
 
-Once a link between a Exact Salesorderlines and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Salesorderlines and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Salesorderlines and a  Order:
+The following properties are synchronized between a Exact Salesorderlines and a Businessnxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Salesorderlines Property
-     -  Order Property
-     -  Data Type
+     - Businessnxt Order Property
+     - Businessnxt Data Type
 
 
-Exact Units to  Country
------------------------
-Every Exact Units will be synchronized with a  Country.
+Exact Units to Businessnxt Country
+----------------------------------
+Every Exact Units will be synchronized with a Businessnxt Country.
 
-Once a link between a Exact Units and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Units and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Units and a  Country:
+The following properties are synchronized between a Exact Units and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Units Property
-     -  Country Property
-     -  Data Type
+     - Businessnxt Country Property
+     - Businessnxt Data Type
    * - Description
      - name
      - "string"
 
 
-Exact Vatcodes to  Country
---------------------------
-Every Exact Vatcodes will be synchronized with a  Country.
+Exact Vatcodes to Businessnxt Country
+-------------------------------------
+Every Exact Vatcodes will be synchronized with a Businessnxt Country.
 
-Once a link between a Exact Vatcodes and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Vatcodes and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Vatcodes and a  Country:
+The following properties are synchronized between a Exact Vatcodes and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Vatcodes Property
-     -  Country Property
-     -  Data Type
+     - Businessnxt Country Property
+     - Businessnxt Data Type
 
 
 Exact Addresses to Businessnxt Country
