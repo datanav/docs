@@ -2,7 +2,7 @@
 Businessnxt to Asana Dataflow
 =============================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:57:55
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Businessnxt Address and a As
    * - Businessnxt Address Property
      - Asana Workspaces Property
      - Asana Data Type
+   * - name
+     - name
+     - "string"
 
 
 Businessnxt Company to Asana Workspaces
@@ -39,4 +42,7 @@ The following properties are synchronized between a Businessnxt Company and a As
    * - Businessnxt Company Property
      - Asana Workspaces Property
      - Asana Data Type
+   * - name
+     - name
+     - "string"
 
