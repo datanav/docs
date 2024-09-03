@@ -2,7 +2,7 @@
 ZohoCRM to Keap Dataflow
 ========================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -59,20 +59,20 @@ The following properties are synchronized between a ZohoCRM Contact and a  Conta
      -  Data Type
 
 
-ZohoCRM Deal to  Opportunity
-----------------------------
-Every ZohoCRM Deal will be synchronized with a  Opportunity.
+ZohoCRM Deal to Keap Opportunity
+--------------------------------
+Every ZohoCRM Deal will be synchronized with a Keap Opportunity.
 
-Once a link between a ZohoCRM Deal and a  Opportunity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Deal and a Keap Opportunity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Deal and a  Opportunity:
+The following properties are synchronized between a ZohoCRM Deal and a Keap Opportunity:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Deal Property
-     -  Opportunity Property
-     -  Data Type
+     - Keap Opportunity Property
+     - Keap Data Type
    * - Deal_Name
      - opportunity_title
      - "string"
