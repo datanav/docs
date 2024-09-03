@@ -2,7 +2,7 @@
 Tripletex to Chargebee Dataflow
 ===============================
 
-Generated: 2024-09-03 08:58:37
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
@@ -52,58 +52,58 @@ The following properties are synchronized between a Tripletex Customer and a Cha
      - Chargebee Data Type
 
 
-Tripletex Customer to  Business_entity
---------------------------------------
-Every Tripletex Customer will be synchronized with a  Business_entity.
+Tripletex Customer to Chargebee Business_entity
+-----------------------------------------------
+Every Tripletex Customer will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Tripletex Customer and a  Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a  Business_entity:
+The following properties are synchronized between a Tripletex Customer and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     -  Business_entity Property
-     -  Data Type
+     - Chargebee Business_entity Property
+     - Chargebee Data Type
    * - name
      - name
      - "string"
 
 
-Tripletex Department to  Business_entity
-----------------------------------------
-Every Tripletex Department will be synchronized with a  Business_entity.
+Tripletex Department to Chargebee Business_entity
+-------------------------------------------------
+Every Tripletex Department will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Tripletex Department and a  Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a  Business_entity:
+The following properties are synchronized between a Tripletex Department and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     -  Business_entity Property
-     -  Data Type
+     - Chargebee Business_entity Property
+     - Chargebee Data Type
    * - name
      - name
      - "string"
 
 
-Tripletex Employee to  Customer
--------------------------------
-Every Tripletex Employee will be synchronized with a  Customer.
+Tripletex Employee to Chargebee Customer
+----------------------------------------
+Every Tripletex Employee will be synchronized with a Chargebee Customer.
 
-Once a link between a Tripletex Employee and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a  Customer:
+The following properties are synchronized between a Tripletex Employee and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     -  Customer Property
-     -  Data Type
+     - Chargebee Customer Property
+     - Chargebee Data Type
    * - firstName
      - first_name
      - "string"
@@ -112,20 +112,20 @@ The following properties are synchronized between a Tripletex Employee and a  Cu
      - "string"
 
 
-Tripletex Orderline to  Order
------------------------------
-Every Tripletex Orderline will be synchronized with a  Order.
+Tripletex Orderline to Chargebee Order
+--------------------------------------
+Every Tripletex Orderline will be synchronized with a Chargebee Order.
 
-Once a link between a Tripletex Orderline and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Orderline and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Orderline and a  Order:
+The following properties are synchronized between a Tripletex Orderline and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Orderline Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
    * - count
      - order_line_items.amount
      - "string"
