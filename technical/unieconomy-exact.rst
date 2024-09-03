@@ -2,46 +2,46 @@
 Unieconomy to Exact Dataflow
 ============================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:20:40
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Unieconomy to Exact. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Unieconomy Companies to  Accounts
----------------------------------
-Every Unieconomy Companies will be synchronized with a  Accounts.
+Unieconomy Companies to Exact Accounts
+--------------------------------------
+Every Unieconomy Companies will be synchronized with a Exact Accounts.
 
-Once a link between a Unieconomy Companies and a  Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Companies and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Companies and a  Accounts:
+The following properties are synchronized between a Unieconomy Companies and a Exact Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Companies Property
-     -  Accounts Property
-     -  Data Type
+     - Exact Accounts Property
+     - Exact Data Type
    * - Name
      - Name
      - "string"
 
 
-Unieconomy Departments to  Accounts
------------------------------------
-Every Unieconomy Departments will be synchronized with a  Accounts.
+Unieconomy Departments to Exact Accounts
+----------------------------------------
+Every Unieconomy Departments will be synchronized with a Exact Accounts.
 
-Once a link between a Unieconomy Departments and a  Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Departments and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Departments and a  Accounts:
+The following properties are synchronized between a Unieconomy Departments and a Exact Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Departments Property
-     -  Accounts Property
-     -  Data Type
+     - Exact Accounts Property
+     - Exact Data Type
    * - Name
      - Name
      - "string"
