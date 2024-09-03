@@ -2,7 +2,7 @@
 Tripletex to Webcrm Dataflow
 ============================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -107,20 +107,20 @@ The following properties are synchronized between a Tripletex Department and a  
      - "string"
 
 
-Tripletex Contact to  Persons
------------------------------
-Every Tripletex Contact will be synchronized with a  Persons.
+Tripletex Contact to Webcrm Persons
+-----------------------------------
+Every Tripletex Contact will be synchronized with a Webcrm Persons.
 
-Once a link between a Tripletex Contact and a  Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a Webcrm Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a  Persons:
+The following properties are synchronized between a Tripletex Contact and a Webcrm Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     -  Persons Property
-     -  Data Type
+     - Webcrm Persons Property
+     - Webcrm Data Type
    * - customer.id
      - PersonOrganisationId
      - "string"
@@ -138,20 +138,20 @@ The following properties are synchronized between a Tripletex Contact and a  Per
      - "string"
 
 
-Tripletex Orderline to  Quotationline
--------------------------------------
-Every Tripletex Orderline will be synchronized with a  Quotationline.
+Tripletex Orderline to Webcrm Quotationline
+-------------------------------------------
+Every Tripletex Orderline will be synchronized with a Webcrm Quotationline.
 
-Once a link between a Tripletex Orderline and a  Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Orderline and a Webcrm Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Orderline and a  Quotationline:
+The following properties are synchronized between a Tripletex Orderline and a Webcrm Quotationline:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Orderline Property
-     -  Quotationline Property
-     -  Data Type
+     - Webcrm Quotationline Property
+     - Webcrm Data Type
    * - count
      - QuotationLineQuantity
      - "string"
@@ -172,20 +172,20 @@ The following properties are synchronized between a Tripletex Orderline and a  Q
      - "string"
 
 
-Tripletex Product to  Products
-------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Products.
+Tripletex Product to Webcrm Products
+------------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Webcrm Products.
 
-Once a link between a Tripletex Product and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Product and a Webcrm Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Product and a  Products:
+The following properties are synchronized between a Tripletex Product and a Webcrm Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     -  Products Property
-     -  Data Type
+     - Webcrm Products Property
+     - Webcrm Data Type
    * - costExcludingVatCurrency
      - ProductCostPrice
      - "string"
