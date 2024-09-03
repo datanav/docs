@@ -2,7 +2,7 @@
 Keap to Superoffice Dataflow
 ============================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:06:35
 
 Introduction
 ------------
@@ -23,6 +23,24 @@ The following properties are synchronized between a Keap Companies and a Superof
    * - Keap Companies Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - address.locality
+     - Address.Postal.City
+     - "string"
+   * - address.locality
+     - Address.Street.City
+     - "string"
+   * - address.zip_code
+     - Address.Postal.Zipcode
+     - "string"
+   * - address.zip_code
+     - Address.Street.Zipcode
+     - "string"
+   * - company_name
+     - Name
+     - "string"
+   * - id
+     - ContactId
+     - "integer"
 
 
 Keap Contacts to Superoffice Person
@@ -39,6 +57,9 @@ The following properties are synchronized between a Keap Contacts and a Superoff
    * - Keap Contacts Property
      - Superoffice Person Property
      - Superoffice Data Type
+   * - birthday
+     - BirthDate
+     - N/A
 
 
 Keap Opportunity to Superoffice Sale
