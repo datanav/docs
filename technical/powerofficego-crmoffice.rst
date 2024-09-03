@@ -2,7 +2,7 @@
 Powerofficego to Crmoffice Dataflow
 ===================================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -100,20 +100,20 @@ The following properties are synchronized between a Powerofficego Projects and a
      - "string"
 
 
-Powerofficego Contactperson to  Contacts
-----------------------------------------
-Every Powerofficego Contactperson will be synchronized with a  Contacts.
+Powerofficego Contactperson to Crmoffice Contacts
+-------------------------------------------------
+Every Powerofficego Contactperson will be synchronized with a Crmoffice Contacts.
 
-Once a link between a Powerofficego Contactperson and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Contactperson and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Contactperson and a  Contacts:
+The following properties are synchronized between a Powerofficego Contactperson and a Crmoffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Contactperson Property
-     -  Contacts Property
-     -  Data Type
+     - Crmoffice Contacts Property
+     - Crmoffice Data Type
    * - firstName
      - givenName
      - "string"
@@ -125,20 +125,20 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
 
 
-Powerofficego Suppliers person to  Contacts
--------------------------------------------
-Every Powerofficego Suppliers person will be synchronized with a  Contacts.
+Powerofficego Suppliers person to Crmoffice Contacts
+----------------------------------------------------
+Every Powerofficego Suppliers person will be synchronized with a Crmoffice Contacts.
 
-Once a link between a Powerofficego Suppliers person and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Suppliers person and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Suppliers person and a  Contacts:
+The following properties are synchronized between a Powerofficego Suppliers person and a Crmoffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Suppliers person Property
-     -  Contacts Property
-     -  Data Type
+     - Crmoffice Contacts Property
+     - Crmoffice Data Type
    * - FirstName
      - givenName
      - "string"
