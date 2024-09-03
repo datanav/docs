@@ -2,12 +2,30 @@
 Woocommerce to Shopify Dataflow
 ===============================
 
-Generated: 2024-09-03 08:16:57
+Generated: 2024-09-03 08:17:37
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Woocommerce to Shopify. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Woocommerce Product to Shopify Product
+--------------------------------------
+Before any synchronization can take place, a link between a Woocommerce Product and a Shopify Product must be established.
+
+A new Shopify Product will be created from a Woocommerce Product if it is connected to a Woocommerce Order that is synchronized into Shopify.
+
+Once a link between a Woocommerce Product and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Woocommerce Product and a Shopify Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Woocommerce Product Property
+     - Shopify Product Property
+     - Shopify Data Type
+
 
 Woocommerce Customer to Shopify Customer
 ----------------------------------------
