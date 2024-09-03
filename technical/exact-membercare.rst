@@ -2,7 +2,7 @@
 Exact to  Dataflow
 ==================
 
-Generated: 2024-09-03 08:20:40
+Generated: 2024-09-03 08:20:45
 
 Introduction
 ------------
@@ -23,6 +23,24 @@ The following properties are synchronized between a Exact Accounts and a  Compan
    * - Exact Accounts Property
      -  Companies Property
      -  Data Type
+   * - City
+     - addresses.postalCode.city
+     - "string"
+   * - Country
+     - addresses.country.id
+     - "string"
+   * - ID
+     - addresses.id
+     - "string"
+   * - Name
+     - companyName
+     - "string"
+   * - Postcode
+     - addresses.postalCode.zipCode
+     - "string"
+   * - Website
+     - url
+     - "string"
 
 
 Exact Currencies to  Companycategories
@@ -71,6 +89,9 @@ The following properties are synchronized between a Exact Divisions and a  Compa
    * - Exact Divisions Property
      -  Companies Property
      -  Data Type
+   * - Website
+     - url
+     - "string"
 
 
 Exact Units to  Companycategories
@@ -103,6 +124,9 @@ The following properties are synchronized between a Exact Vatcodes and a  Compan
    * - Exact Vatcodes Property
      -  Companycategories Property
      -  Data Type
+   * - Description
+     - description
+     - "string"
 
 
 Exact Addresses to  Countries
