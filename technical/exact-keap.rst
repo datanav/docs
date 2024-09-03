@@ -2,7 +2,7 @@
 Exact to  Dataflow
 ==================
 
-Generated: 2024-09-03 08:20:40
+Generated: 2024-09-03 08:20:45
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Exact Accounts and a  Compan
    * - Exact Accounts Property
      -  Companies Property
      -  Data Type
+   * - Name
+     - company_name
+     - "string"
+   * - Phone
+     - phone_number.number
+     - "string"
 
 
 Exact Contacts to  Contacts
@@ -39,6 +45,27 @@ The following properties are synchronized between a Exact Contacts and a  Contac
    * - Exact Contacts Property
      -  Contacts Property
      -  Data Type
+   * - BirthDate
+     - birthday
+     - "string"
+   * - FirstName
+     - family_name
+     - "string"
+   * - FirstName
+     - given_name
+     - "string"
+   * - FullName
+     - family_name
+     - "string"
+   * - FullName
+     - given_name
+     - "string"
+   * - LastName
+     - family_name
+     - "string"
+   * - LastName
+     - given_name
+     - "string"
 
 
 Exact Departments to  Companies
@@ -87,6 +114,27 @@ The following properties are synchronized between a Exact Employees and a  Conta
    * - Exact Employees Property
      -  Contacts Property
      -  Data Type
+   * - BirthDate
+     - birthday
+     - "string"
+   * - FirstName
+     - family_name
+     - "string"
+   * - FirstName
+     - given_name
+     - "string"
+   * - FullName
+     - family_name
+     - "string"
+   * - FullName
+     - given_name
+     - "string"
+   * - LastName
+     - family_name
+     - "string"
+   * - LastName
+     - given_name
+     - "string"
 
 
 Exact Items to  Product
