@@ -2,7 +2,7 @@
 ZohoCRM to Businessnxt Dataflow
 ===============================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -56,20 +56,20 @@ The following properties are synchronized between a ZohoCRM Deal and a  Order:
      - "string"
 
 
-ZohoCRM Account to  Country
----------------------------
-Every ZohoCRM Account will be synchronized with a  Country.
+ZohoCRM Account to Businessnxt Country
+--------------------------------------
+Every ZohoCRM Account will be synchronized with a Businessnxt Country.
 
-Once a link between a ZohoCRM Account and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Account and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Account and a  Country:
+The following properties are synchronized between a ZohoCRM Account and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Account Property
-     -  Country Property
-     -  Data Type
+     - Businessnxt Country Property
+     - Businessnxt Data Type
    * - Billing_Country
      - name
      - "string"
@@ -81,20 +81,20 @@ The following properties are synchronized between a ZohoCRM Account and a  Count
      - "string"
 
 
-ZohoCRM Contact to  Country
----------------------------
-Every ZohoCRM Contact will be synchronized with a  Country.
+ZohoCRM Contact to Businessnxt Country
+--------------------------------------
+Every ZohoCRM Contact will be synchronized with a Businessnxt Country.
 
-Once a link between a ZohoCRM Contact and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Contact and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Contact and a  Country:
+The following properties are synchronized between a ZohoCRM Contact and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Contact Property
-     -  Country Property
-     -  Data Type
+     - Businessnxt Country Property
+     - Businessnxt Data Type
    * - Mailing_Country
      - name
      - "string"
