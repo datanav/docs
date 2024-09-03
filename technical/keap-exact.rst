@@ -2,7 +2,7 @@
 Keap to Exact Dataflow
 ======================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:57:55
 
 Introduction
 ------------
@@ -39,4 +39,7 @@ The following properties are synchronized between a Keap Users and a Exact Addre
    * - Keap Users Property
      - Exact Addresses Property
      - Exact Data Type
+   * - address.locality
+     - City
+     - "string"
 
