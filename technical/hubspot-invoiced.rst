@@ -2,46 +2,46 @@
 HubSpot to Invoiced Dataflow
 ============================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Invoiced. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-HubSpot Deal to  Invoices
--------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a  Invoices.
+HubSpot Deal to Invoiced Invoices
+---------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Invoiced Invoices.
 
-Once a link between a HubSpot Deal and a  Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a Invoiced Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a  Invoices:
+The following properties are synchronized between a HubSpot Deal and a Invoiced Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     -  Invoices Property
-     -  Data Type
+     - Invoiced Invoices Property
+     - Invoiced Data Type
    * - properties.deal_currency_code
      - currency
      - "string"
 
 
-HubSpot Lineitem to  Lineitem
------------------------------
-Every HubSpot Lineitem will be synchronized with a  Lineitem.
+HubSpot Lineitem to Invoiced Lineitem
+-------------------------------------
+Every HubSpot Lineitem will be synchronized with a Invoiced Lineitem.
 
-Once a link between a HubSpot Lineitem and a  Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitem and a Invoiced Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitem and a  Lineitem:
+The following properties are synchronized between a HubSpot Lineitem and a Invoiced Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitem Property
-     -  Lineitem Property
-     -  Data Type
+     - Invoiced Lineitem Property
+     - Invoiced Data Type
    * - properties.description
      - items.description
      - "string"
@@ -59,20 +59,20 @@ The following properties are synchronized between a HubSpot Lineitem and a  Line
      - "string"
 
 
-HubSpot Product to  Items
--------------------------
-Every HubSpot Product will be synchronized with a  Items.
+HubSpot Product to Invoiced Items
+---------------------------------
+Every HubSpot Product will be synchronized with a Invoiced Items.
 
-Once a link between a HubSpot Product and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Product and a Invoiced Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Product and a  Items:
+The following properties are synchronized between a HubSpot Product and a Invoiced Items:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Product Property
-     -  Items Property
-     -  Data Type
+     - Invoiced Items Property
+     - Invoiced Data Type
    * - properties.description
      - description
      - "string"
