@@ -2,27 +2,27 @@
 Businessnxt to Membercare Dataflow
 ==================================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businessnxt to Membercare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businessnxt Address to  Companies
----------------------------------
-Every Businessnxt Address will be synchronized with a  Companies.
+Businessnxt Address to Membercare Companies
+-------------------------------------------
+Every Businessnxt Address will be synchronized with a Membercare Companies.
 
-Once a link between a Businessnxt Address and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businessnxt Address and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Address and a  Companies:
+The following properties are synchronized between a Businessnxt Address and a Membercare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Businessnxt Address Property
-     -  Companies Property
-     -  Data Type
+     - Membercare Companies Property
+     - Membercare Data Type
    * - addressLine1
      - addresses.street
      - "string"
@@ -43,20 +43,20 @@ The following properties are synchronized between a Businessnxt Address and a  C
      - "string"
 
 
-Businessnxt Company to  Companies
----------------------------------
-Every Businessnxt Company will be synchronized with a  Companies.
+Businessnxt Company to Membercare Companies
+-------------------------------------------
+Every Businessnxt Company will be synchronized with a Membercare Companies.
 
-Once a link between a Businessnxt Company and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businessnxt Company and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Company and a  Companies:
+The following properties are synchronized between a Businessnxt Company and a Membercare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Businessnxt Company Property
-     -  Companies Property
-     -  Data Type
+     - Membercare Companies Property
+     - Membercare Data Type
    * - companyNo
      - addresses.id
      - "string"
@@ -65,20 +65,20 @@ The following properties are synchronized between a Businessnxt Company and a  C
      - "string"
 
 
-Businessnxt Country to  Countries
----------------------------------
-Every Businessnxt Country will be synchronized with a  Countries.
+Businessnxt Country to Membercare Countries
+-------------------------------------------
+Every Businessnxt Country will be synchronized with a Membercare Countries.
 
-Once a link between a Businessnxt Country and a  Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businessnxt Country and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Country and a  Countries:
+The following properties are synchronized between a Businessnxt Country and a Membercare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - Businessnxt Country Property
-     -  Countries Property
-     -  Data Type
+     - Membercare Countries Property
+     - Membercare Data Type
    * - isoCode
      - iso2Letter
      - "string"
