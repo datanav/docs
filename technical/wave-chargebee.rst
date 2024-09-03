@@ -2,7 +2,7 @@
 Wave Financial to Chargebee Dataflow
 ====================================
 
-Generated: 2024-09-03 08:58:37
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
@@ -27,20 +27,20 @@ The following properties are synchronized between a Wave Customer and a Chargebe
      - Chargebee Data Type
 
 
-Wave Customer to  Business_entity
----------------------------------
-Every Wave Customer will be synchronized with a  Business_entity.
+Wave Customer to Chargebee Business_entity
+------------------------------------------
+Every Wave Customer will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Wave Customer and a  Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a  Business_entity:
+The following properties are synchronized between a Wave Customer and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     -  Business_entity Property
-     -  Data Type
+     - Chargebee Business_entity Property
+     - Chargebee Data Type
    * - name
      - name
      - "string"
