@@ -2,7 +2,7 @@
 Woocommerce to  Dataflow
 ========================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -39,6 +39,15 @@ The following properties are synchronized between a Woocommerce Order and a  Inv
    * - Woocommerce Order Property
      -  Invoices Property
      -  Data Type
+   * - currency
+     - currency
+     - "string"
+   * - customer_id
+     - customer
+     - "string"
+   * - discount_total
+     - discounts
+     - "string"
 
 
 Woocommerce Order to  Lineitem
@@ -55,6 +64,15 @@ The following properties are synchronized between a Woocommerce Order and a  Lin
    * - Woocommerce Order Property
      -  Lineitem Property
      -  Data Type
+   * - line_items.name
+     - items.name
+     - "string"
+   * - line_items.price
+     - items.amount
+     - "string"
+   * - line_items.quantity
+     - items.quantity
+     - "string"
 
 
 Woocommerce Product to  Items
@@ -71,4 +89,10 @@ The following properties are synchronized between a Woocommerce Product and a  I
    * - Woocommerce Product Property
      -  Items Property
      -  Data Type
+   * - name
+     - name
+     - "string"
+   * - price
+     - unit_cost
+     - "string"
 
