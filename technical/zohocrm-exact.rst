@@ -2,7 +2,7 @@
 ZohoCRM to Exact Dataflow
 =========================
 
-Generated: 2024-09-03 08:14:49
+Generated: 2024-09-03 08:16:35
 
 Introduction
 ------------
@@ -120,20 +120,20 @@ The following properties are synchronized between a ZohoCRM Deal and a  Quotatio
      -  Data Type
 
 
-ZohoCRM Contact to  Addresses
------------------------------
-Every ZohoCRM Contact will be synchronized with a  Addresses.
+ZohoCRM Contact to Exact Addresses
+----------------------------------
+Every ZohoCRM Contact will be synchronized with a Exact Addresses.
 
-Once a link between a ZohoCRM Contact and a  Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Contact and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Contact and a  Addresses:
+The following properties are synchronized between a ZohoCRM Contact and a Exact Addresses:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Contact Property
-     -  Addresses Property
-     -  Data Type
+     - Exact Addresses Property
+     - Exact Data Type
    * - Mailing_City
      - City
      - "string"
