@@ -2,7 +2,7 @@
 Tripletex to Membercare Dataflow
 ================================
 
-Generated: 2024-09-03 09:49:34
+Generated: 2024-09-03 09:50:54
 
 Introduction
 ------------
@@ -89,4 +89,7 @@ The following properties are synchronized between a Tripletex Invoice and a Memb
    * - Tripletex Invoice Property
      - Membercare Invoices Property
      - Membercare Data Type
+   * - invoiceDueDate
+     - payDueDate
+     - "string"
 
