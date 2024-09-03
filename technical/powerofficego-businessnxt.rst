@@ -2,27 +2,27 @@
 Powerofficego to Businessnxt Dataflow
 =====================================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Businessnxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Powerofficego Customers to  Address
------------------------------------
-Every Powerofficego Customers will be synchronized with a  Address.
+Powerofficego Customers to Businessnxt Address
+----------------------------------------------
+Every Powerofficego Customers will be synchronized with a Businessnxt Address.
 
-Once a link between a Powerofficego Customers and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers and a  Address:
+The following properties are synchronized between a Powerofficego Customers and a Businessnxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers Property
-     -  Address Property
-     -  Data Type
+     - Businessnxt Address Property
+     - Businessnxt Data Type
    * - Name
      - name
      - "string"
@@ -31,39 +31,39 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Departments to  Address
--------------------------------------
-Every Powerofficego Departments will be synchronized with a  Address.
+Powerofficego Departments to Businessnxt Address
+------------------------------------------------
+Every Powerofficego Departments will be synchronized with a Businessnxt Address.
 
-Once a link between a Powerofficego Departments and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Departments and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Departments and a  Address:
+The following properties are synchronized between a Powerofficego Departments and a Businessnxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Departments Property
-     -  Address Property
-     -  Data Type
+     - Businessnxt Address Property
+     - Businessnxt Data Type
    * - Name
      - name
      - "string"
 
 
-Powerofficego Salesorderlines to  Order
----------------------------------------
-Every Powerofficego Salesorderlines will be synchronized with a  Order.
+Powerofficego Salesorderlines to Businessnxt Order
+--------------------------------------------------
+Every Powerofficego Salesorderlines will be synchronized with a Businessnxt Order.
 
-Once a link between a Powerofficego Salesorderlines and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Salesorderlines and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Salesorderlines and a  Order:
+The following properties are synchronized between a Powerofficego Salesorderlines and a Businessnxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Salesorderlines Property
-     -  Order Property
-     -  Data Type
+     - Businessnxt Order Property
+     - Businessnxt Data Type
 
 
 Powerofficego Contactperson to Businessnxt Country
