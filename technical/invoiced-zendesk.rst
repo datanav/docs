@@ -2,7 +2,7 @@
 Invoiced to Zendesk Dataflow
 ============================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Invoiced Customers company a
    * - Invoiced Customers company Property
      - Zendesk Organizations Property
      - Zendesk Data Type
+   * - name
+     - name
+     - "string"
 
