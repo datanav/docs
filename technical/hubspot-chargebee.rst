@@ -2,7 +2,7 @@
 HubSpot to Chargebee Dataflow
 =============================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -446,39 +446,39 @@ The following properties are synchronized between a HubSpot User and a  Customer
      -  Data Type
 
 
-HubSpot Deal to  Order
-----------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a  Order.
+HubSpot Deal to Chargebee Order
+-------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Chargebee Order.
 
-Once a link between a HubSpot Deal and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a  Order:
+The following properties are synchronized between a HubSpot Deal and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
    * - properties.deal_currency_code
      - currency_code
      - "string"
 
 
-HubSpot Product to  Item
-------------------------
-Every HubSpot Product will be synchronized with a  Item.
+HubSpot Product to Chargebee Item
+---------------------------------
+Every HubSpot Product will be synchronized with a Chargebee Item.
 
-Once a link between a HubSpot Product and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Product and a  Item:
+The following properties are synchronized between a HubSpot Product and a Chargebee Item:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Product Property
-     -  Item Property
-     -  Data Type
+     - Chargebee Item Property
+     - Chargebee Data Type
    * - properties.name
      - name
      - "string"
