@@ -2,27 +2,27 @@
 ZohoCRM to Businessnxt Dataflow
 ===============================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from ZohoCRM to Businessnxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-ZohoCRM Account to  Address
----------------------------
-Every ZohoCRM Account will be synchronized with a  Address.
+ZohoCRM Account to Businessnxt Address
+--------------------------------------
+Every ZohoCRM Account will be synchronized with a Businessnxt Address.
 
-Once a link between a ZohoCRM Account and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Account and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Account and a  Address:
+The following properties are synchronized between a ZohoCRM Account and a Businessnxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Account Property
-     -  Address Property
-     -  Data Type
+     - Businessnxt Address Property
+     - Businessnxt Data Type
    * - Account_Name
      - name
      - "string"
@@ -34,20 +34,20 @@ The following properties are synchronized between a ZohoCRM Account and a  Addre
      - "string"
 
 
-ZohoCRM Deal to  Order
-----------------------
-Every ZohoCRM Deal will be synchronized with a  Order.
+ZohoCRM Deal to Businessnxt Order
+---------------------------------
+Every ZohoCRM Deal will be synchronized with a Businessnxt Order.
 
-Once a link between a ZohoCRM Deal and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Deal and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Deal and a  Order:
+The following properties are synchronized between a ZohoCRM Deal and a Businessnxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Deal Property
-     -  Order Property
-     -  Data Type
+     - Businessnxt Order Property
+     - Businessnxt Data Type
    * - Closing_Date
      - orderDate
      - "string"
