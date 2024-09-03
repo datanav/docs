@@ -2,7 +2,7 @@
 HubSpot to Keap Dataflow
 ========================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -88,20 +88,20 @@ The following properties are synchronized between a HubSpot User and a  Contacts
      -  Data Type
 
 
-HubSpot Deal to  Opportunity
-----------------------------
-Every HubSpot Deal will be synchronized with a  Opportunity.
+HubSpot Deal to Keap Opportunity
+--------------------------------
+Every HubSpot Deal will be synchronized with a Keap Opportunity.
 
-Once a link between a HubSpot Deal and a  Opportunity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a Keap Opportunity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a  Opportunity:
+The following properties are synchronized between a HubSpot Deal and a Keap Opportunity:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     -  Opportunity Property
-     -  Data Type
+     - Keap Opportunity Property
+     - Keap Data Type
    * - properties.dealname
      - opportunity_title
      - "string"
@@ -110,20 +110,20 @@ The following properties are synchronized between a HubSpot Deal and a  Opportun
      - "string"
 
 
-HubSpot Product to  Product
----------------------------
-Every HubSpot Product will be synchronized with a  Product.
+HubSpot Product to Keap Product
+-------------------------------
+Every HubSpot Product will be synchronized with a Keap Product.
 
-Once a link between a HubSpot Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Product and a Keap Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Product and a  Product:
+The following properties are synchronized between a HubSpot Product and a Keap Product:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Product Property
-     -  Product Property
-     -  Data Type
+     - Keap Product Property
+     - Keap Data Type
    * - properties.description
      - product_desc
      - "string"
