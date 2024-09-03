@@ -2,7 +2,7 @@
 Membercare to Hubspot Dataflow
 ==============================
 
-Generated: 2024-09-03 13:28:36
+Generated: 2024-09-03 13:28:39
 
 Introduction
 ------------
@@ -45,4 +45,13 @@ The following properties are synchronized between a Membercare Invoices and a Hu
    * - Membercare Invoices Property
      - Hubspot Lineitem Property
      - Hubspot Data Type
+   * - invoiceItems.description
+     - properties.description
+     - "string"
+   * - invoiceItems.quantity
+     - properties.quantity
+     - N/A
+   * - invoiceItems.unitPrice
+     - properties.price
+     - "string"
 
