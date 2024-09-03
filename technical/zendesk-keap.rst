@@ -2,44 +2,44 @@
 Zendesk to Keap Dataflow
 ========================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Zendesk to Keap. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Zendesk Organizations to  Companies
------------------------------------
-Every Zendesk Organizations will be synchronized with a  Companies.
+Zendesk Organizations to Keap Companies
+---------------------------------------
+Every Zendesk Organizations will be synchronized with a Keap Companies.
 
-Once a link between a Zendesk Organizations and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Organizations and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Organizations and a  Companies:
+The following properties are synchronized between a Zendesk Organizations and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Organizations Property
-     -  Companies Property
-     -  Data Type
+     - Keap Companies Property
+     - Keap Data Type
    * - name
      - company_name
      - "string"
 
 
-Zendesk Users to  Contacts
---------------------------
-Every Zendesk Users will be synchronized with a  Contacts.
+Zendesk Users to Keap Contacts
+------------------------------
+Every Zendesk Users will be synchronized with a Keap Contacts.
 
-Once a link between a Zendesk Users and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Users and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Users and a  Contacts:
+The following properties are synchronized between a Zendesk Users and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Users Property
-     -  Contacts Property
-     -  Data Type
+     - Keap Contacts Property
+     - Keap Data Type
 
