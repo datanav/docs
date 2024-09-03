@@ -2,7 +2,7 @@
 Tidsbanken to Exact Dataflow
 ============================
 
-Generated: 2024-09-03 08:14:49
+Generated: 2024-09-03 08:16:35
 
 Introduction
 ------------
@@ -74,20 +74,20 @@ The following properties are synchronized between a Tidsbanken Avdeling and a  A
      - "string"
 
 
-Tidsbanken Ansatt to  Addresses
--------------------------------
-Every Tidsbanken Ansatt will be synchronized with a  Addresses.
+Tidsbanken Ansatt to Exact Addresses
+------------------------------------
+Every Tidsbanken Ansatt will be synchronized with a Exact Addresses.
 
-Once a link between a Tidsbanken Ansatt and a  Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Ansatt and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Ansatt and a  Addresses:
+The following properties are synchronized between a Tidsbanken Ansatt and a Exact Addresses:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Ansatt Property
-     -  Addresses Property
-     -  Data Type
+     - Exact Addresses Property
+     - Exact Data Type
    * - Adresse
      - AddressLine1
      - "string"
@@ -96,20 +96,20 @@ The following properties are synchronized between a Tidsbanken Ansatt and a  Add
      - "string"
 
 
-Tidsbanken Ansatt to  Employees
--------------------------------
-Every Tidsbanken Ansatt will be synchronized with a  Employees.
+Tidsbanken Ansatt to Exact Employees
+------------------------------------
+Every Tidsbanken Ansatt will be synchronized with a Exact Employees.
 
-Once a link between a Tidsbanken Ansatt and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Ansatt and a Exact Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Ansatt and a  Employees:
+The following properties are synchronized between a Tidsbanken Ansatt and a Exact Employees:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Ansatt Property
-     -  Employees Property
-     -  Data Type
+     - Exact Employees Property
+     - Exact Data Type
    * - Adresse
      - AddressStreet
      - "string"
@@ -142,33 +142,33 @@ The following properties are synchronized between a Tidsbanken Ansatt and a  Emp
      - "string"
 
 
-Tidsbanken Avdeling to  Departments
------------------------------------
-Every Tidsbanken Avdeling will be synchronized with a  Departments.
+Tidsbanken Avdeling to Exact Departments
+----------------------------------------
+Every Tidsbanken Avdeling will be synchronized with a Exact Departments.
 
-If a matching  Departments already exists, the Tidsbanken Avdeling will be merged with the existing one.
-If no matching  Departments is found, a new  Departments will be created.
+If a matching Exact Departments already exists, the Tidsbanken Avdeling will be merged with the existing one.
+If no matching Exact Departments is found, a new Exact Departments will be created.
 
-A Tidsbanken Avdeling will merge with a  Departments if one of the following property combinations match:
+A Tidsbanken Avdeling will merge with a Exact Departments if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Avdeling Property
-     -  Departments Property
+     - Exact Departments Property
    * - Id
      - Code
 
-Once a link between a Tidsbanken Avdeling and a  Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Avdeling and a Exact Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Avdeling and a  Departments:
+The following properties are synchronized between a Tidsbanken Avdeling and a Exact Departments:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Avdeling Property
-     -  Departments Property
-     -  Data Type
+     - Exact Departments Property
+     - Exact Data Type
    * - Id
      - Code
      - "string"
@@ -177,20 +177,20 @@ The following properties are synchronized between a Tidsbanken Avdeling and a  D
      - "string"
 
 
-Tidsbanken Kunde to  Accounts
------------------------------
-Every Tidsbanken Kunde will be synchronized with a  Accounts.
+Tidsbanken Kunde to Exact Accounts
+----------------------------------
+Every Tidsbanken Kunde will be synchronized with a Exact Accounts.
 
-Once a link between a Tidsbanken Kunde and a  Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Kunde and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Kunde and a  Accounts:
+The following properties are synchronized between a Tidsbanken Kunde and a Exact Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Kunde Property
-     -  Accounts Property
-     -  Data Type
+     - Exact Accounts Property
+     - Exact Data Type
    * - Gateadresse
      - AddressLine1
      - "string"
