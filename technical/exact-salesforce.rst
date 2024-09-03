@@ -2,12 +2,60 @@
 Exact to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-03 08:16:57
+Generated: 2024-09-03 08:20:40
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Exact to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Exact Accounts to Salesforce Organization
+-----------------------------------------
+Every Exact Accounts will be synchronized with a Salesforce Organization.
+
+Once a link between a Exact Accounts and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Accounts and a Salesforce Organization:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Accounts Property
+     - Salesforce Organization Property
+     - Salesforce Data Type
+
+
+Exact Departments to Salesforce Organization
+--------------------------------------------
+Every Exact Departments will be synchronized with a Salesforce Organization.
+
+Once a link between a Exact Departments and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Departments and a Salesforce Organization:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Departments Property
+     - Salesforce Organization Property
+     - Salesforce Data Type
+
+
+Exact Divisions to Salesforce Organization
+------------------------------------------
+Every Exact Divisions will be synchronized with a Salesforce Organization.
+
+Once a link between a Exact Divisions and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Divisions and a Salesforce Organization:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Divisions Property
+     - Salesforce Organization Property
+     - Salesforce Data Type
+
 
 Exact Contacts to Salesforce Contact
 ------------------------------------
