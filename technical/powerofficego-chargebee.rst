@@ -2,27 +2,27 @@
 Powerofficego to Chargebee Dataflow
 ===================================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:58:37
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Powerofficego Contactperson to  Customer
-----------------------------------------
-Every Powerofficego Contactperson will be synchronized with a  Customer.
+Powerofficego Contactperson to Chargebee Customer
+-------------------------------------------------
+Every Powerofficego Contactperson will be synchronized with a Chargebee Customer.
 
-Once a link between a Powerofficego Contactperson and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Contactperson and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Contactperson and a  Customer:
+The following properties are synchronized between a Powerofficego Contactperson and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Contactperson Property
-     -  Customer Property
-     -  Data Type
+     - Chargebee Customer Property
+     - Chargebee Data Type
    * - emailAddress
      - email
      - "string"
@@ -34,22 +34,22 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
 
 
-Powerofficego Customers to  Customer
-------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Customers and a  Customer must be established.
+Powerofficego Customers to Chargebee Customer
+---------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers and a Chargebee Customer must be established.
 
-A new  Customer will be created from a Powerofficego Customers if it is connected to a Powerofficego Salesorders, or Salesorderlines that is synchronized into .
+A new Chargebee Customer will be created from a Powerofficego Customers if it is connected to a Powerofficego Salesorders, or Salesorderlines that is synchronized into Chargebee.
 
-Once a link between a Powerofficego Customers and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers and a  Customer:
+The following properties are synchronized between a Powerofficego Customers and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers Property
-     -  Customer Property
-     -  Data Type
+     - Chargebee Customer Property
+     - Chargebee Data Type
 
 
 Powerofficego Customers to  Business_entity
