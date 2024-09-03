@@ -2,7 +2,7 @@
 Freshteam to Exact Dataflow
 ===========================
 
-Generated: 2024-09-03 08:14:49
+Generated: 2024-09-03 08:16:35
 
 Introduction
 ------------
@@ -80,36 +80,36 @@ The following properties are synchronized between a Freshteam Employee and a  Co
      - "string"
 
 
-Freshteam Department to  Departments
-------------------------------------
-Every Freshteam Department will be synchronized with a  Departments.
+Freshteam Department to Exact Departments
+-----------------------------------------
+Every Freshteam Department will be synchronized with a Exact Departments.
 
-Once a link between a Freshteam Department and a  Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Department and a Exact Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Department and a  Departments:
+The following properties are synchronized between a Freshteam Department and a Exact Departments:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Department Property
-     -  Departments Property
-     -  Data Type
+     - Exact Departments Property
+     - Exact Data Type
 
 
-Freshteam Employee to  Employees
---------------------------------
-Every Freshteam Employee will be synchronized with a  Employees.
+Freshteam Employee to Exact Employees
+-------------------------------------
+Every Freshteam Employee will be synchronized with a Exact Employees.
 
-Once a link between a Freshteam Employee and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Employee and a Exact Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Employee and a  Employees:
+The following properties are synchronized between a Freshteam Employee and a Exact Employees:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Employee Property
-     -  Employees Property
-     -  Data Type
+     - Exact Employees Property
+     - Exact Data Type
    * - date_of_birth
      - BirthDate
      - "string"
