@@ -2,27 +2,27 @@
 ZohoCRM to Exact Dataflow
 =========================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:20:40
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from ZohoCRM to Exact. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-ZohoCRM Account to  Accounts
-----------------------------
-Every ZohoCRM Account will be synchronized with a  Accounts.
+ZohoCRM Account to Exact Accounts
+---------------------------------
+Every ZohoCRM Account will be synchronized with a Exact Accounts.
 
-Once a link between a ZohoCRM Account and a  Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Account and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Account and a  Accounts:
+The following properties are synchronized between a ZohoCRM Account and a Exact Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Account Property
-     -  Accounts Property
-     -  Data Type
+     - Exact Accounts Property
+     - Exact Data Type
    * - Account_Name
      - Name
      - "string"
@@ -52,20 +52,20 @@ The following properties are synchronized between a ZohoCRM Account and a  Accou
      - "string"
 
 
-ZohoCRM Contact to  Contacts
-----------------------------
-Every ZohoCRM Contact will be synchronized with a  Contacts.
+ZohoCRM Contact to Exact Contacts
+---------------------------------
+Every ZohoCRM Contact will be synchronized with a Exact Contacts.
 
-Once a link between a ZohoCRM Contact and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Contact and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Contact and a  Contacts:
+The following properties are synchronized between a ZohoCRM Contact and a Exact Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Contact Property
-     -  Contacts Property
-     -  Data Type
+     - Exact Contacts Property
+     - Exact Data Type
    * - Email
      - Email
      - "string"
@@ -104,20 +104,20 @@ The following properties are synchronized between a ZohoCRM Contact and a  Conta
      - "string"
 
 
-ZohoCRM Deal to  Quotations
----------------------------
-Every ZohoCRM Deal will be synchronized with a  Quotations.
+ZohoCRM Deal to Exact Quotations
+--------------------------------
+Every ZohoCRM Deal will be synchronized with a Exact Quotations.
 
-Once a link between a ZohoCRM Deal and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Deal and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Deal and a  Quotations:
+The following properties are synchronized between a ZohoCRM Deal and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Deal Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
 
 
 ZohoCRM Contact to Exact Addresses
