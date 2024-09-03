@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-09-03 00:00:00
+Generated: 2024-09-03 00:00:29
 
 Introduction
 ------------
@@ -32,32 +32,6 @@ The following properties are synchronized between a Shopify Inventoryitem and a 
 
    * - Shopify Inventoryitem Property
      -  Product Property
-     -  Data Type
-
-
-Shopify Inventoryitem to  Products
-----------------------------------
-Before any synchronization can take place, a link between a Shopify Inventoryitem and a  Products must be established.
-
-A Shopify Inventoryitem will merge with a  Products if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Inventoryitem Property
-     -  Products Property
-   * - sku
-     - sku
-
-Once a link between a Shopify Inventoryitem and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Inventoryitem and a  Products:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Inventoryitem Property
-     -  Products Property
      -  Data Type
 
 
