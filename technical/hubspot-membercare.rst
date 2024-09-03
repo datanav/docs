@@ -2,7 +2,7 @@
 HubSpot to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-03 13:24:01
+Generated: 2024-09-03 13:40:57
 
 Introduction
 ------------
@@ -1240,6 +1240,9 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - HubSpot Lineitemdealassociation Property
      - Membercare Invoices Property
      - Membercare Data Type
+   * - toObjectId (Dependant on having wd:Q190581 in sesam_simpleAssociationTypes)
+     - id
+     - "string"
 
 
 HubSpot Lineitemdealassociationtype to Membercare Companycategories
@@ -1272,6 +1275,9 @@ The following properties are synchronized between a HubSpot Lineitemquoteassocia
    * - HubSpot Lineitemquoteassociation Property
      - Membercare Invoices Property
      - Membercare Data Type
+   * - toObjectId (Dependant on having wd:Q190581 in sesam_simpleAssociationTypes)
+     - id
+     - "string"
 
 
 HubSpot Lineitemquoteassociationtype to Membercare Companycategories
@@ -1384,6 +1390,9 @@ The following properties are synchronized between a HubSpot Quotedealassociation
    * - HubSpot Quotedealassociation Property
      - Membercare Invoices Property
      - Membercare Data Type
+   * - toObjectId (Dependant on having wd:Q190581 in sesam_simpleAssociationTypes)
+     - id
+     - "string"
 
 
 HubSpot Quotedealassociationtype to Membercare Companycategories
@@ -1416,6 +1425,9 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
    * - HubSpot Quotequotetemplateassociation Property
      - Membercare Invoices Property
      - Membercare Data Type
+   * - toObjectId (Dependant on having wd:Q190581 in sesam_simpleAssociationTypes)
+     - id
+     - "string"
 
 
 HubSpot Quotequotetemplateassociationtype to Membercare Companycategories
