@@ -2,7 +2,7 @@
 Keap to Membercare Dataflow
 ===========================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Keap Companies and a  Compan
    * - Keap Companies Property
      -  Companies Property
      -  Data Type
+   * - company_name
+     - companyName
+     - "string"
 
