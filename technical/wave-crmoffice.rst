@@ -2,7 +2,7 @@
 Wave Financial to Crmoffice Dataflow
 ====================================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -56,20 +56,20 @@ The following properties are synchronized between a Wave Product and a  Companie
      -  Data Type
 
 
-Wave Customer to  Contacts
---------------------------
-Every Wave Customer will be synchronized with a  Contacts.
+Wave Customer to Crmoffice Contacts
+-----------------------------------
+Every Wave Customer will be synchronized with a Crmoffice Contacts.
 
-Once a link between a Wave Customer and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a  Contacts:
+The following properties are synchronized between a Wave Customer and a Crmoffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     -  Contacts Property
-     -  Data Type
+     - Crmoffice Contacts Property
+     - Crmoffice Data Type
    * - firstName
      - givenName
      - "string"
@@ -81,20 +81,20 @@ The following properties are synchronized between a Wave Customer and a  Contact
      - "string"
 
 
-Wave Vendor to  Contacts
-------------------------
-Every Wave Vendor will be synchronized with a  Contacts.
+Wave Vendor to Crmoffice Contacts
+---------------------------------
+Every Wave Vendor will be synchronized with a Crmoffice Contacts.
 
-Once a link between a Wave Vendor and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a  Contacts:
+The following properties are synchronized between a Wave Vendor and a Crmoffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     -  Contacts Property
-     -  Data Type
+     - Crmoffice Contacts Property
+     - Crmoffice Data Type
    * - firstName
      - givenName
      - "string"
