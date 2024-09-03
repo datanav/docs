@@ -2,12 +2,60 @@
 Webcrm to Businessnxt Dataflow
 ==============================
 
-Generated: 2024-09-03 09:02:43
+Generated: 2024-09-03 09:11:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Webcrm to Businessnxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Webcrm Opportunities to Businessnxt Order
+-----------------------------------------
+Every Webcrm Opportunities will be synchronized with a Businessnxt Order.
+
+Once a link between a Webcrm Opportunities and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Webcrm Opportunities and a Businessnxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Webcrm Opportunities Property
+     - Businessnxt Order Property
+     - Businessnxt Data Type
+
+
+Webcrm Organisations to Businessnxt Address
+-------------------------------------------
+Every Webcrm Organisations will be synchronized with a Businessnxt Address.
+
+Once a link between a Webcrm Organisations and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Webcrm Organisations and a Businessnxt Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Webcrm Organisations Property
+     - Businessnxt Address Property
+     - Businessnxt Data Type
+
+
+Webcrm Quotationline to Businessnxt Order
+-----------------------------------------
+Every Webcrm Quotationline will be synchronized with a Businessnxt Order.
+
+Once a link between a Webcrm Quotationline and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Webcrm Quotationline and a Businessnxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Webcrm Quotationline Property
+     - Businessnxt Order Property
+     - Businessnxt Data Type
+
 
 Webcrm Organisations to Businessnxt Country
 -------------------------------------------
