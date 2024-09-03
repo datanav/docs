@@ -2,7 +2,7 @@
 Exact to Superoffice Dataflow
 =============================
 
-Generated: 2024-09-03 08:17:46
+Generated: 2024-09-03 08:20:40
 
 Introduction
 ------------
@@ -31,6 +31,86 @@ The following properties are synchronized between a Exact Salesorders and a Supe
    * - Discount
      - DiscountPercent
      - "integer"
+
+
+Exact Accounts to Superoffice Contact
+-------------------------------------
+Every Exact Accounts will be synchronized with a Superoffice Contact.
+
+Once a link between a Exact Accounts and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Accounts and a Superoffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Accounts Property
+     - Superoffice Contact Property
+     - Superoffice Data Type
+
+
+Exact Contacts to Superoffice Person
+------------------------------------
+Every Exact Contacts will be synchronized with a Superoffice Person.
+
+Once a link between a Exact Contacts and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Contacts and a Superoffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Contacts Property
+     - Superoffice Person Property
+     - Superoffice Data Type
+
+
+Exact Departments to Superoffice Contact
+----------------------------------------
+Every Exact Departments will be synchronized with a Superoffice Contact.
+
+Once a link between a Exact Departments and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Departments and a Superoffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Departments Property
+     - Superoffice Contact Property
+     - Superoffice Data Type
+
+
+Exact Divisions to Superoffice Contact
+--------------------------------------
+Every Exact Divisions will be synchronized with a Superoffice Contact.
+
+Once a link between a Exact Divisions and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Divisions and a Superoffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Divisions Property
+     - Superoffice Contact Property
+     - Superoffice Data Type
+
+
+Exact Employees to Superoffice Person
+-------------------------------------
+Every Exact Employees will be synchronized with a Superoffice Person.
+
+Once a link between a Exact Employees and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Employees and a Superoffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Employees Property
+     - Superoffice Person Property
+     - Superoffice Data Type
 
 
 Exact Items to Superoffice Product
