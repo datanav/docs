@@ -2,7 +2,7 @@
 Exact to Chargebee Dataflow
 ===========================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -219,36 +219,36 @@ The following properties are synchronized between a Exact Vatcodes and a  Curren
      -  Data Type
 
 
-Exact Items to  Item
---------------------
-Every Exact Items will be synchronized with a  Item.
+Exact Items to Chargebee Item
+-----------------------------
+Every Exact Items will be synchronized with a Chargebee Item.
 
-Once a link between a Exact Items and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Items and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Items and a  Item:
+The following properties are synchronized between a Exact Items and a Chargebee Item:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Items Property
-     -  Item Property
-     -  Data Type
+     - Chargebee Item Property
+     - Chargebee Data Type
 
 
-Exact Salesorders to  Order
----------------------------
-Every Exact Salesorders will be synchronized with a  Order.
+Exact Salesorders to Chargebee Order
+------------------------------------
+Every Exact Salesorders will be synchronized with a Chargebee Order.
 
-Once a link between a Exact Salesorders and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Salesorders and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Salesorders and a  Order:
+The following properties are synchronized between a Exact Salesorders and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Salesorders Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
    * - Currency
      - currency_code
      - "string"
