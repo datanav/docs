@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-03 08:14:49
+Generated: 2024-09-03 08:16:35
 
 Introduction
 ------------
@@ -40,20 +40,20 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
 
 
-Salesforce Contact to  Contacts
--------------------------------
-Every Salesforce Contact will be synchronized with a  Contacts.
+Salesforce Contact to Exact Contacts
+------------------------------------
+Every Salesforce Contact will be synchronized with a Exact Contacts.
 
-Once a link between a Salesforce Contact and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Contact and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Contact and a  Contacts:
+The following properties are synchronized between a Salesforce Contact and a Exact Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Contact Property
-     -  Contacts Property
-     -  Data Type
+     - Exact Contacts Property
+     - Exact Data Type
    * - Birthdate
      - BirthDate
      - "string"
@@ -89,20 +89,20 @@ The following properties are synchronized between a Salesforce Contact and a  Co
      - "string"
 
 
-Salesforce Organization to  Addresses
--------------------------------------
-Every Salesforce Organization will be synchronized with a  Addresses.
+Salesforce Organization to Exact Addresses
+------------------------------------------
+Every Salesforce Organization will be synchronized with a Exact Addresses.
 
-Once a link between a Salesforce Organization and a  Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Organization and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Organization and a  Addresses:
+The following properties are synchronized between a Salesforce Organization and a Exact Addresses:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Organization Property
-     -  Addresses Property
-     -  Data Type
+     - Exact Addresses Property
+     - Exact Data Type
    * - City
      - City
      - "string"
@@ -111,18 +111,18 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
 
 
-Salesforce Product2 to  Items
------------------------------
-Every Salesforce Product2 will be synchronized with a  Items.
+Salesforce Product2 to Exact Items
+----------------------------------
+Every Salesforce Product2 will be synchronized with a Exact Items.
 
-Once a link between a Salesforce Product2 and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Product2 and a Exact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Product2 and a  Items:
+The following properties are synchronized between a Salesforce Product2 and a Exact Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Product2 Property
-     -  Items Property
-     -  Data Type
+     - Exact Items Property
+     - Exact Data Type
 
