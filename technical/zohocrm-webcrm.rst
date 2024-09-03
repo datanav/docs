@@ -2,7 +2,7 @@
 ZohoCRM to Webcrm Dataflow
 ==========================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -67,20 +67,20 @@ The following properties are synchronized between a ZohoCRM Account and a  Organ
      - "string"
 
 
-ZohoCRM Deal to  Opportunities
-------------------------------
-Every ZohoCRM Deal will be synchronized with a  Opportunities.
+ZohoCRM Deal to Webcrm Opportunities
+------------------------------------
+Every ZohoCRM Deal will be synchronized with a Webcrm Opportunities.
 
-Once a link between a ZohoCRM Deal and a  Opportunities is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Deal and a Webcrm Opportunities is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Deal and a  Opportunities:
+The following properties are synchronized between a ZohoCRM Deal and a Webcrm Opportunities:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Deal Property
-     -  Opportunities Property
-     -  Data Type
+     - Webcrm Opportunities Property
+     - Webcrm Data Type
    * - Account_Name.id
      - OpportunityOrganisationId
      - "string"
