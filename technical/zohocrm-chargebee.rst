@@ -2,7 +2,7 @@
 ZohoCRM to Chargebee Dataflow
 =============================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -77,20 +77,20 @@ The following properties are synchronized between a ZohoCRM Deal and a  Order:
      - "string"
 
 
-ZohoCRM Contact to  Customer
-----------------------------
-Every ZohoCRM Contact will be synchronized with a  Customer.
+ZohoCRM Contact to Chargebee Customer
+-------------------------------------
+Every ZohoCRM Contact will be synchronized with a Chargebee Customer.
 
-Once a link between a ZohoCRM Contact and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Contact and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Contact and a  Customer:
+The following properties are synchronized between a ZohoCRM Contact and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Contact Property
-     -  Customer Property
-     -  Data Type
+     - Chargebee Customer Property
+     - Chargebee Data Type
    * - Email
      - email
      - "string"
