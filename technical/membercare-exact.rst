@@ -2,7 +2,7 @@
 Membercare to Exact Dataflow
 ============================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,6 +23,24 @@ The following properties are synchronized between a Membercare Companies and a E
    * - Membercare Companies Property
      - Exact Accounts Property
      - Exact Data Type
+   * - addresses.country.id
+     - Country
+     - "string"
+   * - addresses.id
+     - ID
+     - "string"
+   * - addresses.postalCode.city
+     - City
+     - "string"
+   * - addresses.postalCode.zipCode
+     - Postcode
+     - "string"
+   * - companyName
+     - Name
+     - "string"
+   * - url
+     - Website
+     - "string"
 
 
 Membercare Companycategories to Exact Currencies
@@ -55,6 +73,9 @@ The following properties are synchronized between a Membercare Countries and a E
    * - Membercare Countries Property
      - Exact Currencies Property
      - Exact Data Type
+   * - name
+     - Description
+     - "string"
 
 
 Membercare Companies to Exact Addresses
