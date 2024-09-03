@@ -2,7 +2,7 @@
 Exact to Superoffice Dataflow
 =============================
 
-Generated: 2024-09-03 08:20:40
+Generated: 2024-09-03 08:20:45
 
 Introduction
 ------------
@@ -47,6 +47,12 @@ The following properties are synchronized between a Exact Accounts and a Superof
    * - Exact Accounts Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - Name
+     - Name
+     - "string"
+   * - Website
+     - Urls.Value
+     - "string"
 
 
 Exact Contacts to Superoffice Person
@@ -63,6 +69,9 @@ The following properties are synchronized between a Exact Contacts and a Superof
    * - Exact Contacts Property
      - Superoffice Person Property
      - Superoffice Data Type
+   * - BirthDate
+     - BirthDate
+     - N/A
 
 
 Exact Departments to Superoffice Contact
@@ -79,6 +88,9 @@ The following properties are synchronized between a Exact Departments and a Supe
    * - Exact Departments Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - Code
+     - OrgNr (Dependant on having wd:Q2366457 in Country.TwoLetterISOCountry)
+     - "string"
 
 
 Exact Divisions to Superoffice Contact
@@ -95,6 +107,9 @@ The following properties are synchronized between a Exact Divisions and a Supero
    * - Exact Divisions Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - Website
+     - Urls.Value
+     - "string"
 
 
 Exact Employees to Superoffice Person
@@ -111,6 +126,21 @@ The following properties are synchronized between a Exact Employees and a Supero
    * - Exact Employees Property
      - Superoffice Person Property
      - Superoffice Data Type
+   * - BirthDate
+     - BirthDate
+     - N/A
+   * - City
+     - Address.Street.City
+     - "string"
+   * - Country
+     - Country.CountryId
+     - "integer"
+   * - ID
+     - PersonId
+     - "integer"
+   * - Postcode
+     - Address.Street.Zipcode
+     - "string"
 
 
 Exact Items to Superoffice Product
