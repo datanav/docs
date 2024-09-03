@@ -2,7 +2,7 @@
 Businessnxt to Membercare Dataflow
 ==================================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -55,6 +55,9 @@ The following properties are synchronized between a Businessnxt Productcategory 
    * - Businessnxt Productcategory Property
      -  Companycategories Property
      -  Data Type
+   * - description
+     - description
+     - "string"
 
 
 Businessnxt Vat to  Companycategories
@@ -71,6 +74,9 @@ The following properties are synchronized between a Businessnxt Vat and a  Compa
    * - Businessnxt Vat Property
      -  Companycategories Property
      -  Data Type
+   * - description
+     - description
+     - "string"
 
 
 Businessnxt Address to Membercare Companies
