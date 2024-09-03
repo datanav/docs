@@ -2,27 +2,27 @@
 ZohoCRM to Keap Dataflow
 ========================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from ZohoCRM to Keap. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-ZohoCRM Account to  Companies
------------------------------
-Every ZohoCRM Account will be synchronized with a  Companies.
+ZohoCRM Account to Keap Companies
+---------------------------------
+Every ZohoCRM Account will be synchronized with a Keap Companies.
 
-Once a link between a ZohoCRM Account and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Account and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Account and a  Companies:
+The following properties are synchronized between a ZohoCRM Account and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Account Property
-     -  Companies Property
-     -  Data Type
+     - Keap Companies Property
+     - Keap Data Type
    * - Account_Name
      - company_name
      - "string"
@@ -43,20 +43,20 @@ The following properties are synchronized between a ZohoCRM Account and a  Compa
      - "string"
 
 
-ZohoCRM Contact to  Contacts
-----------------------------
-Every ZohoCRM Contact will be synchronized with a  Contacts.
+ZohoCRM Contact to Keap Contacts
+--------------------------------
+Every ZohoCRM Contact will be synchronized with a Keap Contacts.
 
-Once a link between a ZohoCRM Contact and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Contact and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Contact and a  Contacts:
+The following properties are synchronized between a ZohoCRM Contact and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Contact Property
-     -  Contacts Property
-     -  Data Type
+     - Keap Contacts Property
+     - Keap Data Type
 
 
 ZohoCRM Deal to Keap Opportunity
