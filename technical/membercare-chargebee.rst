@@ -2,7 +2,7 @@
 Membercare to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-03 13:23:54
+Generated: 2024-09-03 13:24:01
 
 Introduction
 ------------
@@ -76,6 +76,9 @@ The following properties are synchronized between a Membercare Invoices and a Ch
      - "string"
    * - invoiceItems.quantity
      - order_line_items.amount
+     - "string"
+   * - invoiceItems.unitPrice
+     - order_line_items.unit_price
      - "string"
 
 
