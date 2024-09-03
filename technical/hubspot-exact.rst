@@ -2,27 +2,27 @@
 HubSpot to Exact Dataflow
 =========================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:20:40
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Exact. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-HubSpot Company to  Accounts
-----------------------------
-Every HubSpot Company will be synchronized with a  Accounts.
+HubSpot Company to Exact Accounts
+---------------------------------
+Every HubSpot Company will be synchronized with a Exact Accounts.
 
-Once a link between a HubSpot Company and a  Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a  Accounts:
+The following properties are synchronized between a HubSpot Company and a Exact Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     -  Accounts Property
-     -  Data Type
+     - Exact Accounts Property
+     - Exact Data Type
    * - properties.address
      - AddressLine1
      - "string"
@@ -49,20 +49,20 @@ The following properties are synchronized between a HubSpot Company and a  Accou
      - "string"
 
 
-HubSpot Contact to  Contacts
-----------------------------
-Every HubSpot Contact will be synchronized with a  Contacts.
+HubSpot Contact to Exact Contacts
+---------------------------------
+Every HubSpot Contact will be synchronized with a Exact Contacts.
 
-Once a link between a HubSpot Contact and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contact and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contact and a  Contacts:
+The following properties are synchronized between a HubSpot Contact and a Exact Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contact Property
-     -  Contacts Property
-     -  Data Type
+     - Exact Contacts Property
+     - Exact Data Type
    * - properties.city
      - City
      - "string"
@@ -89,55 +89,55 @@ The following properties are synchronized between a HubSpot Contact and a  Conta
      - "string"
 
 
-HubSpot Contactcompanyassociation to  Contacts
-----------------------------------------------
-Every HubSpot Contactcompanyassociation will be synchronized with a  Contacts.
+HubSpot Contactcompanyassociation to Exact Contacts
+---------------------------------------------------
+Every HubSpot Contactcompanyassociation will be synchronized with a Exact Contacts.
 
-Once a link between a HubSpot Contactcompanyassociation and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contactcompanyassociation and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contactcompanyassociation and a  Contacts:
+The following properties are synchronized between a HubSpot Contactcompanyassociation and a Exact Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contactcompanyassociation Property
-     -  Contacts Property
-     -  Data Type
+     - Exact Contacts Property
+     - Exact Data Type
 
 
-HubSpot Contactcompanyassociationtype to  Currencies
-----------------------------------------------------
-Every HubSpot Contactcompanyassociationtype will be synchronized with a  Currencies.
+HubSpot Contactcompanyassociationtype to Exact Currencies
+---------------------------------------------------------
+Every HubSpot Contactcompanyassociationtype will be synchronized with a Exact Currencies.
 
-Once a link between a HubSpot Contactcompanyassociationtype and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contactcompanyassociationtype and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contactcompanyassociationtype and a  Currencies:
+The following properties are synchronized between a HubSpot Contactcompanyassociationtype and a Exact Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contactcompanyassociationtype Property
-     -  Currencies Property
-     -  Data Type
+     - Exact Currencies Property
+     - Exact Data Type
    * - label
      - Description
      - "string"
 
 
-HubSpot Deal to  Quotations
----------------------------
-Every HubSpot Deal will be synchronized with a  Quotations.
+HubSpot Deal to Exact Quotations
+--------------------------------
+Every HubSpot Deal will be synchronized with a Exact Quotations.
 
-Once a link between a HubSpot Deal and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a  Quotations:
+The following properties are synchronized between a HubSpot Deal and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
    * - properties.closedate
      - DeliveryDate
      - "string"
@@ -149,316 +149,316 @@ The following properties are synchronized between a HubSpot Deal and a  Quotatio
      - "string"
 
 
-HubSpot Dealcompanyassociation to  Quotations
----------------------------------------------
-Every HubSpot Dealcompanyassociation will be synchronized with a  Quotations.
+HubSpot Dealcompanyassociation to Exact Quotations
+--------------------------------------------------
+Every HubSpot Dealcompanyassociation will be synchronized with a Exact Quotations.
 
-Once a link between a HubSpot Dealcompanyassociation and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Dealcompanyassociation and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Dealcompanyassociation and a  Quotations:
+The following properties are synchronized between a HubSpot Dealcompanyassociation and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Dealcompanyassociation Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
 
 
-HubSpot Dealcompanyassociationtype to  Currencies
--------------------------------------------------
-Every HubSpot Dealcompanyassociationtype will be synchronized with a  Currencies.
+HubSpot Dealcompanyassociationtype to Exact Currencies
+------------------------------------------------------
+Every HubSpot Dealcompanyassociationtype will be synchronized with a Exact Currencies.
 
-Once a link between a HubSpot Dealcompanyassociationtype and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Dealcompanyassociationtype and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Dealcompanyassociationtype and a  Currencies:
+The following properties are synchronized between a HubSpot Dealcompanyassociationtype and a Exact Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Dealcompanyassociationtype Property
-     -  Currencies Property
-     -  Data Type
+     - Exact Currencies Property
+     - Exact Data Type
    * - label
      - Description
      - "string"
 
 
-HubSpot Dealcontactassociation to  Quotations
----------------------------------------------
-Every HubSpot Dealcontactassociation will be synchronized with a  Quotations.
+HubSpot Dealcontactassociation to Exact Quotations
+--------------------------------------------------
+Every HubSpot Dealcontactassociation will be synchronized with a Exact Quotations.
 
-Once a link between a HubSpot Dealcontactassociation and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Dealcontactassociation and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Dealcontactassociation and a  Quotations:
+The following properties are synchronized between a HubSpot Dealcontactassociation and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Dealcontactassociation Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
 
 
-HubSpot Dealcontactassociationtype to  Currencies
--------------------------------------------------
-Every HubSpot Dealcontactassociationtype will be synchronized with a  Currencies.
+HubSpot Dealcontactassociationtype to Exact Currencies
+------------------------------------------------------
+Every HubSpot Dealcontactassociationtype will be synchronized with a Exact Currencies.
 
-Once a link between a HubSpot Dealcontactassociationtype and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Dealcontactassociationtype and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Dealcontactassociationtype and a  Currencies:
+The following properties are synchronized between a HubSpot Dealcontactassociationtype and a Exact Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Dealcontactassociationtype Property
-     -  Currencies Property
-     -  Data Type
+     - Exact Currencies Property
+     - Exact Data Type
    * - label
      - Description
      - "string"
 
 
-HubSpot Lineitem to  Quotations
--------------------------------
-Every HubSpot Lineitem will be synchronized with a  Quotations.
+HubSpot Lineitem to Exact Quotations
+------------------------------------
+Every HubSpot Lineitem will be synchronized with a Exact Quotations.
 
-Once a link between a HubSpot Lineitem and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitem and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitem and a  Quotations:
+The following properties are synchronized between a HubSpot Lineitem and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitem Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
 
 
-HubSpot Lineitemdealassociation to  Quotations
-----------------------------------------------
-Every HubSpot Lineitemdealassociation will be synchronized with a  Quotations.
+HubSpot Lineitemdealassociation to Exact Quotations
+---------------------------------------------------
+Every HubSpot Lineitemdealassociation will be synchronized with a Exact Quotations.
 
-Once a link between a HubSpot Lineitemdealassociation and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitemdealassociation and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitemdealassociation and a  Quotations:
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitemdealassociation Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
 
 
-HubSpot Lineitemdealassociationtype to  Currencies
---------------------------------------------------
-Every HubSpot Lineitemdealassociationtype will be synchronized with a  Currencies.
+HubSpot Lineitemdealassociationtype to Exact Currencies
+-------------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a Exact Currencies.
 
-Once a link between a HubSpot Lineitemdealassociationtype and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitemdealassociationtype and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a  Currencies:
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a Exact Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitemdealassociationtype Property
-     -  Currencies Property
-     -  Data Type
+     - Exact Currencies Property
+     - Exact Data Type
    * - label
      - Description
      - "string"
 
 
-HubSpot Lineitemquoteassociation to  Quotations
------------------------------------------------
-Every HubSpot Lineitemquoteassociation will be synchronized with a  Quotations.
+HubSpot Lineitemquoteassociation to Exact Quotations
+----------------------------------------------------
+Every HubSpot Lineitemquoteassociation will be synchronized with a Exact Quotations.
 
-Once a link between a HubSpot Lineitemquoteassociation and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitemquoteassociation and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitemquoteassociation and a  Quotations:
+The following properties are synchronized between a HubSpot Lineitemquoteassociation and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitemquoteassociation Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
 
 
-HubSpot Lineitemquoteassociationtype to  Currencies
----------------------------------------------------
-Every HubSpot Lineitemquoteassociationtype will be synchronized with a  Currencies.
+HubSpot Lineitemquoteassociationtype to Exact Currencies
+--------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a Exact Currencies.
 
-Once a link between a HubSpot Lineitemquoteassociationtype and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitemquoteassociationtype and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a  Currencies:
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a Exact Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitemquoteassociationtype Property
-     -  Currencies Property
-     -  Data Type
+     - Exact Currencies Property
+     - Exact Data Type
    * - label
      - Description
      - "string"
 
 
-HubSpot Quotecompanyassociation to  Quotations
-----------------------------------------------
-Every HubSpot Quotecompanyassociation will be synchronized with a  Quotations.
+HubSpot Quotecompanyassociation to Exact Quotations
+---------------------------------------------------
+Every HubSpot Quotecompanyassociation will be synchronized with a Exact Quotations.
 
-Once a link between a HubSpot Quotecompanyassociation and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotecompanyassociation and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotecompanyassociation and a  Quotations:
+The following properties are synchronized between a HubSpot Quotecompanyassociation and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotecompanyassociation Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
 
 
-HubSpot Quotecompanyassociationtype to  Currencies
---------------------------------------------------
-Every HubSpot Quotecompanyassociationtype will be synchronized with a  Currencies.
+HubSpot Quotecompanyassociationtype to Exact Currencies
+-------------------------------------------------------
+Every HubSpot Quotecompanyassociationtype will be synchronized with a Exact Currencies.
 
-Once a link between a HubSpot Quotecompanyassociationtype and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotecompanyassociationtype and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotecompanyassociationtype and a  Currencies:
+The following properties are synchronized between a HubSpot Quotecompanyassociationtype and a Exact Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotecompanyassociationtype Property
-     -  Currencies Property
-     -  Data Type
+     - Exact Currencies Property
+     - Exact Data Type
    * - label
      - Description
      - "string"
 
 
-HubSpot Quotecontactassociation to  Quotations
-----------------------------------------------
-Every HubSpot Quotecontactassociation will be synchronized with a  Quotations.
+HubSpot Quotecontactassociation to Exact Quotations
+---------------------------------------------------
+Every HubSpot Quotecontactassociation will be synchronized with a Exact Quotations.
 
-Once a link between a HubSpot Quotecontactassociation and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotecontactassociation and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotecontactassociation and a  Quotations:
+The following properties are synchronized between a HubSpot Quotecontactassociation and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotecontactassociation Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
 
 
-HubSpot Quotecontactassociationtype to  Currencies
---------------------------------------------------
-Every HubSpot Quotecontactassociationtype will be synchronized with a  Currencies.
+HubSpot Quotecontactassociationtype to Exact Currencies
+-------------------------------------------------------
+Every HubSpot Quotecontactassociationtype will be synchronized with a Exact Currencies.
 
-Once a link between a HubSpot Quotecontactassociationtype and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotecontactassociationtype and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotecontactassociationtype and a  Currencies:
+The following properties are synchronized between a HubSpot Quotecontactassociationtype and a Exact Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotecontactassociationtype Property
-     -  Currencies Property
-     -  Data Type
+     - Exact Currencies Property
+     - Exact Data Type
    * - label
      - Description
      - "string"
 
 
-HubSpot Quotedealassociation to  Quotations
--------------------------------------------
-Every HubSpot Quotedealassociation will be synchronized with a  Quotations.
+HubSpot Quotedealassociation to Exact Quotations
+------------------------------------------------
+Every HubSpot Quotedealassociation will be synchronized with a Exact Quotations.
 
-Once a link between a HubSpot Quotedealassociation and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotedealassociation and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotedealassociation and a  Quotations:
+The following properties are synchronized between a HubSpot Quotedealassociation and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotedealassociation Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
 
 
-HubSpot Quotedealassociationtype to  Currencies
------------------------------------------------
-Every HubSpot Quotedealassociationtype will be synchronized with a  Currencies.
+HubSpot Quotedealassociationtype to Exact Currencies
+----------------------------------------------------
+Every HubSpot Quotedealassociationtype will be synchronized with a Exact Currencies.
 
-Once a link between a HubSpot Quotedealassociationtype and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotedealassociationtype and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotedealassociationtype and a  Currencies:
+The following properties are synchronized between a HubSpot Quotedealassociationtype and a Exact Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotedealassociationtype Property
-     -  Currencies Property
-     -  Data Type
+     - Exact Currencies Property
+     - Exact Data Type
    * - label
      - Description
      - "string"
 
 
-HubSpot Quotequotetemplateassociation to  Quotations
-----------------------------------------------------
-Every HubSpot Quotequotetemplateassociation will be synchronized with a  Quotations.
+HubSpot Quotequotetemplateassociation to Exact Quotations
+---------------------------------------------------------
+Every HubSpot Quotequotetemplateassociation will be synchronized with a Exact Quotations.
 
-Once a link between a HubSpot Quotequotetemplateassociation and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotequotetemplateassociation and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotequotetemplateassociation and a  Quotations:
+The following properties are synchronized between a HubSpot Quotequotetemplateassociation and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotequotetemplateassociation Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
 
 
-HubSpot Quotequotetemplateassociationtype to  Currencies
---------------------------------------------------------
-Every HubSpot Quotequotetemplateassociationtype will be synchronized with a  Currencies.
+HubSpot Quotequotetemplateassociationtype to Exact Currencies
+-------------------------------------------------------------
+Every HubSpot Quotequotetemplateassociationtype will be synchronized with a Exact Currencies.
 
-Once a link between a HubSpot Quotequotetemplateassociationtype and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotequotetemplateassociationtype and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotequotetemplateassociationtype and a  Currencies:
+The following properties are synchronized between a HubSpot Quotequotetemplateassociationtype and a Exact Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotequotetemplateassociationtype Property
-     -  Currencies Property
-     -  Data Type
+     - Exact Currencies Property
+     - Exact Data Type
    * - label
      - Description
      - "string"
 
 
-HubSpot User to  Contacts
--------------------------
-Every HubSpot User will be synchronized with a  Contacts.
+HubSpot User to Exact Contacts
+------------------------------
+Every HubSpot User will be synchronized with a Exact Contacts.
 
-Once a link between a HubSpot User and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot User and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot User and a  Contacts:
+The following properties are synchronized between a HubSpot User and a Exact Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot User Property
-     -  Contacts Property
-     -  Data Type
+     - Exact Contacts Property
+     - Exact Data Type
    * - email
      - BusinessEmail
      - "string"
