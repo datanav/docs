@@ -2,7 +2,7 @@
 Exact to  Dataflow
 ==================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Exact Addresses and a  Count
    * - Exact Addresses Property
      -  Country Property
      -  Data Type
+   * - CountryName
+     - name
+     - "string"
 
 
 Exact Currencies to  Currency
@@ -39,6 +42,9 @@ The following properties are synchronized between a Exact Currencies and a  Curr
    * - Exact Currencies Property
      -  Currency Property
      -  Data Type
+   * - Description
+     - name
+     - "string"
 
 
 Exact Items to  Product
@@ -87,4 +93,7 @@ The following properties are synchronized between a Exact Salesorders and a  Ord
    * - Exact Salesorders Property
      -  Order Property
      -  Data Type
+   * - Discount
+     - totalDiscountAmountInCurrency
+     - "string"
 
