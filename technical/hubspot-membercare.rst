@@ -2,7 +2,7 @@
 HubSpot to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-03 13:15:40
+Generated: 2024-09-03 13:24:01
 
 Introduction
 ------------
@@ -1215,6 +1215,15 @@ The following properties are synchronized between a HubSpot Lineitem and a Membe
    * - HubSpot Lineitem Property
      - Membercare Invoices Property
      - Membercare Data Type
+   * - properties.description
+     - invoiceItems.description
+     - "string"
+   * - properties.price
+     - invoiceItems.unitPrice
+     - "string"
+   * - properties.quantity
+     - invoiceItems.quantity
+     - "string"
 
 
 HubSpot Lineitemdealassociation to Membercare Invoices
