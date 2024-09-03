@@ -2,7 +2,7 @@
 Membercare to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-03 10:03:40
+Generated: 2024-09-03 10:15:41
 
 Introduction
 ------------
@@ -54,6 +54,22 @@ The following properties are synchronized between a Membercare Invoices and a Ch
 
    * - Membercare Invoices Property
      - Chargebee Currency Property
+     - Chargebee Data Type
+
+
+Membercare Invoices to Chargebee Order
+--------------------------------------
+Every Membercare Invoices will be synchronized with a Chargebee Order.
+
+Once a link between a Membercare Invoices and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Invoices and a Chargebee Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Invoices Property
+     - Chargebee Order Property
      - Chargebee Data Type
 
 
