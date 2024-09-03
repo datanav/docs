@@ -2,27 +2,27 @@
 Tripletex to Exact Dataflow
 ===========================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:20:40
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Exact. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Customer person to  Contacts
---------------------------------------
-Every Tripletex Customer person will be synchronized with a  Contacts.
+Tripletex Customer person to Exact Contacts
+-------------------------------------------
+Every Tripletex Customer person will be synchronized with a Exact Contacts.
 
-Once a link between a Tripletex Customer person and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a  Contacts:
+The following properties are synchronized between a Tripletex Customer person and a Exact Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     -  Contacts Property
-     -  Data Type
+     - Exact Contacts Property
+     - Exact Data Type
    * - deliveryAddress.city
      - City
      - "string"
@@ -55,39 +55,39 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
 
 
-Tripletex Department to  Accounts
----------------------------------
-Every Tripletex Department will be synchronized with a  Accounts.
+Tripletex Department to Exact Accounts
+--------------------------------------
+Every Tripletex Department will be synchronized with a Exact Accounts.
 
-Once a link between a Tripletex Department and a  Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a  Accounts:
+The following properties are synchronized between a Tripletex Department and a Exact Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     -  Accounts Property
-     -  Data Type
+     - Exact Accounts Property
+     - Exact Data Type
    * - name
      - Name
      - "string"
 
 
-Tripletex Employee to  Contacts
--------------------------------
-Every Tripletex Employee will be synchronized with a  Contacts.
+Tripletex Employee to Exact Contacts
+------------------------------------
+Every Tripletex Employee will be synchronized with a Exact Contacts.
 
-Once a link between a Tripletex Employee and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a  Contacts:
+The following properties are synchronized between a Tripletex Employee and a Exact Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     -  Contacts Property
-     -  Data Type
+     - Exact Contacts Property
+     - Exact Data Type
    * - address.city
      - City
      - "string"
@@ -114,20 +114,20 @@ The following properties are synchronized between a Tripletex Employee and a  Co
      - "string"
 
 
-Tripletex Order to  Quotations
-------------------------------
-Every Tripletex Order will be synchronized with a  Quotations.
+Tripletex Order to Exact Quotations
+-----------------------------------
+Every Tripletex Order will be synchronized with a Exact Quotations.
 
-Once a link between a Tripletex Order and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Order and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Order and a  Quotations:
+The following properties are synchronized between a Tripletex Order and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Order Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
    * - currency.id
      - Currency
      - "string"
@@ -136,20 +136,20 @@ The following properties are synchronized between a Tripletex Order and a  Quota
      - "string"
 
 
-Tripletex Orderline to  Quotations
-----------------------------------
-Every Tripletex Orderline will be synchronized with a  Quotations.
+Tripletex Orderline to Exact Quotations
+---------------------------------------
+Every Tripletex Orderline will be synchronized with a Exact Quotations.
 
-Once a link between a Tripletex Orderline and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Orderline and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Orderline and a  Quotations:
+The following properties are synchronized between a Tripletex Orderline and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Orderline Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
    * - currency.id
      - Currency
      - "string"
