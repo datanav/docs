@@ -2,7 +2,7 @@
 Keap to Hubspot Dataflow
 ========================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a Keap Companies and a Hubspot
    * - Keap Companies Property
      - Hubspot Company Property
      - Hubspot Data Type
+   * - address.locality
+     - properties.city
+     - "string"
+   * - address.zip_code
+     - properties.zip
+     - "string"
+   * - company_name
+     - properties.name
+     - "string"
+   * - id
+     - id
+     - "string"
 
 
 Keap Contacts to Hubspot Contact
@@ -39,6 +51,9 @@ The following properties are synchronized between a Keap Contacts and a Hubspot 
    * - Keap Contacts Property
      - Hubspot Contact Property
      - Hubspot Data Type
+   * - birthday
+     - properties.date_of_birth
+     - "string"
 
 
 Keap Opportunity to Hubspot Deal
