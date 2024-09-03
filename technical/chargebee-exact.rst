@@ -2,12 +2,108 @@
 Chargebee to Exact Dataflow
 ===========================
 
-Generated: 2024-09-03 08:57:55
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Chargebee to Exact. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Chargebee Address to Exact Addresses
+------------------------------------
+Every Chargebee Address will be synchronized with a Exact Addresses.
+
+Once a link between a Chargebee Address and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Address and a Exact Addresses:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Address Property
+     - Exact Addresses Property
+     - Exact Data Type
+
+
+Chargebee Business_entity to Exact Accounts
+-------------------------------------------
+Every Chargebee Business_entity will be synchronized with a Exact Accounts.
+
+Once a link between a Chargebee Business_entity and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Business_entity and a Exact Accounts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Business_entity Property
+     - Exact Accounts Property
+     - Exact Data Type
+
+
+Chargebee Currency to Exact Currencies
+--------------------------------------
+Every Chargebee Currency will be synchronized with a Exact Currencies.
+
+Once a link between a Chargebee Currency and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Currency and a Exact Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Currency Property
+     - Exact Currencies Property
+     - Exact Data Type
+
+
+Chargebee Customer to Exact Contacts
+------------------------------------
+Every Chargebee Customer will be synchronized with a Exact Contacts.
+
+Once a link between a Chargebee Customer and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Customer and a Exact Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Customer Property
+     - Exact Contacts Property
+     - Exact Data Type
+
+
+Chargebee Item_family to Exact Currencies
+-----------------------------------------
+Every Chargebee Item_family will be synchronized with a Exact Currencies.
+
+Once a link between a Chargebee Item_family and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Item_family and a Exact Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Item_family Property
+     - Exact Currencies Property
+     - Exact Data Type
+
+
+Chargebee Order to Exact Quotations
+-----------------------------------
+Every Chargebee Order will be synchronized with a Exact Quotations.
+
+Once a link between a Chargebee Order and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Order and a Exact Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Order Property
+     - Exact Quotations Property
+     - Exact Data Type
+
 
 Chargebee Item to Exact Items
 -----------------------------
