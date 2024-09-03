@@ -38,6 +38,14 @@ Other :ref:`Financial technology <systemtypefintech>` Systems
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
 
+    **Chargebee**
+
+    
+    .. link-button:: system/chargebee
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
     **Smallworld**
 
     Small World Financial Services is a  provider of payment services making it easy to send and receive money internationally. 
