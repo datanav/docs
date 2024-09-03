@@ -2,7 +2,7 @@
 Wave Financial to Membercare Dataflow
 =====================================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -31,20 +31,20 @@ The following properties are synchronized between a Wave Customer and a  Compani
      - "string"
 
 
-Wave Country to  Countries
---------------------------
-Every Wave Country will be synchronized with a  Countries.
+Wave Country to Membercare Countries
+------------------------------------
+Every Wave Country will be synchronized with a Membercare Countries.
 
-Once a link between a Wave Country and a  Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Country and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Country and a  Countries:
+The following properties are synchronized between a Wave Country and a Membercare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Country Property
-     -  Countries Property
-     -  Data Type
+     - Membercare Countries Property
+     - Membercare Data Type
    * - name
      - name
      - "string"
