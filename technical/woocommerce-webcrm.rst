@@ -2,27 +2,27 @@
 Woocommerce to Webcrm Dataflow
 ==============================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Woocommerce to Webcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Woocommerce Order to  Quotationline
------------------------------------
-Every Woocommerce Order will be synchronized with a  Quotationline.
+Woocommerce Order to Webcrm Quotationline
+-----------------------------------------
+Every Woocommerce Order will be synchronized with a Webcrm Quotationline.
 
-Once a link between a Woocommerce Order and a  Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Woocommerce Order and a Webcrm Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Order and a  Quotationline:
+The following properties are synchronized between a Woocommerce Order and a Webcrm Quotationline:
 
 .. list-table::
    :header-rows: 1
 
    * - Woocommerce Order Property
-     -  Quotationline Property
-     -  Data Type
+     - Webcrm Quotationline Property
+     - Webcrm Data Type
    * - line_items.sku
      - QuotationLineCostPrice
      - "string"
@@ -40,20 +40,20 @@ The following properties are synchronized between a Woocommerce Order and a  Quo
      - "string"
 
 
-Woocommerce Product to  Products
---------------------------------
-Every Woocommerce Product will be synchronized with a  Products.
+Woocommerce Product to Webcrm Products
+--------------------------------------
+Every Woocommerce Product will be synchronized with a Webcrm Products.
 
-Once a link between a Woocommerce Product and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Woocommerce Product and a Webcrm Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Product and a  Products:
+The following properties are synchronized between a Woocommerce Product and a Webcrm Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Woocommerce Product Property
-     -  Products Property
-     -  Data Type
+     - Webcrm Products Property
+     - Webcrm Data Type
    * - price
      - ProductCostPrice
      - "string"
