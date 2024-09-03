@@ -2,7 +2,7 @@
 Webcrm to Zendesk Dataflow
 ==========================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Webcrm Organisations and a Z
    * - Webcrm Organisations Property
      - Zendesk Organizations Property
      - Zendesk Data Type
+   * - OrganisationName
+     - name
+     - "string"
 
 
 Webcrm Users to Zendesk Users
