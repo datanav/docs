@@ -2,7 +2,7 @@
 Chargebee to  Dataflow
 ======================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:57:55
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Chargebee Address and a  Cou
    * - Chargebee Address Property
      -  Countries Property
      -  Data Type
+   * - country
+     - name
+     - "string"
 
 
 Chargebee Business_entity to  Companies
@@ -39,6 +42,9 @@ The following properties are synchronized between a Chargebee Business_entity an
    * - Chargebee Business_entity Property
      -  Companies Property
      -  Data Type
+   * - name
+     - companyName
+     - "string"
 
 
 Chargebee Customer to  Countries
@@ -55,4 +61,7 @@ The following properties are synchronized between a Chargebee Customer and a  Co
    * - Chargebee Customer Property
      -  Countries Property
      -  Data Type
+   * - billing_address.country
+     - name
+     - "string"
 
