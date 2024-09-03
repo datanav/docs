@@ -2,27 +2,27 @@
 SuperOffice to Businessnxt Dataflow
 ===================================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Businessnxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-SuperOffice Contact to  Address
--------------------------------
-Every SuperOffice Contact will be synchronized with a  Address.
+SuperOffice Contact to Businessnxt Address
+------------------------------------------
+Every SuperOffice Contact will be synchronized with a Businessnxt Address.
 
-Once a link between a SuperOffice Contact and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a  Address:
+The following properties are synchronized between a SuperOffice Contact and a Businessnxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     -  Address Property
-     -  Data Type
+     - Businessnxt Address Property
+     - Businessnxt Data Type
    * - Name
      - name
      - "string"
@@ -31,20 +31,20 @@ The following properties are synchronized between a SuperOffice Contact and a  A
      - "string"
 
 
-SuperOffice Quotealternative to  Order
---------------------------------------
-Every SuperOffice Quotealternative will be synchronized with a  Order.
+SuperOffice Quotealternative to Businessnxt Order
+-------------------------------------------------
+Every SuperOffice Quotealternative will be synchronized with a Businessnxt Order.
 
-Once a link between a SuperOffice Quotealternative and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quotealternative and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quotealternative and a  Order:
+The following properties are synchronized between a SuperOffice Quotealternative and a Businessnxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quotealternative Property
-     -  Order Property
-     -  Data Type
+     - Businessnxt Order Property
+     - Businessnxt Data Type
    * - DiscountPercent
      - totalDiscountAmountInCurrency
      - "string"
@@ -53,36 +53,36 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
 
 
-SuperOffice Quoteline to  Order
--------------------------------
-Every SuperOffice Quoteline will be synchronized with a  Order.
+SuperOffice Quoteline to Businessnxt Order
+------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Businessnxt Order.
 
-Once a link between a SuperOffice Quoteline and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quoteline and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quoteline and a  Order:
+The following properties are synchronized between a SuperOffice Quoteline and a Businessnxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quoteline Property
-     -  Order Property
-     -  Data Type
+     - Businessnxt Order Property
+     - Businessnxt Data Type
 
 
-SuperOffice Sale to  Order
---------------------------
-Every SuperOffice Sale will be synchronized with a  Order.
+SuperOffice Sale to Businessnxt Order
+-------------------------------------
+Every SuperOffice Sale will be synchronized with a Businessnxt Order.
 
-Once a link between a SuperOffice Sale and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Sale and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Sale and a  Order:
+The following properties are synchronized between a SuperOffice Sale and a Businessnxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Sale Property
-     -  Order Property
-     -  Data Type
+     - Businessnxt Order Property
+     - Businessnxt Data Type
    * - Heading
      - name
      - "string"
