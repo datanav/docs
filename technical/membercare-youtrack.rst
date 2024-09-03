@@ -2,7 +2,7 @@
 Membercare to Youtrack Dataflow
 ===============================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 10:03:40
 
 Introduction
 ------------
@@ -53,6 +53,22 @@ The following properties are synchronized between a Membercare Countries and a Y
    :header-rows: 1
 
    * - Membercare Countries Property
+     - Youtrack Organizationroles Property
+     - Youtrack Data Type
+
+
+Membercare Invoices to Youtrack Organizationroles
+-------------------------------------------------
+Every Membercare Invoices will be synchronized with a Youtrack Organizationroles.
+
+Once a link between a Membercare Invoices and a Youtrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Invoices and a Youtrack Organizationroles:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Invoices Property
      - Youtrack Organizationroles Property
      - Youtrack Data Type
 
