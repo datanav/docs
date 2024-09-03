@@ -2,7 +2,7 @@
 ZohoCRM to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -31,20 +31,20 @@ The following properties are synchronized between a ZohoCRM Account and a  Compa
      - "string"
 
 
-ZohoCRM Account to  Countries
------------------------------
-Every ZohoCRM Account will be synchronized with a  Countries.
+ZohoCRM Account to Membercare Countries
+---------------------------------------
+Every ZohoCRM Account will be synchronized with a Membercare Countries.
 
-Once a link between a ZohoCRM Account and a  Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Account and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Account and a  Countries:
+The following properties are synchronized between a ZohoCRM Account and a Membercare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Account Property
-     -  Countries Property
-     -  Data Type
+     - Membercare Countries Property
+     - Membercare Data Type
    * - Billing_Country
      - name
      - "string"
@@ -56,20 +56,20 @@ The following properties are synchronized between a ZohoCRM Account and a  Count
      - "string"
 
 
-ZohoCRM Contact to  Countries
------------------------------
-Every ZohoCRM Contact will be synchronized with a  Countries.
+ZohoCRM Contact to Membercare Countries
+---------------------------------------
+Every ZohoCRM Contact will be synchronized with a Membercare Countries.
 
-Once a link between a ZohoCRM Contact and a  Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Contact and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Contact and a  Countries:
+The following properties are synchronized between a ZohoCRM Contact and a Membercare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Contact Property
-     -  Countries Property
-     -  Data Type
+     - Membercare Countries Property
+     - Membercare Data Type
    * - Mailing_Country
      - name
      - "string"
