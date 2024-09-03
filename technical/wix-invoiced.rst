@@ -2,27 +2,27 @@
 Wix.com to Invoiced Dataflow
 ============================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to Invoiced. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wix.com Orders to  Invoices
----------------------------
-Every Wix.com Orders will be synchronized with a  Invoices.
+Wix.com Orders to Invoiced Invoices
+-----------------------------------
+Every Wix.com Orders will be synchronized with a Invoiced Invoices.
 
-Once a link between a Wix.com Orders and a  Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a Invoiced Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a  Invoices:
+The following properties are synchronized between a Wix.com Orders and a Invoiced Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     -  Invoices Property
-     -  Data Type
+     - Invoiced Invoices Property
+     - Invoiced Data Type
    * - buyerInfo.id
      - customer
      - "string"
@@ -31,20 +31,20 @@ The following properties are synchronized between a Wix.com Orders and a  Invoic
      - "string"
 
 
-Wix.com Orders to  Lineitem
----------------------------
-Every Wix.com Orders will be synchronized with a  Lineitem.
+Wix.com Orders to Invoiced Lineitem
+-----------------------------------
+Every Wix.com Orders will be synchronized with a Invoiced Lineitem.
 
-Once a link between a Wix.com Orders and a  Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a Invoiced Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a  Lineitem:
+The following properties are synchronized between a Wix.com Orders and a Invoiced Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     -  Lineitem Property
-     -  Data Type
+     - Invoiced Lineitem Property
+     - Invoiced Data Type
    * - lineItems.name
      - items.name
      - "string"
@@ -56,20 +56,20 @@ The following properties are synchronized between a Wix.com Orders and a  Lineit
      - "string"
 
 
-Wix.com Products to  Items
---------------------------
-Every Wix.com Products will be synchronized with a  Items.
+Wix.com Products to Invoiced Items
+----------------------------------
+Every Wix.com Products will be synchronized with a Invoiced Items.
 
-Once a link between a Wix.com Products and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a Invoiced Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a  Items:
+The following properties are synchronized between a Wix.com Products and a Invoiced Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     -  Items Property
-     -  Data Type
+     - Invoiced Items Property
+     - Invoiced Data Type
    * - costAndProfitData.itemCost
      - unit_cost
      - "string"
