@@ -2,7 +2,7 @@
 Chargebee to Webcrm Dataflow
 ============================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Chargebee Business_entity an
    * - Chargebee Business_entity Property
      -  Organisations Property
      -  Data Type
+   * - name
+     - OrganisationName
+     - "string"
 
 
 Chargebee Item to Webcrm Products
