@@ -2,7 +2,7 @@
 Crmoffice to Hubspot Dataflow
 =============================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,4 +23,16 @@ The following properties are synchronized between a Crmoffice Contacts and a Hub
    * - Crmoffice Contacts Property
      - Hubspot Contact Property
      - Hubspot Data Type
+   * - directPhone
+     - properties.phone
+     - "string"
+   * - familyName
+     - properties.lastname
+     - "string"
+   * - givenName
+     - properties.firstname
+     - "string"
+   * - mobilePhone
+     - properties.mobilephone
+     - "string"
 
