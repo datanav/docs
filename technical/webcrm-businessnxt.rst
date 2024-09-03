@@ -2,7 +2,7 @@
 Webcrm to Businessnxt Dataflow
 ==============================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Webcrm Opportunities and a B
    * - Webcrm Opportunities Property
      - Businessnxt Order Property
      - Businessnxt Data Type
+   * - OpportunityDiscount
+     - totalDiscountAmountInCurrency
+     - "string"
 
 
 Webcrm Organisations to Businessnxt Address
@@ -39,6 +42,12 @@ The following properties are synchronized between a Webcrm Organisations and a B
    * - Webcrm Organisations Property
      - Businessnxt Address Property
      - Businessnxt Data Type
+   * - OrganisationName
+     - name
+     - "string"
+   * - OrganisationTelephone
+     - phone
+     - "string"
 
 
 Webcrm Quotationline to Businessnxt Order
