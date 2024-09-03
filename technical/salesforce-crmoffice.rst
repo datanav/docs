@@ -2,7 +2,7 @@
 Salesforce to Crmoffice Dataflow
 ================================
 
-Generated: 2024-09-03 09:00:37
+Generated: 2024-09-03 09:01:41
 
 Introduction
 ------------
@@ -25,20 +25,20 @@ The following properties are synchronized between a Salesforce Product2 and a  C
      -  Data Type
 
 
-Salesforce Contact to  Contacts
--------------------------------
-Every Salesforce Contact will be synchronized with a  Contacts.
+Salesforce Contact to Crmoffice Contacts
+----------------------------------------
+Every Salesforce Contact will be synchronized with a Crmoffice Contacts.
 
-Once a link between a Salesforce Contact and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Contact and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Contact and a  Contacts:
+The following properties are synchronized between a Salesforce Contact and a Crmoffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Contact Property
-     -  Contacts Property
-     -  Data Type
+     - Crmoffice Contacts Property
+     - Crmoffice Data Type
    * - FirstName
      - givenName
      - "string"
