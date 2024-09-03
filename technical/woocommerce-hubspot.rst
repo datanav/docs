@@ -2,7 +2,7 @@
 Woocommerce to Hubspot Dataflow
 ===============================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Woocommerce Order and a Hubs
    * - Woocommerce Order Property
      - Hubspot Lineitem Property
      - Hubspot Data Type
+   * - line_items.name
+     - properties.name
+     - "string"
+   * - line_items.price
+     - properties.price
+     - "string"
+   * - line_items.quantity
+     - properties.quantity
+     - N/A
 
 
 Woocommerce Product to Hubspot Product
@@ -39,4 +48,16 @@ The following properties are synchronized between a Woocommerce Product and a Hu
    * - Woocommerce Product Property
      - Hubspot Product Property
      - Hubspot Data Type
+   * - name
+     - properties.name
+     - "string"
+   * - price
+     - properties.hs_cost_of_goods_sold
+     - "string"
+   * - sale_price
+     - properties.price
+     - "string"
+   * - sku
+     - properties.hs_sku
+     - "string"
 
