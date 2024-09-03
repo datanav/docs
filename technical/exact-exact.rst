@@ -2,7 +2,7 @@
 Exact to Exact Dataflow
 =======================
 
-Generated: 2024-09-03 08:20:40
+Generated: 2024-09-03 08:20:45
 
 Introduction
 ------------
@@ -117,6 +117,9 @@ The following properties are synchronized between a Exact Divisions and a Exact 
    * - Exact Divisions Property
      - Exact Accounts Property
      - Exact Data Type
+   * - Website
+     - Website
+     - "string"
 
 
 Exact Employees to Exact Contacts
@@ -133,6 +136,54 @@ The following properties are synchronized between a Exact Employees and a Exact 
    * - Exact Employees Property
      - Exact Contacts Property
      - Exact Data Type
+   * - BirthDate
+     - BirthDate
+     - "string"
+   * - BusinessEmail
+     - BusinessEmail
+     - "string"
+   * - BusinessMobile
+     - Mobile
+     - "string"
+   * - City
+     - City
+     - "string"
+   * - Country
+     - Country
+     - "string"
+   * - Email
+     - Email
+     - "string"
+   * - FirstName
+     - FirstName
+     - "string"
+   * - FirstName
+     - FullName
+     - "string"
+   * - FirstName
+     - LastName
+     - "string"
+   * - FullName
+     - FirstName
+     - "string"
+   * - FullName
+     - FullName
+     - "string"
+   * - FullName
+     - LastName
+     - "string"
+   * - LastName
+     - FirstName
+     - "string"
+   * - LastName
+     - FullName
+     - "string"
+   * - LastName
+     - LastName
+     - "string"
+   * - Phone
+     - Phone
+     - "string"
 
 
 Exact Salesinvoices to Exact Quotations
@@ -149,6 +200,15 @@ The following properties are synchronized between a Exact Salesinvoices and a Ex
    * - Exact Salesinvoices Property
      - Exact Quotations Property
      - Exact Data Type
+   * - Currency
+     - Currency
+     - "string"
+   * - Description
+     - Description
+     - "string"
+   * - DueDate
+     - DueDate
+     - "string"
 
 
 Exact Salesorderlines to Exact Quotations
@@ -181,6 +241,15 @@ The following properties are synchronized between a Exact Salesorders and a Exac
    * - Exact Salesorders Property
      - Exact Quotations Property
      - Exact Data Type
+   * - Currency
+     - Currency
+     - "string"
+   * - DeliveryDate
+     - DeliveryDate
+     - "string"
+   * - Description
+     - Description
+     - "string"
 
 
 Exact Units to Exact Currencies
@@ -197,6 +266,9 @@ The following properties are synchronized between a Exact Units and a Exact Curr
    * - Exact Units Property
      - Exact Currencies Property
      - Exact Data Type
+   * - Description
+     - Description
+     - "string"
 
 
 Exact Vatcodes to Exact Currencies
