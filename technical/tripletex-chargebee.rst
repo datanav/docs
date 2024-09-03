@@ -2,7 +2,7 @@
 Tripletex to Chargebee Dataflow
 ===============================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -143,39 +143,39 @@ The following properties are synchronized between a Tripletex Orderline and a  O
      - "string"
 
 
-Tripletex Customer person to  Customer
---------------------------------------
-removed person customers for now until that pattern is resolved, it  will be synchronized with a  Customer.
+Tripletex Customer person to Chargebee Customer
+-----------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Chargebee Customer.
 
-Once a link between a Tripletex Customer person and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a  Customer:
+The following properties are synchronized between a Tripletex Customer person and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     -  Customer Property
-     -  Data Type
+     - Chargebee Customer Property
+     - Chargebee Data Type
    * - email
      - email
      - "string"
 
 
-Tripletex Order to  Order
--------------------------
-Every Tripletex Order will be synchronized with a  Order.
+Tripletex Order to Chargebee Order
+----------------------------------
+Every Tripletex Order will be synchronized with a Chargebee Order.
 
-Once a link between a Tripletex Order and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Order and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Order and a  Order:
+The following properties are synchronized between a Tripletex Order and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Order Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
    * - contact.id
      - customer_id
      - "string"
@@ -187,20 +187,20 @@ The following properties are synchronized between a Tripletex Order and a  Order
      - "string"
 
 
-Tripletex Product to  Item
---------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Item.
+Tripletex Product to Chargebee Item
+-----------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Chargebee Item.
 
-Once a link between a Tripletex Product and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Product and a  Item:
+The following properties are synchronized between a Tripletex Product and a Chargebee Item:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     -  Item Property
-     -  Data Type
+     - Chargebee Item Property
+     - Chargebee Data Type
    * - name
      - name
      - "string"
