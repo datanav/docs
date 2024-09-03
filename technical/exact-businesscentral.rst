@@ -2,7 +2,7 @@
 Exact to Businesscentral Dataflow
 =================================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Exact Accounts and a Busines
    * - Exact Accounts Property
      - Businesscentral Customers company Property
      - Businesscentral Data Type
+   * - Name
+     - displayName
+     - "string"
+   * - Website
+     - website
+     - "string"
 
 
 Exact Contacts to Businesscentral Contacts person
@@ -55,6 +61,21 @@ The following properties are synchronized between a Exact Employees and a Busine
    * - Exact Employees Property
      - Businesscentral Employees Property
      - Businesscentral Data Type
+   * - BirthDate
+     - birthDate
+     - "string"
+   * - City
+     - city
+     - "string"
+   * - Country
+     - country
+     - "string"
+   * - ID
+     - id
+     - "string"
+   * - Postcode
+     - postalCode
+     - "string"
 
 
 Exact Items to Businesscentral Items
@@ -103,4 +124,7 @@ The following properties are synchronized between a Exact Salesorders and a Busi
    * - Exact Salesorders Property
      - Businesscentral Salesorders Property
      - Businesscentral Data Type
+   * - Currency
+     - currencyId
+     - "string"
 
