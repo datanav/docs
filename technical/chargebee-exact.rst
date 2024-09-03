@@ -2,7 +2,7 @@
 Chargebee to Exact Dataflow
 ===========================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Chargebee Address and a Exac
    * - Chargebee Address Property
      - Exact Addresses Property
      - Exact Data Type
+   * - city
+     - City
+     - "string"
+   * - country
+     - Country
+     - "string"
+   * - country
+     - CountryName
+     - "string"
 
 
 Chargebee Business_entity to Exact Accounts
@@ -39,6 +48,9 @@ The following properties are synchronized between a Chargebee Business_entity an
    * - Chargebee Business_entity Property
      - Exact Accounts Property
      - Exact Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Chargebee Currency to Exact Currencies
@@ -71,6 +83,12 @@ The following properties are synchronized between a Chargebee Customer and a Exa
    * - Chargebee Customer Property
      - Exact Contacts Property
      - Exact Data Type
+   * - billing_address.city
+     - City
+     - "string"
+   * - billing_address.country
+     - Country
+     - "string"
 
 
 Chargebee Item_family to Exact Currencies
@@ -103,6 +121,9 @@ The following properties are synchronized between a Chargebee Order and a Exact 
    * - Chargebee Order Property
      - Exact Quotations Property
      - Exact Data Type
+   * - currency_code
+     - Currency
+     - "string"
 
 
 Chargebee Item to Exact Items
