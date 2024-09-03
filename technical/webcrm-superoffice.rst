@@ -2,7 +2,7 @@
 Webcrm to Superoffice Dataflow
 ==============================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,6 +23,51 @@ The following properties are synchronized between a Webcrm Organisations and a S
    * - Webcrm Organisations Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - OrganisationAddress
+     - Address.Postal.Address1
+     - "string"
+   * - OrganisationAddress
+     - Address.Street.Address1
+     - "string"
+   * - OrganisationCity
+     - Address.Postal.City
+     - "string"
+   * - OrganisationCity
+     - Address.Street.City
+     - "string"
+   * - OrganisationDeliveryAddress
+     - Address.Postal.Address1
+     - "string"
+   * - OrganisationDeliveryAddress
+     - Address.Street.Address1
+     - "string"
+   * - OrganisationDeliveryCity
+     - Address.Postal.City
+     - "string"
+   * - OrganisationDeliveryCity
+     - Address.Street.City
+     - "string"
+   * - OrganisationDeliveryPostCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - OrganisationDeliveryPostCode
+     - Address.Street.Zipcode
+     - "string"
+   * - OrganisationId
+     - ContactId
+     - "integer"
+   * - OrganisationName
+     - Name
+     - "string"
+   * - OrganisationPostCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - OrganisationPostCode
+     - Address.Street.Zipcode
+     - "string"
+   * - OrganisationTelephone
+     - Phones.Value
+     - "string"
 
 
 Webcrm Persons to Superoffice Person
@@ -39,6 +84,24 @@ The following properties are synchronized between a Webcrm Persons and a Superof
    * - Webcrm Persons Property
      - Superoffice Person Property
      - Superoffice Data Type
+   * - PersonDirectPhone
+     - OfficePhones.Value
+     - "string"
+   * - PersonFirstName
+     - Firstname
+     - "string"
+   * - PersonLastName
+     - Lastname
+     - "string"
+   * - PersonMobilePhone
+     - MobilePhones.Value
+     - "string"
+   * - PersonOrganisationId
+     - Contact.ContactId
+     - "integer"
+   * - document_number
+     - BirthDate
+     - N/A
 
 
 Webcrm Users to Superoffice Person
@@ -55,6 +118,12 @@ The following properties are synchronized between a Webcrm Users and a Superoffi
    * - Webcrm Users Property
      - Superoffice Person Property
      - Superoffice Data Type
+   * - UserMobilePhone
+     - MobilePhones.Value
+     - "string"
+   * - UserTelephone
+     - OfficePhones.Value
+     - "string"
 
 
 Webcrm Opportunities to Superoffice Sale
