@@ -2,7 +2,7 @@
 Exact to Unieconomy Dataflow
 ============================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Exact Accounts and a Uniecon
    * - Exact Accounts Property
      - Unieconomy Customers Property
      - Unieconomy Data Type
+   * - Website
+     - WebUrl
+     - "string"
 
 
 Exact Departments to Unieconomy Departments
@@ -39,4 +42,7 @@ The following properties are synchronized between a Exact Departments and a Unie
    * - Exact Departments Property
      - Unieconomy Departments Property
      - Unieconomy Data Type
+   * - Description
+     - DepartmentNumber
+     - "string"
 
