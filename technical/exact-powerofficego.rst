@@ -2,7 +2,7 @@
 Exact to Powerofficego Dataflow
 ===============================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Exact Accounts and a Powerof
    * - Exact Accounts Property
      - Powerofficego Customers Property
      - Powerofficego Data Type
+   * - Name
+     - Name
+     - "string"
+   * - Website
+     - WebsiteUrl
+     - "string"
 
 
 Exact Contacts to Powerofficego Contactperson
@@ -39,6 +45,9 @@ The following properties are synchronized between a Exact Contacts and a Powerof
    * - Exact Contacts Property
      - Powerofficego Contactperson Property
      - Powerofficego Data Type
+   * - BirthDate
+     - dateOfBirth
+     - N/A
 
 
 Exact Departments to Powerofficego Departments
@@ -68,6 +77,9 @@ The following properties are synchronized between a Exact Departments and a Powe
    * - Exact Departments Property
      - Powerofficego Departments Property
      - Powerofficego Data Type
+   * - Code
+     - Code
+     - "string"
 
 
 Exact Employees to Powerofficego Employees
@@ -84,6 +96,9 @@ The following properties are synchronized between a Exact Employees and a Powero
    * - Exact Employees Property
      - Powerofficego Employees Property
      - Powerofficego Data Type
+   * - BirthDate
+     - DateOfBirth
+     - N/A
 
 
 Exact Items to Powerofficego Product
@@ -132,4 +147,7 @@ The following properties are synchronized between a Exact Salesorders and a Powe
    * - Exact Salesorders Property
      - Powerofficego Salesorders Property
      - Powerofficego Data Type
+   * - Currency
+     - CurrencyCode
+     - "string"
 
