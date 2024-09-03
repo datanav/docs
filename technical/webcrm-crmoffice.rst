@@ -2,7 +2,7 @@
 Webcrm to Crmoffice Dataflow
 ============================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -39,6 +39,12 @@ The following properties are synchronized between a Webcrm Users and a Crmoffice
    * - Webcrm Users Property
      - Crmoffice Contacts Property
      - Crmoffice Data Type
+   * - UserMobilePhone
+     - mobilePhone
+     - "string"
+   * - UserTelephone
+     - directPhone
+     - "string"
 
 
 Webcrm Persons to Crmoffice Contacts
