@@ -2,7 +2,7 @@
 Exact to  Dataflow
 ==================
 
-Generated: 2024-09-03 08:20:40
+Generated: 2024-09-03 08:20:45
 
 Introduction
 ------------
@@ -23,6 +23,24 @@ The following properties are synchronized between a Exact Accounts and a  Addres
    * - Exact Accounts Property
      -  Address Property
      -  Data Type
+   * - City
+     - postalArea
+     - "string"
+   * - CompanySize
+     - noOfEmployees
+     - "string"
+   * - Country
+     - countryNo
+     - "string"
+   * - ID
+     - addressNo
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - Postcode
+     - postCode
+     - "string"
 
 
 Exact Currencies to  Country
@@ -39,6 +57,9 @@ The following properties are synchronized between a Exact Currencies and a  Coun
    * - Exact Currencies Property
      -  Country Property
      -  Data Type
+   * - Description
+     - name
+     - "string"
 
 
 Exact Departments to  Address
@@ -135,6 +156,9 @@ The following properties are synchronized between a Exact Units and a  Country:
    * - Exact Units Property
      -  Country Property
      -  Data Type
+   * - Description
+     - name
+     - "string"
 
 
 Exact Vatcodes to  Country
