@@ -2,7 +2,7 @@
 Tripletex to Businessnxt Dataflow
 =================================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -69,20 +69,20 @@ The following properties are synchronized between a Tripletex Orderline and a  O
      -  Data Type
 
 
-Tripletex Country to  Country
------------------------------
-Every Tripletex Country will be synchronized with a  Country.
+Tripletex Country to Businessnxt Country
+----------------------------------------
+Every Tripletex Country will be synchronized with a Businessnxt Country.
 
-Once a link between a Tripletex Country and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Country and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Country and a  Country:
+The following properties are synchronized between a Tripletex Country and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Country Property
-     -  Country Property
-     -  Data Type
+     - Businessnxt Country Property
+     - Businessnxt Data Type
    * - isoAlpha2Code
      - isoCode
      - "string"
@@ -91,39 +91,39 @@ The following properties are synchronized between a Tripletex Country and a  Cou
      - "string"
 
 
-Tripletex Currency to  Currency
--------------------------------
-Every Tripletex Currency will be synchronized with a  Currency.
+Tripletex Currency to Businessnxt Currency
+------------------------------------------
+Every Tripletex Currency will be synchronized with a Businessnxt Currency.
 
-Once a link between a Tripletex Currency and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Currency and a Businessnxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Currency and a  Currency:
+The following properties are synchronized between a Tripletex Currency and a Businessnxt Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Currency Property
-     -  Currency Property
-     -  Data Type
+     - Businessnxt Currency Property
+     - Businessnxt Data Type
    * - displayName
      - name
      - "string"
 
 
-Tripletex Order to  Order
--------------------------
-Every Tripletex Order will be synchronized with a  Order.
+Tripletex Order to Businessnxt Order
+------------------------------------
+Every Tripletex Order will be synchronized with a Businessnxt Order.
 
-Once a link between a Tripletex Order and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Order and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Order and a  Order:
+The following properties are synchronized between a Tripletex Order and a Businessnxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Order Property
-     -  Order Property
-     -  Data Type
+     - Businessnxt Order Property
+     - Businessnxt Data Type
    * - deliveryDate
      - dueDate
      - "string"
@@ -132,39 +132,39 @@ The following properties are synchronized between a Tripletex Order and a  Order
      - "string"
 
 
-Tripletex Orderline to  Orderline
----------------------------------
-Every Tripletex Orderline will be synchronized with a  Orderline.
+Tripletex Orderline to Businessnxt Orderline
+--------------------------------------------
+Every Tripletex Orderline will be synchronized with a Businessnxt Orderline.
 
-Once a link between a Tripletex Orderline and a  Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Orderline and a Businessnxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Orderline and a  Orderline:
+The following properties are synchronized between a Tripletex Orderline and a Businessnxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Orderline Property
-     -  Orderline Property
-     -  Data Type
+     - Businessnxt Orderline Property
+     - Businessnxt Data Type
    * - order.id
      - orderNo
      - "string"
 
 
-Tripletex Product to  Product
------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Product.
+Tripletex Product to Businessnxt Product
+----------------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Businessnxt Product.
 
-Once a link between a Tripletex Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Product and a Businessnxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Product and a  Product:
+The following properties are synchronized between a Tripletex Product and a Businessnxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     -  Product Property
-     -  Data Type
+     - Businessnxt Product Property
+     - Businessnxt Data Type
    * - description
      - description
      - "string"
@@ -176,20 +176,20 @@ The following properties are synchronized between a Tripletex Product and a  Pro
      - "string"
 
 
-Tripletex Productgroup to  Productcategory
-------------------------------------------
-Every Tripletex Productgroup will be synchronized with a  Productcategory.
+Tripletex Productgroup to Businessnxt Productcategory
+-----------------------------------------------------
+Every Tripletex Productgroup will be synchronized with a Businessnxt Productcategory.
 
-Once a link between a Tripletex Productgroup and a  Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Productgroup and a Businessnxt Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Productgroup and a  Productcategory:
+The following properties are synchronized between a Tripletex Productgroup and a Businessnxt Productcategory:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Productgroup Property
-     -  Productcategory Property
-     -  Data Type
+     - Businessnxt Productcategory Property
+     - Businessnxt Data Type
    * - name
      - text
      - "string"
