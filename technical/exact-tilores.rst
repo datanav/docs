@@ -2,7 +2,7 @@
 Exact to Tilores Dataflow
 =========================
 
-Generated: 2024-09-03 08:20:40
+Generated: 2024-09-03 08:20:45
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Exact Contacts and a Tilores
    * - Exact Contacts Property
      - Tilores Human Property
      - Tilores Data Type
+   * - BirthDate
+     - dateOfBirth
+     - "string"
+   * - City
+     - city
+     - "string"
 
 
 Exact Employees to Tilores Human
@@ -39,4 +45,16 @@ The following properties are synchronized between a Exact Employees and a Tilore
    * - Exact Employees Property
      - Tilores Human Property
      - Tilores Data Type
+   * - BirthDate
+     - dateOfBirth
+     - "string"
+   * - City
+     - city
+     - "string"
+   * - ID
+     - id
+     - "string"
+   * - Postcode
+     - postalCode
+     - "string"
 
