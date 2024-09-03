@@ -2,7 +2,7 @@
 Shopify to Exact Dataflow
 =========================
 
-Generated: 2024-09-03 08:14:49
+Generated: 2024-09-03 08:16:35
 
 Introduction
 ------------
@@ -103,58 +103,58 @@ The following properties are synchronized between a Shopify Order and a  Quotati
      - "string"
 
 
-Shopify Customer to  Currencies
--------------------------------
-Every Shopify Customer will be synchronized with a  Currencies.
+Shopify Customer to Exact Currencies
+------------------------------------
+Every Shopify Customer will be synchronized with a Exact Currencies.
 
-Once a link between a Shopify Customer and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Customer and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Customer and a  Currencies:
+The following properties are synchronized between a Shopify Customer and a Exact Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Customer Property
-     -  Currencies Property
-     -  Data Type
+     - Exact Currencies Property
+     - Exact Data Type
    * - default_address.country_name
      - Description
      - "string"
 
 
-Shopify Order to  Salesorderlines
----------------------------------
-Every Shopify Order will be synchronized with a  Salesorderlines.
+Shopify Order to Exact Salesorderlines
+--------------------------------------
+Every Shopify Order will be synchronized with a Exact Salesorderlines.
 
-Once a link between a Shopify Order and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a Exact Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a  Salesorderlines:
+The following properties are synchronized between a Shopify Order and a Exact Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     -  Salesorderlines Property
-     -  Data Type
+     - Exact Salesorderlines Property
+     - Exact Data Type
    * - id
      - OrderID
      - "string"
 
 
-Shopify Order to  Salesorders
------------------------------
-Every Shopify Order will be synchronized with a  Salesorders.
+Shopify Order to Exact Salesorders
+----------------------------------
+Every Shopify Order will be synchronized with a Exact Salesorders.
 
-Once a link between a Shopify Order and a  Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a  Salesorders:
+The following properties are synchronized between a Shopify Order and a Exact Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     -  Salesorders Property
-     -  Data Type
+     - Exact Salesorders Property
+     - Exact Data Type
    * - created_at
      - OrderDate
      - "string"
@@ -163,18 +163,18 @@ The following properties are synchronized between a Shopify Order and a  Salesor
      - "string"
 
 
-Shopify Sesamproduct to  Items
-------------------------------
-Every Shopify Sesamproduct will be synchronized with a  Items.
+Shopify Sesamproduct to Exact Items
+-----------------------------------
+Every Shopify Sesamproduct will be synchronized with a Exact Items.
 
-Once a link between a Shopify Sesamproduct and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Sesamproduct and a Exact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Sesamproduct and a  Items:
+The following properties are synchronized between a Shopify Sesamproduct and a Exact Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Sesamproduct Property
-     -  Items Property
-     -  Data Type
+     - Exact Items Property
+     - Exact Data Type
 
