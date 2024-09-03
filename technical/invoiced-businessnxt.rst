@@ -2,7 +2,7 @@
 Invoiced to Businessnxt Dataflow
 ================================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Invoiced Customers company a
    * - Invoiced Customers company Property
      - Businessnxt Address Property
      - Businessnxt Data Type
+   * - name
+     - name
+     - "string"
 
 
 Invoiced Lineitem to Businessnxt Order
