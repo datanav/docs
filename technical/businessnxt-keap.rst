@@ -2,7 +2,7 @@
 Businessnxt to Keap Dataflow
 ============================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Businessnxt Address and a Ke
    * - Businessnxt Address Property
      - Keap Companies Property
      - Keap Data Type
+   * - name
+     - company_name
+     - "string"
 
 
 Businessnxt Company to Keap Companies
@@ -39,6 +42,9 @@ The following properties are synchronized between a Businessnxt Company and a Ke
    * - Businessnxt Company Property
      - Keap Companies Property
      - Keap Data Type
+   * - name
+     - company_name
+     - "string"
 
 
 Businessnxt Product to Keap Product
