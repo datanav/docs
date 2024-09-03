@@ -2,46 +2,46 @@
 Exact to Chargebee Dataflow
 ===========================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Exact to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Exact Accounts to  Business_entity
-----------------------------------
-Every Exact Accounts will be synchronized with a  Business_entity.
+Exact Accounts to Chargebee Business_entity
+-------------------------------------------
+Every Exact Accounts will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Exact Accounts and a  Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Accounts and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Accounts and a  Business_entity:
+The following properties are synchronized between a Exact Accounts and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Accounts Property
-     -  Business_entity Property
-     -  Data Type
+     - Chargebee Business_entity Property
+     - Chargebee Data Type
    * - Name
      - name
      - "string"
 
 
-Exact Addresses to  Address
----------------------------
-Every Exact Addresses will be synchronized with a  Address.
+Exact Addresses to Chargebee Address
+------------------------------------
+Every Exact Addresses will be synchronized with a Chargebee Address.
 
-Once a link between a Exact Addresses and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Addresses and a Chargebee Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Addresses and a  Address:
+The following properties are synchronized between a Exact Addresses and a Chargebee Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Addresses Property
-     -  Address Property
-     -  Data Type
+     - Chargebee Address Property
+     - Chargebee Data Type
    * - City
      - city
      - "string"
@@ -53,170 +53,170 @@ The following properties are synchronized between a Exact Addresses and a  Addre
      - "string"
 
 
-Exact Contacts to  Customer
----------------------------
-Every Exact Contacts will be synchronized with a  Customer.
+Exact Contacts to Chargebee Customer
+------------------------------------
+Every Exact Contacts will be synchronized with a Chargebee Customer.
 
-Once a link between a Exact Contacts and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Contacts and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Contacts and a  Customer:
+The following properties are synchronized between a Exact Contacts and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Contacts Property
-     -  Customer Property
-     -  Data Type
+     - Chargebee Customer Property
+     - Chargebee Data Type
 
 
-Exact Currencies to  Currency
------------------------------
-Every Exact Currencies will be synchronized with a  Currency.
+Exact Currencies to Chargebee Currency
+--------------------------------------
+Every Exact Currencies will be synchronized with a Chargebee Currency.
 
-Once a link between a Exact Currencies and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Currencies and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Currencies and a  Currency:
+The following properties are synchronized between a Exact Currencies and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Currencies Property
-     -  Currency Property
-     -  Data Type
+     - Chargebee Currency Property
+     - Chargebee Data Type
 
 
-Exact Departments to  Business_entity
--------------------------------------
-Every Exact Departments will be synchronized with a  Business_entity.
+Exact Departments to Chargebee Business_entity
+----------------------------------------------
+Every Exact Departments will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Exact Departments and a  Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Departments and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Departments and a  Business_entity:
+The following properties are synchronized between a Exact Departments and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Departments Property
-     -  Business_entity Property
-     -  Data Type
+     - Chargebee Business_entity Property
+     - Chargebee Data Type
 
 
-Exact Divisions to  Business_entity
------------------------------------
-Every Exact Divisions will be synchronized with a  Business_entity.
+Exact Divisions to Chargebee Business_entity
+--------------------------------------------
+Every Exact Divisions will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Exact Divisions and a  Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Divisions and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Divisions and a  Business_entity:
+The following properties are synchronized between a Exact Divisions and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Divisions Property
-     -  Business_entity Property
-     -  Data Type
+     - Chargebee Business_entity Property
+     - Chargebee Data Type
 
 
-Exact Employees to  Customer
-----------------------------
-Every Exact Employees will be synchronized with a  Customer.
+Exact Employees to Chargebee Customer
+-------------------------------------
+Every Exact Employees will be synchronized with a Chargebee Customer.
 
-Once a link between a Exact Employees and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Employees and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Employees and a  Customer:
+The following properties are synchronized between a Exact Employees and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Employees Property
-     -  Customer Property
-     -  Data Type
+     - Chargebee Customer Property
+     - Chargebee Data Type
 
 
-Exact Quotations to  Order
---------------------------
-Every Exact Quotations will be synchronized with a  Order.
+Exact Quotations to Chargebee Order
+-----------------------------------
+Every Exact Quotations will be synchronized with a Chargebee Order.
 
-Once a link between a Exact Quotations and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Quotations and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Quotations and a  Order:
+The following properties are synchronized between a Exact Quotations and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Quotations Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
    * - Currency
      - currency_code
      - "string"
 
 
-Exact Salesinvoices to  Order
------------------------------
-Every Exact Salesinvoices will be synchronized with a  Order.
+Exact Salesinvoices to Chargebee Order
+--------------------------------------
+Every Exact Salesinvoices will be synchronized with a Chargebee Order.
 
-Once a link between a Exact Salesinvoices and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Salesinvoices and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Salesinvoices and a  Order:
+The following properties are synchronized between a Exact Salesinvoices and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Salesinvoices Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
    * - Currency
      - currency_code
      - "string"
 
 
-Exact Salesorderlines to  Order
--------------------------------
-Every Exact Salesorderlines will be synchronized with a  Order.
+Exact Salesorderlines to Chargebee Order
+----------------------------------------
+Every Exact Salesorderlines will be synchronized with a Chargebee Order.
 
-Once a link between a Exact Salesorderlines and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Salesorderlines and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Salesorderlines and a  Order:
+The following properties are synchronized between a Exact Salesorderlines and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Salesorderlines Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
 
 
-Exact Units to  Currency
-------------------------
-Every Exact Units will be synchronized with a  Currency.
+Exact Units to Chargebee Currency
+---------------------------------
+Every Exact Units will be synchronized with a Chargebee Currency.
 
-Once a link between a Exact Units and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Units and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Units and a  Currency:
+The following properties are synchronized between a Exact Units and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Units Property
-     -  Currency Property
-     -  Data Type
+     - Chargebee Currency Property
+     - Chargebee Data Type
 
 
-Exact Vatcodes to  Currency
----------------------------
-Every Exact Vatcodes will be synchronized with a  Currency.
+Exact Vatcodes to Chargebee Currency
+------------------------------------
+Every Exact Vatcodes will be synchronized with a Chargebee Currency.
 
-Once a link between a Exact Vatcodes and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Vatcodes and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Vatcodes and a  Currency:
+The following properties are synchronized between a Exact Vatcodes and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Vatcodes Property
-     -  Currency Property
-     -  Data Type
+     - Chargebee Currency Property
+     - Chargebee Data Type
 
 
 Exact Items to Chargebee Item
