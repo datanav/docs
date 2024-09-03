@@ -2,27 +2,27 @@
 Tripletex to Webcrm Dataflow
 ============================
 
-Generated: 2024-09-03 09:02:34
+Generated: 2024-09-03 09:11:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Webcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Customer to  Organisations
-------------------------------------
-Every Tripletex Customer will be synchronized with a  Organisations.
+Tripletex Customer to Webcrm Organisations
+------------------------------------------
+Every Tripletex Customer will be synchronized with a Webcrm Organisations.
 
-Once a link between a Tripletex Customer and a  Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a  Organisations:
+The following properties are synchronized between a Tripletex Customer and a Webcrm Organisations:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     -  Organisations Property
-     -  Data Type
+     - Webcrm Organisations Property
+     - Webcrm Data Type
    * - deliveryAddress.addressLine1
      - OrganisationAddress
      - "string"
@@ -88,20 +88,20 @@ The following properties are synchronized between a Tripletex Customer and a  Or
      - "string"
 
 
-Tripletex Department to  Organisations
---------------------------------------
-Every Tripletex Department will be synchronized with a  Organisations.
+Tripletex Department to Webcrm Organisations
+--------------------------------------------
+Every Tripletex Department will be synchronized with a Webcrm Organisations.
 
-Once a link between a Tripletex Department and a  Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a  Organisations:
+The following properties are synchronized between a Tripletex Department and a Webcrm Organisations:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     -  Organisations Property
-     -  Data Type
+     - Webcrm Organisations Property
+     - Webcrm Data Type
    * - name
      - OrganisationName
      - "string"
