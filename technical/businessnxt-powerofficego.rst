@@ -2,7 +2,7 @@
 Businessnxt to Powerofficego Dataflow
 =====================================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:57:55
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Businessnxt Order and a Powe
    * - Businessnxt Order Property
      - Powerofficego Salesorders Property
      - Powerofficego Data Type
+   * - orderDate
+     - SalesOrderDate
+     - "string"
 
 
 Businessnxt Orderline to Powerofficego Salesorderlines
@@ -39,6 +42,9 @@ The following properties are synchronized between a Businessnxt Orderline and a 
    * - Businessnxt Orderline Property
      - Powerofficego Salesorderlines Property
      - Powerofficego Data Type
+   * - orderNo
+     - sesam_SalesOrderId
+     - "string"
 
 
 Businessnxt Product to Powerofficego Product
@@ -55,4 +61,13 @@ The following properties are synchronized between a Businessnxt Product and a Po
    * - Businessnxt Product Property
      - Powerofficego Product Property
      - Powerofficego Data Type
+   * - description
+     - description
+     - "string"
+   * - priceQuantity
+     - salesPrice
+     - N/A
+   * - quantityPerUnit
+     - availableStock
+     - "integer"
 
