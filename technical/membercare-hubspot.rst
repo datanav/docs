@@ -2,7 +2,7 @@
 Membercare to Hubspot Dataflow
 ==============================
 
-Generated: 2024-09-03 13:28:39
+Generated: 2024-09-03 22:54:40
 
 Introduction
 ------------
@@ -29,6 +29,22 @@ The following properties are synchronized between a Membercare Companies and a H
    * - url
      - properties.website
      - "string"
+
+
+Membercare Organizations to Hubspot Company
+-------------------------------------------
+Every Membercare Organizations will be synchronized with a Hubspot Company.
+
+Once a link between a Membercare Organizations and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Organizations and a Hubspot Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Organizations Property
+     - Hubspot Company Property
+     - Hubspot Data Type
 
 
 Membercare Invoices to Hubspot Lineitem
