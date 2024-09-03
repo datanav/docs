@@ -2,27 +2,27 @@
 Tripletex to Chargebee Dataflow
 ===============================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:58:37
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Contact to  Customer
-------------------------------
-Every Tripletex Contact will be synchronized with a  Customer.
+Tripletex Contact to Chargebee Customer
+---------------------------------------
+Every Tripletex Contact will be synchronized with a Chargebee Customer.
 
-Once a link between a Tripletex Contact and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a  Customer:
+The following properties are synchronized between a Tripletex Contact and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     -  Customer Property
-     -  Data Type
+     - Chargebee Customer Property
+     - Chargebee Data Type
    * - email
      - email
      - "string"
@@ -34,22 +34,22 @@ The following properties are synchronized between a Tripletex Contact and a  Cus
      - "string"
 
 
-Tripletex Customer to  Customer
--------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer and a  Customer must be established.
+Tripletex Customer to Chargebee Customer
+----------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a Chargebee Customer must be established.
 
-A new  Customer will be created from a Tripletex Customer if it is connected to a Tripletex Order, or Orderline that is synchronized into .
+A new Chargebee Customer will be created from a Tripletex Customer if it is connected to a Tripletex Order, or Orderline that is synchronized into Chargebee.
 
-Once a link between a Tripletex Customer and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a  Customer:
+The following properties are synchronized between a Tripletex Customer and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     -  Customer Property
-     -  Data Type
+     - Chargebee Customer Property
+     - Chargebee Data Type
 
 
 Tripletex Customer to  Business_entity
