@@ -2,7 +2,7 @@
 Keap to Webcrm Dataflow
 =======================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Keap Companies and a  Organi
    * - Keap Companies Property
      -  Organisations Property
      -  Data Type
+   * - company_name
+     - OrganisationName
+     - "string"
 
 
 Keap Opportunity to Webcrm Opportunities
