@@ -2,7 +2,7 @@
 Membercare to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 10:03:40
 
 Introduction
 ------------
@@ -37,6 +37,22 @@ The following properties are synchronized between a Membercare Countries and a C
    :header-rows: 1
 
    * - Membercare Countries Property
+     - Chargebee Currency Property
+     - Chargebee Data Type
+
+
+Membercare Invoices to Chargebee Currency
+-----------------------------------------
+Every Membercare Invoices will be synchronized with a Chargebee Currency.
+
+Once a link between a Membercare Invoices and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Invoices and a Chargebee Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Invoices Property
      - Chargebee Currency Property
      - Chargebee Data Type
 
