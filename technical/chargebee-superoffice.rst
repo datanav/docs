@@ -2,7 +2,7 @@
 Chargebee to Superoffice Dataflow
 =================================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Chargebee Business_entity an
    * - Chargebee Business_entity Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Chargebee Customer to Superoffice Person
@@ -39,6 +42,15 @@ The following properties are synchronized between a Chargebee Customer and a Sup
    * - Chargebee Customer Property
      - Superoffice Person Property
      - Superoffice Data Type
+   * - email
+     - Emails.Value
+     - "string"
+   * - first_name
+     - Firstname
+     - "string"
+   * - last_name
+     - Lastname
+     - "string"
 
 
 Chargebee Item to Superoffice Product
