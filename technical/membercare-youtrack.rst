@@ -2,7 +2,7 @@
 Membercare to Youtrack Dataflow
 ===============================
 
-Generated: 2024-09-03 10:03:40
+Generated: 2024-09-03 23:23:41
 
 Introduction
 ------------
@@ -70,5 +70,21 @@ The following properties are synchronized between a Membercare Invoices and a Yo
 
    * - Membercare Invoices Property
      - Youtrack Organizationroles Property
+     - Youtrack Data Type
+
+
+Membercare Organizations to Youtrack Groups
+-------------------------------------------
+Every Membercare Organizations will be synchronized with a Youtrack Groups.
+
+Once a link between a Membercare Organizations and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Organizations and a Youtrack Groups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Organizations Property
+     - Youtrack Groups Property
      - Youtrack Data Type
 
