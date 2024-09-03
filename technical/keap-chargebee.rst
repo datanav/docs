@@ -2,7 +2,7 @@
 Keap to Chargebee Dataflow
 ==========================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:46
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Keap Companies and a Chargeb
    * - Keap Companies Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
+   * - company_name
+     - name
+     - "string"
 
 
 Keap Contacts to Chargebee Customer
