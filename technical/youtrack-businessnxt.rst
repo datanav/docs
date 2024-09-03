@@ -2,91 +2,91 @@
 YouTrack to Businessnxt Dataflow
 ================================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from YouTrack to Businessnxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-YouTrack Groups to  Address
----------------------------
-Every YouTrack Groups will be synchronized with a  Address.
+YouTrack Groups to Businessnxt Address
+--------------------------------------
+Every YouTrack Groups will be synchronized with a Businessnxt Address.
 
-Once a link between a YouTrack Groups and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Groups and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Groups and a  Address:
+The following properties are synchronized between a YouTrack Groups and a Businessnxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Groups Property
-     -  Address Property
-     -  Data Type
+     - Businessnxt Address Property
+     - Businessnxt Data Type
 
 
-YouTrack Organizationroles to  Country
---------------------------------------
-Every YouTrack Organizationroles will be synchronized with a  Country.
+YouTrack Organizationroles to Businessnxt Country
+-------------------------------------------------
+Every YouTrack Organizationroles will be synchronized with a Businessnxt Country.
 
-Once a link between a YouTrack Organizationroles and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Organizationroles and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Organizationroles and a  Country:
+The following properties are synchronized between a YouTrack Organizationroles and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Organizationroles Property
-     -  Country Property
-     -  Data Type
+     - Businessnxt Country Property
+     - Businessnxt Data Type
 
 
-YouTrack Organizations to  Address
-----------------------------------
-Every YouTrack Organizations will be synchronized with a  Address.
+YouTrack Organizations to Businessnxt Address
+---------------------------------------------
+Every YouTrack Organizations will be synchronized with a Businessnxt Address.
 
-Once a link between a YouTrack Organizations and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Organizations and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Organizations and a  Address:
+The following properties are synchronized between a YouTrack Organizations and a Businessnxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Organizations Property
-     -  Address Property
-     -  Data Type
+     - Businessnxt Address Property
+     - Businessnxt Data Type
 
 
-YouTrack Roles to  Country
---------------------------
-Every YouTrack Roles will be synchronized with a  Country.
+YouTrack Roles to Businessnxt Country
+-------------------------------------
+Every YouTrack Roles will be synchronized with a Businessnxt Country.
 
-Once a link between a YouTrack Roles and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Roles and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Roles and a  Country:
+The following properties are synchronized between a YouTrack Roles and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Roles Property
-     -  Country Property
-     -  Data Type
+     - Businessnxt Country Property
+     - Businessnxt Data Type
 
 
-YouTrack Usergroups to  Address
--------------------------------
-Every YouTrack Usergroups will be synchronized with a  Address.
+YouTrack Usergroups to Businessnxt Address
+------------------------------------------
+Every YouTrack Usergroups will be synchronized with a Businessnxt Address.
 
-Once a link between a YouTrack Usergroups and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Usergroups and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Usergroups and a  Address:
+The following properties are synchronized between a YouTrack Usergroups and a Businessnxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Usergroups Property
-     -  Address Property
-     -  Data Type
+     - Businessnxt Address Property
+     - Businessnxt Data Type
    * - parent.id
      - companyNo
      - "string"
