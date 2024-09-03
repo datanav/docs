@@ -2,7 +2,7 @@
 Keap to Membercare Dataflow
 ===========================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 10:41:40
 
 Introduction
 ------------
@@ -26,4 +26,20 @@ The following properties are synchronized between a Keap Companies and a Memberc
    * - company_name
      - companyName
      - "string"
+
+
+Keap Opportunity to Membercare Invoices
+---------------------------------------
+Every Keap Opportunity will be synchronized with a Membercare Invoices.
+
+Once a link between a Keap Opportunity and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Keap Opportunity and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Keap Opportunity Property
+     - Membercare Invoices Property
+     - Membercare Data Type
 
