@@ -2,7 +2,7 @@
 Keap to Businessnxt Dataflow
 ============================
 
-Generated: 2024-09-03 09:03:43
+Generated: 2024-09-03 09:05:43
 
 Introduction
 ------------
@@ -24,6 +24,25 @@ The following properties are synchronized between a Keap Companies and a Busines
      - Businessnxt Address Property
      - Businessnxt Data Type
    * - company_name
+     - name
+     - "string"
+
+
+Keap Opportunity to Businessnxt Order
+-------------------------------------
+Every Keap Opportunity will be synchronized with a Businessnxt Order.
+
+Once a link between a Keap Opportunity and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Keap Opportunity and a Businessnxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Keap Opportunity Property
+     - Businessnxt Order Property
+     - Businessnxt Data Type
+   * - opportunity_title
      - name
      - "string"
 
