@@ -2,7 +2,7 @@
 SuperOffice to Membercare Dataflow
 ==================================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -31,20 +31,20 @@ The following properties are synchronized between a SuperOffice Contact and a  C
      - "string"
 
 
-SuperOffice Listcountryitems to  Countries
-------------------------------------------
-Every SuperOffice Listcountryitems will be synchronized with a  Countries.
+SuperOffice Listcountryitems to Membercare Countries
+----------------------------------------------------
+Every SuperOffice Listcountryitems will be synchronized with a Membercare Countries.
 
-Once a link between a SuperOffice Listcountryitems and a  Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Listcountryitems and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Listcountryitems and a  Countries:
+The following properties are synchronized between a SuperOffice Listcountryitems and a Membercare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Listcountryitems Property
-     -  Countries Property
-     -  Data Type
+     - Membercare Countries Property
+     - Membercare Data Type
    * - Name
      - name
      - "string"
