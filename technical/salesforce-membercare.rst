@@ -2,46 +2,46 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-03 09:00:48
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Membercare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Salesforce Contact to  Countries
---------------------------------
-Every Salesforce Contact will be synchronized with a  Countries.
+Salesforce Contact to Membercare Countries
+------------------------------------------
+Every Salesforce Contact will be synchronized with a Membercare Countries.
 
-Once a link between a Salesforce Contact and a  Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Contact and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Contact and a  Countries:
+The following properties are synchronized between a Salesforce Contact and a Membercare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Contact Property
-     -  Countries Property
-     -  Data Type
+     - Membercare Countries Property
+     - Membercare Data Type
    * - MailingCountry
      - name
      - "string"
 
 
-Salesforce Organization to  Companies
--------------------------------------
-Every Salesforce Organization will be synchronized with a  Companies.
+Salesforce Organization to Membercare Companies
+-----------------------------------------------
+Every Salesforce Organization will be synchronized with a Membercare Companies.
 
-Once a link between a Salesforce Organization and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Organization and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Organization and a  Companies:
+The following properties are synchronized between a Salesforce Organization and a Membercare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Organization Property
-     -  Companies Property
-     -  Data Type
+     - Membercare Companies Property
+     - Membercare Data Type
    * - City
      - addresses.postalCode.city
      - "string"
