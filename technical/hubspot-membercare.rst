@@ -2,7 +2,7 @@
 HubSpot to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -175,20 +175,20 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
      -  Data Type
 
 
-HubSpot Company to  Countries
------------------------------
-Every HubSpot Company will be synchronized with a  Countries.
+HubSpot Company to Membercare Countries
+---------------------------------------
+Every HubSpot Company will be synchronized with a Membercare Countries.
 
-Once a link between a HubSpot Company and a  Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a  Countries:
+The following properties are synchronized between a HubSpot Company and a Membercare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     -  Countries Property
-     -  Data Type
+     - Membercare Countries Property
+     - Membercare Data Type
    * - properties.country
      - name
      - "string"
