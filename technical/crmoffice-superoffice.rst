@@ -2,7 +2,7 @@
 Crmoffice to Superoffice Dataflow
 =================================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,4 +23,16 @@ The following properties are synchronized between a Crmoffice Contacts and a Sup
    * - Crmoffice Contacts Property
      - Superoffice Person Property
      - Superoffice Data Type
+   * - directPhone
+     - OfficePhones.Value
+     - "string"
+   * - familyName
+     - Lastname
+     - "string"
+   * - givenName
+     - Firstname
+     - "string"
+   * - mobilePhone
+     - MobilePhones.Value
+     - "string"
 
