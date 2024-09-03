@@ -2,89 +2,89 @@
 YouTrack to Membercare Dataflow
 ===============================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:11:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from YouTrack to Membercare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-YouTrack Groups to  Companies
------------------------------
-Every YouTrack Groups will be synchronized with a  Companies.
+YouTrack Groups to Membercare Companies
+---------------------------------------
+Every YouTrack Groups will be synchronized with a Membercare Companies.
 
-Once a link between a YouTrack Groups and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Groups and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Groups and a  Companies:
+The following properties are synchronized between a YouTrack Groups and a Membercare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Groups Property
-     -  Companies Property
-     -  Data Type
+     - Membercare Companies Property
+     - Membercare Data Type
 
 
-YouTrack Organizationroles to  Companycategories
-------------------------------------------------
-Every YouTrack Organizationroles will be synchronized with a  Companycategories.
+YouTrack Organizationroles to Membercare Companycategories
+----------------------------------------------------------
+Every YouTrack Organizationroles will be synchronized with a Membercare Companycategories.
 
-Once a link between a YouTrack Organizationroles and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Organizationroles and a Membercare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Organizationroles and a  Companycategories:
+The following properties are synchronized between a YouTrack Organizationroles and a Membercare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Organizationroles Property
-     -  Companycategories Property
-     -  Data Type
+     - Membercare Companycategories Property
+     - Membercare Data Type
 
 
-YouTrack Organizations to  Companies
-------------------------------------
-Every YouTrack Organizations will be synchronized with a  Companies.
+YouTrack Organizations to Membercare Companies
+----------------------------------------------
+Every YouTrack Organizations will be synchronized with a Membercare Companies.
 
-Once a link between a YouTrack Organizations and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Organizations and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Organizations and a  Companies:
+The following properties are synchronized between a YouTrack Organizations and a Membercare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Organizations Property
-     -  Companies Property
-     -  Data Type
+     - Membercare Companies Property
+     - Membercare Data Type
 
 
-YouTrack Roles to  Companycategories
-------------------------------------
-Every YouTrack Roles will be synchronized with a  Companycategories.
+YouTrack Roles to Membercare Companycategories
+----------------------------------------------
+Every YouTrack Roles will be synchronized with a Membercare Companycategories.
 
-Once a link between a YouTrack Roles and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Roles and a Membercare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Roles and a  Companycategories:
+The following properties are synchronized between a YouTrack Roles and a Membercare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Roles Property
-     -  Companycategories Property
-     -  Data Type
+     - Membercare Companycategories Property
+     - Membercare Data Type
 
 
-YouTrack Usergroups to  Companies
----------------------------------
-Every YouTrack Usergroups will be synchronized with a  Companies.
+YouTrack Usergroups to Membercare Companies
+-------------------------------------------
+Every YouTrack Usergroups will be synchronized with a Membercare Companies.
 
-Once a link between a YouTrack Usergroups and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Usergroups and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Usergroups and a  Companies:
+The following properties are synchronized between a YouTrack Usergroups and a Membercare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Usergroups Property
-     -  Companies Property
-     -  Data Type
+     - Membercare Companies Property
+     - Membercare Data Type
 
