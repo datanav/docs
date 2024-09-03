@@ -2,7 +2,7 @@
 Membercare to Exact Dataflow
 ============================
 
-Generated: 2024-09-03 09:11:47
+Generated: 2024-09-03 09:49:34
 
 Introduction
 ------------
@@ -98,4 +98,20 @@ The following properties are synchronized between a Membercare Companies and a E
    * - addresses.postalCode.city
      - City
      - "string"
+
+
+Membercare Invoices to Exact Salesinvoices
+------------------------------------------
+Every Membercare Invoices will be synchronized with a Exact Salesinvoices.
+
+Once a link between a Membercare Invoices and a Exact Salesinvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Invoices and a Exact Salesinvoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Invoices Property
+     - Exact Salesinvoices Property
+     - Exact Data Type
 
