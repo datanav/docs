@@ -2,7 +2,7 @@
 Wave Financial to Businessnxt Dataflow
 ======================================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -37,20 +37,20 @@ The following properties are synchronized between a Wave Customer and a  Address
      - "string"
 
 
-Wave Country to  Country
-------------------------
-Every Wave Country will be synchronized with a  Country.
+Wave Country to Businessnxt Country
+-----------------------------------
+Every Wave Country will be synchronized with a Businessnxt Country.
 
-Once a link between a Wave Country and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Country and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Country and a  Country:
+The following properties are synchronized between a Wave Country and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Country Property
-     -  Country Property
-     -  Data Type
+     - Businessnxt Country Property
+     - Businessnxt Data Type
    * - currency.code
      - currencyNo
      - "string"
@@ -59,39 +59,39 @@ The following properties are synchronized between a Wave Country and a  Country:
      - "string"
 
 
-Wave Currency to  Currency
---------------------------
-Every Wave Currency will be synchronized with a  Currency.
+Wave Currency to Businessnxt Currency
+-------------------------------------
+Every Wave Currency will be synchronized with a Businessnxt Currency.
 
-Once a link between a Wave Currency and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Currency and a Businessnxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Currency and a  Currency:
+The following properties are synchronized between a Wave Currency and a Businessnxt Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Currency Property
-     -  Currency Property
-     -  Data Type
+     - Businessnxt Currency Property
+     - Businessnxt Data Type
    * - name
      - name
      - "string"
 
 
-Wave Invoice to  Order
-----------------------
-Every Wave Invoice will be synchronized with a  Order.
+Wave Invoice to Businessnxt Order
+---------------------------------
+Every Wave Invoice will be synchronized with a Businessnxt Order.
 
-Once a link between a Wave Invoice and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a  Order:
+The following properties are synchronized between a Wave Invoice and a Businessnxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     -  Order Property
-     -  Data Type
+     - Businessnxt Order Property
+     - Businessnxt Data Type
    * - invoiceDate
      - invoiceDate
      - "string"
@@ -100,39 +100,39 @@ The following properties are synchronized between a Wave Invoice and a  Order:
      - "string"
 
 
-Wave Invoice to  Orderline
---------------------------
-Every Wave Invoice will be synchronized with a  Orderline.
+Wave Invoice to Businessnxt Orderline
+-------------------------------------
+Every Wave Invoice will be synchronized with a Businessnxt Orderline.
 
-Once a link between a Wave Invoice and a  Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a Businessnxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a  Orderline:
+The following properties are synchronized between a Wave Invoice and a Businessnxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     -  Orderline Property
-     -  Data Type
+     - Businessnxt Orderline Property
+     - Businessnxt Data Type
    * - id
      - orderNo
      - "string"
 
 
-Wave Product to  Product
-------------------------
-Every Wave Product will be synchronized with a  Product.
+Wave Product to Businessnxt Product
+-----------------------------------
+Every Wave Product will be synchronized with a Businessnxt Product.
 
-Once a link between a Wave Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a Businessnxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a  Product:
+The following properties are synchronized between a Wave Product and a Businessnxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Product Property
-     -  Product Property
-     -  Data Type
+     - Businessnxt Product Property
+     - Businessnxt Data Type
    * - description
      - description
      - "string"
