@@ -2,27 +2,27 @@
 HubSpot to Crmoffice Dataflow
 =============================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:11:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Crmoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-HubSpot Contact to  Contacts
-----------------------------
-Every HubSpot Contact will be synchronized with a  Contacts.
+HubSpot Contact to Crmoffice Contacts
+-------------------------------------
+Every HubSpot Contact will be synchronized with a Crmoffice Contacts.
 
-Once a link between a HubSpot Contact and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contact and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contact and a  Contacts:
+The following properties are synchronized between a HubSpot Contact and a Crmoffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contact Property
-     -  Contacts Property
-     -  Data Type
+     - Crmoffice Contacts Property
+     - Crmoffice Data Type
    * - properties.firstname
      - givenName
      - "string"
@@ -37,50 +37,50 @@ The following properties are synchronized between a HubSpot Contact and a  Conta
      - "string"
 
 
-HubSpot Contactcompanyassociation to  Contacts
-----------------------------------------------
-Every HubSpot Contactcompanyassociation will be synchronized with a  Contacts.
+HubSpot Contactcompanyassociation to Crmoffice Contacts
+-------------------------------------------------------
+Every HubSpot Contactcompanyassociation will be synchronized with a Crmoffice Contacts.
 
-Once a link between a HubSpot Contactcompanyassociation and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contactcompanyassociation and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contactcompanyassociation and a  Contacts:
+The following properties are synchronized between a HubSpot Contactcompanyassociation and a Crmoffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contactcompanyassociation Property
-     -  Contacts Property
-     -  Data Type
+     - Crmoffice Contacts Property
+     - Crmoffice Data Type
 
 
-HubSpot Product to  Companies
------------------------------
-Every HubSpot Product will be synchronized with a  Companies.
+HubSpot Product to Crmoffice Companies
+--------------------------------------
+Every HubSpot Product will be synchronized with a Crmoffice Companies.
 
-Once a link between a HubSpot Product and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Product and a Crmoffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Product and a  Companies:
+The following properties are synchronized between a HubSpot Product and a Crmoffice Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Product Property
-     -  Companies Property
-     -  Data Type
+     - Crmoffice Companies Property
+     - Crmoffice Data Type
 
 
-HubSpot User to  Contacts
--------------------------
-Every HubSpot User will be synchronized with a  Contacts.
+HubSpot User to Crmoffice Contacts
+----------------------------------
+Every HubSpot User will be synchronized with a Crmoffice Contacts.
 
-Once a link between a HubSpot User and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot User and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot User and a  Contacts:
+The following properties are synchronized between a HubSpot User and a Crmoffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot User Property
-     -  Contacts Property
-     -  Data Type
+     - Crmoffice Contacts Property
+     - Crmoffice Data Type
 
