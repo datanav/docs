@@ -2,9 +2,71 @@
 Invoiced to Superoffice Dataflow
 ================================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:43
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Invoiced Items to Superoffice Product
+-------------------------------------
+Every Invoiced Items will be synchronized with a Superoffice Product.
+
+Once a link between a Invoiced Items and a Superoffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Items and a Superoffice Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Items Property
+     - Superoffice Product Property
+     - Superoffice Data Type
+   * - currency
+     - ERPPriceListKey
+     - "string"
+   * - description
+     - Description
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - unit_cost
+     - UnitCost
+     - "string"
+
+
+Invoiced Lineitem to Superoffice Quoteline
+------------------------------------------
+Every Invoiced Lineitem will be synchronized with a Superoffice Quoteline.
+
+Once a link between a Invoiced Lineitem and a Superoffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Lineitem and a Superoffice Quoteline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Lineitem Property
+     - Superoffice Quoteline Property
+     - Superoffice Data Type
+   * - $original_id
+     - QuoteAlternativeId
+     - "integer"
+   * - items.amount
+     - UnitListPrice
+     - N/A
+   * - items.description
+     - Description
+     - "string"
+   * - items.discounts
+     - ERPDiscountPercent
+     - "integer"
+   * - items.name
+     - Name
+     - "string"
+   * - items.quantity
+     - Quantity
+     - N/A
+
