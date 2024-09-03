@@ -2,12 +2,44 @@
 Chargebee to Businessnxt Dataflow
 =================================
 
-Generated: 2024-09-03 08:57:55
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Chargebee to Businessnxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Chargebee Currency to Businessnxt Country
+-----------------------------------------
+Every Chargebee Currency will be synchronized with a Businessnxt Country.
+
+Once a link between a Chargebee Currency and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Currency and a Businessnxt Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Currency Property
+     - Businessnxt Country Property
+     - Businessnxt Data Type
+
+
+Chargebee Item_family to Businessnxt Country
+--------------------------------------------
+Every Chargebee Item_family will be synchronized with a Businessnxt Country.
+
+Once a link between a Chargebee Item_family and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Item_family and a Businessnxt Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Item_family Property
+     - Businessnxt Country Property
+     - Businessnxt Data Type
+
 
 Chargebee Address to Businessnxt Country
 ----------------------------------------
