@@ -2,7 +2,7 @@
 Businessnxt to  Dataflow
 ========================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:57:55
 
 Introduction
 ------------
@@ -23,6 +23,24 @@ The following properties are synchronized between a Businessnxt Address and a  C
    * - Businessnxt Address Property
      -  Companies Property
      -  Data Type
+   * - addressLine1
+     - addresses.street
+     - "string"
+   * - addressNo
+     - addresses.id
+     - "string"
+   * - countryNo
+     - addresses.country.id
+     - "string"
+   * - name
+     - companyName
+     - "string"
+   * - postCode
+     - addresses.postalCode.zipCode
+     - "string"
+   * - postalArea
+     - addresses.postalCode.city
+     - "string"
 
 
 Businessnxt Company to  Companies
@@ -39,6 +57,12 @@ The following properties are synchronized between a Businessnxt Company and a  C
    * - Businessnxt Company Property
      -  Companies Property
      -  Data Type
+   * - companyNo
+     - addresses.id
+     - "string"
+   * - name
+     - companyName
+     - "string"
 
 
 Businessnxt Country to  Countries
@@ -55,4 +79,10 @@ The following properties are synchronized between a Businessnxt Country and a  C
    * - Businessnxt Country Property
      -  Countries Property
      -  Data Type
+   * - isoCode
+     - iso2Letter
+     - "string"
+   * - name
+     - name
+     - "string"
 
