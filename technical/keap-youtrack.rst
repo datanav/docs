@@ -2,7 +2,7 @@
 Keap to Youtrack Dataflow
 =========================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:57:55
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Keap Users and a Youtrack Us
    * - Keap Users Property
      - Youtrack Users Property
      - Youtrack Data Type
+   * - email_address
+     - profile.email.email
+     - "string"
 
