@@ -2,7 +2,7 @@
 HubSpot to Exact Dataflow
 =========================
 
-Generated: 2024-09-03 08:14:49
+Generated: 2024-09-03 08:16:35
 
 Introduction
 ------------
@@ -464,39 +464,39 @@ The following properties are synchronized between a HubSpot User and a  Contacts
      - "string"
 
 
-HubSpot Account to  Currencies
-------------------------------
-Every HubSpot Account will be synchronized with a  Currencies.
+HubSpot Account to Exact Currencies
+-----------------------------------
+Every HubSpot Account will be synchronized with a Exact Currencies.
 
-Once a link between a HubSpot Account and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Account and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Account and a  Currencies:
+The following properties are synchronized between a HubSpot Account and a Exact Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Account Property
-     -  Currencies Property
-     -  Data Type
+     - Exact Currencies Property
+     - Exact Data Type
    * - accountType
      - Code
      - "string"
 
 
-HubSpot Contact to  Addresses
------------------------------
-Every HubSpot Contact will be synchronized with a  Addresses.
+HubSpot Contact to Exact Addresses
+----------------------------------
+Every HubSpot Contact will be synchronized with a Exact Addresses.
 
-Once a link between a HubSpot Contact and a  Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contact and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contact and a  Addresses:
+The following properties are synchronized between a HubSpot Contact and a Exact Addresses:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contact Property
-     -  Addresses Property
-     -  Data Type
+     - Exact Addresses Property
+     - Exact Data Type
    * - properties.address
      - AddressLine1
      - "string"
@@ -508,39 +508,39 @@ The following properties are synchronized between a HubSpot Contact and a  Addre
      - "string"
 
 
-HubSpot Deal to  Currencies
----------------------------
-Every HubSpot Deal will be synchronized with a  Currencies.
+HubSpot Deal to Exact Currencies
+--------------------------------
+Every HubSpot Deal will be synchronized with a Exact Currencies.
 
-Once a link between a HubSpot Deal and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a  Currencies:
+The following properties are synchronized between a HubSpot Deal and a Exact Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     -  Currencies Property
-     -  Data Type
+     - Exact Currencies Property
+     - Exact Data Type
    * - properties.deal_currency_code
      - Code
      - "string"
 
 
-HubSpot Deal to  Salesorders
-----------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a  Salesorders.
+HubSpot Deal to Exact Salesorders
+---------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Exact Salesorders.
 
-Once a link between a HubSpot Deal and a  Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a  Salesorders:
+The following properties are synchronized between a HubSpot Deal and a Exact Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     -  Salesorders Property
-     -  Data Type
+     - Exact Salesorders Property
+     - Exact Data Type
    * - properties.closedate
      - DeliveryDate
      - "string"
@@ -555,55 +555,55 @@ The following properties are synchronized between a HubSpot Deal and a  Salesord
      - "string"
 
 
-HubSpot Lineitem to  Salesorderlines
-------------------------------------
-Every HubSpot Lineitem will be synchronized with a  Salesorderlines.
+HubSpot Lineitem to Exact Salesorderlines
+-----------------------------------------
+Every HubSpot Lineitem will be synchronized with a Exact Salesorderlines.
 
-Once a link between a HubSpot Lineitem and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitem and a Exact Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitem and a  Salesorderlines:
+The following properties are synchronized between a HubSpot Lineitem and a Exact Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitem Property
-     -  Salesorderlines Property
-     -  Data Type
+     - Exact Salesorderlines Property
+     - Exact Data Type
    * - properties.hs_product_id
      - Item
      - "string"
 
 
-HubSpot Product to  Items
--------------------------
-Every HubSpot Product will be synchronized with a  Items.
+HubSpot Product to Exact Items
+------------------------------
+Every HubSpot Product will be synchronized with a Exact Items.
 
-Once a link between a HubSpot Product and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Product and a Exact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Product and a  Items:
+The following properties are synchronized between a HubSpot Product and a Exact Items:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Product Property
-     -  Items Property
-     -  Data Type
+     - Exact Items Property
+     - Exact Data Type
 
 
-HubSpot Quote to  Quotations
-----------------------------
-Every HubSpot Quote will be synchronized with a  Quotations.
+HubSpot Quote to Exact Quotations
+---------------------------------
+Every HubSpot Quote will be synchronized with a Exact Quotations.
 
-Once a link between a HubSpot Quote and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quote and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quote and a  Quotations:
+The following properties are synchronized between a HubSpot Quote and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quote Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
    * - properties.hs_expiration_date
      - CloseDate
      - "string"
