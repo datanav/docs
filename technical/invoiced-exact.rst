@@ -2,12 +2,60 @@
 Invoiced to Exact Dataflow
 ==========================
 
-Generated: 2024-09-03 09:02:43
+Generated: 2024-09-03 09:11:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Exact. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Invoiced Customers person to Exact Contacts
+-------------------------------------------
+Every Invoiced Customers person will be synchronized with a Exact Contacts.
+
+Once a link between a Invoiced Customers person and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Customers person and a Exact Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Customers person Property
+     - Exact Contacts Property
+     - Exact Data Type
+
+
+Invoiced Invoices to Exact Quotations
+-------------------------------------
+Every Invoiced Invoices will be synchronized with a Exact Quotations.
+
+Once a link between a Invoiced Invoices and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Invoices and a Exact Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Invoices Property
+     - Exact Quotations Property
+     - Exact Data Type
+
+
+Invoiced Lineitem to Exact Quotations
+-------------------------------------
+Every Invoiced Lineitem will be synchronized with a Exact Quotations.
+
+Once a link between a Invoiced Lineitem and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Lineitem and a Exact Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Lineitem Property
+     - Exact Quotations Property
+     - Exact Data Type
+
 
 Invoiced Contacts to Exact Addresses
 ------------------------------------
