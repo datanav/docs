@@ -2,7 +2,7 @@
 Exact to Exact Dataflow
 =======================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -101,6 +101,21 @@ The following properties are synchronized between a Exact Accounts and a Exact A
    * - Exact Accounts Property
      - Exact Addresses Property
      - Exact Data Type
+   * - AddressLine1
+     - AddressLine1
+     - "string"
+   * - AddressLine2
+     - AddressLine2
+     - "string"
+   * - AddressLine3
+     - AddressLine3
+     - "string"
+   * - City
+     - City
+     - "string"
+   * - Country
+     - Country
+     - "string"
 
 
 Exact Employees to Exact Addresses
@@ -117,4 +132,19 @@ The following properties are synchronized between a Exact Employees and a Exact 
    * - Exact Employees Property
      - Exact Addresses Property
      - Exact Data Type
+   * - AddressLine2
+     - AddressLine2
+     - "string"
+   * - AddressLine3
+     - AddressLine3
+     - "string"
+   * - AddressStreet
+     - AddressLine1
+     - "string"
+   * - City
+     - City
+     - "string"
+   * - Country
+     - Country
+     - "string"
 
