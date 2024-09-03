@@ -2,7 +2,7 @@
 Woocommerce to  Dataflow
 ========================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Woocommerce Order and a  Cur
    * - Woocommerce Order Property
      -  Currency Property
      -  Data Type
+   * - billing.country
+     - isoCode
+     - "string"
+   * - shipping.country
+     - isoCode
+     - "string"
 
 
 Woocommerce Order to  Order
@@ -39,6 +45,9 @@ The following properties are synchronized between a Woocommerce Order and a  Ord
    * - Woocommerce Order Property
      -  Order Property
      -  Data Type
+   * - discount_total
+     - totalDiscountAmountInCurrency
+     - "string"
 
 
 Woocommerce Order to  Orderline
@@ -55,6 +64,9 @@ The following properties are synchronized between a Woocommerce Order and a  Ord
    * - Woocommerce Order Property
      -  Orderline Property
      -  Data Type
+   * - id
+     - orderNo
+     - "string"
 
 
 Woocommerce Product to  Product
@@ -71,4 +83,7 @@ The following properties are synchronized between a Woocommerce Product and a  P
    * - Woocommerce Product Property
      -  Product Property
      -  Data Type
+   * - sale_price
+     - priceQuantity
+     - "string"
 
