@@ -2,7 +2,7 @@
 Webcrm to Tilores Dataflow
 ==========================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Webcrm Persons and a Tilores
    * - Webcrm Persons Property
      - Tilores Human Property
      - Tilores Data Type
+   * - PersonFirstName
+     - firstName
+     - "string"
+   * - PersonLastName
+     - lastName
+     - "string"
+   * - document_number
+     - dateOfBirth
+     - "string"
 
 
 Webcrm Users to Tilores Human
