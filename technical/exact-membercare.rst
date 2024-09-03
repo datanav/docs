@@ -2,7 +2,7 @@
 Exact to Membercare Dataflow
 ============================
 
-Generated: 2024-09-03 13:37:56
+Generated: 2024-09-03 14:23:40
 
 Introduction
 ------------
@@ -197,6 +197,22 @@ The following properties are synchronized between a Exact Addresses and a Member
    * - CountryName
      - name
      - "string"
+
+
+Exact Departments to Membercare Organizations
+---------------------------------------------
+Every Exact Departments will be synchronized with a Membercare Organizations.
+
+Once a link between a Exact Departments and a Membercare Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Departments and a Membercare Organizations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Departments Property
+     - Membercare Organizations Property
+     - Membercare Data Type
 
 
 Exact Salesinvoices to Membercare Invoices
