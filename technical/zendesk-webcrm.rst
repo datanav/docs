@@ -2,7 +2,7 @@
 Zendesk to Webcrm Dataflow
 ==========================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -28,18 +28,18 @@ The following properties are synchronized between a Zendesk Organizations and a 
      - "string"
 
 
-Zendesk Users to  Users
------------------------
-When a Zendesk User is of type Agent, it  will be synchronized with a  Users.
+Zendesk Users to Webcrm Users
+-----------------------------
+When a Zendesk User is of type Agent, it  will be synchronized with a Webcrm Users.
 
-Once a link between a Zendesk Users and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Users and a Webcrm Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Users and a  Users:
+The following properties are synchronized between a Zendesk Users and a Webcrm Users:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Users Property
-     -  Users Property
-     -  Data Type
+     - Webcrm Users Property
+     - Webcrm Data Type
 
