@@ -2,7 +2,7 @@
 Membercare to Keap Dataflow
 ===========================
 
-Generated: 2024-09-03 09:11:47
+Generated: 2024-09-03 23:08:40
 
 Introduction
 ------------
@@ -26,4 +26,20 @@ The following properties are synchronized between a Membercare Companies and a K
    * - companyName
      - company_name
      - "string"
+
+
+Membercare Organizations to Keap Companies
+------------------------------------------
+Every Membercare Organizations will be synchronized with a Keap Companies.
+
+Once a link between a Membercare Organizations and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Organizations and a Keap Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Organizations Property
+     - Keap Companies Property
+     - Keap Data Type
 
