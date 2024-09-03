@@ -2,7 +2,7 @@
 HubSpot to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-03 13:10:23
+Generated: 2024-09-03 13:11:00
 
 Introduction
 ------------
@@ -72,6 +72,9 @@ The following properties are synchronized between a HubSpot Deal and a Membercar
      - "string"
    * - properties.dealstage
      - deliverProductsTo
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.addressDescription
      - "string"
    * - properties.dealstage
      - eInvoiceInfo.accountingNo
