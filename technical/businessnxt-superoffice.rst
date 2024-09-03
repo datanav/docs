@@ -2,7 +2,7 @@
 Businessnxt to Superoffice Dataflow
 ===================================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Businessnxt Address and a Su
    * - Businessnxt Address Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - name
+     - Name
+     - "string"
+   * - phone
+     - Phones.Value
+     - "string"
 
 
 Businessnxt Company to Superoffice Contact
@@ -39,6 +45,12 @@ The following properties are synchronized between a Businessnxt Company and a Su
    * - Businessnxt Company Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - companyBusinessNo
+     - OrgNr (Dependant on having  in Country.TwoLetterISOCountry)
+     - "string"
+   * - name
+     - Name
+     - "string"
 
 
 Businessnxt Orderline to Superoffice Quoteline
