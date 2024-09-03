@@ -2,7 +2,7 @@
 Membercare to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-03 13:28:36
+Generated: 2024-09-03 14:16:41
 
 Introduction
 ------------
@@ -148,5 +148,37 @@ The following properties are synchronized between a Membercare Invoices and a Bu
 
    * - Membercare Invoices Property
      - Businessnxt Orderline Property
+     - Businessnxt Data Type
+
+
+Membercare Organizations to Businessnxt Address
+-----------------------------------------------
+Every Membercare Organizations will be synchronized with a Businessnxt Address.
+
+Once a link between a Membercare Organizations and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Organizations and a Businessnxt Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Organizations Property
+     - Businessnxt Address Property
+     - Businessnxt Data Type
+
+
+Membercare Organizations to Businessnxt Company
+-----------------------------------------------
+Every Membercare Organizations will be synchronized with a Businessnxt Company.
+
+Once a link between a Membercare Organizations and a Businessnxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Organizations and a Businessnxt Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Organizations Property
+     - Businessnxt Company Property
      - Businessnxt Data Type
 
