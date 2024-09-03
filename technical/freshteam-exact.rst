@@ -2,46 +2,46 @@
 Freshteam to Exact Dataflow
 ===========================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:20:40
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Freshteam to Exact. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Freshteam Department to  Accounts
----------------------------------
-Every Freshteam Department will be synchronized with a  Accounts.
+Freshteam Department to Exact Accounts
+--------------------------------------
+Every Freshteam Department will be synchronized with a Exact Accounts.
 
-Once a link between a Freshteam Department and a  Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Department and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Department and a  Accounts:
+The following properties are synchronized between a Freshteam Department and a Exact Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Department Property
-     -  Accounts Property
-     -  Data Type
+     - Exact Accounts Property
+     - Exact Data Type
    * - name
      - Name
      - "string"
 
 
-Freshteam Employee to  Contacts
--------------------------------
-Every Freshteam Employee will be synchronized with a  Contacts.
+Freshteam Employee to Exact Contacts
+------------------------------------
+Every Freshteam Employee will be synchronized with a Exact Contacts.
 
-Once a link between a Freshteam Employee and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Employee and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Employee and a  Contacts:
+The following properties are synchronized between a Freshteam Employee and a Exact Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Employee Property
-     -  Contacts Property
-     -  Data Type
+     - Exact Contacts Property
+     - Exact Data Type
    * - address.city
      - City
      - "string"
