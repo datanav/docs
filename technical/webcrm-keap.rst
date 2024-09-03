@@ -2,7 +2,7 @@
 Webcrm to Keap Dataflow
 =======================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Webcrm Organisations and a K
    * - Webcrm Organisations Property
      - Keap Companies Property
      - Keap Data Type
+   * - OrganisationName
+     - company_name
+     - "string"
 
 
 Webcrm Persons to Keap Contacts
@@ -39,6 +42,12 @@ The following properties are synchronized between a Webcrm Persons and a Keap Co
    * - Webcrm Persons Property
      - Keap Contacts Property
      - Keap Data Type
+   * - PersonTitle
+     - job_title
+     - "string"
+   * - document_number
+     - birthday
+     - "string"
 
 
 Webcrm Users to Keap Contacts
@@ -55,6 +64,9 @@ The following properties are synchronized between a Webcrm Users and a Keap Cont
    * - Webcrm Users Property
      - Keap Contacts Property
      - Keap Data Type
+   * - UserTitle
+     - job_title
+     - "string"
 
 
 Webcrm Opportunities to Keap Opportunity
