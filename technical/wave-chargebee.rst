@@ -2,7 +2,7 @@
 Wave Financial to Chargebee Dataflow
 ====================================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -46,20 +46,20 @@ The following properties are synchronized between a Wave Customer and a  Busines
      - "string"
 
 
-Wave Customer person to  Customer
----------------------------------
-Every Wave Customer person will be synchronized with a  Customer.
+Wave Customer person to Chargebee Customer
+------------------------------------------
+Every Wave Customer person will be synchronized with a Chargebee Customer.
 
-Once a link between a Wave Customer person and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer person and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a  Customer:
+The following properties are synchronized between a Wave Customer person and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     -  Customer Property
-     -  Data Type
+     - Chargebee Customer Property
+     - Chargebee Data Type
    * - email
      - email
      - "string"
@@ -71,20 +71,20 @@ The following properties are synchronized between a Wave Customer person and a  
      - "string"
 
 
-Wave Invoice to  Order
-----------------------
-Every Wave Invoice will be synchronized with a  Order.
+Wave Invoice to Chargebee Order
+-------------------------------
+Every Wave Invoice will be synchronized with a Chargebee Order.
 
-Once a link between a Wave Invoice and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a  Order:
+The following properties are synchronized between a Wave Invoice and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
    * - currency.code
      - currency_code
      - "string"
@@ -102,20 +102,20 @@ The following properties are synchronized between a Wave Invoice and a  Order:
      - "string"
 
 
-Wave Product to  Item
----------------------
-Every Wave Product will be synchronized with a  Item.
+Wave Product to Chargebee Item
+------------------------------
+Every Wave Product will be synchronized with a Chargebee Item.
 
-Once a link between a Wave Product and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a  Item:
+The following properties are synchronized between a Wave Product and a Chargebee Item:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Product Property
-     -  Item Property
-     -  Data Type
+     - Chargebee Item Property
+     - Chargebee Data Type
    * - name
      - name
      - "string"
