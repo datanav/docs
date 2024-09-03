@@ -2,27 +2,27 @@
 Tidsbanken to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tidsbanken to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tidsbanken Ansatt to  Customer
-------------------------------
-Every Tidsbanken Ansatt will be synchronized with a  Customer.
+Tidsbanken Ansatt to Chargebee Customer
+---------------------------------------
+Every Tidsbanken Ansatt will be synchronized with a Chargebee Customer.
 
-Once a link between a Tidsbanken Ansatt and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Ansatt and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Ansatt and a  Customer:
+The following properties are synchronized between a Tidsbanken Ansatt and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Ansatt Property
-     -  Customer Property
-     -  Data Type
+     - Chargebee Customer Property
+     - Chargebee Data Type
    * - Etternavn
      - last_name
      - "string"
@@ -31,39 +31,39 @@ The following properties are synchronized between a Tidsbanken Ansatt and a  Cus
      - "string"
 
 
-Tidsbanken Avdeling to  Business_entity
----------------------------------------
-Every Tidsbanken Avdeling will be synchronized with a  Business_entity.
+Tidsbanken Avdeling to Chargebee Business_entity
+------------------------------------------------
+Every Tidsbanken Avdeling will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Tidsbanken Avdeling and a  Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Avdeling and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Avdeling and a  Business_entity:
+The following properties are synchronized between a Tidsbanken Avdeling and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Avdeling Property
-     -  Business_entity Property
-     -  Data Type
+     - Chargebee Business_entity Property
+     - Chargebee Data Type
    * - Navn
      - name
      - "string"
 
 
-Tidsbanken Kunde to  Business_entity
-------------------------------------
-Every Tidsbanken Kunde will be synchronized with a  Business_entity.
+Tidsbanken Kunde to Chargebee Business_entity
+---------------------------------------------
+Every Tidsbanken Kunde will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Tidsbanken Kunde and a  Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Kunde and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Kunde and a  Business_entity:
+The following properties are synchronized between a Tidsbanken Kunde and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Kunde Property
-     -  Business_entity Property
-     -  Data Type
+     - Chargebee Business_entity Property
+     - Chargebee Data Type
    * - Navn
      - name
      - "string"
