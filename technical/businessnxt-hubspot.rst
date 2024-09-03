@@ -2,7 +2,7 @@
 Businessnxt to Hubspot Dataflow
 ===============================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:57:55
 
 Introduction
 ------------
@@ -39,4 +39,10 @@ The following properties are synchronized between a Businessnxt Product and a Hu
    * - Businessnxt Product Property
      - Hubspot Product Property
      - Hubspot Data Type
+   * - description
+     - properties.description
+     - "string"
+   * - priceQuantity
+     - properties.price
+     - "string"
 
