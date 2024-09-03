@@ -2,7 +2,7 @@
 Exact to Webcrm Dataflow
 ========================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -66,55 +66,55 @@ The following properties are synchronized between a Exact Divisions and a  Organ
      - "string"
 
 
-Exact Contacts to  Persons
---------------------------
-Every Exact Contacts will be synchronized with a  Persons.
+Exact Contacts to Webcrm Persons
+--------------------------------
+Every Exact Contacts will be synchronized with a Webcrm Persons.
 
-Once a link between a Exact Contacts and a  Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Contacts and a Webcrm Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Contacts and a  Persons:
+The following properties are synchronized between a Exact Contacts and a Webcrm Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Contacts Property
-     -  Persons Property
-     -  Data Type
+     - Webcrm Persons Property
+     - Webcrm Data Type
    * - BirthDate
      - document_number
      - "string"
 
 
-Exact Items to  Products
-------------------------
-Every Exact Items will be synchronized with a  Products.
+Exact Items to Webcrm Products
+------------------------------
+Every Exact Items will be synchronized with a Webcrm Products.
 
-Once a link between a Exact Items and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Items and a Webcrm Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Items and a  Products:
+The following properties are synchronized between a Exact Items and a Webcrm Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Items Property
-     -  Products Property
-     -  Data Type
+     - Webcrm Products Property
+     - Webcrm Data Type
 
 
-Exact Salesorderlines to  Quotationline
----------------------------------------
-Every Exact Salesorderlines will be synchronized with a  Quotationline.
+Exact Salesorderlines to Webcrm Quotationline
+---------------------------------------------
+Every Exact Salesorderlines will be synchronized with a Webcrm Quotationline.
 
-Once a link between a Exact Salesorderlines and a  Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Salesorderlines and a Webcrm Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Salesorderlines and a  Quotationline:
+The following properties are synchronized between a Exact Salesorderlines and a Webcrm Quotationline:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Salesorderlines Property
-     -  Quotationline Property
-     -  Data Type
+     - Webcrm Quotationline Property
+     - Webcrm Data Type
    * - CostPriceFC
      - QuotationLineCostPrice
      - "string"
