@@ -2,7 +2,7 @@
 Wave Financial to Webcrm Dataflow
 =================================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -82,20 +82,20 @@ The following properties are synchronized between a Wave Customer and a  Organis
      - "string"
 
 
-Wave Customer to  Persons
--------------------------
-Every Wave Customer will be synchronized with a  Persons.
+Wave Customer to Webcrm Persons
+-------------------------------
+Every Wave Customer will be synchronized with a Webcrm Persons.
 
-Once a link between a Wave Customer and a  Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Webcrm Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a  Persons:
+The following properties are synchronized between a Wave Customer and a Webcrm Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     -  Persons Property
-     -  Data Type
+     - Webcrm Persons Property
+     - Webcrm Data Type
    * - firstName
      - PersonFirstName
      - "string"
@@ -110,20 +110,20 @@ The following properties are synchronized between a Wave Customer and a  Persons
      - "string"
 
 
-Wave Invoice to  Quotationline
-------------------------------
-Every Wave Invoice will be synchronized with a  Quotationline.
+Wave Invoice to Webcrm Quotationline
+------------------------------------
+Every Wave Invoice will be synchronized with a Webcrm Quotationline.
 
-Once a link between a Wave Invoice and a  Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a Webcrm Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a  Quotationline:
+The following properties are synchronized between a Wave Invoice and a Webcrm Quotationline:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     -  Quotationline Property
-     -  Data Type
+     - Webcrm Quotationline Property
+     - Webcrm Data Type
    * - id
      - QuotationLineOpportunityId
      - "string"
@@ -135,55 +135,55 @@ The following properties are synchronized between a Wave Invoice and a  Quotatio
      - "string"
 
 
-Wave Product to  Products
--------------------------
-Every Wave Product will be synchronized with a  Products.
+Wave Product to Webcrm Products
+-------------------------------
+Every Wave Product will be synchronized with a Webcrm Products.
 
-Once a link between a Wave Product and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a Webcrm Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a  Products:
+The following properties are synchronized between a Wave Product and a Webcrm Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Product Property
-     -  Products Property
-     -  Data Type
+     - Webcrm Products Property
+     - Webcrm Data Type
    * - unitPrice
      - ProductPrice
      - "string"
 
 
-Wave User to  Users
--------------------
-Every Wave User will be synchronized with a  Users.
+Wave User to Webcrm Users
+-------------------------
+Every Wave User will be synchronized with a Webcrm Users.
 
-Once a link between a Wave User and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave User and a Webcrm Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave User and a  Users:
+The following properties are synchronized between a Wave User and a Webcrm Users:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave User Property
-     -  Users Property
-     -  Data Type
+     - Webcrm Users Property
+     - Webcrm Data Type
 
 
-Wave Vendor to  Persons
------------------------
-Every Wave Vendor will be synchronized with a  Persons.
+Wave Vendor to Webcrm Persons
+-----------------------------
+Every Wave Vendor will be synchronized with a Webcrm Persons.
 
-Once a link between a Wave Vendor and a  Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a Webcrm Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a  Persons:
+The following properties are synchronized between a Wave Vendor and a Webcrm Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     -  Persons Property
-     -  Data Type
+     - Webcrm Persons Property
+     - Webcrm Data Type
    * - firstName
      - PersonFirstName
      - "string"
