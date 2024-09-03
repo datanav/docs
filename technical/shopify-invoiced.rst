@@ -2,43 +2,43 @@
 Shopify to Invoiced Dataflow
 ============================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Invoiced. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Shopify Customer to  Customers person
--------------------------------------
-Every Shopify Customer will be synchronized with a  Customers person.
+Shopify Customer to Invoiced Customers person
+---------------------------------------------
+Every Shopify Customer will be synchronized with a Invoiced Customers person.
 
-Once a link between a Shopify Customer and a  Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Customer and a Invoiced Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Customer and a  Customers person:
+The following properties are synchronized between a Shopify Customer and a Invoiced Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Customer Property
-     -  Customers person Property
-     -  Data Type
+     - Invoiced Customers person Property
+     - Invoiced Data Type
 
 
-Shopify Order to  Invoices
---------------------------
-Every Shopify Order will be synchronized with a  Invoices.
+Shopify Order to Invoiced Invoices
+----------------------------------
+Every Shopify Order will be synchronized with a Invoiced Invoices.
 
-Once a link between a Shopify Order and a  Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a Invoiced Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a  Invoices:
+The following properties are synchronized between a Shopify Order and a Invoiced Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     -  Invoices Property
-     -  Data Type
+     - Invoiced Invoices Property
+     - Invoiced Data Type
    * - currency
      - currency
      - "string"
@@ -47,20 +47,20 @@ The following properties are synchronized between a Shopify Order and a  Invoice
      - "string"
 
 
-Shopify Order to  Lineitem
---------------------------
-Every Shopify Order will be synchronized with a  Lineitem.
+Shopify Order to Invoiced Lineitem
+----------------------------------
+Every Shopify Order will be synchronized with a Invoiced Lineitem.
 
-Once a link between a Shopify Order and a  Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a Invoiced Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a  Lineitem:
+The following properties are synchronized between a Shopify Order and a Invoiced Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     -  Lineitem Property
-     -  Data Type
+     - Invoiced Lineitem Property
+     - Invoiced Data Type
    * - line_items.price
      - items.amount
      - "string"
@@ -75,20 +75,20 @@ The following properties are synchronized between a Shopify Order and a  Lineite
      - "string"
 
 
-Shopify Sesamproduct to  Items
-------------------------------
-Every Shopify Sesamproduct will be synchronized with a  Items.
+Shopify Sesamproduct to Invoiced Items
+--------------------------------------
+Every Shopify Sesamproduct will be synchronized with a Invoiced Items.
 
-Once a link between a Shopify Sesamproduct and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Sesamproduct and a Invoiced Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Sesamproduct and a  Items:
+The following properties are synchronized between a Shopify Sesamproduct and a Invoiced Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Sesamproduct Property
-     -  Items Property
-     -  Data Type
+     - Invoiced Items Property
+     - Invoiced Data Type
    * - title
      - name
      - "string"
