@@ -2,27 +2,27 @@
 Woocommerce to Chargebee Dataflow
 =================================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Woocommerce to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Woocommerce Customer to  Customer
----------------------------------
-Every Woocommerce Customer will be synchronized with a  Customer.
+Woocommerce Customer to Chargebee Customer
+------------------------------------------
+Every Woocommerce Customer will be synchronized with a Chargebee Customer.
 
-Once a link between a Woocommerce Customer and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Woocommerce Customer and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Customer and a  Customer:
+The following properties are synchronized between a Woocommerce Customer and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Woocommerce Customer Property
-     -  Customer Property
-     -  Data Type
+     - Chargebee Customer Property
+     - Chargebee Data Type
    * - billing.address_1
      - billing_address.line1
      - "string"
@@ -58,20 +58,20 @@ The following properties are synchronized between a Woocommerce Customer and a  
      - "string"
 
 
-Woocommerce Order to  Order
----------------------------
-Every Woocommerce Order will be synchronized with a  Order.
+Woocommerce Order to Chargebee Order
+------------------------------------
+Every Woocommerce Order will be synchronized with a Chargebee Order.
 
-Once a link between a Woocommerce Order and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Woocommerce Order and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Order and a  Order:
+The following properties are synchronized between a Woocommerce Order and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Woocommerce Order Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
    * - currency
      - currency_code
      - "string"
@@ -86,18 +86,18 @@ The following properties are synchronized between a Woocommerce Order and a  Ord
      - "string"
 
 
-Woocommerce Product to  Item
-----------------------------
-Every Woocommerce Product will be synchronized with a  Item.
+Woocommerce Product to Chargebee Item
+-------------------------------------
+Every Woocommerce Product will be synchronized with a Chargebee Item.
 
-Once a link between a Woocommerce Product and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Woocommerce Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Product and a  Item:
+The following properties are synchronized between a Woocommerce Product and a Chargebee Item:
 
 .. list-table::
    :header-rows: 1
 
    * - Woocommerce Product Property
-     -  Item Property
-     -  Data Type
+     - Chargebee Item Property
+     - Chargebee Data Type
 
