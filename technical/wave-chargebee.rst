@@ -2,29 +2,29 @@
 Wave Financial to Chargebee Dataflow
 ====================================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:58:37
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Customer to  Customer
---------------------------
-Before any synchronization can take place, a link between a Wave Customer and a  Customer must be established.
+Wave Customer to Chargebee Customer
+-----------------------------------
+Before any synchronization can take place, a link between a Wave Customer and a Chargebee Customer must be established.
 
-A new  Customer will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into .
+A new Chargebee Customer will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into Chargebee.
 
-Once a link between a Wave Customer and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a  Customer:
+The following properties are synchronized between a Wave Customer and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     -  Customer Property
-     -  Data Type
+     - Chargebee Customer Property
+     - Chargebee Data Type
 
 
 Wave Customer to  Business_entity
