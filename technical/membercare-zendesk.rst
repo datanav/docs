@@ -2,7 +2,7 @@
 Membercare to Zendesk Dataflow
 ==============================
 
-Generated: 2024-09-03 09:11:47
+Generated: 2024-09-03 23:23:41
 
 Introduction
 ------------
@@ -26,4 +26,20 @@ The following properties are synchronized between a Membercare Companies and a Z
    * - companyName
      - name
      - "string"
+
+
+Membercare Organizations to Zendesk Organizations
+-------------------------------------------------
+Every Membercare Organizations will be synchronized with a Zendesk Organizations.
+
+Once a link between a Membercare Organizations and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Organizations and a Zendesk Organizations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Organizations Property
+     - Zendesk Organizations Property
+     - Zendesk Data Type
 
