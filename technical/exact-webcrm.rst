@@ -2,7 +2,7 @@
 Exact to  Dataflow
 ==================
 
-Generated: 2024-09-03 08:20:40
+Generated: 2024-09-03 08:20:45
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Exact Accounts and a  Organi
    * - Exact Accounts Property
      -  Organisations Property
      -  Data Type
+   * - Name
+     - OrganisationName
+     - "string"
 
 
 Exact Departments to  Organisations
@@ -39,6 +42,9 @@ The following properties are synchronized between a Exact Departments and a  Org
    * - Exact Departments Property
      -  Organisations Property
      -  Data Type
+   * - Description
+     - OrganisationCompanyDescription
+     - "string"
 
 
 Exact Divisions to  Organisations
@@ -55,6 +61,9 @@ The following properties are synchronized between a Exact Divisions and a  Organ
    * - Exact Divisions Property
      -  Organisations Property
      -  Data Type
+   * - Description
+     - OrganisationCompanyDescription
+     - "string"
 
 
 Exact Contacts to  Persons
