@@ -2,7 +2,7 @@
 Exact to Keap Dataflow
 ======================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -137,18 +137,18 @@ The following properties are synchronized between a Exact Employees and a  Conta
      - "string"
 
 
-Exact Items to  Product
------------------------
-Every Exact Items will be synchronized with a  Product.
+Exact Items to Keap Product
+---------------------------
+Every Exact Items will be synchronized with a Keap Product.
 
-Once a link between a Exact Items and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Items and a Keap Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Items and a  Product:
+The following properties are synchronized between a Exact Items and a Keap Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Items Property
-     -  Product Property
-     -  Data Type
+     - Keap Product Property
+     - Keap Data Type
 
