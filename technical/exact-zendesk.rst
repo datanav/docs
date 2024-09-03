@@ -2,7 +2,7 @@
 Exact to Zendesk Dataflow
 =========================
 
-Generated: 2024-09-03 08:20:40
+Generated: 2024-09-03 08:20:45
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Exact Accounts and a Zendesk
    * - Exact Accounts Property
      - Zendesk Organizations Property
      - Zendesk Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Exact Departments to Zendesk Organizations
