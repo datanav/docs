@@ -2,27 +2,27 @@
 HubSpot to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-03 09:02:34
+Generated: 2024-09-03 09:11:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Membercare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-HubSpot Company to  Companies
------------------------------
-Every HubSpot Company will be synchronized with a  Companies.
+HubSpot Company to Membercare Companies
+---------------------------------------
+Every HubSpot Company will be synchronized with a Membercare Companies.
 
-Once a link between a HubSpot Company and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a  Companies:
+The following properties are synchronized between a HubSpot Company and a Membercare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     -  Companies Property
-     -  Data Type
+     - Membercare Companies Property
+     - Membercare Data Type
    * - properties.name
      - companyName
      - "string"
@@ -31,148 +31,148 @@ The following properties are synchronized between a HubSpot Company and a  Compa
      - "string"
 
 
-HubSpot Contactcompanyassociationtype to  Companycategories
------------------------------------------------------------
-Every HubSpot Contactcompanyassociationtype will be synchronized with a  Companycategories.
+HubSpot Contactcompanyassociationtype to Membercare Companycategories
+---------------------------------------------------------------------
+Every HubSpot Contactcompanyassociationtype will be synchronized with a Membercare Companycategories.
 
-Once a link between a HubSpot Contactcompanyassociationtype and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contactcompanyassociationtype and a Membercare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contactcompanyassociationtype and a  Companycategories:
+The following properties are synchronized between a HubSpot Contactcompanyassociationtype and a Membercare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contactcompanyassociationtype Property
-     -  Companycategories Property
-     -  Data Type
+     - Membercare Companycategories Property
+     - Membercare Data Type
 
 
-HubSpot Dealcompanyassociationtype to  Companycategories
---------------------------------------------------------
-Every HubSpot Dealcompanyassociationtype will be synchronized with a  Companycategories.
+HubSpot Dealcompanyassociationtype to Membercare Companycategories
+------------------------------------------------------------------
+Every HubSpot Dealcompanyassociationtype will be synchronized with a Membercare Companycategories.
 
-Once a link between a HubSpot Dealcompanyassociationtype and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Dealcompanyassociationtype and a Membercare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Dealcompanyassociationtype and a  Companycategories:
+The following properties are synchronized between a HubSpot Dealcompanyassociationtype and a Membercare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Dealcompanyassociationtype Property
-     -  Companycategories Property
-     -  Data Type
+     - Membercare Companycategories Property
+     - Membercare Data Type
 
 
-HubSpot Dealcontactassociationtype to  Companycategories
---------------------------------------------------------
-Every HubSpot Dealcontactassociationtype will be synchronized with a  Companycategories.
+HubSpot Dealcontactassociationtype to Membercare Companycategories
+------------------------------------------------------------------
+Every HubSpot Dealcontactassociationtype will be synchronized with a Membercare Companycategories.
 
-Once a link between a HubSpot Dealcontactassociationtype and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Dealcontactassociationtype and a Membercare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Dealcontactassociationtype and a  Companycategories:
+The following properties are synchronized between a HubSpot Dealcontactassociationtype and a Membercare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Dealcontactassociationtype Property
-     -  Companycategories Property
-     -  Data Type
+     - Membercare Companycategories Property
+     - Membercare Data Type
 
 
-HubSpot Lineitemdealassociationtype to  Companycategories
----------------------------------------------------------
-Every HubSpot Lineitemdealassociationtype will be synchronized with a  Companycategories.
+HubSpot Lineitemdealassociationtype to Membercare Companycategories
+-------------------------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a Membercare Companycategories.
 
-Once a link between a HubSpot Lineitemdealassociationtype and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitemdealassociationtype and a Membercare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a  Companycategories:
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a Membercare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitemdealassociationtype Property
-     -  Companycategories Property
-     -  Data Type
+     - Membercare Companycategories Property
+     - Membercare Data Type
 
 
-HubSpot Lineitemquoteassociationtype to  Companycategories
-----------------------------------------------------------
-Every HubSpot Lineitemquoteassociationtype will be synchronized with a  Companycategories.
+HubSpot Lineitemquoteassociationtype to Membercare Companycategories
+--------------------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a Membercare Companycategories.
 
-Once a link between a HubSpot Lineitemquoteassociationtype and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitemquoteassociationtype and a Membercare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a  Companycategories:
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a Membercare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitemquoteassociationtype Property
-     -  Companycategories Property
-     -  Data Type
+     - Membercare Companycategories Property
+     - Membercare Data Type
 
 
-HubSpot Quotecompanyassociationtype to  Companycategories
----------------------------------------------------------
-Every HubSpot Quotecompanyassociationtype will be synchronized with a  Companycategories.
+HubSpot Quotecompanyassociationtype to Membercare Companycategories
+-------------------------------------------------------------------
+Every HubSpot Quotecompanyassociationtype will be synchronized with a Membercare Companycategories.
 
-Once a link between a HubSpot Quotecompanyassociationtype and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotecompanyassociationtype and a Membercare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotecompanyassociationtype and a  Companycategories:
+The following properties are synchronized between a HubSpot Quotecompanyassociationtype and a Membercare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotecompanyassociationtype Property
-     -  Companycategories Property
-     -  Data Type
+     - Membercare Companycategories Property
+     - Membercare Data Type
 
 
-HubSpot Quotecontactassociationtype to  Companycategories
----------------------------------------------------------
-Every HubSpot Quotecontactassociationtype will be synchronized with a  Companycategories.
+HubSpot Quotecontactassociationtype to Membercare Companycategories
+-------------------------------------------------------------------
+Every HubSpot Quotecontactassociationtype will be synchronized with a Membercare Companycategories.
 
-Once a link between a HubSpot Quotecontactassociationtype and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotecontactassociationtype and a Membercare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotecontactassociationtype and a  Companycategories:
+The following properties are synchronized between a HubSpot Quotecontactassociationtype and a Membercare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotecontactassociationtype Property
-     -  Companycategories Property
-     -  Data Type
+     - Membercare Companycategories Property
+     - Membercare Data Type
 
 
-HubSpot Quotedealassociationtype to  Companycategories
-------------------------------------------------------
-Every HubSpot Quotedealassociationtype will be synchronized with a  Companycategories.
+HubSpot Quotedealassociationtype to Membercare Companycategories
+----------------------------------------------------------------
+Every HubSpot Quotedealassociationtype will be synchronized with a Membercare Companycategories.
 
-Once a link between a HubSpot Quotedealassociationtype and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotedealassociationtype and a Membercare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotedealassociationtype and a  Companycategories:
+The following properties are synchronized between a HubSpot Quotedealassociationtype and a Membercare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotedealassociationtype Property
-     -  Companycategories Property
-     -  Data Type
+     - Membercare Companycategories Property
+     - Membercare Data Type
 
 
-HubSpot Quotequotetemplateassociationtype to  Companycategories
----------------------------------------------------------------
-Every HubSpot Quotequotetemplateassociationtype will be synchronized with a  Companycategories.
+HubSpot Quotequotetemplateassociationtype to Membercare Companycategories
+-------------------------------------------------------------------------
+Every HubSpot Quotequotetemplateassociationtype will be synchronized with a Membercare Companycategories.
 
-Once a link between a HubSpot Quotequotetemplateassociationtype and a  Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotequotetemplateassociationtype and a Membercare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotequotetemplateassociationtype and a  Companycategories:
+The following properties are synchronized between a HubSpot Quotequotetemplateassociationtype and a Membercare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotequotetemplateassociationtype Property
-     -  Companycategories Property
-     -  Data Type
+     - Membercare Companycategories Property
+     - Membercare Data Type
 
 
 HubSpot Company to Membercare Countries
