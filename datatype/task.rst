@@ -59,6 +59,14 @@ System by system type
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
 
+    **Crmoffice**
+
+    
+    .. link-button:: system/crmoffice
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
     **Freshdesk**
 
     Developer and marketer of software products used for inbound marketing and sales.
@@ -71,6 +79,22 @@ System by system type
 
     HubSpot's integrated CRM platform contains marketing, sales, service, operations, and website-building tools.
     .. link-button:: system/hubspot
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **Membercare**
+
+    
+    .. link-button:: system/membercare
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **Salesforce**
+
+    
+    .. link-button:: system/salesforce
         :type: ref
         :text: Read more
         :classes: read-more
@@ -103,6 +127,14 @@ System by system type
 
     Microblogging and social networking service on which users post and interact with messages known as "tweets".
     .. link-button:: system/twitter
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **Webcrm**
+
+    
+    .. link-button:: system/webcrm
         :type: ref
         :text: Read more
         :classes: read-more
@@ -214,6 +246,14 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+    **Businessnxt**
+
+    
+    .. link-button:: system/businessnxt
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
     **Microsoft Dynamics 365**
 
     Microsoft Dynamics 365 is a product line of enterprise resource planning (ERP) and customer relationship management (CRM) intelligent business applications.
@@ -222,10 +262,26 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+    **Exact**
+
+    
+    .. link-button:: system/exact
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
     **IFS**
 
     A multinational enterprise software for companies who manufacture and distribute goods, offers IFS cloud which promises class-leading FSM, ERP and EAM in one product.
     .. link-button:: system/ifs
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **Invoiced**
+
+    
+    .. link-button:: system/invoiced
         :type: ref
         :text: Read more
         :classes: read-more
@@ -327,6 +383,14 @@ System by system type
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
 
+    **Chargebee**
+
+    
+    .. link-button:: system/chargebee
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
     **Smallworld**
 
     Small World Financial Services is a  provider of payment services making it easy to send and receive money internationally. 
