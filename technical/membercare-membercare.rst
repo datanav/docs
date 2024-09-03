@@ -2,7 +2,7 @@
 Membercare to Membercare Dataflow
 =================================
 
-Generated: 2024-09-03 14:17:35
+Generated: 2024-09-03 14:28:41
 
 Introduction
 ------------
@@ -41,37 +41,5 @@ The following properties are synchronized between a Membercare Invoices and a Me
 
    * - Membercare Invoices Property
      - Membercare Companycategories Property
-     - Membercare Data Type
-
-
-Membercare Companies to Membercare Organizations
-------------------------------------------------
-Every Membercare Companies will be synchronized with a Membercare Organizations.
-
-Once a link between a Membercare Companies and a Membercare Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Membercare Companies and a Membercare Organizations:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Membercare Companies Property
-     - Membercare Organizations Property
-     - Membercare Data Type
-
-
-Membercare Organizations to Membercare Companies
-------------------------------------------------
-Every Membercare Organizations will be synchronized with a Membercare Companies.
-
-Once a link between a Membercare Organizations and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Membercare Organizations and a Membercare Companies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Membercare Organizations Property
-     - Membercare Companies Property
      - Membercare Data Type
 
