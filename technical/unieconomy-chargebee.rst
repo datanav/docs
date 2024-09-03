@@ -2,7 +2,7 @@
 Unieconomy to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -44,20 +44,20 @@ The following properties are synchronized between a Unieconomy Departments and a
      - "string"
 
 
-Unieconomy Companies to  Business_entity
-----------------------------------------
-Every Unieconomy Companies will be synchronized with a  Business_entity.
+Unieconomy Companies to Chargebee Business_entity
+-------------------------------------------------
+Every Unieconomy Companies will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Unieconomy Companies and a  Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Companies and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Companies and a  Business_entity:
+The following properties are synchronized between a Unieconomy Companies and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Companies Property
-     -  Business_entity Property
-     -  Data Type
+     - Chargebee Business_entity Property
+     - Chargebee Data Type
    * - Name
      - name
      - "string"
