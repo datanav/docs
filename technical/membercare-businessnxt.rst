@@ -2,7 +2,7 @@
 Membercare to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-03 10:09:41
+Generated: 2024-09-03 13:28:36
 
 Introduction
 ------------
@@ -133,4 +133,20 @@ The following properties are synchronized between a Membercare Countries and a B
    * - name
      - name
      - "string"
+
+
+Membercare Invoices to Businessnxt Orderline
+--------------------------------------------
+Every Membercare Invoices will be synchronized with a Businessnxt Orderline.
+
+Once a link between a Membercare Invoices and a Businessnxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Invoices and a Businessnxt Orderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Invoices Property
+     - Businessnxt Orderline Property
+     - Businessnxt Data Type
 
