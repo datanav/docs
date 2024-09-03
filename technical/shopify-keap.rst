@@ -2,7 +2,7 @@
 Shopify to Keap Dataflow
 ========================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
@@ -35,20 +35,20 @@ The following properties are synchronized between a Shopify Inventoryitem and a 
      - Keap Data Type
 
 
-Shopify Customer to  Contacts
------------------------------
-Every Shopify Customer will be synchronized with a  Contacts.
+Shopify Customer to Keap Contacts
+---------------------------------
+Every Shopify Customer will be synchronized with a Keap Contacts.
 
-Once a link between a Shopify Customer and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Customer and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Customer and a  Contacts:
+The following properties are synchronized between a Shopify Customer and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Customer Property
-     -  Contacts Property
-     -  Data Type
+     - Keap Contacts Property
+     - Keap Data Type
 
 
 Shopify Sesamproduct to Keap Product
