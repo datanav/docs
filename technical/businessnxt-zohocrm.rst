@@ -2,7 +2,7 @@
 Businessnxt to ZohoCRM Dataflow
 ===============================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Businessnxt Address and a Zo
    * - Businessnxt Address Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - fax
+     - Fax
+     - "string"
+   * - name
+     - Account_Name
+     - "string"
+   * - phone
+     - Phone
+     - "string"
 
 
 Businessnxt Company to ZohoCRM Account
@@ -39,4 +48,7 @@ The following properties are synchronized between a Businessnxt Company and a Zo
    * - Businessnxt Company Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - name
+     - Account_Name
+     - "string"
 
