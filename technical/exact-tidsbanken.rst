@@ -2,7 +2,7 @@
 Exact to Tidsbanken Dataflow
 ============================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Exact Accounts and a Tidsban
    * - Exact Accounts Property
      - Tidsbanken Kunde Property
      - Tidsbanken Data Type
+   * - Name
+     - Navn
+     - "string"
+   * - Website
+     - Url
+     - "string"
 
 
 Exact Departments to Tidsbanken Avdeling
@@ -52,6 +58,9 @@ The following properties are synchronized between a Exact Departments and a Tids
    * - Exact Departments Property
      - Tidsbanken Avdeling Property
      - Tidsbanken Data Type
+   * - Code
+     - sesam_avdelingId
+     - "string"
 
 
 Exact Employees to Tidsbanken Ansatt
@@ -68,4 +77,16 @@ The following properties are synchronized between a Exact Employees and a Tidsba
    * - Exact Employees Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
+   * - BirthDate
+     - Fodt
+     - "string"
+   * - City
+     - Poststed
+     - "string"
+   * - ID
+     - Id
+     - "integer"
+   * - Postcode
+     - Postnummer
+     - "string"
 
