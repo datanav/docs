@@ -2,7 +2,7 @@
 Webcrm to Exact Dataflow
 ========================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Webcrm Opportunities and a E
    * - Webcrm Opportunities Property
      - Exact Quotations Property
      - Exact Data Type
+   * - OpportunityCurrencyName
+     - Currency
+     - "string"
+   * - OpportunityCurrencySymbol
+     - Description
+     - "string"
 
 
 Webcrm Organisations to Exact Accounts
@@ -39,6 +45,9 @@ The following properties are synchronized between a Webcrm Organisations and a E
    * - Webcrm Organisations Property
      - Exact Accounts Property
      - Exact Data Type
+   * - OrganisationName
+     - Name
+     - "string"
 
 
 Webcrm Quotationline to Exact Quotations
