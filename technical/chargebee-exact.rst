@@ -2,7 +2,7 @@
 Chargebee to Exact Dataflow
 ===========================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:57:55
 
 Introduction
 ------------
@@ -39,4 +39,7 @@ The following properties are synchronized between a Chargebee Order and a Exact 
    * - Chargebee Order Property
      - Exact Salesorders Property
      - Exact Data Type
+   * - currency_code
+     - Currency
+     - "string"
 
