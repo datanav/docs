@@ -2,7 +2,7 @@
 Tripletex to Membercare Dataflow
 ================================
 
-Generated: 2024-09-03 10:41:40
+Generated: 2024-09-03 13:24:01
 
 Introduction
 ------------
@@ -80,6 +80,15 @@ The following properties are synchronized between a Tripletex Orderline and a Me
    * - Tripletex Orderline Property
      - Membercare Invoices Property
      - Membercare Data Type
+   * - count
+     - invoiceItems.quantity
+     - "string"
+   * - description
+     - invoiceItems.description
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - invoiceItems.unitPrice
+     - "string"
 
 
 Tripletex Country to Membercare Countries
