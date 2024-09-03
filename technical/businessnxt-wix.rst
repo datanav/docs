@@ -2,7 +2,7 @@
 Businessnxt to Wix Dataflow
 ===========================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:57:55
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Businessnxt Product and a Wi
    * - Businessnxt Product Property
      - Wix Products Property
      - Wix Data Type
+   * - priceQuantity
+     - priceData.price
+     - N/A
 
