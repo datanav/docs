@@ -2,46 +2,46 @@
 Wave Financial to Invoiced Dataflow
 ===================================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Invoiced. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Customer to  Customers company
------------------------------------
-Every Wave Customer will be synchronized with a  Customers company.
+Wave Customer to Invoiced Customers company
+-------------------------------------------
+Every Wave Customer will be synchronized with a Invoiced Customers company.
 
-Once a link between a Wave Customer and a  Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Invoiced Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a  Customers company:
+The following properties are synchronized between a Wave Customer and a Invoiced Customers company:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     -  Customers company Property
-     -  Data Type
+     - Invoiced Customers company Property
+     - Invoiced Data Type
    * - name
      - name
      - "string"
 
 
-Wave Customer person to  Customers person
------------------------------------------
-Every Wave Customer person will be synchronized with a  Customers person.
+Wave Customer person to Invoiced Customers person
+-------------------------------------------------
+Every Wave Customer person will be synchronized with a Invoiced Customers person.
 
-Once a link between a Wave Customer person and a  Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer person and a Invoiced Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a  Customers person:
+The following properties are synchronized between a Wave Customer person and a Invoiced Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     -  Customers person Property
-     -  Data Type
+     - Invoiced Customers person Property
+     - Invoiced Data Type
    * - address.addressLine1
      - address1
      - "string"
@@ -80,20 +80,20 @@ The following properties are synchronized between a Wave Customer person and a  
      - "string"
 
 
-Wave Invoice to  Invoices
--------------------------
-Every Wave Invoice will be synchronized with a  Invoices.
+Wave Invoice to Invoiced Invoices
+---------------------------------
+Every Wave Invoice will be synchronized with a Invoiced Invoices.
 
-Once a link between a Wave Invoice and a  Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a Invoiced Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a  Invoices:
+The following properties are synchronized between a Wave Invoice and a Invoiced Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     -  Invoices Property
-     -  Data Type
+     - Invoiced Invoices Property
+     - Invoiced Data Type
    * - currency.code
      - currency
      - "string"
@@ -102,20 +102,20 @@ The following properties are synchronized between a Wave Invoice and a  Invoices
      - "string"
 
 
-Wave Invoice to  Lineitem
--------------------------
-Every Wave Invoice will be synchronized with a  Lineitem.
+Wave Invoice to Invoiced Lineitem
+---------------------------------
+Every Wave Invoice will be synchronized with a Invoiced Lineitem.
 
-Once a link between a Wave Invoice and a  Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a Invoiced Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a  Lineitem:
+The following properties are synchronized between a Wave Invoice and a Invoiced Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     -  Lineitem Property
-     -  Data Type
+     - Invoiced Lineitem Property
+     - Invoiced Data Type
    * - items.description
      - items.description
      - "string"
@@ -127,20 +127,20 @@ The following properties are synchronized between a Wave Invoice and a  Lineitem
      - "string"
 
 
-Wave Product to  Items
-----------------------
-Every Wave Product will be synchronized with a  Items.
+Wave Product to Invoiced Items
+------------------------------
+Every Wave Product will be synchronized with a Invoiced Items.
 
-Once a link between a Wave Product and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a Invoiced Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a  Items:
+The following properties are synchronized between a Wave Product and a Invoiced Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Product Property
-     -  Items Property
-     -  Data Type
+     - Invoiced Items Property
+     - Invoiced Data Type
    * - description
      - description
      - "string"
