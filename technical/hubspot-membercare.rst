@@ -2,7 +2,7 @@
 HubSpot to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-03 13:11:00
+Generated: 2024-09-03 13:15:40
 
 Introduction
 ------------
@@ -75,6 +75,264 @@ The following properties are synchronized between a HubSpot Deal and a Membercar
      - "string"
    * - properties.dealstage
      - deliverProductsTo.addresses.addressDescription
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.addressLineOne
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.addressType
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.attention
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.careOf
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.country
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.end
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.floor
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.formattedAddress
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.id
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.lastChange
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.letter
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.location
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.municipality
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.number
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.postOfficeBox
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.postalCode
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.start
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.street
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.streetAndZipOneLine
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.suite
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.url
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.addresses.zipCityCountry
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.anonymizedOn
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.businessNumbers.debtorLink
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.businessNumbers.productionNumber
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.businessNumbers.registrationNumberCVR
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.businessNumbers.registrationNumberNorwegianCompanyNumber
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.businessNumbers.registrationNumberSwedishCompanyNumber
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.businessNumbers.registrationNumberVAT
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.businessNumbers.registrationNumbersRUT
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.businessNumbers.registrationNumbersSE
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.businessNumbers.url
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.closeDate
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.closeReason.description
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.closeReason.id
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.closeReason.url
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.closeReason.valid
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.contacts.end
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.contacts.id
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.contacts.lastChange
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.contacts.start
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.contacts.type
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.contacts.url
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.contacts.value
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.customFieldValues
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.dafualtPayerRule
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.debtorAccountNumber
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.defaultAddressType
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.defaultPayerLink
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.ean
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.einvoiceEan
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.einvoiceEmail
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.emailForInvoices
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.externalId
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.financeType
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.honorific
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.invoiceDistributionPreference
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.invoicesLink
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.lastChange
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberType
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberships.affiliateDate
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberships.affiliationReason 
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberships.affiliationSource 
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberships.applicationDate
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberships.applicationProcessDate
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberships.applicationStatus
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberships.applicationStatusComment
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberships.closeDate
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberships.description
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberships.disaffiliateDate
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberships.disaffiliateReason 
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberships.enableGeographic
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberships.feeExempt
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberships.id
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberships.member 
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberships.membershipCategory 
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberships.membershipWeights 
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.memberships.url
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.name
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.name1
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.name2
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.sendInvoicesTo
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.sendMailTo
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.socialSecurityNumber.iso2Letter
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.socialSecurityNumber.number
+     - "string"
+   * - properties.dealstage
+     - deliverProductsTo.url
      - "string"
    * - properties.dealstage
      - eInvoiceInfo.accountingNo
@@ -609,6 +867,267 @@ The following properties are synchronized between a HubSpot Deal and a Membercar
      - "string"
    * - properties.dealstage
      - sendInvoiceTo
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.addressDescription
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.addressLineOne
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.addressType
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.attention
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.careOf
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.country
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.end
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.floor
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.formattedAddress
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.id
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.lastChange
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.letter
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.location
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.municipality
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.number
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.postOfficeBox
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.postalCode
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.start
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.street
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.streetAndZipOneLine
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.suite
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.url
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.addresses.zipCityCountry
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.anonymizedOn
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.businessNumbers.debtorLink
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.businessNumbers.productionNumber
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.businessNumbers.registrationNumberCVR
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.businessNumbers.registrationNumberNorwegianCompanyNumber
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.businessNumbers.registrationNumberSwedishCompanyNumber
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.businessNumbers.registrationNumberVAT
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.businessNumbers.registrationNumbersRUT
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.businessNumbers.registrationNumbersSE
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.businessNumbers.url
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.closeDate
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.closeReason.description
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.closeReason.id
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.closeReason.url
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.closeReason.valid
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.contacts.end
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.contacts.id
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.contacts.lastChange
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.contacts.start
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.contacts.type
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.contacts.url
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.contacts.value
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.customFieldValues
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.dafualtPayerRule
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.debtorAccountNumber
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.defaultAddressType
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.defaultPayerLink
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.ean
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.einvoiceEan
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.einvoiceEmail
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.emailForInvoices
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.externalId
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.financeType
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.honorific
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.invoiceDistributionPreference
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.invoicesLink
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.lastChange
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberType
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberships.affiliateDate
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberships.affiliationReason 
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberships.affiliationSource 
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberships.applicationDate
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberships.applicationProcessDate
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberships.applicationStatus
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberships.applicationStatusComment
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberships.closeDate
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberships.description
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberships.disaffiliateDate
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberships.disaffiliateReason 
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberships.enableGeographic
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberships.feeExempt
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberships.id
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberships.member 
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberships.membershipCategory 
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberships.membershipWeights 
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.memberships.url
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.name
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.name1
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.name2
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.sendInvoicesTo
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.sendMailTo
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.socialSecurityNumber.iso2Letter
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.socialSecurityNumber.number
+     - "string"
+   * - properties.dealstage
+     - sendInvoiceTo.url
      - "string"
    * - properties.dealstage
      - source
