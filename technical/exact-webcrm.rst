@@ -2,7 +2,7 @@
 Exact to  Dataflow
 ==================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Exact Contacts and a  Person
    * - Exact Contacts Property
      -  Persons Property
      -  Data Type
+   * - BirthDate
+     - document_number
+     - "string"
 
 
 Exact Items to  Products
@@ -55,4 +58,22 @@ The following properties are synchronized between a Exact Salesorderlines and a 
    * - Exact Salesorderlines Property
      -  Quotationline Property
      -  Data Type
+   * - CostPriceFC
+     - QuotationLineCostPrice
+     - "string"
+   * - CostPriceFC
+     - QuotationLineDiscount
+     - "string"
+   * - CostPriceFC
+     - QuotationLinePrice
+     - "string"
+   * - CostPriceFC
+     - QuotationLineQuantity
+     - "string"
+   * - CostPriceFC
+     - QuotationLineVatPercentage
+     - "string"
+   * - OrderID
+     - QuotationLineOpportunityId
+     - "string"
 
