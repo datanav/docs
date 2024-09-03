@@ -2,7 +2,7 @@
 Businessnxt to Businessnxt Dataflow
 ===================================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:57:55
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Businessnxt Address and a Bu
    * - Businessnxt Address Property
      - Businessnxt Company Property
      - Businessnxt Data Type
+   * - addressNo
+     - companyNo
+     - "string"
+   * - name
+     - name
+     - "string"
 
 
 Businessnxt Company to Businessnxt Address
@@ -39,4 +45,10 @@ The following properties are synchronized between a Businessnxt Company and a Bu
    * - Businessnxt Company Property
      - Businessnxt Address Property
      - Businessnxt Data Type
+   * - companyNo
+     - addressNo
+     - "string"
+   * - name
+     - name
+     - "string"
 
