@@ -2,7 +2,7 @@
 Exact to Hubspot Dataflow
 =========================
 
-Generated: 2024-09-03 08:20:40
+Generated: 2024-09-03 08:20:45
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Exact Accounts and a Hubspot
    * - Exact Accounts Property
      - Hubspot Company Property
      - Hubspot Data Type
+   * - Name
+     - properties.name
+     - "string"
+   * - Website
+     - properties.website
+     - "string"
 
 
 Exact Contacts to Hubspot Contact
@@ -39,6 +45,9 @@ The following properties are synchronized between a Exact Contacts and a Hubspot
    * - Exact Contacts Property
      - Hubspot Contact Property
      - Hubspot Data Type
+   * - BirthDate
+     - properties.date_of_birth
+     - "string"
 
 
 Exact Departments to Hubspot Company
@@ -55,6 +64,9 @@ The following properties are synchronized between a Exact Departments and a Hubs
    * - Exact Departments Property
      - Hubspot Company Property
      - Hubspot Data Type
+   * - Description
+     - properties.description
+     - "string"
 
 
 Exact Divisions to Hubspot Company
@@ -71,6 +83,12 @@ The following properties are synchronized between a Exact Divisions and a Hubspo
    * - Exact Divisions Property
      - Hubspot Company Property
      - Hubspot Data Type
+   * - Description
+     - properties.description
+     - "string"
+   * - Website
+     - properties.website
+     - "string"
 
 
 Exact Employees to Hubspot Contact
@@ -87,6 +105,21 @@ The following properties are synchronized between a Exact Employees and a Hubspo
    * - Exact Employees Property
      - Hubspot Contact Property
      - Hubspot Data Type
+   * - BirthDate
+     - properties.date_of_birth
+     - "string"
+   * - City
+     - properties.city
+     - "string"
+   * - Country
+     - properties.country
+     - "string"
+   * - ID
+     - id
+     - "string"
+   * - Postcode
+     - properties.zip
+     - "string"
 
 
 Exact Items to Hubspot Product
