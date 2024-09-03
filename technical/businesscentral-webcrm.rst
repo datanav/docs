@@ -2,7 +2,7 @@
 Businesscentral to Webcrm Dataflow
 ==================================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -47,20 +47,20 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
 
 
-Businesscentral Contacts person to  Persons
--------------------------------------------
-Every Businesscentral Contacts person will be synchronized with a  Persons.
+Businesscentral Contacts person to Webcrm Persons
+-------------------------------------------------
+Every Businesscentral Contacts person will be synchronized with a Webcrm Persons.
 
-Once a link between a Businesscentral Contacts person and a  Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Contacts person and a Webcrm Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Contacts person and a  Persons:
+The following properties are synchronized between a Businesscentral Contacts person and a Webcrm Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Contacts person Property
-     -  Persons Property
-     -  Data Type
+     - Webcrm Persons Property
+     - Webcrm Data Type
    * - displayName
      - PersonName
      - "string"
@@ -72,20 +72,20 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
 
 
-Businesscentral Items to  Products
-----------------------------------
-Every Businesscentral Items will be synchronized with a  Products.
+Businesscentral Items to Webcrm Products
+----------------------------------------
+Every Businesscentral Items will be synchronized with a Webcrm Products.
 
-Once a link between a Businesscentral Items and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Items and a Webcrm Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Items and a  Products:
+The following properties are synchronized between a Businesscentral Items and a Webcrm Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Items Property
-     -  Products Property
-     -  Data Type
+     - Webcrm Products Property
+     - Webcrm Data Type
    * - inventory
      - ProductQuantity
      - "string"
@@ -97,20 +97,20 @@ The following properties are synchronized between a Businesscentral Items and a 
      - "string"
 
 
-Businesscentral Salesorderlines to  Quotationline
--------------------------------------------------
-Every Businesscentral Salesorderlines will be synchronized with a  Quotationline.
+Businesscentral Salesorderlines to Webcrm Quotationline
+-------------------------------------------------------
+Every Businesscentral Salesorderlines will be synchronized with a Webcrm Quotationline.
 
-Once a link between a Businesscentral Salesorderlines and a  Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Salesorderlines and a Webcrm Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorderlines and a  Quotationline:
+The following properties are synchronized between a Businesscentral Salesorderlines and a Webcrm Quotationline:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Salesorderlines Property
-     -  Quotationline Property
-     -  Data Type
+     - Webcrm Quotationline Property
+     - Webcrm Data Type
    * - discountPercent
      - QuotationLineDiscount
      - "string"
