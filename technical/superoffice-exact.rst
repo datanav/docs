@@ -2,7 +2,7 @@
 SuperOffice to Exact Dataflow
 =============================
 
-Generated: 2024-09-03 08:17:37
+Generated: 2024-09-03 08:20:40
 
 Introduction
 ------------
@@ -33,20 +33,20 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
 
 
-SuperOffice Contact to  Accounts
---------------------------------
-Every SuperOffice Contact will be synchronized with a  Accounts.
+SuperOffice Contact to Exact Accounts
+-------------------------------------
+Every SuperOffice Contact will be synchronized with a Exact Accounts.
 
-Once a link between a SuperOffice Contact and a  Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a  Accounts:
+The following properties are synchronized between a SuperOffice Contact and a Exact Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     -  Accounts Property
-     -  Data Type
+     - Exact Accounts Property
+     - Exact Data Type
    * - Address.Postal.Address1
      - AddressLine1
      - "string"
@@ -91,20 +91,20 @@ The following properties are synchronized between a SuperOffice Contact and a  A
      - "string"
 
 
-SuperOffice Person to  Contacts
--------------------------------
-Every SuperOffice Person will be synchronized with a  Contacts.
+SuperOffice Person to Exact Contacts
+------------------------------------
+Every SuperOffice Person will be synchronized with a Exact Contacts.
 
-Once a link between a SuperOffice Person and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a  Contacts:
+The following properties are synchronized between a SuperOffice Person and a Exact Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     -  Contacts Property
-     -  Data Type
+     - Exact Contacts Property
+     - Exact Data Type
    * - Address.Street.City
      - City
      - "string"
@@ -131,36 +131,36 @@ The following properties are synchronized between a SuperOffice Person and a  Co
      - "string"
 
 
-SuperOffice Quoteline to  Quotations
-------------------------------------
-Every SuperOffice Quoteline will be synchronized with a  Quotations.
+SuperOffice Quoteline to Exact Quotations
+-----------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Exact Quotations.
 
-Once a link between a SuperOffice Quoteline and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quoteline and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quoteline and a  Quotations:
+The following properties are synchronized between a SuperOffice Quoteline and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quoteline Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
 
 
-SuperOffice Sale to  Quotations
--------------------------------
-Every SuperOffice Sale will be synchronized with a  Quotations.
+SuperOffice Sale to Exact Quotations
+------------------------------------
+Every SuperOffice Sale will be synchronized with a Exact Quotations.
 
-Once a link between a SuperOffice Sale and a  Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Sale and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Sale and a  Quotations:
+The following properties are synchronized between a SuperOffice Sale and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Sale Property
-     -  Quotations Property
-     -  Data Type
+     - Exact Quotations Property
+     - Exact Data Type
    * - Currency.Id
      - Currency
      - "string"
