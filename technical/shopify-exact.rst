@@ -2,27 +2,27 @@
 Shopify to Exact Dataflow
 =========================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:17:37
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Exact. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Shopify Product to  Items
--------------------------
-Every Shopify Product will be synchronized with a  Items.
+Shopify Product to Exact Items
+------------------------------
+Every Shopify Product will be synchronized with a Exact Items.
 
-Once a link between a Shopify Product and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Product and a Exact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Product and a  Items:
+The following properties are synchronized between a Shopify Product and a Exact Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Product Property
-     -  Items Property
-     -  Data Type
+     - Exact Items Property
+     - Exact Data Type
 
 
 Shopify Customer to  Contacts
