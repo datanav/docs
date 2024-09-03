@@ -2,7 +2,7 @@
 Businessnxt to Businessnxt Dataflow
 ===================================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Businessnxt Currency and a B
    * - Businessnxt Currency Property
      - Businessnxt Country Property
      - Businessnxt Data Type
+   * - isoCode
+     - isoCode
+     - "string"
+   * - name
+     - name
+     - "string"
 
 
 Businessnxt Orderline to Businessnxt Order
@@ -55,6 +61,9 @@ The following properties are synchronized between a Businessnxt Productcategory 
    * - Businessnxt Productcategory Property
      - Businessnxt Country Property
      - Businessnxt Data Type
+   * - text
+     - name
+     - "string"
 
 
 Businessnxt Vat to Businessnxt Country
