@@ -2,7 +2,7 @@
 Keap to ZohoCRM Dataflow
 ========================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,6 +23,21 @@ The following properties are synchronized between a Keap Companies and a ZohoCRM
    * - Keap Companies Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - address.locality
+     - Billing_City
+     - "string"
+   * - address.locality
+     - Shipping_City
+     - "string"
+   * - address.zip_code
+     - Billing_Code
+     - "string"
+   * - address.zip_code
+     - Shipping_Code
+     - "string"
+   * - company_name
+     - Account_Name
+     - "string"
 
 
 Keap Opportunity to ZohoCRM Deal
