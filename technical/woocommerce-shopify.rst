@@ -2,7 +2,7 @@
 Woocommerce to Shopify Dataflow
 ===============================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -23,6 +23,48 @@ The following properties are synchronized between a Woocommerce Customer and a S
    * - Woocommerce Customer Property
      - Shopify Customer Property
      - Shopify Data Type
+   * - billing.address_1
+     - default_address.address1
+     - "string"
+   * - billing.address_2
+     - default_address.address2
+     - "string"
+   * - billing.city
+     - default_address.city
+     - "string"
+   * - billing.country
+     - default_address.country
+     - "string"
+   * - billing.postcode
+     - default_address.zip
+     - "string"
+   * - billing.state
+     - default_address.province_code
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - last_name
+     - last_name
+     - "string"
+   * - shipping.address_1
+     - default_address.address1
+     - "string"
+   * - shipping.address_2
+     - default_address.address2
+     - "string"
+   * - shipping.city
+     - default_address.city
+     - "string"
+   * - shipping.country
+     - default_address.country
+     - "string"
+   * - shipping.postcode
+     - default_address.zip
+     - "string"
+   * - shipping.state
+     - default_address.province_code
+     - "string"
 
 
 Woocommerce Order to Shopify Order
@@ -39,6 +81,96 @@ The following properties are synchronized between a Woocommerce Order and a Shop
    * - Woocommerce Order Property
      - Shopify Order Property
      - Shopify Data Type
+   * - billing.address_1
+     - billing_address.address1
+     - "string"
+   * - billing.address_1
+     - shipping_address.address1
+     - "string"
+   * - billing.address_2
+     - billing_address.address2
+     - "string"
+   * - billing.address_2
+     - shipping_address.address2
+     - "string"
+   * - billing.city
+     - billing_address.city
+     - "string"
+   * - billing.city
+     - shipping_address.city
+     - "string"
+   * - billing.country
+     - billing_address.country
+     - "string"
+   * - billing.country
+     - shipping_address.country
+     - "string"
+   * - billing.postcode
+     - billing_address.zip
+     - "string"
+   * - billing.postcode
+     - shipping_address.zip
+     - "string"
+   * - billing.state
+     - billing_address.province_code
+     - "string"
+   * - billing.state
+     - shipping_address.province_code
+     - "string"
+   * - currency
+     - currency
+     - "string"
+   * - customer_id
+     - customer.id
+     - "string"
+   * - line_items.name
+     - line_items.title
+     - "string"
+   * - line_items.price
+     - line_items.price
+     - "string"
+   * - line_items.product_id
+     - line_items.product_id
+     - "integer"
+   * - line_items.quantity
+     - line_items.quantity
+     - "integer"
+   * - shipping.address_1
+     - billing_address.address1
+     - "string"
+   * - shipping.address_1
+     - shipping_address.address1
+     - "string"
+   * - shipping.address_2
+     - billing_address.address2
+     - "string"
+   * - shipping.address_2
+     - shipping_address.address2
+     - "string"
+   * - shipping.city
+     - billing_address.city
+     - "string"
+   * - shipping.city
+     - shipping_address.city
+     - "string"
+   * - shipping.country
+     - billing_address.country
+     - "string"
+   * - shipping.country
+     - shipping_address.country
+     - "string"
+   * - shipping.postcode
+     - billing_address.zip
+     - "string"
+   * - shipping.postcode
+     - shipping_address.zip
+     - "string"
+   * - shipping.state
+     - billing_address.province_code
+     - "string"
+   * - shipping.state
+     - shipping_address.province_code
+     - "string"
 
 
 Woocommerce Product to Shopify Sesamproduct
@@ -55,4 +187,13 @@ The following properties are synchronized between a Woocommerce Product and a Sh
    * - Woocommerce Product Property
      - Shopify Sesamproduct Property
      - Shopify Data Type
+   * - name
+     - title
+     - "string"
+   * - sale_price
+     - sesam_priceExclVAT
+     - "string"
+   * - sku
+     - variants.sku
+     - "string"
 
