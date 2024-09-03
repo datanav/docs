@@ -2,7 +2,7 @@
 Exact to  Dataflow
 ==================
 
-Generated: 2024-09-03 08:20:40
+Generated: 2024-09-03 08:20:45
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Exact Accounts and a  Busine
    * - Exact Accounts Property
      -  Business_entity Property
      -  Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Exact Addresses to  Address
@@ -39,6 +42,15 @@ The following properties are synchronized between a Exact Addresses and a  Addre
    * - Exact Addresses Property
      -  Address Property
      -  Data Type
+   * - City
+     - city
+     - "string"
+   * - Country
+     - country
+     - "string"
+   * - CountryName
+     - country
+     - "string"
 
 
 Exact Contacts to  Customer
@@ -135,6 +147,9 @@ The following properties are synchronized between a Exact Quotations and a  Orde
    * - Exact Quotations Property
      -  Order Property
      -  Data Type
+   * - Currency
+     - currency_code
+     - "string"
 
 
 Exact Salesinvoices to  Order
@@ -151,6 +166,9 @@ The following properties are synchronized between a Exact Salesinvoices and a  O
    * - Exact Salesinvoices Property
      -  Order Property
      -  Data Type
+   * - Currency
+     - currency_code
+     - "string"
 
 
 Exact Salesorderlines to  Order
