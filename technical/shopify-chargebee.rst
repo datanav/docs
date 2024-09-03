@@ -2,7 +2,7 @@
 Shopify to Chargebee Dataflow
 =============================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -41,20 +41,20 @@ The following properties are synchronized between a Shopify Product and a  Item:
      -  Data Type
 
 
-Shopify Customer to  Customer
------------------------------
-Every Shopify Customer will be synchronized with a  Customer.
+Shopify Customer to Chargebee Customer
+--------------------------------------
+Every Shopify Customer will be synchronized with a Chargebee Customer.
 
-Once a link between a Shopify Customer and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Customer and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Customer and a  Customer:
+The following properties are synchronized between a Shopify Customer and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Customer Property
-     -  Customer Property
-     -  Data Type
+     - Chargebee Customer Property
+     - Chargebee Data Type
    * - default_address.country_name
      - billing_address.country
      - "string"
@@ -69,20 +69,20 @@ The following properties are synchronized between a Shopify Customer and a  Cust
      - "string"
 
 
-Shopify Order to  Order
------------------------
-Every Shopify Order will be synchronized with a  Order.
+Shopify Order to Chargebee Order
+--------------------------------
+Every Shopify Order will be synchronized with a Chargebee Order.
 
-Once a link between a Shopify Order and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a  Order:
+The following properties are synchronized between a Shopify Order and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
    * - currency
      - currency_code
      - "string"
@@ -97,20 +97,20 @@ The following properties are synchronized between a Shopify Order and a  Order:
      - "string"
 
 
-Shopify Sesamproduct to  Item
------------------------------
-Every Shopify Sesamproduct will be synchronized with a  Item.
+Shopify Sesamproduct to Chargebee Item
+--------------------------------------
+Every Shopify Sesamproduct will be synchronized with a Chargebee Item.
 
-Once a link between a Shopify Sesamproduct and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Sesamproduct and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Sesamproduct and a  Item:
+The following properties are synchronized between a Shopify Sesamproduct and a Chargebee Item:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Sesamproduct Property
-     -  Item Property
-     -  Data Type
+     - Chargebee Item Property
+     - Chargebee Data Type
    * - title
      - name
      - "string"
