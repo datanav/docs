@@ -2,7 +2,7 @@
 Asana to Exact Dataflow
 =======================
 
-Generated: 2024-09-03 08:14:49
+Generated: 2024-09-03 08:16:35
 
 Introduction
 ------------
@@ -53,20 +53,20 @@ The following properties are synchronized between a Asana Workspaces and a  Acco
      - "string"
 
 
-Asana Users to  Employees
--------------------------
-Every Asana Users will be synchronized with a  Employees.
+Asana Users to Exact Employees
+------------------------------
+Every Asana Users will be synchronized with a Exact Employees.
 
-Once a link between a Asana Users and a  Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Users and a Exact Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Users and a  Employees:
+The following properties are synchronized between a Asana Users and a Exact Employees:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Users Property
-     -  Employees Property
-     -  Data Type
+     - Exact Employees Property
+     - Exact Data Type
    * - email
      - Email
      - "string"
