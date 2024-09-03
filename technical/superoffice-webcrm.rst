@@ -2,7 +2,7 @@
 SuperOffice to Webcrm Dataflow
 ==============================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -70,20 +70,20 @@ The following properties are synchronized between a SuperOffice Contact and a  O
      - "string"
 
 
-SuperOffice Product to  Products
---------------------------------
-Every SuperOffice Product will be synchronized with a  Products.
+SuperOffice Product to Webcrm Products
+--------------------------------------
+Every SuperOffice Product will be synchronized with a Webcrm Products.
 
-Once a link between a SuperOffice Product and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Product and a Webcrm Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Product and a  Products:
+The following properties are synchronized between a SuperOffice Product and a Webcrm Products:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Product Property
-     -  Products Property
-     -  Data Type
+     - Webcrm Products Property
+     - Webcrm Data Type
    * - UnitCost
      - ProductCostPrice
      - "string"
@@ -95,20 +95,20 @@ The following properties are synchronized between a SuperOffice Product and a  P
      - "string"
 
 
-SuperOffice Quoteline to  Quotationline
----------------------------------------
-Every SuperOffice Quoteline will be synchronized with a  Quotationline.
+SuperOffice Quoteline to Webcrm Quotationline
+---------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Webcrm Quotationline.
 
-Once a link between a SuperOffice Quoteline and a  Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quoteline and a Webcrm Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quoteline and a  Quotationline:
+The following properties are synchronized between a SuperOffice Quoteline and a Webcrm Quotationline:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quoteline Property
-     -  Quotationline Property
-     -  Data Type
+     - Webcrm Quotationline Property
+     - Webcrm Data Type
    * - DiscountPercent
      - QuotationLineDiscount
      - "string"
@@ -129,20 +129,20 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
 
 
-SuperOffice Sale to  Opportunities
-----------------------------------
-Every SuperOffice Sale will be synchronized with a  Opportunities.
+SuperOffice Sale to Webcrm Opportunities
+----------------------------------------
+Every SuperOffice Sale will be synchronized with a Webcrm Opportunities.
 
-Once a link between a SuperOffice Sale and a  Opportunities is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Sale and a Webcrm Opportunities is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Sale and a  Opportunities:
+The following properties are synchronized between a SuperOffice Sale and a Webcrm Opportunities:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Sale Property
-     -  Opportunities Property
-     -  Data Type
+     - Webcrm Opportunities Property
+     - Webcrm Data Type
    * - Contact.ContactId
      - OpportunityOrganisationId
      - "string"
@@ -154,20 +154,20 @@ The following properties are synchronized between a SuperOffice Sale and a  Oppo
      - "string"
 
 
-SuperOffice User to  Users
---------------------------
-Every SuperOffice User will be synchronized with a  Users.
+SuperOffice User to Webcrm Users
+--------------------------------
+Every SuperOffice User will be synchronized with a Webcrm Users.
 
-Once a link between a SuperOffice User and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice User and a Webcrm Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice User and a  Users:
+The following properties are synchronized between a SuperOffice User and a Webcrm Users:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     -  Users Property
-     -  Data Type
+     - Webcrm Users Property
+     - Webcrm Data Type
    * - personEmail
      - UserEmail
      - "string"
