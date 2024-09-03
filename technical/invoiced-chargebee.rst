@@ -2,7 +2,7 @@
 Invoiced to Chargebee Dataflow
 ==============================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Invoiced Customers company a
    * - Invoiced Customers company Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
+   * - name
+     - name
+     - "string"
 
 
 Invoiced Lineitem to Chargebee Order
@@ -39,6 +42,15 @@ The following properties are synchronized between a Invoiced Lineitem and a Char
    * - Invoiced Lineitem Property
      - Chargebee Order Property
      - Chargebee Data Type
+   * - items.amount
+     - order_line_items.unit_price
+     - "string"
+   * - items.description
+     - order_line_items.description
+     - "string"
+   * - items.quantity
+     - order_line_items.amount
+     - "string"
 
 
 Invoiced Customers person to Chargebee Customer
