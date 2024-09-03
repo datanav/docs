@@ -2,7 +2,7 @@
 ZohoCRM to Chargebee Dataflow
 =============================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
@@ -36,39 +36,39 @@ The following properties are synchronized between a ZohoCRM Account and a  Custo
      - "string"
 
 
-ZohoCRM Account to  Business_entity
------------------------------------
-Every ZohoCRM Account will be synchronized with a  Business_entity.
+ZohoCRM Account to Chargebee Business_entity
+--------------------------------------------
+Every ZohoCRM Account will be synchronized with a Chargebee Business_entity.
 
-Once a link between a ZohoCRM Account and a  Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Account and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Account and a  Business_entity:
+The following properties are synchronized between a ZohoCRM Account and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Account Property
-     -  Business_entity Property
-     -  Data Type
+     - Chargebee Business_entity Property
+     - Chargebee Data Type
    * - Account_Name
      - name
      - "string"
 
 
-ZohoCRM Deal to  Order
-----------------------
-Every ZohoCRM Deal will be synchronized with a  Order.
+ZohoCRM Deal to Chargebee Order
+-------------------------------
+Every ZohoCRM Deal will be synchronized with a Chargebee Order.
 
-Once a link between a ZohoCRM Deal and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Deal and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Deal and a  Order:
+The following properties are synchronized between a ZohoCRM Deal and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Deal Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
    * - Account_Name.id
      - customer_id
      - "string"
