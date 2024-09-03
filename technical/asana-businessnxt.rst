@@ -2,7 +2,7 @@
 Asana to Businessnxt Dataflow
 =============================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -28,39 +28,39 @@ The following properties are synchronized between a Asana Teams and a  Address:
      - "string"
 
 
-Asana Workspaces to  Address
-----------------------------
-Every Asana Workspaces will be synchronized with a  Address.
+Asana Workspaces to Businessnxt Address
+---------------------------------------
+Every Asana Workspaces will be synchronized with a Businessnxt Address.
 
-Once a link between a Asana Workspaces and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Workspaces and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Workspaces and a  Address:
+The following properties are synchronized between a Asana Workspaces and a Businessnxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Workspaces Property
-     -  Address Property
-     -  Data Type
+     - Businessnxt Address Property
+     - Businessnxt Data Type
    * - name
      - name
      - "string"
 
 
-Asana Workspaces to  Company
-----------------------------
-Every Asana Workspaces will be synchronized with a  Company.
+Asana Workspaces to Businessnxt Company
+---------------------------------------
+Every Asana Workspaces will be synchronized with a Businessnxt Company.
 
-Once a link between a Asana Workspaces and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Workspaces and a Businessnxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Workspaces and a  Company:
+The following properties are synchronized between a Asana Workspaces and a Businessnxt Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Workspaces Property
-     -  Company Property
-     -  Data Type
+     - Businessnxt Company Property
+     - Businessnxt Data Type
    * - name
      - name
      - "string"
