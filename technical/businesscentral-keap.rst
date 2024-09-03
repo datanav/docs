@@ -2,7 +2,7 @@
 Businesscentral to Keap Dataflow
 ================================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -122,20 +122,20 @@ The following properties are synchronized between a Businesscentral Employees an
      - "string"
 
 
-Businesscentral Items to  Product
----------------------------------
-Every Businesscentral Items will be synchronized with a  Product.
+Businesscentral Items to Keap Product
+-------------------------------------
+Every Businesscentral Items will be synchronized with a Keap Product.
 
-Once a link between a Businesscentral Items and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Items and a Keap Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Items and a  Product:
+The following properties are synchronized between a Businesscentral Items and a Keap Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Items Property
-     -  Product Property
-     -  Data Type
+     - Keap Product Property
+     - Keap Data Type
    * - displayName
      - product_name
      - "string"
