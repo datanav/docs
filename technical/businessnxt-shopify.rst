@@ -2,7 +2,7 @@
 Businessnxt to Shopify Dataflow
 ===============================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:57:55
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Businessnxt Order and a Shop
    * - Businessnxt Order Property
      - Shopify Order Property
      - Shopify Data Type
+   * - name
+     - name
+     - "string"
 
 
 Businessnxt Product to Shopify Sesamproduct
@@ -39,4 +42,13 @@ The following properties are synchronized between a Businessnxt Product and a Sh
    * - Businessnxt Product Property
      - Shopify Sesamproduct Property
      - Shopify Data Type
+   * - description
+     - variants.title
+     - "string"
+   * - priceQuantity
+     - sesam_priceExclVAT
+     - "string"
+   * - quantityPerUnit
+     - variants.inventory_quantity
+     - "integer"
 
