@@ -2,7 +2,7 @@
 Woocommerce to Exact Dataflow
 =============================
 
-Generated: 2024-09-03 08:20:40
+Generated: 2024-09-03 08:20:45
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Woocommerce Order and a Exac
    * - Woocommerce Order Property
      - Exact Quotations Property
      - Exact Data Type
+   * - currency
+     - Currency
+     - "string"
+   * - id
+     - DeliveryAddress
+     - "string"
 
 
 Woocommerce Order to Exact Currencies
