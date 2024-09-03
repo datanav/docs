@@ -2,7 +2,7 @@
 Businessnxt to Hubspot Dataflow
 ===============================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Businessnxt Address and a Hu
    * - Businessnxt Address Property
      - Hubspot Company Property
      - Hubspot Data Type
+   * - name
+     - properties.name
+     - "string"
+   * - phone
+     - properties.phone
+     - "string"
 
 
 Businessnxt Company to Hubspot Company
@@ -39,6 +45,9 @@ The following properties are synchronized between a Businessnxt Company and a Hu
    * - Businessnxt Company Property
      - Hubspot Company Property
      - Hubspot Data Type
+   * - name
+     - properties.name
+     - "string"
 
 
 Businessnxt Orderline to Hubspot Lineitem
