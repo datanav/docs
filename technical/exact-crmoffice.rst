@@ -2,7 +2,7 @@
 Exact to Crmoffice Dataflow
 ===========================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -41,18 +41,18 @@ The following properties are synchronized between a Exact Items and a  Companies
      -  Data Type
 
 
-Exact Contacts to  Contacts
----------------------------
-Every Exact Contacts will be synchronized with a  Contacts.
+Exact Contacts to Crmoffice Contacts
+------------------------------------
+Every Exact Contacts will be synchronized with a Crmoffice Contacts.
 
-Once a link between a Exact Contacts and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Contacts and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Contacts and a  Contacts:
+The following properties are synchronized between a Exact Contacts and a Crmoffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Contacts Property
-     -  Contacts Property
-     -  Data Type
+     - Crmoffice Contacts Property
+     - Crmoffice Data Type
 
