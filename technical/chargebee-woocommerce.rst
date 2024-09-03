@@ -1,0 +1,10 @@
+=================================
+Chargebee to Woocommerce Dataflow
+=================================
+
+Generated: 2024-09-03 08:55:46
+
+Introduction
+------------
+
+This technical document provides a detailed overview of the Sesam Talk data flow from Chargebee to Woocommerce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
