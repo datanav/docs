@@ -2,27 +2,27 @@
 Tripletex to Keap Dataflow
 ==========================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Keap. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Customer to  Companies
---------------------------------
-Every Tripletex Customer will be synchronized with a  Companies.
+Tripletex Customer to Keap Companies
+------------------------------------
+Every Tripletex Customer will be synchronized with a Keap Companies.
 
-Once a link between a Tripletex Customer and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a  Companies:
+The following properties are synchronized between a Tripletex Customer and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     -  Companies Property
-     -  Data Type
+     - Keap Companies Property
+     - Keap Data Type
    * - deliveryAddress.city
      - address.locality
      - "string"
@@ -49,71 +49,71 @@ The following properties are synchronized between a Tripletex Customer and a  Co
      - "string"
 
 
-Tripletex Contact to  Contacts
-------------------------------
-Every Tripletex Contact will be synchronized with a  Contacts.
+Tripletex Contact to Keap Contacts
+----------------------------------
+Every Tripletex Contact will be synchronized with a Keap Contacts.
 
-Once a link between a Tripletex Contact and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a  Contacts:
+The following properties are synchronized between a Tripletex Contact and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     -  Contacts Property
-     -  Data Type
+     - Keap Contacts Property
+     - Keap Data Type
 
 
-Tripletex Customer person to  Contacts
---------------------------------------
-Every Tripletex Customer person will be synchronized with a  Contacts.
+Tripletex Customer person to Keap Contacts
+------------------------------------------
+Every Tripletex Customer person will be synchronized with a Keap Contacts.
 
-Once a link between a Tripletex Customer person and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a  Contacts:
+The following properties are synchronized between a Tripletex Customer person and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     -  Contacts Property
-     -  Data Type
+     - Keap Contacts Property
+     - Keap Data Type
 
 
-Tripletex Department to  Companies
-----------------------------------
-Every Tripletex Department will be synchronized with a  Companies.
+Tripletex Department to Keap Companies
+--------------------------------------
+Every Tripletex Department will be synchronized with a Keap Companies.
 
-Once a link between a Tripletex Department and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a  Companies:
+The following properties are synchronized between a Tripletex Department and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     -  Companies Property
-     -  Data Type
+     - Keap Companies Property
+     - Keap Data Type
    * - name
      - company_name
      - "string"
 
 
-Tripletex Employee to  Contacts
--------------------------------
-Every Tripletex Employee will be synchronized with a  Contacts.
+Tripletex Employee to Keap Contacts
+-----------------------------------
+Every Tripletex Employee will be synchronized with a Keap Contacts.
 
-Once a link between a Tripletex Employee and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a  Contacts:
+The following properties are synchronized between a Tripletex Employee and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     -  Contacts Property
-     -  Data Type
+     - Keap Contacts Property
+     - Keap Data Type
    * - dateOfBirth
      - birthday
      - "string"
