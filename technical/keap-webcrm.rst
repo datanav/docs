@@ -2,7 +2,7 @@
 Keap to  Dataflow
 =================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:57:55
 
 Introduction
 ------------
@@ -39,6 +39,9 @@ The following properties are synchronized between a Keap Product and a  Products
    * - Keap Product Property
      -  Products Property
      -  Data Type
+   * - product_price
+     - ProductPrice
+     - "string"
 
 
 Keap Users to  Users
@@ -55,4 +58,10 @@ The following properties are synchronized between a Keap Users and a  Users:
    * - Keap Users Property
      -  Users Property
      -  Data Type
+   * - email_address
+     - UserEmail
+     - "string"
+   * - job_title
+     - UserTitle
+     - "string"
 
