@@ -2,7 +2,7 @@
 Businessnxt to Exact Dataflow
 =============================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,6 +23,24 @@ The following properties are synchronized between a Businessnxt Address and a Ex
    * - Businessnxt Address Property
      - Exact Accounts Property
      - Exact Data Type
+   * - addressNo
+     - ID
+     - "string"
+   * - countryNo
+     - Country
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - noOfEmployees
+     - CompanySize
+     - "string"
+   * - postCode
+     - Postcode
+     - "string"
+   * - postalArea
+     - City
+     - "string"
 
 
 Businessnxt Company to Exact Accounts
@@ -39,6 +57,12 @@ The following properties are synchronized between a Businessnxt Company and a Ex
    * - Businessnxt Company Property
      - Exact Accounts Property
      - Exact Data Type
+   * - companyNo
+     - ID
+     - "string"
+   * - name
+     - Name
+     - "string"
 
 
 Businessnxt Country to Exact Currencies
@@ -55,6 +79,9 @@ The following properties are synchronized between a Businessnxt Country and a Ex
    * - Businessnxt Country Property
      - Exact Currencies Property
      - Exact Data Type
+   * - name
+     - Description
+     - "string"
 
 
 Businessnxt Order to Exact Quotations
@@ -103,6 +130,9 @@ The following properties are synchronized between a Businessnxt Productcategory 
    * - Businessnxt Productcategory Property
      - Exact Currencies Property
      - Exact Data Type
+   * - text
+     - Description
+     - "string"
 
 
 Businessnxt Vat to Exact Currencies
