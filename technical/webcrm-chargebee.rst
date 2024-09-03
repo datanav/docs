@@ -2,7 +2,7 @@
 Webcrm to Chargebee Dataflow
 ============================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Webcrm Opportunities and a C
    * - Webcrm Opportunities Property
      - Chargebee Order Property
      - Chargebee Data Type
+   * - OpportunityCurrencyName
+     - currency_code
+     - "string"
 
 
 Webcrm Organisations to Chargebee Business_entity
@@ -39,6 +42,9 @@ The following properties are synchronized between a Webcrm Organisations and a C
    * - Webcrm Organisations Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
+   * - OrganisationName
+     - name
+     - "string"
 
 
 Webcrm Persons to Chargebee Customer
@@ -55,6 +61,12 @@ The following properties are synchronized between a Webcrm Persons and a Chargeb
    * - Webcrm Persons Property
      - Chargebee Customer Property
      - Chargebee Data Type
+   * - PersonFirstName
+     - first_name
+     - "string"
+   * - PersonLastName
+     - last_name
+     - "string"
 
 
 Webcrm Quotationline to Chargebee Order
