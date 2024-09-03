@@ -2,7 +2,7 @@
 SuperOffice to Chargebee Dataflow
 =================================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -140,20 +140,20 @@ The following properties are synchronized between a SuperOffice Sale and a  Orde
      - "string"
 
 
-SuperOffice Product to  Item
-----------------------------
-Every SuperOffice Product will be synchronized with a  Item.
+SuperOffice Product to Chargebee Item
+-------------------------------------
+Every SuperOffice Product will be synchronized with a Chargebee Item.
 
-Once a link between a SuperOffice Product and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Product and a  Item:
+The following properties are synchronized between a SuperOffice Product and a Chargebee Item:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Product Property
-     -  Item Property
-     -  Data Type
+     - Chargebee Item Property
+     - Chargebee Data Type
    * - Name
      - name
      - "string"
