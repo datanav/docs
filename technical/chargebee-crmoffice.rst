@@ -2,7 +2,7 @@
 Chargebee to Crmoffice Dataflow
 ===============================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Chargebee Customer and a  Co
    * - Chargebee Customer Property
      -  Contacts Property
      -  Data Type
+   * - first_name
+     - givenName
+     - "string"
+   * - last_name
+     - familyName
+     - "string"
 
 
 Chargebee Item to  Companies
