@@ -2,7 +2,7 @@
 Chargebee to Tilores Dataflow
 =============================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:05:50
 
 Introduction
 ------------
@@ -23,4 +23,22 @@ The following properties are synchronized between a Chargebee Customer and a Til
    * - Chargebee Customer Property
      - Tilores Human Property
      - Tilores Data Type
+   * - billing_address.city
+     - city
+     - "string"
+   * - billing_address.zip
+     - postalCode
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - first_name
+     - firstName
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - last_name
+     - lastName
+     - "string"
 
