@@ -54,10 +54,34 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
         :text: Read more
         :classes: read-more
     ---
+    **Businessnxt**
+
+    
+    .. link-button:: system/businessnxt
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **Exact**
+
+    
+    .. link-button:: system/exact
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
     **IFS**
 
     A multinational enterprise software for companies who manufacture and distribute goods, offers IFS cloud which promises class-leading FSM, ERP and EAM in one product.
     .. link-button:: system/ifs
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **Invoiced**
+
+    
+    .. link-button:: system/invoiced
         :type: ref
         :text: Read more
         :classes: read-more
