@@ -2,7 +2,7 @@
 HubSpot to Webcrm Dataflow
 ==========================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -34,20 +34,20 @@ The following properties are synchronized between a HubSpot Company and a  Organ
      - "string"
 
 
-HubSpot Deal to  Opportunities
-------------------------------
-Every HubSpot Deal will be synchronized with a  Opportunities.
+HubSpot Deal to Webcrm Opportunities
+------------------------------------
+Every HubSpot Deal will be synchronized with a Webcrm Opportunities.
 
-Once a link between a HubSpot Deal and a  Opportunities is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a Webcrm Opportunities is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a  Opportunities:
+The following properties are synchronized between a HubSpot Deal and a Webcrm Opportunities:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     -  Opportunities Property
-     -  Data Type
+     - Webcrm Opportunities Property
+     - Webcrm Data Type
    * - properties.deal_currency_code
      - OpportunityCurrencyName
      - "string"
@@ -59,20 +59,20 @@ The following properties are synchronized between a HubSpot Deal and a  Opportun
      - "string"
 
 
-HubSpot Lineitem to  Quotationline
-----------------------------------
-Every HubSpot Lineitem will be synchronized with a  Quotationline.
+HubSpot Lineitem to Webcrm Quotationline
+----------------------------------------
+Every HubSpot Lineitem will be synchronized with a Webcrm Quotationline.
 
-Once a link between a HubSpot Lineitem and a  Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitem and a Webcrm Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitem and a  Quotationline:
+The following properties are synchronized between a HubSpot Lineitem and a Webcrm Quotationline:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitem Property
-     -  Quotationline Property
-     -  Data Type
+     - Webcrm Quotationline Property
+     - Webcrm Data Type
    * - properties.hs_discount_percentage
      - QuotationLineDiscount
      - "string"
@@ -84,20 +84,20 @@ The following properties are synchronized between a HubSpot Lineitem and a  Quot
      - "string"
 
 
-HubSpot Product to  Products
-----------------------------
-Every HubSpot Product will be synchronized with a  Products.
+HubSpot Product to Webcrm Products
+----------------------------------
+Every HubSpot Product will be synchronized with a Webcrm Products.
 
-Once a link between a HubSpot Product and a  Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Product and a Webcrm Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Product and a  Products:
+The following properties are synchronized between a HubSpot Product and a Webcrm Products:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Product Property
-     -  Products Property
-     -  Data Type
+     - Webcrm Products Property
+     - Webcrm Data Type
    * - properties.hs_cost_of_goods_sold
      - ProductCostPrice
      - "string"
@@ -106,20 +106,20 @@ The following properties are synchronized between a HubSpot Product and a  Produ
      - "string"
 
 
-HubSpot User to  Users
-----------------------
-Every HubSpot User will be synchronized with a  Users.
+HubSpot User to Webcrm Users
+----------------------------
+Every HubSpot User will be synchronized with a Webcrm Users.
 
-Once a link between a HubSpot User and a  Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot User and a Webcrm Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot User and a  Users:
+The following properties are synchronized between a HubSpot User and a Webcrm Users:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot User Property
-     -  Users Property
-     -  Data Type
+     - Webcrm Users Property
+     - Webcrm Data Type
    * - email
      - UserEmail
      - "string"
