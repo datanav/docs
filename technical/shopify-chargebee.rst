@@ -2,43 +2,43 @@
 Shopify to Chargebee Dataflow
 =============================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Shopify Inventoryitem to  Item
-------------------------------
-Every Shopify Inventoryitem will be synchronized with a  Item.
+Shopify Inventoryitem to Chargebee Item
+---------------------------------------
+Every Shopify Inventoryitem will be synchronized with a Chargebee Item.
 
-Once a link between a Shopify Inventoryitem and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Inventoryitem and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Inventoryitem and a  Item:
+The following properties are synchronized between a Shopify Inventoryitem and a Chargebee Item:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Inventoryitem Property
-     -  Item Property
-     -  Data Type
+     - Chargebee Item Property
+     - Chargebee Data Type
 
 
-Shopify Product to  Item
-------------------------
-Every Shopify Product will be synchronized with a  Item.
+Shopify Product to Chargebee Item
+---------------------------------
+Every Shopify Product will be synchronized with a Chargebee Item.
 
-Once a link between a Shopify Product and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Product and a  Item:
+The following properties are synchronized between a Shopify Product and a Chargebee Item:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Product Property
-     -  Item Property
-     -  Data Type
+     - Chargebee Item Property
+     - Chargebee Data Type
 
 
 Shopify Customer to Chargebee Customer
