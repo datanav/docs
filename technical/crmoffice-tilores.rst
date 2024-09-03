@@ -2,7 +2,7 @@
 Crmoffice to Tilores Dataflow
 =============================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,4 +23,10 @@ The following properties are synchronized between a Crmoffice Contacts and a Til
    * - Crmoffice Contacts Property
      - Tilores Human Property
      - Tilores Data Type
+   * - familyName
+     - lastName
+     - "string"
+   * - givenName
+     - firstName
+     - "string"
 
