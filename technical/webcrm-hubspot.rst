@@ -2,12 +2,60 @@
 Webcrm to Hubspot Dataflow
 ==========================
 
-Generated: 2024-09-03 09:02:43
+Generated: 2024-09-03 09:11:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Webcrm to Hubspot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Webcrm Organisations to Hubspot Company
+---------------------------------------
+Every Webcrm Organisations will be synchronized with a Hubspot Company.
+
+Once a link between a Webcrm Organisations and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Webcrm Organisations and a Hubspot Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Webcrm Organisations Property
+     - Hubspot Company Property
+     - Hubspot Data Type
+
+
+Webcrm Persons to Hubspot Contact
+---------------------------------
+Every Webcrm Persons will be synchronized with a Hubspot Contact.
+
+Once a link between a Webcrm Persons and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Webcrm Persons and a Hubspot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Webcrm Persons Property
+     - Hubspot Contact Property
+     - Hubspot Data Type
+
+
+Webcrm Users to Hubspot Contact
+-------------------------------
+Every Webcrm Users will be synchronized with a Hubspot Contact.
+
+Once a link between a Webcrm Users and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Webcrm Users and a Hubspot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Webcrm Users Property
+     - Hubspot Contact Property
+     - Hubspot Data Type
+
 
 Webcrm Opportunities to Hubspot Deal
 ------------------------------------
