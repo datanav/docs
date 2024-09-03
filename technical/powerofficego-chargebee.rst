@@ -2,7 +2,7 @@
 Powerofficego to Chargebee Dataflow
 ===================================
 
-Generated: 2024-09-03 08:58:37
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
@@ -52,58 +52,58 @@ The following properties are synchronized between a Powerofficego Customers and 
      - Chargebee Data Type
 
 
-Powerofficego Customers to  Business_entity
--------------------------------------------
-Every Powerofficego Customers will be synchronized with a  Business_entity.
+Powerofficego Customers to Chargebee Business_entity
+----------------------------------------------------
+Every Powerofficego Customers will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Powerofficego Customers and a  Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers and a  Business_entity:
+The following properties are synchronized between a Powerofficego Customers and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers Property
-     -  Business_entity Property
-     -  Data Type
+     - Chargebee Business_entity Property
+     - Chargebee Data Type
    * - Name
      - name
      - "string"
 
 
-Powerofficego Departments to  Business_entity
----------------------------------------------
-Every Powerofficego Departments will be synchronized with a  Business_entity.
+Powerofficego Departments to Chargebee Business_entity
+------------------------------------------------------
+Every Powerofficego Departments will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Powerofficego Departments and a  Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Departments and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Departments and a  Business_entity:
+The following properties are synchronized between a Powerofficego Departments and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Departments Property
-     -  Business_entity Property
-     -  Data Type
+     - Chargebee Business_entity Property
+     - Chargebee Data Type
    * - Name
      - name
      - "string"
 
 
-Powerofficego Employees to  Customer
-------------------------------------
-Every Powerofficego Employees will be synchronized with a  Customer.
+Powerofficego Employees to Chargebee Customer
+---------------------------------------------
+Every Powerofficego Employees will be synchronized with a Chargebee Customer.
 
-Once a link between a Powerofficego Employees and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Employees and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Employees and a  Customer:
+The following properties are synchronized between a Powerofficego Employees and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Employees Property
-     -  Customer Property
-     -  Data Type
+     - Chargebee Customer Property
+     - Chargebee Data Type
    * - EmailAddress
      - email
      - "string"
@@ -115,20 +115,20 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
 
 
-Powerofficego Salesorderlines to  Order
----------------------------------------
-Every Powerofficego Salesorderlines will be synchronized with a  Order.
+Powerofficego Salesorderlines to Chargebee Order
+------------------------------------------------
+Every Powerofficego Salesorderlines will be synchronized with a Chargebee Order.
 
-Once a link between a Powerofficego Salesorderlines and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Salesorderlines and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Salesorderlines and a  Order:
+The following properties are synchronized between a Powerofficego Salesorderlines and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Salesorderlines Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
    * - ProductUnitPrice
      - order_line_items.unit_price
      - "string"
