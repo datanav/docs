@@ -2,27 +2,27 @@
 HubSpot to Keap Dataflow
 ========================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Keap. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-HubSpot Company to  Companies
------------------------------
-Every HubSpot Company will be synchronized with a  Companies.
+HubSpot Company to Keap Companies
+---------------------------------
+Every HubSpot Company will be synchronized with a Keap Companies.
 
-Once a link between a HubSpot Company and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a  Companies:
+The following properties are synchronized between a HubSpot Company and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     -  Companies Property
-     -  Data Type
+     - Keap Companies Property
+     - Keap Data Type
    * - id
      - id
      - "string"
@@ -37,55 +37,55 @@ The following properties are synchronized between a HubSpot Company and a  Compa
      - "string"
 
 
-HubSpot Contact to  Contacts
-----------------------------
-Every HubSpot Contact will be synchronized with a  Contacts.
+HubSpot Contact to Keap Contacts
+--------------------------------
+Every HubSpot Contact will be synchronized with a Keap Contacts.
 
-Once a link between a HubSpot Contact and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contact and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contact and a  Contacts:
+The following properties are synchronized between a HubSpot Contact and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contact Property
-     -  Contacts Property
-     -  Data Type
+     - Keap Contacts Property
+     - Keap Data Type
    * - properties.date_of_birth
      - birthday
      - "string"
 
 
-HubSpot Contactcompanyassociation to  Contacts
-----------------------------------------------
-Every HubSpot Contactcompanyassociation will be synchronized with a  Contacts.
+HubSpot Contactcompanyassociation to Keap Contacts
+--------------------------------------------------
+Every HubSpot Contactcompanyassociation will be synchronized with a Keap Contacts.
 
-Once a link between a HubSpot Contactcompanyassociation and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contactcompanyassociation and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contactcompanyassociation and a  Contacts:
+The following properties are synchronized between a HubSpot Contactcompanyassociation and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contactcompanyassociation Property
-     -  Contacts Property
-     -  Data Type
+     - Keap Contacts Property
+     - Keap Data Type
 
 
-HubSpot User to  Contacts
--------------------------
-Every HubSpot User will be synchronized with a  Contacts.
+HubSpot User to Keap Contacts
+-----------------------------
+Every HubSpot User will be synchronized with a Keap Contacts.
 
-Once a link between a HubSpot User and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot User and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot User and a  Contacts:
+The following properties are synchronized between a HubSpot User and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot User Property
-     -  Contacts Property
-     -  Data Type
+     - Keap Contacts Property
+     - Keap Data Type
 
 
 HubSpot Deal to Keap Opportunity
