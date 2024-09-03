@@ -2,7 +2,7 @@
 Invoiced to Webcrm Dataflow
 ===========================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,6 +23,30 @@ The following properties are synchronized between a Invoiced Customers company a
    * - Invoiced Customers company Property
      - Webcrm Organisations Property
      - Webcrm Data Type
+   * - address1
+     - OrganisationAddress
+     - "string"
+   * - address1
+     - OrganisationDeliveryAddress
+     - "string"
+   * - city
+     - OrganisationCity
+     - "string"
+   * - city
+     - OrganisationDeliveryCity
+     - "string"
+   * - id
+     - OrganisationId
+     - "string"
+   * - name
+     - OrganisationName
+     - "string"
+   * - postal_code
+     - OrganisationDeliveryPostCode
+     - "string"
+   * - postal_code
+     - OrganisationPostCode
+     - "string"
 
 
 Invoiced Contacts to Webcrm Persons
