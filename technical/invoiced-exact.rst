@@ -2,7 +2,7 @@
 Invoiced to Exact Dataflow
 ==========================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Invoiced Customers person an
    * - Invoiced Customers person Property
      - Exact Contacts Property
      - Exact Data Type
+   * - city
+     - City
+     - "string"
+   * - country
+     - Country
+     - "string"
 
 
 Invoiced Invoices to Exact Quotations
@@ -39,6 +45,9 @@ The following properties are synchronized between a Invoiced Invoices and a Exac
    * - Invoiced Invoices Property
      - Exact Quotations Property
      - Exact Data Type
+   * - currency
+     - Currency
+     - "string"
 
 
 Invoiced Lineitem to Exact Quotations
