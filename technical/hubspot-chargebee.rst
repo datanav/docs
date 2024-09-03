@@ -2,7 +2,7 @@
 HubSpot to Chargebee Dataflow
 =============================
 
-Generated: 2024-09-03 08:58:37
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
@@ -64,141 +64,141 @@ The following properties are synchronized between a HubSpot Contact and a Charge
      - "string"
 
 
-HubSpot Company to  Business_entity
------------------------------------
-Every HubSpot Company will be synchronized with a  Business_entity.
+HubSpot Company to Chargebee Business_entity
+--------------------------------------------
+Every HubSpot Company will be synchronized with a Chargebee Business_entity.
 
-Once a link between a HubSpot Company and a  Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a  Business_entity:
+The following properties are synchronized between a HubSpot Company and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     -  Business_entity Property
-     -  Data Type
+     - Chargebee Business_entity Property
+     - Chargebee Data Type
    * - properties.name
      - name
      - "string"
 
 
-HubSpot Contactcompanyassociation to  Customer
-----------------------------------------------
-Every HubSpot Contactcompanyassociation will be synchronized with a  Customer.
+HubSpot Contactcompanyassociation to Chargebee Customer
+-------------------------------------------------------
+Every HubSpot Contactcompanyassociation will be synchronized with a Chargebee Customer.
 
-Once a link between a HubSpot Contactcompanyassociation and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contactcompanyassociation and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contactcompanyassociation and a  Customer:
+The following properties are synchronized between a HubSpot Contactcompanyassociation and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contactcompanyassociation Property
-     -  Customer Property
-     -  Data Type
+     - Chargebee Customer Property
+     - Chargebee Data Type
 
 
-HubSpot Contactcompanyassociationtype to  Currency
---------------------------------------------------
-Every HubSpot Contactcompanyassociationtype will be synchronized with a  Currency.
+HubSpot Contactcompanyassociationtype to Chargebee Currency
+-----------------------------------------------------------
+Every HubSpot Contactcompanyassociationtype will be synchronized with a Chargebee Currency.
 
-Once a link between a HubSpot Contactcompanyassociationtype and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contactcompanyassociationtype and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contactcompanyassociationtype and a  Currency:
+The following properties are synchronized between a HubSpot Contactcompanyassociationtype and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contactcompanyassociationtype Property
-     -  Currency Property
-     -  Data Type
+     - Chargebee Currency Property
+     - Chargebee Data Type
 
 
-HubSpot Dealcompanyassociation to  Order
-----------------------------------------
-Every HubSpot Dealcompanyassociation will be synchronized with a  Order.
+HubSpot Dealcompanyassociation to Chargebee Order
+-------------------------------------------------
+Every HubSpot Dealcompanyassociation will be synchronized with a Chargebee Order.
 
-Once a link between a HubSpot Dealcompanyassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Dealcompanyassociation and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Dealcompanyassociation and a  Order:
+The following properties are synchronized between a HubSpot Dealcompanyassociation and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Dealcompanyassociation Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
    * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customer_id
      - "string"
 
 
-HubSpot Dealcompanyassociationtype to  Currency
------------------------------------------------
-Every HubSpot Dealcompanyassociationtype will be synchronized with a  Currency.
+HubSpot Dealcompanyassociationtype to Chargebee Currency
+--------------------------------------------------------
+Every HubSpot Dealcompanyassociationtype will be synchronized with a Chargebee Currency.
 
-Once a link between a HubSpot Dealcompanyassociationtype and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Dealcompanyassociationtype and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Dealcompanyassociationtype and a  Currency:
+The following properties are synchronized between a HubSpot Dealcompanyassociationtype and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Dealcompanyassociationtype Property
-     -  Currency Property
-     -  Data Type
+     - Chargebee Currency Property
+     - Chargebee Data Type
 
 
-HubSpot Dealcontactassociation to  Order
-----------------------------------------
-Every HubSpot Dealcontactassociation will be synchronized with a  Order.
+HubSpot Dealcontactassociation to Chargebee Order
+-------------------------------------------------
+Every HubSpot Dealcontactassociation will be synchronized with a Chargebee Order.
 
-Once a link between a HubSpot Dealcontactassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Dealcontactassociation and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Dealcontactassociation and a  Order:
+The following properties are synchronized between a HubSpot Dealcontactassociation and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Dealcontactassociation Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
    * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customer_id
      - "string"
 
 
-HubSpot Dealcontactassociationtype to  Currency
------------------------------------------------
-Every HubSpot Dealcontactassociationtype will be synchronized with a  Currency.
+HubSpot Dealcontactassociationtype to Chargebee Currency
+--------------------------------------------------------
+Every HubSpot Dealcontactassociationtype will be synchronized with a Chargebee Currency.
 
-Once a link between a HubSpot Dealcontactassociationtype and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Dealcontactassociationtype and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Dealcontactassociationtype and a  Currency:
+The following properties are synchronized between a HubSpot Dealcontactassociationtype and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Dealcontactassociationtype Property
-     -  Currency Property
-     -  Data Type
+     - Chargebee Currency Property
+     - Chargebee Data Type
 
 
-HubSpot Lineitem to  Order
---------------------------
-Every HubSpot Lineitem will be synchronized with a  Order.
+HubSpot Lineitem to Chargebee Order
+-----------------------------------
+Every HubSpot Lineitem will be synchronized with a Chargebee Order.
 
-Once a link between a HubSpot Lineitem and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitem and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitem and a  Order:
+The following properties are synchronized between a HubSpot Lineitem and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitem Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
    * - properties.description
      - order_line_items.description
      - "string"
@@ -210,84 +210,84 @@ The following properties are synchronized between a HubSpot Lineitem and a  Orde
      - "string"
 
 
-HubSpot Lineitemdealassociation to  Order
------------------------------------------
-Every HubSpot Lineitemdealassociation will be synchronized with a  Order.
+HubSpot Lineitemdealassociation to Chargebee Order
+--------------------------------------------------
+Every HubSpot Lineitemdealassociation will be synchronized with a Chargebee Order.
 
-Once a link between a HubSpot Lineitemdealassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitemdealassociation and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitemdealassociation and a  Order:
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitemdealassociation Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
 
 
-HubSpot Lineitemdealassociationtype to  Currency
-------------------------------------------------
-Every HubSpot Lineitemdealassociationtype will be synchronized with a  Currency.
+HubSpot Lineitemdealassociationtype to Chargebee Currency
+---------------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a Chargebee Currency.
 
-Once a link between a HubSpot Lineitemdealassociationtype and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitemdealassociationtype and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a  Currency:
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitemdealassociationtype Property
-     -  Currency Property
-     -  Data Type
+     - Chargebee Currency Property
+     - Chargebee Data Type
 
 
-HubSpot Lineitemquoteassociation to  Order
-------------------------------------------
-Every HubSpot Lineitemquoteassociation will be synchronized with a  Order.
+HubSpot Lineitemquoteassociation to Chargebee Order
+---------------------------------------------------
+Every HubSpot Lineitemquoteassociation will be synchronized with a Chargebee Order.
 
-Once a link between a HubSpot Lineitemquoteassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitemquoteassociation and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitemquoteassociation and a  Order:
+The following properties are synchronized between a HubSpot Lineitemquoteassociation and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitemquoteassociation Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
 
 
-HubSpot Lineitemquoteassociationtype to  Currency
--------------------------------------------------
-Every HubSpot Lineitemquoteassociationtype will be synchronized with a  Currency.
+HubSpot Lineitemquoteassociationtype to Chargebee Currency
+----------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a Chargebee Currency.
 
-Once a link between a HubSpot Lineitemquoteassociationtype and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitemquoteassociationtype and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a  Currency:
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitemquoteassociationtype Property
-     -  Currency Property
-     -  Data Type
+     - Chargebee Currency Property
+     - Chargebee Data Type
 
 
-HubSpot Quote to  Order
------------------------
-Every HubSpot Quote will be synchronized with a  Order.
+HubSpot Quote to Chargebee Order
+--------------------------------
+Every HubSpot Quote will be synchronized with a Chargebee Order.
 
-Once a link between a HubSpot Quote and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quote and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quote and a  Order:
+The following properties are synchronized between a HubSpot Quote and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quote Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
    * - associations.companies.results.id
      - customer_id
      - "string"
@@ -296,154 +296,154 @@ The following properties are synchronized between a HubSpot Quote and a  Order:
      - "string"
 
 
-HubSpot Quotecompanyassociation to  Order
------------------------------------------
-Every HubSpot Quotecompanyassociation will be synchronized with a  Order.
+HubSpot Quotecompanyassociation to Chargebee Order
+--------------------------------------------------
+Every HubSpot Quotecompanyassociation will be synchronized with a Chargebee Order.
 
-Once a link between a HubSpot Quotecompanyassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotecompanyassociation and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotecompanyassociation and a  Order:
+The following properties are synchronized between a HubSpot Quotecompanyassociation and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotecompanyassociation Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
    * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customer_id
      - "string"
 
 
-HubSpot Quotecompanyassociationtype to  Currency
-------------------------------------------------
-Every HubSpot Quotecompanyassociationtype will be synchronized with a  Currency.
+HubSpot Quotecompanyassociationtype to Chargebee Currency
+---------------------------------------------------------
+Every HubSpot Quotecompanyassociationtype will be synchronized with a Chargebee Currency.
 
-Once a link between a HubSpot Quotecompanyassociationtype and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotecompanyassociationtype and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotecompanyassociationtype and a  Currency:
+The following properties are synchronized between a HubSpot Quotecompanyassociationtype and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotecompanyassociationtype Property
-     -  Currency Property
-     -  Data Type
+     - Chargebee Currency Property
+     - Chargebee Data Type
 
 
-HubSpot Quotecontactassociation to  Order
------------------------------------------
-Every HubSpot Quotecontactassociation will be synchronized with a  Order.
+HubSpot Quotecontactassociation to Chargebee Order
+--------------------------------------------------
+Every HubSpot Quotecontactassociation will be synchronized with a Chargebee Order.
 
-Once a link between a HubSpot Quotecontactassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotecontactassociation and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotecontactassociation and a  Order:
+The following properties are synchronized between a HubSpot Quotecontactassociation and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotecontactassociation Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
    * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customer_id
      - "string"
 
 
-HubSpot Quotecontactassociationtype to  Currency
-------------------------------------------------
-Every HubSpot Quotecontactassociationtype will be synchronized with a  Currency.
+HubSpot Quotecontactassociationtype to Chargebee Currency
+---------------------------------------------------------
+Every HubSpot Quotecontactassociationtype will be synchronized with a Chargebee Currency.
 
-Once a link between a HubSpot Quotecontactassociationtype and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotecontactassociationtype and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotecontactassociationtype and a  Currency:
+The following properties are synchronized between a HubSpot Quotecontactassociationtype and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotecontactassociationtype Property
-     -  Currency Property
-     -  Data Type
+     - Chargebee Currency Property
+     - Chargebee Data Type
 
 
-HubSpot Quotedealassociation to  Order
---------------------------------------
-Every HubSpot Quotedealassociation will be synchronized with a  Order.
+HubSpot Quotedealassociation to Chargebee Order
+-----------------------------------------------
+Every HubSpot Quotedealassociation will be synchronized with a Chargebee Order.
 
-Once a link between a HubSpot Quotedealassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotedealassociation and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotedealassociation and a  Order:
+The following properties are synchronized between a HubSpot Quotedealassociation and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotedealassociation Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
 
 
-HubSpot Quotedealassociationtype to  Currency
----------------------------------------------
-Every HubSpot Quotedealassociationtype will be synchronized with a  Currency.
+HubSpot Quotedealassociationtype to Chargebee Currency
+------------------------------------------------------
+Every HubSpot Quotedealassociationtype will be synchronized with a Chargebee Currency.
 
-Once a link between a HubSpot Quotedealassociationtype and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotedealassociationtype and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotedealassociationtype and a  Currency:
+The following properties are synchronized between a HubSpot Quotedealassociationtype and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotedealassociationtype Property
-     -  Currency Property
-     -  Data Type
+     - Chargebee Currency Property
+     - Chargebee Data Type
 
 
-HubSpot Quotequotetemplateassociation to  Order
------------------------------------------------
-Every HubSpot Quotequotetemplateassociation will be synchronized with a  Order.
+HubSpot Quotequotetemplateassociation to Chargebee Order
+--------------------------------------------------------
+Every HubSpot Quotequotetemplateassociation will be synchronized with a Chargebee Order.
 
-Once a link between a HubSpot Quotequotetemplateassociation and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotequotetemplateassociation and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotequotetemplateassociation and a  Order:
+The following properties are synchronized between a HubSpot Quotequotetemplateassociation and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotequotetemplateassociation Property
-     -  Order Property
-     -  Data Type
+     - Chargebee Order Property
+     - Chargebee Data Type
 
 
-HubSpot Quotequotetemplateassociationtype to  Currency
-------------------------------------------------------
-Every HubSpot Quotequotetemplateassociationtype will be synchronized with a  Currency.
+HubSpot Quotequotetemplateassociationtype to Chargebee Currency
+---------------------------------------------------------------
+Every HubSpot Quotequotetemplateassociationtype will be synchronized with a Chargebee Currency.
 
-Once a link between a HubSpot Quotequotetemplateassociationtype and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotequotetemplateassociationtype and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotequotetemplateassociationtype and a  Currency:
+The following properties are synchronized between a HubSpot Quotequotetemplateassociationtype and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotequotetemplateassociationtype Property
-     -  Currency Property
-     -  Data Type
+     - Chargebee Currency Property
+     - Chargebee Data Type
 
 
-HubSpot User to  Customer
--------------------------
-Every HubSpot User will be synchronized with a  Customer.
+HubSpot User to Chargebee Customer
+----------------------------------
+Every HubSpot User will be synchronized with a Chargebee Customer.
 
-Once a link between a HubSpot User and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot User and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot User and a  Customer:
+The following properties are synchronized between a HubSpot User and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot User Property
-     -  Customer Property
-     -  Data Type
+     - Chargebee Customer Property
+     - Chargebee Data Type
 
 
 HubSpot Deal to Chargebee Order
