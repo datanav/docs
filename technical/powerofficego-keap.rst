@@ -2,7 +2,7 @@
 Powerofficego to Keap Dataflow
 ==============================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -113,20 +113,20 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
 
 
-Powerofficego Product to  Product
----------------------------------
-Every Powerofficego Product will be synchronized with a  Product.
+Powerofficego Product to Keap Product
+-------------------------------------
+Every Powerofficego Product will be synchronized with a Keap Product.
 
-Once a link between a Powerofficego Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Product and a Keap Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Product and a  Product:
+The following properties are synchronized between a Powerofficego Product and a Keap Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Product Property
-     -  Product Property
-     -  Data Type
+     - Keap Product Property
+     - Keap Data Type
    * - description
      - product_desc
      - "string"
