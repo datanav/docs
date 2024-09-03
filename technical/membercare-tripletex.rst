@@ -2,7 +2,7 @@
 Membercare to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-03 13:28:39
+Generated: 2024-09-03 14:23:40
 
 Introduction
 ------------
@@ -32,4 +32,20 @@ The following properties are synchronized between a Membercare Invoices and a Tr
    * - invoiceItems.unitPrice
      - unitPriceExcludingVatCurrency
      - "float"
+
+
+Membercare Organizations to Tripletex Department
+------------------------------------------------
+Every Membercare Organizations will be synchronized with a Tripletex Department.
+
+Once a link between a Membercare Organizations and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Organizations and a Tripletex Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Organizations Property
+     - Tripletex Department Property
+     - Tripletex Data Type
 
