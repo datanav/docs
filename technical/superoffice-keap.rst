@@ -2,27 +2,27 @@
 SuperOffice to Keap Dataflow
 ============================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Keap. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-SuperOffice Contact to  Companies
----------------------------------
-Every SuperOffice Contact will be synchronized with a  Companies.
+SuperOffice Contact to Keap Companies
+-------------------------------------
+Every SuperOffice Contact will be synchronized with a Keap Companies.
 
-Once a link between a SuperOffice Contact and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a  Companies:
+The following properties are synchronized between a SuperOffice Contact and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     -  Companies Property
-     -  Data Type
+     - Keap Companies Property
+     - Keap Data Type
    * - Address.Postal.City
      - address.locality
      - "string"
@@ -43,20 +43,20 @@ The following properties are synchronized between a SuperOffice Contact and a  C
      - "string"
 
 
-SuperOffice Person to  Contacts
--------------------------------
-Every SuperOffice Person will be synchronized with a  Contacts.
+SuperOffice Person to Keap Contacts
+-----------------------------------
+Every SuperOffice Person will be synchronized with a Keap Contacts.
 
-Once a link between a SuperOffice Person and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a  Contacts:
+The following properties are synchronized between a SuperOffice Person and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     -  Contacts Property
-     -  Data Type
+     - Keap Contacts Property
+     - Keap Data Type
    * - BirthDate
      - birthday
      - "string"
