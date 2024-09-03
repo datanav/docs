@@ -2,12 +2,28 @@
 Membercare to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-03 09:02:43
+Generated: 2024-09-03 09:11:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Membercare to Businessnxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Membercare Companycategories to Businessnxt Country
+---------------------------------------------------
+Every Membercare Companycategories will be synchronized with a Businessnxt Country.
+
+Once a link between a Membercare Companycategories and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Companycategories and a Businessnxt Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Companycategories Property
+     - Businessnxt Country Property
+     - Businessnxt Data Type
+
 
 Membercare Companies to Businessnxt Address
 -------------------------------------------
