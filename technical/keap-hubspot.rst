@@ -2,7 +2,7 @@
 Keap to Hubspot Dataflow
 ========================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:57:55
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Keap Opportunity and a Hubsp
    * - Keap Opportunity Property
      - Hubspot Deal Property
      - Hubspot Data Type
+   * - contact.id
+     - properties.hubspot_owner_id
+     - "string"
+   * - opportunity_title
+     - properties.dealname
+     - "string"
 
 
 Keap Product to Hubspot Product
@@ -39,6 +45,15 @@ The following properties are synchronized between a Keap Product and a Hubspot P
    * - Keap Product Property
      - Hubspot Product Property
      - Hubspot Data Type
+   * - product_desc
+     - properties.description
+     - "string"
+   * - product_name
+     - properties.name
+     - "string"
+   * - product_price
+     - properties.price
+     - "string"
 
 
 Keap Users to Hubspot User
@@ -55,4 +70,7 @@ The following properties are synchronized between a Keap Users and a Hubspot Use
    * - Keap Users Property
      - Hubspot User Property
      - Hubspot Data Type
+   * - email_address
+     - email
+     - "string"
 
