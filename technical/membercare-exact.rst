@@ -2,7 +2,7 @@
 Membercare to Exact Dataflow
 ============================
 
-Generated: 2024-09-03 10:03:40
+Generated: 2024-09-03 10:15:41
 
 Introduction
 ------------
@@ -91,6 +91,22 @@ The following properties are synchronized between a Membercare Invoices and a Ex
 
    * - Membercare Invoices Property
      - Exact Currencies Property
+     - Exact Data Type
+
+
+Membercare Invoices to Exact Quotations
+---------------------------------------
+Every Membercare Invoices will be synchronized with a Exact Quotations.
+
+Once a link between a Membercare Invoices and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Invoices and a Exact Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Invoices Property
+     - Exact Quotations Property
      - Exact Data Type
 
 
