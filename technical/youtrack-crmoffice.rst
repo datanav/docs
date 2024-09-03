@@ -2,7 +2,7 @@
 YouTrack to Crmoffice Dataflow
 ==============================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:11:41
 
 Introduction
 ------------
@@ -63,85 +63,85 @@ The following properties are synchronized between a YouTrack Usergroups and a  C
      -  Data Type
 
 
-YouTrack Hubprojects to  Activities
------------------------------------
-Every YouTrack Hubprojects will be synchronized with a  Activities.
+YouTrack Hubprojects to Crmoffice Activities
+--------------------------------------------
+Every YouTrack Hubprojects will be synchronized with a Crmoffice Activities.
 
-Once a link between a YouTrack Hubprojects and a  Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Hubprojects and a Crmoffice Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Hubprojects and a  Activities:
+The following properties are synchronized between a YouTrack Hubprojects and a Crmoffice Activities:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Hubprojects Property
-     -  Activities Property
-     -  Data Type
+     - Crmoffice Activities Property
+     - Crmoffice Data Type
 
 
-YouTrack Issues to  Activities
-------------------------------
-Every YouTrack Issues will be synchronized with a  Activities.
+YouTrack Issues to Crmoffice Activities
+---------------------------------------
+Every YouTrack Issues will be synchronized with a Crmoffice Activities.
 
-Once a link between a YouTrack Issues and a  Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Issues and a Crmoffice Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Issues and a  Activities:
+The following properties are synchronized between a YouTrack Issues and a Crmoffice Activities:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Issues Property
-     -  Activities Property
-     -  Data Type
+     - Crmoffice Activities Property
+     - Crmoffice Data Type
    * - reporter.id
      - ownerId
      - "string"
 
 
-YouTrack Projectroles to  Activities
-------------------------------------
-Every YouTrack Projectroles will be synchronized with a  Activities.
+YouTrack Projectroles to Crmoffice Activities
+---------------------------------------------
+Every YouTrack Projectroles will be synchronized with a Crmoffice Activities.
 
-Once a link between a YouTrack Projectroles and a  Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Projectroles and a Crmoffice Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Projectroles and a  Activities:
+The following properties are synchronized between a YouTrack Projectroles and a Crmoffice Activities:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Projectroles Property
-     -  Activities Property
-     -  Data Type
+     - Crmoffice Activities Property
+     - Crmoffice Data Type
 
 
-YouTrack Users to  Contacts
----------------------------
-Every YouTrack Users will be synchronized with a  Contacts.
+YouTrack Users to Crmoffice Contacts
+------------------------------------
+Every YouTrack Users will be synchronized with a Crmoffice Contacts.
 
-Once a link between a YouTrack Users and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Users and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Users and a  Contacts:
+The following properties are synchronized between a YouTrack Users and a Crmoffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     -  Contacts Property
-     -  Data Type
+     - Crmoffice Contacts Property
+     - Crmoffice Data Type
 
 
-YouTrack Workitems to  Activities
----------------------------------
-Every YouTrack Workitems will be synchronized with a  Activities.
+YouTrack Workitems to Crmoffice Activities
+------------------------------------------
+Every YouTrack Workitems will be synchronized with a Crmoffice Activities.
 
-Once a link between a YouTrack Workitems and a  Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Workitems and a Crmoffice Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Workitems and a  Activities:
+The following properties are synchronized between a YouTrack Workitems and a Crmoffice Activities:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Workitems Property
-     -  Activities Property
-     -  Data Type
+     - Crmoffice Activities Property
+     - Crmoffice Data Type
 
