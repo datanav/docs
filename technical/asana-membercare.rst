@@ -2,7 +2,7 @@
 Asana to Membercare Dataflow
 ============================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -34,20 +34,20 @@ The following properties are synchronized between a Asana Teams and a  Companies
      - "string"
 
 
-Asana Workspaces to  Companies
-------------------------------
-Every Asana Workspaces will be synchronized with a  Companies.
+Asana Workspaces to Membercare Companies
+----------------------------------------
+Every Asana Workspaces will be synchronized with a Membercare Companies.
 
-Once a link between a Asana Workspaces and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Workspaces and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Workspaces and a  Companies:
+The following properties are synchronized between a Asana Workspaces and a Membercare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Workspaces Property
-     -  Companies Property
-     -  Data Type
+     - Membercare Companies Property
+     - Membercare Data Type
    * - email_domains
      - url
      - "string"
