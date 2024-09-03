@@ -2,7 +2,7 @@
 ZohoCRM to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-03 13:10:23
+Generated: 2024-09-03 13:15:40
 
 Introduction
 ------------
@@ -56,6 +56,267 @@ The following properties are synchronized between a ZohoCRM Deal and a Membercar
      - "string"
    * - Probability
      - deliverProductsTo
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.addressDescription
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.addressLineOne
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.addressType
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.attention
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.careOf
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.country
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.end
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.floor
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.formattedAddress
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.id
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.lastChange
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.letter
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.location
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.municipality
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.number
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.postOfficeBox
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.postalCode
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.start
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.street
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.streetAndZipOneLine
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.suite
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.url
+     - "string"
+   * - Probability
+     - deliverProductsTo.addresses.zipCityCountry
+     - "string"
+   * - Probability
+     - deliverProductsTo.anonymizedOn
+     - "string"
+   * - Probability
+     - deliverProductsTo.businessNumbers.debtorLink
+     - "string"
+   * - Probability
+     - deliverProductsTo.businessNumbers.productionNumber
+     - "string"
+   * - Probability
+     - deliverProductsTo.businessNumbers.registrationNumberCVR
+     - "string"
+   * - Probability
+     - deliverProductsTo.businessNumbers.registrationNumberNorwegianCompanyNumber
+     - "string"
+   * - Probability
+     - deliverProductsTo.businessNumbers.registrationNumberSwedishCompanyNumber
+     - "string"
+   * - Probability
+     - deliverProductsTo.businessNumbers.registrationNumberVAT
+     - "string"
+   * - Probability
+     - deliverProductsTo.businessNumbers.registrationNumbersRUT
+     - "string"
+   * - Probability
+     - deliverProductsTo.businessNumbers.registrationNumbersSE
+     - "string"
+   * - Probability
+     - deliverProductsTo.businessNumbers.url
+     - "string"
+   * - Probability
+     - deliverProductsTo.closeDate
+     - "string"
+   * - Probability
+     - deliverProductsTo.closeReason.description
+     - "string"
+   * - Probability
+     - deliverProductsTo.closeReason.id
+     - "string"
+   * - Probability
+     - deliverProductsTo.closeReason.url
+     - "string"
+   * - Probability
+     - deliverProductsTo.closeReason.valid
+     - "string"
+   * - Probability
+     - deliverProductsTo.contacts.end
+     - "string"
+   * - Probability
+     - deliverProductsTo.contacts.id
+     - "string"
+   * - Probability
+     - deliverProductsTo.contacts.lastChange
+     - "string"
+   * - Probability
+     - deliverProductsTo.contacts.start
+     - "string"
+   * - Probability
+     - deliverProductsTo.contacts.type
+     - "string"
+   * - Probability
+     - deliverProductsTo.contacts.url
+     - "string"
+   * - Probability
+     - deliverProductsTo.contacts.value
+     - "string"
+   * - Probability
+     - deliverProductsTo.customFieldValues
+     - "string"
+   * - Probability
+     - deliverProductsTo.dafualtPayerRule
+     - "string"
+   * - Probability
+     - deliverProductsTo.debtorAccountNumber
+     - "string"
+   * - Probability
+     - deliverProductsTo.defaultAddressType
+     - "string"
+   * - Probability
+     - deliverProductsTo.defaultPayerLink
+     - "string"
+   * - Probability
+     - deliverProductsTo.ean
+     - "string"
+   * - Probability
+     - deliverProductsTo.einvoiceEan
+     - "string"
+   * - Probability
+     - deliverProductsTo.einvoiceEmail
+     - "string"
+   * - Probability
+     - deliverProductsTo.emailForInvoices
+     - "string"
+   * - Probability
+     - deliverProductsTo.externalId
+     - "string"
+   * - Probability
+     - deliverProductsTo.financeType
+     - "string"
+   * - Probability
+     - deliverProductsTo.honorific
+     - "string"
+   * - Probability
+     - deliverProductsTo.invoiceDistributionPreference
+     - "string"
+   * - Probability
+     - deliverProductsTo.invoicesLink
+     - "string"
+   * - Probability
+     - deliverProductsTo.lastChange
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberType
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberships.affiliateDate
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberships.affiliationReason 
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberships.affiliationSource 
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberships.applicationDate
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberships.applicationProcessDate
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberships.applicationStatus
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberships.applicationStatusComment
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberships.closeDate
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberships.description
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberships.disaffiliateDate
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberships.disaffiliateReason 
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberships.enableGeographic
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberships.feeExempt
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberships.id
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberships.member 
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberships.membershipCategory 
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberships.membershipWeights 
+     - "string"
+   * - Probability
+     - deliverProductsTo.memberships.url
+     - "string"
+   * - Probability
+     - deliverProductsTo.name
+     - "string"
+   * - Probability
+     - deliverProductsTo.name1
+     - "string"
+   * - Probability
+     - deliverProductsTo.name2
+     - "string"
+   * - Probability
+     - deliverProductsTo.sendInvoicesTo
+     - "string"
+   * - Probability
+     - deliverProductsTo.sendMailTo
+     - "string"
+   * - Probability
+     - deliverProductsTo.socialSecurityNumber.iso2Letter
+     - "string"
+   * - Probability
+     - deliverProductsTo.socialSecurityNumber.number
+     - "string"
+   * - Probability
+     - deliverProductsTo.url
      - "string"
    * - Probability
      - eInvoiceInfo.accountingNo
@@ -590,6 +851,267 @@ The following properties are synchronized between a ZohoCRM Deal and a Membercar
      - "string"
    * - Probability
      - sendInvoiceTo
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.addressDescription
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.addressLineOne
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.addressType
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.attention
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.careOf
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.country
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.end
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.floor
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.formattedAddress
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.id
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.lastChange
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.letter
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.location
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.municipality
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.number
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.postOfficeBox
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.postalCode
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.start
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.street
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.streetAndZipOneLine
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.suite
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.url
+     - "string"
+   * - Probability
+     - sendInvoiceTo.addresses.zipCityCountry
+     - "string"
+   * - Probability
+     - sendInvoiceTo.anonymizedOn
+     - "string"
+   * - Probability
+     - sendInvoiceTo.businessNumbers.debtorLink
+     - "string"
+   * - Probability
+     - sendInvoiceTo.businessNumbers.productionNumber
+     - "string"
+   * - Probability
+     - sendInvoiceTo.businessNumbers.registrationNumberCVR
+     - "string"
+   * - Probability
+     - sendInvoiceTo.businessNumbers.registrationNumberNorwegianCompanyNumber
+     - "string"
+   * - Probability
+     - sendInvoiceTo.businessNumbers.registrationNumberSwedishCompanyNumber
+     - "string"
+   * - Probability
+     - sendInvoiceTo.businessNumbers.registrationNumberVAT
+     - "string"
+   * - Probability
+     - sendInvoiceTo.businessNumbers.registrationNumbersRUT
+     - "string"
+   * - Probability
+     - sendInvoiceTo.businessNumbers.registrationNumbersSE
+     - "string"
+   * - Probability
+     - sendInvoiceTo.businessNumbers.url
+     - "string"
+   * - Probability
+     - sendInvoiceTo.closeDate
+     - "string"
+   * - Probability
+     - sendInvoiceTo.closeReason.description
+     - "string"
+   * - Probability
+     - sendInvoiceTo.closeReason.id
+     - "string"
+   * - Probability
+     - sendInvoiceTo.closeReason.url
+     - "string"
+   * - Probability
+     - sendInvoiceTo.closeReason.valid
+     - "string"
+   * - Probability
+     - sendInvoiceTo.contacts.end
+     - "string"
+   * - Probability
+     - sendInvoiceTo.contacts.id
+     - "string"
+   * - Probability
+     - sendInvoiceTo.contacts.lastChange
+     - "string"
+   * - Probability
+     - sendInvoiceTo.contacts.start
+     - "string"
+   * - Probability
+     - sendInvoiceTo.contacts.type
+     - "string"
+   * - Probability
+     - sendInvoiceTo.contacts.url
+     - "string"
+   * - Probability
+     - sendInvoiceTo.contacts.value
+     - "string"
+   * - Probability
+     - sendInvoiceTo.customFieldValues
+     - "string"
+   * - Probability
+     - sendInvoiceTo.dafualtPayerRule
+     - "string"
+   * - Probability
+     - sendInvoiceTo.debtorAccountNumber
+     - "string"
+   * - Probability
+     - sendInvoiceTo.defaultAddressType
+     - "string"
+   * - Probability
+     - sendInvoiceTo.defaultPayerLink
+     - "string"
+   * - Probability
+     - sendInvoiceTo.ean
+     - "string"
+   * - Probability
+     - sendInvoiceTo.einvoiceEan
+     - "string"
+   * - Probability
+     - sendInvoiceTo.einvoiceEmail
+     - "string"
+   * - Probability
+     - sendInvoiceTo.emailForInvoices
+     - "string"
+   * - Probability
+     - sendInvoiceTo.externalId
+     - "string"
+   * - Probability
+     - sendInvoiceTo.financeType
+     - "string"
+   * - Probability
+     - sendInvoiceTo.honorific
+     - "string"
+   * - Probability
+     - sendInvoiceTo.invoiceDistributionPreference
+     - "string"
+   * - Probability
+     - sendInvoiceTo.invoicesLink
+     - "string"
+   * - Probability
+     - sendInvoiceTo.lastChange
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberType
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberships.affiliateDate
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberships.affiliationReason 
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberships.affiliationSource 
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberships.applicationDate
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberships.applicationProcessDate
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberships.applicationStatus
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberships.applicationStatusComment
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberships.closeDate
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberships.description
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberships.disaffiliateDate
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberships.disaffiliateReason 
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberships.enableGeographic
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberships.feeExempt
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberships.id
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberships.member 
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberships.membershipCategory 
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberships.membershipWeights 
+     - "string"
+   * - Probability
+     - sendInvoiceTo.memberships.url
+     - "string"
+   * - Probability
+     - sendInvoiceTo.name
+     - "string"
+   * - Probability
+     - sendInvoiceTo.name1
+     - "string"
+   * - Probability
+     - sendInvoiceTo.name2
+     - "string"
+   * - Probability
+     - sendInvoiceTo.sendInvoicesTo
+     - "string"
+   * - Probability
+     - sendInvoiceTo.sendMailTo
+     - "string"
+   * - Probability
+     - sendInvoiceTo.socialSecurityNumber.iso2Letter
+     - "string"
+   * - Probability
+     - sendInvoiceTo.socialSecurityNumber.number
+     - "string"
+   * - Probability
+     - sendInvoiceTo.url
      - "string"
    * - Probability
      - source
