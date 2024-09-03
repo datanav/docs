@@ -2,7 +2,7 @@
 Membercare to Superoffice Dataflow
 ==================================
 
-Generated: 2024-09-03 09:11:47
+Generated: 2024-09-03 13:28:36
 
 Introduction
 ------------
@@ -29,4 +29,20 @@ The following properties are synchronized between a Membercare Companies and a S
    * - url
      - Urls.Value
      - "string"
+
+
+Membercare Invoices to Superoffice Quoteline
+--------------------------------------------
+Every Membercare Invoices will be synchronized with a Superoffice Quoteline.
+
+Once a link between a Membercare Invoices and a Superoffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Invoices and a Superoffice Quoteline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Invoices Property
+     - Superoffice Quoteline Property
+     - Superoffice Data Type
 
