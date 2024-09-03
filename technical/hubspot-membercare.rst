@@ -2,7 +2,7 @@
 HubSpot to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 10:41:40
 
 Introduction
 ------------
@@ -47,6 +47,38 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
      - Membercare Data Type
 
 
+HubSpot Deal to Membercare Invoices
+-----------------------------------
+Every HubSpot Deal will be synchronized with a Membercare Invoices.
+
+Once a link between a HubSpot Deal and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - Membercare Invoices Property
+     - Membercare Data Type
+
+
+HubSpot Dealcompanyassociation to Membercare Invoices
+-----------------------------------------------------
+Every HubSpot Dealcompanyassociation will be synchronized with a Membercare Invoices.
+
+Once a link between a HubSpot Dealcompanyassociation and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcompanyassociation and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcompanyassociation Property
+     - Membercare Invoices Property
+     - Membercare Data Type
+
+
 HubSpot Dealcompanyassociationtype to Membercare Companycategories
 ------------------------------------------------------------------
 Every HubSpot Dealcompanyassociationtype will be synchronized with a Membercare Companycategories.
@@ -60,6 +92,22 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
 
    * - HubSpot Dealcompanyassociationtype Property
      - Membercare Companycategories Property
+     - Membercare Data Type
+
+
+HubSpot Dealcontactassociation to Membercare Invoices
+-----------------------------------------------------
+Every HubSpot Dealcontactassociation will be synchronized with a Membercare Invoices.
+
+Once a link between a HubSpot Dealcontactassociation and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcontactassociation and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcontactassociation Property
+     - Membercare Invoices Property
      - Membercare Data Type
 
 
@@ -79,6 +127,38 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
      - Membercare Data Type
 
 
+HubSpot Lineitem to Membercare Invoices
+---------------------------------------
+Every HubSpot Lineitem will be synchronized with a Membercare Invoices.
+
+Once a link between a HubSpot Lineitem and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     - Membercare Invoices Property
+     - Membercare Data Type
+
+
+HubSpot Lineitemdealassociation to Membercare Invoices
+------------------------------------------------------
+Every HubSpot Lineitemdealassociation will be synchronized with a Membercare Invoices.
+
+Once a link between a HubSpot Lineitemdealassociation and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
+     - Membercare Invoices Property
+     - Membercare Data Type
+
+
 HubSpot Lineitemdealassociationtype to Membercare Companycategories
 -------------------------------------------------------------------
 Every HubSpot Lineitemdealassociationtype will be synchronized with a Membercare Companycategories.
@@ -92,6 +172,22 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
 
    * - HubSpot Lineitemdealassociationtype Property
      - Membercare Companycategories Property
+     - Membercare Data Type
+
+
+HubSpot Lineitemquoteassociation to Membercare Invoices
+-------------------------------------------------------
+Every HubSpot Lineitemquoteassociation will be synchronized with a Membercare Invoices.
+
+Once a link between a HubSpot Lineitemquoteassociation and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociation and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociation Property
+     - Membercare Invoices Property
      - Membercare Data Type
 
 
@@ -111,6 +207,38 @@ The following properties are synchronized between a HubSpot Lineitemquoteassocia
      - Membercare Data Type
 
 
+HubSpot Quote to Membercare Invoices
+------------------------------------
+Every HubSpot Quote will be synchronized with a Membercare Invoices.
+
+Once a link between a HubSpot Quote and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quote and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quote Property
+     - Membercare Invoices Property
+     - Membercare Data Type
+
+
+HubSpot Quotecompanyassociation to Membercare Invoices
+------------------------------------------------------
+Every HubSpot Quotecompanyassociation will be synchronized with a Membercare Invoices.
+
+Once a link between a HubSpot Quotecompanyassociation and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecompanyassociation and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecompanyassociation Property
+     - Membercare Invoices Property
+     - Membercare Data Type
+
+
 HubSpot Quotecompanyassociationtype to Membercare Companycategories
 -------------------------------------------------------------------
 Every HubSpot Quotecompanyassociationtype will be synchronized with a Membercare Companycategories.
@@ -124,6 +252,22 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
 
    * - HubSpot Quotecompanyassociationtype Property
      - Membercare Companycategories Property
+     - Membercare Data Type
+
+
+HubSpot Quotecontactassociation to Membercare Invoices
+------------------------------------------------------
+Every HubSpot Quotecontactassociation will be synchronized with a Membercare Invoices.
+
+Once a link between a HubSpot Quotecontactassociation and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecontactassociation and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecontactassociation Property
+     - Membercare Invoices Property
      - Membercare Data Type
 
 
@@ -143,6 +287,22 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
      - Membercare Data Type
 
 
+HubSpot Quotedealassociation to Membercare Invoices
+---------------------------------------------------
+Every HubSpot Quotedealassociation will be synchronized with a Membercare Invoices.
+
+Once a link between a HubSpot Quotedealassociation and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotedealassociation and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotedealassociation Property
+     - Membercare Invoices Property
+     - Membercare Data Type
+
+
 HubSpot Quotedealassociationtype to Membercare Companycategories
 ----------------------------------------------------------------
 Every HubSpot Quotedealassociationtype will be synchronized with a Membercare Companycategories.
@@ -156,6 +316,22 @@ The following properties are synchronized between a HubSpot Quotedealassociation
 
    * - HubSpot Quotedealassociationtype Property
      - Membercare Companycategories Property
+     - Membercare Data Type
+
+
+HubSpot Quotequotetemplateassociation to Membercare Invoices
+------------------------------------------------------------
+Every HubSpot Quotequotetemplateassociation will be synchronized with a Membercare Invoices.
+
+Once a link between a HubSpot Quotequotetemplateassociation and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotequotetemplateassociation and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotequotetemplateassociation Property
+     - Membercare Invoices Property
      - Membercare Data Type
 
 
