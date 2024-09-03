@@ -2,7 +2,7 @@
 Tripletex to Membercare Dataflow
 ================================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -50,20 +50,20 @@ The following properties are synchronized between a Tripletex Department and a  
      - "string"
 
 
-Tripletex Country to  Countries
--------------------------------
-Every Tripletex Country will be synchronized with a  Countries.
+Tripletex Country to Membercare Countries
+-----------------------------------------
+Every Tripletex Country will be synchronized with a Membercare Countries.
 
-Once a link between a Tripletex Country and a  Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Country and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Country and a  Countries:
+The following properties are synchronized between a Tripletex Country and a Membercare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Country Property
-     -  Countries Property
-     -  Data Type
+     - Membercare Countries Property
+     - Membercare Data Type
    * - isoAlpha2Code
      - iso2Letter
      - "string"
