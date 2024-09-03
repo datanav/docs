@@ -2,7 +2,7 @@
 Businesscentral to Membercare Dataflow
 ======================================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -25,20 +25,20 @@ The following properties are synchronized between a Businesscentral Companies an
      -  Data Type
 
 
-Businesscentral Customers company to  Companies
------------------------------------------------
-Every Businesscentral Customers company will be synchronized with a  Companies.
+Businesscentral Customers company to Membercare Companies
+---------------------------------------------------------
+Every Businesscentral Customers company will be synchronized with a Membercare Companies.
 
-Once a link between a Businesscentral Customers company and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Customers company and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers company and a  Companies:
+The following properties are synchronized between a Businesscentral Customers company and a Membercare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Customers company Property
-     -  Companies Property
-     -  Data Type
+     - Membercare Companies Property
+     - Membercare Data Type
    * - displayName
      - companyName
      - "string"
@@ -50,20 +50,20 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
 
 
-Businesscentral Salesorders to  Countries
------------------------------------------
-Every Businesscentral Salesorders will be synchronized with a  Countries.
+Businesscentral Salesorders to Membercare Countries
+---------------------------------------------------
+Every Businesscentral Salesorders will be synchronized with a Membercare Countries.
 
-Once a link between a Businesscentral Salesorders and a  Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Salesorders and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorders and a  Countries:
+The following properties are synchronized between a Businesscentral Salesorders and a Membercare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Salesorders Property
-     -  Countries Property
-     -  Data Type
+     - Membercare Countries Property
+     - Membercare Data Type
    * - billToCountry
      - iso2Letter
      - "string"
@@ -72,20 +72,20 @@ The following properties are synchronized between a Businesscentral Salesorders 
      - "string"
 
 
-Businesscentral Salesquotes to  Countries
------------------------------------------
-Every Businesscentral Salesquotes will be synchronized with a  Countries.
+Businesscentral Salesquotes to Membercare Countries
+---------------------------------------------------
+Every Businesscentral Salesquotes will be synchronized with a Membercare Countries.
 
-Once a link between a Businesscentral Salesquotes and a  Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Salesquotes and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesquotes and a  Countries:
+The following properties are synchronized between a Businesscentral Salesquotes and a Membercare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Salesquotes Property
-     -  Countries Property
-     -  Data Type
+     - Membercare Countries Property
+     - Membercare Data Type
    * - billToCountry
      - name
      - "string"
