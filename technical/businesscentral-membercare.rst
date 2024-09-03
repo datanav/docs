@@ -2,7 +2,7 @@
 Businesscentral to Membercare Dataflow
 ======================================
 
-Generated: 2024-09-03 10:30:41
+Generated: 2024-09-03 10:41:40
 
 Introduction
 ------------
@@ -37,6 +37,38 @@ The following properties are synchronized between a Businesscentral Salesorderli
    :header-rows: 1
 
    * - Businesscentral Salesorderlines Property
+     - Membercare Invoices Property
+     - Membercare Data Type
+
+
+Businesscentral Salesorders to Membercare Invoices
+--------------------------------------------------
+Every Businesscentral Salesorders will be synchronized with a Membercare Invoices.
+
+Once a link between a Businesscentral Salesorders and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorders and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorders Property
+     - Membercare Invoices Property
+     - Membercare Data Type
+
+
+Businesscentral Salesquotes to Membercare Invoices
+--------------------------------------------------
+Every Businesscentral Salesquotes will be synchronized with a Membercare Invoices.
+
+Once a link between a Businesscentral Salesquotes and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesquotes and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesquotes Property
      - Membercare Invoices Property
      - Membercare Data Type
 
