@@ -2,7 +2,7 @@
 Exact to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a Exact Contacts and a Salesfo
    * - Exact Contacts Property
      - Salesforce Contact Property
      - Salesforce Data Type
+   * - BirthDate
+     - Birthdate
+     - "string"
+   * - FirstName
+     - Name
+     - "string"
+   * - FullName
+     - Name
+     - "string"
+   * - LastName
+     - Name
+     - "string"
 
 
 Exact Items to Salesforce Product2
