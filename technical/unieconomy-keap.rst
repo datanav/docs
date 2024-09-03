@@ -2,62 +2,62 @@
 Unieconomy to Keap Dataflow
 ===========================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 09:05:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Unieconomy to Keap. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Unieconomy Companies to  Companies
-----------------------------------
-Every Unieconomy Companies will be synchronized with a  Companies.
+Unieconomy Companies to Keap Companies
+--------------------------------------
+Every Unieconomy Companies will be synchronized with a Keap Companies.
 
-Once a link between a Unieconomy Companies and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Companies and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Companies and a  Companies:
+The following properties are synchronized between a Unieconomy Companies and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Companies Property
-     -  Companies Property
-     -  Data Type
+     - Keap Companies Property
+     - Keap Data Type
    * - Name
      - company_name
      - "string"
 
 
-Unieconomy Customers to  Companies
-----------------------------------
-Every Unieconomy Customers will be synchronized with a  Companies.
+Unieconomy Customers to Keap Companies
+--------------------------------------
+Every Unieconomy Customers will be synchronized with a Keap Companies.
 
-Once a link between a Unieconomy Customers and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Customers and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Customers and a  Companies:
+The following properties are synchronized between a Unieconomy Customers and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Customers Property
-     -  Companies Property
-     -  Data Type
+     - Keap Companies Property
+     - Keap Data Type
 
 
-Unieconomy Departments to  Companies
-------------------------------------
-Every Unieconomy Departments will be synchronized with a  Companies.
+Unieconomy Departments to Keap Companies
+----------------------------------------
+Every Unieconomy Departments will be synchronized with a Keap Companies.
 
-Once a link between a Unieconomy Departments and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Departments and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Departments and a  Companies:
+The following properties are synchronized between a Unieconomy Departments and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Departments Property
-     -  Companies Property
-     -  Data Type
+     - Keap Companies Property
+     - Keap Data Type
    * - Name
      - company_name
      - "string"
