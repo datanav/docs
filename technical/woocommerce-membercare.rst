@@ -2,7 +2,7 @@
 Woocommerce to Membercare Dataflow
 ==================================
 
-Generated: 2024-09-03 10:41:40
+Generated: 2024-09-03 13:28:00
 
 Introduction
 ------------
@@ -23,4 +23,10 @@ The following properties are synchronized between a Woocommerce Order and a Memb
    * - Woocommerce Order Property
      - Membercare Invoices Property
      - Membercare Data Type
+   * - line_items.price
+     - invoiceItems.unitPrice
+     - "string"
+   * - line_items.quantity
+     - invoiceItems.quantity
+     - "string"
 
