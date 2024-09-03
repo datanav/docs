@@ -2,7 +2,7 @@
 Wave Financial to Keap Dataflow
 ===============================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:06:35
 
 Introduction
 ------------
@@ -43,22 +43,22 @@ The following properties are synchronized between a Wave Customer and a Keap Com
      - "string"
 
 
-Wave Vendor to  Companies
--------------------------
-Before any synchronization can take place, a link between a Wave Vendor and a  Companies must be established.
+Wave Vendor to Keap Companies
+-----------------------------
+Before any synchronization can take place, a link between a Wave Vendor and a Keap Companies must be established.
 
-A new  Companies will be created from a Wave Vendor if it is connected to a Wave Customer-person that is synchronized into .
+A new Keap Companies will be created from a Wave Vendor if it is connected to a Wave Customer-person that is synchronized into Keap.
 
-Once a link between a Wave Vendor and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a  Companies:
+The following properties are synchronized between a Wave Vendor and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     -  Companies Property
-     -  Data Type
+     - Keap Companies Property
+     - Keap Data Type
    * - address.city
      - address.locality
      - "string"
