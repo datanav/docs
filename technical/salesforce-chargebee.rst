@@ -2,7 +2,7 @@
 Salesforce to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -37,39 +37,39 @@ The following properties are synchronized between a Salesforce Contact and a  Cu
      - "string"
 
 
-Salesforce Organization to  Business_entity
--------------------------------------------
-Every Salesforce Organization will be synchronized with a  Business_entity.
+Salesforce Organization to Chargebee Business_entity
+----------------------------------------------------
+Every Salesforce Organization will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Salesforce Organization and a  Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Organization and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Organization and a  Business_entity:
+The following properties are synchronized between a Salesforce Organization and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Organization Property
-     -  Business_entity Property
-     -  Data Type
+     - Chargebee Business_entity Property
+     - Chargebee Data Type
    * - Name	
      - name
      - "string"
 
 
-Salesforce Product2 to  Item
-----------------------------
-Every Salesforce Product2 will be synchronized with a  Item.
+Salesforce Product2 to Chargebee Item
+-------------------------------------
+Every Salesforce Product2 will be synchronized with a Chargebee Item.
 
-Once a link between a Salesforce Product2 and a  Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Product2 and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Product2 and a  Item:
+The following properties are synchronized between a Salesforce Product2 and a Chargebee Item:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Product2 Property
-     -  Item Property
-     -  Data Type
+     - Chargebee Item Property
+     - Chargebee Data Type
    * - Name	
      - name
      - "string"
