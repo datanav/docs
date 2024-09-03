@@ -2,7 +2,7 @@
 Wave Financial to Membercare Dataflow
 =====================================
 
-Generated: 2024-09-03 10:41:40
+Generated: 2024-09-03 10:41:42
 
 Introduction
 ------------
@@ -45,6 +45,9 @@ The following properties are synchronized between a Wave Invoice and a Membercar
    * - Wave Invoice Property
      - Membercare Invoices Property
      - Membercare Data Type
+   * - dueDate
+     - payDueDate
+     - "string"
 
 
 Wave Country to Membercare Countries
