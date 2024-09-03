@@ -2,7 +2,7 @@
 Businessnxt to Chargebee Dataflow
 =================================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:57:55
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Businessnxt Address and a Ch
    * - Businessnxt Address Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
+   * - name
+     - name
+     - "string"
 
 
 Businessnxt Company to Chargebee Business_entity
@@ -39,6 +42,9 @@ The following properties are synchronized between a Businessnxt Company and a Ch
    * - Businessnxt Company Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
+   * - name
+     - name
+     - "string"
 
 
 Businessnxt Order to Chargebee Order
