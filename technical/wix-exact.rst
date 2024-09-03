@@ -2,27 +2,27 @@
 Wix.com to Exact Dataflow
 =========================
 
-Generated: 2024-09-03 08:14:49
+Generated: 2024-09-03 08:16:35
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to Exact. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wix.com Contacts to  Contacts
------------------------------
-Every Wix.com Contacts will be synchronized with a  Contacts.
+Wix.com Contacts to Exact Contacts
+----------------------------------
+Every Wix.com Contacts will be synchronized with a Exact Contacts.
 
-Once a link between a Wix.com Contacts and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a  Contacts:
+The following properties are synchronized between a Wix.com Contacts and a Exact Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     -  Contacts Property
-     -  Data Type
+     - Exact Contacts Property
+     - Exact Data Type
    * - info.name.first
      - FirstName
      - "string"
@@ -37,36 +37,36 @@ The following properties are synchronized between a Wix.com Contacts and a  Cont
      - "string"
 
 
-Wix.com Currencies to  Currencies
----------------------------------
-Every Wix.com Currencies will be synchronized with a  Currencies.
+Wix.com Currencies to Exact Currencies
+--------------------------------------
+Every Wix.com Currencies will be synchronized with a Exact Currencies.
 
-Once a link between a Wix.com Currencies and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Currencies and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Currencies and a  Currencies:
+The following properties are synchronized between a Wix.com Currencies and a Exact Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Currencies Property
-     -  Currencies Property
-     -  Data Type
+     - Exact Currencies Property
+     - Exact Data Type
 
 
-Wix.com Orders to  Salesorderlines
-----------------------------------
-Every Wix.com Orders will be synchronized with a  Salesorderlines.
+Wix.com Orders to Exact Salesorderlines
+---------------------------------------
+Every Wix.com Orders will be synchronized with a Exact Salesorderlines.
 
-Once a link between a Wix.com Orders and a  Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a Exact Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a  Salesorderlines:
+The following properties are synchronized between a Wix.com Orders and a Exact Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     -  Salesorderlines Property
-     -  Data Type
+     - Exact Salesorderlines Property
+     - Exact Data Type
    * - id
      - OrderID
      - "string"
@@ -75,37 +75,37 @@ The following properties are synchronized between a Wix.com Orders and a  Saleso
      - "string"
 
 
-Wix.com Orders to  Salesorders
-------------------------------
-Every Wix.com Orders will be synchronized with a  Salesorders.
+Wix.com Orders to Exact Salesorders
+-----------------------------------
+Every Wix.com Orders will be synchronized with a Exact Salesorders.
 
-Once a link between a Wix.com Orders and a  Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a  Salesorders:
+The following properties are synchronized between a Wix.com Orders and a Exact Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     -  Salesorders Property
-     -  Data Type
+     - Exact Salesorders Property
+     - Exact Data Type
    * - currency
      - Currency
      - "string"
 
 
-Wix.com Products to  Items
---------------------------
-Every Wix.com Products will be synchronized with a  Items.
+Wix.com Products to Exact Items
+-------------------------------
+Every Wix.com Products will be synchronized with a Exact Items.
 
-Once a link between a Wix.com Products and a  Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a Exact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a  Items:
+The following properties are synchronized between a Wix.com Products and a Exact Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     -  Items Property
-     -  Data Type
+     - Exact Items Property
+     - Exact Data Type
 
