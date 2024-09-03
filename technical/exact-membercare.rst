@@ -2,7 +2,7 @@
 Exact to Membercare Dataflow
 ============================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -129,20 +129,20 @@ The following properties are synchronized between a Exact Vatcodes and a  Compan
      - "string"
 
 
-Exact Addresses to  Countries
------------------------------
-Every Exact Addresses will be synchronized with a  Countries.
+Exact Addresses to Membercare Countries
+---------------------------------------
+Every Exact Addresses will be synchronized with a Membercare Countries.
 
-Once a link between a Exact Addresses and a  Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Addresses and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Addresses and a  Countries:
+The following properties are synchronized between a Exact Addresses and a Membercare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Addresses Property
-     -  Countries Property
-     -  Data Type
+     - Membercare Countries Property
+     - Membercare Data Type
    * - CountryName
      - name
      - "string"
