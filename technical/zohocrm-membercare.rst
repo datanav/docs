@@ -2,7 +2,7 @@
 ZohoCRM to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 10:41:40
 
 Introduction
 ------------
@@ -29,6 +29,22 @@ The following properties are synchronized between a ZohoCRM Account and a Member
    * - Website
      - url
      - "string"
+
+
+ZohoCRM Deal to Membercare Invoices
+-----------------------------------
+Every ZohoCRM Deal will be synchronized with a Membercare Invoices.
+
+Once a link between a ZohoCRM Deal and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Deal and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Deal Property
+     - Membercare Invoices Property
+     - Membercare Data Type
 
 
 ZohoCRM Account to Membercare Countries
