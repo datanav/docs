@@ -2,7 +2,7 @@
 Businessnxt to Businesscentral Dataflow
 =======================================
 
-Generated: 2024-09-03 08:57:35
+Generated: 2024-09-03 08:57:55
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Businessnxt Order and a Busi
    * - Businessnxt Order Property
      - Businesscentral Salesorders Property
      - Businesscentral Data Type
+   * - dueDate
+     - requestedDeliveryDate
+     - N/A
+   * - orderDate
+     - orderDate
+     - N/A
 
 
 Businessnxt Orderline to Businesscentral Salesorderlines
@@ -39,6 +45,9 @@ The following properties are synchronized between a Businessnxt Orderline and a 
    * - Businessnxt Orderline Property
      - Businesscentral Salesorderlines Property
      - Businesscentral Data Type
+   * - orderNo
+     - documentId
+     - "string"
 
 
 Businessnxt Product to Businesscentral Items
@@ -55,4 +64,7 @@ The following properties are synchronized between a Businessnxt Product and a Bu
    * - Businessnxt Product Property
      - Businesscentral Items Property
      - Businesscentral Data Type
+   * - priceQuantity
+     - unitPrice
+     - N/A
 
