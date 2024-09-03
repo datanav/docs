@@ -2,12 +2,60 @@
 Exact to Businesscentral Dataflow
 =================================
 
-Generated: 2024-09-03 08:16:57
+Generated: 2024-09-03 08:20:40
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Exact to Businesscentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Exact Accounts to Businesscentral Companies
+-------------------------------------------
+Every Exact Accounts will be synchronized with a Businesscentral Companies.
+
+Once a link between a Exact Accounts and a Businesscentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Accounts and a Businesscentral Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Accounts Property
+     - Businesscentral Companies Property
+     - Businesscentral Data Type
+
+
+Exact Departments to Businesscentral Companies
+----------------------------------------------
+Every Exact Departments will be synchronized with a Businesscentral Companies.
+
+Once a link between a Exact Departments and a Businesscentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Departments and a Businesscentral Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Departments Property
+     - Businesscentral Companies Property
+     - Businesscentral Data Type
+
+
+Exact Divisions to Businesscentral Companies
+--------------------------------------------
+Every Exact Divisions will be synchronized with a Businesscentral Companies.
+
+Once a link between a Exact Divisions and a Businesscentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Divisions and a Businesscentral Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Divisions Property
+     - Businesscentral Companies Property
+     - Businesscentral Data Type
+
 
 Exact Accounts to Businesscentral Customers company
 ---------------------------------------------------
