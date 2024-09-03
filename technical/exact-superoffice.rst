@@ -2,7 +2,7 @@
 Exact to Superoffice Dataflow
 =============================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Exact Items and a Superoffic
    * - Exact Items Property
      - Superoffice Product Property
      - Superoffice Data Type
+   * - Code
+     - Code
+     - "string"
 
 
 Exact Quotations to Superoffice Quotealternative
@@ -39,6 +42,9 @@ The following properties are synchronized between a Exact Quotations and a Super
    * - Exact Quotations Property
      - Superoffice Quotealternative Property
      - Superoffice Data Type
+   * - Description
+     - Name
+     - "string"
 
 
 Exact Salesorderlines to Superoffice Quoteline
