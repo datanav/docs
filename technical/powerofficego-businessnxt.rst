@@ -2,7 +2,7 @@
 Powerofficego to Businessnxt Dataflow
 =====================================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -66,106 +66,106 @@ The following properties are synchronized between a Powerofficego Salesorderline
      -  Data Type
 
 
-Powerofficego Contactperson to  Country
----------------------------------------
-Every Powerofficego Contactperson will be synchronized with a  Country.
+Powerofficego Contactperson to Businessnxt Country
+--------------------------------------------------
+Every Powerofficego Contactperson will be synchronized with a Businessnxt Country.
 
-Once a link between a Powerofficego Contactperson and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Contactperson and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Contactperson and a  Country:
+The following properties are synchronized between a Powerofficego Contactperson and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Contactperson Property
-     -  Country Property
-     -  Data Type
+     - Businessnxt Country Property
+     - Businessnxt Data Type
    * - residenceCountryCode
      - isoCode
      - "string"
 
 
-Powerofficego Currency to  Currency
------------------------------------
-Every Powerofficego Currency will be synchronized with a  Currency.
+Powerofficego Currency to Businessnxt Currency
+----------------------------------------------
+Every Powerofficego Currency will be synchronized with a Businessnxt Currency.
 
-Once a link between a Powerofficego Currency and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Currency and a Businessnxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Currency and a  Currency:
+The following properties are synchronized between a Powerofficego Currency and a Businessnxt Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Currency Property
-     -  Currency Property
-     -  Data Type
+     - Businessnxt Currency Property
+     - Businessnxt Data Type
 
 
-Powerofficego Customers to  Country
------------------------------------
-Every Powerofficego Customers will be synchronized with a  Country.
+Powerofficego Customers to Businessnxt Country
+----------------------------------------------
+Every Powerofficego Customers will be synchronized with a Businessnxt Country.
 
-Once a link between a Powerofficego Customers and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers and a  Country:
+The following properties are synchronized between a Powerofficego Customers and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers Property
-     -  Country Property
-     -  Data Type
+     - Businessnxt Country Property
+     - Businessnxt Data Type
    * - MailAddress.CountryCode
      - isoCode
      - "string"
 
 
-Powerofficego Location to  Country
-----------------------------------
-Every Powerofficego Location will be synchronized with a  Country.
+Powerofficego Location to Businessnxt Country
+---------------------------------------------
+Every Powerofficego Location will be synchronized with a Businessnxt Country.
 
-Once a link between a Powerofficego Location and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Location and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Location and a  Country:
+The following properties are synchronized between a Powerofficego Location and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Location Property
-     -  Country Property
-     -  Data Type
+     - Businessnxt Country Property
+     - Businessnxt Data Type
 
 
-Powerofficego Outgoinginvoices to  Country
-------------------------------------------
-Every Powerofficego Outgoinginvoices will be synchronized with a  Country.
+Powerofficego Outgoinginvoices to Businessnxt Country
+-----------------------------------------------------
+Every Powerofficego Outgoinginvoices will be synchronized with a Businessnxt Country.
 
-Once a link between a Powerofficego Outgoinginvoices and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Outgoinginvoices and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Outgoinginvoices and a  Country:
+The following properties are synchronized between a Powerofficego Outgoinginvoices and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Outgoinginvoices Property
-     -  Country Property
-     -  Data Type
+     - Businessnxt Country Property
+     - Businessnxt Data Type
 
 
-Powerofficego Product to  Product
----------------------------------
-Every Powerofficego Product will be synchronized with a  Product.
+Powerofficego Product to Businessnxt Product
+--------------------------------------------
+Every Powerofficego Product will be synchronized with a Businessnxt Product.
 
-Once a link between a Powerofficego Product and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Product and a Businessnxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Product and a  Product:
+The following properties are synchronized between a Powerofficego Product and a Businessnxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Product Property
-     -  Product Property
-     -  Data Type
+     - Businessnxt Product Property
+     - Businessnxt Data Type
    * - availableStock
      - quantityPerUnit
      - "string"
@@ -177,91 +177,91 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "string"
 
 
-Powerofficego Productgroup to  Productcategory
-----------------------------------------------
-Every Powerofficego Productgroup will be synchronized with a  Productcategory.
+Powerofficego Productgroup to Businessnxt Productcategory
+---------------------------------------------------------
+Every Powerofficego Productgroup will be synchronized with a Businessnxt Productcategory.
 
-Once a link between a Powerofficego Productgroup and a  Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Productgroup and a Businessnxt Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Productgroup and a  Productcategory:
+The following properties are synchronized between a Powerofficego Productgroup and a Businessnxt Productcategory:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Productgroup Property
-     -  Productcategory Property
-     -  Data Type
+     - Businessnxt Productcategory Property
+     - Businessnxt Data Type
    * - name
      - text
      - "string"
 
 
-Powerofficego Salesorderlines to  Orderline
--------------------------------------------
-Every Powerofficego Salesorderlines will be synchronized with a  Orderline.
+Powerofficego Salesorderlines to Businessnxt Orderline
+------------------------------------------------------
+Every Powerofficego Salesorderlines will be synchronized with a Businessnxt Orderline.
 
-Once a link between a Powerofficego Salesorderlines and a  Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Salesorderlines and a Businessnxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Salesorderlines and a  Orderline:
+The following properties are synchronized between a Powerofficego Salesorderlines and a Businessnxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Salesorderlines Property
-     -  Orderline Property
-     -  Data Type
+     - Businessnxt Orderline Property
+     - Businessnxt Data Type
    * - sesam_SalesOrderId
      - orderNo
      - "string"
 
 
-Powerofficego Salesorders to  Order
------------------------------------
-Every Powerofficego Salesorders will be synchronized with a  Order.
+Powerofficego Salesorders to Businessnxt Order
+----------------------------------------------
+Every Powerofficego Salesorders will be synchronized with a Businessnxt Order.
 
-Once a link between a Powerofficego Salesorders and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Salesorders and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Salesorders and a  Order:
+The following properties are synchronized between a Powerofficego Salesorders and a Businessnxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Salesorders Property
-     -  Order Property
-     -  Data Type
+     - Businessnxt Order Property
+     - Businessnxt Data Type
    * - SalesOrderDate
      - orderDate
      - "string"
 
 
-Powerofficego Suppliers to  Country
------------------------------------
-Every Powerofficego Suppliers will be synchronized with a  Country.
+Powerofficego Suppliers to Businessnxt Country
+----------------------------------------------
+Every Powerofficego Suppliers will be synchronized with a Businessnxt Country.
 
-Once a link between a Powerofficego Suppliers and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Suppliers and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Suppliers and a  Country:
+The following properties are synchronized between a Powerofficego Suppliers and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Suppliers Property
-     -  Country Property
-     -  Data Type
+     - Businessnxt Country Property
+     - Businessnxt Data Type
 
 
-Powerofficego Suppliers person to  Country
-------------------------------------------
-Every Powerofficego Suppliers person will be synchronized with a  Country.
+Powerofficego Suppliers person to Businessnxt Country
+-----------------------------------------------------
+Every Powerofficego Suppliers person will be synchronized with a Businessnxt Country.
 
-Once a link between a Powerofficego Suppliers person and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Suppliers person and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Suppliers person and a  Country:
+The following properties are synchronized between a Powerofficego Suppliers person and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Suppliers person Property
-     -  Country Property
-     -  Data Type
+     - Businessnxt Country Property
+     - Businessnxt Data Type
 
