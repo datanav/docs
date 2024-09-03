@@ -2,7 +2,7 @@
 Invoiced to ZohoCRM Dataflow
 ============================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Invoiced Customers company a
    * - Invoiced Customers company Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - name
+     - Account_Name
+     - "string"
 
 
 Invoiced Customers person to ZohoCRM Contact
