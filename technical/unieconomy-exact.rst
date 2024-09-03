@@ -2,7 +2,7 @@
 Unieconomy to Exact Dataflow
 ============================
 
-Generated: 2024-09-03 08:14:49
+Generated: 2024-09-03 08:16:35
 
 Introduction
 ------------
@@ -47,20 +47,20 @@ The following properties are synchronized between a Unieconomy Departments and a
      - "string"
 
 
-Unieconomy Currencycodes to  Currencies
----------------------------------------
-Every Unieconomy Currencycodes will be synchronized with a  Currencies.
+Unieconomy Currencycodes to Exact Currencies
+--------------------------------------------
+Every Unieconomy Currencycodes will be synchronized with a Exact Currencies.
 
-Once a link between a Unieconomy Currencycodes and a  Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Currencycodes and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Currencycodes and a  Currencies:
+The following properties are synchronized between a Unieconomy Currencycodes and a Exact Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Currencycodes Property
-     -  Currencies Property
-     -  Data Type
+     - Exact Currencies Property
+     - Exact Data Type
    * - Code
      - Code
      - "string"
@@ -69,20 +69,20 @@ The following properties are synchronized between a Unieconomy Currencycodes and
      - "string"
 
 
-Unieconomy Customers to  Accounts
----------------------------------
-Every Unieconomy Customers will be synchronized with a  Accounts.
+Unieconomy Customers to Exact Accounts
+--------------------------------------
+Every Unieconomy Customers will be synchronized with a Exact Accounts.
 
-Once a link between a Unieconomy Customers and a  Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Customers and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Customers and a  Accounts:
+The following properties are synchronized between a Unieconomy Customers and a Exact Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Customers Property
-     -  Accounts Property
-     -  Data Type
+     - Exact Accounts Property
+     - Exact Data Type
    * - CurrencyCodeID
      - Currency
      - "string"
@@ -91,20 +91,20 @@ The following properties are synchronized between a Unieconomy Customers and a  
      - "string"
 
 
-Unieconomy Departments to  Departments
---------------------------------------
-Every Unieconomy Departments will be synchronized with a  Departments.
+Unieconomy Departments to Exact Departments
+-------------------------------------------
+Every Unieconomy Departments will be synchronized with a Exact Departments.
 
-Once a link between a Unieconomy Departments and a  Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Departments and a Exact Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Departments and a  Departments:
+The following properties are synchronized between a Unieconomy Departments and a Exact Departments:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Departments Property
-     -  Departments Property
-     -  Data Type
+     - Exact Departments Property
+     - Exact Data Type
    * - DepartmentNumber
      - Description
      - "string"
