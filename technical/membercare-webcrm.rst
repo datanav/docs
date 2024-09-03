@@ -2,7 +2,7 @@
 Membercare to Webcrm Dataflow
 =============================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Membercare Companies and a W
    * - Membercare Companies Property
      - Webcrm Organisations Property
      - Webcrm Data Type
+   * - companyName
+     - OrganisationName
+     - "string"
 
