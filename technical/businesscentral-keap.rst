@@ -2,29 +2,29 @@
 Businesscentral to Keap Dataflow
 ================================
 
-Generated: 2024-09-03 09:05:41
+Generated: 2024-09-03 09:06:35
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to Keap. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Customers to  Companies
----------------------------------------
-Before any synchronization can take place, a link between a Businesscentral Customers and a  Companies must be established.
+Businesscentral Customers to Keap Companies
+-------------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Customers and a Keap Companies must be established.
 
-A new  Companies will be created from a Businesscentral Customers if it is connected to a Businesscentral Employees, Contacts-person, or Customers-person that is synchronized into .
+A new Keap Companies will be created from a Businesscentral Customers if it is connected to a Businesscentral Employees, Contacts-person, or Customers-person that is synchronized into Keap.
 
-Once a link between a Businesscentral Customers and a  Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Customers and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers and a  Companies:
+The following properties are synchronized between a Businesscentral Customers and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Customers Property
-     -  Companies Property
-     -  Data Type
+     - Keap Companies Property
+     - Keap Data Type
 
 
 Businesscentral Companies to Keap Companies
