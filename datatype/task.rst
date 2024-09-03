@@ -75,14 +75,6 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
-    **Salesforce**
-
-    Salesforce is a CRM platform, providing services such as marketing, sales, commerce, service and IT.
-    .. link-button:: system/salesforce
-        :type: ref
-        :text: Read more
-        :classes: read-more
-    ---
     **SuperOffice**
 
     SuperOffice is a CRM system, combining all customer-facing processes – sales, marketing and customer service – into one technology stack.
