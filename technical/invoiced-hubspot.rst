@@ -2,7 +2,7 @@
 Invoiced to Hubspot Dataflow
 ============================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Invoiced Customers company a
    * - Invoiced Customers company Property
      - Hubspot Company Property
      - Hubspot Data Type
+   * - name
+     - properties.name
+     - "string"
 
 
 Invoiced Customers person to Hubspot Contact
@@ -39,6 +42,21 @@ The following properties are synchronized between a Invoiced Customers person an
    * - Invoiced Customers person Property
      - Hubspot Contact Property
      - Hubspot Data Type
+   * - address1
+     - properties.address
+     - "string"
+   * - city
+     - properties.city
+     - "string"
+   * - country
+     - properties.country
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - postal_code
+     - properties.zip
+     - "string"
 
 
 Invoiced Items to Hubspot Product
