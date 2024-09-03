@@ -2,7 +2,7 @@
 Wix.com to Crmoffice Dataflow
 =============================
 
-Generated: 2024-09-03 09:00:55
+Generated: 2024-09-03 09:02:34
 
 Introduction
 ------------
@@ -25,20 +25,20 @@ The following properties are synchronized between a Wix.com Products and a  Comp
      -  Data Type
 
 
-Wix.com Contacts to  Contacts
------------------------------
-Every Wix.com Contacts will be synchronized with a  Contacts.
+Wix.com Contacts to Crmoffice Contacts
+--------------------------------------
+Every Wix.com Contacts will be synchronized with a Crmoffice Contacts.
 
-Once a link between a Wix.com Contacts and a  Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a  Contacts:
+The following properties are synchronized between a Wix.com Contacts and a Crmoffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     -  Contacts Property
-     -  Data Type
+     - Crmoffice Contacts Property
+     - Crmoffice Data Type
    * - info.name.first
      - givenName
      - "string"
