@@ -2,7 +2,7 @@
 Wix.com to Keap Dataflow
 ========================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -25,20 +25,20 @@ The following properties are synchronized between a Wix.com Contacts and a  Cont
      -  Data Type
 
 
-Wix.com Products to  Product
-----------------------------
-Every Wix.com Products will be synchronized with a  Product.
+Wix.com Products to Keap Product
+--------------------------------
+Every Wix.com Products will be synchronized with a Keap Product.
 
-Once a link between a Wix.com Products and a  Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a Keap Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a  Product:
+The following properties are synchronized between a Wix.com Products and a Keap Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     -  Product Property
-     -  Data Type
+     - Keap Product Property
+     - Keap Data Type
    * - name
      - product_name
      - "string"
