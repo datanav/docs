@@ -2,7 +2,7 @@
 Membercare to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-03 14:28:41
+Generated: 2024-09-03 22:24:40
 
 Introduction
 ------------
@@ -80,6 +80,22 @@ The following properties are synchronized between a Membercare Invoices and a Ch
    * - invoiceItems.unitPrice
      - order_line_items.unit_price
      - "string"
+
+
+Membercare Organizations to Chargebee Business_entity
+-----------------------------------------------------
+Every Membercare Organizations will be synchronized with a Chargebee Business_entity.
+
+Once a link between a Membercare Organizations and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Organizations and a Chargebee Business_entity:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Organizations Property
+     - Chargebee Business_entity Property
+     - Chargebee Data Type
 
 
 Membercare Companies to Chargebee Business_entity
