@@ -2,7 +2,7 @@
 Membercare to Exact Dataflow
 ============================
 
-Generated: 2024-09-03 10:15:41
+Generated: 2024-09-03 13:28:36
 
 Introduction
 ------------
@@ -145,5 +145,21 @@ The following properties are synchronized between a Membercare Invoices and a Ex
 
    * - Membercare Invoices Property
      - Exact Salesinvoices Property
+     - Exact Data Type
+
+
+Membercare Invoices to Exact Salesorderlines
+--------------------------------------------
+Every Membercare Invoices will be synchronized with a Exact Salesorderlines.
+
+Once a link between a Membercare Invoices and a Exact Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Invoices and a Exact Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Invoices Property
+     - Exact Salesorderlines Property
      - Exact Data Type
 
