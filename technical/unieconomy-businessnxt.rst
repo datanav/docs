@@ -2,7 +2,7 @@
 Unieconomy to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-03 08:55:46
+Generated: 2024-09-03 08:57:35
 
 Introduction
 ------------
@@ -44,77 +44,77 @@ The following properties are synchronized between a Unieconomy Departments and a
      - "string"
 
 
-Unieconomy Companies to  Address
---------------------------------
-Every Unieconomy Companies will be synchronized with a  Address.
+Unieconomy Companies to Businessnxt Address
+-------------------------------------------
+Every Unieconomy Companies will be synchronized with a Businessnxt Address.
 
-Once a link between a Unieconomy Companies and a  Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Companies and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Companies and a  Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Unieconomy Companies Property
-     -  Address Property
-     -  Data Type
-   * - Name
-     - name
-     - "string"
-
-
-Unieconomy Companies to  Company
---------------------------------
-Every Unieconomy Companies will be synchronized with a  Company.
-
-Once a link between a Unieconomy Companies and a  Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Unieconomy Companies and a  Company:
+The following properties are synchronized between a Unieconomy Companies and a Businessnxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Companies Property
-     -  Company Property
-     -  Data Type
+     - Businessnxt Address Property
+     - Businessnxt Data Type
    * - Name
      - name
      - "string"
 
 
-Unieconomy Countries to  Country
---------------------------------
-Every Unieconomy Countries will be synchronized with a  Country.
+Unieconomy Companies to Businessnxt Company
+-------------------------------------------
+Every Unieconomy Companies will be synchronized with a Businessnxt Company.
 
-Once a link between a Unieconomy Countries and a  Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Companies and a Businessnxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Countries and a  Country:
+The following properties are synchronized between a Unieconomy Companies and a Businessnxt Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Companies Property
+     - Businessnxt Company Property
+     - Businessnxt Data Type
+   * - Name
+     - name
+     - "string"
+
+
+Unieconomy Countries to Businessnxt Country
+-------------------------------------------
+Every Unieconomy Countries will be synchronized with a Businessnxt Country.
+
+Once a link between a Unieconomy Countries and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Countries and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Countries Property
-     -  Country Property
-     -  Data Type
+     - Businessnxt Country Property
+     - Businessnxt Data Type
    * - Name
      - name
      - "string"
 
 
-Unieconomy Currencycodes to  Currency
--------------------------------------
-Every Unieconomy Currencycodes will be synchronized with a  Currency.
+Unieconomy Currencycodes to Businessnxt Currency
+------------------------------------------------
+Every Unieconomy Currencycodes will be synchronized with a Businessnxt Currency.
 
-Once a link between a Unieconomy Currencycodes and a  Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Currencycodes and a Businessnxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Currencycodes and a  Currency:
+The following properties are synchronized between a Unieconomy Currencycodes and a Businessnxt Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Currencycodes Property
-     -  Currency Property
-     -  Data Type
+     - Businessnxt Currency Property
+     - Businessnxt Data Type
    * - Code
      - isoCode
      - "string"
