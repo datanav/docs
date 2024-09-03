@@ -2,7 +2,7 @@
 Webcrm to ZohoCRM Dataflow
 ==========================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,6 +23,45 @@ The following properties are synchronized between a Webcrm Organisations and a Z
    * - Webcrm Organisations Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - OrganisationCity
+     - Billing_City
+     - "string"
+   * - OrganisationCity
+     - Shipping_City
+     - "string"
+   * - OrganisationCompanyDescription
+     - Created_Time
+     - "string"
+   * - OrganisationDeliveryCity
+     - Billing_City
+     - "string"
+   * - OrganisationDeliveryCity
+     - Shipping_City
+     - "string"
+   * - OrganisationDeliveryPostCode
+     - Billing_Code
+     - "string"
+   * - OrganisationDeliveryPostCode
+     - Shipping_Code
+     - "string"
+   * - OrganisationDeliveryState
+     - Billing_State
+     - "string"
+   * - OrganisationDeliveryState
+     - Shipping_State
+     - "string"
+   * - OrganisationName
+     - Account_Name
+     - "string"
+   * - OrganisationPostCode
+     - Billing_Code
+     - "string"
+   * - OrganisationPostCode
+     - Shipping_Code
+     - "string"
+   * - OrganisationTelephone
+     - Phone
+     - "string"
 
 
 Webcrm Opportunities to ZohoCRM Deal
