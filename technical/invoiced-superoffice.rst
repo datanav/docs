@@ -2,7 +2,7 @@
 Invoiced to Superoffice Dataflow
 ================================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 09:11:47
 
 Introduction
 ------------
@@ -23,6 +23,39 @@ The following properties are synchronized between a Invoiced Customers company a
    * - Invoiced Customers company Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - address1
+     - Address.Postal.Address1
+     - "string"
+   * - address1
+     - Address.Street.Address1
+     - "string"
+   * - address2
+     - Address.Postal.Address2
+     - "string"
+   * - address2
+     - Address.Street.Address2
+     - "string"
+   * - city
+     - Address.Postal.City
+     - "string"
+   * - city
+     - Address.Street.City
+     - "string"
+   * - country
+     - Country.CountryId
+     - "integer"
+   * - id
+     - ContactId
+     - "integer"
+   * - name
+     - Name
+     - "string"
+   * - postal_code
+     - Address.Postal.Zipcode
+     - "string"
+   * - postal_code
+     - Address.Street.Zipcode
+     - "string"
 
 
 Invoiced Customers person to Superoffice Person
@@ -39,6 +72,24 @@ The following properties are synchronized between a Invoiced Customers person an
    * - Invoiced Customers person Property
      - Superoffice Person Property
      - Superoffice Data Type
+   * - address1
+     - Address.Street.Address1
+     - "string"
+   * - address2
+     - Address.Street.Address2
+     - "string"
+   * - city
+     - Address.Street.City
+     - "string"
+   * - country
+     - Country.CountryId
+     - "integer"
+   * - id
+     - PersonId
+     - "integer"
+   * - postal_code
+     - Address.Street.Zipcode
+     - "string"
 
 
 Invoiced Items to Superoffice Product
