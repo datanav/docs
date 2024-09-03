@@ -2,7 +2,7 @@
 Exact to ZohoCRM Dataflow
 =========================
 
-Generated: 2024-09-03 08:20:40
+Generated: 2024-09-03 08:20:45
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Exact Accounts and a ZohoCRM
    * - Exact Accounts Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - Name
+     - Account_Name
+     - "string"
+   * - Website
+     - Website
+     - "string"
 
 
 Exact Departments to ZohoCRM Account
@@ -39,6 +45,9 @@ The following properties are synchronized between a Exact Departments and a Zoho
    * - Exact Departments Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - Description
+     - Created_Time
+     - "string"
 
 
 Exact Divisions to ZohoCRM Account
@@ -55,4 +64,10 @@ The following properties are synchronized between a Exact Divisions and a ZohoCR
    * - Exact Divisions Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - Description
+     - Created_Time
+     - "string"
+   * - Website
+     - Website
+     - "string"
 
