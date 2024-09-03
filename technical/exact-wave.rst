@@ -2,7 +2,7 @@
 Exact to Wave Dataflow
 ======================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Exact Accounts and a Wave Cu
    * - Exact Accounts Property
      - Wave Customer Property
      - Wave Data Type
+   * - Name
+     - name
+     - N/A
+   * - Website
+     - website
+     - "string"
 
 
 Exact Items to Wave Product
@@ -55,4 +61,10 @@ The following properties are synchronized between a Exact Salesorders and a Wave
    * - Exact Salesorders Property
      - Wave Invoice Property
      - Wave Data Type
+   * - Currency
+     - currency.code
+     - "string"
+   * - Description
+     - memo
+     - "string"
 
