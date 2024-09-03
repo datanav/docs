@@ -2,7 +2,7 @@
 Exact to Shopify Dataflow
 =========================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -39,4 +39,7 @@ The following properties are synchronized between a Exact Salesorders and a Shop
    * - Exact Salesorders Property
      - Shopify Order Property
      - Shopify Data Type
+   * - Currency
+     - currency
+     - "string"
 
