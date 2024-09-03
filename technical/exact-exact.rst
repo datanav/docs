@@ -2,7 +2,7 @@
 Exact to Exact Dataflow
 =======================
 
-Generated: 2024-09-03 08:16:57
+Generated: 2024-09-03 08:20:40
 
 Introduction
 ------------
@@ -84,6 +84,134 @@ The following properties are synchronized between a Exact Quotations and a Exact
 
    * - Exact Quotations Property
      - Exact Addresses Property
+     - Exact Data Type
+
+
+Exact Departments to Exact Accounts
+-----------------------------------
+Every Exact Departments will be synchronized with a Exact Accounts.
+
+Once a link between a Exact Departments and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Departments and a Exact Accounts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Departments Property
+     - Exact Accounts Property
+     - Exact Data Type
+
+
+Exact Divisions to Exact Accounts
+---------------------------------
+Every Exact Divisions will be synchronized with a Exact Accounts.
+
+Once a link between a Exact Divisions and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Divisions and a Exact Accounts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Divisions Property
+     - Exact Accounts Property
+     - Exact Data Type
+
+
+Exact Employees to Exact Contacts
+---------------------------------
+Every Exact Employees will be synchronized with a Exact Contacts.
+
+Once a link between a Exact Employees and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Employees and a Exact Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Employees Property
+     - Exact Contacts Property
+     - Exact Data Type
+
+
+Exact Salesinvoices to Exact Quotations
+---------------------------------------
+Every Exact Salesinvoices will be synchronized with a Exact Quotations.
+
+Once a link between a Exact Salesinvoices and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Salesinvoices and a Exact Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Salesinvoices Property
+     - Exact Quotations Property
+     - Exact Data Type
+
+
+Exact Salesorderlines to Exact Quotations
+-----------------------------------------
+Every Exact Salesorderlines will be synchronized with a Exact Quotations.
+
+Once a link between a Exact Salesorderlines and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Salesorderlines and a Exact Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Salesorderlines Property
+     - Exact Quotations Property
+     - Exact Data Type
+
+
+Exact Salesorders to Exact Quotations
+-------------------------------------
+Every Exact Salesorders will be synchronized with a Exact Quotations.
+
+Once a link between a Exact Salesorders and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Salesorders and a Exact Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Salesorders Property
+     - Exact Quotations Property
+     - Exact Data Type
+
+
+Exact Units to Exact Currencies
+-------------------------------
+Every Exact Units will be synchronized with a Exact Currencies.
+
+Once a link between a Exact Units and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Units and a Exact Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Units Property
+     - Exact Currencies Property
+     - Exact Data Type
+
+
+Exact Vatcodes to Exact Currencies
+----------------------------------
+Every Exact Vatcodes will be synchronized with a Exact Currencies.
+
+Once a link between a Exact Vatcodes and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Vatcodes and a Exact Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Vatcodes Property
+     - Exact Currencies Property
      - Exact Data Type
 
 
