@@ -2,7 +2,7 @@
 Woocommerce to  Dataflow
 ========================
 
-Generated: 2024-09-03 08:16:35
+Generated: 2024-09-03 08:16:57
 
 Introduction
 ------------
@@ -23,4 +23,10 @@ The following properties are synchronized between a Woocommerce Product and a  P
    * - Woocommerce Product Property
      -  Product Property
      -  Data Type
+   * - name
+     - product_name
+     - "string"
+   * - sale_price
+     - product_price
+     - "string"
 
