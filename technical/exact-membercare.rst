@@ -2,7 +2,7 @@
 Exact to Membercare Dataflow
 ============================
 
-Generated: 2024-09-03 09:49:34
+Generated: 2024-09-03 10:41:40
 
 Introduction
 ------------
@@ -92,6 +92,54 @@ The following properties are synchronized between a Exact Divisions and a Member
    * - Website
      - url
      - "string"
+
+
+Exact Quotations to Membercare Invoices
+---------------------------------------
+Every Exact Quotations will be synchronized with a Membercare Invoices.
+
+Once a link between a Exact Quotations and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Quotations and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Quotations Property
+     - Membercare Invoices Property
+     - Membercare Data Type
+
+
+Exact Salesorderlines to Membercare Invoices
+--------------------------------------------
+Every Exact Salesorderlines will be synchronized with a Membercare Invoices.
+
+Once a link between a Exact Salesorderlines and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Salesorderlines and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Salesorderlines Property
+     - Membercare Invoices Property
+     - Membercare Data Type
+
+
+Exact Salesorders to Membercare Invoices
+----------------------------------------
+Every Exact Salesorders will be synchronized with a Membercare Invoices.
+
+Once a link between a Exact Salesorders and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Salesorders and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Salesorders Property
+     - Membercare Invoices Property
+     - Membercare Data Type
 
 
 Exact Units to Membercare Companycategories
