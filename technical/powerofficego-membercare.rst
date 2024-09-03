@@ -2,7 +2,7 @@
 Powerofficego to Membercare Dataflow
 ====================================
 
-Generated: 2024-09-03 09:11:41
+Generated: 2024-09-03 10:41:40
 
 Introduction
 ------------
@@ -48,6 +48,38 @@ The following properties are synchronized between a Powerofficego Departments an
    * - Name
      - companyName
      - "string"
+
+
+Powerofficego Salesorderlines to Membercare Invoices
+----------------------------------------------------
+Every Powerofficego Salesorderlines will be synchronized with a Membercare Invoices.
+
+Once a link between a Powerofficego Salesorderlines and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorderlines and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorderlines Property
+     - Membercare Invoices Property
+     - Membercare Data Type
+
+
+Powerofficego Salesorders to Membercare Invoices
+------------------------------------------------
+Every Powerofficego Salesorders will be synchronized with a Membercare Invoices.
+
+Once a link between a Powerofficego Salesorders and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorders and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorders Property
+     - Membercare Invoices Property
+     - Membercare Data Type
 
 
 Powerofficego Contactperson to Membercare Countries
