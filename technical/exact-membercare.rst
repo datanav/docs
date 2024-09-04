@@ -2,7 +2,7 @@
 Exact to Membercare Dataflow
 ============================
 
-Generated: 2024-09-04 10:50:26
+Generated: 2024-09-04 10:50:42
 
 Introduction
 ------------
@@ -124,6 +124,18 @@ The following properties are synchronized between a Exact Employees and a Member
    * - Exact Employees Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - City
+     - addresses.postalCode.city
+     - "string"
+   * - Country
+     - addresses.country.id
+     - "string"
+   * - ID
+     - addresses.id
+     - "string"
+   * - Postcode
+     - addresses.postalCode.zipCode
+     - "string"
 
 
 Exact Quotations to Membercare Invoices
