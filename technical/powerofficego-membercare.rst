@@ -2,7 +2,7 @@
 Powerofficego to Membercare Dataflow
 ====================================
 
-Generated: 2024-09-04 11:49:03
+Generated: 2024-09-04 14:53:24
 
 Introduction
 ------------
@@ -162,6 +162,22 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - Number
      - socialSecurityNumber.number (Dependant on having wd:Q36218176 in socialSecurityNumber.iso2Letter)
      - "string"
+
+
+Powerofficego Product to Membercare Products
+--------------------------------------------
+Every Powerofficego Product will be synchronized with a Membercare Products.
+
+Once a link between a Powerofficego Product and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product and a Membercare Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     - Membercare Products Property
+     - Membercare Data Type
 
 
 Powerofficego Salesorderlines to Membercare Invoices
