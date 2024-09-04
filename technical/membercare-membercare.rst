@@ -2,7 +2,7 @@
 Membercare to Membercare Dataflow
 =================================
 
-Generated: 2024-09-04 08:38:27
+Generated: 2024-09-04 10:48:08
 
 Introduction
 ------------
@@ -44,6 +44,9 @@ The following properties are synchronized between a Membercare Organizations and
      - Membercare Data Type
    * - addresses.country.id
      - addresses.country.id
+     - "string"
+   * - addresses.id
+     - addresses.id
      - "string"
    * - addresses.postalCode.city
      - addresses.postalCode.city
