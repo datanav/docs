@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a SuperOffice Contact and a  O
    * - SuperOffice Contact Property
      -  Organizations Property
      -  Data Type
+   * - Name
+     - name
+     - "string"
+   * - Urls.Value
+     - website
+     - "string"
 
 
 SuperOffice Person to  Members
