@@ -2,7 +2,7 @@
 Wave Financial to Membercare Dataflow
 =====================================
 
-Generated: 2024-09-04 11:49:03
+Generated: 2024-09-04 14:53:24
 
 Introduction
 ------------
@@ -106,6 +106,22 @@ The following properties are synchronized between a Wave Invoice and a Membercar
    * - items.quantity
      - invoiceItems.quantity
      - "string"
+
+
+Wave Product to Membercare Products
+-----------------------------------
+Every Wave Product will be synchronized with a Membercare Products.
+
+Once a link between a Wave Product and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Product and a Membercare Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Product Property
+     - Membercare Products Property
+     - Membercare Data Type
 
 
 Wave Country to Membercare Countries
