@@ -2,7 +2,7 @@
 Businesscentral to Membercare Dataflow
 ======================================
 
-Generated: 2024-09-04 10:50:42
+Generated: 2024-09-04 11:40:15
 
 Introduction
 ------------
@@ -45,6 +45,9 @@ The following properties are synchronized between a Businesscentral Contacts per
    * - country
      - addresses.country.id
      - "string"
+   * - displayName
+     - name
+     - "string"
    * - id
      - addresses.id
      - "string"
@@ -73,6 +76,9 @@ The following properties are synchronized between a Businesscentral Customers pe
    * - country
      - addresses.country.id
      - "string"
+   * - displayName
+     - name
+     - "string"
    * - id
      - addresses.id
      - "string"
@@ -95,6 +101,15 @@ The following properties are synchronized between a Businesscentral Employees an
    * - Businesscentral Employees Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - displayName
+     - name
+     - "string"
+   * - givenName
+     - firstname
+     - "string"
+   * - surname
+     - lastname
+     - "string"
 
 
 Businesscentral Salesorderlines to Membercare Invoices
