@@ -2,7 +2,7 @@
 Unieconomy to  Dataflow
 =======================
 
-Generated: 2024-09-04 12:33:25
+Generated: 2024-09-04 12:38:01
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Unieconomy Companies and a  
    * - Unieconomy Companies Property
      -  Organizations Property
      -  Data Type
+   * - Name
+     - name
+     - "string"
 
