@@ -2,7 +2,7 @@
 Membercare to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-04 10:47:46
+Generated: 2024-09-04 14:53:24
 
 Introduction
 ------------
@@ -85,6 +85,22 @@ The following properties are synchronized between a Membercare Organizations and
    * - name
      - name
      - "string"
+
+
+Membercare Products to Businessnxt Product
+------------------------------------------
+Every Membercare Products will be synchronized with a Businessnxt Product.
+
+Once a link between a Membercare Products and a Businessnxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Products and a Businessnxt Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Products Property
+     - Businessnxt Product Property
+     - Businessnxt Data Type
 
 
 Membercare Companies to Businessnxt Address
