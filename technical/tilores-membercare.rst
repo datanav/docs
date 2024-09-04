@@ -2,7 +2,7 @@
 Tilores to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-04 10:50:26
+Generated: 2024-09-04 11:40:15
 
 Introduction
 ------------
@@ -23,4 +23,10 @@ The following properties are synchronized between a Tilores Human and a Memberca
    * - Tilores Human Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - firstName
+     - firstname
+     - "string"
+   * - lastName
+     - lastname
+     - "string"
 
