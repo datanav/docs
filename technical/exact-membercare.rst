@@ -2,7 +2,7 @@
 Exact to Membercare Dataflow
 ============================
 
-Generated: 2024-09-04 07:40:25
+Generated: 2024-09-04 10:50:26
 
 Introduction
 ------------
@@ -41,6 +41,22 @@ The following properties are synchronized between a Exact Accounts and a Memberc
    * - Website
      - url
      - "string"
+
+
+Exact Contacts to Membercare Persons
+------------------------------------
+Every Exact Contacts will be synchronized with a Membercare Persons.
+
+Once a link between a Exact Contacts and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Contacts and a Membercare Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Contacts Property
+     - Membercare Persons Property
+     - Membercare Data Type
 
 
 Exact Currencies to Membercare Companycategories
@@ -92,6 +108,22 @@ The following properties are synchronized between a Exact Divisions and a Member
    * - Website
      - url
      - "string"
+
+
+Exact Employees to Membercare Persons
+-------------------------------------
+Every Exact Employees will be synchronized with a Membercare Persons.
+
+Once a link between a Exact Employees and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Employees and a Membercare Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Employees Property
+     - Membercare Persons Property
+     - Membercare Data Type
 
 
 Exact Quotations to Membercare Invoices
