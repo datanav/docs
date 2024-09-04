@@ -2,7 +2,7 @@
 Membercare to Membercare Dataflow
 =================================
 
-Generated: 2024-09-04 00:00:01
+Generated: 2024-09-04 00:34:28
 
 Introduction
 ------------
@@ -26,22 +26,6 @@ The following properties are synchronized between a Membercare Countries and a M
    * - url
      - url
      - "string"
-
-
-Membercare Invoices to Membercare Companycategories
----------------------------------------------------
-Every Membercare Invoices will be synchronized with a Membercare Companycategories.
-
-Once a link between a Membercare Invoices and a Membercare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Membercare Invoices and a Membercare Companycategories:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Membercare Invoices Property
-     - Membercare Companycategories Property
-     - Membercare Data Type
 
 
 Membercare Organizations to Membercare Companies
