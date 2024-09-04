@@ -2,7 +2,7 @@
 SuperOffice to Membercare Dataflow
 ==================================
 
-Generated: 2024-09-04 11:46:49
+Generated: 2024-09-04 11:49:03
 
 Introduction
 ------------
@@ -56,6 +56,9 @@ The following properties are synchronized between a SuperOffice Person and a Mem
      - "string"
    * - Country.CountryId
      - addresses.country.id
+     - "string"
+   * - Emails.Value
+     - socialSecurityNumber.number (Dependant on having wd:Q1273217 in socialSecurityNumber.iso2Letter)
      - "string"
    * - Firstname
      - firstname
