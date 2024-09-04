@@ -2,7 +2,7 @@
 Membercare to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -60,6 +60,9 @@ The following properties are synchronized between a Membercare Products and a Sa
    * - Membercare Products Property
      - Salesforce Product2 Property
      - Salesforce Data Type
+   * - name
+     - Name	
+     - "string"
 
 
 Membercare Companies to Salesforce Organization
