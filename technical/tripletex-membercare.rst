@@ -2,7 +2,7 @@
 Tripletex to Membercare Dataflow
 ================================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -228,6 +228,9 @@ The following properties are synchronized between a Tripletex Product and a Memb
    * - Tripletex Product Property
      - Membercare Products Property
      - Membercare Data Type
+   * - name
+     - name
+     - "string"
 
 
 Tripletex Country to Membercare Countries
