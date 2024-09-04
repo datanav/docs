@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-09-04 13:42:17
+Generated: 2024-09-04 13:42:41
 
 Introduction
 ------------
@@ -61,6 +61,15 @@ The following properties are synchronized between a Asana Teams and a  Organizat
    * - Asana Teams Property
      -  Organizations Property
      -  Data Type
+   * - description
+     - desc
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - permalink_url
+     - website
+     - "string"
 
 
 Asana Users to  Members
