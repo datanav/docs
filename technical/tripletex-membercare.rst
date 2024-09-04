@@ -2,12 +2,28 @@
 Tripletex to Membercare Dataflow
 ================================
 
-Generated: 2024-09-04 07:40:25
+Generated: 2024-09-04 10:50:26
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Membercare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Contact to Membercare Persons
+---------------------------------------
+Every Tripletex Contact will be synchronized with a Membercare Persons.
+
+Once a link between a Tripletex Contact and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a Membercare Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Membercare Persons Property
+     - Membercare Data Type
+
 
 Tripletex Customer to Membercare Companies
 ------------------------------------------
@@ -31,6 +47,22 @@ The following properties are synchronized between a Tripletex Customer and a Mem
      - "string"
 
 
+Tripletex Customer person to Membercare Persons
+-----------------------------------------------
+Every Tripletex Customer person will be synchronized with a Membercare Persons.
+
+Once a link between a Tripletex Customer person and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a Membercare Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     - Membercare Persons Property
+     - Membercare Data Type
+
+
 Tripletex Department to Membercare Companies
 --------------------------------------------
 Every Tripletex Department will be synchronized with a Membercare Companies.
@@ -48,6 +80,22 @@ The following properties are synchronized between a Tripletex Department and a M
    * - name
      - companyName
      - "string"
+
+
+Tripletex Employee to Membercare Persons
+----------------------------------------
+Every Tripletex Employee will be synchronized with a Membercare Persons.
+
+Once a link between a Tripletex Employee and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a Membercare Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - Membercare Persons Property
+     - Membercare Data Type
 
 
 Tripletex Order to Membercare Invoices
