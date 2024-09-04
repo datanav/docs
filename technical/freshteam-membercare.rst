@@ -2,7 +2,7 @@
 Freshteam to Membercare Dataflow
 ================================
 
-Generated: 2024-09-04 00:00:02
+Generated: 2024-09-04 07:40:25
 
 Introduction
 ------------
@@ -26,20 +26,4 @@ The following properties are synchronized between a Freshteam Department and a M
    * - name
      - companyName
      - "string"
-
-
-Freshteam Department to Membercare Organizations
-------------------------------------------------
-Every Freshteam Department will be synchronized with a Membercare Organizations.
-
-Once a link between a Freshteam Department and a Membercare Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Freshteam Department and a Membercare Organizations:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Freshteam Department Property
-     - Membercare Organizations Property
-     - Membercare Data Type
 
