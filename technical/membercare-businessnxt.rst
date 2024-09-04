@@ -2,7 +2,7 @@
 Membercare to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-04 00:00:01
+Generated: 2024-09-04 00:34:28
 
 Introduction
 ------------
@@ -21,22 +21,6 @@ The following properties are synchronized between a Membercare Companycategories
    :header-rows: 1
 
    * - Membercare Companycategories Property
-     - Businessnxt Country Property
-     - Businessnxt Data Type
-
-
-Membercare Invoices to Businessnxt Country
-------------------------------------------
-Every Membercare Invoices will be synchronized with a Businessnxt Country.
-
-Once a link between a Membercare Invoices and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Membercare Invoices and a Businessnxt Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Membercare Invoices Property
      - Businessnxt Country Property
      - Businessnxt Data Type
 
