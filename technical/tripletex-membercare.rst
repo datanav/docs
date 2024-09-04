@@ -2,7 +2,7 @@
 Tripletex to Membercare Dataflow
 ================================
 
-Generated: 2024-09-04 11:46:49
+Generated: 2024-09-04 11:49:03
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Tripletex Contact and a Memb
    * - Tripletex Contact Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - email
+     - socialSecurityNumber.number (Dependant on having wd:Q1273217 in socialSecurityNumber.iso2Letter)
+     - "string"
    * - firstName
      - firstname
      - "string"
@@ -75,6 +78,9 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
    * - deliveryAddress.postalCode
      - addresses.postalCode.zipCode
+     - "string"
+   * - email
+     - socialSecurityNumber.number (Dependant on having wd:Q1273217 in socialSecurityNumber.iso2Letter)
      - "string"
    * - id
      - addresses.id
@@ -147,6 +153,12 @@ The following properties are synchronized between a Tripletex Employee and a Mem
    * - dateOfBirth
      - birthDate
      - "string"
+   * - email
+     - socialSecurityNumber.number (Dependant on having wd:Q1273217 in socialSecurityNumber.iso2Letter)
+     - "string"
+   * - employeeNumber
+     - socialSecurityNumber.number (Dependant on having wd:Q36218176 in socialSecurityNumber.iso2Letter)
+     - "string"
    * - firstName
      - firstname
      - "string"
@@ -155,6 +167,9 @@ The following properties are synchronized between a Tripletex Employee and a Mem
      - "string"
    * - lastName
      - lastname
+     - "string"
+   * - nationalIdentityNumber
+     - socialSecurityNumber.number (Dependant on having wd:Q1140371 in socialSecurityNumber.iso2Letter)
      - "string"
 
 
