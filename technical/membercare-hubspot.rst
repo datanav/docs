@@ -2,7 +2,7 @@
 Membercare to Hubspot Dataflow
 ==============================
 
-Generated: 2024-09-04 10:45:17
+Generated: 2024-09-04 10:48:35
 
 Introduction
 ------------
@@ -64,6 +64,18 @@ The following properties are synchronized between a Membercare Persons and a Hub
    * - Membercare Persons Property
      - Hubspot Contact Property
      - Hubspot Data Type
+   * - addresses.country.id
+     - properties.country
+     - "string"
+   * - addresses.id
+     - id
+     - "string"
+   * - addresses.postalCode.city
+     - properties.city
+     - "string"
+   * - addresses.postalCode.zipCode
+     - properties.zip
+     - "string"
 
 
 Membercare Invoices to Hubspot Lineitem
