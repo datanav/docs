@@ -2,7 +2,7 @@
 Tidsbanken to Membercare Dataflow
 =================================
 
-Generated: 2024-09-04 10:50:26
+Generated: 2024-09-04 10:50:42
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Memb
    * - Tidsbanken Ansatt Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - Id
+     - addresses.id
+     - "string"
+   * - Postnummer
+     - addresses.postalCode.zipCode
+     - "string"
+   * - Poststed
+     - addresses.postalCode.city
+     - "string"
 
 
 Tidsbanken Avdeling to Membercare Companies
