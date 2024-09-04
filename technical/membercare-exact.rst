@@ -2,7 +2,7 @@
 Membercare to Exact Dataflow
 ============================
 
-Generated: 2024-09-04 07:40:25
+Generated: 2024-09-04 07:43:01
 
 Introduction
 ------------
@@ -108,6 +108,9 @@ The following properties are synchronized between a Membercare Organizations and
    * - Membercare Organizations Property
      - Exact Accounts Property
      - Exact Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Membercare Companies to Exact Addresses
