@@ -2,7 +2,7 @@
 Businessnxt to  Dataflow
 ========================
 
-Generated: 2024-09-04 12:33:25
+Generated: 2024-09-04 12:38:01
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Businessnxt Address and a  O
    * - Businessnxt Address Property
      -  Organizations Property
      -  Data Type
+   * - name
+     - name
+     - "string"
 
 
 Businessnxt Company to  Organizations
@@ -39,4 +42,7 @@ The following properties are synchronized between a Businessnxt Company and a  O
    * - Businessnxt Company Property
      -  Organizations Property
      -  Data Type
+   * - name
+     - name
+     - "string"
 
