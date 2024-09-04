@@ -2,7 +2,7 @@
 Membercare to Superoffice Dataflow
 ==================================
 
-Generated: 2024-09-04 10:50:42
+Generated: 2024-09-04 11:40:15
 
 Introduction
 ------------
@@ -75,6 +75,12 @@ The following properties are synchronized between a Membercare Persons and a Sup
      - "string"
    * - addresses.postalCode.zipCode
      - Address.Street.Zipcode
+     - "string"
+   * - firstname
+     - Firstname
+     - "string"
+   * - lastname
+     - Lastname
      - "string"
 
 
