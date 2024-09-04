@@ -2,7 +2,7 @@
 HubSpot to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-04 00:00:17
+Generated: 2024-09-04 10:50:26
 
 Introduction
 ------------
@@ -29,6 +29,38 @@ The following properties are synchronized between a HubSpot Company and a Member
    * - properties.website
      - url
      - "string"
+
+
+HubSpot Contact to Membercare Persons
+-------------------------------------
+Every HubSpot Contact will be synchronized with a Membercare Persons.
+
+Once a link between a HubSpot Contact and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a Membercare Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - Membercare Persons Property
+     - Membercare Data Type
+
+
+HubSpot Contactcompanyassociation to Membercare Persons
+-------------------------------------------------------
+Every HubSpot Contactcompanyassociation will be synchronized with a Membercare Persons.
+
+Once a link between a HubSpot Contactcompanyassociation and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contactcompanyassociation and a Membercare Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contactcompanyassociation Property
+     - Membercare Persons Property
+     - Membercare Data Type
 
 
 HubSpot Contactcompanyassociationtype to Membercare Companycategories
@@ -1443,6 +1475,22 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
 
    * - HubSpot Quotequotetemplateassociationtype Property
      - Membercare Companycategories Property
+     - Membercare Data Type
+
+
+HubSpot User to Membercare Persons
+----------------------------------
+Every HubSpot User will be synchronized with a Membercare Persons.
+
+Once a link between a HubSpot User and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot User and a Membercare Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot User Property
+     - Membercare Persons Property
      - Membercare Data Type
 
 
