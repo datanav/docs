@@ -2,7 +2,7 @@
 Membercare to Exact Dataflow
 ============================
 
-Generated: 2024-09-04 10:48:45
+Generated: 2024-09-04 11:35:46
 
 Introduction
 ------------
@@ -156,6 +156,12 @@ The following properties are synchronized between a Membercare Persons and a Exa
      - "string"
    * - addresses.postalCode.city
      - City
+     - "string"
+   * - firstname
+     - FirstName
+     - "string"
+   * - firstname
+     - FullName
      - "string"
 
 
