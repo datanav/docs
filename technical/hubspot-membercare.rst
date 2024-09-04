@@ -2,7 +2,7 @@
 HubSpot to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -1366,6 +1366,9 @@ The following properties are synchronized between a HubSpot Product and a Member
    * - HubSpot Product Property
      - Membercare Products Property
      - Membercare Data Type
+   * - properties.name
+     - name
+     - "string"
 
 
 HubSpot Quote to Membercare Invoices
