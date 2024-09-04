@@ -2,7 +2,7 @@
 Keap to  Dataflow
 =================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Keap Companies and a  Organi
    * - Keap Companies Property
      -  Organizations Property
      -  Data Type
+   * - company_name
+     - name
+     - "string"
 
 
 Keap Contacts to  Members
