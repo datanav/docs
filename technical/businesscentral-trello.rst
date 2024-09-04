@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-09-04 12:46:25
+Generated: 2024-09-04 12:47:58
 
 Introduction
 ------------
@@ -61,4 +61,7 @@ The following properties are synchronized between a Businesscentral Employees an
    * - Businesscentral Employees Property
      -  Members Property
      -  Data Type
+   * - displayName
+     - fullName
+     - "string"
 
