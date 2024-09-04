@@ -2,7 +2,7 @@
 Membercare to Tilores Dataflow
 ==============================
 
-Generated: 2024-09-04 11:40:15
+Generated: 2024-09-04 11:46:49
 
 Introduction
 ------------
@@ -31,6 +31,9 @@ The following properties are synchronized between a Membercare Persons and a Til
      - "string"
    * - addresses.postalCode.zipCode
      - postalCode
+     - "string"
+   * - birthDate
+     - dateOfBirth
      - "string"
    * - firstname
      - firstName
