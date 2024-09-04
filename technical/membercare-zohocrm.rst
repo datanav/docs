@@ -2,7 +2,7 @@
 Membercare to ZohoCRM Dataflow
 ==============================
 
-Generated: 2024-09-04 00:00:01
+Generated: 2024-09-04 07:43:01
 
 Introduction
 ------------
@@ -45,4 +45,7 @@ The following properties are synchronized between a Membercare Organizations and
    * - Membercare Organizations Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - name
+     - Account_Name
+     - "string"
 
