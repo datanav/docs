@@ -2,7 +2,7 @@
 Tidsbanken to Membercare Dataflow
 =================================
 
-Generated: 2024-09-04 00:00:02
+Generated: 2024-09-04 07:40:25
 
 Introduction
 ------------
@@ -48,20 +48,4 @@ The following properties are synchronized between a Tidsbanken Kunde and a Membe
    * - Url
      - url
      - "string"
-
-
-Tidsbanken Avdeling to Membercare Organizations
------------------------------------------------
-Every Tidsbanken Avdeling will be synchronized with a Membercare Organizations.
-
-Once a link between a Tidsbanken Avdeling and a Membercare Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tidsbanken Avdeling and a Membercare Organizations:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Avdeling Property
-     - Membercare Organizations Property
-     - Membercare Data Type
 
