@@ -2,7 +2,7 @@
 Invoiced to Membercare Dataflow
 ===============================
 
-Generated: 2024-09-04 11:40:15
+Generated: 2024-09-04 14:53:24
 
 Introduction
 ------------
@@ -72,6 +72,22 @@ The following properties are synchronized between a Invoiced Invoices and a Memb
 
    * - Invoiced Invoices Property
      - Membercare Invoices Property
+     - Membercare Data Type
+
+
+Invoiced Items to Membercare Products
+-------------------------------------
+Every Invoiced Items will be synchronized with a Membercare Products.
+
+Once a link between a Invoiced Items and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Items and a Membercare Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Items Property
+     - Membercare Products Property
      - Membercare Data Type
 
 
