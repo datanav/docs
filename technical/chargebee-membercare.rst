@@ -2,7 +2,7 @@
 Chargebee to Membercare Dataflow
 ================================
 
-Generated: 2024-09-04 11:40:15
+Generated: 2024-09-04 14:53:24
 
 Introduction
 ------------
@@ -45,6 +45,22 @@ The following properties are synchronized between a Chargebee Customer and a Mem
    * - last_name
      - lastname
      - "string"
+
+
+Chargebee Item to Membercare Products
+-------------------------------------
+Every Chargebee Item will be synchronized with a Membercare Products.
+
+Once a link between a Chargebee Item and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Item and a Membercare Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Item Property
+     - Membercare Products Property
+     - Membercare Data Type
 
 
 Chargebee Item_family to Membercare Companycategories
