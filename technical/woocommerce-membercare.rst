@@ -2,7 +2,7 @@
 Woocommerce to Membercare Dataflow
 ==================================
 
-Generated: 2024-09-04 00:00:02
+Generated: 2024-09-04 14:53:24
 
 Introduction
 ------------
@@ -29,4 +29,20 @@ The following properties are synchronized between a Woocommerce Order and a Memb
    * - line_items.quantity
      - invoiceItems.quantity
      - "string"
+
+
+Woocommerce Product to Membercare Products
+------------------------------------------
+Every Woocommerce Product will be synchronized with a Membercare Products.
+
+Once a link between a Woocommerce Product and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Woocommerce Product and a Membercare Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Woocommerce Product Property
+     - Membercare Products Property
+     - Membercare Data Type
 
