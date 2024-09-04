@@ -2,7 +2,7 @@
 Webcrm to Membercare Dataflow
 =============================
 
-Generated: 2024-09-04 00:00:01
+Generated: 2024-09-04 10:50:26
 
 Introduction
 ------------
@@ -44,6 +44,22 @@ The following properties are synchronized between a Webcrm Organisations and a M
      - "string"
 
 
+Webcrm Persons to Membercare Persons
+------------------------------------
+Every Webcrm Persons will be synchronized with a Membercare Persons.
+
+Once a link between a Webcrm Persons and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Webcrm Persons and a Membercare Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Webcrm Persons Property
+     - Membercare Persons Property
+     - Membercare Data Type
+
+
 Webcrm Quotationline to Membercare Invoices
 -------------------------------------------
 Every Webcrm Quotationline will be synchronized with a Membercare Invoices.
@@ -57,6 +73,22 @@ The following properties are synchronized between a Webcrm Quotationline and a M
 
    * - Webcrm Quotationline Property
      - Membercare Invoices Property
+     - Membercare Data Type
+
+
+Webcrm Users to Membercare Persons
+----------------------------------
+Every Webcrm Users will be synchronized with a Membercare Persons.
+
+Once a link between a Webcrm Users and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Webcrm Users and a Membercare Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Webcrm Users Property
+     - Membercare Persons Property
      - Membercare Data Type
 
 
