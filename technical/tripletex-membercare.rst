@@ -2,7 +2,7 @@
 Tripletex to Membercare Dataflow
 ================================
 
-Generated: 2024-09-04 11:40:15
+Generated: 2024-09-04 11:46:49
 
 Introduction
 ------------
@@ -143,6 +143,9 @@ The following properties are synchronized between a Tripletex Employee and a Mem
      - "string"
    * - address.postalCode
      - addresses.postalCode.zipCode
+     - "string"
+   * - dateOfBirth
+     - birthDate
      - "string"
    * - firstName
      - firstname
