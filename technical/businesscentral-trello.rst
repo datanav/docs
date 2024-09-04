@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-09-04 14:01:40
+Generated: 2024-09-04 14:15:23
 
 Introduction
 ------------
@@ -26,6 +26,22 @@ The following properties are synchronized between a Businesscentral Contacts per
    * - displayName
      - fullName
      - "string"
+
+
+Businesscentral Customers person to  Members
+--------------------------------------------
+Every Businesscentral Customers person will be synchronized with a  Members.
+
+Once a link between a Businesscentral Customers person and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers person and a  Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers person Property
+     -  Members Property
+     -  Data Type
 
 
 Businesscentral Customers company to  Organizations
