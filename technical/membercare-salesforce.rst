@@ -2,7 +2,7 @@
 Membercare to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-04 08:37:46
+Generated: 2024-09-04 08:38:27
 
 Introduction
 ------------
@@ -27,6 +27,18 @@ The following properties are synchronized between a Membercare Organizations and
      - Country
      - "string"
    * - addresses.postalCode.city
+     - City
+     - "string"
+   * - addresses.postalCode.zipCode
+     - PostalCode	
+     - "string"
+   * - company.addresses.addressDescription
+     - Country
+     - "string"
+   * - company.addresses.municipality
+     - PostalCode	
+     - "string"
+   * - company.addresses.start
      - City
      - "string"
    * - name
