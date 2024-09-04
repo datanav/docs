@@ -2,7 +2,7 @@
 Membercare to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-04 00:34:28
+Generated: 2024-09-04 07:43:01
 
 Introduction
 ------------
@@ -80,6 +80,9 @@ The following properties are synchronized between a Membercare Organizations and
    * - Membercare Organizations Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
+   * - name
+     - name
+     - "string"
 
 
 Membercare Companies to Chargebee Business_entity
