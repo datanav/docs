@@ -2,7 +2,7 @@
 Woocommerce to Wix Dataflow
 ===========================
 
-Generated: 2024-09-03 08:16:57
+Generated: 2024-09-04 00:00:01
 
 Introduction
 ------------
