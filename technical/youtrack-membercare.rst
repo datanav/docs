@@ -2,7 +2,7 @@
 YouTrack to Membercare Dataflow
 ===============================
 
-Generated: 2024-09-04 00:00:02
+Generated: 2024-09-04 10:50:26
 
 Introduction
 ------------
@@ -86,5 +86,21 @@ The following properties are synchronized between a YouTrack Usergroups and a Me
 
    * - YouTrack Usergroups Property
      - Membercare Companies Property
+     - Membercare Data Type
+
+
+YouTrack Users to Membercare Persons
+------------------------------------
+Every YouTrack Users will be synchronized with a Membercare Persons.
+
+Once a link between a YouTrack Users and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Users and a Membercare Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Users Property
+     - Membercare Persons Property
      - Membercare Data Type
 
