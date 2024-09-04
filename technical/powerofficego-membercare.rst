@@ -2,7 +2,7 @@
 Powerofficego to Membercare Dataflow
 ====================================
 
-Generated: 2024-09-04 10:50:26
+Generated: 2024-09-04 10:50:42
 
 Introduction
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - Powerofficego Contactperson Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - city
+     - addresses.postalCode.city
+     - "string"
+   * - id
+     - addresses.id
+     - "string"
+   * - residenceCountryCode
+     - addresses.country.id
+     - "string"
+   * - zipCode
+     - addresses.postalCode.zipCode
+     - "string"
 
 
 Powerofficego Customers to Membercare Companies
@@ -61,6 +73,18 @@ The following properties are synchronized between a Powerofficego Customers pers
    * - Powerofficego Customers person Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - Id
+     - addresses.id
+     - "string"
+   * - MailAddress.City
+     - addresses.postalCode.city
+     - "string"
+   * - MailAddress.CountryCode
+     - addresses.country.id
+     - "string"
+   * - MailAddress.ZipCode
+     - addresses.postalCode.zipCode
+     - "string"
 
 
 Powerofficego Departments to Membercare Companies
