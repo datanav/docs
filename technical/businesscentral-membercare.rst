@@ -2,7 +2,7 @@
 Businesscentral to Membercare Dataflow
 ======================================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -135,6 +135,9 @@ The following properties are synchronized between a Businesscentral Items and a 
    * - Businesscentral Items Property
      - Membercare Products Property
      - Membercare Data Type
+   * - displayName
+     - name
+     - "string"
 
 
 Businesscentral Salesorderlines to Membercare Invoices
