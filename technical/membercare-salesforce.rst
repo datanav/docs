@@ -2,7 +2,7 @@
 Membercare to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-04 08:38:27
+Generated: 2024-09-04 14:53:24
 
 Introduction
 ------------
@@ -44,6 +44,22 @@ The following properties are synchronized between a Membercare Organizations and
    * - name
      - Name	
      - "string"
+
+
+Membercare Products to Salesforce Product2
+------------------------------------------
+Every Membercare Products will be synchronized with a Salesforce Product2.
+
+Once a link between a Membercare Products and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Products and a Salesforce Product2:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Products Property
+     - Salesforce Product2 Property
+     - Salesforce Data Type
 
 
 Membercare Companies to Salesforce Organization
