@@ -2,7 +2,7 @@
 Membercare to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-04 00:00:01
+Generated: 2024-09-04 07:43:01
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Membercare Organizations and
    * - Membercare Organizations Property
      - Salesforce Organization Property
      - Salesforce Data Type
+   * - name
+     - Name	
+     - "string"
 
 
 Membercare Companies to Salesforce Organization
