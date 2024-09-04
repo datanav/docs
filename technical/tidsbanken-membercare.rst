@@ -2,7 +2,7 @@
 Tidsbanken to Membercare Dataflow
 =================================
 
-Generated: 2024-09-04 11:46:49
+Generated: 2024-09-04 11:49:03
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Memb
    * - Tidsbanken Ansatt Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - Epost
+     - socialSecurityNumber.number (Dependant on having wd:Q1273217 in socialSecurityNumber.iso2Letter)
+     - "string"
    * - Etternavn
      - lastname
      - "string"
@@ -35,8 +38,14 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Memb
    * - Id
      - addresses.id
      - "string"
+   * - Id
+     - socialSecurityNumber.number (Dependant on having wd:Q36218176 in socialSecurityNumber.iso2Letter)
+     - "string"
    * - Navn
      - name
+     - "string"
+   * - Personnummer
+     - socialSecurityNumber.number (Dependant on having wd:Q1140371 in socialSecurityNumber.iso2Letter)
      - "string"
    * - Postnummer
      - addresses.postalCode.zipCode
