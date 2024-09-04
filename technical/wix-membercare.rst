@@ -2,7 +2,7 @@
 Wix.com to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-04 11:49:03
+Generated: 2024-09-04 14:53:24
 
 Introduction
 ------------
@@ -32,4 +32,20 @@ The following properties are synchronized between a Wix.com Contacts and a Membe
    * - primaryInfo.email
      - socialSecurityNumber.number (Dependant on having wd:Q1273217 in socialSecurityNumber.iso2Letter)
      - "string"
+
+
+Wix.com Products to Membercare Products
+---------------------------------------
+Every Wix.com Products will be synchronized with a Membercare Products.
+
+Once a link between a Wix.com Products and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a Membercare Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
+     - Membercare Products Property
+     - Membercare Data Type
 
