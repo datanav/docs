@@ -2,7 +2,7 @@
 HubSpot to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-04 11:40:15
+Generated: 2024-09-04 11:46:49
 
 Introduction
 ------------
@@ -53,6 +53,9 @@ The following properties are synchronized between a HubSpot Contact and a Member
      - "string"
    * - properties.country
      - addresses.country.id
+     - "string"
+   * - properties.date_of_birth
+     - birthDate
      - "string"
    * - properties.firstname
      - firstname
