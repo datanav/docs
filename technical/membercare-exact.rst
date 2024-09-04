@@ -2,7 +2,7 @@
 Membercare to Exact Dataflow
 ============================
 
-Generated: 2024-09-04 11:46:49
+Generated: 2024-09-04 14:53:24
 
 Introduction
 ------------
@@ -178,6 +178,22 @@ The following properties are synchronized between a Membercare Persons and a Exa
    * - name
      - LastName
      - "string"
+
+
+Membercare Products to Exact Items
+----------------------------------
+Every Membercare Products will be synchronized with a Exact Items.
+
+Once a link between a Membercare Products and a Exact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Products and a Exact Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Products Property
+     - Exact Items Property
+     - Exact Data Type
 
 
 Membercare Companies to Exact Addresses
