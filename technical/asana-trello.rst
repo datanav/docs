@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-09-04 12:33:25
+Generated: 2024-09-04 12:38:01
 
 Introduction
 ------------
@@ -23,4 +23,10 @@ The following properties are synchronized between a Asana Workspaces and a  Orga
    * - Asana Workspaces Property
      -  Organizations Property
      -  Data Type
+   * - email_domains
+     - website
+     - "string"
+   * - name
+     - name
+     - "string"
 
