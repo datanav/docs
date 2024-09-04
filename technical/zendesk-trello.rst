@@ -2,7 +2,7 @@
 Zendesk to  Dataflow
 ====================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Zendesk Organizations and a 
    * - Zendesk Organizations Property
      -  Organizations Property
      -  Data Type
+   * - name
+     - name
+     - "string"
 
 
 Zendesk Ticketcomments to  Boards
@@ -55,6 +58,9 @@ The following properties are synchronized between a Zendesk Tickets and a  Board
    * - Zendesk Tickets Property
      -  Boards Property
      -  Data Type
+   * - subject
+     - name
+     - "string"
 
 
 Zendesk Users to  Members
@@ -71,4 +77,7 @@ The following properties are synchronized between a Zendesk Users and a  Members
    * - Zendesk Users Property
      -  Members Property
      -  Data Type
+   * - name
+     - fullName
+     - "string"
 
