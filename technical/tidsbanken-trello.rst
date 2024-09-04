@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-09-04 12:46:25
+Generated: 2024-09-04 12:47:58
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Tidsbanken Ansatt and a  Mem
    * - Tidsbanken Ansatt Property
      -  Members Property
      -  Data Type
+   * - Navn
+     - fullName
+     - "string"
 
