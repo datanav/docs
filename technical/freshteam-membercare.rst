@@ -2,7 +2,7 @@
 Freshteam to Membercare Dataflow
 ================================
 
-Generated: 2024-09-04 11:40:15
+Generated: 2024-09-04 11:46:49
 
 Introduction
 ------------
@@ -42,6 +42,9 @@ The following properties are synchronized between a Freshteam Employee and a Mem
    * - Freshteam Employee Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - date_of_birth
+     - birthDate
+     - "string"
    * - first_name
      - firstname
      - "string"
