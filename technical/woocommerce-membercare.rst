@@ -2,7 +2,7 @@
 Woocommerce to Membercare Dataflow
 ==================================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -45,4 +45,7 @@ The following properties are synchronized between a Woocommerce Product and a Me
    * - Woocommerce Product Property
      - Membercare Products Property
      - Membercare Data Type
+   * - name
+     - name
+     - "string"
 
