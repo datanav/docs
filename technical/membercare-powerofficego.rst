@@ -2,7 +2,7 @@
 Membercare to Powerofficego Dataflow
 ====================================
 
-Generated: 2024-09-04 00:00:01
+Generated: 2024-09-04 07:40:25
 
 Introduction
 ------------
@@ -29,20 +29,4 @@ The following properties are synchronized between a Membercare Invoices and a Po
    * - invoiceItems.unitPrice
      - ProductUnitPrice
      - N/A
-
-
-Membercare Organizations to Powerofficego Departments
------------------------------------------------------
-Every Membercare Organizations will be synchronized with a Powerofficego Departments.
-
-Once a link between a Membercare Organizations and a Powerofficego Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Membercare Organizations and a Powerofficego Departments:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Membercare Organizations Property
-     - Powerofficego Departments Property
-     - Powerofficego Data Type
 
