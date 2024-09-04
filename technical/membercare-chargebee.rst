@@ -2,7 +2,7 @@
 Membercare to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-04 11:39:47
+Generated: 2024-09-04 11:39:52
 
 Introduction
 ------------
@@ -101,6 +101,9 @@ The following properties are synchronized between a Membercare Persons and a Cha
      - Chargebee Data Type
    * - firstname
      - first_name
+     - "string"
+   * - lastname
+     - last_name
      - "string"
 
 
