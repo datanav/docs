@@ -2,7 +2,7 @@
 Tidsbanken to Membercare Dataflow
 =================================
 
-Generated: 2024-09-04 11:40:15
+Generated: 2024-09-04 11:46:49
 
 Introduction
 ------------
@@ -25,6 +25,9 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Memb
      - Membercare Data Type
    * - Etternavn
      - lastname
+     - "string"
+   * - Fodt
+     - birthDate
      - "string"
    * - Fornavn
      - firstname
