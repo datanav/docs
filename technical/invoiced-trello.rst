@@ -2,7 +2,7 @@
 Invoiced to  Dataflow
 =====================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Invoiced Customers company a
    * - Invoiced Customers company Property
      -  Organizations Property
      -  Data Type
+   * - name
+     - name
+     - "string"
 
 
 Invoiced Customers person to  Members
@@ -39,4 +42,7 @@ The following properties are synchronized between a Invoiced Customers person an
    * - Invoiced Customers person Property
      -  Members Property
      -  Data Type
+   * - name
+     - fullName
+     - "string"
 
