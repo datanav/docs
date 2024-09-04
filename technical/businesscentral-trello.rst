@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-09-04 14:01:24
+Generated: 2024-09-04 14:01:40
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Businesscentral Contacts per
    * - Businesscentral Contacts person Property
      -  Members Property
      -  Data Type
+   * - displayName
+     - fullName
+     - "string"
 
 
 Businesscentral Customers company to  Organizations
