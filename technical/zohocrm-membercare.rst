@@ -2,7 +2,7 @@
 ZohoCRM to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-04 10:50:26
+Generated: 2024-09-04 10:50:42
 
 Introduction
 ------------
@@ -45,6 +45,27 @@ The following properties are synchronized between a ZohoCRM Contact and a Member
    * - ZohoCRM Contact Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - Mailing_City
+     - addresses.postalCode.city
+     - "string"
+   * - Mailing_Country
+     - addresses.country.id
+     - "string"
+   * - Mailing_Zip
+     - addresses.postalCode.zipCode
+     - "string"
+   * - Other_City
+     - addresses.postalCode.city
+     - "string"
+   * - Other_Country
+     - addresses.country.id
+     - "string"
+   * - Other_Zip
+     - addresses.postalCode.zipCode
+     - "string"
+   * - id
+     - addresses.id
+     - "string"
 
 
 ZohoCRM Deal to Membercare Invoices
