@@ -2,7 +2,7 @@
 Membercare to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-04 07:43:01
+Generated: 2024-09-04 10:24:24
 
 Introduction
 ------------
@@ -83,6 +83,22 @@ The following properties are synchronized between a Membercare Organizations and
    * - name
      - name
      - "string"
+
+
+Membercare Persons to Chargebee Customer
+----------------------------------------
+Every Membercare Persons will be synchronized with a Chargebee Customer.
+
+Once a link between a Membercare Persons and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Persons and a Chargebee Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Persons Property
+     - Chargebee Customer Property
+     - Chargebee Data Type
 
 
 Membercare Companies to Chargebee Business_entity
