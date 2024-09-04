@@ -2,7 +2,7 @@
 Membercare to Superoffice Dataflow
 ==================================
 
-Generated: 2024-09-04 00:00:01
+Generated: 2024-09-04 07:43:01
 
 Introduction
 ------------
@@ -45,6 +45,9 @@ The following properties are synchronized between a Membercare Organizations and
    * - Membercare Organizations Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Membercare Invoices to Superoffice Quoteline
