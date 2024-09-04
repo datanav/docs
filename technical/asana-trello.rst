@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-09-04 12:46:25
+Generated: 2024-09-04 12:47:58
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Asana Users and a  Members:
    * - Asana Users Property
      -  Members Property
      -  Data Type
+   * - name
+     - fullName
+     - "string"
 
 
 Asana Workspaces to  Organizations
