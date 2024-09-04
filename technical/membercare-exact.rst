@@ -2,7 +2,7 @@
 Membercare to Exact Dataflow
 ============================
 
-Generated: 2024-09-04 00:00:01
+Generated: 2024-09-04 00:34:28
 
 Introduction
 ------------
@@ -76,22 +76,6 @@ The following properties are synchronized between a Membercare Countries and a E
    * - name
      - Description
      - "string"
-
-
-Membercare Invoices to Exact Currencies
----------------------------------------
-Every Membercare Invoices will be synchronized with a Exact Currencies.
-
-Once a link between a Membercare Invoices and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Membercare Invoices and a Exact Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Membercare Invoices Property
-     - Exact Currencies Property
-     - Exact Data Type
 
 
 Membercare Invoices to Exact Quotations
