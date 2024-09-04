@@ -2,7 +2,7 @@
 Businessnxt to Membercare Dataflow
 ==================================
 
-Generated: 2024-09-04 00:00:01
+Generated: 2024-09-04 14:53:24
 
 Introduction
 ------------
@@ -70,6 +70,22 @@ The following properties are synchronized between a Businessnxt Orderline and a 
 
    * - Businessnxt Orderline Property
      - Membercare Invoices Property
+     - Membercare Data Type
+
+
+Businessnxt Product to Membercare Products
+------------------------------------------
+Every Businessnxt Product will be synchronized with a Membercare Products.
+
+Once a link between a Businessnxt Product and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businessnxt Product and a Membercare Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businessnxt Product Property
+     - Membercare Products Property
      - Membercare Data Type
 
 
