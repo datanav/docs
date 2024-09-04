@@ -2,7 +2,7 @@
 Chargebee to  Dataflow
 ======================
 
-Generated: 2024-09-04 12:33:25
+Generated: 2024-09-04 12:38:01
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Chargebee Business_entity an
    * - Chargebee Business_entity Property
      -  Organizations Property
      -  Data Type
+   * - name
+     - name
+     - "string"
 
