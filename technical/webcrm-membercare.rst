@@ -2,7 +2,7 @@
 Webcrm to Membercare Dataflow
 =============================
 
-Generated: 2024-09-04 11:46:49
+Generated: 2024-09-04 14:53:24
 
 Introduction
 ------------
@@ -70,6 +70,22 @@ The following properties are synchronized between a Webcrm Persons and a Memberc
    * - document_number
      - birthDate
      - "string"
+
+
+Webcrm Products to Membercare Products
+--------------------------------------
+Every Webcrm Products will be synchronized with a Membercare Products.
+
+Once a link between a Webcrm Products and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Webcrm Products and a Membercare Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Webcrm Products Property
+     - Membercare Products Property
+     - Membercare Data Type
 
 
 Webcrm Quotationline to Membercare Invoices
