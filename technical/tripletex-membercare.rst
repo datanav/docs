@@ -2,7 +2,7 @@
 Tripletex to Membercare Dataflow
 ================================
 
-Generated: 2024-09-04 11:49:03
+Generated: 2024-09-04 14:53:24
 
 Introduction
 ------------
@@ -212,6 +212,22 @@ The following properties are synchronized between a Tripletex Orderline and a Me
    * - unitPriceExcludingVatCurrency
      - invoiceItems.unitPrice
      - "string"
+
+
+Tripletex Product to Membercare Products
+----------------------------------------
+Every Tripletex Product will be synchronized with a Membercare Products.
+
+Once a link between a Tripletex Product and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a Membercare Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - Membercare Products Property
+     - Membercare Data Type
 
 
 Tripletex Country to Membercare Countries
