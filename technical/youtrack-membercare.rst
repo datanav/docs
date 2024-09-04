@@ -2,7 +2,7 @@
 YouTrack to Membercare Dataflow
 ===============================
 
-Generated: 2024-09-04 11:40:15
+Generated: 2024-09-04 11:49:03
 
 Introduction
 ------------
@@ -105,5 +105,8 @@ The following properties are synchronized between a YouTrack Users and a Memberc
      - Membercare Data Type
    * - name
      - name
+     - "string"
+   * - profile.email.email
+     - socialSecurityNumber.number (Dependant on having wd:Q1273217 in socialSecurityNumber.iso2Letter)
      - "string"
 
