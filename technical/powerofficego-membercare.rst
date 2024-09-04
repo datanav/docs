@@ -2,7 +2,7 @@
 Powerofficego to Membercare Dataflow
 ====================================
 
-Generated: 2024-09-04 11:46:49
+Generated: 2024-09-04 11:49:03
 
 Introduction
 ------------
@@ -23,11 +23,17 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - Powerofficego Contactperson Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - SocialSecurityNumber
+     - socialSecurityNumber.number (Dependant on having wd:Q1140371 in socialSecurityNumber.iso2Letter)
+     - "string"
    * - city
      - addresses.postalCode.city
      - "string"
    * - dateOfBirth
      - birthDate
+     - "string"
+   * - emailAddress
+     - socialSecurityNumber.number (Dependant on having wd:Q1273217 in socialSecurityNumber.iso2Letter)
      - "string"
    * - firstName
      - firstname
@@ -84,6 +90,9 @@ The following properties are synchronized between a Powerofficego Customers pers
      - Membercare Data Type
    * - DateOfBirth
      - birthDate
+     - "string"
+   * - EmailAddress
+     - socialSecurityNumber.number (Dependant on having wd:Q1273217 in socialSecurityNumber.iso2Letter)
      - "string"
    * - FirstName
      - firstname
@@ -144,8 +153,14 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - FirstName
      - firstname
      - "string"
+   * - Id
+     - socialSecurityNumber.number (Dependant on having poweroffice-employee in socialSecurityNumber.iso2Letter)
+     - "string"
    * - LastName
      - lastname
+     - "string"
+   * - Number
+     - socialSecurityNumber.number (Dependant on having wd:Q36218176 in socialSecurityNumber.iso2Letter)
      - "string"
 
 
