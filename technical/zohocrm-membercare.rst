@@ -2,7 +2,7 @@
 ZohoCRM to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-04 10:50:42
+Generated: 2024-09-04 11:40:15
 
 Introduction
 ------------
@@ -45,6 +45,15 @@ The following properties are synchronized between a ZohoCRM Contact and a Member
    * - ZohoCRM Contact Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - First_Name
+     - firstname
+     - "string"
+   * - Full_Name
+     - name
+     - "string"
+   * - Last_Name
+     - lastname
+     - "string"
    * - Mailing_City
      - addresses.postalCode.city
      - "string"
