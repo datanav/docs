@@ -2,7 +2,7 @@
 Tripletex to Membercare Dataflow
 ================================
 
-Generated: 2024-09-04 10:50:26
+Generated: 2024-09-04 10:50:42
 
 Introduction
 ------------
@@ -61,6 +61,36 @@ The following properties are synchronized between a Tripletex Customer person an
    * - Tripletex Customer person Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - deliveryAddress.city
+     - addresses.postalCode.city
+     - "string"
+   * - deliveryAddress.country.id
+     - addresses.country.id
+     - "string"
+   * - deliveryAddress.postalCode
+     - addresses.postalCode.zipCode
+     - "string"
+   * - id
+     - addresses.id
+     - "string"
+   * - physicalAddress.city
+     - addresses.postalCode.city
+     - "string"
+   * - physicalAddress.country.id
+     - addresses.country.id
+     - "string"
+   * - physicalAddress.postalCode
+     - addresses.postalCode.zipCode
+     - "string"
+   * - postalAddress.city
+     - addresses.postalCode.city
+     - "string"
+   * - postalAddress.country.id
+     - addresses.country.id
+     - "string"
+   * - postalAddress.postalCode
+     - addresses.postalCode.zipCode
+     - "string"
 
 
 Tripletex Department to Membercare Companies
@@ -96,6 +126,18 @@ The following properties are synchronized between a Tripletex Employee and a Mem
    * - Tripletex Employee Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - address.city
+     - addresses.postalCode.city
+     - "string"
+   * - address.country.id
+     - addresses.country.id
+     - "string"
+   * - address.postalCode
+     - addresses.postalCode.zipCode
+     - "string"
+   * - id
+     - addresses.id
+     - "string"
 
 
 Tripletex Order to Membercare Invoices
