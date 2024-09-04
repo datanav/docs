@@ -2,7 +2,7 @@
 Invoiced to Membercare Dataflow
 ===============================
 
-Generated: 2024-09-04 00:00:01
+Generated: 2024-09-04 10:50:26
 
 Introduction
 ------------
@@ -26,6 +26,22 @@ The following properties are synchronized between a Invoiced Customers company a
    * - name
      - companyName
      - "string"
+
+
+Invoiced Customers person to Membercare Persons
+-----------------------------------------------
+Every Invoiced Customers person will be synchronized with a Membercare Persons.
+
+Once a link between a Invoiced Customers person and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Customers person and a Membercare Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Customers person Property
+     - Membercare Persons Property
+     - Membercare Data Type
 
 
 Invoiced Invoices to Membercare Invoices
