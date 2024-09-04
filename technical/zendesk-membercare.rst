@@ -2,7 +2,7 @@
 Zendesk to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-04 11:40:15
+Generated: 2024-09-04 11:49:03
 
 Introduction
 ------------
@@ -42,6 +42,9 @@ The following properties are synchronized between a Zendesk Users and a Memberca
    * - Zendesk Users Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - email
+     - socialSecurityNumber.number (Dependant on having wd:Q1273217 in socialSecurityNumber.iso2Letter)
+     - "string"
    * - name
      - name
      - "string"
