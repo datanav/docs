@@ -2,7 +2,7 @@
 Membercare to Keap Dataflow
 ===========================
 
-Generated: 2024-09-04 11:35:51
+Generated: 2024-09-04 11:46:49
 
 Introduction
 ------------
@@ -61,6 +61,9 @@ The following properties are synchronized between a Membercare Persons and a Kea
    * - Membercare Persons Property
      - Keap Contacts Property
      - Keap Data Type
+   * - birthDate
+     - birthday
+     - "string"
    * - firstname
      - family_name
      - "string"
