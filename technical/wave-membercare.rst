@@ -2,7 +2,7 @@
 Wave Financial to Membercare Dataflow
 =====================================
 
-Generated: 2024-09-04 10:50:26
+Generated: 2024-09-04 10:50:42
 
 Introduction
 ------------
@@ -45,6 +45,27 @@ The following properties are synchronized between a Wave Customer person and a M
    * - Wave Customer person Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - address.city
+     - addresses.postalCode.city
+     - "string"
+   * - address.country.code
+     - addresses.country.id
+     - "string"
+   * - address.postalCode
+     - addresses.postalCode.zipCode
+     - "string"
+   * - id
+     - addresses.id
+     - "string"
+   * - shippingDetails.address.city
+     - addresses.postalCode.city
+     - "string"
+   * - shippingDetails.address.country.code
+     - addresses.country.id
+     - "string"
+   * - shippingDetails.address.postalCode
+     - addresses.postalCode.zipCode
+     - "string"
 
 
 Wave Invoice to Membercare Invoices
