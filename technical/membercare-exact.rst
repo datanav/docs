@@ -2,7 +2,7 @@
 Membercare to Exact Dataflow
 ============================
 
-Generated: 2024-09-04 10:44:24
+Generated: 2024-09-04 10:47:48
 
 Introduction
 ------------
@@ -110,6 +110,9 @@ The following properties are synchronized between a Membercare Organizations and
      - Exact Data Type
    * - addresses.country.id
      - Country
+     - "string"
+   * - addresses.id
+     - ID
      - "string"
    * - addresses.postalCode.city
      - City
