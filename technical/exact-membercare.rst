@@ -2,7 +2,7 @@
 Exact to Membercare Dataflow
 ============================
 
-Generated: 2024-09-04 10:50:42
+Generated: 2024-09-04 11:35:51
 
 Introduction
 ------------
@@ -57,6 +57,24 @@ The following properties are synchronized between a Exact Contacts and a Memberc
    * - Exact Contacts Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - FirstName
+     - firstname
+     - "string"
+   * - FirstName
+     - name
+     - "string"
+   * - FullName
+     - firstname
+     - "string"
+   * - FullName
+     - name
+     - "string"
+   * - LastName
+     - firstname
+     - "string"
+   * - LastName
+     - name
+     - "string"
 
 
 Exact Currencies to Membercare Companycategories
@@ -130,8 +148,26 @@ The following properties are synchronized between a Exact Employees and a Member
    * - Country
      - addresses.country.id
      - "string"
+   * - FirstName
+     - firstname
+     - "string"
+   * - FirstName
+     - name
+     - "string"
+   * - FullName
+     - firstname
+     - "string"
+   * - FullName
+     - name
+     - "string"
    * - ID
      - addresses.id
+     - "string"
+   * - LastName
+     - firstname
+     - "string"
+   * - LastName
+     - name
      - "string"
    * - Postcode
      - addresses.postalCode.zipCode
