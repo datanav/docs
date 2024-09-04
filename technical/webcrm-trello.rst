@@ -2,7 +2,7 @@
 Webcrm to  Dataflow
 ===================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Webcrm Organisations and a  
    * - Webcrm Organisations Property
      -  Organizations Property
      -  Data Type
+   * - OrganisationCompanyDescription
+     - desc
+     - "string"
+   * - OrganisationName
+     - name
+     - "string"
 
 
 Webcrm Persons to  Members
@@ -39,6 +45,9 @@ The following properties are synchronized between a Webcrm Persons and a  Member
    * - Webcrm Persons Property
      -  Members Property
      -  Data Type
+   * - PersonName
+     - fullName
+     - "string"
 
 
 Webcrm Users to  Members
