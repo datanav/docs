@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a HubSpot Company and a  Organ
    * - HubSpot Company Property
      -  Organizations Property
      -  Data Type
+   * - properties.description
+     - desc
+     - "string"
+   * - properties.name
+     - name
+     - "string"
+   * - properties.website
+     - website
+     - "string"
 
 
 HubSpot Contact to  Members
