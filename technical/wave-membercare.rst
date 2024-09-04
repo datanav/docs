@@ -2,7 +2,7 @@
 Wave Financial to Membercare Dataflow
 =====================================
 
-Generated: 2024-09-04 10:50:42
+Generated: 2024-09-04 11:40:15
 
 Introduction
 ------------
@@ -54,8 +54,17 @@ The following properties are synchronized between a Wave Customer person and a M
    * - address.postalCode
      - addresses.postalCode.zipCode
      - "string"
+   * - firstName
+     - firstname
+     - "string"
    * - id
      - addresses.id
+     - "string"
+   * - lastName
+     - lastname
+     - "string"
+   * - name
+     - name
      - "string"
    * - shippingDetails.address.city
      - addresses.postalCode.city
