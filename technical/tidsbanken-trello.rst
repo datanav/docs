@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Tidsbanken Avdeling and a  O
    * - Tidsbanken Avdeling Property
      -  Organizations Property
      -  Data Type
+   * - Navn
+     - name
+     - "string"
 
 
 Tidsbanken Kunde to  Organizations
@@ -39,6 +42,12 @@ The following properties are synchronized between a Tidsbanken Kunde and a  Orga
    * - Tidsbanken Kunde Property
      -  Organizations Property
      -  Data Type
+   * - Navn
+     - name
+     - "string"
+   * - Url
+     - website
+     - "string"
 
 
 Tidsbanken Prosjekt to  Boards
@@ -55,6 +64,9 @@ The following properties are synchronized between a Tidsbanken Prosjekt and a  B
    * - Tidsbanken Prosjekt Property
      -  Boards Property
      -  Data Type
+   * - Navn
+     - name
+     - "string"
 
 
 Tidsbanken Ansatt to  Members
