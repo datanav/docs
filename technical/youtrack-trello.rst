@@ -2,7 +2,7 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -71,6 +71,9 @@ The following properties are synchronized between a YouTrack Organizations and a
    * - YouTrack Organizations Property
      -  Organizations Property
      -  Data Type
+   * - description
+     - desc
+     - "string"
 
 
 YouTrack Projectroles to  Boards
@@ -119,6 +122,9 @@ The following properties are synchronized between a YouTrack Users and a  Member
    * - YouTrack Users Property
      -  Members Property
      -  Data Type
+   * - name
+     - fullName
+     - "string"
 
 
 YouTrack Workitems to  Boards
