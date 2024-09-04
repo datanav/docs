@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-04 11:40:15
+Generated: 2024-09-04 11:46:49
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Salesforce Contact and a Mem
    * - Salesforce Contact Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - Birthdate
+     - birthDate
+     - "string"
    * - FirstName
      - firstname
      - "string"
