@@ -2,7 +2,7 @@
 SuperOffice to Membercare Dataflow
 ==================================
 
-Generated: 2024-09-04 11:49:03
+Generated: 2024-09-04 14:53:24
 
 Introduction
 ------------
@@ -69,6 +69,22 @@ The following properties are synchronized between a SuperOffice Person and a Mem
    * - PersonId
      - addresses.id
      - "string"
+
+
+SuperOffice Product to Membercare Products
+------------------------------------------
+Every SuperOffice Product will be synchronized with a Membercare Products.
+
+Once a link between a SuperOffice Product and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a Membercare Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Membercare Products Property
+     - Membercare Data Type
 
 
 SuperOffice Quotealternative to Membercare Invoices
