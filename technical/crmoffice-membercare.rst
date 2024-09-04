@@ -2,12 +2,28 @@
 Crmoffice to Membercare Dataflow
 ================================
 
-Generated: 2024-09-04 00:00:01
+Generated: 2024-09-04 10:50:26
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Crmoffice to Membercare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Crmoffice Contacts to Membercare Persons
+----------------------------------------
+Every Crmoffice Contacts will be synchronized with a Membercare Persons.
+
+Once a link between a Crmoffice Contacts and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Crmoffice Contacts and a Membercare Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Crmoffice Contacts Property
+     - Membercare Persons Property
+     - Membercare Data Type
+
 
 Crmoffice Activities to Membercare Countries
 --------------------------------------------
