@@ -2,7 +2,7 @@
 Membercare to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-04 07:42:46
+Generated: 2024-09-04 08:38:27
 
 Introduction
 ------------
@@ -55,6 +55,30 @@ The following properties are synchronized between a Membercare Organizations and
    * - Membercare Organizations Property
      - Businessnxt Address Property
      - Businessnxt Data Type
+   * - addresses.country.id
+     - countryNo
+     - "string"
+   * - addresses.postalCode.city
+     - postalArea
+     - "string"
+   * - addresses.postalCode.zipCode
+     - postCode
+     - "string"
+   * - company.addresses.addressDescription
+     - countryNo
+     - "string"
+   * - company.addresses.id
+     - addressNo
+     - "string"
+   * - company.addresses.municipality
+     - postCode
+     - "string"
+   * - company.addresses.start
+     - postalArea
+     - "string"
+   * - company.addresses.street
+     - addressLine1
+     - "string"
    * - name
      - name
      - "string"
