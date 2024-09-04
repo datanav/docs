@@ -2,7 +2,7 @@
 Businesscentral to Membercare Dataflow
 ======================================
 
-Generated: 2024-09-04 11:46:49
+Generated: 2024-09-04 11:48:52
 
 Introduction
 ------------
@@ -50,6 +50,9 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
    * - id
      - addresses.id
+     - "string"
+   * - id
+     - socialSecurityNumber.number (Dependant on having BusinessCentral-contact in socialSecurityNumber.iso2Letter)
      - "string"
    * - postalCode
      - addresses.postalCode.zipCode
