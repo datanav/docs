@@ -2,7 +2,7 @@
 SuperOffice to Membercare Dataflow
 ==================================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -85,6 +85,9 @@ The following properties are synchronized between a SuperOffice Product and a Me
    * - SuperOffice Product Property
      - Membercare Products Property
      - Membercare Data Type
+   * - Name
+     - name
+     - "string"
 
 
 SuperOffice Quotealternative to Membercare Invoices
