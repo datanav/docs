@@ -2,7 +2,7 @@
 Membercare to Tilores Dataflow
 ==============================
 
-Generated: 2024-09-04 10:50:26
+Generated: 2024-09-04 10:50:42
 
 Introduction
 ------------
@@ -23,4 +23,13 @@ The following properties are synchronized between a Membercare Persons and a Til
    * - Membercare Persons Property
      - Tilores Human Property
      - Tilores Data Type
+   * - addresses.id
+     - id
+     - "string"
+   * - addresses.postalCode.city
+     - city
+     - "string"
+   * - addresses.postalCode.zipCode
+     - postalCode
+     - "string"
 
