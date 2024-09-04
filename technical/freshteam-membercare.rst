@@ -2,7 +2,7 @@
 Freshteam to Membercare Dataflow
 ================================
 
-Generated: 2024-09-04 11:46:49
+Generated: 2024-09-04 11:49:03
 
 Introduction
 ------------
@@ -45,10 +45,16 @@ The following properties are synchronized between a Freshteam Employee and a Mem
    * - date_of_birth
      - birthDate
      - "string"
+   * - employee_id
+     - socialSecurityNumber.number (Dependant on having wd:Q36218176 in socialSecurityNumber.iso2Letter)
+     - "string"
    * - first_name
      - firstname
      - "string"
    * - last_name
      - lastname
+     - "string"
+   * - official_email
+     - socialSecurityNumber.number (Dependant on having wd:Q28378282 in socialSecurityNumber.iso2Letter)
      - "string"
 
