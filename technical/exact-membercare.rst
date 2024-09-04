@@ -2,7 +2,7 @@
 Exact to Membercare Dataflow
 ============================
 
-Generated: 2024-09-04 11:35:51
+Generated: 2024-09-04 11:46:49
 
 Introduction
 ------------
@@ -57,6 +57,9 @@ The following properties are synchronized between a Exact Contacts and a Memberc
    * - Exact Contacts Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - BirthDate
+     - birthDate
+     - "string"
    * - FirstName
      - firstname
      - "string"
@@ -142,6 +145,9 @@ The following properties are synchronized between a Exact Employees and a Member
    * - Exact Employees Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - BirthDate
+     - birthDate
+     - "string"
    * - City
      - addresses.postalCode.city
      - "string"
