@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-04 11:46:49
+Generated: 2024-09-04 14:53:24
 
 Introduction
 ------------
@@ -38,6 +38,22 @@ The following properties are synchronized between a Salesforce Contact and a Mem
    * - Name
      - name
      - "string"
+
+
+Salesforce Product2 to Membercare Products
+------------------------------------------
+Every Salesforce Product2 will be synchronized with a Membercare Products.
+
+Once a link between a Salesforce Product2 and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Product2 and a Membercare Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Product2 Property
+     - Membercare Products Property
+     - Membercare Data Type
 
 
 Salesforce Contact to Membercare Countries
