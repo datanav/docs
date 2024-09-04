@@ -2,7 +2,7 @@
 Membercare to  Dataflow
 =======================
 
-Generated: 2024-09-04 12:33:25
+Generated: 2024-09-04 12:38:01
 
 Introduction
 ------------
@@ -23,4 +23,10 @@ The following properties are synchronized between a Membercare Companies and a  
    * - Membercare Companies Property
      -  Organizations Property
      -  Data Type
+   * - companyName
+     - name
+     - "string"
+   * - url
+     - website
+     - "string"
 
