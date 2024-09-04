@@ -2,7 +2,7 @@
 Membercare to Crmoffice Dataflow
 ================================
 
-Generated: 2024-09-04 10:39:26
+Generated: 2024-09-04 11:40:15
 
 Introduction
 ------------
@@ -23,4 +23,10 @@ The following properties are synchronized between a Membercare Persons and a Crm
    * - Membercare Persons Property
      - Crmoffice Contacts Property
      - Crmoffice Data Type
+   * - firstname
+     - givenName
+     - "string"
+   * - lastname
+     - familyName
+     - "string"
 
