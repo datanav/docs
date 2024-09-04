@@ -2,7 +2,7 @@
 Invoiced to Membercare Dataflow
 ===============================
 
-Generated: 2024-09-04 10:50:42
+Generated: 2024-09-04 11:40:15
 
 Introduction
 ------------
@@ -50,6 +50,9 @@ The following properties are synchronized between a Invoiced Customers person an
      - "string"
    * - id
      - addresses.id
+     - "string"
+   * - name
+     - name
      - "string"
    * - postal_code
      - addresses.postalCode.zipCode
