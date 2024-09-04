@@ -2,7 +2,7 @@
 HubSpot to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-04 11:46:49
+Generated: 2024-09-04 11:49:03
 
 Introduction
 ------------
@@ -56,6 +56,9 @@ The following properties are synchronized between a HubSpot Contact and a Member
      - "string"
    * - properties.date_of_birth
      - birthDate
+     - "string"
+   * - properties.email
+     - socialSecurityNumber.number (Dependant on having wd:Q1273217 in socialSecurityNumber.iso2Letter)
      - "string"
    * - properties.firstname
      - firstname
@@ -1513,6 +1516,9 @@ The following properties are synchronized between a HubSpot User and a Membercar
    * - HubSpot User Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - email
+     - socialSecurityNumber.number (Dependant on having wd:Q28378282 in socialSecurityNumber.iso2Letter)
+     - "string"
 
 
 HubSpot Company to Membercare Countries
