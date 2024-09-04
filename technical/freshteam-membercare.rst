@@ -2,7 +2,7 @@
 Freshteam to Membercare Dataflow
 ================================
 
-Generated: 2024-09-04 07:40:25
+Generated: 2024-09-04 10:50:26
 
 Introduction
 ------------
@@ -26,4 +26,20 @@ The following properties are synchronized between a Freshteam Department and a M
    * - name
      - companyName
      - "string"
+
+
+Freshteam Employee to Membercare Persons
+----------------------------------------
+Every Freshteam Employee will be synchronized with a Membercare Persons.
+
+Once a link between a Freshteam Employee and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Freshteam Employee and a Membercare Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Freshteam Employee Property
+     - Membercare Persons Property
+     - Membercare Data Type
 
