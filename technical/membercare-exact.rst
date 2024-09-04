@@ -2,7 +2,7 @@
 Membercare to Exact Dataflow
 ============================
 
-Generated: 2024-09-04 08:38:37
+Generated: 2024-09-04 10:44:24
 
 Introduction
 ------------
@@ -132,6 +132,22 @@ The following properties are synchronized between a Membercare Organizations and
    * - name
      - Name
      - "string"
+
+
+Membercare Persons to Exact Contacts
+------------------------------------
+Every Membercare Persons will be synchronized with a Exact Contacts.
+
+Once a link between a Membercare Persons and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Persons and a Exact Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Persons Property
+     - Exact Contacts Property
+     - Exact Data Type
 
 
 Membercare Companies to Exact Addresses
