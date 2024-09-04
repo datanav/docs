@@ -2,7 +2,7 @@
 Tripletex to Membercare Dataflow
 ================================
 
-Generated: 2024-09-04 10:50:42
+Generated: 2024-09-04 11:40:15
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Tripletex Contact and a Memb
    * - Tripletex Contact Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - firstName
+     - firstname
+     - "string"
+   * - lastName
+     - lastname
+     - "string"
 
 
 Tripletex Customer to Membercare Companies
@@ -72,6 +78,9 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
    * - id
      - addresses.id
+     - "string"
+   * - name
+     - name
      - "string"
    * - physicalAddress.city
      - addresses.postalCode.city
@@ -135,8 +144,14 @@ The following properties are synchronized between a Tripletex Employee and a Mem
    * - address.postalCode
      - addresses.postalCode.zipCode
      - "string"
+   * - firstName
+     - firstname
+     - "string"
    * - id
      - addresses.id
+     - "string"
+   * - lastName
+     - lastname
      - "string"
 
 
