@@ -2,7 +2,7 @@
 Powerofficego to Membercare Dataflow
 ====================================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -178,6 +178,9 @@ The following properties are synchronized between a Powerofficego Product and a 
    * - Powerofficego Product Property
      - Membercare Products Property
      - Membercare Data Type
+   * - name
+     - name
+     - "string"
 
 
 Powerofficego Salesorderlines to Membercare Invoices
