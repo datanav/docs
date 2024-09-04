@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-09-04 13:27:19
+Generated: 2024-09-04 13:27:37
 
 Introduction
 ------------
@@ -42,6 +42,9 @@ The following properties are synchronized between a Asana Tasks and a  Boards:
    * - Asana Tasks Property
      -  Boards Property
      -  Data Type
+   * - name
+     - name
+     - "string"
 
 
 Asana Users to  Members
