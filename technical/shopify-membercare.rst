@@ -2,7 +2,7 @@
 Shopify to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-04 10:50:26
+Generated: 2024-09-04 11:40:15
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Shopify Customer and a Membe
    * - Shopify Customer Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - first_name
+     - firstname
+     - "string"
+   * - last_name
+     - lastname
+     - "string"
 
 
 Shopify Order to Membercare Invoices
