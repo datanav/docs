@@ -2,7 +2,7 @@
 Webcrm to Membercare Dataflow
 =============================
 
-Generated: 2024-09-04 11:40:15
+Generated: 2024-09-04 11:46:49
 
 Introduction
 ------------
@@ -66,6 +66,9 @@ The following properties are synchronized between a Webcrm Persons and a Memberc
      - "string"
    * - PersonName
      - name
+     - "string"
+   * - document_number
+     - birthDate
      - "string"
 
 
