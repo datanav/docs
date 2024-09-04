@@ -2,7 +2,7 @@
 Membercare to Superoffice Dataflow
 ==================================
 
-Generated: 2024-09-04 07:43:01
+Generated: 2024-09-04 10:50:26
 
 Introduction
 ------------
@@ -48,6 +48,22 @@ The following properties are synchronized between a Membercare Organizations and
    * - name
      - Name
      - "string"
+
+
+Membercare Persons to Superoffice Person
+----------------------------------------
+Every Membercare Persons will be synchronized with a Superoffice Person.
+
+Once a link between a Membercare Persons and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Persons and a Superoffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Persons Property
+     - Superoffice Person Property
+     - Superoffice Data Type
 
 
 Membercare Invoices to Superoffice Quoteline
