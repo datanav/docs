@@ -2,7 +2,7 @@
 Shopify to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-04 11:40:15
+Generated: 2024-09-04 14:53:24
 
 Introduction
 ------------
@@ -31,6 +31,22 @@ The following properties are synchronized between a Shopify Customer and a Membe
      - "string"
 
 
+Shopify Inventoryitem to Membercare Products
+--------------------------------------------
+Every Shopify Inventoryitem will be synchronized with a Membercare Products.
+
+Once a link between a Shopify Inventoryitem and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Inventoryitem and a Membercare Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Inventoryitem Property
+     - Membercare Products Property
+     - Membercare Data Type
+
+
 Shopify Order to Membercare Invoices
 ------------------------------------
 Every Shopify Order will be synchronized with a Membercare Invoices.
@@ -51,6 +67,38 @@ The following properties are synchronized between a Shopify Order and a Memberca
    * - line_items.quantity
      - invoiceItems.quantity
      - "string"
+
+
+Shopify Product to Membercare Products
+--------------------------------------
+Every Shopify Product will be synchronized with a Membercare Products.
+
+Once a link between a Shopify Product and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Product and a Membercare Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Product Property
+     - Membercare Products Property
+     - Membercare Data Type
+
+
+Shopify Sesamproduct to Membercare Products
+-------------------------------------------
+Every Shopify Sesamproduct will be synchronized with a Membercare Products.
+
+Once a link between a Shopify Sesamproduct and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Sesamproduct and a Membercare Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Sesamproduct Property
+     - Membercare Products Property
+     - Membercare Data Type
 
 
 Shopify Customer to Membercare Countries
