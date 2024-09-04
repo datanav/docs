@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a ZohoCRM Account and a  Organ
    * - ZohoCRM Account Property
      -  Organizations Property
      -  Data Type
+   * - Account_Name
+     - name
+     - "string"
+   * - Created_Time
+     - desc
+     - "string"
+   * - Website
+     - website
+     - "string"
 
 
 ZohoCRM Contact to  Members
@@ -39,4 +48,7 @@ The following properties are synchronized between a ZohoCRM Contact and a  Membe
    * - ZohoCRM Contact Property
      -  Members Property
      -  Data Type
+   * - Full_Name
+     - fullName
+     - "string"
 
