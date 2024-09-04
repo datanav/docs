@@ -2,7 +2,7 @@
 Membercare to Hubspot Dataflow
 ==============================
 
-Generated: 2024-09-04 10:48:35
+Generated: 2024-09-04 11:40:15
 
 Introduction
 ------------
@@ -75,6 +75,12 @@ The following properties are synchronized between a Membercare Persons and a Hub
      - "string"
    * - addresses.postalCode.zipCode
      - properties.zip
+     - "string"
+   * - firstname
+     - properties.firstname
+     - "string"
+   * - lastname
+     - properties.lastname
      - "string"
 
 
