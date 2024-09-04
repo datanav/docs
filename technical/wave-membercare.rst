@@ -2,7 +2,7 @@
 Wave Financial to Membercare Dataflow
 =====================================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -122,6 +122,9 @@ The following properties are synchronized between a Wave Product and a Membercar
    * - Wave Product Property
      - Membercare Products Property
      - Membercare Data Type
+   * - name
+     - name
+     - "string"
 
 
 Wave Country to Membercare Countries
