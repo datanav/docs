@@ -2,7 +2,7 @@
 Shopify to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -99,6 +99,9 @@ The following properties are synchronized between a Shopify Sesamproduct and a M
    * - Shopify Sesamproduct Property
      - Membercare Products Property
      - Membercare Data Type
+   * - title
+     - name
+     - "string"
 
 
 Shopify Customer to Membercare Countries
