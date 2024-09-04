@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -39,6 +39,9 @@ The following properties are synchronized between a Tripletex Customer person an
    * - Tripletex Customer person Property
      -  Members Property
      -  Data Type
+   * - name
+     - fullName
+     - "string"
 
 
 Tripletex Customer to  Organizations
@@ -55,6 +58,12 @@ The following properties are synchronized between a Tripletex Customer and a  Or
    * - Tripletex Customer Property
      -  Organizations Property
      -  Data Type
+   * - name
+     - name
+     - "string"
+   * - website
+     - website
+     - "string"
 
 
 Tripletex Department to  Organizations
@@ -71,6 +80,9 @@ The following properties are synchronized between a Tripletex Department and a  
    * - Tripletex Department Property
      -  Organizations Property
      -  Data Type
+   * - name
+     - name
+     - "string"
 
 
 Tripletex Project to  Boards
@@ -87,6 +99,9 @@ The following properties are synchronized between a Tripletex Project and a  Boa
    * - Tripletex Project Property
      -  Boards Property
      -  Data Type
+   * - name
+     - name
+     - "string"
 
 
 Tripletex Employee to  Members
