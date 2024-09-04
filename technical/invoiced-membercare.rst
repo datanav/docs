@@ -2,7 +2,7 @@
 Invoiced to Membercare Dataflow
 ===============================
 
-Generated: 2024-09-04 14:53:24
+Generated: 2024-09-04 14:53:42
 
 Introduction
 ------------
@@ -89,6 +89,9 @@ The following properties are synchronized between a Invoiced Items and a Memberc
    * - Invoiced Items Property
      - Membercare Products Property
      - Membercare Data Type
+   * - name
+     - name
+     - "string"
 
 
 Invoiced Lineitem to Membercare Invoices
