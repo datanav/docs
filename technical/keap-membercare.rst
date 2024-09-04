@@ -2,7 +2,7 @@
 Keap to Membercare Dataflow
 ===========================
 
-Generated: 2024-09-04 10:50:26
+Generated: 2024-09-04 11:35:51
 
 Introduction
 ------------
@@ -42,6 +42,18 @@ The following properties are synchronized between a Keap Contacts and a Memberca
    * - Keap Contacts Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - family_name
+     - firstname
+     - "string"
+   * - family_name
+     - name
+     - "string"
+   * - given_name
+     - firstname
+     - "string"
+   * - given_name
+     - name
+     - "string"
 
 
 Keap Opportunity to Membercare Invoices
