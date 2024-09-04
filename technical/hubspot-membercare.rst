@@ -2,7 +2,7 @@
 HubSpot to Membercare Dataflow
 ==============================
 
-Generated: 2024-09-04 10:50:26
+Generated: 2024-09-04 10:50:42
 
 Introduction
 ------------
@@ -45,6 +45,18 @@ The following properties are synchronized between a HubSpot Contact and a Member
    * - HubSpot Contact Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - id
+     - addresses.id
+     - "string"
+   * - properties.city
+     - addresses.postalCode.city
+     - "string"
+   * - properties.country
+     - addresses.country.id
+     - "string"
+   * - properties.zip
+     - addresses.postalCode.zipCode
+     - "string"
 
 
 HubSpot Contactcompanyassociation to Membercare Persons
