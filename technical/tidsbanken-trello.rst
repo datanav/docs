@@ -2,12 +2,60 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-09-04 12:47:58
+Generated: 2024-09-04 14:53:24
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tidsbanken to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tidsbanken Avdeling to  Organizations
+-------------------------------------
+Every Tidsbanken Avdeling will be synchronized with a  Organizations.
+
+Once a link between a Tidsbanken Avdeling and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Avdeling and a  Organizations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     -  Organizations Property
+     -  Data Type
+
+
+Tidsbanken Kunde to  Organizations
+----------------------------------
+Every Tidsbanken Kunde will be synchronized with a  Organizations.
+
+Once a link between a Tidsbanken Kunde and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Kunde and a  Organizations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Kunde Property
+     -  Organizations Property
+     -  Data Type
+
+
+Tidsbanken Prosjekt to  Boards
+------------------------------
+Every Tidsbanken Prosjekt will be synchronized with a  Boards.
+
+Once a link between a Tidsbanken Prosjekt and a  Boards is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Prosjekt and a  Boards:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Prosjekt Property
+     -  Boards Property
+     -  Data Type
+
 
 Tidsbanken Ansatt to  Members
 -----------------------------
