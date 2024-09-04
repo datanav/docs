@@ -2,7 +2,7 @@
 Webcrm to Membercare Dataflow
 =============================
 
-Generated: 2024-09-04 10:50:26
+Generated: 2024-09-04 11:40:15
 
 Introduction
 ------------
@@ -58,6 +58,15 @@ The following properties are synchronized between a Webcrm Persons and a Memberc
    * - Webcrm Persons Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - PersonFirstName
+     - firstname
+     - "string"
+   * - PersonLastName
+     - lastname
+     - "string"
+   * - PersonName
+     - name
+     - "string"
 
 
 Webcrm Quotationline to Membercare Invoices
