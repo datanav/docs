@@ -2,7 +2,7 @@
 Membercare to Superoffice Dataflow
 ==================================
 
-Generated: 2024-09-04 10:50:26
+Generated: 2024-09-04 10:50:42
 
 Introduction
 ------------
@@ -64,6 +64,18 @@ The following properties are synchronized between a Membercare Persons and a Sup
    * - Membercare Persons Property
      - Superoffice Person Property
      - Superoffice Data Type
+   * - addresses.country.id
+     - Country.CountryId
+     - "integer"
+   * - addresses.id
+     - PersonId
+     - "integer"
+   * - addresses.postalCode.city
+     - Address.Street.City
+     - "string"
+   * - addresses.postalCode.zipCode
+     - Address.Street.Zipcode
+     - "string"
 
 
 Membercare Invoices to Superoffice Quoteline
