@@ -2,7 +2,7 @@
 SuperOffice to Membercare Dataflow
 ==================================
 
-Generated: 2024-09-04 10:50:26
+Generated: 2024-09-04 10:50:42
 
 Introduction
 ------------
@@ -45,6 +45,18 @@ The following properties are synchronized between a SuperOffice Person and a Mem
    * - SuperOffice Person Property
      - Membercare Persons Property
      - Membercare Data Type
+   * - Address.Street.City
+     - addresses.postalCode.city
+     - "string"
+   * - Address.Street.Zipcode
+     - addresses.postalCode.zipCode
+     - "string"
+   * - Country.CountryId
+     - addresses.country.id
+     - "string"
+   * - PersonId
+     - addresses.id
+     - "string"
 
 
 SuperOffice Quotealternative to Membercare Invoices
