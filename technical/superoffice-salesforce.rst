@@ -2,7 +2,7 @@
 SuperOffice to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-05 00:00:01
+Generated: 2024-09-05 13:30:17
 
 Introduction
 ------------
@@ -29,6 +29,22 @@ The following properties are synchronized between a SuperOffice Contact and a Sa
    * - Phones.Value
      - Phone	
      - "string"
+
+
+SuperOffice Listcurrencyitems to Salesforce Currencytype
+--------------------------------------------------------
+Every SuperOffice Listcurrencyitems will be synchronized with a Salesforce Currencytype.
+
+Once a link between a SuperOffice Listcurrencyitems and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Listcurrencyitems and a Salesforce Currencytype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Listcurrencyitems Property
+     - Salesforce Currencytype Property
+     - Salesforce Data Type
 
 
 SuperOffice Product to Salesforce Product2
