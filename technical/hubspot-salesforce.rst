@@ -2,7 +2,7 @@
 HubSpot to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-05 00:00:18
+Generated: 2024-09-05 13:30:17
 
 Introduction
 ------------
@@ -29,6 +29,38 @@ The following properties are synchronized between a HubSpot Company and a Salesf
    * - properties.phone
      - Phone	
      - "string"
+
+
+HubSpot Account to Salesforce Currencytype
+------------------------------------------
+Every HubSpot Account will be synchronized with a Salesforce Currencytype.
+
+Once a link between a HubSpot Account and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Account and a Salesforce Currencytype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Account Property
+     - Salesforce Currencytype Property
+     - Salesforce Data Type
+
+
+HubSpot Deal to Salesforce Currencytype
+---------------------------------------
+Every HubSpot Deal will be synchronized with a Salesforce Currencytype.
+
+Once a link between a HubSpot Deal and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a Salesforce Currencytype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - Salesforce Currencytype Property
+     - Salesforce Data Type
 
 
 HubSpot Product to Salesforce Product2
