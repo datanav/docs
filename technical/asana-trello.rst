@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-09-05 11:38:24
+Generated: 2024-09-05 11:38:40
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Asana Projects and a  Action
    * - Asana Projects Property
      -  Actions Property
      -  Data Type
+   * - owner.gid
+     - memberCreator.id
+     - "string"
 
 
 Asana Projects to  Boards
