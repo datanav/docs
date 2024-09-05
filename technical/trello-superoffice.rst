@@ -2,7 +2,7 @@
 Trello to Superoffice Dataflow
 ==============================
 
-Generated: 2024-09-05 12:21:23
+Generated: 2024-09-05 12:21:42
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Trello Members and a Superof
    * - Trello Members Property
      - Superoffice Person Property
      - Superoffice Data Type
+   * - email
+     - Emails.Value
+     - "string"
 
 
 Trello Organizations to Superoffice Contact
@@ -39,4 +42,10 @@ The following properties are synchronized between a Trello Organizations and a S
    * - Trello Organizations Property
      - Superoffice Contact Property
      - Superoffice Data Type
+   * - name
+     - Name
+     - "string"
+   * - website
+     - Urls.Value
+     - "string"
 
