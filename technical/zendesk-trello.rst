@@ -2,7 +2,7 @@
 Zendesk to  Dataflow
 ====================
 
-Generated: 2024-09-05 10:48:08
+Generated: 2024-09-05 12:06:24
 
 Introduction
 ------------
@@ -28,6 +28,22 @@ The following properties are synchronized between a Zendesk Organizations and a 
      - "string"
 
 
+Zendesk Ticketcomments to  Actions
+----------------------------------
+Every Zendesk Ticketcomments will be synchronized with a  Actions.
+
+Once a link between a Zendesk Ticketcomments and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Ticketcomments and a  Actions:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Ticketcomments Property
+     -  Actions Property
+     -  Data Type
+
+
 Zendesk Ticketcomments to  Boards
 ---------------------------------
 Every Zendesk Ticketcomments will be synchronized with a  Boards.
@@ -41,6 +57,22 @@ The following properties are synchronized between a Zendesk Ticketcomments and a
 
    * - Zendesk Ticketcomments Property
      -  Boards Property
+     -  Data Type
+
+
+Zendesk Tickets to  Actions
+---------------------------
+Every Zendesk Tickets will be synchronized with a  Actions.
+
+Once a link between a Zendesk Tickets and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Tickets and a  Actions:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Tickets Property
+     -  Actions Property
      -  Data Type
 
 
