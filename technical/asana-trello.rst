@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-09-05 08:59:44
+Generated: 2024-09-05 10:02:45
 
 Introduction
 ------------
@@ -118,6 +118,9 @@ The following properties are synchronized between a Asana Tasks and a  Cards:
      - "string"
    * - name
      - name
+     - "string"
+   * - start_at
+     - start
      - "string"
 
 
