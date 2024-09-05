@@ -2,12 +2,28 @@
 Woocommerce to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-05 00:00:01
+Generated: 2024-09-05 13:30:17
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Woocommerce to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Woocommerce Order to Salesforce Currencytype
+--------------------------------------------
+Every Woocommerce Order will be synchronized with a Salesforce Currencytype.
+
+Once a link between a Woocommerce Order and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Woocommerce Order and a Salesforce Currencytype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Woocommerce Order Property
+     - Salesforce Currencytype Property
+     - Salesforce Data Type
+
 
 Woocommerce Product to Salesforce Product2
 ------------------------------------------
