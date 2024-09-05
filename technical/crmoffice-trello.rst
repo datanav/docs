@@ -2,7 +2,7 @@
 Crmoffice to  Dataflow
 ======================
 
-Generated: 2024-09-05 11:18:46
+Generated: 2024-09-05 11:41:25
 
 Introduction
 ------------
@@ -64,4 +64,20 @@ The following properties are synchronized between a Crmoffice Activities and a  
    * - startsAt
      - date
      - "string"
+
+
+Crmoffice Activities to  Lists
+------------------------------
+Every Crmoffice Activities will be synchronized with a  Lists.
+
+Once a link between a Crmoffice Activities and a  Lists is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Crmoffice Activities and a  Lists:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Crmoffice Activities Property
+     -  Lists Property
+     -  Data Type
 
