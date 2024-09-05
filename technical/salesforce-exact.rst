@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-05 13:50:24
+Generated: 2024-09-05 14:27:24
 
 Introduction
 ------------
@@ -22,6 +22,22 @@ The following properties are synchronized between a Salesforce Currencytype and 
 
    * - Salesforce Currencytype Property
      - Exact Accounts Property
+     - Exact Data Type
+
+
+Salesforce Customer to Exact Contacts
+-------------------------------------
+Every Salesforce Customer will be synchronized with a Exact Contacts.
+
+Once a link between a Salesforce Customer and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Customer and a Exact Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Customer Property
+     - Exact Contacts Property
      - Exact Data Type
 
 
