@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-05 11:02:22
+Generated: 2024-09-05 11:05:25
 
 Introduction
 ------------
@@ -108,6 +108,22 @@ The following properties are synchronized between a Tripletex Project and a  Boa
    * - name
      - name
      - "string"
+
+
+Tripletex Activity to  Actions
+------------------------------
+Every Tripletex Activity will be synchronized with a  Actions.
+
+Once a link between a Tripletex Activity and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Activity and a  Actions:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Activity Property
+     -  Actions Property
+     -  Data Type
 
 
 Tripletex Employee to  Actions
