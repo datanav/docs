@@ -2,7 +2,7 @@
 Woocommerce to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-05 13:35:18
+Generated: 2024-09-05 13:50:24
 
 Introduction
 ------------
@@ -22,22 +22,6 @@ The following properties are synchronized between a Woocommerce Order and a Sale
 
    * - Woocommerce Order Property
      - Salesforce Currencytype Property
-     - Salesforce Data Type
-
-
-Woocommerce Order to Salesforce Customer
-----------------------------------------
-Every Woocommerce Order will be synchronized with a Salesforce Customer.
-
-Once a link between a Woocommerce Order and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Woocommerce Order and a Salesforce Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Woocommerce Order Property
-     - Salesforce Customer Property
      - Salesforce Data Type
 
 
