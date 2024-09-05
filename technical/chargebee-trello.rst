@@ -2,7 +2,7 @@
 Chargebee to Trello Dataflow
 ============================
 
-Generated: 2024-09-05 12:09:41
+Generated: 2024-09-05 12:11:24
 
 Introduction
 ------------
@@ -28,20 +28,20 @@ The following properties are synchronized between a Chargebee Customer and a  Me
      - "string"
 
 
-Chargebee Business_entity to  Organizations
--------------------------------------------
-Every Chargebee Business_entity will be synchronized with a  Organizations.
+Chargebee Business_entity to Trello Organizations
+-------------------------------------------------
+Every Chargebee Business_entity will be synchronized with a Trello Organizations.
 
-Once a link between a Chargebee Business_entity and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Business_entity and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Business_entity and a  Organizations:
+The following properties are synchronized between a Chargebee Business_entity and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Business_entity Property
-     -  Organizations Property
-     -  Data Type
+     - Trello Organizations Property
+     - Trello Data Type
    * - name
      - name
      - "string"
