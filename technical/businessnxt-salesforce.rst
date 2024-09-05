@@ -2,7 +2,7 @@
 Businessnxt to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-05 13:30:17
+Generated: 2024-09-05 13:35:18
 
 Introduction
 ------------
@@ -75,6 +75,22 @@ The following properties are synchronized between a Businessnxt Currency and a S
 
    * - Businessnxt Currency Property
      - Salesforce Currencytype Property
+     - Salesforce Data Type
+
+
+Businessnxt Currency to Salesforce Customer
+-------------------------------------------
+Every Businessnxt Currency will be synchronized with a Salesforce Customer.
+
+Once a link between a Businessnxt Currency and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businessnxt Currency and a Salesforce Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businessnxt Currency Property
+     - Salesforce Customer Property
      - Salesforce Data Type
 
 
