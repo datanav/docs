@@ -2,7 +2,7 @@
 Exact to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-05 13:35:18
+Generated: 2024-09-05 13:35:37
 
 Introduction
 ------------
@@ -130,6 +130,9 @@ The following properties are synchronized between a Exact Currencies and a Sales
    * - Exact Currencies Property
      - Salesforce Customer Property
      - Salesforce Data Type
+   * - Code
+     - IsoCode
+     - "string"
 
 
 Exact Items to Salesforce Product2
