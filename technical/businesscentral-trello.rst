@@ -2,7 +2,7 @@
 Businesscentral to  Dataflow
 ============================
 
-Generated: 2024-09-05 00:00:02
+Generated: 2024-09-05 10:48:01
 
 Introduction
 ------------
@@ -41,6 +41,9 @@ The following properties are synchronized between a Businesscentral Contacts per
      -  Data Type
    * - displayName
      - fullName
+     - "string"
+   * - email
+     - email
      - "string"
 
 
