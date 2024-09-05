@@ -2,7 +2,7 @@
 Businesscentral to Trello Dataflow
 ==================================
 
-Generated: 2024-09-05 12:09:41
+Generated: 2024-09-05 12:11:24
 
 Introduction
 ------------
@@ -69,20 +69,20 @@ The following properties are synchronized between a Businesscentral Customers pe
      - "string"
 
 
-Businesscentral Customers company to  Organizations
----------------------------------------------------
-Every Businesscentral Customers company will be synchronized with a  Organizations.
+Businesscentral Customers company to Trello Organizations
+---------------------------------------------------------
+Every Businesscentral Customers company will be synchronized with a Trello Organizations.
 
-Once a link between a Businesscentral Customers company and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Customers company and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers company and a  Organizations:
+The following properties are synchronized between a Businesscentral Customers company and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Customers company Property
-     -  Organizations Property
-     -  Data Type
+     - Trello Organizations Property
+     - Trello Data Type
    * - displayName
      - name
      - "string"
@@ -91,20 +91,20 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
 
 
-Businesscentral Employees to  Members
--------------------------------------
-Every Businesscentral Employees will be synchronized with a  Members.
+Businesscentral Employees to Trello Members
+-------------------------------------------
+Every Businesscentral Employees will be synchronized with a Trello Members.
 
-Once a link between a Businesscentral Employees and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Employees and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Employees and a  Members:
+The following properties are synchronized between a Businesscentral Employees and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Employees Property
-     -  Members Property
-     -  Data Type
+     - Trello Members Property
+     - Trello Data Type
    * - displayName
      - fullName
      - "string"
