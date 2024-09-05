@@ -2,46 +2,46 @@
 Tripletex to Trello Dataflow
 ============================
 
-Generated: 2024-09-05 12:11:24
+Generated: 2024-09-05 12:21:23
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Trello. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Contact to  Members
------------------------------
-Every Tripletex Contact will be synchronized with a  Members.
+Tripletex Contact to Trello Members
+-----------------------------------
+Every Tripletex Contact will be synchronized with a Trello Members.
 
-Once a link between a Tripletex Contact and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a  Members:
+The following properties are synchronized between a Tripletex Contact and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     -  Members Property
-     -  Data Type
+     - Trello Members Property
+     - Trello Data Type
    * - email
      - email
      - "string"
 
 
-Tripletex Customer person to  Members
--------------------------------------
-Every Tripletex Customer person will be synchronized with a  Members.
+Tripletex Customer person to Trello Members
+-------------------------------------------
+Every Tripletex Customer person will be synchronized with a Trello Members.
 
-Once a link between a Tripletex Customer person and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a  Members:
+The following properties are synchronized between a Tripletex Customer person and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     -  Members Property
-     -  Data Type
+     - Trello Members Property
+     - Trello Data Type
    * - email
      - email
      - "string"
@@ -50,20 +50,20 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
 
 
-Tripletex Customer to  Organizations
-------------------------------------
-Every Tripletex Customer will be synchronized with a  Organizations.
+Tripletex Customer to Trello Organizations
+------------------------------------------
+Every Tripletex Customer will be synchronized with a Trello Organizations.
 
-Once a link between a Tripletex Customer and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a  Organizations:
+The following properties are synchronized between a Tripletex Customer and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     -  Organizations Property
-     -  Data Type
+     - Trello Organizations Property
+     - Trello Data Type
    * - name
      - name
      - "string"
@@ -72,39 +72,39 @@ The following properties are synchronized between a Tripletex Customer and a  Or
      - "string"
 
 
-Tripletex Department to  Organizations
---------------------------------------
-Every Tripletex Department will be synchronized with a  Organizations.
+Tripletex Department to Trello Organizations
+--------------------------------------------
+Every Tripletex Department will be synchronized with a Trello Organizations.
 
-Once a link between a Tripletex Department and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a  Organizations:
+The following properties are synchronized between a Tripletex Department and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     -  Organizations Property
-     -  Data Type
+     - Trello Organizations Property
+     - Trello Data Type
    * - name
      - name
      - "string"
 
 
-Tripletex Project to  Actions
------------------------------
-Every Tripletex Project will be synchronized with a  Actions.
+Tripletex Project to Trello Actions
+-----------------------------------
+Every Tripletex Project will be synchronized with a Trello Actions.
 
-Once a link between a Tripletex Project and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Project and a Trello Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Project and a  Actions:
+The following properties are synchronized between a Tripletex Project and a Trello Actions:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Project Property
-     -  Actions Property
-     -  Data Type
+     - Trello Actions Property
+     - Trello Data Type
    * - projectManager.id
      - memberCreator.id
      - "string"
