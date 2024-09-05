@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-05 13:29:23
+Generated: 2024-09-05 13:29:41
 
 Introduction
 ------------
@@ -103,6 +103,9 @@ The following properties are synchronized between a Salesforce Currencytype and 
    * - Salesforce Currencytype Property
      - Exact Currencies Property
      - Exact Data Type
+   * - IsoCode
+     - Code
+     - "string"
 
 
 Salesforce Organization to Exact Addresses
