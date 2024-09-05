@@ -2,7 +2,7 @@
 Salesforce to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-05 13:11:24
+Generated: 2024-09-05 13:20:23
 
 Introduction
 ------------
@@ -35,22 +35,6 @@ The following properties are synchronized between a Salesforce Contact and a Cha
    * - MailingCountry
      - billing_address.country
      - "string"
-
-
-Salesforce Currencytype to Chargebee Business_entity
-----------------------------------------------------
-Every Salesforce Currencytype will be synchronized with a Chargebee Business_entity.
-
-Once a link between a Salesforce Currencytype and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Currencytype and a Chargebee Business_entity:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Currencytype Property
-     - Chargebee Business_entity Property
-     - Chargebee Data Type
 
 
 Salesforce Organization to Chargebee Business_entity
