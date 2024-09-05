@@ -2,7 +2,7 @@
 Unieconomy to Trello Dataflow
 =============================
 
-Generated: 2024-09-05 12:09:41
+Generated: 2024-09-05 12:11:24
 
 Introduction
 ------------
@@ -50,20 +50,20 @@ The following properties are synchronized between a Unieconomy Departments and a
      - "string"
 
 
-Unieconomy Companies to  Organizations
---------------------------------------
-Every Unieconomy Companies will be synchronized with a  Organizations.
+Unieconomy Companies to Trello Organizations
+--------------------------------------------
+Every Unieconomy Companies will be synchronized with a Trello Organizations.
 
-Once a link between a Unieconomy Companies and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Companies and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Companies and a  Organizations:
+The following properties are synchronized between a Unieconomy Companies and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Companies Property
-     -  Organizations Property
-     -  Data Type
+     - Trello Organizations Property
+     - Trello Data Type
    * - Name
      - name
      - "string"
