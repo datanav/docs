@@ -2,7 +2,7 @@
 Businesscentral to Salesforce Dataflow
 ======================================
 
-Generated: 2024-09-05 13:30:39
+Generated: 2024-09-05 13:35:18
 
 Introduction
 ------------
@@ -79,6 +79,22 @@ The following properties are synchronized between a Businesscentral Currencies a
    * - code
      - IsoCode
      - "string"
+
+
+Businesscentral Currencies to Salesforce Customer
+-------------------------------------------------
+Every Businesscentral Currencies will be synchronized with a Salesforce Customer.
+
+Once a link between a Businesscentral Currencies and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Currencies and a Salesforce Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Currencies Property
+     - Salesforce Customer Property
+     - Salesforce Data Type
 
 
 Businesscentral Customers company to Salesforce Organization
