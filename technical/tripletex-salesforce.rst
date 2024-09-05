@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-05 13:46:24
+Generated: 2024-09-05 13:50:24
 
 Introduction
 ------------
@@ -129,22 +129,6 @@ The following properties are synchronized between a Tripletex Currency and a Sal
 
    * - Tripletex Currency Property
      - Salesforce Currencytype Property
-     - Salesforce Data Type
-
-
-Tripletex Currency to Salesforce Customer
------------------------------------------
-Every Tripletex Currency will be synchronized with a Salesforce Customer.
-
-Once a link between a Tripletex Currency and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Currency and a Salesforce Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     - Salesforce Customer Property
      - Salesforce Data Type
 
 
