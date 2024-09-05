@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-09-05 00:00:18
+Generated: 2024-09-05 10:48:08
 
 Introduction
 ------------
@@ -48,6 +48,9 @@ The following properties are synchronized between a HubSpot Contact and a  Membe
    * - HubSpot Contact Property
      -  Members Property
      -  Data Type
+   * - properties.email
+     - email
+     - "string"
 
 
 HubSpot Contactcompanyassociation to  Members
