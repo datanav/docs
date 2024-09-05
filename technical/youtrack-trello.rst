@@ -2,7 +2,7 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2024-09-05 00:00:02
+Generated: 2024-09-05 12:06:24
 
 Introduction
 ------------
@@ -25,6 +25,22 @@ The following properties are synchronized between a YouTrack Groups and a  Organ
      -  Data Type
 
 
+YouTrack Hubprojects to  Actions
+--------------------------------
+Every YouTrack Hubprojects will be synchronized with a  Actions.
+
+Once a link between a YouTrack Hubprojects and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Hubprojects and a  Actions:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Hubprojects Property
+     -  Actions Property
+     -  Data Type
+
+
 YouTrack Hubprojects to  Boards
 -------------------------------
 Every YouTrack Hubprojects will be synchronized with a  Boards.
@@ -38,6 +54,22 @@ The following properties are synchronized between a YouTrack Hubprojects and a  
 
    * - YouTrack Hubprojects Property
      -  Boards Property
+     -  Data Type
+
+
+YouTrack Issues to  Actions
+---------------------------
+Every YouTrack Issues will be synchronized with a  Actions.
+
+Once a link between a YouTrack Issues and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Issues and a  Actions:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Issues Property
+     -  Actions Property
      -  Data Type
 
 
@@ -74,6 +106,22 @@ The following properties are synchronized between a YouTrack Organizations and a
    * - description
      - desc
      - "string"
+
+
+YouTrack Projectroles to  Actions
+---------------------------------
+Every YouTrack Projectroles will be synchronized with a  Actions.
+
+Once a link between a YouTrack Projectroles and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Projectroles and a  Actions:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Projectroles Property
+     -  Actions Property
+     -  Data Type
 
 
 YouTrack Projectroles to  Boards
@@ -125,6 +173,22 @@ The following properties are synchronized between a YouTrack Users and a  Member
    * - name
      - fullName
      - "string"
+
+
+YouTrack Workitems to  Actions
+------------------------------
+Every YouTrack Workitems will be synchronized with a  Actions.
+
+Once a link between a YouTrack Workitems and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Workitems and a  Actions:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Workitems Property
+     -  Actions Property
+     -  Data Type
 
 
 YouTrack Workitems to  Boards
