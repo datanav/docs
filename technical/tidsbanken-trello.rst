@@ -2,7 +2,7 @@
 Tidsbanken to Trello Dataflow
 =============================
 
-Generated: 2024-09-05 12:09:41
+Generated: 2024-09-05 12:11:24
 
 Introduction
 ------------
@@ -91,20 +91,20 @@ The following properties are synchronized between a Tidsbanken Prosjekt and a  B
      - "string"
 
 
-Tidsbanken Ansatt to  Members
------------------------------
-Every Tidsbanken Ansatt will be synchronized with a  Members.
+Tidsbanken Ansatt to Trello Members
+-----------------------------------
+Every Tidsbanken Ansatt will be synchronized with a Trello Members.
 
-Once a link between a Tidsbanken Ansatt and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Ansatt and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Ansatt and a  Members:
+The following properties are synchronized between a Tidsbanken Ansatt and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Ansatt Property
-     -  Members Property
-     -  Data Type
+     - Trello Members Property
+     - Trello Data Type
    * - Navn
      - fullName
      - "string"
