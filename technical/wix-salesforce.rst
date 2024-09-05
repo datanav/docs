@@ -2,7 +2,7 @@
 Wix.com to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-05 00:00:01
+Generated: 2024-09-05 13:30:17
 
 Introduction
 ------------
@@ -38,6 +38,22 @@ The following properties are synchronized between a Wix.com Contacts and a Sales
    * - primaryInfo.phone
      - Phone
      - "string"
+
+
+Wix.com Currencies to Salesforce Currencytype
+---------------------------------------------
+Every Wix.com Currencies will be synchronized with a Salesforce Currencytype.
+
+Once a link between a Wix.com Currencies and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Currencies and a Salesforce Currencytype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Currencies Property
+     - Salesforce Currencytype Property
+     - Salesforce Data Type
 
 
 Wix.com Products to Salesforce Product2
