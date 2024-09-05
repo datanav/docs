@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-09-05 00:00:02
+Generated: 2024-09-05 08:35:24
 
 Introduction
 ------------
@@ -70,6 +70,22 @@ The following properties are synchronized between a Asana Teams and a  Organizat
    * - permalink_url
      - website
      - "string"
+
+
+Asana Tasks to  Cards
+---------------------
+Every Asana Tasks will be synchronized with a  Cards.
+
+Once a link between a Asana Tasks and a  Cards is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Asana Tasks and a  Cards:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Asana Tasks Property
+     -  Cards Property
+     -  Data Type
 
 
 Asana Users to  Members
