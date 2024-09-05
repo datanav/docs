@@ -2,7 +2,7 @@
 Salesforce to Trello Dataflow
 =============================
 
-Generated: 2024-09-05 12:09:41
+Generated: 2024-09-05 12:11:24
 
 Introduction
 ------------
@@ -28,20 +28,20 @@ The following properties are synchronized between a Salesforce Contact and a  Me
      - "string"
 
 
-Salesforce Organization to  Organizations
------------------------------------------
-Every Salesforce Organization will be synchronized with a  Organizations.
+Salesforce Organization to Trello Organizations
+-----------------------------------------------
+Every Salesforce Organization will be synchronized with a Trello Organizations.
 
-Once a link between a Salesforce Organization and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Organization and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Organization and a  Organizations:
+The following properties are synchronized between a Salesforce Organization and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Organization Property
-     -  Organizations Property
-     -  Data Type
+     - Trello Organizations Property
+     - Trello Data Type
    * - Name	
      - name
      - "string"
