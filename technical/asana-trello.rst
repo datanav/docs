@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-09-05 10:48:08
+Generated: 2024-09-05 11:02:22
 
 Introduction
 ------------
@@ -122,6 +122,22 @@ The following properties are synchronized between a Asana Tasks and a  Cards:
    * - start_at
      - start
      - "string"
+
+
+Asana Users to  Actions
+-----------------------
+Every Asana Users will be synchronized with a  Actions.
+
+Once a link between a Asana Users and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Asana Users and a  Actions:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Asana Users Property
+     -  Actions Property
+     -  Data Type
 
 
 Asana Users to  Members
