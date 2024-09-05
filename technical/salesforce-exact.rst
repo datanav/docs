@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-05 00:00:18
+Generated: 2024-09-05 13:29:23
 
 Introduction
 ------------
@@ -87,6 +87,22 @@ The following properties are synchronized between a Salesforce Contact and a Exa
    * - Phone
      - Phone
      - "string"
+
+
+Salesforce Currencytype to Exact Currencies
+-------------------------------------------
+Every Salesforce Currencytype will be synchronized with a Exact Currencies.
+
+Once a link between a Salesforce Currencytype and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Currencytype and a Exact Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Currencytype Property
+     - Exact Currencies Property
+     - Exact Data Type
 
 
 Salesforce Organization to Exact Addresses
