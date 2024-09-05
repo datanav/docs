@@ -2,7 +2,7 @@
 Powerofficego to Salesforce Dataflow
 ====================================
 
-Generated: 2024-09-05 13:30:17
+Generated: 2024-09-05 13:35:18
 
 Introduction
 ------------
@@ -106,6 +106,22 @@ The following properties are synchronized between a Powerofficego Currency and a
 
    * - Powerofficego Currency Property
      - Salesforce Currencytype Property
+     - Salesforce Data Type
+
+
+Powerofficego Currency to Salesforce Customer
+---------------------------------------------
+Every Powerofficego Currency will be synchronized with a Salesforce Customer.
+
+Once a link between a Powerofficego Currency and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Currency and a Salesforce Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Currency Property
+     - Salesforce Customer Property
      - Salesforce Data Type
 
 
