@@ -2,7 +2,7 @@
 YouTrack to  Dataflow
 =====================
 
-Generated: 2024-09-05 12:06:24
+Generated: 2024-09-05 12:06:40
 
 Introduction
 ------------
@@ -71,6 +71,12 @@ The following properties are synchronized between a YouTrack Issues and a  Actio
    * - YouTrack Issues Property
      -  Actions Property
      -  Data Type
+   * - project.id
+     - data.card.id
+     - "string"
+   * - reporter.id
+     - memberCreator.id
+     - "string"
 
 
 YouTrack Issues to  Boards
@@ -189,6 +195,9 @@ The following properties are synchronized between a YouTrack Workitems and a  Ac
    * - YouTrack Workitems Property
      -  Actions Property
      -  Data Type
+   * - issue.id
+     - data.card.id
+     - "string"
 
 
 YouTrack Workitems to  Boards
