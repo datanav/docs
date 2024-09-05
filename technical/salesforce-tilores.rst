@@ -2,7 +2,7 @@
 Salesforce to Tilores Dataflow
 ==============================
 
-Generated: 2024-09-05 00:00:18
+Generated: 2024-09-05 14:27:24
 
 Introduction
 ------------
@@ -50,4 +50,20 @@ The following properties are synchronized between a Salesforce Contact and a Til
    * - Phone
      - phoneNumber
      - "string"
+
+
+Salesforce Customer to Tilores Human
+------------------------------------
+Every Salesforce Customer will be synchronized with a Tilores Human.
+
+Once a link between a Salesforce Customer and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Customer and a Tilores Human:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Customer Property
+     - Tilores Human Property
+     - Tilores Data Type
 
