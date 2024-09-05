@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-05 13:46:24
+Generated: 2024-09-05 13:50:24
 
 Introduction
 ------------
@@ -117,25 +117,6 @@ The following properties are synchronized between a Salesforce Currencytype and 
    :header-rows: 1
 
    * - Salesforce Currencytype Property
-     - Exact Currencies Property
-     - Exact Data Type
-   * - IsoCode
-     - Code
-     - "string"
-
-
-Salesforce Customer to Exact Currencies
----------------------------------------
-Every Salesforce Customer will be synchronized with a Exact Currencies.
-
-Once a link between a Salesforce Customer and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Customer and a Exact Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Customer Property
      - Exact Currencies Property
      - Exact Data Type
    * - IsoCode
