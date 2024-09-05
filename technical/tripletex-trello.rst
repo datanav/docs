@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-05 00:00:02
+Generated: 2024-09-05 10:48:08
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Tripletex Contact and a  Mem
    * - Tripletex Contact Property
      -  Members Property
      -  Data Type
+   * - email
+     - email
+     - "string"
 
 
 Tripletex Customer person to  Members
@@ -39,6 +42,9 @@ The following properties are synchronized between a Tripletex Customer person an
    * - Tripletex Customer person Property
      -  Members Property
      -  Data Type
+   * - email
+     - email
+     - "string"
    * - name
      - fullName
      - "string"
