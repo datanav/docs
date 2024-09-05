@@ -2,7 +2,7 @@
 Tilores to  Dataflow
 ====================
 
-Generated: 2024-09-05 00:00:02
+Generated: 2024-09-05 10:48:08
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Tilores Human and a  Members
    * - Tilores Human Property
      -  Members Property
      -  Data Type
+   * - email
+     - email
+     - "string"
 
