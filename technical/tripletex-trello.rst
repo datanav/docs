@@ -2,7 +2,7 @@
 Tripletex to Trello Dataflow
 ============================
 
-Generated: 2024-09-05 12:09:41
+Generated: 2024-09-05 12:11:24
 
 Introduction
 ------------
@@ -132,34 +132,34 @@ The following properties are synchronized between a Tripletex Project and a  Boa
      - "string"
 
 
-Tripletex Activity to  Actions
-------------------------------
-Every Tripletex Activity will be synchronized with a  Actions.
+Tripletex Activity to Trello Actions
+------------------------------------
+Every Tripletex Activity will be synchronized with a Trello Actions.
 
-Once a link between a Tripletex Activity and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Activity and a Trello Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Activity and a  Actions:
+The following properties are synchronized between a Tripletex Activity and a Trello Actions:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Activity Property
-     -  Actions Property
-     -  Data Type
+     - Trello Actions Property
+     - Trello Data Type
 
 
-Tripletex Employee to  Members
-------------------------------
-Every Tripletex Employee will be synchronized with a  Members.
+Tripletex Employee to Trello Members
+------------------------------------
+Every Tripletex Employee will be synchronized with a Trello Members.
 
-Once a link between a Tripletex Employee and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a  Members:
+The following properties are synchronized between a Tripletex Employee and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     -  Members Property
-     -  Data Type
+     - Trello Members Property
+     - Trello Data Type
 
