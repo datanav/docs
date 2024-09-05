@@ -2,7 +2,7 @@
 Exact to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-05 00:00:01
+Generated: 2024-09-05 13:30:17
 
 Introduction
 ------------
@@ -95,6 +95,22 @@ The following properties are synchronized between a Exact Contacts and a Salesfo
    * - LastName
      - Name
      - "string"
+
+
+Exact Currencies to Salesforce Currencytype
+-------------------------------------------
+Every Exact Currencies will be synchronized with a Salesforce Currencytype.
+
+Once a link between a Exact Currencies and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Currencies and a Salesforce Currencytype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Currencies Property
+     - Salesforce Currencytype Property
+     - Salesforce Data Type
 
 
 Exact Items to Salesforce Product2
