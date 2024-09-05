@@ -2,7 +2,7 @@
 Crmoffice to  Dataflow
 ======================
 
-Generated: 2024-09-05 00:00:02
+Generated: 2024-09-05 11:05:25
 
 Introduction
 ------------
@@ -41,5 +41,21 @@ The following properties are synchronized between a Crmoffice Contacts and a  Me
 
    * - Crmoffice Contacts Property
      -  Members Property
+     -  Data Type
+
+
+Crmoffice Activities to  Actions
+--------------------------------
+Every Crmoffice Activities will be synchronized with a  Actions.
+
+Once a link between a Crmoffice Activities and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Crmoffice Activities and a  Actions:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Crmoffice Activities Property
+     -  Actions Property
      -  Data Type
 
