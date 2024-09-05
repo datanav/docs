@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-05 11:41:25
+Generated: 2024-09-05 11:43:47
 
 Introduction
 ------------
@@ -140,6 +140,9 @@ The following properties are synchronized between a Tripletex Activity and a  Li
    * - Tripletex Activity Property
      -  Lists Property
      -  Data Type
+   * - name
+     - name
+     - "string"
 
 
 Tripletex Employee to  Members
