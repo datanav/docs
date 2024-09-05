@@ -2,7 +2,7 @@
 Crmoffice to  Dataflow
 ======================
 
-Generated: 2024-09-05 11:05:25
+Generated: 2024-09-05 11:05:41
 
 Introduction
 ------------
@@ -58,4 +58,7 @@ The following properties are synchronized between a Crmoffice Activities and a  
    * - Crmoffice Activities Property
      -  Actions Property
      -  Data Type
+   * - ownerId
+     - memberCreator.id
+     - "string"
 
