@@ -2,7 +2,7 @@
 Trello to ZohoCRM Dataflow
 ==========================
 
-Generated: 2024-09-05 12:21:23
+Generated: 2024-09-05 12:21:42
 
 Introduction
 ------------
@@ -23,4 +23,13 @@ The following properties are synchronized between a Trello Organizations and a Z
    * - Trello Organizations Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - desc
+     - Created_Time
+     - "string"
+   * - name
+     - Account_Name
+     - "string"
+   * - website
+     - Website
+     - "string"
 
