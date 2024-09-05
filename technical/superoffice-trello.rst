@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-09-05 00:00:02
+Generated: 2024-09-05 10:48:08
 
 Introduction
 ------------
@@ -45,4 +45,7 @@ The following properties are synchronized between a SuperOffice Person and a  Me
    * - SuperOffice Person Property
      -  Members Property
      -  Data Type
+   * - Emails.Value
+     - email
+     - "string"
 
