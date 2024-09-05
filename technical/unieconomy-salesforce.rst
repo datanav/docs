@@ -2,7 +2,7 @@
 Unieconomy to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-05 13:20:23
+Generated: 2024-09-05 13:30:17
 
 Introduction
 ------------
@@ -61,4 +61,20 @@ The following properties are synchronized between a Unieconomy Companies and a S
    * - Name
      - Name	
      - "string"
+
+
+Unieconomy Currencycodes to Salesforce Currencytype
+---------------------------------------------------
+Every Unieconomy Currencycodes will be synchronized with a Salesforce Currencytype.
+
+Once a link between a Unieconomy Currencycodes and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Currencycodes and a Salesforce Currencytype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Currencycodes Property
+     - Salesforce Currencytype Property
+     - Salesforce Data Type
 
