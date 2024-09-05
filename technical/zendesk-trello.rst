@@ -2,7 +2,7 @@
 Zendesk to  Dataflow
 ====================
 
-Generated: 2024-09-05 12:06:24
+Generated: 2024-09-05 12:06:40
 
 Introduction
 ------------
@@ -74,6 +74,9 @@ The following properties are synchronized between a Zendesk Tickets and a  Actio
    * - Zendesk Tickets Property
      -  Actions Property
      -  Data Type
+   * - requester_id
+     - memberCreator.id
+     - "string"
 
 
 Zendesk Tickets to  Boards
