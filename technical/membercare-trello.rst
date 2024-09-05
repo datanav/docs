@@ -2,7 +2,7 @@
 Membercare to Trello Dataflow
 =============================
 
-Generated: 2024-09-05 12:09:41
+Generated: 2024-09-05 12:11:24
 
 Introduction
 ------------
@@ -47,20 +47,20 @@ The following properties are synchronized between a Membercare Persons and a  Me
      - "string"
 
 
-Membercare Companies to  Organizations
---------------------------------------
-Every Membercare Companies will be synchronized with a  Organizations.
+Membercare Companies to Trello Organizations
+--------------------------------------------
+Every Membercare Companies will be synchronized with a Trello Organizations.
 
-Once a link between a Membercare Companies and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Membercare Companies and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Companies and a  Organizations:
+The following properties are synchronized between a Membercare Companies and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - Membercare Companies Property
-     -  Organizations Property
-     -  Data Type
+     - Trello Organizations Property
+     - Trello Data Type
    * - companyName
      - name
      - "string"
