@@ -2,7 +2,7 @@
 Salesforce to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-05 13:39:25
+Generated: 2024-09-05 13:59:24
 
 Introduction
 ------------
@@ -50,6 +50,22 @@ The following properties are synchronized between a Salesforce Currencytype and 
 
    * - Salesforce Currencytype Property
      - Chargebee Business_entity Property
+     - Chargebee Data Type
+
+
+Salesforce Currencytype to Chargebee Currency
+---------------------------------------------
+Every Salesforce Currencytype will be synchronized with a Chargebee Currency.
+
+Once a link between a Salesforce Currencytype and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Currencytype and a Chargebee Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Currencytype Property
+     - Chargebee Currency Property
      - Chargebee Data Type
 
 
