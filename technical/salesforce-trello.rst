@@ -2,7 +2,7 @@
 Salesforce to Trello Dataflow
 =============================
 
-Generated: 2024-09-05 13:46:24
+Generated: 2024-09-05 14:27:24
 
 Introduction
 ------------
@@ -41,6 +41,22 @@ The following properties are synchronized between a Salesforce Currencytype and 
 
    * - Salesforce Currencytype Property
      - Trello Organizations Property
+     - Trello Data Type
+
+
+Salesforce Customer to Trello Members
+-------------------------------------
+Every Salesforce Customer will be synchronized with a Trello Members.
+
+Once a link between a Salesforce Customer and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Customer and a Trello Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Customer Property
+     - Trello Members Property
      - Trello Data Type
 
 
