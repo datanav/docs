@@ -2,7 +2,7 @@
 YouTrack to Salesforce Dataflow
 ===============================
 
-Generated: 2024-09-05 13:46:24
+Generated: 2024-09-05 14:27:24
 
 Introduction
 ------------
@@ -41,6 +41,22 @@ The following properties are synchronized between a YouTrack Groups and a Salesf
      - Salesforce Data Type
 
 
+YouTrack Organizationroles to Salesforce Currencytype
+-----------------------------------------------------
+Every YouTrack Organizationroles will be synchronized with a Salesforce Currencytype.
+
+Once a link between a YouTrack Organizationroles and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Organizationroles and a Salesforce Currencytype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Organizationroles Property
+     - Salesforce Currencytype Property
+     - Salesforce Data Type
+
+
 YouTrack Organizations to Salesforce Currencytype
 -------------------------------------------------
 Every YouTrack Organizations will be synchronized with a Salesforce Currencytype.
@@ -70,6 +86,22 @@ The following properties are synchronized between a YouTrack Organizations and a
 
    * - YouTrack Organizations Property
      - Salesforce Organization Property
+     - Salesforce Data Type
+
+
+YouTrack Roles to Salesforce Currencytype
+-----------------------------------------
+Every YouTrack Roles will be synchronized with a Salesforce Currencytype.
+
+Once a link between a YouTrack Roles and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Roles and a Salesforce Currencytype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Roles Property
+     - Salesforce Currencytype Property
      - Salesforce Data Type
 
 
