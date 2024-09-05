@@ -2,7 +2,7 @@
 Businesscentral to Salesforce Dataflow
 ======================================
 
-Generated: 2024-09-05 13:20:23
+Generated: 2024-09-05 13:30:17
 
 Introduction
 ------------
@@ -60,6 +60,22 @@ The following properties are synchronized between a Businesscentral Contacts per
    * - postalCode
      - MailingPostalCode
      - "string"
+
+
+Businesscentral Currencies to Salesforce Currencytype
+-----------------------------------------------------
+Every Businesscentral Currencies will be synchronized with a Salesforce Currencytype.
+
+Once a link between a Businesscentral Currencies and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Currencies and a Salesforce Currencytype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Currencies Property
+     - Salesforce Currencytype Property
+     - Salesforce Data Type
 
 
 Businesscentral Customers company to Salesforce Organization
