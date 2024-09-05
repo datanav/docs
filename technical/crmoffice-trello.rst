@@ -2,7 +2,7 @@
 Crmoffice to  Dataflow
 ======================
 
-Generated: 2024-09-05 11:41:25
+Generated: 2024-09-05 11:43:47
 
 Introduction
 ------------
@@ -80,4 +80,7 @@ The following properties are synchronized between a Crmoffice Activities and a  
    * - Crmoffice Activities Property
      -  Lists Property
      -  Data Type
+   * - subject
+     - name
+     - "string"
 
