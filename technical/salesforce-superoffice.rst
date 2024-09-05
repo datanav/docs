@@ -2,7 +2,7 @@
 Salesforce to Superoffice Dataflow
 ==================================
 
-Generated: 2024-09-05 13:46:24
+Generated: 2024-09-05 14:27:24
 
 Introduction
 ------------
@@ -62,6 +62,22 @@ The following properties are synchronized between a Salesforce Currencytype and 
 
    * - Salesforce Currencytype Property
      - Superoffice Contact Property
+     - Superoffice Data Type
+
+
+Salesforce Customer to Superoffice Person
+-----------------------------------------
+Every Salesforce Customer will be synchronized with a Superoffice Person.
+
+Once a link between a Salesforce Customer and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Customer and a Superoffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Customer Property
+     - Superoffice Person Property
      - Superoffice Data Type
 
 
