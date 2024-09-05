@@ -2,7 +2,7 @@
 Trello to Crmoffice Dataflow
 ============================
 
-Generated: 2024-09-05 12:21:23
+Generated: 2024-09-05 12:21:42
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Trello Boards and a Crmoffic
    * - Trello Boards Property
      - Crmoffice Activities Property
      - Crmoffice Data Type
+   * - name
+     - subject
+     - "string"
 
 
 Trello Cards to Crmoffice Activities
@@ -39,6 +42,9 @@ The following properties are synchronized between a Trello Cards and a Crmoffice
    * - Trello Cards Property
      - Crmoffice Activities Property
      - Crmoffice Data Type
+   * - name
+     - subject
+     - "string"
 
 
 Trello Lists to Crmoffice Activities
@@ -55,6 +61,9 @@ The following properties are synchronized between a Trello Lists and a Crmoffice
    * - Trello Lists Property
      - Crmoffice Activities Property
      - Crmoffice Data Type
+   * - name
+     - subject
+     - "string"
 
 
 Trello Members to Crmoffice Contacts
