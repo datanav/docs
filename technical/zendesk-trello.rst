@@ -2,46 +2,46 @@
 Zendesk to Trello Dataflow
 ==========================
 
-Generated: 2024-09-05 12:09:41
+Generated: 2024-09-05 12:21:23
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Zendesk to Trello. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Zendesk Organizations to  Organizations
----------------------------------------
-Every Zendesk Organizations will be synchronized with a  Organizations.
+Zendesk Organizations to Trello Organizations
+---------------------------------------------
+Every Zendesk Organizations will be synchronized with a Trello Organizations.
 
-Once a link between a Zendesk Organizations and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Organizations and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Organizations and a  Organizations:
+The following properties are synchronized between a Zendesk Organizations and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Organizations Property
-     -  Organizations Property
-     -  Data Type
+     - Trello Organizations Property
+     - Trello Data Type
    * - name
      - name
      - "string"
 
 
-Zendesk Ticketcomments to  Actions
-----------------------------------
-Every Zendesk Ticketcomments will be synchronized with a  Actions.
+Zendesk Ticketcomments to Trello Actions
+----------------------------------------
+Every Zendesk Ticketcomments will be synchronized with a Trello Actions.
 
-Once a link between a Zendesk Ticketcomments and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Ticketcomments and a Trello Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Ticketcomments and a  Actions:
+The following properties are synchronized between a Zendesk Ticketcomments and a Trello Actions:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Ticketcomments Property
-     -  Actions Property
-     -  Data Type
+     - Trello Actions Property
+     - Trello Data Type
 
 
 Zendesk Ticketcomments to  Boards
@@ -60,20 +60,20 @@ The following properties are synchronized between a Zendesk Ticketcomments and a
      -  Data Type
 
 
-Zendesk Tickets to  Actions
----------------------------
-Every Zendesk Tickets will be synchronized with a  Actions.
+Zendesk Tickets to Trello Actions
+---------------------------------
+Every Zendesk Tickets will be synchronized with a Trello Actions.
 
-Once a link between a Zendesk Tickets and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Tickets and a Trello Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Tickets and a  Actions:
+The following properties are synchronized between a Zendesk Tickets and a Trello Actions:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Tickets Property
-     -  Actions Property
-     -  Data Type
+     - Trello Actions Property
+     - Trello Data Type
    * - requester_id
      - memberCreator.id
      - "string"
@@ -98,20 +98,20 @@ The following properties are synchronized between a Zendesk Tickets and a  Board
      - "string"
 
 
-Zendesk Users to  Members
--------------------------
-Every Zendesk Users will be synchronized with a  Members.
+Zendesk Users to Trello Members
+-------------------------------
+Every Zendesk Users will be synchronized with a Trello Members.
 
-Once a link between a Zendesk Users and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Users and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Users and a  Members:
+The following properties are synchronized between a Zendesk Users and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Users Property
-     -  Members Property
-     -  Data Type
+     - Trello Members Property
+     - Trello Data Type
    * - email
      - email
      - "string"
