@@ -2,7 +2,7 @@
 SuperOffice to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-05 13:30:17
+Generated: 2024-09-05 13:30:39
 
 Introduction
 ------------
@@ -45,6 +45,9 @@ The following properties are synchronized between a SuperOffice Listcurrencyitem
    * - SuperOffice Listcurrencyitems Property
      - Salesforce Currencytype Property
      - Salesforce Data Type
+   * - Name
+     - IsoCode
+     - "string"
 
 
 SuperOffice Product to Salesforce Product2
