@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-05 13:11:24
+Generated: 2024-09-05 13:20:23
 
 Introduction
 ------------
@@ -26,38 +26,6 @@ The following properties are synchronized between a Salesforce Contact and a Bus
    * - MailingCountry
      - name
      - "string"
-
-
-Salesforce Currencytype to Businessnxt Address
-----------------------------------------------
-Every Salesforce Currencytype will be synchronized with a Businessnxt Address.
-
-Once a link between a Salesforce Currencytype and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Currencytype and a Businessnxt Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Currencytype Property
-     - Businessnxt Address Property
-     - Businessnxt Data Type
-
-
-Salesforce Currencytype to Businessnxt Company
-----------------------------------------------
-Every Salesforce Currencytype will be synchronized with a Businessnxt Company.
-
-Once a link between a Salesforce Currencytype and a Businessnxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Currencytype and a Businessnxt Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Currencytype Property
-     - Businessnxt Company Property
-     - Businessnxt Data Type
 
 
 Salesforce Organization to Businessnxt Address
