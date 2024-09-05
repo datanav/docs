@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-05 11:05:25
+Generated: 2024-09-05 11:10:25
 
 Introduction
 ------------
@@ -122,22 +122,6 @@ The following properties are synchronized between a Tripletex Activity and a  Ac
    :header-rows: 1
 
    * - Tripletex Activity Property
-     -  Actions Property
-     -  Data Type
-
-
-Tripletex Employee to  Actions
-------------------------------
-Every Tripletex Employee will be synchronized with a  Actions.
-
-Once a link between a Tripletex Employee and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Employee and a  Actions:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
      -  Actions Property
      -  Data Type
 
