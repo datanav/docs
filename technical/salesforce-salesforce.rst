@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-05 13:11:24
+Generated: 2024-09-05 13:12:18
 
 Introduction
 ------------
@@ -22,5 +22,21 @@ The following properties are synchronized between a Salesforce Currencytype and 
 
    * - Salesforce Currencytype Property
      - Salesforce Organization Property
+     - Salesforce Data Type
+
+
+Salesforce Organization to Salesforce Currencytype
+--------------------------------------------------
+Every Salesforce Organization will be synchronized with a Salesforce Currencytype.
+
+Once a link between a Salesforce Organization and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Organization and a Salesforce Currencytype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Organization Property
+     - Salesforce Currencytype Property
      - Salesforce Data Type
 
