@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-09-05 11:38:40
+Generated: 2024-09-05 11:52:24
 
 Introduction
 ------------
@@ -45,6 +45,22 @@ The following properties are synchronized between a Asana Projects and a  Boards
    * - name
      - name
      - "string"
+
+
+Asana Tasks to  Actions
+-----------------------
+Every Asana Tasks will be synchronized with a  Actions.
+
+Once a link between a Asana Tasks and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Asana Tasks and a  Actions:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Asana Tasks Property
+     -  Actions Property
+     -  Data Type
 
 
 Asana Tasks to  Boards
