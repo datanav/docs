@@ -2,7 +2,7 @@
 Trello to Keap Dataflow
 =======================
 
-Generated: 2024-09-05 12:21:23
+Generated: 2024-09-05 12:21:42
 
 Introduction
 ------------
@@ -39,4 +39,7 @@ The following properties are synchronized between a Trello Organizations and a K
    * - Trello Organizations Property
      - Keap Companies Property
      - Keap Data Type
+   * - name
+     - company_name
+     - "string"
 
