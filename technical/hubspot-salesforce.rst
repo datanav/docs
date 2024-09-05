@@ -2,7 +2,7 @@
 HubSpot to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-05 13:35:18
+Generated: 2024-09-05 13:35:37
 
 Introduction
 ------------
@@ -64,6 +64,9 @@ The following properties are synchronized between a HubSpot Account and a Salesf
    * - HubSpot Account Property
      - Salesforce Customer Property
      - Salesforce Data Type
+   * - accountType
+     - IsoCode
+     - "string"
 
 
 HubSpot Deal to Salesforce Currencytype
@@ -99,6 +102,9 @@ The following properties are synchronized between a HubSpot Deal and a Salesforc
    * - HubSpot Deal Property
      - Salesforce Customer Property
      - Salesforce Data Type
+   * - properties.deal_currency_code
+     - IsoCode
+     - "string"
 
 
 HubSpot Product to Salesforce Product2
