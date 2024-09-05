@@ -2,7 +2,7 @@
 Freshteam to  Dataflow
 ======================
 
-Generated: 2024-09-05 00:00:02
+Generated: 2024-09-05 10:48:08
 
 Introduction
 ------------
@@ -42,4 +42,7 @@ The following properties are synchronized between a Freshteam Employee and a  Me
    * - Freshteam Employee Property
      -  Members Property
      -  Data Type
+   * - personal_email
+     - email
+     - "string"
 
