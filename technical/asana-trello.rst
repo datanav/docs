@@ -2,27 +2,27 @@
 Asana to Trello Dataflow
 ========================
 
-Generated: 2024-09-05 12:11:24
+Generated: 2024-09-05 12:21:23
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Asana to Trello. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Asana Projects to  Actions
---------------------------
-Every Asana Projects will be synchronized with a  Actions.
+Asana Projects to Trello Actions
+--------------------------------
+Every Asana Projects will be synchronized with a Trello Actions.
 
-Once a link between a Asana Projects and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Projects and a Trello Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Projects and a  Actions:
+The following properties are synchronized between a Asana Projects and a Trello Actions:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Projects Property
-     -  Actions Property
-     -  Data Type
+     - Trello Actions Property
+     - Trello Data Type
    * - owner.gid
      - memberCreator.id
      - "string"
@@ -47,20 +47,20 @@ The following properties are synchronized between a Asana Projects and a  Boards
      - "string"
 
 
-Asana Tasks to  Actions
------------------------
-Every Asana Tasks will be synchronized with a  Actions.
+Asana Tasks to Trello Actions
+-----------------------------
+Every Asana Tasks will be synchronized with a Trello Actions.
 
-Once a link between a Asana Tasks and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Tasks and a Trello Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Tasks and a  Actions:
+The following properties are synchronized between a Asana Tasks and a Trello Actions:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Tasks Property
-     -  Actions Property
-     -  Data Type
+     - Trello Actions Property
+     - Trello Data Type
 
 
 Asana Tasks to  Boards
@@ -82,20 +82,20 @@ The following properties are synchronized between a Asana Tasks and a  Boards:
      - "string"
 
 
-Asana Teams to  Organizations
------------------------------
-Every Asana Teams will be synchronized with a  Organizations.
+Asana Teams to Trello Organizations
+-----------------------------------
+Every Asana Teams will be synchronized with a Trello Organizations.
 
-Once a link between a Asana Teams and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Teams and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Teams and a  Organizations:
+The following properties are synchronized between a Asana Teams and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Teams Property
-     -  Organizations Property
-     -  Data Type
+     - Trello Organizations Property
+     - Trello Data Type
    * - description
      - desc
      - "string"
