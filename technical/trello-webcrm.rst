@@ -2,7 +2,7 @@
 Trello to Webcrm Dataflow
 =========================
 
-Generated: 2024-09-05 12:21:23
+Generated: 2024-09-05 12:21:42
 
 Introduction
 ------------
@@ -23,4 +23,10 @@ The following properties are synchronized between a Trello Organizations and a W
    * - Trello Organizations Property
      - Webcrm Organisations Property
      - Webcrm Data Type
+   * - desc
+     - OrganisationCompanyDescription
+     - "string"
+   * - name
+     - OrganisationName
+     - "string"
 
