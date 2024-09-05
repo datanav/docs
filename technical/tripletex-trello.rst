@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-05 11:50:24
+Generated: 2024-09-05 12:06:24
 
 Introduction
 ------------
@@ -89,6 +89,22 @@ The following properties are synchronized between a Tripletex Department and a  
    * - name
      - name
      - "string"
+
+
+Tripletex Project to  Actions
+-----------------------------
+Every Tripletex Project will be synchronized with a  Actions.
+
+Once a link between a Tripletex Project and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Project and a  Actions:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Project Property
+     -  Actions Property
+     -  Data Type
 
 
 Tripletex Project to  Boards
