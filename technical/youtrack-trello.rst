@@ -2,7 +2,7 @@
 YouTrack to Trello Dataflow
 ===========================
 
-Generated: 2024-09-05 12:09:41
+Generated: 2024-09-05 12:21:23
 
 Introduction
 ------------
@@ -45,36 +45,36 @@ The following properties are synchronized between a YouTrack Project and a  Card
      -  Data Type
 
 
-YouTrack Groups to  Organizations
----------------------------------
-Every YouTrack Groups will be synchronized with a  Organizations.
+YouTrack Groups to Trello Organizations
+---------------------------------------
+Every YouTrack Groups will be synchronized with a Trello Organizations.
 
-Once a link between a YouTrack Groups and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Groups and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Groups and a  Organizations:
+The following properties are synchronized between a YouTrack Groups and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Groups Property
-     -  Organizations Property
-     -  Data Type
+     - Trello Organizations Property
+     - Trello Data Type
 
 
-YouTrack Hubprojects to  Actions
---------------------------------
-Every YouTrack Hubprojects will be synchronized with a  Actions.
+YouTrack Hubprojects to Trello Actions
+--------------------------------------
+Every YouTrack Hubprojects will be synchronized with a Trello Actions.
 
-Once a link between a YouTrack Hubprojects and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Hubprojects and a Trello Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Hubprojects and a  Actions:
+The following properties are synchronized between a YouTrack Hubprojects and a Trello Actions:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Hubprojects Property
-     -  Actions Property
-     -  Data Type
+     - Trello Actions Property
+     - Trello Data Type
 
 
 YouTrack Hubprojects to  Boards
@@ -93,20 +93,20 @@ The following properties are synchronized between a YouTrack Hubprojects and a  
      -  Data Type
 
 
-YouTrack Issues to  Actions
----------------------------
-Every YouTrack Issues will be synchronized with a  Actions.
+YouTrack Issues to Trello Actions
+---------------------------------
+Every YouTrack Issues will be synchronized with a Trello Actions.
 
-Once a link between a YouTrack Issues and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Issues and a Trello Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Issues and a  Actions:
+The following properties are synchronized between a YouTrack Issues and a Trello Actions:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Issues Property
-     -  Actions Property
-     -  Data Type
+     - Trello Actions Property
+     - Trello Data Type
    * - project.id
      - data.card.id
      - "string"
@@ -131,39 +131,39 @@ The following properties are synchronized between a YouTrack Issues and a  Board
      -  Data Type
 
 
-YouTrack Organizations to  Organizations
-----------------------------------------
-Every YouTrack Organizations will be synchronized with a  Organizations.
+YouTrack Organizations to Trello Organizations
+----------------------------------------------
+Every YouTrack Organizations will be synchronized with a Trello Organizations.
 
-Once a link between a YouTrack Organizations and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Organizations and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Organizations and a  Organizations:
+The following properties are synchronized between a YouTrack Organizations and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Organizations Property
-     -  Organizations Property
-     -  Data Type
+     - Trello Organizations Property
+     - Trello Data Type
    * - description
      - desc
      - "string"
 
 
-YouTrack Projectroles to  Actions
----------------------------------
-Every YouTrack Projectroles will be synchronized with a  Actions.
+YouTrack Projectroles to Trello Actions
+---------------------------------------
+Every YouTrack Projectroles will be synchronized with a Trello Actions.
 
-Once a link between a YouTrack Projectroles and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Projectroles and a Trello Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Projectroles and a  Actions:
+The following properties are synchronized between a YouTrack Projectroles and a Trello Actions:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Projectroles Property
-     -  Actions Property
-     -  Data Type
+     - Trello Actions Property
+     - Trello Data Type
 
 
 YouTrack Projectroles to  Boards
@@ -182,55 +182,55 @@ The following properties are synchronized between a YouTrack Projectroles and a 
      -  Data Type
 
 
-YouTrack Usergroups to  Organizations
--------------------------------------
-Every YouTrack Usergroups will be synchronized with a  Organizations.
+YouTrack Usergroups to Trello Organizations
+-------------------------------------------
+Every YouTrack Usergroups will be synchronized with a Trello Organizations.
 
-Once a link between a YouTrack Usergroups and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Usergroups and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Usergroups and a  Organizations:
+The following properties are synchronized between a YouTrack Usergroups and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Usergroups Property
-     -  Organizations Property
-     -  Data Type
+     - Trello Organizations Property
+     - Trello Data Type
 
 
-YouTrack Users to  Members
---------------------------
-Every YouTrack Users will be synchronized with a  Members.
+YouTrack Users to Trello Members
+--------------------------------
+Every YouTrack Users will be synchronized with a Trello Members.
 
-Once a link between a YouTrack Users and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Users and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Users and a  Members:
+The following properties are synchronized between a YouTrack Users and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     -  Members Property
-     -  Data Type
+     - Trello Members Property
+     - Trello Data Type
    * - name
      - fullName
      - "string"
 
 
-YouTrack Workitems to  Actions
-------------------------------
-Every YouTrack Workitems will be synchronized with a  Actions.
+YouTrack Workitems to Trello Actions
+------------------------------------
+Every YouTrack Workitems will be synchronized with a Trello Actions.
 
-Once a link between a YouTrack Workitems and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Workitems and a Trello Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Workitems and a  Actions:
+The following properties are synchronized between a YouTrack Workitems and a Trello Actions:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Workitems Property
-     -  Actions Property
-     -  Data Type
+     - Trello Actions Property
+     - Trello Data Type
    * - issue.id
      - data.card.id
      - "string"
