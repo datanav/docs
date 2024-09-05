@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-09-05 08:35:24
+Generated: 2024-09-05 08:35:42
 
 Introduction
 ------------
@@ -86,6 +86,33 @@ The following properties are synchronized between a Asana Tasks and a  Cards:
    * - Asana Tasks Property
      -  Cards Property
      -  Data Type
+   * - name
+     - closed
+     - "string"
+   * - name
+     - desc
+     - "string"
+   * - name
+     - descData
+     - "string"
+   * - name
+     - idMemberCreator
+     - "string"
+   * - name
+     - idOrganization
+     - "string"
+   * - name
+     - invited
+     - "string"
+   * - name
+     - limits
+     - "string"
+   * - name
+     - memberships
+     - "string"
+   * - name
+     - name
+     - "string"
 
 
 Asana Users to  Members
