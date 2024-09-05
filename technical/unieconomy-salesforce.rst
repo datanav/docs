@@ -2,7 +2,7 @@
 Unieconomy to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-05 13:12:18
+Generated: 2024-09-05 13:20:23
 
 Introduction
 ------------
@@ -42,22 +42,6 @@ The following properties are synchronized between a Unieconomy Departments and a
    * - Name
      - Name	
      - "string"
-
-
-Unieconomy Companies to Salesforce Currencytype
------------------------------------------------
-Every Unieconomy Companies will be synchronized with a Salesforce Currencytype.
-
-Once a link between a Unieconomy Companies and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Unieconomy Companies and a Salesforce Currencytype:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Unieconomy Companies Property
-     - Salesforce Currencytype Property
-     - Salesforce Data Type
 
 
 Unieconomy Companies to Salesforce Organization
