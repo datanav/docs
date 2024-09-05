@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-09-05 00:00:18
+Generated: 2024-09-05 10:48:08
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Salesforce Contact and a  Me
    * - Salesforce Contact Property
      -  Members Property
      -  Data Type
+   * - Email
+     - email
+     - "string"
 
 
 Salesforce Organization to  Organizations
