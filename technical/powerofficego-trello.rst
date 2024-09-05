@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-09-05 11:10:25
+Generated: 2024-09-05 12:06:24
 
 Introduction
 ------------
@@ -86,6 +86,22 @@ The following properties are synchronized between a Powerofficego Departments an
    * - Name
      - name
      - "string"
+
+
+Powerofficego Projects to  Actions
+----------------------------------
+Every Powerofficego Projects will be synchronized with a  Actions.
+
+Once a link between a Powerofficego Projects and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Projects and a  Actions:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Projects Property
+     -  Actions Property
+     -  Data Type
 
 
 Powerofficego Projects to  Boards
