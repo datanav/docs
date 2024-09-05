@@ -2,47 +2,47 @@
 YouTrack to Trello Dataflow
 ===========================
 
-Generated: 2024-09-05 12:21:23
+Generated: 2024-09-05 12:23:24
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from YouTrack to Trello. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-YouTrack Issues to  Cards
--------------------------
-Before any synchronization can take place, a link between a YouTrack Issues and a  Cards must be established.
+YouTrack Issues to Trello Cards
+-------------------------------
+Before any synchronization can take place, a link between a YouTrack Issues and a Trello Cards must be established.
 
-A new  Cards will be created from a YouTrack Issues if it is connected to a YouTrack Issues, Workitems, Hubprojects, or Projectroles that is synchronized into .
+A new Trello Cards will be created from a YouTrack Issues if it is connected to a YouTrack Issues, Workitems, Hubprojects, or Projectroles that is synchronized into Trello.
 
-Once a link between a YouTrack Issues and a  Cards is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Issues and a Trello Cards is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Issues and a  Cards:
+The following properties are synchronized between a YouTrack Issues and a Trello Cards:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Issues Property
-     -  Cards Property
-     -  Data Type
+     - Trello Cards Property
+     - Trello Data Type
 
 
-YouTrack Project to  Cards
---------------------------
-Before any synchronization can take place, a link between a YouTrack Project and a  Cards must be established.
+YouTrack Project to Trello Cards
+--------------------------------
+Before any synchronization can take place, a link between a YouTrack Project and a Trello Cards must be established.
 
-A new  Cards will be created from a YouTrack Project if it is connected to a YouTrack Issues, Workitems, Hubprojects, or Projectroles that is synchronized into .
+A new Trello Cards will be created from a YouTrack Project if it is connected to a YouTrack Issues, Workitems, Hubprojects, or Projectroles that is synchronized into Trello.
 
-Once a link between a YouTrack Project and a  Cards is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Project and a Trello Cards is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Project and a  Cards:
+The following properties are synchronized between a YouTrack Project and a Trello Cards:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Project Property
-     -  Cards Property
-     -  Data Type
+     - Trello Cards Property
+     - Trello Data Type
 
 
 YouTrack Groups to Trello Organizations
