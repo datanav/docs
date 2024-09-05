@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-05 13:34:24
+Generated: 2024-09-05 13:34:40
 
 Introduction
 ------------
@@ -122,6 +122,9 @@ The following properties are synchronized between a Salesforce Customer and a Ex
    * - Salesforce Customer Property
      - Exact Currencies Property
      - Exact Data Type
+   * - IsoCode
+     - Code
+     - "string"
 
 
 Salesforce Organization to Exact Addresses
