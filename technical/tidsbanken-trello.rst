@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-09-05 11:02:22
+Generated: 2024-09-05 11:10:25
 
 Introduction
 ------------
@@ -67,22 +67,6 @@ The following properties are synchronized between a Tidsbanken Prosjekt and a  B
    * - Navn
      - name
      - "string"
-
-
-Tidsbanken Ansatt to  Actions
------------------------------
-Every Tidsbanken Ansatt will be synchronized with a  Actions.
-
-Once a link between a Tidsbanken Ansatt and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tidsbanken Ansatt and a  Actions:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Ansatt Property
-     -  Actions Property
-     -  Data Type
 
 
 Tidsbanken Ansatt to  Members
