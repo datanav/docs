@@ -2,27 +2,27 @@
 Exact to Trello Dataflow
 ========================
 
-Generated: 2024-09-05 12:11:24
+Generated: 2024-09-05 12:21:23
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Exact to Trello. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Exact Accounts to  Organizations
---------------------------------
-Every Exact Accounts will be synchronized with a  Organizations.
+Exact Accounts to Trello Organizations
+--------------------------------------
+Every Exact Accounts will be synchronized with a Trello Organizations.
 
-Once a link between a Exact Accounts and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Accounts and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Accounts and a  Organizations:
+The following properties are synchronized between a Exact Accounts and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Accounts Property
-     -  Organizations Property
-     -  Data Type
+     - Trello Organizations Property
+     - Trello Data Type
    * - Name
      - name
      - "string"
@@ -31,55 +31,55 @@ The following properties are synchronized between a Exact Accounts and a  Organi
      - "string"
 
 
-Exact Contacts to  Members
---------------------------
-Every Exact Contacts will be synchronized with a  Members.
+Exact Contacts to Trello Members
+--------------------------------
+Every Exact Contacts will be synchronized with a Trello Members.
 
-Once a link between a Exact Contacts and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Contacts and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Contacts and a  Members:
+The following properties are synchronized between a Exact Contacts and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Contacts Property
-     -  Members Property
-     -  Data Type
+     - Trello Members Property
+     - Trello Data Type
 
 
-Exact Departments to  Organizations
------------------------------------
-Every Exact Departments will be synchronized with a  Organizations.
+Exact Departments to Trello Organizations
+-----------------------------------------
+Every Exact Departments will be synchronized with a Trello Organizations.
 
-Once a link between a Exact Departments and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Departments and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Departments and a  Organizations:
+The following properties are synchronized between a Exact Departments and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Departments Property
-     -  Organizations Property
-     -  Data Type
+     - Trello Organizations Property
+     - Trello Data Type
    * - Description
      - desc
      - "string"
 
 
-Exact Divisions to  Organizations
----------------------------------
-Every Exact Divisions will be synchronized with a  Organizations.
+Exact Divisions to Trello Organizations
+---------------------------------------
+Every Exact Divisions will be synchronized with a Trello Organizations.
 
-Once a link between a Exact Divisions and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Divisions and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Divisions and a  Organizations:
+The following properties are synchronized between a Exact Divisions and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Divisions Property
-     -  Organizations Property
-     -  Data Type
+     - Trello Organizations Property
+     - Trello Data Type
    * - Description
      - desc
      - "string"
