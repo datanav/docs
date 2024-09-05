@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-05 13:11:24
+Generated: 2024-09-05 13:20:23
 
 Introduction
 ------------
@@ -76,22 +76,6 @@ The following properties are synchronized between a Salesforce Contact and a Mem
    * - MailingCountry
      - name
      - "string"
-
-
-Salesforce Currencytype to Membercare Companies
------------------------------------------------
-Every Salesforce Currencytype will be synchronized with a Membercare Companies.
-
-Once a link between a Salesforce Currencytype and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Currencytype and a Membercare Companies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Currencytype Property
-     - Membercare Companies Property
-     - Membercare Data Type
 
 
 Salesforce Organization to Membercare Companies
