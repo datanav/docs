@@ -2,7 +2,7 @@
 Trello to Tilores Dataflow
 ==========================
 
-Generated: 2024-09-05 12:21:23
+Generated: 2024-09-05 12:21:42
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Trello Members and a Tilores
    * - Trello Members Property
      - Tilores Human Property
      - Tilores Data Type
+   * - email
+     - email
+     - "string"
 
