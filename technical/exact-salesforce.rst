@@ -2,12 +2,28 @@
 Exact to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-05 13:35:37
+Generated: 2024-09-05 13:46:24
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Exact to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Exact Accounts to Salesforce Currencytype
+-----------------------------------------
+Every Exact Accounts will be synchronized with a Salesforce Currencytype.
+
+Once a link between a Exact Accounts and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Accounts and a Salesforce Currencytype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Accounts Property
+     - Salesforce Currencytype Property
+     - Salesforce Data Type
+
 
 Exact Accounts to Salesforce Organization
 -----------------------------------------
@@ -37,6 +53,22 @@ The following properties are synchronized between a Exact Accounts and a Salesfo
      - "string"
 
 
+Exact Departments to Salesforce Currencytype
+--------------------------------------------
+Every Exact Departments will be synchronized with a Salesforce Currencytype.
+
+Once a link between a Exact Departments and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Departments and a Salesforce Currencytype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Departments Property
+     - Salesforce Currencytype Property
+     - Salesforce Data Type
+
+
 Exact Departments to Salesforce Organization
 --------------------------------------------
 Every Exact Departments will be synchronized with a Salesforce Organization.
@@ -50,6 +82,22 @@ The following properties are synchronized between a Exact Departments and a Sale
 
    * - Exact Departments Property
      - Salesforce Organization Property
+     - Salesforce Data Type
+
+
+Exact Divisions to Salesforce Currencytype
+------------------------------------------
+Every Exact Divisions will be synchronized with a Salesforce Currencytype.
+
+Once a link between a Exact Divisions and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Divisions and a Salesforce Currencytype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Divisions Property
+     - Salesforce Currencytype Property
      - Salesforce Data Type
 
 
