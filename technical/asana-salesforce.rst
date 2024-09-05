@@ -2,7 +2,7 @@
 Asana to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-05 00:00:01
+Generated: 2024-09-05 13:12:18
 
 Introduction
 ------------
@@ -26,6 +26,22 @@ The following properties are synchronized between a Asana Teams and a Salesforce
    * - name
      - Name	
      - "string"
+
+
+Asana Workspaces to Salesforce Currencytype
+-------------------------------------------
+Every Asana Workspaces will be synchronized with a Salesforce Currencytype.
+
+Once a link between a Asana Workspaces and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Asana Workspaces and a Salesforce Currencytype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Asana Workspaces Property
+     - Salesforce Currencytype Property
+     - Salesforce Data Type
 
 
 Asana Workspaces to Salesforce Organization
