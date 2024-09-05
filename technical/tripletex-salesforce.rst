@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-05 00:00:01
+Generated: 2024-09-05 13:30:17
 
 Introduction
 ------------
@@ -82,6 +82,22 @@ The following properties are synchronized between a Tripletex Contact and a Sale
    * - phoneNumberWork
      - Phone
      - "string"
+
+
+Tripletex Currency to Salesforce Currencytype
+---------------------------------------------
+Every Tripletex Currency will be synchronized with a Salesforce Currencytype.
+
+Once a link between a Tripletex Currency and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Currency and a Salesforce Currencytype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Currency Property
+     - Salesforce Currencytype Property
+     - Salesforce Data Type
 
 
 Tripletex Product to Salesforce Product2
