@@ -2,7 +2,7 @@
 Exact to  Dataflow
 ==================
 
-Generated: 2024-09-05 11:02:22
+Generated: 2024-09-05 11:10:25
 
 Introduction
 ------------
@@ -86,22 +86,6 @@ The following properties are synchronized between a Exact Divisions and a  Organ
    * - Website
      - website
      - "string"
-
-
-Exact Employees to  Actions
----------------------------
-Every Exact Employees will be synchronized with a  Actions.
-
-Once a link between a Exact Employees and a  Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Employees and a  Actions:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Employees Property
-     -  Actions Property
-     -  Data Type
 
 
 Exact Employees to  Members
