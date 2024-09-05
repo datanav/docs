@@ -2,7 +2,7 @@
 Salesforce to Trello Dataflow
 =============================
 
-Generated: 2024-09-05 13:20:23
+Generated: 2024-09-05 13:46:24
 
 Introduction
 ------------
@@ -26,6 +26,22 @@ The following properties are synchronized between a Salesforce Contact and a Tre
    * - Email
      - email
      - "string"
+
+
+Salesforce Currencytype to Trello Organizations
+-----------------------------------------------
+Every Salesforce Currencytype will be synchronized with a Trello Organizations.
+
+Once a link between a Salesforce Currencytype and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Currencytype and a Trello Organizations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Currencytype Property
+     - Trello Organizations Property
+     - Trello Data Type
 
 
 Salesforce Organization to Trello Organizations
