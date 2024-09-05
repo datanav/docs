@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-05 12:06:24
+Generated: 2024-09-05 12:06:40
 
 Introduction
 ------------
@@ -105,6 +105,12 @@ The following properties are synchronized between a Tripletex Project and a  Act
    * - Tripletex Project Property
      -  Actions Property
      -  Data Type
+   * - projectManager.id
+     - memberCreator.id
+     - "string"
+   * - startDate
+     - date
+     - "string"
 
 
 Tripletex Project to  Boards
