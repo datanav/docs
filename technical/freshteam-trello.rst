@@ -2,7 +2,7 @@
 Freshteam to Trello Dataflow
 ============================
 
-Generated: 2024-09-05 12:09:41
+Generated: 2024-09-05 12:11:24
 
 Introduction
 ------------
@@ -28,20 +28,20 @@ The following properties are synchronized between a Freshteam Department and a  
      - "string"
 
 
-Freshteam Employee to  Members
-------------------------------
-Every Freshteam Employee will be synchronized with a  Members.
+Freshteam Employee to Trello Members
+------------------------------------
+Every Freshteam Employee will be synchronized with a Trello Members.
 
-Once a link between a Freshteam Employee and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Employee and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Employee and a  Members:
+The following properties are synchronized between a Freshteam Employee and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Employee Property
-     -  Members Property
-     -  Data Type
+     - Trello Members Property
+     - Trello Data Type
    * - personal_email
      - email
      - "string"
