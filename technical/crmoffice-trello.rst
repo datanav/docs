@@ -2,7 +2,7 @@
 Crmoffice to Trello Dataflow
 ============================
 
-Generated: 2024-09-05 12:11:24
+Generated: 2024-09-05 12:21:23
 
 Introduction
 ------------
@@ -28,20 +28,20 @@ The following properties are synchronized between a Crmoffice Activities and a  
      - "string"
 
 
-Crmoffice Contacts to  Members
-------------------------------
-Every Crmoffice Contacts will be synchronized with a  Members.
+Crmoffice Contacts to Trello Members
+------------------------------------
+Every Crmoffice Contacts will be synchronized with a Trello Members.
 
-Once a link between a Crmoffice Contacts and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Crmoffice Contacts and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Crmoffice Contacts and a  Members:
+The following properties are synchronized between a Crmoffice Contacts and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
    * - Crmoffice Contacts Property
-     -  Members Property
-     -  Data Type
+     - Trello Members Property
+     - Trello Data Type
 
 
 Crmoffice Activities to Trello Actions
