@@ -2,7 +2,7 @@
 ZohoCRM to  Dataflow
 ====================
 
-Generated: 2024-09-05 00:00:02
+Generated: 2024-09-05 10:48:08
 
 Introduction
 ------------
@@ -48,7 +48,13 @@ The following properties are synchronized between a ZohoCRM Contact and a  Membe
    * - ZohoCRM Contact Property
      -  Members Property
      -  Data Type
+   * - Email
+     - email
+     - "string"
    * - Full_Name
      - fullName
+     - "string"
+   * - Secondary_Email
+     - email
      - "string"
 
