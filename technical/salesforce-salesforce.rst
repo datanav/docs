@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-05 13:35:18
+Generated: 2024-09-05 13:35:37
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Salesforce Currencytype and 
    * - Salesforce Currencytype Property
      - Salesforce Customer Property
      - Salesforce Data Type
+   * - IsoCode
+     - IsoCode
+     - "string"
 
 
 Salesforce Customer to Salesforce Currencytype
