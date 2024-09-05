@@ -2,7 +2,7 @@
 Asana to Trello Dataflow
 ========================
 
-Generated: 2024-09-05 12:09:41
+Generated: 2024-09-05 12:11:24
 
 Introduction
 ------------
@@ -107,20 +107,20 @@ The following properties are synchronized between a Asana Teams and a  Organizat
      - "string"
 
 
-Asana Tasks to  Cards
----------------------
-Every Asana Tasks will be synchronized with a  Cards.
+Asana Tasks to Trello Cards
+---------------------------
+Every Asana Tasks will be synchronized with a Trello Cards.
 
-Once a link between a Asana Tasks and a  Cards is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Tasks and a Trello Cards is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Tasks and a  Cards:
+The following properties are synchronized between a Asana Tasks and a Trello Cards:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Tasks Property
-     -  Cards Property
-     -  Data Type
+     - Trello Cards Property
+     - Trello Data Type
    * - completed_at
      - dueComplete
      - "string"
@@ -159,20 +159,20 @@ The following properties are synchronized between a Asana Tasks and a  Cards:
      - "string"
 
 
-Asana Users to  Members
------------------------
-Every Asana Users will be synchronized with a  Members.
+Asana Users to Trello Members
+-----------------------------
+Every Asana Users will be synchronized with a Trello Members.
 
-Once a link between a Asana Users and a  Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Users and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Users and a  Members:
+The following properties are synchronized between a Asana Users and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Users Property
-     -  Members Property
-     -  Data Type
+     - Trello Members Property
+     - Trello Data Type
    * - email
      - email
      - "string"
@@ -181,20 +181,20 @@ The following properties are synchronized between a Asana Users and a  Members:
      - "string"
 
 
-Asana Workspaces to  Organizations
-----------------------------------
-Every Asana Workspaces will be synchronized with a  Organizations.
+Asana Workspaces to Trello Organizations
+----------------------------------------
+Every Asana Workspaces will be synchronized with a Trello Organizations.
 
-Once a link between a Asana Workspaces and a  Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Workspaces and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Workspaces and a  Organizations:
+The following properties are synchronized between a Asana Workspaces and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Workspaces Property
-     -  Organizations Property
-     -  Data Type
+     - Trello Organizations Property
+     - Trello Data Type
    * - email_domains
      - website
      - "string"
