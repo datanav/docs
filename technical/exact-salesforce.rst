@@ -2,7 +2,7 @@
 Exact to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-06 10:40:23
+Generated: 2024-09-06 11:53:23
 
 Introduction
 ------------
@@ -101,6 +101,70 @@ The following properties are synchronized between a Exact Divisions and a Salesf
 
    * - Exact Divisions Property
      - Salesforce Organization Property
+     - Salesforce Data Type
+
+
+Exact Quotations to Salesforce Invoice
+--------------------------------------
+Every Exact Quotations will be synchronized with a Salesforce Invoice.
+
+Once a link between a Exact Quotations and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Quotations and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Quotations Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+Exact Salesinvoices to Salesforce Invoice
+-----------------------------------------
+Every Exact Salesinvoices will be synchronized with a Salesforce Invoice.
+
+Once a link between a Exact Salesinvoices and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Salesinvoices and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Salesinvoices Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+Exact Salesorderlines to Salesforce Invoice
+-------------------------------------------
+Every Exact Salesorderlines will be synchronized with a Salesforce Invoice.
+
+Once a link between a Exact Salesorderlines and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Salesorderlines and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Salesorderlines Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+Exact Salesorders to Salesforce Invoice
+---------------------------------------
+Every Exact Salesorders will be synchronized with a Salesforce Invoice.
+
+Once a link between a Exact Salesorders and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Salesorders and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Salesorders Property
+     - Salesforce Invoice Property
      - Salesforce Data Type
 
 
