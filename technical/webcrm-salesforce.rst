@@ -2,7 +2,7 @@
 Webcrm to Salesforce Dataflow
 =============================
 
-Generated: 2024-09-06 12:29:25
+Generated: 2024-09-06 12:29:43
 
 Introduction
 ------------
@@ -45,6 +45,9 @@ The following properties are synchronized between a Webcrm Opportunities and a S
    * - Webcrm Opportunities Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
+   * - OpportunityCurrencyName
+     - CurrencyIsoCode
+     - "string"
 
 
 Webcrm Organisations to Salesforce Division
