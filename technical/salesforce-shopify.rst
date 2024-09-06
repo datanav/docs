@@ -2,7 +2,7 @@
 Salesforce to Shopify Dataflow
 ==============================
 
-Generated: 2024-09-06 06:50:24
+Generated: 2024-09-06 12:46:20
 
 Introduction
 ------------
@@ -22,6 +22,22 @@ The following properties are synchronized between a Salesforce Customer and a Sh
 
    * - Salesforce Customer Property
      - Shopify Customer Property
+     - Shopify Data Type
+
+
+Salesforce Order to Shopify Order
+---------------------------------
+Every Salesforce Order will be synchronized with a Shopify Order.
+
+Once a link between a Salesforce Order and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Order and a Shopify Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Order Property
+     - Shopify Order Property
      - Shopify Data Type
 
 
