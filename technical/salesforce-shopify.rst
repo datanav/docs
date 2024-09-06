@@ -2,12 +2,30 @@
 Salesforce to Shopify Dataflow
 ==============================
 
-Generated: 2024-09-06 12:46:20
+Generated: 2024-09-06 12:47:18
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Shopify. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Salesforce Product2 to Shopify Product
+--------------------------------------
+Before any synchronization can take place, a link between a Salesforce Product2 and a Shopify Product must be established.
+
+A new Shopify Product will be created from a Salesforce Product2 if it is connected to a Salesforce Order that is synchronized into Shopify.
+
+Once a link between a Salesforce Product2 and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Product2 and a Shopify Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Product2 Property
+     - Shopify Product Property
+     - Shopify Data Type
+
 
 Salesforce Customer to Shopify Customer
 ---------------------------------------
