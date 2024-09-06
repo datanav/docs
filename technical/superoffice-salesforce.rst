@@ -2,7 +2,7 @@
 SuperOffice to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-06 11:53:23
+Generated: 2024-09-06 11:53:41
 
 Introduction
 ------------
@@ -64,6 +64,12 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - SuperOffice Quotealternative Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - Name
+     - Description
+     - "string"
+   * - TotalPrice
+     - TotalAmount
+     - "string"
 
 
 SuperOffice Quoteline to Salesforce Invoice
@@ -96,6 +102,15 @@ The following properties are synchronized between a SuperOffice Sale and a Sales
    * - SuperOffice Sale Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - Amount
+     - TotalAmount
+     - "string"
+   * - Currency.Id
+     - CurrencyIsoCode
+     - "string"
+   * - Saledate
+     - FullSettlementDate
+     - "string"
 
 
 SuperOffice Listcurrencyitems to Salesforce Currencytype
