@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-06 16:19:25
+Generated: 2024-09-06 16:19:40
 
 Introduction
 ------------
@@ -77,6 +77,18 @@ The following properties are synchronized between a Salesforce Order and a Sales
    * - Salesforce Order Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - CurrencyIsoCode
+     - CurrencyIsoCode
+     - "string"
+   * - Description
+     - Description
+     - "string"
+   * - EffectiveDate
+     - FullSettlementDate
+     - "string"
+   * - TotalAmount
+     - TotalAmount
+     - "string"
 
 
 Salesforce Organization to Salesforce Division
