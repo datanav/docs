@@ -2,7 +2,7 @@
 Shopify to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-06 13:01:59
+Generated: 2024-09-06 13:09:50
 
 Introduction
 ------------
@@ -142,6 +142,9 @@ The following properties are synchronized between a Shopify Order and a Salesfor
      - Salesforce Data Type
    * - created_at
      - EffectiveDate
+     - "string"
+   * - created_at
+     - OrderedDate
      - "string"
    * - currency
      - CurrencyIsoCode
