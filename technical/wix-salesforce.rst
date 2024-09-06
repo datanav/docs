@@ -2,7 +2,7 @@
 Wix.com to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-06 00:00:01
+Generated: 2024-09-06 11:56:23
 
 Introduction
 ------------
@@ -53,6 +53,22 @@ The following properties are synchronized between a Wix.com Currencies and a Sal
 
    * - Wix.com Currencies Property
      - Salesforce Currencytype Property
+     - Salesforce Data Type
+
+
+Wix.com Orders to Salesforce Invoiceline
+----------------------------------------
+Every Wix.com Orders will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a Wix.com Orders and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Orders and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Orders Property
+     - Salesforce Invoiceline Property
      - Salesforce Data Type
 
 
