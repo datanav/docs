@@ -2,12 +2,28 @@
 Membercare to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-06 00:34:19
+Generated: 2024-09-06 07:56:25
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Membercare to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Membercare Companies to Salesforce Division
+-------------------------------------------
+Every Membercare Companies will be synchronized with a Salesforce Division.
+
+Once a link between a Membercare Companies and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Companies and a Salesforce Division:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Companies Property
+     - Salesforce Division Property
+     - Salesforce Data Type
+
 
 Membercare Companycategories to Salesforce Currencytype
 -------------------------------------------------------
@@ -38,6 +54,22 @@ The following properties are synchronized between a Membercare Countries and a S
 
    * - Membercare Countries Property
      - Salesforce Currencytype Property
+     - Salesforce Data Type
+
+
+Membercare Organizations to Salesforce Division
+-----------------------------------------------
+Every Membercare Organizations will be synchronized with a Salesforce Division.
+
+Once a link between a Membercare Organizations and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Organizations and a Salesforce Division:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Organizations Property
+     - Salesforce Division Property
      - Salesforce Data Type
 
 
