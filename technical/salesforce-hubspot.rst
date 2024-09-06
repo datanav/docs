@@ -2,7 +2,7 @@
 Salesforce to Hubspot Dataflow
 ==============================
 
-Generated: 2024-09-06 00:00:21
+Generated: 2024-09-06 00:34:19
 
 Introduction
 ------------
@@ -44,22 +44,6 @@ The following properties are synchronized between a Salesforce Contact and a Hub
    * - Phone
      - properties.phone
      - "string"
-
-
-Salesforce Currencytype to Hubspot Company
-------------------------------------------
-Every Salesforce Currencytype will be synchronized with a Hubspot Company.
-
-Once a link between a Salesforce Currencytype and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Currencytype and a Hubspot Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Currencytype Property
-     - Hubspot Company Property
-     - Hubspot Data Type
 
 
 Salesforce Customer to Hubspot Contact
