@@ -2,7 +2,7 @@
 Businesscentral to Salesforce Dataflow
 ======================================
 
-Generated: 2024-09-06 13:47:40
+Generated: 2024-09-06 13:50:49
 
 Introduction
 ------------
@@ -337,6 +337,9 @@ The following properties are synchronized between a Businesscentral Salesorders 
    * - billToCountry
      - ShippingCountry
      - "string"
+   * - billToCountry
+     - ShippingCountryCode
+     - "string"
    * - billToPostCode
      - BillingPostalCode
      - "string"
@@ -378,6 +381,9 @@ The following properties are synchronized between a Businesscentral Salesorders 
      - "string"
    * - shipToCountry
      - ShippingCountry
+     - "string"
+   * - shipToCountry
+     - ShippingCountryCode
      - "string"
    * - shipToPostCode
      - BillingPostalCode
