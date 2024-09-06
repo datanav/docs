@@ -2,7 +2,7 @@
 Salesforce to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-06 00:34:19
+Generated: 2024-09-06 06:45:16
 
 Introduction
 ------------
@@ -65,6 +65,22 @@ The following properties are synchronized between a Salesforce Customer and a Ch
    :header-rows: 1
 
    * - Salesforce Customer Property
+     - Chargebee Customer Property
+     - Chargebee Data Type
+
+
+Salesforce Division to Chargebee Customer
+-----------------------------------------
+Every Salesforce Division will be synchronized with a Chargebee Customer.
+
+Once a link between a Salesforce Division and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Division and a Chargebee Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Division Property
      - Chargebee Customer Property
      - Chargebee Data Type
 
