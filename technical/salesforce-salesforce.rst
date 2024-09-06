@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-06 12:31:25
+Generated: 2024-09-06 12:31:40
 
 Introduction
 ------------
@@ -58,6 +58,9 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Salesforce Invoiceline Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - CurrencyIsoCode
+     - CurrencyIsoCode
+     - "string"
 
 
 Salesforce Organization to Salesforce Division
