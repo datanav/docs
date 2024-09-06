@@ -2,7 +2,7 @@
 Salesforce to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-06 07:40:25
+Generated: 2024-09-06 07:40:40
 
 Introduction
 ------------
@@ -67,6 +67,9 @@ The following properties are synchronized between a Salesforce Division and a Ch
    * - Salesforce Division Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Salesforce Division to Chargebee Customer
