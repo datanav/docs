@@ -2,7 +2,7 @@
 Salesforce to Hubspot Dataflow
 ==============================
 
-Generated: 2024-09-06 07:17:24
+Generated: 2024-09-06 07:56:25
 
 Introduction
 ------------
@@ -59,6 +59,22 @@ The following properties are synchronized between a Salesforce Customer and a Hu
 
    * - Salesforce Customer Property
      - Hubspot Contact Property
+     - Hubspot Data Type
+
+
+Salesforce Division to Hubspot Company
+--------------------------------------
+Every Salesforce Division will be synchronized with a Hubspot Company.
+
+Once a link between a Salesforce Division and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Division and a Hubspot Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Division Property
+     - Hubspot Company Property
      - Hubspot Data Type
 
 
