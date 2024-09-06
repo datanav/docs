@@ -2,7 +2,7 @@
 Wix.com to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-06 13:01:59
+Generated: 2024-09-06 13:10:58
 
 Introduction
 ------------
@@ -98,6 +98,9 @@ The following properties are synchronized between a Wix.com Orders and a Salesfo
    * - Wix.com Orders Property
      - Salesforce Order Property
      - Salesforce Data Type
+   * - billingInfo.paidDate
+     - EndDate
+     - "string"
    * - currency
      - CurrencyIsoCode
      - "string"
