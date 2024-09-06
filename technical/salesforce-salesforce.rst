@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-06 12:00:30
+Generated: 2024-09-06 12:29:25
 
 Introduction
 ------------
@@ -22,6 +22,22 @@ The following properties are synchronized between a Salesforce Invoice and a Sal
 
    * - Salesforce Invoice Property
      - Salesforce Division Property
+     - Salesforce Data Type
+
+
+Salesforce Invoice to Salesforce Invoiceline
+--------------------------------------------
+Every Salesforce Invoice will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a Salesforce Invoice and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Invoice and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Invoice Property
+     - Salesforce Invoiceline Property
      - Salesforce Data Type
 
 
