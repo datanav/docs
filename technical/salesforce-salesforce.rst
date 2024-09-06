@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-06 12:31:40
+Generated: 2024-09-06 12:43:24
 
 Introduction
 ------------
@@ -80,4 +80,20 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Name	
      - Name
      - "string"
+
+
+Salesforce Order to Salesforce Invoiceline
+------------------------------------------
+Every Salesforce Order will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a Salesforce Order and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Order and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Order Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
 
