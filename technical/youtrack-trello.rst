@@ -2,7 +2,7 @@
 YouTrack to Trello Dataflow
 ===========================
 
-Generated: 2024-09-06 00:00:01
+Generated: 2024-09-06 00:34:19
 
 Introduction
 ------------
@@ -77,22 +77,6 @@ The following properties are synchronized between a YouTrack Hubprojects and a T
      - Trello Data Type
 
 
-YouTrack Hubprojects to  Boards
--------------------------------
-Every YouTrack Hubprojects will be synchronized with a  Boards.
-
-Once a link between a YouTrack Hubprojects and a  Boards is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Hubprojects and a  Boards:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Hubprojects Property
-     -  Boards Property
-     -  Data Type
-
-
 YouTrack Issues to Trello Actions
 ---------------------------------
 Every YouTrack Issues will be synchronized with a Trello Actions.
@@ -113,22 +97,6 @@ The following properties are synchronized between a YouTrack Issues and a Trello
    * - reporter.id
      - memberCreator.id
      - "string"
-
-
-YouTrack Issues to  Boards
---------------------------
-Every YouTrack Issues will be synchronized with a  Boards.
-
-Once a link between a YouTrack Issues and a  Boards is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Issues and a  Boards:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Issues Property
-     -  Boards Property
-     -  Data Type
 
 
 YouTrack Organizations to Trello Organizations
@@ -164,22 +132,6 @@ The following properties are synchronized between a YouTrack Projectroles and a 
    * - YouTrack Projectroles Property
      - Trello Actions Property
      - Trello Data Type
-
-
-YouTrack Projectroles to  Boards
---------------------------------
-Every YouTrack Projectroles will be synchronized with a  Boards.
-
-Once a link between a YouTrack Projectroles and a  Boards is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Projectroles and a  Boards:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Projectroles Property
-     -  Boards Property
-     -  Data Type
 
 
 YouTrack Usergroups to Trello Organizations
@@ -234,20 +186,4 @@ The following properties are synchronized between a YouTrack Workitems and a Tre
    * - issue.id
      - data.card.id
      - "string"
-
-
-YouTrack Workitems to  Boards
------------------------------
-Every YouTrack Workitems will be synchronized with a  Boards.
-
-Once a link between a YouTrack Workitems and a  Boards is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Workitems and a  Boards:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Workitems Property
-     -  Boards Property
-     -  Data Type
 
