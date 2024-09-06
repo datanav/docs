@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-06 12:06:46
+Generated: 2024-09-06 12:22:24
 
 Introduction
 ------------
@@ -96,6 +96,22 @@ The following properties are synchronized between a Salesforce Invoice and a Exa
    * - Description
      - Description
      - "string"
+
+
+Salesforce Invoiceline to Exact Quotations
+------------------------------------------
+Every Salesforce Invoiceline will be synchronized with a Exact Quotations.
+
+Once a link between a Salesforce Invoiceline and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Invoiceline and a Exact Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Invoiceline Property
+     - Exact Quotations Property
+     - Exact Data Type
 
 
 Salesforce Organization to Exact Accounts
