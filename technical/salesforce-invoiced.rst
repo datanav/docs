@@ -2,7 +2,7 @@
 Salesforce to Invoiced Dataflow
 ===============================
 
-Generated: 2024-09-06 12:50:24
+Generated: 2024-09-06 13:01:01
 
 Introduction
 ------------
@@ -70,6 +70,9 @@ The following properties are synchronized between a Salesforce Order and a Invoi
    * - Salesforce Order Property
      - Invoiced Invoices Property
      - Invoiced Data Type
+   * - CurrencyIsoCode
+     - currency
+     - "string"
 
 
 Salesforce Product2 to Invoiced Items
