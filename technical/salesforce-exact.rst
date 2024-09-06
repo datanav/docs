@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-06 13:01:59
+Generated: 2024-09-06 15:50:25
 
 Introduction
 ------------
@@ -115,6 +115,22 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - CurrencyIsoCode
      - Currency
      - "string"
+
+
+Salesforce Order to Exact Quotations
+------------------------------------
+Every Salesforce Order will be synchronized with a Exact Quotations.
+
+Once a link between a Salesforce Order and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Order and a Exact Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Order Property
+     - Exact Quotations Property
+     - Exact Data Type
 
 
 Salesforce Organization to Exact Accounts
