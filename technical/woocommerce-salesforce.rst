@@ -2,12 +2,28 @@
 Woocommerce to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-06 06:50:24
+Generated: 2024-09-06 11:53:23
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Woocommerce to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Woocommerce Order to Salesforce Invoice
+---------------------------------------
+Every Woocommerce Order will be synchronized with a Salesforce Invoice.
+
+Once a link between a Woocommerce Order and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Woocommerce Order and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Woocommerce Order Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
+
 
 Woocommerce Customer to Salesforce Customer
 -------------------------------------------
