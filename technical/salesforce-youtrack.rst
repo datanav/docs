@@ -2,7 +2,7 @@
 Salesforce to Youtrack Dataflow
 ===============================
 
-Generated: 2024-09-06 00:34:19
+Generated: 2024-09-06 07:56:25
 
 Introduction
 ------------
@@ -22,6 +22,22 @@ The following properties are synchronized between a Salesforce Currencytype and 
 
    * - Salesforce Currencytype Property
      - Youtrack Organizationroles Property
+     - Youtrack Data Type
+
+
+Salesforce Division to Youtrack Groups
+--------------------------------------
+Every Salesforce Division will be synchronized with a Youtrack Groups.
+
+Once a link between a Salesforce Division and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Division and a Youtrack Groups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Division Property
+     - Youtrack Groups Property
      - Youtrack Data Type
 
 
