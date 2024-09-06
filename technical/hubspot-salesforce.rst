@@ -2,7 +2,7 @@
 HubSpot to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-06 11:53:41
+Generated: 2024-09-06 11:56:23
 
 Introduction
 ------------
@@ -421,6 +421,22 @@ The following properties are synchronized between a HubSpot Deal and a Salesforc
    * - properties.deal_currency_code
      - IsoCode
      - "string"
+
+
+HubSpot Lineitem to Salesforce Invoiceline
+------------------------------------------
+Every HubSpot Lineitem will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a HubSpot Lineitem and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
 
 
 HubSpot Product to Salesforce Product2
