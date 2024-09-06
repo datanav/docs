@@ -2,7 +2,7 @@
 Salesforce to Trello Dataflow
 =============================
 
-Generated: 2024-09-06 07:17:24
+Generated: 2024-09-06 07:56:25
 
 Introduction
 ------------
@@ -60,6 +60,22 @@ The following properties are synchronized between a Salesforce Division and a Tr
 
    * - Salesforce Division Property
      - Trello Members Property
+     - Trello Data Type
+
+
+Salesforce Division to Trello Organizations
+-------------------------------------------
+Every Salesforce Division will be synchronized with a Trello Organizations.
+
+Once a link between a Salesforce Division and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Division and a Trello Organizations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Division Property
+     - Trello Organizations Property
      - Trello Data Type
 
 
