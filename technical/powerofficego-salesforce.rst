@@ -2,7 +2,7 @@
 Powerofficego to Salesforce Dataflow
 ====================================
 
-Generated: 2024-09-06 11:56:23
+Generated: 2024-09-06 12:09:58
 
 Introduction
 ------------
@@ -246,6 +246,15 @@ The following properties are synchronized between a Powerofficego Salesorderline
    * - Powerofficego Salesorderlines Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
+   * - Description
+     - Name
+     - "string"
+   * - ProductUnitPrice
+     - UnitPrice
+     - "string"
+   * - Quantity
+     - Quantity
+     - "string"
 
 
 Powerofficego Suppliers person to Salesforce Contact
