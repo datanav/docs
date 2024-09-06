@@ -2,7 +2,7 @@
 Salesforce to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-06 13:01:59
+Generated: 2024-09-06 13:06:49
 
 Introduction
 ------------
@@ -109,6 +109,9 @@ The following properties are synchronized between a Salesforce Order and a Tripl
      - "integer"
    * - EffectiveDate
      - orderDate
+     - N/A
+   * - EndDate
+     - deliveryDate
      - N/A
 
 
