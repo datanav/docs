@@ -2,7 +2,7 @@
 Salesforce to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-06 00:00:21
+Generated: 2024-09-06 06:50:24
 
 Introduction
 ------------
@@ -41,6 +41,22 @@ The following properties are synchronized between a Salesforce Contact and a Tri
    * - Phone
      - phoneNumberWork
      - "string"
+
+
+Salesforce Customer to Tripletex Customer person
+------------------------------------------------
+Every Salesforce Customer will be synchronized with a Tripletex Customer person.
+
+Once a link between a Salesforce Customer and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Customer and a Tripletex Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Customer Property
+     - Tripletex Customer person Property
+     - Tripletex Data Type
 
 
 Salesforce Product2 to Tripletex Product
