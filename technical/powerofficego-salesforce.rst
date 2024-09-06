@@ -2,7 +2,7 @@
 Powerofficego to Salesforce Dataflow
 ====================================
 
-Generated: 2024-09-06 13:01:01
+Generated: 2024-09-06 13:01:59
 
 Introduction
 ------------
@@ -295,6 +295,12 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - Salesforce Data Type
    * - CurrencyCode
      - CurrencyIsoCode
+     - "string"
+   * - NetAmount
+     - TotalAmount
+     - "string"
+   * - SalesOrderDate
+     - EffectiveDate
      - "string"
 
 
