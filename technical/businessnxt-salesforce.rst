@@ -2,7 +2,7 @@
 Businessnxt to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-06 07:56:25
+Generated: 2024-09-06 07:56:40
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Businessnxt Address and a Sa
    * - Businessnxt Address Property
      - Salesforce Division Property
      - Salesforce Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Businessnxt Company to Salesforce Division
@@ -39,6 +42,9 @@ The following properties are synchronized between a Businessnxt Company and a Sa
    * - Businessnxt Company Property
      - Salesforce Division Property
      - Salesforce Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Businessnxt Country to Salesforce Currencytype
