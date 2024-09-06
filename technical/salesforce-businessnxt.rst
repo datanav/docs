@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-06 10:47:26
+Generated: 2024-09-06 11:08:24
 
 Introduction
 ------------
@@ -57,6 +57,22 @@ The following properties are synchronized between a Salesforce Invoice and a Bus
 
    * - Salesforce Invoice Property
      - Businessnxt Address Property
+     - Businessnxt Data Type
+
+
+Salesforce Invoice to Businessnxt Order
+---------------------------------------
+Every Salesforce Invoice will be synchronized with a Businessnxt Order.
+
+Once a link between a Salesforce Invoice and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Invoice and a Businessnxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Invoice Property
+     - Businessnxt Order Property
      - Businessnxt Data Type
 
 
