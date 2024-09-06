@@ -2,7 +2,7 @@
 SuperOffice to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-06 11:56:23
+Generated: 2024-09-06 12:09:58
 
 Introduction
 ------------
@@ -171,4 +171,16 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
+   * - Description
+     - Description
+     - "string"
+   * - Name
+     - Name
+     - "string"
+   * - Quantity
+     - Quantity
+     - "string"
+   * - UnitListPrice
+     - UnitPrice
+     - "string"
 
