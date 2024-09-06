@@ -2,7 +2,7 @@
 Salesforce to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-09-06 13:47:04
+Generated: 2024-09-06 13:47:40
 
 Introduction
 ------------
@@ -155,6 +155,21 @@ The following properties are synchronized between a Salesforce Order and a Busin
    * - BillingCountry
      - billToCountry
      - "string"
+   * - BillingCountry
+     - shipToCountry
+     - "string"
+   * - BillingPostalCode
+     - billToPostCode
+     - "string"
+   * - BillingPostalCode
+     - shipToPostCode
+     - "string"
+   * - BillingStreet
+     - billToAddressLine1
+     - "string"
+   * - BillingStreet
+     - shipToAddressLine1
+     - "string"
    * - CurrencyIsoCode
      - currencyId
      - "string"
@@ -167,9 +182,30 @@ The following properties are synchronized between a Salesforce Order and a Busin
    * - EndDate
      - requestedDeliveryDate
      - N/A
+   * - ID
+     - id
+     - "string"
    * - OrderedDate
      - orderDate
      - N/A
+   * - ShippingCity
+     - billToCity
+     - "string"
+   * - ShippingCity
+     - shipToCity
+     - "string"
+   * - ShippingCountry
+     - billToCountry
+     - "string"
+   * - ShippingCountry
+     - shipToCountry
+     - "string"
+   * - ShippingStateCode
+     - billToPostCode
+     - "string"
+   * - ShippingStateCode
+     - shipToPostCode
+     - "string"
 
 
 Salesforce Product2 to Businesscentral Items
