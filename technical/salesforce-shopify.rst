@@ -2,7 +2,7 @@
 Salesforce to Shopify Dataflow
 ==============================
 
-Generated: 2024-09-06 13:31:35
+Generated: 2024-09-06 13:47:40
 
 Introduction
 ------------
@@ -92,6 +92,24 @@ The following properties are synchronized between a Salesforce Order and a Shopi
      - "string"
    * - Name
      - name
+     - "string"
+   * - ShippingCity
+     - billing_address.city
+     - "string"
+   * - ShippingCity
+     - shipping_address.city
+     - "string"
+   * - ShippingCountry
+     - billing_address.country
+     - "string"
+   * - ShippingCountry
+     - shipping_address.country
+     - "string"
+   * - ShippingStateCode
+     - billing_address.zip
+     - "string"
+   * - ShippingStateCode
+     - shipping_address.zip
      - "string"
    * - TotalAmount
      - current_total_price
