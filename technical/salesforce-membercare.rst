@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-06 11:48:42
+Generated: 2024-09-06 11:56:23
 
 Introduction
 ------------
@@ -126,25 +126,6 @@ The following properties are synchronized between a Salesforce Invoice and a Mem
      - Membercare Data Type
 
 
-Salesforce Invoice to Membercare Invoices
------------------------------------------
-Every Salesforce Invoice will be synchronized with a Membercare Invoices.
-
-Once a link between a Salesforce Invoice and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Invoice and a Membercare Invoices:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Invoice Property
-     - Membercare Invoices Property
-     - Membercare Data Type
-   * - DueDate
-     - payDueDate
-     - "string"
-
-
 Salesforce Product2 to Membercare Products
 ------------------------------------------
 Every Salesforce Product2 will be synchronized with a Membercare Products.
@@ -180,6 +161,25 @@ The following properties are synchronized between a Salesforce Contact and a Mem
      - Membercare Data Type
    * - MailingCountry
      - name
+     - "string"
+
+
+Salesforce Invoice to Membercare Invoices
+-----------------------------------------
+Every Salesforce Invoice will be synchronized with a Membercare Invoices.
+
+Once a link between a Salesforce Invoice and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Invoice and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Invoice Property
+     - Membercare Invoices Property
+     - Membercare Data Type
+   * - DueDate
+     - payDueDate
      - "string"
 
 
