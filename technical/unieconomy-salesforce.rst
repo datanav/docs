@@ -2,12 +2,44 @@
 Unieconomy to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-06 00:34:19
+Generated: 2024-09-06 07:56:25
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Unieconomy to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Unieconomy Companies to Salesforce Division
+-------------------------------------------
+Every Unieconomy Companies will be synchronized with a Salesforce Division.
+
+Once a link between a Unieconomy Companies and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Companies and a Salesforce Division:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Companies Property
+     - Salesforce Division Property
+     - Salesforce Data Type
+
+
+Unieconomy Customers to Salesforce Division
+-------------------------------------------
+Every Unieconomy Customers will be synchronized with a Salesforce Division.
+
+Once a link between a Unieconomy Customers and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Customers and a Salesforce Division:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Customers Property
+     - Salesforce Division Property
+     - Salesforce Data Type
+
 
 Unieconomy Customers to Salesforce Organization
 -----------------------------------------------
@@ -22,6 +54,22 @@ The following properties are synchronized between a Unieconomy Customers and a S
 
    * - Unieconomy Customers Property
      - Salesforce Organization Property
+     - Salesforce Data Type
+
+
+Unieconomy Departments to Salesforce Division
+---------------------------------------------
+Every Unieconomy Departments will be synchronized with a Salesforce Division.
+
+Once a link between a Unieconomy Departments and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Departments and a Salesforce Division:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Departments Property
+     - Salesforce Division Property
      - Salesforce Data Type
 
 
