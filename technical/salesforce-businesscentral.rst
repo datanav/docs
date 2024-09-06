@@ -2,7 +2,7 @@
 Salesforce to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-09-06 13:46:45
+Generated: 2024-09-06 13:46:55
 
 Introduction
 ------------
@@ -148,6 +148,9 @@ The following properties are synchronized between a Salesforce Order and a Busin
      - Businesscentral Data Type
    * - BillingCity
      - billToCity
+     - "string"
+   * - BillingCity
+     - shipToCity
      - "string"
    * - CurrencyIsoCode
      - currencyId
