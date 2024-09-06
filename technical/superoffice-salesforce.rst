@@ -2,7 +2,7 @@
 SuperOffice to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-06 11:53:41
+Generated: 2024-09-06 11:56:23
 
 Introduction
 ------------
@@ -155,4 +155,20 @@ The following properties are synchronized between a SuperOffice Product and a Sa
    * - Url
      - DisplayUrl	
      - "string"
+
+
+SuperOffice Quoteline to Salesforce Invoiceline
+-----------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a SuperOffice Quoteline and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
 
