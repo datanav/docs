@@ -2,7 +2,7 @@
 Salesforce to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-06 12:08:40
+Generated: 2024-09-06 12:09:41
 
 Introduction
 ------------
@@ -139,6 +139,9 @@ The following properties are synchronized between a Salesforce Invoiceline and a
      - Chargebee Data Type
    * - CurrencyIsoCode
      - currency_code
+     - "string"
+   * - Description
+     - order_line_items.description
      - "string"
 
 
