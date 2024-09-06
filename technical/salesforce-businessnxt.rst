@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-06 11:08:24
+Generated: 2024-09-06 11:08:40
 
 Introduction
 ------------
@@ -74,6 +74,15 @@ The following properties are synchronized between a Salesforce Invoice and a Bus
    * - Salesforce Invoice Property
      - Businessnxt Order Property
      - Businessnxt Data Type
+   * - FullSettlementDate
+     - dueDate
+     - "string"
+   * - InvoiceDate
+     - invoiceDate
+     - "string"
+   * - PostedDate
+     - invoiceDate
+     - "string"
 
 
 Salesforce Contact to Businessnxt Country
