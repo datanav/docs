@@ -2,7 +2,7 @@
 Exact to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-06 00:34:19
+Generated: 2024-09-06 06:46:18
 
 Introduction
 ------------
@@ -146,6 +146,22 @@ The following properties are synchronized between a Exact Currencies and a Sales
    * - Code
      - IsoCode
      - "string"
+
+
+Exact Divisions to Salesforce Division
+--------------------------------------
+Every Exact Divisions will be synchronized with a Salesforce Division.
+
+Once a link between a Exact Divisions and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Divisions and a Salesforce Division:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Divisions Property
+     - Salesforce Division Property
+     - Salesforce Data Type
 
 
 Exact Items to Salesforce Product2
