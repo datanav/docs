@@ -2,7 +2,7 @@
 Wave Financial to Salesforce Dataflow
 =====================================
 
-Generated: 2024-09-06 07:56:40
+Generated: 2024-09-06 11:53:23
 
 Introduction
 ------------
@@ -54,6 +54,22 @@ The following properties are synchronized between a Wave Customer and a Salesfor
    * - shippingDetails.phone
      - Phone	
      - "string"
+
+
+Wave Invoice to Salesforce Invoice
+----------------------------------
+Every Wave Invoice will be synchronized with a Salesforce Invoice.
+
+Once a link between a Wave Invoice and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
 
 
 Wave Currency to Salesforce Currencytype
