@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-06 12:16:44
+Generated: 2024-09-06 12:29:25
 
 Introduction
 ------------
@@ -111,6 +111,22 @@ The following properties are synchronized between a Tripletex Order and a Salesf
    * - deliveryDate
      - FullSettlementDate
      - "string"
+
+
+Tripletex Order to Salesforce Invoiceline
+-----------------------------------------
+Every Tripletex Order will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a Tripletex Order and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
 
 
 Tripletex Orderline to Salesforce Invoice
