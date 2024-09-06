@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-06 12:22:24
+Generated: 2024-09-06 12:22:39
 
 Introduction
 ------------
@@ -112,6 +112,9 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Salesforce Invoiceline Property
      - Exact Quotations Property
      - Exact Data Type
+   * - CurrencyIsoCode
+     - Currency
+     - "string"
 
 
 Salesforce Organization to Exact Accounts
