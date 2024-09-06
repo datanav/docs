@@ -2,7 +2,7 @@
 Membercare to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-06 12:01:44
+Generated: 2024-09-06 12:09:58
 
 Introduction
 ------------
@@ -198,5 +198,14 @@ The following properties are synchronized between a Membercare Invoices and a Sa
      - Salesforce Data Type
    * - id
      - InvoiceId
+     - "string"
+   * - invoiceItems.description
+     - Description
+     - "string"
+   * - invoiceItems.quantity
+     - Quantity
+     - "string"
+   * - invoiceItems.unitPrice
+     - UnitPrice
      - "string"
 
