@@ -2,7 +2,7 @@
 Businesscentral to Salesforce Dataflow
 ======================================
 
-Generated: 2024-09-06 13:01:59
+Generated: 2024-09-06 13:06:49
 
 Introduction
 ------------
@@ -324,6 +324,9 @@ The following properties are synchronized between a Businesscentral Salesorders 
      - "string"
    * - orderDate
      - EffectiveDate
+     - "string"
+   * - requestedDeliveryDate
+     - EndDate
      - "string"
    * - totalAmountExcludingTax
      - TotalAmount
