@@ -2,7 +2,7 @@
 Salesforce to Superoffice Dataflow
 ==================================
 
-Generated: 2024-09-06 12:43:24
+Generated: 2024-09-06 12:50:24
 
 Introduction
 ------------
@@ -167,22 +167,6 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - UnitPrice
      - UnitListPrice
      - N/A
-
-
-Salesforce Order to Superoffice Quoteline
------------------------------------------
-Every Salesforce Order will be synchronized with a Superoffice Quoteline.
-
-Once a link between a Salesforce Order and a Superoffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Order and a Superoffice Quoteline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Order Property
-     - Superoffice Quoteline Property
-     - Superoffice Data Type
 
 
 Salesforce Product2 to Superoffice Product
