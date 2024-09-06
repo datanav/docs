@@ -2,7 +2,7 @@
 Woocommerce to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-06 11:56:23
+Generated: 2024-09-06 12:01:44
 
 Introduction
 ------------
@@ -74,6 +74,9 @@ The following properties are synchronized between a Woocommerce Order and a Sale
    * - Woocommerce Order Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
+   * - currency
+     - CurrencyIsoCode
+     - "string"
 
 
 Woocommerce Product to Salesforce Product2
