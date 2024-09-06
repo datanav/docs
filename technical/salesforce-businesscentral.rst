@@ -2,7 +2,7 @@
 Salesforce to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-09-06 10:33:21
+Generated: 2024-09-06 11:56:23
 
 Introduction
 ------------
@@ -102,6 +102,22 @@ The following properties are synchronized between a Salesforce Customer and a Bu
    * - Name
      - displayName
      - "string"
+
+
+Salesforce Invoiceline to Businesscentral Salesorderlines
+---------------------------------------------------------
+Every Salesforce Invoiceline will be synchronized with a Businesscentral Salesorderlines.
+
+Once a link between a Salesforce Invoiceline and a Businesscentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Invoiceline and a Businesscentral Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Invoiceline Property
+     - Businesscentral Salesorderlines Property
+     - Businesscentral Data Type
 
 
 Salesforce Product2 to Businesscentral Items
