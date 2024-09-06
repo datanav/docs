@@ -2,12 +2,28 @@
 Exact to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-06 06:46:18
+Generated: 2024-09-06 07:56:25
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Exact to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Exact Accounts to Salesforce Division
+-------------------------------------
+Every Exact Accounts will be synchronized with a Salesforce Division.
+
+Once a link between a Exact Accounts and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Accounts and a Salesforce Division:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Accounts Property
+     - Salesforce Division Property
+     - Salesforce Data Type
+
 
 Exact Accounts to Salesforce Organization
 -----------------------------------------
@@ -35,6 +51,22 @@ The following properties are synchronized between a Exact Accounts and a Salesfo
    * - Postcode
      - PostalCode	
      - "string"
+
+
+Exact Departments to Salesforce Division
+----------------------------------------
+Every Exact Departments will be synchronized with a Salesforce Division.
+
+Once a link between a Exact Departments and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Departments and a Salesforce Division:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Departments Property
+     - Salesforce Division Property
+     - Salesforce Data Type
 
 
 Exact Departments to Salesforce Organization
