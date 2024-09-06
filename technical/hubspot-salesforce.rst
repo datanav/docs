@@ -2,7 +2,7 @@
 HubSpot to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-06 12:29:25
+Generated: 2024-09-06 12:29:43
 
 Introduction
 ------------
@@ -108,6 +108,9 @@ The following properties are synchronized between a HubSpot Deal and a Salesforc
    * - HubSpot Deal Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
+   * - properties.deal_currency_code
+     - CurrencyIsoCode
+     - "string"
 
 
 HubSpot Dealcompanyassociation to Salesforce Invoice
@@ -252,6 +255,9 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - HubSpot Lineitemdealassociation Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
+   * - toObjectId (Dependant on having wd:Q190581 in sesam_simpleAssociationTypes)
+     - InvoiceId
+     - "string"
 
 
 HubSpot Lineitemdealassociationtype to Salesforce Currencytype
@@ -300,6 +306,9 @@ The following properties are synchronized between a HubSpot Lineitemquoteassocia
    * - HubSpot Lineitemquoteassociation Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
+   * - toObjectId (Dependant on having wd:Q190581 in sesam_simpleAssociationTypes)
+     - InvoiceId
+     - "string"
 
 
 HubSpot Lineitemquoteassociationtype to Salesforce Currencytype
@@ -479,6 +488,9 @@ The following properties are synchronized between a HubSpot Quotedealassociation
    * - HubSpot Quotedealassociation Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
+   * - toObjectId (Dependant on having wd:Q190581 in sesam_simpleAssociationTypes)
+     - InvoiceId
+     - "string"
 
 
 HubSpot Quotedealassociationtype to Salesforce Currencytype
@@ -527,6 +539,9 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
    * - HubSpot Quotequotetemplateassociation Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
+   * - toObjectId (Dependant on having wd:Q190581 in sesam_simpleAssociationTypes)
+     - InvoiceId
+     - "string"
 
 
 HubSpot Quotequotetemplateassociationtype to Salesforce Currencytype
