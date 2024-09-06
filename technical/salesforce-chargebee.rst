@@ -2,7 +2,7 @@
 Salesforce to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-06 12:09:58
+Generated: 2024-09-06 12:16:44
 
 Introduction
 ------------
@@ -145,6 +145,9 @@ The following properties are synchronized between a Salesforce Invoiceline and a
      - "string"
    * - Quantity
      - order_line_items.amount
+     - "string"
+   * - TaxRate
+     - order_line_items.tax_amount
      - "string"
    * - UnitPrice
      - order_line_items.unit_price
