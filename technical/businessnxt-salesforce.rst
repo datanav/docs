@@ -2,7 +2,7 @@
 Businessnxt to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-06 07:56:40
+Generated: 2024-09-06 11:53:23
 
 Introduction
 ------------
@@ -60,6 +60,38 @@ The following properties are synchronized between a Businessnxt Country and a Sa
 
    * - Businessnxt Country Property
      - Salesforce Currencytype Property
+     - Salesforce Data Type
+
+
+Businessnxt Order to Salesforce Invoice
+---------------------------------------
+Every Businessnxt Order will be synchronized with a Salesforce Invoice.
+
+Once a link between a Businessnxt Order and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businessnxt Order and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businessnxt Order Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+Businessnxt Orderline to Salesforce Invoice
+-------------------------------------------
+Every Businessnxt Orderline will be synchronized with a Salesforce Invoice.
+
+Once a link between a Businessnxt Orderline and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businessnxt Orderline and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businessnxt Orderline Property
+     - Salesforce Invoice Property
      - Salesforce Data Type
 
 
