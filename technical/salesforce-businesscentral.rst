@@ -2,7 +2,7 @@
 Salesforce to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-09-06 11:56:23
+Generated: 2024-09-06 12:09:58
 
 Introduction
 ------------
@@ -118,6 +118,15 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Salesforce Invoiceline Property
      - Businesscentral Salesorderlines Property
      - Businesscentral Data Type
+   * - Name
+     - description
+     - "string"
+   * - Quantity
+     - quantity
+     - N/A
+   * - UnitPrice
+     - unitPrice
+     - "float"
 
 
 Salesforce Product2 to Businesscentral Items
