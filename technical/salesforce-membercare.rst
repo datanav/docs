@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-06 00:34:19
+Generated: 2024-09-06 07:17:24
 
 Introduction
 ------------
@@ -73,6 +73,22 @@ The following properties are synchronized between a Salesforce Customer and a Me
    * - Name
      - name
      - "string"
+
+
+Salesforce Division to Membercare Persons
+-----------------------------------------
+Every Salesforce Division will be synchronized with a Membercare Persons.
+
+Once a link between a Salesforce Division and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Division and a Membercare Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Division Property
+     - Membercare Persons Property
+     - Membercare Data Type
 
 
 Salesforce Product2 to Membercare Products
