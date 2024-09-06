@@ -2,7 +2,7 @@
 Salesforce to Webcrm Dataflow
 =============================
 
-Generated: 2024-09-06 11:06:24
+Generated: 2024-09-06 11:56:23
 
 Introduction
 ------------
@@ -95,6 +95,22 @@ The following properties are synchronized between a Salesforce Contact and a Web
    * - Phone
      - PersonDirectPhone
      - "string"
+
+
+Salesforce Invoiceline to Webcrm Quotationline
+----------------------------------------------
+Every Salesforce Invoiceline will be synchronized with a Webcrm Quotationline.
+
+Once a link between a Salesforce Invoiceline and a Webcrm Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Invoiceline and a Webcrm Quotationline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Invoiceline Property
+     - Webcrm Quotationline Property
+     - Webcrm Data Type
 
 
 Salesforce Product2 to Webcrm Products
