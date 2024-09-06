@@ -2,7 +2,7 @@
 Salesforce to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-06 12:16:44
+Generated: 2024-09-06 12:46:20
 
 Introduction
 ------------
@@ -167,6 +167,22 @@ The following properties are synchronized between a Salesforce Customer and a Ch
 
    * - Salesforce Customer Property
      - Chargebee Customer Property
+     - Chargebee Data Type
+
+
+Salesforce Order to Chargebee Order
+-----------------------------------
+Every Salesforce Order will be synchronized with a Chargebee Order.
+
+Once a link between a Salesforce Order and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Order and a Chargebee Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Order Property
+     - Chargebee Order Property
      - Chargebee Data Type
 
 
