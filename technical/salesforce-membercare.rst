@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-06 12:29:43
+Generated: 2024-09-06 13:27:20
 
 Introduction
 ------------
@@ -209,6 +209,22 @@ The following properties are synchronized between a Salesforce Invoice and a Mem
    * - DueDate
      - payDueDate
      - "string"
+
+
+Salesforce Order to Membercare Countries
+----------------------------------------
+Every Salesforce Order will be synchronized with a Membercare Countries.
+
+Once a link between a Salesforce Order and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Order and a Membercare Countries:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Order Property
+     - Membercare Countries Property
+     - Membercare Data Type
 
 
 Salesforce Organization to Membercare Companies
