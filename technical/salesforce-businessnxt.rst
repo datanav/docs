@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-06 00:34:19
+Generated: 2024-09-06 07:25:23
 
 Introduction
 ------------
@@ -22,6 +22,22 @@ The following properties are synchronized between a Salesforce Currencytype and 
 
    * - Salesforce Currencytype Property
      - Businessnxt Country Property
+     - Businessnxt Data Type
+
+
+Salesforce Division to Businessnxt Address
+------------------------------------------
+Every Salesforce Division will be synchronized with a Businessnxt Address.
+
+Once a link between a Salesforce Division and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Division and a Businessnxt Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Division Property
+     - Businessnxt Address Property
      - Businessnxt Data Type
 
 
