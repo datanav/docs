@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-06 12:43:24
+Generated: 2024-09-06 12:46:20
 
 Introduction
 ------------
@@ -286,6 +286,22 @@ The following properties are synchronized between a Salesforce Order and a Exact
 
    * - Salesforce Order Property
      - Exact Salesorderlines Property
+     - Exact Data Type
+
+
+Salesforce Order to Exact Salesorders
+-------------------------------------
+Every Salesforce Order will be synchronized with a Exact Salesorders.
+
+Once a link between a Salesforce Order and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Order and a Exact Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Order Property
+     - Exact Salesorders Property
      - Exact Data Type
 
 
