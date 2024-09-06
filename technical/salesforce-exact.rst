@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-06 11:57:28
+Generated: 2024-09-06 12:06:46
 
 Introduction
 ------------
@@ -249,6 +249,9 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Salesforce Invoiceline Property
      - Exact Salesorderlines Property
      - Exact Data Type
+   * - Description
+     - CostPriceFC
+     - "string"
 
 
 Salesforce Organization to Exact Addresses
