@@ -2,7 +2,7 @@
 Zendesk to Trello Dataflow
 ==========================
 
-Generated: 2024-09-06 00:00:01
+Generated: 2024-09-06 00:34:19
 
 Introduction
 ------------
@@ -44,22 +44,6 @@ The following properties are synchronized between a Zendesk Ticketcomments and a
      - Trello Data Type
 
 
-Zendesk Ticketcomments to  Boards
----------------------------------
-Every Zendesk Ticketcomments will be synchronized with a  Boards.
-
-Once a link between a Zendesk Ticketcomments and a  Boards is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Ticketcomments and a  Boards:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Ticketcomments Property
-     -  Boards Property
-     -  Data Type
-
-
 Zendesk Tickets to Trello Actions
 ---------------------------------
 Every Zendesk Tickets will be synchronized with a Trello Actions.
@@ -76,25 +60,6 @@ The following properties are synchronized between a Zendesk Tickets and a Trello
      - Trello Data Type
    * - requester_id
      - memberCreator.id
-     - "string"
-
-
-Zendesk Tickets to  Boards
---------------------------
-Every Zendesk Tickets will be synchronized with a  Boards.
-
-Once a link between a Zendesk Tickets and a  Boards is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Tickets and a  Boards:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Tickets Property
-     -  Boards Property
-     -  Data Type
-   * - subject
-     - name
      - "string"
 
 
