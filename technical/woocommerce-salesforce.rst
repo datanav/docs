@@ -2,7 +2,7 @@
 Woocommerce to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-06 13:31:35
+Generated: 2024-09-06 13:47:40
 
 Introduction
 ------------
@@ -111,11 +111,20 @@ The following properties are synchronized between a Woocommerce Order and a Sale
    * - billing.city
      - BillingCity
      - "string"
+   * - billing.city
+     - ShippingCity
+     - "string"
    * - billing.country
      - BillingCountry
      - "string"
+   * - billing.country
+     - ShippingCountry
+     - "string"
    * - billing.postcode
      - BillingPostalCode
+     - "string"
+   * - billing.postcode
+     - ShippingStateCode
      - "string"
    * - currency
      - CurrencyIsoCode
@@ -129,11 +138,20 @@ The following properties are synchronized between a Woocommerce Order and a Sale
    * - shipping.city
      - BillingCity
      - "string"
+   * - shipping.city
+     - ShippingCity
+     - "string"
    * - shipping.country
      - BillingCountry
      - "string"
+   * - shipping.country
+     - ShippingCountry
+     - "string"
    * - shipping.postcode
      - BillingPostalCode
+     - "string"
+   * - shipping.postcode
+     - ShippingStateCode
      - "string"
 
 
