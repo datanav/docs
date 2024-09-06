@@ -2,7 +2,7 @@
 ZohoCRM to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-06 11:53:23
+Generated: 2024-09-06 11:53:41
 
 Introduction
 ------------
@@ -67,6 +67,9 @@ The following properties are synchronized between a ZohoCRM Deal and a Salesforc
    * - ZohoCRM Deal Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - Amount
+     - TotalAmount
+     - "string"
 
 
 ZohoCRM Contact to Salesforce Customer
