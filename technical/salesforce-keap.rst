@@ -2,7 +2,7 @@
 Salesforce to Keap Dataflow
 ===========================
 
-Generated: 2024-09-06 07:56:25
+Generated: 2024-09-06 07:56:40
 
 Introduction
 ------------
@@ -64,6 +64,9 @@ The following properties are synchronized between a Salesforce Division and a Ke
    * - Salesforce Division Property
      - Keap Companies Property
      - Keap Data Type
+   * - Name
+     - company_name
+     - "string"
 
 
 Salesforce Division to Keap Contacts
