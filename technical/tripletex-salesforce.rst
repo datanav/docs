@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-06 11:56:23
+Generated: 2024-09-06 11:57:28
 
 Introduction
 ------------
@@ -215,6 +215,27 @@ The following properties are synchronized between a Tripletex Invoice and a Sale
    * - Tripletex Invoice Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - amountExcludingVat
+     - TotalAmount
+     - "string"
+   * - currency.id
+     - CurrencyIsoCode
+     - "string"
+   * - deliveryDate
+     - FullSettlementDate
+     - "string"
+   * - invoiceDate
+     - InvoiceDate
+     - "string"
+   * - invoiceDate
+     - PostedDate
+     - "string"
+   * - invoiceDueDate
+     - DueDate
+     - "string"
+   * - invoiceNumber
+     - InvoiceNumber
+     - "string"
 
 
 Tripletex Orderline to Salesforce Invoiceline
