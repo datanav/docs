@@ -2,28 +2,12 @@
 Asana to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-06 00:00:01
+Generated: 2024-09-06 00:34:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Asana to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Asana Teams to Salesforce Currencytype
---------------------------------------
-Every Asana Teams will be synchronized with a Salesforce Currencytype.
-
-Once a link between a Asana Teams and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Asana Teams and a Salesforce Currencytype:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Asana Teams Property
-     - Salesforce Currencytype Property
-     - Salesforce Data Type
-
 
 Asana Teams to Salesforce Organization
 --------------------------------------
@@ -42,22 +26,6 @@ The following properties are synchronized between a Asana Teams and a Salesforce
    * - name
      - Name	
      - "string"
-
-
-Asana Workspaces to Salesforce Currencytype
--------------------------------------------
-Every Asana Workspaces will be synchronized with a Salesforce Currencytype.
-
-Once a link between a Asana Workspaces and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Asana Workspaces and a Salesforce Currencytype:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Asana Workspaces Property
-     - Salesforce Currencytype Property
-     - Salesforce Data Type
 
 
 Asana Workspaces to Salesforce Organization
