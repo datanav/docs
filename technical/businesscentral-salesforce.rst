@@ -2,28 +2,12 @@
 Businesscentral to Salesforce Dataflow
 ======================================
 
-Generated: 2024-09-06 00:00:01
+Generated: 2024-09-06 00:34:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Businesscentral Companies to Salesforce Currencytype
-----------------------------------------------------
-Every Businesscentral Companies will be synchronized with a Salesforce Currencytype.
-
-Once a link between a Businesscentral Companies and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Companies and a Salesforce Currencytype:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Companies Property
-     - Salesforce Currencytype Property
-     - Salesforce Data Type
-
 
 Businesscentral Companies to Salesforce Organization
 ----------------------------------------------------
@@ -38,22 +22,6 @@ The following properties are synchronized between a Businesscentral Companies an
 
    * - Businesscentral Companies Property
      - Salesforce Organization Property
-     - Salesforce Data Type
-
-
-Businesscentral Customers company to Salesforce Currencytype
-------------------------------------------------------------
-Every Businesscentral Customers company will be synchronized with a Salesforce Currencytype.
-
-Once a link between a Businesscentral Customers company and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Customers company and a Salesforce Currencytype:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Customers company Property
-     - Salesforce Currencytype Property
      - Salesforce Data Type
 
 
