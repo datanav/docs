@@ -2,7 +2,7 @@
 Wave Financial to Salesforce Dataflow
 =====================================
 
-Generated: 2024-09-06 11:56:23
+Generated: 2024-09-06 12:01:44
 
 Introduction
 ------------
@@ -200,6 +200,12 @@ The following properties are synchronized between a Wave Invoice and a Salesforc
    * - Wave Invoice Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
+   * - currency.code
+     - CurrencyIsoCode
+     - "string"
+   * - memo
+     - Description
+     - "string"
 
 
 Wave Product to Salesforce Product2
