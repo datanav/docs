@@ -2,7 +2,7 @@
 Chargebee to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-06 11:53:23
+Generated: 2024-09-06 11:53:41
 
 Introduction
 ------------
@@ -74,6 +74,9 @@ The following properties are synchronized between a Chargebee Order and a Salesf
    * - Chargebee Order Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - currency_code
+     - CurrencyIsoCode
+     - "string"
 
 
 Chargebee Business_entity to Salesforce Organization
