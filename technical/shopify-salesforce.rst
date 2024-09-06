@@ -2,7 +2,7 @@
 Shopify to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-06 11:53:41
+Generated: 2024-09-06 11:56:23
 
 Introduction
 ------------
@@ -95,6 +95,22 @@ The following properties are synchronized between a Shopify Customer and a Sales
 
    * - Shopify Customer Property
      - Salesforce Customer Property
+     - Salesforce Data Type
+
+
+Shopify Order to Salesforce Invoiceline
+---------------------------------------
+Every Shopify Order will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a Shopify Order and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - Salesforce Invoiceline Property
      - Salesforce Data Type
 
 
