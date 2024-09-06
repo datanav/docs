@@ -2,7 +2,7 @@
 Businesscentral to Salesforce Dataflow
 ======================================
 
-Generated: 2024-09-06 07:56:25
+Generated: 2024-09-06 07:56:40
 
 Introduction
 ------------
@@ -55,6 +55,9 @@ The following properties are synchronized between a Businesscentral Customers co
    * - Businesscentral Customers company Property
      - Salesforce Division Property
      - Salesforce Data Type
+   * - displayName
+     - Name
+     - "string"
 
 
 Businesscentral Contacts person to Salesforce Contact
