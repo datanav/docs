@@ -2,7 +2,7 @@
 Wave Financial to Salesforce Dataflow
 =====================================
 
-Generated: 2024-09-06 06:50:40
+Generated: 2024-09-06 06:53:54
 
 Introduction
 ------------
@@ -103,6 +103,9 @@ The following properties are synchronized between a Wave Customer and a Salesfor
      - "string"
    * - firstName
      - FirstName
+     - "string"
+   * - id
+     - ID
      - "string"
    * - id
      - Id
