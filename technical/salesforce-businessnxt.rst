@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-06 07:25:23
+Generated: 2024-09-06 07:25:41
 
 Introduction
 ------------
@@ -39,6 +39,9 @@ The following properties are synchronized between a Salesforce Division and a Bu
    * - Salesforce Division Property
      - Businessnxt Address Property
      - Businessnxt Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Salesforce Contact to Businessnxt Country
