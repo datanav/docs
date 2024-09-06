@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-06 11:56:23
+Generated: 2024-09-06 11:57:28
 
 Introduction
 ------------
@@ -227,6 +227,12 @@ The following properties are synchronized between a Salesforce Invoice and a Exa
    * - Salesforce Invoice Property
      - Exact Salesinvoices Property
      - Exact Data Type
+   * - CurrencyIsoCode
+     - Currency
+     - "string"
+   * - Description
+     - Description
+     - "string"
 
 
 Salesforce Invoiceline to Exact Salesorderlines
