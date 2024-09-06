@@ -2,7 +2,7 @@
 Membercare to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-06 11:53:41
+Generated: 2024-09-06 11:56:23
 
 Introduction
 ------------
@@ -58,25 +58,6 @@ The following properties are synchronized between a Membercare Countries and a S
    * - Membercare Countries Property
      - Salesforce Currencytype Property
      - Salesforce Data Type
-
-
-Membercare Invoices to Salesforce Invoice
------------------------------------------
-Every Membercare Invoices will be synchronized with a Salesforce Invoice.
-
-Once a link between a Membercare Invoices and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Membercare Invoices and a Salesforce Invoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Membercare Invoices Property
-     - Salesforce Invoice Property
-     - Salesforce Data Type
-   * - payDueDate
-     - DueDate
-     - "string"
 
 
 Membercare Organizations to Salesforce Division
@@ -180,4 +161,39 @@ The following properties are synchronized between a Membercare Companies and a S
    * - companyName
      - Name	
      - "string"
+
+
+Membercare Invoices to Salesforce Invoice
+-----------------------------------------
+Every Membercare Invoices will be synchronized with a Salesforce Invoice.
+
+Once a link between a Membercare Invoices and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Invoices and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Invoices Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
+   * - payDueDate
+     - DueDate
+     - "string"
+
+
+Membercare Invoices to Salesforce Invoiceline
+---------------------------------------------
+Every Membercare Invoices will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a Membercare Invoices and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Invoices and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Invoices Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
 
