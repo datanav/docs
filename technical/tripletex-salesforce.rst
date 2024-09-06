@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-06 11:53:41
+Generated: 2024-09-06 11:56:23
 
 Introduction
 ------------
@@ -199,6 +199,38 @@ The following properties are synchronized between a Tripletex Customer person an
    * - name
      - Name
      - "string"
+
+
+Tripletex Invoice to Salesforce Invoice
+---------------------------------------
+Every Tripletex Invoice will be synchronized with a Salesforce Invoice.
+
+Once a link between a Tripletex Invoice and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Invoice and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Invoice Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+Tripletex Orderline to Salesforce Invoiceline
+---------------------------------------------
+Every Tripletex Orderline will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a Tripletex Orderline and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
 
 
 Tripletex Product to Salesforce Product2
