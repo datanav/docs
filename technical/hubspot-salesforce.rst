@@ -2,7 +2,7 @@
 HubSpot to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-06 12:09:58
+Generated: 2024-09-06 12:29:25
 
 Introduction
 ------------
@@ -94,6 +94,22 @@ The following properties are synchronized between a HubSpot Deal and a Salesforc
      - "string"
 
 
+HubSpot Deal to Salesforce Invoiceline
+--------------------------------------
+Every HubSpot Deal will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a HubSpot Deal and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
+
+
 HubSpot Dealcompanyassociation to Salesforce Invoice
 ----------------------------------------------------
 Every HubSpot Dealcompanyassociation will be synchronized with a Salesforce Invoice.
@@ -107,6 +123,22 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
 
    * - HubSpot Dealcompanyassociation Property
      - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+HubSpot Dealcompanyassociation to Salesforce Invoiceline
+--------------------------------------------------------
+Every HubSpot Dealcompanyassociation will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a HubSpot Dealcompanyassociation and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcompanyassociation and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcompanyassociation Property
+     - Salesforce Invoiceline Property
      - Salesforce Data Type
 
 
@@ -139,6 +171,22 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
 
    * - HubSpot Dealcontactassociation Property
      - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+HubSpot Dealcontactassociation to Salesforce Invoiceline
+--------------------------------------------------------
+Every HubSpot Dealcontactassociation will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a HubSpot Dealcontactassociation and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcontactassociation and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcontactassociation Property
+     - Salesforce Invoiceline Property
      - Salesforce Data Type
 
 
@@ -190,6 +238,22 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
      - Salesforce Data Type
 
 
+HubSpot Lineitemdealassociation to Salesforce Invoiceline
+---------------------------------------------------------
+Every HubSpot Lineitemdealassociation will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a HubSpot Lineitemdealassociation and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
+
+
 HubSpot Lineitemdealassociationtype to Salesforce Currencytype
 --------------------------------------------------------------
 Every HubSpot Lineitemdealassociationtype will be synchronized with a Salesforce Currencytype.
@@ -219,6 +283,22 @@ The following properties are synchronized between a HubSpot Lineitemquoteassocia
 
    * - HubSpot Lineitemquoteassociation Property
      - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+HubSpot Lineitemquoteassociation to Salesforce Invoiceline
+----------------------------------------------------------
+Every HubSpot Lineitemquoteassociation will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a HubSpot Lineitemquoteassociation and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociation and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociation Property
+     - Salesforce Invoiceline Property
      - Salesforce Data Type
 
 
@@ -257,6 +337,22 @@ The following properties are synchronized between a HubSpot Quote and a Salesfor
      - "string"
 
 
+HubSpot Quote to Salesforce Invoiceline
+---------------------------------------
+Every HubSpot Quote will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a HubSpot Quote and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quote and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quote Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
+
+
 HubSpot Quotecompanyassociation to Salesforce Invoice
 -----------------------------------------------------
 Every HubSpot Quotecompanyassociation will be synchronized with a Salesforce Invoice.
@@ -270,6 +366,22 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
 
    * - HubSpot Quotecompanyassociation Property
      - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+HubSpot Quotecompanyassociation to Salesforce Invoiceline
+---------------------------------------------------------
+Every HubSpot Quotecompanyassociation will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a HubSpot Quotecompanyassociation and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecompanyassociation and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecompanyassociation Property
+     - Salesforce Invoiceline Property
      - Salesforce Data Type
 
 
@@ -305,6 +417,22 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
      - Salesforce Data Type
 
 
+HubSpot Quotecontactassociation to Salesforce Invoiceline
+---------------------------------------------------------
+Every HubSpot Quotecontactassociation will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a HubSpot Quotecontactassociation and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecontactassociation and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecontactassociation Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
+
+
 HubSpot Quotecontactassociationtype to Salesforce Currencytype
 --------------------------------------------------------------
 Every HubSpot Quotecontactassociationtype will be synchronized with a Salesforce Currencytype.
@@ -337,6 +465,22 @@ The following properties are synchronized between a HubSpot Quotedealassociation
      - Salesforce Data Type
 
 
+HubSpot Quotedealassociation to Salesforce Invoiceline
+------------------------------------------------------
+Every HubSpot Quotedealassociation will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a HubSpot Quotedealassociation and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotedealassociation and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotedealassociation Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
+
+
 HubSpot Quotedealassociationtype to Salesforce Currencytype
 -----------------------------------------------------------
 Every HubSpot Quotedealassociationtype will be synchronized with a Salesforce Currencytype.
@@ -366,6 +510,22 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
 
    * - HubSpot Quotequotetemplateassociation Property
      - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+HubSpot Quotequotetemplateassociation to Salesforce Invoiceline
+---------------------------------------------------------------
+Every HubSpot Quotequotetemplateassociation will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a HubSpot Quotequotetemplateassociation and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotequotetemplateassociation and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotequotetemplateassociation Property
+     - Salesforce Invoiceline Property
      - Salesforce Data Type
 
 
