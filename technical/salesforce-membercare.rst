@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-06 13:27:20
+Generated: 2024-09-06 13:28:01
 
 Introduction
 ------------
@@ -225,6 +225,12 @@ The following properties are synchronized between a Salesforce Order and a Membe
    * - Salesforce Order Property
      - Membercare Countries Property
      - Membercare Data Type
+   * - BillingCountry
+     - name
+     - "string"
+   * - BillingCountryCode
+     - iso2Letter
+     - "string"
 
 
 Salesforce Organization to Membercare Companies
