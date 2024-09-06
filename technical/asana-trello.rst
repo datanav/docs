@@ -2,7 +2,7 @@
 Asana to Trello Dataflow
 ========================
 
-Generated: 2024-09-06 00:00:01
+Generated: 2024-09-06 00:34:19
 
 Introduction
 ------------
@@ -28,25 +28,6 @@ The following properties are synchronized between a Asana Projects and a Trello 
      - "string"
 
 
-Asana Projects to  Boards
--------------------------
-Every Asana Projects will be synchronized with a  Boards.
-
-Once a link between a Asana Projects and a  Boards is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Asana Projects and a  Boards:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Asana Projects Property
-     -  Boards Property
-     -  Data Type
-   * - name
-     - name
-     - "string"
-
-
 Asana Tasks to Trello Actions
 -----------------------------
 Every Asana Tasks will be synchronized with a Trello Actions.
@@ -61,25 +42,6 @@ The following properties are synchronized between a Asana Tasks and a Trello Act
    * - Asana Tasks Property
      - Trello Actions Property
      - Trello Data Type
-
-
-Asana Tasks to  Boards
-----------------------
-Every Asana Tasks will be synchronized with a  Boards.
-
-Once a link between a Asana Tasks and a  Boards is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Asana Tasks and a  Boards:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Asana Tasks Property
-     -  Boards Property
-     -  Data Type
-   * - name
-     - name
-     - "string"
 
 
 Asana Teams to Trello Organizations
