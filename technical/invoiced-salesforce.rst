@@ -2,7 +2,7 @@
 Invoiced to Salesforce Dataflow
 ===============================
 
-Generated: 2024-09-06 07:56:40
+Generated: 2024-09-06 11:53:23
 
 Introduction
 ------------
@@ -45,6 +45,38 @@ The following properties are synchronized between a Invoiced Customers company a
    * - name
      - Name	
      - "string"
+
+
+Invoiced Invoices to Salesforce Invoice
+---------------------------------------
+Every Invoiced Invoices will be synchronized with a Salesforce Invoice.
+
+Once a link between a Invoiced Invoices and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Invoices and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Invoices Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+Invoiced Lineitem to Salesforce Invoice
+---------------------------------------
+Every Invoiced Lineitem will be synchronized with a Salesforce Invoice.
+
+Once a link between a Invoiced Lineitem and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Lineitem and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Lineitem Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
 
 
 Invoiced Contacts to Salesforce Contact
