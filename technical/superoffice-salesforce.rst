@@ -2,7 +2,7 @@
 SuperOffice to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-06 07:56:40
+Generated: 2024-09-06 11:53:23
 
 Introduction
 ------------
@@ -48,6 +48,54 @@ The following properties are synchronized between a SuperOffice Contact and a Sa
    * - Phones.Value
      - Phone	
      - "string"
+
+
+SuperOffice Quotealternative to Salesforce Invoice
+--------------------------------------------------
+Every SuperOffice Quotealternative will be synchronized with a Salesforce Invoice.
+
+Once a link between a SuperOffice Quotealternative and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quotealternative Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+SuperOffice Quoteline to Salesforce Invoice
+-------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Salesforce Invoice.
+
+Once a link between a SuperOffice Quoteline and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+SuperOffice Sale to Salesforce Invoice
+--------------------------------------
+Every SuperOffice Sale will be synchronized with a Salesforce Invoice.
+
+Once a link between a SuperOffice Sale and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Sale and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Sale Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
 
 
 SuperOffice Listcurrencyitems to Salesforce Currencytype
