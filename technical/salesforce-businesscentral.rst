@@ -2,7 +2,7 @@
 Salesforce to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-09-06 13:01:44
+Generated: 2024-09-06 13:06:47
 
 Introduction
 ------------
@@ -151,6 +151,9 @@ The following properties are synchronized between a Salesforce Order and a Busin
      - "string"
    * - EffectiveDate
      - orderDate
+     - N/A
+   * - EndDate
+     - requestedDeliveryDate
      - N/A
 
 
