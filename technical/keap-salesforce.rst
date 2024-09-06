@@ -2,7 +2,7 @@
 Keap to Salesforce Dataflow
 ===========================
 
-Generated: 2024-09-06 11:53:23
+Generated: 2024-09-06 12:29:25
 
 Introduction
 ------------
@@ -60,6 +60,22 @@ The following properties are synchronized between a Keap Opportunity and a Sales
 
    * - Keap Opportunity Property
      - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+Keap Opportunity to Salesforce Invoiceline
+------------------------------------------
+Every Keap Opportunity will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a Keap Opportunity and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Keap Opportunity and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Keap Opportunity Property
+     - Salesforce Invoiceline Property
      - Salesforce Data Type
 
 
