@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-06 12:29:25
+Generated: 2024-09-06 12:29:43
 
 Introduction
 ------------
@@ -140,6 +140,18 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Salesforce Invoiceline Property
      - Membercare Invoices Property
      - Membercare Data Type
+   * - Description
+     - invoiceItems.description
+     - "string"
+   * - InvoiceId
+     - id
+     - "string"
+   * - Quantity
+     - invoiceItems.quantity
+     - "string"
+   * - UnitPrice
+     - invoiceItems.unitPrice
+     - "string"
 
 
 Salesforce Product2 to Membercare Products
