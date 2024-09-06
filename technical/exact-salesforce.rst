@@ -2,7 +2,7 @@
 Exact to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-06 12:06:48
+Generated: 2024-09-06 12:29:25
 
 Introduction
 ------------
@@ -126,6 +126,38 @@ The following properties are synchronized between a Exact Quotations and a Sales
      - "string"
 
 
+Exact Quotations to Salesforce Invoiceline
+------------------------------------------
+Every Exact Quotations will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a Exact Quotations and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Quotations and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Quotations Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
+
+
+Exact Salesinvoices to Salesforce Invoiceline
+---------------------------------------------
+Every Exact Salesinvoices will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a Exact Salesinvoices and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Salesinvoices and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Salesinvoices Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
+
+
 Exact Salesorderlines to Salesforce Invoice
 -------------------------------------------
 Every Exact Salesorderlines will be synchronized with a Salesforce Invoice.
@@ -162,6 +194,22 @@ The following properties are synchronized between a Exact Salesorders and a Sale
    * - Description
      - Description
      - "string"
+
+
+Exact Salesorders to Salesforce Invoiceline
+-------------------------------------------
+Every Exact Salesorders will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a Exact Salesorders and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Salesorders and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Salesorders Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
 
 
 Exact Units to Salesforce Currencytype
