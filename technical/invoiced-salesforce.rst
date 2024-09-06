@@ -2,12 +2,28 @@
 Invoiced to Salesforce Dataflow
 ===============================
 
-Generated: 2024-09-06 06:50:40
+Generated: 2024-09-06 07:56:25
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Invoiced Customers company to Salesforce Division
+-------------------------------------------------
+Every Invoiced Customers company will be synchronized with a Salesforce Division.
+
+Once a link between a Invoiced Customers company and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Customers company and a Salesforce Division:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Customers company Property
+     - Salesforce Division Property
+     - Salesforce Data Type
+
 
 Invoiced Customers company to Salesforce Organization
 -----------------------------------------------------
