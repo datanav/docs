@@ -2,7 +2,7 @@
 Tidsbanken to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-06 07:56:25
+Generated: 2024-09-06 07:56:40
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Sa
    * - Tidsbanken Avdeling Property
      - Salesforce Division Property
      - Salesforce Data Type
+   * - Navn
+     - Name
+     - "string"
+   * - Synlig
+     - IsActive
+     - "string"
 
 
 Tidsbanken Avdeling to Salesforce Organization
@@ -58,6 +64,9 @@ The following properties are synchronized between a Tidsbanken Kunde and a Sales
    * - Tidsbanken Kunde Property
      - Salesforce Division Property
      - Salesforce Data Type
+   * - Navn
+     - Name
+     - "string"
 
 
 Tidsbanken Kunde to Salesforce Organization
