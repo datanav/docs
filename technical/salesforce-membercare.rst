@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-06 11:56:23
+Generated: 2024-09-06 12:29:25
 
 Introduction
 ------------
@@ -123,6 +123,22 @@ The following properties are synchronized between a Salesforce Invoice and a Mem
 
    * - Salesforce Invoice Property
      - Membercare Companies Property
+     - Membercare Data Type
+
+
+Salesforce Invoiceline to Membercare Invoices
+---------------------------------------------
+Every Salesforce Invoiceline will be synchronized with a Membercare Invoices.
+
+Once a link between a Salesforce Invoiceline and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Invoiceline and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Invoiceline Property
+     - Membercare Invoices Property
      - Membercare Data Type
 
 
