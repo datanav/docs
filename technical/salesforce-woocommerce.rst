@@ -2,7 +2,7 @@
 Salesforce to Woocommerce Dataflow
 ==================================
 
-Generated: 2024-09-06 13:31:35
+Generated: 2024-09-06 13:47:40
 
 Introduction
 ------------
@@ -52,6 +52,24 @@ The following properties are synchronized between a Salesforce Order and a Wooco
      - "string"
    * - ID
      - id
+     - "string"
+   * - ShippingCity
+     - billing.city
+     - "string"
+   * - ShippingCity
+     - shipping.city
+     - "string"
+   * - ShippingCountry
+     - billing.country
+     - "string"
+   * - ShippingCountry
+     - shipping.country
+     - "string"
+   * - ShippingStateCode
+     - billing.postcode
+     - "string"
+   * - ShippingStateCode
+     - shipping.postcode
      - "string"
 
 
