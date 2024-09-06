@@ -2,7 +2,7 @@
 Salesforce to Youtrack Dataflow
 ===============================
 
-Generated: 2024-09-06 07:56:25
+Generated: 2024-09-06 11:06:24
 
 Introduction
 ------------
@@ -37,6 +37,22 @@ The following properties are synchronized between a Salesforce Division and a Yo
    :header-rows: 1
 
    * - Salesforce Division Property
+     - Youtrack Groups Property
+     - Youtrack Data Type
+
+
+Salesforce Invoice to Youtrack Groups
+-------------------------------------
+Every Salesforce Invoice will be synchronized with a Youtrack Groups.
+
+Once a link between a Salesforce Invoice and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Invoice and a Youtrack Groups:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Invoice Property
      - Youtrack Groups Property
      - Youtrack Data Type
 
