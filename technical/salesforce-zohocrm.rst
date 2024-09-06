@@ -2,7 +2,7 @@
 Salesforce to ZohoCRM Dataflow
 ==============================
 
-Generated: 2024-09-06 07:56:25
+Generated: 2024-09-06 07:56:40
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Salesforce Division and a Zo
    * - Salesforce Division Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
+   * - Name
+     - Account_Name
+     - "string"
 
 
 Salesforce Organization to ZohoCRM Account
