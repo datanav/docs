@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-06 13:09:50
+Generated: 2024-09-06 13:10:40
 
 Introduction
 ------------
@@ -174,6 +174,9 @@ The following properties are synchronized between a Salesforce Order and a Busin
      - "string"
    * - EndDate
      - dueDate
+     - "string"
+   * - EndDate
+     - settlementDate
      - "string"
    * - Name
      - name
