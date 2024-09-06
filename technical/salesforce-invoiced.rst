@@ -2,7 +2,7 @@
 Salesforce to Invoiced Dataflow
 ===============================
 
-Generated: 2024-09-06 11:56:23
+Generated: 2024-09-06 12:09:58
 
 Introduction
 ------------
@@ -42,6 +42,18 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Salesforce Invoiceline Property
      - Invoiced Lineitem Property
      - Invoiced Data Type
+   * - Description
+     - items.description
+     - "string"
+   * - Name
+     - items.name
+     - "string"
+   * - Quantity
+     - items.quantity
+     - "string"
+   * - UnitPrice
+     - items.amount
+     - "string"
 
 
 Salesforce Product2 to Invoiced Items
