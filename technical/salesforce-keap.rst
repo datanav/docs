@@ -2,7 +2,7 @@
 Salesforce to Keap Dataflow
 ===========================
 
-Generated: 2024-09-06 00:00:21
+Generated: 2024-09-06 00:34:19
 
 Introduction
 ------------
@@ -32,22 +32,6 @@ The following properties are synchronized between a Salesforce Contact and a Kea
    * - Name
      - given_name
      - "string"
-
-
-Salesforce Currencytype to Keap Companies
------------------------------------------
-Every Salesforce Currencytype will be synchronized with a Keap Companies.
-
-Once a link between a Salesforce Currencytype and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Currencytype and a Keap Companies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Currencytype Property
-     - Keap Companies Property
-     - Keap Data Type
 
 
 Salesforce Customer to Keap Contacts
