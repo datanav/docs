@@ -2,7 +2,7 @@
 Businesscentral to Salesforce Dataflow
 ======================================
 
-Generated: 2024-09-06 07:56:40
+Generated: 2024-09-06 11:53:23
 
 Introduction
 ------------
@@ -58,6 +58,54 @@ The following properties are synchronized between a Businesscentral Customers co
    * - displayName
      - Name
      - "string"
+
+
+Businesscentral Salesorderlines to Salesforce Invoice
+-----------------------------------------------------
+Every Businesscentral Salesorderlines will be synchronized with a Salesforce Invoice.
+
+Once a link between a Businesscentral Salesorderlines and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorderlines and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorderlines Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+Businesscentral Salesorders to Salesforce Invoice
+-------------------------------------------------
+Every Businesscentral Salesorders will be synchronized with a Salesforce Invoice.
+
+Once a link between a Businesscentral Salesorders and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorders and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorders Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+Businesscentral Salesquotes to Salesforce Invoice
+-------------------------------------------------
+Every Businesscentral Salesquotes will be synchronized with a Salesforce Invoice.
+
+Once a link between a Businesscentral Salesquotes and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesquotes and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesquotes Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
 
 
 Businesscentral Contacts person to Salesforce Contact
