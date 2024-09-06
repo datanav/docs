@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-06 13:27:20
+Generated: 2024-09-06 13:27:38
 
 Introduction
 ------------
@@ -166,6 +166,9 @@ The following properties are synchronized between a Salesforce Order and a Busin
    * - Salesforce Order Property
      - Businessnxt Country Property
      - Businessnxt Data Type
+   * - BillingCountry
+     - name
+     - "string"
 
 
 Salesforce Order to Businessnxt Order
