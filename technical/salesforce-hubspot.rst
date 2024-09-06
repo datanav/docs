@@ -2,7 +2,7 @@
 Salesforce to Hubspot Dataflow
 ==============================
 
-Generated: 2024-09-06 12:09:58
+Generated: 2024-09-06 12:43:24
 
 Introduction
 ------------
@@ -161,6 +161,22 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - UnitPrice
      - properties.price
      - "string"
+
+
+Salesforce Order to Hubspot Lineitem
+------------------------------------
+Every Salesforce Order will be synchronized with a Hubspot Lineitem.
+
+Once a link between a Salesforce Order and a Hubspot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Order and a Hubspot Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Order Property
+     - Hubspot Lineitem Property
+     - Hubspot Data Type
 
 
 Salesforce Product2 to Hubspot Product
