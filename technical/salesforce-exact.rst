@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-06 10:31:24
+Generated: 2024-09-06 10:40:23
 
 Introduction
 ------------
@@ -171,22 +171,6 @@ The following properties are synchronized between a Salesforce Division and a Ex
    :header-rows: 1
 
    * - Salesforce Division Property
-     - Exact Divisions Property
-     - Exact Data Type
-
-
-Salesforce Invoice to Exact Divisions
--------------------------------------
-Every Salesforce Invoice will be synchronized with a Exact Divisions.
-
-Once a link between a Salesforce Invoice and a Exact Divisions is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Invoice and a Exact Divisions:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Invoice Property
      - Exact Divisions Property
      - Exact Data Type
 
