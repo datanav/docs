@@ -2,7 +2,7 @@
 Powerofficego to Salesforce Dataflow
 ====================================
 
-Generated: 2024-09-06 11:53:23
+Generated: 2024-09-06 11:53:41
 
 Introduction
 ------------
@@ -105,6 +105,9 @@ The following properties are synchronized between a Powerofficego Salesorderline
    * - Powerofficego Salesorderlines Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - TotalAmount
+     - TotalAmount
+     - "string"
 
 
 Powerofficego Salesorders to Salesforce Invoice
@@ -121,6 +124,15 @@ The following properties are synchronized between a Powerofficego Salesorders an
    * - Powerofficego Salesorders Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - CurrencyCode
+     - CurrencyIsoCode
+     - "string"
+   * - NetAmount
+     - TotalAmount
+     - "string"
+   * - RelatedInvoiceNo
+     - InvoiceNumber
+     - "string"
 
 
 Powerofficego Contactperson to Salesforce Contact
