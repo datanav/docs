@@ -2,7 +2,7 @@
 Salesforce to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-09-06 12:16:44
+Generated: 2024-09-06 12:43:24
 
 Introduction
 ------------
@@ -130,6 +130,22 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - UnitPrice
      - unitPrice
      - "float"
+
+
+Salesforce Order to Businesscentral Salesorderlines
+---------------------------------------------------
+Every Salesforce Order will be synchronized with a Businesscentral Salesorderlines.
+
+Once a link between a Salesforce Order and a Businesscentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Order and a Businesscentral Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Order Property
+     - Businesscentral Salesorderlines Property
+     - Businesscentral Data Type
 
 
 Salesforce Product2 to Businesscentral Items
