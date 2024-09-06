@@ -2,7 +2,7 @@
 Salesforce to Hubspot Dataflow
 ==============================
 
-Generated: 2024-09-06 11:06:24
+Generated: 2024-09-06 11:56:23
 
 Introduction
 ------------
@@ -133,6 +133,22 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Phone	
      - properties.phone
      - "string"
+
+
+Salesforce Invoiceline to Hubspot Lineitem
+------------------------------------------
+Every Salesforce Invoiceline will be synchronized with a Hubspot Lineitem.
+
+Once a link between a Salesforce Invoiceline and a Hubspot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Invoiceline and a Hubspot Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Invoiceline Property
+     - Hubspot Lineitem Property
+     - Hubspot Data Type
 
 
 Salesforce Product2 to Hubspot Product
