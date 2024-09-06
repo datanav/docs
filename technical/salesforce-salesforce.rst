@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-06 10:32:18
+Generated: 2024-09-06 10:40:23
 
 Introduction
 ------------
@@ -26,36 +26,4 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Name	
      - Name
      - "string"
-
-
-Salesforce Division to Salesforce Invoice
------------------------------------------
-Every Salesforce Division will be synchronized with a Salesforce Invoice.
-
-Once a link between a Salesforce Division and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Division and a Salesforce Invoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Division Property
-     - Salesforce Invoice Property
-     - Salesforce Data Type
-
-
-Salesforce Invoice to Salesforce Division
------------------------------------------
-Every Salesforce Invoice will be synchronized with a Salesforce Division.
-
-Once a link between a Salesforce Invoice and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Invoice and a Salesforce Division:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Invoice Property
-     - Salesforce Division Property
-     - Salesforce Data Type
 
