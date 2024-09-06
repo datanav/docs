@@ -2,7 +2,7 @@
 HubSpot to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-06 12:44:18
+Generated: 2024-09-06 12:46:20
 
 Introduction
 ------------
@@ -596,6 +596,22 @@ The following properties are synchronized between a HubSpot Deal and a Salesforc
    * - properties.deal_currency_code
      - IsoCode
      - "string"
+
+
+HubSpot Deal to Salesforce Order
+--------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Salesforce Order.
+
+Once a link between a HubSpot Deal and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a Salesforce Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - Salesforce Order Property
+     - Salesforce Data Type
 
 
 HubSpot Lineitem to Salesforce Invoiceline
