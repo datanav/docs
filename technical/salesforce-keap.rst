@@ -2,7 +2,7 @@
 Salesforce to Keap Dataflow
 ===========================
 
-Generated: 2024-09-06 07:17:24
+Generated: 2024-09-06 07:56:25
 
 Introduction
 ------------
@@ -47,6 +47,22 @@ The following properties are synchronized between a Salesforce Customer and a Ke
 
    * - Salesforce Customer Property
      - Keap Contacts Property
+     - Keap Data Type
+
+
+Salesforce Division to Keap Companies
+-------------------------------------
+Every Salesforce Division will be synchronized with a Keap Companies.
+
+Once a link between a Salesforce Division and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Division and a Keap Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Division Property
+     - Keap Companies Property
      - Keap Data Type
 
 
