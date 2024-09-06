@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-06 12:22:39
+Generated: 2024-09-06 12:43:24
 
 Introduction
 ------------
@@ -271,6 +271,22 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Description
      - CostPriceFC
      - "string"
+
+
+Salesforce Order to Exact Salesorderlines
+-----------------------------------------
+Every Salesforce Order will be synchronized with a Exact Salesorderlines.
+
+Once a link between a Salesforce Order and a Exact Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Order and a Exact Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Order Property
+     - Exact Salesorderlines Property
+     - Exact Data Type
 
 
 Salesforce Organization to Exact Addresses
