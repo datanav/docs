@@ -2,7 +2,7 @@
 Businesscentral to Salesforce Dataflow
 ======================================
 
-Generated: 2024-09-06 12:16:44
+Generated: 2024-09-06 12:29:25
 
 Introduction
 ------------
@@ -101,6 +101,22 @@ The following properties are synchronized between a Businesscentral Salesorders 
      - "string"
 
 
+Businesscentral Salesorders to Salesforce Invoiceline
+-----------------------------------------------------
+Every Businesscentral Salesorders will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a Businesscentral Salesorders and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorders and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorders Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
+
+
 Businesscentral Salesquotes to Salesforce Invoice
 -------------------------------------------------
 Every Businesscentral Salesquotes will be synchronized with a Salesforce Invoice.
@@ -114,6 +130,22 @@ The following properties are synchronized between a Businesscentral Salesquotes 
 
    * - Businesscentral Salesquotes Property
      - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+Businesscentral Salesquotes to Salesforce Invoiceline
+-----------------------------------------------------
+Every Businesscentral Salesquotes will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a Businesscentral Salesquotes and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesquotes and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesquotes Property
+     - Salesforce Invoiceline Property
      - Salesforce Data Type
 
 
