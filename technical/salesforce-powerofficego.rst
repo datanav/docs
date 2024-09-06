@@ -2,7 +2,7 @@
 Salesforce to Powerofficego Dataflow
 ====================================
 
-Generated: 2024-09-06 06:50:24
+Generated: 2024-09-06 11:56:23
 
 Introduction
 ------------
@@ -56,6 +56,22 @@ The following properties are synchronized between a Salesforce Customer and a Po
 
    * - Salesforce Customer Property
      - Powerofficego Customers person Property
+     - Powerofficego Data Type
+
+
+Salesforce Invoiceline to Powerofficego Salesorderlines
+-------------------------------------------------------
+Every Salesforce Invoiceline will be synchronized with a Powerofficego Salesorderlines.
+
+Once a link between a Salesforce Invoiceline and a Powerofficego Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Invoiceline and a Powerofficego Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Invoiceline Property
+     - Powerofficego Salesorderlines Property
      - Powerofficego Data Type
 
 
