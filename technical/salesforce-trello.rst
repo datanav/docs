@@ -2,7 +2,7 @@
 Salesforce to Trello Dataflow
 =============================
 
-Generated: 2024-09-06 07:56:25
+Generated: 2024-09-06 07:56:40
 
 Introduction
 ------------
@@ -77,6 +77,9 @@ The following properties are synchronized between a Salesforce Division and a Tr
    * - Salesforce Division Property
      - Trello Organizations Property
      - Trello Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Salesforce Organization to Trello Organizations
