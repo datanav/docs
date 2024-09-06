@@ -2,7 +2,7 @@
 Invoiced to Salesforce Dataflow
 ===============================
 
-Generated: 2024-09-06 12:29:43
+Generated: 2024-09-06 12:44:18
 
 Introduction
 ------------
@@ -184,4 +184,20 @@ The following properties are synchronized between a Invoiced Lineitem and a Sale
    * - items.quantity
      - Quantity
      - "string"
+
+
+Invoiced Lineitem to Salesforce Order
+-------------------------------------
+Every Invoiced Lineitem will be synchronized with a Salesforce Order.
+
+Once a link between a Invoiced Lineitem and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Lineitem and a Salesforce Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Lineitem Property
+     - Salesforce Order Property
+     - Salesforce Data Type
 
