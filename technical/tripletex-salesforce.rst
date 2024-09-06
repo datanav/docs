@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-06 13:06:49
+Generated: 2024-09-06 13:09:50
 
 Introduction
 ------------
@@ -275,10 +275,16 @@ The following properties are synchronized between a Tripletex Order and a Salesf
      - CurrencyIsoCode
      - "string"
    * - deliveryDate
+     - EffectiveDate
+     - "string"
+   * - deliveryDate
      - EndDate
      - "string"
    * - orderDate
      - EffectiveDate
+     - "string"
+   * - orderDate
+     - OrderedDate
      - "string"
 
 
