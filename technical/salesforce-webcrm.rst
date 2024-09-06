@@ -2,7 +2,7 @@
 Salesforce to Webcrm Dataflow
 =============================
 
-Generated: 2024-09-06 12:43:24
+Generated: 2024-09-06 12:50:24
 
 Introduction
 ------------
@@ -126,22 +126,6 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Description
      - QuotationLineVatPercentage
      - "string"
-
-
-Salesforce Order to Webcrm Quotationline
-----------------------------------------
-Every Salesforce Order will be synchronized with a Webcrm Quotationline.
-
-Once a link between a Salesforce Order and a Webcrm Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Order and a Webcrm Quotationline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Order Property
-     - Webcrm Quotationline Property
-     - Webcrm Data Type
 
 
 Salesforce Product2 to Webcrm Products
