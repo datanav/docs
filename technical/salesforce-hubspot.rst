@@ -2,7 +2,7 @@
 Salesforce to Hubspot Dataflow
 ==============================
 
-Generated: 2024-09-06 07:56:25
+Generated: 2024-09-06 07:56:40
 
 Introduction
 ------------
@@ -76,6 +76,9 @@ The following properties are synchronized between a Salesforce Division and a Hu
    * - Salesforce Division Property
      - Hubspot Company Property
      - Hubspot Data Type
+   * - Name
+     - properties.name
+     - "string"
 
 
 Salesforce Division to Hubspot Contact
