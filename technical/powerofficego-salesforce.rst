@@ -2,12 +2,28 @@
 Powerofficego to Salesforce Dataflow
 ====================================
 
-Generated: 2024-09-06 06:50:24
+Generated: 2024-09-06 07:56:25
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Powerofficego Customers to Salesforce Division
+----------------------------------------------
+Every Powerofficego Customers will be synchronized with a Salesforce Division.
+
+Once a link between a Powerofficego Customers and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a Salesforce Division:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - Salesforce Division Property
+     - Salesforce Data Type
+
 
 Powerofficego Customers to Salesforce Organization
 --------------------------------------------------
@@ -29,6 +45,22 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - PhoneNumber
      - Phone	
      - "string"
+
+
+Powerofficego Departments to Salesforce Division
+------------------------------------------------
+Every Powerofficego Departments will be synchronized with a Salesforce Division.
+
+Once a link between a Powerofficego Departments and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Departments and a Salesforce Division:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Departments Property
+     - Salesforce Division Property
+     - Salesforce Data Type
 
 
 Powerofficego Departments to Salesforce Organization
