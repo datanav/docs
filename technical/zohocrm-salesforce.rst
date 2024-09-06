@@ -2,7 +2,7 @@
 ZohoCRM to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-06 00:34:19
+Generated: 2024-09-06 06:50:24
 
 Introduction
 ------------
@@ -32,4 +32,20 @@ The following properties are synchronized between a ZohoCRM Account and a Salesf
    * - Phone
      - Phone	
      - "string"
+
+
+ZohoCRM Contact to Salesforce Customer
+--------------------------------------
+Every ZohoCRM Contact will be synchronized with a Salesforce Customer.
+
+Once a link between a ZohoCRM Contact and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Contact and a Salesforce Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Contact Property
+     - Salesforce Customer Property
+     - Salesforce Data Type
 
