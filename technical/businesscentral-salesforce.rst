@@ -2,7 +2,7 @@
 Businesscentral to Salesforce Dataflow
 ======================================
 
-Generated: 2024-09-06 12:44:18
+Generated: 2024-09-06 12:46:20
 
 Introduction
 ------------
@@ -317,6 +317,22 @@ The following properties are synchronized between a Businesscentral Salesorderli
    :header-rows: 1
 
    * - Businesscentral Salesorderlines Property
+     - Salesforce Order Property
+     - Salesforce Data Type
+
+
+Businesscentral Salesorders to Salesforce Order
+-----------------------------------------------
+Every Businesscentral Salesorders will be synchronized with a Salesforce Order.
+
+Once a link between a Businesscentral Salesorders and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorders and a Salesforce Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorders Property
      - Salesforce Order Property
      - Salesforce Data Type
 
