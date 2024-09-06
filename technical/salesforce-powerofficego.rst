@@ -2,7 +2,7 @@
 Salesforce to Powerofficego Dataflow
 ====================================
 
-Generated: 2024-09-06 00:00:21
+Generated: 2024-09-06 06:50:24
 
 Introduction
 ------------
@@ -41,6 +41,22 @@ The following properties are synchronized between a Salesforce Contact and a Pow
    * - Phone
      - phoneNumber
      - "string"
+
+
+Salesforce Customer to Powerofficego Customers person
+-----------------------------------------------------
+Every Salesforce Customer will be synchronized with a Powerofficego Customers person.
+
+Once a link between a Salesforce Customer and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Customer and a Powerofficego Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Customer Property
+     - Powerofficego Customers person Property
+     - Powerofficego Data Type
 
 
 Salesforce Product2 to Powerofficego Product
