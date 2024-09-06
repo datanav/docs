@@ -2,7 +2,7 @@
 HubSpot to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-06 07:56:25
+Generated: 2024-09-06 07:56:40
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a HubSpot Company and a Salesf
    * - HubSpot Company Property
      - Salesforce Division Property
      - Salesforce Data Type
+   * - properties.name
+     - Name
+     - "string"
 
 
 HubSpot Company to Salesforce Organization
