@@ -2,7 +2,7 @@
 Tidsbanken to Trello Dataflow
 =============================
 
-Generated: 2024-09-06 00:00:01
+Generated: 2024-09-06 00:34:19
 
 Introduction
 ------------
@@ -69,25 +69,6 @@ The following properties are synchronized between a Tidsbanken Prosjekt and a Tr
      - "string"
    * - StartDato
      - date
-     - "string"
-
-
-Tidsbanken Prosjekt to  Boards
-------------------------------
-Every Tidsbanken Prosjekt will be synchronized with a  Boards.
-
-Once a link between a Tidsbanken Prosjekt and a  Boards is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tidsbanken Prosjekt and a  Boards:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Prosjekt Property
-     -  Boards Property
-     -  Data Type
-   * - Navn
-     - name
      - "string"
 
 
