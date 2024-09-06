@@ -2,7 +2,7 @@
 Salesforce to Superoffice Dataflow
 ==================================
 
-Generated: 2024-09-06 11:06:24
+Generated: 2024-09-06 11:56:23
 
 Introduction
 ------------
@@ -136,6 +136,22 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Phone	
      - Phones.Value
      - "string"
+
+
+Salesforce Invoiceline to Superoffice Quoteline
+-----------------------------------------------
+Every Salesforce Invoiceline will be synchronized with a Superoffice Quoteline.
+
+Once a link between a Salesforce Invoiceline and a Superoffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Invoiceline and a Superoffice Quoteline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Invoiceline Property
+     - Superoffice Quoteline Property
+     - Superoffice Data Type
 
 
 Salesforce Product2 to Superoffice Product
