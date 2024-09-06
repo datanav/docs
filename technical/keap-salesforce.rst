@@ -2,7 +2,7 @@
 Keap to Salesforce Dataflow
 ===========================
 
-Generated: 2024-09-06 07:56:25
+Generated: 2024-09-06 07:56:40
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Keap Companies and a Salesfo
    * - Keap Companies Property
      - Salesforce Division Property
      - Salesforce Data Type
+   * - company_name
+     - Name
+     - "string"
 
 
 Keap Companies to Salesforce Organization
