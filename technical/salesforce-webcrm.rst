@@ -2,7 +2,7 @@
 Salesforce to Webcrm Dataflow
 =============================
 
-Generated: 2024-09-06 11:56:23
+Generated: 2024-09-06 12:06:48
 
 Introduction
 ------------
@@ -111,6 +111,21 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Salesforce Invoiceline Property
      - Webcrm Quotationline Property
      - Webcrm Data Type
+   * - Description
+     - QuotationLineCostPrice
+     - "string"
+   * - Description
+     - QuotationLineDiscount
+     - "string"
+   * - Description
+     - QuotationLinePrice
+     - "string"
+   * - Description
+     - QuotationLineQuantity
+     - "string"
+   * - Description
+     - QuotationLineVatPercentage
+     - "string"
 
 
 Salesforce Product2 to Webcrm Products
