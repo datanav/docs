@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-06 07:54:25
+Generated: 2024-09-06 07:54:40
 
 Introduction
 ------------
@@ -39,6 +39,9 @@ The following properties are synchronized between a Salesforce Division and a Ex
    * - Salesforce Division Property
      - Exact Accounts Property
      - Exact Data Type
+   * - Name
+     - Name
+     - "string"
 
 
 Salesforce Division to Exact Contacts
