@@ -2,7 +2,7 @@
 Salesforce to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-09-06 13:00:47
+Generated: 2024-09-06 13:01:44
 
 Introduction
 ------------
@@ -149,6 +149,9 @@ The following properties are synchronized between a Salesforce Order and a Busin
    * - CurrencyIsoCode
      - currencyId
      - "string"
+   * - EffectiveDate
+     - orderDate
+     - N/A
 
 
 Salesforce Product2 to Businesscentral Items
