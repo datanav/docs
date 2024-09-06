@@ -2,7 +2,7 @@
 Invoiced to Salesforce Dataflow
 ===============================
 
-Generated: 2024-09-06 11:53:23
+Generated: 2024-09-06 11:53:41
 
 Introduction
 ------------
@@ -61,6 +61,9 @@ The following properties are synchronized between a Invoiced Invoices and a Sale
    * - Invoiced Invoices Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - currency
+     - CurrencyIsoCode
+     - "string"
 
 
 Invoiced Lineitem to Salesforce Invoice
