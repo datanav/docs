@@ -2,7 +2,7 @@
 Chargebee to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-06 00:34:19
+Generated: 2024-09-06 06:50:24
 
 Introduction
 ------------
@@ -58,6 +58,22 @@ The following properties are synchronized between a Chargebee Business_entity an
    * - name
      - Name	
      - "string"
+
+
+Chargebee Customer to Salesforce Customer
+-----------------------------------------
+Every Chargebee Customer will be synchronized with a Salesforce Customer.
+
+Once a link between a Chargebee Customer and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Customer and a Salesforce Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Customer Property
+     - Salesforce Customer Property
+     - Salesforce Data Type
 
 
 Chargebee Item to Salesforce Product2
