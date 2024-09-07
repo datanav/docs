@@ -2,7 +2,7 @@
 Asana to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-07 00:00:01
+Generated: 2024-09-07 00:36:25
 
 Introduction
 ------------
@@ -25,25 +25,6 @@ The following properties are synchronized between a Asana Teams and a Salesforce
      - Salesforce Data Type
    * - name
      - Name
-     - "string"
-
-
-Asana Teams to Salesforce Organization
---------------------------------------
-Every Asana Teams will be synchronized with a Salesforce Organization.
-
-Once a link between a Asana Teams and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Asana Teams and a Salesforce Organization:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Asana Teams Property
-     - Salesforce Organization Property
-     - Salesforce Data Type
-   * - name
-     - Name	
      - "string"
 
 
