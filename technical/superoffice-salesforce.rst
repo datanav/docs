@@ -2,7 +2,7 @@
 SuperOffice to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-07 00:00:01
+Generated: 2024-09-07 00:36:25
 
 Introduction
 ------------
@@ -28,28 +28,6 @@ The following properties are synchronized between a SuperOffice Contact and a Sa
      - "string"
 
 
-SuperOffice Contact to Salesforce Organization
-----------------------------------------------
-Every SuperOffice Contact will be synchronized with a Salesforce Organization.
-
-Once a link between a SuperOffice Contact and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Contact and a Salesforce Organization:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Contact Property
-     - Salesforce Organization Property
-     - Salesforce Data Type
-   * - Name
-     - Name	
-     - "string"
-   * - Phones.Value
-     - Phone	
-     - "string"
-
-
 SuperOffice Quotealternative to Salesforce Invoice
 --------------------------------------------------
 Every SuperOffice Quotealternative will be synchronized with a Salesforce Invoice.
@@ -70,22 +48,6 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - TotalPrice
      - TotalAmount
      - "string"
-
-
-SuperOffice Quotealternative to Salesforce Invoiceline
-------------------------------------------------------
-Every SuperOffice Quotealternative will be synchronized with a Salesforce Invoiceline.
-
-Once a link between a SuperOffice Quotealternative and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quotealternative and a Salesforce Invoiceline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quotealternative Property
-     - Salesforce Invoiceline Property
-     - Salesforce Data Type
 
 
 SuperOffice Quoteline to Salesforce Invoice
@@ -126,25 +88,6 @@ The following properties are synchronized between a SuperOffice Sale and a Sales
      - "string"
    * - Saledate
      - FullSettlementDate
-     - "string"
-
-
-SuperOffice Sale to Salesforce Invoiceline
-------------------------------------------
-Every SuperOffice Sale will be synchronized with a Salesforce Invoiceline.
-
-Once a link between a SuperOffice Sale and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Sale and a Salesforce Invoiceline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Sale Property
-     - Salesforce Invoiceline Property
-     - Salesforce Data Type
-   * - Currency.Id
-     - CurrencyIsoCode
      - "string"
 
 
