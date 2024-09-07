@@ -2,7 +2,7 @@
 Salesforce to Hubspot Dataflow
 ==============================
 
-Generated: 2024-09-07 00:00:19
+Generated: 2024-09-07 00:36:25
 
 Introduction
 ------------
@@ -79,38 +79,6 @@ The following properties are synchronized between a Salesforce Division and a Hu
    * - Name
      - properties.name
      - "string"
-
-
-Salesforce Division to Hubspot Contact
---------------------------------------
-Every Salesforce Division will be synchronized with a Hubspot Contact.
-
-Once a link between a Salesforce Division and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Division and a Hubspot Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Division Property
-     - Hubspot Contact Property
-     - Hubspot Data Type
-
-
-Salesforce Invoice to Hubspot Company
--------------------------------------
-Every Salesforce Invoice will be synchronized with a Hubspot Company.
-
-Once a link between a Salesforce Invoice and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Invoice and a Hubspot Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Invoice Property
-     - Hubspot Company Property
-     - Hubspot Data Type
 
 
 Salesforce Organization to Hubspot Company
