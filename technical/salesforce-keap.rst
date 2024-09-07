@@ -2,7 +2,7 @@
 Salesforce to Keap Dataflow
 ===========================
 
-Generated: 2024-09-07 00:00:19
+Generated: 2024-09-07 00:36:25
 
 Introduction
 ------------
@@ -67,38 +67,6 @@ The following properties are synchronized between a Salesforce Division and a Ke
    * - Name
      - company_name
      - "string"
-
-
-Salesforce Division to Keap Contacts
-------------------------------------
-Every Salesforce Division will be synchronized with a Keap Contacts.
-
-Once a link between a Salesforce Division and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Division and a Keap Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Division Property
-     - Keap Contacts Property
-     - Keap Data Type
-
-
-Salesforce Invoice to Keap Companies
-------------------------------------
-Every Salesforce Invoice will be synchronized with a Keap Companies.
-
-Once a link between a Salesforce Invoice and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Invoice and a Keap Companies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Invoice Property
-     - Keap Companies Property
-     - Keap Data Type
 
 
 Salesforce Organization to Keap Companies
