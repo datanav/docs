@@ -2,7 +2,7 @@
 Unieconomy to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-07 00:00:01
+Generated: 2024-09-07 00:36:25
 
 Introduction
 ------------
@@ -44,22 +44,6 @@ The following properties are synchronized between a Unieconomy Customers and a S
      - Salesforce Data Type
 
 
-Unieconomy Customers to Salesforce Organization
------------------------------------------------
-Every Unieconomy Customers will be synchronized with a Salesforce Organization.
-
-Once a link between a Unieconomy Customers and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Unieconomy Customers and a Salesforce Organization:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Unieconomy Customers Property
-     - Salesforce Organization Property
-     - Salesforce Data Type
-
-
 Unieconomy Departments to Salesforce Division
 ---------------------------------------------
 Every Unieconomy Departments will be synchronized with a Salesforce Division.
@@ -76,25 +60,6 @@ The following properties are synchronized between a Unieconomy Departments and a
      - Salesforce Data Type
    * - Name
      - Name
-     - "string"
-
-
-Unieconomy Departments to Salesforce Organization
--------------------------------------------------
-Every Unieconomy Departments will be synchronized with a Salesforce Organization.
-
-Once a link between a Unieconomy Departments and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Unieconomy Departments and a Salesforce Organization:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Unieconomy Departments Property
-     - Salesforce Organization Property
-     - Salesforce Data Type
-   * - Name
-     - Name	
      - "string"
 
 
