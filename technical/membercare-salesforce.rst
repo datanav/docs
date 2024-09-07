@@ -2,7 +2,7 @@
 Membercare to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-07 00:00:29
+Generated: 2024-09-07 00:36:25
 
 Introduction
 ------------
@@ -76,43 +76,6 @@ The following properties are synchronized between a Membercare Organizations and
      - Salesforce Data Type
    * - name
      - Name
-     - "string"
-
-
-Membercare Organizations to Salesforce Organization
----------------------------------------------------
-Every Membercare Organizations will be synchronized with a Salesforce Organization.
-
-Once a link between a Membercare Organizations and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Membercare Organizations and a Salesforce Organization:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Membercare Organizations Property
-     - Salesforce Organization Property
-     - Salesforce Data Type
-   * - addresses.country.id
-     - Country
-     - "string"
-   * - addresses.postalCode.city
-     - City
-     - "string"
-   * - addresses.postalCode.zipCode
-     - PostalCode	
-     - "string"
-   * - company.addresses.addressDescription
-     - Country
-     - "string"
-   * - company.addresses.municipality
-     - PostalCode	
-     - "string"
-   * - company.addresses.start
-     - City
-     - "string"
-   * - name
-     - Name	
      - "string"
 
 
