@@ -2,7 +2,7 @@
 YouTrack to Salesforce Dataflow
 ===============================
 
-Generated: 2024-09-07 00:00:01
+Generated: 2024-09-07 00:36:25
 
 Introduction
 ------------
@@ -22,22 +22,6 @@ The following properties are synchronized between a YouTrack Groups and a Salesf
 
    * - YouTrack Groups Property
      - Salesforce Division Property
-     - Salesforce Data Type
-
-
-YouTrack Groups to Salesforce Organization
-------------------------------------------
-Every YouTrack Groups will be synchronized with a Salesforce Organization.
-
-Once a link between a YouTrack Groups and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Groups and a Salesforce Organization:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Groups Property
-     - Salesforce Organization Property
      - Salesforce Data Type
 
 
@@ -73,22 +57,6 @@ The following properties are synchronized between a YouTrack Organizations and a
      - Salesforce Data Type
 
 
-YouTrack Organizations to Salesforce Organization
--------------------------------------------------
-Every YouTrack Organizations will be synchronized with a Salesforce Organization.
-
-Once a link between a YouTrack Organizations and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Organizations and a Salesforce Organization:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Organizations Property
-     - Salesforce Organization Property
-     - Salesforce Data Type
-
-
 YouTrack Roles to Salesforce Currencytype
 -----------------------------------------
 Every YouTrack Roles will be synchronized with a Salesforce Currencytype.
@@ -118,21 +86,5 @@ The following properties are synchronized between a YouTrack Usergroups and a Sa
 
    * - YouTrack Usergroups Property
      - Salesforce Division Property
-     - Salesforce Data Type
-
-
-YouTrack Usergroups to Salesforce Organization
-----------------------------------------------
-Every YouTrack Usergroups will be synchronized with a Salesforce Organization.
-
-Once a link between a YouTrack Usergroups and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Usergroups and a Salesforce Organization:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Usergroups Property
-     - Salesforce Organization Property
      - Salesforce Data Type
 
