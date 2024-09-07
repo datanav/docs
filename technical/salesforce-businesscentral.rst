@@ -2,7 +2,7 @@
 Salesforce to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-09-07 00:00:19
+Generated: 2024-09-07 00:36:25
 
 Introduction
 ------------
@@ -21,22 +21,6 @@ The following properties are synchronized between a Salesforce Division and a Bu
    :header-rows: 1
 
    * - Salesforce Division Property
-     - Businesscentral Companies Property
-     - Businesscentral Data Type
-
-
-Salesforce Invoice to Businesscentral Companies
------------------------------------------------
-Every Salesforce Invoice will be synchronized with a Businesscentral Companies.
-
-Once a link between a Salesforce Invoice and a Businesscentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Invoice and a Businesscentral Companies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Invoice Property
      - Businesscentral Companies Property
      - Businesscentral Data Type
 
