@@ -2,7 +2,7 @@
 Businessnxt to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-07 00:00:01
+Generated: 2024-09-07 00:36:25
 
 Introduction
 ------------
@@ -86,22 +86,6 @@ The following properties are synchronized between a Businessnxt Order and a Sale
    * - invoiceDate
      - PostedDate
      - "string"
-
-
-Businessnxt Order to Salesforce Invoiceline
--------------------------------------------
-Every Businessnxt Order will be synchronized with a Salesforce Invoiceline.
-
-Once a link between a Businessnxt Order and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businessnxt Order and a Salesforce Invoiceline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businessnxt Order Property
-     - Salesforce Invoiceline Property
-     - Salesforce Data Type
 
 
 Businessnxt Orderline to Salesforce Invoice
