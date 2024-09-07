@@ -2,7 +2,7 @@
 Salesforce to ZohoCRM Dataflow
 ==============================
 
-Generated: 2024-09-07 00:00:19
+Generated: 2024-09-07 00:36:25
 
 Introduction
 ------------
@@ -26,22 +26,6 @@ The following properties are synchronized between a Salesforce Division and a Zo
    * - Name
      - Account_Name
      - "string"
-
-
-Salesforce Invoice to ZohoCRM Account
--------------------------------------
-Every Salesforce Invoice will be synchronized with a ZohoCRM Account.
-
-Once a link between a Salesforce Invoice and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Invoice and a ZohoCRM Account:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Invoice Property
-     - ZohoCRM Account Property
-     - ZohoCRM Data Type
 
 
 Salesforce Organization to ZohoCRM Account
