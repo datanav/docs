@@ -2,7 +2,7 @@
 Salesforce to Superoffice Dataflow
 ==================================
 
-Generated: 2024-09-07 00:00:19
+Generated: 2024-09-07 00:36:25
 
 Introduction
 ------------
@@ -82,38 +82,6 @@ The following properties are synchronized between a Salesforce Division and a Su
    * - Name
      - Name
      - "string"
-
-
-Salesforce Division to Superoffice Person
------------------------------------------
-Every Salesforce Division will be synchronized with a Superoffice Person.
-
-Once a link between a Salesforce Division and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Division and a Superoffice Person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Division Property
-     - Superoffice Person Property
-     - Superoffice Data Type
-
-
-Salesforce Invoice to Superoffice Contact
------------------------------------------
-Every Salesforce Invoice will be synchronized with a Superoffice Contact.
-
-Once a link between a Salesforce Invoice and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Invoice and a Superoffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Invoice Property
-     - Superoffice Contact Property
-     - Superoffice Data Type
 
 
 Salesforce Organization to Superoffice Contact
