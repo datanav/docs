@@ -2,7 +2,7 @@
 Exact to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-07 00:00:29
+Generated: 2024-09-07 00:36:25
 
 Introduction
 ------------
@@ -28,34 +28,6 @@ The following properties are synchronized between a Exact Accounts and a Salesfo
      - "string"
 
 
-Exact Accounts to Salesforce Organization
------------------------------------------
-Every Exact Accounts will be synchronized with a Salesforce Organization.
-
-Once a link between a Exact Accounts and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Accounts and a Salesforce Organization:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Accounts Property
-     - Salesforce Organization Property
-     - Salesforce Data Type
-   * - City
-     - City
-     - "string"
-   * - Country
-     - Country
-     - "string"
-   * - Name
-     - Name	
-     - "string"
-   * - Postcode
-     - PostalCode	
-     - "string"
-
-
 Exact Departments to Salesforce Division
 ----------------------------------------
 Every Exact Departments will be synchronized with a Salesforce Division.
@@ -69,38 +41,6 @@ The following properties are synchronized between a Exact Departments and a Sale
 
    * - Exact Departments Property
      - Salesforce Division Property
-     - Salesforce Data Type
-
-
-Exact Departments to Salesforce Organization
---------------------------------------------
-Every Exact Departments will be synchronized with a Salesforce Organization.
-
-Once a link between a Exact Departments and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Departments and a Salesforce Organization:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Departments Property
-     - Salesforce Organization Property
-     - Salesforce Data Type
-
-
-Exact Divisions to Salesforce Organization
-------------------------------------------
-Every Exact Divisions will be synchronized with a Salesforce Organization.
-
-Once a link between a Exact Divisions and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Divisions and a Salesforce Organization:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Divisions Property
-     - Salesforce Organization Property
      - Salesforce Data Type
 
 
@@ -123,44 +63,6 @@ The following properties are synchronized between a Exact Quotations and a Sales
      - "string"
    * - Description
      - Description
-     - "string"
-
-
-Exact Quotations to Salesforce Invoiceline
-------------------------------------------
-Every Exact Quotations will be synchronized with a Salesforce Invoiceline.
-
-Once a link between a Exact Quotations and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Quotations and a Salesforce Invoiceline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Quotations Property
-     - Salesforce Invoiceline Property
-     - Salesforce Data Type
-   * - Currency
-     - CurrencyIsoCode
-     - "string"
-
-
-Exact Salesinvoices to Salesforce Invoiceline
----------------------------------------------
-Every Exact Salesinvoices will be synchronized with a Salesforce Invoiceline.
-
-Once a link between a Exact Salesinvoices and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Salesinvoices and a Salesforce Invoiceline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Salesinvoices Property
-     - Salesforce Invoiceline Property
-     - Salesforce Data Type
-   * - Currency
-     - CurrencyIsoCode
      - "string"
 
 
@@ -199,25 +101,6 @@ The following properties are synchronized between a Exact Salesorders and a Sale
      - "string"
    * - Description
      - Description
-     - "string"
-
-
-Exact Salesorders to Salesforce Invoiceline
--------------------------------------------
-Every Exact Salesorders will be synchronized with a Salesforce Invoiceline.
-
-Once a link between a Exact Salesorders and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Salesorders and a Salesforce Invoiceline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Salesorders Property
-     - Salesforce Invoiceline Property
-     - Salesforce Data Type
-   * - Currency
-     - CurrencyIsoCode
      - "string"
 
 
