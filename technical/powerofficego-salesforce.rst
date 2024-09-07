@@ -2,7 +2,7 @@
 Powerofficego to Salesforce Dataflow
 ====================================
 
-Generated: 2024-09-07 00:00:01
+Generated: 2024-09-07 00:36:25
 
 Introduction
 ------------
@@ -28,28 +28,6 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Customers to Salesforce Organization
---------------------------------------------------
-Every Powerofficego Customers will be synchronized with a Salesforce Organization.
-
-Once a link between a Powerofficego Customers and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customers and a Salesforce Organization:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers Property
-     - Salesforce Organization Property
-     - Salesforce Data Type
-   * - Name
-     - Name	
-     - "string"
-   * - PhoneNumber
-     - Phone	
-     - "string"
-
-
 Powerofficego Departments to Salesforce Division
 ------------------------------------------------
 Every Powerofficego Departments will be synchronized with a Salesforce Division.
@@ -69,25 +47,6 @@ The following properties are synchronized between a Powerofficego Departments an
      - "string"
    * - Name
      - Name
-     - "string"
-
-
-Powerofficego Departments to Salesforce Organization
-----------------------------------------------------
-Every Powerofficego Departments will be synchronized with a Salesforce Organization.
-
-Once a link between a Powerofficego Departments and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Departments and a Salesforce Organization:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Departments Property
-     - Salesforce Organization Property
-     - Salesforce Data Type
-   * - Name
-     - Name	
      - "string"
 
 
@@ -132,25 +91,6 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - "string"
    * - RelatedInvoiceNo
      - InvoiceNumber
-     - "string"
-
-
-Powerofficego Salesorders to Salesforce Invoiceline
----------------------------------------------------
-Every Powerofficego Salesorders will be synchronized with a Salesforce Invoiceline.
-
-Once a link between a Powerofficego Salesorders and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorders and a Salesforce Invoiceline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorders Property
-     - Salesforce Invoiceline Property
-     - Salesforce Data Type
-   * - CurrencyCode
-     - CurrencyIsoCode
      - "string"
 
 
