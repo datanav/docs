@@ -2,7 +2,7 @@
 Invoiced to Salesforce Dataflow
 ===============================
 
-Generated: 2024-09-07 00:00:01
+Generated: 2024-09-07 00:36:25
 
 Introduction
 ------------
@@ -28,25 +28,6 @@ The following properties are synchronized between a Invoiced Customers company a
      - "string"
 
 
-Invoiced Customers company to Salesforce Organization
------------------------------------------------------
-Every Invoiced Customers company will be synchronized with a Salesforce Organization.
-
-Once a link between a Invoiced Customers company and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Invoiced Customers company and a Salesforce Organization:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Invoiced Customers company Property
-     - Salesforce Organization Property
-     - Salesforce Data Type
-   * - name
-     - Name	
-     - "string"
-
-
 Invoiced Invoices to Salesforce Invoice
 ---------------------------------------
 Every Invoiced Invoices will be synchronized with a Salesforce Invoice.
@@ -60,25 +41,6 @@ The following properties are synchronized between a Invoiced Invoices and a Sale
 
    * - Invoiced Invoices Property
      - Salesforce Invoice Property
-     - Salesforce Data Type
-   * - currency
-     - CurrencyIsoCode
-     - "string"
-
-
-Invoiced Invoices to Salesforce Invoiceline
--------------------------------------------
-Every Invoiced Invoices will be synchronized with a Salesforce Invoiceline.
-
-Once a link between a Invoiced Invoices and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Invoiced Invoices and a Salesforce Invoiceline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Invoiced Invoices Property
-     - Salesforce Invoiceline Property
      - Salesforce Data Type
    * - currency
      - CurrencyIsoCode
