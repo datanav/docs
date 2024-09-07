@@ -2,7 +2,7 @@
 Salesforce to Webcrm Dataflow
 =============================
 
-Generated: 2024-09-07 00:00:19
+Generated: 2024-09-07 00:36:25
 
 Introduction
 ------------
@@ -26,22 +26,6 @@ The following properties are synchronized between a Salesforce Division and a We
    * - Name
      - OrganisationName
      - "string"
-
-
-Salesforce Invoice to Webcrm Organisations
-------------------------------------------
-Every Salesforce Invoice will be synchronized with a Webcrm Organisations.
-
-Once a link between a Salesforce Invoice and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Invoice and a Webcrm Organisations:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Invoice Property
-     - Webcrm Organisations Property
-     - Webcrm Data Type
 
 
 Salesforce Organization to Webcrm Organisations
