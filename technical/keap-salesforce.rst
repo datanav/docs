@@ -2,7 +2,7 @@
 Keap to Salesforce Dataflow
 ===========================
 
-Generated: 2024-09-07 00:00:01
+Generated: 2024-09-07 00:36:25
 
 Introduction
 ------------
@@ -28,25 +28,6 @@ The following properties are synchronized between a Keap Companies and a Salesfo
      - "string"
 
 
-Keap Companies to Salesforce Organization
------------------------------------------
-Every Keap Companies will be synchronized with a Salesforce Organization.
-
-Once a link between a Keap Companies and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Keap Companies and a Salesforce Organization:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Keap Companies Property
-     - Salesforce Organization Property
-     - Salesforce Data Type
-   * - company_name
-     - Name	
-     - "string"
-
-
 Keap Opportunity to Salesforce Invoice
 --------------------------------------
 Every Keap Opportunity will be synchronized with a Salesforce Invoice.
@@ -60,22 +41,6 @@ The following properties are synchronized between a Keap Opportunity and a Sales
 
    * - Keap Opportunity Property
      - Salesforce Invoice Property
-     - Salesforce Data Type
-
-
-Keap Opportunity to Salesforce Invoiceline
-------------------------------------------
-Every Keap Opportunity will be synchronized with a Salesforce Invoiceline.
-
-Once a link between a Keap Opportunity and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Keap Opportunity and a Salesforce Invoiceline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Keap Opportunity Property
-     - Salesforce Invoiceline Property
      - Salesforce Data Type
 
 
