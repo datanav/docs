@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-09 13:50:46
+Generated: 2024-09-09 14:21:08
 
 Introduction
 ------------
@@ -114,6 +114,22 @@ The following properties are synchronized between a Tripletex Project and a Sale
    * - projectManager.id
      - OwnerId
      - "string"
+
+
+Tripletex Projectactivity to Salesforce Task
+--------------------------------------------
+Every Tripletex Projectactivity will be synchronized with a Salesforce Task.
+
+Once a link between a Tripletex Projectactivity and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Projectactivity and a Salesforce Task:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Projectactivity Property
+     - Salesforce Task Property
+     - Salesforce Data Type
 
 
 Tripletex Contact to Salesforce Contact
