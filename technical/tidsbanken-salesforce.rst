@@ -2,7 +2,7 @@
 Tidsbanken to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-09 00:00:00
+Generated: 2024-09-09 13:19:25
 
 Introduction
 ------------
@@ -47,5 +47,30 @@ The following properties are synchronized between a Tidsbanken Kunde and a Sales
      - Salesforce Data Type
    * - Navn
      - Name
+     - "string"
+
+
+Tidsbanken Prosjekt to Salesforce Task
+--------------------------------------
+Every Tidsbanken Prosjekt will be synchronized with a Salesforce Task.
+
+Once a link between a Tidsbanken Prosjekt and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Prosjekt and a Salesforce Task:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Prosjekt Property
+     - Salesforce Task Property
+     - Salesforce Data Type
+   * - AnsvarligId
+     - OwnerId
+     - "string"
+   * - Avsluttet
+     - IsClosed
+     - "string"
+   * - Navn
+     - Subject
      - "string"
 
