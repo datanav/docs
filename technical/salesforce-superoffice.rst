@@ -2,7 +2,7 @@
 Salesforce to Superoffice Dataflow
 ==================================
 
-Generated: 2024-09-09 13:31:43
+Generated: 2024-09-09 13:32:29
 
 Introduction
 ------------
@@ -127,6 +127,9 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
    * - Name	
      - Name
+     - "string"
+   * - Phone
+     - Phones.Value
      - "string"
    * - Phone	
      - Phones.Value
@@ -265,11 +268,20 @@ The following properties are synchronized between a Salesforce Product2 and a Su
    * - Salesforce Product2 Property
      - Superoffice Product Property
      - Superoffice Data Type
+   * - Description
+     - Description
+     - "string"
    * - Description	
      - Description
      - "string"
+   * - DisplayUrl
+     - Url
+     - "string"
    * - DisplayUrl	
      - Url
+     - "string"
+   * - Name
+     - Name
      - "string"
    * - Name	
      - Name
