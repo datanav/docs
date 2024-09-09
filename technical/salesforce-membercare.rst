@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-09 13:19:25
+Generated: 2024-09-09 13:32:29
 
 Introduction
 ------------
@@ -174,6 +174,9 @@ The following properties are synchronized between a Salesforce Product2 and a Me
    * - Salesforce Product2 Property
      - Membercare Products Property
      - Membercare Data Type
+   * - Name
+     - name
+     - "string"
    * - Name	
      - name
      - "string"
@@ -362,11 +365,17 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Country
      - addresses.country.id
      - "string"
+   * - Name
+     - companyName
+     - "string"
    * - Name	
      - companyName
      - "string"
    * - Name	
      - name
+     - "string"
+   * - PostalCode
+     - addresses.postalCode.zipCode
      - "string"
    * - PostalCode	
      - addresses.postalCode.zipCode
