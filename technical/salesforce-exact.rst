@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-09 10:35:50
+Generated: 2024-09-09 10:37:50
 
 Introduction
 ------------
@@ -398,22 +398,6 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    :header-rows: 1
 
    * - Salesforce Quotelineitem Property
-     - Exact Salesorderlines Property
-     - Exact Data Type
-
-
-Salesforce Seller to Exact Salesorderlines
-------------------------------------------
-Every Salesforce Seller will be synchronized with a Exact Salesorderlines.
-
-Once a link between a Salesforce Seller and a Exact Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Seller and a Exact Salesorderlines:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Seller Property
      - Exact Salesorderlines Property
      - Exact Data Type
 
