@@ -2,7 +2,7 @@
 HubSpot to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-09 09:58:58
+Generated: 2024-09-09 10:36:42
 
 Introduction
 ------------
@@ -514,6 +514,22 @@ The following properties are synchronized between a HubSpot Lineitem and a Sales
    * - properties.quantity
      - Quantity
      - "string"
+
+
+HubSpot Lineitem to Salesforce Seller
+-------------------------------------
+Every HubSpot Lineitem will be synchronized with a Salesforce Seller.
+
+Once a link between a HubSpot Lineitem and a Salesforce Seller is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a Salesforce Seller:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     - Salesforce Seller Property
+     - Salesforce Data Type
 
 
 HubSpot Product to Salesforce Product2
