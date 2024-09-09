@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-09 08:45:39
+Generated: 2024-09-09 08:45:51
 
 Introduction
 ------------
@@ -124,6 +124,9 @@ The following properties are synchronized between a Salesforce Orderitem and a E
    * - Salesforce Orderitem Property
      - Exact Quotations Property
      - Exact Data Type
+   * - CurrencyIsoCode
+     - Currency
+     - "string"
 
 
 Salesforce Organization to Exact Accounts
