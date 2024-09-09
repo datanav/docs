@@ -2,7 +2,7 @@
 SuperOffice to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-09 00:00:00
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -135,6 +135,22 @@ The following properties are synchronized between a SuperOffice Product and a Sa
      - "string"
 
 
+SuperOffice Quotealternative to Salesforce Quote
+------------------------------------------------
+Every SuperOffice Quotealternative will be synchronized with a Salesforce Quote.
+
+Once a link between a SuperOffice Quotealternative and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a Salesforce Quote:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quotealternative Property
+     - Salesforce Quote Property
+     - Salesforce Data Type
+
+
 SuperOffice Quoteline to Salesforce Invoiceline
 -----------------------------------------------
 Every SuperOffice Quoteline will be synchronized with a Salesforce Invoiceline.
@@ -164,4 +180,20 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - VAT
      - TaxRate
      - "string"
+
+
+SuperOffice Quoteline to Salesforce Orderitem
+---------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Salesforce Orderitem.
+
+Once a link between a SuperOffice Quoteline and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a Salesforce Orderitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     - Salesforce Orderitem Property
+     - Salesforce Data Type
 
