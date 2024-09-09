@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-09 08:41:44
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -288,23 +288,20 @@ The following properties are synchronized between a Salesforce Order and a Exact
      - "string"
 
 
-Salesforce Orderitem to Exact Salesorders
------------------------------------------
-Every Salesforce Orderitem will be synchronized with a Exact Salesorders.
+Salesforce Orderitem to Exact Salesorderlines
+---------------------------------------------
+Every Salesforce Orderitem will be synchronized with a Exact Salesorderlines.
 
-Once a link between a Salesforce Orderitem and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Orderitem and a Exact Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Orderitem and a Exact Salesorders:
+The following properties are synchronized between a Salesforce Orderitem and a Exact Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Orderitem Property
-     - Exact Salesorders Property
+     - Exact Salesorderlines Property
      - Exact Data Type
-   * - CurrencyIsoCode
-     - Currency
-     - "string"
 
 
 Salesforce Organization to Exact Addresses
@@ -345,18 +342,18 @@ The following properties are synchronized between a Salesforce Product2 and a Ex
      - Exact Data Type
 
 
-Salesforce Quote to Exact Salesorders
--------------------------------------
-Every Salesforce Quote will be synchronized with a Exact Salesorders.
+Salesforce Quote to Exact Quotations
+------------------------------------
+Every Salesforce Quote will be synchronized with a Exact Quotations.
 
-Once a link between a Salesforce Quote and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quote and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quote and a Exact Salesorders:
+The following properties are synchronized between a Salesforce Quote and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quote Property
-     - Exact Salesorders Property
+     - Exact Quotations Property
      - Exact Data Type
 
