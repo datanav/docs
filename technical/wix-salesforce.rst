@@ -2,7 +2,7 @@
 Wix.com to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-09 10:36:42
+Generated: 2024-09-09 10:37:50
 
 Introduction
 ------------
@@ -160,22 +160,6 @@ The following properties are synchronized between a Wix.com Orders and a Salesfo
    * - lineItems.quantity
      - Quantity
      - "string"
-
-
-Wix.com Orders to Salesforce Seller
------------------------------------
-Every Wix.com Orders will be synchronized with a Salesforce Seller.
-
-Once a link between a Wix.com Orders and a Salesforce Seller is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Orders and a Salesforce Seller:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Orders Property
-     - Salesforce Seller Property
-     - Salesforce Data Type
 
 
 Wix.com Products to Salesforce Product2
