@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-09 08:13:46
+Generated: 2024-09-09 08:17:57
 
 Introduction
 ------------
@@ -89,6 +89,9 @@ The following properties are synchronized between a Salesforce Order and a Sales
    * - Salesforce Order Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
+   * - CurrencyIsoCode
+     - CurrencyIsoCode
+     - "string"
 
 
 Salesforce Orderitem to Salesforce Order
@@ -105,4 +108,7 @@ The following properties are synchronized between a Salesforce Orderitem and a S
    * - Salesforce Orderitem Property
      - Salesforce Order Property
      - Salesforce Data Type
+   * - CurrencyIsoCode
+     - CurrencyIsoCode
+     - "string"
 
