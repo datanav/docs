@@ -2,7 +2,7 @@
 Webcrm to Membercare Dataflow
 =============================
 
-Generated: 2024-09-09 00:00:00
+Generated: 2024-09-09 14:25:18
 
 Introduction
 ------------
@@ -138,6 +138,12 @@ The following properties are synchronized between a Webcrm Organisations and a M
      - iso2Letter
      - "string"
    * - OrganisationCountryData
+     - name
+     - "string"
+   * - OrganisationCountryData.CodeISO
+     - iso2Letter
+     - "string"
+   * - OrganisationCountryData.Name
      - name
      - "string"
 
