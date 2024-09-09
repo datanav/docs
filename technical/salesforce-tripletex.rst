@@ -2,7 +2,7 @@
 Salesforce to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-09 10:37:50
+Generated: 2024-09-09 13:32:29
 
 Introduction
 ------------
@@ -160,8 +160,14 @@ The following properties are synchronized between a Salesforce Product2 and a Tr
    * - Salesforce Product2 Property
      - Tripletex Product Property
      - Tripletex Data Type
+   * - Description
+     - description
+     - "string"
    * - Description	
      - description
+     - "string"
+   * - Name
+     - name
      - "string"
    * - Name	
      - name
