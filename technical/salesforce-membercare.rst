@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-09 09:00:02
+Generated: 2024-09-09 09:50:22
 
 Introduction
 ------------
@@ -177,6 +177,22 @@ The following properties are synchronized between a Salesforce Product2 and a Me
    * - Name	
      - name
      - "string"
+
+
+Salesforce Quote to Membercare Invoices
+---------------------------------------
+Every Salesforce Quote will be synchronized with a Membercare Invoices.
+
+Once a link between a Salesforce Quote and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quote and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quote Property
+     - Membercare Invoices Property
+     - Membercare Data Type
 
 
 Salesforce Contact to Membercare Countries
