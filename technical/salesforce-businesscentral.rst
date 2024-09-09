@@ -2,7 +2,7 @@
 Salesforce to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-09-09 10:37:50
+Generated: 2024-09-09 13:32:29
 
 Introduction
 ------------
@@ -231,6 +231,9 @@ The following properties are synchronized between a Salesforce Product2 and a Bu
    * - Salesforce Product2 Property
      - Businesscentral Items Property
      - Businesscentral Data Type
+   * - Name
+     - displayName
+     - "string"
    * - Name	
      - displayName
      - "string"
