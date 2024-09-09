@@ -2,7 +2,7 @@
 Salesforce to Hubspot Dataflow
 ==============================
 
-Generated: 2024-09-09 13:19:25
+Generated: 2024-09-09 13:31:24
 
 Introduction
 ------------
@@ -95,8 +95,14 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      - Hubspot Company Property
      - Hubspot Data Type
+   * - Name
+     - properties.name
+     - "string"
    * - Name	
      - properties.name
+     - "string"
+   * - Phone
+     - properties.phone
      - "string"
    * - Phone	
      - properties.phone
