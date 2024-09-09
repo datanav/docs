@@ -2,7 +2,7 @@
 Salesforce to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-09-09 08:44:13
+Generated: 2024-09-09 09:53:51
 
 Introduction
 ------------
@@ -234,4 +234,20 @@ The following properties are synchronized between a Salesforce Product2 and a Bu
    * - Name	
      - displayName
      - "string"
+
+
+Salesforce Quotelineitem to Businesscentral Salesorderlines
+-----------------------------------------------------------
+Every Salesforce Quotelineitem will be synchronized with a Businesscentral Salesorderlines.
+
+Once a link between a Salesforce Quotelineitem and a Businesscentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quotelineitem and a Businesscentral Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quotelineitem Property
+     - Businesscentral Salesorderlines Property
+     - Businesscentral Data Type
 
