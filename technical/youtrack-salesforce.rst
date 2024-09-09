@@ -2,7 +2,7 @@
 YouTrack to Salesforce Dataflow
 ===============================
 
-Generated: 2024-09-09 00:00:00
+Generated: 2024-09-09 13:19:25
 
 Introduction
 ------------
@@ -23,6 +23,41 @@ The following properties are synchronized between a YouTrack Groups and a Salesf
    * - YouTrack Groups Property
      - Salesforce Division Property
      - Salesforce Data Type
+
+
+YouTrack Hubprojects to Salesforce Task
+---------------------------------------
+Every YouTrack Hubprojects will be synchronized with a Salesforce Task.
+
+Once a link between a YouTrack Hubprojects and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Hubprojects and a Salesforce Task:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Hubprojects Property
+     - Salesforce Task Property
+     - Salesforce Data Type
+
+
+YouTrack Issues to Salesforce Task
+----------------------------------
+Every YouTrack Issues will be synchronized with a Salesforce Task.
+
+Once a link between a YouTrack Issues and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Issues and a Salesforce Task:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Issues Property
+     - Salesforce Task Property
+     - Salesforce Data Type
+   * - reporter.id
+     - OwnerId
+     - "string"
 
 
 YouTrack Organizationroles to Salesforce Currencytype
@@ -57,6 +92,22 @@ The following properties are synchronized between a YouTrack Organizations and a
      - Salesforce Data Type
 
 
+YouTrack Projectroles to Salesforce Task
+----------------------------------------
+Every YouTrack Projectroles will be synchronized with a Salesforce Task.
+
+Once a link between a YouTrack Projectroles and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Projectroles and a Salesforce Task:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Projectroles Property
+     - Salesforce Task Property
+     - Salesforce Data Type
+
+
 YouTrack Roles to Salesforce Currencytype
 -----------------------------------------
 Every YouTrack Roles will be synchronized with a Salesforce Currencytype.
@@ -86,5 +137,21 @@ The following properties are synchronized between a YouTrack Usergroups and a Sa
 
    * - YouTrack Usergroups Property
      - Salesforce Division Property
+     - Salesforce Data Type
+
+
+YouTrack Workitems to Salesforce Task
+-------------------------------------
+Every YouTrack Workitems will be synchronized with a Salesforce Task.
+
+Once a link between a YouTrack Workitems and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Workitems and a Salesforce Task:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Workitems Property
+     - Salesforce Task Property
      - Salesforce Data Type
 
