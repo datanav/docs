@@ -2,7 +2,7 @@
 Salesforce to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-09 11:57:15
+Generated: 2024-09-09 13:32:29
 
 Introduction
 ------------
@@ -287,6 +287,9 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
+   * - Name
+     - name
+     - "string"
    * - Name	
      - name
      - "string"
