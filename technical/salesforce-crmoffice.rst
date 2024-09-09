@@ -2,7 +2,7 @@
 Salesforce to Crmoffice Dataflow
 ================================
 
-Generated: 2024-09-09 12:25:51
+Generated: 2024-09-09 12:40:14
 
 Introduction
 ------------
@@ -76,6 +76,34 @@ The following properties are synchronized between a Salesforce Task and a Crmoff
      - "string"
    * - Subject
      - subject
+     - "string"
+
+
+Salesforce User to Crmoffice Contacts
+-------------------------------------
+Every Salesforce User will be synchronized with a Crmoffice Contacts.
+
+Once a link between a Salesforce User and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce User and a Crmoffice Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce User Property
+     - Crmoffice Contacts Property
+     - Crmoffice Data Type
+   * - EmployeeNumber
+     - company.id
+     - "string"
+   * - FirstName
+     - givenName
+     - "string"
+   * - LastName
+     - familyName
+     - "string"
+   * - MobilePhone
+     - mobilePhone
      - "string"
 
 
