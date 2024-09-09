@@ -2,7 +2,7 @@
 Salesforce to Powerofficego Dataflow
 ====================================
 
-Generated: 2024-09-09 09:58:58
+Generated: 2024-09-09 10:35:50
 
 Introduction
 ------------
@@ -179,4 +179,20 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - TotalPriceWithTax
      - ProductUnitPrice
      - N/A
+
+
+Salesforce Seller to Powerofficego Salesorderlines
+--------------------------------------------------
+Every Salesforce Seller will be synchronized with a Powerofficego Salesorderlines.
+
+Once a link between a Salesforce Seller and a Powerofficego Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Seller and a Powerofficego Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Seller Property
+     - Powerofficego Salesorderlines Property
+     - Powerofficego Data Type
 
