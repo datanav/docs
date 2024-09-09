@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-09 13:30:51
+Generated: 2024-09-09 13:31:06
 
 Introduction
 ------------
@@ -306,6 +306,9 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Name	
      - name
      - "string"
+   * - Phone
+     - phone
+     - "string"
    * - Phone	
      - phone
      - "string"
@@ -331,6 +334,9 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      - Businessnxt Company Property
      - Businessnxt Data Type
+   * - Name
+     - name
+     - "string"
    * - Name	
      - name
      - "string"
