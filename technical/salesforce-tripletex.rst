@@ -2,7 +2,7 @@
 Salesforce to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-09 09:58:58
+Generated: 2024-09-09 10:35:50
 
 Introduction
 ------------
@@ -194,4 +194,20 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - TotalPriceWithTax
      - unitPriceExcludingVatCurrency
      - "float"
+
+
+Salesforce Seller to Tripletex Orderline
+----------------------------------------
+Every Salesforce Seller will be synchronized with a Tripletex Orderline.
+
+Once a link between a Salesforce Seller and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Seller and a Tripletex Orderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Seller Property
+     - Tripletex Orderline Property
+     - Tripletex Data Type
 
