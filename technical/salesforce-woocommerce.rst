@@ -2,7 +2,7 @@
 Salesforce to Woocommerce Dataflow
 ==================================
 
-Generated: 2024-09-09 08:41:44
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -73,40 +73,6 @@ The following properties are synchronized between a Salesforce Order and a Wooco
      - "string"
 
 
-Salesforce Orderitem to Woocommerce Order
------------------------------------------
-Every Salesforce Orderitem will be synchronized with a Woocommerce Order.
-
-Once a link between a Salesforce Orderitem and a Woocommerce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Orderitem and a Woocommerce Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Orderitem Property
-     - Woocommerce Order Property
-     - Woocommerce Data Type
-   * - CurrencyIsoCode
-     - currency
-     - "string"
-   * - Product2Id
-     - line_items.product_id
-     - "string"
-   * - Quantity
-     - line_items.quantity
-     - "string"
-   * - Quantity
-     - line_items.sku
-     - "string"
-   * - TotalPrice
-     - line_items.price
-     - "string"
-   * - UnitPrice
-     - line_items.sku
-     - "string"
-
-
 Salesforce Product2 to Woocommerce Product
 ------------------------------------------
 Every Salesforce Product2 will be synchronized with a Woocommerce Product.
@@ -124,20 +90,4 @@ The following properties are synchronized between a Salesforce Product2 and a Wo
    * - Name	
      - name
      - "string"
-
-
-Salesforce Quote to Woocommerce Order
--------------------------------------
-Every Salesforce Quote will be synchronized with a Woocommerce Order.
-
-Once a link between a Salesforce Quote and a Woocommerce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Quote and a Woocommerce Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Quote Property
-     - Woocommerce Order Property
-     - Woocommerce Data Type
 
