@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-09 12:54:24
+Generated: 2024-09-09 13:08:54
 
 Introduction
 ------------
@@ -193,6 +193,28 @@ The following properties are synchronized between a Salesforce Seller and a Exac
    * - Salesforce Seller Property
      - Exact Contacts Property
      - Exact Data Type
+
+
+Salesforce User to Exact Contacts
+---------------------------------
+Every Salesforce User will be synchronized with a Exact Contacts.
+
+Once a link between a Salesforce User and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce User and a Exact Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce User Property
+     - Exact Contacts Property
+     - Exact Data Type
+   * - City
+     - City
+     - "string"
+   * - Country
+     - Country
+     - "string"
 
 
 Salesforce Contact to Exact Contacts
