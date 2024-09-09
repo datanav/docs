@@ -2,7 +2,7 @@
 Salesforce to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-09 00:00:21
+Generated: 2024-09-09 08:12:44
 
 Introduction
 ------------
@@ -155,6 +155,22 @@ The following properties are synchronized between a Salesforce Order and a Charg
    * - CurrencyIsoCode
      - currency_code
      - "string"
+
+
+Salesforce Orderitem to Chargebee Order
+---------------------------------------
+Every Salesforce Orderitem will be synchronized with a Chargebee Order.
+
+Once a link between a Salesforce Orderitem and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Orderitem and a Chargebee Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Orderitem Property
+     - Chargebee Order Property
+     - Chargebee Data Type
 
 
 Salesforce Organization to Chargebee Business_entity
