@@ -2,7 +2,7 @@
 Salesforce to Tilores Dataflow
 ==============================
 
-Generated: 2024-09-09 00:00:21
+Generated: 2024-09-09 13:19:25
 
 Introduction
 ------------
@@ -69,4 +69,54 @@ The following properties are synchronized between a Salesforce Customer and a Ti
    * - Salesforce Customer Property
      - Tilores Human Property
      - Tilores Data Type
+
+
+Salesforce Seller to Tilores Human
+----------------------------------
+Every Salesforce Seller will be synchronized with a Tilores Human.
+
+Once a link between a Salesforce Seller and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Seller and a Tilores Human:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Seller Property
+     - Tilores Human Property
+     - Tilores Data Type
+
+
+Salesforce User to Tilores Human
+--------------------------------
+Every Salesforce User will be synchronized with a Tilores Human.
+
+Once a link between a Salesforce User and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce User and a Tilores Human:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce User Property
+     - Tilores Human Property
+     - Tilores Data Type
+   * - City
+     - city
+     - "string"
+   * - Email
+     - email
+     - "string"
+   * - FirstName
+     - firstName
+     - "string"
+   * - ID
+     - id
+     - "string"
+   * - LastName
+     - lastName
+     - "string"
+   * - PostalCode
+     - postalCode
+     - "string"
 
