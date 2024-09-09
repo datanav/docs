@@ -2,7 +2,7 @@
 Salesforce to Wave Dataflow
 ===========================
 
-Generated: 2024-09-09 08:41:44
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -53,31 +53,6 @@ The following properties are synchronized between a Salesforce Order and a Wave 
      - "string"
 
 
-Salesforce Orderitem to Wave Invoice
-------------------------------------
-Every Salesforce Orderitem will be synchronized with a Wave Invoice.
-
-Once a link between a Salesforce Orderitem and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Orderitem and a Wave Invoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Orderitem Property
-     - Wave Invoice Property
-     - Wave Data Type
-   * - CurrencyIsoCode
-     - currency.code
-     - "string"
-   * - Quantity
-     - items.quantity
-     - N/A
-   * - TotalPrice
-     - items.price
-     - "string"
-
-
 Salesforce Product2 to Wave Product
 -----------------------------------
 Every Salesforce Product2 will be synchronized with a Wave Product.
@@ -98,20 +73,4 @@ The following properties are synchronized between a Salesforce Product2 and a Wa
    * - Name	
      - name
      - "string"
-
-
-Salesforce Quote to Wave Invoice
---------------------------------
-Every Salesforce Quote will be synchronized with a Wave Invoice.
-
-Once a link between a Salesforce Quote and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Quote and a Wave Invoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Quote Property
-     - Wave Invoice Property
-     - Wave Data Type
 
