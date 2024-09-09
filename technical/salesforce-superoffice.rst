@@ -2,7 +2,7 @@
 Salesforce to Superoffice Dataflow
 ==================================
 
-Generated: 2024-09-09 09:01:47
+Generated: 2024-09-09 09:15:49
 
 Introduction
 ------------
@@ -230,6 +230,9 @@ The following properties are synchronized between a Salesforce Quote and a Super
      - "string"
    * - Discount
      - DiscountPercent
+     - "integer"
+   * - Tax
+     - VAT
      - "integer"
    * - TotalPriceWithTax
      - TotalPrice
