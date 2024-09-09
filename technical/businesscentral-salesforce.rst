@@ -2,7 +2,7 @@
 Businesscentral to Salesforce Dataflow
 ======================================
 
-Generated: 2024-09-09 08:43:54
+Generated: 2024-09-09 08:44:13
 
 Introduction
 ------------
@@ -268,6 +268,15 @@ The following properties are synchronized between a Businesscentral Salesorderli
    * - Businesscentral Salesorderlines Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
+   * - documentId
+     - OrderId
+     - "string"
+   * - quantity
+     - Quantity
+     - "string"
+   * - unitPrice
+     - TotalPrice
+     - "string"
 
 
 Businesscentral Salesorders to Salesforce Order
