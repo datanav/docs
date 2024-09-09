@@ -2,7 +2,7 @@
 SuperOffice to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-09 09:54:07
+Generated: 2024-09-09 09:58:58
 
 Introduction
 ------------
@@ -268,5 +268,8 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
    * - Quantity
      - Quantity
+     - "string"
+   * - UnitListPrice
+     - TotalPriceWithTax
      - "string"
 
