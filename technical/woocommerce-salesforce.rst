@@ -2,7 +2,7 @@
 Woocommerce to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-09 08:42:46
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -190,22 +190,6 @@ The following properties are synchronized between a Woocommerce Order and a Sale
    * - line_items.sku
      - UnitPrice
      - "string"
-
-
-Woocommerce Order to Salesforce Quote
--------------------------------------
-Every Woocommerce Order will be synchronized with a Salesforce Quote.
-
-Once a link between a Woocommerce Order and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Woocommerce Order and a Salesforce Quote:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Woocommerce Order Property
-     - Salesforce Quote Property
-     - Salesforce Data Type
 
 
 Woocommerce Product to Salesforce Product2
