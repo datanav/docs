@@ -2,7 +2,7 @@
 Powerofficego to Salesforce Dataflow
 ====================================
 
-Generated: 2024-09-09 09:53:51
+Generated: 2024-09-09 09:54:07
 
 Introduction
 ------------
@@ -277,6 +277,12 @@ The following properties are synchronized between a Powerofficego Salesorderline
    * - Powerofficego Salesorderlines Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
+   * - Allowance
+     - Discount
+     - "string"
+   * - Quantity
+     - Quantity
+     - "string"
 
 
 Powerofficego Salesorders to Salesforce Order
