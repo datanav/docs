@@ -2,7 +2,7 @@
 Salesforce to Youtrack Dataflow
 ===============================
 
-Generated: 2024-09-09 00:00:21
+Generated: 2024-09-09 13:19:23
 
 Introduction
 ------------
@@ -54,5 +54,21 @@ The following properties are synchronized between a Salesforce Organization and 
 
    * - Salesforce Organization Property
      - Youtrack Groups Property
+     - Youtrack Data Type
+
+
+Salesforce Task to Youtrack Hubprojects
+---------------------------------------
+Every Salesforce Task will be synchronized with a Youtrack Hubprojects.
+
+Once a link between a Salesforce Task and a Youtrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Task and a Youtrack Hubprojects:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Task Property
+     - Youtrack Hubprojects Property
      - Youtrack Data Type
 
