@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-09 11:49:51
+Generated: 2024-09-09 13:30:46
 
 Introduction
 ------------
@@ -294,6 +294,9 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Country
      - countryNo
      - "string"
+   * - Fax
+     - fax
+     - "string"
    * - Fax	
      - fax
      - "string"
@@ -302,6 +305,9 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
    * - Phone	
      - phone
+     - "string"
+   * - PostalCode
+     - postCode
      - "string"
    * - PostalCode	
      - postCode
