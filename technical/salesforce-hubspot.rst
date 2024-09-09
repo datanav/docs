@@ -2,7 +2,7 @@
 Salesforce to Hubspot Dataflow
 ==============================
 
-Generated: 2024-09-09 08:55:04
+Generated: 2024-09-09 09:53:51
 
 Introduction
 ------------
@@ -192,4 +192,20 @@ The following properties are synchronized between a Salesforce Quote and a Hubsp
    * - Name
      - properties.hs_title
      - "string"
+
+
+Salesforce Quotelineitem to Hubspot Lineitem
+--------------------------------------------
+Every Salesforce Quotelineitem will be synchronized with a Hubspot Lineitem.
+
+Once a link between a Salesforce Quotelineitem and a Hubspot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quotelineitem and a Hubspot Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quotelineitem Property
+     - Hubspot Lineitem Property
+     - Hubspot Data Type
 
