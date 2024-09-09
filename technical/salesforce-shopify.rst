@@ -2,7 +2,7 @@
 Salesforce to Shopify Dataflow
 ==============================
 
-Generated: 2024-09-09 08:17:57
+Generated: 2024-09-09 08:41:46
 
 Introduction
 ------------
@@ -13,7 +13,7 @@ Salesforce Product2 to Shopify Product
 --------------------------------------
 Before any synchronization can take place, a link between a Salesforce Product2 and a Shopify Product must be established.
 
-A new Shopify Product will be created from a Salesforce Product2 if it is connected to a Salesforce Order, or Orderitem that is synchronized into Shopify.
+A new Shopify Product will be created from a Salesforce Product2 if it is connected to a Salesforce Order, Quote, or Orderitem that is synchronized into Shopify.
 
 Once a link between a Salesforce Product2 and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -173,4 +173,20 @@ The following properties are synchronized between a Salesforce Product2 and a Sh
    * - Name	
      - title
      - "string"
+
+
+Salesforce Quote to Shopify Order
+---------------------------------
+Every Salesforce Quote will be synchronized with a Shopify Order.
+
+Once a link between a Salesforce Quote and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quote and a Shopify Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quote Property
+     - Shopify Order Property
+     - Shopify Data Type
 
