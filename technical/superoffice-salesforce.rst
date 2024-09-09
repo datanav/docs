@@ -2,7 +2,7 @@
 SuperOffice to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-09 08:44:13
+Generated: 2024-09-09 08:44:35
 
 Introduction
 ------------
@@ -25,6 +25,12 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - SuperOffice Quotealternative Property
      - Salesforce Order Property
      - Salesforce Data Type
+   * - Name
+     - Description
+     - "string"
+   * - TotalPrice
+     - TotalAmount
+     - "string"
 
 
 SuperOffice Contact to Salesforce Division
