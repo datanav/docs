@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-09 11:48:48
+Generated: 2024-09-09 11:49:51
 
 Introduction
 ------------
@@ -407,4 +407,10 @@ The following properties are synchronized between a Salesforce User and a Busine
    * - Salesforce User Property
      - Businessnxt Country Property
      - Businessnxt Data Type
+   * - Country
+     - name
+     - "string"
+   * - CountryCode
+     - isoCode
+     - "string"
 
