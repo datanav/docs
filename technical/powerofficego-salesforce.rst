@@ -2,7 +2,7 @@
 Powerofficego to Salesforce Dataflow
 ====================================
 
-Generated: 2024-09-09 00:00:00
+Generated: 2024-09-09 08:13:46
 
 Introduction
 ------------
@@ -245,6 +245,22 @@ The following properties are synchronized between a Powerofficego Salesorders an
    * - SalesOrderDate
      - OrderedDate
      - "string"
+
+
+Powerofficego Salesorders to Salesforce Orderitem
+-------------------------------------------------
+Every Powerofficego Salesorders will be synchronized with a Salesforce Orderitem.
+
+Once a link between a Powerofficego Salesorders and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorders and a Salesforce Orderitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorders Property
+     - Salesforce Orderitem Property
+     - Salesforce Data Type
 
 
 Powerofficego Suppliers person to Salesforce Contact
