@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-09 08:12:44
+Generated: 2024-09-09 08:13:46
 
 Introduction
 ------------
@@ -73,6 +73,22 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Name	
      - Name
      - "string"
+
+
+Salesforce Order to Salesforce Orderitem
+----------------------------------------
+Every Salesforce Order will be synchronized with a Salesforce Orderitem.
+
+Once a link between a Salesforce Order and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Order and a Salesforce Orderitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Order Property
+     - Salesforce Orderitem Property
+     - Salesforce Data Type
 
 
 Salesforce Orderitem to Salesforce Order
