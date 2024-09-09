@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-09 11:48:48
+Generated: 2024-09-09 11:49:51
 
 Introduction
 ------------
@@ -362,4 +362,10 @@ The following properties are synchronized between a Salesforce User and a Member
    * - Salesforce User Property
      - Membercare Countries Property
      - Membercare Data Type
+   * - Country
+     - name
+     - "string"
+   * - CountryCode
+     - iso2Letter
+     - "string"
 
