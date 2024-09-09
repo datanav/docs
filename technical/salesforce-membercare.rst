@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-09 08:58:03
+Generated: 2024-09-09 09:00:02
 
 Introduction
 ------------
@@ -136,6 +136,28 @@ The following properties are synchronized between a Salesforce Order and a Membe
    * - Salesforce Order Property
      - Membercare Invoices Property
      - Membercare Data Type
+
+
+Salesforce Orderitem to Membercare Invoices
+-------------------------------------------
+Every Salesforce Orderitem will be synchronized with a Membercare Invoices.
+
+Once a link between a Salesforce Orderitem and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Orderitem and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Orderitem Property
+     - Membercare Invoices Property
+     - Membercare Data Type
+   * - Quantity
+     - invoiceItems.quantity
+     - "string"
+   * - TotalPrice
+     - invoiceItems.unitPrice
+     - "string"
 
 
 Salesforce Product2 to Membercare Products
