@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-09 13:32:29
+Generated: 2024-09-09 14:04:44
 
 Introduction
 ------------
@@ -364,6 +364,9 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
    * - Country
      - addresses.country.id
+     - "string"
+   * - ID
+     - addresses.id
      - "string"
    * - Name
      - companyName
