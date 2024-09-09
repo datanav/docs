@@ -2,7 +2,7 @@
 Tripletex to Crmoffice Dataflow
 ===============================
 
-Generated: 2024-09-09 00:00:00
+Generated: 2024-09-09 14:12:12
 
 Introduction
 ------------
@@ -98,6 +98,22 @@ The following properties are synchronized between a Tripletex Project and a Crmo
    * - startDate
      - startsAt
      - "string"
+
+
+Tripletex Projectactivity to Crmoffice Activities
+-------------------------------------------------
+Every Tripletex Projectactivity will be synchronized with a Crmoffice Activities.
+
+Once a link between a Tripletex Projectactivity and a Crmoffice Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Projectactivity and a Crmoffice Activities:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Projectactivity Property
+     - Crmoffice Activities Property
+     - Crmoffice Data Type
 
 
 Tripletex Activity to Crmoffice Activities
