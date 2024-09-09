@@ -2,7 +2,7 @@
 Salesforce to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-09 08:43:54
+Generated: 2024-09-09 08:44:13
 
 Introduction
 ------------
@@ -135,6 +135,15 @@ The following properties are synchronized between a Salesforce Orderitem and a T
    * - Salesforce Orderitem Property
      - Tripletex Orderline Property
      - Tripletex Data Type
+   * - OrderId
+     - order.id
+     - "integer"
+   * - Quantity
+     - count
+     - N/A
+   * - TotalPrice
+     - unitPriceExcludingVatCurrency
+     - "float"
 
 
 Salesforce Product2 to Tripletex Product
