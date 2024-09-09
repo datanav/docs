@@ -2,7 +2,7 @@
 Webcrm to Businessnxt Dataflow
 ==============================
 
-Generated: 2024-09-09 14:24:50
+Generated: 2024-09-09 14:25:18
 
 Introduction
 ------------
@@ -88,6 +88,9 @@ The following properties are synchronized between a Webcrm Organisations and a B
      - "string"
    * - OrganisationCountryData.CodeISO
      - isoCode
+     - "string"
+   * - OrganisationCountryData.Name
+     - name
      - "string"
 
 
