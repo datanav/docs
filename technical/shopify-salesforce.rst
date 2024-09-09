@@ -2,7 +2,7 @@
 Shopify to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-09 08:43:54
+Generated: 2024-09-09 09:53:51
 
 Introduction
 ------------
@@ -249,6 +249,22 @@ The following properties are synchronized between a Shopify Order and a Salesfor
    * - line_items.quantity
      - Quantity
      - "string"
+
+
+Shopify Order to Salesforce Quotelineitem
+-----------------------------------------
+Every Shopify Order will be synchronized with a Salesforce Quotelineitem.
+
+Once a link between a Shopify Order and a Salesforce Quotelineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a Salesforce Quotelineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - Salesforce Quotelineitem Property
+     - Salesforce Data Type
 
 
 Shopify Sesamproduct to Salesforce Product2
