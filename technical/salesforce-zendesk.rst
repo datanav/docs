@@ -2,7 +2,7 @@
 Salesforce to Zendesk Dataflow
 ==============================
 
-Generated: 2024-09-09 00:00:21
+Generated: 2024-09-09 13:32:29
 
 Introduction
 ------------
@@ -42,6 +42,9 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      - Zendesk Organizations Property
      - Zendesk Data Type
+   * - Name
+     - name
+     - "string"
    * - Name	
      - name
      - "string"
