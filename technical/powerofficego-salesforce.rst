@@ -2,7 +2,7 @@
 Powerofficego to Salesforce Dataflow
 ====================================
 
-Generated: 2024-09-09 10:38:36
+Generated: 2024-09-09 10:50:52
 
 Introduction
 ------------
@@ -360,20 +360,4 @@ The following properties are synchronized between a Powerofficego Suppliers pers
    * - PhoneNumber
      - Phone
      - "string"
-
-
-Powerofficego Suppliers to Salesforce Seller
---------------------------------------------
-Every Powerofficego Suppliers will be synchronized with a Salesforce Seller.
-
-Once a link between a Powerofficego Suppliers and a Salesforce Seller is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Suppliers and a Salesforce Seller:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Suppliers Property
-     - Salesforce Seller Property
-     - Salesforce Data Type
 
