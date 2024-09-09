@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-09 10:04:43
+Generated: 2024-09-09 10:35:50
 
 Introduction
 ------------
@@ -273,4 +273,52 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - TotalPriceWithTax
      - TotalPrice
      - "string"
+
+
+Salesforce Seller to Salesforce Invoiceline
+-------------------------------------------
+Every Salesforce Seller will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a Salesforce Seller and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Seller and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Seller Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
+
+
+Salesforce Seller to Salesforce Orderitem
+-----------------------------------------
+Every Salesforce Seller will be synchronized with a Salesforce Orderitem.
+
+Once a link between a Salesforce Seller and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Seller and a Salesforce Orderitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Seller Property
+     - Salesforce Orderitem Property
+     - Salesforce Data Type
+
+
+Salesforce Seller to Salesforce Quotelineitem
+---------------------------------------------
+Every Salesforce Seller will be synchronized with a Salesforce Quotelineitem.
+
+Once a link between a Salesforce Seller and a Salesforce Quotelineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Seller and a Salesforce Quotelineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Seller Property
+     - Salesforce Quotelineitem Property
+     - Salesforce Data Type
 
