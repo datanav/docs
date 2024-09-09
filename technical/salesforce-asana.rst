@@ -2,7 +2,7 @@
 Salesforce to Asana Dataflow
 ============================
 
-Generated: 2024-09-09 00:00:21
+Generated: 2024-09-09 10:53:38
 
 Introduction
 ------------
@@ -26,4 +26,20 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Name	
      - name
      - "string"
+
+
+Salesforce Task to Asana Tasks
+------------------------------
+Every Salesforce Task will be synchronized with a Asana Tasks.
+
+Once a link between a Salesforce Task and a Asana Tasks is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Task and a Asana Tasks:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Task Property
+     - Asana Tasks Property
+     - Asana Data Type
 
