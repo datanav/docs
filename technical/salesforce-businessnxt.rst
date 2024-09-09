@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-09 13:32:29
+Generated: 2024-09-09 14:03:57
 
 Introduction
 ------------
@@ -299,6 +299,9 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
    * - Fax	
      - fax
+     - "string"
+   * - ID
+     - addressNo
      - "string"
    * - Name
      - name
