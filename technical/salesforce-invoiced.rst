@@ -2,7 +2,7 @@
 Salesforce to Invoiced Dataflow
 ===============================
 
-Generated: 2024-09-09 08:43:54
+Generated: 2024-09-09 08:44:13
 
 Introduction
 ------------
@@ -89,6 +89,12 @@ The following properties are synchronized between a Salesforce Orderitem and a I
    * - Salesforce Orderitem Property
      - Invoiced Lineitem Property
      - Invoiced Data Type
+   * - Quantity
+     - items.quantity
+     - "string"
+   * - TotalPrice
+     - items.amount
+     - "string"
 
 
 Salesforce Product2 to Invoiced Items
