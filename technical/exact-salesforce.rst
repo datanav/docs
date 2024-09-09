@@ -2,7 +2,7 @@
 Exact to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-09 00:00:00
+Generated: 2024-09-09 08:13:46
 
 Introduction
 ------------
@@ -276,4 +276,20 @@ The following properties are synchronized between a Exact Salesorders and a Sale
    * - Description
      - Description
      - "string"
+
+
+Exact Salesorders to Salesforce Orderitem
+-----------------------------------------
+Every Exact Salesorders will be synchronized with a Salesforce Orderitem.
+
+Once a link between a Exact Salesorders and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Salesorders and a Salesforce Orderitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Salesorders Property
+     - Salesforce Orderitem Property
+     - Salesforce Data Type
 
