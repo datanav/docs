@@ -2,7 +2,7 @@
 Salesforce to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-09 10:50:47
+Generated: 2024-09-09 11:42:58
 
 Introduction
 ------------
@@ -192,6 +192,22 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - TotalPriceWithTax
      - order_line_items.unit_price
      - "string"
+
+
+Salesforce Seller to Chargebee Customer
+---------------------------------------
+Every Salesforce Seller will be synchronized with a Chargebee Customer.
+
+Once a link between a Salesforce Seller and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Seller and a Chargebee Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Seller Property
+     - Chargebee Customer Property
+     - Chargebee Data Type
 
 
 Salesforce Customer to Chargebee Customer
