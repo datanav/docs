@@ -2,7 +2,7 @@
 Salesforce to Powerofficego Dataflow
 ====================================
 
-Generated: 2024-09-09 08:41:44
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -109,23 +109,20 @@ The following properties are synchronized between a Salesforce Order and a Power
      - "string"
 
 
-Salesforce Orderitem to Powerofficego Salesorders
--------------------------------------------------
-Every Salesforce Orderitem will be synchronized with a Powerofficego Salesorders.
+Salesforce Orderitem to Powerofficego Salesorderlines
+-----------------------------------------------------
+Every Salesforce Orderitem will be synchronized with a Powerofficego Salesorderlines.
 
-Once a link between a Salesforce Orderitem and a Powerofficego Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Orderitem and a Powerofficego Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Orderitem and a Powerofficego Salesorders:
+The following properties are synchronized between a Salesforce Orderitem and a Powerofficego Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Orderitem Property
-     - Powerofficego Salesorders Property
+     - Powerofficego Salesorderlines Property
      - Powerofficego Data Type
-   * - CurrencyIsoCode
-     - CurrencyCode
-     - "string"
 
 
 Salesforce Product2 to Powerofficego Product
@@ -148,20 +145,4 @@ The following properties are synchronized between a Salesforce Product2 and a Po
    * - Name	
      - name
      - "string"
-
-
-Salesforce Quote to Powerofficego Salesorders
----------------------------------------------
-Every Salesforce Quote will be synchronized with a Powerofficego Salesorders.
-
-Once a link between a Salesforce Quote and a Powerofficego Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Quote and a Powerofficego Salesorders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Quote Property
-     - Powerofficego Salesorders Property
-     - Powerofficego Data Type
 
