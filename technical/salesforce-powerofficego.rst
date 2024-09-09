@@ -2,7 +2,7 @@
 Salesforce to Powerofficego Dataflow
 ====================================
 
-Generated: 2024-09-09 08:12:44
+Generated: 2024-09-09 08:17:57
 
 Introduction
 ------------
@@ -123,6 +123,9 @@ The following properties are synchronized between a Salesforce Orderitem and a P
    * - Salesforce Orderitem Property
      - Powerofficego Salesorders Property
      - Powerofficego Data Type
+   * - CurrencyIsoCode
+     - CurrencyCode
+     - "string"
 
 
 Salesforce Product2 to Powerofficego Product
