@@ -2,7 +2,7 @@
 Wave Financial to Salesforce Dataflow
 =====================================
 
-Generated: 2024-09-09 10:50:52
+Generated: 2024-09-09 13:32:29
 
 Introduction
 ------------
@@ -288,7 +288,13 @@ The following properties are synchronized between a Wave Product and a Salesforc
      - Salesforce Product2 Property
      - Salesforce Data Type
    * - description
+     - Description
+     - "string"
+   * - description
      - Description	
+     - "string"
+   * - name
+     - Name
      - "string"
    * - name
      - Name	
