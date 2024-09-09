@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-09 08:44:13
+Generated: 2024-09-09 08:50:48
 
 Introduction
 ------------
@@ -306,4 +306,20 @@ The following properties are synchronized between a Salesforce Product2 and a Bu
    * - DisplayUrl	
      - webPage
      - "string"
+
+
+Salesforce Quote to Businessnxt Country
+---------------------------------------
+Every Salesforce Quote will be synchronized with a Businessnxt Country.
+
+Once a link between a Salesforce Quote and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quote and a Businessnxt Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quote Property
+     - Businessnxt Country Property
+     - Businessnxt Data Type
 
