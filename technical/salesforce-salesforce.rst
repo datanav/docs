@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-09 09:03:34
+Generated: 2024-09-09 09:03:39
 
 Introduction
 ------------
@@ -70,6 +70,9 @@ The following properties are synchronized between a Salesforce Orderitem and a S
    * - Salesforce Orderitem Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - CurrencyIsoCode
+     - CurrencyIsoCode
+     - "string"
 
 
 Salesforce Organization to Salesforce Division
