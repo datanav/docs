@@ -2,7 +2,7 @@
 Membercare to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-09 00:00:00
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -171,4 +171,20 @@ The following properties are synchronized between a Membercare Invoices and a Sa
    * - invoiceItems.unitPrice
      - UnitPrice
      - "string"
+
+
+Membercare Invoices to Salesforce Orderitem
+-------------------------------------------
+Every Membercare Invoices will be synchronized with a Salesforce Orderitem.
+
+Once a link between a Membercare Invoices and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Membercare Invoices and a Salesforce Orderitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Membercare Invoices Property
+     - Salesforce Orderitem Property
+     - Salesforce Data Type
 
