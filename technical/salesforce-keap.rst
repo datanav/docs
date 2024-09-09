@@ -2,7 +2,7 @@
 Salesforce to Keap Dataflow
 ===========================
 
-Generated: 2024-09-09 00:00:21
+Generated: 2024-09-09 13:19:23
 
 Introduction
 ------------
@@ -86,6 +86,38 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Name	
      - company_name
      - "string"
+
+
+Salesforce Seller to Keap Contacts
+----------------------------------
+Every Salesforce Seller will be synchronized with a Keap Contacts.
+
+Once a link between a Salesforce Seller and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Seller and a Keap Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Seller Property
+     - Keap Contacts Property
+     - Keap Data Type
+
+
+Salesforce User to Keap Contacts
+--------------------------------
+Every Salesforce User will be synchronized with a Keap Contacts.
+
+Once a link between a Salesforce User and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce User and a Keap Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce User Property
+     - Keap Contacts Property
+     - Keap Data Type
 
 
 Salesforce Product2 to Keap Product
