@@ -2,7 +2,7 @@
 Powerofficego to Salesforce Dataflow
 ====================================
 
-Generated: 2024-09-09 08:44:13
+Generated: 2024-09-09 09:01:59
 
 Introduction
 ------------
@@ -205,6 +205,9 @@ The following properties are synchronized between a Powerofficego Quote and a Sa
    * - Powerofficego Quote Property
      - Salesforce Quote Property
      - Salesforce Data Type
+   * - TotalAmount
+     - TotalPriceWithTax
+     - "string"
 
 
 Powerofficego Salesorderlines to Salesforce Invoiceline
