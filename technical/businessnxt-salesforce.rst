@@ -2,7 +2,7 @@
 Businessnxt to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-09 14:04:44
+Generated: 2024-09-09 14:57:39
 
 Introduction
 ------------
@@ -150,6 +150,9 @@ The following properties are synchronized between a Businessnxt Address and a Sa
    * - Businessnxt Address Property
      - Salesforce Organization Property
      - Salesforce Data Type
+   * - addressLine1
+     - Street
+     - "string"
    * - addressNo
      - ID
      - "string"
