@@ -2,7 +2,7 @@
 Businessnxt to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-09 10:36:42
+Generated: 2024-09-09 10:37:50
 
 Introduction
 ------------
@@ -287,22 +287,6 @@ The following properties are synchronized between a Businessnxt Orderline and a 
 
    * - Businessnxt Orderline Property
      - Salesforce Quotelineitem Property
-     - Salesforce Data Type
-
-
-Businessnxt Orderline to Salesforce Seller
-------------------------------------------
-Every Businessnxt Orderline will be synchronized with a Salesforce Seller.
-
-Once a link between a Businessnxt Orderline and a Salesforce Seller is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businessnxt Orderline and a Salesforce Seller:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businessnxt Orderline Property
-     - Salesforce Seller Property
      - Salesforce Data Type
 
 
