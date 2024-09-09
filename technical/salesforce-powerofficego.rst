@@ -2,7 +2,7 @@
 Salesforce to Powerofficego Dataflow
 ====================================
 
-Generated: 2024-09-09 09:54:07
+Generated: 2024-09-09 09:58:58
 
 Introduction
 ------------
@@ -175,5 +175,8 @@ The following properties are synchronized between a Salesforce Quotelineitem and
      - "float"
    * - Quantity
      - Quantity
+     - N/A
+   * - TotalPriceWithTax
+     - ProductUnitPrice
      - N/A
 
