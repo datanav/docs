@@ -2,7 +2,7 @@
 Salesforce to Crmoffice Dataflow
 ================================
 
-Generated: 2024-09-09 00:00:21
+Generated: 2024-09-09 12:11:35
 
 Introduction
 ------------
@@ -39,6 +39,28 @@ The following properties are synchronized between a Salesforce Product2 and a Cr
    * - Salesforce Product2 Property
      - Crmoffice Companies Property
      - Crmoffice Data Type
+
+
+Salesforce Task to Crmoffice Activities
+---------------------------------------
+Every Salesforce Task will be synchronized with a Crmoffice Activities.
+
+Once a link between a Salesforce Task and a Crmoffice Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Task and a Crmoffice Activities:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Task Property
+     - Crmoffice Activities Property
+     - Crmoffice Data Type
+   * - OwnerId
+     - ownerId
+     - "string"
+   * - Subject
+     - subject
+     - "string"
 
 
 Salesforce Contact to Crmoffice Contacts
