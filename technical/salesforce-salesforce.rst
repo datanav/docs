@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-09 08:43:54
+Generated: 2024-09-09 08:44:13
 
 Introduction
 ------------
@@ -89,6 +89,15 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Salesforce Invoiceline Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
+   * - CurrencyIsoCode
+     - CurrencyIsoCode
+     - "string"
+   * - Quantity
+     - Quantity
+     - "string"
+   * - UnitPrice
+     - TotalPrice
+     - "string"
 
 
 Salesforce Orderitem to Salesforce Invoiceline
@@ -105,4 +114,13 @@ The following properties are synchronized between a Salesforce Orderitem and a S
    * - Salesforce Orderitem Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
+   * - CurrencyIsoCode
+     - CurrencyIsoCode
+     - "string"
+   * - Quantity
+     - Quantity
+     - "string"
+   * - TotalPrice
+     - UnitPrice
+     - "string"
 
