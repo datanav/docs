@@ -2,7 +2,7 @@
 Invoiced to Businesscentral Dataflow
 ====================================
 
-Generated: 2024-09-09 14:45:49
+Generated: 2024-09-09 14:46:49
 
 Introduction
 ------------
@@ -47,6 +47,15 @@ The following properties are synchronized between a Invoiced Contacts and a Busi
      - "string"
    * - city
      - city
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - name
+     - displayName
+     - "string"
+   * - phone
+     - mobilePhoneNumber
      - "string"
    * - postal_code
      - postalCode
