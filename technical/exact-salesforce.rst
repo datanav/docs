@@ -2,7 +2,7 @@
 Exact to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-09 08:42:46
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -215,6 +215,22 @@ The following properties are synchronized between a Exact Items and a Salesforce
      - Salesforce Data Type
 
 
+Exact Quotations to Salesforce Quote
+------------------------------------
+Every Exact Quotations will be synchronized with a Salesforce Quote.
+
+Once a link between a Exact Quotations and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Quotations and a Salesforce Quote:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Quotations Property
+     - Salesforce Quote Property
+     - Salesforce Data Type
+
+
 Exact Salesinvoices to Salesforce Invoice
 -----------------------------------------
 Every Exact Salesinvoices will be synchronized with a Salesforce Invoice.
@@ -256,6 +272,22 @@ The following properties are synchronized between a Exact Salesorderlines and a 
      - "string"
 
 
+Exact Salesorderlines to Salesforce Orderitem
+---------------------------------------------
+Every Exact Salesorderlines will be synchronized with a Salesforce Orderitem.
+
+Once a link between a Exact Salesorderlines and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Salesorderlines and a Salesforce Orderitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Salesorderlines Property
+     - Salesforce Orderitem Property
+     - Salesforce Data Type
+
+
 Exact Salesorders to Salesforce Order
 -------------------------------------
 Every Exact Salesorders will be synchronized with a Salesforce Order.
@@ -276,39 +308,4 @@ The following properties are synchronized between a Exact Salesorders and a Sale
    * - Description
      - Description
      - "string"
-
-
-Exact Salesorders to Salesforce Orderitem
------------------------------------------
-Every Exact Salesorders will be synchronized with a Salesforce Orderitem.
-
-Once a link between a Exact Salesorders and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Salesorders and a Salesforce Orderitem:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Salesorders Property
-     - Salesforce Orderitem Property
-     - Salesforce Data Type
-   * - Currency
-     - CurrencyIsoCode
-     - "string"
-
-
-Exact Salesorders to Salesforce Quote
--------------------------------------
-Every Exact Salesorders will be synchronized with a Salesforce Quote.
-
-Once a link between a Exact Salesorders and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Salesorders and a Salesforce Quote:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Salesorders Property
-     - Salesforce Quote Property
-     - Salesforce Data Type
 
