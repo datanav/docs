@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-09 08:50:48
+Generated: 2024-09-09 08:52:03
 
 Introduction
 ------------
@@ -322,4 +322,10 @@ The following properties are synchronized between a Salesforce Quote and a Busin
    * - Salesforce Quote Property
      - Businessnxt Country Property
      - Businessnxt Data Type
+   * - BillingCountry
+     - name
+     - "string"
+   * - BillingCountryCode
+     - isoCode
+     - "string"
 
