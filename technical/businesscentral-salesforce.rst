@@ -2,7 +2,7 @@
 Businesscentral to Salesforce Dataflow
 ======================================
 
-Generated: 2024-09-09 08:13:46
+Generated: 2024-09-09 08:17:57
 
 Introduction
 ------------
@@ -359,4 +359,7 @@ The following properties are synchronized between a Businesscentral Salesorders 
    * - Businesscentral Salesorders Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
+   * - currencyId
+     - CurrencyIsoCode
+     - "string"
 
