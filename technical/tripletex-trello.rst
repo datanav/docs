@@ -2,7 +2,7 @@
 Tripletex to Trello Dataflow
 ============================
 
-Generated: 2024-09-09 12:05:51
+Generated: 2024-09-09 13:50:46
 
 Introduction
 ------------
@@ -143,23 +143,4 @@ The following properties are synchronized between a Tripletex Employee and a Tre
    * - Tripletex Employee Property
      - Trello Members Property
      - Trello Data Type
-
-
-Tripletex Task to Trello Cards
-------------------------------
-Every Tripletex Task will be synchronized with a Trello Cards.
-
-Once a link between a Tripletex Task and a Trello Cards is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Task and a Trello Cards:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Task Property
-     - Trello Cards Property
-     - Trello Data Type
-   * - name
-     - name
-     - "string"
 
