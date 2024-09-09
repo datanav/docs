@@ -2,7 +2,7 @@
 Businessnxt to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-09 08:43:54
+Generated: 2024-09-09 08:44:13
 
 Introduction
 ------------
@@ -269,6 +269,9 @@ The following properties are synchronized between a Businessnxt Orderline and a 
    * - Businessnxt Orderline Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
+   * - orderNo
+     - OrderId
+     - "string"
 
 
 Businessnxt Product to Salesforce Product2
