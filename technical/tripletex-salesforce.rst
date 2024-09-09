@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-09 08:42:46
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -228,41 +228,6 @@ The following properties are synchronized between a Tripletex Order and a Salesf
      - "string"
 
 
-Tripletex Order to Salesforce Orderitem
----------------------------------------
-Every Tripletex Order will be synchronized with a Salesforce Orderitem.
-
-Once a link between a Tripletex Order and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Order and a Salesforce Orderitem:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Order Property
-     - Salesforce Orderitem Property
-     - Salesforce Data Type
-   * - currency.id
-     - CurrencyIsoCode
-     - "string"
-
-
-Tripletex Order to Salesforce Quote
------------------------------------
-Every Tripletex Order will be synchronized with a Salesforce Quote.
-
-Once a link between a Tripletex Order and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Order and a Salesforce Quote:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Order Property
-     - Salesforce Quote Property
-     - Salesforce Data Type
-
-
 Tripletex Orderline to Salesforce Invoiceline
 ---------------------------------------------
 Every Tripletex Orderline will be synchronized with a Salesforce Invoiceline.
@@ -292,6 +257,22 @@ The following properties are synchronized between a Tripletex Orderline and a Sa
    * - vatType.id
      - TaxRate
      - "string"
+
+
+Tripletex Orderline to Salesforce Orderitem
+-------------------------------------------
+Every Tripletex Orderline will be synchronized with a Salesforce Orderitem.
+
+Once a link between a Tripletex Orderline and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a Salesforce Orderitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     - Salesforce Orderitem Property
+     - Salesforce Data Type
 
 
 Tripletex Product to Salesforce Product2
