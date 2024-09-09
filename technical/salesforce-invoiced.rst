@@ -2,7 +2,7 @@
 Salesforce to Invoiced Dataflow
 ===============================
 
-Generated: 2024-09-09 08:41:44
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -75,23 +75,20 @@ The following properties are synchronized between a Salesforce Order and a Invoi
      - "string"
 
 
-Salesforce Orderitem to Invoiced Invoices
+Salesforce Orderitem to Invoiced Lineitem
 -----------------------------------------
-Every Salesforce Orderitem will be synchronized with a Invoiced Invoices.
+Every Salesforce Orderitem will be synchronized with a Invoiced Lineitem.
 
-Once a link between a Salesforce Orderitem and a Invoiced Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Orderitem and a Invoiced Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Orderitem and a Invoiced Invoices:
+The following properties are synchronized between a Salesforce Orderitem and a Invoiced Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Orderitem Property
-     - Invoiced Invoices Property
+     - Invoiced Lineitem Property
      - Invoiced Data Type
-   * - CurrencyIsoCode
-     - currency
-     - "string"
 
 
 Salesforce Product2 to Invoiced Items
@@ -114,20 +111,4 @@ The following properties are synchronized between a Salesforce Product2 and a In
    * - Name	
      - name
      - "string"
-
-
-Salesforce Quote to Invoiced Invoices
--------------------------------------
-Every Salesforce Quote will be synchronized with a Invoiced Invoices.
-
-Once a link between a Salesforce Quote and a Invoiced Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Quote and a Invoiced Invoices:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Quote Property
-     - Invoiced Invoices Property
-     - Invoiced Data Type
 
