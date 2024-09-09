@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-09 09:03:39
+Generated: 2024-09-09 09:53:51
 
 Introduction
 ------------
@@ -119,6 +119,22 @@ The following properties are synchronized between a Salesforce Invoiceline and a
      - "string"
 
 
+Salesforce Invoiceline to Salesforce Quotelineitem
+--------------------------------------------------
+Every Salesforce Invoiceline will be synchronized with a Salesforce Quotelineitem.
+
+Once a link between a Salesforce Invoiceline and a Salesforce Quotelineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Invoiceline and a Salesforce Quotelineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Invoiceline Property
+     - Salesforce Quotelineitem Property
+     - Salesforce Data Type
+
+
 Salesforce Orderitem to Salesforce Invoiceline
 ----------------------------------------------
 Every Salesforce Orderitem will be synchronized with a Salesforce Invoiceline.
@@ -142,4 +158,52 @@ The following properties are synchronized between a Salesforce Orderitem and a S
    * - TotalPrice
      - UnitPrice
      - "string"
+
+
+Salesforce Orderitem to Salesforce Quotelineitem
+------------------------------------------------
+Every Salesforce Orderitem will be synchronized with a Salesforce Quotelineitem.
+
+Once a link between a Salesforce Orderitem and a Salesforce Quotelineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Orderitem and a Salesforce Quotelineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Orderitem Property
+     - Salesforce Quotelineitem Property
+     - Salesforce Data Type
+
+
+Salesforce Quotelineitem to Salesforce Invoiceline
+--------------------------------------------------
+Every Salesforce Quotelineitem will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a Salesforce Quotelineitem and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quotelineitem and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quotelineitem Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
+
+
+Salesforce Quotelineitem to Salesforce Orderitem
+------------------------------------------------
+Every Salesforce Quotelineitem will be synchronized with a Salesforce Orderitem.
+
+Once a link between a Salesforce Quotelineitem and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quotelineitem and a Salesforce Orderitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quotelineitem Property
+     - Salesforce Orderitem Property
+     - Salesforce Data Type
 
