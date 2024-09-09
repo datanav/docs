@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-09 11:49:51
+Generated: 2024-09-09 13:19:25
 
 Introduction
 ------------
@@ -217,6 +217,62 @@ The following properties are synchronized between a Salesforce Quotelineitem and
      - "string"
    * - TotalPriceWithTax
      - invoiceItems.unitPrice
+     - "string"
+
+
+Salesforce Seller to Membercare Persons
+---------------------------------------
+Every Salesforce Seller will be synchronized with a Membercare Persons.
+
+Once a link between a Salesforce Seller and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Seller and a Membercare Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Seller Property
+     - Membercare Persons Property
+     - Membercare Data Type
+   * - Name
+     - name
+     - "string"
+
+
+Salesforce User to Membercare Persons
+-------------------------------------
+Every Salesforce User will be synchronized with a Membercare Persons.
+
+Once a link between a Salesforce User and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce User and a Membercare Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce User Property
+     - Membercare Persons Property
+     - Membercare Data Type
+   * - City
+     - addresses.postalCode.city
+     - "string"
+   * - Country
+     - addresses.country.id
+     - "string"
+   * - FirstName
+     - firstname
+     - "string"
+   * - ID
+     - addresses.id
+     - "string"
+   * - LastName
+     - lastname
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - PostalCode
+     - addresses.postalCode.zipCode
      - "string"
 
 
