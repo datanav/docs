@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-09 09:50:22
+Generated: 2024-09-09 11:19:27
 
 Introduction
 ------------
@@ -193,6 +193,31 @@ The following properties are synchronized between a Salesforce Quote and a Membe
    * - Salesforce Quote Property
      - Membercare Invoices Property
      - Membercare Data Type
+
+
+Salesforce Quotelineitem to Membercare Invoices
+-----------------------------------------------
+Every Salesforce Quotelineitem will be synchronized with a Membercare Invoices.
+
+Once a link between a Salesforce Quotelineitem and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quotelineitem and a Membercare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quotelineitem Property
+     - Membercare Invoices Property
+     - Membercare Data Type
+   * - Description
+     - invoiceItems.description
+     - "string"
+   * - Quantity
+     - invoiceItems.quantity
+     - "string"
+   * - TotalPriceWithTax
+     - invoiceItems.unitPrice
+     - "string"
 
 
 Salesforce Contact to Membercare Countries
