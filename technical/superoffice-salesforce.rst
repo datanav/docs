@@ -2,7 +2,7 @@
 SuperOffice to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-09 09:01:59
+Generated: 2024-09-09 09:15:49
 
 Introduction
 ------------
@@ -181,6 +181,9 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
    * - TotalPrice
      - TotalPriceWithTax
+     - "string"
+   * - VAT
+     - Tax
      - "string"
 
 
