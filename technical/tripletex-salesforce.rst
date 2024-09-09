@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-09 10:37:50
+Generated: 2024-09-09 10:38:36
 
 Introduction
 ------------
@@ -338,4 +338,20 @@ The following properties are synchronized between a Tripletex Product and a Sale
    * - name
      - Name	
      - "string"
+
+
+Tripletex Supplier to Salesforce Seller
+---------------------------------------
+Every Tripletex Supplier will be synchronized with a Salesforce Seller.
+
+Once a link between a Tripletex Supplier and a Salesforce Seller is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Supplier and a Salesforce Seller:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Supplier Property
+     - Salesforce Seller Property
+     - Salesforce Data Type
 
