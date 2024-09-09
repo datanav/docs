@@ -2,7 +2,7 @@
 Salesforce to Superoffice Dataflow
 ==================================
 
-Generated: 2024-09-09 08:43:54
+Generated: 2024-09-09 08:44:13
 
 Introduction
 ------------
@@ -13,7 +13,7 @@ Salesforce Order to Superoffice Quotealternative
 ------------------------------------------------
 Before any synchronization can take place, a link between a Salesforce Order and a Superoffice Quotealternative must be established.
 
-A new Superoffice Quotealternative will be created from a Salesforce Order if it is connected to a Salesforce Invoiceline that is synchronized into Superoffice.
+A new Superoffice Quotealternative will be created from a Salesforce Order if it is connected to a Salesforce Orderitem, or Invoiceline that is synchronized into Superoffice.
 
 Once a link between a Salesforce Order and a Superoffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -175,6 +175,15 @@ The following properties are synchronized between a Salesforce Orderitem and a S
    * - Salesforce Orderitem Property
      - Superoffice Quoteline Property
      - Superoffice Data Type
+   * - OrderId
+     - QuoteAlternativeId
+     - "integer"
+   * - Quantity
+     - Quantity
+     - N/A
+   * - TotalPrice
+     - UnitListPrice
+     - N/A
 
 
 Salesforce Product2 to Superoffice Product
