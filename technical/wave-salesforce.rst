@@ -2,7 +2,7 @@
 Wave Financial to Salesforce Dataflow
 =====================================
 
-Generated: 2024-09-09 10:37:50
+Generated: 2024-09-09 10:38:36
 
 Introduction
 ------------
@@ -339,4 +339,20 @@ The following properties are synchronized between a Wave Vendor and a Salesforce
    * - phone
      - Phone
      - "string"
+
+
+Wave Vendor to Salesforce Seller
+--------------------------------
+Every Wave Vendor will be synchronized with a Salesforce Seller.
+
+Once a link between a Wave Vendor and a Salesforce Seller is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a Salesforce Seller:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - Salesforce Seller Property
+     - Salesforce Data Type
 
