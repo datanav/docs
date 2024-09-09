@@ -2,7 +2,7 @@
 HubSpot to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-09 08:43:54
+Generated: 2024-09-09 08:44:13
 
 Introduction
 ------------
@@ -480,6 +480,12 @@ The following properties are synchronized between a HubSpot Lineitem and a Sales
    * - HubSpot Lineitem Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
+   * - properties.price
+     - TotalPrice
+     - "string"
+   * - properties.quantity
+     - Quantity
+     - "string"
 
 
 HubSpot Product to Salesforce Product2
