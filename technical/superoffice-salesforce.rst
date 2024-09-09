@@ -2,7 +2,7 @@
 SuperOffice to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-09 09:15:49
+Generated: 2024-09-09 09:53:51
 
 Introduction
 ------------
@@ -241,4 +241,20 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - UnitListPrice
      - TotalPrice
      - "string"
+
+
+SuperOffice Quoteline to Salesforce Quotelineitem
+-------------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Salesforce Quotelineitem.
+
+Once a link between a SuperOffice Quoteline and a Salesforce Quotelineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a Salesforce Quotelineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     - Salesforce Quotelineitem Property
+     - Salesforce Data Type
 
