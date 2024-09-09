@@ -2,7 +2,7 @@
 HubSpot to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-09 09:54:07
+Generated: 2024-09-09 09:58:58
 
 Introduction
 ------------
@@ -507,6 +507,9 @@ The following properties are synchronized between a HubSpot Lineitem and a Sales
      - "string"
    * - properties.hs_discount_percentage
      - Discount
+     - "string"
+   * - properties.price
+     - TotalPriceWithTax
      - "string"
    * - properties.quantity
      - Quantity
