@@ -2,7 +2,7 @@
 HubSpot to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-09 08:42:46
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -438,41 +438,6 @@ The following properties are synchronized between a HubSpot Deal and a Salesforc
      - "string"
 
 
-HubSpot Deal to Salesforce Orderitem
-------------------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Salesforce Orderitem.
-
-Once a link between a HubSpot Deal and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Deal and a Salesforce Orderitem:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     - Salesforce Orderitem Property
-     - Salesforce Data Type
-   * - properties.deal_currency_code
-     - CurrencyIsoCode
-     - "string"
-
-
-HubSpot Deal to Salesforce Quote
---------------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Salesforce Quote.
-
-Once a link between a HubSpot Deal and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Deal and a Salesforce Quote:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     - Salesforce Quote Property
-     - Salesforce Data Type
-
-
 HubSpot Lineitem to Salesforce Invoiceline
 ------------------------------------------
 Every HubSpot Lineitem will be synchronized with a Salesforce Invoiceline.
@@ -501,6 +466,22 @@ The following properties are synchronized between a HubSpot Lineitem and a Sales
      - "string"
 
 
+HubSpot Lineitem to Salesforce Orderitem
+----------------------------------------
+Every HubSpot Lineitem will be synchronized with a Salesforce Orderitem.
+
+Once a link between a HubSpot Lineitem and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a Salesforce Orderitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     - Salesforce Orderitem Property
+     - Salesforce Data Type
+
+
 HubSpot Product to Salesforce Product2
 --------------------------------------
 Every HubSpot Product will be synchronized with a Salesforce Product2.
@@ -521,4 +502,20 @@ The following properties are synchronized between a HubSpot Product and a Salesf
    * - properties.name
      - Name	
      - "string"
+
+
+HubSpot Quote to Salesforce Quote
+---------------------------------
+Every HubSpot Quote will be synchronized with a Salesforce Quote.
+
+Once a link between a HubSpot Quote and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quote and a Salesforce Quote:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quote Property
+     - Salesforce Quote Property
+     - Salesforce Data Type
 
