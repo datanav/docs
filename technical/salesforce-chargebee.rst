@@ -2,7 +2,7 @@
 Salesforce to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-09 09:21:41
+Generated: 2024-09-09 10:50:47
 
 Introduction
 ------------
@@ -163,6 +163,34 @@ The following properties are synchronized between a Salesforce Quote and a Charg
      - Chargebee Data Type
    * - CurrencyIsoCode
      - currency_code
+     - "string"
+
+
+Salesforce Quotelineitem to Chargebee Order
+-------------------------------------------
+Every Salesforce Quotelineitem will be synchronized with a Chargebee Order.
+
+Once a link between a Salesforce Quotelineitem and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quotelineitem and a Chargebee Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quotelineitem Property
+     - Chargebee Order Property
+     - Chargebee Data Type
+   * - CurrencyIsoCode
+     - currency_code
+     - "string"
+   * - Description
+     - order_line_items.description
+     - "string"
+   * - Quantity
+     - order_line_items.amount
+     - "string"
+   * - TotalPriceWithTax
+     - order_line_items.unit_price
      - "string"
 
 
