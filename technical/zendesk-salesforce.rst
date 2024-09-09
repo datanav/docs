@@ -2,7 +2,7 @@
 Zendesk to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-09 00:00:00
+Generated: 2024-09-09 13:19:25
 
 Introduction
 ------------
@@ -25,5 +25,46 @@ The following properties are synchronized between a Zendesk Organizations and a 
      - Salesforce Data Type
    * - name
      - Name
+     - "string"
+
+
+Zendesk Ticketcomments to Salesforce Task
+-----------------------------------------
+Every Zendesk Ticketcomments will be synchronized with a Salesforce Task.
+
+Once a link between a Zendesk Ticketcomments and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Ticketcomments and a Salesforce Task:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Ticketcomments Property
+     - Salesforce Task Property
+     - Salesforce Data Type
+
+
+Zendesk Tickets to Salesforce Task
+----------------------------------
+Every Zendesk Tickets will be synchronized with a Salesforce Task.
+
+Once a link between a Zendesk Tickets and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Tickets and a Salesforce Task:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Tickets Property
+     - Salesforce Task Property
+     - Salesforce Data Type
+   * - due_at
+     - ActivityDate
+     - "string"
+   * - requester_id
+     - OwnerId
+     - "string"
+   * - subject
+     - Subject
      - "string"
 
