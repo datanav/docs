@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-09 08:17:57
+Generated: 2024-09-09 08:41:44
 
 Introduction
 ------------
@@ -342,5 +342,21 @@ The following properties are synchronized between a Salesforce Product2 and a Ex
 
    * - Salesforce Product2 Property
      - Exact Items Property
+     - Exact Data Type
+
+
+Salesforce Quote to Exact Salesorders
+-------------------------------------
+Every Salesforce Quote will be synchronized with a Exact Salesorders.
+
+Once a link between a Salesforce Quote and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quote and a Exact Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quote Property
+     - Exact Salesorders Property
      - Exact Data Type
 
