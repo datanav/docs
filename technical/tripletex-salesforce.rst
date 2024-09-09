@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-09 13:32:29
+Generated: 2024-09-09 13:50:46
 
 Introduction
 ------------
@@ -368,24 +368,5 @@ The following properties are synchronized between a Tripletex Product and a Sale
      - "string"
    * - name
      - Name	
-     - "string"
-
-
-Tripletex Task to Salesforce Task
----------------------------------
-Every Tripletex Task will be synchronized with a Salesforce Task.
-
-Once a link between a Tripletex Task and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Task and a Salesforce Task:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Task Property
-     - Salesforce Task Property
-     - Salesforce Data Type
-   * - name
-     - Subject
      - "string"
 
