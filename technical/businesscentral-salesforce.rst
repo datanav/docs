@@ -2,7 +2,7 @@
 Businesscentral to Salesforce Dataflow
 ======================================
 
-Generated: 2024-09-09 08:42:46
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -254,6 +254,22 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - "string"
 
 
+Businesscentral Salesorderlines to Salesforce Orderitem
+-------------------------------------------------------
+Every Businesscentral Salesorderlines will be synchronized with a Salesforce Orderitem.
+
+Once a link between a Businesscentral Salesorderlines and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorderlines and a Salesforce Orderitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorderlines Property
+     - Salesforce Orderitem Property
+     - Salesforce Data Type
+
+
 Businesscentral Salesorders to Salesforce Order
 -----------------------------------------------
 Every Businesscentral Salesorders will be synchronized with a Salesforce Order.
@@ -343,39 +359,4 @@ The following properties are synchronized between a Businesscentral Salesorders 
    * - totalAmountExcludingTax
      - TotalAmount
      - "string"
-
-
-Businesscentral Salesorders to Salesforce Orderitem
----------------------------------------------------
-Every Businesscentral Salesorders will be synchronized with a Salesforce Orderitem.
-
-Once a link between a Businesscentral Salesorders and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Salesorders and a Salesforce Orderitem:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Salesorders Property
-     - Salesforce Orderitem Property
-     - Salesforce Data Type
-   * - currencyId
-     - CurrencyIsoCode
-     - "string"
-
-
-Businesscentral Salesorders to Salesforce Quote
------------------------------------------------
-Every Businesscentral Salesorders will be synchronized with a Salesforce Quote.
-
-Once a link between a Businesscentral Salesorders and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Salesorders and a Salesforce Quote:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Salesorders Property
-     - Salesforce Quote Property
-     - Salesforce Data Type
 
