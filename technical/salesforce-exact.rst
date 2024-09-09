@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-09 11:52:53
+Generated: 2024-09-09 12:54:24
 
 Introduction
 ------------
@@ -177,6 +177,22 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - CurrencyIsoCode
      - Currency
      - "string"
+
+
+Salesforce Seller to Exact Contacts
+-----------------------------------
+Every Salesforce Seller will be synchronized with a Exact Contacts.
+
+Once a link between a Salesforce Seller and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Seller and a Exact Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Seller Property
+     - Exact Contacts Property
+     - Exact Data Type
 
 
 Salesforce Contact to Exact Contacts
