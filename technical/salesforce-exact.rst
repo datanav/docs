@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-09 10:37:50
+Generated: 2024-09-09 11:05:08
 
 Introduction
 ------------
@@ -157,6 +157,25 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
    * - PostalCode	
      - Postcode
+     - "string"
+
+
+Salesforce Quotelineitem to Exact Quotations
+--------------------------------------------
+Every Salesforce Quotelineitem will be synchronized with a Exact Quotations.
+
+Once a link between a Salesforce Quotelineitem and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quotelineitem and a Exact Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quotelineitem Property
+     - Exact Quotations Property
+     - Exact Data Type
+   * - CurrencyIsoCode
+     - Currency
      - "string"
 
 
