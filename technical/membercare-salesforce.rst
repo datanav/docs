@@ -2,7 +2,7 @@
 Membercare to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-09 09:53:51
+Generated: 2024-09-09 09:54:07
 
 Introduction
 ------------
@@ -209,4 +209,10 @@ The following properties are synchronized between a Membercare Invoices and a Sa
    * - Membercare Invoices Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
+   * - invoiceItems.description
+     - Description
+     - "string"
+   * - invoiceItems.quantity
+     - Quantity
+     - "string"
 
