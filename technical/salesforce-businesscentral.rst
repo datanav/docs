@@ -2,7 +2,7 @@
 Salesforce to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-09-09 09:53:51
+Generated: 2024-09-09 09:54:07
 
 Introduction
 ------------
@@ -250,4 +250,10 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - Salesforce Quotelineitem Property
      - Businesscentral Salesorderlines Property
      - Businesscentral Data Type
+   * - Discount
+     - discountPercent
+     - N/A
+   * - Quantity
+     - quantity
+     - N/A
 
