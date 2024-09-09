@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-09 10:37:50
+Generated: 2024-09-09 11:33:42
 
 Introduction
 ------------
@@ -117,6 +117,22 @@ The following properties are synchronized between a Salesforce Quote and a Sales
    * - TotalPriceWithTax
      - TotalAmount
      - "string"
+
+
+Salesforce Quotelineitem to Salesforce Invoice
+----------------------------------------------
+Every Salesforce Quotelineitem will be synchronized with a Salesforce Invoice.
+
+Once a link between a Salesforce Quotelineitem and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quotelineitem and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quotelineitem Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
 
 
 Salesforce Invoiceline to Salesforce Orderitem
