@@ -2,7 +2,7 @@
 Salesforce to Powerofficego Dataflow
 ====================================
 
-Generated: 2024-09-09 08:17:57
+Generated: 2024-09-09 08:41:44
 
 Introduction
 ------------
@@ -148,4 +148,20 @@ The following properties are synchronized between a Salesforce Product2 and a Po
    * - Name	
      - name
      - "string"
+
+
+Salesforce Quote to Powerofficego Salesorders
+---------------------------------------------
+Every Salesforce Quote will be synchronized with a Powerofficego Salesorders.
+
+Once a link between a Salesforce Quote and a Powerofficego Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quote and a Powerofficego Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quote Property
+     - Powerofficego Salesorders Property
+     - Powerofficego Data Type
 
