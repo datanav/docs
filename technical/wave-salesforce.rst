@@ -2,7 +2,7 @@
 Wave Financial to Salesforce Dataflow
 =====================================
 
-Generated: 2024-09-09 08:42:46
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -243,22 +243,6 @@ The following properties are synchronized between a Wave Invoice and a Salesforc
    * - items.quantity
      - Quantity
      - "string"
-
-
-Wave Invoice to Salesforce Quote
---------------------------------
-Every Wave Invoice will be synchronized with a Salesforce Quote.
-
-Once a link between a Wave Invoice and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Invoice and a Salesforce Quote:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Invoice Property
-     - Salesforce Quote Property
-     - Salesforce Data Type
 
 
 Wave Product to Salesforce Product2
