@@ -2,7 +2,7 @@
 Salesforce to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-09-09 10:35:50
+Generated: 2024-09-09 10:37:50
 
 Introduction
 ------------
@@ -259,20 +259,4 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - TotalPriceWithTax
      - unitPrice
      - "float"
-
-
-Salesforce Seller to Businesscentral Salesorderlines
-----------------------------------------------------
-Every Salesforce Seller will be synchronized with a Businesscentral Salesorderlines.
-
-Once a link between a Salesforce Seller and a Businesscentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Seller and a Businesscentral Salesorderlines:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Seller Property
-     - Businesscentral Salesorderlines Property
-     - Businesscentral Data Type
 
