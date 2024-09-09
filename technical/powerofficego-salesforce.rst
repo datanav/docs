@@ -2,7 +2,7 @@
 Powerofficego to Salesforce Dataflow
 ====================================
 
-Generated: 2024-09-09 08:17:57
+Generated: 2024-09-09 08:42:46
 
 Introduction
 ------------
@@ -264,6 +264,22 @@ The following properties are synchronized between a Powerofficego Salesorders an
    * - CurrencyCode
      - CurrencyIsoCode
      - "string"
+
+
+Powerofficego Salesorders to Salesforce Quote
+---------------------------------------------
+Every Powerofficego Salesorders will be synchronized with a Salesforce Quote.
+
+Once a link between a Powerofficego Salesorders and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorders and a Salesforce Quote:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorders Property
+     - Salesforce Quote Property
+     - Salesforce Data Type
 
 
 Powerofficego Suppliers person to Salesforce Contact
