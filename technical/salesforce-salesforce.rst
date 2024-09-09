@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-09 08:42:46
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -75,104 +75,34 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
 
 
-Salesforce Order to Salesforce Orderitem
-----------------------------------------
-Every Salesforce Order will be synchronized with a Salesforce Orderitem.
+Salesforce Invoiceline to Salesforce Orderitem
+----------------------------------------------
+Every Salesforce Invoiceline will be synchronized with a Salesforce Orderitem.
 
-Once a link between a Salesforce Order and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Invoiceline and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Order and a Salesforce Orderitem:
+The following properties are synchronized between a Salesforce Invoiceline and a Salesforce Orderitem:
 
 .. list-table::
    :header-rows: 1
 
-   * - Salesforce Order Property
+   * - Salesforce Invoiceline Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
-   * - CurrencyIsoCode
-     - CurrencyIsoCode
-     - "string"
 
 
-Salesforce Order to Salesforce Quote
-------------------------------------
-Every Salesforce Order will be synchronized with a Salesforce Quote.
+Salesforce Orderitem to Salesforce Invoiceline
+----------------------------------------------
+Every Salesforce Orderitem will be synchronized with a Salesforce Invoiceline.
 
-Once a link between a Salesforce Order and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Orderitem and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Order and a Salesforce Quote:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Order Property
-     - Salesforce Quote Property
-     - Salesforce Data Type
-
-
-Salesforce Orderitem to Salesforce Order
-----------------------------------------
-Every Salesforce Orderitem will be synchronized with a Salesforce Order.
-
-Once a link between a Salesforce Orderitem and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Orderitem and a Salesforce Order:
+The following properties are synchronized between a Salesforce Orderitem and a Salesforce Invoiceline:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Orderitem Property
-     - Salesforce Order Property
-     - Salesforce Data Type
-   * - CurrencyIsoCode
-     - CurrencyIsoCode
-     - "string"
-
-
-Salesforce Orderitem to Salesforce Quote
-----------------------------------------
-Every Salesforce Orderitem will be synchronized with a Salesforce Quote.
-
-Once a link between a Salesforce Orderitem and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Orderitem and a Salesforce Quote:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Orderitem Property
-     - Salesforce Quote Property
-     - Salesforce Data Type
-
-
-Salesforce Quote to Salesforce Order
-------------------------------------
-Every Salesforce Quote will be synchronized with a Salesforce Order.
-
-Once a link between a Salesforce Quote and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Quote and a Salesforce Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Quote Property
-     - Salesforce Order Property
-     - Salesforce Data Type
-
-
-Salesforce Quote to Salesforce Orderitem
-----------------------------------------
-Every Salesforce Quote will be synchronized with a Salesforce Orderitem.
-
-Once a link between a Salesforce Quote and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Quote and a Salesforce Orderitem:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Quote Property
-     - Salesforce Orderitem Property
+     - Salesforce Invoiceline Property
      - Salesforce Data Type
 
