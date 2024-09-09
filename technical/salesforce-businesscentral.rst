@@ -2,7 +2,7 @@
 Salesforce to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-09-09 08:41:44
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -192,23 +192,20 @@ The following properties are synchronized between a Salesforce Order and a Busin
      - "string"
 
 
-Salesforce Orderitem to Businesscentral Salesorders
----------------------------------------------------
-Every Salesforce Orderitem will be synchronized with a Businesscentral Salesorders.
+Salesforce Orderitem to Businesscentral Salesorderlines
+-------------------------------------------------------
+Every Salesforce Orderitem will be synchronized with a Businesscentral Salesorderlines.
 
-Once a link between a Salesforce Orderitem and a Businesscentral Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Orderitem and a Businesscentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Orderitem and a Businesscentral Salesorders:
+The following properties are synchronized between a Salesforce Orderitem and a Businesscentral Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Orderitem Property
-     - Businesscentral Salesorders Property
+     - Businesscentral Salesorderlines Property
      - Businesscentral Data Type
-   * - CurrencyIsoCode
-     - currencyId
-     - "string"
 
 
 Salesforce Product2 to Businesscentral Items
@@ -228,20 +225,4 @@ The following properties are synchronized between a Salesforce Product2 and a Bu
    * - Name	
      - displayName
      - "string"
-
-
-Salesforce Quote to Businesscentral Salesorders
------------------------------------------------
-Every Salesforce Quote will be synchronized with a Businesscentral Salesorders.
-
-Once a link between a Salesforce Quote and a Businesscentral Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Quote and a Businesscentral Salesorders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Quote Property
-     - Businesscentral Salesorders Property
-     - Businesscentral Data Type
 
