@@ -2,7 +2,7 @@
 Salesforce to Shopify Dataflow
 ==============================
 
-Generated: 2024-09-09 08:41:46
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -125,34 +125,6 @@ The following properties are synchronized between a Salesforce Order and a Shopi
      - "string"
 
 
-Salesforce Orderitem to Shopify Order
--------------------------------------
-Every Salesforce Orderitem will be synchronized with a Shopify Order.
-
-Once a link between a Salesforce Orderitem and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Orderitem and a Shopify Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Orderitem Property
-     - Shopify Order Property
-     - Shopify Data Type
-   * - CurrencyIsoCode
-     - currency
-     - "string"
-   * - Product2Id
-     - line_items.product_id
-     - "integer"
-   * - Quantity
-     - line_items.quantity
-     - "integer"
-   * - TotalPrice
-     - line_items.price
-     - "string"
-
-
 Salesforce Product2 to Shopify Sesamproduct
 -------------------------------------------
 Every Salesforce Product2 will be synchronized with a Shopify Sesamproduct.
@@ -173,20 +145,4 @@ The following properties are synchronized between a Salesforce Product2 and a Sh
    * - Name	
      - title
      - "string"
-
-
-Salesforce Quote to Shopify Order
----------------------------------
-Every Salesforce Quote will be synchronized with a Shopify Order.
-
-Once a link between a Salesforce Quote and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Quote and a Shopify Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Quote Property
-     - Shopify Order Property
-     - Shopify Data Type
 
