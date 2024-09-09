@@ -2,7 +2,7 @@
 HubSpot to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-09 08:55:04
+Generated: 2024-09-09 09:01:59
 
 Introduction
 ------------
@@ -524,6 +524,9 @@ The following properties are synchronized between a HubSpot Quote and a Salesfor
    * - HubSpot Quote Property
      - Salesforce Quote Property
      - Salesforce Data Type
+   * - properties.hs_quote_amount
+     - TotalPriceWithTax
+     - "string"
    * - properties.hs_title
      - Name
      - "string"
