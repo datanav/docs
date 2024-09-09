@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-09 08:41:44
+Generated: 2024-09-09 08:42:46
 
 Introduction
 ------------
@@ -94,6 +94,22 @@ The following properties are synchronized between a Salesforce Order and a Sales
      - "string"
 
 
+Salesforce Order to Salesforce Quote
+------------------------------------
+Every Salesforce Order will be synchronized with a Salesforce Quote.
+
+Once a link between a Salesforce Order and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Order and a Salesforce Quote:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Order Property
+     - Salesforce Quote Property
+     - Salesforce Data Type
+
+
 Salesforce Orderitem to Salesforce Order
 ----------------------------------------
 Every Salesforce Orderitem will be synchronized with a Salesforce Order.
@@ -111,6 +127,22 @@ The following properties are synchronized between a Salesforce Orderitem and a S
    * - CurrencyIsoCode
      - CurrencyIsoCode
      - "string"
+
+
+Salesforce Orderitem to Salesforce Quote
+----------------------------------------
+Every Salesforce Orderitem will be synchronized with a Salesforce Quote.
+
+Once a link between a Salesforce Orderitem and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Orderitem and a Salesforce Quote:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Orderitem Property
+     - Salesforce Quote Property
+     - Salesforce Data Type
 
 
 Salesforce Quote to Salesforce Order
