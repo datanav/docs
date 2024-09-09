@@ -2,7 +2,7 @@
 Salesforce to Invoiced Dataflow
 ===============================
 
-Generated: 2024-09-09 08:44:13
+Generated: 2024-09-09 09:53:51
 
 Introduction
 ------------
@@ -117,4 +117,20 @@ The following properties are synchronized between a Salesforce Product2 and a In
    * - Name	
      - name
      - "string"
+
+
+Salesforce Quotelineitem to Invoiced Lineitem
+---------------------------------------------
+Every Salesforce Quotelineitem will be synchronized with a Invoiced Lineitem.
+
+Once a link between a Salesforce Quotelineitem and a Invoiced Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quotelineitem and a Invoiced Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quotelineitem Property
+     - Invoiced Lineitem Property
+     - Invoiced Data Type
 
