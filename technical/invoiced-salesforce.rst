@@ -2,7 +2,7 @@
 Invoiced to Salesforce Dataflow
 ===============================
 
-Generated: 2024-09-09 09:54:07
+Generated: 2024-09-09 09:58:58
 
 Introduction
 ------------
@@ -206,6 +206,9 @@ The following properties are synchronized between a Invoiced Lineitem and a Sale
    * - Invoiced Lineitem Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
+   * - items.amount
+     - TotalPriceWithTax
+     - "string"
    * - items.description
      - Description
      - "string"
