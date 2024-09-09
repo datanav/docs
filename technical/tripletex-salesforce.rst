@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-09 09:53:51
+Generated: 2024-09-09 09:54:07
 
 Introduction
 ------------
@@ -301,6 +301,18 @@ The following properties are synchronized between a Tripletex Orderline and a Sa
    * - Tripletex Orderline Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
+   * - count
+     - Quantity
+     - "string"
+   * - currency.id
+     - CurrencyIsoCode
+     - "string"
+   * - description
+     - Description
+     - "string"
+   * - discount
+     - Discount
+     - "string"
 
 
 Tripletex Product to Salesforce Product2
