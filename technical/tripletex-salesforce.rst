@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-09 12:05:51
+Generated: 2024-09-09 13:19:25
 
 Introduction
 ------------
@@ -88,6 +88,31 @@ The following properties are synchronized between a Tripletex Orderline and a Sa
      - Salesforce Data Type
    * - currency.id
      - CurrencyIsoCode
+     - "string"
+
+
+Tripletex Project to Salesforce Task
+------------------------------------
+Every Tripletex Project will be synchronized with a Salesforce Task.
+
+Once a link between a Tripletex Project and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Project and a Salesforce Task:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Project Property
+     - Salesforce Task Property
+     - Salesforce Data Type
+   * - isClosed
+     - IsClosed
+     - "string"
+   * - name
+     - Subject
+     - "string"
+   * - projectManager.id
+     - OwnerId
      - "string"
 
 
