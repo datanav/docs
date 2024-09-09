@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-09 08:50:48
+Generated: 2024-09-09 08:52:03
 
 Introduction
 ------------
@@ -271,4 +271,10 @@ The following properties are synchronized between a Salesforce Quote and a Membe
    * - Salesforce Quote Property
      - Membercare Countries Property
      - Membercare Data Type
+   * - BillingCountry
+     - name
+     - "string"
+   * - BillingCountryCode
+     - iso2Letter
+     - "string"
 
