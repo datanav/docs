@@ -2,7 +2,7 @@
 Webcrm to Salesforce Dataflow
 =============================
 
-Generated: 2024-09-09 09:53:51
+Generated: 2024-09-09 10:36:42
 
 Introduction
 ------------
@@ -173,5 +173,21 @@ The following properties are synchronized between a Webcrm Quotationline and a S
 
    * - Webcrm Quotationline Property
      - Salesforce Quotelineitem Property
+     - Salesforce Data Type
+
+
+Webcrm Quotationline to Salesforce Seller
+-----------------------------------------
+Every Webcrm Quotationline will be synchronized with a Salesforce Seller.
+
+Once a link between a Webcrm Quotationline and a Salesforce Seller is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Webcrm Quotationline and a Salesforce Seller:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Webcrm Quotationline Property
+     - Salesforce Seller Property
      - Salesforce Data Type
 
