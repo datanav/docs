@@ -2,7 +2,7 @@
 Tripletex to Asana Dataflow
 ===========================
 
-Generated: 2024-09-09 12:08:45
+Generated: 2024-09-09 13:50:46
 
 Introduction
 ------------
@@ -40,27 +40,5 @@ The following properties are synchronized between a Tripletex Project and a Asan
      - "string"
    * - startDate
      - start_on
-     - "string"
-
-
-Tripletex Task to Asana Tasks
------------------------------
-Every Tripletex Task will be synchronized with a Asana Tasks.
-
-Once a link between a Tripletex Task and a Asana Tasks is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Task and a Asana Tasks:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Task Property
-     - Asana Tasks Property
-     - Asana Data Type
-   * - name
-     - name
-     - "string"
-   * - sesam_projectid
-     - projects.gid
      - "string"
 
