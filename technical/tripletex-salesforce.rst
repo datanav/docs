@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-09 08:13:46
+Generated: 2024-09-09 08:17:57
 
 Introduction
 ------------
@@ -242,6 +242,9 @@ The following properties are synchronized between a Tripletex Order and a Salesf
    * - Tripletex Order Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
+   * - currency.id
+     - CurrencyIsoCode
+     - "string"
 
 
 Tripletex Orderline to Salesforce Invoiceline
