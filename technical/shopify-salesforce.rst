@@ -2,7 +2,7 @@
 Shopify to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-09 08:13:46
+Generated: 2024-09-09 08:15:58
 
 Introduction
 ------------
@@ -234,6 +234,9 @@ The following properties are synchronized between a Shopify Order and a Salesfor
    * - Shopify Order Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
+   * - line_items.quantity
+     - Quantity
+     - "string"
 
 
 Shopify Sesamproduct to Salesforce Product2
