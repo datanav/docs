@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-09 08:44:13
+Generated: 2024-09-09 09:53:51
 
 Introduction
 ------------
@@ -285,6 +285,22 @@ The following properties are synchronized between a Tripletex Orderline and a Sa
    * - unitPriceExcludingVatCurrency
      - TotalPrice
      - "string"
+
+
+Tripletex Orderline to Salesforce Quotelineitem
+-----------------------------------------------
+Every Tripletex Orderline will be synchronized with a Salesforce Quotelineitem.
+
+Once a link between a Tripletex Orderline and a Salesforce Quotelineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a Salesforce Quotelineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     - Salesforce Quotelineitem Property
+     - Salesforce Data Type
 
 
 Tripletex Product to Salesforce Product2
