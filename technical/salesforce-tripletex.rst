@@ -2,7 +2,7 @@
 Salesforce to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-09 08:41:44
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -121,23 +121,20 @@ The following properties are synchronized between a Salesforce Order and a Tripl
      - N/A
 
 
-Salesforce Orderitem to Tripletex Order
----------------------------------------
-Every Salesforce Orderitem will be synchronized with a Tripletex Order.
+Salesforce Orderitem to Tripletex Orderline
+-------------------------------------------
+Every Salesforce Orderitem will be synchronized with a Tripletex Orderline.
 
-Once a link between a Salesforce Orderitem and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Orderitem and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Orderitem and a Tripletex Order:
+The following properties are synchronized between a Salesforce Orderitem and a Tripletex Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Orderitem Property
-     - Tripletex Order Property
+     - Tripletex Orderline Property
      - Tripletex Data Type
-   * - CurrencyIsoCode
-     - currency.id
-     - "integer"
 
 
 Salesforce Product2 to Tripletex Product
@@ -160,20 +157,4 @@ The following properties are synchronized between a Salesforce Product2 and a Tr
    * - Name	
      - name
      - "string"
-
-
-Salesforce Quote to Tripletex Order
------------------------------------
-Every Salesforce Quote will be synchronized with a Tripletex Order.
-
-Once a link between a Salesforce Quote and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Quote and a Tripletex Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Quote Property
-     - Tripletex Order Property
-     - Tripletex Data Type
 
