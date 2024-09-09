@@ -2,7 +2,7 @@
 Trello to Salesforce Dataflow
 =============================
 
-Generated: 2024-09-09 00:00:00
+Generated: 2024-09-09 10:54:43
 
 Introduction
 ------------
@@ -26,6 +26,22 @@ The following properties are synchronized between a Trello Organizations and a S
    * - name
      - Name
      - "string"
+
+
+Trello Cards to Salesforce Task
+-------------------------------
+Every Trello Cards will be synchronized with a Salesforce Task.
+
+Once a link between a Trello Cards and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Trello Cards and a Salesforce Task:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Trello Cards Property
+     - Salesforce Task Property
+     - Salesforce Data Type
 
 
 Trello Organizations to Salesforce Organization
