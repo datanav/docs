@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-09 08:43:54
+Generated: 2024-09-09 08:45:39
 
 Introduction
 ------------
@@ -108,6 +108,22 @@ The following properties are synchronized between a Salesforce Order and a Exact
    * - ID
      - DeliveryAddress
      - "string"
+
+
+Salesforce Orderitem to Exact Quotations
+----------------------------------------
+Every Salesforce Orderitem will be synchronized with a Exact Quotations.
+
+Once a link between a Salesforce Orderitem and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Orderitem and a Exact Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Orderitem Property
+     - Exact Quotations Property
+     - Exact Data Type
 
 
 Salesforce Organization to Exact Accounts
