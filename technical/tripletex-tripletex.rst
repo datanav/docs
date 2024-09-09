@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-09-09 00:00:00
+Generated: 2024-09-09 13:54:44
 
 Introduction
 ------------
@@ -893,6 +893,32 @@ The following properties are synchronized between a Tripletex Productgrouprelati
 
    * - Tripletex Productgrouprelation Property
      - Tripletex Product Property
+     - Tripletex Data Type
+
+
+Tripletex Projectactivity to Tripletex Projectactivity
+------------------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Projectactivity and a Tripletex Projectactivity must be established.
+
+A Tripletex Projectactivity will merge with a Tripletex Projectactivity if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Projectactivity Property
+     - Tripletex Projectactivity Property
+   * - activity.id
+     - activity.id
+
+Once a link between a Tripletex Projectactivity and a Tripletex Projectactivity is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Projectactivity and a Tripletex Projectactivity:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Projectactivity Property
+     - Tripletex Projectactivity Property
      - Tripletex Data Type
 
 
