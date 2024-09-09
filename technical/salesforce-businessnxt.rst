@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-09 08:41:44
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -81,6 +81,22 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    :header-rows: 1
 
    * - Salesforce Invoiceline Property
+     - Businessnxt Order Property
+     - Businessnxt Data Type
+
+
+Salesforce Orderitem to Businessnxt Order
+-----------------------------------------
+Every Salesforce Orderitem will be synchronized with a Businessnxt Order.
+
+Once a link between a Salesforce Orderitem and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Orderitem and a Businessnxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Orderitem Property
      - Businessnxt Order Property
      - Businessnxt Data Type
 
@@ -198,19 +214,19 @@ The following properties are synchronized between a Salesforce Order and a Busin
      - "string"
 
 
-Salesforce Orderitem to Businessnxt Order
------------------------------------------
-Every Salesforce Orderitem will be synchronized with a Businessnxt Order.
+Salesforce Orderitem to Businessnxt Orderline
+---------------------------------------------
+Every Salesforce Orderitem will be synchronized with a Businessnxt Orderline.
 
-Once a link between a Salesforce Orderitem and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Orderitem and a Businessnxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Orderitem and a Businessnxt Order:
+The following properties are synchronized between a Salesforce Orderitem and a Businessnxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Orderitem Property
-     - Businessnxt Order Property
+     - Businessnxt Orderline Property
      - Businessnxt Data Type
 
 
@@ -287,20 +303,4 @@ The following properties are synchronized between a Salesforce Product2 and a Bu
    * - DisplayUrl	
      - webPage
      - "string"
-
-
-Salesforce Quote to Businessnxt Order
--------------------------------------
-Every Salesforce Quote will be synchronized with a Businessnxt Order.
-
-Once a link between a Salesforce Quote and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Quote and a Businessnxt Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Quote Property
-     - Businessnxt Order Property
-     - Businessnxt Data Type
 
