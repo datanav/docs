@@ -2,7 +2,7 @@
 Tripletex to Youtrack Dataflow
 ==============================
 
-Generated: 2024-09-09 00:00:00
+Generated: 2024-09-09 14:28:50
 
 Introduction
 ------------
@@ -188,6 +188,22 @@ The following properties are synchronized between a Tripletex Project and a Yout
    :header-rows: 1
 
    * - Tripletex Project Property
+     - Youtrack Hubprojects Property
+     - Youtrack Data Type
+
+
+Tripletex Projectactivity to Youtrack Hubprojects
+-------------------------------------------------
+Every Tripletex Projectactivity will be synchronized with a Youtrack Hubprojects.
+
+Once a link between a Tripletex Projectactivity and a Youtrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Projectactivity and a Youtrack Hubprojects:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Projectactivity Property
      - Youtrack Hubprojects Property
      - Youtrack Data Type
 
