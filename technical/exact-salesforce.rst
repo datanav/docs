@@ -2,7 +2,7 @@
 Exact to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-09 08:43:54
+Generated: 2024-09-09 08:55:04
 
 Introduction
 ------------
@@ -229,6 +229,12 @@ The following properties are synchronized between a Exact Quotations and a Sales
    * - Exact Quotations Property
      - Salesforce Quote Property
      - Salesforce Data Type
+   * - Currency
+     - CurrencyIsoCode
+     - "string"
+   * - Description
+     - Description
+     - "string"
 
 
 Exact Salesinvoices to Salesforce Invoice
