@@ -2,7 +2,7 @@
 Invoiced to Tripletex Dataflow
 ==============================
 
-Generated: 2024-09-09 00:00:00
+Generated: 2024-09-09 14:46:49
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Invoiced Contacts and a Trip
    * - Invoiced Contacts Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - email
+     - email
+     - "string"
+   * - phone
+     - phoneNumberMobile
+     - N/A
 
 
 Invoiced Customers company to Tripletex Customer
