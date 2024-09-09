@@ -2,7 +2,7 @@
 Exact to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-09 08:17:57
+Generated: 2024-09-09 08:42:46
 
 Introduction
 ------------
@@ -295,4 +295,20 @@ The following properties are synchronized between a Exact Salesorders and a Sale
    * - Currency
      - CurrencyIsoCode
      - "string"
+
+
+Exact Salesorders to Salesforce Quote
+-------------------------------------
+Every Exact Salesorders will be synchronized with a Salesforce Quote.
+
+Once a link between a Exact Salesorders and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Salesorders and a Salesforce Quote:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Salesorders Property
+     - Salesforce Quote Property
+     - Salesforce Data Type
 
