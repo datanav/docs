@@ -2,7 +2,7 @@
 Salesforce to Woocommerce Dataflow
 ==================================
 
-Generated: 2024-09-09 00:00:21
+Generated: 2024-09-09 08:12:44
 
 Introduction
 ------------
@@ -70,6 +70,25 @@ The following properties are synchronized between a Salesforce Order and a Wooco
      - "string"
    * - ShippingStateCode
      - shipping.postcode
+     - "string"
+
+
+Salesforce Orderitem to Woocommerce Order
+-----------------------------------------
+Every Salesforce Orderitem will be synchronized with a Woocommerce Order.
+
+Once a link between a Salesforce Orderitem and a Woocommerce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Orderitem and a Woocommerce Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Orderitem Property
+     - Woocommerce Order Property
+     - Woocommerce Data Type
+   * - Quantity
+     - line_items.sku
      - "string"
 
 
