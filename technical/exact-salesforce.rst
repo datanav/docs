@@ -2,7 +2,7 @@
 Exact to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-09 08:13:46
+Generated: 2024-09-09 08:17:57
 
 Introduction
 ------------
@@ -292,4 +292,7 @@ The following properties are synchronized between a Exact Salesorders and a Sale
    * - Exact Salesorders Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
+   * - Currency
+     - CurrencyIsoCode
+     - "string"
 
