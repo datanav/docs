@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-09 08:43:54
+Generated: 2024-09-09 08:44:13
 
 Introduction
 ------------
@@ -228,6 +228,9 @@ The following properties are synchronized between a Salesforce Orderitem and a B
    * - Salesforce Orderitem Property
      - Businessnxt Orderline Property
      - Businessnxt Data Type
+   * - OrderId
+     - orderNo
+     - "string"
 
 
 Salesforce Organization to Businessnxt Address
