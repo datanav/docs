@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-09 08:12:44
+Generated: 2024-09-09 08:41:44
 
 Introduction
 ------------
@@ -287,4 +287,20 @@ The following properties are synchronized between a Salesforce Product2 and a Bu
    * - DisplayUrl	
      - webPage
      - "string"
+
+
+Salesforce Quote to Businessnxt Order
+-------------------------------------
+Every Salesforce Quote will be synchronized with a Businessnxt Order.
+
+Once a link between a Salesforce Quote and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quote and a Businessnxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quote Property
+     - Businessnxt Order Property
+     - Businessnxt Data Type
 
