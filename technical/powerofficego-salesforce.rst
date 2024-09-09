@@ -2,7 +2,7 @@
 Powerofficego to Salesforce Dataflow
 ====================================
 
-Generated: 2024-09-09 10:50:52
+Generated: 2024-09-09 13:19:25
 
 Introduction
 ------------
@@ -47,6 +47,31 @@ The following properties are synchronized between a Powerofficego Departments an
      - "string"
    * - Name
      - Name
+     - "string"
+
+
+Powerofficego Projects to Salesforce Task
+-----------------------------------------
+Every Powerofficego Projects will be synchronized with a Salesforce Task.
+
+Once a link between a Powerofficego Projects and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Projects and a Salesforce Task:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Projects Property
+     - Salesforce Task Property
+     - Salesforce Data Type
+   * - IsActive
+     - IsClosed
+     - "string"
+   * - Name
+     - Subject
+     - "string"
+   * - ProjectManagerEmployeeId
+     - OwnerId
      - "string"
 
 
