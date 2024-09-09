@@ -2,7 +2,7 @@
 Salesforce to Hubspot Dataflow
 ==============================
 
-Generated: 2024-09-09 10:37:50
+Generated: 2024-09-09 13:19:25
 
 Introduction
 ------------
@@ -100,6 +100,65 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
    * - Phone	
      - properties.phone
+     - "string"
+
+
+Salesforce Seller to Hubspot Contact
+------------------------------------
+Every Salesforce Seller will be synchronized with a Hubspot Contact.
+
+Once a link between a Salesforce Seller and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Seller and a Hubspot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Seller Property
+     - Hubspot Contact Property
+     - Hubspot Data Type
+
+
+Salesforce User to Hubspot Contact
+----------------------------------
+Every Salesforce User will be synchronized with a Hubspot Contact.
+
+Once a link between a Salesforce User and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce User and a Hubspot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce User Property
+     - Hubspot Contact Property
+     - Hubspot Data Type
+   * - City
+     - properties.city
+     - "string"
+   * - Country
+     - properties.country
+     - "string"
+   * - Email
+     - properties.email
+     - "string"
+   * - FirstName
+     - properties.firstname
+     - "string"
+   * - ID
+     - id
+     - "string"
+   * - LastName
+     - properties.lastname
+     - "string"
+   * - MobilePhone
+     - properties.mobilephone
+     - "string"
+   * - PostalCode
+     - properties.zip
+     - "string"
+   * - Street
+     - properties.address
      - "string"
 
 
