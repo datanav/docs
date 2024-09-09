@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-09 08:45:51
+Generated: 2024-09-09 08:53:43
 
 Introduction
 ------------
@@ -375,4 +375,7 @@ The following properties are synchronized between a Salesforce Quote and a Exact
    * - Salesforce Quote Property
      - Exact Quotations Property
      - Exact Data Type
+   * - CurrencyIsoCode
+     - Currency
+     - "string"
 
