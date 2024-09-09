@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-09 11:19:27
+Generated: 2024-09-09 11:48:48
 
 Introduction
 ------------
@@ -346,4 +346,20 @@ The following properties are synchronized between a Salesforce Quote and a Membe
    * - ShippingCountryCode
      - iso2Letter
      - "string"
+
+
+Salesforce User to Membercare Countries
+---------------------------------------
+Every Salesforce User will be synchronized with a Membercare Countries.
+
+Once a link between a Salesforce User and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce User and a Membercare Countries:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce User Property
+     - Membercare Countries Property
+     - Membercare Data Type
 
