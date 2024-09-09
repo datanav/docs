@@ -2,7 +2,7 @@
 Salesforce to Membercare Dataflow
 =================================
 
-Generated: 2024-09-09 00:00:21
+Generated: 2024-09-09 08:50:48
 
 Introduction
 ------------
@@ -255,4 +255,20 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Street	
      - addresses.street
      - "string"
+
+
+Salesforce Quote to Membercare Countries
+----------------------------------------
+Every Salesforce Quote will be synchronized with a Membercare Countries.
+
+Once a link between a Salesforce Quote and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quote and a Membercare Countries:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quote Property
+     - Membercare Countries Property
+     - Membercare Data Type
 
