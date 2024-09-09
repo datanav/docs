@@ -2,12 +2,38 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-09-09 13:54:44
+Generated: 2024-09-09 15:05:33
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Activity to Tripletex Projectactivity
+-----------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Activity and a Tripletex Projectactivity must be established.
+
+A Tripletex Activity will merge with a Tripletex Projectactivity if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Activity Property
+     - Tripletex Projectactivity Property
+   * - id
+     - activity.id
+
+Once a link between a Tripletex Activity and a Tripletex Projectactivity is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Activity and a Tripletex Projectactivity:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Activity Property
+     - Tripletex Projectactivity Property
+     - Tripletex Data Type
+
 
 Tripletex Contact to Tripletex Contact
 --------------------------------------
