@@ -2,7 +2,7 @@
 Invoiced to Salesforce Dataflow
 ===============================
 
-Generated: 2024-09-09 08:42:46
+Generated: 2024-09-09 08:43:54
 
 Introduction
 ------------
@@ -117,41 +117,6 @@ The following properties are synchronized between a Invoiced Invoices and a Sale
      - "string"
 
 
-Invoiced Invoices to Salesforce Orderitem
------------------------------------------
-Every Invoiced Invoices will be synchronized with a Salesforce Orderitem.
-
-Once a link between a Invoiced Invoices and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Invoiced Invoices and a Salesforce Orderitem:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Invoiced Invoices Property
-     - Salesforce Orderitem Property
-     - Salesforce Data Type
-   * - currency
-     - CurrencyIsoCode
-     - "string"
-
-
-Invoiced Invoices to Salesforce Quote
--------------------------------------
-Every Invoiced Invoices will be synchronized with a Salesforce Quote.
-
-Once a link between a Invoiced Invoices and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Invoiced Invoices and a Salesforce Quote:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Invoiced Invoices Property
-     - Salesforce Quote Property
-     - Salesforce Data Type
-
-
 Invoiced Items to Salesforce Product2
 -------------------------------------
 Every Invoiced Items will be synchronized with a Salesforce Product2.
@@ -200,4 +165,20 @@ The following properties are synchronized between a Invoiced Lineitem and a Sale
    * - items.quantity
      - Quantity
      - "string"
+
+
+Invoiced Lineitem to Salesforce Orderitem
+-----------------------------------------
+Every Invoiced Lineitem will be synchronized with a Salesforce Orderitem.
+
+Once a link between a Invoiced Lineitem and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Lineitem and a Salesforce Orderitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Lineitem Property
+     - Salesforce Orderitem Property
+     - Salesforce Data Type
 
