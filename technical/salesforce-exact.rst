@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-09 13:08:54
+Generated: 2024-09-09 13:32:29
 
 Introduction
 ------------
@@ -149,11 +149,17 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Country
      - Country
      - "string"
+   * - Name
+     - Name
+     - "string"
    * - Name	
      - Name
      - "string"
    * - Phone	
      - Phone
+     - "string"
+   * - PostalCode
+     - Postcode
      - "string"
    * - PostalCode	
      - Postcode
