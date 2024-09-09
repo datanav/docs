@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-09 08:58:03
+Generated: 2024-09-09 09:07:24
 
 Introduction
 ------------
@@ -99,6 +99,28 @@ The following properties are synchronized between a Salesforce Orderitem and a B
    * - Salesforce Orderitem Property
      - Businessnxt Order Property
      - Businessnxt Data Type
+
+
+Salesforce Quote to Businessnxt Order
+-------------------------------------
+Every Salesforce Quote will be synchronized with a Businessnxt Order.
+
+Once a link between a Salesforce Quote and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quote and a Businessnxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quote Property
+     - Businessnxt Order Property
+     - Businessnxt Data Type
+   * - Discount
+     - totalDiscountAmountInCurrency
+     - "string"
+   * - Name
+     - name
+     - "string"
 
 
 Salesforce Contact to Businessnxt Country
