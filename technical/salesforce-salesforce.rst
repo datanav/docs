@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-09 10:36:42
+Generated: 2024-09-09 10:37:50
 
 Introduction
 ------------
@@ -172,22 +172,6 @@ The following properties are synchronized between a Salesforce Invoiceline and a
      - "string"
 
 
-Salesforce Invoiceline to Salesforce Seller
--------------------------------------------
-Every Salesforce Invoiceline will be synchronized with a Salesforce Seller.
-
-Once a link between a Salesforce Invoiceline and a Salesforce Seller is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Invoiceline and a Salesforce Seller:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Invoiceline Property
-     - Salesforce Seller Property
-     - Salesforce Data Type
-
-
 Salesforce Orderitem to Salesforce Invoiceline
 ----------------------------------------------
 Every Salesforce Orderitem will be synchronized with a Salesforce Invoiceline.
@@ -236,22 +220,6 @@ The following properties are synchronized between a Salesforce Orderitem and a S
    * - TotalPrice
      - TotalPriceWithTax
      - "string"
-
-
-Salesforce Orderitem to Salesforce Seller
------------------------------------------
-Every Salesforce Orderitem will be synchronized with a Salesforce Seller.
-
-Once a link between a Salesforce Orderitem and a Salesforce Seller is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Orderitem and a Salesforce Seller:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Orderitem Property
-     - Salesforce Seller Property
-     - Salesforce Data Type
 
 
 Salesforce Quotelineitem to Salesforce Invoiceline
@@ -305,68 +273,4 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - TotalPriceWithTax
      - TotalPrice
      - "string"
-
-
-Salesforce Quotelineitem to Salesforce Seller
----------------------------------------------
-Every Salesforce Quotelineitem will be synchronized with a Salesforce Seller.
-
-Once a link between a Salesforce Quotelineitem and a Salesforce Seller is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Quotelineitem and a Salesforce Seller:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Quotelineitem Property
-     - Salesforce Seller Property
-     - Salesforce Data Type
-
-
-Salesforce Seller to Salesforce Invoiceline
--------------------------------------------
-Every Salesforce Seller will be synchronized with a Salesforce Invoiceline.
-
-Once a link between a Salesforce Seller and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Seller and a Salesforce Invoiceline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Seller Property
-     - Salesforce Invoiceline Property
-     - Salesforce Data Type
-
-
-Salesforce Seller to Salesforce Orderitem
------------------------------------------
-Every Salesforce Seller will be synchronized with a Salesforce Orderitem.
-
-Once a link between a Salesforce Seller and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Seller and a Salesforce Orderitem:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Seller Property
-     - Salesforce Orderitem Property
-     - Salesforce Data Type
-
-
-Salesforce Seller to Salesforce Quotelineitem
----------------------------------------------
-Every Salesforce Seller will be synchronized with a Salesforce Quotelineitem.
-
-Once a link between a Salesforce Seller and a Salesforce Quotelineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Seller and a Salesforce Quotelineitem:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Seller Property
-     - Salesforce Quotelineitem Property
-     - Salesforce Data Type
 
