@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-09 10:35:50
+Generated: 2024-09-09 10:36:20
 
 Introduction
 ------------
@@ -124,6 +124,22 @@ The following properties are synchronized between a Salesforce Quote and a Busin
    * - Tax
      - taxCode
      - "string"
+
+
+Salesforce Quotelineitem to Businessnxt Order
+---------------------------------------------
+Every Salesforce Quotelineitem will be synchronized with a Businessnxt Order.
+
+Once a link between a Salesforce Quotelineitem and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quotelineitem and a Businessnxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quotelineitem Property
+     - Businessnxt Order Property
+     - Businessnxt Data Type
 
 
 Salesforce Contact to Businessnxt Country
