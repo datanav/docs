@@ -2,12 +2,30 @@
 SuperOffice to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-09 08:43:54
+Generated: 2024-09-09 08:44:13
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+SuperOffice Quotealternative to Salesforce Order
+------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Salesforce Order must be established.
+
+A new Salesforce Order will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into Salesforce.
+
+Once a link between a SuperOffice Quotealternative and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a Salesforce Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quotealternative Property
+     - Salesforce Order Property
+     - Salesforce Data Type
+
 
 SuperOffice Contact to Salesforce Division
 ------------------------------------------
@@ -196,4 +214,13 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
+   * - Quantity
+     - Quantity
+     - "string"
+   * - QuoteAlternativeId
+     - OrderId
+     - "string"
+   * - UnitListPrice
+     - TotalPrice
+     - "string"
 
