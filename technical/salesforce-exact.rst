@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-09 11:05:08
+Generated: 2024-09-09 11:51:45
 
 Introduction
 ------------
@@ -418,5 +418,21 @@ The following properties are synchronized between a Salesforce Quotelineitem and
 
    * - Salesforce Quotelineitem Property
      - Exact Salesorderlines Property
+     - Exact Data Type
+
+
+Salesforce User to Exact Addresses
+----------------------------------
+Every Salesforce User will be synchronized with a Exact Addresses.
+
+Once a link between a Salesforce User and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce User and a Exact Addresses:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce User Property
+     - Exact Addresses Property
      - Exact Data Type
 
