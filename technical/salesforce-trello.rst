@@ -2,7 +2,7 @@
 Salesforce to Trello Dataflow
 =============================
 
-Generated: 2024-09-09 11:17:40
+Generated: 2024-09-09 13:19:25
 
 Introduction
 ------------
@@ -63,6 +63,66 @@ The following properties are synchronized between a Salesforce Division and a Tr
      - Trello Data Type
    * - Name
      - name
+     - "string"
+
+
+Salesforce Seller to Trello Members
+-----------------------------------
+Every Salesforce Seller will be synchronized with a Trello Members.
+
+Once a link between a Salesforce Seller and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Seller and a Trello Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Seller Property
+     - Trello Members Property
+     - Trello Data Type
+   * - Name
+     - fullName
+     - "string"
+
+
+Salesforce Task to Trello Actions
+---------------------------------
+Every Salesforce Task will be synchronized with a Trello Actions.
+
+Once a link between a Salesforce Task and a Trello Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Task and a Trello Actions:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Task Property
+     - Trello Actions Property
+     - Trello Data Type
+   * - OwnerId
+     - memberCreator.id
+     - "string"
+
+
+Salesforce User to Trello Members
+---------------------------------
+Every Salesforce User will be synchronized with a Trello Members.
+
+Once a link between a Salesforce User and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce User and a Trello Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce User Property
+     - Trello Members Property
+     - Trello Data Type
+   * - Email
+     - email
+     - "string"
+   * - Name
+     - fullName
      - "string"
 
 
