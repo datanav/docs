@@ -2,7 +2,7 @@
 Tripletex to Asana Dataflow
 ===========================
 
-Generated: 2024-09-09 12:05:51
+Generated: 2024-09-09 12:08:45
 
 Introduction
 ------------
@@ -59,5 +59,8 @@ The following properties are synchronized between a Tripletex Task and a Asana T
      - Asana Data Type
    * - name
      - name
+     - "string"
+   * - sesam_projectid
+     - projects.gid
      - "string"
 
