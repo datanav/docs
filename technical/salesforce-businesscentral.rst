@@ -2,7 +2,7 @@
 Salesforce to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-09-09 00:00:21
+Generated: 2024-09-09 08:12:44
 
 Introduction
 ------------
@@ -190,6 +190,22 @@ The following properties are synchronized between a Salesforce Order and a Busin
    * - ShippingStateCode
      - shipToPostCode
      - "string"
+
+
+Salesforce Orderitem to Businesscentral Salesorders
+---------------------------------------------------
+Every Salesforce Orderitem will be synchronized with a Businesscentral Salesorders.
+
+Once a link between a Salesforce Orderitem and a Businesscentral Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Orderitem and a Businesscentral Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Orderitem Property
+     - Businesscentral Salesorders Property
+     - Businesscentral Data Type
 
 
 Salesforce Product2 to Businesscentral Items
