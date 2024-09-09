@@ -2,7 +2,7 @@
 Salesforce to Businessnxt Dataflow
 ==================================
 
-Generated: 2024-09-09 14:04:01
+Generated: 2024-09-09 14:56:50
 
 Introduction
 ------------
@@ -320,6 +320,9 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
    * - PostalCode	
      - postCode
+     - "string"
+   * - Street
+     - addressLine1
      - "string"
 
 
