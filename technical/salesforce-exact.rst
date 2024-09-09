@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-09 08:55:04
+Generated: 2024-09-09 09:00:36
 
 Introduction
 ------------
@@ -380,5 +380,8 @@ The following properties are synchronized between a Salesforce Quote and a Exact
      - "string"
    * - Description
      - Description
+     - "string"
+   * - ID
+     - DeliveryAddress
      - "string"
 
