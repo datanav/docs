@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-09 08:44:13
+Generated: 2024-09-09 09:03:34
 
 Introduction
 ------------
@@ -54,6 +54,22 @@ The following properties are synchronized between a Salesforce Order and a Sales
    * - TotalAmount
      - TotalAmount
      - "string"
+
+
+Salesforce Orderitem to Salesforce Invoice
+------------------------------------------
+Every Salesforce Orderitem will be synchronized with a Salesforce Invoice.
+
+Once a link between a Salesforce Orderitem and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Orderitem and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Orderitem Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
 
 
 Salesforce Organization to Salesforce Division
