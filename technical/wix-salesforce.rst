@@ -2,7 +2,7 @@
 Wix.com to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-09 09:53:51
+Generated: 2024-09-09 09:54:07
 
 Introduction
 ------------
@@ -151,6 +151,12 @@ The following properties are synchronized between a Wix.com Orders and a Salesfo
    * - Wix.com Orders Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
+   * - currency
+     - CurrencyIsoCode
+     - "string"
+   * - lineItems.quantity
+     - Quantity
+     - "string"
 
 
 Wix.com Products to Salesforce Product2
