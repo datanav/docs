@@ -2,7 +2,7 @@
 Salesforce to Invoiced Dataflow
 ===============================
 
-Generated: 2024-09-09 10:35:50
+Generated: 2024-09-09 10:37:50
 
 Introduction
 ------------
@@ -145,20 +145,4 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - TotalPriceWithTax
      - items.amount
      - "string"
-
-
-Salesforce Seller to Invoiced Lineitem
---------------------------------------
-Every Salesforce Seller will be synchronized with a Invoiced Lineitem.
-
-Once a link between a Salesforce Seller and a Invoiced Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Seller and a Invoiced Lineitem:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Seller Property
-     - Invoiced Lineitem Property
-     - Invoiced Data Type
 
