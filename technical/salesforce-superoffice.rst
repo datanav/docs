@@ -2,7 +2,7 @@
 Salesforce to Superoffice Dataflow
 ==================================
 
-Generated: 2024-09-09 10:37:50
+Generated: 2024-09-09 13:19:25
 
 Introduction
 ------------
@@ -127,6 +127,68 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
    * - Phone	
      - Phones.Value
+     - "string"
+
+
+Salesforce Seller to Superoffice Person
+---------------------------------------
+Every Salesforce Seller will be synchronized with a Superoffice Person.
+
+Once a link between a Salesforce Seller and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Seller and a Superoffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Seller Property
+     - Superoffice Person Property
+     - Superoffice Data Type
+
+
+Salesforce User to Superoffice Person
+-------------------------------------
+Every Salesforce User will be synchronized with a Superoffice Person.
+
+Once a link between a Salesforce User and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce User and a Superoffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce User Property
+     - Superoffice Person Property
+     - Superoffice Data Type
+   * - City
+     - Address.Street.City
+     - "string"
+   * - Country
+     - Country.CountryId
+     - "integer"
+   * - Division
+     - Contact.ContactId
+     - "integer"
+   * - Email
+     - Emails.Value
+     - "string"
+   * - FirstName
+     - Firstname
+     - "string"
+   * - ID
+     - PersonId
+     - "integer"
+   * - LastName
+     - Lastname
+     - "string"
+   * - MobilePhone
+     - MobilePhones.Value
+     - "string"
+   * - PostalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - Street
+     - Address.Street.Address1
      - "string"
 
 
