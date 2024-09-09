@@ -2,7 +2,7 @@
 Salesforce to Hubspot Dataflow
 ==============================
 
-Generated: 2024-09-09 09:53:51
+Generated: 2024-09-09 09:54:07
 
 Introduction
 ------------
@@ -208,4 +208,13 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - Salesforce Quotelineitem Property
      - Hubspot Lineitem Property
      - Hubspot Data Type
+   * - Description
+     - properties.description
+     - "string"
+   * - Discount
+     - properties.hs_discount_percentage
+     - "string"
+   * - Quantity
+     - properties.quantity
+     - N/A
 
