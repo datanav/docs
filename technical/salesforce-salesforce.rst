@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-09 09:58:58
+Generated: 2024-09-09 10:04:43
 
 Introduction
 ------------
@@ -91,6 +91,31 @@ The following properties are synchronized between a Salesforce Organization and 
      - Salesforce Data Type
    * - Name	
      - Name
+     - "string"
+
+
+Salesforce Quote to Salesforce Invoice
+--------------------------------------
+Every Salesforce Quote will be synchronized with a Salesforce Invoice.
+
+Once a link between a Salesforce Quote and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quote and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quote Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
+   * - CurrencyIsoCode
+     - CurrencyIsoCode
+     - "string"
+   * - Description
+     - Description
+     - "string"
+   * - TotalPriceWithTax
+     - TotalAmount
      - "string"
 
 
