@@ -2,7 +2,7 @@
 Invoiced to  Dataflow
 =====================
 
-Generated: 2024-09-10 13:18:04
+Generated: 2024-09-10 13:23:48
 
 Introduction
 ------------
@@ -23,7 +23,19 @@ The following properties are synchronized between a Invoiced Customers company a
    * - Invoiced Customers company Property
      -  Customer Property
      -  Data Type
+   * - address1
+     - StreetAddress1
+     - "string"
+   * - address2
+     - StreetAddress2
+     - "string"
+   * - city
+     - City
+     - "string"
    * - name
      - Name
+     - "string"
+   * - postal_code
+     - ZipCode
      - "string"
 
