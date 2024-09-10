@@ -2,12 +2,92 @@
 Businesscentral to Customerp Dataflow
 =====================================
 
-Generated: 2024-09-10 14:22:33
+Generated: 2024-09-10 15:43:43
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to Customerp. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Businesscentral Companies to Customerp Customer
+-----------------------------------------------
+Every Businesscentral Companies will be synchronized with a Customerp Customer.
+
+Once a link between a Businesscentral Companies and a Customerp Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Companies and a Customerp Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Companies Property
+     - Customerp Customer Property
+     - Customerp Data Type
+
+
+Businesscentral Customers person to Customerp Contact
+-----------------------------------------------------
+Every Businesscentral Customers person will be synchronized with a Customerp Contact.
+
+Once a link between a Businesscentral Customers person and a Customerp Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers person and a Customerp Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers person Property
+     - Customerp Contact Property
+     - Customerp Data Type
+
+
+Businesscentral Employees to Customerp Contact
+----------------------------------------------
+Every Businesscentral Employees will be synchronized with a Customerp Contact.
+
+Once a link between a Businesscentral Employees and a Customerp Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Employees and a Customerp Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Employees Property
+     - Customerp Contact Property
+     - Customerp Data Type
+
+
+Businesscentral Salesorderlines to Customerp Order
+--------------------------------------------------
+Every Businesscentral Salesorderlines will be synchronized with a Customerp Order.
+
+Once a link between a Businesscentral Salesorderlines and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorderlines and a Customerp Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorderlines Property
+     - Customerp Order Property
+     - Customerp Data Type
+
+
+Businesscentral Salesquotes to Customerp Order
+----------------------------------------------
+Every Businesscentral Salesquotes will be synchronized with a Customerp Order.
+
+Once a link between a Businesscentral Salesquotes and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesquotes and a Customerp Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesquotes Property
+     - Customerp Order Property
+     - Customerp Data Type
+
 
 Businesscentral Contacts person to Customerp Contact
 ----------------------------------------------------
