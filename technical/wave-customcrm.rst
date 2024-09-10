@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-09-10 13:16:17
+Generated: 2024-09-10 13:18:04
 
 Introduction
 ------------
@@ -23,4 +23,13 @@ The following properties are synchronized between a Wave Customer and a  Custome
    * - Wave Customer Property
      -  Customer Property
      -  Data Type
+   * - internalNotes
+     - Description
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - website
+     - Website
+     - "string"
 
