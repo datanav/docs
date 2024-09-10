@@ -2,12 +2,28 @@
 Customhrm to Tripletex Dataflow
 ===============================
 
-Generated: 2024-09-10 14:22:33
+Generated: 2024-09-10 14:23:07
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Customhrm to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Customhrm Department to Tripletex Department
+--------------------------------------------
+Every Customhrm Department will be synchronized with a Tripletex Department.
+
+Once a link between a Customhrm Department and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customhrm Department and a Tripletex Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customhrm Department Property
+     - Tripletex Department Property
+     - Tripletex Data Type
+
 
 Customhrm Employee to Tripletex Employee
 ----------------------------------------
