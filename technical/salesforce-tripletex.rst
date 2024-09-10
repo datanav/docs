@@ -2,7 +2,7 @@
 Salesforce to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-10 07:19:19
+Generated: 2024-09-10 07:19:46
 
 Introduction
 ------------
@@ -216,4 +216,28 @@ The following properties are synchronized between a Salesforce User and a Triple
    * - Salesforce User Property
      - Tripletex Employee Property
      - Tripletex Data Type
+   * - City
+     - address.city
+     - "string"
+   * - Country
+     - address.country.id
+     - "integer"
+   * - FirstName
+     - firstName
+     - "string"
+   * - ID
+     - id
+     - "integer"
+   * - LastName
+     - lastName
+     - "string"
+   * - MobilePhone
+     - phoneNumberMobile
+     - N/A
+   * - PostalCode
+     - address.postalCode
+     - "string"
+   * - Street
+     - address.addressLine1
+     - "string"
 
