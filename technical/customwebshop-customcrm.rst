@@ -2,7 +2,7 @@
 Customwebshop to Customcrm Dataflow
 ===================================
 
-Generated: 2024-09-10 14:33:36
+Generated: 2024-09-10 14:34:11
 
 Introduction
 ------------
@@ -22,5 +22,37 @@ The following properties are synchronized between a Customwebshop Customer and a
 
    * - Customwebshop Customer Property
      - Customcrm Customer Property
+     - Customcrm Data Type
+
+
+Customwebshop Order to Customcrm Order
+--------------------------------------
+Every Customwebshop Order will be synchronized with a Customcrm Order.
+
+Once a link between a Customwebshop Order and a Customcrm Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customwebshop Order and a Customcrm Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customwebshop Order Property
+     - Customcrm Order Property
+     - Customcrm Data Type
+
+
+Customwebshop Product to Customcrm Product
+------------------------------------------
+Every Customwebshop Product will be synchronized with a Customcrm Product.
+
+Once a link between a Customwebshop Product and a Customcrm Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customwebshop Product and a Customcrm Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customwebshop Product Property
+     - Customcrm Product Property
      - Customcrm Data Type
 
