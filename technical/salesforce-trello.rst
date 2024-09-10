@@ -2,7 +2,7 @@
 Salesforce to Trello Dataflow
 =============================
 
-Generated: 2024-09-10 00:00:21
+Generated: 2024-09-10 07:19:19
 
 Introduction
 ------------
@@ -104,28 +104,6 @@ The following properties are synchronized between a Salesforce Task and a Trello
      - "string"
 
 
-Salesforce User to Trello Members
----------------------------------
-Every Salesforce User will be synchronized with a Trello Members.
-
-Once a link between a Salesforce User and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce User and a Trello Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce User Property
-     - Trello Members Property
-     - Trello Data Type
-   * - Email
-     - email
-     - "string"
-   * - Name
-     - fullName
-     - "string"
-
-
 Salesforce Organization to Trello Organizations
 -----------------------------------------------
 Every Salesforce Organization will be synchronized with a Trello Organizations.
@@ -170,5 +148,27 @@ The following properties are synchronized between a Salesforce Task and a Trello
      - "string"
    * - Subject
      - name
+     - "string"
+
+
+Salesforce User to Trello Members
+---------------------------------
+Every Salesforce User will be synchronized with a Trello Members.
+
+Once a link between a Salesforce User and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce User and a Trello Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce User Property
+     - Trello Members Property
+     - Trello Data Type
+   * - Email
+     - email
+     - "string"
+   * - Name
+     - fullName
      - "string"
 
