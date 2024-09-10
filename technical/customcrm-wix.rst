@@ -2,7 +2,7 @@
 Customcrm to Wix Dataflow
 =========================
 
-Generated: 2024-09-10 14:14:16
+Generated: 2024-09-10 14:20:17
 
 Introduction
 ------------
@@ -21,22 +21,6 @@ The following properties are synchronized between a Customcrm Contact and a Wix 
    :header-rows: 1
 
    * - Customcrm Contact Property
-     - Wix Contacts Property
-     - Wix Data Type
-
-
-Customcrm Product to Wix Contacts
----------------------------------
-Every Customcrm Product will be synchronized with a Wix Contacts.
-
-Once a link between a Customcrm Product and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Customcrm Product and a Wix Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Customcrm Product Property
      - Wix Contacts Property
      - Wix Data Type
 
