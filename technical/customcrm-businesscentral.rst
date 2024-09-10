@@ -2,7 +2,7 @@
 Customcrm to Businesscentral Dataflow
 =====================================
 
-Generated: 2024-09-10 14:10:18
+Generated: 2024-09-10 14:14:16
 
 Introduction
 ------------
@@ -41,6 +41,22 @@ The following properties are synchronized between a Customcrm Customer and a Bus
      - Businesscentral Data Type
 
 
+Customcrm Order to Businesscentral Salesorders
+----------------------------------------------
+Every Customcrm Order will be synchronized with a Businesscentral Salesorders.
+
+Once a link between a Customcrm Order and a Businesscentral Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customcrm Order and a Businesscentral Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customcrm Order Property
+     - Businesscentral Salesorders Property
+     - Businesscentral Data Type
+
+
 Customcrm Product to Businesscentral Contacts person
 ----------------------------------------------------
 Every Customcrm Product will be synchronized with a Businesscentral Contacts person.
@@ -54,5 +70,21 @@ The following properties are synchronized between a Customcrm Product and a Busi
 
    * - Customcrm Product Property
      - Businesscentral Contacts person Property
+     - Businesscentral Data Type
+
+
+Customcrm Product to Businesscentral Items
+------------------------------------------
+Every Customcrm Product will be synchronized with a Businesscentral Items.
+
+Once a link between a Customcrm Product and a Businesscentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customcrm Product and a Businesscentral Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customcrm Product Property
+     - Businesscentral Items Property
      - Businesscentral Data Type
 
