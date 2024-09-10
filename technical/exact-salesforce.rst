@@ -2,7 +2,7 @@
 Exact to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-10 07:19:19
+Generated: 2024-09-10 07:19:46
 
 Introduction
 ------------
@@ -213,6 +213,18 @@ The following properties are synchronized between a Exact Employees and a Salesf
    * - Exact Employees Property
      - Salesforce User Property
      - Salesforce Data Type
+   * - City
+     - City
+     - "string"
+   * - Country
+     - Country
+     - "string"
+   * - ID
+     - ID
+     - "string"
+   * - Postcode
+     - PostalCode
+     - "string"
 
 
 Exact Items to Salesforce Product2
