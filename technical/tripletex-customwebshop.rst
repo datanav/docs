@@ -2,12 +2,44 @@
 Tripletex to Customwebshop Dataflow
 ===================================
 
-Generated: 2024-09-10 14:35:47
+Generated: 2024-09-10 15:43:43
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Customwebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Department to Customwebshop Customer
+----------------------------------------------
+Every Tripletex Department will be synchronized with a Customwebshop Customer.
+
+Once a link between a Tripletex Department and a Customwebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a Customwebshop Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - Customwebshop Customer Property
+     - Customwebshop Data Type
+
+
+Tripletex Orderline to Customwebshop Order
+------------------------------------------
+Every Tripletex Orderline will be synchronized with a Customwebshop Order.
+
+Once a link between a Tripletex Orderline and a Customwebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a Customwebshop Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     - Customwebshop Order Property
+     - Customwebshop Data Type
+
 
 Tripletex Customer to Customwebshop Customer
 --------------------------------------------
