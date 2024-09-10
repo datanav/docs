@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-10 00:00:21
+Generated: 2024-09-10 07:19:19
 
 Introduction
 ------------
@@ -491,4 +491,20 @@ The following properties are synchronized between a Salesforce User and a Exact 
    * - Country
      - CountryName
      - "string"
+
+
+Salesforce User to Exact Employees
+----------------------------------
+Every Salesforce User will be synchronized with a Exact Employees.
+
+Once a link between a Salesforce User and a Exact Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce User and a Exact Employees:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce User Property
+     - Exact Employees Property
+     - Exact Data Type
 
