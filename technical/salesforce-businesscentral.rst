@@ -2,7 +2,7 @@
 Salesforce to Businesscentral Dataflow
 ======================================
 
-Generated: 2024-09-10 00:00:21
+Generated: 2024-09-10 07:19:19
 
 Introduction
 ------------
@@ -262,4 +262,20 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - TotalPriceWithTax
      - unitPrice
      - "float"
+
+
+Salesforce User to Businesscentral Employees
+--------------------------------------------
+Every Salesforce User will be synchronized with a Businesscentral Employees.
+
+Once a link between a Salesforce User and a Businesscentral Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce User and a Businesscentral Employees:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce User Property
+     - Businesscentral Employees Property
+     - Businesscentral Data Type
 
