@@ -2,7 +2,7 @@
 Powerofficego to Customerp Dataflow
 ===================================
 
-Generated: 2024-09-10 14:20:17
+Generated: 2024-09-10 14:22:33
 
 Introduction
 ------------
@@ -41,6 +41,22 @@ The following properties are synchronized between a Powerofficego Customers and 
      - Customerp Data Type
 
 
+Powerofficego Employees to Customerp Employee
+---------------------------------------------
+Every Powerofficego Employees will be synchronized with a Customerp Employee.
+
+Once a link between a Powerofficego Employees and a Customerp Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Employees and a Customerp Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Employees Property
+     - Customerp Employee Property
+     - Customerp Data Type
+
+
 Powerofficego Product to Customerp Product
 ------------------------------------------
 Every Powerofficego Product will be synchronized with a Customerp Product.
@@ -54,6 +70,22 @@ The following properties are synchronized between a Powerofficego Product and a 
 
    * - Powerofficego Product Property
      - Customerp Product Property
+     - Customerp Data Type
+
+
+Powerofficego Projects to Customerp Project
+-------------------------------------------
+Every Powerofficego Projects will be synchronized with a Customerp Project.
+
+Once a link between a Powerofficego Projects and a Customerp Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Projects and a Customerp Project:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Projects Property
+     - Customerp Project Property
      - Customerp Data Type
 
 
