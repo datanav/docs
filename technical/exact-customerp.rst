@@ -2,9 +2,89 @@
 Exact to Customerp Dataflow
 ===========================
 
-Generated: 2024-09-10 14:19:40
+Generated: 2024-09-10 14:20:17
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Exact to Customerp. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Exact Accounts to Customerp Customer
+------------------------------------
+Every Exact Accounts will be synchronized with a Customerp Customer.
+
+Once a link between a Exact Accounts and a Customerp Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Accounts and a Customerp Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Accounts Property
+     - Customerp Customer Property
+     - Customerp Data Type
+
+
+Exact Contacts to Customerp Contact
+-----------------------------------
+Every Exact Contacts will be synchronized with a Customerp Contact.
+
+Once a link between a Exact Contacts and a Customerp Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Contacts and a Customerp Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Contacts Property
+     - Customerp Contact Property
+     - Customerp Data Type
+
+
+Exact Items to Customerp Product
+--------------------------------
+Every Exact Items will be synchronized with a Customerp Product.
+
+Once a link between a Exact Items and a Customerp Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Items and a Customerp Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Items Property
+     - Customerp Product Property
+     - Customerp Data Type
+
+
+Exact Quotations to Customerp Quote
+-----------------------------------
+Every Exact Quotations will be synchronized with a Customerp Quote.
+
+Once a link between a Exact Quotations and a Customerp Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Quotations and a Customerp Quote:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Quotations Property
+     - Customerp Quote Property
+     - Customerp Data Type
+
+
+Exact Salesorders to Customerp Order
+------------------------------------
+Every Exact Salesorders will be synchronized with a Customerp Order.
+
+Once a link between a Exact Salesorders and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Salesorders and a Customerp Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Salesorders Property
+     - Customerp Order Property
+     - Customerp Data Type
+
