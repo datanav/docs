@@ -38,6 +38,14 @@ Systems
         :text: Read more
         :classes: read-more
     ---
+    **Customhrm**
+
+    
+    .. link-button:: system/customhrm
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
     **Freshteam**
 
     Freshteam is a HR software that helps you handle recruiting, onboarding, time off and employee information in one place.
