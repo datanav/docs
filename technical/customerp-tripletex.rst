@@ -2,7 +2,7 @@
 Customerp to Tripletex Dataflow
 ===============================
 
-Generated: 2024-09-10 14:20:17
+Generated: 2024-09-10 14:21:11
 
 Introduction
 ------------
@@ -41,6 +41,22 @@ The following properties are synchronized between a Customerp Customer and a Tri
      - Tripletex Data Type
 
 
+Customerp Employee to Tripletex Employee
+----------------------------------------
+Every Customerp Employee will be synchronized with a Tripletex Employee.
+
+Once a link between a Customerp Employee and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customerp Employee and a Tripletex Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customerp Employee Property
+     - Tripletex Employee Property
+     - Tripletex Data Type
+
+
 Customerp Order to Tripletex Order
 ----------------------------------
 Every Customerp Order will be synchronized with a Tripletex Order.
@@ -70,5 +86,21 @@ The following properties are synchronized between a Customerp Product and a Trip
 
    * - Customerp Product Property
      - Tripletex Product Property
+     - Tripletex Data Type
+
+
+Customerp Project to Tripletex Project
+--------------------------------------
+Every Customerp Project will be synchronized with a Tripletex Project.
+
+Once a link between a Customerp Project and a Tripletex Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customerp Project and a Tripletex Project:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customerp Project Property
+     - Tripletex Project Property
      - Tripletex Data Type
 
