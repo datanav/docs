@@ -2,7 +2,7 @@
 Exact to  Dataflow
 ==================
 
-Generated: 2024-09-10 13:23:48
+Generated: 2024-09-10 13:27:14
 
 Introduction
 ------------
@@ -25,6 +25,9 @@ The following properties are synchronized between a Exact Accounts and a  Custom
      -  Data Type
    * - City
      - City
+     - "string"
+   * - Country
+     - Country
      - "string"
    * - Name
      - Name
