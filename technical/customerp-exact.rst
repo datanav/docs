@@ -2,7 +2,7 @@
 Customerp to Exact Dataflow
 ===========================
 
-Generated: 2024-09-10 14:20:17
+Generated: 2024-09-10 14:21:11
 
 Introduction
 ------------
@@ -38,6 +38,22 @@ The following properties are synchronized between a Customerp Customer and a Exa
 
    * - Customerp Customer Property
      - Exact Accounts Property
+     - Exact Data Type
+
+
+Customerp Employee to Exact Employees
+-------------------------------------
+Every Customerp Employee will be synchronized with a Exact Employees.
+
+Once a link between a Customerp Employee and a Exact Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customerp Employee and a Exact Employees:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customerp Employee Property
+     - Exact Employees Property
      - Exact Data Type
 
 
