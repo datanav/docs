@@ -2,7 +2,7 @@
 Salesforce to Tidsbanken Dataflow
 =================================
 
-Generated: 2024-09-10 07:19:46
+Generated: 2024-09-10 07:23:53
 
 Introduction
 ------------
@@ -26,6 +26,9 @@ The following properties are synchronized between a Salesforce User and a Tidsba
    * - City
      - Poststed
      - "string"
+   * - EmployeeNumber
+     - sesam_ansattId
+     - "integer"
    * - FirstName
      - Fornavn
      - "string"
