@@ -2,7 +2,7 @@
 Customwebshop to Exact Dataflow
 ===============================
 
-Generated: 2024-09-10 14:33:36
+Generated: 2024-09-10 14:34:11
 
 Introduction
 ------------
@@ -22,5 +22,37 @@ The following properties are synchronized between a Customwebshop Customer and a
 
    * - Customwebshop Customer Property
      - Exact Accounts Property
+     - Exact Data Type
+
+
+Customwebshop Order to Exact Salesorders
+----------------------------------------
+Every Customwebshop Order will be synchronized with a Exact Salesorders.
+
+Once a link between a Customwebshop Order and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customwebshop Order and a Exact Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customwebshop Order Property
+     - Exact Salesorders Property
+     - Exact Data Type
+
+
+Customwebshop Product to Exact Items
+------------------------------------
+Every Customwebshop Product will be synchronized with a Exact Items.
+
+Once a link between a Customwebshop Product and a Exact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customwebshop Product and a Exact Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customwebshop Product Property
+     - Exact Items Property
      - Exact Data Type
 
