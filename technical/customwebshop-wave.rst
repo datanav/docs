@@ -2,7 +2,7 @@
 Customwebshop to Wave Dataflow
 ==============================
 
-Generated: 2024-09-10 14:33:36
+Generated: 2024-09-10 14:34:11
 
 Introduction
 ------------
@@ -22,5 +22,37 @@ The following properties are synchronized between a Customwebshop Customer and a
 
    * - Customwebshop Customer Property
      - Wave Customer Property
+     - Wave Data Type
+
+
+Customwebshop Order to Wave Invoice
+-----------------------------------
+Every Customwebshop Order will be synchronized with a Wave Invoice.
+
+Once a link between a Customwebshop Order and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customwebshop Order and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customwebshop Order Property
+     - Wave Invoice Property
+     - Wave Data Type
+
+
+Customwebshop Product to Wave Product
+-------------------------------------
+Every Customwebshop Product will be synchronized with a Wave Product.
+
+Once a link between a Customwebshop Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customwebshop Product and a Wave Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customwebshop Product Property
+     - Wave Product Property
      - Wave Data Type
 
