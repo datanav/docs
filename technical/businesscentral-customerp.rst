@@ -2,7 +2,7 @@
 Businesscentral to Customerp Dataflow
 =====================================
 
-Generated: 2024-09-10 14:20:17
+Generated: 2024-09-10 14:22:33
 
 Introduction
 ------------
@@ -38,6 +38,22 @@ The following properties are synchronized between a Businesscentral Customers co
 
    * - Businesscentral Customers company Property
      - Customerp Customer Property
+     - Customerp Data Type
+
+
+Businesscentral Employees to Customerp Employee
+-----------------------------------------------
+Every Businesscentral Employees will be synchronized with a Customerp Employee.
+
+Once a link between a Businesscentral Employees and a Customerp Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Employees and a Customerp Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Employees Property
+     - Customerp Employee Property
      - Customerp Data Type
 
 
