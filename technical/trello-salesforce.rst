@@ -2,7 +2,7 @@
 Trello to Salesforce Dataflow
 =============================
 
-Generated: 2024-09-10 00:00:01
+Generated: 2024-09-10 07:19:19
 
 Introduction
 ------------
@@ -108,6 +108,22 @@ The following properties are synchronized between a Trello Cards and a Salesforc
    * - name
      - Subject
      - "string"
+
+
+Trello Members to Salesforce User
+---------------------------------
+Every Trello Members will be synchronized with a Salesforce User.
+
+Once a link between a Trello Members and a Salesforce User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Trello Members and a Salesforce User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Trello Members Property
+     - Salesforce User Property
+     - Salesforce Data Type
 
 
 Trello Organizations to Salesforce Organization
