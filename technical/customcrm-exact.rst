@@ -2,7 +2,7 @@
 Customcrm to Exact Dataflow
 ===========================
 
-Generated: 2024-09-10 14:14:16
+Generated: 2024-09-10 14:15:24
 
 Introduction
 ------------
@@ -102,5 +102,21 @@ The following properties are synchronized between a Customcrm Quote and a Exact 
 
    * - Customcrm Quote Property
      - Exact Quotations Property
+     - Exact Data Type
+
+
+Customcrm User to Exact Salesorders
+-----------------------------------
+Every Customcrm User will be synchronized with a Exact Salesorders.
+
+Once a link between a Customcrm User and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customcrm User and a Exact Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customcrm User Property
+     - Exact Salesorders Property
      - Exact Data Type
 
