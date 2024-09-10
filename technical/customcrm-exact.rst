@@ -2,7 +2,7 @@
 Customcrm to Exact Dataflow
 ===========================
 
-Generated: 2024-09-10 14:10:18
+Generated: 2024-09-10 14:14:16
 
 Introduction
 ------------
@@ -41,6 +41,22 @@ The following properties are synchronized between a Customcrm Customer and a Exa
      - Exact Data Type
 
 
+Customcrm Order to Exact Salesorders
+------------------------------------
+Every Customcrm Order will be synchronized with a Exact Salesorders.
+
+Once a link between a Customcrm Order and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customcrm Order and a Exact Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customcrm Order Property
+     - Exact Salesorders Property
+     - Exact Data Type
+
+
 Customcrm Product to Exact Contacts
 -----------------------------------
 Every Customcrm Product will be synchronized with a Exact Contacts.
@@ -54,5 +70,37 @@ The following properties are synchronized between a Customcrm Product and a Exac
 
    * - Customcrm Product Property
      - Exact Contacts Property
+     - Exact Data Type
+
+
+Customcrm Product to Exact Items
+--------------------------------
+Every Customcrm Product will be synchronized with a Exact Items.
+
+Once a link between a Customcrm Product and a Exact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customcrm Product and a Exact Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customcrm Product Property
+     - Exact Items Property
+     - Exact Data Type
+
+
+Customcrm Quote to Exact Quotations
+-----------------------------------
+Every Customcrm Quote will be synchronized with a Exact Quotations.
+
+Once a link between a Customcrm Quote and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customcrm Quote and a Exact Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customcrm Quote Property
+     - Exact Quotations Property
      - Exact Data Type
 
