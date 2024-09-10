@@ -2,9 +2,25 @@
 Customhrm to Tidsbanken Dataflow
 ================================
 
-Generated: 2024-09-10 14:21:41
+Generated: 2024-09-10 14:22:33
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Customhrm to Tidsbanken. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Customhrm Employee to Tidsbanken Ansatt
+---------------------------------------
+Every Customhrm Employee will be synchronized with a Tidsbanken Ansatt.
+
+Once a link between a Customhrm Employee and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customhrm Employee and a Tidsbanken Ansatt:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customhrm Employee Property
+     - Tidsbanken Ansatt Property
+     - Tidsbanken Data Type
+
