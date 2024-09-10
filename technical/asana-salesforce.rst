@@ -2,7 +2,7 @@
 Asana to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-10 07:19:19
+Generated: 2024-09-10 07:19:46
 
 Introduction
 ------------
@@ -114,6 +114,15 @@ The following properties are synchronized between a Asana Users and a Salesforce
    * - Asana Users Property
      - Salesforce User Property
      - Salesforce Data Type
+   * - email
+     - Email
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - workspaces.gid
+     - EmployeeNumber
+     - "string"
 
 
 Asana Workspaces to Salesforce Organization
