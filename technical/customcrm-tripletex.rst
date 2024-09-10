@@ -2,7 +2,7 @@
 Customcrm to Tripletex Dataflow
 ===============================
 
-Generated: 2024-09-10 14:14:16
+Generated: 2024-09-10 14:15:24
 
 Introduction
 ------------
@@ -86,5 +86,21 @@ The following properties are synchronized between a Customcrm Product and a Trip
 
    * - Customcrm Product Property
      - Tripletex Product Property
+     - Tripletex Data Type
+
+
+Customcrm User to Tripletex Order
+---------------------------------
+Every Customcrm User will be synchronized with a Tripletex Order.
+
+Once a link between a Customcrm User and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customcrm User and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customcrm User Property
+     - Tripletex Order Property
      - Tripletex Data Type
 
