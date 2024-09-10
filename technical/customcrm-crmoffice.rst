@@ -2,7 +2,7 @@
 Customcrm to Crmoffice Dataflow
 ===============================
 
-Generated: 2024-09-10 14:10:18
+Generated: 2024-09-10 14:20:17
 
 Introduction
 ------------
@@ -21,22 +21,6 @@ The following properties are synchronized between a Customcrm Contact and a Crmo
    :header-rows: 1
 
    * - Customcrm Contact Property
-     - Crmoffice Contacts Property
-     - Crmoffice Data Type
-
-
-Customcrm Product to Crmoffice Contacts
----------------------------------------
-Every Customcrm Product will be synchronized with a Crmoffice Contacts.
-
-Once a link between a Customcrm Product and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Customcrm Product and a Crmoffice Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Customcrm Product Property
      - Crmoffice Contacts Property
      - Crmoffice Data Type
 
