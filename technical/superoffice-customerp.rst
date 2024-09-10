@@ -2,7 +2,7 @@
 SuperOffice to Customerp Dataflow
 =================================
 
-Generated: 2024-09-10 14:20:17
+Generated: 2024-09-10 14:22:33
 
 Introduction
 ------------
@@ -22,6 +22,22 @@ The following properties are synchronized between a SuperOffice Product and a Cu
 
    * - SuperOffice Product Property
      - Customerp Product Property
+     - Customerp Data Type
+
+
+SuperOffice Project to Customerp Project
+----------------------------------------
+Every SuperOffice Project will be synchronized with a Customerp Project.
+
+Once a link between a SuperOffice Project and a Customerp Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Project and a Customerp Project:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Project Property
+     - Customerp Project Property
      - Customerp Data Type
 
 
