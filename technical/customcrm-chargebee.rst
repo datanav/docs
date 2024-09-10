@@ -2,7 +2,7 @@
 Customcrm to Chargebee Dataflow
 ===============================
 
-Generated: 2024-09-10 14:14:16
+Generated: 2024-09-10 14:15:24
 
 Introduction
 ------------
@@ -38,5 +38,21 @@ The following properties are synchronized between a Customcrm Product and a Char
 
    * - Customcrm Product Property
      - Chargebee Item Property
+     - Chargebee Data Type
+
+
+Customcrm User to Chargebee Order
+---------------------------------
+Every Customcrm User will be synchronized with a Chargebee Order.
+
+Once a link between a Customcrm User and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customcrm User and a Chargebee Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customcrm User Property
+     - Chargebee Order Property
      - Chargebee Data Type
 
