@@ -2,7 +2,7 @@
 Webcrm to Customcrm Dataflow
 ============================
 
-Generated: 2024-09-10 14:11:29
+Generated: 2024-09-10 14:15:24
 
 Introduction
 ------------
@@ -37,6 +37,22 @@ The following properties are synchronized between a Webcrm Persons and a Customc
    :header-rows: 1
 
    * - Webcrm Persons Property
+     - Customcrm Product Property
+     - Customcrm Data Type
+
+
+Webcrm Products to Customcrm Product
+------------------------------------
+Every Webcrm Products will be synchronized with a Customcrm Product.
+
+Once a link between a Webcrm Products and a Customcrm Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Webcrm Products and a Customcrm Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Webcrm Products Property
      - Customcrm Product Property
      - Customcrm Data Type
 
