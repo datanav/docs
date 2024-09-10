@@ -2,7 +2,7 @@
 Businesscentral to Salesforce Dataflow
 ======================================
 
-Generated: 2024-09-10 00:00:00
+Generated: 2024-09-10 07:19:19
 
 Introduction
 ------------
@@ -211,6 +211,22 @@ The following properties are synchronized between a Businesscentral Customers pe
    * - displayName
      - Name
      - "string"
+
+
+Businesscentral Employees to Salesforce User
+--------------------------------------------
+Every Businesscentral Employees will be synchronized with a Salesforce User.
+
+Once a link between a Businesscentral Employees and a Salesforce User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Employees and a Salesforce User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Employees Property
+     - Salesforce User Property
+     - Salesforce Data Type
 
 
 Businesscentral Items to Salesforce Product2
