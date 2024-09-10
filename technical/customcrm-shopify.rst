@@ -2,7 +2,7 @@
 Customcrm to Shopify Dataflow
 =============================
 
-Generated: 2024-09-10 14:15:24
+Generated: 2024-09-10 14:20:17
 
 Introduction
 ------------
@@ -38,21 +38,5 @@ The following properties are synchronized between a Customcrm Product and a Shop
 
    * - Customcrm Product Property
      - Shopify Sesamproduct Property
-     - Shopify Data Type
-
-
-Customcrm User to Shopify Order
--------------------------------
-Every Customcrm User will be synchronized with a Shopify Order.
-
-Once a link between a Customcrm User and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Customcrm User and a Shopify Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Customcrm User Property
-     - Shopify Order Property
      - Shopify Data Type
 
