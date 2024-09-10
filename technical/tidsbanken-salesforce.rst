@@ -2,7 +2,7 @@
 Tidsbanken to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-10 07:19:46
+Generated: 2024-09-10 07:23:53
 
 Introduction
 ------------
@@ -115,5 +115,8 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Sale
      - "string"
    * - Tittel
      - Title
+     - "string"
+   * - sesam_ansattId
+     - EmployeeNumber
      - "string"
 
