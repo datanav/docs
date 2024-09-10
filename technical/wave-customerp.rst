@@ -2,12 +2,28 @@
 Wave Financial to Customerp Dataflow
 ====================================
 
-Generated: 2024-09-10 14:20:17
+Generated: 2024-09-10 15:43:43
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Customerp. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wave Customer person to Customerp Contact
+-----------------------------------------
+Every Wave Customer person will be synchronized with a Customerp Contact.
+
+Once a link between a Wave Customer person and a Customerp Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer person and a Customerp Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - Customerp Contact Property
+     - Customerp Data Type
+
 
 Wave Customer to Customerp Contact
 ----------------------------------
