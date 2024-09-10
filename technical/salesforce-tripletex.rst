@@ -2,7 +2,7 @@
 Salesforce to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-10 00:00:21
+Generated: 2024-09-10 07:19:19
 
 Introduction
 ------------
@@ -200,4 +200,20 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - TotalPriceWithTax
      - unitPriceExcludingVatCurrency
      - "float"
+
+
+Salesforce User to Tripletex Employee
+-------------------------------------
+Every Salesforce User will be synchronized with a Tripletex Employee.
+
+Once a link between a Salesforce User and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce User and a Tripletex Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce User Property
+     - Tripletex Employee Property
+     - Tripletex Data Type
 
