@@ -2,7 +2,7 @@
 Salesforce to Exact Dataflow
 ============================
 
-Generated: 2024-09-10 07:19:19
+Generated: 2024-09-10 07:19:46
 
 Introduction
 ------------
@@ -507,4 +507,16 @@ The following properties are synchronized between a Salesforce User and a Exact 
    * - Salesforce User Property
      - Exact Employees Property
      - Exact Data Type
+   * - City
+     - City
+     - "string"
+   * - Country
+     - Country
+     - "string"
+   * - ID
+     - ID
+     - "string"
+   * - PostalCode
+     - Postcode
+     - "string"
 
