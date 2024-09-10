@@ -2,7 +2,7 @@
 Custompms to Tidsbanken Dataflow
 ================================
 
-Generated: 2024-09-10 14:31:19
+Generated: 2024-09-10 14:41:14
 
 Introduction
 ------------
@@ -22,5 +22,21 @@ The following properties are synchronized between a Custompms Customer and a Tid
 
    * - Custompms Customer Property
      - Tidsbanken Kunde Property
+     - Tidsbanken Data Type
+
+
+Custompms Project to Tidsbanken Prosjekt
+----------------------------------------
+Every Custompms Project will be synchronized with a Tidsbanken Prosjekt.
+
+Once a link between a Custompms Project and a Tidsbanken Prosjekt is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custompms Project and a Tidsbanken Prosjekt:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custompms Project Property
+     - Tidsbanken Prosjekt Property
      - Tidsbanken Data Type
 
