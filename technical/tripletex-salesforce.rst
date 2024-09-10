@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-10 07:19:46
+Generated: 2024-09-10 07:23:53
 
 Introduction
 ------------
@@ -226,6 +226,9 @@ The following properties are synchronized between a Tripletex Employee and a Sal
      - "string"
    * - address.postalCode
      - PostalCode
+     - "string"
+   * - employeeNumber
+     - EmployeeNumber
      - "string"
    * - firstName
      - FirstName
