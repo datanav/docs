@@ -2,7 +2,7 @@
 Salesforce to Customcrm Dataflow
 ================================
 
-Generated: 2024-09-10 14:18:21
+Generated: 2024-09-10 14:20:17
 
 Introduction
 ------------
@@ -57,22 +57,6 @@ The following properties are synchronized between a Salesforce Contact and a Cus
      - Customcrm Data Type
 
 
-Salesforce Contact to Customcrm Product
----------------------------------------
-Every Salesforce Contact will be synchronized with a Customcrm Product.
-
-Once a link between a Salesforce Contact and a Customcrm Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Contact and a Customcrm Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Contact Property
-     - Customcrm Product Property
-     - Customcrm Data Type
-
-
 Salesforce Order to Customcrm Order
 -----------------------------------
 Every Salesforce Order will be synchronized with a Customcrm Order.
@@ -86,22 +70,6 @@ The following properties are synchronized between a Salesforce Order and a Custo
 
    * - Salesforce Order Property
      - Customcrm Order Property
-     - Customcrm Data Type
-
-
-Salesforce Order to Customcrm User
-----------------------------------
-Every Salesforce Order will be synchronized with a Customcrm User.
-
-Once a link between a Salesforce Order and a Customcrm User is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Order and a Customcrm User:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Order Property
-     - Customcrm User Property
      - Customcrm Data Type
 
 
