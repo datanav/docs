@@ -2,7 +2,7 @@
 Salesforce to Customerp Dataflow
 ================================
 
-Generated: 2024-09-10 14:20:17
+Generated: 2024-09-10 14:22:33
 
 Introduction
 ------------
@@ -70,5 +70,21 @@ The following properties are synchronized between a Salesforce Quote and a Custo
 
    * - Salesforce Quote Property
      - Customerp Quote Property
+     - Customerp Data Type
+
+
+Salesforce User to Customerp Employee
+-------------------------------------
+Every Salesforce User will be synchronized with a Customerp Employee.
+
+Once a link between a Salesforce User and a Customerp Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce User and a Customerp Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce User Property
+     - Customerp Employee Property
      - Customerp Data Type
 
