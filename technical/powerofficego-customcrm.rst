@@ -2,7 +2,7 @@
 Powerofficego to Customcrm Dataflow
 ===================================
 
-Generated: 2024-09-10 14:11:29
+Generated: 2024-09-10 14:15:24
 
 Introduction
 ------------
@@ -73,6 +73,54 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - WebsiteUrl
      - Website
      - "string"
+
+
+Powerofficego Product to Customcrm Product
+------------------------------------------
+Every Powerofficego Product will be synchronized with a Customcrm Product.
+
+Once a link between a Powerofficego Product and a Customcrm Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product and a Customcrm Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     - Customcrm Product Property
+     - Customcrm Data Type
+
+
+Powerofficego Quote to Customcrm Quote
+--------------------------------------
+Every Powerofficego Quote will be synchronized with a Customcrm Quote.
+
+Once a link between a Powerofficego Quote and a Customcrm Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Quote and a Customcrm Quote:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Quote Property
+     - Customcrm Quote Property
+     - Customcrm Data Type
+
+
+Powerofficego Salesorders to Customcrm Order
+--------------------------------------------
+Every Powerofficego Salesorders will be synchronized with a Customcrm Order.
+
+Once a link between a Powerofficego Salesorders and a Customcrm Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorders and a Customcrm Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorders Property
+     - Customcrm Order Property
+     - Customcrm Data Type
 
 
 Powerofficego Suppliers person to Customcrm Contact
