@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-10 13:18:04
+Generated: 2024-09-10 13:18:54
 
 Introduction
 ------------
@@ -25,6 +25,9 @@ The following properties are synchronized between a Tripletex Customer and a  Cu
      -  Data Type
    * - name
      - Name
+     - "string"
+   * - phoneNumberMobile
+     - Phone
      - "string"
    * - website
      - Website
