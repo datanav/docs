@@ -2,12 +2,92 @@
 Tripletex to Customerp Dataflow
 ===============================
 
-Generated: 2024-09-10 14:22:33
+Generated: 2024-09-10 15:43:43
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Customerp. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Customer person to Customerp Contact
+----------------------------------------------
+Every Tripletex Customer person will be synchronized with a Customerp Contact.
+
+Once a link between a Tripletex Customer person and a Customerp Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a Customerp Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     - Customerp Contact Property
+     - Customerp Data Type
+
+
+Tripletex Department to Customerp Customer
+------------------------------------------
+Every Tripletex Department will be synchronized with a Customerp Customer.
+
+Once a link between a Tripletex Department and a Customerp Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a Customerp Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - Customerp Customer Property
+     - Customerp Data Type
+
+
+Tripletex Employee to Customerp Contact
+---------------------------------------
+Every Tripletex Employee will be synchronized with a Customerp Contact.
+
+Once a link between a Tripletex Employee and a Customerp Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a Customerp Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - Customerp Contact Property
+     - Customerp Data Type
+
+
+Tripletex Orderline to Customerp Order
+--------------------------------------
+Every Tripletex Orderline will be synchronized with a Customerp Order.
+
+Once a link between a Tripletex Orderline and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a Customerp Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     - Customerp Order Property
+     - Customerp Data Type
+
+
+Tripletex Projectactivity to Customerp Project
+----------------------------------------------
+Every Tripletex Projectactivity will be synchronized with a Customerp Project.
+
+Once a link between a Tripletex Projectactivity and a Customerp Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Projectactivity and a Customerp Project:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Projectactivity Property
+     - Customerp Project Property
+     - Customerp Data Type
+
 
 Tripletex Contact to Customerp Contact
 --------------------------------------
