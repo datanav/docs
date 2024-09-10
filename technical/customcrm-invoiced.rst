@@ -2,7 +2,7 @@
 Customcrm to Invoiced Dataflow
 ==============================
 
-Generated: 2024-09-10 14:09:16
+Generated: 2024-09-10 14:14:16
 
 Introduction
 ------------
@@ -22,5 +22,37 @@ The following properties are synchronized between a Customcrm Customer and a Inv
 
    * - Customcrm Customer Property
      - Invoiced Customers company Property
+     - Invoiced Data Type
+
+
+Customcrm Order to Invoiced Invoices
+------------------------------------
+Every Customcrm Order will be synchronized with a Invoiced Invoices.
+
+Once a link between a Customcrm Order and a Invoiced Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customcrm Order and a Invoiced Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customcrm Order Property
+     - Invoiced Invoices Property
+     - Invoiced Data Type
+
+
+Customcrm Product to Invoiced Items
+-----------------------------------
+Every Customcrm Product will be synchronized with a Invoiced Items.
+
+Once a link between a Customcrm Product and a Invoiced Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customcrm Product and a Invoiced Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customcrm Product Property
+     - Invoiced Items Property
      - Invoiced Data Type
 
