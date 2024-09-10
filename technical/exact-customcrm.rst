@@ -2,7 +2,7 @@
 Exact to Customcrm Dataflow
 ===========================
 
-Generated: 2024-09-10 14:18:21
+Generated: 2024-09-10 14:20:17
 
 Introduction
 ------------
@@ -91,22 +91,6 @@ The following properties are synchronized between a Exact Contacts and a Customc
      - Customcrm Data Type
 
 
-Exact Contacts to Customcrm Product
------------------------------------
-Every Exact Contacts will be synchronized with a Customcrm Product.
-
-Once a link between a Exact Contacts and a Customcrm Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Contacts and a Customcrm Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Contacts Property
-     - Customcrm Product Property
-     - Customcrm Data Type
-
-
 Exact Items to Customcrm Product
 --------------------------------
 Every Exact Items will be synchronized with a Customcrm Product.
@@ -152,21 +136,5 @@ The following properties are synchronized between a Exact Salesorders and a Cust
 
    * - Exact Salesorders Property
      - Customcrm Order Property
-     - Customcrm Data Type
-
-
-Exact Salesorders to Customcrm User
------------------------------------
-Every Exact Salesorders will be synchronized with a Customcrm User.
-
-Once a link between a Exact Salesorders and a Customcrm User is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Salesorders and a Customcrm User:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Salesorders Property
-     - Customcrm User Property
      - Customcrm Data Type
 
