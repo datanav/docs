@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-09-10 13:32:23
+Generated: 2024-09-10 13:32:43
 
 Introduction
 ------------
@@ -23,4 +23,13 @@ The following properties are synchronized between a Asana Teams and a  Customer:
    * - Asana Teams Property
      -  Customer Property
      -  Data Type
+   * - description
+     - Description
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - permalink_url
+     - Website
+     - "string"
 
