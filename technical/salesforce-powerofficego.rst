@@ -2,7 +2,7 @@
 Salesforce to Powerofficego Dataflow
 ====================================
 
-Generated: 2024-09-10 07:19:46
+Generated: 2024-09-10 07:23:51
 
 Introduction
 ------------
@@ -201,6 +201,9 @@ The following properties are synchronized between a Salesforce User and a Powero
    * - Salesforce User Property
      - Powerofficego Employees Property
      - Powerofficego Data Type
+   * - EmployeeNumber
+     - Number
+     - "string"
    * - FirstName
      - FirstName
      - "string"
