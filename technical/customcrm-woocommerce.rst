@@ -2,7 +2,7 @@
 Customcrm to Woocommerce Dataflow
 =================================
 
-Generated: 2024-09-10 14:15:24
+Generated: 2024-09-10 14:20:17
 
 Introduction
 ------------
@@ -38,21 +38,5 @@ The following properties are synchronized between a Customcrm Product and a Wooc
 
    * - Customcrm Product Property
      - Woocommerce Product Property
-     - Woocommerce Data Type
-
-
-Customcrm User to Woocommerce Order
------------------------------------
-Every Customcrm User will be synchronized with a Woocommerce Order.
-
-Once a link between a Customcrm User and a Woocommerce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Customcrm User and a Woocommerce Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Customcrm User Property
-     - Woocommerce Order Property
      - Woocommerce Data Type
 
