@@ -2,27 +2,91 @@
 Businesscentral to Customcrm Dataflow
 =====================================
 
-Generated: 2024-09-10 14:20:17
+Generated: 2024-09-10 15:02:06
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to Customcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Companies to  Customer
---------------------------------------
-Every Businesscentral Companies will be synchronized with a  Customer.
+Businesscentral Companies to Customcrm Customer
+-----------------------------------------------
+Every Businesscentral Companies will be synchronized with a Customcrm Customer.
 
-Once a link between a Businesscentral Companies and a  Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Companies and a Customcrm Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Companies and a  Customer:
+The following properties are synchronized between a Businesscentral Companies and a Customcrm Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Businesscentral Companies Property
-     -  Customer Property
-     -  Data Type
+     - Customcrm Customer Property
+     - Customcrm Data Type
+
+
+Businesscentral Customers person to Customcrm Contact
+-----------------------------------------------------
+Every Businesscentral Customers person will be synchronized with a Customcrm Contact.
+
+Once a link between a Businesscentral Customers person and a Customcrm Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Customers person and a Customcrm Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Customers person Property
+     - Customcrm Contact Property
+     - Customcrm Data Type
+
+
+Businesscentral Employees to Customcrm Contact
+----------------------------------------------
+Every Businesscentral Employees will be synchronized with a Customcrm Contact.
+
+Once a link between a Businesscentral Employees and a Customcrm Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Employees and a Customcrm Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Employees Property
+     - Customcrm Contact Property
+     - Customcrm Data Type
+
+
+Businesscentral Salesorderlines to Customcrm Order
+--------------------------------------------------
+Every Businesscentral Salesorderlines will be synchronized with a Customcrm Order.
+
+Once a link between a Businesscentral Salesorderlines and a Customcrm Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesorderlines and a Customcrm Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesorderlines Property
+     - Customcrm Order Property
+     - Customcrm Data Type
+
+
+Businesscentral Salesquotes to Customcrm Order
+----------------------------------------------
+Every Businesscentral Salesquotes will be synchronized with a Customcrm Order.
+
+Once a link between a Businesscentral Salesquotes and a Customcrm Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Salesquotes and a Customcrm Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Salesquotes Property
+     - Customcrm Order Property
+     - Customcrm Data Type
 
 
 Businesscentral Contacts person to Customcrm Contact
