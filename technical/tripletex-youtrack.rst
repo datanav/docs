@@ -2,7 +2,7 @@
 Tripletex to Youtrack Dataflow
 ==============================
 
-Generated: 2024-09-09 14:28:50
+Generated: 2024-09-10 00:00:00
 
 Introduction
 ------------
