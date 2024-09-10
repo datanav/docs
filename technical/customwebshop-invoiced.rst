@@ -2,7 +2,7 @@
 Customwebshop to Invoiced Dataflow
 ==================================
 
-Generated: 2024-09-10 14:33:36
+Generated: 2024-09-10 14:34:11
 
 Introduction
 ------------
@@ -22,5 +22,37 @@ The following properties are synchronized between a Customwebshop Customer and a
 
    * - Customwebshop Customer Property
      - Invoiced Customers company Property
+     - Invoiced Data Type
+
+
+Customwebshop Order to Invoiced Invoices
+----------------------------------------
+Every Customwebshop Order will be synchronized with a Invoiced Invoices.
+
+Once a link between a Customwebshop Order and a Invoiced Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customwebshop Order and a Invoiced Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customwebshop Order Property
+     - Invoiced Invoices Property
+     - Invoiced Data Type
+
+
+Customwebshop Product to Invoiced Items
+---------------------------------------
+Every Customwebshop Product will be synchronized with a Invoiced Items.
+
+Once a link between a Customwebshop Product and a Invoiced Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customwebshop Product and a Invoiced Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customwebshop Product Property
+     - Invoiced Items Property
      - Invoiced Data Type
 
