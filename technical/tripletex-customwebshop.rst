@@ -2,7 +2,7 @@
 Tripletex to Customwebshop Dataflow
 ===================================
 
-Generated: 2024-09-10 14:33:36
+Generated: 2024-09-10 14:35:47
 
 Introduction
 ------------
@@ -22,5 +22,37 @@ The following properties are synchronized between a Tripletex Customer and a Cus
 
    * - Tripletex Customer Property
      - Customwebshop Customer Property
+     - Customwebshop Data Type
+
+
+Tripletex Order to Customwebshop Order
+--------------------------------------
+Every Tripletex Order will be synchronized with a Customwebshop Order.
+
+Once a link between a Tripletex Order and a Customwebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a Customwebshop Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - Customwebshop Order Property
+     - Customwebshop Data Type
+
+
+Tripletex Product to Customwebshop Product
+------------------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Customwebshop Product.
+
+Once a link between a Tripletex Product and a Customwebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a Customwebshop Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - Customwebshop Product Property
      - Customwebshop Data Type
 
