@@ -2,7 +2,7 @@
 Tidsbanken to  Dataflow
 =======================
 
-Generated: 2024-09-10 13:18:04
+Generated: 2024-09-10 13:18:54
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Tidsbanken Kunde and a  Cust
    * - Tidsbanken Kunde Property
      -  Customer Property
      -  Data Type
+   * - Mobil
+     - Phone
+     - "string"
    * - Navn
      - Name
      - "string"
