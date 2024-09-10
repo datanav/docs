@@ -2,7 +2,7 @@
 Powerofficego to Customcrm Dataflow
 ===================================
 
-Generated: 2024-09-10 14:18:21
+Generated: 2024-09-10 14:20:17
 
 Introduction
 ------------
@@ -38,22 +38,6 @@ The following properties are synchronized between a Powerofficego Contactperson 
 
    * - Powerofficego Contactperson Property
      - Customcrm Contact Property
-     - Customcrm Data Type
-
-
-Powerofficego Contactperson to Customcrm Product
-------------------------------------------------
-Every Powerofficego Contactperson will be synchronized with a Customcrm Product.
-
-Once a link between a Powerofficego Contactperson and a Customcrm Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Contactperson and a Customcrm Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Contactperson Property
-     - Customcrm Product Property
      - Customcrm Data Type
 
 
@@ -139,22 +123,6 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - Customcrm Data Type
 
 
-Powerofficego Salesorders to Customcrm User
--------------------------------------------
-Every Powerofficego Salesorders will be synchronized with a Customcrm User.
-
-Once a link between a Powerofficego Salesorders and a Customcrm User is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorders and a Customcrm User:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorders Property
-     - Customcrm User Property
-     - Customcrm Data Type
-
-
 Powerofficego Suppliers person to Customcrm Contact
 ---------------------------------------------------
 Every Powerofficego Suppliers person will be synchronized with a Customcrm Contact.
@@ -168,21 +136,5 @@ The following properties are synchronized between a Powerofficego Suppliers pers
 
    * - Powerofficego Suppliers person Property
      - Customcrm Contact Property
-     - Customcrm Data Type
-
-
-Powerofficego Suppliers person to Customcrm Product
----------------------------------------------------
-Every Powerofficego Suppliers person will be synchronized with a Customcrm Product.
-
-Once a link between a Powerofficego Suppliers person and a Customcrm Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Suppliers person and a Customcrm Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Suppliers person Property
-     - Customcrm Product Property
      - Customcrm Data Type
 
