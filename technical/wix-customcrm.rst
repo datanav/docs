@@ -2,7 +2,7 @@
 Wix.com to Customcrm Dataflow
 =============================
 
-Generated: 2024-09-10 14:15:24
+Generated: 2024-09-10 14:16:17
 
 Introduction
 ------------
@@ -54,6 +54,22 @@ The following properties are synchronized between a Wix.com Orders and a Customc
 
    * - Wix.com Orders Property
      - Customcrm Order Property
+     - Customcrm Data Type
+
+
+Wix.com Orders to Customcrm User
+--------------------------------
+Every Wix.com Orders will be synchronized with a Customcrm User.
+
+Once a link between a Wix.com Orders and a Customcrm User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Orders and a Customcrm User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Orders Property
+     - Customcrm User Property
      - Customcrm Data Type
 
 
