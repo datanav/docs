@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-10 07:19:19
+Generated: 2024-09-10 07:19:46
 
 Introduction
 ------------
@@ -215,6 +215,30 @@ The following properties are synchronized between a Tripletex Employee and a Sal
    * - Tripletex Employee Property
      - Salesforce User Property
      - Salesforce Data Type
+   * - address.addressLine1
+     - Street
+     - "string"
+   * - address.city
+     - City
+     - "string"
+   * - address.country.id
+     - Country
+     - "string"
+   * - address.postalCode
+     - PostalCode
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - id
+     - ID
+     - "string"
+   * - lastName
+     - LastName
+     - "string"
+   * - phoneNumberMobile
+     - MobilePhone
+     - "string"
 
 
 Tripletex Invoice to Salesforce Invoice
