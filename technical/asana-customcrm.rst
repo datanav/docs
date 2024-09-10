@@ -2,7 +2,7 @@
 Asana to  Dataflow
 ==================
 
-Generated: 2024-09-10 13:46:41
+Generated: 2024-09-10 13:46:44
 
 Introduction
 ------------
@@ -48,4 +48,10 @@ The following properties are synchronized between a Asana Workspaces and a  Cust
    * - Asana Workspaces Property
      -  Customer Property
      -  Data Type
+   * - email_domains
+     - Website
+     - "string"
+   * - name
+     - Name
+     - "string"
 
