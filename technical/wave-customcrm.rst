@@ -2,7 +2,7 @@
 Wave Financial to Customcrm Dataflow
 ====================================
 
-Generated: 2024-09-10 14:11:29
+Generated: 2024-09-10 14:15:24
 
 Introduction
 ------------
@@ -89,6 +89,38 @@ The following properties are synchronized between a Wave Customer and a Customcr
    :header-rows: 1
 
    * - Wave Customer Property
+     - Customcrm Product Property
+     - Customcrm Data Type
+
+
+Wave Invoice to Customcrm Order
+-------------------------------
+Every Wave Invoice will be synchronized with a Customcrm Order.
+
+Once a link between a Wave Invoice and a Customcrm Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a Customcrm Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     - Customcrm Order Property
+     - Customcrm Data Type
+
+
+Wave Product to Customcrm Product
+---------------------------------
+Every Wave Product will be synchronized with a Customcrm Product.
+
+Once a link between a Wave Product and a Customcrm Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Product and a Customcrm Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Product Property
      - Customcrm Product Property
      - Customcrm Data Type
 
