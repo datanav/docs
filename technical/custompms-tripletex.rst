@@ -2,7 +2,7 @@
 Custompms to Tripletex Dataflow
 ===============================
 
-Generated: 2024-09-10 14:31:19
+Generated: 2024-09-10 14:41:14
 
 Introduction
 ------------
@@ -22,5 +22,21 @@ The following properties are synchronized between a Custompms Customer and a Tri
 
    * - Custompms Customer Property
      - Tripletex Customer Property
+     - Tripletex Data Type
+
+
+Custompms Project to Tripletex Project
+--------------------------------------
+Every Custompms Project will be synchronized with a Tripletex Project.
+
+Once a link between a Custompms Project and a Tripletex Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custompms Project and a Tripletex Project:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custompms Project Property
+     - Tripletex Project Property
      - Tripletex Data Type
 
