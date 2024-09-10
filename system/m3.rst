@@ -62,6 +62,14 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
         :text: Read more
         :classes: read-more
     ---
+    **Customerp**
+
+    
+    .. link-button:: system/customerp
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
     **Microsoft Dynamics 365**
 
     Microsoft Dynamics 365 is a product line of enterprise resource planning (ERP) and customer relationship management (CRM) intelligent business applications.
