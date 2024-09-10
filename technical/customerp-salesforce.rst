@@ -2,7 +2,7 @@
 Customerp to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-10 14:20:17
+Generated: 2024-09-10 14:21:11
 
 Introduction
 ------------
@@ -22,6 +22,22 @@ The following properties are synchronized between a Customerp Contact and a Sale
 
    * - Customerp Contact Property
      - Salesforce Contact Property
+     - Salesforce Data Type
+
+
+Customerp Employee to Salesforce User
+-------------------------------------
+Every Customerp Employee will be synchronized with a Salesforce User.
+
+Once a link between a Customerp Employee and a Salesforce User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customerp Employee and a Salesforce User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customerp Employee Property
+     - Salesforce User Property
      - Salesforce Data Type
 
 
