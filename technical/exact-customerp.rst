@@ -2,7 +2,7 @@
 Exact to Customerp Dataflow
 ===========================
 
-Generated: 2024-09-10 14:20:17
+Generated: 2024-09-10 14:22:33
 
 Introduction
 ------------
@@ -38,6 +38,22 @@ The following properties are synchronized between a Exact Contacts and a Custome
 
    * - Exact Contacts Property
      - Customerp Contact Property
+     - Customerp Data Type
+
+
+Exact Employees to Customerp Employee
+-------------------------------------
+Every Exact Employees will be synchronized with a Customerp Employee.
+
+Once a link between a Exact Employees and a Customerp Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Employees and a Customerp Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Employees Property
+     - Customerp Employee Property
      - Customerp Data Type
 
 
