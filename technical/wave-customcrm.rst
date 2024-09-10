@@ -2,7 +2,7 @@
 Wave Financial to  Dataflow
 ===========================
 
-Generated: 2024-09-10 13:21:50
+Generated: 2024-09-10 13:23:48
 
 Introduction
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a Wave Customer and a  Custome
    * - Wave Customer Property
      -  Customer Property
      -  Data Type
+   * - address.addressLine1
+     - StreetAddress1
+     - "string"
+   * - address.addressLine2
+     - StreetAddress2
+     - "string"
+   * - address.city
+     - City
+     - "string"
+   * - address.postalCode
+     - ZipCode
+     - "string"
    * - fax
      - Fax
      - "string"
@@ -31,6 +43,18 @@ The following properties are synchronized between a Wave Customer and a  Custome
      - "string"
    * - name
      - Name
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - StreetAddress1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - StreetAddress2
+     - "string"
+   * - shippingDetails.address.city
+     - City
+     - "string"
+   * - shippingDetails.address.postalCode
+     - ZipCode
      - "string"
    * - website
      - Website
