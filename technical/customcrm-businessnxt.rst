@@ -2,7 +2,7 @@
 Customcrm to Businessnxt Dataflow
 =================================
 
-Generated: 2024-09-10 14:14:16
+Generated: 2024-09-10 14:15:24
 
 Introduction
 ------------
@@ -38,5 +38,21 @@ The following properties are synchronized between a Customcrm Product and a Busi
 
    * - Customcrm Product Property
      - Businessnxt Product Property
+     - Businessnxt Data Type
+
+
+Customcrm User to Businessnxt Order
+-----------------------------------
+Every Customcrm User will be synchronized with a Businessnxt Order.
+
+Once a link between a Customcrm User and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customcrm User and a Businessnxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customcrm User Property
+     - Businessnxt Order Property
      - Businessnxt Data Type
 
