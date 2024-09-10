@@ -2,7 +2,7 @@
 Tidsbanken to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-10 07:19:19
+Generated: 2024-09-10 07:19:46
 
 Introduction
 ------------
@@ -89,4 +89,31 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Sale
    * - Tidsbanken Ansatt Property
      - Salesforce User Property
      - Salesforce Data Type
+   * - Adresse
+     - Street
+     - "string"
+   * - Etternavn
+     - LastName
+     - "string"
+   * - Fornavn
+     - FirstName
+     - "string"
+   * - Id
+     - ID
+     - "string"
+   * - Mobil
+     - MobilePhone
+     - "string"
+   * - Navn
+     - Name
+     - "string"
+   * - Postnummer
+     - PostalCode
+     - "string"
+   * - Poststed
+     - City
+     - "string"
+   * - Tittel
+     - Title
+     - "string"
 
