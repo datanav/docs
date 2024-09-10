@@ -2,7 +2,7 @@
 Customcrm to Customcrm Dataflow
 ===============================
 
-Generated: 2024-09-10 14:11:29
+Generated: 2024-09-10 14:15:24
 
 Introduction
 ------------
@@ -38,5 +38,21 @@ The following properties are synchronized between a Customcrm Product and a Cust
 
    * - Customcrm Product Property
      - Customcrm Contact Property
+     - Customcrm Data Type
+
+
+Customcrm User to Customcrm Order
+---------------------------------
+Every Customcrm User will be synchronized with a Customcrm Order.
+
+Once a link between a Customcrm User and a Customcrm Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customcrm User and a Customcrm Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customcrm User Property
+     - Customcrm Order Property
      - Customcrm Data Type
 
