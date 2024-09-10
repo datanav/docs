@@ -2,7 +2,7 @@
 Tidsbanken to Customhrm Dataflow
 ================================
 
-Generated: 2024-09-10 14:22:33
+Generated: 2024-09-10 14:24:13
 
 Introduction
 ------------
@@ -22,5 +22,21 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Cust
 
    * - Tidsbanken Ansatt Property
      - Customhrm Employee Property
+     - Customhrm Data Type
+
+
+Tidsbanken Avdeling to Customhrm Department
+-------------------------------------------
+Every Tidsbanken Avdeling will be synchronized with a Customhrm Department.
+
+Once a link between a Tidsbanken Avdeling and a Customhrm Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Avdeling and a Customhrm Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     - Customhrm Department Property
      - Customhrm Data Type
 
