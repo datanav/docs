@@ -2,12 +2,92 @@
 Exact to Customwebshop Dataflow
 ===============================
 
-Generated: 2024-09-10 14:35:47
+Generated: 2024-09-10 15:43:43
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Exact to Customwebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Exact Departments to Customwebshop Customer
+-------------------------------------------
+Every Exact Departments will be synchronized with a Customwebshop Customer.
+
+Once a link between a Exact Departments and a Customwebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Departments and a Customwebshop Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Departments Property
+     - Customwebshop Customer Property
+     - Customwebshop Data Type
+
+
+Exact Divisions to Customwebshop Customer
+-----------------------------------------
+Every Exact Divisions will be synchronized with a Customwebshop Customer.
+
+Once a link between a Exact Divisions and a Customwebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Divisions and a Customwebshop Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Divisions Property
+     - Customwebshop Customer Property
+     - Customwebshop Data Type
+
+
+Exact Quotations to Customwebshop Order
+---------------------------------------
+Every Exact Quotations will be synchronized with a Customwebshop Order.
+
+Once a link between a Exact Quotations and a Customwebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Quotations and a Customwebshop Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Quotations Property
+     - Customwebshop Order Property
+     - Customwebshop Data Type
+
+
+Exact Salesinvoices to Customwebshop Order
+------------------------------------------
+Every Exact Salesinvoices will be synchronized with a Customwebshop Order.
+
+Once a link between a Exact Salesinvoices and a Customwebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Salesinvoices and a Customwebshop Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Salesinvoices Property
+     - Customwebshop Order Property
+     - Customwebshop Data Type
+
+
+Exact Salesorderlines to Customwebshop Order
+--------------------------------------------
+Every Exact Salesorderlines will be synchronized with a Customwebshop Order.
+
+Once a link between a Exact Salesorderlines and a Customwebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Salesorderlines and a Customwebshop Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Salesorderlines Property
+     - Customwebshop Order Property
+     - Customwebshop Data Type
+
 
 Exact Accounts to Customwebshop Customer
 ----------------------------------------
