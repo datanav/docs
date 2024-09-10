@@ -2,7 +2,7 @@
 Customcrm to Powerofficego Dataflow
 ===================================
 
-Generated: 2024-09-10 14:10:18
+Generated: 2024-09-10 14:14:16
 
 Introduction
 ------------
@@ -41,6 +41,22 @@ The following properties are synchronized between a Customcrm Customer and a Pow
      - Powerofficego Data Type
 
 
+Customcrm Order to Powerofficego Salesorders
+--------------------------------------------
+Every Customcrm Order will be synchronized with a Powerofficego Salesorders.
+
+Once a link between a Customcrm Order and a Powerofficego Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customcrm Order and a Powerofficego Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customcrm Order Property
+     - Powerofficego Salesorders Property
+     - Powerofficego Data Type
+
+
 Customcrm Product to Powerofficego Contactperson
 ------------------------------------------------
 Every Customcrm Product will be synchronized with a Powerofficego Contactperson.
@@ -54,5 +70,21 @@ The following properties are synchronized between a Customcrm Product and a Powe
 
    * - Customcrm Product Property
      - Powerofficego Contactperson Property
+     - Powerofficego Data Type
+
+
+Customcrm Product to Powerofficego Product
+------------------------------------------
+Every Customcrm Product will be synchronized with a Powerofficego Product.
+
+Once a link between a Customcrm Product and a Powerofficego Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Customcrm Product and a Powerofficego Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customcrm Product Property
+     - Powerofficego Product Property
      - Powerofficego Data Type
 
