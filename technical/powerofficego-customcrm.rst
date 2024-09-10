@@ -2,7 +2,7 @@
 Powerofficego to  Dataflow
 ==========================
 
-Generated: 2024-09-10 13:18:04
+Generated: 2024-09-10 13:23:48
 
 Introduction
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      -  Customer Property
      -  Data Type
+   * - MailAddress.AddressLine1
+     - StreetAddress1
+     - "string"
+   * - MailAddress.AddressLine2
+     - StreetAddress2
+     - "string"
+   * - MailAddress.City
+     - City
+     - "string"
+   * - MailAddress.ZipCode
+     - ZipCode
+     - "string"
    * - Name
      - Name
      - "string"
