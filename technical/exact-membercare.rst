@@ -1,13 +1,13 @@
 ===================================
-Exact Online to Membercare Dataflow
+Exact Online to MemberCare Dataflow
 ===================================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to Membercare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Exact Accounts to Membercare Companies
 --------------------------------------
@@ -282,37 +282,37 @@ The following properties are synchronized between a Exact Vatcodes and a Memberc
      - "string"
 
 
-Exact Addresses to Membercare Countries
+Exact Addresses to MemberCare Countries
 ---------------------------------------
-Every Exact Addresses will be synchronized with a Membercare Countries.
+Every Exact Addresses will be synchronized with a MemberCare Countries.
 
-Once a link between a Exact Addresses and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Addresses and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Addresses and a Membercare Countries:
+The following properties are synchronized between a Exact Addresses and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Addresses Property
-     - Membercare Countries Property
-     - Membercare Data Type
+     - MemberCare Countries Property
+     - MemberCare Data Type
    * - CountryName
      - name
      - "string"
 
 
-Exact Salesinvoices to Membercare Invoices
+Exact Salesinvoices to MemberCare Invoices
 ------------------------------------------
-Every Exact Salesinvoices will be synchronized with a Membercare Invoices.
+Every Exact Salesinvoices will be synchronized with a MemberCare Invoices.
 
-Once a link between a Exact Salesinvoices and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Salesinvoices and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Salesinvoices and a Membercare Invoices:
+The following properties are synchronized between a Exact Salesinvoices and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Salesinvoices Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
 
