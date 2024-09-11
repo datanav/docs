@@ -2,7 +2,7 @@
 Shopify to SuperOffice Dataflow
 ===============================
 
-Generated: 2024-09-11 07:57:12
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
@@ -51,20 +51,20 @@ The following properties are synchronized between a Shopify Product and a SuperO
      - SuperOffice Data Type
 
 
-Shopify Customer to Superoffice Person
+Shopify Customer to SuperOffice Person
 --------------------------------------
-Every Shopify Customer will be synchronized with a Superoffice Person.
+Every Shopify Customer will be synchronized with a SuperOffice Person.
 
-Once a link between a Shopify Customer and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Customer and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Customer and a Superoffice Person:
+The following properties are synchronized between a Shopify Customer and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Customer Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+     - SuperOffice Person Property
+     - SuperOffice Data Type
    * - addresses.address1
      - Address.Street.Address1
      - "string"
