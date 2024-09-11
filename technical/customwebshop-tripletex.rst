@@ -2,57 +2,57 @@
 CustomWebshop to Tripletex Dataflow
 ===================================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 07:55:13
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CustomWebshop to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Custom Customer to Tripletex Customer
--------------------------------------
-Every Custom Customer will be synchronized with a Tripletex Customer.
+CustomWebshop Customer to Tripletex Customer
+--------------------------------------------
+Every CustomWebshop Customer will be synchronized with a Tripletex Customer.
 
-Once a link between a Custom Customer and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomWebshop Customer and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Customer and a Tripletex Customer:
+The following properties are synchronized between a CustomWebshop Customer and a Tripletex Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Customer Property
+   * - CustomWebshop Customer Property
      - Tripletex Customer Property
      - Tripletex Data Type
 
 
-Custom Order to Tripletex Order
--------------------------------
-Every Custom Order will be synchronized with a Tripletex Order.
+CustomWebshop Order to Tripletex Order
+--------------------------------------
+Every CustomWebshop Order will be synchronized with a Tripletex Order.
 
-Once a link between a Custom Order and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomWebshop Order and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Order and a Tripletex Order:
+The following properties are synchronized between a CustomWebshop Order and a Tripletex Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Order Property
+   * - CustomWebshop Order Property
      - Tripletex Order Property
      - Tripletex Data Type
 
 
-Custom Product to Tripletex Product
------------------------------------
-Every Custom Product will be synchronized with a Tripletex Product.
+CustomWebshop Product to Tripletex Product
+------------------------------------------
+Every CustomWebshop Product will be synchronized with a Tripletex Product.
 
-Once a link between a Custom Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomWebshop Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Product and a Tripletex Product:
+The following properties are synchronized between a CustomWebshop Product and a Tripletex Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Product Property
+   * - CustomWebshop Product Property
      - Tripletex Product Property
      - Tripletex Data Type
 
