@@ -1,13 +1,13 @@
-==================================
-Membercare to Businessnxt Dataflow
-==================================
+=========================================
+MemberCare to Visma Business Nxt Dataflow
+=========================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Membercare to Businessnxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Membercare Companycategories to Businessnxt Country
 ---------------------------------------------------
@@ -103,20 +103,20 @@ The following properties are synchronized between a Membercare Products and a Bu
      - Businessnxt Data Type
 
 
-Membercare Companies to Businessnxt Address
--------------------------------------------
-Every Membercare Companies will be synchronized with a Businessnxt Address.
+MemberCare Companies to Visma Address
+-------------------------------------
+Every MemberCare Companies will be synchronized with a Visma Address.
 
-Once a link between a Membercare Companies and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companies and a Visma Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Companies and a Businessnxt Address:
+The following properties are synchronized between a MemberCare Companies and a Visma Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Companies Property
-     - Businessnxt Address Property
-     - Businessnxt Data Type
+   * - MemberCare Companies Property
+     - Visma Address Property
+     - Visma Data Type
    * - addresses.country.id
      - countryNo
      - "string"
@@ -137,20 +137,20 @@ The following properties are synchronized between a Membercare Companies and a B
      - "string"
 
 
-Membercare Companies to Businessnxt Company
--------------------------------------------
-Every Membercare Companies will be synchronized with a Businessnxt Company.
+MemberCare Companies to Visma Company
+-------------------------------------
+Every MemberCare Companies will be synchronized with a Visma Company.
 
-Once a link between a Membercare Companies and a Businessnxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companies and a Visma Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Companies and a Businessnxt Company:
+The following properties are synchronized between a MemberCare Companies and a Visma Company:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Companies Property
-     - Businessnxt Company Property
-     - Businessnxt Data Type
+   * - MemberCare Companies Property
+     - Visma Company Property
+     - Visma Data Type
    * - addresses.id
      - companyNo
      - "string"
@@ -159,20 +159,20 @@ The following properties are synchronized between a Membercare Companies and a B
      - "string"
 
 
-Membercare Countries to Businessnxt Country
--------------------------------------------
-Every Membercare Countries will be synchronized with a Businessnxt Country.
+MemberCare Countries to Visma Country
+-------------------------------------
+Every MemberCare Countries will be synchronized with a Visma Country.
 
-Once a link between a Membercare Countries and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Countries and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Countries and a Businessnxt Country:
+The following properties are synchronized between a MemberCare Countries and a Visma Country:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Countries Property
-     - Businessnxt Country Property
-     - Businessnxt Data Type
+   * - MemberCare Countries Property
+     - Visma Country Property
+     - Visma Data Type
    * - iso2Letter
      - isoCode
      - "string"
@@ -181,18 +181,18 @@ The following properties are synchronized between a Membercare Countries and a B
      - "string"
 
 
-Membercare Invoices to Businessnxt Orderline
---------------------------------------------
-Every Membercare Invoices will be synchronized with a Businessnxt Orderline.
+MemberCare Invoices to Visma Orderline
+--------------------------------------
+Every MemberCare Invoices will be synchronized with a Visma Orderline.
 
-Once a link between a Membercare Invoices and a Businessnxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Invoices and a Visma Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Invoices and a Businessnxt Orderline:
+The following properties are synchronized between a MemberCare Invoices and a Visma Orderline:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Invoices Property
-     - Businessnxt Orderline Property
-     - Businessnxt Data Type
+   * - MemberCare Invoices Property
+     - Visma Orderline Property
+     - Visma Data Type
 
