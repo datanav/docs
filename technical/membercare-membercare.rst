@@ -1,13 +1,13 @@
 =================================
-Membercare to Membercare Dataflow
+MemberCare to MemberCare Dataflow
 =================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Membercare to Membercare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Membercare Countries to Membercare Companycategories
 ----------------------------------------------------
@@ -74,18 +74,18 @@ The following properties are synchronized between a Membercare Organizations and
      - "string"
 
 
-Membercare Organizations to Membercare Companycategories
+MemberCare Organizations to MemberCare Companycategories
 --------------------------------------------------------
-Every Membercare Organizations will be synchronized with a Membercare Companycategories.
+Every MemberCare Organizations will be synchronized with a MemberCare Companycategories.
 
-Once a link between a Membercare Organizations and a Membercare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Organizations and a MemberCare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Organizations and a Membercare Companycategories:
+The following properties are synchronized between a MemberCare Organizations and a MemberCare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Organizations Property
-     - Membercare Companycategories Property
-     - Membercare Data Type
+   * - MemberCare Organizations Property
+     - MemberCare Companycategories Property
+     - MemberCare Data Type
 
