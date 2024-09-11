@@ -1,28 +1,28 @@
-=====================================
-Businesscentral to Chargebee Dataflow
-=====================================
+======================================
+Business Central to Chargebee Dataflow
+======================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:53:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Customers to Chargebee Customer
------------------------------------------------
-Before any synchronization can take place, a link between a Businesscentral Customers and a Chargebee Customer must be established.
+Business Customers to Chargebee Customer
+----------------------------------------
+Before any synchronization can take place, a link between a Business Customers and a Chargebee Customer must be established.
 
-A new Chargebee Customer will be created from a Businesscentral Customers if it is connected to a Businesscentral Salesorders, Salesquotes, or Salesorderlines that is synchronized into Chargebee.
+A new Chargebee Customer will be created from a Business Customers if it is connected to a Business Businesscentral-salesorders, Businesscentral-salesquotes, or Businesscentral-salesorderlines that is synchronized into Chargebee.
 
-Once a link between a Businesscentral Customers and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers and a Chargebee Customer:
+The following properties are synchronized between a Business Customers and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Customers Property
+   * - Business Customers Property
      - Chargebee Customer Property
      - Chargebee Data Type
 
@@ -128,18 +128,18 @@ The following properties are synchronized between a Businesscentral Salesquotes 
      - Chargebee Data Type
 
 
-Businesscentral Customers company to Chargebee Business_entity
---------------------------------------------------------------
-Every Businesscentral Customers company will be synchronized with a Chargebee Business_entity.
+Business Customers company to Chargebee Business_entity
+-------------------------------------------------------
+Every Business Customers company will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Businesscentral Customers company and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers company and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers company and a Chargebee Business_entity:
+The following properties are synchronized between a Business Customers company and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Customers company Property
+   * - Business Customers company Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
    * - displayName
@@ -147,18 +147,18 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
 
 
-Businesscentral Customers person to Chargebee Customer
-------------------------------------------------------
-Every Businesscentral Customers person will be synchronized with a Chargebee Customer.
+Business Customers person to Chargebee Customer
+-----------------------------------------------
+Every Business Customers person will be synchronized with a Chargebee Customer.
 
-Once a link between a Businesscentral Customers person and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers person and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers person and a Chargebee Customer:
+The following properties are synchronized between a Business Customers person and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Customers person Property
+   * - Business Customers person Property
      - Chargebee Customer Property
      - Chargebee Data Type
    * - email
@@ -166,18 +166,18 @@ The following properties are synchronized between a Businesscentral Customers pe
      - "string"
 
 
-Businesscentral Items to Chargebee Item
----------------------------------------
-Every Businesscentral Items will be synchronized with a Chargebee Item.
+Business Items to Chargebee Item
+--------------------------------
+Every Business Items will be synchronized with a Chargebee Item.
 
-Once a link between a Businesscentral Items and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Items and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Items and a Chargebee Item:
+The following properties are synchronized between a Business Items and a Chargebee Item:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Items Property
+   * - Business Items Property
      - Chargebee Item Property
      - Chargebee Data Type
    * - displayName
@@ -185,18 +185,18 @@ The following properties are synchronized between a Businesscentral Items and a 
      - "string"
 
 
-Businesscentral Salesorders to Chargebee Order
-----------------------------------------------
-Every Businesscentral Salesorders will be synchronized with a Chargebee Order.
+Business Salesorders to Chargebee Order
+---------------------------------------
+Every Business Salesorders will be synchronized with a Chargebee Order.
 
-Once a link between a Businesscentral Salesorders and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Salesorders and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorders and a Chargebee Order:
+The following properties are synchronized between a Business Salesorders and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Salesorders Property
+   * - Business Salesorders Property
      - Chargebee Order Property
      - Chargebee Data Type
    * - currencyId
