@@ -2,75 +2,75 @@
 Tripletex to Custom CRM Dataflow
 ================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Customer person to CustomCRM Contact
-----------------------------------------------
-Every Tripletex Customer person will be synchronized with a CustomCRM Contact.
+Tripletex Customer person to Custom CRM Contact
+-----------------------------------------------
+Every Tripletex Customer person will be synchronized with a Custom CRM Contact.
 
-Once a link between a Tripletex Customer person and a CustomCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a CustomCRM Contact:
+The following properties are synchronized between a Tripletex Customer person and a Custom CRM Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     - CustomCRM Contact Property
-     - CustomCRM Data Type
+     - Custom CRM Contact Property
+     - Custom CRM Data Type
 
 
-Tripletex Department to CustomCRM Customer
-------------------------------------------
-Every Tripletex Department will be synchronized with a CustomCRM Customer.
+Tripletex Department to Custom CRM Customer
+-------------------------------------------
+Every Tripletex Department will be synchronized with a Custom CRM Customer.
 
-Once a link between a Tripletex Department and a CustomCRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a CustomCRM Customer:
+The following properties are synchronized between a Tripletex Department and a Custom CRM Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     - CustomCRM Customer Property
-     - CustomCRM Data Type
+     - Custom CRM Customer Property
+     - Custom CRM Data Type
 
 
-Tripletex Employee to CustomCRM Contact
----------------------------------------
-Every Tripletex Employee will be synchronized with a CustomCRM Contact.
+Tripletex Employee to Custom CRM Contact
+----------------------------------------
+Every Tripletex Employee will be synchronized with a Custom CRM Contact.
 
-Once a link between a Tripletex Employee and a CustomCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a CustomCRM Contact:
+The following properties are synchronized between a Tripletex Employee and a Custom CRM Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     - CustomCRM Contact Property
-     - CustomCRM Data Type
+     - Custom CRM Contact Property
+     - Custom CRM Data Type
 
 
-Tripletex Orderline to CustomCRM Order
---------------------------------------
-Every Tripletex Orderline will be synchronized with a CustomCRM Order.
+Tripletex Orderline to Custom CRM Order
+---------------------------------------
+Every Tripletex Orderline will be synchronized with a Custom CRM Order.
 
-Once a link between a Tripletex Orderline and a CustomCRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Orderline and a Custom CRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Orderline and a CustomCRM Order:
+The following properties are synchronized between a Tripletex Orderline and a Custom CRM Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Orderline Property
-     - CustomCRM Order Property
-     - CustomCRM Data Type
+     - Custom CRM Order Property
+     - Custom CRM Data Type
 
 
 Tripletex Contact to Custom CRM Contact
