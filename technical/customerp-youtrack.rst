@@ -2,41 +2,41 @@
 Custom ERP to Youtrack Dataflow
 ===============================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Custom ERP to Youtrack. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-CustomERP Customer to Youtrack Groups
--------------------------------------
-Every CustomERP Customer will be synchronized with a Youtrack Groups.
+Custom ERP Customer to Youtrack Groups
+--------------------------------------
+Every Custom ERP Customer will be synchronized with a Youtrack Groups.
 
-Once a link between a CustomERP Customer and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Customer and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Customer and a Youtrack Groups:
+The following properties are synchronized between a Custom ERP Customer and a Youtrack Groups:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Customer Property
+   * - Custom ERP Customer Property
      - Youtrack Groups Property
      - Youtrack Data Type
 
 
-CustomERP Project to Youtrack Hubprojects
------------------------------------------
-Every CustomERP Project will be synchronized with a Youtrack Hubprojects.
+Custom ERP Project to Youtrack Hubprojects
+------------------------------------------
+Every Custom ERP Project will be synchronized with a Youtrack Hubprojects.
 
-Once a link between a CustomERP Project and a Youtrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Project and a Youtrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Project and a Youtrack Hubprojects:
+The following properties are synchronized between a Custom ERP Project and a Youtrack Hubprojects:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Project Property
+   * - Custom ERP Project Property
      - Youtrack Hubprojects Property
      - Youtrack Data Type
 
