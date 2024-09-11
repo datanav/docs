@@ -2,25 +2,25 @@
 Exact Online to HubSpot Dataflow
 ================================
 
-Generated: 2024-09-11 11:40:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-ExactOnline Accounts to HubSpot Company
----------------------------------------
-Every ExactOnline Accounts will be synchronized with a HubSpot Company.
+Exact Online Accounts to HubSpot Company
+----------------------------------------
+Every Exact Online Accounts will be synchronized with a HubSpot Company.
 
-Once a link between a ExactOnline Accounts and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Accounts and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Accounts and a HubSpot Company:
+The following properties are synchronized between a Exact Online Accounts and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Accounts Property
+   * - Exact Online Accounts Property
      - HubSpot Company Property
      - HubSpot Data Type
    * - Name
@@ -31,18 +31,18 @@ The following properties are synchronized between a ExactOnline Accounts and a H
      - "string"
 
 
-ExactOnline Contacts to HubSpot Contact
----------------------------------------
-Every ExactOnline Contacts will be synchronized with a HubSpot Contact.
+Exact Online Contacts to HubSpot Contact
+----------------------------------------
+Every Exact Online Contacts will be synchronized with a HubSpot Contact.
 
-Once a link between a ExactOnline Contacts and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Contacts and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Contacts and a HubSpot Contact:
+The following properties are synchronized between a Exact Online Contacts and a HubSpot Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Contacts Property
+   * - Exact Online Contacts Property
      - HubSpot Contact Property
      - HubSpot Data Type
    * - BirthDate
@@ -50,18 +50,18 @@ The following properties are synchronized between a ExactOnline Contacts and a H
      - "string"
 
 
-ExactOnline Departments to HubSpot Company
-------------------------------------------
-Every ExactOnline Departments will be synchronized with a HubSpot Company.
+Exact Online Departments to HubSpot Company
+-------------------------------------------
+Every Exact Online Departments will be synchronized with a HubSpot Company.
 
-Once a link between a ExactOnline Departments and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Departments and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Departments and a HubSpot Company:
+The following properties are synchronized between a Exact Online Departments and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Departments Property
+   * - Exact Online Departments Property
      - HubSpot Company Property
      - HubSpot Data Type
    * - Description
@@ -69,18 +69,18 @@ The following properties are synchronized between a ExactOnline Departments and 
      - "string"
 
 
-ExactOnline Divisions to HubSpot Company
-----------------------------------------
-Every ExactOnline Divisions will be synchronized with a HubSpot Company.
+Exact Online Divisions to HubSpot Company
+-----------------------------------------
+Every Exact Online Divisions will be synchronized with a HubSpot Company.
 
-Once a link between a ExactOnline Divisions and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Divisions and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Divisions and a HubSpot Company:
+The following properties are synchronized between a Exact Online Divisions and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Divisions Property
+   * - Exact Online Divisions Property
      - HubSpot Company Property
      - HubSpot Data Type
    * - Description
@@ -91,18 +91,18 @@ The following properties are synchronized between a ExactOnline Divisions and a 
      - "string"
 
 
-ExactOnline Employees to HubSpot Contact
-----------------------------------------
-Every ExactOnline Employees will be synchronized with a HubSpot Contact.
+Exact Online Employees to HubSpot Contact
+-----------------------------------------
+Every Exact Online Employees will be synchronized with a HubSpot Contact.
 
-Once a link between a ExactOnline Employees and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Employees and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Employees and a HubSpot Contact:
+The following properties are synchronized between a Exact Online Employees and a HubSpot Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Employees Property
+   * - Exact Online Employees Property
      - HubSpot Contact Property
      - HubSpot Data Type
    * - BirthDate
