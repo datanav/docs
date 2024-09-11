@@ -1,13 +1,13 @@
-================================
-HubSpot to Exact Online Dataflow
-================================
+===============================
+HubSpot to ExactOnline Dataflow
+===============================
 
-Generated: 2024-09-11 07:46:45
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 HubSpot Company to Exact Accounts
 ---------------------------------
@@ -464,39 +464,39 @@ The following properties are synchronized between a HubSpot User and a Exact Con
      - "string"
 
 
-HubSpot Account to Exact Currencies
------------------------------------
-Every HubSpot Account will be synchronized with a Exact Currencies.
+HubSpot Account to ExactOnline Currencies
+-----------------------------------------
+Every HubSpot Account will be synchronized with a ExactOnline Currencies.
 
-Once a link between a HubSpot Account and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Account and a ExactOnline Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Account and a Exact Currencies:
+The following properties are synchronized between a HubSpot Account and a ExactOnline Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Account Property
-     - Exact Currencies Property
-     - Exact Data Type
+     - ExactOnline Currencies Property
+     - ExactOnline Data Type
    * - accountType
      - Code
      - "string"
 
 
-HubSpot Contact to Exact Addresses
-----------------------------------
-Every HubSpot Contact will be synchronized with a Exact Addresses.
+HubSpot Contact to ExactOnline Addresses
+----------------------------------------
+Every HubSpot Contact will be synchronized with a ExactOnline Addresses.
 
-Once a link between a HubSpot Contact and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contact and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contact and a Exact Addresses:
+The following properties are synchronized between a HubSpot Contact and a ExactOnline Addresses:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contact Property
-     - Exact Addresses Property
-     - Exact Data Type
+     - ExactOnline Addresses Property
+     - ExactOnline Data Type
    * - properties.address
      - AddressLine1
      - "string"
@@ -508,39 +508,39 @@ The following properties are synchronized between a HubSpot Contact and a Exact 
      - "string"
 
 
-HubSpot Deal to Exact Currencies
---------------------------------
-Every HubSpot Deal will be synchronized with a Exact Currencies.
+HubSpot Deal to ExactOnline Currencies
+--------------------------------------
+Every HubSpot Deal will be synchronized with a ExactOnline Currencies.
 
-Once a link between a HubSpot Deal and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a ExactOnline Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a Exact Currencies:
+The following properties are synchronized between a HubSpot Deal and a ExactOnline Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     - Exact Currencies Property
-     - Exact Data Type
+     - ExactOnline Currencies Property
+     - ExactOnline Data Type
    * - properties.deal_currency_code
      - Code
      - "string"
 
 
-HubSpot Deal to Exact Salesorders
----------------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Exact Salesorders.
+HubSpot Deal to ExactOnline Salesorders
+---------------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a ExactOnline Salesorders.
 
-Once a link between a HubSpot Deal and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a ExactOnline Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a Exact Salesorders:
+The following properties are synchronized between a HubSpot Deal and a ExactOnline Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     - Exact Salesorders Property
-     - Exact Data Type
+     - ExactOnline Salesorders Property
+     - ExactOnline Data Type
    * - properties.closedate
      - DeliveryDate
      - "string"
@@ -555,55 +555,55 @@ The following properties are synchronized between a HubSpot Deal and a Exact Sal
      - "string"
 
 
-HubSpot Lineitem to Exact Salesorderlines
------------------------------------------
-Every HubSpot Lineitem will be synchronized with a Exact Salesorderlines.
+HubSpot Lineitem to ExactOnline Salesorderlines
+-----------------------------------------------
+Every HubSpot Lineitem will be synchronized with a ExactOnline Salesorderlines.
 
-Once a link between a HubSpot Lineitem and a Exact Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitem and a ExactOnline Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitem and a Exact Salesorderlines:
+The following properties are synchronized between a HubSpot Lineitem and a ExactOnline Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitem Property
-     - Exact Salesorderlines Property
-     - Exact Data Type
+     - ExactOnline Salesorderlines Property
+     - ExactOnline Data Type
    * - properties.hs_product_id
      - Item
      - "string"
 
 
-HubSpot Product to Exact Items
-------------------------------
-Every HubSpot Product will be synchronized with a Exact Items.
+HubSpot Product to ExactOnline Items
+------------------------------------
+Every HubSpot Product will be synchronized with a ExactOnline Items.
 
-Once a link between a HubSpot Product and a Exact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Product and a ExactOnline Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Product and a Exact Items:
+The following properties are synchronized between a HubSpot Product and a ExactOnline Items:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Product Property
-     - Exact Items Property
-     - Exact Data Type
+     - ExactOnline Items Property
+     - ExactOnline Data Type
 
 
-HubSpot Quote to Exact Quotations
----------------------------------
-Every HubSpot Quote will be synchronized with a Exact Quotations.
+HubSpot Quote to ExactOnline Quotations
+---------------------------------------
+Every HubSpot Quote will be synchronized with a ExactOnline Quotations.
 
-Once a link between a HubSpot Quote and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quote and a ExactOnline Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quote and a Exact Quotations:
+The following properties are synchronized between a HubSpot Quote and a ExactOnline Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quote Property
-     - Exact Quotations Property
-     - Exact Data Type
+     - ExactOnline Quotations Property
+     - ExactOnline Data Type
    * - properties.hs_expiration_date
      - CloseDate
      - "string"
