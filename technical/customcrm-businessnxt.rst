@@ -2,59 +2,59 @@
 CustomCRM to BusinessNxt Dataflow
 =================================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CustomCRM to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Custom Customer to Businessnxt Address
---------------------------------------
-Every Custom Customer will be synchronized with a Businessnxt Address.
+Custom Customer to Visma Address
+--------------------------------
+Every Custom Customer will be synchronized with a Visma Address.
 
-Once a link between a Custom Customer and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Customer and a Visma Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Customer and a Businessnxt Address:
+The following properties are synchronized between a Custom Customer and a Visma Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Custom Customer Property
-     - Businessnxt Address Property
-     - Businessnxt Data Type
+     - Visma Address Property
+     - Visma Data Type
 
 
-Custom Quote to Businessnxt Order
----------------------------------
-Every Custom Quote will be synchronized with a Businessnxt Order.
+Custom Quote to Visma Order
+---------------------------
+Every Custom Quote will be synchronized with a Visma Order.
 
-Once a link between a Custom Quote and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Quote and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Quote and a Businessnxt Order:
+The following properties are synchronized between a Custom Quote and a Visma Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Custom Quote Property
-     - Businessnxt Order Property
-     - Businessnxt Data Type
+     - Visma Order Property
+     - Visma Data Type
 
 
-Custom User to Businessnxt Order
---------------------------------
-Every Custom User will be synchronized with a Businessnxt Order.
+Custom User to Visma Order
+--------------------------
+Every Custom User will be synchronized with a Visma Order.
 
-Once a link between a Custom User and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom User and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom User and a Businessnxt Order:
+The following properties are synchronized between a Custom User and a Visma Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Custom User Property
-     - Businessnxt Order Property
-     - Businessnxt Data Type
+     - Visma Order Property
+     - Visma Data Type
 
 
 CustomCRM Order to BusinessNxt Order
