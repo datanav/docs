@@ -1,88 +1,88 @@
-===================================
-ExactOnline to ExactOnline Dataflow
-===================================
+====================================
+Exact Online to ExactOnline Dataflow
+====================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:39:19
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from ExactOnline to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-ExactOnline Addresses to ExactOnline Addresses
-----------------------------------------------
-Before any synchronization can take place, a link between a ExactOnline Addresses and a ExactOnline Addresses must be established.
+Exact Online Addresses to ExactOnline Addresses
+-----------------------------------------------
+Before any synchronization can take place, a link between a Exact Online Addresses and a ExactOnline Addresses must be established.
 
-A ExactOnline Addresses will merge with a ExactOnline Addresses if one of the following property combinations match:
+A Exact Online Addresses will merge with a ExactOnline Addresses if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Addresses Property
+   * - Exact Online Addresses Property
      - ExactOnline Addresses Property
    * - ID
      - ID
 
-Once a link between a ExactOnline Addresses and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Addresses and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Addresses and a ExactOnline Addresses:
+The following properties are synchronized between a Exact Online Addresses and a ExactOnline Addresses:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Addresses Property
+   * - Exact Online Addresses Property
      - ExactOnline Addresses Property
      - ExactOnline Data Type
 
 
-ExactOnline Departments to ExactOnline Departments
---------------------------------------------------
-Before any synchronization can take place, a link between a ExactOnline Departments and a ExactOnline Departments must be established.
+Exact Online Departments to ExactOnline Departments
+---------------------------------------------------
+Before any synchronization can take place, a link between a Exact Online Departments and a ExactOnline Departments must be established.
 
-A ExactOnline Departments will merge with a ExactOnline Departments if one of the following property combinations match:
+A Exact Online Departments will merge with a ExactOnline Departments if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Departments Property
+   * - Exact Online Departments Property
      - ExactOnline Departments Property
    * - Code
      - Code
 
-Once a link between a ExactOnline Departments and a ExactOnline Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Departments and a ExactOnline Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Departments and a ExactOnline Departments:
+The following properties are synchronized between a Exact Online Departments and a ExactOnline Departments:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Departments Property
+   * - Exact Online Departments Property
      - ExactOnline Departments Property
      - ExactOnline Data Type
 
 
-ExactOnline Quotations to ExactOnline Addresses
------------------------------------------------
-Before any synchronization can take place, a link between a ExactOnline Quotations and a ExactOnline Addresses must be established.
+Exact Online Quotations to ExactOnline Addresses
+------------------------------------------------
+Before any synchronization can take place, a link between a Exact Online Quotations and a ExactOnline Addresses must be established.
 
-A ExactOnline Quotations will merge with a ExactOnline Addresses if one of the following property combinations match:
+A Exact Online Quotations will merge with a ExactOnline Addresses if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Quotations Property
+   * - Exact Online Quotations Property
      - ExactOnline Addresses Property
    * - DeliveryAddress
      - ID
 
-Once a link between a ExactOnline Quotations and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Quotations and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Quotations and a ExactOnline Addresses:
+The following properties are synchronized between a Exact Online Quotations and a ExactOnline Addresses:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Quotations Property
+   * - Exact Online Quotations Property
      - ExactOnline Addresses Property
      - ExactOnline Data Type
 
