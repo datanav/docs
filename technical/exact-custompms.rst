@@ -2,41 +2,41 @@
 ExactOnline to CustomPMS Dataflow
 =================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from ExactOnline to CustomPMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Exact Departments to CustomPMS Customer
----------------------------------------
-Every Exact Departments will be synchronized with a CustomPMS Customer.
+ExactOnline Departments to CustomPMS Customer
+---------------------------------------------
+Every ExactOnline Departments will be synchronized with a CustomPMS Customer.
 
-Once a link between a Exact Departments and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Departments and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Departments and a CustomPMS Customer:
+The following properties are synchronized between a ExactOnline Departments and a CustomPMS Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Departments Property
+   * - ExactOnline Departments Property
      - CustomPMS Customer Property
      - CustomPMS Data Type
 
 
-Exact Divisions to CustomPMS Customer
--------------------------------------
-Every Exact Divisions will be synchronized with a CustomPMS Customer.
+ExactOnline Divisions to CustomPMS Customer
+-------------------------------------------
+Every ExactOnline Divisions will be synchronized with a CustomPMS Customer.
 
-Once a link between a Exact Divisions and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Divisions and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Divisions and a CustomPMS Customer:
+The following properties are synchronized between a ExactOnline Divisions and a CustomPMS Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Divisions Property
+   * - ExactOnline Divisions Property
      - CustomPMS Customer Property
      - CustomPMS Data Type
 
