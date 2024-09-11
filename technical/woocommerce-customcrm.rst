@@ -1,42 +1,42 @@
-=================================
-WooCommerce to CustomCRM Dataflow
-=================================
+==================================
+WooCommerce to Custom CRM Dataflow
+==================================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to CustomCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-WooCommerce Order to CustomCRM Order
-------------------------------------
-Every WooCommerce Order will be synchronized with a CustomCRM Order.
+WooCommerce Order to Custom CRM Order
+-------------------------------------
+Every WooCommerce Order will be synchronized with a Custom CRM Order.
 
-Once a link between a WooCommerce Order and a CustomCRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a Custom CRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Order and a CustomCRM Order:
+The following properties are synchronized between a WooCommerce Order and a Custom CRM Order:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Order Property
-     - CustomCRM Order Property
-     - CustomCRM Data Type
+     - Custom CRM Order Property
+     - Custom CRM Data Type
 
 
-WooCommerce Product to CustomCRM Product
-----------------------------------------
-Every WooCommerce Product will be synchronized with a CustomCRM Product.
+WooCommerce Product to Custom CRM Product
+-----------------------------------------
+Every WooCommerce Product will be synchronized with a Custom CRM Product.
 
-Once a link between a WooCommerce Product and a CustomCRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Product and a Custom CRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Product and a CustomCRM Product:
+The following properties are synchronized between a WooCommerce Product and a Custom CRM Product:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Product Property
-     - CustomCRM Product Property
-     - CustomCRM Data Type
+     - Custom CRM Product Property
+     - Custom CRM Data Type
 
