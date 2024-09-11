@@ -2,43 +2,43 @@
 WooCommerce to Shopify Dataflow
 ===============================
 
-Generated: 2024-09-11 07:44:23
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Shopify. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Woocommerce Product to Shopify Product
+WooCommerce Product to Shopify Product
 --------------------------------------
-Before any synchronization can take place, a link between a Woocommerce Product and a Shopify Product must be established.
+Before any synchronization can take place, a link between a WooCommerce Product and a Shopify Product must be established.
 
-A new Shopify Product will be created from a Woocommerce Product if it is connected to a Woocommerce Order that is synchronized into Shopify.
+A new Shopify Product will be created from a WooCommerce Product if it is connected to a WooCommerce Order that is synchronized into Shopify.
 
-Once a link between a Woocommerce Product and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Product and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Product and a Shopify Product:
+The following properties are synchronized between a WooCommerce Product and a Shopify Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Product Property
+   * - WooCommerce Product Property
      - Shopify Product Property
      - Shopify Data Type
 
 
-Woocommerce Customer to Shopify Customer
+WooCommerce Customer to Shopify Customer
 ----------------------------------------
-Every Woocommerce Customer will be synchronized with a Shopify Customer.
+Every WooCommerce Customer will be synchronized with a Shopify Customer.
 
-Once a link between a Woocommerce Customer and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Customer and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Customer and a Shopify Customer:
+The following properties are synchronized between a WooCommerce Customer and a Shopify Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Customer Property
+   * - WooCommerce Customer Property
      - Shopify Customer Property
      - Shopify Data Type
    * - billing.address_1
@@ -85,18 +85,18 @@ The following properties are synchronized between a Woocommerce Customer and a S
      - "string"
 
 
-Woocommerce Order to Shopify Order
+WooCommerce Order to Shopify Order
 ----------------------------------
-Every Woocommerce Order will be synchronized with a Shopify Order.
+Every WooCommerce Order will be synchronized with a Shopify Order.
 
-Once a link between a Woocommerce Order and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Order and a Shopify Order:
+The following properties are synchronized between a WooCommerce Order and a Shopify Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Order Property
+   * - WooCommerce Order Property
      - Shopify Order Property
      - Shopify Data Type
    * - billing.address_1
@@ -191,18 +191,18 @@ The following properties are synchronized between a Woocommerce Order and a Shop
      - "string"
 
 
-Woocommerce Product to Shopify Sesamproduct
+WooCommerce Product to Shopify Sesamproduct
 -------------------------------------------
-Every Woocommerce Product will be synchronized with a Shopify Sesamproduct.
+Every WooCommerce Product will be synchronized with a Shopify Sesamproduct.
 
-Once a link between a Woocommerce Product and a Shopify Sesamproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Product and a Shopify Sesamproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Product and a Shopify Sesamproduct:
+The following properties are synchronized between a WooCommerce Product and a Shopify Sesamproduct:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Product Property
+   * - WooCommerce Product Property
      - Shopify Sesamproduct Property
      - Shopify Data Type
    * - name
