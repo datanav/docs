@@ -2,7 +2,7 @@
 Wave to PowerOffice GO Dataflow
 ===============================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 07:54:14
 
 Introduction
 ------------
@@ -202,22 +202,22 @@ The following properties are synchronized between a Wave Vendor and a PowerOffic
      - "integer"
 
 
-Wave Vendor to Powerofficego Customers
---------------------------------------
-Before any synchronization can take place, a link between a Wave Vendor and a Powerofficego Customers must be established.
+Wave Vendor to PowerOffice Customers
+------------------------------------
+Before any synchronization can take place, a link between a Wave Vendor and a PowerOffice Customers must be established.
 
-A new Powerofficego Customers will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, Customer-person, or Customer-contact that is synchronized into Powerofficego.
+A new PowerOffice Customers will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, Customer-person, or Customer-contact that is synchronized into PowerOffice.
 
-Once a link between a Wave Vendor and a Powerofficego Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a PowerOffice Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a Powerofficego Customers:
+The following properties are synchronized between a Wave Vendor and a PowerOffice Customers:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     - Powerofficego Customers Property
-     - Powerofficego Data Type
+     - PowerOffice Customers Property
+     - PowerOffice Data Type
    * - address.addressLine1
      - MailAddress.AddressLine1
      - "string"
