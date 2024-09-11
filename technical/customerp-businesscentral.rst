@@ -2,27 +2,27 @@
 Custom ERP to Business Central Dataflow
 =======================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Custom ERP to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-CustomERP Customer to BusinessCentral Companies
------------------------------------------------
-Every CustomERP Customer will be synchronized with a BusinessCentral Companies.
+Custom ERP Customer to Business Central Companies
+-------------------------------------------------
+Every Custom ERP Customer will be synchronized with a Business Central Companies.
 
-Once a link between a CustomERP Customer and a BusinessCentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Customer and a Business Central Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Customer and a BusinessCentral Companies:
+The following properties are synchronized between a Custom ERP Customer and a Business Central Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Customer Property
-     - BusinessCentral Companies Property
-     - BusinessCentral Data Type
+   * - Custom ERP Customer Property
+     - Business Central Companies Property
+     - Business Central Data Type
 
 
 Custom ERP Contact to Business Central Contacts person
