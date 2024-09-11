@@ -1,13 +1,13 @@
 ================================
-Membercare to Chargebee Dataflow
+MemberCare to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Membercare to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Membercare Companycategories to Chargebee Currency
 --------------------------------------------------
@@ -123,18 +123,18 @@ The following properties are synchronized between a Membercare Products and a Ch
      - Chargebee Data Type
 
 
-Membercare Companies to Chargebee Business_entity
+MemberCare Companies to Chargebee Business_entity
 -------------------------------------------------
-Every Membercare Companies will be synchronized with a Chargebee Business_entity.
+Every MemberCare Companies will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Membercare Companies and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companies and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Companies and a Chargebee Business_entity:
+The following properties are synchronized between a MemberCare Companies and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Companies Property
+   * - MemberCare Companies Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
    * - companyName
