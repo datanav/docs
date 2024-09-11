@@ -2,25 +2,25 @@
 BusinessNxt to Unieconomy Dataflow
 ==================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:37:15
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from BusinessNxt to Unieconomy. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Visma Address to Unieconomy Companies
--------------------------------------
-Every Visma Address will be synchronized with a Unieconomy Companies.
+BusinessNxt Address to Unieconomy Companies
+-------------------------------------------
+Every BusinessNxt Address will be synchronized with a Unieconomy Companies.
 
-Once a link between a Visma Address and a Unieconomy Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Address and a Unieconomy Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Address and a Unieconomy Companies:
+The following properties are synchronized between a BusinessNxt Address and a Unieconomy Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Address Property
+   * - BusinessNxt Address Property
      - Unieconomy Companies Property
      - Unieconomy Data Type
    * - name
@@ -28,18 +28,18 @@ The following properties are synchronized between a Visma Address and a Uniecono
      - "string"
 
 
-Visma Company to Unieconomy Companies
--------------------------------------
-Every Visma Company will be synchronized with a Unieconomy Companies.
+BusinessNxt Company to Unieconomy Companies
+-------------------------------------------
+Every BusinessNxt Company will be synchronized with a Unieconomy Companies.
 
-Once a link between a Visma Company and a Unieconomy Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Company and a Unieconomy Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Company and a Unieconomy Companies:
+The following properties are synchronized between a BusinessNxt Company and a Unieconomy Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Company Property
+   * - BusinessNxt Company Property
      - Unieconomy Companies Property
      - Unieconomy Data Type
    * - name
