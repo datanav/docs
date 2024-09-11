@@ -2,7 +2,7 @@
 CustomWebshop to Visma Business Nxt Dataflow
 ============================================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 07:55:13
 
 Introduction
 ------------
@@ -25,34 +25,34 @@ The following properties are synchronized between a Custom Customer and a Busine
      - Businessnxt Data Type
 
 
-Custom Order to Visma Order
----------------------------
-Every Custom Order will be synchronized with a Visma Order.
+CustomWebshop Order to Visma Order
+----------------------------------
+Every CustomWebshop Order will be synchronized with a Visma Order.
 
-Once a link between a Custom Order and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomWebshop Order and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Order and a Visma Order:
+The following properties are synchronized between a CustomWebshop Order and a Visma Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Order Property
+   * - CustomWebshop Order Property
      - Visma Order Property
      - Visma Data Type
 
 
-Custom Product to Visma Product
--------------------------------
-Every Custom Product will be synchronized with a Visma Product.
+CustomWebshop Product to Visma Product
+--------------------------------------
+Every CustomWebshop Product will be synchronized with a Visma Product.
 
-Once a link between a Custom Product and a Visma Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomWebshop Product and a Visma Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Product and a Visma Product:
+The following properties are synchronized between a CustomWebshop Product and a Visma Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Product Property
+   * - CustomWebshop Product Property
      - Visma Product Property
      - Visma Data Type
 
