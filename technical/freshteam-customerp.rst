@@ -2,7 +2,7 @@
 Freshteam to CustomERP Dataflow
 ===============================
 
-Generated: 2024-09-11 08:01:30
+Generated: 2024-09-11 08:03:13
 
 Introduction
 ------------
@@ -41,18 +41,18 @@ The following properties are synchronized between a Freshteam Employee and a Cus
      - Custom Data Type
 
 
-Freshteam Employee to Custom Employee
--------------------------------------
-Every Freshteam Employee will be synchronized with a Custom Employee.
+Freshteam Employee to CustomERP Employee
+----------------------------------------
+Every Freshteam Employee will be synchronized with a CustomERP Employee.
 
-Once a link between a Freshteam Employee and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Employee and a CustomERP Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Employee and a Custom Employee:
+The following properties are synchronized between a Freshteam Employee and a CustomERP Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Employee Property
-     - Custom Employee Property
-     - Custom Data Type
+     - CustomERP Employee Property
+     - CustomERP Data Type
 
