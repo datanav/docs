@@ -2,43 +2,43 @@
 BusinessCentral to MemberCare Dataflow
 ======================================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from BusinessCentral to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Companies to Membercare Companies
--------------------------------------------------
-Every Businesscentral Companies will be synchronized with a Membercare Companies.
+Business Companies to MemberCare Companies
+------------------------------------------
+Every Business Companies will be synchronized with a MemberCare Companies.
 
-Once a link between a Businesscentral Companies and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Companies and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Companies and a Membercare Companies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Companies Property
-     - Membercare Companies Property
-     - Membercare Data Type
-
-
-Businesscentral Contacts person to Membercare Persons
------------------------------------------------------
-Every Businesscentral Contacts person will be synchronized with a Membercare Persons.
-
-Once a link between a Businesscentral Contacts person and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Contacts person and a Membercare Persons:
+The following properties are synchronized between a Business Companies and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Contacts person Property
-     - Membercare Persons Property
-     - Membercare Data Type
+   * - Business Companies Property
+     - MemberCare Companies Property
+     - MemberCare Data Type
+
+
+Business Contacts person to MemberCare Persons
+----------------------------------------------
+Every Business Contacts person will be synchronized with a MemberCare Persons.
+
+Once a link between a Business Contacts person and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Contacts person and a MemberCare Persons:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Contacts person Property
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - city
      - addresses.postalCode.city
      - "string"
@@ -59,20 +59,20 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
 
 
-Businesscentral Customers person to Membercare Persons
-------------------------------------------------------
-Every Businesscentral Customers person will be synchronized with a Membercare Persons.
+Business Customers person to MemberCare Persons
+-----------------------------------------------
+Every Business Customers person will be synchronized with a MemberCare Persons.
 
-Once a link between a Businesscentral Customers person and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers person and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers person and a Membercare Persons:
+The following properties are synchronized between a Business Customers person and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Customers person Property
-     - Membercare Persons Property
-     - Membercare Data Type
+   * - Business Customers person Property
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - city
      - addresses.postalCode.city
      - "string"
@@ -93,20 +93,20 @@ The following properties are synchronized between a Businesscentral Customers pe
      - "string"
 
 
-Businesscentral Employees to Membercare Persons
------------------------------------------------
-Every Businesscentral Employees will be synchronized with a Membercare Persons.
+Business Employees to MemberCare Persons
+----------------------------------------
+Every Business Employees will be synchronized with a MemberCare Persons.
 
-Once a link between a Businesscentral Employees and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Employees and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Employees and a Membercare Persons:
+The following properties are synchronized between a Business Employees and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Employees Property
-     - Membercare Persons Property
-     - Membercare Data Type
+   * - Business Employees Property
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - birthDate
      - birthDate
      - "string"
@@ -121,39 +121,39 @@ The following properties are synchronized between a Businesscentral Employees an
      - "string"
 
 
-Businesscentral Items to Membercare Products
---------------------------------------------
-Every Businesscentral Items will be synchronized with a Membercare Products.
+Business Items to MemberCare Products
+-------------------------------------
+Every Business Items will be synchronized with a MemberCare Products.
 
-Once a link between a Businesscentral Items and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Items and a MemberCare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Items and a Membercare Products:
+The following properties are synchronized between a Business Items and a MemberCare Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Items Property
-     - Membercare Products Property
-     - Membercare Data Type
+   * - Business Items Property
+     - MemberCare Products Property
+     - MemberCare Data Type
    * - displayName
      - name
      - "string"
 
 
-Businesscentral Salesorderlines to Membercare Invoices
-------------------------------------------------------
-Every Businesscentral Salesorderlines will be synchronized with a Membercare Invoices.
+Business Salesorderlines to MemberCare Invoices
+-----------------------------------------------
+Every Business Salesorderlines will be synchronized with a MemberCare Invoices.
 
-Once a link between a Businesscentral Salesorderlines and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Salesorderlines and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorderlines and a Membercare Invoices:
+The following properties are synchronized between a Business Salesorderlines and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Salesorderlines Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+   * - Business Salesorderlines Property
+     - MemberCare Invoices Property
+     - MemberCare Data Type
    * - quantity
      - invoiceItems.quantity
      - "string"
@@ -162,36 +162,36 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - "string"
 
 
-Businesscentral Salesorders to Membercare Invoices
---------------------------------------------------
-Every Businesscentral Salesorders will be synchronized with a Membercare Invoices.
+Business Salesorders to MemberCare Invoices
+-------------------------------------------
+Every Business Salesorders will be synchronized with a MemberCare Invoices.
 
-Once a link between a Businesscentral Salesorders and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Salesorders and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorders and a Membercare Invoices:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Salesorders Property
-     - Membercare Invoices Property
-     - Membercare Data Type
-
-
-Businesscentral Salesquotes to Membercare Invoices
---------------------------------------------------
-Every Businesscentral Salesquotes will be synchronized with a Membercare Invoices.
-
-Once a link between a Businesscentral Salesquotes and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Salesquotes and a Membercare Invoices:
+The following properties are synchronized between a Business Salesorders and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Salesquotes Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+   * - Business Salesorders Property
+     - MemberCare Invoices Property
+     - MemberCare Data Type
+
+
+Business Salesquotes to MemberCare Invoices
+-------------------------------------------
+Every Business Salesquotes will be synchronized with a MemberCare Invoices.
+
+Once a link between a Business Salesquotes and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Salesquotes and a MemberCare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Salesquotes Property
+     - MemberCare Invoices Property
+     - MemberCare Data Type
 
 
 BusinessCentral Customers company to MemberCare Companies
