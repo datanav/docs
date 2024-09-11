@@ -2,41 +2,41 @@
 CustomERP to CustomPMS Dataflow
 ===============================
 
-Generated: 2024-09-11 08:00:24
+Generated: 2024-09-11 08:02:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CustomERP to CustomPMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Custom Customer to CustomPMS Customer
--------------------------------------
-Every Custom Customer will be synchronized with a CustomPMS Customer.
+CustomERP Customer to CustomPMS Customer
+----------------------------------------
+Every CustomERP Customer will be synchronized with a CustomPMS Customer.
 
-Once a link between a Custom Customer and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Customer and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Customer and a CustomPMS Customer:
+The following properties are synchronized between a CustomERP Customer and a CustomPMS Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Customer Property
+   * - CustomERP Customer Property
      - CustomPMS Customer Property
      - CustomPMS Data Type
 
 
-Custom Project to CustomPMS Project
------------------------------------
-Every Custom Project will be synchronized with a CustomPMS Project.
+CustomERP Project to CustomPMS Project
+--------------------------------------
+Every CustomERP Project will be synchronized with a CustomPMS Project.
 
-Once a link between a Custom Project and a CustomPMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Project and a CustomPMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Project and a CustomPMS Project:
+The following properties are synchronized between a CustomERP Project and a CustomPMS Project:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Project Property
+   * - CustomERP Project Property
      - CustomPMS Project Property
      - CustomPMS Data Type
 
