@@ -2,27 +2,27 @@
 Business Central to Keap Dataflow
 =================================
 
-Generated: 2024-09-11 12:17:19
+Generated: 2024-09-11 12:18:13
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to Keap. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-BusinessCentral Customers to Keap Companies
--------------------------------------------
-Before any synchronization can take place, a link between a BusinessCentral Customers and a Keap Companies must be established.
+Business Central Customers to Keap Companies
+--------------------------------------------
+Before any synchronization can take place, a link between a Business Central Customers and a Keap Companies must be established.
 
-A new Keap Companies will be created from a BusinessCentral Customers if it is connected to a BusinessCentral Employees, Contacts-person, or Customers-person that is synchronized into Keap.
+A new Keap Companies will be created from a Business Central Customers if it is connected to a Business Central Businesscentral-employees, Businesscentral-contacts-person, or Businesscentral-customers-person that is synchronized into Keap.
 
-Once a link between a BusinessCentral Customers and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Customers and a Keap Companies:
+The following properties are synchronized between a Business Central Customers and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Customers Property
+   * - Business Central Customers Property
      - Keap Companies Property
      - Keap Data Type
 
