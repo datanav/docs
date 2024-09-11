@@ -1,13 +1,13 @@
-====================================
-Invoiced to BusinessCentral Dataflow
-====================================
+=====================================
+Invoiced to Business Central Dataflow
+=====================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to BusinessCentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Invoiced Customers company to BusinessCentral Companies
 -------------------------------------------------------
@@ -25,20 +25,20 @@ The following properties are synchronized between a Invoiced Customers company a
      - BusinessCentral Data Type
 
 
-Invoiced Contacts to BusinessCentral Contacts person
-----------------------------------------------------
-Every Invoiced Contacts will be synchronized with a BusinessCentral Contacts person.
+Invoiced Contacts to Business Central Contacts person
+-----------------------------------------------------
+Every Invoiced Contacts will be synchronized with a Business Central Contacts person.
 
-Once a link between a Invoiced Contacts and a BusinessCentral Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Contacts and a Business Central Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Contacts and a BusinessCentral Contacts person:
+The following properties are synchronized between a Invoiced Contacts and a Business Central Contacts person:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Contacts Property
-     - BusinessCentral Contacts person Property
-     - BusinessCentral Data Type
+     - Business Central Contacts person Property
+     - Business Central Data Type
    * - address1
      - addressLine1
      - "string"
@@ -62,39 +62,39 @@ The following properties are synchronized between a Invoiced Contacts and a Busi
      - "string"
 
 
-Invoiced Customers company to BusinessCentral Customers company
----------------------------------------------------------------
-Every Invoiced Customers company will be synchronized with a BusinessCentral Customers company.
+Invoiced Customers company to Business Central Customers company
+----------------------------------------------------------------
+Every Invoiced Customers company will be synchronized with a Business Central Customers company.
 
-Once a link between a Invoiced Customers company and a BusinessCentral Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers company and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a BusinessCentral Customers company:
+The following properties are synchronized between a Invoiced Customers company and a Business Central Customers company:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Customers company Property
-     - BusinessCentral Customers company Property
-     - BusinessCentral Data Type
+     - Business Central Customers company Property
+     - Business Central Data Type
    * - name
      - displayName
      - "string"
 
 
-Invoiced Customers person to BusinessCentral Customers person
--------------------------------------------------------------
-Every Invoiced Customers person will be synchronized with a BusinessCentral Customers person.
+Invoiced Customers person to Business Central Customers person
+--------------------------------------------------------------
+Every Invoiced Customers person will be synchronized with a Business Central Customers person.
 
-Once a link between a Invoiced Customers person and a BusinessCentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers person and a Business Central Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers person and a BusinessCentral Customers person:
+The following properties are synchronized between a Invoiced Customers person and a Business Central Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Customers person Property
-     - BusinessCentral Customers person Property
-     - BusinessCentral Data Type
+     - Business Central Customers person Property
+     - Business Central Data Type
    * - address1
      - addressLine1
      - "string"
@@ -118,20 +118,20 @@ The following properties are synchronized between a Invoiced Customers person an
      - "string"
 
 
-Invoiced Invoices to BusinessCentral Salesorders
-------------------------------------------------
-Every Invoiced Invoices will be synchronized with a BusinessCentral Salesorders.
+Invoiced Invoices to Business Central Salesorders
+-------------------------------------------------
+Every Invoiced Invoices will be synchronized with a Business Central Salesorders.
 
-Once a link between a Invoiced Invoices and a BusinessCentral Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Invoices and a Business Central Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Invoices and a BusinessCentral Salesorders:
+The following properties are synchronized between a Invoiced Invoices and a Business Central Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Invoices Property
-     - BusinessCentral Salesorders Property
-     - BusinessCentral Data Type
+     - Business Central Salesorders Property
+     - Business Central Data Type
    * - currency
      - currencyId
      - "string"
@@ -140,20 +140,20 @@ The following properties are synchronized between a Invoiced Invoices and a Busi
      - "string"
 
 
-Invoiced Items to BusinessCentral Items
----------------------------------------
-Every Invoiced Items will be synchronized with a BusinessCentral Items.
+Invoiced Items to Business Central Items
+----------------------------------------
+Every Invoiced Items will be synchronized with a Business Central Items.
 
-Once a link between a Invoiced Items and a BusinessCentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Items and a Business Central Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Items and a BusinessCentral Items:
+The following properties are synchronized between a Invoiced Items and a Business Central Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Items Property
-     - BusinessCentral Items Property
-     - BusinessCentral Data Type
+     - Business Central Items Property
+     - Business Central Data Type
    * - name
      - displayName
      - "string"
@@ -162,20 +162,20 @@ The following properties are synchronized between a Invoiced Items and a Busines
      - N/A
 
 
-Invoiced Lineitem to BusinessCentral Salesorderlines
-----------------------------------------------------
-Every Invoiced Lineitem will be synchronized with a BusinessCentral Salesorderlines.
+Invoiced Lineitem to Business Central Salesorderlines
+-----------------------------------------------------
+Every Invoiced Lineitem will be synchronized with a Business Central Salesorderlines.
 
-Once a link between a Invoiced Lineitem and a BusinessCentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Lineitem and a Business Central Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Lineitem and a BusinessCentral Salesorderlines:
+The following properties are synchronized between a Invoiced Lineitem and a Business Central Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Lineitem Property
-     - BusinessCentral Salesorderlines Property
-     - BusinessCentral Data Type
+     - Business Central Salesorderlines Property
+     - Business Central Data Type
    * - $original_id
      - documentId
      - "string"
