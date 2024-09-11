@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2024-09-11 07:56:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
@@ -1660,20 +1660,20 @@ The following properties are synchronized between a HubSpot Contact and a HubSpo
      - HubSpot Data Type
 
 
-HubSpot User to Hubspot Contact
+HubSpot User to HubSpot Contact
 -------------------------------
-Every HubSpot User will be synchronized with a Hubspot Contact.
+Every HubSpot User will be synchronized with a HubSpot Contact.
 
-Once a link between a HubSpot User and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot User and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot User and a Hubspot Contact:
+The following properties are synchronized between a HubSpot User and a HubSpot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot User Property
-     - Hubspot Contact Property
-     - Hubspot Data Type
+     - HubSpot Contact Property
+     - HubSpot Data Type
    * - email
      - properties.email
      - "string"
