@@ -1,42 +1,42 @@
-=================================
-SuperOffice to Custompms Dataflow
-=================================
+==================================
+SuperOffice to Custom PMS Dataflow
+==================================
 
-Generated: 2024-09-11 00:00:02
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Custompms. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Custom PMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-SuperOffice Contact to Custompms Customer
------------------------------------------
-Every SuperOffice Contact will be synchronized with a Custompms Customer.
+SuperOffice Contact to Custom Customer
+--------------------------------------
+Every SuperOffice Contact will be synchronized with a Custom Customer.
 
-Once a link between a SuperOffice Contact and a Custompms Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a Custompms Customer:
+The following properties are synchronized between a SuperOffice Contact and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - Custompms Customer Property
-     - Custompms Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-SuperOffice Project to Custompms Project
-----------------------------------------
-Every SuperOffice Project will be synchronized with a Custompms Project.
+SuperOffice Project to Custom Project
+-------------------------------------
+Every SuperOffice Project will be synchronized with a Custom Project.
 
-Once a link between a SuperOffice Project and a Custompms Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Project and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Project and a Custompms Project:
+The following properties are synchronized between a SuperOffice Project and a Custom Project:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Project Property
-     - Custompms Project Property
-     - Custompms Data Type
+     - Custom Project Property
+     - Custom Data Type
 
