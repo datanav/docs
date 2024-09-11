@@ -2,7 +2,7 @@
 PowerOfficeGO to Youtrack Dataflow
 ==================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
@@ -76,37 +76,18 @@ The following properties are synchronized between a PowerOfficeGO Customers pers
      - "string"
 
 
-PowerOffice Customers to Youtrack Groups
-----------------------------------------
-Every PowerOffice Customers will be synchronized with a Youtrack Groups.
-
-Once a link between a PowerOffice Customers and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice Customers and a Youtrack Groups:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice Customers Property
-     - Youtrack Groups Property
-     - Youtrack Data Type
-   * - Name
-     - name
-     - "string"
-
-
-PowerOffice Departments to Youtrack Groups
+PowerOfficeGO Customers to Youtrack Groups
 ------------------------------------------
-Every PowerOffice Departments will be synchronized with a Youtrack Groups.
+Every PowerOfficeGO Customers will be synchronized with a Youtrack Groups.
 
-Once a link between a PowerOffice Departments and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Customers and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Departments and a Youtrack Groups:
+The following properties are synchronized between a PowerOfficeGO Customers and a Youtrack Groups:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Departments Property
+   * - PowerOfficeGO Customers Property
      - Youtrack Groups Property
      - Youtrack Data Type
    * - Name
@@ -114,18 +95,37 @@ The following properties are synchronized between a PowerOffice Departments and 
      - "string"
 
 
-PowerOffice Projects to Youtrack Hubprojects
+PowerOfficeGO Departments to Youtrack Groups
 --------------------------------------------
-Every PowerOffice Projects will be synchronized with a Youtrack Hubprojects.
+Every PowerOfficeGO Departments will be synchronized with a Youtrack Groups.
 
-Once a link between a PowerOffice Projects and a Youtrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Departments and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Projects and a Youtrack Hubprojects:
+The following properties are synchronized between a PowerOfficeGO Departments and a Youtrack Groups:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Projects Property
+   * - PowerOfficeGO Departments Property
+     - Youtrack Groups Property
+     - Youtrack Data Type
+   * - Name
+     - name
+     - "string"
+
+
+PowerOfficeGO Projects to Youtrack Hubprojects
+----------------------------------------------
+Every PowerOfficeGO Projects will be synchronized with a Youtrack Hubprojects.
+
+Once a link between a PowerOfficeGO Projects and a Youtrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOfficeGO Projects and a Youtrack Hubprojects:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOfficeGO Projects Property
      - Youtrack Hubprojects Property
      - Youtrack Data Type
 
