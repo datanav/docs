@@ -2,25 +2,25 @@
 ExactOnline to MemberCare Dataflow
 ==================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from ExactOnline to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Exact Accounts to MemberCare Companies
---------------------------------------
-Every Exact Accounts will be synchronized with a MemberCare Companies.
+ExactOnline Accounts to MemberCare Companies
+--------------------------------------------
+Every ExactOnline Accounts will be synchronized with a MemberCare Companies.
 
-Once a link between a Exact Accounts and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Accounts and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Accounts and a MemberCare Companies:
+The following properties are synchronized between a ExactOnline Accounts and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Accounts Property
+   * - ExactOnline Accounts Property
      - MemberCare Companies Property
      - MemberCare Data Type
    * - City
@@ -43,18 +43,18 @@ The following properties are synchronized between a Exact Accounts and a MemberC
      - "string"
 
 
-Exact Contacts to MemberCare Persons
-------------------------------------
-Every Exact Contacts will be synchronized with a MemberCare Persons.
+ExactOnline Contacts to MemberCare Persons
+------------------------------------------
+Every ExactOnline Contacts will be synchronized with a MemberCare Persons.
 
-Once a link between a Exact Contacts and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Contacts and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Contacts and a MemberCare Persons:
+The following properties are synchronized between a ExactOnline Contacts and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Contacts Property
+   * - ExactOnline Contacts Property
      - MemberCare Persons Property
      - MemberCare Data Type
    * - BirthDate
@@ -80,50 +80,50 @@ The following properties are synchronized between a Exact Contacts and a MemberC
      - "string"
 
 
-Exact Currencies to MemberCare Companycategories
-------------------------------------------------
-Every Exact Currencies will be synchronized with a MemberCare Companycategories.
+ExactOnline Currencies to MemberCare Companycategories
+------------------------------------------------------
+Every ExactOnline Currencies will be synchronized with a MemberCare Companycategories.
 
-Once a link between a Exact Currencies and a MemberCare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Currencies and a MemberCare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Currencies and a MemberCare Companycategories:
+The following properties are synchronized between a ExactOnline Currencies and a MemberCare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Currencies Property
+   * - ExactOnline Currencies Property
      - MemberCare Companycategories Property
      - MemberCare Data Type
 
 
-Exact Departments to MemberCare Companies
------------------------------------------
-Every Exact Departments will be synchronized with a MemberCare Companies.
+ExactOnline Departments to MemberCare Companies
+-----------------------------------------------
+Every ExactOnline Departments will be synchronized with a MemberCare Companies.
 
-Once a link between a Exact Departments and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Departments and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Departments and a MemberCare Companies:
+The following properties are synchronized between a ExactOnline Departments and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Departments Property
+   * - ExactOnline Departments Property
      - MemberCare Companies Property
      - MemberCare Data Type
 
 
-Exact Divisions to MemberCare Companies
----------------------------------------
-Every Exact Divisions will be synchronized with a MemberCare Companies.
+ExactOnline Divisions to MemberCare Companies
+---------------------------------------------
+Every ExactOnline Divisions will be synchronized with a MemberCare Companies.
 
-Once a link between a Exact Divisions and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Divisions and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Divisions and a MemberCare Companies:
+The following properties are synchronized between a ExactOnline Divisions and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Divisions Property
+   * - ExactOnline Divisions Property
      - MemberCare Companies Property
      - MemberCare Data Type
    * - Website
@@ -131,18 +131,18 @@ The following properties are synchronized between a Exact Divisions and a Member
      - "string"
 
 
-Exact Employees to MemberCare Persons
--------------------------------------
-Every Exact Employees will be synchronized with a MemberCare Persons.
+ExactOnline Employees to MemberCare Persons
+-------------------------------------------
+Every ExactOnline Employees will be synchronized with a MemberCare Persons.
 
-Once a link between a Exact Employees and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Employees and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Employees and a MemberCare Persons:
+The following properties are synchronized between a ExactOnline Employees and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Employees Property
+   * - ExactOnline Employees Property
      - MemberCare Persons Property
      - MemberCare Data Type
    * - BirthDate
@@ -180,50 +180,50 @@ The following properties are synchronized between a Exact Employees and a Member
      - "string"
 
 
-Exact Items to MemberCare Products
-----------------------------------
-Every Exact Items will be synchronized with a MemberCare Products.
+ExactOnline Items to MemberCare Products
+----------------------------------------
+Every ExactOnline Items will be synchronized with a MemberCare Products.
 
-Once a link between a Exact Items and a MemberCare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Items and a MemberCare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Items and a MemberCare Products:
+The following properties are synchronized between a ExactOnline Items and a MemberCare Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Items Property
+   * - ExactOnline Items Property
      - MemberCare Products Property
      - MemberCare Data Type
 
 
-Exact Quotations to MemberCare Invoices
----------------------------------------
-Every Exact Quotations will be synchronized with a MemberCare Invoices.
+ExactOnline Quotations to MemberCare Invoices
+---------------------------------------------
+Every ExactOnline Quotations will be synchronized with a MemberCare Invoices.
 
-Once a link between a Exact Quotations and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Quotations and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Quotations and a MemberCare Invoices:
+The following properties are synchronized between a ExactOnline Quotations and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Quotations Property
+   * - ExactOnline Quotations Property
      - MemberCare Invoices Property
      - MemberCare Data Type
 
 
-Exact Salesorderlines to MemberCare Invoices
---------------------------------------------
-Every Exact Salesorderlines will be synchronized with a MemberCare Invoices.
+ExactOnline Salesorderlines to MemberCare Invoices
+--------------------------------------------------
+Every ExactOnline Salesorderlines will be synchronized with a MemberCare Invoices.
 
-Once a link between a Exact Salesorderlines and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Salesorderlines and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Salesorderlines and a MemberCare Invoices:
+The following properties are synchronized between a ExactOnline Salesorderlines and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Salesorderlines Property
+   * - ExactOnline Salesorderlines Property
      - MemberCare Invoices Property
      - MemberCare Data Type
    * - Quantity
@@ -231,50 +231,50 @@ The following properties are synchronized between a Exact Salesorderlines and a 
      - "string"
 
 
-Exact Salesorders to MemberCare Invoices
-----------------------------------------
-Every Exact Salesorders will be synchronized with a MemberCare Invoices.
+ExactOnline Salesorders to MemberCare Invoices
+----------------------------------------------
+Every ExactOnline Salesorders will be synchronized with a MemberCare Invoices.
 
-Once a link between a Exact Salesorders and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Salesorders and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Salesorders and a MemberCare Invoices:
+The following properties are synchronized between a ExactOnline Salesorders and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Salesorders Property
+   * - ExactOnline Salesorders Property
      - MemberCare Invoices Property
      - MemberCare Data Type
 
 
-Exact Units to MemberCare Companycategories
--------------------------------------------
-Every Exact Units will be synchronized with a MemberCare Companycategories.
+ExactOnline Units to MemberCare Companycategories
+-------------------------------------------------
+Every ExactOnline Units will be synchronized with a MemberCare Companycategories.
 
-Once a link between a Exact Units and a MemberCare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Units and a MemberCare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Units and a MemberCare Companycategories:
+The following properties are synchronized between a ExactOnline Units and a MemberCare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Units Property
+   * - ExactOnline Units Property
      - MemberCare Companycategories Property
      - MemberCare Data Type
 
 
-Exact Vatcodes to MemberCare Companycategories
-----------------------------------------------
-Every Exact Vatcodes will be synchronized with a MemberCare Companycategories.
+ExactOnline Vatcodes to MemberCare Companycategories
+----------------------------------------------------
+Every ExactOnline Vatcodes will be synchronized with a MemberCare Companycategories.
 
-Once a link between a Exact Vatcodes and a MemberCare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Vatcodes and a MemberCare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Vatcodes and a MemberCare Companycategories:
+The following properties are synchronized between a ExactOnline Vatcodes and a MemberCare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Vatcodes Property
+   * - ExactOnline Vatcodes Property
      - MemberCare Companycategories Property
      - MemberCare Data Type
    * - Description
