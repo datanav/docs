@@ -1,13 +1,13 @@
 =============================
-Webcrm to Membercare Dataflow
+WebCRM to MemberCare Dataflow
 =============================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Webcrm to Membercare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Webcrm Opportunities to Membercare Invoices
 -------------------------------------------
@@ -120,20 +120,20 @@ The following properties are synchronized between a Webcrm Users and a Membercar
      - Membercare Data Type
 
 
-Webcrm Organisations to Membercare Countries
+WebCRM Organisations to MemberCare Countries
 --------------------------------------------
-Every Webcrm Organisations will be synchronized with a Membercare Countries.
+Every WebCRM Organisations will be synchronized with a MemberCare Countries.
 
-Once a link between a Webcrm Organisations and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Organisations and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Organisations and a Membercare Countries:
+The following properties are synchronized between a WebCRM Organisations and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Organisations Property
-     - Membercare Countries Property
-     - Membercare Data Type
+   * - WebCRM Organisations Property
+     - MemberCare Countries Property
+     - MemberCare Data Type
    * - OrganisationCountryData
      - iso2Letter
      - "string"
