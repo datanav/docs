@@ -2,7 +2,7 @@
 CustomPMS to Trello Dataflow
 ============================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 07:55:13
 
 Introduction
 ------------
@@ -57,18 +57,18 @@ The following properties are synchronized between a Custom Task and a Trello Act
      - Trello Data Type
 
 
-Custom Task to Trello Cards
----------------------------
-Every Custom Task will be synchronized with a Trello Cards.
+CustomPMS Task to Trello Cards
+------------------------------
+Every CustomPMS Task will be synchronized with a Trello Cards.
 
-Once a link between a Custom Task and a Trello Cards is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomPMS Task and a Trello Cards is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Task and a Trello Cards:
+The following properties are synchronized between a CustomPMS Task and a Trello Cards:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Task Property
+   * - CustomPMS Task Property
      - Trello Cards Property
      - Trello Data Type
 
