@@ -1,13 +1,13 @@
-=================================
-Businesscentral to Exact Dataflow
-=================================
+=========================================
+Business Central to Exact Online Dataflow
+=========================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:52:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to Exact. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Businesscentral Companies to Exact Accounts
 -------------------------------------------
@@ -162,18 +162,18 @@ The following properties are synchronized between a Businesscentral Salesquotes 
      - "string"
 
 
-Businesscentral Contacts person to Exact Addresses
---------------------------------------------------
-Every Businesscentral Contacts person will be synchronized with a Exact Addresses.
+Business Contacts person to Exact Addresses
+-------------------------------------------
+Every Business Contacts person will be synchronized with a Exact Addresses.
 
-Once a link between a Businesscentral Contacts person and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Contacts person and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Contacts person and a Exact Addresses:
+The following properties are synchronized between a Business Contacts person and a Exact Addresses:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Contacts person Property
+   * - Business Contacts person Property
      - Exact Addresses Property
      - Exact Data Type
    * - addressLine1
@@ -190,18 +190,18 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
 
 
-Businesscentral Contacts person to Exact Contacts
--------------------------------------------------
-Every Businesscentral Contacts person will be synchronized with a Exact Contacts.
+Business Contacts person to Exact Contacts
+------------------------------------------
+Every Business Contacts person will be synchronized with a Exact Contacts.
 
-Once a link between a Businesscentral Contacts person and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Contacts person and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Contacts person and a Exact Contacts:
+The following properties are synchronized between a Business Contacts person and a Exact Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Contacts person Property
+   * - Business Contacts person Property
      - Exact Contacts Property
      - Exact Data Type
    * - city
@@ -224,18 +224,18 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
 
 
-Businesscentral Currencies to Exact Currencies
-----------------------------------------------
-Every Businesscentral Currencies will be synchronized with a Exact Currencies.
+Business Currencies to Exact Currencies
+---------------------------------------
+Every Business Currencies will be synchronized with a Exact Currencies.
 
-Once a link between a Businesscentral Currencies and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Currencies and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Currencies and a Exact Currencies:
+The following properties are synchronized between a Business Currencies and a Exact Currencies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Currencies Property
+   * - Business Currencies Property
      - Exact Currencies Property
      - Exact Data Type
    * - code
@@ -246,18 +246,18 @@ The following properties are synchronized between a Businesscentral Currencies a
      - "string"
 
 
-Businesscentral Customers company to Exact Accounts
----------------------------------------------------
-Every Businesscentral Customers company will be synchronized with a Exact Accounts.
+Business Customers company to Exact Accounts
+--------------------------------------------
+Every Business Customers company will be synchronized with a Exact Accounts.
 
-Once a link between a Businesscentral Customers company and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers company and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers company and a Exact Accounts:
+The following properties are synchronized between a Business Customers company and a Exact Accounts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Customers company Property
+   * - Business Customers company Property
      - Exact Accounts Property
      - Exact Data Type
    * - addressLine1
@@ -289,18 +289,18 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
 
 
-Businesscentral Customers person to Exact Addresses
----------------------------------------------------
-Every Businesscentral Customers person will be synchronized with a Exact Addresses.
+Business Customers person to Exact Addresses
+--------------------------------------------
+Every Business Customers person will be synchronized with a Exact Addresses.
 
-Once a link between a Businesscentral Customers person and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers person and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers person and a Exact Addresses:
+The following properties are synchronized between a Business Customers person and a Exact Addresses:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Customers person Property
+   * - Business Customers person Property
      - Exact Addresses Property
      - Exact Data Type
    * - addressLine1
@@ -317,18 +317,18 @@ The following properties are synchronized between a Businesscentral Customers pe
      - "string"
 
 
-Businesscentral Employees to Exact Employees
---------------------------------------------
-Every Businesscentral Employees will be synchronized with a Exact Employees.
+Business Employees to Exact Employees
+-------------------------------------
+Every Business Employees will be synchronized with a Exact Employees.
 
-Once a link between a Businesscentral Employees and a Exact Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Employees and a Exact Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Employees and a Exact Employees:
+The following properties are synchronized between a Business Employees and a Exact Employees:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Employees Property
+   * - Business Employees Property
      - Exact Employees Property
      - Exact Data Type
    * - birthDate
@@ -354,34 +354,34 @@ The following properties are synchronized between a Businesscentral Employees an
      - "string"
 
 
-Businesscentral Items to Exact Items
-------------------------------------
-Every Businesscentral Items will be synchronized with a Exact Items.
+Business Items to Exact Items
+-----------------------------
+Every Business Items will be synchronized with a Exact Items.
 
-Once a link between a Businesscentral Items and a Exact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Items and a Exact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Items and a Exact Items:
+The following properties are synchronized between a Business Items and a Exact Items:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Items Property
+   * - Business Items Property
      - Exact Items Property
      - Exact Data Type
 
 
-Businesscentral Salesorderlines to Exact Salesorderlines
---------------------------------------------------------
-Every Businesscentral Salesorderlines will be synchronized with a Exact Salesorderlines.
+Business Salesorderlines to Exact Salesorderlines
+-------------------------------------------------
+Every Business Salesorderlines will be synchronized with a Exact Salesorderlines.
 
-Once a link between a Businesscentral Salesorderlines and a Exact Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Salesorderlines and a Exact Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorderlines and a Exact Salesorderlines:
+The following properties are synchronized between a Business Salesorderlines and a Exact Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Salesorderlines Property
+   * - Business Salesorderlines Property
      - Exact Salesorderlines Property
      - Exact Data Type
    * - documentId
@@ -392,34 +392,34 @@ The following properties are synchronized between a Businesscentral Salesorderli
      - "string"
 
 
-Businesscentral Salesorderlines to Exact Vatcodes
--------------------------------------------------
-Every Businesscentral Salesorderlines will be synchronized with a Exact Vatcodes.
+Business Salesorderlines to Exact Vatcodes
+------------------------------------------
+Every Business Salesorderlines will be synchronized with a Exact Vatcodes.
 
-Once a link between a Businesscentral Salesorderlines and a Exact Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Salesorderlines and a Exact Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorderlines and a Exact Vatcodes:
+The following properties are synchronized between a Business Salesorderlines and a Exact Vatcodes:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Salesorderlines Property
+   * - Business Salesorderlines Property
      - Exact Vatcodes Property
      - Exact Data Type
 
 
-Businesscentral Salesorders to Exact Salesorders
-------------------------------------------------
-Every Businesscentral Salesorders will be synchronized with a Exact Salesorders.
+Business Salesorders to Exact Salesorders
+-----------------------------------------
+Every Business Salesorders will be synchronized with a Exact Salesorders.
 
-Once a link between a Businesscentral Salesorders and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Salesorders and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorders and a Exact Salesorders:
+The following properties are synchronized between a Business Salesorders and a Exact Salesorders:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Salesorders Property
+   * - Business Salesorders Property
      - Exact Salesorders Property
      - Exact Data Type
    * - currencyId
