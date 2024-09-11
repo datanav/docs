@@ -1,13 +1,13 @@
-==============================
-YouTrack to CustomPMS Dataflow
-==============================
+===============================
+YouTrack to Custom PMS Dataflow
+===============================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 11:39:33
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from YouTrack to CustomPMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from YouTrack to Custom PMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 YouTrack Groups to CustomPMS Customer
 -------------------------------------
