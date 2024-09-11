@@ -2,25 +2,25 @@
 Custom PMS to WebCRM Dataflow
 =============================
 
-Generated: 2024-09-11 11:38:24
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Custom PMS to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-CustomPMS Customer to WebCRM Organisations
-------------------------------------------
-Every CustomPMS Customer will be synchronized with a WebCRM Organisations.
+Custom PMS Customer to WebCRM Organisations
+-------------------------------------------
+Every Custom PMS Customer will be synchronized with a WebCRM Organisations.
 
-Once a link between a CustomPMS Customer and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom PMS Customer and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomPMS Customer and a WebCRM Organisations:
+The following properties are synchronized between a Custom PMS Customer and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomPMS Customer Property
+   * - Custom PMS Customer Property
      - WebCRM Organisations Property
      - WebCRM Data Type
 
