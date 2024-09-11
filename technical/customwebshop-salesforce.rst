@@ -2,7 +2,7 @@
 Custom Webshop to Salesforce Dataflow
 =====================================
 
-Generated: 2024-09-11 11:38:24
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -41,34 +41,34 @@ The following properties are synchronized between a CustomWebshop Order and a Sa
      - Salesforce Data Type
 
 
-CustomWebshop Order to Salesforce Order
----------------------------------------
-Every CustomWebshop Order will be synchronized with a Salesforce Order.
+Custom Webshop Order to Salesforce Order
+----------------------------------------
+Every Custom Webshop Order will be synchronized with a Salesforce Order.
 
-Once a link between a CustomWebshop Order and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Webshop Order and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomWebshop Order and a Salesforce Order:
+The following properties are synchronized between a Custom Webshop Order and a Salesforce Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomWebshop Order Property
+   * - Custom Webshop Order Property
      - Salesforce Order Property
      - Salesforce Data Type
 
 
-CustomWebshop Product to Salesforce Product2
---------------------------------------------
-Every CustomWebshop Product will be synchronized with a Salesforce Product2.
+Custom Webshop Product to Salesforce Product2
+---------------------------------------------
+Every Custom Webshop Product will be synchronized with a Salesforce Product2.
 
-Once a link between a CustomWebshop Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Webshop Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomWebshop Product and a Salesforce Product2:
+The following properties are synchronized between a Custom Webshop Product and a Salesforce Product2:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomWebshop Product Property
+   * - Custom Webshop Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
 
