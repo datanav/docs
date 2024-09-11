@@ -2,7 +2,7 @@
 BusinessCentral to Keap Dataflow
 ================================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
@@ -27,50 +27,50 @@ The following properties are synchronized between a Businesscentral Customers an
      - Keap Data Type
 
 
-Businesscentral Companies to Keap Companies
--------------------------------------------
-Every Businesscentral Companies will be synchronized with a Keap Companies.
+Business Companies to Keap Companies
+------------------------------------
+Every Business Companies will be synchronized with a Keap Companies.
 
-Once a link between a Businesscentral Companies and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Companies and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Companies and a Keap Companies:
+The following properties are synchronized between a Business Companies and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Companies Property
+   * - Business Companies Property
      - Keap Companies Property
      - Keap Data Type
 
 
-Businesscentral Contacts person to Keap Contacts
-------------------------------------------------
-Every Businesscentral Contacts person will be synchronized with a Keap Contacts.
+Business Contacts person to Keap Contacts
+-----------------------------------------
+Every Business Contacts person will be synchronized with a Keap Contacts.
 
-Once a link between a Businesscentral Contacts person and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Contacts person and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Contacts person and a Keap Contacts:
+The following properties are synchronized between a Business Contacts person and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Contacts person Property
+   * - Business Contacts person Property
      - Keap Contacts Property
      - Keap Data Type
 
 
-Businesscentral Customers company to Keap Companies
----------------------------------------------------
-Every Businesscentral Customers company will be synchronized with a Keap Companies.
+Business Customers company to Keap Companies
+--------------------------------------------
+Every Business Customers company will be synchronized with a Keap Companies.
 
-Once a link between a Businesscentral Customers company and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers company and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers company and a Keap Companies:
+The following properties are synchronized between a Business Customers company and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Customers company Property
+   * - Business Customers company Property
      - Keap Companies Property
      - Keap Data Type
    * - city
@@ -87,34 +87,34 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
 
 
-Businesscentral Customers person to Keap Contacts
--------------------------------------------------
-Every Businesscentral Customers person will be synchronized with a Keap Contacts.
+Business Customers person to Keap Contacts
+------------------------------------------
+Every Business Customers person will be synchronized with a Keap Contacts.
 
-Once a link between a Businesscentral Customers person and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers person and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers person and a Keap Contacts:
+The following properties are synchronized between a Business Customers person and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Customers person Property
+   * - Business Customers person Property
      - Keap Contacts Property
      - Keap Data Type
 
 
-Businesscentral Employees to Keap Contacts
-------------------------------------------
-Every Businesscentral Employees will be synchronized with a Keap Contacts.
+Business Employees to Keap Contacts
+-----------------------------------
+Every Business Employees will be synchronized with a Keap Contacts.
 
-Once a link between a Businesscentral Employees and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Employees and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Employees and a Keap Contacts:
+The following properties are synchronized between a Business Employees and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Employees Property
+   * - Business Employees Property
      - Keap Contacts Property
      - Keap Data Type
    * - birthDate
