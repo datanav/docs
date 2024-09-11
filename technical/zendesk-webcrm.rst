@@ -1,13 +1,13 @@
 ==========================
-Zendesk to Webcrm Dataflow
+Zendesk to WebCRM Dataflow
 ==========================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Zendesk to Webcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Zendesk to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Zendesk Organizations to Webcrm Organisations
 ---------------------------------------------
@@ -28,18 +28,18 @@ The following properties are synchronized between a Zendesk Organizations and a 
      - "string"
 
 
-Zendesk Users to Webcrm Users
+Zendesk Users to WebCRM Users
 -----------------------------
-When a Zendesk User is of type Agent, it  will be synchronized with a Webcrm Users.
+When a Zendesk User is of type Agent, it  will be synchronized with a WebCRM Users.
 
-Once a link between a Zendesk Users and a Webcrm Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Users and a WebCRM Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Users and a Webcrm Users:
+The following properties are synchronized between a Zendesk Users and a WebCRM Users:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Users Property
-     - Webcrm Users Property
-     - Webcrm Data Type
+     - WebCRM Users Property
+     - WebCRM Data Type
 
