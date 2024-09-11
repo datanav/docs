@@ -2,89 +2,89 @@
 Business Nxt to Chargebee Dataflow
 ==================================
 
-Generated: 2024-09-11 11:40:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Business Nxt to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-BusinessNxt Country to Chargebee Currency
------------------------------------------
-Every BusinessNxt Country will be synchronized with a Chargebee Currency.
-
-Once a link between a BusinessNxt Country and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a BusinessNxt Country and a Chargebee Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - BusinessNxt Country Property
-     - Chargebee Currency Property
-     - Chargebee Data Type
-
-
-BusinessNxt Currency to Chargebee Currency
+Business Nxt Country to Chargebee Currency
 ------------------------------------------
-Every BusinessNxt Currency will be synchronized with a Chargebee Currency.
+Every Business Nxt Country will be synchronized with a Chargebee Currency.
 
-Once a link between a BusinessNxt Currency and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Country and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Currency and a Chargebee Currency:
+The following properties are synchronized between a Business Nxt Country and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Currency Property
+   * - Business Nxt Country Property
      - Chargebee Currency Property
      - Chargebee Data Type
 
 
-BusinessNxt Orderline to Chargebee Order
-----------------------------------------
-Every BusinessNxt Orderline will be synchronized with a Chargebee Order.
+Business Nxt Currency to Chargebee Currency
+-------------------------------------------
+Every Business Nxt Currency will be synchronized with a Chargebee Currency.
 
-Once a link between a BusinessNxt Orderline and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Currency and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Orderline and a Chargebee Order:
+The following properties are synchronized between a Business Nxt Currency and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Orderline Property
+   * - Business Nxt Currency Property
+     - Chargebee Currency Property
+     - Chargebee Data Type
+
+
+Business Nxt Orderline to Chargebee Order
+-----------------------------------------
+Every Business Nxt Orderline will be synchronized with a Chargebee Order.
+
+Once a link between a Business Nxt Orderline and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Orderline and a Chargebee Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Orderline Property
      - Chargebee Order Property
      - Chargebee Data Type
 
 
-BusinessNxt Productcategory to Chargebee Currency
--------------------------------------------------
-Every BusinessNxt Productcategory will be synchronized with a Chargebee Currency.
+Business Nxt Productcategory to Chargebee Currency
+--------------------------------------------------
+Every Business Nxt Productcategory will be synchronized with a Chargebee Currency.
 
-Once a link between a BusinessNxt Productcategory and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Productcategory and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Productcategory and a Chargebee Currency:
+The following properties are synchronized between a Business Nxt Productcategory and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Productcategory Property
+   * - Business Nxt Productcategory Property
      - Chargebee Currency Property
      - Chargebee Data Type
 
 
-BusinessNxt Vat to Chargebee Currency
--------------------------------------
-Every BusinessNxt Vat will be synchronized with a Chargebee Currency.
+Business Nxt Vat to Chargebee Currency
+--------------------------------------
+Every Business Nxt Vat will be synchronized with a Chargebee Currency.
 
-Once a link between a BusinessNxt Vat and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Vat and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Vat and a Chargebee Currency:
+The following properties are synchronized between a Business Nxt Vat and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Vat Property
+   * - Business Nxt Vat Property
      - Chargebee Currency Property
      - Chargebee Data Type
 
