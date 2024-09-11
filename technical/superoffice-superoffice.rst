@@ -1,40 +1,40 @@
 ===================================
-SuperOffice to Superoffice Dataflow
+SuperOffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2024-09-11 00:00:00
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-SuperOffice Contact to Superoffice Contact
+SuperOffice Contact to SuperOffice Contact
 ------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a Superoffice Contact must be established.
+Before any synchronization can take place, a link between a SuperOffice Contact and a SuperOffice Contact must be established.
 
-A SuperOffice Contact will merge with a Superoffice Contact if one of the following property combinations match:
+A SuperOffice Contact will merge with a SuperOffice Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - Superoffice Contact Property
+     - SuperOffice Contact Property
    * - ContactId
      - ContactId
    * - Emails.Value
      - Emails.Value
 
-Once a link between a SuperOffice Contact and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a Superoffice Contact:
+The following properties are synchronized between a SuperOffice Contact and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - Superoffice Contact Property
-     - Superoffice Data Type
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
    * - Address.Postal.Address1
      - Address.Postal.Address1
      - "string"
@@ -121,30 +121,30 @@ The following properties are synchronized between a SuperOffice Contact and a Su
      - "string"
 
 
-SuperOffice Ownercontactlink to Superoffice Contact
+SuperOffice Ownercontactlink to SuperOffice Contact
 ---------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Ownercontactlink and a Superoffice Contact must be established.
+Before any synchronization can take place, a link between a SuperOffice Ownercontactlink and a SuperOffice Contact must be established.
 
-A SuperOffice Ownercontactlink will merge with a Superoffice Contact if one of the following property combinations match:
+A SuperOffice Ownercontactlink will merge with a SuperOffice Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Ownercontactlink Property
-     - Superoffice Contact Property
+     - SuperOffice Contact Property
    * - contact_id
      - ContactId
 
-Once a link between a SuperOffice Ownercontactlink and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Ownercontactlink and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Ownercontactlink and a Superoffice Contact:
+The following properties are synchronized between a SuperOffice Ownercontactlink and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Ownercontactlink Property
-     - Superoffice Contact Property
-     - Superoffice Data Type
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
    * - contact_id
      - ContactId
      - "string"
@@ -153,30 +153,30 @@ The following properties are synchronized between a SuperOffice Ownercontactlink
      - "string"
 
 
-SuperOffice Person to Superoffice Person
+SuperOffice Person to SuperOffice Person
 ----------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a Superoffice Person must be established.
+Before any synchronization can take place, a link between a SuperOffice Person and a SuperOffice Person must be established.
 
-A SuperOffice Person will merge with a Superoffice Person if one of the following property combinations match:
+A SuperOffice Person will merge with a SuperOffice Person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - Superoffice Person Property
+     - SuperOffice Person Property
    * - Emails.Value
      - Emails.Value
 
-Once a link between a SuperOffice Person and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a Superoffice Person:
+The following properties are synchronized between a SuperOffice Person and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+     - SuperOffice Person Property
+     - SuperOffice Data Type
    * - Address.Postal.Address1
      - Address.Postal.Address1
      - "string"
@@ -239,32 +239,32 @@ The following properties are synchronized between a SuperOffice Person and a Sup
      - "string"
 
 
-SuperOffice Product to Superoffice Product
+SuperOffice Product to SuperOffice Product
 ------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Product and a Superoffice Product must be established.
+Before any synchronization can take place, a link between a SuperOffice Product and a SuperOffice Product must be established.
 
-A SuperOffice Product will merge with a Superoffice Product if one of the following property combinations match:
+A SuperOffice Product will merge with a SuperOffice Product if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Product Property
-     - Superoffice Product Property
+     - SuperOffice Product Property
    * - ProductId
      - ProductId
    * - ERPProductKey
      - ERPProductKey
 
-Once a link between a SuperOffice Product and a Superoffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Product and a Superoffice Product:
+The following properties are synchronized between a SuperOffice Product and a SuperOffice Product:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Product Property
-     - Superoffice Product Property
-     - Superoffice Data Type
+     - SuperOffice Product Property
+     - SuperOffice Data Type
    * - Description
      - Description
      - "string"
@@ -306,59 +306,59 @@ The following properties are synchronized between a SuperOffice Product and a Su
      - "integer"
 
 
-SuperOffice Quote to Superoffice Sale
+SuperOffice Quote to SuperOffice Sale
 -------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Quote and a Superoffice Sale must be established.
+Before any synchronization can take place, a link between a SuperOffice Quote and a SuperOffice Sale must be established.
 
-A SuperOffice Quote will merge with a Superoffice Sale if one of the following property combinations match:
+A SuperOffice Quote will merge with a SuperOffice Sale if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quote Property
-     - Superoffice Sale Property
+     - SuperOffice Sale Property
    * - SaleId
      - SaleId
 
-Once a link between a SuperOffice Quote and a Superoffice Sale is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quote and a SuperOffice Sale is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quote and a Superoffice Sale:
+The following properties are synchronized between a SuperOffice Quote and a SuperOffice Sale:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quote Property
-     - Superoffice Sale Property
-     - Superoffice Data Type
+     - SuperOffice Sale Property
+     - SuperOffice Data Type
    * - AcceptedQuoteAlternativeId
      - Status
      - "string"
 
 
-SuperOffice Sale to Superoffice Sale
+SuperOffice Sale to SuperOffice Sale
 ------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Sale and a Superoffice Sale must be established.
+Before any synchronization can take place, a link between a SuperOffice Sale and a SuperOffice Sale must be established.
 
-A SuperOffice Sale will merge with a Superoffice Sale if one of the following property combinations match:
+A SuperOffice Sale will merge with a SuperOffice Sale if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Sale Property
-     - Superoffice Sale Property
+     - SuperOffice Sale Property
    * - SaleId
      - SaleId
 
-Once a link between a SuperOffice Sale and a Superoffice Sale is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Sale and a SuperOffice Sale is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Sale and a Superoffice Sale:
+The following properties are synchronized between a SuperOffice Sale and a SuperOffice Sale:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Sale Property
-     - Superoffice Sale Property
-     - Superoffice Data Type
+     - SuperOffice Sale Property
+     - SuperOffice Data Type
    * - Amount
      - Amount
      - "float"
@@ -394,30 +394,30 @@ The following properties are synchronized between a SuperOffice Sale and a Super
      - "string"
 
 
-SuperOffice User to Superoffice Person
+SuperOffice User to SuperOffice Person
 --------------------------------------
-Before any synchronization can take place, a link between a SuperOffice User and a Superoffice Person must be established.
+Before any synchronization can take place, a link between a SuperOffice User and a SuperOffice Person must be established.
 
-A SuperOffice User will merge with a Superoffice Person if one of the following property combinations match:
+A SuperOffice User will merge with a SuperOffice Person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     - Superoffice Person Property
+     - SuperOffice Person Property
    * - personEmail
      - Emails.Value
 
-Once a link between a SuperOffice User and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice User and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice User and a Superoffice Person:
+The following properties are synchronized between a SuperOffice User and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice User Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+     - SuperOffice Person Property
+     - SuperOffice Data Type
    * - contactId
      - Contact.ContactId
      - "integer"
@@ -432,40 +432,40 @@ The following properties are synchronized between a SuperOffice User and a Super
      - "string"
 
 
-SuperOffice Contact to Superoffice Person
+SuperOffice Contact to SuperOffice Person
 -----------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a Superoffice Person must be established.
+Before any synchronization can take place, a link between a SuperOffice Contact and a SuperOffice Person must be established.
 
-A new Superoffice Person will be created from a SuperOffice Contact if it is connected to a SuperOffice Sale, or Quote that is synchronized into Superoffice.
+A new SuperOffice Person will be created from a SuperOffice Contact if it is connected to a SuperOffice Sale, or Quote that is synchronized into SuperOffice.
 
-Once a link between a SuperOffice Contact and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a Superoffice Person:
+The following properties are synchronized between a SuperOffice Contact and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+     - SuperOffice Person Property
+     - SuperOffice Data Type
 
 
-SuperOffice Person to Superoffice Contact
+SuperOffice Person to SuperOffice Contact
 -----------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a Superoffice Contact must be established.
+Before any synchronization can take place, a link between a SuperOffice Person and a SuperOffice Contact must be established.
 
-A new Superoffice Contact will be created from a SuperOffice Person if it is connected to a SuperOffice Sale, or Quote that is synchronized into Superoffice.
+A new SuperOffice Contact will be created from a SuperOffice Person if it is connected to a SuperOffice Sale, or Quote that is synchronized into SuperOffice.
 
-Once a link between a SuperOffice Person and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a Superoffice Contact:
+The following properties are synchronized between a SuperOffice Person and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - Superoffice Contact Property
-     - Superoffice Data Type
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
 
 
 SuperOffice Sale classification status to SuperOffice Quotealternative
