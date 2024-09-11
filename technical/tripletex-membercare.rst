@@ -2,27 +2,27 @@
 Tripletex to MemberCare Dataflow
 ================================
 
-Generated: 2024-09-11 07:48:17
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Contact to Membercare Persons
+Tripletex Contact to MemberCare Persons
 ---------------------------------------
-Every Tripletex Contact will be synchronized with a Membercare Persons.
+Every Tripletex Contact will be synchronized with a MemberCare Persons.
 
-Once a link between a Tripletex Contact and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a Membercare Persons:
+The following properties are synchronized between a Tripletex Contact and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     - Membercare Persons Property
-     - Membercare Data Type
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - email
      - socialSecurityNumber.number (Dependant on having wd:Q1273217 in socialSecurityNumber.iso2Letter)
      - "string"
@@ -34,20 +34,20 @@ The following properties are synchronized between a Tripletex Contact and a Memb
      - "string"
 
 
-Tripletex Customer to Membercare Companies
+Tripletex Customer to MemberCare Companies
 ------------------------------------------
-Every Tripletex Customer will be synchronized with a Membercare Companies.
+Every Tripletex Customer will be synchronized with a MemberCare Companies.
 
-Once a link between a Tripletex Customer and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a Membercare Companies:
+The following properties are synchronized between a Tripletex Customer and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     - Membercare Companies Property
-     - Membercare Data Type
+     - MemberCare Companies Property
+     - MemberCare Data Type
    * - name
      - companyName
      - "string"
@@ -56,20 +56,20 @@ The following properties are synchronized between a Tripletex Customer and a Mem
      - "string"
 
 
-Tripletex Customer person to Membercare Persons
+Tripletex Customer person to MemberCare Persons
 -----------------------------------------------
-Every Tripletex Customer person will be synchronized with a Membercare Persons.
+Every Tripletex Customer person will be synchronized with a MemberCare Persons.
 
-Once a link between a Tripletex Customer person and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a Membercare Persons:
+The following properties are synchronized between a Tripletex Customer person and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     - Membercare Persons Property
-     - Membercare Data Type
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - deliveryAddress.city
      - addresses.postalCode.city
      - "string"
@@ -108,39 +108,39 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
 
 
-Tripletex Department to Membercare Companies
+Tripletex Department to MemberCare Companies
 --------------------------------------------
-Every Tripletex Department will be synchronized with a Membercare Companies.
+Every Tripletex Department will be synchronized with a MemberCare Companies.
 
-Once a link between a Tripletex Department and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a Membercare Companies:
+The following properties are synchronized between a Tripletex Department and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     - Membercare Companies Property
-     - Membercare Data Type
+     - MemberCare Companies Property
+     - MemberCare Data Type
    * - name
      - companyName
      - "string"
 
 
-Tripletex Employee to Membercare Persons
+Tripletex Employee to MemberCare Persons
 ----------------------------------------
-Every Tripletex Employee will be synchronized with a Membercare Persons.
+Every Tripletex Employee will be synchronized with a MemberCare Persons.
 
-Once a link between a Tripletex Employee and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a Membercare Persons:
+The following properties are synchronized between a Tripletex Employee and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     - Membercare Persons Property
-     - Membercare Data Type
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - address.city
      - addresses.postalCode.city
      - "string"
@@ -173,36 +173,36 @@ The following properties are synchronized between a Tripletex Employee and a Mem
      - "string"
 
 
-Tripletex Order to Membercare Invoices
+Tripletex Order to MemberCare Invoices
 --------------------------------------
-Every Tripletex Order will be synchronized with a Membercare Invoices.
+Every Tripletex Order will be synchronized with a MemberCare Invoices.
 
-Once a link between a Tripletex Order and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Order and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Order and a Membercare Invoices:
+The following properties are synchronized between a Tripletex Order and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Order Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
 
 
-Tripletex Orderline to Membercare Invoices
+Tripletex Orderline to MemberCare Invoices
 ------------------------------------------
-Every Tripletex Orderline will be synchronized with a Membercare Invoices.
+Every Tripletex Orderline will be synchronized with a MemberCare Invoices.
 
-Once a link between a Tripletex Orderline and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Orderline and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Orderline and a Membercare Invoices:
+The following properties are synchronized between a Tripletex Orderline and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Orderline Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
    * - count
      - invoiceItems.quantity
      - "string"
@@ -214,20 +214,20 @@ The following properties are synchronized between a Tripletex Orderline and a Me
      - "string"
 
 
-Tripletex Product to Membercare Products
+Tripletex Product to MemberCare Products
 ----------------------------------------
-Every Tripletex Product will be synchronized with a Membercare Products.
+Every Tripletex Product will be synchronized with a MemberCare Products.
 
-Once a link between a Tripletex Product and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Product and a MemberCare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Product and a Membercare Products:
+The following properties are synchronized between a Tripletex Product and a MemberCare Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     - Membercare Products Property
-     - Membercare Data Type
+     - MemberCare Products Property
+     - MemberCare Data Type
    * - name
      - name
      - "string"
