@@ -2,41 +2,41 @@
 Business Central to WebCRM Dataflow
 ===================================
 
-Generated: 2024-09-11 11:40:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-BusinessCentral Companies to WebCRM Organisations
--------------------------------------------------
-Every BusinessCentral Companies will be synchronized with a WebCRM Organisations.
+Business Central Companies to WebCRM Organisations
+--------------------------------------------------
+Every Business Central Companies will be synchronized with a WebCRM Organisations.
 
-Once a link between a BusinessCentral Companies and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Companies and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Companies and a WebCRM Organisations:
+The following properties are synchronized between a Business Central Companies and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Companies Property
+   * - Business Central Companies Property
      - WebCRM Organisations Property
      - WebCRM Data Type
 
 
-BusinessCentral Customers company to WebCRM Organisations
----------------------------------------------------------
-Every BusinessCentral Customers company will be synchronized with a WebCRM Organisations.
+Business Central Customers company to WebCRM Organisations
+----------------------------------------------------------
+Every Business Central Customers company will be synchronized with a WebCRM Organisations.
 
-Once a link between a BusinessCentral Customers company and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers company and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Customers company and a WebCRM Organisations:
+The following properties are synchronized between a Business Central Customers company and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Customers company Property
+   * - Business Central Customers company Property
      - WebCRM Organisations Property
      - WebCRM Data Type
    * - displayName
