@@ -2,25 +2,25 @@
 WebCRM to Tilores Dataflow
 ==========================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to Tilores. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Webcrm Persons to Tilores Human
+WebCRM Persons to Tilores Human
 -------------------------------
-Every Webcrm Persons will be synchronized with a Tilores Human.
+Every WebCRM Persons will be synchronized with a Tilores Human.
 
-Once a link between a Webcrm Persons and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Persons and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Persons and a Tilores Human:
+The following properties are synchronized between a WebCRM Persons and a Tilores Human:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Persons Property
+   * - WebCRM Persons Property
      - Tilores Human Property
      - Tilores Data Type
    * - PersonFirstName
@@ -34,18 +34,18 @@ The following properties are synchronized between a Webcrm Persons and a Tilores
      - "string"
 
 
-Webcrm Users to Tilores Human
+WebCRM Users to Tilores Human
 -----------------------------
-Every Webcrm Users will be synchronized with a Tilores Human.
+Every WebCRM Users will be synchronized with a Tilores Human.
 
-Once a link between a Webcrm Users and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Users and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Users and a Tilores Human:
+The following properties are synchronized between a WebCRM Users and a Tilores Human:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Users Property
+   * - WebCRM Users Property
      - Tilores Human Property
      - Tilores Data Type
 
