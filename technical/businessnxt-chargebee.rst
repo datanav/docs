@@ -2,89 +2,89 @@
 BusinessNxt to Chargebee Dataflow
 =================================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from BusinessNxt to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Visma Country to Chargebee Currency
------------------------------------
-Every Visma Country will be synchronized with a Chargebee Currency.
+BusinessNxt Country to Chargebee Currency
+-----------------------------------------
+Every BusinessNxt Country will be synchronized with a Chargebee Currency.
 
-Once a link between a Visma Country and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Country and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Country and a Chargebee Currency:
+The following properties are synchronized between a BusinessNxt Country and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Country Property
+   * - BusinessNxt Country Property
      - Chargebee Currency Property
      - Chargebee Data Type
 
 
-Visma Currency to Chargebee Currency
-------------------------------------
-Every Visma Currency will be synchronized with a Chargebee Currency.
+BusinessNxt Currency to Chargebee Currency
+------------------------------------------
+Every BusinessNxt Currency will be synchronized with a Chargebee Currency.
 
-Once a link between a Visma Currency and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Currency and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Currency and a Chargebee Currency:
+The following properties are synchronized between a BusinessNxt Currency and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Currency Property
+   * - BusinessNxt Currency Property
      - Chargebee Currency Property
      - Chargebee Data Type
 
 
-Visma Orderline to Chargebee Order
-----------------------------------
-Every Visma Orderline will be synchronized with a Chargebee Order.
+BusinessNxt Orderline to Chargebee Order
+----------------------------------------
+Every BusinessNxt Orderline will be synchronized with a Chargebee Order.
 
-Once a link between a Visma Orderline and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Orderline and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Orderline and a Chargebee Order:
+The following properties are synchronized between a BusinessNxt Orderline and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Orderline Property
+   * - BusinessNxt Orderline Property
      - Chargebee Order Property
      - Chargebee Data Type
 
 
-Visma Productcategory to Chargebee Currency
--------------------------------------------
-Every Visma Productcategory will be synchronized with a Chargebee Currency.
+BusinessNxt Productcategory to Chargebee Currency
+-------------------------------------------------
+Every BusinessNxt Productcategory will be synchronized with a Chargebee Currency.
 
-Once a link between a Visma Productcategory and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Productcategory and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Productcategory and a Chargebee Currency:
+The following properties are synchronized between a BusinessNxt Productcategory and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Productcategory Property
+   * - BusinessNxt Productcategory Property
      - Chargebee Currency Property
      - Chargebee Data Type
 
 
-Visma Vat to Chargebee Currency
--------------------------------
-Every Visma Vat will be synchronized with a Chargebee Currency.
+BusinessNxt Vat to Chargebee Currency
+-------------------------------------
+Every BusinessNxt Vat will be synchronized with a Chargebee Currency.
 
-Once a link between a Visma Vat and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Vat and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Vat and a Chargebee Currency:
+The following properties are synchronized between a BusinessNxt Vat and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Vat Property
+   * - BusinessNxt Vat Property
      - Chargebee Currency Property
      - Chargebee Data Type
 
