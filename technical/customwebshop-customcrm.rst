@@ -1,58 +1,58 @@
-====================================
-CustomWebshop to Custom CRM Dataflow
-====================================
+===================================
+CustomWebshop to CustomCRM Dataflow
+===================================
 
-Generated: 2024-09-11 07:55:13
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from CustomWebshop to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from CustomWebshop to CustomCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-CustomWebshop Customer to Custom Customer
------------------------------------------
-Every CustomWebshop Customer will be synchronized with a Custom Customer.
+CustomWebshop Customer to CustomCRM Customer
+--------------------------------------------
+Every CustomWebshop Customer will be synchronized with a CustomCRM Customer.
 
-Once a link between a CustomWebshop Customer and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomWebshop Customer and a CustomCRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomWebshop Customer and a Custom Customer:
+The following properties are synchronized between a CustomWebshop Customer and a CustomCRM Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - CustomWebshop Customer Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomCRM Customer Property
+     - CustomCRM Data Type
 
 
-CustomWebshop Order to Custom Order
------------------------------------
-Every CustomWebshop Order will be synchronized with a Custom Order.
+CustomWebshop Order to CustomCRM Order
+--------------------------------------
+Every CustomWebshop Order will be synchronized with a CustomCRM Order.
 
-Once a link between a CustomWebshop Order and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomWebshop Order and a CustomCRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomWebshop Order and a Custom Order:
+The following properties are synchronized between a CustomWebshop Order and a CustomCRM Order:
 
 .. list-table::
    :header-rows: 1
 
    * - CustomWebshop Order Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomCRM Order Property
+     - CustomCRM Data Type
 
 
-CustomWebshop Product to Custom Product
----------------------------------------
-Every CustomWebshop Product will be synchronized with a Custom Product.
+CustomWebshop Product to CustomCRM Product
+------------------------------------------
+Every CustomWebshop Product will be synchronized with a CustomCRM Product.
 
-Once a link between a CustomWebshop Product and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomWebshop Product and a CustomCRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomWebshop Product and a Custom Product:
+The following properties are synchronized between a CustomWebshop Product and a CustomCRM Product:
 
 .. list-table::
    :header-rows: 1
 
    * - CustomWebshop Product Property
-     - Custom Product Property
-     - Custom Data Type
+     - CustomCRM Product Property
+     - CustomCRM Data Type
 
