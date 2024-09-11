@@ -1,28 +1,28 @@
 ==============================
-WooCommerce to Webcrm Dataflow
+WooCommerce to WebCRM Dataflow
 ==============================
 
-Generated: 2024-09-11 07:44:23
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Webcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Woocommerce Order to Webcrm Quotationline
+WooCommerce Order to WebCRM Quotationline
 -----------------------------------------
-Every Woocommerce Order will be synchronized with a Webcrm Quotationline.
+Every WooCommerce Order will be synchronized with a WebCRM Quotationline.
 
-Once a link between a Woocommerce Order and a Webcrm Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a WebCRM Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Order and a Webcrm Quotationline:
+The following properties are synchronized between a WooCommerce Order and a WebCRM Quotationline:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Order Property
-     - Webcrm Quotationline Property
-     - Webcrm Data Type
+   * - WooCommerce Order Property
+     - WebCRM Quotationline Property
+     - WebCRM Data Type
    * - line_items.sku
      - QuotationLineCostPrice
      - "string"
@@ -40,20 +40,20 @@ The following properties are synchronized between a Woocommerce Order and a Webc
      - "string"
 
 
-Woocommerce Product to Webcrm Products
+WooCommerce Product to WebCRM Products
 --------------------------------------
-Every Woocommerce Product will be synchronized with a Webcrm Products.
+Every WooCommerce Product will be synchronized with a WebCRM Products.
 
-Once a link between a Woocommerce Product and a Webcrm Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Product and a WebCRM Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Product and a Webcrm Products:
+The following properties are synchronized between a WooCommerce Product and a WebCRM Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Product Property
-     - Webcrm Products Property
-     - Webcrm Data Type
+   * - WooCommerce Product Property
+     - WebCRM Products Property
+     - WebCRM Data Type
    * - price
      - ProductCostPrice
      - "string"
