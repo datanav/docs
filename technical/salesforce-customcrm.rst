@@ -1,13 +1,13 @@
-================================
-Salesforce to CustomCRM Dataflow
-================================
+=================================
+Salesforce to Custom CRM Dataflow
+=================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to CustomCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Salesforce Customer to CustomCRM Contact
 ----------------------------------------
@@ -169,66 +169,66 @@ The following properties are synchronized between a Salesforce User and a Custom
      - CustomCRM Data Type
 
 
-Salesforce Contact to CustomCRM Contact
----------------------------------------
-Every Salesforce Contact will be synchronized with a CustomCRM Contact.
+Salesforce Contact to Custom CRM Contact
+----------------------------------------
+Every Salesforce Contact will be synchronized with a Custom CRM Contact.
 
-Once a link between a Salesforce Contact and a CustomCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Contact and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Contact and a CustomCRM Contact:
+The following properties are synchronized between a Salesforce Contact and a Custom CRM Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Contact Property
-     - CustomCRM Contact Property
-     - CustomCRM Data Type
+     - Custom CRM Contact Property
+     - Custom CRM Data Type
 
 
-Salesforce Order to CustomCRM Order
------------------------------------
-Every Salesforce Order will be synchronized with a CustomCRM Order.
+Salesforce Order to Custom CRM Order
+------------------------------------
+Every Salesforce Order will be synchronized with a Custom CRM Order.
 
-Once a link between a Salesforce Order and a CustomCRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Order and a Custom CRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Order and a CustomCRM Order:
+The following properties are synchronized between a Salesforce Order and a Custom CRM Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Order Property
-     - CustomCRM Order Property
-     - CustomCRM Data Type
+     - Custom CRM Order Property
+     - Custom CRM Data Type
 
 
-Salesforce Product2 to CustomCRM Product
-----------------------------------------
-Every Salesforce Product2 will be synchronized with a CustomCRM Product.
+Salesforce Product2 to Custom CRM Product
+-----------------------------------------
+Every Salesforce Product2 will be synchronized with a Custom CRM Product.
 
-Once a link between a Salesforce Product2 and a CustomCRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Product2 and a Custom CRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Product2 and a CustomCRM Product:
+The following properties are synchronized between a Salesforce Product2 and a Custom CRM Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Product2 Property
-     - CustomCRM Product Property
-     - CustomCRM Data Type
+     - Custom CRM Product Property
+     - Custom CRM Data Type
 
 
-Salesforce Quote to CustomCRM Quote
------------------------------------
-Every Salesforce Quote will be synchronized with a CustomCRM Quote.
+Salesforce Quote to Custom CRM Quote
+------------------------------------
+Every Salesforce Quote will be synchronized with a Custom CRM Quote.
 
-Once a link between a Salesforce Quote and a CustomCRM Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quote and a Custom CRM Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quote and a CustomCRM Quote:
+The following properties are synchronized between a Salesforce Quote and a Custom CRM Quote:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quote Property
-     - CustomCRM Quote Property
-     - CustomCRM Data Type
+     - Custom CRM Quote Property
+     - Custom CRM Data Type
 
