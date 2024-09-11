@@ -38,7 +38,7 @@ Systems
         :text: Read more
         :classes: read-more
     ---
-    **Custom HRM**
+    **CustomHRM**
 
     
     .. link-button:: system/customhrm
