@@ -1,13 +1,13 @@
-================================
-Tidsbanken to CustomHRM Dataflow
-================================
+=================================
+Tidsbanken to Custom HRM Dataflow
+=================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Tidsbanken to CustomHRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Tidsbanken to Custom HRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Tidsbanken Kunde to CustomHRM Department
 ----------------------------------------
@@ -25,34 +25,34 @@ The following properties are synchronized between a Tidsbanken Kunde and a Custo
      - CustomHRM Data Type
 
 
-Tidsbanken Ansatt to CustomHRM Employee
----------------------------------------
-Every Tidsbanken Ansatt will be synchronized with a CustomHRM Employee.
+Tidsbanken Ansatt to Custom HRM Employee
+----------------------------------------
+Every Tidsbanken Ansatt will be synchronized with a Custom HRM Employee.
 
-Once a link between a Tidsbanken Ansatt and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Ansatt and a Custom HRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Ansatt and a CustomHRM Employee:
+The following properties are synchronized between a Tidsbanken Ansatt and a Custom HRM Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Ansatt Property
-     - CustomHRM Employee Property
-     - CustomHRM Data Type
+     - Custom HRM Employee Property
+     - Custom HRM Data Type
 
 
-Tidsbanken Avdeling to CustomHRM Department
--------------------------------------------
-Every Tidsbanken Avdeling will be synchronized with a CustomHRM Department.
+Tidsbanken Avdeling to Custom HRM Department
+--------------------------------------------
+Every Tidsbanken Avdeling will be synchronized with a Custom HRM Department.
 
-Once a link between a Tidsbanken Avdeling and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Avdeling and a Custom HRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Avdeling and a CustomHRM Department:
+The following properties are synchronized between a Tidsbanken Avdeling and a Custom HRM Department:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Avdeling Property
-     - CustomHRM Department Property
-     - CustomHRM Data Type
+     - Custom HRM Department Property
+     - Custom HRM Data Type
 
