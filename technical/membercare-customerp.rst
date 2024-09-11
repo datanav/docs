@@ -1,90 +1,90 @@
-================================
-Membercare to Customerp Dataflow
-================================
+=================================
+MemberCare to Custom ERP Dataflow
+=================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:45:31
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Membercare to Customerp. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Membercare Companies to Customerp Customer
-------------------------------------------
-Every Membercare Companies will be synchronized with a Customerp Customer.
+Membercare Companies to Custom Customer
+---------------------------------------
+Every Membercare Companies will be synchronized with a Custom Customer.
 
-Once a link between a Membercare Companies and a Customerp Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Membercare Companies and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Companies and a Customerp Customer:
+The following properties are synchronized between a Membercare Companies and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Membercare Companies Property
-     - Customerp Customer Property
-     - Customerp Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Membercare Invoices to Customerp Order
---------------------------------------
-Every Membercare Invoices will be synchronized with a Customerp Order.
+Membercare Invoices to Custom Order
+-----------------------------------
+Every Membercare Invoices will be synchronized with a Custom Order.
 
-Once a link between a Membercare Invoices and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Membercare Invoices and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Invoices and a Customerp Order:
+The following properties are synchronized between a Membercare Invoices and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Membercare Invoices Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Membercare Organizations to Customerp Customer
-----------------------------------------------
-Every Membercare Organizations will be synchronized with a Customerp Customer.
+Membercare Organizations to Custom Customer
+-------------------------------------------
+Every Membercare Organizations will be synchronized with a Custom Customer.
 
-Once a link between a Membercare Organizations and a Customerp Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Membercare Organizations and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Organizations and a Customerp Customer:
+The following properties are synchronized between a Membercare Organizations and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Membercare Organizations Property
-     - Customerp Customer Property
-     - Customerp Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Membercare Persons to Customerp Contact
----------------------------------------
-Every Membercare Persons will be synchronized with a Customerp Contact.
+Membercare Persons to Custom Contact
+------------------------------------
+Every Membercare Persons will be synchronized with a Custom Contact.
 
-Once a link between a Membercare Persons and a Customerp Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Membercare Persons and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Persons and a Customerp Contact:
+The following properties are synchronized between a Membercare Persons and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Membercare Persons Property
-     - Customerp Contact Property
-     - Customerp Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
 
-Membercare Products to Customerp Product
-----------------------------------------
-Every Membercare Products will be synchronized with a Customerp Product.
+Membercare Products to Custom Product
+-------------------------------------
+Every Membercare Products will be synchronized with a Custom Product.
 
-Once a link between a Membercare Products and a Customerp Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Membercare Products and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Products and a Customerp Product:
+The following properties are synchronized between a Membercare Products and a Custom Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Membercare Products Property
-     - Customerp Product Property
-     - Customerp Data Type
+     - Custom Product Property
+     - Custom Data Type
 
