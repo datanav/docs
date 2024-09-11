@@ -2,41 +2,41 @@
 CRMOffice to Chargebee Dataflow
 ===============================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CRMOffice to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Crmoffice Companies to Chargebee Item
+CRMOffice Companies to Chargebee Item
 -------------------------------------
-Every Crmoffice Companies will be synchronized with a Chargebee Item.
+Every CRMOffice Companies will be synchronized with a Chargebee Item.
 
-Once a link between a Crmoffice Companies and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Companies and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Crmoffice Companies and a Chargebee Item:
+The following properties are synchronized between a CRMOffice Companies and a Chargebee Item:
 
 .. list-table::
    :header-rows: 1
 
-   * - Crmoffice Companies Property
+   * - CRMOffice Companies Property
      - Chargebee Item Property
      - Chargebee Data Type
 
 
-Crmoffice Contacts to Chargebee Customer
+CRMOffice Contacts to Chargebee Customer
 ----------------------------------------
-Every Crmoffice Contacts will be synchronized with a Chargebee Customer.
+Every CRMOffice Contacts will be synchronized with a Chargebee Customer.
 
-Once a link between a Crmoffice Contacts and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Contacts and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Crmoffice Contacts and a Chargebee Customer:
+The following properties are synchronized between a CRMOffice Contacts and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Crmoffice Contacts Property
+   * - CRMOffice Contacts Property
      - Chargebee Customer Property
      - Chargebee Data Type
    * - familyName
