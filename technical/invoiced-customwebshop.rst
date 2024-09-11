@@ -1,74 +1,74 @@
-==================================
-Invoiced to Customwebshop Dataflow
-==================================
+===================================
+Invoiced to Custom Webshop Dataflow
+===================================
 
-Generated: 2024-09-11 00:00:02
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Customwebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Custom Webshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Invoiced Lineitem to Customwebshop Order
-----------------------------------------
-Every Invoiced Lineitem will be synchronized with a Customwebshop Order.
+Invoiced Lineitem to Custom Order
+---------------------------------
+Every Invoiced Lineitem will be synchronized with a Custom Order.
 
-Once a link between a Invoiced Lineitem and a Customwebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Lineitem and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Lineitem and a Customwebshop Order:
+The following properties are synchronized between a Invoiced Lineitem and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Lineitem Property
-     - Customwebshop Order Property
-     - Customwebshop Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Invoiced Customers company to Customwebshop Customer
-----------------------------------------------------
-Every Invoiced Customers company will be synchronized with a Customwebshop Customer.
+Invoiced Customers company to Custom Customer
+---------------------------------------------
+Every Invoiced Customers company will be synchronized with a Custom Customer.
 
-Once a link between a Invoiced Customers company and a Customwebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers company and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a Customwebshop Customer:
+The following properties are synchronized between a Invoiced Customers company and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Customers company Property
-     - Customwebshop Customer Property
-     - Customwebshop Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Invoiced Invoices to Customwebshop Order
-----------------------------------------
-Every Invoiced Invoices will be synchronized with a Customwebshop Order.
+Invoiced Invoices to Custom Order
+---------------------------------
+Every Invoiced Invoices will be synchronized with a Custom Order.
 
-Once a link between a Invoiced Invoices and a Customwebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Invoices and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Invoices and a Customwebshop Order:
+The following properties are synchronized between a Invoiced Invoices and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Invoices Property
-     - Customwebshop Order Property
-     - Customwebshop Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Invoiced Items to Customwebshop Product
----------------------------------------
-Every Invoiced Items will be synchronized with a Customwebshop Product.
+Invoiced Items to Custom Product
+--------------------------------
+Every Invoiced Items will be synchronized with a Custom Product.
 
-Once a link between a Invoiced Items and a Customwebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Items and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Items and a Customwebshop Product:
+The following properties are synchronized between a Invoiced Items and a Custom Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Items Property
-     - Customwebshop Product Property
-     - Customwebshop Data Type
+     - Custom Product Property
+     - Custom Data Type
 
