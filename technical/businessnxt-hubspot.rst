@@ -2,7 +2,7 @@
 Visma Business Nxt to Hubspot Dataflow
 ======================================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
@@ -50,34 +50,34 @@ The following properties are synchronized between a Businessnxt Company and a Hu
      - "string"
 
 
-Businessnxt Orderline to Hubspot Lineitem
------------------------------------------
-Every Businessnxt Orderline will be synchronized with a Hubspot Lineitem.
+Visma Orderline to Hubspot Lineitem
+-----------------------------------
+Every Visma Orderline will be synchronized with a Hubspot Lineitem.
 
-Once a link between a Businessnxt Orderline and a Hubspot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Orderline and a Hubspot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Orderline and a Hubspot Lineitem:
+The following properties are synchronized between a Visma Orderline and a Hubspot Lineitem:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Orderline Property
+   * - Visma Orderline Property
      - Hubspot Lineitem Property
      - Hubspot Data Type
 
 
-Businessnxt Product to Hubspot Product
---------------------------------------
-Every Businessnxt Product will be synchronized with a Hubspot Product.
+Visma Product to Hubspot Product
+--------------------------------
+Every Visma Product will be synchronized with a Hubspot Product.
 
-Once a link between a Businessnxt Product and a Hubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Product and a Hubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Product and a Hubspot Product:
+The following properties are synchronized between a Visma Product and a Hubspot Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Product Property
+   * - Visma Product Property
      - Hubspot Product Property
      - Hubspot Data Type
    * - description
