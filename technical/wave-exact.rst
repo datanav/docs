@@ -2,27 +2,27 @@
 Wave to Exact Online Dataflow
 =============================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Customer person to ExactOnline Contacts
---------------------------------------------
-Every Wave Customer person will be synchronized with a ExactOnline Contacts.
+Wave Customer person to Exact Online Contacts
+---------------------------------------------
+Every Wave Customer person will be synchronized with a Exact Online Contacts.
 
-Once a link between a Wave Customer person and a ExactOnline Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer person and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a ExactOnline Contacts:
+The following properties are synchronized between a Wave Customer person and a Exact Online Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     - ExactOnline Contacts Property
-     - ExactOnline Data Type
+     - Exact Online Contacts Property
+     - Exact Online Data Type
    * - address.city
      - City
      - "string"
@@ -58,20 +58,20 @@ The following properties are synchronized between a Wave Customer person and a E
      - "string"
 
 
-Wave Invoice to ExactOnline Quotations
---------------------------------------
-Every Wave Invoice will be synchronized with a ExactOnline Quotations.
+Wave Invoice to Exact Online Quotations
+---------------------------------------
+Every Wave Invoice will be synchronized with a Exact Online Quotations.
 
-Once a link between a Wave Invoice and a ExactOnline Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a Exact Online Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a ExactOnline Quotations:
+The following properties are synchronized between a Wave Invoice and a Exact Online Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     - ExactOnline Quotations Property
-     - ExactOnline Data Type
+     - Exact Online Quotations Property
+     - Exact Online Data Type
    * - currency.code
      - Currency
      - "string"
