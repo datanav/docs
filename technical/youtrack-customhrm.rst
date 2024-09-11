@@ -2,73 +2,73 @@
 YouTrack to CustomHRM Dataflow
 ==============================
 
-Generated: 2024-09-11 07:54:34
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from YouTrack to CustomHRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-YouTrack Groups to Custom Department
-------------------------------------
-Every YouTrack Groups will be synchronized with a Custom Department.
+YouTrack Groups to CustomHRM Department
+---------------------------------------
+Every YouTrack Groups will be synchronized with a CustomHRM Department.
 
-Once a link between a YouTrack Groups and a Custom Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Groups and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Groups and a Custom Department:
+The following properties are synchronized between a YouTrack Groups and a CustomHRM Department:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Groups Property
-     - Custom Department Property
-     - Custom Data Type
+     - CustomHRM Department Property
+     - CustomHRM Data Type
 
 
-YouTrack Organizations to Custom Department
--------------------------------------------
-Every YouTrack Organizations will be synchronized with a Custom Department.
+YouTrack Organizations to CustomHRM Department
+----------------------------------------------
+Every YouTrack Organizations will be synchronized with a CustomHRM Department.
 
-Once a link between a YouTrack Organizations and a Custom Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Organizations and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Organizations and a Custom Department:
+The following properties are synchronized between a YouTrack Organizations and a CustomHRM Department:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Organizations Property
-     - Custom Department Property
-     - Custom Data Type
+     - CustomHRM Department Property
+     - CustomHRM Data Type
 
 
-YouTrack Usergroups to Custom Department
-----------------------------------------
-Every YouTrack Usergroups will be synchronized with a Custom Department.
+YouTrack Usergroups to CustomHRM Department
+-------------------------------------------
+Every YouTrack Usergroups will be synchronized with a CustomHRM Department.
 
-Once a link between a YouTrack Usergroups and a Custom Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Usergroups and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Usergroups and a Custom Department:
+The following properties are synchronized between a YouTrack Usergroups and a CustomHRM Department:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Usergroups Property
-     - Custom Department Property
-     - Custom Data Type
+     - CustomHRM Department Property
+     - CustomHRM Data Type
 
 
-YouTrack Users to Custom Employee
----------------------------------
-Every YouTrack Users will be synchronized with a Custom Employee.
+YouTrack Users to CustomHRM Employee
+------------------------------------
+Every YouTrack Users will be synchronized with a CustomHRM Employee.
 
-Once a link between a YouTrack Users and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Users and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Users and a Custom Employee:
+The following properties are synchronized between a YouTrack Users and a CustomHRM Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     - Custom Employee Property
-     - Custom Data Type
+     - CustomHRM Employee Property
+     - CustomHRM Data Type
 
