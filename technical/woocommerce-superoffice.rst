@@ -1,49 +1,49 @@
 ===================================
-WooCommerce to Superoffice Dataflow
+WooCommerce to SuperOffice Dataflow
 ===================================
 
-Generated: 2024-09-11 07:47:14
+Generated: 2024-09-11 07:57:12
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-WooCommerce Order to Superoffice Quotealternative
+WooCommerce Order to SuperOffice Quotealternative
 -------------------------------------------------
-Before any synchronization can take place, a link between a WooCommerce Order and a Superoffice Quotealternative must be established.
+Before any synchronization can take place, a link between a WooCommerce Order and a SuperOffice Quotealternative must be established.
 
-A new Superoffice Quotealternative will be created from a WooCommerce Order if it is connected to a WooCommerce Order that is synchronized into Superoffice.
+A new SuperOffice Quotealternative will be created from a WooCommerce Order if it is connected to a WooCommerce Order that is synchronized into SuperOffice.
 
-Once a link between a WooCommerce Order and a Superoffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Order and a Superoffice Quotealternative:
+The following properties are synchronized between a WooCommerce Order and a SuperOffice Quotealternative:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Order Property
-     - Superoffice Quotealternative Property
-     - Superoffice Data Type
+     - SuperOffice Quotealternative Property
+     - SuperOffice Data Type
    * - discount_total
      - DiscountPercent
      - "integer"
 
 
-WooCommerce Order to Superoffice Quoteline
+WooCommerce Order to SuperOffice Quoteline
 ------------------------------------------
-Every WooCommerce Order will be synchronized with a Superoffice Quoteline.
+Every WooCommerce Order will be synchronized with a SuperOffice Quoteline.
 
-Once a link between a WooCommerce Order and a Superoffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Order and a Superoffice Quoteline:
+The following properties are synchronized between a WooCommerce Order and a SuperOffice Quoteline:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Order Property
-     - Superoffice Quoteline Property
-     - Superoffice Data Type
+     - SuperOffice Quoteline Property
+     - SuperOffice Data Type
    * - id
      - QuoteAlternativeId
      - "integer"
@@ -58,20 +58,20 @@ The following properties are synchronized between a WooCommerce Order and a Supe
      - N/A
 
 
-WooCommerce Product to Superoffice Product
+WooCommerce Product to SuperOffice Product
 ------------------------------------------
-Every WooCommerce Product will be synchronized with a Superoffice Product.
+Every WooCommerce Product will be synchronized with a SuperOffice Product.
 
-Once a link between a WooCommerce Product and a Superoffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Product and a Superoffice Product:
+The following properties are synchronized between a WooCommerce Product and a SuperOffice Product:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Product Property
-     - Superoffice Product Property
-     - Superoffice Data Type
+     - SuperOffice Product Property
+     - SuperOffice Data Type
    * - name
      - Name
      - "string"
