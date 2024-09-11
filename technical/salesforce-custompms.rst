@@ -2,59 +2,59 @@
 Salesforce to CustomPMS Dataflow
 ================================
 
-Generated: 2024-09-11 07:56:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to CustomPMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Salesforce Division to Custom Customer
---------------------------------------
-Every Salesforce Division will be synchronized with a Custom Customer.
+Salesforce Division to CustomPMS Customer
+-----------------------------------------
+Every Salesforce Division will be synchronized with a CustomPMS Customer.
 
-Once a link between a Salesforce Division and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Division and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Division and a Custom Customer:
+The following properties are synchronized between a Salesforce Division and a CustomPMS Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Division Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomPMS Customer Property
+     - CustomPMS Data Type
 
 
-Salesforce Organization to Custom Customer
-------------------------------------------
-Every Salesforce Organization will be synchronized with a Custom Customer.
+Salesforce Organization to CustomPMS Customer
+---------------------------------------------
+Every Salesforce Organization will be synchronized with a CustomPMS Customer.
 
-Once a link between a Salesforce Organization and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Organization and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Organization and a Custom Customer:
+The following properties are synchronized between a Salesforce Organization and a CustomPMS Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Organization Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomPMS Customer Property
+     - CustomPMS Data Type
 
 
-Salesforce Task to Custom Project
----------------------------------
-Every Salesforce Task will be synchronized with a Custom Project.
+Salesforce Task to CustomPMS Project
+------------------------------------
+Every Salesforce Task will be synchronized with a CustomPMS Project.
 
-Once a link between a Salesforce Task and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Task and a CustomPMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Task and a Custom Project:
+The following properties are synchronized between a Salesforce Task and a CustomPMS Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Task Property
-     - Custom Project Property
-     - Custom Data Type
+     - CustomPMS Project Property
+     - CustomPMS Data Type
 
 
 Salesforce Task to CustomPMS Task
