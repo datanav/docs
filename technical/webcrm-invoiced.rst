@@ -1,26 +1,26 @@
 ===========================
-Webcrm to Invoiced Dataflow
+WebCRM to Invoiced Dataflow
 ===========================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Webcrm to Invoiced. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to Invoiced. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Webcrm Products to Invoiced Items
+WebCRM Products to Invoiced Items
 ---------------------------------
-Every Webcrm Products will be synchronized with a Invoiced Items.
+Every WebCRM Products will be synchronized with a Invoiced Items.
 
-Once a link between a Webcrm Products and a Invoiced Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Products and a Invoiced Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Products and a Invoiced Items:
+The following properties are synchronized between a WebCRM Products and a Invoiced Items:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Products Property
+   * - WebCRM Products Property
      - Invoiced Items Property
      - Invoiced Data Type
    * - ProductCostPrice
@@ -28,18 +28,18 @@ The following properties are synchronized between a Webcrm Products and a Invoic
      - "string"
 
 
-Webcrm Quotationline to Invoiced Lineitem
+WebCRM Quotationline to Invoiced Lineitem
 -----------------------------------------
-Every Webcrm Quotationline will be synchronized with a Invoiced Lineitem.
+Every WebCRM Quotationline will be synchronized with a Invoiced Lineitem.
 
-Once a link between a Webcrm Quotationline and a Invoiced Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Quotationline and a Invoiced Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Quotationline and a Invoiced Lineitem:
+The following properties are synchronized between a WebCRM Quotationline and a Invoiced Lineitem:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Quotationline Property
+   * - WebCRM Quotationline Property
      - Invoiced Lineitem Property
      - Invoiced Data Type
 
