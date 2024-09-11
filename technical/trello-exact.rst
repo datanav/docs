@@ -2,43 +2,43 @@
 Trello to Exact Online Dataflow
 ===============================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Trello to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Trello Members to ExactOnline Contacts
---------------------------------------
-Every Trello Members will be synchronized with a ExactOnline Contacts.
+Trello Members to Exact Online Contacts
+---------------------------------------
+Every Trello Members will be synchronized with a Exact Online Contacts.
 
-Once a link between a Trello Members and a ExactOnline Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Members and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Members and a ExactOnline Contacts:
+The following properties are synchronized between a Trello Members and a Exact Online Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Members Property
-     - ExactOnline Contacts Property
-     - ExactOnline Data Type
+     - Exact Online Contacts Property
+     - Exact Online Data Type
 
 
-Trello Organizations to ExactOnline Accounts
---------------------------------------------
-Every Trello Organizations will be synchronized with a ExactOnline Accounts.
+Trello Organizations to Exact Online Accounts
+---------------------------------------------
+Every Trello Organizations will be synchronized with a Exact Online Accounts.
 
-Once a link between a Trello Organizations and a ExactOnline Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Organizations and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Organizations and a ExactOnline Accounts:
+The following properties are synchronized between a Trello Organizations and a Exact Online Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Organizations Property
-     - ExactOnline Accounts Property
-     - ExactOnline Data Type
+     - Exact Online Accounts Property
+     - Exact Online Data Type
    * - name
      - Name
      - "string"
