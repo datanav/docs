@@ -1,36 +1,36 @@
-===========================================
-BusinessCentral to BusinessCentral Dataflow
-===========================================
+============================================
+Business Central to BusinessCentral Dataflow
+============================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:39:19
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from BusinessCentral to BusinessCentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to BusinessCentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-BusinessCentral Contacts person to BusinessCentral Contacts person
-------------------------------------------------------------------
-Before any synchronization can take place, a link between a BusinessCentral Contacts person and a BusinessCentral Contacts person must be established.
+Business Central Contacts person to BusinessCentral Contacts person
+-------------------------------------------------------------------
+Before any synchronization can take place, a link between a Business Central Contacts person and a BusinessCentral Contacts person must be established.
 
-A BusinessCentral Contacts person will merge with a BusinessCentral Contacts person if one of the following property combinations match:
+A Business Central Contacts person will merge with a BusinessCentral Contacts person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Contacts person Property
+   * - Business Central Contacts person Property
      - BusinessCentral Contacts person Property
    * - id
      - id
 
-Once a link between a BusinessCentral Contacts person and a BusinessCentral Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Contacts person and a BusinessCentral Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Contacts person and a BusinessCentral Contacts person:
+The following properties are synchronized between a Business Central Contacts person and a BusinessCentral Contacts person:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Contacts person Property
+   * - Business Central Contacts person Property
      - BusinessCentral Contacts person Property
      - BusinessCentral Data Type
    * - addressLine1
@@ -50,28 +50,28 @@ The following properties are synchronized between a BusinessCentral Contacts per
      - "string"
 
 
-BusinessCentral Contactsinformation person customer relation to BusinessCentral Contacts person
------------------------------------------------------------------------------------------------
-Before any synchronization can take place, a link between a BusinessCentral Contactsinformation person customer relation and a BusinessCentral Contacts person must be established.
+Business Central Contactsinformation person customer relation to BusinessCentral Contacts person
+------------------------------------------------------------------------------------------------
+Before any synchronization can take place, a link between a Business Central Contactsinformation person customer relation and a BusinessCentral Contacts person must be established.
 
-A BusinessCentral Contactsinformation person customer relation will merge with a BusinessCentral Contacts person if one of the following property combinations match:
+A Business Central Contactsinformation person customer relation will merge with a BusinessCentral Contacts person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Contactsinformation person customer relation Property
+   * - Business Central Contactsinformation person customer relation Property
      - BusinessCentral Contacts person Property
    * - contactId
      - id
 
-Once a link between a BusinessCentral Contactsinformation person customer relation and a BusinessCentral Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Contactsinformation person customer relation and a BusinessCentral Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Contactsinformation person customer relation and a BusinessCentral Contacts person:
+The following properties are synchronized between a Business Central Contactsinformation person customer relation and a BusinessCentral Contacts person:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Contactsinformation person customer relation Property
+   * - Business Central Contactsinformation person customer relation Property
      - BusinessCentral Contacts person Property
      - BusinessCentral Data Type
    * - contactId
@@ -85,28 +85,28 @@ The following properties are synchronized between a BusinessCentral Contactsinfo
      - "string"
 
 
-BusinessCentral Items to BusinessCentral Items
-----------------------------------------------
-Before any synchronization can take place, a link between a BusinessCentral Items and a BusinessCentral Items must be established.
+Business Central Items to BusinessCentral Items
+-----------------------------------------------
+Before any synchronization can take place, a link between a Business Central Items and a BusinessCentral Items must be established.
 
-A BusinessCentral Items will merge with a BusinessCentral Items if one of the following property combinations match:
+A Business Central Items will merge with a BusinessCentral Items if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Items Property
+   * - Business Central Items Property
      - BusinessCentral Items Property
    * - gtin
      - gtin
 
-Once a link between a BusinessCentral Items and a BusinessCentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Items and a BusinessCentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Items and a BusinessCentral Items:
+The following properties are synchronized between a Business Central Items and a BusinessCentral Items:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Items Property
+   * - Business Central Items Property
      - BusinessCentral Items Property
      - BusinessCentral Data Type
    * - displayName
