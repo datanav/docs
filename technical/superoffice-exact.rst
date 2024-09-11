@@ -1,30 +1,30 @@
-===================================
-SuperOffice to ExactOnline Dataflow
-===================================
+====================================
+SuperOffice to Exact Online Dataflow
+====================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:42:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-SuperOffice Quotealternative to ExactOnline Salesorders
--------------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Quotealternative and a ExactOnline Salesorders must be established.
+SuperOffice Quotealternative to Exact Online Salesorders
+--------------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Exact Online Salesorders must be established.
 
-A new ExactOnline Salesorders will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into ExactOnline.
+A new Exact Online Salesorders will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into Exact Online.
 
-Once a link between a SuperOffice Quotealternative and a ExactOnline Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quotealternative and a Exact Online Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quotealternative and a ExactOnline Salesorders:
+The following properties are synchronized between a SuperOffice Quotealternative and a Exact Online Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quotealternative Property
-     - ExactOnline Salesorders Property
-     - ExactOnline Data Type
+     - Exact Online Salesorders Property
+     - Exact Online Data Type
    * - DiscountPercent
      - Discount
      - "string"
@@ -169,39 +169,39 @@ The following properties are synchronized between a SuperOffice Sale and a Exact
      - "string"
 
 
-SuperOffice Listcurrencyitems to ExactOnline Currencies
--------------------------------------------------------
-Every SuperOffice Listcurrencyitems will be synchronized with a ExactOnline Currencies.
+SuperOffice Listcurrencyitems to Exact Online Currencies
+--------------------------------------------------------
+Every SuperOffice Listcurrencyitems will be synchronized with a Exact Online Currencies.
 
-Once a link between a SuperOffice Listcurrencyitems and a ExactOnline Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Listcurrencyitems and a Exact Online Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Listcurrencyitems and a ExactOnline Currencies:
+The following properties are synchronized between a SuperOffice Listcurrencyitems and a Exact Online Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Listcurrencyitems Property
-     - ExactOnline Currencies Property
-     - ExactOnline Data Type
+     - Exact Online Currencies Property
+     - Exact Online Data Type
    * - Name
      - Code
      - "string"
 
 
-SuperOffice Person to ExactOnline Addresses
--------------------------------------------
-Every SuperOffice Person will be synchronized with a ExactOnline Addresses.
+SuperOffice Person to Exact Online Addresses
+--------------------------------------------
+Every SuperOffice Person will be synchronized with a Exact Online Addresses.
 
-Once a link between a SuperOffice Person and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a Exact Online Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a ExactOnline Addresses:
+The following properties are synchronized between a SuperOffice Person and a Exact Online Addresses:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - ExactOnline Addresses Property
-     - ExactOnline Data Type
+     - Exact Online Addresses Property
+     - Exact Online Data Type
    * - Address.Street.Address1
      - AddressLine1
      - "string"
@@ -219,96 +219,96 @@ The following properties are synchronized between a SuperOffice Person and a Exa
      - "string"
 
 
-SuperOffice Product to ExactOnline Items
-----------------------------------------
-Every SuperOffice Product will be synchronized with a ExactOnline Items.
+SuperOffice Product to Exact Online Items
+-----------------------------------------
+Every SuperOffice Product will be synchronized with a Exact Online Items.
 
-Once a link between a SuperOffice Product and a ExactOnline Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Product and a Exact Online Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Product and a ExactOnline Items:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - ExactOnline Items Property
-     - ExactOnline Data Type
-   * - Code
-     - Code
-     - "string"
-
-
-SuperOffice Product to ExactOnline Vatcodes
--------------------------------------------
-Every SuperOffice Product will be synchronized with a ExactOnline Vatcodes.
-
-Once a link between a SuperOffice Product and a ExactOnline Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Product and a ExactOnline Vatcodes:
+The following properties are synchronized between a SuperOffice Product and a Exact Online Items:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Product Property
-     - ExactOnline Vatcodes Property
-     - ExactOnline Data Type
+     - Exact Online Items Property
+     - Exact Online Data Type
    * - Code
      - Code
      - "string"
 
 
-SuperOffice Quotealternative to ExactOnline Quotations
-------------------------------------------------------
-Every SuperOffice Quotealternative will be synchronized with a ExactOnline Quotations.
+SuperOffice Product to Exact Online Vatcodes
+--------------------------------------------
+Every SuperOffice Product will be synchronized with a Exact Online Vatcodes.
 
-Once a link between a SuperOffice Quotealternative and a ExactOnline Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Product and a Exact Online Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quotealternative and a ExactOnline Quotations:
+The following properties are synchronized between a SuperOffice Product and a Exact Online Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Exact Online Vatcodes Property
+     - Exact Online Data Type
+   * - Code
+     - Code
+     - "string"
+
+
+SuperOffice Quotealternative to Exact Online Quotations
+-------------------------------------------------------
+Every SuperOffice Quotealternative will be synchronized with a Exact Online Quotations.
+
+Once a link between a SuperOffice Quotealternative and a Exact Online Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a Exact Online Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quotealternative Property
-     - ExactOnline Quotations Property
-     - ExactOnline Data Type
+     - Exact Online Quotations Property
+     - Exact Online Data Type
    * - Name
      - Description
      - "string"
 
 
-SuperOffice Quotealternative to ExactOnline Vatcodes
-----------------------------------------------------
-Every SuperOffice Quotealternative will be synchronized with a ExactOnline Vatcodes.
+SuperOffice Quotealternative to Exact Online Vatcodes
+-----------------------------------------------------
+Every SuperOffice Quotealternative will be synchronized with a Exact Online Vatcodes.
 
-Once a link between a SuperOffice Quotealternative and a ExactOnline Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quotealternative and a Exact Online Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quotealternative and a ExactOnline Vatcodes:
+The following properties are synchronized between a SuperOffice Quotealternative and a Exact Online Vatcodes:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quotealternative Property
-     - ExactOnline Vatcodes Property
-     - ExactOnline Data Type
+     - Exact Online Vatcodes Property
+     - Exact Online Data Type
    * - VAT
      - Code
      - "string"
 
 
-SuperOffice Quoteline to ExactOnline Salesorderlines
-----------------------------------------------------
-Every SuperOffice Quoteline will be synchronized with a ExactOnline Salesorderlines.
+SuperOffice Quoteline to Exact Online Salesorderlines
+-----------------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Exact Online Salesorderlines.
 
-Once a link between a SuperOffice Quoteline and a ExactOnline Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quoteline and a Exact Online Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quoteline and a ExactOnline Salesorderlines:
+The following properties are synchronized between a SuperOffice Quoteline and a Exact Online Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quoteline Property
-     - ExactOnline Salesorderlines Property
-     - ExactOnline Data Type
+     - Exact Online Salesorderlines Property
+     - Exact Online Data Type
    * - ERPProductKey
      - Item
      - "string"
@@ -317,20 +317,20 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
 
 
-SuperOffice Quoteline to ExactOnline Vatcodes
----------------------------------------------
-Every SuperOffice Quoteline will be synchronized with a ExactOnline Vatcodes.
+SuperOffice Quoteline to Exact Online Vatcodes
+----------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Exact Online Vatcodes.
 
-Once a link between a SuperOffice Quoteline and a ExactOnline Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quoteline and a Exact Online Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quoteline and a ExactOnline Vatcodes:
+The following properties are synchronized between a SuperOffice Quoteline and a Exact Online Vatcodes:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quoteline Property
-     - ExactOnline Vatcodes Property
-     - ExactOnline Data Type
+     - Exact Online Vatcodes Property
+     - Exact Online Data Type
    * - VAT
      - Code
      - "string"
