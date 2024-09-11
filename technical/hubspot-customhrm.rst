@@ -1,74 +1,74 @@
-=============================
-HubSpot to Customhrm Dataflow
-=============================
+==============================
+HubSpot to Custom HRM Dataflow
+==============================
 
-Generated: 2024-09-11 00:00:24
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Customhrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Custom HRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-HubSpot Company to Customhrm Department
----------------------------------------
-Every HubSpot Company will be synchronized with a Customhrm Department.
+HubSpot Company to Custom Department
+------------------------------------
+Every HubSpot Company will be synchronized with a Custom Department.
 
-Once a link between a HubSpot Company and a Customhrm Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a Custom Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a Customhrm Department:
+The following properties are synchronized between a HubSpot Company and a Custom Department:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     - Customhrm Department Property
-     - Customhrm Data Type
+     - Custom Department Property
+     - Custom Data Type
 
 
-HubSpot Contact to Customhrm Employee
--------------------------------------
-Every HubSpot Contact will be synchronized with a Customhrm Employee.
+HubSpot Contact to Custom Employee
+----------------------------------
+Every HubSpot Contact will be synchronized with a Custom Employee.
 
-Once a link between a HubSpot Contact and a Customhrm Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contact and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contact and a Customhrm Employee:
+The following properties are synchronized between a HubSpot Contact and a Custom Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contact Property
-     - Customhrm Employee Property
-     - Customhrm Data Type
+     - Custom Employee Property
+     - Custom Data Type
 
 
-HubSpot Contactcompanyassociation to Customhrm Employee
--------------------------------------------------------
-Every HubSpot Contactcompanyassociation will be synchronized with a Customhrm Employee.
+HubSpot Contactcompanyassociation to Custom Employee
+----------------------------------------------------
+Every HubSpot Contactcompanyassociation will be synchronized with a Custom Employee.
 
-Once a link between a HubSpot Contactcompanyassociation and a Customhrm Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contactcompanyassociation and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contactcompanyassociation and a Customhrm Employee:
+The following properties are synchronized between a HubSpot Contactcompanyassociation and a Custom Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contactcompanyassociation Property
-     - Customhrm Employee Property
-     - Customhrm Data Type
+     - Custom Employee Property
+     - Custom Data Type
 
 
-HubSpot User to Customhrm Employee
-----------------------------------
-Every HubSpot User will be synchronized with a Customhrm Employee.
+HubSpot User to Custom Employee
+-------------------------------
+Every HubSpot User will be synchronized with a Custom Employee.
 
-Once a link between a HubSpot User and a Customhrm Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot User and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot User and a Customhrm Employee:
+The following properties are synchronized between a HubSpot User and a Custom Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot User Property
-     - Customhrm Employee Property
-     - Customhrm Data Type
+     - Custom Employee Property
+     - Custom Data Type
 
