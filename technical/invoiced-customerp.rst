@@ -1,13 +1,13 @@
-==============================
-Invoiced to CustomERP Dataflow
-==============================
+===============================
+Invoiced to Custom ERP Dataflow
+===============================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to CustomERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Invoiced Customers person to CustomERP Contact
 ----------------------------------------------
@@ -41,66 +41,66 @@ The following properties are synchronized between a Invoiced Lineitem and a Cust
      - CustomERP Data Type
 
 
-Invoiced Contacts to CustomERP Contact
---------------------------------------
-Every Invoiced Contacts will be synchronized with a CustomERP Contact.
+Invoiced Contacts to Custom ERP Contact
+---------------------------------------
+Every Invoiced Contacts will be synchronized with a Custom ERP Contact.
 
-Once a link between a Invoiced Contacts and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Contacts and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Contacts and a CustomERP Contact:
+The following properties are synchronized between a Invoiced Contacts and a Custom ERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Contacts Property
-     - CustomERP Contact Property
-     - CustomERP Data Type
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
 
 
-Invoiced Customers company to CustomERP Customer
-------------------------------------------------
-Every Invoiced Customers company will be synchronized with a CustomERP Customer.
+Invoiced Customers company to Custom ERP Customer
+-------------------------------------------------
+Every Invoiced Customers company will be synchronized with a Custom ERP Customer.
 
-Once a link between a Invoiced Customers company and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers company and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a CustomERP Customer:
+The following properties are synchronized between a Invoiced Customers company and a Custom ERP Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Customers company Property
-     - CustomERP Customer Property
-     - CustomERP Data Type
+     - Custom ERP Customer Property
+     - Custom ERP Data Type
 
 
-Invoiced Invoices to CustomERP Order
-------------------------------------
-Every Invoiced Invoices will be synchronized with a CustomERP Order.
+Invoiced Invoices to Custom ERP Order
+-------------------------------------
+Every Invoiced Invoices will be synchronized with a Custom ERP Order.
 
-Once a link between a Invoiced Invoices and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Invoices and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Invoices and a CustomERP Order:
+The following properties are synchronized between a Invoiced Invoices and a Custom ERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Invoices Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
 
-Invoiced Items to CustomERP Product
------------------------------------
-Every Invoiced Items will be synchronized with a CustomERP Product.
+Invoiced Items to Custom ERP Product
+------------------------------------
+Every Invoiced Items will be synchronized with a Custom ERP Product.
 
-Once a link between a Invoiced Items and a CustomERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Items and a Custom ERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Items and a CustomERP Product:
+The following properties are synchronized between a Invoiced Items and a Custom ERP Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Items Property
-     - CustomERP Product Property
-     - CustomERP Data Type
+     - Custom ERP Product Property
+     - Custom ERP Data Type
 
