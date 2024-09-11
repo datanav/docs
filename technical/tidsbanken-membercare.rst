@@ -2,27 +2,27 @@
 Tidsbanken to MemberCare Dataflow
 =================================
 
-Generated: 2024-09-11 07:46:45
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tidsbanken to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tidsbanken Ansatt to Membercare Persons
+Tidsbanken Ansatt to MemberCare Persons
 ---------------------------------------
-Every Tidsbanken Ansatt will be synchronized with a Membercare Persons.
+Every Tidsbanken Ansatt will be synchronized with a MemberCare Persons.
 
-Once a link between a Tidsbanken Ansatt and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Ansatt and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Ansatt and a Membercare Persons:
+The following properties are synchronized between a Tidsbanken Ansatt and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Ansatt Property
-     - Membercare Persons Property
-     - Membercare Data Type
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - Epost
      - socialSecurityNumber.number (Dependant on having wd:Q1273217 in socialSecurityNumber.iso2Letter)
      - "string"
@@ -55,39 +55,39 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Memb
      - "string"
 
 
-Tidsbanken Avdeling to Membercare Companies
+Tidsbanken Avdeling to MemberCare Companies
 -------------------------------------------
-Every Tidsbanken Avdeling will be synchronized with a Membercare Companies.
+Every Tidsbanken Avdeling will be synchronized with a MemberCare Companies.
 
-Once a link between a Tidsbanken Avdeling and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Avdeling and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Avdeling and a Membercare Companies:
+The following properties are synchronized between a Tidsbanken Avdeling and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Avdeling Property
-     - Membercare Companies Property
-     - Membercare Data Type
+     - MemberCare Companies Property
+     - MemberCare Data Type
    * - Navn
      - companyName
      - "string"
 
 
-Tidsbanken Kunde to Membercare Companies
+Tidsbanken Kunde to MemberCare Companies
 ----------------------------------------
-Every Tidsbanken Kunde will be synchronized with a Membercare Companies.
+Every Tidsbanken Kunde will be synchronized with a MemberCare Companies.
 
-Once a link between a Tidsbanken Kunde and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Kunde and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Kunde and a Membercare Companies:
+The following properties are synchronized between a Tidsbanken Kunde and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Kunde Property
-     - Membercare Companies Property
-     - Membercare Data Type
+     - MemberCare Companies Property
+     - MemberCare Data Type
    * - Navn
      - companyName
      - "string"
