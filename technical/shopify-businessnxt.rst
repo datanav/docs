@@ -1,13 +1,13 @@
-======================================
-Shopify to Visma Business Nxt Dataflow
-======================================
+===============================
+Shopify to BusinessNxt Dataflow
+===============================
 
-Generated: 2024-09-11 07:48:17
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Shopify Inventoryitem to Businessnxt Product
 --------------------------------------------
@@ -41,20 +41,20 @@ The following properties are synchronized between a Shopify Product and a Busine
      - Businessnxt Data Type
 
 
-Shopify Customer to Visma Country
----------------------------------
-Every Shopify Customer will be synchronized with a Visma Country.
+Shopify Customer to BusinessNxt Country
+---------------------------------------
+Every Shopify Customer will be synchronized with a BusinessNxt Country.
 
-Once a link between a Shopify Customer and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Customer and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Customer and a Visma Country:
+The following properties are synchronized between a Shopify Customer and a BusinessNxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Customer Property
-     - Visma Country Property
-     - Visma Data Type
+     - BusinessNxt Country Property
+     - BusinessNxt Data Type
    * - currency
      - isoCode
      - "string"
@@ -66,20 +66,20 @@ The following properties are synchronized between a Shopify Customer and a Visma
      - "string"
 
 
-Shopify Customer to Visma Currency
-----------------------------------
-Every Shopify Customer will be synchronized with a Visma Currency.
+Shopify Customer to BusinessNxt Currency
+----------------------------------------
+Every Shopify Customer will be synchronized with a BusinessNxt Currency.
 
-Once a link between a Shopify Customer and a Visma Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Customer and a BusinessNxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Customer and a Visma Currency:
+The following properties are synchronized between a Shopify Customer and a BusinessNxt Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Customer Property
-     - Visma Currency Property
-     - Visma Data Type
+     - BusinessNxt Currency Property
+     - BusinessNxt Data Type
    * - currency
      - isoCode
      - "string"
@@ -91,20 +91,20 @@ The following properties are synchronized between a Shopify Customer and a Visma
      - "string"
 
 
-Shopify Order to Visma Country
-------------------------------
-Every Shopify Order will be synchronized with a Visma Country.
+Shopify Order to BusinessNxt Country
+------------------------------------
+Every Shopify Order will be synchronized with a BusinessNxt Country.
 
-Once a link between a Shopify Order and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a Visma Country:
+The following properties are synchronized between a Shopify Order and a BusinessNxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     - Visma Country Property
-     - Visma Data Type
+     - BusinessNxt Country Property
+     - BusinessNxt Data Type
    * - billing_address.country
      - name
      - "string"
@@ -119,20 +119,20 @@ The following properties are synchronized between a Shopify Order and a Visma Co
      - "string"
 
 
-Shopify Order to Visma Order
-----------------------------
-Every Shopify Order will be synchronized with a Visma Order.
+Shopify Order to BusinessNxt Order
+----------------------------------
+Every Shopify Order will be synchronized with a BusinessNxt Order.
 
-Once a link between a Shopify Order and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a Visma Order:
+The following properties are synchronized between a Shopify Order and a BusinessNxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     - Visma Order Property
-     - Visma Data Type
+     - BusinessNxt Order Property
+     - BusinessNxt Data Type
    * - created_at
      - orderDate
      - "string"
@@ -141,39 +141,39 @@ The following properties are synchronized between a Shopify Order and a Visma Or
      - "string"
 
 
-Shopify Order to Visma Orderline
---------------------------------
-Every Shopify Order will be synchronized with a Visma Orderline.
+Shopify Order to BusinessNxt Orderline
+--------------------------------------
+Every Shopify Order will be synchronized with a BusinessNxt Orderline.
 
-Once a link between a Shopify Order and a Visma Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a BusinessNxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a Visma Orderline:
+The following properties are synchronized between a Shopify Order and a BusinessNxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     - Visma Orderline Property
-     - Visma Data Type
+     - BusinessNxt Orderline Property
+     - BusinessNxt Data Type
    * - id
      - orderNo
      - "string"
 
 
-Shopify Sesamproduct to Visma Product
--------------------------------------
-Every Shopify Sesamproduct will be synchronized with a Visma Product.
+Shopify Sesamproduct to BusinessNxt Product
+-------------------------------------------
+Every Shopify Sesamproduct will be synchronized with a BusinessNxt Product.
 
-Once a link between a Shopify Sesamproduct and a Visma Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Sesamproduct and a BusinessNxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Sesamproduct and a Visma Product:
+The following properties are synchronized between a Shopify Sesamproduct and a BusinessNxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Sesamproduct Property
-     - Visma Product Property
-     - Visma Data Type
+     - BusinessNxt Product Property
+     - BusinessNxt Data Type
    * - sesam_priceExclVAT
      - priceQuantity
      - "string"
