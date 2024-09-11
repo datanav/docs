@@ -1,28 +1,28 @@
-=====================================
-WooCommerce to PowerOfficeGO Dataflow
-=====================================
+======================================
+WooCommerce to PowerOffice GO Dataflow
+======================================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to PowerOfficeGO. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to PowerOffice GO. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-WooCommerce Customer to PowerOfficeGO Customers person
-------------------------------------------------------
-Every WooCommerce Customer will be synchronized with a PowerOfficeGO Customers person.
+WooCommerce Customer to PowerOffice GO Customers person
+-------------------------------------------------------
+Every WooCommerce Customer will be synchronized with a PowerOffice GO Customers person.
 
-Once a link between a WooCommerce Customer and a PowerOfficeGO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Customer and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Customer and a PowerOfficeGO Customers person:
+The following properties are synchronized between a WooCommerce Customer and a PowerOffice GO Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Customer Property
-     - PowerOfficeGO Customers person Property
-     - PowerOfficeGO Data Type
+     - PowerOffice GO Customers person Property
+     - PowerOffice GO Data Type
    * - email
      - EmailAddress
      - "string"
@@ -31,20 +31,20 @@ The following properties are synchronized between a WooCommerce Customer and a P
      - "string"
 
 
-WooCommerce Order to PowerOfficeGO Salesorderlines
---------------------------------------------------
-Every WooCommerce Order will be synchronized with a PowerOfficeGO Salesorderlines.
+WooCommerce Order to PowerOffice GO Salesorderlines
+---------------------------------------------------
+Every WooCommerce Order will be synchronized with a PowerOffice GO Salesorderlines.
 
-Once a link between a WooCommerce Order and a PowerOfficeGO Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a PowerOffice GO Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Order and a PowerOfficeGO Salesorderlines:
+The following properties are synchronized between a WooCommerce Order and a PowerOffice GO Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Order Property
-     - PowerOfficeGO Salesorderlines Property
-     - PowerOfficeGO Data Type
+     - PowerOffice GO Salesorderlines Property
+     - PowerOffice GO Data Type
    * - id
      - sesam_SalesOrderId
      - "string"
@@ -59,20 +59,20 @@ The following properties are synchronized between a WooCommerce Order and a Powe
      - N/A
 
 
-WooCommerce Order to PowerOfficeGO Salesorders
-----------------------------------------------
-Every WooCommerce Order will be synchronized with a PowerOfficeGO Salesorders.
+WooCommerce Order to PowerOffice GO Salesorders
+-----------------------------------------------
+Every WooCommerce Order will be synchronized with a PowerOffice GO Salesorders.
 
-Once a link between a WooCommerce Order and a PowerOfficeGO Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a PowerOffice GO Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Order and a PowerOfficeGO Salesorders:
+The following properties are synchronized between a WooCommerce Order and a PowerOffice GO Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Order Property
-     - PowerOfficeGO Salesorders Property
-     - PowerOfficeGO Data Type
+     - PowerOffice GO Salesorders Property
+     - PowerOffice GO Data Type
    * - currency
      - CurrencyCode
      - "string"
@@ -84,20 +84,20 @@ The following properties are synchronized between a WooCommerce Order and a Powe
      - "integer"
 
 
-WooCommerce Product to PowerOfficeGO Product
---------------------------------------------
-Every WooCommerce Product will be synchronized with a PowerOfficeGO Product.
+WooCommerce Product to PowerOffice GO Product
+---------------------------------------------
+Every WooCommerce Product will be synchronized with a PowerOffice GO Product.
 
-Once a link between a WooCommerce Product and a PowerOfficeGO Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Product and a PowerOffice GO Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Product and a PowerOfficeGO Product:
+The following properties are synchronized between a WooCommerce Product and a PowerOffice GO Product:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Product Property
-     - PowerOfficeGO Product Property
-     - PowerOfficeGO Data Type
+     - PowerOffice GO Product Property
+     - PowerOffice GO Data Type
    * - name
      - name
      - "string"
