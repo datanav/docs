@@ -2,7 +2,7 @@
 Chargebee to CustomERP Dataflow
 ===============================
 
-Generated: 2024-09-11 08:01:30
+Generated: 2024-09-11 08:03:13
 
 Introduction
 ------------
@@ -41,34 +41,34 @@ The following properties are synchronized between a Chargebee Customer and a Cus
      - Custom Data Type
 
 
-Chargebee Item to Custom Product
---------------------------------
-Every Chargebee Item will be synchronized with a Custom Product.
+Chargebee Item to CustomERP Product
+-----------------------------------
+Every Chargebee Item will be synchronized with a CustomERP Product.
 
-Once a link between a Chargebee Item and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Item and a CustomERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Item and a Custom Product:
+The following properties are synchronized between a Chargebee Item and a CustomERP Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Item Property
-     - Custom Product Property
-     - Custom Data Type
+     - CustomERP Product Property
+     - CustomERP Data Type
 
 
-Chargebee Order to Custom Order
--------------------------------
-Every Chargebee Order will be synchronized with a Custom Order.
+Chargebee Order to CustomERP Order
+----------------------------------
+Every Chargebee Order will be synchronized with a CustomERP Order.
 
-Once a link between a Chargebee Order and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Order and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Order and a Custom Order:
+The following properties are synchronized between a Chargebee Order and a CustomERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Order Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomERP Order Property
+     - CustomERP Data Type
 
