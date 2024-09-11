@@ -2,25 +2,25 @@
 PowerOfficeGO to Salesforce Dataflow
 ====================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from PowerOfficeGO to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-PowerOffice Customers to Salesforce Division
---------------------------------------------
-Every PowerOffice Customers will be synchronized with a Salesforce Division.
+PowerOfficeGO Customers to Salesforce Division
+----------------------------------------------
+Every PowerOfficeGO Customers will be synchronized with a Salesforce Division.
 
-Once a link between a PowerOffice Customers and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Customers and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Customers and a Salesforce Division:
+The following properties are synchronized between a PowerOfficeGO Customers and a Salesforce Division:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Customers Property
+   * - PowerOfficeGO Customers Property
      - Salesforce Division Property
      - Salesforce Data Type
    * - Name
@@ -28,18 +28,18 @@ The following properties are synchronized between a PowerOffice Customers and a 
      - "string"
 
 
-PowerOffice Departments to Salesforce Division
-----------------------------------------------
-Every PowerOffice Departments will be synchronized with a Salesforce Division.
+PowerOfficeGO Departments to Salesforce Division
+------------------------------------------------
+Every PowerOfficeGO Departments will be synchronized with a Salesforce Division.
 
-Once a link between a PowerOffice Departments and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Departments and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Departments and a Salesforce Division:
+The following properties are synchronized between a PowerOfficeGO Departments and a Salesforce Division:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Departments Property
+   * - PowerOfficeGO Departments Property
      - Salesforce Division Property
      - Salesforce Data Type
    * - IsActive
@@ -50,18 +50,18 @@ The following properties are synchronized between a PowerOffice Departments and 
      - "string"
 
 
-PowerOffice Projects to Salesforce Task
----------------------------------------
-Every PowerOffice Projects will be synchronized with a Salesforce Task.
+PowerOfficeGO Projects to Salesforce Task
+-----------------------------------------
+Every PowerOfficeGO Projects will be synchronized with a Salesforce Task.
 
-Once a link between a PowerOffice Projects and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Projects and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Projects and a Salesforce Task:
+The following properties are synchronized between a PowerOfficeGO Projects and a Salesforce Task:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Projects Property
+   * - PowerOfficeGO Projects Property
      - Salesforce Task Property
      - Salesforce Data Type
    * - IsActive
@@ -75,18 +75,18 @@ The following properties are synchronized between a PowerOffice Projects and a S
      - "string"
 
 
-PowerOffice Salesorderlines to Salesforce Invoice
--------------------------------------------------
-Every PowerOffice Salesorderlines will be synchronized with a Salesforce Invoice.
+PowerOfficeGO Salesorderlines to Salesforce Invoice
+---------------------------------------------------
+Every PowerOfficeGO Salesorderlines will be synchronized with a Salesforce Invoice.
 
-Once a link between a PowerOffice Salesorderlines and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Salesorderlines and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Salesorderlines and a Salesforce Invoice:
+The following properties are synchronized between a PowerOfficeGO Salesorderlines and a Salesforce Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Salesorderlines Property
+   * - PowerOfficeGO Salesorderlines Property
      - Salesforce Invoice Property
      - Salesforce Data Type
    * - TotalAmount
@@ -94,18 +94,18 @@ The following properties are synchronized between a PowerOffice Salesorderlines 
      - "string"
 
 
-PowerOffice Salesorders to Salesforce Invoice
----------------------------------------------
-Every PowerOffice Salesorders will be synchronized with a Salesforce Invoice.
+PowerOfficeGO Salesorders to Salesforce Invoice
+-----------------------------------------------
+Every PowerOfficeGO Salesorders will be synchronized with a Salesforce Invoice.
 
-Once a link between a PowerOffice Salesorders and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Salesorders and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Salesorders and a Salesforce Invoice:
+The following properties are synchronized between a PowerOfficeGO Salesorders and a Salesforce Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Salesorders Property
+   * - PowerOfficeGO Salesorders Property
      - Salesforce Invoice Property
      - Salesforce Data Type
    * - CurrencyCode
