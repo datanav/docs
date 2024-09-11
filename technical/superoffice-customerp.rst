@@ -2,91 +2,91 @@
 SuperOffice to Custom ERP Dataflow
 ==================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-SuperOffice Contact to CustomERP Customer
------------------------------------------
-Every SuperOffice Contact will be synchronized with a CustomERP Customer.
+SuperOffice Contact to Custom ERP Customer
+------------------------------------------
+Every SuperOffice Contact will be synchronized with a Custom ERP Customer.
 
-Once a link between a SuperOffice Contact and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a CustomERP Customer:
+The following properties are synchronized between a SuperOffice Contact and a Custom ERP Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - CustomERP Customer Property
-     - CustomERP Data Type
+     - Custom ERP Customer Property
+     - Custom ERP Data Type
 
 
-SuperOffice Person to CustomERP Contact
----------------------------------------
-Every SuperOffice Person will be synchronized with a CustomERP Contact.
+SuperOffice Person to Custom ERP Contact
+----------------------------------------
+Every SuperOffice Person will be synchronized with a Custom ERP Contact.
 
-Once a link between a SuperOffice Person and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a CustomERP Contact:
+The following properties are synchronized between a SuperOffice Person and a Custom ERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - CustomERP Contact Property
-     - CustomERP Data Type
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
 
 
-SuperOffice Quotealternative to CustomERP Order
------------------------------------------------
-Every SuperOffice Quotealternative will be synchronized with a CustomERP Order.
+SuperOffice Quotealternative to Custom ERP Order
+------------------------------------------------
+Every SuperOffice Quotealternative will be synchronized with a Custom ERP Order.
 
-Once a link between a SuperOffice Quotealternative and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quotealternative and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quotealternative and a CustomERP Order:
+The following properties are synchronized between a SuperOffice Quotealternative and a Custom ERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quotealternative Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
 
-SuperOffice Quoteline to CustomERP Order
-----------------------------------------
-Every SuperOffice Quoteline will be synchronized with a CustomERP Order.
+SuperOffice Quoteline to Custom ERP Order
+-----------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Custom ERP Order.
 
-Once a link between a SuperOffice Quoteline and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quoteline and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quoteline and a CustomERP Order:
+The following properties are synchronized between a SuperOffice Quoteline and a Custom ERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quoteline Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
 
-SuperOffice Sale to CustomERP Order
------------------------------------
-Every SuperOffice Sale will be synchronized with a CustomERP Order.
+SuperOffice Sale to Custom ERP Order
+------------------------------------
+Every SuperOffice Sale will be synchronized with a Custom ERP Order.
 
-Once a link between a SuperOffice Sale and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Sale and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Sale and a CustomERP Order:
+The following properties are synchronized between a SuperOffice Sale and a Custom ERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Sale Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
 
 SuperOffice Product to Custom ERP Product
