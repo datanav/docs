@@ -1,13 +1,13 @@
 ========================
-Keap to Hubspot Dataflow
+Keap to HubSpot Dataflow
 ========================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Keap to Hubspot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Keap to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Keap Companies to Hubspot Company
 ---------------------------------
@@ -56,20 +56,20 @@ The following properties are synchronized between a Keap Contacts and a Hubspot 
      - "string"
 
 
-Keap Opportunity to Hubspot Deal
+Keap Opportunity to HubSpot Deal
 --------------------------------
-Every Keap Opportunity will be synchronized with a Hubspot Deal.
+Every Keap Opportunity will be synchronized with a HubSpot Deal.
 
-Once a link between a Keap Opportunity and a Hubspot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Opportunity and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Opportunity and a Hubspot Deal:
+The following properties are synchronized between a Keap Opportunity and a HubSpot Deal:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Opportunity Property
-     - Hubspot Deal Property
-     - Hubspot Data Type
+     - HubSpot Deal Property
+     - HubSpot Data Type
    * - contact.id
      - properties.hubspot_owner_id
      - "string"
@@ -78,20 +78,20 @@ The following properties are synchronized between a Keap Opportunity and a Hubsp
      - "string"
 
 
-Keap Product to Hubspot Product
+Keap Product to HubSpot Product
 -------------------------------
-Every Keap Product will be synchronized with a Hubspot Product.
+Every Keap Product will be synchronized with a HubSpot Product.
 
-Once a link between a Keap Product and a Hubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Product and a Hubspot Product:
+The following properties are synchronized between a Keap Product and a HubSpot Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Product Property
-     - Hubspot Product Property
-     - Hubspot Data Type
+     - HubSpot Product Property
+     - HubSpot Data Type
    * - product_desc
      - properties.description
      - "string"
@@ -103,20 +103,20 @@ The following properties are synchronized between a Keap Product and a Hubspot P
      - "string"
 
 
-Keap Users to Hubspot User
+Keap Users to HubSpot User
 --------------------------
-Every Keap Users will be synchronized with a Hubspot User.
+Every Keap Users will be synchronized with a HubSpot User.
 
-Once a link between a Keap Users and a Hubspot User is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Users and a HubSpot User is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Users and a Hubspot User:
+The following properties are synchronized between a Keap Users and a HubSpot User:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Users Property
-     - Hubspot User Property
-     - Hubspot Data Type
+     - HubSpot User Property
+     - HubSpot Data Type
    * - email_address
      - email
      - "string"
