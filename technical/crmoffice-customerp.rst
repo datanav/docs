@@ -1,13 +1,13 @@
-===============================
-CRMOffice to CustomERP Dataflow
-===============================
+================================
+CRMOffice to Custom ERP Dataflow
+================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from CRMOffice to CustomERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from CRMOffice to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 CRMOffice Activities to CustomERP Project
 -----------------------------------------
@@ -41,18 +41,18 @@ The following properties are synchronized between a CRMOffice Companies and a Cu
      - CustomERP Data Type
 
 
-CRMOffice Contacts to CustomERP Contact
----------------------------------------
-Every CRMOffice Contacts will be synchronized with a CustomERP Contact.
+CRMOffice Contacts to Custom ERP Contact
+----------------------------------------
+Every CRMOffice Contacts will be synchronized with a Custom ERP Contact.
 
-Once a link between a CRMOffice Contacts and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Contacts and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CRMOffice Contacts and a CustomERP Contact:
+The following properties are synchronized between a CRMOffice Contacts and a Custom ERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - CRMOffice Contacts Property
-     - CustomERP Contact Property
-     - CustomERP Data Type
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
 
