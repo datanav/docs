@@ -2,46 +2,46 @@
 BusinessCentral to CRMOffice Dataflow
 =====================================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from BusinessCentral to CRMOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Customers person to Crmoffice Contacts
-------------------------------------------------------
-Every Businesscentral Customers person will be synchronized with a Crmoffice Contacts.
+Business Customers person to CRMOffice Contacts
+-----------------------------------------------
+Every Business Customers person will be synchronized with a CRMOffice Contacts.
 
-Once a link between a Businesscentral Customers person and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers person and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers person and a Crmoffice Contacts:
+The following properties are synchronized between a Business Customers person and a CRMOffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Customers person Property
-     - Crmoffice Contacts Property
-     - Crmoffice Data Type
+   * - Business Customers person Property
+     - CRMOffice Contacts Property
+     - CRMOffice Data Type
    * - phoneNumber
      - directPhone
      - "string"
 
 
-Businesscentral Employees to Crmoffice Contacts
------------------------------------------------
-Every Businesscentral Employees will be synchronized with a Crmoffice Contacts.
+Business Employees to CRMOffice Contacts
+----------------------------------------
+Every Business Employees will be synchronized with a CRMOffice Contacts.
 
-Once a link between a Businesscentral Employees and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Employees and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Employees and a Crmoffice Contacts:
+The following properties are synchronized between a Business Employees and a CRMOffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Employees Property
-     - Crmoffice Contacts Property
-     - Crmoffice Data Type
+   * - Business Employees Property
+     - CRMOffice Contacts Property
+     - CRMOffice Data Type
    * - givenName
      - givenName
      - "string"
@@ -56,20 +56,20 @@ The following properties are synchronized between a Businesscentral Employees an
      - "string"
 
 
-Businesscentral Items to Crmoffice Companies
---------------------------------------------
-Every Businesscentral Items will be synchronized with a Crmoffice Companies.
+Business Items to CRMOffice Companies
+-------------------------------------
+Every Business Items will be synchronized with a CRMOffice Companies.
 
-Once a link between a Businesscentral Items and a Crmoffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Items and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Items and a Crmoffice Companies:
+The following properties are synchronized between a Business Items and a CRMOffice Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Items Property
-     - Crmoffice Companies Property
-     - Crmoffice Data Type
+   * - Business Items Property
+     - CRMOffice Companies Property
+     - CRMOffice Data Type
 
 
 BusinessCentral Contacts person to CRMOffice Contacts
