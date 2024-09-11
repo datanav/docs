@@ -1,13 +1,13 @@
-==========================
-Keap to CustomCRM Dataflow
-==========================
+===========================
+Keap to Custom CRM Dataflow
+===========================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Keap to CustomCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Keap to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Keap Companies to CustomCRM Customer
 ------------------------------------
@@ -57,18 +57,18 @@ The following properties are synchronized between a Keap Opportunity and a Custo
      - CustomCRM Data Type
 
 
-Keap Product to CustomCRM Product
----------------------------------
-Every Keap Product will be synchronized with a CustomCRM Product.
+Keap Product to Custom CRM Product
+----------------------------------
+Every Keap Product will be synchronized with a Custom CRM Product.
 
-Once a link between a Keap Product and a CustomCRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Product and a Custom CRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Product and a CustomCRM Product:
+The following properties are synchronized between a Keap Product and a Custom CRM Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Product Property
-     - CustomCRM Product Property
-     - CustomCRM Data Type
+     - Custom CRM Product Property
+     - Custom CRM Data Type
 
