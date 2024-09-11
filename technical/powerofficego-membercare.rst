@@ -1,13 +1,13 @@
-====================================
-Powerofficego to Membercare Dataflow
-====================================
+=====================================
+PowerOffice GO to MemberCare Dataflow
+=====================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:52:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Membercare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from PowerOffice GO to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Powerofficego Contactperson to Membercare Persons
 -------------------------------------------------
@@ -221,104 +221,104 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - Membercare Data Type
 
 
-Powerofficego Contactperson to Membercare Countries
----------------------------------------------------
-Every Powerofficego Contactperson will be synchronized with a Membercare Countries.
+PowerOffice Contactperson to MemberCare Countries
+-------------------------------------------------
+Every PowerOffice Contactperson will be synchronized with a MemberCare Countries.
 
-Once a link between a Powerofficego Contactperson and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Contactperson and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Contactperson and a Membercare Countries:
+The following properties are synchronized between a PowerOffice Contactperson and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Contactperson Property
-     - Membercare Countries Property
-     - Membercare Data Type
+   * - PowerOffice Contactperson Property
+     - MemberCare Countries Property
+     - MemberCare Data Type
    * - residenceCountryCode
      - iso2Letter
      - "string"
 
 
-Powerofficego Customers to Membercare Countries
------------------------------------------------
-Every Powerofficego Customers will be synchronized with a Membercare Countries.
+PowerOffice Customers to MemberCare Countries
+---------------------------------------------
+Every PowerOffice Customers will be synchronized with a MemberCare Countries.
 
-Once a link between a Powerofficego Customers and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Customers and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers and a Membercare Countries:
+The following properties are synchronized between a PowerOffice Customers and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Customers Property
-     - Membercare Countries Property
-     - Membercare Data Type
+   * - PowerOffice Customers Property
+     - MemberCare Countries Property
+     - MemberCare Data Type
    * - MailAddress.CountryCode
      - iso2Letter
      - "string"
 
 
-Powerofficego Location to Membercare Countries
-----------------------------------------------
-Every Powerofficego Location will be synchronized with a Membercare Countries.
+PowerOffice Location to MemberCare Countries
+--------------------------------------------
+Every PowerOffice Location will be synchronized with a MemberCare Countries.
 
-Once a link between a Powerofficego Location and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Location and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Location and a Membercare Countries:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Location Property
-     - Membercare Countries Property
-     - Membercare Data Type
-
-
-Powerofficego Outgoinginvoices to Membercare Countries
-------------------------------------------------------
-Every Powerofficego Outgoinginvoices will be synchronized with a Membercare Countries.
-
-Once a link between a Powerofficego Outgoinginvoices and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Outgoinginvoices and a Membercare Countries:
+The following properties are synchronized between a PowerOffice Location and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Outgoinginvoices Property
-     - Membercare Countries Property
-     - Membercare Data Type
+   * - PowerOffice Location Property
+     - MemberCare Countries Property
+     - MemberCare Data Type
 
 
-Powerofficego Suppliers to Membercare Countries
------------------------------------------------
-Every Powerofficego Suppliers will be synchronized with a Membercare Countries.
+PowerOffice Outgoinginvoices to MemberCare Countries
+----------------------------------------------------
+Every PowerOffice Outgoinginvoices will be synchronized with a MemberCare Countries.
 
-Once a link between a Powerofficego Suppliers and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Outgoinginvoices and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Suppliers and a Membercare Countries:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Suppliers Property
-     - Membercare Countries Property
-     - Membercare Data Type
-
-
-Powerofficego Suppliers person to Membercare Countries
-------------------------------------------------------
-Every Powerofficego Suppliers person will be synchronized with a Membercare Countries.
-
-Once a link between a Powerofficego Suppliers person and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Suppliers person and a Membercare Countries:
+The following properties are synchronized between a PowerOffice Outgoinginvoices and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Suppliers person Property
-     - Membercare Countries Property
-     - Membercare Data Type
+   * - PowerOffice Outgoinginvoices Property
+     - MemberCare Countries Property
+     - MemberCare Data Type
+
+
+PowerOffice Suppliers to MemberCare Countries
+---------------------------------------------
+Every PowerOffice Suppliers will be synchronized with a MemberCare Countries.
+
+Once a link between a PowerOffice Suppliers and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice Suppliers and a MemberCare Countries:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice Suppliers Property
+     - MemberCare Countries Property
+     - MemberCare Data Type
+
+
+PowerOffice Suppliers person to MemberCare Countries
+----------------------------------------------------
+Every PowerOffice Suppliers person will be synchronized with a MemberCare Countries.
+
+Once a link between a PowerOffice Suppliers person and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice Suppliers person and a MemberCare Countries:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice Suppliers person Property
+     - MemberCare Countries Property
+     - MemberCare Data Type
 
