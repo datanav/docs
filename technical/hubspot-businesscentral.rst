@@ -2,29 +2,29 @@
 HubSpot to BusinessCentral Dataflow
 ===================================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 08:39:13
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to BusinessCentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-HubSpot Company to Business Customers company
----------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Company and a Business Customers company must be established.
+HubSpot Company to BusinessCentral Customers company
+----------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Company and a BusinessCentral Customers company must be established.
 
-A new Business Customers company will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into Business.
+A new BusinessCentral Customers company will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into BusinessCentral.
 
-Once a link between a HubSpot Company and a Business Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a BusinessCentral Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a Business Customers company:
+The following properties are synchronized between a HubSpot Company and a BusinessCentral Customers company:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     - Business Customers company Property
-     - Business Data Type
+     - BusinessCentral Customers company Property
+     - BusinessCentral Data Type
    * - id
      - id
      - "string"
@@ -63,40 +63,40 @@ The following properties are synchronized between a HubSpot Company and a Busine
      - "string"
 
 
-HubSpot Company to Business Customers person
---------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Company and a Business Customers person must be established.
+HubSpot Company to BusinessCentral Customers person
+---------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Company and a BusinessCentral Customers person must be established.
 
-A new Business Customers person will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into Business.
+A new BusinessCentral Customers person will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into BusinessCentral.
 
-Once a link between a HubSpot Company and a Business Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a BusinessCentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a Business Customers person:
+The following properties are synchronized between a HubSpot Company and a BusinessCentral Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     - Business Customers person Property
-     - Business Data Type
+     - BusinessCentral Customers person Property
+     - BusinessCentral Data Type
 
 
-HubSpot Contact to Business Customers company
----------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a Business Customers company must be established.
+HubSpot Contact to BusinessCentral Customers company
+----------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a BusinessCentral Customers company must be established.
 
-A new Business Customers company will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into Business.
+A new BusinessCentral Customers company will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into BusinessCentral.
 
-Once a link between a HubSpot Contact and a Business Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contact and a BusinessCentral Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contact and a Business Customers company:
+The following properties are synchronized between a HubSpot Contact and a BusinessCentral Customers company:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contact Property
-     - Business Customers company Property
-     - Business Data Type
+     - BusinessCentral Customers company Property
+     - BusinessCentral Data Type
    * - id
      - id
      - "string"
@@ -114,22 +114,22 @@ The following properties are synchronized between a HubSpot Contact and a Busine
      - "string"
 
 
-HubSpot Contact to Business Customers person
---------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a Business Customers person must be established.
+HubSpot Contact to BusinessCentral Customers person
+---------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a BusinessCentral Customers person must be established.
 
-A new Business Customers person will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into Business.
+A new BusinessCentral Customers person will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into BusinessCentral.
 
-Once a link between a HubSpot Contact and a Business Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contact and a BusinessCentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contact and a Business Customers person:
+The following properties are synchronized between a HubSpot Contact and a BusinessCentral Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contact Property
-     - Business Customers person Property
-     - Business Data Type
+     - BusinessCentral Customers person Property
+     - BusinessCentral Data Type
    * - id
      - id
      - "string"
