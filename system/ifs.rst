@@ -178,7 +178,7 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
         :text: Read more
         :classes: read-more
     ---
-    **Wave Financial**
+    **Wave**
 
     Wave Financials stands out as a great billing tool due to its user-friendly interface, comprehensive invoicing features, seamless payment integration, expense tracking capabilities, financial reporting options, and cost-effectiveness
     .. link-button:: system/wave
