@@ -1,13 +1,13 @@
-===============================
-HubSpot to Businessnxt Dataflow
-===============================
+======================================
+HubSpot to Visma Business Nxt Dataflow
+======================================
 
-Generated: 2024-09-11 00:00:24
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Businessnxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 HubSpot Company to Businessnxt Address
 --------------------------------------
@@ -365,39 +365,39 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
      - "string"
 
 
-HubSpot Account to Businessnxt Currency
----------------------------------------
-Every HubSpot Account will be synchronized with a Businessnxt Currency.
+HubSpot Account to Visma Currency
+---------------------------------
+Every HubSpot Account will be synchronized with a Visma Currency.
 
-Once a link between a HubSpot Account and a Businessnxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Account and a Visma Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Account and a Businessnxt Currency:
+The following properties are synchronized between a HubSpot Account and a Visma Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Account Property
-     - Businessnxt Currency Property
-     - Businessnxt Data Type
+     - Visma Currency Property
+     - Visma Data Type
    * - accountType
      - isoCode
      - "string"
 
 
-HubSpot Company to Businessnxt Country
---------------------------------------
-Every HubSpot Company will be synchronized with a Businessnxt Country.
+HubSpot Company to Visma Country
+--------------------------------
+Every HubSpot Company will be synchronized with a Visma Country.
 
-Once a link between a HubSpot Company and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a Businessnxt Country:
+The following properties are synchronized between a HubSpot Company and a Visma Country:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     - Businessnxt Country Property
-     - Businessnxt Data Type
+     - Visma Country Property
+     - Visma Data Type
    * - properties.country
      - name
      - "string"
@@ -412,39 +412,39 @@ The following properties are synchronized between a HubSpot Company and a Busine
      - "string"
 
 
-HubSpot Deal to Businessnxt Currency
-------------------------------------
-Every HubSpot Deal will be synchronized with a Businessnxt Currency.
+HubSpot Deal to Visma Currency
+------------------------------
+Every HubSpot Deal will be synchronized with a Visma Currency.
 
-Once a link between a HubSpot Deal and a Businessnxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a Visma Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a Businessnxt Currency:
+The following properties are synchronized between a HubSpot Deal and a Visma Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     - Businessnxt Currency Property
-     - Businessnxt Data Type
+     - Visma Currency Property
+     - Visma Data Type
    * - properties.deal_currency_code
      - isoCode
      - "string"
 
 
-HubSpot Deal to Businessnxt Order
----------------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Businessnxt Order.
+HubSpot Deal to Visma Order
+---------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Visma Order.
 
-Once a link between a HubSpot Deal and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a Businessnxt Order:
+The following properties are synchronized between a HubSpot Deal and a Visma Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     - Businessnxt Order Property
-     - Businessnxt Data Type
+     - Visma Order Property
+     - Visma Data Type
    * - properties.closedate
      - dueDate
      - "string"
@@ -456,36 +456,36 @@ The following properties are synchronized between a HubSpot Deal and a Businessn
      - "string"
 
 
-HubSpot Lineitem to Businessnxt Orderline
------------------------------------------
-Every HubSpot Lineitem will be synchronized with a Businessnxt Orderline.
+HubSpot Lineitem to Visma Orderline
+-----------------------------------
+Every HubSpot Lineitem will be synchronized with a Visma Orderline.
 
-Once a link between a HubSpot Lineitem and a Businessnxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitem and a Visma Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitem and a Businessnxt Orderline:
+The following properties are synchronized between a HubSpot Lineitem and a Visma Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitem Property
-     - Businessnxt Orderline Property
-     - Businessnxt Data Type
+     - Visma Orderline Property
+     - Visma Data Type
 
 
-HubSpot Product to Businessnxt Product
---------------------------------------
-Every HubSpot Product will be synchronized with a Businessnxt Product.
+HubSpot Product to Visma Product
+--------------------------------
+Every HubSpot Product will be synchronized with a Visma Product.
 
-Once a link between a HubSpot Product and a Businessnxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Product and a Visma Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Product and a Businessnxt Product:
+The following properties are synchronized between a HubSpot Product and a Visma Product:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Product Property
-     - Businessnxt Product Property
-     - Businessnxt Data Type
+     - Visma Product Property
+     - Visma Data Type
    * - properties.description
      - description
      - "string"
