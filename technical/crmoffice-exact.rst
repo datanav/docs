@@ -1,13 +1,13 @@
-=================================
-CRMOffice to ExactOnline Dataflow
-=================================
+==================================
+CRMOffice to Exact Online Dataflow
+==================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from CRMOffice to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from CRMOffice to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 CRMOffice Companies to ExactOnline Items
 ----------------------------------------
@@ -25,20 +25,20 @@ The following properties are synchronized between a CRMOffice Companies and a Ex
      - ExactOnline Data Type
 
 
-CRMOffice Activities to ExactOnline Addresses
----------------------------------------------
-Every CRMOffice Activities will be synchronized with a ExactOnline Addresses.
+CRMOffice Activities to Exact Online Addresses
+----------------------------------------------
+Every CRMOffice Activities will be synchronized with a Exact Online Addresses.
 
-Once a link between a CRMOffice Activities and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Activities and a Exact Online Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CRMOffice Activities and a ExactOnline Addresses:
+The following properties are synchronized between a CRMOffice Activities and a Exact Online Addresses:
 
 .. list-table::
    :header-rows: 1
 
    * - CRMOffice Activities Property
-     - ExactOnline Addresses Property
-     - ExactOnline Data Type
+     - Exact Online Addresses Property
+     - Exact Online Data Type
    * - address.country
      - Country
      - "string"
@@ -50,20 +50,20 @@ The following properties are synchronized between a CRMOffice Activities and a E
      - "string"
 
 
-CRMOffice Companies to ExactOnline Addresses
---------------------------------------------
-Every CRMOffice Companies will be synchronized with a ExactOnline Addresses.
+CRMOffice Companies to Exact Online Addresses
+---------------------------------------------
+Every CRMOffice Companies will be synchronized with a Exact Online Addresses.
 
-Once a link between a CRMOffice Companies and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Companies and a Exact Online Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CRMOffice Companies and a ExactOnline Addresses:
+The following properties are synchronized between a CRMOffice Companies and a Exact Online Addresses:
 
 .. list-table::
    :header-rows: 1
 
    * - CRMOffice Companies Property
-     - ExactOnline Addresses Property
-     - ExactOnline Data Type
+     - Exact Online Addresses Property
+     - Exact Online Data Type
    * - postAddress.country
      - Country
      - "string"
@@ -84,18 +84,18 @@ The following properties are synchronized between a CRMOffice Companies and a Ex
      - "string"
 
 
-CRMOffice Contacts to ExactOnline Contacts
-------------------------------------------
-Every CRMOffice Contacts will be synchronized with a ExactOnline Contacts.
+CRMOffice Contacts to Exact Online Contacts
+-------------------------------------------
+Every CRMOffice Contacts will be synchronized with a Exact Online Contacts.
 
-Once a link between a CRMOffice Contacts and a ExactOnline Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Contacts and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CRMOffice Contacts and a ExactOnline Contacts:
+The following properties are synchronized between a CRMOffice Contacts and a Exact Online Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - CRMOffice Contacts Property
-     - ExactOnline Contacts Property
-     - ExactOnline Data Type
+     - Exact Online Contacts Property
+     - Exact Online Data Type
 
