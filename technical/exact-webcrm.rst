@@ -1,13 +1,13 @@
 ===============================
-Exact Online to Webcrm Dataflow
+Exact Online to WebCRM Dataflow
 ===============================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to Webcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Exact Accounts to Webcrm Organisations
 --------------------------------------
@@ -66,55 +66,55 @@ The following properties are synchronized between a Exact Divisions and a Webcrm
      - "string"
 
 
-Exact Contacts to Webcrm Persons
+Exact Contacts to WebCRM Persons
 --------------------------------
-Every Exact Contacts will be synchronized with a Webcrm Persons.
+Every Exact Contacts will be synchronized with a WebCRM Persons.
 
-Once a link between a Exact Contacts and a Webcrm Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Contacts and a WebCRM Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Contacts and a Webcrm Persons:
+The following properties are synchronized between a Exact Contacts and a WebCRM Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Contacts Property
-     - Webcrm Persons Property
-     - Webcrm Data Type
+     - WebCRM Persons Property
+     - WebCRM Data Type
    * - BirthDate
      - document_number
      - "string"
 
 
-Exact Items to Webcrm Products
+Exact Items to WebCRM Products
 ------------------------------
-Every Exact Items will be synchronized with a Webcrm Products.
+Every Exact Items will be synchronized with a WebCRM Products.
 
-Once a link between a Exact Items and a Webcrm Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Items and a WebCRM Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Items and a Webcrm Products:
+The following properties are synchronized between a Exact Items and a WebCRM Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Items Property
-     - Webcrm Products Property
-     - Webcrm Data Type
+     - WebCRM Products Property
+     - WebCRM Data Type
 
 
-Exact Salesorderlines to Webcrm Quotationline
+Exact Salesorderlines to WebCRM Quotationline
 ---------------------------------------------
-Every Exact Salesorderlines will be synchronized with a Webcrm Quotationline.
+Every Exact Salesorderlines will be synchronized with a WebCRM Quotationline.
 
-Once a link between a Exact Salesorderlines and a Webcrm Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Salesorderlines and a WebCRM Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Salesorderlines and a Webcrm Quotationline:
+The following properties are synchronized between a Exact Salesorderlines and a WebCRM Quotationline:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Salesorderlines Property
-     - Webcrm Quotationline Property
-     - Webcrm Data Type
+     - WebCRM Quotationline Property
+     - WebCRM Data Type
    * - CostPriceFC
      - QuotationLineCostPrice
      - "string"
