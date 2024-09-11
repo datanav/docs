@@ -2,57 +2,57 @@
 ZohoCRM to CustomERP Dataflow
 =============================
 
-Generated: 2024-09-11 08:01:30
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from ZohoCRM to CustomERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-ZohoCRM Account to Custom Customer
-----------------------------------
-Every ZohoCRM Account will be synchronized with a Custom Customer.
+ZohoCRM Account to CustomERP Customer
+-------------------------------------
+Every ZohoCRM Account will be synchronized with a CustomERP Customer.
 
-Once a link between a ZohoCRM Account and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Account and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Account and a Custom Customer:
+The following properties are synchronized between a ZohoCRM Account and a CustomERP Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Account Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomERP Customer Property
+     - CustomERP Data Type
 
 
-ZohoCRM Contact to Custom Contact
----------------------------------
-Every ZohoCRM Contact will be synchronized with a Custom Contact.
+ZohoCRM Contact to CustomERP Contact
+------------------------------------
+Every ZohoCRM Contact will be synchronized with a CustomERP Contact.
 
-Once a link between a ZohoCRM Contact and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Contact and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Contact and a Custom Contact:
+The following properties are synchronized between a ZohoCRM Contact and a CustomERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Contact Property
-     - Custom Contact Property
-     - Custom Data Type
+     - CustomERP Contact Property
+     - CustomERP Data Type
 
 
-ZohoCRM Deal to Custom Order
-----------------------------
-Every ZohoCRM Deal will be synchronized with a Custom Order.
+ZohoCRM Deal to CustomERP Order
+-------------------------------
+Every ZohoCRM Deal will be synchronized with a CustomERP Order.
 
-Once a link between a ZohoCRM Deal and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Deal and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Deal and a Custom Order:
+The following properties are synchronized between a ZohoCRM Deal and a CustomERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Deal Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomERP Order Property
+     - CustomERP Data Type
 
