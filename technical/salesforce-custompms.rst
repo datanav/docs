@@ -1,13 +1,13 @@
-================================
-Salesforce to CustomPMS Dataflow
-================================
+=================================
+Salesforce to Custom PMS Dataflow
+=================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to CustomPMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Custom PMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Salesforce Division to CustomPMS Customer
 -----------------------------------------
@@ -57,18 +57,18 @@ The following properties are synchronized between a Salesforce Task and a Custom
      - CustomPMS Data Type
 
 
-Salesforce Task to CustomPMS Task
----------------------------------
-Every Salesforce Task will be synchronized with a CustomPMS Task.
+Salesforce Task to Custom PMS Task
+----------------------------------
+Every Salesforce Task will be synchronized with a Custom PMS Task.
 
-Once a link between a Salesforce Task and a CustomPMS Task is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Task and a Custom PMS Task is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Task and a CustomPMS Task:
+The following properties are synchronized between a Salesforce Task and a Custom PMS Task:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Task Property
-     - CustomPMS Task Property
-     - CustomPMS Data Type
+     - Custom PMS Task Property
+     - Custom PMS Data Type
 
