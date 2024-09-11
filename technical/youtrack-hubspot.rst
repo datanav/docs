@@ -2,7 +2,7 @@
 YouTrack to HubSpot Dataflow
 ============================
 
-Generated: 2024-09-11 07:56:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
@@ -47,39 +47,39 @@ The following properties are synchronized between a YouTrack Users and a HubSpot
      - "string"
 
 
-YouTrack Groups to Hubspot Company
+YouTrack Groups to HubSpot Company
 ----------------------------------
-Every YouTrack Groups will be synchronized with a Hubspot Company.
+Every YouTrack Groups will be synchronized with a HubSpot Company.
 
-Once a link between a YouTrack Groups and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Groups and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Groups and a Hubspot Company:
+The following properties are synchronized between a YouTrack Groups and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Groups Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
    * - name
      - properties.name
      - "string"
 
 
-YouTrack Organizations to Hubspot Company
+YouTrack Organizations to HubSpot Company
 -----------------------------------------
-Every YouTrack Organizations will be synchronized with a Hubspot Company.
+Every YouTrack Organizations will be synchronized with a HubSpot Company.
 
-Once a link between a YouTrack Organizations and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Organizations and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Organizations and a Hubspot Company:
+The following properties are synchronized between a YouTrack Organizations and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Organizations Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
    * - description
      - properties.description
      - "string"
@@ -88,20 +88,20 @@ The following properties are synchronized between a YouTrack Organizations and a
      - "string"
 
 
-YouTrack Usergroups to Hubspot Company
+YouTrack Usergroups to HubSpot Company
 --------------------------------------
-Every YouTrack Usergroups will be synchronized with a Hubspot Company.
+Every YouTrack Usergroups will be synchronized with a HubSpot Company.
 
-Once a link between a YouTrack Usergroups and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Usergroups and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Usergroups and a Hubspot Company:
+The following properties are synchronized between a YouTrack Usergroups and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Usergroups Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
    * - name
      - properties.name
      - "string"
