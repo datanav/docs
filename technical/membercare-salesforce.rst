@@ -2,25 +2,25 @@
 MemberCare to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-11 07:47:14
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Membercare Companies to Salesforce Division
+MemberCare Companies to Salesforce Division
 -------------------------------------------
-Every Membercare Companies will be synchronized with a Salesforce Division.
+Every MemberCare Companies will be synchronized with a Salesforce Division.
 
-Once a link between a Membercare Companies and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companies and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Companies and a Salesforce Division:
+The following properties are synchronized between a MemberCare Companies and a Salesforce Division:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Companies Property
+   * - MemberCare Companies Property
      - Salesforce Division Property
      - Salesforce Data Type
    * - companyName
@@ -28,50 +28,50 @@ The following properties are synchronized between a Membercare Companies and a S
      - "string"
 
 
-Membercare Companycategories to Salesforce Currencytype
+MemberCare Companycategories to Salesforce Currencytype
 -------------------------------------------------------
-Every Membercare Companycategories will be synchronized with a Salesforce Currencytype.
+Every MemberCare Companycategories will be synchronized with a Salesforce Currencytype.
 
-Once a link between a Membercare Companycategories and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companycategories and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Companycategories and a Salesforce Currencytype:
+The following properties are synchronized between a MemberCare Companycategories and a Salesforce Currencytype:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Companycategories Property
+   * - MemberCare Companycategories Property
      - Salesforce Currencytype Property
      - Salesforce Data Type
 
 
-Membercare Countries to Salesforce Currencytype
+MemberCare Countries to Salesforce Currencytype
 -----------------------------------------------
-Every Membercare Countries will be synchronized with a Salesforce Currencytype.
+Every MemberCare Countries will be synchronized with a Salesforce Currencytype.
 
-Once a link between a Membercare Countries and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Countries and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Countries and a Salesforce Currencytype:
+The following properties are synchronized between a MemberCare Countries and a Salesforce Currencytype:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Countries Property
+   * - MemberCare Countries Property
      - Salesforce Currencytype Property
      - Salesforce Data Type
 
 
-Membercare Organizations to Salesforce Division
+MemberCare Organizations to Salesforce Division
 -----------------------------------------------
-Every Membercare Organizations will be synchronized with a Salesforce Division.
+Every MemberCare Organizations will be synchronized with a Salesforce Division.
 
-Once a link between a Membercare Organizations and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Organizations and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Organizations and a Salesforce Division:
+The following properties are synchronized between a MemberCare Organizations and a Salesforce Division:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Organizations Property
+   * - MemberCare Organizations Property
      - Salesforce Division Property
      - Salesforce Data Type
    * - name
@@ -79,18 +79,18 @@ The following properties are synchronized between a Membercare Organizations and
      - "string"
 
 
-Membercare Products to Salesforce Product2
+MemberCare Products to Salesforce Product2
 ------------------------------------------
-Every Membercare Products will be synchronized with a Salesforce Product2.
+Every MemberCare Products will be synchronized with a Salesforce Product2.
 
-Once a link between a Membercare Products and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Products and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Products and a Salesforce Product2:
+The following properties are synchronized between a MemberCare Products and a Salesforce Product2:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Products Property
+   * - MemberCare Products Property
      - Salesforce Product2 Property
      - Salesforce Data Type
    * - name
