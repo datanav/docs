@@ -2,25 +2,25 @@
 WebCRM to Keap Dataflow
 =======================
 
-Generated: 2024-09-11 07:47:14
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to Keap. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Webcrm Organisations to Keap Companies
+WebCRM Organisations to Keap Companies
 --------------------------------------
-Every Webcrm Organisations will be synchronized with a Keap Companies.
+Every WebCRM Organisations will be synchronized with a Keap Companies.
 
-Once a link between a Webcrm Organisations and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Organisations and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Organisations and a Keap Companies:
+The following properties are synchronized between a WebCRM Organisations and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Organisations Property
+   * - WebCRM Organisations Property
      - Keap Companies Property
      - Keap Data Type
    * - OrganisationName
@@ -28,18 +28,18 @@ The following properties are synchronized between a Webcrm Organisations and a K
      - "string"
 
 
-Webcrm Persons to Keap Contacts
+WebCRM Persons to Keap Contacts
 -------------------------------
-Every Webcrm Persons will be synchronized with a Keap Contacts.
+Every WebCRM Persons will be synchronized with a Keap Contacts.
 
-Once a link between a Webcrm Persons and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Persons and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Persons and a Keap Contacts:
+The following properties are synchronized between a WebCRM Persons and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Persons Property
+   * - WebCRM Persons Property
      - Keap Contacts Property
      - Keap Data Type
    * - PersonTitle
@@ -50,18 +50,18 @@ The following properties are synchronized between a Webcrm Persons and a Keap Co
      - "string"
 
 
-Webcrm Users to Keap Contacts
+WebCRM Users to Keap Contacts
 -----------------------------
-Every Webcrm Users will be synchronized with a Keap Contacts.
+Every WebCRM Users will be synchronized with a Keap Contacts.
 
-Once a link between a Webcrm Users and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Users and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Users and a Keap Contacts:
+The following properties are synchronized between a WebCRM Users and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Users Property
+   * - WebCRM Users Property
      - Keap Contacts Property
      - Keap Data Type
    * - UserTitle
