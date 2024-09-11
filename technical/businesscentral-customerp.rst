@@ -1,13 +1,13 @@
-======================================
-Business Central to CustomERP Dataflow
-======================================
+=======================================
+Business Central to Custom ERP Dataflow
+=======================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to CustomERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 BusinessCentral Companies to CustomERP Customer
 -----------------------------------------------
@@ -89,82 +89,82 @@ The following properties are synchronized between a BusinessCentral Salesquotes 
      - CustomERP Data Type
 
 
-BusinessCentral Contacts person to CustomERP Contact
-----------------------------------------------------
-Every BusinessCentral Contacts person will be synchronized with a CustomERP Contact.
+Business Central Contacts person to Custom ERP Contact
+------------------------------------------------------
+Every Business Central Contacts person will be synchronized with a Custom ERP Contact.
 
-Once a link between a BusinessCentral Contacts person and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Contacts person and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Contacts person and a CustomERP Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - BusinessCentral Contacts person Property
-     - CustomERP Contact Property
-     - CustomERP Data Type
-
-
-BusinessCentral Customers company to CustomERP Customer
--------------------------------------------------------
-Every BusinessCentral Customers company will be synchronized with a CustomERP Customer.
-
-Once a link between a BusinessCentral Customers company and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a BusinessCentral Customers company and a CustomERP Customer:
+The following properties are synchronized between a Business Central Contacts person and a Custom ERP Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Customers company Property
-     - CustomERP Customer Property
-     - CustomERP Data Type
+   * - Business Central Contacts person Property
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
 
 
-BusinessCentral Employees to CustomERP Employee
------------------------------------------------
-Every BusinessCentral Employees will be synchronized with a CustomERP Employee.
+Business Central Customers company to Custom ERP Customer
+---------------------------------------------------------
+Every Business Central Customers company will be synchronized with a Custom ERP Customer.
 
-Once a link between a BusinessCentral Employees and a CustomERP Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers company and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Employees and a CustomERP Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - BusinessCentral Employees Property
-     - CustomERP Employee Property
-     - CustomERP Data Type
-
-
-BusinessCentral Items to CustomERP Product
-------------------------------------------
-Every BusinessCentral Items will be synchronized with a CustomERP Product.
-
-Once a link between a BusinessCentral Items and a CustomERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a BusinessCentral Items and a CustomERP Product:
+The following properties are synchronized between a Business Central Customers company and a Custom ERP Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Items Property
-     - CustomERP Product Property
-     - CustomERP Data Type
+   * - Business Central Customers company Property
+     - Custom ERP Customer Property
+     - Custom ERP Data Type
 
 
-BusinessCentral Salesorders to CustomERP Order
-----------------------------------------------
-Every BusinessCentral Salesorders will be synchronized with a CustomERP Order.
+Business Central Employees to Custom ERP Employee
+-------------------------------------------------
+Every Business Central Employees will be synchronized with a Custom ERP Employee.
 
-Once a link between a BusinessCentral Salesorders and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Employees and a Custom ERP Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Salesorders and a CustomERP Order:
+The following properties are synchronized between a Business Central Employees and a Custom ERP Employee:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Salesorders Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+   * - Business Central Employees Property
+     - Custom ERP Employee Property
+     - Custom ERP Data Type
+
+
+Business Central Items to Custom ERP Product
+--------------------------------------------
+Every Business Central Items will be synchronized with a Custom ERP Product.
+
+Once a link between a Business Central Items and a Custom ERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Items and a Custom ERP Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Items Property
+     - Custom ERP Product Property
+     - Custom ERP Data Type
+
+
+Business Central Salesorders to Custom ERP Order
+------------------------------------------------
+Every Business Central Salesorders will be synchronized with a Custom ERP Order.
+
+Once a link between a Business Central Salesorders and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Salesorders and a Custom ERP Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Salesorders Property
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
