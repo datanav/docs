@@ -2,7 +2,7 @@
 BusinessNxt to Keap Dataflow
 ============================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:37:15
 
 Introduction
 ------------
@@ -47,18 +47,18 @@ The following properties are synchronized between a Visma Company and a Keap Com
      - "string"
 
 
-Visma Product to Keap Product
------------------------------
-Every Visma Product will be synchronized with a Keap Product.
+BusinessNxt Product to Keap Product
+-----------------------------------
+Every BusinessNxt Product will be synchronized with a Keap Product.
 
-Once a link between a Visma Product and a Keap Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Product and a Keap Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Product and a Keap Product:
+The following properties are synchronized between a BusinessNxt Product and a Keap Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Product Property
+   * - BusinessNxt Product Property
      - Keap Product Property
      - Keap Data Type
    * - description
