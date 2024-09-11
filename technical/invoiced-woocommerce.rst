@@ -1,28 +1,28 @@
 ================================
-Invoiced to Woocommerce Dataflow
+Invoiced to WooCommerce Dataflow
 ================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Woocommerce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to WooCommerce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Invoiced Invoices to Woocommerce Order
+Invoiced Invoices to WooCommerce Order
 --------------------------------------
-Every Invoiced Invoices will be synchronized with a Woocommerce Order.
+Every Invoiced Invoices will be synchronized with a WooCommerce Order.
 
-Once a link between a Invoiced Invoices and a Woocommerce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Invoices and a WooCommerce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Invoices and a Woocommerce Order:
+The following properties are synchronized between a Invoiced Invoices and a WooCommerce Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Invoices Property
-     - Woocommerce Order Property
-     - Woocommerce Data Type
+     - WooCommerce Order Property
+     - WooCommerce Data Type
    * - currency
      - currency
      - "string"
@@ -34,20 +34,20 @@ The following properties are synchronized between a Invoiced Invoices and a Wooc
      - "string"
 
 
-Invoiced Items to Woocommerce Product
+Invoiced Items to WooCommerce Product
 -------------------------------------
-Every Invoiced Items will be synchronized with a Woocommerce Product.
+Every Invoiced Items will be synchronized with a WooCommerce Product.
 
-Once a link between a Invoiced Items and a Woocommerce Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Items and a WooCommerce Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Items and a Woocommerce Product:
+The following properties are synchronized between a Invoiced Items and a WooCommerce Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Items Property
-     - Woocommerce Product Property
-     - Woocommerce Data Type
+     - WooCommerce Product Property
+     - WooCommerce Data Type
    * - name
      - name
      - "string"
