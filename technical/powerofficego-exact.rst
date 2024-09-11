@@ -2,7 +2,7 @@
 PowerOfficeGO to ExactOnline Dataflow
 =====================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:13:29
 
 Introduction
 ------------
@@ -386,18 +386,18 @@ The following properties are synchronized between a PowerOfficeGO Location and a
      - "string"
 
 
-PowerOfficeGO Product to ExactOnline Items
-------------------------------------------
-Every PowerOfficeGO Product will be synchronized with a ExactOnline Items.
+PowerOfficeGOPowerofficego Product to ExactOnline Items
+-------------------------------------------------------
+Every PowerOfficeGOPowerofficego Product will be synchronized with a ExactOnline Items.
 
-Once a link between a PowerOfficeGO Product and a ExactOnline Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGOPowerofficego Product and a ExactOnline Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Product and a ExactOnline Items:
+The following properties are synchronized between a PowerOfficeGOPowerofficego Product and a ExactOnline Items:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Product Property
+   * - PowerOfficeGOPowerofficego Product Property
      - ExactOnline Items Property
      - ExactOnline Data Type
 
@@ -459,18 +459,18 @@ The following properties are synchronized between a PowerOfficeGO Salesorderline
      - "string"
 
 
-PowerOfficeGO Salesorders to ExactOnline Salesorders
-----------------------------------------------------
-Every PowerOfficeGO Salesorders will be synchronized with a ExactOnline Salesorders.
+PowerOfficeGOPowerofficego Salesorders to ExactOnline Salesorders
+-----------------------------------------------------------------
+Every PowerOfficeGOPowerofficego Salesorders will be synchronized with a ExactOnline Salesorders.
 
-Once a link between a PowerOfficeGO Salesorders and a ExactOnline Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGOPowerofficego Salesorders and a ExactOnline Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Salesorders and a ExactOnline Salesorders:
+The following properties are synchronized between a PowerOfficeGOPowerofficego Salesorders and a ExactOnline Salesorders:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Salesorders Property
+   * - PowerOfficeGOPowerofficego Salesorders Property
      - ExactOnline Salesorders Property
      - ExactOnline Data Type
    * - CurrencyCode
