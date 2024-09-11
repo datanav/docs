@@ -2,27 +2,27 @@
 WebCRM to SuperOffice Dataflow
 ==============================
 
-Generated: 2024-09-11 08:07:20
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-WebCRM Organisations to Superoffice Contact
+WebCRM Organisations to SuperOffice Contact
 -------------------------------------------
-Every WebCRM Organisations will be synchronized with a Superoffice Contact.
+Every WebCRM Organisations will be synchronized with a SuperOffice Contact.
 
-Once a link between a WebCRM Organisations and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Organisations and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Organisations and a Superoffice Contact:
+The following properties are synchronized between a WebCRM Organisations and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Organisations Property
-     - Superoffice Contact Property
-     - Superoffice Data Type
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
    * - OrganisationAddress
      - Address.Postal.Address1
      - "string"
@@ -70,20 +70,20 @@ The following properties are synchronized between a WebCRM Organisations and a S
      - "string"
 
 
-WebCRM Persons to Superoffice Person
+WebCRM Persons to SuperOffice Person
 ------------------------------------
-Every WebCRM Persons will be synchronized with a Superoffice Person.
+Every WebCRM Persons will be synchronized with a SuperOffice Person.
 
-Once a link between a WebCRM Persons and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Persons and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Persons and a Superoffice Person:
+The following properties are synchronized between a WebCRM Persons and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Persons Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+     - SuperOffice Person Property
+     - SuperOffice Data Type
    * - PersonDirectPhone
      - OfficePhones.Value
      - "string"
@@ -104,20 +104,20 @@ The following properties are synchronized between a WebCRM Persons and a Superof
      - N/A
 
 
-WebCRM Users to Superoffice Person
+WebCRM Users to SuperOffice Person
 ----------------------------------
-Every WebCRM Users will be synchronized with a Superoffice Person.
+Every WebCRM Users will be synchronized with a SuperOffice Person.
 
-Once a link between a WebCRM Users and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Users and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Users and a Superoffice Person:
+The following properties are synchronized between a WebCRM Users and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Users Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+     - SuperOffice Person Property
+     - SuperOffice Data Type
    * - UserMobilePhone
      - MobilePhones.Value
      - "string"
