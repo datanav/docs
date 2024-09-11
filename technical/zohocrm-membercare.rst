@@ -2,27 +2,27 @@
 ZohoCRM to MemberCare Dataflow
 ==============================
 
-Generated: 2024-09-11 07:48:17
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from ZohoCRM to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-ZohoCRM Account to Membercare Companies
+ZohoCRM Account to MemberCare Companies
 ---------------------------------------
-Every ZohoCRM Account will be synchronized with a Membercare Companies.
+Every ZohoCRM Account will be synchronized with a MemberCare Companies.
 
-Once a link between a ZohoCRM Account and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Account and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Account and a Membercare Companies:
+The following properties are synchronized between a ZohoCRM Account and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Account Property
-     - Membercare Companies Property
-     - Membercare Data Type
+     - MemberCare Companies Property
+     - MemberCare Data Type
    * - Account_Name
      - companyName
      - "string"
@@ -31,20 +31,20 @@ The following properties are synchronized between a ZohoCRM Account and a Member
      - "string"
 
 
-ZohoCRM Contact to Membercare Persons
+ZohoCRM Contact to MemberCare Persons
 -------------------------------------
-Every ZohoCRM Contact will be synchronized with a Membercare Persons.
+Every ZohoCRM Contact will be synchronized with a MemberCare Persons.
 
-Once a link between a ZohoCRM Contact and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Contact and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Contact and a Membercare Persons:
+The following properties are synchronized between a ZohoCRM Contact and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Contact Property
-     - Membercare Persons Property
-     - Membercare Data Type
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - First_Name
      - firstname
      - "string"
@@ -77,20 +77,20 @@ The following properties are synchronized between a ZohoCRM Contact and a Member
      - "string"
 
 
-ZohoCRM Deal to Membercare Invoices
+ZohoCRM Deal to MemberCare Invoices
 -----------------------------------
-Every ZohoCRM Deal will be synchronized with a Membercare Invoices.
+Every ZohoCRM Deal will be synchronized with a MemberCare Invoices.
 
-Once a link between a ZohoCRM Deal and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Deal and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Deal and a Membercare Invoices:
+The following properties are synchronized between a ZohoCRM Deal and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Deal Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
    * - Probability
      - creationInfo
      - "string"
