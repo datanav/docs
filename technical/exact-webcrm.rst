@@ -2,65 +2,65 @@
 ExactOnline to WebCRM Dataflow
 ==============================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from ExactOnline to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Exact Accounts to Webcrm Organisations
+Exact Accounts to WebCRM Organisations
 --------------------------------------
-Every Exact Accounts will be synchronized with a Webcrm Organisations.
+Every Exact Accounts will be synchronized with a WebCRM Organisations.
 
-Once a link between a Exact Accounts and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Accounts and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Accounts and a Webcrm Organisations:
+The following properties are synchronized between a Exact Accounts and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Accounts Property
-     - Webcrm Organisations Property
-     - Webcrm Data Type
+     - WebCRM Organisations Property
+     - WebCRM Data Type
    * - Name
      - OrganisationName
      - "string"
 
 
-Exact Departments to Webcrm Organisations
+Exact Departments to WebCRM Organisations
 -----------------------------------------
-Every Exact Departments will be synchronized with a Webcrm Organisations.
+Every Exact Departments will be synchronized with a WebCRM Organisations.
 
-Once a link between a Exact Departments and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Departments and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Departments and a Webcrm Organisations:
+The following properties are synchronized between a Exact Departments and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Departments Property
-     - Webcrm Organisations Property
-     - Webcrm Data Type
+     - WebCRM Organisations Property
+     - WebCRM Data Type
    * - Description
      - OrganisationCompanyDescription
      - "string"
 
 
-Exact Divisions to Webcrm Organisations
+Exact Divisions to WebCRM Organisations
 ---------------------------------------
-Every Exact Divisions will be synchronized with a Webcrm Organisations.
+Every Exact Divisions will be synchronized with a WebCRM Organisations.
 
-Once a link between a Exact Divisions and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Divisions and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Divisions and a Webcrm Organisations:
+The following properties are synchronized between a Exact Divisions and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Divisions Property
-     - Webcrm Organisations Property
-     - Webcrm Data Type
+     - WebCRM Organisations Property
+     - WebCRM Data Type
    * - Description
      - OrganisationCompanyDescription
      - "string"
