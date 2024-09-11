@@ -1,13 +1,13 @@
 ==================================
-Membercare to Superoffice Dataflow
+MemberCare to Superoffice Dataflow
 ==================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Membercare to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Membercare Companies to Superoffice Contact
 -------------------------------------------
@@ -87,18 +87,18 @@ The following properties are synchronized between a Membercare Persons and a Sup
      - "string"
 
 
-Membercare Invoices to Superoffice Quoteline
+MemberCare Invoices to Superoffice Quoteline
 --------------------------------------------
-Every Membercare Invoices will be synchronized with a Superoffice Quoteline.
+Every MemberCare Invoices will be synchronized with a Superoffice Quoteline.
 
-Once a link between a Membercare Invoices and a Superoffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Invoices and a Superoffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Invoices and a Superoffice Quoteline:
+The following properties are synchronized between a MemberCare Invoices and a Superoffice Quoteline:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Invoices Property
+   * - MemberCare Invoices Property
      - Superoffice Quoteline Property
      - Superoffice Data Type
    * - invoiceItems.description
