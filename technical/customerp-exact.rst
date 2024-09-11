@@ -2,43 +2,43 @@
 Custom ERP to Exact Online Dataflow
 ===================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Custom ERP to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-CustomERP Employee to ExactOnline Contacts
-------------------------------------------
-Every CustomERP Employee will be synchronized with a ExactOnline Contacts.
+Custom ERP Employee to Exact Online Contacts
+--------------------------------------------
+Every Custom ERP Employee will be synchronized with a Exact Online Contacts.
 
-Once a link between a CustomERP Employee and a ExactOnline Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Employee and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Employee and a ExactOnline Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - CustomERP Employee Property
-     - ExactOnline Contacts Property
-     - ExactOnline Data Type
-
-
-CustomERP Order to ExactOnline Quotations
------------------------------------------
-Every CustomERP Order will be synchronized with a ExactOnline Quotations.
-
-Once a link between a CustomERP Order and a ExactOnline Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a CustomERP Order and a ExactOnline Quotations:
+The following properties are synchronized between a Custom ERP Employee and a Exact Online Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Order Property
-     - ExactOnline Quotations Property
-     - ExactOnline Data Type
+   * - Custom ERP Employee Property
+     - Exact Online Contacts Property
+     - Exact Online Data Type
+
+
+Custom ERP Order to Exact Online Quotations
+-------------------------------------------
+Every Custom ERP Order will be synchronized with a Exact Online Quotations.
+
+Once a link between a Custom ERP Order and a Exact Online Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom ERP Order and a Exact Online Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom ERP Order Property
+     - Exact Online Quotations Property
+     - Exact Online Data Type
 
 
 Custom ERP Contact to Exact Online Contacts
