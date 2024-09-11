@@ -2,25 +2,25 @@
 PowerOffice GO to CRMOffice Dataflow
 ====================================
 
-Generated: 2024-09-11 11:54:17
+Generated: 2024-09-11 12:05:18
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from PowerOffice GO to CRMOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-PowerOfficeGO Customers person to CRMOffice Contacts
-----------------------------------------------------
-Every PowerOfficeGO Customers person will be synchronized with a CRMOffice Contacts.
+PowerOffice GO Customers person to CRMOffice Contacts
+-----------------------------------------------------
+Every PowerOffice GO Customers person will be synchronized with a CRMOffice Contacts.
 
-Once a link between a PowerOfficeGO Customers person and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Customers person and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Customers person and a CRMOffice Contacts:
+The following properties are synchronized between a PowerOffice GO Customers person and a CRMOffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Customers person Property
+   * - PowerOffice GO Customers person Property
      - CRMOffice Contacts Property
      - CRMOffice Data Type
    * - FirstName
@@ -34,18 +34,18 @@ The following properties are synchronized between a PowerOfficeGO Customers pers
      - "string"
 
 
-PowerOfficeGO Employees to CRMOffice Contacts
----------------------------------------------
-Every PowerOfficeGO Employees will be synchronized with a CRMOffice Contacts.
+PowerOffice GO Employees to CRMOffice Contacts
+----------------------------------------------
+Every PowerOffice GO Employees will be synchronized with a CRMOffice Contacts.
 
-Once a link between a PowerOfficeGO Employees and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Employees and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Employees and a CRMOffice Contacts:
+The following properties are synchronized between a PowerOffice GO Employees and a CRMOffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Employees Property
+   * - PowerOffice GO Employees Property
      - CRMOffice Contacts Property
      - CRMOffice Data Type
    * - FirstName
