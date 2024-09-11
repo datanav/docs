@@ -1,13 +1,13 @@
 ==================================
-Salesforce to Superoffice Dataflow
+Salesforce to SuperOffice Dataflow
 ==================================
 
-Generated: 2024-09-11 00:00:24
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Salesforce Order to Superoffice Quotealternative
 ------------------------------------------------
@@ -198,20 +198,20 @@ The following properties are synchronized between a Salesforce User and a Supero
      - "string"
 
 
-Salesforce Invoiceline to Superoffice Quoteline
+Salesforce Invoiceline to SuperOffice Quoteline
 -----------------------------------------------
-Every Salesforce Invoiceline will be synchronized with a Superoffice Quoteline.
+Every Salesforce Invoiceline will be synchronized with a SuperOffice Quoteline.
 
-Once a link between a Salesforce Invoiceline and a Superoffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Invoiceline and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Invoiceline and a Superoffice Quoteline:
+The following properties are synchronized between a Salesforce Invoiceline and a SuperOffice Quoteline:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Invoiceline Property
-     - Superoffice Quoteline Property
-     - Superoffice Data Type
+     - SuperOffice Quoteline Property
+     - SuperOffice Data Type
    * - Description
      - Description
      - "string"
@@ -229,20 +229,20 @@ The following properties are synchronized between a Salesforce Invoiceline and a
      - N/A
 
 
-Salesforce Orderitem to Superoffice Quoteline
+Salesforce Orderitem to SuperOffice Quoteline
 ---------------------------------------------
-Every Salesforce Orderitem will be synchronized with a Superoffice Quoteline.
+Every Salesforce Orderitem will be synchronized with a SuperOffice Quoteline.
 
-Once a link between a Salesforce Orderitem and a Superoffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Orderitem and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Orderitem and a Superoffice Quoteline:
+The following properties are synchronized between a Salesforce Orderitem and a SuperOffice Quoteline:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Orderitem Property
-     - Superoffice Quoteline Property
-     - Superoffice Data Type
+     - SuperOffice Quoteline Property
+     - SuperOffice Data Type
    * - OrderId
      - QuoteAlternativeId
      - "integer"
@@ -254,20 +254,20 @@ The following properties are synchronized between a Salesforce Orderitem and a S
      - N/A
 
 
-Salesforce Product2 to Superoffice Product
+Salesforce Product2 to SuperOffice Product
 ------------------------------------------
-Every Salesforce Product2 will be synchronized with a Superoffice Product.
+Every Salesforce Product2 will be synchronized with a SuperOffice Product.
 
-Once a link between a Salesforce Product2 and a Superoffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Product2 and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Product2 and a Superoffice Product:
+The following properties are synchronized between a Salesforce Product2 and a SuperOffice Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Product2 Property
-     - Superoffice Product Property
-     - Superoffice Data Type
+     - SuperOffice Product Property
+     - SuperOffice Data Type
    * - Description
      - Description
      - "string"
@@ -288,20 +288,20 @@ The following properties are synchronized between a Salesforce Product2 and a Su
      - "string"
 
 
-Salesforce Quote to Superoffice Quotealternative
+Salesforce Quote to SuperOffice Quotealternative
 ------------------------------------------------
-Every Salesforce Quote will be synchronized with a Superoffice Quotealternative.
+Every Salesforce Quote will be synchronized with a SuperOffice Quotealternative.
 
-Once a link between a Salesforce Quote and a Superoffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quote and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quote and a Superoffice Quotealternative:
+The following properties are synchronized between a Salesforce Quote and a SuperOffice Quotealternative:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quote Property
-     - Superoffice Quotealternative Property
-     - Superoffice Data Type
+     - SuperOffice Quotealternative Property
+     - SuperOffice Data Type
    * - Description
      - Name
      - "string"
@@ -316,20 +316,20 @@ The following properties are synchronized between a Salesforce Quote and a Super
      - "float"
 
 
-Salesforce Quotelineitem to Superoffice Quoteline
+Salesforce Quotelineitem to SuperOffice Quoteline
 -------------------------------------------------
-Every Salesforce Quotelineitem will be synchronized with a Superoffice Quoteline.
+Every Salesforce Quotelineitem will be synchronized with a SuperOffice Quoteline.
 
-Once a link between a Salesforce Quotelineitem and a Superoffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quotelineitem and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quotelineitem and a Superoffice Quoteline:
+The following properties are synchronized between a Salesforce Quotelineitem and a SuperOffice Quoteline:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quotelineitem Property
-     - Superoffice Quoteline Property
-     - Superoffice Data Type
+     - SuperOffice Quoteline Property
+     - SuperOffice Data Type
    * - Description
      - Description
      - "string"
