@@ -221,7 +221,7 @@ System by system type
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
 
-    **Businesscentral**
+    **Business Central**
 
     Microsoft Dynamics 365 Business Central (formerly Microsoft Dynamics NAV) – ERP and CRM software-as-a-service product meant for small and mid-sized businesses.
     .. link-button:: system/businesscentral
@@ -301,7 +301,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
-    **Powerofficego**
+    **PowerOffice GO**
 
     PowerOffice is an all-in-one business solution. It is a cloud-based software that allows small and medium businesses to manage their accounting, invoicing, payroll, and human resources. 
     .. link-button:: system/powerofficego
