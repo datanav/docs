@@ -2,27 +2,27 @@
 Invoiced to Exact Online Dataflow
 =================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Invoiced Customers person to ExactOnline Contacts
--------------------------------------------------
-Every Invoiced Customers person will be synchronized with a ExactOnline Contacts.
+Invoiced Customers person to Exact Online Contacts
+--------------------------------------------------
+Every Invoiced Customers person will be synchronized with a Exact Online Contacts.
 
-Once a link between a Invoiced Customers person and a ExactOnline Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers person and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers person and a ExactOnline Contacts:
+The following properties are synchronized between a Invoiced Customers person and a Exact Online Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Customers person Property
-     - ExactOnline Contacts Property
-     - ExactOnline Data Type
+     - Exact Online Contacts Property
+     - Exact Online Data Type
    * - city
      - City
      - "string"
@@ -31,39 +31,39 @@ The following properties are synchronized between a Invoiced Customers person an
      - "string"
 
 
-Invoiced Invoices to ExactOnline Quotations
--------------------------------------------
-Every Invoiced Invoices will be synchronized with a ExactOnline Quotations.
+Invoiced Invoices to Exact Online Quotations
+--------------------------------------------
+Every Invoiced Invoices will be synchronized with a Exact Online Quotations.
 
-Once a link between a Invoiced Invoices and a ExactOnline Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Invoices and a Exact Online Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Invoices and a ExactOnline Quotations:
+The following properties are synchronized between a Invoiced Invoices and a Exact Online Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Invoices Property
-     - ExactOnline Quotations Property
-     - ExactOnline Data Type
+     - Exact Online Quotations Property
+     - Exact Online Data Type
    * - currency
      - Currency
      - "string"
 
 
-Invoiced Lineitem to ExactOnline Quotations
--------------------------------------------
-Every Invoiced Lineitem will be synchronized with a ExactOnline Quotations.
+Invoiced Lineitem to Exact Online Quotations
+--------------------------------------------
+Every Invoiced Lineitem will be synchronized with a Exact Online Quotations.
 
-Once a link between a Invoiced Lineitem and a ExactOnline Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Lineitem and a Exact Online Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Lineitem and a ExactOnline Quotations:
+The following properties are synchronized between a Invoiced Lineitem and a Exact Online Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Lineitem Property
-     - ExactOnline Quotations Property
-     - ExactOnline Data Type
+     - Exact Online Quotations Property
+     - Exact Online Data Type
 
 
 Invoiced Contacts to Exact Online Addresses
