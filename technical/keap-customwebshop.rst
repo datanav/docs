@@ -1,13 +1,13 @@
-==============================
-Keap to CustomWebshop Dataflow
-==============================
+===============================
+Keap to Custom Webshop Dataflow
+===============================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Keap to CustomWebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Keap to Custom Webshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Keap Companies to CustomWebshop Customer
 ----------------------------------------
@@ -41,18 +41,18 @@ The following properties are synchronized between a Keap Opportunity and a Custo
      - CustomWebshop Data Type
 
 
-Keap Product to CustomWebshop Product
--------------------------------------
-Every Keap Product will be synchronized with a CustomWebshop Product.
+Keap Product to Custom Webshop Product
+--------------------------------------
+Every Keap Product will be synchronized with a Custom Webshop Product.
 
-Once a link between a Keap Product and a CustomWebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Product and a Custom Webshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Product and a CustomWebshop Product:
+The following properties are synchronized between a Keap Product and a Custom Webshop Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Product Property
-     - CustomWebshop Product Property
-     - CustomWebshop Data Type
+     - Custom Webshop Product Property
+     - Custom Webshop Data Type
 
