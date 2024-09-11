@@ -1,13 +1,13 @@
-======================================
-Business Nxt to CustomWebshop Dataflow
-======================================
+=======================================
+Business Nxt to Custom Webshop Dataflow
+=======================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Business Nxt to CustomWebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Business Nxt to Custom Webshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 BusinessNxt Address to CustomWebshop Customer
 ---------------------------------------------
@@ -57,34 +57,34 @@ The following properties are synchronized between a BusinessNxt Orderline and a 
      - CustomWebshop Data Type
 
 
-BusinessNxt Order to CustomWebshop Order
-----------------------------------------
-Every BusinessNxt Order will be synchronized with a CustomWebshop Order.
+Business Nxt Order to Custom Webshop Order
+------------------------------------------
+Every Business Nxt Order will be synchronized with a Custom Webshop Order.
 
-Once a link between a BusinessNxt Order and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Order and a Custom Webshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Order and a CustomWebshop Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - BusinessNxt Order Property
-     - CustomWebshop Order Property
-     - CustomWebshop Data Type
-
-
-BusinessNxt Product to CustomWebshop Product
---------------------------------------------
-Every BusinessNxt Product will be synchronized with a CustomWebshop Product.
-
-Once a link between a BusinessNxt Product and a CustomWebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a BusinessNxt Product and a CustomWebshop Product:
+The following properties are synchronized between a Business Nxt Order and a Custom Webshop Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Product Property
-     - CustomWebshop Product Property
-     - CustomWebshop Data Type
+   * - Business Nxt Order Property
+     - Custom Webshop Order Property
+     - Custom Webshop Data Type
+
+
+Business Nxt Product to Custom Webshop Product
+----------------------------------------------
+Every Business Nxt Product will be synchronized with a Custom Webshop Product.
+
+Once a link between a Business Nxt Product and a Custom Webshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Product and a Custom Webshop Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Product Property
+     - Custom Webshop Product Property
+     - Custom Webshop Data Type
 
