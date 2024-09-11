@@ -2,27 +2,27 @@
 BusinessNxt to HubSpot Dataflow
 ===============================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from BusinessNxt to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Visma Address to Hubspot Company
+Visma Address to HubSpot Company
 --------------------------------
-Every Visma Address will be synchronized with a Hubspot Company.
+Every Visma Address will be synchronized with a HubSpot Company.
 
-Once a link between a Visma Address and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Address and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Address and a Hubspot Company:
+The following properties are synchronized between a Visma Address and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Visma Address Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
    * - name
      - properties.name
      - "string"
@@ -31,20 +31,20 @@ The following properties are synchronized between a Visma Address and a Hubspot 
      - "string"
 
 
-Visma Company to Hubspot Company
+Visma Company to HubSpot Company
 --------------------------------
-Every Visma Company will be synchronized with a Hubspot Company.
+Every Visma Company will be synchronized with a HubSpot Company.
 
-Once a link between a Visma Company and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Company and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Company and a Hubspot Company:
+The following properties are synchronized between a Visma Company and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Visma Company Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
    * - name
      - properties.name
      - "string"
