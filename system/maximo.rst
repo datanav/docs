@@ -42,7 +42,7 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
         :text: Read more
         :classes: read-more
     ---
-    **Businessnxt**
+    **Visma Business Nxt**
 
     
     .. link-button:: system/businessnxt
@@ -66,7 +66,7 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
         :text: Read more
         :classes: read-more
     ---
-    **Exact**
+    **Exact Online**
 
     
     .. link-button:: system/exact
