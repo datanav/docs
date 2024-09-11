@@ -2,7 +2,7 @@
 ExactOnline to Keap Dataflow
 ============================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:37:15
 
 Introduction
 ------------
@@ -137,18 +137,18 @@ The following properties are synchronized between a Exact Employees and a Keap C
      - "string"
 
 
-Exact Items to Keap Product
----------------------------
-Every Exact Items will be synchronized with a Keap Product.
+ExactOnline Items to Keap Product
+---------------------------------
+Every ExactOnline Items will be synchronized with a Keap Product.
 
-Once a link between a Exact Items and a Keap Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Items and a Keap Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Items and a Keap Product:
+The following properties are synchronized between a ExactOnline Items and a Keap Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Items Property
+   * - ExactOnline Items Property
      - Keap Product Property
      - Keap Data Type
 
