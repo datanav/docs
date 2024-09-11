@@ -2,7 +2,7 @@
 Visma Business Nxt to Superoffice Dataflow
 ==========================================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
@@ -53,18 +53,18 @@ The following properties are synchronized between a Businessnxt Company and a Su
      - "string"
 
 
-Businessnxt Orderline to Superoffice Quoteline
-----------------------------------------------
-Every Businessnxt Orderline will be synchronized with a Superoffice Quoteline.
+Visma Orderline to Superoffice Quoteline
+----------------------------------------
+Every Visma Orderline will be synchronized with a Superoffice Quoteline.
 
-Once a link between a Businessnxt Orderline and a Superoffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Orderline and a Superoffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Orderline and a Superoffice Quoteline:
+The following properties are synchronized between a Visma Orderline and a Superoffice Quoteline:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Orderline Property
+   * - Visma Orderline Property
      - Superoffice Quoteline Property
      - Superoffice Data Type
    * - orderNo
@@ -72,18 +72,18 @@ The following properties are synchronized between a Businessnxt Orderline and a 
      - "integer"
 
 
-Businessnxt Product to Superoffice Product
-------------------------------------------
-Every Businessnxt Product will be synchronized with a Superoffice Product.
+Visma Product to Superoffice Product
+------------------------------------
+Every Visma Product will be synchronized with a Superoffice Product.
 
-Once a link between a Businessnxt Product and a Superoffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Product and a Superoffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Product and a Superoffice Product:
+The following properties are synchronized between a Visma Product and a Superoffice Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Product Property
+   * - Visma Product Property
      - Superoffice Product Property
      - Superoffice Data Type
    * - description
