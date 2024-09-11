@@ -1,106 +1,106 @@
-==============================
-Invoiced to Customerp Dataflow
-==============================
+===============================
+Invoiced to Custom ERP Dataflow
+===============================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Customerp. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Invoiced Customers person to Customerp Contact
-----------------------------------------------
-Every Invoiced Customers person will be synchronized with a Customerp Contact.
+Invoiced Customers person to Custom Contact
+-------------------------------------------
+Every Invoiced Customers person will be synchronized with a Custom Contact.
 
-Once a link between a Invoiced Customers person and a Customerp Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers person and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers person and a Customerp Contact:
+The following properties are synchronized between a Invoiced Customers person and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Customers person Property
-     - Customerp Contact Property
-     - Customerp Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
 
-Invoiced Lineitem to Customerp Order
-------------------------------------
-Every Invoiced Lineitem will be synchronized with a Customerp Order.
+Invoiced Lineitem to Custom Order
+---------------------------------
+Every Invoiced Lineitem will be synchronized with a Custom Order.
 
-Once a link between a Invoiced Lineitem and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Lineitem and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Lineitem and a Customerp Order:
+The following properties are synchronized between a Invoiced Lineitem and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Lineitem Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Invoiced Contacts to Customerp Contact
---------------------------------------
-Every Invoiced Contacts will be synchronized with a Customerp Contact.
+Invoiced Contacts to Custom Contact
+-----------------------------------
+Every Invoiced Contacts will be synchronized with a Custom Contact.
 
-Once a link between a Invoiced Contacts and a Customerp Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Contacts and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Contacts and a Customerp Contact:
+The following properties are synchronized between a Invoiced Contacts and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Contacts Property
-     - Customerp Contact Property
-     - Customerp Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
 
-Invoiced Customers company to Customerp Customer
-------------------------------------------------
-Every Invoiced Customers company will be synchronized with a Customerp Customer.
+Invoiced Customers company to Custom Customer
+---------------------------------------------
+Every Invoiced Customers company will be synchronized with a Custom Customer.
 
-Once a link between a Invoiced Customers company and a Customerp Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers company and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a Customerp Customer:
+The following properties are synchronized between a Invoiced Customers company and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Customers company Property
-     - Customerp Customer Property
-     - Customerp Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Invoiced Invoices to Customerp Order
-------------------------------------
-Every Invoiced Invoices will be synchronized with a Customerp Order.
+Invoiced Invoices to Custom Order
+---------------------------------
+Every Invoiced Invoices will be synchronized with a Custom Order.
 
-Once a link between a Invoiced Invoices and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Invoices and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Invoices and a Customerp Order:
+The following properties are synchronized between a Invoiced Invoices and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Invoices Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Invoiced Items to Customerp Product
------------------------------------
-Every Invoiced Items will be synchronized with a Customerp Product.
+Invoiced Items to Custom Product
+--------------------------------
+Every Invoiced Items will be synchronized with a Custom Product.
 
-Once a link between a Invoiced Items and a Customerp Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Items and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Items and a Customerp Product:
+The following properties are synchronized between a Invoiced Items and a Custom Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Items Property
-     - Customerp Product Property
-     - Customerp Data Type
+     - Custom Product Property
+     - Custom Data Type
 
