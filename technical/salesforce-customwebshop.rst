@@ -2,123 +2,123 @@
 Salesforce to CustomWebshop Dataflow
 ====================================
 
-Generated: 2024-09-11 07:56:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to CustomWebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Salesforce Division to Custom Customer
---------------------------------------
-Every Salesforce Division will be synchronized with a Custom Customer.
+Salesforce Division to CustomWebshop Customer
+---------------------------------------------
+Every Salesforce Division will be synchronized with a CustomWebshop Customer.
 
-Once a link between a Salesforce Division and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Division and a CustomWebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Division and a Custom Customer:
+The following properties are synchronized between a Salesforce Division and a CustomWebshop Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Division Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomWebshop Customer Property
+     - CustomWebshop Data Type
 
 
-Salesforce Invoice to Custom Order
-----------------------------------
-Every Salesforce Invoice will be synchronized with a Custom Order.
+Salesforce Invoice to CustomWebshop Order
+-----------------------------------------
+Every Salesforce Invoice will be synchronized with a CustomWebshop Order.
 
-Once a link between a Salesforce Invoice and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Invoice and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Invoice and a Custom Order:
+The following properties are synchronized between a Salesforce Invoice and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Invoice Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
-Salesforce Invoiceline to Custom Order
---------------------------------------
-Every Salesforce Invoiceline will be synchronized with a Custom Order.
+Salesforce Invoiceline to CustomWebshop Order
+---------------------------------------------
+Every Salesforce Invoiceline will be synchronized with a CustomWebshop Order.
 
-Once a link between a Salesforce Invoiceline and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Invoiceline and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Invoiceline and a Custom Order:
+The following properties are synchronized between a Salesforce Invoiceline and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Invoiceline Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
-Salesforce Orderitem to Custom Order
-------------------------------------
-Every Salesforce Orderitem will be synchronized with a Custom Order.
+Salesforce Orderitem to CustomWebshop Order
+-------------------------------------------
+Every Salesforce Orderitem will be synchronized with a CustomWebshop Order.
 
-Once a link between a Salesforce Orderitem and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Orderitem and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Orderitem and a Custom Order:
+The following properties are synchronized between a Salesforce Orderitem and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Orderitem Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
-Salesforce Organization to Custom Customer
-------------------------------------------
-Every Salesforce Organization will be synchronized with a Custom Customer.
+Salesforce Organization to CustomWebshop Customer
+-------------------------------------------------
+Every Salesforce Organization will be synchronized with a CustomWebshop Customer.
 
-Once a link between a Salesforce Organization and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Organization and a CustomWebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Organization and a Custom Customer:
+The following properties are synchronized between a Salesforce Organization and a CustomWebshop Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Organization Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomWebshop Customer Property
+     - CustomWebshop Data Type
 
 
-Salesforce Quote to Custom Order
---------------------------------
-Every Salesforce Quote will be synchronized with a Custom Order.
+Salesforce Quote to CustomWebshop Order
+---------------------------------------
+Every Salesforce Quote will be synchronized with a CustomWebshop Order.
 
-Once a link between a Salesforce Quote and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quote and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quote and a Custom Order:
+The following properties are synchronized between a Salesforce Quote and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quote Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
-Salesforce Quotelineitem to Custom Order
-----------------------------------------
-Every Salesforce Quotelineitem will be synchronized with a Custom Order.
+Salesforce Quotelineitem to CustomWebshop Order
+-----------------------------------------------
+Every Salesforce Quotelineitem will be synchronized with a CustomWebshop Order.
 
-Once a link between a Salesforce Quotelineitem and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quotelineitem and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quotelineitem and a Custom Order:
+The following properties are synchronized between a Salesforce Quotelineitem and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quotelineitem Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
 Salesforce Order to CustomWebshop Order
