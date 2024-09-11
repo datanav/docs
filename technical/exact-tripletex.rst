@@ -1,13 +1,13 @@
-=================================
-ExactOnline to Tripletex Dataflow
-=================================
+==================================
+Exact Online to Tripletex Dataflow
+==================================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 11:38:23
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from ExactOnline to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 ExactOnline Accounts to Tripletex Customer
 ------------------------------------------
