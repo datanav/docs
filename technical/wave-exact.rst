@@ -1,13 +1,13 @@
-============================
-Wave to ExactOnline Dataflow
-============================
+=============================
+Wave to Exact Online Dataflow
+=============================
 
-Generated: 2024-09-11 11:13:29
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Wave to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Wave to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Wave Customer person to ExactOnline Contacts
 --------------------------------------------
@@ -83,39 +83,39 @@ The following properties are synchronized between a Wave Invoice and a ExactOnli
      - "string"
 
 
-Wave Currency to ExactOnline Currencies
----------------------------------------
-Every Wave Currency will be synchronized with a ExactOnline Currencies.
+Wave Currency to Exact Online Currencies
+----------------------------------------
+Every Wave Currency will be synchronized with a Exact Online Currencies.
 
-Once a link between a Wave Currency and a ExactOnline Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Currency and a Exact Online Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Currency and a ExactOnline Currencies:
+The following properties are synchronized between a Wave Currency and a Exact Online Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Currency Property
-     - ExactOnline Currencies Property
-     - ExactOnline Data Type
+     - Exact Online Currencies Property
+     - Exact Online Data Type
    * - name
      - Description
      - "string"
 
 
-Wave Customer to ExactOnline Accounts
--------------------------------------
-Every Wave Customer will be synchronized with a ExactOnline Accounts.
+Wave Customer to Exact Online Accounts
+--------------------------------------
+Every Wave Customer will be synchronized with a Exact Online Accounts.
 
-Once a link between a Wave Customer and a ExactOnline Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a ExactOnline Accounts:
+The following properties are synchronized between a Wave Customer and a Exact Online Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - ExactOnline Accounts Property
-     - ExactOnline Data Type
+     - Exact Online Accounts Property
+     - Exact Online Data Type
    * - address.addressLine1
      - AddressLine1
      - "string"
@@ -160,20 +160,20 @@ The following properties are synchronized between a Wave Customer and a ExactOnl
      - "string"
 
 
-Wave Customer to ExactOnline Contacts
--------------------------------------
-Every Wave Customer will be synchronized with a ExactOnline Contacts.
+Wave Customer to Exact Online Contacts
+--------------------------------------
+Every Wave Customer will be synchronized with a Exact Online Contacts.
 
-Once a link between a Wave Customer and a ExactOnline Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a ExactOnline Contacts:
+The following properties are synchronized between a Wave Customer and a Exact Online Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - ExactOnline Contacts Property
-     - ExactOnline Data Type
+     - Exact Online Contacts Property
+     - Exact Online Data Type
    * - address.city
      - City
      - "string"
@@ -200,20 +200,20 @@ The following properties are synchronized between a Wave Customer and a ExactOnl
      - "string"
 
 
-Wave Customer person to ExactOnline Addresses
----------------------------------------------
-Every Wave Customer person will be synchronized with a ExactOnline Addresses.
+Wave Customer person to Exact Online Addresses
+----------------------------------------------
+Every Wave Customer person will be synchronized with a Exact Online Addresses.
 
-Once a link between a Wave Customer person and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer person and a Exact Online Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a ExactOnline Addresses:
+The following properties are synchronized between a Wave Customer person and a Exact Online Addresses:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     - ExactOnline Addresses Property
-     - ExactOnline Data Type
+     - Exact Online Addresses Property
+     - Exact Online Data Type
    * - address.addressLine1
      - AddressLine1
      - "string"
@@ -240,20 +240,20 @@ The following properties are synchronized between a Wave Customer person and a E
      - "string"
 
 
-Wave Invoice to ExactOnline Salesorderlines
--------------------------------------------
-Every Wave Invoice will be synchronized with a ExactOnline Salesorderlines.
+Wave Invoice to Exact Online Salesorderlines
+--------------------------------------------
+Every Wave Invoice will be synchronized with a Exact Online Salesorderlines.
 
-Once a link between a Wave Invoice and a ExactOnline Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a Exact Online Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a ExactOnline Salesorderlines:
+The following properties are synchronized between a Wave Invoice and a Exact Online Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     - ExactOnline Salesorderlines Property
-     - ExactOnline Data Type
+     - Exact Online Salesorderlines Property
+     - Exact Online Data Type
    * - id
      - OrderID
      - "string"
@@ -262,20 +262,20 @@ The following properties are synchronized between a Wave Invoice and a ExactOnli
      - "string"
 
 
-Wave Invoice to ExactOnline Salesorders
----------------------------------------
-Every Wave Invoice will be synchronized with a ExactOnline Salesorders.
+Wave Invoice to Exact Online Salesorders
+----------------------------------------
+Every Wave Invoice will be synchronized with a Exact Online Salesorders.
 
-Once a link between a Wave Invoice and a ExactOnline Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a Exact Online Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a ExactOnline Salesorders:
+The following properties are synchronized between a Wave Invoice and a Exact Online Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     - ExactOnline Salesorders Property
-     - ExactOnline Data Type
+     - Exact Online Salesorders Property
+     - Exact Online Data Type
    * - currency.code
      - Currency
      - "string"
@@ -284,36 +284,36 @@ The following properties are synchronized between a Wave Invoice and a ExactOnli
      - "string"
 
 
-Wave Product to ExactOnline Items
----------------------------------
-Every Wave Product will be synchronized with a ExactOnline Items.
+Wave Product to Exact Online Items
+----------------------------------
+Every Wave Product will be synchronized with a Exact Online Items.
 
-Once a link between a Wave Product and a ExactOnline Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a Exact Online Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a ExactOnline Items:
+The following properties are synchronized between a Wave Product and a Exact Online Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Product Property
-     - ExactOnline Items Property
-     - ExactOnline Data Type
+     - Exact Online Items Property
+     - Exact Online Data Type
 
 
-Wave Vendor to ExactOnline Addresses
-------------------------------------
-Every Wave Vendor will be synchronized with a ExactOnline Addresses.
+Wave Vendor to Exact Online Addresses
+-------------------------------------
+Every Wave Vendor will be synchronized with a Exact Online Addresses.
 
-Once a link between a Wave Vendor and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a Exact Online Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a ExactOnline Addresses:
+The following properties are synchronized between a Wave Vendor and a Exact Online Addresses:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     - ExactOnline Addresses Property
-     - ExactOnline Data Type
+     - Exact Online Addresses Property
+     - Exact Online Data Type
    * - address.addressLine1
      - AddressLine1
      - "string"
@@ -328,20 +328,20 @@ The following properties are synchronized between a Wave Vendor and a ExactOnlin
      - "string"
 
 
-Wave Vendor to ExactOnline Contacts
------------------------------------
-Every Wave Vendor will be synchronized with a ExactOnline Contacts.
+Wave Vendor to Exact Online Contacts
+------------------------------------
+Every Wave Vendor will be synchronized with a Exact Online Contacts.
 
-Once a link between a Wave Vendor and a ExactOnline Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a ExactOnline Contacts:
+The following properties are synchronized between a Wave Vendor and a Exact Online Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     - ExactOnline Contacts Property
-     - ExactOnline Data Type
+     - Exact Online Contacts Property
+     - Exact Online Data Type
    * - address.city
      - City
      - "string"
