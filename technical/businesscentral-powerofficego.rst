@@ -2,65 +2,65 @@
 BusinessCentral to PowerOfficeGO Dataflow
 =========================================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 08:40:13
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from BusinessCentral to PowerOfficeGO. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-BusinessCentral Customers to PowerOffice Contactperson
-------------------------------------------------------
-Before any synchronization can take place, a link between a BusinessCentral Customers and a PowerOffice Contactperson must be established.
+BusinessCentral Customers to PowerOfficeGO Contactperson
+--------------------------------------------------------
+Before any synchronization can take place, a link between a BusinessCentral Customers and a PowerOfficeGO Contactperson must be established.
 
-A new PowerOffice Contactperson will be created from a BusinessCentral Customers if it is connected to a BusinessCentral Salesorders that is synchronized into PowerOffice.
+A new PowerOfficeGO Contactperson will be created from a BusinessCentral Customers if it is connected to a BusinessCentral Salesorders that is synchronized into PowerOfficeGO.
 
-Once a link between a BusinessCentral Customers and a PowerOffice Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessCentral Customers and a PowerOfficeGO Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Customers and a PowerOffice Contactperson:
+The following properties are synchronized between a BusinessCentral Customers and a PowerOfficeGO Contactperson:
 
 .. list-table::
    :header-rows: 1
 
    * - BusinessCentral Customers Property
-     - PowerOffice Contactperson Property
-     - PowerOffice Data Type
+     - PowerOfficeGO Contactperson Property
+     - PowerOfficeGO Data Type
 
 
-Business Customers to PowerOffice Customers
--------------------------------------------
-Before any synchronization can take place, a link between a Business Customers and a PowerOffice Customers must be established.
+BusinessCentral Customers to PowerOfficeGO Customers
+----------------------------------------------------
+Before any synchronization can take place, a link between a BusinessCentral Customers and a PowerOfficeGO Customers must be established.
 
-A new PowerOffice Customers will be created from a Business Customers if it is connected to a Business Businesscentral-customers, Businesscentral-salesorders, Businesscentral-contact-person, or Businesscentral-contacts-person that is synchronized into PowerOffice.
+A new PowerOfficeGO Customers will be created from a BusinessCentral Customers if it is connected to a BusinessCentral Customers, Salesorders, Contact-person, or Contacts-person that is synchronized into PowerOfficeGO.
 
-Once a link between a Business Customers and a PowerOffice Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessCentral Customers and a PowerOfficeGO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Customers and a PowerOffice Customers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Customers Property
-     - PowerOffice Customers Property
-     - PowerOffice Data Type
-
-
-Business Customers to PowerOffice Customers person
---------------------------------------------------
-Before any synchronization can take place, a link between a Business Customers and a PowerOffice Customers person must be established.
-
-A new PowerOffice Customers person will be created from a Business Customers if it is connected to a Business Businesscentral-customers, Businesscentral-salesorders, Businesscentral-contact-person, or Businesscentral-contacts-person that is synchronized into PowerOffice.
-
-Once a link between a Business Customers and a PowerOffice Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Customers and a PowerOffice Customers person:
+The following properties are synchronized between a BusinessCentral Customers and a PowerOfficeGO Customers:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Customers Property
-     - PowerOffice Customers person Property
-     - PowerOffice Data Type
+   * - BusinessCentral Customers Property
+     - PowerOfficeGO Customers Property
+     - PowerOfficeGO Data Type
+
+
+BusinessCentral Customers to PowerOfficeGO Customers person
+-----------------------------------------------------------
+Before any synchronization can take place, a link between a BusinessCentral Customers and a PowerOfficeGO Customers person must be established.
+
+A new PowerOfficeGO Customers person will be created from a BusinessCentral Customers if it is connected to a BusinessCentral Customers, Salesorders, Contact-person, or Contacts-person that is synchronized into PowerOfficeGO.
+
+Once a link between a BusinessCentral Customers and a PowerOfficeGO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a BusinessCentral Customers and a PowerOfficeGO Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - BusinessCentral Customers Property
+     - PowerOfficeGO Customers person Property
+     - PowerOfficeGO Data Type
 
 
 BusinessCentral Contacts person to PowerOfficeGO Contactperson
