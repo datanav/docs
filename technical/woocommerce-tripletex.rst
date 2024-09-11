@@ -2,25 +2,25 @@
 WooCommerce to Tripletex Dataflow
 =================================
 
-Generated: 2024-09-11 07:44:23
+Generated: 2024-09-11 07:46:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Woocommerce Customer to Tripletex Customer person
+WooCommerce Customer to Tripletex Customer person
 -------------------------------------------------
-Every Woocommerce Customer will be synchronized with a Tripletex Customer person.
+Every WooCommerce Customer will be synchronized with a Tripletex Customer person.
 
-Once a link between a Woocommerce Customer and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Customer and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Customer and a Tripletex Customer person:
+The following properties are synchronized between a WooCommerce Customer and a Tripletex Customer person:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Customer Property
+   * - WooCommerce Customer Property
      - Tripletex Customer person Property
      - Tripletex Data Type
    * - billing.address_1
@@ -121,18 +121,18 @@ The following properties are synchronized between a Woocommerce Customer and a T
      - "string"
 
 
-Woocommerce Order to Tripletex Order
+WooCommerce Order to Tripletex Order
 ------------------------------------
-Every Woocommerce Order will be synchronized with a Tripletex Order.
+Every WooCommerce Order will be synchronized with a Tripletex Order.
 
-Once a link between a Woocommerce Order and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Order and a Tripletex Order:
+The following properties are synchronized between a WooCommerce Order and a Tripletex Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Order Property
+   * - WooCommerce Order Property
      - Tripletex Order Property
      - Tripletex Data Type
    * - currency
@@ -146,18 +146,18 @@ The following properties are synchronized between a Woocommerce Order and a Trip
      - "integer"
 
 
-Woocommerce Order to Tripletex Orderline
+WooCommerce Order to Tripletex Orderline
 ----------------------------------------
-Every Woocommerce Order will be synchronized with a Tripletex Orderline.
+Every WooCommerce Order will be synchronized with a Tripletex Orderline.
 
-Once a link between a Woocommerce Order and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Order and a Tripletex Orderline:
+The following properties are synchronized between a WooCommerce Order and a Tripletex Orderline:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Order Property
+   * - WooCommerce Order Property
      - Tripletex Orderline Property
      - Tripletex Data Type
    * - id
@@ -171,18 +171,18 @@ The following properties are synchronized between a Woocommerce Order and a Trip
      - N/A
 
 
-Woocommerce Product to Tripletex Product
+WooCommerce Product to Tripletex Product
 ----------------------------------------
-Every Woocommerce Product will be synchronized with a Tripletex Product.
+Every WooCommerce Product will be synchronized with a Tripletex Product.
 
-Once a link between a Woocommerce Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Product and a Tripletex Product:
+The following properties are synchronized between a WooCommerce Product and a Tripletex Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Product Property
+   * - WooCommerce Product Property
      - Tripletex Product Property
      - Tripletex Data Type
    * - name
