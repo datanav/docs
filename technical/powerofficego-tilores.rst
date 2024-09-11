@@ -2,25 +2,25 @@
 PowerOfficeGO to Tilores Dataflow
 =================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from PowerOfficeGO to Tilores. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Powerofficego Contactperson to Tilores Human
---------------------------------------------
-Every Powerofficego Contactperson will be synchronized with a Tilores Human.
+PowerOffice Contactperson to Tilores Human
+------------------------------------------
+Every PowerOffice Contactperson will be synchronized with a Tilores Human.
 
-Once a link between a Powerofficego Contactperson and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Contactperson and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Contactperson and a Tilores Human:
+The following properties are synchronized between a PowerOffice Contactperson and a Tilores Human:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Contactperson Property
+   * - PowerOffice Contactperson Property
      - Tilores Human Property
      - Tilores Data Type
    * - address1
@@ -52,18 +52,18 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
 
 
-Powerofficego Customers person to Tilores Human
------------------------------------------------
-Every Powerofficego Customers person will be synchronized with a Tilores Human.
+PowerOffice Customers person to Tilores Human
+---------------------------------------------
+Every PowerOffice Customers person will be synchronized with a Tilores Human.
 
-Once a link between a Powerofficego Customers person and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Customers person and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers person and a Tilores Human:
+The following properties are synchronized between a PowerOffice Customers person and a Tilores Human:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Customers person Property
+   * - PowerOffice Customers person Property
      - Tilores Human Property
      - Tilores Data Type
    * - DateOfBirth
@@ -89,18 +89,18 @@ The following properties are synchronized between a Powerofficego Customers pers
      - "string"
 
 
-Powerofficego Employees to Tilores Human
-----------------------------------------
-Every Powerofficego Employees will be synchronized with a Tilores Human.
+PowerOffice Employees to Tilores Human
+--------------------------------------
+Every PowerOffice Employees will be synchronized with a Tilores Human.
 
-Once a link between a Powerofficego Employees and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Employees and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Employees and a Tilores Human:
+The following properties are synchronized between a PowerOffice Employees and a Tilores Human:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Employees Property
+   * - PowerOffice Employees Property
      - Tilores Human Property
      - Tilores Data Type
    * - DateOfBirth
