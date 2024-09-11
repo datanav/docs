@@ -2,105 +2,105 @@
 Custom ERP to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-11 07:41:19
+Generated: 2024-09-11 07:43:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Custom ERP to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Customerp Contact to Chargebee Customer
----------------------------------------
-Every Customerp Contact will be synchronized with a Chargebee Customer.
+Custom Contact to Chargebee Customer
+------------------------------------
+Every Custom Contact will be synchronized with a Chargebee Customer.
 
-Once a link between a Customerp Contact and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Contact and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customerp Contact and a Chargebee Customer:
+The following properties are synchronized between a Custom Contact and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customerp Contact Property
+   * - Custom Contact Property
      - Chargebee Customer Property
      - Chargebee Data Type
 
 
-Customerp Customer to Chargebee Business_entity
------------------------------------------------
-Every Customerp Customer will be synchronized with a Chargebee Business_entity.
+Custom Customer to Chargebee Business_entity
+--------------------------------------------
+Every Custom Customer will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Customerp Customer and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Customer and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customerp Customer and a Chargebee Business_entity:
+The following properties are synchronized between a Custom Customer and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customerp Customer Property
+   * - Custom Customer Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
 
 
-Customerp Employee to Chargebee Customer
-----------------------------------------
-Every Customerp Employee will be synchronized with a Chargebee Customer.
+Custom Employee to Chargebee Customer
+-------------------------------------
+Every Custom Employee will be synchronized with a Chargebee Customer.
 
-Once a link between a Customerp Employee and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Employee and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customerp Employee and a Chargebee Customer:
+The following properties are synchronized between a Custom Employee and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customerp Employee Property
+   * - Custom Employee Property
      - Chargebee Customer Property
      - Chargebee Data Type
 
 
-Customerp Quote to Chargebee Order
-----------------------------------
-Every Customerp Quote will be synchronized with a Chargebee Order.
+Custom Quote to Chargebee Order
+-------------------------------
+Every Custom Quote will be synchronized with a Chargebee Order.
 
-Once a link between a Customerp Quote and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Quote and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customerp Quote and a Chargebee Order:
+The following properties are synchronized between a Custom Quote and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customerp Quote Property
+   * - Custom Quote Property
      - Chargebee Order Property
      - Chargebee Data Type
 
 
-Customerp Order to Chargebee Order
-----------------------------------
-Every Customerp Order will be synchronized with a Chargebee Order.
+Custom Order to Chargebee Order
+-------------------------------
+Every Custom Order will be synchronized with a Chargebee Order.
 
-Once a link between a Customerp Order and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Order and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customerp Order and a Chargebee Order:
+The following properties are synchronized between a Custom Order and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customerp Order Property
+   * - Custom Order Property
      - Chargebee Order Property
      - Chargebee Data Type
 
 
-Customerp Product to Chargebee Item
------------------------------------
-Every Customerp Product will be synchronized with a Chargebee Item.
+Custom Product to Chargebee Item
+--------------------------------
+Every Custom Product will be synchronized with a Chargebee Item.
 
-Once a link between a Customerp Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customerp Product and a Chargebee Item:
+The following properties are synchronized between a Custom Product and a Chargebee Item:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customerp Product Property
+   * - Custom Product Property
      - Chargebee Item Property
      - Chargebee Data Type
 
