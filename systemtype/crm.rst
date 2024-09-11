@@ -24,9 +24,13 @@ Data types
 
    * - :ref:`Asset <datatype_asset>`
      - true
-     - false
+     - true
 
    * - :ref:`Classification <datatype_classification>`
+     - true
+     - true
+
+   * - :ref:`Documentation <datatype_documentation>`
      - true
      - false
 
@@ -48,7 +52,7 @@ Data types
 
    * - :ref:`Task <datatype_task>`
      - true
-     - false
+     - true
 
 Systems
 ^^^^^^^^^^
@@ -108,7 +112,7 @@ Systems
     ---
     **Salesforce**
 
-    Salesforce is a CRM platform, providing services such as marketing, sales, commerce, service and IT.
+    
     .. link-button:: system/salesforce
         :type: ref
         :text: Read more
