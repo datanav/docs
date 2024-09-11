@@ -2,41 +2,41 @@
 ZohoCRM to CustomHRM Dataflow
 =============================
 
-Generated: 2024-09-11 07:54:34
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from ZohoCRM to CustomHRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-ZohoCRM Account to Custom Department
-------------------------------------
-Every ZohoCRM Account will be synchronized with a Custom Department.
+ZohoCRM Account to CustomHRM Department
+---------------------------------------
+Every ZohoCRM Account will be synchronized with a CustomHRM Department.
 
-Once a link between a ZohoCRM Account and a Custom Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Account and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Account and a Custom Department:
+The following properties are synchronized between a ZohoCRM Account and a CustomHRM Department:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Account Property
-     - Custom Department Property
-     - Custom Data Type
+     - CustomHRM Department Property
+     - CustomHRM Data Type
 
 
-ZohoCRM Contact to Custom Employee
-----------------------------------
-Every ZohoCRM Contact will be synchronized with a Custom Employee.
+ZohoCRM Contact to CustomHRM Employee
+-------------------------------------
+Every ZohoCRM Contact will be synchronized with a CustomHRM Employee.
 
-Once a link between a ZohoCRM Contact and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Contact and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Contact and a Custom Employee:
+The following properties are synchronized between a ZohoCRM Contact and a CustomHRM Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Contact Property
-     - Custom Employee Property
-     - Custom Data Type
+     - CustomHRM Employee Property
+     - CustomHRM Data Type
 
