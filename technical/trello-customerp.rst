@@ -2,7 +2,7 @@
 Trello to CustomERP Dataflow
 ============================
 
-Generated: 2024-09-11 08:01:30
+Generated: 2024-09-11 08:03:13
 
 Introduction
 ------------
@@ -105,18 +105,18 @@ The following properties are synchronized between a Trello Organizations and a C
      - Custom Data Type
 
 
-Trello Members to Custom Employee
----------------------------------
-Every Trello Members will be synchronized with a Custom Employee.
+Trello Members to CustomERP Employee
+------------------------------------
+Every Trello Members will be synchronized with a CustomERP Employee.
 
-Once a link between a Trello Members and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Members and a CustomERP Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Members and a Custom Employee:
+The following properties are synchronized between a Trello Members and a CustomERP Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Members Property
-     - Custom Employee Property
-     - Custom Data Type
+     - CustomERP Employee Property
+     - CustomERP Data Type
 
