@@ -2,25 +2,25 @@
 MemberCare to ZohoCRM Dataflow
 ==============================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to ZohoCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Membercare Companies to ZohoCRM Account
+MemberCare Companies to ZohoCRM Account
 ---------------------------------------
-Every Membercare Companies will be synchronized with a ZohoCRM Account.
+Every MemberCare Companies will be synchronized with a ZohoCRM Account.
 
-Once a link between a Membercare Companies and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companies and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Companies and a ZohoCRM Account:
+The following properties are synchronized between a MemberCare Companies and a ZohoCRM Account:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Companies Property
+   * - MemberCare Companies Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
    * - companyName
@@ -31,18 +31,18 @@ The following properties are synchronized between a Membercare Companies and a Z
      - "string"
 
 
-Membercare Organizations to ZohoCRM Account
+MemberCare Organizations to ZohoCRM Account
 -------------------------------------------
-Every Membercare Organizations will be synchronized with a ZohoCRM Account.
+Every MemberCare Organizations will be synchronized with a ZohoCRM Account.
 
-Once a link between a Membercare Organizations and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Organizations and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Organizations and a ZohoCRM Account:
+The following properties are synchronized between a MemberCare Organizations and a ZohoCRM Account:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Organizations Property
+   * - MemberCare Organizations Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
    * - name
