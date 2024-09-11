@@ -2,27 +2,27 @@
 Wix.com to MemberCare Dataflow
 ==============================
 
-Generated: 2024-09-11 07:46:45
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wix.com Contacts to Membercare Persons
+Wix.com Contacts to MemberCare Persons
 --------------------------------------
-Every Wix.com Contacts will be synchronized with a Membercare Persons.
+Every Wix.com Contacts will be synchronized with a MemberCare Persons.
 
-Once a link between a Wix.com Contacts and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a Membercare Persons:
+The following properties are synchronized between a Wix.com Contacts and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     - Membercare Persons Property
-     - Membercare Data Type
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - info.name.first
      - firstname
      - "string"
@@ -34,20 +34,20 @@ The following properties are synchronized between a Wix.com Contacts and a Membe
      - "string"
 
 
-Wix.com Products to Membercare Products
+Wix.com Products to MemberCare Products
 ---------------------------------------
-Every Wix.com Products will be synchronized with a Membercare Products.
+Every Wix.com Products will be synchronized with a MemberCare Products.
 
-Once a link between a Wix.com Products and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a MemberCare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a Membercare Products:
+The following properties are synchronized between a Wix.com Products and a MemberCare Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     - Membercare Products Property
-     - Membercare Data Type
+     - MemberCare Products Property
+     - MemberCare Data Type
    * - name
      - name
      - "string"
