@@ -2,7 +2,7 @@
 Keap to SuperOffice Dataflow
 ============================
 
-Generated: 2024-09-11 07:56:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
@@ -43,20 +43,20 @@ The following properties are synchronized between a Keap Companies and a Superof
      - "integer"
 
 
-Keap Contacts to Superoffice Person
+Keap Contacts to SuperOffice Person
 -----------------------------------
-Every Keap Contacts will be synchronized with a Superoffice Person.
+Every Keap Contacts will be synchronized with a SuperOffice Person.
 
-Once a link between a Keap Contacts and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Contacts and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Contacts and a Superoffice Person:
+The following properties are synchronized between a Keap Contacts and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Contacts Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+     - SuperOffice Person Property
+     - SuperOffice Data Type
    * - birthday
      - BirthDate
      - N/A
