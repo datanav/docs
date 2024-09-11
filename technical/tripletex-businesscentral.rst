@@ -1,13 +1,13 @@
-=====================================
-Tripletex to Businesscentral Dataflow
-=====================================
+======================================
+Tripletex to Business Central Dataflow
+======================================
 
-Generated: 2024-09-11 02:23:13
+Generated: 2024-09-11 07:53:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Businesscentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Tripletex Contact to Businesscentral Customers company
 ------------------------------------------------------
@@ -104,20 +104,20 @@ The following properties are synchronized between a Tripletex Department and a B
      - Businesscentral Data Type
 
 
-Tripletex Contact to Businesscentral Contacts person
-----------------------------------------------------
-Every Tripletex Contact will be synchronized with a Businesscentral Contacts person.
+Tripletex Contact to Business Contacts person
+---------------------------------------------
+Every Tripletex Contact will be synchronized with a Business Contacts person.
 
-Once a link between a Tripletex Contact and a Businesscentral Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a Business Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a Businesscentral Contacts person:
+The following properties are synchronized between a Tripletex Contact and a Business Contacts person:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     - Businesscentral Contacts person Property
-     - Businesscentral Data Type
+     - Business Contacts person Property
+     - Business Data Type
    * - email
      - email
      - "string"
@@ -129,20 +129,20 @@ The following properties are synchronized between a Tripletex Contact and a Busi
      - "string"
 
 
-Tripletex Customer to Businesscentral Customers company
--------------------------------------------------------
-removed person customers for now until that pattern is resolved, it  will be synchronized with a Businesscentral Customers company.
+Tripletex Customer to Business Customers company
+------------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Business Customers company.
 
-Once a link between a Tripletex Customer and a Businesscentral Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Business Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a Businesscentral Customers company:
+The following properties are synchronized between a Tripletex Customer and a Business Customers company:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     - Businesscentral Customers company Property
-     - Businesscentral Data Type
+     - Business Customers company Property
+     - Business Data Type
    * - deliveryAddress.addressLine1
      - addressLine1
      - "string"
@@ -238,20 +238,20 @@ The following properties are synchronized between a Tripletex Customer and a Bus
      - "string"
 
 
-Tripletex Customer person to Businesscentral Contacts person
-------------------------------------------------------------
-Every Tripletex Customer person will be synchronized with a Businesscentral Contacts person.
+Tripletex Customer person to Business Contacts person
+-----------------------------------------------------
+Every Tripletex Customer person will be synchronized with a Business Contacts person.
 
-Once a link between a Tripletex Customer person and a Businesscentral Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a Business Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a Businesscentral Contacts person:
+The following properties are synchronized between a Tripletex Customer person and a Business Contacts person:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     - Businesscentral Contacts person Property
-     - Businesscentral Data Type
+     - Business Contacts person Property
+     - Business Data Type
    * - deliveryAddress.addressLine1
      - addressLine1
      - "string"
@@ -317,20 +317,20 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
 
 
-Tripletex Customer person to Businesscentral Customers person
--------------------------------------------------------------
-Every Tripletex Customer person will be synchronized with a Businesscentral Customers person.
+Tripletex Customer person to Business Customers person
+------------------------------------------------------
+Every Tripletex Customer person will be synchronized with a Business Customers person.
 
-Once a link between a Tripletex Customer person and a Businesscentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a Business Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a Businesscentral Customers person:
+The following properties are synchronized between a Tripletex Customer person and a Business Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     - Businesscentral Customers person Property
-     - Businesscentral Data Type
+     - Business Customers person Property
+     - Business Data Type
    * - deliveryAddress.addressLine1
      - addressLine1
      - "string"
@@ -393,20 +393,20 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
 
 
-Tripletex Employee to Businesscentral Employees
------------------------------------------------
-Every Tripletex Employee will be synchronized with a Businesscentral Employees.
+Tripletex Employee to Business Employees
+----------------------------------------
+Every Tripletex Employee will be synchronized with a Business Employees.
 
-Once a link between a Tripletex Employee and a Businesscentral Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a Business Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a Businesscentral Employees:
+The following properties are synchronized between a Tripletex Employee and a Business Employees:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     - Businesscentral Employees Property
-     - Businesscentral Data Type
+     - Business Employees Property
+     - Business Data Type
    * - address.addressLine1
      - addressLine1
      - "string"
@@ -457,20 +457,20 @@ The following properties are synchronized between a Tripletex Employee and a Bus
      - "string"
 
 
-Tripletex Order to Businesscentral Salesorders
-----------------------------------------------
-Every Tripletex Order will be synchronized with a Businesscentral Salesorders.
+Tripletex Order to Business Salesorders
+---------------------------------------
+Every Tripletex Order will be synchronized with a Business Salesorders.
 
-Once a link between a Tripletex Order and a Businesscentral Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Order and a Business Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Order and a Businesscentral Salesorders:
+The following properties are synchronized between a Tripletex Order and a Business Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Order Property
-     - Businesscentral Salesorders Property
-     - Businesscentral Data Type
+     - Business Salesorders Property
+     - Business Data Type
    * - contact.id
      - customerId
      - "string"
@@ -491,20 +491,20 @@ The following properties are synchronized between a Tripletex Order and a Busine
      - "string"
 
 
-Tripletex Orderline to Businesscentral Salesorderlines
-------------------------------------------------------
-Every Tripletex Orderline will be synchronized with a Businesscentral Salesorderlines.
+Tripletex Orderline to Business Salesorderlines
+-----------------------------------------------
+Every Tripletex Orderline will be synchronized with a Business Salesorderlines.
 
-Once a link between a Tripletex Orderline and a Businesscentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Orderline and a Business Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Orderline and a Businesscentral Salesorderlines:
+The following properties are synchronized between a Tripletex Orderline and a Business Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Orderline Property
-     - Businesscentral Salesorderlines Property
-     - Businesscentral Data Type
+     - Business Salesorderlines Property
+     - Business Data Type
    * - count
      - description
      - "string"
@@ -609,33 +609,33 @@ The following properties are synchronized between a Tripletex Orderline and a Bu
      - "float"
 
 
-Tripletex Product to Businesscentral Items
-------------------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Businesscentral Items.
+Tripletex Product to Business Items
+-----------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Business Items.
 
-If a matching Businesscentral Items already exists, the Tripletex Product will be merged with the existing one.
-If no matching Businesscentral Items is found, a new Businesscentral Items will be created.
+If a matching Business Items already exists, the Tripletex Product will be merged with the existing one.
+If no matching Business Items is found, a new Business Items will be created.
 
-A Tripletex Product will merge with a Businesscentral Items if one of the following property combinations match:
+A Tripletex Product will merge with a Business Items if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     - Businesscentral Items Property
+     - Business Items Property
    * - ean
      - gtin
 
-Once a link between a Tripletex Product and a Businesscentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Product and a Business Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Product and a Businesscentral Items:
+The following properties are synchronized between a Tripletex Product and a Business Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     - Businesscentral Items Property
-     - Businesscentral Data Type
+     - Business Items Property
+     - Business Data Type
    * - costExcludingVatCurrency
      - unitCost
      - N/A
