@@ -1,41 +1,41 @@
 =============================
-Tripletex to Hubspot Dataflow
+Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2024-09-11 00:00:00
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Hubspot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Contact to Hubspot Contact
+Tripletex Contact to HubSpot Contact
 ------------------------------------
-Every Tripletex Contact will be synchronized with a Hubspot Contact.
+Every Tripletex Contact will be synchronized with a HubSpot Contact.
 
-If a matching Hubspot Contact already exists, the Tripletex Contact will be merged with the existing one.
-If no matching Hubspot Contact is found, a new Hubspot Contact will be created.
+If a matching HubSpot Contact already exists, the Tripletex Contact will be merged with the existing one.
+If no matching HubSpot Contact is found, a new HubSpot Contact will be created.
 
-A Tripletex Contact will merge with a Hubspot Contact if one of the following property combinations match:
+A Tripletex Contact will merge with a HubSpot Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     - Hubspot Contact Property
+     - HubSpot Contact Property
    * - email
      - properties.email
 
-Once a link between a Tripletex Contact and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a Hubspot Contact:
+The following properties are synchronized between a Tripletex Contact and a HubSpot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     - Hubspot Contact Property
-     - Hubspot Data Type
+     - HubSpot Contact Property
+     - HubSpot Data Type
    * - email
      - properties.email
      - "string"
@@ -53,33 +53,33 @@ The following properties are synchronized between a Tripletex Contact and a Hubs
      - "string"
 
 
-Tripletex Customer person to Hubspot Contact
+Tripletex Customer person to HubSpot Contact
 --------------------------------------------
-Every Tripletex Customer person will be synchronized with a Hubspot Contact.
+Every Tripletex Customer person will be synchronized with a HubSpot Contact.
 
-If a matching Hubspot Contact already exists, the Tripletex Customer person will be merged with the existing one.
-If no matching Hubspot Contact is found, a new Hubspot Contact will be created.
+If a matching HubSpot Contact already exists, the Tripletex Customer person will be merged with the existing one.
+If no matching HubSpot Contact is found, a new HubSpot Contact will be created.
 
-A Tripletex Customer person will merge with a Hubspot Contact if one of the following property combinations match:
+A Tripletex Customer person will merge with a HubSpot Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     - Hubspot Contact Property
+     - HubSpot Contact Property
    * - email
      - properties.email
 
-Once a link between a Tripletex Customer person and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a Hubspot Contact:
+The following properties are synchronized between a Tripletex Customer person and a HubSpot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     - Hubspot Contact Property
-     - Hubspot Data Type
+     - HubSpot Contact Property
+     - HubSpot Data Type
    * - deliveryAddress.addressLine1
      - properties.address
      - "string"
@@ -130,33 +130,33 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
 
 
-Tripletex Employee to Hubspot Contact
+Tripletex Employee to HubSpot Contact
 -------------------------------------
-Every Tripletex Employee will be synchronized with a Hubspot Contact.
+Every Tripletex Employee will be synchronized with a HubSpot Contact.
 
-If a matching Hubspot Contact already exists, the Tripletex Employee will be merged with the existing one.
-If no matching Hubspot Contact is found, a new Hubspot Contact will be created.
+If a matching HubSpot Contact already exists, the Tripletex Employee will be merged with the existing one.
+If no matching HubSpot Contact is found, a new HubSpot Contact will be created.
 
-A Tripletex Employee will merge with a Hubspot Contact if one of the following property combinations match:
+A Tripletex Employee will merge with a HubSpot Contact if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     - Hubspot Contact Property
+     - HubSpot Contact Property
    * - email
      - properties.email
 
-Once a link between a Tripletex Employee and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a Hubspot Contact:
+The following properties are synchronized between a Tripletex Employee and a HubSpot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     - Hubspot Contact Property
-     - Hubspot Data Type
+     - HubSpot Contact Property
+     - HubSpot Data Type
    * - address.addressLine1
      - properties.address
      - "string"
@@ -296,20 +296,20 @@ The following properties are synchronized between a Tripletex Department and a H
      - "string"
 
 
-Tripletex Orderline to Hubspot Lineitem
+Tripletex Orderline to HubSpot Lineitem
 ---------------------------------------
-Every Tripletex Orderline will be synchronized with a Hubspot Lineitem.
+Every Tripletex Orderline will be synchronized with a HubSpot Lineitem.
 
-Once a link between a Tripletex Orderline and a Hubspot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Orderline and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Orderline and a Hubspot Lineitem:
+The following properties are synchronized between a Tripletex Orderline and a HubSpot Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Orderline Property
-     - Hubspot Lineitem Property
-     - Hubspot Data Type
+     - HubSpot Lineitem Property
+     - HubSpot Data Type
    * - count
      - properties.quantity
      - N/A
@@ -330,20 +330,20 @@ The following properties are synchronized between a Tripletex Orderline and a Hu
      - "string"
 
 
-Tripletex Product to Hubspot Product
+Tripletex Product to HubSpot Product
 ------------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Hubspot Product.
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a HubSpot Product.
 
-Once a link between a Tripletex Product and a Hubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Product and a Hubspot Product:
+The following properties are synchronized between a Tripletex Product and a HubSpot Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     - Hubspot Product Property
-     - Hubspot Data Type
+     - HubSpot Product Property
+     - HubSpot Data Type
    * - costExcludingVatCurrency
      - properties.hs_cost_of_goods_sold
      - "string"
