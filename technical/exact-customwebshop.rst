@@ -1,13 +1,13 @@
-======================================
-Exact Online to CustomWebshop Dataflow
-======================================
+=======================================
+Exact Online to Custom Webshop Dataflow
+=======================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to CustomWebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to Custom Webshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 ExactOnline Departments to CustomWebshop Customer
 -------------------------------------------------
@@ -89,50 +89,50 @@ The following properties are synchronized between a ExactOnline Salesorderlines 
      - CustomWebshop Data Type
 
 
-ExactOnline Accounts to CustomWebshop Customer
-----------------------------------------------
-Every ExactOnline Accounts will be synchronized with a CustomWebshop Customer.
+Exact Online Accounts to Custom Webshop Customer
+------------------------------------------------
+Every Exact Online Accounts will be synchronized with a Custom Webshop Customer.
 
-Once a link between a ExactOnline Accounts and a CustomWebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Accounts and a Custom Webshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Accounts and a CustomWebshop Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ExactOnline Accounts Property
-     - CustomWebshop Customer Property
-     - CustomWebshop Data Type
-
-
-ExactOnline Items to CustomWebshop Product
-------------------------------------------
-Every ExactOnline Items will be synchronized with a CustomWebshop Product.
-
-Once a link between a ExactOnline Items and a CustomWebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ExactOnline Items and a CustomWebshop Product:
+The following properties are synchronized between a Exact Online Accounts and a Custom Webshop Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Items Property
-     - CustomWebshop Product Property
-     - CustomWebshop Data Type
+   * - Exact Online Accounts Property
+     - Custom Webshop Customer Property
+     - Custom Webshop Data Type
 
 
-ExactOnline Salesorders to CustomWebshop Order
-----------------------------------------------
-Every ExactOnline Salesorders will be synchronized with a CustomWebshop Order.
+Exact Online Items to Custom Webshop Product
+--------------------------------------------
+Every Exact Online Items will be synchronized with a Custom Webshop Product.
 
-Once a link between a ExactOnline Salesorders and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Items and a Custom Webshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Salesorders and a CustomWebshop Order:
+The following properties are synchronized between a Exact Online Items and a Custom Webshop Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Salesorders Property
-     - CustomWebshop Order Property
-     - CustomWebshop Data Type
+   * - Exact Online Items Property
+     - Custom Webshop Product Property
+     - Custom Webshop Data Type
+
+
+Exact Online Salesorders to Custom Webshop Order
+------------------------------------------------
+Every Exact Online Salesorders will be synchronized with a Custom Webshop Order.
+
+Once a link between a Exact Online Salesorders and a Custom Webshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Salesorders and a Custom Webshop Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Salesorders Property
+     - Custom Webshop Order Property
+     - Custom Webshop Data Type
 
