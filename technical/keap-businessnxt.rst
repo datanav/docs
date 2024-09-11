@@ -1,13 +1,13 @@
-===================================
-Keap to Visma Business Nxt Dataflow
-===================================
+============================
+Keap to BusinessNxt Dataflow
+============================
 
-Generated: 2024-09-11 07:48:17
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Keap to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Keap to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Keap Companies to Businessnxt Address
 -------------------------------------
@@ -47,20 +47,20 @@ The following properties are synchronized between a Keap Opportunity and a Busin
      - "string"
 
 
-Keap Product to Visma Product
------------------------------
-Every Keap Product will be synchronized with a Visma Product.
+Keap Product to BusinessNxt Product
+-----------------------------------
+Every Keap Product will be synchronized with a BusinessNxt Product.
 
-Once a link between a Keap Product and a Visma Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Product and a BusinessNxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Product and a Visma Product:
+The following properties are synchronized between a Keap Product and a BusinessNxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Product Property
-     - Visma Product Property
-     - Visma Data Type
+     - BusinessNxt Product Property
+     - BusinessNxt Data Type
    * - product_desc
      - description
      - "string"
