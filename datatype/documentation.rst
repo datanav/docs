@@ -133,7 +133,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
-    **Businessnxt**
+    **Visma Business Nxt**
 
     
     .. link-button:: system/businessnxt
@@ -157,7 +157,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
-    **Exact**
+    **Exact Online**
 
     
     .. link-button:: system/exact
