@@ -2,41 +2,41 @@
 BusinessCentral to Trello Dataflow
 ==================================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from BusinessCentral to Trello. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Companies to Trello Organizations
--------------------------------------------------
-Every Businesscentral Companies will be synchronized with a Trello Organizations.
+Business Companies to Trello Organizations
+------------------------------------------
+Every Business Companies will be synchronized with a Trello Organizations.
 
-Once a link between a Businesscentral Companies and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Companies and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Companies and a Trello Organizations:
+The following properties are synchronized between a Business Companies and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Companies Property
+   * - Business Companies Property
      - Trello Organizations Property
      - Trello Data Type
 
 
-Businesscentral Contacts person to Trello Members
--------------------------------------------------
-Every Businesscentral Contacts person will be synchronized with a Trello Members.
+Business Contacts person to Trello Members
+------------------------------------------
+Every Business Contacts person will be synchronized with a Trello Members.
 
-Once a link between a Businesscentral Contacts person and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Contacts person and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Contacts person and a Trello Members:
+The following properties are synchronized between a Business Contacts person and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Contacts person Property
+   * - Business Contacts person Property
      - Trello Members Property
      - Trello Data Type
    * - displayName
@@ -47,18 +47,18 @@ The following properties are synchronized between a Businesscentral Contacts per
      - "string"
 
 
-Businesscentral Customers person to Trello Members
---------------------------------------------------
-Every Businesscentral Customers person will be synchronized with a Trello Members.
+Business Customers person to Trello Members
+-------------------------------------------
+Every Business Customers person will be synchronized with a Trello Members.
 
-Once a link between a Businesscentral Customers person and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers person and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers person and a Trello Members:
+The following properties are synchronized between a Business Customers person and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Customers person Property
+   * - Business Customers person Property
      - Trello Members Property
      - Trello Data Type
    * - displayName
