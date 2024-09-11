@@ -2,107 +2,107 @@
 Trello to CustomERP Dataflow
 ============================
 
-Generated: 2024-09-11 08:03:13
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Trello to CustomERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Trello Actions to Custom Project
---------------------------------
-Every Trello Actions will be synchronized with a Custom Project.
+Trello Actions to CustomERP Project
+-----------------------------------
+Every Trello Actions will be synchronized with a CustomERP Project.
 
-Once a link between a Trello Actions and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Actions and a CustomERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Actions and a Custom Project:
+The following properties are synchronized between a Trello Actions and a CustomERP Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Actions Property
-     - Custom Project Property
-     - Custom Data Type
+     - CustomERP Project Property
+     - CustomERP Data Type
 
 
-Trello Boards to Custom Project
--------------------------------
-Every Trello Boards will be synchronized with a Custom Project.
+Trello Boards to CustomERP Project
+----------------------------------
+Every Trello Boards will be synchronized with a CustomERP Project.
 
-Once a link between a Trello Boards and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Boards and a CustomERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Boards and a Custom Project:
+The following properties are synchronized between a Trello Boards and a CustomERP Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Boards Property
-     - Custom Project Property
-     - Custom Data Type
+     - CustomERP Project Property
+     - CustomERP Data Type
 
 
-Trello Cards to Custom Project
-------------------------------
-Every Trello Cards will be synchronized with a Custom Project.
+Trello Cards to CustomERP Project
+---------------------------------
+Every Trello Cards will be synchronized with a CustomERP Project.
 
-Once a link between a Trello Cards and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Cards and a CustomERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Cards and a Custom Project:
+The following properties are synchronized between a Trello Cards and a CustomERP Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Cards Property
-     - Custom Project Property
-     - Custom Data Type
+     - CustomERP Project Property
+     - CustomERP Data Type
 
 
-Trello Lists to Custom Project
-------------------------------
-Every Trello Lists will be synchronized with a Custom Project.
+Trello Lists to CustomERP Project
+---------------------------------
+Every Trello Lists will be synchronized with a CustomERP Project.
 
-Once a link between a Trello Lists and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Lists and a CustomERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Lists and a Custom Project:
+The following properties are synchronized between a Trello Lists and a CustomERP Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Lists Property
-     - Custom Project Property
-     - Custom Data Type
+     - CustomERP Project Property
+     - CustomERP Data Type
 
 
-Trello Members to Custom Contact
---------------------------------
-Every Trello Members will be synchronized with a Custom Contact.
+Trello Members to CustomERP Contact
+-----------------------------------
+Every Trello Members will be synchronized with a CustomERP Contact.
 
-Once a link between a Trello Members and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Members and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Members and a Custom Contact:
+The following properties are synchronized between a Trello Members and a CustomERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Members Property
-     - Custom Contact Property
-     - Custom Data Type
+     - CustomERP Contact Property
+     - CustomERP Data Type
 
 
-Trello Organizations to Custom Customer
----------------------------------------
-Every Trello Organizations will be synchronized with a Custom Customer.
+Trello Organizations to CustomERP Customer
+------------------------------------------
+Every Trello Organizations will be synchronized with a CustomERP Customer.
 
-Once a link between a Trello Organizations and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Organizations and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Organizations and a Custom Customer:
+The following properties are synchronized between a Trello Organizations and a CustomERP Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Organizations Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomERP Customer Property
+     - CustomERP Data Type
 
 
 Trello Members to CustomERP Employee
