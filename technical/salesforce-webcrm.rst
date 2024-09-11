@@ -1,13 +1,13 @@
 =============================
-Salesforce to Webcrm Dataflow
+Salesforce to WebCRM Dataflow
 =============================
 
-Generated: 2024-09-11 00:00:24
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Webcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Salesforce Division to Webcrm Organisations
 -------------------------------------------
@@ -56,20 +56,20 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
 
 
-Salesforce Contact to Webcrm Persons
+Salesforce Contact to WebCRM Persons
 ------------------------------------
-Every Salesforce Contact will be synchronized with a Webcrm Persons.
+Every Salesforce Contact will be synchronized with a WebCRM Persons.
 
-Once a link between a Salesforce Contact and a Webcrm Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Contact and a WebCRM Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Contact and a Webcrm Persons:
+The following properties are synchronized between a Salesforce Contact and a WebCRM Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Contact Property
-     - Webcrm Persons Property
-     - Webcrm Data Type
+     - WebCRM Persons Property
+     - WebCRM Data Type
    * - Birthdate
      - document_number
      - "string"
@@ -87,20 +87,20 @@ The following properties are synchronized between a Salesforce Contact and a Web
      - "string"
 
 
-Salesforce Invoiceline to Webcrm Quotationline
+Salesforce Invoiceline to WebCRM Quotationline
 ----------------------------------------------
-Every Salesforce Invoiceline will be synchronized with a Webcrm Quotationline.
+Every Salesforce Invoiceline will be synchronized with a WebCRM Quotationline.
 
-Once a link between a Salesforce Invoiceline and a Webcrm Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Invoiceline and a WebCRM Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Invoiceline and a Webcrm Quotationline:
+The following properties are synchronized between a Salesforce Invoiceline and a WebCRM Quotationline:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Invoiceline Property
-     - Webcrm Quotationline Property
-     - Webcrm Data Type
+     - WebCRM Quotationline Property
+     - WebCRM Data Type
    * - Description
      - QuotationLineCostPrice
      - "string"
@@ -118,50 +118,50 @@ The following properties are synchronized between a Salesforce Invoiceline and a
      - "string"
 
 
-Salesforce Orderitem to Webcrm Quotationline
+Salesforce Orderitem to WebCRM Quotationline
 --------------------------------------------
-Every Salesforce Orderitem will be synchronized with a Webcrm Quotationline.
+Every Salesforce Orderitem will be synchronized with a WebCRM Quotationline.
 
-Once a link between a Salesforce Orderitem and a Webcrm Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Orderitem and a WebCRM Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Orderitem and a Webcrm Quotationline:
+The following properties are synchronized between a Salesforce Orderitem and a WebCRM Quotationline:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Orderitem Property
-     - Webcrm Quotationline Property
-     - Webcrm Data Type
+     - WebCRM Quotationline Property
+     - WebCRM Data Type
 
 
-Salesforce Product2 to Webcrm Products
+Salesforce Product2 to WebCRM Products
 --------------------------------------
-Every Salesforce Product2 will be synchronized with a Webcrm Products.
+Every Salesforce Product2 will be synchronized with a WebCRM Products.
 
-Once a link between a Salesforce Product2 and a Webcrm Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Product2 and a WebCRM Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Product2 and a Webcrm Products:
+The following properties are synchronized between a Salesforce Product2 and a WebCRM Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Product2 Property
-     - Webcrm Products Property
-     - Webcrm Data Type
+     - WebCRM Products Property
+     - WebCRM Data Type
 
 
-Salesforce Quotelineitem to Webcrm Quotationline
+Salesforce Quotelineitem to WebCRM Quotationline
 ------------------------------------------------
-Every Salesforce Quotelineitem will be synchronized with a Webcrm Quotationline.
+Every Salesforce Quotelineitem will be synchronized with a WebCRM Quotationline.
 
-Once a link between a Salesforce Quotelineitem and a Webcrm Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quotelineitem and a WebCRM Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quotelineitem and a Webcrm Quotationline:
+The following properties are synchronized between a Salesforce Quotelineitem and a WebCRM Quotationline:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quotelineitem Property
-     - Webcrm Quotationline Property
-     - Webcrm Data Type
+     - WebCRM Quotationline Property
+     - WebCRM Data Type
 
