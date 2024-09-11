@@ -2,7 +2,7 @@
 BusinessCentral to Salesforce Dataflow
 ======================================
 
-Generated: 2024-09-11 11:13:29
+Generated: 2024-09-11 11:28:31
 
 Introduction
 ------------
@@ -247,18 +247,18 @@ The following properties are synchronized between a BusinessCentral Employees an
      - "string"
 
 
-BusinessCentralBusinesscentral Items to Salesforce Product2
------------------------------------------------------------
-Every BusinessCentralBusinesscentral Items will be synchronized with a Salesforce Product2.
+BusinessCentral Items to Salesforce Product2
+--------------------------------------------
+Every BusinessCentral Items will be synchronized with a Salesforce Product2.
 
-Once a link between a BusinessCentralBusinesscentral Items and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessCentral Items and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentralBusinesscentral Items and a Salesforce Product2:
+The following properties are synchronized between a BusinessCentral Items and a Salesforce Product2:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentralBusinesscentral Items Property
+   * - BusinessCentral Items Property
      - Salesforce Product2 Property
      - Salesforce Data Type
    * - displayName
@@ -347,18 +347,18 @@ The following properties are synchronized between a BusinessCentral Salesorderli
      - "string"
 
 
-BusinessCentralBusinesscentral Salesorders to Salesforce Order
---------------------------------------------------------------
-Every BusinessCentralBusinesscentral Salesorders will be synchronized with a Salesforce Order.
+BusinessCentral Salesorders to Salesforce Order
+-----------------------------------------------
+Every BusinessCentral Salesorders will be synchronized with a Salesforce Order.
 
-Once a link between a BusinessCentralBusinesscentral Salesorders and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessCentral Salesorders and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentralBusinesscentral Salesorders and a Salesforce Order:
+The following properties are synchronized between a BusinessCentral Salesorders and a Salesforce Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentralBusinesscentral Salesorders Property
+   * - BusinessCentral Salesorders Property
      - Salesforce Order Property
      - Salesforce Data Type
    * - billToAddressLine1
