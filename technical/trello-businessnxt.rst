@@ -1,47 +1,47 @@
-==============================
-Trello to BusinessNxt Dataflow
-==============================
+===============================
+Trello to Business Nxt Dataflow
+===============================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Trello to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Trello to Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Trello Organizations to BusinessNxt Address
--------------------------------------------
-Every Trello Organizations will be synchronized with a BusinessNxt Address.
+Trello Organizations to Business Nxt Address
+--------------------------------------------
+Every Trello Organizations will be synchronized with a Business Nxt Address.
 
-Once a link between a Trello Organizations and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Organizations and a Business Nxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Organizations and a BusinessNxt Address:
+The following properties are synchronized between a Trello Organizations and a Business Nxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Organizations Property
-     - BusinessNxt Address Property
-     - BusinessNxt Data Type
+     - Business Nxt Address Property
+     - Business Nxt Data Type
    * - name
      - name
      - "string"
 
 
-Trello Organizations to BusinessNxt Company
--------------------------------------------
-Every Trello Organizations will be synchronized with a BusinessNxt Company.
+Trello Organizations to Business Nxt Company
+--------------------------------------------
+Every Trello Organizations will be synchronized with a Business Nxt Company.
 
-Once a link between a Trello Organizations and a BusinessNxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Organizations and a Business Nxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Organizations and a BusinessNxt Company:
+The following properties are synchronized between a Trello Organizations and a Business Nxt Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Organizations Property
-     - BusinessNxt Company Property
-     - BusinessNxt Data Type
+     - Business Nxt Company Property
+     - Business Nxt Data Type
    * - name
      - name
      - "string"
