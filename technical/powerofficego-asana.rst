@@ -1,13 +1,13 @@
-================================
-PowerOffice GO to Asana Dataflow
-================================
+===============================
+PowerOfficeGO to Asana Dataflow
+===============================
 
-Generated: 2024-09-11 07:52:13
+Generated: 2024-09-11 08:35:25
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from PowerOffice GO to Asana. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from PowerOfficeGO to Asana. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 PowerOffice Projects to Asana Projects
 --------------------------------------
