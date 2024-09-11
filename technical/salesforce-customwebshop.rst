@@ -1,13 +1,13 @@
-=====================================
-Salesforce to Custom Webshop Dataflow
-=====================================
+====================================
+Salesforce to CustomWebshop Dataflow
+====================================
 
-Generated: 2024-09-11 07:44:14
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Custom Webshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to CustomWebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Salesforce Division to Custom Customer
 --------------------------------------
@@ -121,34 +121,34 @@ The following properties are synchronized between a Salesforce Quotelineitem and
      - Custom Data Type
 
 
-Salesforce Order to Custom Order
---------------------------------
-Every Salesforce Order will be synchronized with a Custom Order.
+Salesforce Order to CustomWebshop Order
+---------------------------------------
+Every Salesforce Order will be synchronized with a CustomWebshop Order.
 
-Once a link between a Salesforce Order and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Order and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Order and a Custom Order:
+The following properties are synchronized between a Salesforce Order and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Order Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
-Salesforce Product2 to Custom Product
--------------------------------------
-Every Salesforce Product2 will be synchronized with a Custom Product.
+Salesforce Product2 to CustomWebshop Product
+--------------------------------------------
+Every Salesforce Product2 will be synchronized with a CustomWebshop Product.
 
-Once a link between a Salesforce Product2 and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Product2 and a CustomWebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Product2 and a Custom Product:
+The following properties are synchronized between a Salesforce Product2 and a CustomWebshop Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Product2 Property
-     - Custom Product Property
-     - Custom Data Type
+     - CustomWebshop Product Property
+     - CustomWebshop Data Type
 
