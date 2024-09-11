@@ -2,7 +2,7 @@
 Visma Business Nxt to Custom CRM Dataflow
 =========================================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
@@ -57,34 +57,34 @@ The following properties are synchronized between a Businessnxt Orderline and a 
      - Custom Data Type
 
 
-Businessnxt Order to Custom Order
----------------------------------
-Every Businessnxt Order will be synchronized with a Custom Order.
+Visma Order to Custom Order
+---------------------------
+Every Visma Order will be synchronized with a Custom Order.
 
-Once a link between a Businessnxt Order and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Order and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Order and a Custom Order:
+The following properties are synchronized between a Visma Order and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Order Property
+   * - Visma Order Property
      - Custom Order Property
      - Custom Data Type
 
 
-Businessnxt Product to Custom Product
--------------------------------------
-Every Businessnxt Product will be synchronized with a Custom Product.
+Visma Product to Custom Product
+-------------------------------
+Every Visma Product will be synchronized with a Custom Product.
 
-Once a link between a Businessnxt Product and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Product and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Product and a Custom Product:
+The following properties are synchronized between a Visma Product and a Custom Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Product Property
+   * - Visma Product Property
      - Custom Product Property
      - Custom Data Type
 
