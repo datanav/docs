@@ -1,26 +1,26 @@
-====================================
-Custom PMS to Customwebshop Dataflow
-====================================
+=====================================
+Custom PMS to Custom Webshop Dataflow
+=====================================
 
-Generated: 2024-09-11 07:41:19
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Custom PMS to Customwebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Custom PMS to Custom Webshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Custompms Customer to Customwebshop Customer
---------------------------------------------
-Every Custompms Customer will be synchronized with a Customwebshop Customer.
+Custom Customer to Custom Customer
+----------------------------------
+Every Custom Customer will be synchronized with a Custom Customer.
 
-Once a link between a Custompms Customer and a Customwebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Customer and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custompms Customer and a Customwebshop Customer:
+The following properties are synchronized between a Custom Customer and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custompms Customer Property
-     - Customwebshop Customer Property
-     - Customwebshop Data Type
+   * - Custom Customer Property
+     - Custom Customer Property
+     - Custom Data Type
 
