@@ -2,27 +2,27 @@
 Salesforce to MemberCare Dataflow
 =================================
 
-Generated: 2024-09-11 07:48:17
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Salesforce Contact to Membercare Persons
+Salesforce Contact to MemberCare Persons
 ----------------------------------------
-Every Salesforce Contact will be synchronized with a Membercare Persons.
+Every Salesforce Contact will be synchronized with a MemberCare Persons.
 
-Once a link between a Salesforce Contact and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Contact and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Contact and a Membercare Persons:
+The following properties are synchronized between a Salesforce Contact and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Contact Property
-     - Membercare Persons Property
-     - Membercare Data Type
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - Birthdate
      - birthDate
      - "string"
@@ -40,74 +40,74 @@ The following properties are synchronized between a Salesforce Contact and a Mem
      - "string"
 
 
-Salesforce Currencytype to Membercare Companycategories
+Salesforce Currencytype to MemberCare Companycategories
 -------------------------------------------------------
-Every Salesforce Currencytype will be synchronized with a Membercare Companycategories.
+Every Salesforce Currencytype will be synchronized with a MemberCare Companycategories.
 
-Once a link between a Salesforce Currencytype and a Membercare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Currencytype and a MemberCare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Currencytype and a Membercare Companycategories:
+The following properties are synchronized between a Salesforce Currencytype and a MemberCare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Currencytype Property
-     - Membercare Companycategories Property
-     - Membercare Data Type
+     - MemberCare Companycategories Property
+     - MemberCare Data Type
 
 
-Salesforce Customer to Membercare Persons
+Salesforce Customer to MemberCare Persons
 -----------------------------------------
-Every Salesforce Customer will be synchronized with a Membercare Persons.
+Every Salesforce Customer will be synchronized with a MemberCare Persons.
 
-Once a link between a Salesforce Customer and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Customer and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Customer and a Membercare Persons:
+The following properties are synchronized between a Salesforce Customer and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Customer Property
-     - Membercare Persons Property
-     - Membercare Data Type
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - Name
      - name
      - "string"
 
 
-Salesforce Division to Membercare Companies
+Salesforce Division to MemberCare Companies
 -------------------------------------------
-Every Salesforce Division will be synchronized with a Membercare Companies.
+Every Salesforce Division will be synchronized with a MemberCare Companies.
 
-Once a link between a Salesforce Division and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Division and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Division and a Membercare Companies:
+The following properties are synchronized between a Salesforce Division and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Division Property
-     - Membercare Companies Property
-     - Membercare Data Type
+     - MemberCare Companies Property
+     - MemberCare Data Type
    * - Name
      - companyName
      - "string"
 
 
-Salesforce Invoiceline to Membercare Invoices
+Salesforce Invoiceline to MemberCare Invoices
 ---------------------------------------------
-Every Salesforce Invoiceline will be synchronized with a Membercare Invoices.
+Every Salesforce Invoiceline will be synchronized with a MemberCare Invoices.
 
-Once a link between a Salesforce Invoiceline and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Invoiceline and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Invoiceline and a Membercare Invoices:
+The following properties are synchronized between a Salesforce Invoiceline and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Invoiceline Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
    * - Description
      - invoiceItems.description
      - "string"
@@ -122,36 +122,36 @@ The following properties are synchronized between a Salesforce Invoiceline and a
      - "string"
 
 
-Salesforce Order to Membercare Invoices
+Salesforce Order to MemberCare Invoices
 ---------------------------------------
-Every Salesforce Order will be synchronized with a Membercare Invoices.
+Every Salesforce Order will be synchronized with a MemberCare Invoices.
 
-Once a link between a Salesforce Order and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Order and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Order and a Membercare Invoices:
+The following properties are synchronized between a Salesforce Order and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Order Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
 
 
-Salesforce Orderitem to Membercare Invoices
+Salesforce Orderitem to MemberCare Invoices
 -------------------------------------------
-Every Salesforce Orderitem will be synchronized with a Membercare Invoices.
+Every Salesforce Orderitem will be synchronized with a MemberCare Invoices.
 
-Once a link between a Salesforce Orderitem and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Orderitem and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Orderitem and a Membercare Invoices:
+The following properties are synchronized between a Salesforce Orderitem and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Orderitem Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
    * - Quantity
      - invoiceItems.quantity
      - "string"
@@ -160,20 +160,20 @@ The following properties are synchronized between a Salesforce Orderitem and a M
      - "string"
 
 
-Salesforce Product2 to Membercare Products
+Salesforce Product2 to MemberCare Products
 ------------------------------------------
-Every Salesforce Product2 will be synchronized with a Membercare Products.
+Every Salesforce Product2 will be synchronized with a MemberCare Products.
 
-Once a link between a Salesforce Product2 and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Product2 and a MemberCare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Product2 and a Membercare Products:
+The following properties are synchronized between a Salesforce Product2 and a MemberCare Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Product2 Property
-     - Membercare Products Property
-     - Membercare Data Type
+     - MemberCare Products Property
+     - MemberCare Data Type
    * - Name
      - name
      - "string"
@@ -182,36 +182,36 @@ The following properties are synchronized between a Salesforce Product2 and a Me
      - "string"
 
 
-Salesforce Quote to Membercare Invoices
+Salesforce Quote to MemberCare Invoices
 ---------------------------------------
-Every Salesforce Quote will be synchronized with a Membercare Invoices.
+Every Salesforce Quote will be synchronized with a MemberCare Invoices.
 
-Once a link between a Salesforce Quote and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quote and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quote and a Membercare Invoices:
+The following properties are synchronized between a Salesforce Quote and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quote Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
 
 
-Salesforce Quotelineitem to Membercare Invoices
+Salesforce Quotelineitem to MemberCare Invoices
 -----------------------------------------------
-Every Salesforce Quotelineitem will be synchronized with a Membercare Invoices.
+Every Salesforce Quotelineitem will be synchronized with a MemberCare Invoices.
 
-Once a link between a Salesforce Quotelineitem and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quotelineitem and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quotelineitem and a Membercare Invoices:
+The following properties are synchronized between a Salesforce Quotelineitem and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quotelineitem Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
    * - Description
      - invoiceItems.description
      - "string"
@@ -223,39 +223,39 @@ The following properties are synchronized between a Salesforce Quotelineitem and
      - "string"
 
 
-Salesforce Seller to Membercare Persons
+Salesforce Seller to MemberCare Persons
 ---------------------------------------
-Every Salesforce Seller will be synchronized with a Membercare Persons.
+Every Salesforce Seller will be synchronized with a MemberCare Persons.
 
-Once a link between a Salesforce Seller and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Seller and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Seller and a Membercare Persons:
+The following properties are synchronized between a Salesforce Seller and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Seller Property
-     - Membercare Persons Property
-     - Membercare Data Type
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - Name
      - name
      - "string"
 
 
-Salesforce User to Membercare Persons
+Salesforce User to MemberCare Persons
 -------------------------------------
-Every Salesforce User will be synchronized with a Membercare Persons.
+Every Salesforce User will be synchronized with a MemberCare Persons.
 
-Once a link between a Salesforce User and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce User and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce User and a Membercare Persons:
+The following properties are synchronized between a Salesforce User and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce User Property
-     - Membercare Persons Property
-     - Membercare Data Type
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - City
      - addresses.postalCode.city
      - "string"
