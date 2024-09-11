@@ -2,46 +2,46 @@
 Keap to MemberCare Dataflow
 ===========================
 
-Generated: 2024-09-11 07:46:45
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Keap to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Keap Companies to Membercare Companies
+Keap Companies to MemberCare Companies
 --------------------------------------
-Every Keap Companies will be synchronized with a Membercare Companies.
+Every Keap Companies will be synchronized with a MemberCare Companies.
 
-Once a link between a Keap Companies and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Companies and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Companies and a Membercare Companies:
+The following properties are synchronized between a Keap Companies and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Companies Property
-     - Membercare Companies Property
-     - Membercare Data Type
+     - MemberCare Companies Property
+     - MemberCare Data Type
    * - company_name
      - companyName
      - "string"
 
 
-Keap Contacts to Membercare Persons
+Keap Contacts to MemberCare Persons
 -----------------------------------
-Every Keap Contacts will be synchronized with a Membercare Persons.
+Every Keap Contacts will be synchronized with a MemberCare Persons.
 
-Once a link between a Keap Contacts and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Contacts and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Contacts and a Membercare Persons:
+The following properties are synchronized between a Keap Contacts and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Contacts Property
-     - Membercare Persons Property
-     - Membercare Data Type
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - birthday
      - birthDate
      - "string"
@@ -59,36 +59,36 @@ The following properties are synchronized between a Keap Contacts and a Memberca
      - "string"
 
 
-Keap Opportunity to Membercare Invoices
+Keap Opportunity to MemberCare Invoices
 ---------------------------------------
-Every Keap Opportunity will be synchronized with a Membercare Invoices.
+Every Keap Opportunity will be synchronized with a MemberCare Invoices.
 
-Once a link between a Keap Opportunity and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Opportunity and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Opportunity and a Membercare Invoices:
+The following properties are synchronized between a Keap Opportunity and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Opportunity Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
 
 
-Keap Product to Membercare Products
+Keap Product to MemberCare Products
 -----------------------------------
-Every Keap Product will be synchronized with a Membercare Products.
+Every Keap Product will be synchronized with a MemberCare Products.
 
-Once a link between a Keap Product and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Product and a MemberCare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Product and a Membercare Products:
+The following properties are synchronized between a Keap Product and a MemberCare Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Product Property
-     - Membercare Products Property
-     - Membercare Data Type
+     - MemberCare Products Property
+     - MemberCare Data Type
    * - product_name
      - name
      - "string"
