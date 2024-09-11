@@ -2,7 +2,7 @@
 ExactOnline to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:13:29
 
 Introduction
 ------------
@@ -227,18 +227,18 @@ The following properties are synchronized between a ExactOnline Employees and a 
      - "string"
 
 
-ExactOnline Items to Salesforce Product2
-----------------------------------------
-Every ExactOnline Items will be synchronized with a Salesforce Product2.
+ExactOnlineExact Items to Salesforce Product2
+---------------------------------------------
+Every ExactOnlineExact Items will be synchronized with a Salesforce Product2.
 
-Once a link between a ExactOnline Items and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnlineExact Items and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Items and a Salesforce Product2:
+The following properties are synchronized between a ExactOnlineExact Items and a Salesforce Product2:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Items Property
+   * - ExactOnlineExact Items Property
      - Salesforce Product2 Property
      - Salesforce Data Type
 
@@ -341,18 +341,18 @@ The following properties are synchronized between a ExactOnline Salesorderlines 
      - Salesforce Data Type
 
 
-ExactOnline Salesorders to Salesforce Order
--------------------------------------------
-Every ExactOnline Salesorders will be synchronized with a Salesforce Order.
+ExactOnlineExact Salesorders to Salesforce Order
+------------------------------------------------
+Every ExactOnlineExact Salesorders will be synchronized with a Salesforce Order.
 
-Once a link between a ExactOnline Salesorders and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnlineExact Salesorders and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Salesorders and a Salesforce Order:
+The following properties are synchronized between a ExactOnlineExact Salesorders and a Salesforce Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Salesorders Property
+   * - ExactOnlineExact Salesorders Property
      - Salesforce Order Property
      - Salesforce Data Type
    * - Currency
