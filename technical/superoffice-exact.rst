@@ -2,29 +2,29 @@
 SuperOffice to ExactOnline Dataflow
 ===================================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 08:39:13
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-SuperOffice Quotealternative to Exact Salesorders
--------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Exact Salesorders must be established.
+SuperOffice Quotealternative to ExactOnline Salesorders
+-------------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Quotealternative and a ExactOnline Salesorders must be established.
 
-A new Exact Salesorders will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into Exact.
+A new ExactOnline Salesorders will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into ExactOnline.
 
-Once a link between a SuperOffice Quotealternative and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quotealternative and a ExactOnline Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quotealternative and a Exact Salesorders:
+The following properties are synchronized between a SuperOffice Quotealternative and a ExactOnline Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quotealternative Property
-     - Exact Salesorders Property
-     - Exact Data Type
+     - ExactOnline Salesorders Property
+     - ExactOnline Data Type
    * - DiscountPercent
      - Discount
      - "string"
