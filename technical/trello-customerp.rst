@@ -1,13 +1,13 @@
-============================
-Trello to CustomERP Dataflow
-============================
+=============================
+Trello to Custom ERP Dataflow
+=============================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Trello to CustomERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Trello to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Trello Actions to CustomERP Project
 -----------------------------------
@@ -105,18 +105,18 @@ The following properties are synchronized between a Trello Organizations and a C
      - CustomERP Data Type
 
 
-Trello Members to CustomERP Employee
-------------------------------------
-Every Trello Members will be synchronized with a CustomERP Employee.
+Trello Members to Custom ERP Employee
+-------------------------------------
+Every Trello Members will be synchronized with a Custom ERP Employee.
 
-Once a link between a Trello Members and a CustomERP Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Members and a Custom ERP Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Members and a CustomERP Employee:
+The following properties are synchronized between a Trello Members and a Custom ERP Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Members Property
-     - CustomERP Employee Property
-     - CustomERP Data Type
+     - Custom ERP Employee Property
+     - Custom ERP Data Type
 
