@@ -2,46 +2,46 @@
 WebCRM to BusinessNxt Dataflow
 ==============================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-WebCRM Opportunities to Businessnxt Order
------------------------------------------
-Every WebCRM Opportunities will be synchronized with a Businessnxt Order.
+WebCRM Opportunities to Visma Order
+-----------------------------------
+Every WebCRM Opportunities will be synchronized with a Visma Order.
 
-Once a link between a WebCRM Opportunities and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Opportunities and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Opportunities and a Businessnxt Order:
+The following properties are synchronized between a WebCRM Opportunities and a Visma Order:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Opportunities Property
-     - Businessnxt Order Property
-     - Businessnxt Data Type
+     - Visma Order Property
+     - Visma Data Type
    * - OpportunityDiscount
      - totalDiscountAmountInCurrency
      - "string"
 
 
-WebCRM Organisations to Businessnxt Address
--------------------------------------------
-Every WebCRM Organisations will be synchronized with a Businessnxt Address.
+WebCRM Organisations to Visma Address
+-------------------------------------
+Every WebCRM Organisations will be synchronized with a Visma Address.
 
-Once a link between a WebCRM Organisations and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Organisations and a Visma Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Organisations and a Businessnxt Address:
+The following properties are synchronized between a WebCRM Organisations and a Visma Address:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Organisations Property
-     - Businessnxt Address Property
-     - Businessnxt Data Type
+     - Visma Address Property
+     - Visma Data Type
    * - OrganisationName
      - name
      - "string"
@@ -50,20 +50,20 @@ The following properties are synchronized between a WebCRM Organisations and a B
      - "string"
 
 
-WebCRM Quotationline to Businessnxt Order
------------------------------------------
-Every WebCRM Quotationline will be synchronized with a Businessnxt Order.
+WebCRM Quotationline to Visma Order
+-----------------------------------
+Every WebCRM Quotationline will be synchronized with a Visma Order.
 
-Once a link between a WebCRM Quotationline and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Quotationline and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Quotationline and a Businessnxt Order:
+The following properties are synchronized between a WebCRM Quotationline and a Visma Order:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Quotationline Property
-     - Businessnxt Order Property
-     - Businessnxt Data Type
+     - Visma Order Property
+     - Visma Data Type
 
 
 WebCRM Organisations to BusinessNxt Country
