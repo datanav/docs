@@ -2,7 +2,7 @@
 PowerOfficeGO to CustomERP Dataflow
 ===================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 09:47:19
 
 Introduction
 ------------
@@ -54,6 +54,22 @@ The following properties are synchronized between a PowerOfficeGO Employees and 
 
    * - PowerOfficeGO Employees Property
      - CustomERP Contact Property
+     - CustomERP Data Type
+
+
+PowerOfficeGO Projectactivity to CustomERP Project
+--------------------------------------------------
+Every PowerOfficeGO Projectactivity will be synchronized with a CustomERP Project.
+
+Once a link between a PowerOfficeGO Projectactivity and a CustomERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOfficeGO Projectactivity and a CustomERP Project:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOfficeGO Projectactivity Property
+     - CustomERP Project Property
      - CustomERP Data Type
 
 
