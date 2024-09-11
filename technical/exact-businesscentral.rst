@@ -2,59 +2,59 @@
 Exact Online to Business Central Dataflow
 =========================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-ExactOnline Accounts to BusinessCentral Companies
--------------------------------------------------
-Every ExactOnline Accounts will be synchronized with a BusinessCentral Companies.
+Exact Online Accounts to Business Central Companies
+---------------------------------------------------
+Every Exact Online Accounts will be synchronized with a Business Central Companies.
 
-Once a link between a ExactOnline Accounts and a BusinessCentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Accounts and a Business Central Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Accounts and a BusinessCentral Companies:
+The following properties are synchronized between a Exact Online Accounts and a Business Central Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Accounts Property
-     - BusinessCentral Companies Property
-     - BusinessCentral Data Type
+   * - Exact Online Accounts Property
+     - Business Central Companies Property
+     - Business Central Data Type
 
 
-ExactOnline Departments to BusinessCentral Companies
+Exact Online Departments to Business Central Companies
+------------------------------------------------------
+Every Exact Online Departments will be synchronized with a Business Central Companies.
+
+Once a link between a Exact Online Departments and a Business Central Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Departments and a Business Central Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Departments Property
+     - Business Central Companies Property
+     - Business Central Data Type
+
+
+Exact Online Divisions to Business Central Companies
 ----------------------------------------------------
-Every ExactOnline Departments will be synchronized with a BusinessCentral Companies.
+Every Exact Online Divisions will be synchronized with a Business Central Companies.
 
-Once a link between a ExactOnline Departments and a BusinessCentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Divisions and a Business Central Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Departments and a BusinessCentral Companies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ExactOnline Departments Property
-     - BusinessCentral Companies Property
-     - BusinessCentral Data Type
-
-
-ExactOnline Divisions to BusinessCentral Companies
---------------------------------------------------
-Every ExactOnline Divisions will be synchronized with a BusinessCentral Companies.
-
-Once a link between a ExactOnline Divisions and a BusinessCentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ExactOnline Divisions and a BusinessCentral Companies:
+The following properties are synchronized between a Exact Online Divisions and a Business Central Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Divisions Property
-     - BusinessCentral Companies Property
-     - BusinessCentral Data Type
+   * - Exact Online Divisions Property
+     - Business Central Companies Property
+     - Business Central Data Type
 
 
 Exact Online Accounts to Business Central Customers company
