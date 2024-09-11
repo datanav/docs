@@ -2,7 +2,7 @@
 CRMOffice to Youtrack Dataflow
 ==============================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
@@ -27,18 +27,18 @@ The following properties are synchronized between a Crmoffice Companies and a Yo
      - Youtrack Data Type
 
 
-Crmoffice Activities to Youtrack Hubprojects
+CRMOffice Activities to Youtrack Hubprojects
 --------------------------------------------
-Every Crmoffice Activities will be synchronized with a Youtrack Hubprojects.
+Every CRMOffice Activities will be synchronized with a Youtrack Hubprojects.
 
-Once a link between a Crmoffice Activities and a Youtrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Activities and a Youtrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Crmoffice Activities and a Youtrack Hubprojects:
+The following properties are synchronized between a CRMOffice Activities and a Youtrack Hubprojects:
 
 .. list-table::
    :header-rows: 1
 
-   * - Crmoffice Activities Property
+   * - CRMOffice Activities Property
      - Youtrack Hubprojects Property
      - Youtrack Data Type
 
