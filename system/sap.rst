@@ -62,7 +62,7 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
         :text: Read more
         :classes: read-more
     ---
-    **Custom ERP**
+    **CustomERP**
 
     
     .. link-button:: system/customerp
