@@ -2,43 +2,43 @@
 Business Nxt to Business Central Dataflow
 =========================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Business Nxt to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-BusinessNxt Address to BusinessCentral Companies
-------------------------------------------------
-Every BusinessNxt Address will be synchronized with a BusinessCentral Companies.
+Business Nxt Address to Business Central Companies
+--------------------------------------------------
+Every Business Nxt Address will be synchronized with a Business Central Companies.
 
-Once a link between a BusinessNxt Address and a BusinessCentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Address and a Business Central Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Address and a BusinessCentral Companies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - BusinessNxt Address Property
-     - BusinessCentral Companies Property
-     - BusinessCentral Data Type
-
-
-BusinessNxt Company to BusinessCentral Companies
-------------------------------------------------
-Every BusinessNxt Company will be synchronized with a BusinessCentral Companies.
-
-Once a link between a BusinessNxt Company and a BusinessCentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a BusinessNxt Company and a BusinessCentral Companies:
+The following properties are synchronized between a Business Nxt Address and a Business Central Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Company Property
-     - BusinessCentral Companies Property
-     - BusinessCentral Data Type
+   * - Business Nxt Address Property
+     - Business Central Companies Property
+     - Business Central Data Type
+
+
+Business Nxt Company to Business Central Companies
+--------------------------------------------------
+Every Business Nxt Company will be synchronized with a Business Central Companies.
+
+Once a link between a Business Nxt Company and a Business Central Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Company and a Business Central Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Company Property
+     - Business Central Companies Property
+     - Business Central Data Type
 
 
 Business Nxt Order to Business Central Salesorders
