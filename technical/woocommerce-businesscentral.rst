@@ -1,47 +1,47 @@
-========================================
-WooCommerce to Business Central Dataflow
-========================================
+=======================================
+WooCommerce to BusinessCentral Dataflow
+=======================================
 
-Generated: 2024-09-11 07:53:15
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to BusinessCentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-WooCommerce Customer to Business Customers person
--------------------------------------------------
-Every WooCommerce Customer will be synchronized with a Business Customers person.
+WooCommerce Customer to BusinessCentral Customers person
+--------------------------------------------------------
+Every WooCommerce Customer will be synchronized with a BusinessCentral Customers person.
 
-Once a link between a WooCommerce Customer and a Business Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Customer and a BusinessCentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Customer and a Business Customers person:
+The following properties are synchronized between a WooCommerce Customer and a BusinessCentral Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Customer Property
-     - Business Customers person Property
-     - Business Data Type
+     - BusinessCentral Customers person Property
+     - BusinessCentral Data Type
    * - email
      - email
      - "string"
 
 
-WooCommerce Order to Business Salesorderlines
----------------------------------------------
-Every WooCommerce Order will be synchronized with a Business Salesorderlines.
+WooCommerce Order to BusinessCentral Salesorderlines
+----------------------------------------------------
+Every WooCommerce Order will be synchronized with a BusinessCentral Salesorderlines.
 
-Once a link between a WooCommerce Order and a Business Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a BusinessCentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Order and a Business Salesorderlines:
+The following properties are synchronized between a WooCommerce Order and a BusinessCentral Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Order Property
-     - Business Salesorderlines Property
-     - Business Data Type
+     - BusinessCentral Salesorderlines Property
+     - BusinessCentral Data Type
    * - id
      - documentId
      - "string"
@@ -56,20 +56,20 @@ The following properties are synchronized between a WooCommerce Order and a Busi
      - N/A
 
 
-WooCommerce Order to Business Salesorders
------------------------------------------
-Every WooCommerce Order will be synchronized with a Business Salesorders.
+WooCommerce Order to BusinessCentral Salesorders
+------------------------------------------------
+Every WooCommerce Order will be synchronized with a BusinessCentral Salesorders.
 
-Once a link between a WooCommerce Order and a Business Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a BusinessCentral Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Order and a Business Salesorders:
+The following properties are synchronized between a WooCommerce Order and a BusinessCentral Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Order Property
-     - Business Salesorders Property
-     - Business Data Type
+     - BusinessCentral Salesorders Property
+     - BusinessCentral Data Type
    * - billing.address_1
      - billToAddressLine1
      - "string"
@@ -141,20 +141,20 @@ The following properties are synchronized between a WooCommerce Order and a Busi
      - "string"
 
 
-WooCommerce Product to Business Items
--------------------------------------
-Every WooCommerce Product will be synchronized with a Business Items.
+WooCommerce Product to BusinessCentral Items
+--------------------------------------------
+Every WooCommerce Product will be synchronized with a BusinessCentral Items.
 
-Once a link between a WooCommerce Product and a Business Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Product and a BusinessCentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Product and a Business Items:
+The following properties are synchronized between a WooCommerce Product and a BusinessCentral Items:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Product Property
-     - Business Items Property
-     - Business Data Type
+     - BusinessCentral Items Property
+     - BusinessCentral Data Type
    * - name
      - displayName
      - "string"
