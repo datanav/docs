@@ -1,266 +1,266 @@
-================================
-Salesforce to Customerp Dataflow
-================================
+=================================
+Salesforce to Custom ERP Dataflow
+=================================
 
-Generated: 2024-09-11 00:00:24
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Customerp. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Salesforce Customer to Customerp Contact
-----------------------------------------
-Every Salesforce Customer will be synchronized with a Customerp Contact.
+Salesforce Customer to Custom Contact
+-------------------------------------
+Every Salesforce Customer will be synchronized with a Custom Contact.
 
-Once a link between a Salesforce Customer and a Customerp Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Customer and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Customer and a Customerp Contact:
+The following properties are synchronized between a Salesforce Customer and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Customer Property
-     - Customerp Contact Property
-     - Customerp Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
 
-Salesforce Division to Customerp Customer
------------------------------------------
-Every Salesforce Division will be synchronized with a Customerp Customer.
+Salesforce Division to Custom Customer
+--------------------------------------
+Every Salesforce Division will be synchronized with a Custom Customer.
 
-Once a link between a Salesforce Division and a Customerp Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Division and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Division and a Customerp Customer:
+The following properties are synchronized between a Salesforce Division and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Division Property
-     - Customerp Customer Property
-     - Customerp Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Salesforce Invoice to Customerp Order
--------------------------------------
-Every Salesforce Invoice will be synchronized with a Customerp Order.
+Salesforce Invoice to Custom Order
+----------------------------------
+Every Salesforce Invoice will be synchronized with a Custom Order.
 
-Once a link between a Salesforce Invoice and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Invoice and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Invoice and a Customerp Order:
+The following properties are synchronized between a Salesforce Invoice and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Invoice Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Salesforce Invoiceline to Customerp Order
------------------------------------------
-Every Salesforce Invoiceline will be synchronized with a Customerp Order.
+Salesforce Invoiceline to Custom Order
+--------------------------------------
+Every Salesforce Invoiceline will be synchronized with a Custom Order.
 
-Once a link between a Salesforce Invoiceline and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Invoiceline and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Invoiceline and a Customerp Order:
+The following properties are synchronized between a Salesforce Invoiceline and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Invoiceline Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Salesforce Orderitem to Customerp Order
----------------------------------------
-Every Salesforce Orderitem will be synchronized with a Customerp Order.
+Salesforce Orderitem to Custom Order
+------------------------------------
+Every Salesforce Orderitem will be synchronized with a Custom Order.
 
-Once a link between a Salesforce Orderitem and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Orderitem and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Orderitem and a Customerp Order:
+The following properties are synchronized between a Salesforce Orderitem and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Orderitem Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Salesforce Organization to Customerp Customer
----------------------------------------------
-Every Salesforce Organization will be synchronized with a Customerp Customer.
+Salesforce Organization to Custom Customer
+------------------------------------------
+Every Salesforce Organization will be synchronized with a Custom Customer.
 
-Once a link between a Salesforce Organization and a Customerp Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Organization and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Organization and a Customerp Customer:
+The following properties are synchronized between a Salesforce Organization and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Organization Property
-     - Customerp Customer Property
-     - Customerp Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Salesforce Quote to Customerp Order
------------------------------------
-Every Salesforce Quote will be synchronized with a Customerp Order.
+Salesforce Quote to Custom Order
+--------------------------------
+Every Salesforce Quote will be synchronized with a Custom Order.
 
-Once a link between a Salesforce Quote and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quote and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quote and a Customerp Order:
+The following properties are synchronized between a Salesforce Quote and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quote Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Salesforce Quotelineitem to Customerp Order
--------------------------------------------
-Every Salesforce Quotelineitem will be synchronized with a Customerp Order.
+Salesforce Quotelineitem to Custom Order
+----------------------------------------
+Every Salesforce Quotelineitem will be synchronized with a Custom Order.
 
-Once a link between a Salesforce Quotelineitem and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quotelineitem and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quotelineitem and a Customerp Order:
+The following properties are synchronized between a Salesforce Quotelineitem and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quotelineitem Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Salesforce Seller to Customerp Contact
---------------------------------------
-Every Salesforce Seller will be synchronized with a Customerp Contact.
+Salesforce Seller to Custom Contact
+-----------------------------------
+Every Salesforce Seller will be synchronized with a Custom Contact.
 
-Once a link between a Salesforce Seller and a Customerp Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Seller and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Seller and a Customerp Contact:
+The following properties are synchronized between a Salesforce Seller and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Seller Property
-     - Customerp Contact Property
-     - Customerp Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
 
-Salesforce Task to Customerp Project
-------------------------------------
-Every Salesforce Task will be synchronized with a Customerp Project.
+Salesforce Task to Custom Project
+---------------------------------
+Every Salesforce Task will be synchronized with a Custom Project.
 
-Once a link between a Salesforce Task and a Customerp Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Task and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Task and a Customerp Project:
+The following properties are synchronized between a Salesforce Task and a Custom Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Task Property
-     - Customerp Project Property
-     - Customerp Data Type
+     - Custom Project Property
+     - Custom Data Type
 
 
-Salesforce User to Customerp Contact
-------------------------------------
-Every Salesforce User will be synchronized with a Customerp Contact.
+Salesforce User to Custom Contact
+---------------------------------
+Every Salesforce User will be synchronized with a Custom Contact.
 
-Once a link between a Salesforce User and a Customerp Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce User and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce User and a Customerp Contact:
+The following properties are synchronized between a Salesforce User and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce User Property
-     - Customerp Contact Property
-     - Customerp Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
 
-Salesforce Contact to Customerp Contact
----------------------------------------
-Every Salesforce Contact will be synchronized with a Customerp Contact.
+Salesforce Contact to Custom Contact
+------------------------------------
+Every Salesforce Contact will be synchronized with a Custom Contact.
 
-Once a link between a Salesforce Contact and a Customerp Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Contact and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Contact and a Customerp Contact:
+The following properties are synchronized between a Salesforce Contact and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Contact Property
-     - Customerp Contact Property
-     - Customerp Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
 
-Salesforce Order to Customerp Order
------------------------------------
-Every Salesforce Order will be synchronized with a Customerp Order.
+Salesforce Order to Custom Order
+--------------------------------
+Every Salesforce Order will be synchronized with a Custom Order.
 
-Once a link between a Salesforce Order and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Order and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Order and a Customerp Order:
+The following properties are synchronized between a Salesforce Order and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Order Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Salesforce Product2 to Customerp Product
-----------------------------------------
-Every Salesforce Product2 will be synchronized with a Customerp Product.
+Salesforce Product2 to Custom Product
+-------------------------------------
+Every Salesforce Product2 will be synchronized with a Custom Product.
 
-Once a link between a Salesforce Product2 and a Customerp Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Product2 and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Product2 and a Customerp Product:
+The following properties are synchronized between a Salesforce Product2 and a Custom Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Product2 Property
-     - Customerp Product Property
-     - Customerp Data Type
+     - Custom Product Property
+     - Custom Data Type
 
 
-Salesforce Quote to Customerp Quote
------------------------------------
-Every Salesforce Quote will be synchronized with a Customerp Quote.
+Salesforce Quote to Custom Quote
+--------------------------------
+Every Salesforce Quote will be synchronized with a Custom Quote.
 
-Once a link between a Salesforce Quote and a Customerp Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quote and a Custom Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quote and a Customerp Quote:
+The following properties are synchronized between a Salesforce Quote and a Custom Quote:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quote Property
-     - Customerp Quote Property
-     - Customerp Data Type
+     - Custom Quote Property
+     - Custom Data Type
 
 
-Salesforce User to Customerp Employee
--------------------------------------
-Every Salesforce User will be synchronized with a Customerp Employee.
+Salesforce User to Custom Employee
+----------------------------------
+Every Salesforce User will be synchronized with a Custom Employee.
 
-Once a link between a Salesforce User and a Customerp Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce User and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce User and a Customerp Employee:
+The following properties are synchronized between a Salesforce User and a Custom Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce User Property
-     - Customerp Employee Property
-     - Customerp Data Type
+     - Custom Employee Property
+     - Custom Data Type
 
