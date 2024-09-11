@@ -2,7 +2,7 @@
 CustomERP to HubSpot Dataflow
 =============================
 
-Generated: 2024-09-11 08:00:24
+Generated: 2024-09-11 08:02:19
 
 Introduction
 ------------
@@ -57,34 +57,34 @@ The following properties are synchronized between a Custom Employee and a Hubspo
      - Hubspot Data Type
 
 
-Custom Product to HubSpot Product
----------------------------------
-Every Custom Product will be synchronized with a HubSpot Product.
+CustomERP Product to HubSpot Product
+------------------------------------
+Every CustomERP Product will be synchronized with a HubSpot Product.
 
-Once a link between a Custom Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Product and a HubSpot Product:
+The following properties are synchronized between a CustomERP Product and a HubSpot Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Product Property
+   * - CustomERP Product Property
      - HubSpot Product Property
      - HubSpot Data Type
 
 
-Custom Quote to HubSpot Quote
------------------------------
-Every Custom Quote will be synchronized with a HubSpot Quote.
+CustomERP Quote to HubSpot Quote
+--------------------------------
+Every CustomERP Quote will be synchronized with a HubSpot Quote.
 
-Once a link between a Custom Quote and a HubSpot Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Quote and a HubSpot Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Quote and a HubSpot Quote:
+The following properties are synchronized between a CustomERP Quote and a HubSpot Quote:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Quote Property
+   * - CustomERP Quote Property
      - HubSpot Quote Property
      - HubSpot Data Type
 
