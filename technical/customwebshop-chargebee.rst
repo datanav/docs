@@ -2,25 +2,25 @@
 CustomWebshop to Chargebee Dataflow
 ===================================
 
-Generated: 2024-09-11 07:55:13
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CustomWebshop to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Custom Customer to Chargebee Business_entity
---------------------------------------------
-Every Custom Customer will be synchronized with a Chargebee Business_entity.
+CustomWebshop Customer to Chargebee Business_entity
+---------------------------------------------------
+Every CustomWebshop Customer will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Custom Customer and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomWebshop Customer and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Customer and a Chargebee Business_entity:
+The following properties are synchronized between a CustomWebshop Customer and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Customer Property
+   * - CustomWebshop Customer Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
 
