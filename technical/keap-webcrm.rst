@@ -1,13 +1,13 @@
 =======================
-Keap to Webcrm Dataflow
+Keap to WebCRM Dataflow
 =======================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Keap to Webcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Keap to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Keap Companies to Webcrm Organisations
 --------------------------------------
@@ -28,55 +28,55 @@ The following properties are synchronized between a Keap Companies and a Webcrm 
      - "string"
 
 
-Keap Opportunity to Webcrm Opportunities
+Keap Opportunity to WebCRM Opportunities
 ----------------------------------------
-Every Keap Opportunity will be synchronized with a Webcrm Opportunities.
+Every Keap Opportunity will be synchronized with a WebCRM Opportunities.
 
-Once a link between a Keap Opportunity and a Webcrm Opportunities is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Opportunity and a WebCRM Opportunities is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Opportunity and a Webcrm Opportunities:
+The following properties are synchronized between a Keap Opportunity and a WebCRM Opportunities:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Opportunity Property
-     - Webcrm Opportunities Property
-     - Webcrm Data Type
+     - WebCRM Opportunities Property
+     - WebCRM Data Type
 
 
-Keap Product to Webcrm Products
+Keap Product to WebCRM Products
 -------------------------------
-Every Keap Product will be synchronized with a Webcrm Products.
+Every Keap Product will be synchronized with a WebCRM Products.
 
-Once a link between a Keap Product and a Webcrm Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Product and a WebCRM Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Product and a Webcrm Products:
+The following properties are synchronized between a Keap Product and a WebCRM Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Product Property
-     - Webcrm Products Property
-     - Webcrm Data Type
+     - WebCRM Products Property
+     - WebCRM Data Type
    * - product_price
      - ProductPrice
      - "string"
 
 
-Keap Users to Webcrm Users
+Keap Users to WebCRM Users
 --------------------------
-Every Keap Users will be synchronized with a Webcrm Users.
+Every Keap Users will be synchronized with a WebCRM Users.
 
-Once a link between a Keap Users and a Webcrm Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Users and a WebCRM Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Users and a Webcrm Users:
+The following properties are synchronized between a Keap Users and a WebCRM Users:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Users Property
-     - Webcrm Users Property
-     - Webcrm Data Type
+     - WebCRM Users Property
+     - WebCRM Data Type
    * - email_address
      - UserEmail
      - "string"
