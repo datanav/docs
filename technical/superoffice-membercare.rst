@@ -2,27 +2,27 @@
 SuperOffice to MemberCare Dataflow
 ==================================
 
-Generated: 2024-09-11 07:48:17
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-SuperOffice Contact to Membercare Companies
+SuperOffice Contact to MemberCare Companies
 -------------------------------------------
-Every SuperOffice Contact will be synchronized with a Membercare Companies.
+Every SuperOffice Contact will be synchronized with a MemberCare Companies.
 
-Once a link between a SuperOffice Contact and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a Membercare Companies:
+The following properties are synchronized between a SuperOffice Contact and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - Membercare Companies Property
-     - Membercare Data Type
+     - MemberCare Companies Property
+     - MemberCare Data Type
    * - Name
      - companyName
      - "string"
@@ -31,20 +31,20 @@ The following properties are synchronized between a SuperOffice Contact and a Me
      - "string"
 
 
-SuperOffice Person to Membercare Persons
+SuperOffice Person to MemberCare Persons
 ----------------------------------------
-Every SuperOffice Person will be synchronized with a Membercare Persons.
+Every SuperOffice Person will be synchronized with a MemberCare Persons.
 
-Once a link between a SuperOffice Person and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a Membercare Persons:
+The following properties are synchronized between a SuperOffice Person and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - Membercare Persons Property
-     - Membercare Data Type
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - Address.Street.City
      - addresses.postalCode.city
      - "string"
@@ -71,39 +71,39 @@ The following properties are synchronized between a SuperOffice Person and a Mem
      - "string"
 
 
-SuperOffice Product to Membercare Products
+SuperOffice Product to MemberCare Products
 ------------------------------------------
-Every SuperOffice Product will be synchronized with a Membercare Products.
+Every SuperOffice Product will be synchronized with a MemberCare Products.
 
-Once a link between a SuperOffice Product and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Product and a MemberCare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Product and a Membercare Products:
+The following properties are synchronized between a SuperOffice Product and a MemberCare Products:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Product Property
-     - Membercare Products Property
-     - Membercare Data Type
+     - MemberCare Products Property
+     - MemberCare Data Type
    * - Name
      - name
      - "string"
 
 
-SuperOffice Quotealternative to Membercare Invoices
+SuperOffice Quotealternative to MemberCare Invoices
 ---------------------------------------------------
-Every SuperOffice Quotealternative will be synchronized with a Membercare Invoices.
+Every SuperOffice Quotealternative will be synchronized with a MemberCare Invoices.
 
-Once a link between a SuperOffice Quotealternative and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quotealternative and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quotealternative and a Membercare Invoices:
+The following properties are synchronized between a SuperOffice Quotealternative and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quotealternative Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
    * - sesam_Accepted
      - creationInfo
      - "string"
@@ -1180,20 +1180,20 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
 
 
-SuperOffice Quoteline to Membercare Invoices
+SuperOffice Quoteline to MemberCare Invoices
 --------------------------------------------
-Every SuperOffice Quoteline will be synchronized with a Membercare Invoices.
+Every SuperOffice Quoteline will be synchronized with a MemberCare Invoices.
 
-Once a link between a SuperOffice Quoteline and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quoteline and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quoteline and a Membercare Invoices:
+The following properties are synchronized between a SuperOffice Quoteline and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quoteline Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
    * - Description
      - invoiceItems.description
      - "string"
@@ -1205,20 +1205,20 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
 
 
-SuperOffice Sale to Membercare Invoices
+SuperOffice Sale to MemberCare Invoices
 ---------------------------------------
-Every SuperOffice Sale will be synchronized with a Membercare Invoices.
+Every SuperOffice Sale will be synchronized with a MemberCare Invoices.
 
-Once a link between a SuperOffice Sale and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Sale and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Sale and a Membercare Invoices:
+The following properties are synchronized between a SuperOffice Sale and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Sale Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
 
 
 SuperOffice Listcountryitems to MemberCare Countries
