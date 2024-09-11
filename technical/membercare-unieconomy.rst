@@ -1,26 +1,26 @@
 =================================
-Membercare to Unieconomy Dataflow
+MemberCare to Unieconomy Dataflow
 =================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Membercare to Unieconomy. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to Unieconomy. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Membercare Companies to Unieconomy Companies
+MemberCare Companies to Unieconomy Companies
 --------------------------------------------
-Every Membercare Companies will be synchronized with a Unieconomy Companies.
+Every MemberCare Companies will be synchronized with a Unieconomy Companies.
 
-Once a link between a Membercare Companies and a Unieconomy Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companies and a Unieconomy Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Companies and a Unieconomy Companies:
+The following properties are synchronized between a MemberCare Companies and a Unieconomy Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Companies Property
+   * - MemberCare Companies Property
      - Unieconomy Companies Property
      - Unieconomy Data Type
    * - companyName
