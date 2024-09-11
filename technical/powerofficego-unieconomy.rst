@@ -1,26 +1,26 @@
-====================================
-Powerofficego to Unieconomy Dataflow
-====================================
+=====================================
+PowerOffice GO to Unieconomy Dataflow
+=====================================
 
-Generated: 2024-09-11 00:00:00
+Generated: 2024-09-11 07:52:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Unieconomy. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from PowerOffice GO to Unieconomy. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Powerofficego Customers to Unieconomy Customers
------------------------------------------------
-Every Powerofficego Customers will be synchronized with a Unieconomy Customers.
+PowerOffice Customers to Unieconomy Customers
+---------------------------------------------
+Every PowerOffice Customers will be synchronized with a Unieconomy Customers.
 
-Once a link between a Powerofficego Customers and a Unieconomy Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Customers and a Unieconomy Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers and a Unieconomy Customers:
+The following properties are synchronized between a PowerOffice Customers and a Unieconomy Customers:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Customers Property
+   * - PowerOffice Customers Property
      - Unieconomy Customers Property
      - Unieconomy Data Type
    * - OrganizationNumber (Dependant on having wd:Q11994066 in MailAddress.CountryCodeDependant on having wd:Q11994066 in MailAddress.countryCodeDependant on having wd:Q11994066 in MailAddress.countryCodeDependant on having wd:Q11994066 in MailAddress.countryCodeDependant on having wd:Q11994066 in MailAddress.countryCodeDependant on having wd:Q11994066 in MailAddress.countryCodeDependant on having wd:Q11994066 in MailAddress.countryCode)
@@ -40,18 +40,18 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Departments to Unieconomy Departments
----------------------------------------------------
-Every Powerofficego Departments will be synchronized with a Unieconomy Departments.
+PowerOffice Departments to Unieconomy Departments
+-------------------------------------------------
+Every PowerOffice Departments will be synchronized with a Unieconomy Departments.
 
-Once a link between a Powerofficego Departments and a Unieconomy Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Departments and a Unieconomy Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Departments and a Unieconomy Departments:
+The following properties are synchronized between a PowerOffice Departments and a Unieconomy Departments:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Departments Property
+   * - PowerOffice Departments Property
      - Unieconomy Departments Property
      - Unieconomy Data Type
    * - Name
