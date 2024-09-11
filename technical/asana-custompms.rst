@@ -1,90 +1,90 @@
-===========================
-Asana to Custompms Dataflow
-===========================
+============================
+Asana to Custom PMS Dataflow
+============================
 
-Generated: 2024-09-11 00:00:02
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Asana to Custompms. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Asana to Custom PMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Asana Tasks to Custompms Project
---------------------------------
-Every Asana Tasks will be synchronized with a Custompms Project.
+Asana Tasks to Custom Project
+-----------------------------
+Every Asana Tasks will be synchronized with a Custom Project.
 
-Once a link between a Asana Tasks and a Custompms Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Tasks and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Tasks and a Custompms Project:
+The following properties are synchronized between a Asana Tasks and a Custom Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Tasks Property
-     - Custompms Project Property
-     - Custompms Data Type
+     - Custom Project Property
+     - Custom Data Type
 
 
-Asana Teams to Custompms Customer
----------------------------------
-Every Asana Teams will be synchronized with a Custompms Customer.
+Asana Teams to Custom Customer
+------------------------------
+Every Asana Teams will be synchronized with a Custom Customer.
 
-Once a link between a Asana Teams and a Custompms Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Teams and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Teams and a Custompms Customer:
+The following properties are synchronized between a Asana Teams and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Teams Property
-     - Custompms Customer Property
-     - Custompms Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Asana Workspaces to Custompms Customer
---------------------------------------
-Every Asana Workspaces will be synchronized with a Custompms Customer.
+Asana Workspaces to Custom Customer
+-----------------------------------
+Every Asana Workspaces will be synchronized with a Custom Customer.
 
-Once a link between a Asana Workspaces and a Custompms Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Workspaces and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Workspaces and a Custompms Customer:
+The following properties are synchronized between a Asana Workspaces and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Workspaces Property
-     - Custompms Customer Property
-     - Custompms Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Asana Projects to Custompms Project
------------------------------------
-Every Asana Projects will be synchronized with a Custompms Project.
+Asana Projects to Custom Project
+--------------------------------
+Every Asana Projects will be synchronized with a Custom Project.
 
-Once a link between a Asana Projects and a Custompms Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Projects and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Projects and a Custompms Project:
+The following properties are synchronized between a Asana Projects and a Custom Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Projects Property
-     - Custompms Project Property
-     - Custompms Data Type
+     - Custom Project Property
+     - Custom Data Type
 
 
-Asana Tasks to Custompms Task
------------------------------
-Every Asana Tasks will be synchronized with a Custompms Task.
+Asana Tasks to Custom Task
+--------------------------
+Every Asana Tasks will be synchronized with a Custom Task.
 
-Once a link between a Asana Tasks and a Custompms Task is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Tasks and a Custom Task is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Tasks and a Custompms Task:
+The following properties are synchronized between a Asana Tasks and a Custom Task:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Tasks Property
-     - Custompms Task Property
-     - Custompms Data Type
+     - Custom Task Property
+     - Custom Data Type
 
