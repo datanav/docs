@@ -1,60 +1,60 @@
-====================================
-Wave Financial to Customcrm Dataflow
-====================================
+=====================================
+Wave Financial to Custom CRM Dataflow
+=====================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Customcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Customer person to Customcrm Contact
------------------------------------------
-Every Wave Customer person will be synchronized with a Customcrm Contact.
+Wave Customer person to Custom Contact
+--------------------------------------
+Every Wave Customer person will be synchronized with a Custom Contact.
 
-Once a link between a Wave Customer person and a Customcrm Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer person and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a Customcrm Contact:
+The following properties are synchronized between a Wave Customer person and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     - Customcrm Contact Property
-     - Customcrm Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
 
-Wave Customer to Customcrm Contact
-----------------------------------
-Every Wave Customer will be synchronized with a Customcrm Contact.
+Wave Customer to Custom Contact
+-------------------------------
+Every Wave Customer will be synchronized with a Custom Contact.
 
-Once a link between a Wave Customer and a Customcrm Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a Customcrm Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Customcrm Contact Property
-     - Customcrm Data Type
-
-
-Wave Customer to Customcrm Customer
------------------------------------
-Every Wave Customer will be synchronized with a Customcrm Customer.
-
-Once a link between a Wave Customer and a Customcrm Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a Customcrm Customer:
+The following properties are synchronized between a Wave Customer and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - Customcrm Customer Property
-     - Customcrm Data Type
+     - Custom Contact Property
+     - Custom Data Type
+
+
+Wave Customer to Custom Customer
+--------------------------------
+Every Wave Customer will be synchronized with a Custom Customer.
+
+Once a link between a Wave Customer and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Custom Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Custom Customer Property
+     - Custom Data Type
    * - address.addressLine1
      - StreetAddress1
      - "string"
@@ -93,50 +93,50 @@ The following properties are synchronized between a Wave Customer and a Customcr
      - "string"
 
 
-Wave Invoice to Customcrm Order
--------------------------------
-Every Wave Invoice will be synchronized with a Customcrm Order.
+Wave Invoice to Custom Order
+----------------------------
+Every Wave Invoice will be synchronized with a Custom Order.
 
-Once a link between a Wave Invoice and a Customcrm Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a Customcrm Order:
+The following properties are synchronized between a Wave Invoice and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     - Customcrm Order Property
-     - Customcrm Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Wave Product to Customcrm Product
----------------------------------
-Every Wave Product will be synchronized with a Customcrm Product.
+Wave Product to Custom Product
+------------------------------
+Every Wave Product will be synchronized with a Custom Product.
 
-Once a link between a Wave Product and a Customcrm Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a Customcrm Product:
+The following properties are synchronized between a Wave Product and a Custom Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Product Property
-     - Customcrm Product Property
-     - Customcrm Data Type
+     - Custom Product Property
+     - Custom Data Type
 
 
-Wave Vendor to Customcrm Contact
---------------------------------
-Every Wave Vendor will be synchronized with a Customcrm Contact.
+Wave Vendor to Custom Contact
+-----------------------------
+Every Wave Vendor will be synchronized with a Custom Contact.
 
-Once a link between a Wave Vendor and a Customcrm Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a Customcrm Contact:
+The following properties are synchronized between a Wave Vendor and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     - Customcrm Contact Property
-     - Customcrm Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
