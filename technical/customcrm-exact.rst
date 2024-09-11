@@ -1,13 +1,13 @@
-==================================
-CustomCRM to Exact Online Dataflow
-==================================
+=================================
+CustomCRM to ExactOnline Dataflow
+=================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from CustomCRM to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from CustomCRM to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Custom Order to Exact Quotations
 --------------------------------
@@ -41,82 +41,82 @@ The following properties are synchronized between a Custom User and a Exact Quot
      - Exact Data Type
 
 
-Custom Contact to Exact Contacts
---------------------------------
-Every Custom Contact will be synchronized with a Exact Contacts.
+CustomCRM Contact to ExactOnline Contacts
+-----------------------------------------
+Every CustomCRM Contact will be synchronized with a ExactOnline Contacts.
 
-Once a link between a Custom Contact and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Contact and a ExactOnline Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Contact and a Exact Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Custom Contact Property
-     - Exact Contacts Property
-     - Exact Data Type
-
-
-Custom Customer to Exact Accounts
----------------------------------
-Every Custom Customer will be synchronized with a Exact Accounts.
-
-Once a link between a Custom Customer and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Custom Customer and a Exact Accounts:
+The following properties are synchronized between a CustomCRM Contact and a ExactOnline Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Customer Property
-     - Exact Accounts Property
-     - Exact Data Type
+   * - CustomCRM Contact Property
+     - ExactOnline Contacts Property
+     - ExactOnline Data Type
 
 
-Custom Order to Exact Salesorders
----------------------------------
-Every Custom Order will be synchronized with a Exact Salesorders.
+CustomCRM Customer to ExactOnline Accounts
+------------------------------------------
+Every CustomCRM Customer will be synchronized with a ExactOnline Accounts.
 
-Once a link between a Custom Order and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Customer and a ExactOnline Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Order and a Exact Salesorders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Custom Order Property
-     - Exact Salesorders Property
-     - Exact Data Type
-
-
-Custom Product to Exact Items
------------------------------
-Every Custom Product will be synchronized with a Exact Items.
-
-Once a link between a Custom Product and a Exact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Custom Product and a Exact Items:
+The following properties are synchronized between a CustomCRM Customer and a ExactOnline Accounts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Product Property
-     - Exact Items Property
-     - Exact Data Type
+   * - CustomCRM Customer Property
+     - ExactOnline Accounts Property
+     - ExactOnline Data Type
 
 
-Custom Quote to Exact Quotations
---------------------------------
-Every Custom Quote will be synchronized with a Exact Quotations.
+CustomCRM Order to ExactOnline Salesorders
+------------------------------------------
+Every CustomCRM Order will be synchronized with a ExactOnline Salesorders.
 
-Once a link between a Custom Quote and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Order and a ExactOnline Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Quote and a Exact Quotations:
+The following properties are synchronized between a CustomCRM Order and a ExactOnline Salesorders:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Quote Property
-     - Exact Quotations Property
-     - Exact Data Type
+   * - CustomCRM Order Property
+     - ExactOnline Salesorders Property
+     - ExactOnline Data Type
+
+
+CustomCRM Product to ExactOnline Items
+--------------------------------------
+Every CustomCRM Product will be synchronized with a ExactOnline Items.
+
+Once a link between a CustomCRM Product and a ExactOnline Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a CustomCRM Product and a ExactOnline Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - CustomCRM Product Property
+     - ExactOnline Items Property
+     - ExactOnline Data Type
+
+
+CustomCRM Quote to ExactOnline Quotations
+-----------------------------------------
+Every CustomCRM Quote will be synchronized with a ExactOnline Quotations.
+
+Once a link between a CustomCRM Quote and a ExactOnline Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a CustomCRM Quote and a ExactOnline Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - CustomCRM Quote Property
+     - ExactOnline Quotations Property
+     - ExactOnline Data Type
 
