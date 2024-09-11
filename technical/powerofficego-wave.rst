@@ -2,37 +2,37 @@
 PowerOffice GO to Wave Dataflow
 ===============================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:39:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from PowerOffice GO to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-PowerOfficeGO Contactperson to Wave Customer person
----------------------------------------------------
-Before any synchronization can take place, a link between a PowerOfficeGO Contactperson and a Wave Customer person must be established.
+PowerOffice GO Contactperson to Wave Customer person
+----------------------------------------------------
+Before any synchronization can take place, a link between a PowerOffice GO Contactperson and a Wave Customer person must be established.
 
-A new Wave Customer person will be created from a PowerOfficeGO Contactperson if it is connected to a PowerOfficeGO Salesorder, Salesorders, Salesorderlines, or Outgoinginvoices that is synchronized into Wave.
+A new Wave Customer person will be created from a PowerOffice GO Contactperson if it is connected to a PowerOffice GO Powerofficego-salesorder, Powerofficego-salesorders, Powerofficego-salesorderlines, or Powerofficego-outgoinginvoices that is synchronized into Wave.
 
-A PowerOfficeGO Contactperson will merge with a Wave Customer person if one of the following property combinations match:
+A PowerOffice GO Contactperson will merge with a Wave Customer person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Contactperson Property
+   * - PowerOffice GO Contactperson Property
      - Wave Customer person Property
    * - emailAddress
      - email
 
-Once a link between a PowerOfficeGO Contactperson and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Contactperson and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Contactperson and a Wave Customer person:
+The following properties are synchronized between a PowerOffice GO Contactperson and a Wave Customer person:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Contactperson Property
+   * - PowerOffice GO Contactperson Property
      - Wave Customer person Property
      - Wave Data Type
    * - address1
