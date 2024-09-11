@@ -2,105 +2,105 @@
 BusinessNxt to MemberCare Dataflow
 ==================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from BusinessNxt to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Visma Country to MemberCare Companycategories
----------------------------------------------
-Every Visma Country will be synchronized with a MemberCare Companycategories.
+BusinessNxt Country to MemberCare Companycategories
+---------------------------------------------------
+Every BusinessNxt Country will be synchronized with a MemberCare Companycategories.
 
-Once a link between a Visma Country and a MemberCare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Country and a MemberCare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Country and a MemberCare Companycategories:
+The following properties are synchronized between a BusinessNxt Country and a MemberCare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Country Property
+   * - BusinessNxt Country Property
      - MemberCare Companycategories Property
      - MemberCare Data Type
 
 
-Visma Currency to MemberCare Companycategories
-----------------------------------------------
-Every Visma Currency will be synchronized with a MemberCare Companycategories.
+BusinessNxt Currency to MemberCare Companycategories
+----------------------------------------------------
+Every BusinessNxt Currency will be synchronized with a MemberCare Companycategories.
 
-Once a link between a Visma Currency and a MemberCare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Currency and a MemberCare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Currency and a MemberCare Companycategories:
+The following properties are synchronized between a BusinessNxt Currency and a MemberCare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Currency Property
+   * - BusinessNxt Currency Property
      - MemberCare Companycategories Property
      - MemberCare Data Type
 
 
-Visma Order to MemberCare Invoices
-----------------------------------
-Every Visma Order will be synchronized with a MemberCare Invoices.
+BusinessNxt Order to MemberCare Invoices
+----------------------------------------
+Every BusinessNxt Order will be synchronized with a MemberCare Invoices.
 
-Once a link between a Visma Order and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Order and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Order and a MemberCare Invoices:
+The following properties are synchronized between a BusinessNxt Order and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Order Property
+   * - BusinessNxt Order Property
      - MemberCare Invoices Property
      - MemberCare Data Type
 
 
-Visma Orderline to MemberCare Invoices
---------------------------------------
-Every Visma Orderline will be synchronized with a MemberCare Invoices.
+BusinessNxt Orderline to MemberCare Invoices
+--------------------------------------------
+Every BusinessNxt Orderline will be synchronized with a MemberCare Invoices.
 
-Once a link between a Visma Orderline and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Orderline and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Orderline and a MemberCare Invoices:
+The following properties are synchronized between a BusinessNxt Orderline and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Orderline Property
+   * - BusinessNxt Orderline Property
      - MemberCare Invoices Property
      - MemberCare Data Type
 
 
-Visma Product to MemberCare Products
-------------------------------------
-Every Visma Product will be synchronized with a MemberCare Products.
+BusinessNxt Product to MemberCare Products
+------------------------------------------
+Every BusinessNxt Product will be synchronized with a MemberCare Products.
 
-Once a link between a Visma Product and a MemberCare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Product and a MemberCare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Product and a MemberCare Products:
+The following properties are synchronized between a BusinessNxt Product and a MemberCare Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Product Property
+   * - BusinessNxt Product Property
      - MemberCare Products Property
      - MemberCare Data Type
 
 
-Visma Productcategory to MemberCare Companycategories
------------------------------------------------------
-Every Visma Productcategory will be synchronized with a MemberCare Companycategories.
+BusinessNxt Productcategory to MemberCare Companycategories
+-----------------------------------------------------------
+Every BusinessNxt Productcategory will be synchronized with a MemberCare Companycategories.
 
-Once a link between a Visma Productcategory and a MemberCare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Productcategory and a MemberCare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Productcategory and a MemberCare Companycategories:
+The following properties are synchronized between a BusinessNxt Productcategory and a MemberCare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Productcategory Property
+   * - BusinessNxt Productcategory Property
      - MemberCare Companycategories Property
      - MemberCare Data Type
    * - description
@@ -108,18 +108,18 @@ The following properties are synchronized between a Visma Productcategory and a 
      - "string"
 
 
-Visma Vat to MemberCare Companycategories
------------------------------------------
-Every Visma Vat will be synchronized with a MemberCare Companycategories.
+BusinessNxt Vat to MemberCare Companycategories
+-----------------------------------------------
+Every BusinessNxt Vat will be synchronized with a MemberCare Companycategories.
 
-Once a link between a Visma Vat and a MemberCare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Vat and a MemberCare Companycategories is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Vat and a MemberCare Companycategories:
+The following properties are synchronized between a BusinessNxt Vat and a MemberCare Companycategories:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Vat Property
+   * - BusinessNxt Vat Property
      - MemberCare Companycategories Property
      - MemberCare Data Type
    * - description
