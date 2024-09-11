@@ -2,27 +2,27 @@
 CRMOffice to BusinessNxt Dataflow
 =================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CRMOffice to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-CRMOffice Companies to Visma Product
-------------------------------------
-Every CRMOffice Companies will be synchronized with a Visma Product.
+CRMOffice Companies to BusinessNxt Product
+------------------------------------------
+Every CRMOffice Companies will be synchronized with a BusinessNxt Product.
 
-Once a link between a CRMOffice Companies and a Visma Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Companies and a BusinessNxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CRMOffice Companies and a Visma Product:
+The following properties are synchronized between a CRMOffice Companies and a BusinessNxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - CRMOffice Companies Property
-     - Visma Product Property
-     - Visma Data Type
+     - BusinessNxt Product Property
+     - BusinessNxt Data Type
 
 
 CRMOffice Activities to BusinessNxt Country
