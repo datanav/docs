@@ -2,25 +2,25 @@
 ExactOnline to ZohoCRM Dataflow
 ===============================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from ExactOnline to ZohoCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Exact Accounts to ZohoCRM Account
----------------------------------
-Every Exact Accounts will be synchronized with a ZohoCRM Account.
+ExactOnline Accounts to ZohoCRM Account
+---------------------------------------
+Every ExactOnline Accounts will be synchronized with a ZohoCRM Account.
 
-Once a link between a Exact Accounts and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Accounts and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Accounts and a ZohoCRM Account:
+The following properties are synchronized between a ExactOnline Accounts and a ZohoCRM Account:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Accounts Property
+   * - ExactOnline Accounts Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
    * - Name
@@ -31,18 +31,18 @@ The following properties are synchronized between a Exact Accounts and a ZohoCRM
      - "string"
 
 
-Exact Departments to ZohoCRM Account
-------------------------------------
-Every Exact Departments will be synchronized with a ZohoCRM Account.
+ExactOnline Departments to ZohoCRM Account
+------------------------------------------
+Every ExactOnline Departments will be synchronized with a ZohoCRM Account.
 
-Once a link between a Exact Departments and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Departments and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Departments and a ZohoCRM Account:
+The following properties are synchronized between a ExactOnline Departments and a ZohoCRM Account:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Departments Property
+   * - ExactOnline Departments Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
    * - Description
@@ -50,18 +50,18 @@ The following properties are synchronized between a Exact Departments and a Zoho
      - "string"
 
 
-Exact Divisions to ZohoCRM Account
-----------------------------------
-Every Exact Divisions will be synchronized with a ZohoCRM Account.
+ExactOnline Divisions to ZohoCRM Account
+----------------------------------------
+Every ExactOnline Divisions will be synchronized with a ZohoCRM Account.
 
-Once a link between a Exact Divisions and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Divisions and a ZohoCRM Account is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Divisions and a ZohoCRM Account:
+The following properties are synchronized between a ExactOnline Divisions and a ZohoCRM Account:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Divisions Property
+   * - ExactOnline Divisions Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
    * - Description
