@@ -1,13 +1,13 @@
-========================================
-PowerOffice GO to CustomWebshop Dataflow
-========================================
+=========================================
+PowerOffice GO to Custom Webshop Dataflow
+=========================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from PowerOffice GO to CustomWebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from PowerOffice GO to Custom Webshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 PowerOfficeGO Departments to CustomWebshop Customer
 ---------------------------------------------------
@@ -41,50 +41,50 @@ The following properties are synchronized between a PowerOfficeGO Salesorderline
      - CustomWebshop Data Type
 
 
-PowerOfficeGO Customers to CustomWebshop Customer
--------------------------------------------------
-Every PowerOfficeGO Customers will be synchronized with a CustomWebshop Customer.
+PowerOffice GO Customers to Custom Webshop Customer
+---------------------------------------------------
+Every PowerOffice GO Customers will be synchronized with a Custom Webshop Customer.
 
-Once a link between a PowerOfficeGO Customers and a CustomWebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Customers and a Custom Webshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Customers and a CustomWebshop Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOfficeGO Customers Property
-     - CustomWebshop Customer Property
-     - CustomWebshop Data Type
-
-
-PowerOfficeGO Product to CustomWebshop Product
-----------------------------------------------
-Every PowerOfficeGO Product will be synchronized with a CustomWebshop Product.
-
-Once a link between a PowerOfficeGO Product and a CustomWebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOfficeGO Product and a CustomWebshop Product:
+The following properties are synchronized between a PowerOffice GO Customers and a Custom Webshop Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Product Property
-     - CustomWebshop Product Property
-     - CustomWebshop Data Type
+   * - PowerOffice GO Customers Property
+     - Custom Webshop Customer Property
+     - Custom Webshop Data Type
 
 
-PowerOfficeGO Salesorders to CustomWebshop Order
+PowerOffice GO Product to Custom Webshop Product
 ------------------------------------------------
-Every PowerOfficeGO Salesorders will be synchronized with a CustomWebshop Order.
+Every PowerOffice GO Product will be synchronized with a Custom Webshop Product.
 
-Once a link between a PowerOfficeGO Salesorders and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Product and a Custom Webshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Salesorders and a CustomWebshop Order:
+The following properties are synchronized between a PowerOffice GO Product and a Custom Webshop Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Salesorders Property
-     - CustomWebshop Order Property
-     - CustomWebshop Data Type
+   * - PowerOffice GO Product Property
+     - Custom Webshop Product Property
+     - Custom Webshop Data Type
+
+
+PowerOffice GO Salesorders to Custom Webshop Order
+--------------------------------------------------
+Every PowerOffice GO Salesorders will be synchronized with a Custom Webshop Order.
+
+Once a link between a PowerOffice GO Salesorders and a Custom Webshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Salesorders and a Custom Webshop Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Salesorders Property
+     - Custom Webshop Order Property
+     - Custom Webshop Data Type
 
