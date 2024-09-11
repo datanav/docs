@@ -2,7 +2,7 @@
 BusinessCentral to BusinessCentral Dataflow
 ===========================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
@@ -123,20 +123,20 @@ The following properties are synchronized between a BusinessCentral Items and a 
      - "string"
 
 
-Business Customers company to Business Companies
-------------------------------------------------
-Every Business Customers company will be synchronized with a Business Companies.
+BusinessCentral Customers company to BusinessCentral Companies
+--------------------------------------------------------------
+Every BusinessCentral Customers company will be synchronized with a BusinessCentral Companies.
 
-Once a link between a Business Customers company and a Business Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessCentral Customers company and a BusinessCentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Customers company and a Business Companies:
+The following properties are synchronized between a BusinessCentral Customers company and a BusinessCentral Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Customers company Property
-     - Business Companies Property
-     - Business Data Type
+   * - BusinessCentral Customers company Property
+     - BusinessCentral Companies Property
+     - BusinessCentral Data Type
 
 
 BusinessCentral Contacts person to BusinessCentral Customers person
