@@ -1,13 +1,13 @@
-==================================
-Unieconomy to BusinessNxt Dataflow
-==================================
+===================================
+Unieconomy to Business Nxt Dataflow
+===================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Unieconomy to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Unieconomy to Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Unieconomy Customers to BusinessNxt Address
 -------------------------------------------
@@ -44,77 +44,77 @@ The following properties are synchronized between a Unieconomy Departments and a
      - "string"
 
 
-Unieconomy Companies to BusinessNxt Address
--------------------------------------------
-Every Unieconomy Companies will be synchronized with a BusinessNxt Address.
+Unieconomy Companies to Business Nxt Address
+--------------------------------------------
+Every Unieconomy Companies will be synchronized with a Business Nxt Address.
 
-Once a link between a Unieconomy Companies and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Companies and a Business Nxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Companies and a BusinessNxt Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Unieconomy Companies Property
-     - BusinessNxt Address Property
-     - BusinessNxt Data Type
-   * - Name
-     - name
-     - "string"
-
-
-Unieconomy Companies to BusinessNxt Company
--------------------------------------------
-Every Unieconomy Companies will be synchronized with a BusinessNxt Company.
-
-Once a link between a Unieconomy Companies and a BusinessNxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Unieconomy Companies and a BusinessNxt Company:
+The following properties are synchronized between a Unieconomy Companies and a Business Nxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Companies Property
-     - BusinessNxt Company Property
-     - BusinessNxt Data Type
+     - Business Nxt Address Property
+     - Business Nxt Data Type
    * - Name
      - name
      - "string"
 
 
-Unieconomy Countries to BusinessNxt Country
--------------------------------------------
-Every Unieconomy Countries will be synchronized with a BusinessNxt Country.
+Unieconomy Companies to Business Nxt Company
+--------------------------------------------
+Every Unieconomy Companies will be synchronized with a Business Nxt Company.
 
-Once a link between a Unieconomy Countries and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Companies and a Business Nxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Countries and a BusinessNxt Country:
+The following properties are synchronized between a Unieconomy Companies and a Business Nxt Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Companies Property
+     - Business Nxt Company Property
+     - Business Nxt Data Type
+   * - Name
+     - name
+     - "string"
+
+
+Unieconomy Countries to Business Nxt Country
+--------------------------------------------
+Every Unieconomy Countries will be synchronized with a Business Nxt Country.
+
+Once a link between a Unieconomy Countries and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Countries and a Business Nxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Countries Property
-     - BusinessNxt Country Property
-     - BusinessNxt Data Type
+     - Business Nxt Country Property
+     - Business Nxt Data Type
    * - Name
      - name
      - "string"
 
 
-Unieconomy Currencycodes to BusinessNxt Currency
-------------------------------------------------
-Every Unieconomy Currencycodes will be synchronized with a BusinessNxt Currency.
+Unieconomy Currencycodes to Business Nxt Currency
+-------------------------------------------------
+Every Unieconomy Currencycodes will be synchronized with a Business Nxt Currency.
 
-Once a link between a Unieconomy Currencycodes and a BusinessNxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Currencycodes and a Business Nxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Currencycodes and a BusinessNxt Currency:
+The following properties are synchronized between a Unieconomy Currencycodes and a Business Nxt Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Currencycodes Property
-     - BusinessNxt Currency Property
-     - BusinessNxt Data Type
+     - Business Nxt Currency Property
+     - Business Nxt Data Type
    * - Code
      - isoCode
      - "string"
