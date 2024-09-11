@@ -2,41 +2,12 @@
 Tripletex to PowerOfficeGO Dataflow
 ===================================
 
-Generated: 2024-09-11 09:12:46
+Generated: 2024-09-11 09:13:13
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to PowerOfficeGO. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Tripletex Activity to PowerOfficeGO Projectactivity
----------------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Activity and a PowerOfficeGO Projectactivity must be established.
-
-A Tripletex Activity will merge with a PowerOfficeGO Projectactivity if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Activity Property
-     - PowerOfficeGO Projectactivity Property
-   * - id
-     - activityCode
-
-Once a link between a Tripletex Activity and a PowerOfficeGO Projectactivity is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Activity and a PowerOfficeGO Projectactivity:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Activity Property
-     - PowerOfficeGO Projectactivity Property
-     - PowerOfficeGO Data Type
-   * - name
-     - name
-     - "string"
-
 
 Tripletex Contact to PowerOfficeGO Customers person
 ---------------------------------------------------
@@ -504,6 +475,38 @@ The following properties are synchronized between a Tripletex Customer and a Pow
      - "string"
    * - postalAddress.postalCode
      - MailAddress.ZipCode
+     - "string"
+
+
+Tripletex Activity to PowerOfficeGO Projectactivity
+---------------------------------------------------
+Every Tripletex Activity will be synchronized with a PowerOfficeGO Projectactivity.
+
+If a matching PowerOfficeGO Projectactivity already exists, the Tripletex Activity will be merged with the existing one.
+If no matching PowerOfficeGO Projectactivity is found, a new PowerOfficeGO Projectactivity will be created.
+
+A Tripletex Activity will merge with a PowerOfficeGO Projectactivity if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Activity Property
+     - PowerOfficeGO Projectactivity Property
+   * - id
+     - activityCode
+
+Once a link between a Tripletex Activity and a PowerOfficeGO Projectactivity is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Activity and a PowerOfficeGO Projectactivity:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Activity Property
+     - PowerOfficeGO Projectactivity Property
+     - PowerOfficeGO Data Type
+   * - name
+     - name
      - "string"
 
 
