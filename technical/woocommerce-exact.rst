@@ -2,27 +2,27 @@
 WooCommerce to Exact Online Dataflow
 ====================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-WooCommerce Order to ExactOnline Quotations
--------------------------------------------
-Every WooCommerce Order will be synchronized with a ExactOnline Quotations.
+WooCommerce Order to Exact Online Quotations
+--------------------------------------------
+Every WooCommerce Order will be synchronized with a Exact Online Quotations.
 
-Once a link between a WooCommerce Order and a ExactOnline Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a Exact Online Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Order and a ExactOnline Quotations:
+The following properties are synchronized between a WooCommerce Order and a Exact Online Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Order Property
-     - ExactOnline Quotations Property
-     - ExactOnline Data Type
+     - Exact Online Quotations Property
+     - Exact Online Data Type
    * - currency
      - Currency
      - "string"
