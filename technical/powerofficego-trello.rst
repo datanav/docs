@@ -2,25 +2,25 @@
 PowerOfficeGO to Trello Dataflow
 ================================
 
-Generated: 2024-09-11 09:03:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from PowerOfficeGO to Trello. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-PowerOffice Contactperson to Trello Members
--------------------------------------------
-Every PowerOffice Contactperson will be synchronized with a Trello Members.
+PowerOfficeGO Contactperson to Trello Members
+---------------------------------------------
+Every PowerOfficeGO Contactperson will be synchronized with a Trello Members.
 
-Once a link between a PowerOffice Contactperson and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Contactperson and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Contactperson and a Trello Members:
+The following properties are synchronized between a PowerOfficeGO Contactperson and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Contactperson Property
+   * - PowerOfficeGO Contactperson Property
      - Trello Members Property
      - Trello Data Type
    * - emailAddress
@@ -28,18 +28,18 @@ The following properties are synchronized between a PowerOffice Contactperson an
      - "string"
 
 
-PowerOffice Customers person to Trello Members
-----------------------------------------------
-Every PowerOffice Customers person will be synchronized with a Trello Members.
+PowerOfficeGO Customers person to Trello Members
+------------------------------------------------
+Every PowerOfficeGO Customers person will be synchronized with a Trello Members.
 
-Once a link between a PowerOffice Customers person and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Customers person and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Customers person and a Trello Members:
+The following properties are synchronized between a PowerOfficeGO Customers person and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Customers person Property
+   * - PowerOfficeGO Customers person Property
      - Trello Members Property
      - Trello Data Type
    * - EmailAddress
@@ -47,18 +47,18 @@ The following properties are synchronized between a PowerOffice Customers person
      - "string"
 
 
-PowerOffice Customers to Trello Organizations
----------------------------------------------
-Every PowerOffice Customers will be synchronized with a Trello Organizations.
+PowerOfficeGO Customers to Trello Organizations
+-----------------------------------------------
+Every PowerOfficeGO Customers will be synchronized with a Trello Organizations.
 
-Once a link between a PowerOffice Customers and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Customers and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Customers and a Trello Organizations:
+The following properties are synchronized between a PowerOfficeGO Customers and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Customers Property
+   * - PowerOfficeGO Customers Property
      - Trello Organizations Property
      - Trello Data Type
    * - Name
@@ -69,18 +69,18 @@ The following properties are synchronized between a PowerOffice Customers and a 
      - "string"
 
 
-PowerOffice Departments to Trello Organizations
------------------------------------------------
-Every PowerOffice Departments will be synchronized with a Trello Organizations.
+PowerOfficeGO Departments to Trello Organizations
+-------------------------------------------------
+Every PowerOfficeGO Departments will be synchronized with a Trello Organizations.
 
-Once a link between a PowerOffice Departments and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Departments and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Departments and a Trello Organizations:
+The following properties are synchronized between a PowerOfficeGO Departments and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Departments Property
+   * - PowerOfficeGO Departments Property
      - Trello Organizations Property
      - Trello Data Type
    * - Name
@@ -88,18 +88,18 @@ The following properties are synchronized between a PowerOffice Departments and 
      - "string"
 
 
-PowerOffice Projects to Trello Actions
---------------------------------------
-Every PowerOffice Projects will be synchronized with a Trello Actions.
+PowerOfficeGO Projects to Trello Actions
+----------------------------------------
+Every PowerOfficeGO Projects will be synchronized with a Trello Actions.
 
-Once a link between a PowerOffice Projects and a Trello Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Projects and a Trello Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Projects and a Trello Actions:
+The following properties are synchronized between a PowerOfficeGO Projects and a Trello Actions:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Projects Property
+   * - PowerOfficeGO Projects Property
      - Trello Actions Property
      - Trello Data Type
    * - ProjectManagerEmployeeId
