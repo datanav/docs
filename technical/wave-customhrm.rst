@@ -1,13 +1,13 @@
-==========================
-Wave to CustomHRM Dataflow
-==========================
+===========================
+Wave to Custom HRM Dataflow
+===========================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 11:39:33
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Wave to CustomHRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Wave to Custom HRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Wave Customer to CustomHRM Department
 -------------------------------------
