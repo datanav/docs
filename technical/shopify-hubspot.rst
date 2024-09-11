@@ -1,30 +1,30 @@
 ===========================
-Shopify to Hubspot Dataflow
+Shopify to HubSpot Dataflow
 ===========================
 
-Generated: 2024-09-11 00:00:00
+Generated: 2024-09-11 07:57:12
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Hubspot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Shopify Product to Hubspot Product
+Shopify Product to HubSpot Product
 ----------------------------------
-Before any synchronization can take place, a link between a Shopify Product and a Hubspot Product must be established.
+Before any synchronization can take place, a link between a Shopify Product and a HubSpot Product must be established.
 
-A new Hubspot Product will be created from a Shopify Product if it is connected to a Shopify Order that is synchronized into Hubspot.
+A new HubSpot Product will be created from a Shopify Product if it is connected to a Shopify Order that is synchronized into HubSpot.
 
-Once a link between a Shopify Product and a Hubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Product and a Hubspot Product:
+The following properties are synchronized between a Shopify Product and a HubSpot Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Product Property
-     - Hubspot Product Property
-     - Hubspot Data Type
+     - HubSpot Product Property
+     - HubSpot Data Type
 
 
 Shopify Customer to Hubspot Contact
@@ -94,20 +94,20 @@ The following properties are synchronized between a Shopify Customer and a Hubsp
      - "string"
 
 
-Shopify Order to Hubspot Lineitem
+Shopify Order to HubSpot Lineitem
 ---------------------------------
-Every Shopify Order will be synchronized with a Hubspot Lineitem.
+Every Shopify Order will be synchronized with a HubSpot Lineitem.
 
-Once a link between a Shopify Order and a Hubspot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a Hubspot Lineitem:
+The following properties are synchronized between a Shopify Order and a HubSpot Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     - Hubspot Lineitem Property
-     - Hubspot Data Type
+     - HubSpot Lineitem Property
+     - HubSpot Data Type
    * - line_items.price
      - properties.price
      - "string"
@@ -122,20 +122,20 @@ The following properties are synchronized between a Shopify Order and a Hubspot 
      - "string"
 
 
-Shopify Sesamproduct to Hubspot Product
+Shopify Sesamproduct to HubSpot Product
 ---------------------------------------
-Every Shopify Sesamproduct will be synchronized with a Hubspot Product.
+Every Shopify Sesamproduct will be synchronized with a HubSpot Product.
 
-Once a link between a Shopify Sesamproduct and a Hubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Sesamproduct and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Sesamproduct and a Hubspot Product:
+The following properties are synchronized between a Shopify Sesamproduct and a HubSpot Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Sesamproduct Property
-     - Hubspot Product Property
-     - Hubspot Data Type
+     - HubSpot Product Property
+     - HubSpot Data Type
    * - sesam_priceExclVAT
      - properties.price
      - "string"
