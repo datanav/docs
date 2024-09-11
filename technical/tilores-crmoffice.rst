@@ -2,27 +2,27 @@
 Tilores to CRMOffice Dataflow
 =============================
 
-Generated: 2024-09-11 07:46:45
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tilores to CRMOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tilores Human to Crmoffice Contacts
+Tilores Human to CRMOffice Contacts
 -----------------------------------
-Every Tilores Human will be synchronized with a Crmoffice Contacts.
+Every Tilores Human will be synchronized with a CRMOffice Contacts.
 
-Once a link between a Tilores Human and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tilores Human and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tilores Human and a Crmoffice Contacts:
+The following properties are synchronized between a Tilores Human and a CRMOffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Tilores Human Property
-     - Crmoffice Contacts Property
-     - Crmoffice Data Type
+     - CRMOffice Contacts Property
+     - CRMOffice Data Type
    * - firstName
      - givenName
      - "string"
