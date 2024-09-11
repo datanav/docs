@@ -2,27 +2,27 @@
 Asana to MemberCare Dataflow
 ============================
 
-Generated: 2024-09-11 07:48:17
+Generated: 2024-09-11 08:47:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Asana to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Asana Teams to Membercare Companies
+Asana Teams to MemberCare Companies
 -----------------------------------
-Every Asana Teams will be synchronized with a Membercare Companies.
+Every Asana Teams will be synchronized with a MemberCare Companies.
 
-Once a link between a Asana Teams and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Teams and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Teams and a Membercare Companies:
+The following properties are synchronized between a Asana Teams and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Teams Property
-     - Membercare Companies Property
-     - Membercare Data Type
+     - MemberCare Companies Property
+     - MemberCare Data Type
    * - name
      - companyName
      - "string"
