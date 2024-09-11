@@ -1,28 +1,28 @@
-======================================
-Wave Financial to Woocommerce Dataflow
-======================================
+============================
+Wave to WooCommerce Dataflow
+============================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:53:23
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Woocommerce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Wave to WooCommerce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Invoice to Woocommerce Order
+Wave Invoice to WooCommerce Order
 ---------------------------------
-Every Wave Invoice will be synchronized with a Woocommerce Order.
+Every Wave Invoice will be synchronized with a WooCommerce Order.
 
-Once a link between a Wave Invoice and a Woocommerce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a WooCommerce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a Woocommerce Order:
+The following properties are synchronized between a Wave Invoice and a WooCommerce Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     - Woocommerce Order Property
-     - Woocommerce Data Type
+     - WooCommerce Order Property
+     - WooCommerce Data Type
    * - currency.code
      - currency
      - "string"
@@ -37,20 +37,20 @@ The following properties are synchronized between a Wave Invoice and a Woocommer
      - "string"
 
 
-Wave Product to Woocommerce Product
+Wave Product to WooCommerce Product
 -----------------------------------
-Every Wave Product will be synchronized with a Woocommerce Product.
+Every Wave Product will be synchronized with a WooCommerce Product.
 
-Once a link between a Wave Product and a Woocommerce Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a WooCommerce Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a Woocommerce Product:
+The following properties are synchronized between a Wave Product and a WooCommerce Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Product Property
-     - Woocommerce Product Property
-     - Woocommerce Data Type
+     - WooCommerce Product Property
+     - WooCommerce Data Type
    * - name
      - name
      - "string"
