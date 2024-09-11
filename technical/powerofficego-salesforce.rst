@@ -2,7 +2,7 @@
 PowerOffice GO to Salesforce Dataflow
 =====================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -138,18 +138,18 @@ The following properties are synchronized between a PowerOfficeGO Salesorders an
      - "string"
 
 
-PowerOfficeGO Contactperson to Salesforce Contact
--------------------------------------------------
-Every PowerOfficeGO Contactperson will be synchronized with a Salesforce Contact.
+PowerOffice GO Contactperson to Salesforce Contact
+--------------------------------------------------
+Every PowerOffice GO Contactperson will be synchronized with a Salesforce Contact.
 
-Once a link between a PowerOfficeGO Contactperson and a Salesforce Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Contactperson and a Salesforce Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Contactperson and a Salesforce Contact:
+The following properties are synchronized between a PowerOffice GO Contactperson and a Salesforce Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Contactperson Property
+   * - PowerOffice GO Contactperson Property
      - Salesforce Contact Property
      - Salesforce Data Type
    * - city
@@ -181,50 +181,50 @@ The following properties are synchronized between a PowerOfficeGO Contactperson 
      - "string"
 
 
-PowerOfficeGO Currency to Salesforce Currencytype
--------------------------------------------------
-Every PowerOfficeGO Currency will be synchronized with a Salesforce Currencytype.
+PowerOffice GO Currency to Salesforce Currencytype
+--------------------------------------------------
+Every PowerOffice GO Currency will be synchronized with a Salesforce Currencytype.
 
-Once a link between a PowerOfficeGO Currency and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Currency and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Currency and a Salesforce Currencytype:
+The following properties are synchronized between a PowerOffice GO Currency and a Salesforce Currencytype:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Currency Property
+   * - PowerOffice GO Currency Property
      - Salesforce Currencytype Property
      - Salesforce Data Type
 
 
-PowerOfficeGO Customers person to Salesforce Customer
------------------------------------------------------
-Every PowerOfficeGO Customers person will be synchronized with a Salesforce Customer.
+PowerOffice GO Customers person to Salesforce Customer
+------------------------------------------------------
+Every PowerOffice GO Customers person will be synchronized with a Salesforce Customer.
 
-Once a link between a PowerOfficeGO Customers person and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Customers person and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Customers person and a Salesforce Customer:
+The following properties are synchronized between a PowerOffice GO Customers person and a Salesforce Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Customers person Property
+   * - PowerOffice GO Customers person Property
      - Salesforce Customer Property
      - Salesforce Data Type
 
 
-PowerOfficeGO Employees to Salesforce User
-------------------------------------------
-Every PowerOfficeGO Employees will be synchronized with a Salesforce User.
+PowerOffice GO Employees to Salesforce User
+-------------------------------------------
+Every PowerOffice GO Employees will be synchronized with a Salesforce User.
 
-Once a link between a PowerOfficeGO Employees and a Salesforce User is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Employees and a Salesforce User is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Employees and a Salesforce User:
+The following properties are synchronized between a PowerOffice GO Employees and a Salesforce User:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Employees Property
+   * - PowerOffice GO Employees Property
      - Salesforce User Property
      - Salesforce Data Type
    * - EmailAddress
@@ -247,18 +247,18 @@ The following properties are synchronized between a PowerOfficeGO Employees and 
      - "string"
 
 
-PowerOfficeGO Product to Salesforce Product2
---------------------------------------------
-Every PowerOfficeGO Product will be synchronized with a Salesforce Product2.
+PowerOffice GO Product to Salesforce Product2
+---------------------------------------------
+Every PowerOffice GO Product will be synchronized with a Salesforce Product2.
 
-Once a link between a PowerOfficeGO Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Product and a Salesforce Product2:
+The following properties are synchronized between a PowerOffice GO Product and a Salesforce Product2:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Product Property
+   * - PowerOffice GO Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
    * - description
@@ -275,18 +275,18 @@ The following properties are synchronized between a PowerOfficeGO Product and a 
      - "string"
 
 
-PowerOfficeGO Quote to Salesforce Quote
----------------------------------------
-Every PowerOfficeGO Quote will be synchronized with a Salesforce Quote.
+PowerOffice GO Quote to Salesforce Quote
+----------------------------------------
+Every PowerOffice GO Quote will be synchronized with a Salesforce Quote.
 
-Once a link between a PowerOfficeGO Quote and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Quote and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Quote and a Salesforce Quote:
+The following properties are synchronized between a PowerOffice GO Quote and a Salesforce Quote:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Quote Property
+   * - PowerOffice GO Quote Property
      - Salesforce Quote Property
      - Salesforce Data Type
    * - TotalAmount
@@ -294,18 +294,18 @@ The following properties are synchronized between a PowerOfficeGO Quote and a Sa
      - "string"
 
 
-PowerOfficeGO Salesorderlines to Salesforce Invoiceline
--------------------------------------------------------
-Every PowerOfficeGO Salesorderlines will be synchronized with a Salesforce Invoiceline.
+PowerOffice GO Salesorderlines to Salesforce Invoiceline
+--------------------------------------------------------
+Every PowerOffice GO Salesorderlines will be synchronized with a Salesforce Invoiceline.
 
-Once a link between a PowerOfficeGO Salesorderlines and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Salesorderlines and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Salesorderlines and a Salesforce Invoiceline:
+The following properties are synchronized between a PowerOffice GO Salesorderlines and a Salesforce Invoiceline:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Salesorderlines Property
+   * - PowerOffice GO Salesorderlines Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
    * - Description
@@ -322,18 +322,18 @@ The following properties are synchronized between a PowerOfficeGO Salesorderline
      - "string"
 
 
-PowerOfficeGO Salesorderlines to Salesforce Orderitem
------------------------------------------------------
-Every PowerOfficeGO Salesorderlines will be synchronized with a Salesforce Orderitem.
+PowerOffice GO Salesorderlines to Salesforce Orderitem
+------------------------------------------------------
+Every PowerOffice GO Salesorderlines will be synchronized with a Salesforce Orderitem.
 
-Once a link between a PowerOfficeGO Salesorderlines and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Salesorderlines and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Salesorderlines and a Salesforce Orderitem:
+The following properties are synchronized between a PowerOffice GO Salesorderlines and a Salesforce Orderitem:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Salesorderlines Property
+   * - PowerOffice GO Salesorderlines Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
    * - ProductUnitPrice
@@ -347,18 +347,18 @@ The following properties are synchronized between a PowerOfficeGO Salesorderline
      - "string"
 
 
-PowerOfficeGO Salesorderlines to Salesforce Quotelineitem
----------------------------------------------------------
-Every PowerOfficeGO Salesorderlines will be synchronized with a Salesforce Quotelineitem.
+PowerOffice GO Salesorderlines to Salesforce Quotelineitem
+----------------------------------------------------------
+Every PowerOffice GO Salesorderlines will be synchronized with a Salesforce Quotelineitem.
 
-Once a link between a PowerOfficeGO Salesorderlines and a Salesforce Quotelineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Salesorderlines and a Salesforce Quotelineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Salesorderlines and a Salesforce Quotelineitem:
+The following properties are synchronized between a PowerOffice GO Salesorderlines and a Salesforce Quotelineitem:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Salesorderlines Property
+   * - PowerOffice GO Salesorderlines Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
    * - Allowance
@@ -372,18 +372,18 @@ The following properties are synchronized between a PowerOfficeGO Salesorderline
      - "string"
 
 
-PowerOfficeGO Salesorders to Salesforce Order
----------------------------------------------
-Every PowerOfficeGO Salesorders will be synchronized with a Salesforce Order.
+PowerOffice GO Salesorders to Salesforce Order
+----------------------------------------------
+Every PowerOffice GO Salesorders will be synchronized with a Salesforce Order.
 
-Once a link between a PowerOfficeGO Salesorders and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Salesorders and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Salesorders and a Salesforce Order:
+The following properties are synchronized between a PowerOffice GO Salesorders and a Salesforce Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Salesorders Property
+   * - PowerOffice GO Salesorders Property
      - Salesforce Order Property
      - Salesforce Data Type
    * - CurrencyCode
@@ -400,18 +400,18 @@ The following properties are synchronized between a PowerOfficeGO Salesorders an
      - "string"
 
 
-PowerOfficeGO Suppliers person to Salesforce Contact
-----------------------------------------------------
-Every PowerOfficeGO Suppliers person will be synchronized with a Salesforce Contact.
+PowerOffice GO Suppliers person to Salesforce Contact
+-----------------------------------------------------
+Every PowerOffice GO Suppliers person will be synchronized with a Salesforce Contact.
 
-Once a link between a PowerOfficeGO Suppliers person and a Salesforce Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Suppliers person and a Salesforce Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Suppliers person and a Salesforce Contact:
+The following properties are synchronized between a PowerOffice GO Suppliers person and a Salesforce Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Suppliers person Property
+   * - PowerOffice GO Suppliers person Property
      - Salesforce Contact Property
      - Salesforce Data Type
    * - DateOfBirth
