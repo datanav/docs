@@ -1,13 +1,13 @@
 ============================
-Asana to Membercare Dataflow
+Asana to MemberCare Dataflow
 ============================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Asana to Membercare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Asana to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Asana Teams to Membercare Companies
 -----------------------------------
@@ -34,20 +34,20 @@ The following properties are synchronized between a Asana Teams and a Membercare
      - "string"
 
 
-Asana Workspaces to Membercare Companies
+Asana Workspaces to MemberCare Companies
 ----------------------------------------
-Every Asana Workspaces will be synchronized with a Membercare Companies.
+Every Asana Workspaces will be synchronized with a MemberCare Companies.
 
-Once a link between a Asana Workspaces and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Workspaces and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Workspaces and a Membercare Companies:
+The following properties are synchronized between a Asana Workspaces and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Workspaces Property
-     - Membercare Companies Property
-     - Membercare Data Type
+     - MemberCare Companies Property
+     - MemberCare Data Type
    * - email_domains
      - url
      - "string"
