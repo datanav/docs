@@ -2,57 +2,57 @@
 MemberCare to CustomHRM Dataflow
 ================================
 
-Generated: 2024-09-11 08:07:20
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to CustomHRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-MemberCare Companies to Custom Department
------------------------------------------
-Every MemberCare Companies will be synchronized with a Custom Department.
+MemberCare Companies to CustomHRM Department
+--------------------------------------------
+Every MemberCare Companies will be synchronized with a CustomHRM Department.
 
-Once a link between a MemberCare Companies and a Custom Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companies and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Companies and a Custom Department:
+The following properties are synchronized between a MemberCare Companies and a CustomHRM Department:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Companies Property
-     - Custom Department Property
-     - Custom Data Type
+     - CustomHRM Department Property
+     - CustomHRM Data Type
 
 
-MemberCare Organizations to Custom Department
----------------------------------------------
-Every MemberCare Organizations will be synchronized with a Custom Department.
+MemberCare Organizations to CustomHRM Department
+------------------------------------------------
+Every MemberCare Organizations will be synchronized with a CustomHRM Department.
 
-Once a link between a MemberCare Organizations and a Custom Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Organizations and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Organizations and a Custom Department:
+The following properties are synchronized between a MemberCare Organizations and a CustomHRM Department:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Organizations Property
-     - Custom Department Property
-     - Custom Data Type
+     - CustomHRM Department Property
+     - CustomHRM Data Type
 
 
-MemberCare Persons to Custom Employee
--------------------------------------
-Every MemberCare Persons will be synchronized with a Custom Employee.
+MemberCare Persons to CustomHRM Employee
+----------------------------------------
+Every MemberCare Persons will be synchronized with a CustomHRM Employee.
 
-Once a link between a MemberCare Persons and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Persons and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Persons and a Custom Employee:
+The following properties are synchronized between a MemberCare Persons and a CustomHRM Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Persons Property
-     - Custom Employee Property
-     - Custom Data Type
+     - CustomHRM Employee Property
+     - CustomHRM Data Type
 
