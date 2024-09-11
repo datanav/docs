@@ -2,7 +2,7 @@
 Business Nxt to Chargebee Dataflow
 ==================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -89,18 +89,18 @@ The following properties are synchronized between a BusinessNxt Vat and a Charge
      - Chargebee Data Type
 
 
-BusinessNxt Address to Chargebee Business_entity
-------------------------------------------------
-Every BusinessNxt Address will be synchronized with a Chargebee Business_entity.
+Business Nxt Address to Chargebee Business_entity
+-------------------------------------------------
+Every Business Nxt Address will be synchronized with a Chargebee Business_entity.
 
-Once a link between a BusinessNxt Address and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Address and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Address and a Chargebee Business_entity:
+The following properties are synchronized between a Business Nxt Address and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Address Property
+   * - Business Nxt Address Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
    * - name
@@ -108,18 +108,18 @@ The following properties are synchronized between a BusinessNxt Address and a Ch
      - "string"
 
 
-BusinessNxt Company to Chargebee Business_entity
-------------------------------------------------
-Every BusinessNxt Company will be synchronized with a Chargebee Business_entity.
+Business Nxt Company to Chargebee Business_entity
+-------------------------------------------------
+Every Business Nxt Company will be synchronized with a Chargebee Business_entity.
 
-Once a link between a BusinessNxt Company and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Company and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Company and a Chargebee Business_entity:
+The following properties are synchronized between a Business Nxt Company and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Company Property
+   * - Business Nxt Company Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
    * - name
@@ -127,34 +127,34 @@ The following properties are synchronized between a BusinessNxt Company and a Ch
      - "string"
 
 
-BusinessNxt Order to Chargebee Order
-------------------------------------
-Every BusinessNxt Order will be synchronized with a Chargebee Order.
+Business Nxt Order to Chargebee Order
+-------------------------------------
+Every Business Nxt Order will be synchronized with a Chargebee Order.
 
-Once a link between a BusinessNxt Order and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Order and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Order and a Chargebee Order:
+The following properties are synchronized between a Business Nxt Order and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Order Property
+   * - Business Nxt Order Property
      - Chargebee Order Property
      - Chargebee Data Type
 
 
-BusinessNxt Product to Chargebee Item
--------------------------------------
-Every BusinessNxt Product will be synchronized with a Chargebee Item.
+Business Nxt Product to Chargebee Item
+--------------------------------------
+Every Business Nxt Product will be synchronized with a Chargebee Item.
 
-Once a link between a BusinessNxt Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Product and a Chargebee Item:
+The following properties are synchronized between a Business Nxt Product and a Chargebee Item:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Product Property
+   * - Business Nxt Product Property
      - Chargebee Item Property
      - Chargebee Data Type
 
