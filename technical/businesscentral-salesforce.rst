@@ -2,41 +2,41 @@
 BusinessCentral to Salesforce Dataflow
 ======================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from BusinessCentral to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Business Companies to Salesforce Division
------------------------------------------
-Every Business Companies will be synchronized with a Salesforce Division.
+BusinessCentral Companies to Salesforce Division
+------------------------------------------------
+Every BusinessCentral Companies will be synchronized with a Salesforce Division.
 
-Once a link between a Business Companies and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessCentral Companies and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Companies and a Salesforce Division:
+The following properties are synchronized between a BusinessCentral Companies and a Salesforce Division:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Companies Property
+   * - BusinessCentral Companies Property
      - Salesforce Division Property
      - Salesforce Data Type
 
 
-Business Customers company to Salesforce Division
--------------------------------------------------
-Every Business Customers company will be synchronized with a Salesforce Division.
+BusinessCentral Customers company to Salesforce Division
+--------------------------------------------------------
+Every BusinessCentral Customers company will be synchronized with a Salesforce Division.
 
-Once a link between a Business Customers company and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessCentral Customers company and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Customers company and a Salesforce Division:
+The following properties are synchronized between a BusinessCentral Customers company and a Salesforce Division:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Customers company Property
+   * - BusinessCentral Customers company Property
      - Salesforce Division Property
      - Salesforce Data Type
    * - displayName
@@ -44,34 +44,34 @@ The following properties are synchronized between a Business Customers company a
      - "string"
 
 
-Business Salesorderlines to Salesforce Invoice
-----------------------------------------------
-Every Business Salesorderlines will be synchronized with a Salesforce Invoice.
+BusinessCentral Salesorderlines to Salesforce Invoice
+-----------------------------------------------------
+Every BusinessCentral Salesorderlines will be synchronized with a Salesforce Invoice.
 
-Once a link between a Business Salesorderlines and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessCentral Salesorderlines and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Salesorderlines and a Salesforce Invoice:
+The following properties are synchronized between a BusinessCentral Salesorderlines and a Salesforce Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Salesorderlines Property
+   * - BusinessCentral Salesorderlines Property
      - Salesforce Invoice Property
      - Salesforce Data Type
 
 
-Business Salesorders to Salesforce Invoice
-------------------------------------------
-Every Business Salesorders will be synchronized with a Salesforce Invoice.
+BusinessCentral Salesorders to Salesforce Invoice
+-------------------------------------------------
+Every BusinessCentral Salesorders will be synchronized with a Salesforce Invoice.
 
-Once a link between a Business Salesorders and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessCentral Salesorders and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Salesorders and a Salesforce Invoice:
+The following properties are synchronized between a BusinessCentral Salesorders and a Salesforce Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Salesorders Property
+   * - BusinessCentral Salesorders Property
      - Salesforce Invoice Property
      - Salesforce Data Type
    * - currencyId
@@ -85,18 +85,18 @@ The following properties are synchronized between a Business Salesorders and a S
      - "string"
 
 
-Business Salesquotes to Salesforce Invoice
-------------------------------------------
-Every Business Salesquotes will be synchronized with a Salesforce Invoice.
+BusinessCentral Salesquotes to Salesforce Invoice
+-------------------------------------------------
+Every BusinessCentral Salesquotes will be synchronized with a Salesforce Invoice.
 
-Once a link between a Business Salesquotes and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessCentral Salesquotes and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Salesquotes and a Salesforce Invoice:
+The following properties are synchronized between a BusinessCentral Salesquotes and a Salesforce Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Salesquotes Property
+   * - BusinessCentral Salesquotes Property
      - Salesforce Invoice Property
      - Salesforce Data Type
 
