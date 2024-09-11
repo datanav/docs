@@ -1,13 +1,13 @@
-========================================
-Business Nxt to BusinessCentral Dataflow
-========================================
+=========================================
+Business Nxt to Business Central Dataflow
+=========================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Business Nxt to BusinessCentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Business Nxt to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 BusinessNxt Address to BusinessCentral Companies
 ------------------------------------------------
@@ -41,20 +41,20 @@ The following properties are synchronized between a BusinessNxt Company and a Bu
      - BusinessCentral Data Type
 
 
-BusinessNxt Order to BusinessCentral Salesorders
-------------------------------------------------
-Every BusinessNxt Order will be synchronized with a BusinessCentral Salesorders.
+Business Nxt Order to Business Central Salesorders
+--------------------------------------------------
+Every Business Nxt Order will be synchronized with a Business Central Salesorders.
 
-Once a link between a BusinessNxt Order and a BusinessCentral Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Order and a Business Central Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Order and a BusinessCentral Salesorders:
+The following properties are synchronized between a Business Nxt Order and a Business Central Salesorders:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Order Property
-     - BusinessCentral Salesorders Property
-     - BusinessCentral Data Type
+   * - Business Nxt Order Property
+     - Business Central Salesorders Property
+     - Business Central Data Type
    * - dueDate
      - requestedDeliveryDate
      - N/A
@@ -63,39 +63,39 @@ The following properties are synchronized between a BusinessNxt Order and a Busi
      - N/A
 
 
-BusinessNxt Orderline to BusinessCentral Salesorderlines
---------------------------------------------------------
-Every BusinessNxt Orderline will be synchronized with a BusinessCentral Salesorderlines.
+Business Nxt Orderline to Business Central Salesorderlines
+----------------------------------------------------------
+Every Business Nxt Orderline will be synchronized with a Business Central Salesorderlines.
 
-Once a link between a BusinessNxt Orderline and a BusinessCentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Orderline and a Business Central Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Orderline and a BusinessCentral Salesorderlines:
+The following properties are synchronized between a Business Nxt Orderline and a Business Central Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Orderline Property
-     - BusinessCentral Salesorderlines Property
-     - BusinessCentral Data Type
+   * - Business Nxt Orderline Property
+     - Business Central Salesorderlines Property
+     - Business Central Data Type
    * - orderNo
      - documentId
      - "string"
 
 
-BusinessNxt Product to BusinessCentral Items
---------------------------------------------
-Every BusinessNxt Product will be synchronized with a BusinessCentral Items.
+Business Nxt Product to Business Central Items
+----------------------------------------------
+Every Business Nxt Product will be synchronized with a Business Central Items.
 
-Once a link between a BusinessNxt Product and a BusinessCentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Product and a Business Central Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Product and a BusinessCentral Items:
+The following properties are synchronized between a Business Nxt Product and a Business Central Items:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Product Property
-     - BusinessCentral Items Property
-     - BusinessCentral Data Type
+   * - Business Nxt Product Property
+     - Business Central Items Property
+     - Business Central Data Type
    * - priceQuantity
      - unitPrice
      - N/A
