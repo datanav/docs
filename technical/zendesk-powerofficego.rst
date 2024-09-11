@@ -1,38 +1,38 @@
-=================================
-Zendesk to Powerofficego Dataflow
-=================================
+==================================
+Zendesk to PowerOffice GO Dataflow
+==================================
 
-Generated: 2024-09-11 00:00:00
+Generated: 2024-09-11 07:52:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Zendesk to Powerofficego. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Zendesk to PowerOffice GO. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Zendesk Users to Powerofficego Contactperson
---------------------------------------------
-Before any synchronization can take place, a link between a Zendesk Users and a Powerofficego Contactperson must be established.
+Zendesk Users to PowerOffice Contactperson
+------------------------------------------
+Before any synchronization can take place, a link between a Zendesk Users and a PowerOffice Contactperson must be established.
 
-A Zendesk Users will merge with a Powerofficego Contactperson if one of the following property combinations match:
+A Zendesk Users will merge with a PowerOffice Contactperson if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Users Property
-     - Powerofficego Contactperson Property
+     - PowerOffice Contactperson Property
    * - email
      - emailAddress
 
-Once a link between a Zendesk Users and a Powerofficego Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Users and a PowerOffice Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Users and a Powerofficego Contactperson:
+The following properties are synchronized between a Zendesk Users and a PowerOffice Contactperson:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Users Property
-     - Powerofficego Contactperson Property
-     - Powerofficego Data Type
+     - PowerOffice Contactperson Property
+     - PowerOffice Data Type
    * - email
      - emailAddress
      - "string"
@@ -41,30 +41,30 @@ The following properties are synchronized between a Zendesk Users and a Poweroff
      - "integer"
 
 
-Zendesk Users to Powerofficego Customers person
------------------------------------------------
-Before any synchronization can take place, a link between a Zendesk Users and a Powerofficego Customers person must be established.
+Zendesk Users to PowerOffice Customers person
+---------------------------------------------
+Before any synchronization can take place, a link between a Zendesk Users and a PowerOffice Customers person must be established.
 
-A Zendesk Users will merge with a Powerofficego Customers person if one of the following property combinations match:
+A Zendesk Users will merge with a PowerOffice Customers person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Users Property
-     - Powerofficego Customers person Property
+     - PowerOffice Customers person Property
    * - email
      - EmailAddress
 
-Once a link between a Zendesk Users and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Zendesk Users and a PowerOffice Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Zendesk Users and a Powerofficego Customers person:
+The following properties are synchronized between a Zendesk Users and a PowerOffice Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - Zendesk Users Property
-     - Powerofficego Customers person Property
-     - Powerofficego Data Type
+     - PowerOffice Customers person Property
+     - PowerOffice Data Type
    * - email
      - EmailAddress
      - "string"
