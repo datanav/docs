@@ -1,13 +1,13 @@
-=================================
-SuperOffice to CustomERP Dataflow
-=================================
+==================================
+SuperOffice to Custom ERP Dataflow
+==================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to CustomERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 SuperOffice Contact to CustomERP Customer
 -----------------------------------------
@@ -89,50 +89,50 @@ The following properties are synchronized between a SuperOffice Sale and a Custo
      - CustomERP Data Type
 
 
-SuperOffice Product to CustomERP Product
-----------------------------------------
-Every SuperOffice Product will be synchronized with a CustomERP Product.
+SuperOffice Product to Custom ERP Product
+-----------------------------------------
+Every SuperOffice Product will be synchronized with a Custom ERP Product.
 
-Once a link between a SuperOffice Product and a CustomERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Product and a Custom ERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Product and a CustomERP Product:
+The following properties are synchronized between a SuperOffice Product and a Custom ERP Product:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Product Property
-     - CustomERP Product Property
-     - CustomERP Data Type
+     - Custom ERP Product Property
+     - Custom ERP Data Type
 
 
-SuperOffice Project to CustomERP Project
-----------------------------------------
-Every SuperOffice Project will be synchronized with a CustomERP Project.
+SuperOffice Project to Custom ERP Project
+-----------------------------------------
+Every SuperOffice Project will be synchronized with a Custom ERP Project.
 
-Once a link between a SuperOffice Project and a CustomERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Project and a Custom ERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Project and a CustomERP Project:
+The following properties are synchronized between a SuperOffice Project and a Custom ERP Project:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Project Property
-     - CustomERP Project Property
-     - CustomERP Data Type
+     - Custom ERP Project Property
+     - Custom ERP Data Type
 
 
-SuperOffice Quotealternative to CustomERP Quote
------------------------------------------------
-Every SuperOffice Quotealternative will be synchronized with a CustomERP Quote.
+SuperOffice Quotealternative to Custom ERP Quote
+------------------------------------------------
+Every SuperOffice Quotealternative will be synchronized with a Custom ERP Quote.
 
-Once a link between a SuperOffice Quotealternative and a CustomERP Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quotealternative and a Custom ERP Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quotealternative and a CustomERP Quote:
+The following properties are synchronized between a SuperOffice Quotealternative and a Custom ERP Quote:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quotealternative Property
-     - CustomERP Quote Property
-     - CustomERP Data Type
+     - Custom ERP Quote Property
+     - Custom ERP Data Type
 
