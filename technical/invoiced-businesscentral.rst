@@ -2,27 +2,27 @@
 Invoiced to BusinessCentral Dataflow
 ====================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to BusinessCentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Invoiced Customers company to Business Companies
-------------------------------------------------
-Every Invoiced Customers company will be synchronized with a Business Companies.
+Invoiced Customers company to BusinessCentral Companies
+-------------------------------------------------------
+Every Invoiced Customers company will be synchronized with a BusinessCentral Companies.
 
-Once a link between a Invoiced Customers company and a Business Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers company and a BusinessCentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a Business Companies:
+The following properties are synchronized between a Invoiced Customers company and a BusinessCentral Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Customers company Property
-     - Business Companies Property
-     - Business Data Type
+     - BusinessCentral Companies Property
+     - BusinessCentral Data Type
 
 
 Invoiced Contacts to BusinessCentral Contacts person
