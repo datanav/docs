@@ -2,107 +2,107 @@
 Exact Online to Custom ERP Dataflow
 ===================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-ExactOnline Departments to CustomERP Customer
+Exact Online Departments to Custom ERP Customer
+-----------------------------------------------
+Every Exact Online Departments will be synchronized with a Custom ERP Customer.
+
+Once a link between a Exact Online Departments and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Departments and a Custom ERP Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Departments Property
+     - Custom ERP Customer Property
+     - Custom ERP Data Type
+
+
+Exact Online Divisions to Custom ERP Customer
 ---------------------------------------------
-Every ExactOnline Departments will be synchronized with a CustomERP Customer.
+Every Exact Online Divisions will be synchronized with a Custom ERP Customer.
 
-Once a link between a ExactOnline Departments and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Divisions and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Departments and a CustomERP Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ExactOnline Departments Property
-     - CustomERP Customer Property
-     - CustomERP Data Type
-
-
-ExactOnline Divisions to CustomERP Customer
--------------------------------------------
-Every ExactOnline Divisions will be synchronized with a CustomERP Customer.
-
-Once a link between a ExactOnline Divisions and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ExactOnline Divisions and a CustomERP Customer:
+The following properties are synchronized between a Exact Online Divisions and a Custom ERP Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Divisions Property
-     - CustomERP Customer Property
-     - CustomERP Data Type
+   * - Exact Online Divisions Property
+     - Custom ERP Customer Property
+     - Custom ERP Data Type
 
 
-ExactOnline Employees to CustomERP Contact
-------------------------------------------
-Every ExactOnline Employees will be synchronized with a CustomERP Contact.
-
-Once a link between a ExactOnline Employees and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ExactOnline Employees and a CustomERP Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ExactOnline Employees Property
-     - CustomERP Contact Property
-     - CustomERP Data Type
-
-
-ExactOnline Quotations to CustomERP Order
------------------------------------------
-Every ExactOnline Quotations will be synchronized with a CustomERP Order.
-
-Once a link between a ExactOnline Quotations and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ExactOnline Quotations and a CustomERP Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ExactOnline Quotations Property
-     - CustomERP Order Property
-     - CustomERP Data Type
-
-
-ExactOnline Salesinvoices to CustomERP Order
+Exact Online Employees to Custom ERP Contact
 --------------------------------------------
-Every ExactOnline Salesinvoices will be synchronized with a CustomERP Order.
+Every Exact Online Employees will be synchronized with a Custom ERP Contact.
 
-Once a link between a ExactOnline Salesinvoices and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Employees and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Salesinvoices and a CustomERP Order:
+The following properties are synchronized between a Exact Online Employees and a Custom ERP Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Salesinvoices Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+   * - Exact Online Employees Property
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
 
 
-ExactOnline Salesorderlines to CustomERP Order
+Exact Online Quotations to Custom ERP Order
+-------------------------------------------
+Every Exact Online Quotations will be synchronized with a Custom ERP Order.
+
+Once a link between a Exact Online Quotations and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Quotations and a Custom ERP Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Quotations Property
+     - Custom ERP Order Property
+     - Custom ERP Data Type
+
+
+Exact Online Salesinvoices to Custom ERP Order
 ----------------------------------------------
-Every ExactOnline Salesorderlines will be synchronized with a CustomERP Order.
+Every Exact Online Salesinvoices will be synchronized with a Custom ERP Order.
 
-Once a link between a ExactOnline Salesorderlines and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Salesinvoices and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Salesorderlines and a CustomERP Order:
+The following properties are synchronized between a Exact Online Salesinvoices and a Custom ERP Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Salesorderlines Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+   * - Exact Online Salesinvoices Property
+     - Custom ERP Order Property
+     - Custom ERP Data Type
+
+
+Exact Online Salesorderlines to Custom ERP Order
+------------------------------------------------
+Every Exact Online Salesorderlines will be synchronized with a Custom ERP Order.
+
+Once a link between a Exact Online Salesorderlines and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Salesorderlines and a Custom ERP Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Salesorderlines Property
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
 
 Exact Online Accounts to Custom ERP Customer
