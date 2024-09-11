@@ -67,7 +67,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
-    **CustomCRM**
+    **Custom CRM**
 
     
     .. link-button:: system/customcrm
@@ -254,7 +254,7 @@ System by system type
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
 
-    **BusinessCentral**
+    **Business Central**
 
     Microsoft Dynamics 365 Business Central (formerly Microsoft Dynamics NAV) – ERP and CRM software-as-a-service product meant for small and mid-sized businesses.
     .. link-button:: system/businesscentral
@@ -262,7 +262,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
-    **BusinessNxt**
+    **Business Nxt**
 
     
     .. link-button:: system/businessnxt
@@ -270,7 +270,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
-    **CustomERP**
+    **Custom ERP**
 
     
     .. link-button:: system/customerp
@@ -286,7 +286,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
-    **ExactOnline**
+    **Exact Online**
 
     
     .. link-button:: system/exact
@@ -334,7 +334,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
-    **PowerOfficeGO**
+    **PowerOffice GO**
 
     PowerOffice is an all-in-one business solution. It is a cloud-based software that allows small and medium businesses to manage their accounting, invoicing, payroll, and human resources. 
     .. link-button:: system/powerofficego
@@ -415,7 +415,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
-    **CustomHRM**
+    **Custom HRM**
 
     
     .. link-button:: system/customhrm
@@ -547,7 +547,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
-    **CustomPMS**
+    **Custom PMS**
 
     
     .. link-button:: system/custompms
