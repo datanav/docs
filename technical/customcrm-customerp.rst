@@ -2,7 +2,7 @@
 CustomCRM to CustomERP Dataflow
 ===============================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:37:15
 
 Introduction
 ------------
@@ -41,82 +41,82 @@ The following properties are synchronized between a Custom User and a Custom Ord
      - Custom Data Type
 
 
-Custom Contact to CustomERP Contact
------------------------------------
-Every Custom Contact will be synchronized with a CustomERP Contact.
+CustomCRM Contact to CustomERP Contact
+--------------------------------------
+Every CustomCRM Contact will be synchronized with a CustomERP Contact.
 
-Once a link between a Custom Contact and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Contact and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Contact and a CustomERP Contact:
+The following properties are synchronized between a CustomCRM Contact and a CustomERP Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Contact Property
+   * - CustomCRM Contact Property
      - CustomERP Contact Property
      - CustomERP Data Type
 
 
-Custom Customer to CustomERP Customer
--------------------------------------
-Every Custom Customer will be synchronized with a CustomERP Customer.
+CustomCRM Customer to CustomERP Customer
+----------------------------------------
+Every CustomCRM Customer will be synchronized with a CustomERP Customer.
 
-Once a link between a Custom Customer and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Customer and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Customer and a CustomERP Customer:
+The following properties are synchronized between a CustomCRM Customer and a CustomERP Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Customer Property
+   * - CustomCRM Customer Property
      - CustomERP Customer Property
      - CustomERP Data Type
 
 
-Custom Order to CustomERP Order
--------------------------------
-Every Custom Order will be synchronized with a CustomERP Order.
+CustomCRM Order to CustomERP Order
+----------------------------------
+Every CustomCRM Order will be synchronized with a CustomERP Order.
 
-Once a link between a Custom Order and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Order and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Order and a CustomERP Order:
+The following properties are synchronized between a CustomCRM Order and a CustomERP Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Order Property
+   * - CustomCRM Order Property
      - CustomERP Order Property
      - CustomERP Data Type
 
 
-Custom Product to CustomERP Product
------------------------------------
-Every Custom Product will be synchronized with a CustomERP Product.
+CustomCRM Product to CustomERP Product
+--------------------------------------
+Every CustomCRM Product will be synchronized with a CustomERP Product.
 
-Once a link between a Custom Product and a CustomERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Product and a CustomERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Product and a CustomERP Product:
+The following properties are synchronized between a CustomCRM Product and a CustomERP Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Product Property
+   * - CustomCRM Product Property
      - CustomERP Product Property
      - CustomERP Data Type
 
 
-Custom Quote to CustomERP Quote
--------------------------------
-Every Custom Quote will be synchronized with a CustomERP Quote.
+CustomCRM Quote to CustomERP Quote
+----------------------------------
+Every CustomCRM Quote will be synchronized with a CustomERP Quote.
 
-Once a link between a Custom Quote and a CustomERP Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Quote and a CustomERP Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Quote and a CustomERP Quote:
+The following properties are synchronized between a CustomCRM Quote and a CustomERP Quote:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Quote Property
+   * - CustomCRM Quote Property
      - CustomERP Quote Property
      - CustomERP Data Type
 
