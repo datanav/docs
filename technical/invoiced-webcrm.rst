@@ -2,27 +2,27 @@
 Invoiced to WebCRM Dataflow
 ===========================
 
-Generated: 2024-09-11 07:48:17
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Invoiced Customers company to Webcrm Organisations
+Invoiced Customers company to WebCRM Organisations
 --------------------------------------------------
-Every Invoiced Customers company will be synchronized with a Webcrm Organisations.
+Every Invoiced Customers company will be synchronized with a WebCRM Organisations.
 
-Once a link between a Invoiced Customers company and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers company and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a Webcrm Organisations:
+The following properties are synchronized between a Invoiced Customers company and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Customers company Property
-     - Webcrm Organisations Property
-     - Webcrm Data Type
+     - WebCRM Organisations Property
+     - WebCRM Data Type
    * - address1
      - OrganisationAddress
      - "string"
