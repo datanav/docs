@@ -1,13 +1,13 @@
-=============================
-Shopify to CustomERP Dataflow
-=============================
+==============================
+Shopify to Custom ERP Dataflow
+==============================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to CustomERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Shopify Customer to CustomERP Contact
 -------------------------------------
@@ -57,34 +57,34 @@ The following properties are synchronized between a Shopify Product and a Custom
      - CustomERP Data Type
 
 
-Shopify Order to CustomERP Order
---------------------------------
-Every Shopify Order will be synchronized with a CustomERP Order.
+Shopify Order to Custom ERP Order
+---------------------------------
+Every Shopify Order will be synchronized with a Custom ERP Order.
 
-Once a link between a Shopify Order and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a CustomERP Order:
+The following properties are synchronized between a Shopify Order and a Custom ERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
 
-Shopify Sesamproduct to CustomERP Product
------------------------------------------
-Every Shopify Sesamproduct will be synchronized with a CustomERP Product.
+Shopify Sesamproduct to Custom ERP Product
+------------------------------------------
+Every Shopify Sesamproduct will be synchronized with a Custom ERP Product.
 
-Once a link between a Shopify Sesamproduct and a CustomERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Sesamproduct and a Custom ERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Sesamproduct and a CustomERP Product:
+The following properties are synchronized between a Shopify Sesamproduct and a Custom ERP Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Sesamproduct Property
-     - CustomERP Product Property
-     - CustomERP Data Type
+     - Custom ERP Product Property
+     - Custom ERP Data Type
 
