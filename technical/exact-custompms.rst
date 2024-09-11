@@ -1,58 +1,58 @@
-===========================
-Exact to Custompms Dataflow
-===========================
+===================================
+Exact Online to Custom PMS Dataflow
+===================================
 
-Generated: 2024-09-11 00:00:02
+Generated: 2024-09-11 07:45:31
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Exact to Custompms. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to Custom PMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Exact Departments to Custompms Customer
----------------------------------------
-Every Exact Departments will be synchronized with a Custompms Customer.
+Exact Departments to Custom Customer
+------------------------------------
+Every Exact Departments will be synchronized with a Custom Customer.
 
-Once a link between a Exact Departments and a Custompms Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Departments and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Departments and a Custompms Customer:
+The following properties are synchronized between a Exact Departments and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Departments Property
-     - Custompms Customer Property
-     - Custompms Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Exact Divisions to Custompms Customer
--------------------------------------
-Every Exact Divisions will be synchronized with a Custompms Customer.
+Exact Divisions to Custom Customer
+----------------------------------
+Every Exact Divisions will be synchronized with a Custom Customer.
 
-Once a link between a Exact Divisions and a Custompms Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Divisions and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Divisions and a Custompms Customer:
+The following properties are synchronized between a Exact Divisions and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Divisions Property
-     - Custompms Customer Property
-     - Custompms Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Exact Accounts to Custompms Customer
-------------------------------------
-Every Exact Accounts will be synchronized with a Custompms Customer.
+Exact Accounts to Custom Customer
+---------------------------------
+Every Exact Accounts will be synchronized with a Custom Customer.
 
-Once a link between a Exact Accounts and a Custompms Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Accounts and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Accounts and a Custompms Customer:
+The following properties are synchronized between a Exact Accounts and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Accounts Property
-     - Custompms Customer Property
-     - Custompms Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
