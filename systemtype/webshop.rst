@@ -50,7 +50,7 @@ Systems
         :text: Read more
         :classes: read-more
     ---
-    **Woocommerce**
+    **WooCommerce**
 
     
     .. link-button:: system/woocommerce
