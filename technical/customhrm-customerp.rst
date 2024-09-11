@@ -2,7 +2,7 @@
 CustomHRM to Custom ERP Dataflow
 ================================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 07:55:13
 
 Introduction
 ------------
@@ -41,18 +41,18 @@ The following properties are synchronized between a Custom Employee and a Custom
      - Custom Data Type
 
 
-Custom Employee to Custom Employee
-----------------------------------
-Every Custom Employee will be synchronized with a Custom Employee.
+CustomHRM Employee to Custom Employee
+-------------------------------------
+Every CustomHRM Employee will be synchronized with a Custom Employee.
 
-Once a link between a Custom Employee and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomHRM Employee and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Employee and a Custom Employee:
+The following properties are synchronized between a CustomHRM Employee and a Custom Employee:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Employee Property
+   * - CustomHRM Employee Property
      - Custom Employee Property
      - Custom Data Type
 
