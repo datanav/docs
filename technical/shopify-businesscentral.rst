@@ -1,13 +1,13 @@
-====================================
-Shopify to Business Central Dataflow
-====================================
+===================================
+Shopify to BusinessCentral Dataflow
+===================================
 
-Generated: 2024-09-11 07:54:14
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to BusinessCentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Shopify Customer to Business Customers company
 ----------------------------------------------
@@ -45,20 +45,20 @@ The following properties are synchronized between a Shopify Product and a Busine
      - Business Data Type
 
 
-Shopify Customer to Business Customers person
----------------------------------------------
-Every Shopify Customer will be synchronized with a Business Customers person.
+Shopify Customer to BusinessCentral Customers person
+----------------------------------------------------
+Every Shopify Customer will be synchronized with a BusinessCentral Customers person.
 
-Once a link between a Shopify Customer and a Business Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Customer and a BusinessCentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Customer and a Business Customers person:
+The following properties are synchronized between a Shopify Customer and a BusinessCentral Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Customer Property
-     - Business Customers person Property
-     - Business Data Type
+     - BusinessCentral Customers person Property
+     - BusinessCentral Data Type
    * - addresses.address1
      - addressLine1
      - "string"
@@ -103,20 +103,20 @@ The following properties are synchronized between a Shopify Customer and a Busin
      - "string"
 
 
-Shopify Order to Business Salesorderlines
------------------------------------------
-Every Shopify Order will be synchronized with a Business Salesorderlines.
+Shopify Order to BusinessCentral Salesorderlines
+------------------------------------------------
+Every Shopify Order will be synchronized with a BusinessCentral Salesorderlines.
 
-Once a link between a Shopify Order and a Business Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a BusinessCentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a Business Salesorderlines:
+The following properties are synchronized between a Shopify Order and a BusinessCentral Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     - Business Salesorderlines Property
-     - Business Data Type
+     - BusinessCentral Salesorderlines Property
+     - BusinessCentral Data Type
    * - id
      - documentId
      - "string"
@@ -134,20 +134,20 @@ The following properties are synchronized between a Shopify Order and a Business
      - N/A
 
 
-Shopify Order to Business Salesorders
--------------------------------------
-Every Shopify Order will be synchronized with a Business Salesorders.
+Shopify Order to BusinessCentral Salesorders
+--------------------------------------------
+Every Shopify Order will be synchronized with a BusinessCentral Salesorders.
 
-Once a link between a Shopify Order and a Business Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a BusinessCentral Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a Business Salesorders:
+The following properties are synchronized between a Shopify Order and a BusinessCentral Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     - Business Salesorders Property
-     - Business Data Type
+     - BusinessCentral Salesorders Property
+     - BusinessCentral Data Type
    * - billing_address.address1
      - billToAddressLine1
      - "string"
@@ -225,20 +225,20 @@ The following properties are synchronized between a Shopify Order and a Business
      - "string"
 
 
-Shopify Sesamproduct to Business Items
---------------------------------------
-Every Shopify Sesamproduct will be synchronized with a Business Items.
+Shopify Sesamproduct to BusinessCentral Items
+---------------------------------------------
+Every Shopify Sesamproduct will be synchronized with a BusinessCentral Items.
 
-Once a link between a Shopify Sesamproduct and a Business Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Sesamproduct and a BusinessCentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Sesamproduct and a Business Items:
+The following properties are synchronized between a Shopify Sesamproduct and a BusinessCentral Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Sesamproduct Property
-     - Business Items Property
-     - Business Data Type
+     - BusinessCentral Items Property
+     - BusinessCentral Data Type
    * - sesam_priceExclVAT
      - unitPrice
      - N/A
