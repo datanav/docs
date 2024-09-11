@@ -1,26 +1,26 @@
-==========================
-Wave to CustomPMS Dataflow
-==========================
+===========================
+Wave to Custom PMS Dataflow
+===========================
 
-Generated: 2024-09-11 07:56:15
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Wave to CustomPMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Wave to Custom PMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Customer to CustomPMS Customer
------------------------------------
-Every Wave Customer will be synchronized with a CustomPMS Customer.
+Wave Customer to Custom PMS Customer
+------------------------------------
+Every Wave Customer will be synchronized with a Custom PMS Customer.
 
-Once a link between a Wave Customer and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Custom PMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a CustomPMS Customer:
+The following properties are synchronized between a Wave Customer and a Custom PMS Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - CustomPMS Customer Property
-     - CustomPMS Data Type
+     - Custom PMS Customer Property
+     - Custom PMS Data Type
 
