@@ -2,43 +2,43 @@
 Unieconomy to Business Nxt Dataflow
 ===================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Unieconomy to Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Unieconomy Customers to BusinessNxt Address
--------------------------------------------
-Every Unieconomy Customers will be synchronized with a BusinessNxt Address.
+Unieconomy Customers to Business Nxt Address
+--------------------------------------------
+Every Unieconomy Customers will be synchronized with a Business Nxt Address.
 
-Once a link between a Unieconomy Customers and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Customers and a Business Nxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Customers and a BusinessNxt Address:
+The following properties are synchronized between a Unieconomy Customers and a Business Nxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Customers Property
-     - BusinessNxt Address Property
-     - BusinessNxt Data Type
+     - Business Nxt Address Property
+     - Business Nxt Data Type
 
 
-Unieconomy Departments to BusinessNxt Address
----------------------------------------------
-Every Unieconomy Departments will be synchronized with a BusinessNxt Address.
+Unieconomy Departments to Business Nxt Address
+----------------------------------------------
+Every Unieconomy Departments will be synchronized with a Business Nxt Address.
 
-Once a link between a Unieconomy Departments and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Departments and a Business Nxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Departments and a BusinessNxt Address:
+The following properties are synchronized between a Unieconomy Departments and a Business Nxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Departments Property
-     - BusinessNxt Address Property
-     - BusinessNxt Data Type
+     - Business Nxt Address Property
+     - Business Nxt Data Type
    * - Name
      - name
      - "string"
