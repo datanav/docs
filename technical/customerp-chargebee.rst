@@ -2,73 +2,73 @@
 Custom ERP to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-11 11:40:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Custom ERP to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-CustomERP Contact to Chargebee Customer
----------------------------------------
-Every CustomERP Contact will be synchronized with a Chargebee Customer.
+Custom ERP Contact to Chargebee Customer
+----------------------------------------
+Every Custom ERP Contact will be synchronized with a Chargebee Customer.
 
-Once a link between a CustomERP Contact and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Contact and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Contact and a Chargebee Customer:
+The following properties are synchronized between a Custom ERP Contact and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Contact Property
+   * - Custom ERP Contact Property
      - Chargebee Customer Property
      - Chargebee Data Type
 
 
-CustomERP Customer to Chargebee Business_entity
------------------------------------------------
-Every CustomERP Customer will be synchronized with a Chargebee Business_entity.
+Custom ERP Customer to Chargebee Business_entity
+------------------------------------------------
+Every Custom ERP Customer will be synchronized with a Chargebee Business_entity.
 
-Once a link between a CustomERP Customer and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Customer and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Customer and a Chargebee Business_entity:
+The following properties are synchronized between a Custom ERP Customer and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Customer Property
+   * - Custom ERP Customer Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
 
 
-CustomERP Employee to Chargebee Customer
-----------------------------------------
-Every CustomERP Employee will be synchronized with a Chargebee Customer.
+Custom ERP Employee to Chargebee Customer
+-----------------------------------------
+Every Custom ERP Employee will be synchronized with a Chargebee Customer.
 
-Once a link between a CustomERP Employee and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Employee and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Employee and a Chargebee Customer:
+The following properties are synchronized between a Custom ERP Employee and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Employee Property
+   * - Custom ERP Employee Property
      - Chargebee Customer Property
      - Chargebee Data Type
 
 
-CustomERP Quote to Chargebee Order
-----------------------------------
-Every CustomERP Quote will be synchronized with a Chargebee Order.
+Custom ERP Quote to Chargebee Order
+-----------------------------------
+Every Custom ERP Quote will be synchronized with a Chargebee Order.
 
-Once a link between a CustomERP Quote and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Quote and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Quote and a Chargebee Order:
+The following properties are synchronized between a Custom ERP Quote and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Quote Property
+   * - Custom ERP Quote Property
      - Chargebee Order Property
      - Chargebee Data Type
 
