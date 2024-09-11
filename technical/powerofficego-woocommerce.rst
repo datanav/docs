@@ -1,28 +1,28 @@
-=====================================
-Powerofficego to Woocommerce Dataflow
-=====================================
+======================================
+PowerOffice GO to WooCommerce Dataflow
+======================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:52:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Woocommerce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from PowerOffice GO to WooCommerce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Powerofficego Product to Woocommerce Product
---------------------------------------------
-Every Powerofficego Product will be synchronized with a Woocommerce Product.
+PowerOffice Product to WooCommerce Product
+------------------------------------------
+Every PowerOffice Product will be synchronized with a WooCommerce Product.
 
-Once a link between a Powerofficego Product and a Woocommerce Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Product and a WooCommerce Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Product and a Woocommerce Product:
+The following properties are synchronized between a PowerOffice Product and a WooCommerce Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Product Property
-     - Woocommerce Product Property
-     - Woocommerce Data Type
+   * - PowerOffice Product Property
+     - WooCommerce Product Property
+     - WooCommerce Data Type
    * - costPrice
      - price
      - "string"
@@ -34,20 +34,20 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "string"
 
 
-Powerofficego Salesorders to Woocommerce Order
-----------------------------------------------
-Every Powerofficego Salesorders will be synchronized with a Woocommerce Order.
+PowerOffice Salesorders to WooCommerce Order
+--------------------------------------------
+Every PowerOffice Salesorders will be synchronized with a WooCommerce Order.
 
-Once a link between a Powerofficego Salesorders and a Woocommerce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Salesorders and a WooCommerce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Salesorders and a Woocommerce Order:
+The following properties are synchronized between a PowerOffice Salesorders and a WooCommerce Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Salesorders Property
-     - Woocommerce Order Property
-     - Woocommerce Data Type
+   * - PowerOffice Salesorders Property
+     - WooCommerce Order Property
+     - WooCommerce Data Type
    * - CurrencyCode
      - currency
      - "string"
