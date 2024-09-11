@@ -1,13 +1,13 @@
-=================================
-Tripletex to Businessnxt Dataflow
-=================================
+========================================
+Tripletex to Visma Business Nxt Dataflow
+========================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Businessnxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Tripletex Customer to Businessnxt Address
 -----------------------------------------
@@ -69,20 +69,20 @@ The following properties are synchronized between a Tripletex Orderline and a Bu
      - Businessnxt Data Type
 
 
-Tripletex Country to Businessnxt Country
-----------------------------------------
-Every Tripletex Country will be synchronized with a Businessnxt Country.
+Tripletex Country to Visma Country
+----------------------------------
+Every Tripletex Country will be synchronized with a Visma Country.
 
-Once a link between a Tripletex Country and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Country and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Country and a Businessnxt Country:
+The following properties are synchronized between a Tripletex Country and a Visma Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Country Property
-     - Businessnxt Country Property
-     - Businessnxt Data Type
+     - Visma Country Property
+     - Visma Data Type
    * - isoAlpha2Code
      - isoCode
      - "string"
@@ -91,39 +91,39 @@ The following properties are synchronized between a Tripletex Country and a Busi
      - "string"
 
 
-Tripletex Currency to Businessnxt Currency
-------------------------------------------
-Every Tripletex Currency will be synchronized with a Businessnxt Currency.
+Tripletex Currency to Visma Currency
+------------------------------------
+Every Tripletex Currency will be synchronized with a Visma Currency.
 
-Once a link between a Tripletex Currency and a Businessnxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Currency and a Visma Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Currency and a Businessnxt Currency:
+The following properties are synchronized between a Tripletex Currency and a Visma Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Currency Property
-     - Businessnxt Currency Property
-     - Businessnxt Data Type
+     - Visma Currency Property
+     - Visma Data Type
    * - displayName
      - name
      - "string"
 
 
-Tripletex Order to Businessnxt Order
-------------------------------------
-Every Tripletex Order will be synchronized with a Businessnxt Order.
+Tripletex Order to Visma Order
+------------------------------
+Every Tripletex Order will be synchronized with a Visma Order.
 
-Once a link between a Tripletex Order and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Order and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Order and a Businessnxt Order:
+The following properties are synchronized between a Tripletex Order and a Visma Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Order Property
-     - Businessnxt Order Property
-     - Businessnxt Data Type
+     - Visma Order Property
+     - Visma Data Type
    * - deliveryDate
      - dueDate
      - "string"
@@ -132,39 +132,39 @@ The following properties are synchronized between a Tripletex Order and a Busine
      - "string"
 
 
-Tripletex Orderline to Businessnxt Orderline
---------------------------------------------
-Every Tripletex Orderline will be synchronized with a Businessnxt Orderline.
+Tripletex Orderline to Visma Orderline
+--------------------------------------
+Every Tripletex Orderline will be synchronized with a Visma Orderline.
 
-Once a link between a Tripletex Orderline and a Businessnxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Orderline and a Visma Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Orderline and a Businessnxt Orderline:
+The following properties are synchronized between a Tripletex Orderline and a Visma Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Orderline Property
-     - Businessnxt Orderline Property
-     - Businessnxt Data Type
+     - Visma Orderline Property
+     - Visma Data Type
    * - order.id
      - orderNo
      - "string"
 
 
-Tripletex Product to Businessnxt Product
-----------------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Businessnxt Product.
+Tripletex Product to Visma Product
+----------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Visma Product.
 
-Once a link between a Tripletex Product and a Businessnxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Product and a Visma Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Product and a Businessnxt Product:
+The following properties are synchronized between a Tripletex Product and a Visma Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     - Businessnxt Product Property
-     - Businessnxt Data Type
+     - Visma Product Property
+     - Visma Data Type
    * - description
      - description
      - "string"
@@ -176,20 +176,20 @@ The following properties are synchronized between a Tripletex Product and a Busi
      - "string"
 
 
-Tripletex Productgroup to Businessnxt Productcategory
------------------------------------------------------
-Every Tripletex Productgroup will be synchronized with a Businessnxt Productcategory.
+Tripletex Productgroup to Visma Productcategory
+-----------------------------------------------
+Every Tripletex Productgroup will be synchronized with a Visma Productcategory.
 
-Once a link between a Tripletex Productgroup and a Businessnxt Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Productgroup and a Visma Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Productgroup and a Businessnxt Productcategory:
+The following properties are synchronized between a Tripletex Productgroup and a Visma Productcategory:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Productgroup Property
-     - Businessnxt Productcategory Property
-     - Businessnxt Data Type
+     - Visma Productcategory Property
+     - Visma Data Type
    * - name
      - text
      - "string"
