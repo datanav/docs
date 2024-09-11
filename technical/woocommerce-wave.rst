@@ -2,7 +2,7 @@
 WooCommerce to Wave Dataflow
 ============================
 
-Generated: 2024-09-11 07:46:20
+Generated: 2024-09-11 11:13:29
 
 Introduction
 ------------
@@ -103,18 +103,18 @@ The following properties are synchronized between a WooCommerce Customer and a W
      - "string"
 
 
-WooCommerce Order to Wave Invoice
----------------------------------
-Every WooCommerce Order will be synchronized with a Wave Invoice.
+WooCommerceWoocommerce Order to Wave Invoice
+--------------------------------------------
+Every WooCommerceWoocommerce Order will be synchronized with a Wave Invoice.
 
-Once a link between a WooCommerce Order and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerceWoocommerce Order and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Order and a Wave Invoice:
+The following properties are synchronized between a WooCommerceWoocommerce Order and a Wave Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - WooCommerce Order Property
+   * - WooCommerceWoocommerce Order Property
      - Wave Invoice Property
      - Wave Data Type
    * - currency
@@ -131,18 +131,18 @@ The following properties are synchronized between a WooCommerce Order and a Wave
      - N/A
 
 
-WooCommerce Product to Wave Product
------------------------------------
-Every WooCommerce Product will be synchronized with a Wave Product.
+WooCommerceWoocommerce Product to Wave Product
+----------------------------------------------
+Every WooCommerceWoocommerce Product will be synchronized with a Wave Product.
 
-Once a link between a WooCommerce Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerceWoocommerce Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Product and a Wave Product:
+The following properties are synchronized between a WooCommerceWoocommerce Product and a Wave Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - WooCommerce Product Property
+   * - WooCommerceWoocommerce Product Property
      - Wave Product Property
      - Wave Data Type
    * - name
