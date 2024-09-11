@@ -2,27 +2,27 @@
 Asana to WebCRM Dataflow
 ========================
 
-Generated: 2024-09-11 07:46:45
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Asana to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Asana Teams to Webcrm Organisations
+Asana Teams to WebCRM Organisations
 -----------------------------------
-Every Asana Teams will be synchronized with a Webcrm Organisations.
+Every Asana Teams will be synchronized with a WebCRM Organisations.
 
-Once a link between a Asana Teams and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Teams and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Teams and a Webcrm Organisations:
+The following properties are synchronized between a Asana Teams and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Teams Property
-     - Webcrm Organisations Property
-     - Webcrm Data Type
+     - WebCRM Organisations Property
+     - WebCRM Data Type
    * - description
      - OrganisationCompanyDescription
      - "string"
@@ -31,20 +31,20 @@ The following properties are synchronized between a Asana Teams and a Webcrm Org
      - "string"
 
 
-Asana Workspaces to Webcrm Organisations
+Asana Workspaces to WebCRM Organisations
 ----------------------------------------
-Every Asana Workspaces will be synchronized with a Webcrm Organisations.
+Every Asana Workspaces will be synchronized with a WebCRM Organisations.
 
-Once a link between a Asana Workspaces and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Workspaces and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Workspaces and a Webcrm Organisations:
+The following properties are synchronized between a Asana Workspaces and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Workspaces Property
-     - Webcrm Organisations Property
-     - Webcrm Data Type
+     - WebCRM Organisations Property
+     - WebCRM Data Type
    * - name
      - OrganisationName
      - "string"
