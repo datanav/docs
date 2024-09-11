@@ -2,62 +2,62 @@
 YouTrack to WebCRM Dataflow
 ===========================
 
-Generated: 2024-09-11 07:48:17
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from YouTrack to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-YouTrack Groups to Webcrm Organisations
+YouTrack Groups to WebCRM Organisations
 ---------------------------------------
-Every YouTrack Groups will be synchronized with a Webcrm Organisations.
+Every YouTrack Groups will be synchronized with a WebCRM Organisations.
 
-Once a link between a YouTrack Groups and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Groups and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Groups and a Webcrm Organisations:
+The following properties are synchronized between a YouTrack Groups and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Groups Property
-     - Webcrm Organisations Property
-     - Webcrm Data Type
+     - WebCRM Organisations Property
+     - WebCRM Data Type
 
 
-YouTrack Organizations to Webcrm Organisations
+YouTrack Organizations to WebCRM Organisations
 ----------------------------------------------
-Every YouTrack Organizations will be synchronized with a Webcrm Organisations.
+Every YouTrack Organizations will be synchronized with a WebCRM Organisations.
 
-Once a link between a YouTrack Organizations and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Organizations and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Organizations and a Webcrm Organisations:
+The following properties are synchronized between a YouTrack Organizations and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Organizations Property
-     - Webcrm Organisations Property
-     - Webcrm Data Type
+     - WebCRM Organisations Property
+     - WebCRM Data Type
    * - description
      - OrganisationCompanyDescription
      - "string"
 
 
-YouTrack Usergroups to Webcrm Organisations
+YouTrack Usergroups to WebCRM Organisations
 -------------------------------------------
-Every YouTrack Usergroups will be synchronized with a Webcrm Organisations.
+Every YouTrack Usergroups will be synchronized with a WebCRM Organisations.
 
-Once a link between a YouTrack Usergroups and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Usergroups and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Usergroups and a Webcrm Organisations:
+The following properties are synchronized between a YouTrack Usergroups and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Usergroups Property
-     - Webcrm Organisations Property
-     - Webcrm Data Type
+     - WebCRM Organisations Property
+     - WebCRM Data Type
 
 
 YouTrack Users to WebCRM Users
