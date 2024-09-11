@@ -1,28 +1,28 @@
-================================
-Webcrm to Powerofficego Dataflow
-================================
+=================================
+WebCRM to PowerOffice GO Dataflow
+=================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:53:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Webcrm to Powerofficego. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to PowerOffice GO. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Webcrm Persons to Powerofficego Contactperson
----------------------------------------------
-Every Webcrm Persons will be synchronized with a Powerofficego Contactperson.
+WebCRM Persons to PowerOffice Contactperson
+-------------------------------------------
+Every WebCRM Persons will be synchronized with a PowerOffice Contactperson.
 
-Once a link between a Webcrm Persons and a Powerofficego Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Persons and a PowerOffice Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Persons and a Powerofficego Contactperson:
+The following properties are synchronized between a WebCRM Persons and a PowerOffice Contactperson:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Persons Property
-     - Powerofficego Contactperson Property
-     - Powerofficego Data Type
+   * - WebCRM Persons Property
+     - PowerOffice Contactperson Property
+     - PowerOffice Data Type
    * - PersonDirectPhone
      - phoneNumber
      - "string"
@@ -40,20 +40,20 @@ The following properties are synchronized between a Webcrm Persons and a Powerof
      - N/A
 
 
-Webcrm Products to Powerofficego Product
-----------------------------------------
-Every Webcrm Products will be synchronized with a Powerofficego Product.
+WebCRM Products to PowerOffice Product
+--------------------------------------
+Every WebCRM Products will be synchronized with a PowerOffice Product.
 
-Once a link between a Webcrm Products and a Powerofficego Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Products and a PowerOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Products and a Powerofficego Product:
+The following properties are synchronized between a WebCRM Products and a PowerOffice Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Products Property
-     - Powerofficego Product Property
-     - Powerofficego Data Type
+   * - WebCRM Products Property
+     - PowerOffice Product Property
+     - PowerOffice Data Type
    * - ProductCostPrice
      - costPrice
      - N/A
@@ -68,18 +68,18 @@ The following properties are synchronized between a Webcrm Products and a Powero
      - "string"
 
 
-Webcrm Quotationline to Powerofficego Salesorderlines
------------------------------------------------------
-Every Webcrm Quotationline will be synchronized with a Powerofficego Salesorderlines.
+WebCRM Quotationline to PowerOffice Salesorderlines
+---------------------------------------------------
+Every WebCRM Quotationline will be synchronized with a PowerOffice Salesorderlines.
 
-Once a link between a Webcrm Quotationline and a Powerofficego Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Quotationline and a PowerOffice Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Quotationline and a Powerofficego Salesorderlines:
+The following properties are synchronized between a WebCRM Quotationline and a PowerOffice Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Quotationline Property
-     - Powerofficego Salesorderlines Property
-     - Powerofficego Data Type
+   * - WebCRM Quotationline Property
+     - PowerOffice Salesorderlines Property
+     - PowerOffice Data Type
 
