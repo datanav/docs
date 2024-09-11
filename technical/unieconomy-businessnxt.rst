@@ -1,13 +1,13 @@
-=========================================
-Unieconomy to Visma Business Nxt Dataflow
-=========================================
+==================================
+Unieconomy to BusinessNxt Dataflow
+==================================
 
-Generated: 2024-09-11 07:48:17
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Unieconomy to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Unieconomy to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Unieconomy Customers to Businessnxt Address
 -------------------------------------------
@@ -44,77 +44,77 @@ The following properties are synchronized between a Unieconomy Departments and a
      - "string"
 
 
-Unieconomy Companies to Visma Address
--------------------------------------
-Every Unieconomy Companies will be synchronized with a Visma Address.
+Unieconomy Companies to BusinessNxt Address
+-------------------------------------------
+Every Unieconomy Companies will be synchronized with a BusinessNxt Address.
 
-Once a link between a Unieconomy Companies and a Visma Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Companies and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Companies and a Visma Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Unieconomy Companies Property
-     - Visma Address Property
-     - Visma Data Type
-   * - Name
-     - name
-     - "string"
-
-
-Unieconomy Companies to Visma Company
--------------------------------------
-Every Unieconomy Companies will be synchronized with a Visma Company.
-
-Once a link between a Unieconomy Companies and a Visma Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Unieconomy Companies and a Visma Company:
+The following properties are synchronized between a Unieconomy Companies and a BusinessNxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Companies Property
-     - Visma Company Property
-     - Visma Data Type
+     - BusinessNxt Address Property
+     - BusinessNxt Data Type
    * - Name
      - name
      - "string"
 
 
-Unieconomy Countries to Visma Country
--------------------------------------
-Every Unieconomy Countries will be synchronized with a Visma Country.
+Unieconomy Companies to BusinessNxt Company
+-------------------------------------------
+Every Unieconomy Companies will be synchronized with a BusinessNxt Company.
 
-Once a link between a Unieconomy Countries and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Companies and a BusinessNxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Countries and a Visma Country:
+The following properties are synchronized between a Unieconomy Companies and a BusinessNxt Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Companies Property
+     - BusinessNxt Company Property
+     - BusinessNxt Data Type
+   * - Name
+     - name
+     - "string"
+
+
+Unieconomy Countries to BusinessNxt Country
+-------------------------------------------
+Every Unieconomy Countries will be synchronized with a BusinessNxt Country.
+
+Once a link between a Unieconomy Countries and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Countries and a BusinessNxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Countries Property
-     - Visma Country Property
-     - Visma Data Type
+     - BusinessNxt Country Property
+     - BusinessNxt Data Type
    * - Name
      - name
      - "string"
 
 
-Unieconomy Currencycodes to Visma Currency
-------------------------------------------
-Every Unieconomy Currencycodes will be synchronized with a Visma Currency.
+Unieconomy Currencycodes to BusinessNxt Currency
+------------------------------------------------
+Every Unieconomy Currencycodes will be synchronized with a BusinessNxt Currency.
 
-Once a link between a Unieconomy Currencycodes and a Visma Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Currencycodes and a BusinessNxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Currencycodes and a Visma Currency:
+The following properties are synchronized between a Unieconomy Currencycodes and a BusinessNxt Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Currencycodes Property
-     - Visma Currency Property
-     - Visma Data Type
+     - BusinessNxt Currency Property
+     - BusinessNxt Data Type
    * - Code
      - isoCode
      - "string"
