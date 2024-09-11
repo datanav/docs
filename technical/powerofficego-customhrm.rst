@@ -2,57 +2,57 @@
 PowerOfficeGO to CustomHRM Dataflow
 ===================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from PowerOfficeGO to CustomHRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-PowerOffice Contactperson to CustomHRM Employee
------------------------------------------------
-Every PowerOffice Contactperson will be synchronized with a CustomHRM Employee.
+PowerOfficeGO Contactperson to CustomHRM Employee
+-------------------------------------------------
+Every PowerOfficeGO Contactperson will be synchronized with a CustomHRM Employee.
 
-Once a link between a PowerOffice Contactperson and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Contactperson and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Contactperson and a CustomHRM Employee:
+The following properties are synchronized between a PowerOfficeGO Contactperson and a CustomHRM Employee:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Contactperson Property
+   * - PowerOfficeGO Contactperson Property
      - CustomHRM Employee Property
      - CustomHRM Data Type
 
 
-PowerOffice Customers to CustomHRM Department
----------------------------------------------
-Every PowerOffice Customers will be synchronized with a CustomHRM Department.
+PowerOfficeGO Customers to CustomHRM Department
+-----------------------------------------------
+Every PowerOfficeGO Customers will be synchronized with a CustomHRM Department.
 
-Once a link between a PowerOffice Customers and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Customers and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Customers and a CustomHRM Department:
+The following properties are synchronized between a PowerOfficeGO Customers and a CustomHRM Department:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Customers Property
+   * - PowerOfficeGO Customers Property
      - CustomHRM Department Property
      - CustomHRM Data Type
 
 
-PowerOffice Customers person to CustomHRM Employee
---------------------------------------------------
-Every PowerOffice Customers person will be synchronized with a CustomHRM Employee.
+PowerOfficeGO Customers person to CustomHRM Employee
+----------------------------------------------------
+Every PowerOfficeGO Customers person will be synchronized with a CustomHRM Employee.
 
-Once a link between a PowerOffice Customers person and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Customers person and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Customers person and a CustomHRM Employee:
+The following properties are synchronized between a PowerOfficeGO Customers person and a CustomHRM Employee:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Customers person Property
+   * - PowerOfficeGO Customers person Property
      - CustomHRM Employee Property
      - CustomHRM Data Type
 
