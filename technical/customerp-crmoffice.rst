@@ -2,7 +2,7 @@
 CustomERP to CRMOffice Dataflow
 ===============================
 
-Generated: 2024-09-11 08:00:24
+Generated: 2024-09-11 08:02:19
 
 Introduction
 ------------
@@ -57,18 +57,18 @@ The following properties are synchronized between a Custom Project and a Crmoffi
      - Crmoffice Data Type
 
 
-Custom Contact to CRMOffice Contacts
-------------------------------------
-Every Custom Contact will be synchronized with a CRMOffice Contacts.
+CustomERP Contact to CRMOffice Contacts
+---------------------------------------
+Every CustomERP Contact will be synchronized with a CRMOffice Contacts.
 
-Once a link between a Custom Contact and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Contact and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Contact and a CRMOffice Contacts:
+The following properties are synchronized between a CustomERP Contact and a CRMOffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Contact Property
+   * - CustomERP Contact Property
      - CRMOffice Contacts Property
      - CRMOffice Data Type
 
