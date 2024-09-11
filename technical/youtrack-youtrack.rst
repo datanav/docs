@@ -2,7 +2,7 @@
 YouTrack to Youtrack Dataflow
 =============================
 
-Generated: 2024-09-11 00:00:00
+Generated: 2024-09-11 11:13:29
 
 Introduction
 ------------
@@ -199,184 +199,184 @@ The following properties are synchronized between a YouTrack Users and a Youtrac
      - "string"
 
 
-YouTrack Groups to Youtrack Usergroups
---------------------------------------
-Before any synchronization can take place, a link between a YouTrack Groups and a Youtrack Usergroups must be established.
+YouTrack Groups to YoutrackYouTrack Usergroups
+----------------------------------------------
+Before any synchronization can take place, a link between a YouTrack Groups and a YoutrackYouTrack Usergroups must be established.
 
-A new Youtrack Usergroups will be created from a YouTrack Groups if it is connected to a YouTrack Issues, Projects, Workitems, Hubprojects, or Projectroles that is synchronized into Youtrack.
+A new YoutrackYouTrack Usergroups will be created from a YouTrack Groups if it is connected to a YouTrack Issues, Projects, Workitems, Hubprojects, or Projectroles that is synchronized into YoutrackYouTrack.
 
-Once a link between a YouTrack Groups and a Youtrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Groups and a YoutrackYouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Groups and a Youtrack Usergroups:
+The following properties are synchronized between a YouTrack Groups and a YoutrackYouTrack Usergroups:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Groups Property
-     - Youtrack Usergroups Property
-     - Youtrack Data Type
+     - YoutrackYouTrack Usergroups Property
+     - YoutrackYouTrack Data Type
 
 
-YouTrack Organization to Youtrack Usergroups
---------------------------------------------
-Before any synchronization can take place, a link between a YouTrack Organization and a Youtrack Usergroups must be established.
+YouTrack Organization to YoutrackYouTrack Usergroups
+----------------------------------------------------
+Before any synchronization can take place, a link between a YouTrack Organization and a YoutrackYouTrack Usergroups must be established.
 
-A new Youtrack Usergroups will be created from a YouTrack Organization if it is connected to a YouTrack Issues, Projects, Workitems, Hubprojects, or Projectroles that is synchronized into Youtrack.
+A new YoutrackYouTrack Usergroups will be created from a YouTrack Organization if it is connected to a YouTrack Issues, Projects, Workitems, Hubprojects, or Projectroles that is synchronized into YoutrackYouTrack.
 
-Once a link between a YouTrack Organization and a Youtrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Organization and a YoutrackYouTrack Usergroups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Organization and a Youtrack Usergroups:
+The following properties are synchronized between a YouTrack Organization and a YoutrackYouTrack Usergroups:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Organization Property
-     - Youtrack Usergroups Property
-     - Youtrack Data Type
+     - YoutrackYouTrack Usergroups Property
+     - YoutrackYouTrack Data Type
 
 
-YouTrack Organizationroles to YouTrack Projectroles
----------------------------------------------------
-Before any synchronization can take place, a link between a YouTrack Organizationroles and a YouTrack Projectroles must be established.
+YouTrack Organizationroles to YouTrackYoutrack Projectroles
+-----------------------------------------------------------
+Before any synchronization can take place, a link between a YouTrack Organizationroles and a YouTrackYoutrack Projectroles must be established.
 
-A new YouTrack Projectroles will be created from a YouTrack Organizationroles if it is connected to a YouTrack Team, Owner, Users, Author, Leader, Parent, Creator, Created by, Usergroups, Projectroles, or Usersyoutrack that is synchronized into YouTrack.
+A new YouTrackYoutrack Projectroles will be created from a YouTrack Organizationroles if it is connected to a YouTrack Team, Owner, Users, Author, Leader, Parent, Creator, Created by, Usergroups, Projectroles, or Usersyoutrack that is synchronized into YouTrackYoutrack.
 
-Once a link between a YouTrack Organizationroles and a YouTrack Projectroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Organizationroles and a YouTrackYoutrack Projectroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Organizationroles and a YouTrack Projectroles:
+The following properties are synchronized between a YouTrack Organizationroles and a YouTrackYoutrack Projectroles:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Organizationroles Property
-     - YouTrack Projectroles Property
-     - YouTrack Data Type
+     - YouTrackYoutrack Projectroles Property
+     - YouTrackYoutrack Data Type
 
 
-YouTrack Projectroles to YouTrack Organizationroles
----------------------------------------------------
-Before any synchronization can take place, a link between a YouTrack Projectroles and a YouTrack Organizationroles must be established.
+YouTrack Projectroles to YouTrackYoutrack Organizationroles
+-----------------------------------------------------------
+Before any synchronization can take place, a link between a YouTrack Projectroles and a YouTrackYoutrack Organizationroles must be established.
 
-A new YouTrack Organizationroles will be created from a YouTrack Projectroles if it is connected to a YouTrack Team, Owner, Users, Author, Leader, Parent, Creator, Created by, Usergroups, Projectroles, or Usersyoutrack that is synchronized into YouTrack.
+A new YouTrackYoutrack Organizationroles will be created from a YouTrack Projectroles if it is connected to a YouTrack Team, Owner, Users, Author, Leader, Parent, Creator, Created by, Usergroups, Projectroles, or Usersyoutrack that is synchronized into YouTrackYoutrack.
 
-Once a link between a YouTrack Projectroles and a YouTrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Projectroles and a YouTrackYoutrack Organizationroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Projectroles and a YouTrack Organizationroles:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Projectroles Property
-     - YouTrack Organizationroles Property
-     - YouTrack Data Type
-
-
-YouTrack Projectroles to YouTrack Roles
----------------------------------------
-Before any synchronization can take place, a link between a YouTrack Projectroles and a YouTrack Roles must be established.
-
-A new YouTrack Roles will be created from a YouTrack Projectroles if it is connected to a YouTrack Role, Team, Owner, Roles, Users, Author, Leader, Creator, Created by, Usersyoutrack, or Organizationroles that is synchronized into YouTrack.
-
-Once a link between a YouTrack Projectroles and a YouTrack Roles is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Projectroles and a YouTrack Roles:
+The following properties are synchronized between a YouTrack Projectroles and a YouTrackYoutrack Organizationroles:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Projectroles Property
-     - YouTrack Roles Property
-     - YouTrack Data Type
+     - YouTrackYoutrack Organizationroles Property
+     - YouTrackYoutrack Data Type
 
 
-YouTrack Projectroles to YouTrack Users
----------------------------------------
-Before any synchronization can take place, a link between a YouTrack Projectroles and a YouTrack Users must be established.
+YouTrack Projectroles to YouTrackYoutrack Roles
+-----------------------------------------------
+Before any synchronization can take place, a link between a YouTrack Projectroles and a YouTrackYoutrack Roles must be established.
 
-A new YouTrack Users will be created from a YouTrack Projectroles if it is connected to a YouTrack Role, Team, Owner, Roles, Users, Author, Issues, Leader, Creator, Projects, Workitems, Created by, Hubprojects, Projectroles, Usersyoutrack, or Organizationroles that is synchronized into YouTrack.
+A new YouTrackYoutrack Roles will be created from a YouTrack Projectroles if it is connected to a YouTrack Role, Team, Owner, Roles, Users, Author, Leader, Creator, Created by, Usersyoutrack, or Organizationroles that is synchronized into YouTrackYoutrack.
 
-Once a link between a YouTrack Projectroles and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Projectroles and a YouTrackYoutrack Roles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Projectroles and a YouTrack Users:
+The following properties are synchronized between a YouTrack Projectroles and a YouTrackYoutrack Roles:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Projectroles Property
-     - YouTrack Users Property
-     - YouTrack Data Type
+     - YouTrackYoutrack Roles Property
+     - YouTrackYoutrack Data Type
 
 
-YouTrack Roles to Youtrack Projectroles
----------------------------------------
-Before any synchronization can take place, a link between a YouTrack Roles and a Youtrack Projectroles must be established.
+YouTrack Projectroles to YouTrackYoutrack Users
+-----------------------------------------------
+Before any synchronization can take place, a link between a YouTrack Projectroles and a YouTrackYoutrack Users must be established.
 
-A new Youtrack Projectroles will be created from a YouTrack Roles if it is connected to a YouTrack Issues, Projects, Workitems, Hubprojects, or Projectroles that is synchronized into Youtrack.
+A new YouTrackYoutrack Users will be created from a YouTrack Projectroles if it is connected to a YouTrack Role, Team, Owner, Roles, Users, Author, Issues, Leader, Creator, Projects, Workitems, Created by, Hubprojects, Projectroles, Usersyoutrack, or Organizationroles that is synchronized into YouTrackYoutrack.
 
-Once a link between a YouTrack Roles and a Youtrack Projectroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Projectroles and a YouTrackYoutrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Roles and a Youtrack Projectroles:
+The following properties are synchronized between a YouTrack Projectroles and a YouTrackYoutrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Projectroles Property
+     - YouTrackYoutrack Users Property
+     - YouTrackYoutrack Data Type
+
+
+YouTrack Roles to YoutrackYouTrack Projectroles
+-----------------------------------------------
+Before any synchronization can take place, a link between a YouTrack Roles and a YoutrackYouTrack Projectroles must be established.
+
+A new YoutrackYouTrack Projectroles will be created from a YouTrack Roles if it is connected to a YouTrack Issues, Projects, Workitems, Hubprojects, or Projectroles that is synchronized into YoutrackYouTrack.
+
+Once a link between a YouTrack Roles and a YoutrackYouTrack Projectroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Roles and a YoutrackYouTrack Projectroles:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Roles Property
-     - Youtrack Projectroles Property
-     - Youtrack Data Type
+     - YoutrackYouTrack Projectroles Property
+     - YoutrackYouTrack Data Type
 
 
-YouTrack Users to Youtrack Projectroles
----------------------------------------
-Before any synchronization can take place, a link between a YouTrack Users and a Youtrack Projectroles must be established.
+YouTrack Users to YoutrackYouTrack Projectroles
+-----------------------------------------------
+Before any synchronization can take place, a link between a YouTrack Users and a YoutrackYouTrack Projectroles must be established.
 
-A new Youtrack Projectroles will be created from a YouTrack Users if it is connected to a YouTrack Issues, Projects, Workitems, Hubprojects, or Projectroles that is synchronized into Youtrack.
+A new YoutrackYouTrack Projectroles will be created from a YouTrack Users if it is connected to a YouTrack Issues, Projects, Workitems, Hubprojects, or Projectroles that is synchronized into YoutrackYouTrack.
 
-Once a link between a YouTrack Users and a Youtrack Projectroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Users and a YoutrackYouTrack Projectroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Users and a Youtrack Projectroles:
+The following properties are synchronized between a YouTrack Users and a YoutrackYouTrack Projectroles:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     - Youtrack Projectroles Property
-     - Youtrack Data Type
+     - YoutrackYouTrack Projectroles Property
+     - YoutrackYouTrack Data Type
 
 
-YouTrack Usersyoutrack to Youtrack Projectroles
------------------------------------------------
-Before any synchronization can take place, a link between a YouTrack Usersyoutrack and a Youtrack Projectroles must be established.
+YouTrack Usersyoutrack to YoutrackYouTrack Projectroles
+-------------------------------------------------------
+Before any synchronization can take place, a link between a YouTrack Usersyoutrack and a YoutrackYouTrack Projectroles must be established.
 
-A new Youtrack Projectroles will be created from a YouTrack Usersyoutrack if it is connected to a YouTrack Issues, Projects, Workitems, Hubprojects, or Projectroles that is synchronized into Youtrack.
+A new YoutrackYouTrack Projectroles will be created from a YouTrack Usersyoutrack if it is connected to a YouTrack Issues, Projects, Workitems, Hubprojects, or Projectroles that is synchronized into YoutrackYouTrack.
 
-Once a link between a YouTrack Usersyoutrack and a Youtrack Projectroles is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Usersyoutrack and a YoutrackYouTrack Projectroles is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Usersyoutrack and a Youtrack Projectroles:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Usersyoutrack Property
-     - Youtrack Projectroles Property
-     - Youtrack Data Type
-
-
-YouTrack Usersyoutrack to YouTrack Users
-----------------------------------------
-Before any synchronization can take place, a link between a YouTrack Usersyoutrack and a YouTrack Users must be established.
-
-A new YouTrack Users will be created from a YouTrack Usersyoutrack if it is connected to a YouTrack Role, Team, Owner, Roles, Users, Author, Issues, Leader, Creator, Projects, Workitems, Created by, Hubprojects, Projectroles, Usersyoutrack, or Organizationroles that is synchronized into YouTrack.
-
-Once a link between a YouTrack Usersyoutrack and a YouTrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Usersyoutrack and a YouTrack Users:
+The following properties are synchronized between a YouTrack Usersyoutrack and a YoutrackYouTrack Projectroles:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Usersyoutrack Property
-     - YouTrack Users Property
-     - YouTrack Data Type
+     - YoutrackYouTrack Projectroles Property
+     - YoutrackYouTrack Data Type
+
+
+YouTrack Usersyoutrack to YouTrackYoutrack Users
+------------------------------------------------
+Before any synchronization can take place, a link between a YouTrack Usersyoutrack and a YouTrackYoutrack Users must be established.
+
+A new YouTrackYoutrack Users will be created from a YouTrack Usersyoutrack if it is connected to a YouTrack Role, Team, Owner, Roles, Users, Author, Issues, Leader, Creator, Projects, Workitems, Created by, Hubprojects, Projectroles, Usersyoutrack, or Organizationroles that is synchronized into YouTrackYoutrack.
+
+Once a link between a YouTrack Usersyoutrack and a YouTrackYoutrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Usersyoutrack and a YouTrackYoutrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Usersyoutrack Property
+     - YouTrackYoutrack Users Property
+     - YouTrackYoutrack Data Type
 
 
 YouTrack Issues to Youtrack Hubprojects
