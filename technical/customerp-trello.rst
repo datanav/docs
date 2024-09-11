@@ -2,57 +2,57 @@
 Custom ERP to Trello Dataflow
 =============================
 
-Generated: 2024-09-11 11:40:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Custom ERP to Trello. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-CustomERP Contact to Trello Members
------------------------------------
-Every CustomERP Contact will be synchronized with a Trello Members.
+Custom ERP Contact to Trello Members
+------------------------------------
+Every Custom ERP Contact will be synchronized with a Trello Members.
 
-Once a link between a CustomERP Contact and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Contact and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Contact and a Trello Members:
+The following properties are synchronized between a Custom ERP Contact and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Contact Property
+   * - Custom ERP Contact Property
      - Trello Members Property
      - Trello Data Type
 
 
-CustomERP Customer to Trello Organizations
-------------------------------------------
-Every CustomERP Customer will be synchronized with a Trello Organizations.
+Custom ERP Customer to Trello Organizations
+-------------------------------------------
+Every Custom ERP Customer will be synchronized with a Trello Organizations.
 
-Once a link between a CustomERP Customer and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Customer and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Customer and a Trello Organizations:
+The following properties are synchronized between a Custom ERP Customer and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Customer Property
+   * - Custom ERP Customer Property
      - Trello Organizations Property
      - Trello Data Type
 
 
-CustomERP Project to Trello Actions
------------------------------------
-Every CustomERP Project will be synchronized with a Trello Actions.
+Custom ERP Project to Trello Actions
+------------------------------------
+Every Custom ERP Project will be synchronized with a Trello Actions.
 
-Once a link between a CustomERP Project and a Trello Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Project and a Trello Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Project and a Trello Actions:
+The following properties are synchronized between a Custom ERP Project and a Trello Actions:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Project Property
+   * - Custom ERP Project Property
      - Trello Actions Property
      - Trello Data Type
 
