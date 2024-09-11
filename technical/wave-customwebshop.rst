@@ -1,58 +1,58 @@
-========================================
-Wave Financial to Customwebshop Dataflow
-========================================
+=========================================
+Wave Financial to Custom Webshop Dataflow
+=========================================
 
-Generated: 2024-09-11 00:00:02
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Customwebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Custom Webshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Customer to Customwebshop Customer
----------------------------------------
-Every Wave Customer will be synchronized with a Customwebshop Customer.
+Wave Customer to Custom Customer
+--------------------------------
+Every Wave Customer will be synchronized with a Custom Customer.
 
-Once a link between a Wave Customer and a Customwebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a Customwebshop Customer:
+The following properties are synchronized between a Wave Customer and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - Customwebshop Customer Property
-     - Customwebshop Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Wave Invoice to Customwebshop Order
------------------------------------
-Every Wave Invoice will be synchronized with a Customwebshop Order.
+Wave Invoice to Custom Order
+----------------------------
+Every Wave Invoice will be synchronized with a Custom Order.
 
-Once a link between a Wave Invoice and a Customwebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a Customwebshop Order:
+The following properties are synchronized between a Wave Invoice and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     - Customwebshop Order Property
-     - Customwebshop Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Wave Product to Customwebshop Product
--------------------------------------
-Every Wave Product will be synchronized with a Customwebshop Product.
+Wave Product to Custom Product
+------------------------------
+Every Wave Product will be synchronized with a Custom Product.
 
-Once a link between a Wave Product and a Customwebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a Customwebshop Product:
+The following properties are synchronized between a Wave Product and a Custom Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Product Property
-     - Customwebshop Product Property
-     - Customwebshop Data Type
+     - Custom Product Property
+     - Custom Data Type
 
