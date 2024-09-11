@@ -1,38 +1,38 @@
-==============================
-Powerofficego to Wave Dataflow
-==============================
+===============================
+PowerOffice GO to Wave Dataflow
+===============================
 
-Generated: 2024-09-11 00:00:00
+Generated: 2024-09-11 07:52:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from PowerOffice GO to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Powerofficego Contactperson to Wave Customer person
----------------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Contactperson and a Wave Customer person must be established.
+PowerOffice Contactperson to Wave Customer person
+-------------------------------------------------
+Before any synchronization can take place, a link between a PowerOffice Contactperson and a Wave Customer person must be established.
 
-A new Wave Customer person will be created from a Powerofficego Contactperson if it is connected to a Powerofficego Salesorder, Salesorders, Salesorderlines, or Outgoinginvoices that is synchronized into Wave.
+A new Wave Customer person will be created from a PowerOffice Contactperson if it is connected to a PowerOffice Powerofficego-salesorder, Powerofficego-salesorders, Powerofficego-salesorderlines, or Powerofficego-outgoinginvoices that is synchronized into Wave.
 
-A Powerofficego Contactperson will merge with a Wave Customer person if one of the following property combinations match:
+A PowerOffice Contactperson will merge with a Wave Customer person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Contactperson Property
+   * - PowerOffice Contactperson Property
      - Wave Customer person Property
    * - emailAddress
      - email
 
-Once a link between a Powerofficego Contactperson and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Contactperson and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Contactperson and a Wave Customer person:
+The following properties are synchronized between a PowerOffice Contactperson and a Wave Customer person:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Contactperson Property
+   * - PowerOffice Contactperson Property
      - Wave Customer person Property
      - Wave Data Type
    * - address1
@@ -184,31 +184,31 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Customers person to Wave Customer person
-------------------------------------------------------
-Every Powerofficego Customers person will be synchronized with a Wave Customer person.
+PowerOffice Customers person to Wave Customer person
+----------------------------------------------------
+Every PowerOffice Customers person will be synchronized with a Wave Customer person.
 
-If a matching Wave Customer person already exists, the Powerofficego Customers person will be merged with the existing one.
+If a matching Wave Customer person already exists, the PowerOffice Customers person will be merged with the existing one.
 If no matching Wave Customer person is found, a new Wave Customer person will be created.
 
-A Powerofficego Customers person will merge with a Wave Customer person if one of the following property combinations match:
+A PowerOffice Customers person will merge with a Wave Customer person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Customers person Property
+   * - PowerOffice Customers person Property
      - Wave Customer person Property
    * - EmailAddress
      - email
 
-Once a link between a Powerofficego Customers person and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Customers person and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers person and a Wave Customer person:
+The following properties are synchronized between a PowerOffice Customers person and a Wave Customer person:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Customers person Property
+   * - PowerOffice Customers person Property
      - Wave Customer person Property
      - Wave Data Type
    * - EmailAddress
@@ -255,18 +255,18 @@ The following properties are synchronized between a Powerofficego Customers pers
      - "string"
 
 
-Powerofficego Customers to Wave Customer
-----------------------------------------
-Every Powerofficego Customers will be synchronized with a Wave Customer.
+PowerOffice Customers to Wave Customer
+--------------------------------------
+Every PowerOffice Customers will be synchronized with a Wave Customer.
 
-Once a link between a Powerofficego Customers and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Customers and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers and a Wave Customer:
+The following properties are synchronized between a PowerOffice Customers and a Wave Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Customers Property
+   * - PowerOffice Customers Property
      - Wave Customer Property
      - Wave Data Type
    * - EmailAddress
@@ -355,18 +355,18 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Product to Wave Product
--------------------------------------
-Every Powerofficego Product will be synchronized with a Wave Product.
+PowerOffice Product to Wave Product
+-----------------------------------
+Every PowerOffice Product will be synchronized with a Wave Product.
 
-Once a link between a Powerofficego Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Product and a Wave Product:
+The following properties are synchronized between a PowerOffice Product and a Wave Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Product Property
+   * - PowerOffice Product Property
      - Wave Product Property
      - Wave Data Type
    * - Description
@@ -389,18 +389,18 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "string"
 
 
-Powerofficego Salesorders to Wave Invoice
------------------------------------------
-Every Powerofficego Salesorders will be synchronized with a Wave Invoice.
+PowerOffice Salesorders to Wave Invoice
+---------------------------------------
+Every PowerOffice Salesorders will be synchronized with a Wave Invoice.
 
-Once a link between a Powerofficego Salesorders and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Salesorders and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Salesorders and a Wave Invoice:
+The following properties are synchronized between a PowerOffice Salesorders and a Wave Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Salesorders Property
+   * - PowerOffice Salesorders Property
      - Wave Invoice Property
      - Wave Data Type
    * - CurrencyCode
