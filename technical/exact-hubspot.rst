@@ -2,27 +2,27 @@
 ExactOnline to HubSpot Dataflow
 ===============================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from ExactOnline to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Exact Accounts to Hubspot Company
+Exact Accounts to HubSpot Company
 ---------------------------------
-Every Exact Accounts will be synchronized with a Hubspot Company.
+Every Exact Accounts will be synchronized with a HubSpot Company.
 
-Once a link between a Exact Accounts and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Accounts and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Accounts and a Hubspot Company:
+The following properties are synchronized between a Exact Accounts and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Accounts Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
    * - Name
      - properties.name
      - "string"
@@ -31,58 +31,58 @@ The following properties are synchronized between a Exact Accounts and a Hubspot
      - "string"
 
 
-Exact Contacts to Hubspot Contact
+Exact Contacts to HubSpot Contact
 ---------------------------------
-Every Exact Contacts will be synchronized with a Hubspot Contact.
+Every Exact Contacts will be synchronized with a HubSpot Contact.
 
-Once a link between a Exact Contacts and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Contacts and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Contacts and a Hubspot Contact:
+The following properties are synchronized between a Exact Contacts and a HubSpot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Contacts Property
-     - Hubspot Contact Property
-     - Hubspot Data Type
+     - HubSpot Contact Property
+     - HubSpot Data Type
    * - BirthDate
      - properties.date_of_birth
      - "string"
 
 
-Exact Departments to Hubspot Company
+Exact Departments to HubSpot Company
 ------------------------------------
-Every Exact Departments will be synchronized with a Hubspot Company.
+Every Exact Departments will be synchronized with a HubSpot Company.
 
-Once a link between a Exact Departments and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Departments and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Departments and a Hubspot Company:
+The following properties are synchronized between a Exact Departments and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Departments Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
    * - Description
      - properties.description
      - "string"
 
 
-Exact Divisions to Hubspot Company
+Exact Divisions to HubSpot Company
 ----------------------------------
-Every Exact Divisions will be synchronized with a Hubspot Company.
+Every Exact Divisions will be synchronized with a HubSpot Company.
 
-Once a link between a Exact Divisions and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Divisions and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Divisions and a Hubspot Company:
+The following properties are synchronized between a Exact Divisions and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Divisions Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
    * - Description
      - properties.description
      - "string"
@@ -91,20 +91,20 @@ The following properties are synchronized between a Exact Divisions and a Hubspo
      - "string"
 
 
-Exact Employees to Hubspot Contact
+Exact Employees to HubSpot Contact
 ----------------------------------
-Every Exact Employees will be synchronized with a Hubspot Contact.
+Every Exact Employees will be synchronized with a HubSpot Contact.
 
-Once a link between a Exact Employees and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Employees and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Employees and a Hubspot Contact:
+The following properties are synchronized between a Exact Employees and a HubSpot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Employees Property
-     - Hubspot Contact Property
-     - Hubspot Data Type
+     - HubSpot Contact Property
+     - HubSpot Data Type
    * - BirthDate
      - properties.date_of_birth
      - "string"
