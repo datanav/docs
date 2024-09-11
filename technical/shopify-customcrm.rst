@@ -1,13 +1,13 @@
-=============================
-Shopify to CustomCRM Dataflow
-=============================
+==============================
+Shopify to Custom CRM Dataflow
+==============================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to CustomCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Shopify Customer to CustomCRM Contact
 -------------------------------------
@@ -57,34 +57,34 @@ The following properties are synchronized between a Shopify Product and a Custom
      - CustomCRM Data Type
 
 
-Shopify Order to CustomCRM Order
---------------------------------
-Every Shopify Order will be synchronized with a CustomCRM Order.
+Shopify Order to Custom CRM Order
+---------------------------------
+Every Shopify Order will be synchronized with a Custom CRM Order.
 
-Once a link between a Shopify Order and a CustomCRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a Custom CRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a CustomCRM Order:
+The following properties are synchronized between a Shopify Order and a Custom CRM Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     - CustomCRM Order Property
-     - CustomCRM Data Type
+     - Custom CRM Order Property
+     - Custom CRM Data Type
 
 
-Shopify Sesamproduct to CustomCRM Product
------------------------------------------
-Every Shopify Sesamproduct will be synchronized with a CustomCRM Product.
+Shopify Sesamproduct to Custom CRM Product
+------------------------------------------
+Every Shopify Sesamproduct will be synchronized with a Custom CRM Product.
 
-Once a link between a Shopify Sesamproduct and a CustomCRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Sesamproduct and a Custom CRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Sesamproduct and a CustomCRM Product:
+The following properties are synchronized between a Shopify Sesamproduct and a Custom CRM Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Sesamproduct Property
-     - CustomCRM Product Property
-     - CustomCRM Data Type
+     - Custom CRM Product Property
+     - Custom CRM Data Type
 
