@@ -2,25 +2,25 @@
 Business Central to Tidsbanken Dataflow
 =======================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to Tidsbanken. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-BusinessCentral Customers company to Tidsbanken Kunde
------------------------------------------------------
-Every BusinessCentral Customers company will be synchronized with a Tidsbanken Kunde.
+Business Central Customers company to Tidsbanken Kunde
+------------------------------------------------------
+Every Business Central Customers company will be synchronized with a Tidsbanken Kunde.
 
-Once a link between a BusinessCentral Customers company and a Tidsbanken Kunde is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers company and a Tidsbanken Kunde is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Customers company and a Tidsbanken Kunde:
+The following properties are synchronized between a Business Central Customers company and a Tidsbanken Kunde:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Customers company Property
+   * - Business Central Customers company Property
      - Tidsbanken Kunde Property
      - Tidsbanken Data Type
    * - addressLine1
@@ -67,18 +67,18 @@ The following properties are synchronized between a BusinessCentral Customers co
      - "string"
 
 
-BusinessCentral Employees to Tidsbanken Ansatt
-----------------------------------------------
-Every BusinessCentral Employees will be synchronized with a Tidsbanken Ansatt.
+Business Central Employees to Tidsbanken Ansatt
+-----------------------------------------------
+Every Business Central Employees will be synchronized with a Tidsbanken Ansatt.
 
-Once a link between a BusinessCentral Employees and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Employees and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Employees and a Tidsbanken Ansatt:
+The following properties are synchronized between a Business Central Employees and a Tidsbanken Ansatt:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Employees Property
+   * - Business Central Employees Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
    * - birthDate
