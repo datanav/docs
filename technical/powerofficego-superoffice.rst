@@ -2,7 +2,7 @@
 PowerOfficeGO to SuperOffice Dataflow
 =====================================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
@@ -273,20 +273,20 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - "float"
 
 
-Powerofficego Departments to Superoffice Contact
-------------------------------------------------
-Every Powerofficego Departments will be synchronized with a Superoffice Contact.
+PowerOffice Departments to SuperOffice Contact
+----------------------------------------------
+Every PowerOffice Departments will be synchronized with a SuperOffice Contact.
 
-Once a link between a Powerofficego Departments and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Departments and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Departments and a Superoffice Contact:
+The following properties are synchronized between a PowerOffice Departments and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Departments Property
-     - Superoffice Contact Property
-     - Superoffice Data Type
+   * - PowerOffice Departments Property
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
    * - Code
      - OrgNr (Dependant on having wd:Q2366457 in Country.TwoLetterISOCountry)
      - "string"
@@ -295,20 +295,20 @@ The following properties are synchronized between a Powerofficego Departments an
      - "string"
 
 
-Powerofficego Employees to Superoffice Person
----------------------------------------------
-Every Powerofficego Employees will be synchronized with a Superoffice Person.
+PowerOffice Employees to SuperOffice Person
+-------------------------------------------
+Every PowerOffice Employees will be synchronized with a SuperOffice Person.
 
-Once a link between a Powerofficego Employees and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Employees and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Employees and a Superoffice Person:
+The following properties are synchronized between a PowerOffice Employees and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Employees Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+   * - PowerOffice Employees Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
    * - DateOfBirth
      - BirthDate
      - N/A
