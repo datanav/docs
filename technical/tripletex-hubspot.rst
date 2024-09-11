@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2024-09-11 07:56:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
@@ -198,20 +198,20 @@ The following properties are synchronized between a Tripletex Employee and a Hub
      - "string"
 
 
-Tripletex Customer to Hubspot Company
+Tripletex Customer to HubSpot Company
 -------------------------------------
-Every Tripletex Customer will be synchronized with a Hubspot Company.
+Every Tripletex Customer will be synchronized with a HubSpot Company.
 
-Once a link between a Tripletex Customer and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a Hubspot Company:
+The following properties are synchronized between a Tripletex Customer and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
    * - deliveryAddress.addressLine1
      - properties.address
      - "string"
@@ -274,20 +274,20 @@ The following properties are synchronized between a Tripletex Customer and a Hub
      - "string"
 
 
-Tripletex Department to Hubspot Company
+Tripletex Department to HubSpot Company
 ---------------------------------------
-Every Tripletex Department will be synchronized with a Hubspot Company.
+Every Tripletex Department will be synchronized with a HubSpot Company.
 
-Once a link between a Tripletex Department and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a Hubspot Company:
+The following properties are synchronized between a Tripletex Department and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
    * - departmentNumber
      - properties.description
      - "string"
