@@ -2,25 +2,25 @@
 BusinessNxt to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from BusinessNxt to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Visma Address to Salesforce Division
-------------------------------------
-Every Visma Address will be synchronized with a Salesforce Division.
+BusinessNxt Address to Salesforce Division
+------------------------------------------
+Every BusinessNxt Address will be synchronized with a Salesforce Division.
 
-Once a link between a Visma Address and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Address and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Address and a Salesforce Division:
+The following properties are synchronized between a BusinessNxt Address and a Salesforce Division:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Address Property
+   * - BusinessNxt Address Property
      - Salesforce Division Property
      - Salesforce Data Type
    * - name
@@ -28,18 +28,18 @@ The following properties are synchronized between a Visma Address and a Salesfor
      - "string"
 
 
-Visma Company to Salesforce Division
-------------------------------------
-Every Visma Company will be synchronized with a Salesforce Division.
+BusinessNxt Company to Salesforce Division
+------------------------------------------
+Every BusinessNxt Company will be synchronized with a Salesforce Division.
 
-Once a link between a Visma Company and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Company and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Company and a Salesforce Division:
+The following properties are synchronized between a BusinessNxt Company and a Salesforce Division:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Company Property
+   * - BusinessNxt Company Property
      - Salesforce Division Property
      - Salesforce Data Type
    * - name
@@ -47,34 +47,34 @@ The following properties are synchronized between a Visma Company and a Salesfor
      - "string"
 
 
-Visma Country to Salesforce Currencytype
-----------------------------------------
-Every Visma Country will be synchronized with a Salesforce Currencytype.
+BusinessNxt Country to Salesforce Currencytype
+----------------------------------------------
+Every BusinessNxt Country will be synchronized with a Salesforce Currencytype.
 
-Once a link between a Visma Country and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Country and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Country and a Salesforce Currencytype:
+The following properties are synchronized between a BusinessNxt Country and a Salesforce Currencytype:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Country Property
+   * - BusinessNxt Country Property
      - Salesforce Currencytype Property
      - Salesforce Data Type
 
 
-Visma Order to Salesforce Invoice
----------------------------------
-Every Visma Order will be synchronized with a Salesforce Invoice.
+BusinessNxt Order to Salesforce Invoice
+---------------------------------------
+Every BusinessNxt Order will be synchronized with a Salesforce Invoice.
 
-Once a link between a Visma Order and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Order and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Order and a Salesforce Invoice:
+The following properties are synchronized between a BusinessNxt Order and a Salesforce Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Order Property
+   * - BusinessNxt Order Property
      - Salesforce Invoice Property
      - Salesforce Data Type
    * - dueDate
@@ -88,50 +88,50 @@ The following properties are synchronized between a Visma Order and a Salesforce
      - "string"
 
 
-Visma Orderline to Salesforce Invoice
--------------------------------------
-Every Visma Orderline will be synchronized with a Salesforce Invoice.
+BusinessNxt Orderline to Salesforce Invoice
+-------------------------------------------
+Every BusinessNxt Orderline will be synchronized with a Salesforce Invoice.
 
-Once a link between a Visma Orderline and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Orderline and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Orderline and a Salesforce Invoice:
+The following properties are synchronized between a BusinessNxt Orderline and a Salesforce Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Orderline Property
+   * - BusinessNxt Orderline Property
      - Salesforce Invoice Property
      - Salesforce Data Type
 
 
-Visma Productcategory to Salesforce Currencytype
-------------------------------------------------
-Every Visma Productcategory will be synchronized with a Salesforce Currencytype.
+BusinessNxt Productcategory to Salesforce Currencytype
+------------------------------------------------------
+Every BusinessNxt Productcategory will be synchronized with a Salesforce Currencytype.
 
-Once a link between a Visma Productcategory and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Productcategory and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Productcategory and a Salesforce Currencytype:
+The following properties are synchronized between a BusinessNxt Productcategory and a Salesforce Currencytype:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Productcategory Property
+   * - BusinessNxt Productcategory Property
      - Salesforce Currencytype Property
      - Salesforce Data Type
 
 
-Visma Vat to Salesforce Currencytype
-------------------------------------
-Every Visma Vat will be synchronized with a Salesforce Currencytype.
+BusinessNxt Vat to Salesforce Currencytype
+------------------------------------------
+Every BusinessNxt Vat will be synchronized with a Salesforce Currencytype.
 
-Once a link between a Visma Vat and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Vat and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Vat and a Salesforce Currencytype:
+The following properties are synchronized between a BusinessNxt Vat and a Salesforce Currencytype:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Vat Property
+   * - BusinessNxt Vat Property
      - Salesforce Currencytype Property
      - Salesforce Data Type
 
