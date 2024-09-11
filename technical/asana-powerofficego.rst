@@ -1,28 +1,28 @@
-================================
-Asana to PowerOffice GO Dataflow
-================================
+===============================
+Asana to PowerOfficeGO Dataflow
+===============================
 
-Generated: 2024-09-11 07:53:15
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Asana to PowerOffice GO. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Asana to PowerOfficeGO. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Asana Projects to PowerOffice Projects
---------------------------------------
-Every Asana Projects will be synchronized with a PowerOffice Projects.
+Asana Projects to PowerOfficeGO Projects
+----------------------------------------
+Every Asana Projects will be synchronized with a PowerOfficeGO Projects.
 
-Once a link between a Asana Projects and a PowerOffice Projects is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Projects and a PowerOfficeGO Projects is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Projects and a PowerOffice Projects:
+The following properties are synchronized between a Asana Projects and a PowerOfficeGO Projects:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Projects Property
-     - PowerOffice Projects Property
-     - PowerOffice Data Type
+     - PowerOfficeGO Projects Property
+     - PowerOfficeGO Data Type
    * - name
      - Name
      - "string"
@@ -31,20 +31,20 @@ The following properties are synchronized between a Asana Projects and a PowerOf
      - "integer"
 
 
-Asana Users to PowerOffice Employees
-------------------------------------
-Every Asana Users will be synchronized with a PowerOffice Employees.
+Asana Users to PowerOfficeGO Employees
+--------------------------------------
+Every Asana Users will be synchronized with a PowerOfficeGO Employees.
 
-Once a link between a Asana Users and a PowerOffice Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Users and a PowerOfficeGO Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Users and a PowerOffice Employees:
+The following properties are synchronized between a Asana Users and a PowerOfficeGO Employees:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Users Property
-     - PowerOffice Employees Property
-     - PowerOffice Data Type
+     - PowerOfficeGO Employees Property
+     - PowerOfficeGO Data Type
    * - name
      - FirstName
      - "string"
