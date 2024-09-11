@@ -2,7 +2,7 @@
 Custom CRM to WebCRM Dataflow
 =============================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -25,34 +25,34 @@ The following properties are synchronized between a CustomCRM Customer and a Web
      - WebCRM Data Type
 
 
-CustomCRM Contact to WebCRM Persons
------------------------------------
-Every CustomCRM Contact will be synchronized with a WebCRM Persons.
+Custom CRM Contact to WebCRM Persons
+------------------------------------
+Every Custom CRM Contact will be synchronized with a WebCRM Persons.
 
-Once a link between a CustomCRM Contact and a WebCRM Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom CRM Contact and a WebCRM Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomCRM Contact and a WebCRM Persons:
+The following properties are synchronized between a Custom CRM Contact and a WebCRM Persons:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomCRM Contact Property
+   * - Custom CRM Contact Property
      - WebCRM Persons Property
      - WebCRM Data Type
 
 
-CustomCRM Product to WebCRM Products
-------------------------------------
-Every CustomCRM Product will be synchronized with a WebCRM Products.
+Custom CRM Product to WebCRM Products
+-------------------------------------
+Every Custom CRM Product will be synchronized with a WebCRM Products.
 
-Once a link between a CustomCRM Product and a WebCRM Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom CRM Product and a WebCRM Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomCRM Product and a WebCRM Products:
+The following properties are synchronized between a Custom CRM Product and a WebCRM Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomCRM Product Property
+   * - Custom CRM Product Property
      - WebCRM Products Property
      - WebCRM Data Type
 
