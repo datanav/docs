@@ -2,7 +2,7 @@
 Custom CRM to SuperOffice Dataflow
 ==================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -41,34 +41,34 @@ The following properties are synchronized between a CustomCRM Customer and a Sup
      - SuperOffice Data Type
 
 
-CustomCRM Product to SuperOffice Product
-----------------------------------------
-Every CustomCRM Product will be synchronized with a SuperOffice Product.
+Custom CRM Product to SuperOffice Product
+-----------------------------------------
+Every Custom CRM Product will be synchronized with a SuperOffice Product.
 
-Once a link between a CustomCRM Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom CRM Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomCRM Product and a SuperOffice Product:
+The following properties are synchronized between a Custom CRM Product and a SuperOffice Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomCRM Product Property
+   * - Custom CRM Product Property
      - SuperOffice Product Property
      - SuperOffice Data Type
 
 
-CustomCRM Quote to SuperOffice Quotealternative
------------------------------------------------
-Every CustomCRM Quote will be synchronized with a SuperOffice Quotealternative.
+Custom CRM Quote to SuperOffice Quotealternative
+------------------------------------------------
+Every Custom CRM Quote will be synchronized with a SuperOffice Quotealternative.
 
-Once a link between a CustomCRM Quote and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom CRM Quote and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomCRM Quote and a SuperOffice Quotealternative:
+The following properties are synchronized between a Custom CRM Quote and a SuperOffice Quotealternative:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomCRM Quote Property
+   * - Custom CRM Quote Property
      - SuperOffice Quotealternative Property
      - SuperOffice Data Type
 
