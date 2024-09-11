@@ -1,13 +1,13 @@
-=============================
-Asana to Businessnxt Dataflow
-=============================
+====================================
+Asana to Visma Business Nxt Dataflow
+====================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Asana to Businessnxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Asana to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Asana Teams to Businessnxt Address
 ----------------------------------
@@ -28,39 +28,39 @@ The following properties are synchronized between a Asana Teams and a Businessnx
      - "string"
 
 
-Asana Workspaces to Businessnxt Address
----------------------------------------
-Every Asana Workspaces will be synchronized with a Businessnxt Address.
+Asana Workspaces to Visma Address
+---------------------------------
+Every Asana Workspaces will be synchronized with a Visma Address.
 
-Once a link between a Asana Workspaces and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Workspaces and a Visma Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Workspaces and a Businessnxt Address:
+The following properties are synchronized between a Asana Workspaces and a Visma Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Workspaces Property
-     - Businessnxt Address Property
-     - Businessnxt Data Type
+     - Visma Address Property
+     - Visma Data Type
    * - name
      - name
      - "string"
 
 
-Asana Workspaces to Businessnxt Company
----------------------------------------
-Every Asana Workspaces will be synchronized with a Businessnxt Company.
+Asana Workspaces to Visma Company
+---------------------------------
+Every Asana Workspaces will be synchronized with a Visma Company.
 
-Once a link between a Asana Workspaces and a Businessnxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Workspaces and a Visma Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Workspaces and a Businessnxt Company:
+The following properties are synchronized between a Asana Workspaces and a Visma Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Workspaces Property
-     - Businessnxt Company Property
-     - Businessnxt Data Type
+     - Visma Company Property
+     - Visma Data Type
    * - name
      - name
      - "string"
