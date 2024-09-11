@@ -2,7 +2,7 @@
 Custom Webshop to SuperOffice Dataflow
 ======================================
 
-Generated: 2024-09-11 11:38:24
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -25,18 +25,18 @@ The following properties are synchronized between a CustomWebshop Customer and a
      - SuperOffice Data Type
 
 
-CustomWebshop Product to SuperOffice Product
---------------------------------------------
-Every CustomWebshop Product will be synchronized with a SuperOffice Product.
+Custom Webshop Product to SuperOffice Product
+---------------------------------------------
+Every Custom Webshop Product will be synchronized with a SuperOffice Product.
 
-Once a link between a CustomWebshop Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Webshop Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomWebshop Product and a SuperOffice Product:
+The following properties are synchronized between a Custom Webshop Product and a SuperOffice Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomWebshop Product Property
+   * - Custom Webshop Product Property
      - SuperOffice Product Property
      - SuperOffice Data Type
 
