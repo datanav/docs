@@ -2,27 +2,27 @@
 PowerOfficeGO to BusinessNxt Dataflow
 =====================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from PowerOfficeGO to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-PowerOffice Customers to Visma Address
---------------------------------------
-Every PowerOffice Customers will be synchronized with a Visma Address.
+PowerOfficeGO Customers to BusinessNxt Address
+----------------------------------------------
+Every PowerOfficeGO Customers will be synchronized with a BusinessNxt Address.
 
-Once a link between a PowerOffice Customers and a Visma Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Customers and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Customers and a Visma Address:
+The following properties are synchronized between a PowerOfficeGO Customers and a BusinessNxt Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Customers Property
-     - Visma Address Property
-     - Visma Data Type
+   * - PowerOfficeGO Customers Property
+     - BusinessNxt Address Property
+     - BusinessNxt Data Type
    * - Name
      - name
      - "string"
@@ -31,39 +31,39 @@ The following properties are synchronized between a PowerOffice Customers and a 
      - "string"
 
 
-PowerOffice Departments to Visma Address
-----------------------------------------
-Every PowerOffice Departments will be synchronized with a Visma Address.
+PowerOfficeGO Departments to BusinessNxt Address
+------------------------------------------------
+Every PowerOfficeGO Departments will be synchronized with a BusinessNxt Address.
 
-Once a link between a PowerOffice Departments and a Visma Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Departments and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Departments and a Visma Address:
+The following properties are synchronized between a PowerOfficeGO Departments and a BusinessNxt Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Departments Property
-     - Visma Address Property
-     - Visma Data Type
+   * - PowerOfficeGO Departments Property
+     - BusinessNxt Address Property
+     - BusinessNxt Data Type
    * - Name
      - name
      - "string"
 
 
-PowerOffice Salesorderlines to Visma Order
-------------------------------------------
-Every PowerOffice Salesorderlines will be synchronized with a Visma Order.
+PowerOfficeGO Salesorderlines to BusinessNxt Order
+--------------------------------------------------
+Every PowerOfficeGO Salesorderlines will be synchronized with a BusinessNxt Order.
 
-Once a link between a PowerOffice Salesorderlines and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Salesorderlines and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Salesorderlines and a Visma Order:
+The following properties are synchronized between a PowerOfficeGO Salesorderlines and a BusinessNxt Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Salesorderlines Property
-     - Visma Order Property
-     - Visma Data Type
+   * - PowerOfficeGO Salesorderlines Property
+     - BusinessNxt Order Property
+     - BusinessNxt Data Type
 
 
 PowerOfficeGO Contactperson to BusinessNxt Country
