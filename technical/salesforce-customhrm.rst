@@ -1,13 +1,13 @@
-=================================
-Salesforce to Custom HRM Dataflow
-=================================
+================================
+Salesforce to CustomHRM Dataflow
+================================
 
-Generated: 2024-09-11 07:44:14
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Custom HRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to CustomHRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Salesforce Contact to Custom Employee
 -------------------------------------
@@ -89,18 +89,18 @@ The following properties are synchronized between a Salesforce Seller and a Cust
      - Custom Data Type
 
 
-Salesforce User to Custom Employee
-----------------------------------
-Every Salesforce User will be synchronized with a Custom Employee.
+Salesforce User to CustomHRM Employee
+-------------------------------------
+Every Salesforce User will be synchronized with a CustomHRM Employee.
 
-Once a link between a Salesforce User and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce User and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce User and a Custom Employee:
+The following properties are synchronized between a Salesforce User and a CustomHRM Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce User Property
-     - Custom Employee Property
-     - Custom Data Type
+     - CustomHRM Employee Property
+     - CustomHRM Data Type
 
