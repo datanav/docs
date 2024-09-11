@@ -1,13 +1,13 @@
 ==============================
-Salesforce to Hubspot Dataflow
+Salesforce to HubSpot Dataflow
 ==============================
 
-Generated: 2024-09-11 00:00:24
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Hubspot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Salesforce Contact to Hubspot Contact
 -------------------------------------
@@ -168,20 +168,20 @@ The following properties are synchronized between a Salesforce User and a Hubspo
      - "string"
 
 
-Salesforce Invoiceline to Hubspot Lineitem
+Salesforce Invoiceline to HubSpot Lineitem
 ------------------------------------------
-Every Salesforce Invoiceline will be synchronized with a Hubspot Lineitem.
+Every Salesforce Invoiceline will be synchronized with a HubSpot Lineitem.
 
-Once a link between a Salesforce Invoiceline and a Hubspot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Invoiceline and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Invoiceline and a Hubspot Lineitem:
+The following properties are synchronized between a Salesforce Invoiceline and a HubSpot Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Invoiceline Property
-     - Hubspot Lineitem Property
-     - Hubspot Data Type
+     - HubSpot Lineitem Property
+     - HubSpot Data Type
    * - Description
      - properties.description
      - "string"
@@ -196,20 +196,20 @@ The following properties are synchronized between a Salesforce Invoiceline and a
      - "string"
 
 
-Salesforce Orderitem to Hubspot Lineitem
+Salesforce Orderitem to HubSpot Lineitem
 ----------------------------------------
-Every Salesforce Orderitem will be synchronized with a Hubspot Lineitem.
+Every Salesforce Orderitem will be synchronized with a HubSpot Lineitem.
 
-Once a link between a Salesforce Orderitem and a Hubspot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Orderitem and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Orderitem and a Hubspot Lineitem:
+The following properties are synchronized between a Salesforce Orderitem and a HubSpot Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Orderitem Property
-     - Hubspot Lineitem Property
-     - Hubspot Data Type
+     - HubSpot Lineitem Property
+     - HubSpot Data Type
    * - Quantity
      - properties.quantity
      - N/A
@@ -218,20 +218,20 @@ The following properties are synchronized between a Salesforce Orderitem and a H
      - "string"
 
 
-Salesforce Product2 to Hubspot Product
+Salesforce Product2 to HubSpot Product
 --------------------------------------
-Every Salesforce Product2 will be synchronized with a Hubspot Product.
+Every Salesforce Product2 will be synchronized with a HubSpot Product.
 
-Once a link between a Salesforce Product2 and a Hubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Product2 and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Product2 and a Hubspot Product:
+The following properties are synchronized between a Salesforce Product2 and a HubSpot Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Product2 Property
-     - Hubspot Product Property
-     - Hubspot Data Type
+     - HubSpot Product Property
+     - HubSpot Data Type
    * - Description
      - properties.description
      - "string"
@@ -246,39 +246,39 @@ The following properties are synchronized between a Salesforce Product2 and a Hu
      - "string"
 
 
-Salesforce Quote to Hubspot Quote
+Salesforce Quote to HubSpot Quote
 ---------------------------------
-Every Salesforce Quote will be synchronized with a Hubspot Quote.
+Every Salesforce Quote will be synchronized with a HubSpot Quote.
 
-Once a link between a Salesforce Quote and a Hubspot Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quote and a HubSpot Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quote and a Hubspot Quote:
+The following properties are synchronized between a Salesforce Quote and a HubSpot Quote:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quote Property
-     - Hubspot Quote Property
-     - Hubspot Data Type
+     - HubSpot Quote Property
+     - HubSpot Data Type
    * - Name
      - properties.hs_title
      - "string"
 
 
-Salesforce Quotelineitem to Hubspot Lineitem
+Salesforce Quotelineitem to HubSpot Lineitem
 --------------------------------------------
-Every Salesforce Quotelineitem will be synchronized with a Hubspot Lineitem.
+Every Salesforce Quotelineitem will be synchronized with a HubSpot Lineitem.
 
-Once a link between a Salesforce Quotelineitem and a Hubspot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quotelineitem and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quotelineitem and a Hubspot Lineitem:
+The following properties are synchronized between a Salesforce Quotelineitem and a HubSpot Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quotelineitem Property
-     - Hubspot Lineitem Property
-     - Hubspot Data Type
+     - HubSpot Lineitem Property
+     - HubSpot Data Type
    * - Description
      - properties.description
      - "string"
