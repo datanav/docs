@@ -2,29 +2,29 @@
 Chargebee to Business Central Dataflow
 ======================================
 
-Generated: 2024-09-11 07:53:15
+Generated: 2024-09-11 07:54:14
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Chargebee to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Chargebee Customer to Businesscentral Customers company
--------------------------------------------------------
-Before any synchronization can take place, a link between a Chargebee Customer and a Businesscentral Customers company must be established.
+Chargebee Customer to Business Customers company
+------------------------------------------------
+Before any synchronization can take place, a link between a Chargebee Customer and a Business Customers company must be established.
 
-A new Businesscentral Customers company will be created from a Chargebee Customer if it is connected to a Chargebee Order that is synchronized into Businesscentral.
+A new Business Customers company will be created from a Chargebee Customer if it is connected to a Chargebee Order that is synchronized into Business.
 
-Once a link between a Chargebee Customer and a Businesscentral Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Customer and a Business Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Customer and a Businesscentral Customers company:
+The following properties are synchronized between a Chargebee Customer and a Business Customers company:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Customer Property
-     - Businesscentral Customers company Property
-     - Businesscentral Data Type
+     - Business Customers company Property
+     - Business Data Type
 
 
 Chargebee Business_entity to Businesscentral Companies
