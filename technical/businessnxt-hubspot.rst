@@ -2,7 +2,7 @@
 Business Nxt to HubSpot Dataflow
 ================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -50,34 +50,34 @@ The following properties are synchronized between a BusinessNxt Company and a Hu
      - "string"
 
 
-BusinessNxt Orderline to HubSpot Lineitem
------------------------------------------
-Every BusinessNxt Orderline will be synchronized with a HubSpot Lineitem.
+Business Nxt Orderline to HubSpot Lineitem
+------------------------------------------
+Every Business Nxt Orderline will be synchronized with a HubSpot Lineitem.
 
-Once a link between a BusinessNxt Orderline and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Orderline and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Orderline and a HubSpot Lineitem:
+The following properties are synchronized between a Business Nxt Orderline and a HubSpot Lineitem:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Orderline Property
+   * - Business Nxt Orderline Property
      - HubSpot Lineitem Property
      - HubSpot Data Type
 
 
-BusinessNxt Product to HubSpot Product
---------------------------------------
-Every BusinessNxt Product will be synchronized with a HubSpot Product.
+Business Nxt Product to HubSpot Product
+---------------------------------------
+Every Business Nxt Product will be synchronized with a HubSpot Product.
 
-Once a link between a BusinessNxt Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Product and a HubSpot Product:
+The following properties are synchronized between a Business Nxt Product and a HubSpot Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Product Property
+   * - Business Nxt Product Property
      - HubSpot Product Property
      - HubSpot Data Type
    * - description
