@@ -2,7 +2,7 @@
 BusinessCentral to PowerOfficeGO Dataflow
 =========================================
 
-Generated: 2024-09-11 11:13:29
+Generated: 2024-09-11 11:28:31
 
 Introduction
 ------------
@@ -27,38 +27,38 @@ The following properties are synchronized between a BusinessCentral Customers an
      - PowerOfficeGO Data Type
 
 
-BusinessCentralBusinesscentral Customers to PowerOfficeGO Customers
--------------------------------------------------------------------
-Before any synchronization can take place, a link between a BusinessCentralBusinesscentral Customers and a PowerOfficeGO Customers must be established.
+BusinessCentral Customers to PowerOfficeGO Customers
+----------------------------------------------------
+Before any synchronization can take place, a link between a BusinessCentral Customers and a PowerOfficeGO Customers must be established.
 
-A new PowerOfficeGO Customers will be created from a BusinessCentralBusinesscentral Customers if it is connected to a BusinessCentralBusinesscentral Businesscentral-customers, Businesscentral-salesorders, Businesscentral-contact-person, or Businesscentral-contacts-person that is synchronized into PowerOfficeGO.
+A new PowerOfficeGO Customers will be created from a BusinessCentral Customers if it is connected to a BusinessCentral Customers, Salesorders, Contact-person, or Contacts-person that is synchronized into PowerOfficeGO.
 
-Once a link between a BusinessCentralBusinesscentral Customers and a PowerOfficeGO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessCentral Customers and a PowerOfficeGO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentralBusinesscentral Customers and a PowerOfficeGO Customers:
+The following properties are synchronized between a BusinessCentral Customers and a PowerOfficeGO Customers:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentralBusinesscentral Customers Property
+   * - BusinessCentral Customers Property
      - PowerOfficeGO Customers Property
      - PowerOfficeGO Data Type
 
 
-BusinessCentralBusinesscentral Customers to PowerOfficeGO Customers person
---------------------------------------------------------------------------
-Before any synchronization can take place, a link between a BusinessCentralBusinesscentral Customers and a PowerOfficeGO Customers person must be established.
+BusinessCentral Customers to PowerOfficeGO Customers person
+-----------------------------------------------------------
+Before any synchronization can take place, a link between a BusinessCentral Customers and a PowerOfficeGO Customers person must be established.
 
-A new PowerOfficeGO Customers person will be created from a BusinessCentralBusinesscentral Customers if it is connected to a BusinessCentralBusinesscentral Businesscentral-customers, Businesscentral-salesorders, Businesscentral-contact-person, or Businesscentral-contacts-person that is synchronized into PowerOfficeGO.
+A new PowerOfficeGO Customers person will be created from a BusinessCentral Customers if it is connected to a BusinessCentral Customers, Salesorders, Contact-person, or Contacts-person that is synchronized into PowerOfficeGO.
 
-Once a link between a BusinessCentralBusinesscentral Customers and a PowerOfficeGO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessCentral Customers and a PowerOfficeGO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentralBusinesscentral Customers and a PowerOfficeGO Customers person:
+The following properties are synchronized between a BusinessCentral Customers and a PowerOfficeGO Customers person:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentralBusinesscentral Customers Property
+   * - BusinessCentral Customers Property
      - PowerOfficeGO Customers person Property
      - PowerOfficeGO Data Type
 
