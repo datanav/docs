@@ -1,13 +1,13 @@
-=============================
-Trello to Custom HRM Dataflow
-=============================
+============================
+Trello to CustomHRM Dataflow
+============================
 
-Generated: 2024-09-11 07:44:14
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Trello to Custom HRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Trello to CustomHRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Trello Organizations to Custom Department
 -----------------------------------------
@@ -25,18 +25,18 @@ The following properties are synchronized between a Trello Organizations and a C
      - Custom Data Type
 
 
-Trello Members to Custom Employee
----------------------------------
-Every Trello Members will be synchronized with a Custom Employee.
+Trello Members to CustomHRM Employee
+------------------------------------
+Every Trello Members will be synchronized with a CustomHRM Employee.
 
-Once a link between a Trello Members and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Members and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Members and a Custom Employee:
+The following properties are synchronized between a Trello Members and a CustomHRM Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Members Property
-     - Custom Employee Property
-     - Custom Data Type
+     - CustomHRM Employee Property
+     - CustomHRM Data Type
 
