@@ -2,29 +2,29 @@
 Wave to Business Central Dataflow
 =================================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 07:54:14
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Customer to Businesscentral Customers person
--------------------------------------------------
-Before any synchronization can take place, a link between a Wave Customer and a Businesscentral Customers person must be established.
+Wave Customer to Business Customers person
+------------------------------------------
+Before any synchronization can take place, a link between a Wave Customer and a Business Customers person must be established.
 
-A new Businesscentral Customers person will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into Businesscentral.
+A new Business Customers person will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into Business.
 
-Once a link between a Wave Customer and a Businesscentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Business Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a Businesscentral Customers person:
+The following properties are synchronized between a Wave Customer and a Business Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - Businesscentral Customers person Property
-     - Businesscentral Data Type
+     - Business Customers person Property
+     - Business Data Type
    * - address.addressLine1
      - addressLine1
      - "string"
