@@ -2,41 +2,41 @@
 Asana to CustomWebshop Dataflow
 ===============================
 
-Generated: 2024-09-11 07:54:34
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Asana to CustomWebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Asana Teams to Custom Customer
-------------------------------
-Every Asana Teams will be synchronized with a Custom Customer.
+Asana Teams to CustomWebshop Customer
+-------------------------------------
+Every Asana Teams will be synchronized with a CustomWebshop Customer.
 
-Once a link between a Asana Teams and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Teams and a CustomWebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Teams and a Custom Customer:
+The following properties are synchronized between a Asana Teams and a CustomWebshop Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Teams Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomWebshop Customer Property
+     - CustomWebshop Data Type
 
 
-Asana Workspaces to Custom Customer
------------------------------------
-Every Asana Workspaces will be synchronized with a Custom Customer.
+Asana Workspaces to CustomWebshop Customer
+------------------------------------------
+Every Asana Workspaces will be synchronized with a CustomWebshop Customer.
 
-Once a link between a Asana Workspaces and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Workspaces and a CustomWebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Workspaces and a Custom Customer:
+The following properties are synchronized between a Asana Workspaces and a CustomWebshop Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Workspaces Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomWebshop Customer Property
+     - CustomWebshop Data Type
 
