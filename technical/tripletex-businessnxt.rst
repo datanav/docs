@@ -1,13 +1,13 @@
-=================================
-Tripletex to BusinessNxt Dataflow
-=================================
+==================================
+Tripletex to Business Nxt Dataflow
+==================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Tripletex Customer to BusinessNxt Address
 -----------------------------------------
@@ -69,20 +69,20 @@ The following properties are synchronized between a Tripletex Orderline and a Bu
      - BusinessNxt Data Type
 
 
-Tripletex Country to BusinessNxt Country
-----------------------------------------
-Every Tripletex Country will be synchronized with a BusinessNxt Country.
+Tripletex Country to Business Nxt Country
+-----------------------------------------
+Every Tripletex Country will be synchronized with a Business Nxt Country.
 
-Once a link between a Tripletex Country and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Country and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Country and a BusinessNxt Country:
+The following properties are synchronized between a Tripletex Country and a Business Nxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Country Property
-     - BusinessNxt Country Property
-     - BusinessNxt Data Type
+     - Business Nxt Country Property
+     - Business Nxt Data Type
    * - isoAlpha2Code
      - isoCode
      - "string"
@@ -91,39 +91,39 @@ The following properties are synchronized between a Tripletex Country and a Busi
      - "string"
 
 
-Tripletex Currency to BusinessNxt Currency
-------------------------------------------
-Every Tripletex Currency will be synchronized with a BusinessNxt Currency.
+Tripletex Currency to Business Nxt Currency
+-------------------------------------------
+Every Tripletex Currency will be synchronized with a Business Nxt Currency.
 
-Once a link between a Tripletex Currency and a BusinessNxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Currency and a Business Nxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Currency and a BusinessNxt Currency:
+The following properties are synchronized between a Tripletex Currency and a Business Nxt Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Currency Property
-     - BusinessNxt Currency Property
-     - BusinessNxt Data Type
+     - Business Nxt Currency Property
+     - Business Nxt Data Type
    * - displayName
      - name
      - "string"
 
 
-Tripletex Order to BusinessNxt Order
-------------------------------------
-Every Tripletex Order will be synchronized with a BusinessNxt Order.
+Tripletex Order to Business Nxt Order
+-------------------------------------
+Every Tripletex Order will be synchronized with a Business Nxt Order.
 
-Once a link between a Tripletex Order and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Order and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Order and a BusinessNxt Order:
+The following properties are synchronized between a Tripletex Order and a Business Nxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Order Property
-     - BusinessNxt Order Property
-     - BusinessNxt Data Type
+     - Business Nxt Order Property
+     - Business Nxt Data Type
    * - deliveryDate
      - dueDate
      - "string"
@@ -132,39 +132,39 @@ The following properties are synchronized between a Tripletex Order and a Busine
      - "string"
 
 
-Tripletex Orderline to BusinessNxt Orderline
---------------------------------------------
-Every Tripletex Orderline will be synchronized with a BusinessNxt Orderline.
+Tripletex Orderline to Business Nxt Orderline
+---------------------------------------------
+Every Tripletex Orderline will be synchronized with a Business Nxt Orderline.
 
-Once a link between a Tripletex Orderline and a BusinessNxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Orderline and a Business Nxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Orderline and a BusinessNxt Orderline:
+The following properties are synchronized between a Tripletex Orderline and a Business Nxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Orderline Property
-     - BusinessNxt Orderline Property
-     - BusinessNxt Data Type
+     - Business Nxt Orderline Property
+     - Business Nxt Data Type
    * - order.id
      - orderNo
      - "string"
 
 
-Tripletex Product to BusinessNxt Product
-----------------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a BusinessNxt Product.
+Tripletex Product to Business Nxt Product
+-----------------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Business Nxt Product.
 
-Once a link between a Tripletex Product and a BusinessNxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Product and a Business Nxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Product and a BusinessNxt Product:
+The following properties are synchronized between a Tripletex Product and a Business Nxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     - BusinessNxt Product Property
-     - BusinessNxt Data Type
+     - Business Nxt Product Property
+     - Business Nxt Data Type
    * - description
      - description
      - "string"
@@ -176,20 +176,20 @@ The following properties are synchronized between a Tripletex Product and a Busi
      - "string"
 
 
-Tripletex Productgroup to BusinessNxt Productcategory
------------------------------------------------------
-Every Tripletex Productgroup will be synchronized with a BusinessNxt Productcategory.
+Tripletex Productgroup to Business Nxt Productcategory
+------------------------------------------------------
+Every Tripletex Productgroup will be synchronized with a Business Nxt Productcategory.
 
-Once a link between a Tripletex Productgroup and a BusinessNxt Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Productgroup and a Business Nxt Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Productgroup and a BusinessNxt Productcategory:
+The following properties are synchronized between a Tripletex Productgroup and a Business Nxt Productcategory:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Productgroup Property
-     - BusinessNxt Productcategory Property
-     - BusinessNxt Data Type
+     - Business Nxt Productcategory Property
+     - Business Nxt Data Type
    * - name
      - text
      - "string"
