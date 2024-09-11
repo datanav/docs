@@ -2,25 +2,25 @@
 Visma Business Nxt to Tripletex Dataflow
 ========================================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Visma Business Nxt to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businessnxt Order to Tripletex Order
-------------------------------------
-Every Businessnxt Order will be synchronized with a Tripletex Order.
+Visma Order to Tripletex Order
+------------------------------
+Every Visma Order will be synchronized with a Tripletex Order.
 
-Once a link between a Businessnxt Order and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Order and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Order and a Tripletex Order:
+The following properties are synchronized between a Visma Order and a Tripletex Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Order Property
+   * - Visma Order Property
      - Tripletex Order Property
      - Tripletex Data Type
    * - dueDate
@@ -31,18 +31,18 @@ The following properties are synchronized between a Businessnxt Order and a Trip
      - N/A
 
 
-Businessnxt Orderline to Tripletex Orderline
---------------------------------------------
-Every Businessnxt Orderline will be synchronized with a Tripletex Orderline.
+Visma Orderline to Tripletex Orderline
+--------------------------------------
+Every Visma Orderline will be synchronized with a Tripletex Orderline.
 
-Once a link between a Businessnxt Orderline and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Orderline and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Orderline and a Tripletex Orderline:
+The following properties are synchronized between a Visma Orderline and a Tripletex Orderline:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Orderline Property
+   * - Visma Orderline Property
      - Tripletex Orderline Property
      - Tripletex Data Type
    * - orderNo
@@ -50,18 +50,18 @@ The following properties are synchronized between a Businessnxt Orderline and a 
      - "integer"
 
 
-Businessnxt Product to Tripletex Product
-----------------------------------------
-Every Businessnxt Product will be synchronized with a Tripletex Product.
+Visma Product to Tripletex Product
+----------------------------------
+Every Visma Product will be synchronized with a Tripletex Product.
 
-Once a link between a Businessnxt Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Product and a Tripletex Product:
+The following properties are synchronized between a Visma Product and a Tripletex Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Product Property
+   * - Visma Product Property
      - Tripletex Product Property
      - Tripletex Data Type
    * - description
