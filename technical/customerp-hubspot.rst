@@ -2,57 +2,57 @@
 Custom ERP to HubSpot Dataflow
 ==============================
 
-Generated: 2024-09-11 11:40:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Custom ERP to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-CustomERP Contact to HubSpot Contact
-------------------------------------
-Every CustomERP Contact will be synchronized with a HubSpot Contact.
+Custom ERP Contact to HubSpot Contact
+-------------------------------------
+Every Custom ERP Contact will be synchronized with a HubSpot Contact.
 
-Once a link between a CustomERP Contact and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Contact and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Contact and a HubSpot Contact:
+The following properties are synchronized between a Custom ERP Contact and a HubSpot Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Contact Property
+   * - Custom ERP Contact Property
      - HubSpot Contact Property
      - HubSpot Data Type
 
 
-CustomERP Customer to HubSpot Company
--------------------------------------
-Every CustomERP Customer will be synchronized with a HubSpot Company.
+Custom ERP Customer to HubSpot Company
+--------------------------------------
+Every Custom ERP Customer will be synchronized with a HubSpot Company.
 
-Once a link between a CustomERP Customer and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Customer and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Customer and a HubSpot Company:
+The following properties are synchronized between a Custom ERP Customer and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Customer Property
+   * - Custom ERP Customer Property
      - HubSpot Company Property
      - HubSpot Data Type
 
 
-CustomERP Employee to HubSpot Contact
--------------------------------------
-Every CustomERP Employee will be synchronized with a HubSpot Contact.
+Custom ERP Employee to HubSpot Contact
+--------------------------------------
+Every Custom ERP Employee will be synchronized with a HubSpot Contact.
 
-Once a link between a CustomERP Employee and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Employee and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Employee and a HubSpot Contact:
+The following properties are synchronized between a Custom ERP Employee and a HubSpot Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Employee Property
+   * - Custom ERP Employee Property
      - HubSpot Contact Property
      - HubSpot Data Type
 
