@@ -1,13 +1,13 @@
 =============================
-Membercare to Trello Dataflow
+MemberCare to Trello Dataflow
 =============================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Membercare to Trello. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to Trello. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Membercare Organizations to Trello Organizations
 ------------------------------------------------
@@ -47,18 +47,18 @@ The following properties are synchronized between a Membercare Persons and a Tre
      - "string"
 
 
-Membercare Companies to Trello Organizations
+MemberCare Companies to Trello Organizations
 --------------------------------------------
-Every Membercare Companies will be synchronized with a Trello Organizations.
+Every MemberCare Companies will be synchronized with a Trello Organizations.
 
-Once a link between a Membercare Companies and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companies and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Companies and a Trello Organizations:
+The following properties are synchronized between a MemberCare Companies and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Companies Property
+   * - MemberCare Companies Property
      - Trello Organizations Property
      - Trello Data Type
    * - companyName
