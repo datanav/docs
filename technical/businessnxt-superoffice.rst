@@ -2,7 +2,7 @@
 Business Nxt to SuperOffice Dataflow
 ====================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -53,18 +53,18 @@ The following properties are synchronized between a BusinessNxt Company and a Su
      - "string"
 
 
-BusinessNxt Orderline to SuperOffice Quoteline
-----------------------------------------------
-Every BusinessNxt Orderline will be synchronized with a SuperOffice Quoteline.
+Business Nxt Orderline to SuperOffice Quoteline
+-----------------------------------------------
+Every Business Nxt Orderline will be synchronized with a SuperOffice Quoteline.
 
-Once a link between a BusinessNxt Orderline and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Orderline and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Orderline and a SuperOffice Quoteline:
+The following properties are synchronized between a Business Nxt Orderline and a SuperOffice Quoteline:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Orderline Property
+   * - Business Nxt Orderline Property
      - SuperOffice Quoteline Property
      - SuperOffice Data Type
    * - orderNo
@@ -72,18 +72,18 @@ The following properties are synchronized between a BusinessNxt Orderline and a 
      - "integer"
 
 
-BusinessNxt Product to SuperOffice Product
-------------------------------------------
-Every BusinessNxt Product will be synchronized with a SuperOffice Product.
+Business Nxt Product to SuperOffice Product
+-------------------------------------------
+Every Business Nxt Product will be synchronized with a SuperOffice Product.
 
-Once a link between a BusinessNxt Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Product and a SuperOffice Product:
+The following properties are synchronized between a Business Nxt Product and a SuperOffice Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Product Property
+   * - Business Nxt Product Property
      - SuperOffice Product Property
      - SuperOffice Data Type
    * - description
