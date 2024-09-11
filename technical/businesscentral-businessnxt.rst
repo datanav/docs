@@ -1,13 +1,13 @@
-=======================================
-Businesscentral to Businessnxt Dataflow
-=======================================
+===============================================
+Business Central to Visma Business Nxt Dataflow
+===============================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:52:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to Businessnxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Businesscentral Companies to Businessnxt Address
 ------------------------------------------------
@@ -57,20 +57,20 @@ The following properties are synchronized between a Businesscentral Salesquotes 
      - Businessnxt Data Type
 
 
-Businesscentral Currencies to Businessnxt Currency
---------------------------------------------------
-Every Businesscentral Currencies will be synchronized with a Businessnxt Currency.
+Business Currencies to Visma Currency
+-------------------------------------
+Every Business Currencies will be synchronized with a Visma Currency.
 
-Once a link between a Businesscentral Currencies and a Businessnxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Currencies and a Visma Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Currencies and a Businessnxt Currency:
+The following properties are synchronized between a Business Currencies and a Visma Currency:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Currencies Property
-     - Businessnxt Currency Property
-     - Businessnxt Data Type
+   * - Business Currencies Property
+     - Visma Currency Property
+     - Visma Data Type
    * - code
      - isoCode
      - "string"
@@ -79,20 +79,20 @@ The following properties are synchronized between a Businesscentral Currencies a
      - "string"
 
 
-Businesscentral Customers company to Businessnxt Address
---------------------------------------------------------
-Every Businesscentral Customers company will be synchronized with a Businessnxt Address.
+Business Customers company to Visma Address
+-------------------------------------------
+Every Business Customers company will be synchronized with a Visma Address.
 
-Once a link between a Businesscentral Customers company and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers company and a Visma Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers company and a Businessnxt Address:
+The following properties are synchronized between a Business Customers company and a Visma Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Customers company Property
-     - Businessnxt Address Property
-     - Businessnxt Data Type
+   * - Business Customers company Property
+     - Visma Address Property
+     - Visma Data Type
    * - displayName
      - name
      - "string"
@@ -104,58 +104,58 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
 
 
-Businesscentral Customers company to Businessnxt Company
---------------------------------------------------------
-Every Businesscentral Customers company will be synchronized with a Businessnxt Company.
+Business Customers company to Visma Company
+-------------------------------------------
+Every Business Customers company will be synchronized with a Visma Company.
 
-Once a link between a Businesscentral Customers company and a Businessnxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers company and a Visma Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers company and a Businessnxt Company:
+The following properties are synchronized between a Business Customers company and a Visma Company:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Customers company Property
-     - Businessnxt Company Property
-     - Businessnxt Data Type
+   * - Business Customers company Property
+     - Visma Company Property
+     - Visma Data Type
    * - displayName
      - name
      - "string"
 
 
-Businesscentral Itemcategories to Businessnxt Productcategory
--------------------------------------------------------------
-Every Businesscentral Itemcategories will be synchronized with a Businessnxt Productcategory.
+Business Itemcategories to Visma Productcategory
+------------------------------------------------
+Every Business Itemcategories will be synchronized with a Visma Productcategory.
 
-Once a link between a Businesscentral Itemcategories and a Businessnxt Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Itemcategories and a Visma Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Itemcategories and a Businessnxt Productcategory:
+The following properties are synchronized between a Business Itemcategories and a Visma Productcategory:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Itemcategories Property
-     - Businessnxt Productcategory Property
-     - Businessnxt Data Type
+   * - Business Itemcategories Property
+     - Visma Productcategory Property
+     - Visma Data Type
    * - displayName
      - text
      - "string"
 
 
-Businesscentral Items to Businessnxt Product
---------------------------------------------
-Every Businesscentral Items will be synchronized with a Businessnxt Product.
+Business Items to Visma Product
+-------------------------------
+Every Business Items will be synchronized with a Visma Product.
 
-Once a link between a Businesscentral Items and a Businessnxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Items and a Visma Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Items and a Businessnxt Product:
+The following properties are synchronized between a Business Items and a Visma Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Items Property
-     - Businessnxt Product Property
-     - Businessnxt Data Type
+   * - Business Items Property
+     - Visma Product Property
+     - Visma Data Type
    * - inventory
      - quantityPerUnit
      - "string"
@@ -164,39 +164,39 @@ The following properties are synchronized between a Businesscentral Items and a 
      - "string"
 
 
-Businesscentral Salesorderlines to Businessnxt Orderline
---------------------------------------------------------
-Every Businesscentral Salesorderlines will be synchronized with a Businessnxt Orderline.
+Business Salesorderlines to Visma Orderline
+-------------------------------------------
+Every Business Salesorderlines will be synchronized with a Visma Orderline.
 
-Once a link between a Businesscentral Salesorderlines and a Businessnxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Salesorderlines and a Visma Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorderlines and a Businessnxt Orderline:
+The following properties are synchronized between a Business Salesorderlines and a Visma Orderline:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Salesorderlines Property
-     - Businessnxt Orderline Property
-     - Businessnxt Data Type
+   * - Business Salesorderlines Property
+     - Visma Orderline Property
+     - Visma Data Type
    * - documentId
      - orderNo
      - "string"
 
 
-Businesscentral Salesorders to Businessnxt Country
---------------------------------------------------
-Every Businesscentral Salesorders will be synchronized with a Businessnxt Country.
+Business Salesorders to Visma Country
+-------------------------------------
+Every Business Salesorders will be synchronized with a Visma Country.
 
-Once a link between a Businesscentral Salesorders and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Salesorders and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorders and a Businessnxt Country:
+The following properties are synchronized between a Business Salesorders and a Visma Country:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Salesorders Property
-     - Businessnxt Country Property
-     - Businessnxt Data Type
+   * - Business Salesorders Property
+     - Visma Country Property
+     - Visma Data Type
    * - billToCountry
      - isoCode
      - "string"
@@ -205,20 +205,20 @@ The following properties are synchronized between a Businesscentral Salesorders 
      - "string"
 
 
-Businesscentral Salesorders to Businessnxt Order
-------------------------------------------------
-Every Businesscentral Salesorders will be synchronized with a Businessnxt Order.
+Business Salesorders to Visma Order
+-----------------------------------
+Every Business Salesorders will be synchronized with a Visma Order.
 
-Once a link between a Businesscentral Salesorders and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Salesorders and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorders and a Businessnxt Order:
+The following properties are synchronized between a Business Salesorders and a Visma Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Salesorders Property
-     - Businessnxt Order Property
-     - Businessnxt Data Type
+   * - Business Salesorders Property
+     - Visma Order Property
+     - Visma Data Type
    * - orderDate
      - orderDate
      - "string"
@@ -227,20 +227,20 @@ The following properties are synchronized between a Businesscentral Salesorders 
      - "string"
 
 
-Businesscentral Salesquotes to Businessnxt Country
---------------------------------------------------
-Every Businesscentral Salesquotes will be synchronized with a Businessnxt Country.
+Business Salesquotes to Visma Country
+-------------------------------------
+Every Business Salesquotes will be synchronized with a Visma Country.
 
-Once a link between a Businesscentral Salesquotes and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Salesquotes and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesquotes and a Businessnxt Country:
+The following properties are synchronized between a Business Salesquotes and a Visma Country:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Salesquotes Property
-     - Businessnxt Country Property
-     - Businessnxt Data Type
+   * - Business Salesquotes Property
+     - Visma Country Property
+     - Visma Data Type
    * - billToCountry
      - name
      - "string"
