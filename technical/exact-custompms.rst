@@ -2,7 +2,7 @@
 ExactOnline to CustomPMS Dataflow
 =================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:37:15
 
 Introduction
 ------------
@@ -41,18 +41,18 @@ The following properties are synchronized between a Exact Divisions and a Custom
      - Custom Data Type
 
 
-Exact Accounts to CustomPMS Customer
-------------------------------------
-Every Exact Accounts will be synchronized with a CustomPMS Customer.
+ExactOnline Accounts to CustomPMS Customer
+------------------------------------------
+Every ExactOnline Accounts will be synchronized with a CustomPMS Customer.
 
-Once a link between a Exact Accounts and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Accounts and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Accounts and a CustomPMS Customer:
+The following properties are synchronized between a ExactOnline Accounts and a CustomPMS Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Accounts Property
+   * - ExactOnline Accounts Property
      - CustomPMS Customer Property
      - CustomPMS Data Type
 
