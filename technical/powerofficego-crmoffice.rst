@@ -2,7 +2,7 @@
 PowerOfficeGO to CRMOffice Dataflow
 ===================================
 
-Generated: 2024-09-11 08:55:19
+Generated: 2024-09-11 09:01:20
 
 Introduction
 ------------
@@ -59,18 +59,18 @@ The following properties are synchronized between a PowerOffice Employees and a 
      - "string"
 
 
-PowerOffice Product to CRMOffice Companies
-------------------------------------------
-Every PowerOffice Product will be synchronized with a CRMOffice Companies.
+PowerOfficeGO Product to CRMOffice Companies
+--------------------------------------------
+Every PowerOfficeGO Product will be synchronized with a CRMOffice Companies.
 
-Once a link between a PowerOffice Product and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Product and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Product and a CRMOffice Companies:
+The following properties are synchronized between a PowerOfficeGO Product and a CRMOffice Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Product Property
+   * - PowerOfficeGO Product Property
      - CRMOffice Companies Property
      - CRMOffice Data Type
 
