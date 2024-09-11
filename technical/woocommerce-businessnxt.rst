@@ -1,28 +1,28 @@
-===================================
-WooCommerce to BusinessNxt Dataflow
-===================================
+====================================
+WooCommerce to Business Nxt Dataflow
+====================================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-WooCommerce Order to BusinessNxt Currency
------------------------------------------
-Every WooCommerce Order will be synchronized with a BusinessNxt Currency.
+WooCommerce Order to Business Nxt Currency
+------------------------------------------
+Every WooCommerce Order will be synchronized with a Business Nxt Currency.
 
-Once a link between a WooCommerce Order and a BusinessNxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a Business Nxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Order and a BusinessNxt Currency:
+The following properties are synchronized between a WooCommerce Order and a Business Nxt Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Order Property
-     - BusinessNxt Currency Property
-     - BusinessNxt Data Type
+     - Business Nxt Currency Property
+     - Business Nxt Data Type
    * - billing.country
      - isoCode
      - "string"
@@ -31,58 +31,58 @@ The following properties are synchronized between a WooCommerce Order and a Busi
      - "string"
 
 
-WooCommerce Order to BusinessNxt Order
---------------------------------------
-Every WooCommerce Order will be synchronized with a BusinessNxt Order.
+WooCommerce Order to Business Nxt Order
+---------------------------------------
+Every WooCommerce Order will be synchronized with a Business Nxt Order.
 
-Once a link between a WooCommerce Order and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Order and a BusinessNxt Order:
+The following properties are synchronized between a WooCommerce Order and a Business Nxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Order Property
-     - BusinessNxt Order Property
-     - BusinessNxt Data Type
+     - Business Nxt Order Property
+     - Business Nxt Data Type
    * - discount_total
      - totalDiscountAmountInCurrency
      - "string"
 
 
-WooCommerce Order to BusinessNxt Orderline
-------------------------------------------
-Every WooCommerce Order will be synchronized with a BusinessNxt Orderline.
+WooCommerce Order to Business Nxt Orderline
+-------------------------------------------
+Every WooCommerce Order will be synchronized with a Business Nxt Orderline.
 
-Once a link between a WooCommerce Order and a BusinessNxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a Business Nxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Order and a BusinessNxt Orderline:
+The following properties are synchronized between a WooCommerce Order and a Business Nxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Order Property
-     - BusinessNxt Orderline Property
-     - BusinessNxt Data Type
+     - Business Nxt Orderline Property
+     - Business Nxt Data Type
    * - id
      - orderNo
      - "string"
 
 
-WooCommerce Product to BusinessNxt Product
-------------------------------------------
-Every WooCommerce Product will be synchronized with a BusinessNxt Product.
+WooCommerce Product to Business Nxt Product
+-------------------------------------------
+Every WooCommerce Product will be synchronized with a Business Nxt Product.
 
-Once a link between a WooCommerce Product and a BusinessNxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Product and a Business Nxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Product and a BusinessNxt Product:
+The following properties are synchronized between a WooCommerce Product and a Business Nxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Product Property
-     - BusinessNxt Product Property
-     - BusinessNxt Data Type
+     - Business Nxt Product Property
+     - Business Nxt Data Type
    * - sale_price
      - priceQuantity
      - "string"
