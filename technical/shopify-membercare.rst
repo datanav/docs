@@ -2,27 +2,27 @@
 Shopify to MemberCare Dataflow
 ==============================
 
-Generated: 2024-09-11 07:48:17
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Shopify Customer to Membercare Persons
+Shopify Customer to MemberCare Persons
 --------------------------------------
-Every Shopify Customer will be synchronized with a Membercare Persons.
+Every Shopify Customer will be synchronized with a MemberCare Persons.
 
-Once a link between a Shopify Customer and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Customer and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Customer and a Membercare Persons:
+The following properties are synchronized between a Shopify Customer and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Customer Property
-     - Membercare Persons Property
-     - Membercare Data Type
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - first_name
      - firstname
      - "string"
@@ -31,36 +31,36 @@ The following properties are synchronized between a Shopify Customer and a Membe
      - "string"
 
 
-Shopify Inventoryitem to Membercare Products
+Shopify Inventoryitem to MemberCare Products
 --------------------------------------------
-Every Shopify Inventoryitem will be synchronized with a Membercare Products.
+Every Shopify Inventoryitem will be synchronized with a MemberCare Products.
 
-Once a link between a Shopify Inventoryitem and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Inventoryitem and a MemberCare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Inventoryitem and a Membercare Products:
+The following properties are synchronized between a Shopify Inventoryitem and a MemberCare Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Inventoryitem Property
-     - Membercare Products Property
-     - Membercare Data Type
+     - MemberCare Products Property
+     - MemberCare Data Type
 
 
-Shopify Order to Membercare Invoices
+Shopify Order to MemberCare Invoices
 ------------------------------------
-Every Shopify Order will be synchronized with a Membercare Invoices.
+Every Shopify Order will be synchronized with a MemberCare Invoices.
 
-Once a link between a Shopify Order and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a Membercare Invoices:
+The following properties are synchronized between a Shopify Order and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
    * - line_items.price
      - invoiceItems.unitPrice
      - "string"
@@ -69,36 +69,36 @@ The following properties are synchronized between a Shopify Order and a Memberca
      - "string"
 
 
-Shopify Product to Membercare Products
+Shopify Product to MemberCare Products
 --------------------------------------
-Every Shopify Product will be synchronized with a Membercare Products.
+Every Shopify Product will be synchronized with a MemberCare Products.
 
-Once a link between a Shopify Product and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Product and a MemberCare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Product and a Membercare Products:
+The following properties are synchronized between a Shopify Product and a MemberCare Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Product Property
-     - Membercare Products Property
-     - Membercare Data Type
+     - MemberCare Products Property
+     - MemberCare Data Type
 
 
-Shopify Sesamproduct to Membercare Products
+Shopify Sesamproduct to MemberCare Products
 -------------------------------------------
-Every Shopify Sesamproduct will be synchronized with a Membercare Products.
+Every Shopify Sesamproduct will be synchronized with a MemberCare Products.
 
-Once a link between a Shopify Sesamproduct and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Sesamproduct and a MemberCare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Sesamproduct and a Membercare Products:
+The following properties are synchronized between a Shopify Sesamproduct and a MemberCare Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Sesamproduct Property
-     - Membercare Products Property
-     - Membercare Data Type
+     - MemberCare Products Property
+     - MemberCare Data Type
    * - title
      - name
      - "string"
