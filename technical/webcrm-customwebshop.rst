@@ -1,13 +1,13 @@
-================================
-WebCRM to CustomWebshop Dataflow
-================================
+=================================
+WebCRM to Custom Webshop Dataflow
+=================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to CustomWebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to Custom Webshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 WebCRM Opportunities to CustomWebshop Order
 -------------------------------------------
@@ -57,18 +57,18 @@ The following properties are synchronized between a WebCRM Quotationline and a C
      - CustomWebshop Data Type
 
 
-WebCRM Products to CustomWebshop Product
-----------------------------------------
-Every WebCRM Products will be synchronized with a CustomWebshop Product.
+WebCRM Products to Custom Webshop Product
+-----------------------------------------
+Every WebCRM Products will be synchronized with a Custom Webshop Product.
 
-Once a link between a WebCRM Products and a CustomWebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Products and a Custom Webshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Products and a CustomWebshop Product:
+The following properties are synchronized between a WebCRM Products and a Custom Webshop Product:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Products Property
-     - CustomWebshop Product Property
-     - CustomWebshop Data Type
+     - Custom Webshop Product Property
+     - Custom Webshop Data Type
 
