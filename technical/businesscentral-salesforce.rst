@@ -2,7 +2,7 @@
 Business Central to Salesforce Dataflow
 =======================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -101,18 +101,18 @@ The following properties are synchronized between a BusinessCentral Salesquotes 
      - Salesforce Data Type
 
 
-BusinessCentral Contacts person to Salesforce Contact
------------------------------------------------------
-Every BusinessCentral Contacts person will be synchronized with a Salesforce Contact.
+Business Central Contacts person to Salesforce Contact
+------------------------------------------------------
+Every Business Central Contacts person will be synchronized with a Salesforce Contact.
 
-Once a link between a BusinessCentral Contacts person and a Salesforce Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Contacts person and a Salesforce Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Contacts person and a Salesforce Contact:
+The following properties are synchronized between a Business Central Contacts person and a Salesforce Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Contacts person Property
+   * - Business Central Contacts person Property
      - Salesforce Contact Property
      - Salesforce Data Type
    * - city
@@ -138,18 +138,18 @@ The following properties are synchronized between a BusinessCentral Contacts per
      - "string"
 
 
-BusinessCentral Currencies to Salesforce Currencytype
------------------------------------------------------
-Every BusinessCentral Currencies will be synchronized with a Salesforce Currencytype.
+Business Central Currencies to Salesforce Currencytype
+------------------------------------------------------
+Every Business Central Currencies will be synchronized with a Salesforce Currencytype.
 
-Once a link between a BusinessCentral Currencies and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Currencies and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Currencies and a Salesforce Currencytype:
+The following properties are synchronized between a Business Central Currencies and a Salesforce Currencytype:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Currencies Property
+   * - Business Central Currencies Property
      - Salesforce Currencytype Property
      - Salesforce Data Type
    * - code
@@ -157,18 +157,18 @@ The following properties are synchronized between a BusinessCentral Currencies a
      - "string"
 
 
-BusinessCentral Customers company to Salesforce Organization
-------------------------------------------------------------
-Every BusinessCentral Customers company will be synchronized with a Salesforce Organization.
+Business Central Customers company to Salesforce Organization
+-------------------------------------------------------------
+Every Business Central Customers company will be synchronized with a Salesforce Organization.
 
-Once a link between a BusinessCentral Customers company and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers company and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Customers company and a Salesforce Organization:
+The following properties are synchronized between a Business Central Customers company and a Salesforce Organization:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Customers company Property
+   * - Business Central Customers company Property
      - Salesforce Organization Property
      - Salesforce Data Type
    * - city
@@ -194,18 +194,18 @@ The following properties are synchronized between a BusinessCentral Customers co
      - "string"
 
 
-BusinessCentral Customers person to Salesforce Customer
--------------------------------------------------------
-Every BusinessCentral Customers person will be synchronized with a Salesforce Customer.
+Business Central Customers person to Salesforce Customer
+--------------------------------------------------------
+Every Business Central Customers person will be synchronized with a Salesforce Customer.
 
-Once a link between a BusinessCentral Customers person and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers person and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Customers person and a Salesforce Customer:
+The following properties are synchronized between a Business Central Customers person and a Salesforce Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Customers person Property
+   * - Business Central Customers person Property
      - Salesforce Customer Property
      - Salesforce Data Type
    * - displayName
@@ -213,18 +213,18 @@ The following properties are synchronized between a BusinessCentral Customers pe
      - "string"
 
 
-BusinessCentral Employees to Salesforce User
---------------------------------------------
-Every BusinessCentral Employees will be synchronized with a Salesforce User.
+Business Central Employees to Salesforce User
+---------------------------------------------
+Every Business Central Employees will be synchronized with a Salesforce User.
 
-Once a link between a BusinessCentral Employees and a Salesforce User is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Employees and a Salesforce User is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Employees and a Salesforce User:
+The following properties are synchronized between a Business Central Employees and a Salesforce User:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Employees Property
+   * - Business Central Employees Property
      - Salesforce User Property
      - Salesforce Data Type
    * - displayName
@@ -247,18 +247,18 @@ The following properties are synchronized between a BusinessCentral Employees an
      - "string"
 
 
-BusinessCentral Items to Salesforce Product2
---------------------------------------------
-Every BusinessCentral Items will be synchronized with a Salesforce Product2.
+Business Central Items to Salesforce Product2
+---------------------------------------------
+Every Business Central Items will be synchronized with a Salesforce Product2.
 
-Once a link between a BusinessCentral Items and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Items and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Items and a Salesforce Product2:
+The following properties are synchronized between a Business Central Items and a Salesforce Product2:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Items Property
+   * - Business Central Items Property
      - Salesforce Product2 Property
      - Salesforce Data Type
    * - displayName
@@ -269,18 +269,18 @@ The following properties are synchronized between a BusinessCentral Items and a 
      - "string"
 
 
-BusinessCentral Salesorderlines to Salesforce Invoiceline
----------------------------------------------------------
-Every BusinessCentral Salesorderlines will be synchronized with a Salesforce Invoiceline.
+Business Central Salesorderlines to Salesforce Invoiceline
+----------------------------------------------------------
+Every Business Central Salesorderlines will be synchronized with a Salesforce Invoiceline.
 
-Once a link between a BusinessCentral Salesorderlines and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Salesorderlines and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Salesorderlines and a Salesforce Invoiceline:
+The following properties are synchronized between a Business Central Salesorderlines and a Salesforce Invoiceline:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Salesorderlines Property
+   * - Business Central Salesorderlines Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
    * - description
@@ -297,18 +297,18 @@ The following properties are synchronized between a BusinessCentral Salesorderli
      - "string"
 
 
-BusinessCentral Salesorderlines to Salesforce Orderitem
--------------------------------------------------------
-Every BusinessCentral Salesorderlines will be synchronized with a Salesforce Orderitem.
+Business Central Salesorderlines to Salesforce Orderitem
+--------------------------------------------------------
+Every Business Central Salesorderlines will be synchronized with a Salesforce Orderitem.
 
-Once a link between a BusinessCentral Salesorderlines and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Salesorderlines and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Salesorderlines and a Salesforce Orderitem:
+The following properties are synchronized between a Business Central Salesorderlines and a Salesforce Orderitem:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Salesorderlines Property
+   * - Business Central Salesorderlines Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
    * - documentId
@@ -322,18 +322,18 @@ The following properties are synchronized between a BusinessCentral Salesorderli
      - "string"
 
 
-BusinessCentral Salesorderlines to Salesforce Quotelineitem
------------------------------------------------------------
-Every BusinessCentral Salesorderlines will be synchronized with a Salesforce Quotelineitem.
+Business Central Salesorderlines to Salesforce Quotelineitem
+------------------------------------------------------------
+Every Business Central Salesorderlines will be synchronized with a Salesforce Quotelineitem.
 
-Once a link between a BusinessCentral Salesorderlines and a Salesforce Quotelineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Salesorderlines and a Salesforce Quotelineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Salesorderlines and a Salesforce Quotelineitem:
+The following properties are synchronized between a Business Central Salesorderlines and a Salesforce Quotelineitem:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Salesorderlines Property
+   * - Business Central Salesorderlines Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
    * - discountPercent
@@ -347,18 +347,18 @@ The following properties are synchronized between a BusinessCentral Salesorderli
      - "string"
 
 
-BusinessCentral Salesorders to Salesforce Order
------------------------------------------------
-Every BusinessCentral Salesorders will be synchronized with a Salesforce Order.
+Business Central Salesorders to Salesforce Order
+------------------------------------------------
+Every Business Central Salesorders will be synchronized with a Salesforce Order.
 
-Once a link between a BusinessCentral Salesorders and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Salesorders and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Salesorders and a Salesforce Order:
+The following properties are synchronized between a Business Central Salesorders and a Salesforce Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Salesorders Property
+   * - Business Central Salesorders Property
      - Salesforce Order Property
      - Salesforce Data Type
    * - billToAddressLine1
