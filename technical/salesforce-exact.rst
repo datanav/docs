@@ -1,13 +1,13 @@
-===================================
-Salesforce to Exact Online Dataflow
-===================================
+==================================
+Salesforce to ExactOnline Dataflow
+==================================
 
-Generated: 2024-09-11 07:46:45
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Salesforce Customer to Exact Contacts
 -------------------------------------
@@ -226,20 +226,20 @@ The following properties are synchronized between a Salesforce User and a Exact 
      - "string"
 
 
-Salesforce Contact to Exact Contacts
-------------------------------------
-Every Salesforce Contact will be synchronized with a Exact Contacts.
+Salesforce Contact to ExactOnline Contacts
+------------------------------------------
+Every Salesforce Contact will be synchronized with a ExactOnline Contacts.
 
-Once a link between a Salesforce Contact and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Contact and a ExactOnline Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Contact and a Exact Contacts:
+The following properties are synchronized between a Salesforce Contact and a ExactOnline Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Contact Property
-     - Exact Contacts Property
-     - Exact Data Type
+     - ExactOnline Contacts Property
+     - ExactOnline Data Type
    * - Birthdate
      - BirthDate
      - "string"
@@ -275,55 +275,55 @@ The following properties are synchronized between a Salesforce Contact and a Exa
      - "string"
 
 
-Salesforce Currencytype to Exact Currencies
--------------------------------------------
-Every Salesforce Currencytype will be synchronized with a Exact Currencies.
+Salesforce Currencytype to ExactOnline Currencies
+-------------------------------------------------
+Every Salesforce Currencytype will be synchronized with a ExactOnline Currencies.
 
-Once a link between a Salesforce Currencytype and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Currencytype and a ExactOnline Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Currencytype and a Exact Currencies:
+The following properties are synchronized between a Salesforce Currencytype and a ExactOnline Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Currencytype Property
-     - Exact Currencies Property
-     - Exact Data Type
+     - ExactOnline Currencies Property
+     - ExactOnline Data Type
    * - IsoCode
      - Code
      - "string"
 
 
-Salesforce Division to Exact Divisions
---------------------------------------
-Every Salesforce Division will be synchronized with a Exact Divisions.
+Salesforce Division to ExactOnline Divisions
+--------------------------------------------
+Every Salesforce Division will be synchronized with a ExactOnline Divisions.
 
-Once a link between a Salesforce Division and a Exact Divisions is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Division and a ExactOnline Divisions is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Division and a Exact Divisions:
+The following properties are synchronized between a Salesforce Division and a ExactOnline Divisions:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Division Property
-     - Exact Divisions Property
-     - Exact Data Type
+     - ExactOnline Divisions Property
+     - ExactOnline Data Type
 
 
-Salesforce Invoice to Exact Salesinvoices
------------------------------------------
-Every Salesforce Invoice will be synchronized with a Exact Salesinvoices.
+Salesforce Invoice to ExactOnline Salesinvoices
+-----------------------------------------------
+Every Salesforce Invoice will be synchronized with a ExactOnline Salesinvoices.
 
-Once a link between a Salesforce Invoice and a Exact Salesinvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Invoice and a ExactOnline Salesinvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Invoice and a Exact Salesinvoices:
+The following properties are synchronized between a Salesforce Invoice and a ExactOnline Salesinvoices:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Invoice Property
-     - Exact Salesinvoices Property
-     - Exact Data Type
+     - ExactOnline Salesinvoices Property
+     - ExactOnline Data Type
    * - CurrencyIsoCode
      - Currency
      - "string"
@@ -332,39 +332,39 @@ The following properties are synchronized between a Salesforce Invoice and a Exa
      - "string"
 
 
-Salesforce Invoiceline to Exact Salesorderlines
------------------------------------------------
-Every Salesforce Invoiceline will be synchronized with a Exact Salesorderlines.
+Salesforce Invoiceline to ExactOnline Salesorderlines
+-----------------------------------------------------
+Every Salesforce Invoiceline will be synchronized with a ExactOnline Salesorderlines.
 
-Once a link between a Salesforce Invoiceline and a Exact Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Invoiceline and a ExactOnline Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Invoiceline and a Exact Salesorderlines:
+The following properties are synchronized between a Salesforce Invoiceline and a ExactOnline Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Invoiceline Property
-     - Exact Salesorderlines Property
-     - Exact Data Type
+     - ExactOnline Salesorderlines Property
+     - ExactOnline Data Type
    * - Description
      - CostPriceFC
      - "string"
 
 
-Salesforce Order to Exact Salesorders
--------------------------------------
-Every Salesforce Order will be synchronized with a Exact Salesorders.
+Salesforce Order to ExactOnline Salesorders
+-------------------------------------------
+Every Salesforce Order will be synchronized with a ExactOnline Salesorders.
 
-Once a link between a Salesforce Order and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Order and a ExactOnline Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Order and a Exact Salesorders:
+The following properties are synchronized between a Salesforce Order and a ExactOnline Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Order Property
-     - Exact Salesorders Property
-     - Exact Data Type
+     - ExactOnline Salesorders Property
+     - ExactOnline Data Type
    * - CurrencyIsoCode
      - Currency
      - "string"
@@ -373,36 +373,36 @@ The following properties are synchronized between a Salesforce Order and a Exact
      - "string"
 
 
-Salesforce Orderitem to Exact Salesorderlines
----------------------------------------------
-Every Salesforce Orderitem will be synchronized with a Exact Salesorderlines.
+Salesforce Orderitem to ExactOnline Salesorderlines
+---------------------------------------------------
+Every Salesforce Orderitem will be synchronized with a ExactOnline Salesorderlines.
 
-Once a link between a Salesforce Orderitem and a Exact Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Orderitem and a ExactOnline Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Orderitem and a Exact Salesorderlines:
+The following properties are synchronized between a Salesforce Orderitem and a ExactOnline Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Orderitem Property
-     - Exact Salesorderlines Property
-     - Exact Data Type
+     - ExactOnline Salesorderlines Property
+     - ExactOnline Data Type
 
 
-Salesforce Organization to Exact Addresses
-------------------------------------------
-Every Salesforce Organization will be synchronized with a Exact Addresses.
+Salesforce Organization to ExactOnline Addresses
+------------------------------------------------
+Every Salesforce Organization will be synchronized with a ExactOnline Addresses.
 
-Once a link between a Salesforce Organization and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Organization and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Organization and a Exact Addresses:
+The following properties are synchronized between a Salesforce Organization and a ExactOnline Addresses:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Organization Property
-     - Exact Addresses Property
-     - Exact Data Type
+     - ExactOnline Addresses Property
+     - ExactOnline Data Type
    * - City
      - City
      - "string"
@@ -411,36 +411,36 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
 
 
-Salesforce Product2 to Exact Items
-----------------------------------
-Every Salesforce Product2 will be synchronized with a Exact Items.
+Salesforce Product2 to ExactOnline Items
+----------------------------------------
+Every Salesforce Product2 will be synchronized with a ExactOnline Items.
 
-Once a link between a Salesforce Product2 and a Exact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Product2 and a ExactOnline Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Product2 and a Exact Items:
+The following properties are synchronized between a Salesforce Product2 and a ExactOnline Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Product2 Property
-     - Exact Items Property
-     - Exact Data Type
+     - ExactOnline Items Property
+     - ExactOnline Data Type
 
 
-Salesforce Quote to Exact Quotations
-------------------------------------
-Every Salesforce Quote will be synchronized with a Exact Quotations.
+Salesforce Quote to ExactOnline Quotations
+------------------------------------------
+Every Salesforce Quote will be synchronized with a ExactOnline Quotations.
 
-Once a link between a Salesforce Quote and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quote and a ExactOnline Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quote and a Exact Quotations:
+The following properties are synchronized between a Salesforce Quote and a ExactOnline Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quote Property
-     - Exact Quotations Property
-     - Exact Data Type
+     - ExactOnline Quotations Property
+     - ExactOnline Data Type
    * - CurrencyIsoCode
      - Currency
      - "string"
@@ -452,36 +452,36 @@ The following properties are synchronized between a Salesforce Quote and a Exact
      - "string"
 
 
-Salesforce Quotelineitem to Exact Salesorderlines
--------------------------------------------------
-Every Salesforce Quotelineitem will be synchronized with a Exact Salesorderlines.
+Salesforce Quotelineitem to ExactOnline Salesorderlines
+-------------------------------------------------------
+Every Salesforce Quotelineitem will be synchronized with a ExactOnline Salesorderlines.
 
-Once a link between a Salesforce Quotelineitem and a Exact Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quotelineitem and a ExactOnline Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quotelineitem and a Exact Salesorderlines:
+The following properties are synchronized between a Salesforce Quotelineitem and a ExactOnline Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quotelineitem Property
-     - Exact Salesorderlines Property
-     - Exact Data Type
+     - ExactOnline Salesorderlines Property
+     - ExactOnline Data Type
 
 
-Salesforce User to Exact Addresses
-----------------------------------
-Every Salesforce User will be synchronized with a Exact Addresses.
+Salesforce User to ExactOnline Addresses
+----------------------------------------
+Every Salesforce User will be synchronized with a ExactOnline Addresses.
 
-Once a link between a Salesforce User and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce User and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce User and a Exact Addresses:
+The following properties are synchronized between a Salesforce User and a ExactOnline Addresses:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce User Property
-     - Exact Addresses Property
-     - Exact Data Type
+     - ExactOnline Addresses Property
+     - ExactOnline Data Type
    * - City
      - City
      - "string"
@@ -493,20 +493,20 @@ The following properties are synchronized between a Salesforce User and a Exact 
      - "string"
 
 
-Salesforce User to Exact Employees
-----------------------------------
-Every Salesforce User will be synchronized with a Exact Employees.
+Salesforce User to ExactOnline Employees
+----------------------------------------
+Every Salesforce User will be synchronized with a ExactOnline Employees.
 
-Once a link between a Salesforce User and a Exact Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce User and a ExactOnline Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce User and a Exact Employees:
+The following properties are synchronized between a Salesforce User and a ExactOnline Employees:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce User Property
-     - Exact Employees Property
-     - Exact Data Type
+     - ExactOnline Employees Property
+     - ExactOnline Data Type
    * - City
      - City
      - "string"
