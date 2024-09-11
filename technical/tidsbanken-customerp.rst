@@ -2,43 +2,43 @@
 Tidsbanken to CustomERP Dataflow
 ================================
 
-Generated: 2024-09-11 08:03:13
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tidsbanken to CustomERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tidsbanken Ansatt to Custom Contact
------------------------------------
-Every Tidsbanken Ansatt will be synchronized with a Custom Contact.
+Tidsbanken Ansatt to CustomERP Contact
+--------------------------------------
+Every Tidsbanken Ansatt will be synchronized with a CustomERP Contact.
 
-Once a link between a Tidsbanken Ansatt and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Ansatt and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Ansatt and a Custom Contact:
+The following properties are synchronized between a Tidsbanken Ansatt and a CustomERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Ansatt Property
-     - Custom Contact Property
-     - Custom Data Type
+     - CustomERP Contact Property
+     - CustomERP Data Type
 
 
-Tidsbanken Avdeling to Custom Customer
---------------------------------------
-Every Tidsbanken Avdeling will be synchronized with a Custom Customer.
+Tidsbanken Avdeling to CustomERP Customer
+-----------------------------------------
+Every Tidsbanken Avdeling will be synchronized with a CustomERP Customer.
 
-Once a link between a Tidsbanken Avdeling and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Avdeling and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Avdeling and a Custom Customer:
+The following properties are synchronized between a Tidsbanken Avdeling and a CustomERP Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Avdeling Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomERP Customer Property
+     - CustomERP Data Type
 
 
 Tidsbanken Ansatt to CustomERP Employee
