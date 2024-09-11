@@ -1,13 +1,13 @@
-====================================
-Custom Webshop to Tripletex Dataflow
-====================================
+===================================
+CustomWebshop to Tripletex Dataflow
+===================================
 
-Generated: 2024-09-11 07:43:20
+Generated: 2024-09-11 07:53:23
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Custom Webshop to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from CustomWebshop to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Custom Customer to Tripletex Customer
 -------------------------------------
