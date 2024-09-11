@@ -2,27 +2,27 @@
 PowerOfficeGO to CRMOffice Dataflow
 ===================================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from PowerOfficeGO to CRMOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Powerofficego Customers person to Crmoffice Contacts
-----------------------------------------------------
-Every Powerofficego Customers person will be synchronized with a Crmoffice Contacts.
+PowerOffice Customers person to CRMOffice Contacts
+--------------------------------------------------
+Every PowerOffice Customers person will be synchronized with a CRMOffice Contacts.
 
-Once a link between a Powerofficego Customers person and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Customers person and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers person and a Crmoffice Contacts:
+The following properties are synchronized between a PowerOffice Customers person and a CRMOffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Customers person Property
-     - Crmoffice Contacts Property
-     - Crmoffice Data Type
+   * - PowerOffice Customers person Property
+     - CRMOffice Contacts Property
+     - CRMOffice Data Type
    * - FirstName
      - givenName
      - "string"
@@ -34,20 +34,20 @@ The following properties are synchronized between a Powerofficego Customers pers
      - "string"
 
 
-Powerofficego Employees to Crmoffice Contacts
----------------------------------------------
-Every Powerofficego Employees will be synchronized with a Crmoffice Contacts.
+PowerOffice Employees to CRMOffice Contacts
+-------------------------------------------
+Every PowerOffice Employees will be synchronized with a CRMOffice Contacts.
 
-Once a link between a Powerofficego Employees and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Employees and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Employees and a Crmoffice Contacts:
+The following properties are synchronized between a PowerOffice Employees and a CRMOffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Employees Property
-     - Crmoffice Contacts Property
-     - Crmoffice Data Type
+   * - PowerOffice Employees Property
+     - CRMOffice Contacts Property
+     - CRMOffice Data Type
    * - FirstName
      - givenName
      - "string"
@@ -59,36 +59,36 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
 
 
-Powerofficego Product to Crmoffice Companies
+PowerOffice Product to CRMOffice Companies
+------------------------------------------
+Every PowerOffice Product will be synchronized with a CRMOffice Companies.
+
+Once a link between a PowerOffice Product and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice Product and a CRMOffice Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice Product Property
+     - CRMOffice Companies Property
+     - CRMOffice Data Type
+
+
+PowerOffice Projects to CRMOffice Activities
 --------------------------------------------
-Every Powerofficego Product will be synchronized with a Crmoffice Companies.
+Every PowerOffice Projects will be synchronized with a CRMOffice Activities.
 
-Once a link between a Powerofficego Product and a Crmoffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Projects and a CRMOffice Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Product and a Crmoffice Companies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Product Property
-     - Crmoffice Companies Property
-     - Crmoffice Data Type
-
-
-Powerofficego Projects to Crmoffice Activities
-----------------------------------------------
-Every Powerofficego Projects will be synchronized with a Crmoffice Activities.
-
-Once a link between a Powerofficego Projects and a Crmoffice Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Projects and a Crmoffice Activities:
+The following properties are synchronized between a PowerOffice Projects and a CRMOffice Activities:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Projects Property
-     - Crmoffice Activities Property
-     - Crmoffice Data Type
+   * - PowerOffice Projects Property
+     - CRMOffice Activities Property
+     - CRMOffice Data Type
    * - Name
      - subject
      - "string"
