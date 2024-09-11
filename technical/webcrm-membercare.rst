@@ -2,62 +2,62 @@
 WebCRM to MemberCare Dataflow
 =============================
 
-Generated: 2024-09-11 08:07:20
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-WebCRM Opportunities to Membercare Invoices
+WebCRM Opportunities to MemberCare Invoices
 -------------------------------------------
-Every WebCRM Opportunities will be synchronized with a Membercare Invoices.
+Every WebCRM Opportunities will be synchronized with a MemberCare Invoices.
 
-Once a link between a WebCRM Opportunities and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Opportunities and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Opportunities and a Membercare Invoices:
+The following properties are synchronized between a WebCRM Opportunities and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Opportunities Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
 
 
-WebCRM Organisations to Membercare Companies
+WebCRM Organisations to MemberCare Companies
 --------------------------------------------
-Every WebCRM Organisations will be synchronized with a Membercare Companies.
+Every WebCRM Organisations will be synchronized with a MemberCare Companies.
 
-Once a link between a WebCRM Organisations and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Organisations and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Organisations and a Membercare Companies:
+The following properties are synchronized between a WebCRM Organisations and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Organisations Property
-     - Membercare Companies Property
-     - Membercare Data Type
+     - MemberCare Companies Property
+     - MemberCare Data Type
    * - OrganisationName
      - companyName
      - "string"
 
 
-WebCRM Persons to Membercare Persons
+WebCRM Persons to MemberCare Persons
 ------------------------------------
-Every WebCRM Persons will be synchronized with a Membercare Persons.
+Every WebCRM Persons will be synchronized with a MemberCare Persons.
 
-Once a link between a WebCRM Persons and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Persons and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Persons and a Membercare Persons:
+The following properties are synchronized between a WebCRM Persons and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Persons Property
-     - Membercare Persons Property
-     - Membercare Data Type
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - PersonFirstName
      - firstname
      - "string"
@@ -72,52 +72,52 @@ The following properties are synchronized between a WebCRM Persons and a Memberc
      - "string"
 
 
-WebCRM Products to Membercare Products
+WebCRM Products to MemberCare Products
 --------------------------------------
-Every WebCRM Products will be synchronized with a Membercare Products.
+Every WebCRM Products will be synchronized with a MemberCare Products.
 
-Once a link between a WebCRM Products and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Products and a MemberCare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Products and a Membercare Products:
+The following properties are synchronized between a WebCRM Products and a MemberCare Products:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Products Property
-     - Membercare Products Property
-     - Membercare Data Type
+     - MemberCare Products Property
+     - MemberCare Data Type
 
 
-WebCRM Quotationline to Membercare Invoices
+WebCRM Quotationline to MemberCare Invoices
 -------------------------------------------
-Every WebCRM Quotationline will be synchronized with a Membercare Invoices.
+Every WebCRM Quotationline will be synchronized with a MemberCare Invoices.
 
-Once a link between a WebCRM Quotationline and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Quotationline and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Quotationline and a Membercare Invoices:
+The following properties are synchronized between a WebCRM Quotationline and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Quotationline Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
 
 
-WebCRM Users to Membercare Persons
+WebCRM Users to MemberCare Persons
 ----------------------------------
-Every WebCRM Users will be synchronized with a Membercare Persons.
+Every WebCRM Users will be synchronized with a MemberCare Persons.
 
-Once a link between a WebCRM Users and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Users and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Users and a Membercare Persons:
+The following properties are synchronized between a WebCRM Users and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Users Property
-     - Membercare Persons Property
-     - Membercare Data Type
+     - MemberCare Persons Property
+     - MemberCare Data Type
 
 
 WebCRM Organisations to MemberCare Countries
