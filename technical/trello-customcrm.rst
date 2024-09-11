@@ -1,42 +1,42 @@
-============================
-Trello to Customcrm Dataflow
-============================
+=============================
+Trello to Custom CRM Dataflow
+=============================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Trello to Customcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Trello to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Trello Members to Customcrm Contact
------------------------------------
-Every Trello Members will be synchronized with a Customcrm Contact.
+Trello Members to Custom Contact
+--------------------------------
+Every Trello Members will be synchronized with a Custom Contact.
 
-Once a link between a Trello Members and a Customcrm Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Members and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Members and a Customcrm Contact:
+The following properties are synchronized between a Trello Members and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Members Property
-     - Customcrm Contact Property
-     - Customcrm Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
 
-Trello Organizations to Customcrm Customer
-------------------------------------------
-Every Trello Organizations will be synchronized with a Customcrm Customer.
+Trello Organizations to Custom Customer
+---------------------------------------
+Every Trello Organizations will be synchronized with a Custom Customer.
 
-Once a link between a Trello Organizations and a Customcrm Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Organizations and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Organizations and a Customcrm Customer:
+The following properties are synchronized between a Trello Organizations and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Organizations Property
-     - Customcrm Customer Property
-     - Customcrm Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
