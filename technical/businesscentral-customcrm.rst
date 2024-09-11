@@ -1,13 +1,13 @@
-======================================
-Business Central to CustomCRM Dataflow
-======================================
+=======================================
+Business Central to Custom CRM Dataflow
+=======================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to CustomCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 BusinessCentral Companies to CustomCRM Customer
 -----------------------------------------------
@@ -89,36 +89,36 @@ The following properties are synchronized between a BusinessCentral Salesquotes 
      - CustomCRM Data Type
 
 
-BusinessCentral Contacts person to CustomCRM Contact
-----------------------------------------------------
-Every BusinessCentral Contacts person will be synchronized with a CustomCRM Contact.
+Business Central Contacts person to Custom CRM Contact
+------------------------------------------------------
+Every Business Central Contacts person will be synchronized with a Custom CRM Contact.
 
-Once a link between a BusinessCentral Contacts person and a CustomCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Contacts person and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Contacts person and a CustomCRM Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - BusinessCentral Contacts person Property
-     - CustomCRM Contact Property
-     - CustomCRM Data Type
-
-
-BusinessCentral Customers company to CustomCRM Customer
--------------------------------------------------------
-Every BusinessCentral Customers company will be synchronized with a CustomCRM Customer.
-
-Once a link between a BusinessCentral Customers company and a CustomCRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a BusinessCentral Customers company and a CustomCRM Customer:
+The following properties are synchronized between a Business Central Contacts person and a Custom CRM Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Customers company Property
-     - CustomCRM Customer Property
-     - CustomCRM Data Type
+   * - Business Central Contacts person Property
+     - Custom CRM Contact Property
+     - Custom CRM Data Type
+
+
+Business Central Customers company to Custom CRM Customer
+---------------------------------------------------------
+Every Business Central Customers company will be synchronized with a Custom CRM Customer.
+
+Once a link between a Business Central Customers company and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Customers company and a Custom CRM Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Customers company Property
+     - Custom CRM Customer Property
+     - Custom CRM Data Type
    * - addressLine1
      - StreetAddress1
      - "string"
@@ -142,34 +142,34 @@ The following properties are synchronized between a BusinessCentral Customers co
      - "string"
 
 
-BusinessCentral Items to CustomCRM Product
-------------------------------------------
-Every BusinessCentral Items will be synchronized with a CustomCRM Product.
+Business Central Items to Custom CRM Product
+--------------------------------------------
+Every Business Central Items will be synchronized with a Custom CRM Product.
 
-Once a link between a BusinessCentral Items and a CustomCRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Items and a Custom CRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Items and a CustomCRM Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - BusinessCentral Items Property
-     - CustomCRM Product Property
-     - CustomCRM Data Type
-
-
-BusinessCentral Salesorders to CustomCRM Order
-----------------------------------------------
-Every BusinessCentral Salesorders will be synchronized with a CustomCRM Order.
-
-Once a link between a BusinessCentral Salesorders and a CustomCRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a BusinessCentral Salesorders and a CustomCRM Order:
+The following properties are synchronized between a Business Central Items and a Custom CRM Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Salesorders Property
-     - CustomCRM Order Property
-     - CustomCRM Data Type
+   * - Business Central Items Property
+     - Custom CRM Product Property
+     - Custom CRM Data Type
+
+
+Business Central Salesorders to Custom CRM Order
+------------------------------------------------
+Every Business Central Salesorders will be synchronized with a Custom CRM Order.
+
+Once a link between a Business Central Salesorders and a Custom CRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Salesorders and a Custom CRM Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Salesorders Property
+     - Custom CRM Order Property
+     - Custom CRM Data Type
 
