@@ -1,13 +1,13 @@
-======================================
-SuperOffice to Custom Webshop Dataflow
-======================================
+=====================================
+SuperOffice to CustomWebshop Dataflow
+=====================================
 
-Generated: 2024-09-11 07:44:14
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Custom Webshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to CustomWebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 SuperOffice Contact to Custom Customer
 --------------------------------------
@@ -73,18 +73,18 @@ The following properties are synchronized between a SuperOffice Sale and a Custo
      - Custom Data Type
 
 
-SuperOffice Product to Custom Product
--------------------------------------
-Every SuperOffice Product will be synchronized with a Custom Product.
+SuperOffice Product to CustomWebshop Product
+--------------------------------------------
+Every SuperOffice Product will be synchronized with a CustomWebshop Product.
 
-Once a link between a SuperOffice Product and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Product and a CustomWebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Product and a Custom Product:
+The following properties are synchronized between a SuperOffice Product and a CustomWebshop Product:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Product Property
-     - Custom Product Property
-     - Custom Data Type
+     - CustomWebshop Product Property
+     - CustomWebshop Data Type
 
