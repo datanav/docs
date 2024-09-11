@@ -1,13 +1,13 @@
 =================================
-Membercare to Salesforce Dataflow
+MemberCare to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Membercare to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Membercare Companies to Salesforce Division
 -------------------------------------------
@@ -101,18 +101,18 @@ The following properties are synchronized between a Membercare Products and a Sa
      - "string"
 
 
-Membercare Companies to Salesforce Organization
+MemberCare Companies to Salesforce Organization
 -----------------------------------------------
-Every Membercare Companies will be synchronized with a Salesforce Organization.
+Every MemberCare Companies will be synchronized with a Salesforce Organization.
 
-Once a link between a Membercare Companies and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companies and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Companies and a Salesforce Organization:
+The following properties are synchronized between a MemberCare Companies and a Salesforce Organization:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Companies Property
+   * - MemberCare Companies Property
      - Salesforce Organization Property
      - Salesforce Data Type
    * - addresses.country.id
@@ -141,18 +141,18 @@ The following properties are synchronized between a Membercare Companies and a S
      - "string"
 
 
-Membercare Invoices to Salesforce Invoice
+MemberCare Invoices to Salesforce Invoice
 -----------------------------------------
-Every Membercare Invoices will be synchronized with a Salesforce Invoice.
+Every MemberCare Invoices will be synchronized with a Salesforce Invoice.
 
-Once a link between a Membercare Invoices and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Invoices and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Invoices and a Salesforce Invoice:
+The following properties are synchronized between a MemberCare Invoices and a Salesforce Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Invoices Property
+   * - MemberCare Invoices Property
      - Salesforce Invoice Property
      - Salesforce Data Type
    * - payDueDate
@@ -160,18 +160,18 @@ The following properties are synchronized between a Membercare Invoices and a Sa
      - "string"
 
 
-Membercare Invoices to Salesforce Invoiceline
+MemberCare Invoices to Salesforce Invoiceline
 ---------------------------------------------
-Every Membercare Invoices will be synchronized with a Salesforce Invoiceline.
+Every MemberCare Invoices will be synchronized with a Salesforce Invoiceline.
 
-Once a link between a Membercare Invoices and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Invoices and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Invoices and a Salesforce Invoiceline:
+The following properties are synchronized between a MemberCare Invoices and a Salesforce Invoiceline:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Invoices Property
+   * - MemberCare Invoices Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
    * - id
@@ -188,18 +188,18 @@ The following properties are synchronized between a Membercare Invoices and a Sa
      - "string"
 
 
-Membercare Invoices to Salesforce Orderitem
+MemberCare Invoices to Salesforce Orderitem
 -------------------------------------------
-Every Membercare Invoices will be synchronized with a Salesforce Orderitem.
+Every MemberCare Invoices will be synchronized with a Salesforce Orderitem.
 
-Once a link between a Membercare Invoices and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Invoices and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Invoices and a Salesforce Orderitem:
+The following properties are synchronized between a MemberCare Invoices and a Salesforce Orderitem:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Invoices Property
+   * - MemberCare Invoices Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
    * - invoiceItems.quantity
@@ -210,18 +210,18 @@ The following properties are synchronized between a Membercare Invoices and a Sa
      - "string"
 
 
-Membercare Invoices to Salesforce Quotelineitem
+MemberCare Invoices to Salesforce Quotelineitem
 -----------------------------------------------
-Every Membercare Invoices will be synchronized with a Salesforce Quotelineitem.
+Every MemberCare Invoices will be synchronized with a Salesforce Quotelineitem.
 
-Once a link between a Membercare Invoices and a Salesforce Quotelineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Invoices and a Salesforce Quotelineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Invoices and a Salesforce Quotelineitem:
+The following properties are synchronized between a MemberCare Invoices and a Salesforce Quotelineitem:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Invoices Property
+   * - MemberCare Invoices Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
    * - invoiceItems.description
