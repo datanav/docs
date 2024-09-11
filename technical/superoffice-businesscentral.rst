@@ -2,29 +2,29 @@
 SuperOffice to BusinessCentral Dataflow
 =======================================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 08:40:13
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to BusinessCentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-SuperOffice Contact to Business Customers company
--------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a Business Customers company must be established.
+SuperOffice Contact to BusinessCentral Customers company
+--------------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Contact and a BusinessCentral Customers company must be established.
 
-A new Business Customers company will be created from a SuperOffice Contact if it is connected to a SuperOffice Quotealternative that is synchronized into Business.
+A new BusinessCentral Customers company will be created from a SuperOffice Contact if it is connected to a SuperOffice Quotealternative that is synchronized into BusinessCentral.
 
-Once a link between a SuperOffice Contact and a Business Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a BusinessCentral Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a Business Customers company:
+The following properties are synchronized between a SuperOffice Contact and a BusinessCentral Customers company:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - Business Customers company Property
-     - Business Data Type
+     - BusinessCentral Customers company Property
+     - BusinessCentral Data Type
    * - Address.Postal.Address1
      - addressLine1
      - "string"
@@ -87,40 +87,40 @@ The following properties are synchronized between a SuperOffice Contact and a Bu
      - "string"
 
 
-SuperOffice Contact to Business Customers person
-------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a Business Customers person must be established.
+SuperOffice Contact to BusinessCentral Customers person
+-------------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Contact and a BusinessCentral Customers person must be established.
 
-A new Business Customers person will be created from a SuperOffice Contact if it is connected to a SuperOffice Quotealternative that is synchronized into Business.
+A new BusinessCentral Customers person will be created from a SuperOffice Contact if it is connected to a SuperOffice Quotealternative that is synchronized into BusinessCentral.
 
-Once a link between a SuperOffice Contact and a Business Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a BusinessCentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a Business Customers person:
+The following properties are synchronized between a SuperOffice Contact and a BusinessCentral Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - Business Customers person Property
-     - Business Data Type
+     - BusinessCentral Customers person Property
+     - BusinessCentral Data Type
 
 
-SuperOffice Person to Business Customers company
-------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a Business Customers company must be established.
+SuperOffice Person to BusinessCentral Customers company
+-------------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a BusinessCentral Customers company must be established.
 
-A new Business Customers company will be created from a SuperOffice Person if it is connected to a SuperOffice Quotealternative that is synchronized into Business.
+A new BusinessCentral Customers company will be created from a SuperOffice Person if it is connected to a SuperOffice Quotealternative that is synchronized into BusinessCentral.
 
-Once a link between a SuperOffice Person and a Business Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a BusinessCentral Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a Business Customers company:
+The following properties are synchronized between a SuperOffice Person and a BusinessCentral Customers company:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - Business Customers company Property
-     - Business Data Type
+     - BusinessCentral Customers company Property
+     - BusinessCentral Data Type
    * - Address.Street.Address1
      - addressLine1
      - "string"
@@ -141,22 +141,22 @@ The following properties are synchronized between a SuperOffice Person and a Bus
      - "string"
 
 
-SuperOffice Person to Business Customers person
------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a Business Customers person must be established.
+SuperOffice Person to BusinessCentral Customers person
+------------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a BusinessCentral Customers person must be established.
 
-A new Business Customers person will be created from a SuperOffice Person if it is connected to a SuperOffice Quotealternative that is synchronized into Business.
+A new BusinessCentral Customers person will be created from a SuperOffice Person if it is connected to a SuperOffice Quotealternative that is synchronized into BusinessCentral.
 
-Once a link between a SuperOffice Person and a Business Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a BusinessCentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a Business Customers person:
+The following properties are synchronized between a SuperOffice Person and a BusinessCentral Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - Business Customers person Property
-     - Business Data Type
+     - BusinessCentral Customers person Property
+     - BusinessCentral Data Type
    * - Address.Street.Address1
      - addressLine1
      - "string"
@@ -195,22 +195,22 @@ The following properties are synchronized between a SuperOffice Person and a Bus
      - "string"
 
 
-SuperOffice Quotealternative to Business Salesorders
-----------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Business Salesorders must be established.
+SuperOffice Quotealternative to BusinessCentral Salesorders
+-----------------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Quotealternative and a BusinessCentral Salesorders must be established.
 
-A new Business Salesorders will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into Business.
+A new BusinessCentral Salesorders will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into BusinessCentral.
 
-Once a link between a SuperOffice Quotealternative and a Business Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quotealternative and a BusinessCentral Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quotealternative and a Business Salesorders:
+The following properties are synchronized between a SuperOffice Quotealternative and a BusinessCentral Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quotealternative Property
-     - Business Salesorders Property
-     - Business Data Type
+     - BusinessCentral Salesorders Property
+     - BusinessCentral Data Type
    * - TotalPrice
      - totalAmountExcludingTax
      - "string"
