@@ -2,75 +2,75 @@
 WebCRM to Custom ERP Dataflow
 =============================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-WebCRM Opportunities to CustomERP Order
----------------------------------------
-Every WebCRM Opportunities will be synchronized with a CustomERP Order.
+WebCRM Opportunities to Custom ERP Order
+----------------------------------------
+Every WebCRM Opportunities will be synchronized with a Custom ERP Order.
 
-Once a link between a WebCRM Opportunities and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Opportunities and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Opportunities and a CustomERP Order:
+The following properties are synchronized between a WebCRM Opportunities and a Custom ERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Opportunities Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
 
-WebCRM Organisations to CustomERP Customer
-------------------------------------------
-Every WebCRM Organisations will be synchronized with a CustomERP Customer.
+WebCRM Organisations to Custom ERP Customer
+-------------------------------------------
+Every WebCRM Organisations will be synchronized with a Custom ERP Customer.
 
-Once a link between a WebCRM Organisations and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Organisations and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Organisations and a CustomERP Customer:
+The following properties are synchronized between a WebCRM Organisations and a Custom ERP Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Organisations Property
-     - CustomERP Customer Property
-     - CustomERP Data Type
+     - Custom ERP Customer Property
+     - Custom ERP Data Type
 
 
-WebCRM Quotationline to CustomERP Order
----------------------------------------
-Every WebCRM Quotationline will be synchronized with a CustomERP Order.
+WebCRM Quotationline to Custom ERP Order
+----------------------------------------
+Every WebCRM Quotationline will be synchronized with a Custom ERP Order.
 
-Once a link between a WebCRM Quotationline and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Quotationline and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Quotationline and a CustomERP Order:
+The following properties are synchronized between a WebCRM Quotationline and a Custom ERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Quotationline Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
 
-WebCRM Users to CustomERP Contact
----------------------------------
-Every WebCRM Users will be synchronized with a CustomERP Contact.
+WebCRM Users to Custom ERP Contact
+----------------------------------
+Every WebCRM Users will be synchronized with a Custom ERP Contact.
 
-Once a link between a WebCRM Users and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Users and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Users and a CustomERP Contact:
+The following properties are synchronized between a WebCRM Users and a Custom ERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Users Property
-     - CustomERP Contact Property
-     - CustomERP Data Type
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
 
 
 WebCRM Persons to Custom ERP Contact
