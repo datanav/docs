@@ -1,13 +1,13 @@
-===============================
-HubSpot to BusinessNxt Dataflow
-===============================
+================================
+HubSpot to Business Nxt Dataflow
+================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 HubSpot Company to BusinessNxt Address
 --------------------------------------
@@ -365,39 +365,39 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
      - "string"
 
 
-HubSpot Account to BusinessNxt Currency
----------------------------------------
-Every HubSpot Account will be synchronized with a BusinessNxt Currency.
+HubSpot Account to Business Nxt Currency
+----------------------------------------
+Every HubSpot Account will be synchronized with a Business Nxt Currency.
 
-Once a link between a HubSpot Account and a BusinessNxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Account and a Business Nxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Account and a BusinessNxt Currency:
+The following properties are synchronized between a HubSpot Account and a Business Nxt Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Account Property
-     - BusinessNxt Currency Property
-     - BusinessNxt Data Type
+     - Business Nxt Currency Property
+     - Business Nxt Data Type
    * - accountType
      - isoCode
      - "string"
 
 
-HubSpot Company to BusinessNxt Country
---------------------------------------
-Every HubSpot Company will be synchronized with a BusinessNxt Country.
+HubSpot Company to Business Nxt Country
+---------------------------------------
+Every HubSpot Company will be synchronized with a Business Nxt Country.
 
-Once a link between a HubSpot Company and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a BusinessNxt Country:
+The following properties are synchronized between a HubSpot Company and a Business Nxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     - BusinessNxt Country Property
-     - BusinessNxt Data Type
+     - Business Nxt Country Property
+     - Business Nxt Data Type
    * - properties.country
      - name
      - "string"
@@ -412,39 +412,39 @@ The following properties are synchronized between a HubSpot Company and a Busine
      - "string"
 
 
-HubSpot Deal to BusinessNxt Currency
-------------------------------------
-Every HubSpot Deal will be synchronized with a BusinessNxt Currency.
+HubSpot Deal to Business Nxt Currency
+-------------------------------------
+Every HubSpot Deal will be synchronized with a Business Nxt Currency.
 
-Once a link between a HubSpot Deal and a BusinessNxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a Business Nxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a BusinessNxt Currency:
+The following properties are synchronized between a HubSpot Deal and a Business Nxt Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     - BusinessNxt Currency Property
-     - BusinessNxt Data Type
+     - Business Nxt Currency Property
+     - Business Nxt Data Type
    * - properties.deal_currency_code
      - isoCode
      - "string"
 
 
-HubSpot Deal to BusinessNxt Order
----------------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a BusinessNxt Order.
+HubSpot Deal to Business Nxt Order
+----------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Business Nxt Order.
 
-Once a link between a HubSpot Deal and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a BusinessNxt Order:
+The following properties are synchronized between a HubSpot Deal and a Business Nxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     - BusinessNxt Order Property
-     - BusinessNxt Data Type
+     - Business Nxt Order Property
+     - Business Nxt Data Type
    * - properties.closedate
      - dueDate
      - "string"
@@ -456,36 +456,36 @@ The following properties are synchronized between a HubSpot Deal and a BusinessN
      - "string"
 
 
-HubSpot Lineitem to BusinessNxt Orderline
------------------------------------------
-Every HubSpot Lineitem will be synchronized with a BusinessNxt Orderline.
+HubSpot Lineitem to Business Nxt Orderline
+------------------------------------------
+Every HubSpot Lineitem will be synchronized with a Business Nxt Orderline.
 
-Once a link between a HubSpot Lineitem and a BusinessNxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitem and a Business Nxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitem and a BusinessNxt Orderline:
+The following properties are synchronized between a HubSpot Lineitem and a Business Nxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitem Property
-     - BusinessNxt Orderline Property
-     - BusinessNxt Data Type
+     - Business Nxt Orderline Property
+     - Business Nxt Data Type
 
 
-HubSpot Product to BusinessNxt Product
---------------------------------------
-Every HubSpot Product will be synchronized with a BusinessNxt Product.
+HubSpot Product to Business Nxt Product
+---------------------------------------
+Every HubSpot Product will be synchronized with a Business Nxt Product.
 
-Once a link between a HubSpot Product and a BusinessNxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Product and a Business Nxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Product and a BusinessNxt Product:
+The following properties are synchronized between a HubSpot Product and a Business Nxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Product Property
-     - BusinessNxt Product Property
-     - BusinessNxt Data Type
+     - Business Nxt Product Property
+     - Business Nxt Data Type
    * - properties.description
      - description
      - "string"
