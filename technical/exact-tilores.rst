@@ -2,25 +2,25 @@
 ExactOnline to Tilores Dataflow
 ===============================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from ExactOnline to Tilores. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Exact Contacts to Tilores Human
--------------------------------
-Every Exact Contacts will be synchronized with a Tilores Human.
+ExactOnline Contacts to Tilores Human
+-------------------------------------
+Every ExactOnline Contacts will be synchronized with a Tilores Human.
 
-Once a link between a Exact Contacts and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Contacts and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Contacts and a Tilores Human:
+The following properties are synchronized between a ExactOnline Contacts and a Tilores Human:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Contacts Property
+   * - ExactOnline Contacts Property
      - Tilores Human Property
      - Tilores Data Type
    * - BirthDate
@@ -31,18 +31,18 @@ The following properties are synchronized between a Exact Contacts and a Tilores
      - "string"
 
 
-Exact Employees to Tilores Human
---------------------------------
-Every Exact Employees will be synchronized with a Tilores Human.
+ExactOnline Employees to Tilores Human
+--------------------------------------
+Every ExactOnline Employees will be synchronized with a Tilores Human.
 
-Once a link between a Exact Employees and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Employees and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Employees and a Tilores Human:
+The following properties are synchronized between a ExactOnline Employees and a Tilores Human:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Employees Property
+   * - ExactOnline Employees Property
      - Tilores Human Property
      - Tilores Data Type
    * - BirthDate
