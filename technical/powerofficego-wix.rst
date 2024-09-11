@@ -2,7 +2,7 @@
 PowerOfficeGO to Wix Dataflow
 =============================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 11:13:29
 
 Introduction
 ------------
@@ -101,31 +101,31 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-PowerOfficeGO Contactperson to Wix Contacts
--------------------------------------------
-Every PowerOfficeGO Contactperson will be synchronized with a Wix Contacts.
+PowerOfficeGOPowerofficego Contactperson to Wix Contacts
+--------------------------------------------------------
+Every PowerOfficeGOPowerofficego Contactperson will be synchronized with a Wix Contacts.
 
-If a matching Wix Contacts already exists, the PowerOfficeGO Contactperson will be merged with the existing one.
+If a matching Wix Contacts already exists, the PowerOfficeGOPowerofficego Contactperson will be merged with the existing one.
 If no matching Wix Contacts is found, a new Wix Contacts will be created.
 
-A PowerOfficeGO Contactperson will merge with a Wix Contacts if one of the following property combinations match:
+A PowerOfficeGOPowerofficego Contactperson will merge with a Wix Contacts if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Contactperson Property
+   * - PowerOfficeGOPowerofficego Contactperson Property
      - Wix Contacts Property
    * - emailAddress
      - primaryInfo.email
 
-Once a link between a PowerOfficeGO Contactperson and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGOPowerofficego Contactperson and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Contactperson and a Wix Contacts:
+The following properties are synchronized between a PowerOfficeGOPowerofficego Contactperson and a Wix Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Contactperson Property
+   * - PowerOfficeGOPowerofficego Contactperson Property
      - Wix Contacts Property
      - Wix Data Type
    * - address1
@@ -160,18 +160,18 @@ The following properties are synchronized between a PowerOfficeGO Contactperson 
      - "string"
 
 
-PowerOfficeGO Product to Wix Products
--------------------------------------
-Every PowerOfficeGO Product will be synchronized with a Wix Products.
+PowerOfficeGOPowerofficego Product to Wix Products
+--------------------------------------------------
+Every PowerOfficeGOPowerofficego Product will be synchronized with a Wix Products.
 
-Once a link between a PowerOfficeGO Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGOPowerofficego Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Product and a Wix Products:
+The following properties are synchronized between a PowerOfficeGOPowerofficego Product and a Wix Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Product Property
+   * - PowerOfficeGOPowerofficego Product Property
      - Wix Products Property
      - Wix Data Type
    * - costPrice
