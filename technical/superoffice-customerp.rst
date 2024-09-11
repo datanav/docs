@@ -1,138 +1,138 @@
-=================================
-SuperOffice to Customerp Dataflow
-=================================
+==================================
+SuperOffice to Custom ERP Dataflow
+==================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Customerp. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-SuperOffice Contact to Customerp Customer
------------------------------------------
-Every SuperOffice Contact will be synchronized with a Customerp Customer.
+SuperOffice Contact to Custom Customer
+--------------------------------------
+Every SuperOffice Contact will be synchronized with a Custom Customer.
 
-Once a link between a SuperOffice Contact and a Customerp Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a Customerp Customer:
+The following properties are synchronized between a SuperOffice Contact and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - Customerp Customer Property
-     - Customerp Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-SuperOffice Person to Customerp Contact
----------------------------------------
-Every SuperOffice Person will be synchronized with a Customerp Contact.
+SuperOffice Person to Custom Contact
+------------------------------------
+Every SuperOffice Person will be synchronized with a Custom Contact.
 
-Once a link between a SuperOffice Person and a Customerp Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a Customerp Contact:
+The following properties are synchronized between a SuperOffice Person and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - Customerp Contact Property
-     - Customerp Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
 
-SuperOffice Quotealternative to Customerp Order
------------------------------------------------
-Every SuperOffice Quotealternative will be synchronized with a Customerp Order.
+SuperOffice Quotealternative to Custom Order
+--------------------------------------------
+Every SuperOffice Quotealternative will be synchronized with a Custom Order.
 
-Once a link between a SuperOffice Quotealternative and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quotealternative and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quotealternative and a Customerp Order:
+The following properties are synchronized between a SuperOffice Quotealternative and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quotealternative Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-SuperOffice Quoteline to Customerp Order
-----------------------------------------
-Every SuperOffice Quoteline will be synchronized with a Customerp Order.
+SuperOffice Quoteline to Custom Order
+-------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Custom Order.
 
-Once a link between a SuperOffice Quoteline and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quoteline and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quoteline and a Customerp Order:
+The following properties are synchronized between a SuperOffice Quoteline and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quoteline Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-SuperOffice Sale to Customerp Order
------------------------------------
-Every SuperOffice Sale will be synchronized with a Customerp Order.
+SuperOffice Sale to Custom Order
+--------------------------------
+Every SuperOffice Sale will be synchronized with a Custom Order.
 
-Once a link between a SuperOffice Sale and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Sale and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Sale and a Customerp Order:
+The following properties are synchronized between a SuperOffice Sale and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Sale Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-SuperOffice Product to Customerp Product
-----------------------------------------
-Every SuperOffice Product will be synchronized with a Customerp Product.
+SuperOffice Product to Custom Product
+-------------------------------------
+Every SuperOffice Product will be synchronized with a Custom Product.
 
-Once a link between a SuperOffice Product and a Customerp Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Product and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Product and a Customerp Product:
+The following properties are synchronized between a SuperOffice Product and a Custom Product:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Product Property
-     - Customerp Product Property
-     - Customerp Data Type
+     - Custom Product Property
+     - Custom Data Type
 
 
-SuperOffice Project to Customerp Project
-----------------------------------------
-Every SuperOffice Project will be synchronized with a Customerp Project.
+SuperOffice Project to Custom Project
+-------------------------------------
+Every SuperOffice Project will be synchronized with a Custom Project.
 
-Once a link between a SuperOffice Project and a Customerp Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Project and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Project and a Customerp Project:
+The following properties are synchronized between a SuperOffice Project and a Custom Project:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Project Property
-     - Customerp Project Property
-     - Customerp Data Type
+     - Custom Project Property
+     - Custom Data Type
 
 
-SuperOffice Quotealternative to Customerp Quote
------------------------------------------------
-Every SuperOffice Quotealternative will be synchronized with a Customerp Quote.
+SuperOffice Quotealternative to Custom Quote
+--------------------------------------------
+Every SuperOffice Quotealternative will be synchronized with a Custom Quote.
 
-Once a link between a SuperOffice Quotealternative and a Customerp Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quotealternative and a Custom Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quotealternative and a Customerp Quote:
+The following properties are synchronized between a SuperOffice Quotealternative and a Custom Quote:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quotealternative Property
-     - Customerp Quote Property
-     - Customerp Data Type
+     - Custom Quote Property
+     - Custom Data Type
 
