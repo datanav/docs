@@ -2,27 +2,27 @@
 Keap to SuperOffice Dataflow
 ============================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 08:50:13
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Keap to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Keap Companies to Superoffice Contact
+Keap Companies to SuperOffice Contact
 -------------------------------------
-Every Keap Companies will be synchronized with a Superoffice Contact.
+Every Keap Companies will be synchronized with a SuperOffice Contact.
 
-Once a link between a Keap Companies and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Companies and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Companies and a Superoffice Contact:
+The following properties are synchronized between a Keap Companies and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Companies Property
-     - Superoffice Contact Property
-     - Superoffice Data Type
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
    * - address.locality
      - Address.Postal.City
      - "string"
