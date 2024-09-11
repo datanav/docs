@@ -2,89 +2,89 @@
 MemberCare to Custom ERP Dataflow
 =================================
 
-Generated: 2024-09-11 11:39:33
+Generated: 2024-09-11 12:17:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-MemberCare Companies to CustomERP Customer
-------------------------------------------
-Every MemberCare Companies will be synchronized with a CustomERP Customer.
+MemberCare Companies to Custom ERP Customer
+-------------------------------------------
+Every MemberCare Companies will be synchronized with a Custom ERP Customer.
 
-Once a link between a MemberCare Companies and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companies and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Companies and a CustomERP Customer:
+The following properties are synchronized between a MemberCare Companies and a Custom ERP Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Companies Property
-     - CustomERP Customer Property
-     - CustomERP Data Type
+     - Custom ERP Customer Property
+     - Custom ERP Data Type
 
 
-MemberCare Invoices to CustomERP Order
---------------------------------------
-Every MemberCare Invoices will be synchronized with a CustomERP Order.
+MemberCare Invoices to Custom ERP Order
+---------------------------------------
+Every MemberCare Invoices will be synchronized with a Custom ERP Order.
 
-Once a link between a MemberCare Invoices and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Invoices and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Invoices and a CustomERP Order:
+The following properties are synchronized between a MemberCare Invoices and a Custom ERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Invoices Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
 
-MemberCare Organizations to CustomERP Customer
-----------------------------------------------
-Every MemberCare Organizations will be synchronized with a CustomERP Customer.
+MemberCare Organizations to Custom ERP Customer
+-----------------------------------------------
+Every MemberCare Organizations will be synchronized with a Custom ERP Customer.
 
-Once a link between a MemberCare Organizations and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Organizations and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Organizations and a CustomERP Customer:
+The following properties are synchronized between a MemberCare Organizations and a Custom ERP Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Organizations Property
-     - CustomERP Customer Property
-     - CustomERP Data Type
+     - Custom ERP Customer Property
+     - Custom ERP Data Type
 
 
-MemberCare Persons to CustomERP Contact
----------------------------------------
-Every MemberCare Persons will be synchronized with a CustomERP Contact.
+MemberCare Persons to Custom ERP Contact
+----------------------------------------
+Every MemberCare Persons will be synchronized with a Custom ERP Contact.
 
-Once a link between a MemberCare Persons and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Persons and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Persons and a CustomERP Contact:
+The following properties are synchronized between a MemberCare Persons and a Custom ERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Persons Property
-     - CustomERP Contact Property
-     - CustomERP Data Type
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
 
 
-MemberCare Products to CustomERP Product
-----------------------------------------
-Every MemberCare Products will be synchronized with a CustomERP Product.
+MemberCare Products to Custom ERP Product
+-----------------------------------------
+Every MemberCare Products will be synchronized with a Custom ERP Product.
 
-Once a link between a MemberCare Products and a CustomERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Products and a Custom ERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Products and a CustomERP Product:
+The following properties are synchronized between a MemberCare Products and a Custom ERP Product:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Products Property
-     - CustomERP Product Property
-     - CustomERP Data Type
+     - Custom ERP Product Property
+     - Custom ERP Data Type
 
