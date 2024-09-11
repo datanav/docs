@@ -2,59 +2,59 @@
 Business Central to Business Nxt Dataflow
 =========================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-BusinessCentral Companies to BusinessNxt Address
-------------------------------------------------
-Every BusinessCentral Companies will be synchronized with a BusinessNxt Address.
+Business Central Companies to Business Nxt Address
+--------------------------------------------------
+Every Business Central Companies will be synchronized with a Business Nxt Address.
 
-Once a link between a BusinessCentral Companies and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Companies and a Business Nxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Companies and a BusinessNxt Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - BusinessCentral Companies Property
-     - BusinessNxt Address Property
-     - BusinessNxt Data Type
-
-
-BusinessCentral Salesorderlines to BusinessNxt Order
-----------------------------------------------------
-Every BusinessCentral Salesorderlines will be synchronized with a BusinessNxt Order.
-
-Once a link between a BusinessCentral Salesorderlines and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a BusinessCentral Salesorderlines and a BusinessNxt Order:
+The following properties are synchronized between a Business Central Companies and a Business Nxt Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Salesorderlines Property
-     - BusinessNxt Order Property
-     - BusinessNxt Data Type
+   * - Business Central Companies Property
+     - Business Nxt Address Property
+     - Business Nxt Data Type
 
 
-BusinessCentral Salesquotes to BusinessNxt Order
-------------------------------------------------
-Every BusinessCentral Salesquotes will be synchronized with a BusinessNxt Order.
+Business Central Salesorderlines to Business Nxt Order
+------------------------------------------------------
+Every Business Central Salesorderlines will be synchronized with a Business Nxt Order.
 
-Once a link between a BusinessCentral Salesquotes and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Salesorderlines and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Salesquotes and a BusinessNxt Order:
+The following properties are synchronized between a Business Central Salesorderlines and a Business Nxt Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Salesquotes Property
-     - BusinessNxt Order Property
-     - BusinessNxt Data Type
+   * - Business Central Salesorderlines Property
+     - Business Nxt Order Property
+     - Business Nxt Data Type
+
+
+Business Central Salesquotes to Business Nxt Order
+--------------------------------------------------
+Every Business Central Salesquotes will be synchronized with a Business Nxt Order.
+
+Once a link between a Business Central Salesquotes and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Salesquotes and a Business Nxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Salesquotes Property
+     - Business Nxt Order Property
+     - Business Nxt Data Type
 
 
 Business Central Currencies to Business Nxt Currency
