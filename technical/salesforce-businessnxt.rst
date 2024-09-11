@@ -2,62 +2,62 @@
 Salesforce to BusinessNxt Dataflow
 ==================================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Salesforce Currencytype to Businessnxt Country
-----------------------------------------------
-Every Salesforce Currencytype will be synchronized with a Businessnxt Country.
+Salesforce Currencytype to Visma Country
+----------------------------------------
+Every Salesforce Currencytype will be synchronized with a Visma Country.
 
-Once a link between a Salesforce Currencytype and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Currencytype and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Currencytype and a Businessnxt Country:
+The following properties are synchronized between a Salesforce Currencytype and a Visma Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Currencytype Property
-     - Businessnxt Country Property
-     - Businessnxt Data Type
+     - Visma Country Property
+     - Visma Data Type
 
 
-Salesforce Division to Businessnxt Address
-------------------------------------------
-Every Salesforce Division will be synchronized with a Businessnxt Address.
+Salesforce Division to Visma Address
+------------------------------------
+Every Salesforce Division will be synchronized with a Visma Address.
 
-Once a link between a Salesforce Division and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Division and a Visma Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Division and a Businessnxt Address:
+The following properties are synchronized between a Salesforce Division and a Visma Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Division Property
-     - Businessnxt Address Property
-     - Businessnxt Data Type
+     - Visma Address Property
+     - Visma Data Type
    * - Name
      - name
      - "string"
 
 
-Salesforce Invoice to Businessnxt Order
----------------------------------------
-Every Salesforce Invoice will be synchronized with a Businessnxt Order.
+Salesforce Invoice to Visma Order
+---------------------------------
+Every Salesforce Invoice will be synchronized with a Visma Order.
 
-Once a link between a Salesforce Invoice and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Invoice and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Invoice and a Businessnxt Order:
+The following properties are synchronized between a Salesforce Invoice and a Visma Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Invoice Property
-     - Businessnxt Order Property
-     - Businessnxt Data Type
+     - Visma Order Property
+     - Visma Data Type
    * - FullSettlementDate
      - dueDate
      - "string"
@@ -69,52 +69,52 @@ The following properties are synchronized between a Salesforce Invoice and a Bus
      - "string"
 
 
-Salesforce Invoiceline to Businessnxt Order
--------------------------------------------
-Every Salesforce Invoiceline will be synchronized with a Businessnxt Order.
+Salesforce Invoiceline to Visma Order
+-------------------------------------
+Every Salesforce Invoiceline will be synchronized with a Visma Order.
 
-Once a link between a Salesforce Invoiceline and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Invoiceline and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Invoiceline and a Businessnxt Order:
+The following properties are synchronized between a Salesforce Invoiceline and a Visma Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Invoiceline Property
-     - Businessnxt Order Property
-     - Businessnxt Data Type
+     - Visma Order Property
+     - Visma Data Type
 
 
-Salesforce Orderitem to Businessnxt Order
------------------------------------------
-Every Salesforce Orderitem will be synchronized with a Businessnxt Order.
+Salesforce Orderitem to Visma Order
+-----------------------------------
+Every Salesforce Orderitem will be synchronized with a Visma Order.
 
-Once a link between a Salesforce Orderitem and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Orderitem and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Orderitem and a Businessnxt Order:
+The following properties are synchronized between a Salesforce Orderitem and a Visma Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Orderitem Property
-     - Businessnxt Order Property
-     - Businessnxt Data Type
+     - Visma Order Property
+     - Visma Data Type
 
 
-Salesforce Quote to Businessnxt Order
--------------------------------------
-Every Salesforce Quote will be synchronized with a Businessnxt Order.
+Salesforce Quote to Visma Order
+-------------------------------
+Every Salesforce Quote will be synchronized with a Visma Order.
 
-Once a link between a Salesforce Quote and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quote and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quote and a Businessnxt Order:
+The following properties are synchronized between a Salesforce Quote and a Visma Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quote Property
-     - Businessnxt Order Property
-     - Businessnxt Data Type
+     - Visma Order Property
+     - Visma Data Type
    * - Discount
      - totalDiscountAmountInCurrency
      - "string"
@@ -126,20 +126,20 @@ The following properties are synchronized between a Salesforce Quote and a Busin
      - "string"
 
 
-Salesforce Quotelineitem to Businessnxt Order
----------------------------------------------
-Every Salesforce Quotelineitem will be synchronized with a Businessnxt Order.
+Salesforce Quotelineitem to Visma Order
+---------------------------------------
+Every Salesforce Quotelineitem will be synchronized with a Visma Order.
 
-Once a link between a Salesforce Quotelineitem and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quotelineitem and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quotelineitem and a Businessnxt Order:
+The following properties are synchronized between a Salesforce Quotelineitem and a Visma Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quotelineitem Property
-     - Businessnxt Order Property
-     - Businessnxt Data Type
+     - Visma Order Property
+     - Visma Data Type
 
 
 Salesforce Contact to BusinessNxt Country
