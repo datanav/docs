@@ -2,7 +2,7 @@
 Exact Online to Chargebee Dataflow
 ==================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -219,34 +219,34 @@ The following properties are synchronized between a ExactOnline Vatcodes and a C
      - Chargebee Data Type
 
 
-ExactOnline Items to Chargebee Item
------------------------------------
-Every ExactOnline Items will be synchronized with a Chargebee Item.
+Exact Online Items to Chargebee Item
+------------------------------------
+Every Exact Online Items will be synchronized with a Chargebee Item.
 
-Once a link between a ExactOnline Items and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Items and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Items and a Chargebee Item:
+The following properties are synchronized between a Exact Online Items and a Chargebee Item:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Items Property
+   * - Exact Online Items Property
      - Chargebee Item Property
      - Chargebee Data Type
 
 
-ExactOnline Salesorders to Chargebee Order
-------------------------------------------
-Every ExactOnline Salesorders will be synchronized with a Chargebee Order.
+Exact Online Salesorders to Chargebee Order
+-------------------------------------------
+Every Exact Online Salesorders will be synchronized with a Chargebee Order.
 
-Once a link between a ExactOnline Salesorders and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Salesorders and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Salesorders and a Chargebee Order:
+The following properties are synchronized between a Exact Online Salesorders and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Salesorders Property
+   * - Exact Online Salesorders Property
      - Chargebee Order Property
      - Chargebee Data Type
    * - Currency
