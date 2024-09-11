@@ -2,25 +2,25 @@
 Exact Online to Keap Dataflow
 =============================
 
-Generated: 2024-09-11 11:40:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to Keap. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-ExactOnline Accounts to Keap Companies
---------------------------------------
-Every ExactOnline Accounts will be synchronized with a Keap Companies.
+Exact Online Accounts to Keap Companies
+---------------------------------------
+Every Exact Online Accounts will be synchronized with a Keap Companies.
 
-Once a link between a ExactOnline Accounts and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Accounts and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Accounts and a Keap Companies:
+The following properties are synchronized between a Exact Online Accounts and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Accounts Property
+   * - Exact Online Accounts Property
      - Keap Companies Property
      - Keap Data Type
    * - Name
@@ -31,18 +31,18 @@ The following properties are synchronized between a ExactOnline Accounts and a K
      - "string"
 
 
-ExactOnline Contacts to Keap Contacts
--------------------------------------
-Every ExactOnline Contacts will be synchronized with a Keap Contacts.
+Exact Online Contacts to Keap Contacts
+--------------------------------------
+Every Exact Online Contacts will be synchronized with a Keap Contacts.
 
-Once a link between a ExactOnline Contacts and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Contacts and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Contacts and a Keap Contacts:
+The following properties are synchronized between a Exact Online Contacts and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Contacts Property
+   * - Exact Online Contacts Property
      - Keap Contacts Property
      - Keap Data Type
    * - BirthDate
@@ -68,50 +68,50 @@ The following properties are synchronized between a ExactOnline Contacts and a K
      - "string"
 
 
-ExactOnline Departments to Keap Companies
------------------------------------------
-Every ExactOnline Departments will be synchronized with a Keap Companies.
+Exact Online Departments to Keap Companies
+------------------------------------------
+Every Exact Online Departments will be synchronized with a Keap Companies.
 
-Once a link between a ExactOnline Departments and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Departments and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Departments and a Keap Companies:
+The following properties are synchronized between a Exact Online Departments and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Departments Property
+   * - Exact Online Departments Property
      - Keap Companies Property
      - Keap Data Type
 
 
-ExactOnline Divisions to Keap Companies
+Exact Online Divisions to Keap Companies
+----------------------------------------
+Every Exact Online Divisions will be synchronized with a Keap Companies.
+
+Once a link between a Exact Online Divisions and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Divisions and a Keap Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Divisions Property
+     - Keap Companies Property
+     - Keap Data Type
+
+
+Exact Online Employees to Keap Contacts
 ---------------------------------------
-Every ExactOnline Divisions will be synchronized with a Keap Companies.
+Every Exact Online Employees will be synchronized with a Keap Contacts.
 
-Once a link between a ExactOnline Divisions and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Employees and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Divisions and a Keap Companies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ExactOnline Divisions Property
-     - Keap Companies Property
-     - Keap Data Type
-
-
-ExactOnline Employees to Keap Contacts
---------------------------------------
-Every ExactOnline Employees will be synchronized with a Keap Contacts.
-
-Once a link between a ExactOnline Employees and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ExactOnline Employees and a Keap Contacts:
+The following properties are synchronized between a Exact Online Employees and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Employees Property
+   * - Exact Online Employees Property
      - Keap Contacts Property
      - Keap Data Type
    * - BirthDate
