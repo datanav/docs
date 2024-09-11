@@ -2,25 +2,25 @@
 WooCommerce to Hubspot Dataflow
 ===============================
 
-Generated: 2024-09-11 07:44:23
+Generated: 2024-09-11 07:46:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Hubspot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Woocommerce Order to Hubspot Lineitem
+WooCommerce Order to Hubspot Lineitem
 -------------------------------------
-Every Woocommerce Order will be synchronized with a Hubspot Lineitem.
+Every WooCommerce Order will be synchronized with a Hubspot Lineitem.
 
-Once a link between a Woocommerce Order and a Hubspot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a Hubspot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Order and a Hubspot Lineitem:
+The following properties are synchronized between a WooCommerce Order and a Hubspot Lineitem:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Order Property
+   * - WooCommerce Order Property
      - Hubspot Lineitem Property
      - Hubspot Data Type
    * - line_items.name
@@ -34,18 +34,18 @@ The following properties are synchronized between a Woocommerce Order and a Hubs
      - N/A
 
 
-Woocommerce Product to Hubspot Product
+WooCommerce Product to Hubspot Product
 --------------------------------------
-Every Woocommerce Product will be synchronized with a Hubspot Product.
+Every WooCommerce Product will be synchronized with a Hubspot Product.
 
-Once a link between a Woocommerce Product and a Hubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Product and a Hubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Product and a Hubspot Product:
+The following properties are synchronized between a WooCommerce Product and a Hubspot Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Product Property
+   * - WooCommerce Product Property
      - Hubspot Product Property
      - Hubspot Data Type
    * - name
