@@ -2,25 +2,25 @@
 WebCRM to HubSpot Dataflow
 ==========================
 
-Generated: 2024-09-11 07:56:15
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Webcrm Organisations to Hubspot Company
+WebCRM Organisations to Hubspot Company
 ---------------------------------------
-Every Webcrm Organisations will be synchronized with a Hubspot Company.
+Every WebCRM Organisations will be synchronized with a Hubspot Company.
 
-Once a link between a Webcrm Organisations and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Organisations and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Organisations and a Hubspot Company:
+The following properties are synchronized between a WebCRM Organisations and a Hubspot Company:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Organisations Property
+   * - WebCRM Organisations Property
      - Hubspot Company Property
      - Hubspot Data Type
    * - OrganisationCompanyDescription
@@ -34,18 +34,18 @@ The following properties are synchronized between a Webcrm Organisations and a H
      - "string"
 
 
-Webcrm Persons to Hubspot Contact
+WebCRM Persons to Hubspot Contact
 ---------------------------------
-Every Webcrm Persons will be synchronized with a Hubspot Contact.
+Every WebCRM Persons will be synchronized with a Hubspot Contact.
 
-Once a link between a Webcrm Persons and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Persons and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Persons and a Hubspot Contact:
+The following properties are synchronized between a WebCRM Persons and a Hubspot Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Persons Property
+   * - WebCRM Persons Property
      - Hubspot Contact Property
      - Hubspot Data Type
    * - PersonDirectPhone
@@ -65,18 +65,18 @@ The following properties are synchronized between a Webcrm Persons and a Hubspot
      - "string"
 
 
-Webcrm Users to Hubspot Contact
+WebCRM Users to Hubspot Contact
 -------------------------------
-Every Webcrm Users will be synchronized with a Hubspot Contact.
+Every WebCRM Users will be synchronized with a Hubspot Contact.
 
-Once a link between a Webcrm Users and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Users and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Users and a Hubspot Contact:
+The following properties are synchronized between a WebCRM Users and a Hubspot Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Users Property
+   * - WebCRM Users Property
      - Hubspot Contact Property
      - Hubspot Data Type
    * - UserMobilePhone
