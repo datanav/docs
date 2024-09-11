@@ -2,25 +2,25 @@
 Visma Business Nxt to SuperOffice Dataflow
 ==========================================
 
-Generated: 2024-09-11 07:56:15
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Visma Business Nxt to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businessnxt Address to Superoffice Contact
-------------------------------------------
-Every Businessnxt Address will be synchronized with a Superoffice Contact.
+Visma Address to Superoffice Contact
+------------------------------------
+Every Visma Address will be synchronized with a Superoffice Contact.
 
-Once a link between a Businessnxt Address and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Address and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Address and a Superoffice Contact:
+The following properties are synchronized between a Visma Address and a Superoffice Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Address Property
+   * - Visma Address Property
      - Superoffice Contact Property
      - Superoffice Data Type
    * - name
@@ -31,18 +31,18 @@ The following properties are synchronized between a Businessnxt Address and a Su
      - "string"
 
 
-Businessnxt Company to Superoffice Contact
-------------------------------------------
-Every Businessnxt Company will be synchronized with a Superoffice Contact.
+Visma Company to Superoffice Contact
+------------------------------------
+Every Visma Company will be synchronized with a Superoffice Contact.
 
-Once a link between a Businessnxt Company and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Company and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Company and a Superoffice Contact:
+The following properties are synchronized between a Visma Company and a Superoffice Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Company Property
+   * - Visma Company Property
      - Superoffice Contact Property
      - Superoffice Data Type
    * - companyBusinessNo
