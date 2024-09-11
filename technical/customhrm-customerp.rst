@@ -1,13 +1,13 @@
-================================
-Custom HRM to CustomERP Dataflow
-================================
+=================================
+Custom HRM to Custom ERP Dataflow
+=================================
 
-Generated: 2024-09-11 11:38:24
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Custom HRM to CustomERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Custom HRM to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 CustomHRM Department to CustomERP Customer
 ------------------------------------------
@@ -41,18 +41,18 @@ The following properties are synchronized between a CustomHRM Employee and a Cus
      - CustomERP Data Type
 
 
-CustomHRM Employee to CustomERP Employee
-----------------------------------------
-Every CustomHRM Employee will be synchronized with a CustomERP Employee.
+Custom HRM Employee to Custom ERP Employee
+------------------------------------------
+Every Custom HRM Employee will be synchronized with a Custom ERP Employee.
 
-Once a link between a CustomHRM Employee and a CustomERP Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom HRM Employee and a Custom ERP Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomHRM Employee and a CustomERP Employee:
+The following properties are synchronized between a Custom HRM Employee and a Custom ERP Employee:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomHRM Employee Property
-     - CustomERP Employee Property
-     - CustomERP Data Type
+   * - Custom HRM Employee Property
+     - Custom ERP Employee Property
+     - Custom ERP Data Type
 
