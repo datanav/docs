@@ -2,7 +2,7 @@
 Visma Business Nxt to Chargebee Dataflow
 ========================================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
@@ -89,18 +89,18 @@ The following properties are synchronized between a Businessnxt Vat and a Charge
      - Chargebee Data Type
 
 
-Businessnxt Address to Chargebee Business_entity
-------------------------------------------------
-Every Businessnxt Address will be synchronized with a Chargebee Business_entity.
+Visma Address to Chargebee Business_entity
+------------------------------------------
+Every Visma Address will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Businessnxt Address and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Address and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Address and a Chargebee Business_entity:
+The following properties are synchronized between a Visma Address and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Address Property
+   * - Visma Address Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
    * - name
@@ -108,18 +108,18 @@ The following properties are synchronized between a Businessnxt Address and a Ch
      - "string"
 
 
-Businessnxt Company to Chargebee Business_entity
-------------------------------------------------
-Every Businessnxt Company will be synchronized with a Chargebee Business_entity.
+Visma Company to Chargebee Business_entity
+------------------------------------------
+Every Visma Company will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Businessnxt Company and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Company and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Company and a Chargebee Business_entity:
+The following properties are synchronized between a Visma Company and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Company Property
+   * - Visma Company Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
    * - name
@@ -127,34 +127,34 @@ The following properties are synchronized between a Businessnxt Company and a Ch
      - "string"
 
 
-Businessnxt Order to Chargebee Order
-------------------------------------
-Every Businessnxt Order will be synchronized with a Chargebee Order.
+Visma Order to Chargebee Order
+------------------------------
+Every Visma Order will be synchronized with a Chargebee Order.
 
-Once a link between a Businessnxt Order and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Order and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Order and a Chargebee Order:
+The following properties are synchronized between a Visma Order and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Order Property
+   * - Visma Order Property
      - Chargebee Order Property
      - Chargebee Data Type
 
 
-Businessnxt Product to Chargebee Item
--------------------------------------
-Every Businessnxt Product will be synchronized with a Chargebee Item.
+Visma Product to Chargebee Item
+-------------------------------
+Every Visma Product will be synchronized with a Chargebee Item.
 
-Once a link between a Businessnxt Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Product and a Chargebee Item:
+The following properties are synchronized between a Visma Product and a Chargebee Item:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Product Property
+   * - Visma Product Property
      - Chargebee Item Property
      - Chargebee Data Type
 
