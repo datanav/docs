@@ -2,7 +2,7 @@
 CustomCRM to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:37:15
 
 Introduction
 ------------
@@ -73,66 +73,66 @@ The following properties are synchronized between a Custom User and a Salesforce
      - Salesforce Data Type
 
 
-Custom Contact to Salesforce Contact
-------------------------------------
-Every Custom Contact will be synchronized with a Salesforce Contact.
+CustomCRM Contact to Salesforce Contact
+---------------------------------------
+Every CustomCRM Contact will be synchronized with a Salesforce Contact.
 
-Once a link between a Custom Contact and a Salesforce Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Contact and a Salesforce Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Contact and a Salesforce Contact:
+The following properties are synchronized between a CustomCRM Contact and a Salesforce Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Contact Property
+   * - CustomCRM Contact Property
      - Salesforce Contact Property
      - Salesforce Data Type
 
 
-Custom Order to Salesforce Order
---------------------------------
-Every Custom Order will be synchronized with a Salesforce Order.
+CustomCRM Order to Salesforce Order
+-----------------------------------
+Every CustomCRM Order will be synchronized with a Salesforce Order.
 
-Once a link between a Custom Order and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Order and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Order and a Salesforce Order:
+The following properties are synchronized between a CustomCRM Order and a Salesforce Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Order Property
+   * - CustomCRM Order Property
      - Salesforce Order Property
      - Salesforce Data Type
 
 
-Custom Product to Salesforce Product2
--------------------------------------
-Every Custom Product will be synchronized with a Salesforce Product2.
+CustomCRM Product to Salesforce Product2
+----------------------------------------
+Every CustomCRM Product will be synchronized with a Salesforce Product2.
 
-Once a link between a Custom Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Product and a Salesforce Product2:
+The following properties are synchronized between a CustomCRM Product and a Salesforce Product2:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Product Property
+   * - CustomCRM Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
 
 
-Custom Quote to Salesforce Quote
---------------------------------
-Every Custom Quote will be synchronized with a Salesforce Quote.
+CustomCRM Quote to Salesforce Quote
+-----------------------------------
+Every CustomCRM Quote will be synchronized with a Salesforce Quote.
 
-Once a link between a Custom Quote and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Quote and a Salesforce Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Quote and a Salesforce Quote:
+The following properties are synchronized between a CustomCRM Quote and a Salesforce Quote:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Quote Property
+   * - CustomCRM Quote Property
      - Salesforce Quote Property
      - Salesforce Data Type
 
