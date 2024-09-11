@@ -2,7 +2,7 @@
 PowerOffice GO to CRMOffice Dataflow
 ====================================
 
-Generated: 2024-09-11 11:40:16
+Generated: 2024-09-11 11:51:16
 
 Introduction
 ------------
@@ -75,18 +75,18 @@ The following properties are synchronized between a PowerOfficeGO Product and a 
      - CRMOffice Data Type
 
 
-PowerOfficeGO Projects to CRMOffice Activities
-----------------------------------------------
-Every PowerOfficeGO Projects will be synchronized with a CRMOffice Activities.
+PowerOffice GO Projects to CRMOffice Activities
+-----------------------------------------------
+Every PowerOffice GO Projects will be synchronized with a CRMOffice Activities.
 
-Once a link between a PowerOfficeGO Projects and a CRMOffice Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Projects and a CRMOffice Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Projects and a CRMOffice Activities:
+The following properties are synchronized between a PowerOffice GO Projects and a CRMOffice Activities:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Projects Property
+   * - PowerOffice GO Projects Property
      - CRMOffice Activities Property
      - CRMOffice Data Type
    * - Name
