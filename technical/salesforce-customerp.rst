@@ -2,187 +2,187 @@
 Salesforce to Custom ERP Dataflow
 =================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Salesforce Customer to CustomERP Contact
-----------------------------------------
-Every Salesforce Customer will be synchronized with a CustomERP Contact.
+Salesforce Customer to Custom ERP Contact
+-----------------------------------------
+Every Salesforce Customer will be synchronized with a Custom ERP Contact.
 
-Once a link between a Salesforce Customer and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Customer and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Customer and a CustomERP Contact:
+The following properties are synchronized between a Salesforce Customer and a Custom ERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Customer Property
-     - CustomERP Contact Property
-     - CustomERP Data Type
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
 
 
-Salesforce Division to CustomERP Customer
------------------------------------------
-Every Salesforce Division will be synchronized with a CustomERP Customer.
+Salesforce Division to Custom ERP Customer
+------------------------------------------
+Every Salesforce Division will be synchronized with a Custom ERP Customer.
 
-Once a link between a Salesforce Division and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Division and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Division and a CustomERP Customer:
+The following properties are synchronized between a Salesforce Division and a Custom ERP Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Division Property
-     - CustomERP Customer Property
-     - CustomERP Data Type
+     - Custom ERP Customer Property
+     - Custom ERP Data Type
 
 
-Salesforce Invoice to CustomERP Order
--------------------------------------
-Every Salesforce Invoice will be synchronized with a CustomERP Order.
+Salesforce Invoice to Custom ERP Order
+--------------------------------------
+Every Salesforce Invoice will be synchronized with a Custom ERP Order.
 
-Once a link between a Salesforce Invoice and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Invoice and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Invoice and a CustomERP Order:
+The following properties are synchronized between a Salesforce Invoice and a Custom ERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Invoice Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
 
-Salesforce Invoiceline to CustomERP Order
------------------------------------------
-Every Salesforce Invoiceline will be synchronized with a CustomERP Order.
+Salesforce Invoiceline to Custom ERP Order
+------------------------------------------
+Every Salesforce Invoiceline will be synchronized with a Custom ERP Order.
 
-Once a link between a Salesforce Invoiceline and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Invoiceline and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Invoiceline and a CustomERP Order:
+The following properties are synchronized between a Salesforce Invoiceline and a Custom ERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Invoiceline Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
 
-Salesforce Orderitem to CustomERP Order
----------------------------------------
-Every Salesforce Orderitem will be synchronized with a CustomERP Order.
+Salesforce Orderitem to Custom ERP Order
+----------------------------------------
+Every Salesforce Orderitem will be synchronized with a Custom ERP Order.
 
-Once a link between a Salesforce Orderitem and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Orderitem and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Orderitem and a CustomERP Order:
+The following properties are synchronized between a Salesforce Orderitem and a Custom ERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Orderitem Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
 
-Salesforce Organization to CustomERP Customer
----------------------------------------------
-Every Salesforce Organization will be synchronized with a CustomERP Customer.
+Salesforce Organization to Custom ERP Customer
+----------------------------------------------
+Every Salesforce Organization will be synchronized with a Custom ERP Customer.
 
-Once a link between a Salesforce Organization and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Organization and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Organization and a CustomERP Customer:
+The following properties are synchronized between a Salesforce Organization and a Custom ERP Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Organization Property
-     - CustomERP Customer Property
-     - CustomERP Data Type
+     - Custom ERP Customer Property
+     - Custom ERP Data Type
 
 
-Salesforce Quote to CustomERP Order
------------------------------------
-Every Salesforce Quote will be synchronized with a CustomERP Order.
+Salesforce Quote to Custom ERP Order
+------------------------------------
+Every Salesforce Quote will be synchronized with a Custom ERP Order.
 
-Once a link between a Salesforce Quote and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quote and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quote and a CustomERP Order:
+The following properties are synchronized between a Salesforce Quote and a Custom ERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quote Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
 
-Salesforce Quotelineitem to CustomERP Order
--------------------------------------------
-Every Salesforce Quotelineitem will be synchronized with a CustomERP Order.
+Salesforce Quotelineitem to Custom ERP Order
+--------------------------------------------
+Every Salesforce Quotelineitem will be synchronized with a Custom ERP Order.
 
-Once a link between a Salesforce Quotelineitem and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quotelineitem and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quotelineitem and a CustomERP Order:
+The following properties are synchronized between a Salesforce Quotelineitem and a Custom ERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quotelineitem Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
 
-Salesforce Seller to CustomERP Contact
---------------------------------------
-Every Salesforce Seller will be synchronized with a CustomERP Contact.
+Salesforce Seller to Custom ERP Contact
+---------------------------------------
+Every Salesforce Seller will be synchronized with a Custom ERP Contact.
 
-Once a link between a Salesforce Seller and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Seller and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Seller and a CustomERP Contact:
+The following properties are synchronized between a Salesforce Seller and a Custom ERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Seller Property
-     - CustomERP Contact Property
-     - CustomERP Data Type
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
 
 
-Salesforce Task to CustomERP Project
-------------------------------------
-Every Salesforce Task will be synchronized with a CustomERP Project.
+Salesforce Task to Custom ERP Project
+-------------------------------------
+Every Salesforce Task will be synchronized with a Custom ERP Project.
 
-Once a link between a Salesforce Task and a CustomERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Task and a Custom ERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Task and a CustomERP Project:
+The following properties are synchronized between a Salesforce Task and a Custom ERP Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Task Property
-     - CustomERP Project Property
-     - CustomERP Data Type
+     - Custom ERP Project Property
+     - Custom ERP Data Type
 
 
-Salesforce User to CustomERP Contact
-------------------------------------
-Every Salesforce User will be synchronized with a CustomERP Contact.
+Salesforce User to Custom ERP Contact
+-------------------------------------
+Every Salesforce User will be synchronized with a Custom ERP Contact.
 
-Once a link between a Salesforce User and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce User and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce User and a CustomERP Contact:
+The following properties are synchronized between a Salesforce User and a Custom ERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce User Property
-     - CustomERP Contact Property
-     - CustomERP Data Type
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
 
 
 Salesforce Contact to Custom ERP Contact
