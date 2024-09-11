@@ -1,13 +1,13 @@
-==========================================
-SuperOffice to Visma Business Nxt Dataflow
-==========================================
+===================================
+SuperOffice to BusinessNxt Dataflow
+===================================
 
-Generated: 2024-09-11 07:48:17
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 SuperOffice Contact to Businessnxt Address
 ------------------------------------------
@@ -94,20 +94,20 @@ The following properties are synchronized between a SuperOffice Sale and a Busin
      - "string"
 
 
-SuperOffice Listcountryitems to Visma Country
----------------------------------------------
-Every SuperOffice Listcountryitems will be synchronized with a Visma Country.
+SuperOffice Listcountryitems to BusinessNxt Country
+---------------------------------------------------
+Every SuperOffice Listcountryitems will be synchronized with a BusinessNxt Country.
 
-Once a link between a SuperOffice Listcountryitems and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Listcountryitems and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Listcountryitems and a Visma Country:
+The following properties are synchronized between a SuperOffice Listcountryitems and a BusinessNxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Listcountryitems Property
-     - Visma Country Property
-     - Visma Data Type
+     - BusinessNxt Country Property
+     - BusinessNxt Data Type
    * - Name
      - name
      - "string"
@@ -116,39 +116,39 @@ The following properties are synchronized between a SuperOffice Listcountryitems
      - "string"
 
 
-SuperOffice Listcurrencyitems to Visma Currency
------------------------------------------------
-Every SuperOffice Listcurrencyitems will be synchronized with a Visma Currency.
+SuperOffice Listcurrencyitems to BusinessNxt Currency
+-----------------------------------------------------
+Every SuperOffice Listcurrencyitems will be synchronized with a BusinessNxt Currency.
 
-Once a link between a SuperOffice Listcurrencyitems and a Visma Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Listcurrencyitems and a BusinessNxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Listcurrencyitems and a Visma Currency:
+The following properties are synchronized between a SuperOffice Listcurrencyitems and a BusinessNxt Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Listcurrencyitems Property
-     - Visma Currency Property
-     - Visma Data Type
+     - BusinessNxt Currency Property
+     - BusinessNxt Data Type
    * - Name
      - isoCode
      - "string"
 
 
-SuperOffice Listproductcategoryitems to Visma Productcategory
--------------------------------------------------------------
-Every SuperOffice Listproductcategoryitems will be synchronized with a Visma Productcategory.
+SuperOffice Listproductcategoryitems to BusinessNxt Productcategory
+-------------------------------------------------------------------
+Every SuperOffice Listproductcategoryitems will be synchronized with a BusinessNxt Productcategory.
 
-Once a link between a SuperOffice Listproductcategoryitems and a Visma Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Listproductcategoryitems and a BusinessNxt Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Listproductcategoryitems and a Visma Productcategory:
+The following properties are synchronized between a SuperOffice Listproductcategoryitems and a BusinessNxt Productcategory:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Listproductcategoryitems Property
-     - Visma Productcategory Property
-     - Visma Data Type
+     - BusinessNxt Productcategory Property
+     - BusinessNxt Data Type
    * - Name
      - text
      - "string"
@@ -157,20 +157,20 @@ The following properties are synchronized between a SuperOffice Listproductcateg
      - "string"
 
 
-SuperOffice Product to Visma Product
-------------------------------------
-Every SuperOffice Product will be synchronized with a Visma Product.
+SuperOffice Product to BusinessNxt Product
+------------------------------------------
+Every SuperOffice Product will be synchronized with a BusinessNxt Product.
 
-Once a link between a SuperOffice Product and a Visma Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Product and a BusinessNxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Product and a Visma Product:
+The following properties are synchronized between a SuperOffice Product and a BusinessNxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Product Property
-     - Visma Product Property
-     - Visma Data Type
+     - BusinessNxt Product Property
+     - BusinessNxt Data Type
    * - Description
      - description
      - "string"
@@ -182,20 +182,20 @@ The following properties are synchronized between a SuperOffice Product and a Vi
      - "string"
 
 
-SuperOffice Quoteline to Visma Orderline
-----------------------------------------
-Every SuperOffice Quoteline will be synchronized with a Visma Orderline.
+SuperOffice Quoteline to BusinessNxt Orderline
+----------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a BusinessNxt Orderline.
 
-Once a link between a SuperOffice Quoteline and a Visma Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quoteline and a BusinessNxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quoteline and a Visma Orderline:
+The following properties are synchronized between a SuperOffice Quoteline and a BusinessNxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quoteline Property
-     - Visma Orderline Property
-     - Visma Data Type
+     - BusinessNxt Orderline Property
+     - BusinessNxt Data Type
    * - QuoteAlternativeId
      - orderNo
      - "string"
