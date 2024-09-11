@@ -2,7 +2,7 @@
 Business Nxt to MemberCare Dataflow
 ===================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -127,18 +127,18 @@ The following properties are synchronized between a BusinessNxt Vat and a Member
      - "string"
 
 
-BusinessNxt Address to MemberCare Companies
--------------------------------------------
-Every BusinessNxt Address will be synchronized with a MemberCare Companies.
+Business Nxt Address to MemberCare Companies
+--------------------------------------------
+Every Business Nxt Address will be synchronized with a MemberCare Companies.
 
-Once a link between a BusinessNxt Address and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Address and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Address and a MemberCare Companies:
+The following properties are synchronized between a Business Nxt Address and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Address Property
+   * - Business Nxt Address Property
      - MemberCare Companies Property
      - MemberCare Data Type
    * - addressLine1
@@ -161,18 +161,18 @@ The following properties are synchronized between a BusinessNxt Address and a Me
      - "string"
 
 
-BusinessNxt Company to MemberCare Companies
--------------------------------------------
-Every BusinessNxt Company will be synchronized with a MemberCare Companies.
+Business Nxt Company to MemberCare Companies
+--------------------------------------------
+Every Business Nxt Company will be synchronized with a MemberCare Companies.
 
-Once a link between a BusinessNxt Company and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Company and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Company and a MemberCare Companies:
+The following properties are synchronized between a Business Nxt Company and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Company Property
+   * - Business Nxt Company Property
      - MemberCare Companies Property
      - MemberCare Data Type
    * - companyNo
@@ -183,18 +183,18 @@ The following properties are synchronized between a BusinessNxt Company and a Me
      - "string"
 
 
-BusinessNxt Country to MemberCare Countries
--------------------------------------------
-Every BusinessNxt Country will be synchronized with a MemberCare Countries.
+Business Nxt Country to MemberCare Countries
+--------------------------------------------
+Every Business Nxt Country will be synchronized with a MemberCare Countries.
 
-Once a link between a BusinessNxt Country and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Country and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Country and a MemberCare Countries:
+The following properties are synchronized between a Business Nxt Country and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Country Property
+   * - Business Nxt Country Property
      - MemberCare Countries Property
      - MemberCare Data Type
    * - isoCode
