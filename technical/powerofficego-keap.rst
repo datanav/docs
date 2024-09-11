@@ -2,7 +2,7 @@
 PowerOfficeGO to Keap Dataflow
 ==============================
 
-Generated: 2024-09-11 08:50:13
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
@@ -37,18 +37,18 @@ The following properties are synchronized between a PowerOffice Customers and a 
      - "string"
 
 
-PowerOffice Contactperson to Keap Contacts
-------------------------------------------
-Every PowerOffice Contactperson will be synchronized with a Keap Contacts.
+PowerOfficeGO Contactperson to Keap Contacts
+--------------------------------------------
+Every PowerOfficeGO Contactperson will be synchronized with a Keap Contacts.
 
-Once a link between a PowerOffice Contactperson and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Contactperson and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Contactperson and a Keap Contacts:
+The following properties are synchronized between a PowerOfficeGO Contactperson and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Contactperson Property
+   * - PowerOfficeGO Contactperson Property
      - Keap Contacts Property
      - Keap Data Type
    * - dateOfBirth
@@ -56,18 +56,18 @@ The following properties are synchronized between a PowerOffice Contactperson an
      - "string"
 
 
-PowerOffice Customers person to Keap Contacts
----------------------------------------------
-Every PowerOffice Customers person will be synchronized with a Keap Contacts.
+PowerOfficeGO Customers person to Keap Contacts
+-----------------------------------------------
+Every PowerOfficeGO Customers person will be synchronized with a Keap Contacts.
 
-Once a link between a PowerOffice Customers person and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Customers person and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Customers person and a Keap Contacts:
+The following properties are synchronized between a PowerOfficeGO Customers person and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Customers person Property
+   * - PowerOfficeGO Customers person Property
      - Keap Contacts Property
      - Keap Data Type
    * - DateOfBirth
@@ -75,18 +75,18 @@ The following properties are synchronized between a PowerOffice Customers person
      - "string"
 
 
-PowerOffice Departments to Keap Companies
------------------------------------------
-Every PowerOffice Departments will be synchronized with a Keap Companies.
+PowerOfficeGO Departments to Keap Companies
+-------------------------------------------
+Every PowerOfficeGO Departments will be synchronized with a Keap Companies.
 
-Once a link between a PowerOffice Departments and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Departments and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Departments and a Keap Companies:
+The following properties are synchronized between a PowerOfficeGO Departments and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Departments Property
+   * - PowerOfficeGO Departments Property
      - Keap Companies Property
      - Keap Data Type
    * - Name
@@ -94,18 +94,18 @@ The following properties are synchronized between a PowerOffice Departments and 
      - "string"
 
 
-PowerOffice Employees to Keap Contacts
---------------------------------------
-Every PowerOffice Employees will be synchronized with a Keap Contacts.
+PowerOfficeGO Employees to Keap Contacts
+----------------------------------------
+Every PowerOfficeGO Employees will be synchronized with a Keap Contacts.
 
-Once a link between a PowerOffice Employees and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Employees and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Employees and a Keap Contacts:
+The following properties are synchronized between a PowerOfficeGO Employees and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Employees Property
+   * - PowerOfficeGO Employees Property
      - Keap Contacts Property
      - Keap Data Type
    * - DateOfBirth
