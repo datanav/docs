@@ -2,25 +2,25 @@
 CustomWebshop to Wix Dataflow
 =============================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 07:55:13
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CustomWebshop to Wix. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Custom Product to Wix Products
-------------------------------
-Every Custom Product will be synchronized with a Wix Products.
+CustomWebshop Product to Wix Products
+-------------------------------------
+Every CustomWebshop Product will be synchronized with a Wix Products.
 
-Once a link between a Custom Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomWebshop Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Product and a Wix Products:
+The following properties are synchronized between a CustomWebshop Product and a Wix Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Product Property
+   * - CustomWebshop Product Property
      - Wix Products Property
      - Wix Data Type
 
