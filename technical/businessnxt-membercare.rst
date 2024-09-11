@@ -2,7 +2,7 @@
 BusinessNxt to MemberCare Dataflow
 ==================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:37:15
 
 Introduction
 ------------
@@ -127,18 +127,18 @@ The following properties are synchronized between a Visma Vat and a Membercare C
      - "string"
 
 
-Visma Address to MemberCare Companies
--------------------------------------
-Every Visma Address will be synchronized with a MemberCare Companies.
+BusinessNxt Address to MemberCare Companies
+-------------------------------------------
+Every BusinessNxt Address will be synchronized with a MemberCare Companies.
 
-Once a link between a Visma Address and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Address and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Address and a MemberCare Companies:
+The following properties are synchronized between a BusinessNxt Address and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Address Property
+   * - BusinessNxt Address Property
      - MemberCare Companies Property
      - MemberCare Data Type
    * - addressLine1
@@ -161,18 +161,18 @@ The following properties are synchronized between a Visma Address and a MemberCa
      - "string"
 
 
-Visma Company to MemberCare Companies
--------------------------------------
-Every Visma Company will be synchronized with a MemberCare Companies.
+BusinessNxt Company to MemberCare Companies
+-------------------------------------------
+Every BusinessNxt Company will be synchronized with a MemberCare Companies.
 
-Once a link between a Visma Company and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Company and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Company and a MemberCare Companies:
+The following properties are synchronized between a BusinessNxt Company and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Company Property
+   * - BusinessNxt Company Property
      - MemberCare Companies Property
      - MemberCare Data Type
    * - companyNo
@@ -183,18 +183,18 @@ The following properties are synchronized between a Visma Company and a MemberCa
      - "string"
 
 
-Visma Country to MemberCare Countries
--------------------------------------
-Every Visma Country will be synchronized with a MemberCare Countries.
+BusinessNxt Country to MemberCare Countries
+-------------------------------------------
+Every BusinessNxt Country will be synchronized with a MemberCare Countries.
 
-Once a link between a Visma Country and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Country and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Country and a MemberCare Countries:
+The following properties are synchronized between a BusinessNxt Country and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Country Property
+   * - BusinessNxt Country Property
      - MemberCare Countries Property
      - MemberCare Data Type
    * - isoCode
