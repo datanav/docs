@@ -2,7 +2,7 @@
 PowerOfficeGO to Zendesk Dataflow
 =================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
@@ -73,18 +73,18 @@ The following properties are synchronized between a PowerOfficeGO Customers pers
      - "string"
 
 
-PowerOffice Customers to Zendesk Organizations
-----------------------------------------------
-Every PowerOffice Customers will be synchronized with a Zendesk Organizations.
+PowerOfficeGO Customers to Zendesk Organizations
+------------------------------------------------
+Every PowerOfficeGO Customers will be synchronized with a Zendesk Organizations.
 
-Once a link between a PowerOffice Customers and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Customers and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Customers and a Zendesk Organizations:
+The following properties are synchronized between a PowerOfficeGO Customers and a Zendesk Organizations:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Customers Property
+   * - PowerOfficeGO Customers Property
      - Zendesk Organizations Property
      - Zendesk Data Type
    * - Name
@@ -92,18 +92,18 @@ The following properties are synchronized between a PowerOffice Customers and a 
      - "string"
 
 
-PowerOffice Departments to Zendesk Organizations
-------------------------------------------------
-Every PowerOffice Departments will be synchronized with a Zendesk Organizations.
+PowerOfficeGO Departments to Zendesk Organizations
+--------------------------------------------------
+Every PowerOfficeGO Departments will be synchronized with a Zendesk Organizations.
 
-Once a link between a PowerOffice Departments and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Departments and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Departments and a Zendesk Organizations:
+The following properties are synchronized between a PowerOfficeGO Departments and a Zendesk Organizations:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Departments Property
+   * - PowerOfficeGO Departments Property
      - Zendesk Organizations Property
      - Zendesk Data Type
    * - Name
