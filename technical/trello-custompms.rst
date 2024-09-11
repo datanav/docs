@@ -2,91 +2,91 @@
 Trello to CustomPMS Dataflow
 ============================
 
-Generated: 2024-09-11 07:56:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Trello to CustomPMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Trello Actions to Custom Project
---------------------------------
-Every Trello Actions will be synchronized with a Custom Project.
+Trello Actions to CustomPMS Project
+-----------------------------------
+Every Trello Actions will be synchronized with a CustomPMS Project.
 
-Once a link between a Trello Actions and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Actions and a CustomPMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Actions and a Custom Project:
+The following properties are synchronized between a Trello Actions and a CustomPMS Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Actions Property
-     - Custom Project Property
-     - Custom Data Type
+     - CustomPMS Project Property
+     - CustomPMS Data Type
 
 
-Trello Boards to Custom Project
--------------------------------
-Every Trello Boards will be synchronized with a Custom Project.
+Trello Boards to CustomPMS Project
+----------------------------------
+Every Trello Boards will be synchronized with a CustomPMS Project.
 
-Once a link between a Trello Boards and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Boards and a CustomPMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Boards and a Custom Project:
+The following properties are synchronized between a Trello Boards and a CustomPMS Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Boards Property
-     - Custom Project Property
-     - Custom Data Type
+     - CustomPMS Project Property
+     - CustomPMS Data Type
 
 
-Trello Cards to Custom Project
-------------------------------
-Every Trello Cards will be synchronized with a Custom Project.
+Trello Cards to CustomPMS Project
+---------------------------------
+Every Trello Cards will be synchronized with a CustomPMS Project.
 
-Once a link between a Trello Cards and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Cards and a CustomPMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Cards and a Custom Project:
+The following properties are synchronized between a Trello Cards and a CustomPMS Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Cards Property
-     - Custom Project Property
-     - Custom Data Type
+     - CustomPMS Project Property
+     - CustomPMS Data Type
 
 
-Trello Lists to Custom Project
-------------------------------
-Every Trello Lists will be synchronized with a Custom Project.
+Trello Lists to CustomPMS Project
+---------------------------------
+Every Trello Lists will be synchronized with a CustomPMS Project.
 
-Once a link between a Trello Lists and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Lists and a CustomPMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Lists and a Custom Project:
+The following properties are synchronized between a Trello Lists and a CustomPMS Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Lists Property
-     - Custom Project Property
-     - Custom Data Type
+     - CustomPMS Project Property
+     - CustomPMS Data Type
 
 
-Trello Organizations to Custom Customer
----------------------------------------
-Every Trello Organizations will be synchronized with a Custom Customer.
+Trello Organizations to CustomPMS Customer
+------------------------------------------
+Every Trello Organizations will be synchronized with a CustomPMS Customer.
 
-Once a link between a Trello Organizations and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Organizations and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Organizations and a Custom Customer:
+The following properties are synchronized between a Trello Organizations and a CustomPMS Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Organizations Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomPMS Customer Property
+     - CustomPMS Data Type
 
 
 Trello Cards to CustomPMS Task
