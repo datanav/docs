@@ -1,13 +1,13 @@
-====================================
-Business Nxt to ExactOnline Dataflow
-====================================
+=====================================
+Business Nxt to Exact Online Dataflow
+=====================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Business Nxt to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Business Nxt to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 BusinessNxt Address to ExactOnline Accounts
 -------------------------------------------
@@ -151,20 +151,20 @@ The following properties are synchronized between a BusinessNxt Vat and a ExactO
      - ExactOnline Data Type
 
 
-BusinessNxt Address to ExactOnline Addresses
---------------------------------------------
-Every BusinessNxt Address will be synchronized with a ExactOnline Addresses.
+Business Nxt Address to Exact Online Addresses
+----------------------------------------------
+Every Business Nxt Address will be synchronized with a Exact Online Addresses.
 
-Once a link between a BusinessNxt Address and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Address and a Exact Online Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Address and a ExactOnline Addresses:
+The following properties are synchronized between a Business Nxt Address and a Exact Online Addresses:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Address Property
-     - ExactOnline Addresses Property
-     - ExactOnline Data Type
+   * - Business Nxt Address Property
+     - Exact Online Addresses Property
+     - Exact Online Data Type
    * - countryNo
      - Country
      - "string"
@@ -173,88 +173,88 @@ The following properties are synchronized between a BusinessNxt Address and a Ex
      - "string"
 
 
-BusinessNxt Company to ExactOnline Addresses
---------------------------------------------
-Every BusinessNxt Company will be synchronized with a ExactOnline Addresses.
-
-Once a link between a BusinessNxt Company and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a BusinessNxt Company and a ExactOnline Addresses:
-
-.. list-table::
-   :header-rows: 1
-
-   * - BusinessNxt Company Property
-     - ExactOnline Addresses Property
-     - ExactOnline Data Type
-
-
-BusinessNxt Currency to ExactOnline Currencies
+Business Nxt Company to Exact Online Addresses
 ----------------------------------------------
-Every BusinessNxt Currency will be synchronized with a ExactOnline Currencies.
+Every Business Nxt Company will be synchronized with a Exact Online Addresses.
 
-Once a link between a BusinessNxt Currency and a ExactOnline Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Company and a Exact Online Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Currency and a ExactOnline Currencies:
+The following properties are synchronized between a Business Nxt Company and a Exact Online Addresses:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Currency Property
-     - ExactOnline Currencies Property
-     - ExactOnline Data Type
+   * - Business Nxt Company Property
+     - Exact Online Addresses Property
+     - Exact Online Data Type
+
+
+Business Nxt Currency to Exact Online Currencies
+------------------------------------------------
+Every Business Nxt Currency will be synchronized with a Exact Online Currencies.
+
+Once a link between a Business Nxt Currency and a Exact Online Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Currency and a Exact Online Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Currency Property
+     - Exact Online Currencies Property
+     - Exact Online Data Type
    * - name
      - Description
      - "string"
 
 
-BusinessNxt Order to ExactOnline Salesorders
---------------------------------------------
-Every BusinessNxt Order will be synchronized with a ExactOnline Salesorders.
+Business Nxt Order to Exact Online Salesorders
+----------------------------------------------
+Every Business Nxt Order will be synchronized with a Exact Online Salesorders.
 
-Once a link between a BusinessNxt Order and a ExactOnline Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Order and a Exact Online Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Order and a ExactOnline Salesorders:
+The following properties are synchronized between a Business Nxt Order and a Exact Online Salesorders:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Order Property
-     - ExactOnline Salesorders Property
-     - ExactOnline Data Type
+   * - Business Nxt Order Property
+     - Exact Online Salesorders Property
+     - Exact Online Data Type
    * - totalDiscountAmountInCurrency
      - Discount
      - "string"
 
 
-BusinessNxt Orderline to ExactOnline Salesorderlines
-----------------------------------------------------
-Every BusinessNxt Orderline will be synchronized with a ExactOnline Salesorderlines.
+Business Nxt Orderline to Exact Online Salesorderlines
+------------------------------------------------------
+Every Business Nxt Orderline will be synchronized with a Exact Online Salesorderlines.
 
-Once a link between a BusinessNxt Orderline and a ExactOnline Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Orderline and a Exact Online Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Orderline and a ExactOnline Salesorderlines:
-
-.. list-table::
-   :header-rows: 1
-
-   * - BusinessNxt Orderline Property
-     - ExactOnline Salesorderlines Property
-     - ExactOnline Data Type
-
-
-BusinessNxt Product to ExactOnline Items
-----------------------------------------
-Every BusinessNxt Product will be synchronized with a ExactOnline Items.
-
-Once a link between a BusinessNxt Product and a ExactOnline Items is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a BusinessNxt Product and a ExactOnline Items:
+The following properties are synchronized between a Business Nxt Orderline and a Exact Online Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Product Property
-     - ExactOnline Items Property
-     - ExactOnline Data Type
+   * - Business Nxt Orderline Property
+     - Exact Online Salesorderlines Property
+     - Exact Online Data Type
+
+
+Business Nxt Product to Exact Online Items
+------------------------------------------
+Every Business Nxt Product will be synchronized with a Exact Online Items.
+
+Once a link between a Business Nxt Product and a Exact Online Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Product and a Exact Online Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Product Property
+     - Exact Online Items Property
+     - Exact Online Data Type
 
