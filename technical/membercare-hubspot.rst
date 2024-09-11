@@ -1,13 +1,13 @@
 ==============================
-MemberCare to Hubspot Dataflow
+MemberCare to HubSpot Dataflow
 ==============================
 
-Generated: 2024-09-11 07:47:14
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to Hubspot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Membercare Companies to Hubspot Company
 ---------------------------------------
@@ -87,20 +87,20 @@ The following properties are synchronized between a Membercare Persons and a Hub
      - "string"
 
 
-MemberCare Invoices to Hubspot Lineitem
+MemberCare Invoices to HubSpot Lineitem
 ---------------------------------------
-Every MemberCare Invoices will be synchronized with a Hubspot Lineitem.
+Every MemberCare Invoices will be synchronized with a HubSpot Lineitem.
 
-Once a link between a MemberCare Invoices and a Hubspot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Invoices and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Invoices and a Hubspot Lineitem:
+The following properties are synchronized between a MemberCare Invoices and a HubSpot Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Invoices Property
-     - Hubspot Lineitem Property
-     - Hubspot Data Type
+     - HubSpot Lineitem Property
+     - HubSpot Data Type
    * - invoiceItems.description
      - properties.description
      - "string"
