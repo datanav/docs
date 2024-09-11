@@ -2,25 +2,25 @@
 WebCRM to Trello Dataflow
 =========================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to Trello. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Webcrm Organisations to Trello Organizations
+WebCRM Organisations to Trello Organizations
 --------------------------------------------
-Every Webcrm Organisations will be synchronized with a Trello Organizations.
+Every WebCRM Organisations will be synchronized with a Trello Organizations.
 
-Once a link between a Webcrm Organisations and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Organisations and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Organisations and a Trello Organizations:
+The following properties are synchronized between a WebCRM Organisations and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Organisations Property
+   * - WebCRM Organisations Property
      - Trello Organizations Property
      - Trello Data Type
    * - OrganisationCompanyDescription
@@ -31,18 +31,18 @@ The following properties are synchronized between a Webcrm Organisations and a T
      - "string"
 
 
-Webcrm Persons to Trello Members
+WebCRM Persons to Trello Members
 --------------------------------
-Every Webcrm Persons will be synchronized with a Trello Members.
+Every WebCRM Persons will be synchronized with a Trello Members.
 
-Once a link between a Webcrm Persons and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Persons and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Persons and a Trello Members:
+The following properties are synchronized between a WebCRM Persons and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Persons Property
+   * - WebCRM Persons Property
      - Trello Members Property
      - Trello Data Type
    * - PersonName
@@ -50,18 +50,18 @@ The following properties are synchronized between a Webcrm Persons and a Trello 
      - "string"
 
 
-Webcrm Users to Trello Members
+WebCRM Users to Trello Members
 ------------------------------
-Every Webcrm Users will be synchronized with a Trello Members.
+Every WebCRM Users will be synchronized with a Trello Members.
 
-Once a link between a Webcrm Users and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Users and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Users and a Trello Members:
+The following properties are synchronized between a WebCRM Users and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Users Property
+   * - WebCRM Users Property
      - Trello Members Property
      - Trello Data Type
 
