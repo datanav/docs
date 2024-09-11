@@ -1,13 +1,13 @@
 ==========================
-Webcrm to Zendesk Dataflow
+WebCRM to Zendesk Dataflow
 ==========================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Webcrm to Zendesk. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to Zendesk. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Webcrm Organisations to Zendesk Organizations
 ---------------------------------------------
@@ -28,18 +28,18 @@ The following properties are synchronized between a Webcrm Organisations and a Z
      - "string"
 
 
-Webcrm Users to Zendesk Users
+WebCRM Users to Zendesk Users
 -----------------------------
-Every Webcrm Users will be synchronized with a Zendesk Users.
+Every WebCRM Users will be synchronized with a Zendesk Users.
 
-Once a link between a Webcrm Users and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Users and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Users and a Zendesk Users:
+The following properties are synchronized between a WebCRM Users and a Zendesk Users:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Users Property
+   * - WebCRM Users Property
      - Zendesk Users Property
      - Zendesk Data Type
 
