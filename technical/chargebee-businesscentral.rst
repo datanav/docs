@@ -2,7 +2,7 @@
 Chargebee to BusinessCentral Dataflow
 =====================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
@@ -27,20 +27,20 @@ The following properties are synchronized between a Chargebee Customer and a Bus
      - BusinessCentral Data Type
 
 
-Chargebee Business_entity to Business Companies
------------------------------------------------
-Every Chargebee Business_entity will be synchronized with a Business Companies.
+Chargebee Business_entity to BusinessCentral Companies
+------------------------------------------------------
+Every Chargebee Business_entity will be synchronized with a BusinessCentral Companies.
 
-Once a link between a Chargebee Business_entity and a Business Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Business_entity and a BusinessCentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Business_entity and a Business Companies:
+The following properties are synchronized between a Chargebee Business_entity and a BusinessCentral Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Business_entity Property
-     - Business Companies Property
-     - Business Data Type
+     - BusinessCentral Companies Property
+     - BusinessCentral Data Type
 
 
 Chargebee Customer to BusinessCentral Customers person
