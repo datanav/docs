@@ -2,57 +2,57 @@
 BusinessNxt to CustomWebshop Dataflow
 =====================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from BusinessNxt to CustomWebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Visma Address to CustomWebshop Customer
----------------------------------------
-Every Visma Address will be synchronized with a CustomWebshop Customer.
+BusinessNxt Address to CustomWebshop Customer
+---------------------------------------------
+Every BusinessNxt Address will be synchronized with a CustomWebshop Customer.
 
-Once a link between a Visma Address and a CustomWebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Address and a CustomWebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Address and a CustomWebshop Customer:
+The following properties are synchronized between a BusinessNxt Address and a CustomWebshop Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Address Property
+   * - BusinessNxt Address Property
      - CustomWebshop Customer Property
      - CustomWebshop Data Type
 
 
-Visma Company to CustomWebshop Customer
----------------------------------------
-Every Visma Company will be synchronized with a CustomWebshop Customer.
+BusinessNxt Company to CustomWebshop Customer
+---------------------------------------------
+Every BusinessNxt Company will be synchronized with a CustomWebshop Customer.
 
-Once a link between a Visma Company and a CustomWebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Company and a CustomWebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Company and a CustomWebshop Customer:
+The following properties are synchronized between a BusinessNxt Company and a CustomWebshop Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Company Property
+   * - BusinessNxt Company Property
      - CustomWebshop Customer Property
      - CustomWebshop Data Type
 
 
-Visma Orderline to CustomWebshop Order
---------------------------------------
-Every Visma Orderline will be synchronized with a CustomWebshop Order.
+BusinessNxt Orderline to CustomWebshop Order
+--------------------------------------------
+Every BusinessNxt Orderline will be synchronized with a CustomWebshop Order.
 
-Once a link between a Visma Orderline and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Orderline and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Orderline and a CustomWebshop Order:
+The following properties are synchronized between a BusinessNxt Orderline and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Orderline Property
+   * - BusinessNxt Orderline Property
      - CustomWebshop Order Property
      - CustomWebshop Data Type
 
