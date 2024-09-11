@@ -2,43 +2,43 @@
 Custom ERP to Custom CRM Dataflow
 =================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Custom ERP to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-CustomERP Employee to CustomCRM Contact
----------------------------------------
-Every CustomERP Employee will be synchronized with a CustomCRM Contact.
+Custom ERP Employee to Custom CRM Contact
+-----------------------------------------
+Every Custom ERP Employee will be synchronized with a Custom CRM Contact.
 
-Once a link between a CustomERP Employee and a CustomCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Employee and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Employee and a CustomCRM Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - CustomERP Employee Property
-     - CustomCRM Contact Property
-     - CustomCRM Data Type
-
-
-CustomERP Quote to CustomCRM Order
-----------------------------------
-Every CustomERP Quote will be synchronized with a CustomCRM Order.
-
-Once a link between a CustomERP Quote and a CustomCRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a CustomERP Quote and a CustomCRM Order:
+The following properties are synchronized between a Custom ERP Employee and a Custom CRM Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Quote Property
-     - CustomCRM Order Property
-     - CustomCRM Data Type
+   * - Custom ERP Employee Property
+     - Custom CRM Contact Property
+     - Custom CRM Data Type
+
+
+Custom ERP Quote to Custom CRM Order
+------------------------------------
+Every Custom ERP Quote will be synchronized with a Custom CRM Order.
+
+Once a link between a Custom ERP Quote and a Custom CRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom ERP Quote and a Custom CRM Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom ERP Quote Property
+     - Custom CRM Order Property
+     - Custom CRM Data Type
 
 
 Custom ERP Contact to Custom CRM Contact
