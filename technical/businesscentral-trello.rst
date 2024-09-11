@@ -1,13 +1,13 @@
-==================================
-Businesscentral to Trello Dataflow
-==================================
+===================================
+Business Central to Trello Dataflow
+===================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:52:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to Trello. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to Trello. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Businesscentral Companies to Trello Organizations
 -------------------------------------------------
@@ -69,18 +69,18 @@ The following properties are synchronized between a Businesscentral Customers pe
      - "string"
 
 
-Businesscentral Customers company to Trello Organizations
----------------------------------------------------------
-Every Businesscentral Customers company will be synchronized with a Trello Organizations.
+Business Customers company to Trello Organizations
+--------------------------------------------------
+Every Business Customers company will be synchronized with a Trello Organizations.
 
-Once a link between a Businesscentral Customers company and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers company and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers company and a Trello Organizations:
+The following properties are synchronized between a Business Customers company and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Customers company Property
+   * - Business Customers company Property
      - Trello Organizations Property
      - Trello Data Type
    * - displayName
@@ -91,18 +91,18 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
 
 
-Businesscentral Employees to Trello Members
--------------------------------------------
-Every Businesscentral Employees will be synchronized with a Trello Members.
+Business Employees to Trello Members
+------------------------------------
+Every Business Employees will be synchronized with a Trello Members.
 
-Once a link between a Businesscentral Employees and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Employees and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Employees and a Trello Members:
+The following properties are synchronized between a Business Employees and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Employees Property
+   * - Business Employees Property
      - Trello Members Property
      - Trello Data Type
    * - displayName
