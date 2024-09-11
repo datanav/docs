@@ -1,13 +1,13 @@
-=================================
-Chargebee to ExactOnline Dataflow
-=================================
+==================================
+Chargebee to Exact Online Dataflow
+==================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Chargebee to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Chargebee to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Chargebee Address to ExactOnline Addresses
 ------------------------------------------
@@ -126,36 +126,36 @@ The following properties are synchronized between a Chargebee Order and a ExactO
      - "string"
 
 
-Chargebee Item to ExactOnline Items
------------------------------------
-Every Chargebee Item will be synchronized with a ExactOnline Items.
+Chargebee Item to Exact Online Items
+------------------------------------
+Every Chargebee Item will be synchronized with a Exact Online Items.
 
-Once a link between a Chargebee Item and a ExactOnline Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Item and a Exact Online Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Item and a ExactOnline Items:
+The following properties are synchronized between a Chargebee Item and a Exact Online Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Item Property
-     - ExactOnline Items Property
-     - ExactOnline Data Type
+     - Exact Online Items Property
+     - Exact Online Data Type
 
 
-Chargebee Order to ExactOnline Salesorders
-------------------------------------------
-Every Chargebee Order will be synchronized with a ExactOnline Salesorders.
+Chargebee Order to Exact Online Salesorders
+-------------------------------------------
+Every Chargebee Order will be synchronized with a Exact Online Salesorders.
 
-Once a link between a Chargebee Order and a ExactOnline Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Order and a Exact Online Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Order and a ExactOnline Salesorders:
+The following properties are synchronized between a Chargebee Order and a Exact Online Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Order Property
-     - ExactOnline Salesorders Property
-     - ExactOnline Data Type
+     - Exact Online Salesorders Property
+     - Exact Online Data Type
    * - currency_code
      - Currency
      - "string"
