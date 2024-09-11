@@ -2,27 +2,27 @@
 ZohoCRM to BusinessNxt Dataflow
 ===============================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from ZohoCRM to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-ZohoCRM Account to Visma Address
---------------------------------
-Every ZohoCRM Account will be synchronized with a Visma Address.
+ZohoCRM Account to BusinessNxt Address
+--------------------------------------
+Every ZohoCRM Account will be synchronized with a BusinessNxt Address.
 
-Once a link between a ZohoCRM Account and a Visma Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Account and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Account and a Visma Address:
+The following properties are synchronized between a ZohoCRM Account and a BusinessNxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Account Property
-     - Visma Address Property
-     - Visma Data Type
+     - BusinessNxt Address Property
+     - BusinessNxt Data Type
    * - Account_Name
      - name
      - "string"
@@ -34,20 +34,20 @@ The following properties are synchronized between a ZohoCRM Account and a Visma 
      - "string"
 
 
-ZohoCRM Deal to Visma Order
----------------------------
-Every ZohoCRM Deal will be synchronized with a Visma Order.
+ZohoCRM Deal to BusinessNxt Order
+---------------------------------
+Every ZohoCRM Deal will be synchronized with a BusinessNxt Order.
 
-Once a link between a ZohoCRM Deal and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Deal and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Deal and a Visma Order:
+The following properties are synchronized between a ZohoCRM Deal and a BusinessNxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Deal Property
-     - Visma Order Property
-     - Visma Data Type
+     - BusinessNxt Order Property
+     - BusinessNxt Data Type
    * - Closing_Date
      - orderDate
      - "string"
