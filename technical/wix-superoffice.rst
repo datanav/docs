@@ -1,41 +1,41 @@
 ===============================
-Wix.com to Superoffice Dataflow
+Wix.com to SuperOffice Dataflow
 ===============================
 
-Generated: 2024-09-11 00:00:00
+Generated: 2024-09-11 07:57:12
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wix.com Contacts to Superoffice Person
+Wix.com Contacts to SuperOffice Person
 --------------------------------------
-Every Wix.com Contacts will be synchronized with a Superoffice Person.
+Every Wix.com Contacts will be synchronized with a SuperOffice Person.
 
-If a matching Superoffice Person already exists, the Wix.com Contacts will be merged with the existing one.
-If no matching Superoffice Person is found, a new Superoffice Person will be created.
+If a matching SuperOffice Person already exists, the Wix.com Contacts will be merged with the existing one.
+If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
 
-A Wix.com Contacts will merge with a Superoffice Person if one of the following property combinations match:
+A Wix.com Contacts will merge with a SuperOffice Person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     - Superoffice Person Property
+     - SuperOffice Person Property
    * - primaryInfo.email
      - Emails.Value
 
-Once a link between a Wix.com Contacts and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a Superoffice Person:
+The following properties are synchronized between a Wix.com Contacts and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+     - SuperOffice Person Property
+     - SuperOffice Data Type
    * - info.emails
      - Emails.Value
      - "string"
@@ -59,70 +59,70 @@ The following properties are synchronized between a Wix.com Contacts and a Super
      - "string"
 
 
-Wix.com Members to Superoffice Person
+Wix.com Members to SuperOffice Person
 -------------------------------------
-Before any synchronization can take place, a link between a Wix.com Members and a Superoffice Person must be established.
+Before any synchronization can take place, a link between a Wix.com Members and a SuperOffice Person must be established.
 
-A Wix.com Members will merge with a Superoffice Person if one of the following property combinations match:
+A Wix.com Members will merge with a SuperOffice Person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Members Property
-     - Superoffice Person Property
+     - SuperOffice Person Property
    * - loginEmail
      - Emails.Value
 
-Once a link between a Wix.com Members and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Members and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Members and a Superoffice Person:
+The following properties are synchronized between a Wix.com Members and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Members Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+     - SuperOffice Person Property
+     - SuperOffice Data Type
    * - loginEmail
      - Emails.Value
      - "string"
 
 
-Wix.com Orders to Superoffice Quotealternative
+Wix.com Orders to SuperOffice Quotealternative
 ----------------------------------------------
-Before any synchronization can take place, a link between a Wix.com Orders and a Superoffice Quotealternative must be established.
+Before any synchronization can take place, a link between a Wix.com Orders and a SuperOffice Quotealternative must be established.
 
-A new Superoffice Quotealternative will be created from a Wix.com Orders if it is connected to a Wix.com Wix-orders that is synchronized into Superoffice.
+A new SuperOffice Quotealternative will be created from a Wix.com Orders if it is connected to a Wix.com Wix-orders that is synchronized into SuperOffice.
 
-Once a link between a Wix.com Orders and a Superoffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a Superoffice Quotealternative:
+The following properties are synchronized between a Wix.com Orders and a SuperOffice Quotealternative:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     - Superoffice Quotealternative Property
-     - Superoffice Data Type
+     - SuperOffice Quotealternative Property
+     - SuperOffice Data Type
    * - totals.total
      - TotalPrice
      - "float"
 
 
-Wix.com Orders to Superoffice Quoteline
+Wix.com Orders to SuperOffice Quoteline
 ---------------------------------------
-Every Wix.com Orders will be synchronized with a Superoffice Quoteline.
+Every Wix.com Orders will be synchronized with a SuperOffice Quoteline.
 
-Once a link between a Wix.com Orders and a Superoffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a Superoffice Quoteline:
+The following properties are synchronized between a Wix.com Orders and a SuperOffice Quoteline:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     - Superoffice Quoteline Property
-     - Superoffice Data Type
+     - SuperOffice Quoteline Property
+     - SuperOffice Data Type
    * - id
      - QuoteAlternativeId
      - "integer"
@@ -143,20 +143,20 @@ The following properties are synchronized between a Wix.com Orders and a Superof
      - N/A
 
 
-Wix.com Products to Superoffice Product
+Wix.com Products to SuperOffice Product
 ---------------------------------------
-Every Wix.com Products will be synchronized with a Superoffice Product.
+Every Wix.com Products will be synchronized with a SuperOffice Product.
 
-Once a link between a Wix.com Products and a Superoffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a Superoffice Product:
+The following properties are synchronized between a Wix.com Products and a SuperOffice Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     - Superoffice Product Property
-     - Superoffice Data Type
+     - SuperOffice Product Property
+     - SuperOffice Data Type
    * - costAndProfitData.itemCost
      - UnitCost
      - "string"
