@@ -38,7 +38,7 @@ Other :ref:`Human Resource Management (HRM) <systemtypehrm>` Systems
         :text: Read more
         :classes: read-more
     ---
-    **Customhrm**
+    **Custom HRM**
 
     
     .. link-button:: system/customhrm
