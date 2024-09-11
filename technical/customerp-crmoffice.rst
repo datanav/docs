@@ -1,13 +1,13 @@
 ================================
-Custom ERP to Crmoffice Dataflow
+Custom ERP to CRMOffice Dataflow
 ================================
 
-Generated: 2024-09-11 07:43:20
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Custom ERP to Crmoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Custom ERP to CRMOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Custom Employee to Crmoffice Contacts
 -------------------------------------
@@ -57,18 +57,18 @@ The following properties are synchronized between a Custom Project and a Crmoffi
      - Crmoffice Data Type
 
 
-Custom Contact to Crmoffice Contacts
+Custom Contact to CRMOffice Contacts
 ------------------------------------
-Every Custom Contact will be synchronized with a Crmoffice Contacts.
+Every Custom Contact will be synchronized with a CRMOffice Contacts.
 
-Once a link between a Custom Contact and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Contact and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Contact and a Crmoffice Contacts:
+The following properties are synchronized between a Custom Contact and a CRMOffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Custom Contact Property
-     - Crmoffice Contacts Property
-     - Crmoffice Data Type
+     - CRMOffice Contacts Property
+     - CRMOffice Data Type
 
