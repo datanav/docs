@@ -2,27 +2,27 @@
 SuperOffice to BusinessNxt Dataflow
 ===================================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-SuperOffice Contact to Businessnxt Address
-------------------------------------------
-Every SuperOffice Contact will be synchronized with a Businessnxt Address.
+SuperOffice Contact to Visma Address
+------------------------------------
+Every SuperOffice Contact will be synchronized with a Visma Address.
 
-Once a link between a SuperOffice Contact and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a Visma Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a Businessnxt Address:
+The following properties are synchronized between a SuperOffice Contact and a Visma Address:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - Businessnxt Address Property
-     - Businessnxt Data Type
+     - Visma Address Property
+     - Visma Data Type
    * - Name
      - name
      - "string"
@@ -31,20 +31,20 @@ The following properties are synchronized between a SuperOffice Contact and a Bu
      - "string"
 
 
-SuperOffice Quotealternative to Businessnxt Order
--------------------------------------------------
-Every SuperOffice Quotealternative will be synchronized with a Businessnxt Order.
+SuperOffice Quotealternative to Visma Order
+-------------------------------------------
+Every SuperOffice Quotealternative will be synchronized with a Visma Order.
 
-Once a link between a SuperOffice Quotealternative and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quotealternative and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quotealternative and a Businessnxt Order:
+The following properties are synchronized between a SuperOffice Quotealternative and a Visma Order:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quotealternative Property
-     - Businessnxt Order Property
-     - Businessnxt Data Type
+     - Visma Order Property
+     - Visma Data Type
    * - DiscountPercent
      - totalDiscountAmountInCurrency
      - "string"
@@ -53,36 +53,36 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
 
 
-SuperOffice Quoteline to Businessnxt Order
-------------------------------------------
-Every SuperOffice Quoteline will be synchronized with a Businessnxt Order.
+SuperOffice Quoteline to Visma Order
+------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Visma Order.
 
-Once a link between a SuperOffice Quoteline and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quoteline and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quoteline and a Businessnxt Order:
+The following properties are synchronized between a SuperOffice Quoteline and a Visma Order:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quoteline Property
-     - Businessnxt Order Property
-     - Businessnxt Data Type
+     - Visma Order Property
+     - Visma Data Type
 
 
-SuperOffice Sale to Businessnxt Order
--------------------------------------
-Every SuperOffice Sale will be synchronized with a Businessnxt Order.
+SuperOffice Sale to Visma Order
+-------------------------------
+Every SuperOffice Sale will be synchronized with a Visma Order.
 
-Once a link between a SuperOffice Sale and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Sale and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Sale and a Businessnxt Order:
+The following properties are synchronized between a SuperOffice Sale and a Visma Order:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Sale Property
-     - Businessnxt Order Property
-     - Businessnxt Data Type
+     - Visma Order Property
+     - Visma Data Type
    * - Heading
      - name
      - "string"
