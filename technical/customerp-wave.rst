@@ -2,57 +2,57 @@
 Custom ERP to Wave Dataflow
 ===========================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Custom ERP to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-CustomERP Customer to Wave Customer
------------------------------------
-Every CustomERP Customer will be synchronized with a Wave Customer.
+Custom ERP Customer to Wave Customer
+------------------------------------
+Every Custom ERP Customer will be synchronized with a Wave Customer.
 
-Once a link between a CustomERP Customer and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Customer and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Customer and a Wave Customer:
+The following properties are synchronized between a Custom ERP Customer and a Wave Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Customer Property
+   * - Custom ERP Customer Property
      - Wave Customer Property
      - Wave Data Type
 
 
-CustomERP Order to Wave Invoice
--------------------------------
-Every CustomERP Order will be synchronized with a Wave Invoice.
+Custom ERP Order to Wave Invoice
+--------------------------------
+Every Custom ERP Order will be synchronized with a Wave Invoice.
 
-Once a link between a CustomERP Order and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Order and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Order and a Wave Invoice:
+The following properties are synchronized between a Custom ERP Order and a Wave Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Order Property
+   * - Custom ERP Order Property
      - Wave Invoice Property
      - Wave Data Type
 
 
-CustomERP Product to Wave Product
----------------------------------
-Every CustomERP Product will be synchronized with a Wave Product.
+Custom ERP Product to Wave Product
+----------------------------------
+Every Custom ERP Product will be synchronized with a Wave Product.
 
-Once a link between a CustomERP Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Product and a Wave Product:
+The following properties are synchronized between a Custom ERP Product and a Wave Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Product Property
+   * - Custom ERP Product Property
      - Wave Product Property
      - Wave Data Type
 
