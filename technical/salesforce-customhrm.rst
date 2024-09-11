@@ -2,91 +2,91 @@
 Salesforce to Custom HRM Dataflow
 =================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Custom HRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Salesforce Contact to CustomHRM Employee
-----------------------------------------
-Every Salesforce Contact will be synchronized with a CustomHRM Employee.
+Salesforce Contact to Custom HRM Employee
+-----------------------------------------
+Every Salesforce Contact will be synchronized with a Custom HRM Employee.
 
-Once a link between a Salesforce Contact and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Contact and a Custom HRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Contact and a CustomHRM Employee:
+The following properties are synchronized between a Salesforce Contact and a Custom HRM Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Contact Property
-     - CustomHRM Employee Property
-     - CustomHRM Data Type
+     - Custom HRM Employee Property
+     - Custom HRM Data Type
 
 
-Salesforce Customer to CustomHRM Employee
------------------------------------------
-Every Salesforce Customer will be synchronized with a CustomHRM Employee.
+Salesforce Customer to Custom HRM Employee
+------------------------------------------
+Every Salesforce Customer will be synchronized with a Custom HRM Employee.
 
-Once a link between a Salesforce Customer and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Customer and a Custom HRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Customer and a CustomHRM Employee:
+The following properties are synchronized between a Salesforce Customer and a Custom HRM Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Customer Property
-     - CustomHRM Employee Property
-     - CustomHRM Data Type
+     - Custom HRM Employee Property
+     - Custom HRM Data Type
 
 
-Salesforce Division to CustomHRM Department
--------------------------------------------
-Every Salesforce Division will be synchronized with a CustomHRM Department.
+Salesforce Division to Custom HRM Department
+--------------------------------------------
+Every Salesforce Division will be synchronized with a Custom HRM Department.
 
-Once a link between a Salesforce Division and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Division and a Custom HRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Division and a CustomHRM Department:
+The following properties are synchronized between a Salesforce Division and a Custom HRM Department:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Division Property
-     - CustomHRM Department Property
-     - CustomHRM Data Type
+     - Custom HRM Department Property
+     - Custom HRM Data Type
 
 
-Salesforce Organization to CustomHRM Department
------------------------------------------------
-Every Salesforce Organization will be synchronized with a CustomHRM Department.
+Salesforce Organization to Custom HRM Department
+------------------------------------------------
+Every Salesforce Organization will be synchronized with a Custom HRM Department.
 
-Once a link between a Salesforce Organization and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Organization and a Custom HRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Organization and a CustomHRM Department:
+The following properties are synchronized between a Salesforce Organization and a Custom HRM Department:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Organization Property
-     - CustomHRM Department Property
-     - CustomHRM Data Type
+     - Custom HRM Department Property
+     - Custom HRM Data Type
 
 
-Salesforce Seller to CustomHRM Employee
----------------------------------------
-Every Salesforce Seller will be synchronized with a CustomHRM Employee.
+Salesforce Seller to Custom HRM Employee
+----------------------------------------
+Every Salesforce Seller will be synchronized with a Custom HRM Employee.
 
-Once a link between a Salesforce Seller and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Seller and a Custom HRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Seller and a CustomHRM Employee:
+The following properties are synchronized between a Salesforce Seller and a Custom HRM Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Seller Property
-     - CustomHRM Employee Property
-     - CustomHRM Data Type
+     - Custom HRM Employee Property
+     - Custom HRM Data Type
 
 
 Salesforce User to Custom HRM Employee
