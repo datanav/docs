@@ -1,13 +1,13 @@
 ================================
-Tripletex to Membercare Dataflow
+Tripletex to MemberCare Dataflow
 ================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Membercare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Tripletex Contact to Membercare Persons
 ---------------------------------------
@@ -233,20 +233,20 @@ The following properties are synchronized between a Tripletex Product and a Memb
      - "string"
 
 
-Tripletex Country to Membercare Countries
+Tripletex Country to MemberCare Countries
 -----------------------------------------
-Every Tripletex Country will be synchronized with a Membercare Countries.
+Every Tripletex Country will be synchronized with a MemberCare Countries.
 
-Once a link between a Tripletex Country and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Country and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Country and a Membercare Countries:
+The following properties are synchronized between a Tripletex Country and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Country Property
-     - Membercare Countries Property
-     - Membercare Data Type
+     - MemberCare Countries Property
+     - MemberCare Data Type
    * - isoAlpha2Code
      - iso2Letter
      - "string"
@@ -258,20 +258,20 @@ The following properties are synchronized between a Tripletex Country and a Memb
      - "string"
 
 
-Tripletex Invoice to Membercare Invoices
+Tripletex Invoice to MemberCare Invoices
 ----------------------------------------
-Every Tripletex Invoice will be synchronized with a Membercare Invoices.
+Every Tripletex Invoice will be synchronized with a MemberCare Invoices.
 
-Once a link between a Tripletex Invoice and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Invoice and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Invoice and a Membercare Invoices:
+The following properties are synchronized between a Tripletex Invoice and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Invoice Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
    * - invoiceDueDate
      - payDueDate
      - "string"
