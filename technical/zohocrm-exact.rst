@@ -1,13 +1,13 @@
-===============================
-ZohoCRM to ExactOnline Dataflow
-===============================
+================================
+ZohoCRM to Exact Online Dataflow
+================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from ZohoCRM to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from ZohoCRM to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 ZohoCRM Account to ExactOnline Accounts
 ---------------------------------------
@@ -120,20 +120,20 @@ The following properties are synchronized between a ZohoCRM Deal and a ExactOnli
      - ExactOnline Data Type
 
 
-ZohoCRM Contact to ExactOnline Addresses
-----------------------------------------
-Every ZohoCRM Contact will be synchronized with a ExactOnline Addresses.
+ZohoCRM Contact to Exact Online Addresses
+-----------------------------------------
+Every ZohoCRM Contact will be synchronized with a Exact Online Addresses.
 
-Once a link between a ZohoCRM Contact and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Contact and a Exact Online Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Contact and a ExactOnline Addresses:
+The following properties are synchronized between a ZohoCRM Contact and a Exact Online Addresses:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Contact Property
-     - ExactOnline Addresses Property
-     - ExactOnline Data Type
+     - Exact Online Addresses Property
+     - Exact Online Data Type
    * - Mailing_City
      - City
      - "string"
