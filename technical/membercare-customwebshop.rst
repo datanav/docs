@@ -1,74 +1,74 @@
-====================================
-Membercare to Customwebshop Dataflow
-====================================
+=====================================
+MemberCare to Custom Webshop Dataflow
+=====================================
 
-Generated: 2024-09-11 00:00:02
+Generated: 2024-09-11 07:45:31
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Membercare to Customwebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to Custom Webshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Membercare Companies to Customwebshop Customer
-----------------------------------------------
-Every Membercare Companies will be synchronized with a Customwebshop Customer.
+Membercare Companies to Custom Customer
+---------------------------------------
+Every Membercare Companies will be synchronized with a Custom Customer.
 
-Once a link between a Membercare Companies and a Customwebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Membercare Companies and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Companies and a Customwebshop Customer:
+The following properties are synchronized between a Membercare Companies and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Membercare Companies Property
-     - Customwebshop Customer Property
-     - Customwebshop Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Membercare Invoices to Customwebshop Order
-------------------------------------------
-Every Membercare Invoices will be synchronized with a Customwebshop Order.
+Membercare Invoices to Custom Order
+-----------------------------------
+Every Membercare Invoices will be synchronized with a Custom Order.
 
-Once a link between a Membercare Invoices and a Customwebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Membercare Invoices and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Invoices and a Customwebshop Order:
+The following properties are synchronized between a Membercare Invoices and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Membercare Invoices Property
-     - Customwebshop Order Property
-     - Customwebshop Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Membercare Organizations to Customwebshop Customer
---------------------------------------------------
-Every Membercare Organizations will be synchronized with a Customwebshop Customer.
+Membercare Organizations to Custom Customer
+-------------------------------------------
+Every Membercare Organizations will be synchronized with a Custom Customer.
 
-Once a link between a Membercare Organizations and a Customwebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Membercare Organizations and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Organizations and a Customwebshop Customer:
+The following properties are synchronized between a Membercare Organizations and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Membercare Organizations Property
-     - Customwebshop Customer Property
-     - Customwebshop Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Membercare Products to Customwebshop Product
---------------------------------------------
-Every Membercare Products will be synchronized with a Customwebshop Product.
+Membercare Products to Custom Product
+-------------------------------------
+Every Membercare Products will be synchronized with a Custom Product.
 
-Once a link between a Membercare Products and a Customwebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Membercare Products and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Products and a Customwebshop Product:
+The following properties are synchronized between a Membercare Products and a Custom Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Membercare Products Property
-     - Customwebshop Product Property
-     - Customwebshop Data Type
+     - Custom Product Property
+     - Custom Data Type
 
