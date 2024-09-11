@@ -2,7 +2,7 @@
 Salesforce to HubSpot Dataflow
 ==============================
 
-Generated: 2024-09-11 11:13:29
+Generated: 2024-09-11 11:28:31
 
 Introduction
 ------------
@@ -218,20 +218,20 @@ The following properties are synchronized between a Salesforce Orderitem and a H
      - "string"
 
 
-Salesforce Product2 to HubSpotHubspot Product
----------------------------------------------
-Every Salesforce Product2 will be synchronized with a HubSpotHubspot Product.
+Salesforce Product2 to HubSpot Product
+--------------------------------------
+Every Salesforce Product2 will be synchronized with a HubSpot Product.
 
-Once a link between a Salesforce Product2 and a HubSpotHubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Product2 and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Product2 and a HubSpotHubspot Product:
+The following properties are synchronized between a Salesforce Product2 and a HubSpot Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Product2 Property
-     - HubSpotHubspot Product Property
-     - HubSpotHubspot Data Type
+     - HubSpot Product Property
+     - HubSpot Data Type
    * - Description
      - properties.description
      - "string"
