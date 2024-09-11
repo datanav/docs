@@ -2,25 +2,25 @@
 WooCommerce to Powerofficego Dataflow
 =====================================
 
-Generated: 2024-09-11 07:44:23
+Generated: 2024-09-11 07:46:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Powerofficego. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Woocommerce Customer to Powerofficego Customers person
+WooCommerce Customer to Powerofficego Customers person
 ------------------------------------------------------
-Every Woocommerce Customer will be synchronized with a Powerofficego Customers person.
+Every WooCommerce Customer will be synchronized with a Powerofficego Customers person.
 
-Once a link between a Woocommerce Customer and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Customer and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Customer and a Powerofficego Customers person:
+The following properties are synchronized between a WooCommerce Customer and a Powerofficego Customers person:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Customer Property
+   * - WooCommerce Customer Property
      - Powerofficego Customers person Property
      - Powerofficego Data Type
    * - email
@@ -31,18 +31,18 @@ The following properties are synchronized between a Woocommerce Customer and a P
      - "string"
 
 
-Woocommerce Order to Powerofficego Salesorderlines
+WooCommerce Order to Powerofficego Salesorderlines
 --------------------------------------------------
-Every Woocommerce Order will be synchronized with a Powerofficego Salesorderlines.
+Every WooCommerce Order will be synchronized with a Powerofficego Salesorderlines.
 
-Once a link between a Woocommerce Order and a Powerofficego Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a Powerofficego Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Order and a Powerofficego Salesorderlines:
+The following properties are synchronized between a WooCommerce Order and a Powerofficego Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Order Property
+   * - WooCommerce Order Property
      - Powerofficego Salesorderlines Property
      - Powerofficego Data Type
    * - id
@@ -59,18 +59,18 @@ The following properties are synchronized between a Woocommerce Order and a Powe
      - N/A
 
 
-Woocommerce Order to Powerofficego Salesorders
+WooCommerce Order to Powerofficego Salesorders
 ----------------------------------------------
-Every Woocommerce Order will be synchronized with a Powerofficego Salesorders.
+Every WooCommerce Order will be synchronized with a Powerofficego Salesorders.
 
-Once a link between a Woocommerce Order and a Powerofficego Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a Powerofficego Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Order and a Powerofficego Salesorders:
+The following properties are synchronized between a WooCommerce Order and a Powerofficego Salesorders:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Order Property
+   * - WooCommerce Order Property
      - Powerofficego Salesorders Property
      - Powerofficego Data Type
    * - currency
@@ -84,18 +84,18 @@ The following properties are synchronized between a Woocommerce Order and a Powe
      - "integer"
 
 
-Woocommerce Product to Powerofficego Product
+WooCommerce Product to Powerofficego Product
 --------------------------------------------
-Every Woocommerce Product will be synchronized with a Powerofficego Product.
+Every WooCommerce Product will be synchronized with a Powerofficego Product.
 
-Once a link between a Woocommerce Product and a Powerofficego Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Product and a Powerofficego Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Product and a Powerofficego Product:
+The following properties are synchronized between a WooCommerce Product and a Powerofficego Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Product Property
+   * - WooCommerce Product Property
      - Powerofficego Product Property
      - Powerofficego Data Type
    * - name
