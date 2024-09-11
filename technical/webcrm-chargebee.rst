@@ -2,25 +2,25 @@
 WebCRM to Chargebee Dataflow
 ============================
 
-Generated: 2024-09-11 07:47:14
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Webcrm Opportunities to Chargebee Order
+WebCRM Opportunities to Chargebee Order
 ---------------------------------------
-Every Webcrm Opportunities will be synchronized with a Chargebee Order.
+Every WebCRM Opportunities will be synchronized with a Chargebee Order.
 
-Once a link between a Webcrm Opportunities and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Opportunities and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Opportunities and a Chargebee Order:
+The following properties are synchronized between a WebCRM Opportunities and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Opportunities Property
+   * - WebCRM Opportunities Property
      - Chargebee Order Property
      - Chargebee Data Type
    * - OpportunityCurrencyName
@@ -28,18 +28,18 @@ The following properties are synchronized between a Webcrm Opportunities and a C
      - "string"
 
 
-Webcrm Organisations to Chargebee Business_entity
+WebCRM Organisations to Chargebee Business_entity
 -------------------------------------------------
-Every Webcrm Organisations will be synchronized with a Chargebee Business_entity.
+Every WebCRM Organisations will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Webcrm Organisations and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Organisations and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Organisations and a Chargebee Business_entity:
+The following properties are synchronized between a WebCRM Organisations and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Organisations Property
+   * - WebCRM Organisations Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
    * - OrganisationName
@@ -47,18 +47,18 @@ The following properties are synchronized between a Webcrm Organisations and a C
      - "string"
 
 
-Webcrm Persons to Chargebee Customer
+WebCRM Persons to Chargebee Customer
 ------------------------------------
-Every Webcrm Persons will be synchronized with a Chargebee Customer.
+Every WebCRM Persons will be synchronized with a Chargebee Customer.
 
-Once a link between a Webcrm Persons and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Persons and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Persons and a Chargebee Customer:
+The following properties are synchronized between a WebCRM Persons and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Persons Property
+   * - WebCRM Persons Property
      - Chargebee Customer Property
      - Chargebee Data Type
    * - PersonFirstName
@@ -69,34 +69,34 @@ The following properties are synchronized between a Webcrm Persons and a Chargeb
      - "string"
 
 
-Webcrm Quotationline to Chargebee Order
+WebCRM Quotationline to Chargebee Order
 ---------------------------------------
-Every Webcrm Quotationline will be synchronized with a Chargebee Order.
+Every WebCRM Quotationline will be synchronized with a Chargebee Order.
 
-Once a link between a Webcrm Quotationline and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Quotationline and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Quotationline and a Chargebee Order:
+The following properties are synchronized between a WebCRM Quotationline and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Quotationline Property
+   * - WebCRM Quotationline Property
      - Chargebee Order Property
      - Chargebee Data Type
 
 
-Webcrm Users to Chargebee Customer
+WebCRM Users to Chargebee Customer
 ----------------------------------
-Every Webcrm Users will be synchronized with a Chargebee Customer.
+Every WebCRM Users will be synchronized with a Chargebee Customer.
 
-Once a link between a Webcrm Users and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Users and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Users and a Chargebee Customer:
+The following properties are synchronized between a WebCRM Users and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Users Property
+   * - WebCRM Users Property
      - Chargebee Customer Property
      - Chargebee Data Type
 
