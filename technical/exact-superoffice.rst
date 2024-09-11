@@ -2,7 +2,7 @@
 Exact Online to SuperOffice Dataflow
 ====================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
@@ -33,18 +33,18 @@ The following properties are synchronized between a Exact Online Salesorders and
      - "integer"
 
 
-ExactOnline Accounts to SuperOffice Contact
--------------------------------------------
-Every ExactOnline Accounts will be synchronized with a SuperOffice Contact.
+Exact Online Accounts to SuperOffice Contact
+--------------------------------------------
+Every Exact Online Accounts will be synchronized with a SuperOffice Contact.
 
-Once a link between a ExactOnline Accounts and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Accounts and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Accounts and a SuperOffice Contact:
+The following properties are synchronized between a Exact Online Accounts and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Accounts Property
+   * - Exact Online Accounts Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
    * - Name
@@ -55,18 +55,18 @@ The following properties are synchronized between a ExactOnline Accounts and a S
      - "string"
 
 
-ExactOnline Contacts to SuperOffice Person
-------------------------------------------
-Every ExactOnline Contacts will be synchronized with a SuperOffice Person.
+Exact Online Contacts to SuperOffice Person
+-------------------------------------------
+Every Exact Online Contacts will be synchronized with a SuperOffice Person.
 
-Once a link between a ExactOnline Contacts and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Contacts and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Contacts and a SuperOffice Person:
+The following properties are synchronized between a Exact Online Contacts and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Contacts Property
+   * - Exact Online Contacts Property
      - SuperOffice Person Property
      - SuperOffice Data Type
    * - BirthDate
@@ -74,18 +74,18 @@ The following properties are synchronized between a ExactOnline Contacts and a S
      - N/A
 
 
-ExactOnline Departments to SuperOffice Contact
-----------------------------------------------
-Every ExactOnline Departments will be synchronized with a SuperOffice Contact.
+Exact Online Departments to SuperOffice Contact
+-----------------------------------------------
+Every Exact Online Departments will be synchronized with a SuperOffice Contact.
 
-Once a link between a ExactOnline Departments and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Departments and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Departments and a SuperOffice Contact:
+The following properties are synchronized between a Exact Online Departments and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Departments Property
+   * - Exact Online Departments Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
    * - Code
@@ -93,18 +93,18 @@ The following properties are synchronized between a ExactOnline Departments and 
      - "string"
 
 
-ExactOnline Divisions to SuperOffice Contact
---------------------------------------------
-Every ExactOnline Divisions will be synchronized with a SuperOffice Contact.
+Exact Online Divisions to SuperOffice Contact
+---------------------------------------------
+Every Exact Online Divisions will be synchronized with a SuperOffice Contact.
 
-Once a link between a ExactOnline Divisions and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Divisions and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Divisions and a SuperOffice Contact:
+The following properties are synchronized between a Exact Online Divisions and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Divisions Property
+   * - Exact Online Divisions Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
    * - Website
@@ -112,18 +112,18 @@ The following properties are synchronized between a ExactOnline Divisions and a 
      - "string"
 
 
-ExactOnline Employees to SuperOffice Person
--------------------------------------------
-Every ExactOnline Employees will be synchronized with a SuperOffice Person.
+Exact Online Employees to SuperOffice Person
+--------------------------------------------
+Every Exact Online Employees will be synchronized with a SuperOffice Person.
 
-Once a link between a ExactOnline Employees and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Employees and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Employees and a SuperOffice Person:
+The following properties are synchronized between a Exact Online Employees and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Employees Property
+   * - Exact Online Employees Property
      - SuperOffice Person Property
      - SuperOffice Data Type
    * - BirthDate
