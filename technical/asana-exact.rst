@@ -1,13 +1,13 @@
-==============================
-Asana to Exact Online Dataflow
-==============================
+=============================
+Asana to ExactOnline Dataflow
+=============================
 
-Generated: 2024-09-11 07:46:45
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Asana to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Asana to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Asana Teams to Exact Accounts
 -----------------------------
@@ -53,20 +53,20 @@ The following properties are synchronized between a Asana Workspaces and a Exact
      - "string"
 
 
-Asana Users to Exact Employees
-------------------------------
-Every Asana Users will be synchronized with a Exact Employees.
+Asana Users to ExactOnline Employees
+------------------------------------
+Every Asana Users will be synchronized with a ExactOnline Employees.
 
-Once a link between a Asana Users and a Exact Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Users and a ExactOnline Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Users and a Exact Employees:
+The following properties are synchronized between a Asana Users and a ExactOnline Employees:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Users Property
-     - Exact Employees Property
-     - Exact Data Type
+     - ExactOnline Employees Property
+     - ExactOnline Data Type
    * - email
      - Email
      - "string"
