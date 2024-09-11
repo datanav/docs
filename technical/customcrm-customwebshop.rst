@@ -1,90 +1,90 @@
-====================================
-Custom CRM to Customwebshop Dataflow
-====================================
+=====================================
+Custom CRM to Custom Webshop Dataflow
+=====================================
 
-Generated: 2024-09-11 07:41:19
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Custom CRM to Customwebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Custom CRM to Custom Webshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Customcrm Quote to Customwebshop Order
---------------------------------------
-Every Customcrm Quote will be synchronized with a Customwebshop Order.
+Custom Quote to Custom Order
+----------------------------
+Every Custom Quote will be synchronized with a Custom Order.
 
-Once a link between a Customcrm Quote and a Customwebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Quote and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customcrm Quote and a Customwebshop Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Customcrm Quote Property
-     - Customwebshop Order Property
-     - Customwebshop Data Type
-
-
-Customcrm User to Customwebshop Order
--------------------------------------
-Every Customcrm User will be synchronized with a Customwebshop Order.
-
-Once a link between a Customcrm User and a Customwebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Customcrm User and a Customwebshop Order:
+The following properties are synchronized between a Custom Quote and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customcrm User Property
-     - Customwebshop Order Property
-     - Customwebshop Data Type
+   * - Custom Quote Property
+     - Custom Order Property
+     - Custom Data Type
 
 
-Customcrm Customer to Customwebshop Customer
---------------------------------------------
-Every Customcrm Customer will be synchronized with a Customwebshop Customer.
+Custom User to Custom Order
+---------------------------
+Every Custom User will be synchronized with a Custom Order.
 
-Once a link between a Customcrm Customer and a Customwebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom User and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customcrm Customer and a Customwebshop Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Customcrm Customer Property
-     - Customwebshop Customer Property
-     - Customwebshop Data Type
-
-
-Customcrm Order to Customwebshop Order
---------------------------------------
-Every Customcrm Order will be synchronized with a Customwebshop Order.
-
-Once a link between a Customcrm Order and a Customwebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Customcrm Order and a Customwebshop Order:
+The following properties are synchronized between a Custom User and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customcrm Order Property
-     - Customwebshop Order Property
-     - Customwebshop Data Type
+   * - Custom User Property
+     - Custom Order Property
+     - Custom Data Type
 
 
-Customcrm Product to Customwebshop Product
-------------------------------------------
-Every Customcrm Product will be synchronized with a Customwebshop Product.
+Custom Customer to Custom Customer
+----------------------------------
+Every Custom Customer will be synchronized with a Custom Customer.
 
-Once a link between a Customcrm Product and a Customwebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Customer and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customcrm Product and a Customwebshop Product:
+The following properties are synchronized between a Custom Customer and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customcrm Product Property
-     - Customwebshop Product Property
-     - Customwebshop Data Type
+   * - Custom Customer Property
+     - Custom Customer Property
+     - Custom Data Type
+
+
+Custom Order to Custom Order
+----------------------------
+Every Custom Order will be synchronized with a Custom Order.
+
+Once a link between a Custom Order and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom Order and a Custom Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom Order Property
+     - Custom Order Property
+     - Custom Data Type
+
+
+Custom Product to Custom Product
+--------------------------------
+Every Custom Product will be synchronized with a Custom Product.
+
+Once a link between a Custom Product and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom Product and a Custom Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom Product Property
+     - Custom Product Property
+     - Custom Data Type
 
