@@ -2,27 +2,27 @@
 Asana to Exact Online Dataflow
 ==============================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Asana to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Asana Teams to ExactOnline Accounts
------------------------------------
-Every Asana Teams will be synchronized with a ExactOnline Accounts.
+Asana Teams to Exact Online Accounts
+------------------------------------
+Every Asana Teams will be synchronized with a Exact Online Accounts.
 
-Once a link between a Asana Teams and a ExactOnline Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Teams and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Teams and a ExactOnline Accounts:
+The following properties are synchronized between a Asana Teams and a Exact Online Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Teams Property
-     - ExactOnline Accounts Property
-     - ExactOnline Data Type
+     - Exact Online Accounts Property
+     - Exact Online Data Type
    * - name
      - Name
      - "string"
@@ -31,20 +31,20 @@ The following properties are synchronized between a Asana Teams and a ExactOnlin
      - "string"
 
 
-Asana Workspaces to ExactOnline Accounts
-----------------------------------------
-Every Asana Workspaces will be synchronized with a ExactOnline Accounts.
+Asana Workspaces to Exact Online Accounts
+-----------------------------------------
+Every Asana Workspaces will be synchronized with a Exact Online Accounts.
 
-Once a link between a Asana Workspaces and a ExactOnline Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Workspaces and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Workspaces and a ExactOnline Accounts:
+The following properties are synchronized between a Asana Workspaces and a Exact Online Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Workspaces Property
-     - ExactOnline Accounts Property
-     - ExactOnline Data Type
+     - Exact Online Accounts Property
+     - Exact Online Data Type
    * - email_domains
      - Website
      - "string"
