@@ -2,7 +2,7 @@
 Wave to CustomERP Dataflow
 ==========================
 
-Generated: 2024-09-11 08:01:30
+Generated: 2024-09-11 08:03:13
 
 Introduction
 ------------
@@ -25,82 +25,82 @@ The following properties are synchronized between a Wave Customer person and a C
      - Custom Data Type
 
 
-Wave Customer to Custom Contact
+Wave Customer to CustomERP Contact
+----------------------------------
+Every Wave Customer will be synchronized with a CustomERP Contact.
+
+Once a link between a Wave Customer and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a CustomERP Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - CustomERP Contact Property
+     - CustomERP Data Type
+
+
+Wave Customer to CustomERP Customer
+-----------------------------------
+Every Wave Customer will be synchronized with a CustomERP Customer.
+
+Once a link between a Wave Customer and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a CustomERP Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - CustomERP Customer Property
+     - CustomERP Data Type
+
+
+Wave Invoice to CustomERP Order
 -------------------------------
-Every Wave Customer will be synchronized with a Custom Contact.
+Every Wave Invoice will be synchronized with a CustomERP Order.
 
-Once a link between a Wave Customer and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a Custom Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Custom Contact Property
-     - Custom Data Type
-
-
-Wave Customer to Custom Customer
---------------------------------
-Every Wave Customer will be synchronized with a Custom Customer.
-
-Once a link between a Wave Customer and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a Custom Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Custom Customer Property
-     - Custom Data Type
-
-
-Wave Invoice to Custom Order
-----------------------------
-Every Wave Invoice will be synchronized with a Custom Order.
-
-Once a link between a Wave Invoice and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Invoice and a Custom Order:
+The following properties are synchronized between a Wave Invoice and a CustomERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomERP Order Property
+     - CustomERP Data Type
 
 
-Wave Product to Custom Product
-------------------------------
-Every Wave Product will be synchronized with a Custom Product.
+Wave Product to CustomERP Product
+---------------------------------
+Every Wave Product will be synchronized with a CustomERP Product.
 
-Once a link between a Wave Product and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a CustomERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a Custom Product:
+The following properties are synchronized between a Wave Product and a CustomERP Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Product Property
-     - Custom Product Property
-     - Custom Data Type
+     - CustomERP Product Property
+     - CustomERP Data Type
 
 
-Wave Vendor to Custom Contact
------------------------------
-Every Wave Vendor will be synchronized with a Custom Contact.
+Wave Vendor to CustomERP Contact
+--------------------------------
+Every Wave Vendor will be synchronized with a CustomERP Contact.
 
-Once a link between a Wave Vendor and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a Custom Contact:
+The following properties are synchronized between a Wave Vendor and a CustomERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     - Custom Contact Property
-     - Custom Data Type
+     - CustomERP Contact Property
+     - CustomERP Data Type
 
