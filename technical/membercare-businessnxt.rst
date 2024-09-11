@@ -1,13 +1,13 @@
-==================================
-MemberCare to BusinessNxt Dataflow
-==================================
+===================================
+MemberCare to Business Nxt Dataflow
+===================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 MemberCare Companycategories to BusinessNxt Country
 ---------------------------------------------------
@@ -103,20 +103,20 @@ The following properties are synchronized between a MemberCare Products and a Bu
      - BusinessNxt Data Type
 
 
-MemberCare Companies to BusinessNxt Address
--------------------------------------------
-Every MemberCare Companies will be synchronized with a BusinessNxt Address.
+MemberCare Companies to Business Nxt Address
+--------------------------------------------
+Every MemberCare Companies will be synchronized with a Business Nxt Address.
 
-Once a link between a MemberCare Companies and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companies and a Business Nxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Companies and a BusinessNxt Address:
+The following properties are synchronized between a MemberCare Companies and a Business Nxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Companies Property
-     - BusinessNxt Address Property
-     - BusinessNxt Data Type
+     - Business Nxt Address Property
+     - Business Nxt Data Type
    * - addresses.country.id
      - countryNo
      - "string"
@@ -137,20 +137,20 @@ The following properties are synchronized between a MemberCare Companies and a B
      - "string"
 
 
-MemberCare Companies to BusinessNxt Company
--------------------------------------------
-Every MemberCare Companies will be synchronized with a BusinessNxt Company.
+MemberCare Companies to Business Nxt Company
+--------------------------------------------
+Every MemberCare Companies will be synchronized with a Business Nxt Company.
 
-Once a link between a MemberCare Companies and a BusinessNxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companies and a Business Nxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Companies and a BusinessNxt Company:
+The following properties are synchronized between a MemberCare Companies and a Business Nxt Company:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Companies Property
-     - BusinessNxt Company Property
-     - BusinessNxt Data Type
+     - Business Nxt Company Property
+     - Business Nxt Data Type
    * - addresses.id
      - companyNo
      - "string"
@@ -159,20 +159,20 @@ The following properties are synchronized between a MemberCare Companies and a B
      - "string"
 
 
-MemberCare Countries to BusinessNxt Country
--------------------------------------------
-Every MemberCare Countries will be synchronized with a BusinessNxt Country.
+MemberCare Countries to Business Nxt Country
+--------------------------------------------
+Every MemberCare Countries will be synchronized with a Business Nxt Country.
 
-Once a link between a MemberCare Countries and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Countries and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Countries and a BusinessNxt Country:
+The following properties are synchronized between a MemberCare Countries and a Business Nxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Countries Property
-     - BusinessNxt Country Property
-     - BusinessNxt Data Type
+     - Business Nxt Country Property
+     - Business Nxt Data Type
    * - iso2Letter
      - isoCode
      - "string"
@@ -181,18 +181,18 @@ The following properties are synchronized between a MemberCare Countries and a B
      - "string"
 
 
-MemberCare Invoices to BusinessNxt Orderline
---------------------------------------------
-Every MemberCare Invoices will be synchronized with a BusinessNxt Orderline.
+MemberCare Invoices to Business Nxt Orderline
+---------------------------------------------
+Every MemberCare Invoices will be synchronized with a Business Nxt Orderline.
 
-Once a link between a MemberCare Invoices and a BusinessNxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Invoices and a Business Nxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Invoices and a BusinessNxt Orderline:
+The following properties are synchronized between a MemberCare Invoices and a Business Nxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Invoices Property
-     - BusinessNxt Orderline Property
-     - BusinessNxt Data Type
+     - Business Nxt Orderline Property
+     - Business Nxt Data Type
 
