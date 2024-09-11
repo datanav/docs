@@ -2,41 +2,41 @@
 CustomERP to Wix Dataflow
 =========================
 
-Generated: 2024-09-11 08:00:24
+Generated: 2024-09-11 08:02:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CustomERP to Wix. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Custom Contact to Wix Contacts
-------------------------------
-Every Custom Contact will be synchronized with a Wix Contacts.
+CustomERP Contact to Wix Contacts
+---------------------------------
+Every CustomERP Contact will be synchronized with a Wix Contacts.
 
-Once a link between a Custom Contact and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Contact and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Contact and a Wix Contacts:
+The following properties are synchronized between a CustomERP Contact and a Wix Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Contact Property
+   * - CustomERP Contact Property
      - Wix Contacts Property
      - Wix Data Type
 
 
-Custom Product to Wix Products
-------------------------------
-Every Custom Product will be synchronized with a Wix Products.
+CustomERP Product to Wix Products
+---------------------------------
+Every CustomERP Product will be synchronized with a Wix Products.
 
-Once a link between a Custom Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Product and a Wix Products:
+The following properties are synchronized between a CustomERP Product and a Wix Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Product Property
+   * - CustomERP Product Property
      - Wix Products Property
      - Wix Data Type
 
