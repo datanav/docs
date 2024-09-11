@@ -2,7 +2,7 @@
 Business Nxt to WebCRM Dataflow
 ===============================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -50,34 +50,34 @@ The following properties are synchronized between a BusinessNxt Company and a We
      - "string"
 
 
-BusinessNxt Orderline to WebCRM Quotationline
----------------------------------------------
-Every BusinessNxt Orderline will be synchronized with a WebCRM Quotationline.
+Business Nxt Orderline to WebCRM Quotationline
+----------------------------------------------
+Every Business Nxt Orderline will be synchronized with a WebCRM Quotationline.
 
-Once a link between a BusinessNxt Orderline and a WebCRM Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Orderline and a WebCRM Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Orderline and a WebCRM Quotationline:
+The following properties are synchronized between a Business Nxt Orderline and a WebCRM Quotationline:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Orderline Property
+   * - Business Nxt Orderline Property
      - WebCRM Quotationline Property
      - WebCRM Data Type
 
 
-BusinessNxt Product to WebCRM Products
---------------------------------------
-Every BusinessNxt Product will be synchronized with a WebCRM Products.
+Business Nxt Product to WebCRM Products
+---------------------------------------
+Every Business Nxt Product will be synchronized with a WebCRM Products.
 
-Once a link between a BusinessNxt Product and a WebCRM Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Product and a WebCRM Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Product and a WebCRM Products:
+The following properties are synchronized between a Business Nxt Product and a WebCRM Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Product Property
+   * - Business Nxt Product Property
      - WebCRM Products Property
      - WebCRM Data Type
    * - priceQuantity
