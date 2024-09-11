@@ -2,7 +2,7 @@
 Exact Online to MemberCare Dataflow
 ===================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -282,18 +282,18 @@ The following properties are synchronized between a ExactOnline Vatcodes and a M
      - "string"
 
 
-ExactOnline Addresses to MemberCare Countries
----------------------------------------------
-Every ExactOnline Addresses will be synchronized with a MemberCare Countries.
+Exact Online Addresses to MemberCare Countries
+----------------------------------------------
+Every Exact Online Addresses will be synchronized with a MemberCare Countries.
 
-Once a link between a ExactOnline Addresses and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Addresses and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Addresses and a MemberCare Countries:
+The following properties are synchronized between a Exact Online Addresses and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Addresses Property
+   * - Exact Online Addresses Property
      - MemberCare Countries Property
      - MemberCare Data Type
    * - CountryName
@@ -301,18 +301,18 @@ The following properties are synchronized between a ExactOnline Addresses and a 
      - "string"
 
 
-ExactOnline Salesinvoices to MemberCare Invoices
-------------------------------------------------
-Every ExactOnline Salesinvoices will be synchronized with a MemberCare Invoices.
+Exact Online Salesinvoices to MemberCare Invoices
+-------------------------------------------------
+Every Exact Online Salesinvoices will be synchronized with a MemberCare Invoices.
 
-Once a link between a ExactOnline Salesinvoices and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Salesinvoices and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Salesinvoices and a MemberCare Invoices:
+The following properties are synchronized between a Exact Online Salesinvoices and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Salesinvoices Property
+   * - Exact Online Salesinvoices Property
      - MemberCare Invoices Property
      - MemberCare Data Type
 
