@@ -2,41 +2,41 @@
 Business Nxt to Custom HRM Dataflow
 ===================================
 
-Generated: 2024-09-11 11:39:32
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Business Nxt to Custom HRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-BusinessNxt Address to CustomHRM Department
--------------------------------------------
-Every BusinessNxt Address will be synchronized with a CustomHRM Department.
+Business Nxt Address to Custom HRM Department
+---------------------------------------------
+Every Business Nxt Address will be synchronized with a Custom HRM Department.
 
-Once a link between a BusinessNxt Address and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Address and a Custom HRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Address and a CustomHRM Department:
-
-.. list-table::
-   :header-rows: 1
-
-   * - BusinessNxt Address Property
-     - CustomHRM Department Property
-     - CustomHRM Data Type
-
-
-BusinessNxt Company to CustomHRM Department
--------------------------------------------
-Every BusinessNxt Company will be synchronized with a CustomHRM Department.
-
-Once a link between a BusinessNxt Company and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a BusinessNxt Company and a CustomHRM Department:
+The following properties are synchronized between a Business Nxt Address and a Custom HRM Department:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Company Property
-     - CustomHRM Department Property
-     - CustomHRM Data Type
+   * - Business Nxt Address Property
+     - Custom HRM Department Property
+     - Custom HRM Data Type
+
+
+Business Nxt Company to Custom HRM Department
+---------------------------------------------
+Every Business Nxt Company will be synchronized with a Custom HRM Department.
+
+Once a link between a Business Nxt Company and a Custom HRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Company and a Custom HRM Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Company Property
+     - Custom HRM Department Property
+     - Custom HRM Data Type
 
