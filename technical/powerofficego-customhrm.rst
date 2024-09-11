@@ -2,7 +2,7 @@
 PowerOfficeGO to CustomHRM Dataflow
 ===================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:37:15
 
 Introduction
 ------------
@@ -57,34 +57,34 @@ The following properties are synchronized between a Powerofficego Customers pers
      - Custom Data Type
 
 
-PowerOffice Departments to CustomHRM Department
------------------------------------------------
-Every PowerOffice Departments will be synchronized with a CustomHRM Department.
+PowerOfficeGO Departments to CustomHRM Department
+-------------------------------------------------
+Every PowerOfficeGO Departments will be synchronized with a CustomHRM Department.
 
-Once a link between a PowerOffice Departments and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Departments and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Departments and a CustomHRM Department:
+The following properties are synchronized between a PowerOfficeGO Departments and a CustomHRM Department:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Departments Property
+   * - PowerOfficeGO Departments Property
      - CustomHRM Department Property
      - CustomHRM Data Type
 
 
-PowerOffice Employees to CustomHRM Employee
--------------------------------------------
-Every PowerOffice Employees will be synchronized with a CustomHRM Employee.
+PowerOfficeGO Employees to CustomHRM Employee
+---------------------------------------------
+Every PowerOfficeGO Employees will be synchronized with a CustomHRM Employee.
 
-Once a link between a PowerOffice Employees and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Employees and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Employees and a CustomHRM Employee:
+The following properties are synchronized between a PowerOfficeGO Employees and a CustomHRM Employee:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Employees Property
+   * - PowerOfficeGO Employees Property
      - CustomHRM Employee Property
      - CustomHRM Data Type
 
