@@ -2,7 +2,7 @@
 ExactOnline to HubSpot Dataflow
 ===============================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:37:15
 
 Introduction
 ------------
@@ -122,50 +122,50 @@ The following properties are synchronized between a Exact Employees and a Hubspo
      - "string"
 
 
-Exact Items to HubSpot Product
-------------------------------
-Every Exact Items will be synchronized with a HubSpot Product.
+ExactOnline Items to HubSpot Product
+------------------------------------
+Every ExactOnline Items will be synchronized with a HubSpot Product.
 
-Once a link between a Exact Items and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Items and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Items and a HubSpot Product:
+The following properties are synchronized between a ExactOnline Items and a HubSpot Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Items Property
+   * - ExactOnline Items Property
      - HubSpot Product Property
      - HubSpot Data Type
 
 
-Exact Quotations to HubSpot Quote
----------------------------------
-Every Exact Quotations will be synchronized with a HubSpot Quote.
+ExactOnline Quotations to HubSpot Quote
+---------------------------------------
+Every ExactOnline Quotations will be synchronized with a HubSpot Quote.
 
-Once a link between a Exact Quotations and a HubSpot Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Quotations and a HubSpot Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Quotations and a HubSpot Quote:
+The following properties are synchronized between a ExactOnline Quotations and a HubSpot Quote:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Quotations Property
+   * - ExactOnline Quotations Property
      - HubSpot Quote Property
      - HubSpot Data Type
 
 
-Exact Salesorderlines to HubSpot Lineitem
------------------------------------------
-Every Exact Salesorderlines will be synchronized with a HubSpot Lineitem.
+ExactOnline Salesorderlines to HubSpot Lineitem
+-----------------------------------------------
+Every ExactOnline Salesorderlines will be synchronized with a HubSpot Lineitem.
 
-Once a link between a Exact Salesorderlines and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Salesorderlines and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Salesorderlines and a HubSpot Lineitem:
+The following properties are synchronized between a ExactOnline Salesorderlines and a HubSpot Lineitem:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Salesorderlines Property
+   * - ExactOnline Salesorderlines Property
      - HubSpot Lineitem Property
      - HubSpot Data Type
 
