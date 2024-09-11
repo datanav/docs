@@ -1,13 +1,13 @@
 ============================
-Invoiced to Hubspot Dataflow
+Invoiced to HubSpot Dataflow
 ============================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Hubspot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Invoiced Customers company to Hubspot Company
 ---------------------------------------------
@@ -59,20 +59,20 @@ The following properties are synchronized between a Invoiced Customers person an
      - "string"
 
 
-Invoiced Items to Hubspot Product
+Invoiced Items to HubSpot Product
 ---------------------------------
-Every Invoiced Items will be synchronized with a Hubspot Product.
+Every Invoiced Items will be synchronized with a HubSpot Product.
 
-Once a link between a Invoiced Items and a Hubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Items and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Items and a Hubspot Product:
+The following properties are synchronized between a Invoiced Items and a HubSpot Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Items Property
-     - Hubspot Product Property
-     - Hubspot Data Type
+     - HubSpot Product Property
+     - HubSpot Data Type
    * - description
      - properties.description
      - "string"
@@ -84,20 +84,20 @@ The following properties are synchronized between a Invoiced Items and a Hubspot
      - "string"
 
 
-Invoiced Lineitem to Hubspot Lineitem
+Invoiced Lineitem to HubSpot Lineitem
 -------------------------------------
-Every Invoiced Lineitem will be synchronized with a Hubspot Lineitem.
+Every Invoiced Lineitem will be synchronized with a HubSpot Lineitem.
 
-Once a link between a Invoiced Lineitem and a Hubspot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Lineitem and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Lineitem and a Hubspot Lineitem:
+The following properties are synchronized between a Invoiced Lineitem and a HubSpot Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Lineitem Property
-     - Hubspot Lineitem Property
-     - Hubspot Data Type
+     - HubSpot Lineitem Property
+     - HubSpot Data Type
    * - items.amount
      - properties.price
      - "string"
