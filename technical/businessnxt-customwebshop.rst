@@ -2,7 +2,7 @@
 BusinessNxt to CustomWebshop Dataflow
 =====================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:37:15
 
 Introduction
 ------------
@@ -57,34 +57,34 @@ The following properties are synchronized between a Visma Orderline and a Custom
      - Custom Data Type
 
 
-Visma Order to CustomWebshop Order
-----------------------------------
-Every Visma Order will be synchronized with a CustomWebshop Order.
+BusinessNxt Order to CustomWebshop Order
+----------------------------------------
+Every BusinessNxt Order will be synchronized with a CustomWebshop Order.
 
-Once a link between a Visma Order and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Order and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Order and a CustomWebshop Order:
+The following properties are synchronized between a BusinessNxt Order and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Order Property
+   * - BusinessNxt Order Property
      - CustomWebshop Order Property
      - CustomWebshop Data Type
 
 
-Visma Product to CustomWebshop Product
---------------------------------------
-Every Visma Product will be synchronized with a CustomWebshop Product.
+BusinessNxt Product to CustomWebshop Product
+--------------------------------------------
+Every BusinessNxt Product will be synchronized with a CustomWebshop Product.
 
-Once a link between a Visma Product and a CustomWebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Product and a CustomWebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Product and a CustomWebshop Product:
+The following properties are synchronized between a BusinessNxt Product and a CustomWebshop Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Product Property
+   * - BusinessNxt Product Property
      - CustomWebshop Product Property
      - CustomWebshop Data Type
 
