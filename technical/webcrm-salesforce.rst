@@ -2,25 +2,25 @@
 WebCRM to Salesforce Dataflow
 =============================
 
-Generated: 2024-09-11 07:47:14
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Webcrm Opportunities to Salesforce Invoice
+WebCRM Opportunities to Salesforce Invoice
 ------------------------------------------
-Every Webcrm Opportunities will be synchronized with a Salesforce Invoice.
+Every WebCRM Opportunities will be synchronized with a Salesforce Invoice.
 
-Once a link between a Webcrm Opportunities and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Opportunities and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Opportunities and a Salesforce Invoice:
+The following properties are synchronized between a WebCRM Opportunities and a Salesforce Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Opportunities Property
+   * - WebCRM Opportunities Property
      - Salesforce Invoice Property
      - Salesforce Data Type
    * - OpportunityCurrencyName
@@ -31,18 +31,18 @@ The following properties are synchronized between a Webcrm Opportunities and a S
      - "string"
 
 
-Webcrm Organisations to Salesforce Division
+WebCRM Organisations to Salesforce Division
 -------------------------------------------
-Every Webcrm Organisations will be synchronized with a Salesforce Division.
+Every WebCRM Organisations will be synchronized with a Salesforce Division.
 
-Once a link between a Webcrm Organisations and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Organisations and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Organisations and a Salesforce Division:
+The following properties are synchronized between a WebCRM Organisations and a Salesforce Division:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Organisations Property
+   * - WebCRM Organisations Property
      - Salesforce Division Property
      - Salesforce Data Type
    * - OrganisationName
@@ -50,18 +50,18 @@ The following properties are synchronized between a Webcrm Organisations and a S
      - "string"
 
 
-Webcrm Quotationline to Salesforce Invoice
+WebCRM Quotationline to Salesforce Invoice
 ------------------------------------------
-Every Webcrm Quotationline will be synchronized with a Salesforce Invoice.
+Every WebCRM Quotationline will be synchronized with a Salesforce Invoice.
 
-Once a link between a Webcrm Quotationline and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Quotationline and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Quotationline and a Salesforce Invoice:
+The following properties are synchronized between a WebCRM Quotationline and a Salesforce Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Quotationline Property
+   * - WebCRM Quotationline Property
      - Salesforce Invoice Property
      - Salesforce Data Type
 
