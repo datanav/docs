@@ -1,13 +1,13 @@
-=================================
-Tidsbanken to Custom PMS Dataflow
-=================================
+================================
+Tidsbanken to CustomPMS Dataflow
+================================
 
-Generated: 2024-09-11 07:44:14
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Tidsbanken to Custom PMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Tidsbanken to CustomPMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Tidsbanken Avdeling to Custom Customer
 --------------------------------------
@@ -25,34 +25,34 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Cu
      - Custom Data Type
 
 
-Tidsbanken Kunde to Custom Customer
------------------------------------
-Every Tidsbanken Kunde will be synchronized with a Custom Customer.
+Tidsbanken Kunde to CustomPMS Customer
+--------------------------------------
+Every Tidsbanken Kunde will be synchronized with a CustomPMS Customer.
 
-Once a link between a Tidsbanken Kunde and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Kunde and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Kunde and a Custom Customer:
+The following properties are synchronized between a Tidsbanken Kunde and a CustomPMS Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Kunde Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomPMS Customer Property
+     - CustomPMS Data Type
 
 
-Tidsbanken Prosjekt to Custom Project
--------------------------------------
-Every Tidsbanken Prosjekt will be synchronized with a Custom Project.
+Tidsbanken Prosjekt to CustomPMS Project
+----------------------------------------
+Every Tidsbanken Prosjekt will be synchronized with a CustomPMS Project.
 
-Once a link between a Tidsbanken Prosjekt and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Prosjekt and a CustomPMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Prosjekt and a Custom Project:
+The following properties are synchronized between a Tidsbanken Prosjekt and a CustomPMS Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Prosjekt Property
-     - Custom Project Property
-     - Custom Data Type
+     - CustomPMS Project Property
+     - CustomPMS Data Type
 
