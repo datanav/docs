@@ -1,13 +1,13 @@
-=======================================
-Invoiced to Visma Business Nxt Dataflow
-=======================================
+================================
+Invoiced to BusinessNxt Dataflow
+================================
 
-Generated: 2024-09-11 07:48:17
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Invoiced Customers company to Businessnxt Address
 -------------------------------------------------
@@ -44,58 +44,58 @@ The following properties are synchronized between a Invoiced Lineitem and a Busi
      - Businessnxt Data Type
 
 
-Invoiced Invoices to Visma Order
---------------------------------
-Every Invoiced Invoices will be synchronized with a Visma Order.
+Invoiced Invoices to BusinessNxt Order
+--------------------------------------
+Every Invoiced Invoices will be synchronized with a BusinessNxt Order.
 
-Once a link between a Invoiced Invoices and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Invoices and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Invoices and a Visma Order:
+The following properties are synchronized between a Invoiced Invoices and a BusinessNxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Invoices Property
-     - Visma Order Property
-     - Visma Data Type
+     - BusinessNxt Order Property
+     - BusinessNxt Data Type
    * - discounts
      - totalDiscountAmountInCurrency
      - "string"
 
 
-Invoiced Items to Visma Product
--------------------------------
-Every Invoiced Items will be synchronized with a Visma Product.
+Invoiced Items to BusinessNxt Product
+-------------------------------------
+Every Invoiced Items will be synchronized with a BusinessNxt Product.
 
-Once a link between a Invoiced Items and a Visma Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Items and a BusinessNxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Items and a Visma Product:
+The following properties are synchronized between a Invoiced Items and a BusinessNxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Items Property
-     - Visma Product Property
-     - Visma Data Type
+     - BusinessNxt Product Property
+     - BusinessNxt Data Type
    * - description
      - description
      - "string"
 
 
-Invoiced Lineitem to Visma Orderline
-------------------------------------
-Every Invoiced Lineitem will be synchronized with a Visma Orderline.
+Invoiced Lineitem to BusinessNxt Orderline
+------------------------------------------
+Every Invoiced Lineitem will be synchronized with a BusinessNxt Orderline.
 
-Once a link between a Invoiced Lineitem and a Visma Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Lineitem and a BusinessNxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Lineitem and a Visma Orderline:
+The following properties are synchronized between a Invoiced Lineitem and a BusinessNxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Lineitem Property
-     - Visma Orderline Property
-     - Visma Data Type
+     - BusinessNxt Orderline Property
+     - BusinessNxt Data Type
    * - $original_id
      - orderNo
      - "string"
