@@ -1,13 +1,13 @@
-======================================
-Businesscentral to Membercare Dataflow
-======================================
+=======================================
+Business Central to MemberCare Dataflow
+=======================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:52:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to Membercare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Businesscentral Companies to Membercare Companies
 -------------------------------------------------
@@ -194,20 +194,20 @@ The following properties are synchronized between a Businesscentral Salesquotes 
      - Membercare Data Type
 
 
-Businesscentral Customers company to Membercare Companies
----------------------------------------------------------
-Every Businesscentral Customers company will be synchronized with a Membercare Companies.
+Business Customers company to MemberCare Companies
+--------------------------------------------------
+Every Business Customers company will be synchronized with a MemberCare Companies.
 
-Once a link between a Businesscentral Customers company and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers company and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers company and a Membercare Companies:
+The following properties are synchronized between a Business Customers company and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Customers company Property
-     - Membercare Companies Property
-     - Membercare Data Type
+   * - Business Customers company Property
+     - MemberCare Companies Property
+     - MemberCare Data Type
    * - displayName
      - companyName
      - "string"
@@ -219,20 +219,20 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
 
 
-Businesscentral Salesorders to Membercare Countries
----------------------------------------------------
-Every Businesscentral Salesorders will be synchronized with a Membercare Countries.
+Business Salesorders to MemberCare Countries
+--------------------------------------------
+Every Business Salesorders will be synchronized with a MemberCare Countries.
 
-Once a link between a Businesscentral Salesorders and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Salesorders and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorders and a Membercare Countries:
+The following properties are synchronized between a Business Salesorders and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Salesorders Property
-     - Membercare Countries Property
-     - Membercare Data Type
+   * - Business Salesorders Property
+     - MemberCare Countries Property
+     - MemberCare Data Type
    * - billToCountry
      - iso2Letter
      - "string"
@@ -241,20 +241,20 @@ The following properties are synchronized between a Businesscentral Salesorders 
      - "string"
 
 
-Businesscentral Salesquotes to Membercare Countries
----------------------------------------------------
-Every Businesscentral Salesquotes will be synchronized with a Membercare Countries.
+Business Salesquotes to MemberCare Countries
+--------------------------------------------
+Every Business Salesquotes will be synchronized with a MemberCare Countries.
 
-Once a link between a Businesscentral Salesquotes and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Salesquotes and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesquotes and a Membercare Countries:
+The following properties are synchronized between a Business Salesquotes and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Salesquotes Property
-     - Membercare Countries Property
-     - Membercare Data Type
+   * - Business Salesquotes Property
+     - MemberCare Countries Property
+     - MemberCare Data Type
    * - billToCountry
      - name
      - "string"
