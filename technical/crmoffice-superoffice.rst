@@ -1,13 +1,13 @@
 =================================
-CRMOffice to Superoffice Dataflow
+CRMOffice to SuperOffice Dataflow
 =================================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:54:34
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from CRMOffice to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from CRMOffice to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Crmoffice Contacts to Superoffice Person
 ----------------------------------------
