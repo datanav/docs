@@ -2,27 +2,27 @@
 WebCRM to ExactOnline Dataflow
 ==============================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-WebCRM Opportunities to Exact Quotations
-----------------------------------------
-Every WebCRM Opportunities will be synchronized with a Exact Quotations.
+WebCRM Opportunities to ExactOnline Quotations
+----------------------------------------------
+Every WebCRM Opportunities will be synchronized with a ExactOnline Quotations.
 
-Once a link between a WebCRM Opportunities and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Opportunities and a ExactOnline Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Opportunities and a Exact Quotations:
+The following properties are synchronized between a WebCRM Opportunities and a ExactOnline Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Opportunities Property
-     - Exact Quotations Property
-     - Exact Data Type
+     - ExactOnline Quotations Property
+     - ExactOnline Data Type
    * - OpportunityCurrencyName
      - Currency
      - "string"
@@ -31,55 +31,55 @@ The following properties are synchronized between a WebCRM Opportunities and a E
      - "string"
 
 
-WebCRM Organisations to Exact Accounts
---------------------------------------
-Every WebCRM Organisations will be synchronized with a Exact Accounts.
+WebCRM Organisations to ExactOnline Accounts
+--------------------------------------------
+Every WebCRM Organisations will be synchronized with a ExactOnline Accounts.
 
-Once a link between a WebCRM Organisations and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Organisations and a ExactOnline Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Organisations and a Exact Accounts:
+The following properties are synchronized between a WebCRM Organisations and a ExactOnline Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Organisations Property
-     - Exact Accounts Property
-     - Exact Data Type
+     - ExactOnline Accounts Property
+     - ExactOnline Data Type
    * - OrganisationName
      - Name
      - "string"
 
 
-WebCRM Quotationline to Exact Quotations
-----------------------------------------
-Every WebCRM Quotationline will be synchronized with a Exact Quotations.
+WebCRM Quotationline to ExactOnline Quotations
+----------------------------------------------
+Every WebCRM Quotationline will be synchronized with a ExactOnline Quotations.
 
-Once a link between a WebCRM Quotationline and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Quotationline and a ExactOnline Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Quotationline and a Exact Quotations:
+The following properties are synchronized between a WebCRM Quotationline and a ExactOnline Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Quotationline Property
-     - Exact Quotations Property
-     - Exact Data Type
+     - ExactOnline Quotations Property
+     - ExactOnline Data Type
 
 
-WebCRM Users to Exact Contacts
-------------------------------
-Every WebCRM Users will be synchronized with a Exact Contacts.
+WebCRM Users to ExactOnline Contacts
+------------------------------------
+Every WebCRM Users will be synchronized with a ExactOnline Contacts.
 
-Once a link between a WebCRM Users and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Users and a ExactOnline Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Users and a Exact Contacts:
+The following properties are synchronized between a WebCRM Users and a ExactOnline Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Users Property
-     - Exact Contacts Property
-     - Exact Data Type
+     - ExactOnline Contacts Property
+     - ExactOnline Data Type
 
 
 WebCRM Persons to ExactOnline Contacts
