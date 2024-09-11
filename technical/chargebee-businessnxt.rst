@@ -2,43 +2,43 @@
 Chargebee to BusinessNxt Dataflow
 =================================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Chargebee to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Chargebee Currency to Businessnxt Country
------------------------------------------
-Every Chargebee Currency will be synchronized with a Businessnxt Country.
+Chargebee Currency to Visma Country
+-----------------------------------
+Every Chargebee Currency will be synchronized with a Visma Country.
 
-Once a link between a Chargebee Currency and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Currency and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Currency and a Businessnxt Country:
+The following properties are synchronized between a Chargebee Currency and a Visma Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Currency Property
-     - Businessnxt Country Property
-     - Businessnxt Data Type
+     - Visma Country Property
+     - Visma Data Type
 
 
-Chargebee Item_family to Businessnxt Country
---------------------------------------------
-Every Chargebee Item_family will be synchronized with a Businessnxt Country.
+Chargebee Item_family to Visma Country
+--------------------------------------
+Every Chargebee Item_family will be synchronized with a Visma Country.
 
-Once a link between a Chargebee Item_family and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Item_family and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Item_family and a Businessnxt Country:
+The following properties are synchronized between a Chargebee Item_family and a Visma Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Item_family Property
-     - Businessnxt Country Property
-     - Businessnxt Data Type
+     - Visma Country Property
+     - Visma Data Type
 
 
 Chargebee Address to BusinessNxt Country
