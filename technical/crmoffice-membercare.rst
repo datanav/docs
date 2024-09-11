@@ -2,41 +2,41 @@
 CRMOffice to MemberCare Dataflow
 ================================
 
-Generated: 2024-09-11 07:48:17
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CRMOffice to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Crmoffice Companies to Membercare Products
+CRMOffice Companies to Membercare Products
 ------------------------------------------
-Every Crmoffice Companies will be synchronized with a Membercare Products.
+Every CRMOffice Companies will be synchronized with a Membercare Products.
 
-Once a link between a Crmoffice Companies and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Companies and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Crmoffice Companies and a Membercare Products:
+The following properties are synchronized between a CRMOffice Companies and a Membercare Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - Crmoffice Companies Property
+   * - CRMOffice Companies Property
      - Membercare Products Property
      - Membercare Data Type
 
 
-Crmoffice Contacts to Membercare Persons
+CRMOffice Contacts to Membercare Persons
 ----------------------------------------
-Every Crmoffice Contacts will be synchronized with a Membercare Persons.
+Every CRMOffice Contacts will be synchronized with a Membercare Persons.
 
-Once a link between a Crmoffice Contacts and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Contacts and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Crmoffice Contacts and a Membercare Persons:
+The following properties are synchronized between a CRMOffice Contacts and a Membercare Persons:
 
 .. list-table::
    :header-rows: 1
 
-   * - Crmoffice Contacts Property
+   * - CRMOffice Contacts Property
      - Membercare Persons Property
      - Membercare Data Type
    * - familyName
