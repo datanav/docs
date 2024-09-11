@@ -2,25 +2,25 @@
 PowerOfficeGO to WooCommerce Dataflow
 =====================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:37:15
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from PowerOfficeGO to WooCommerce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-PowerOffice Product to WooCommerce Product
-------------------------------------------
-Every PowerOffice Product will be synchronized with a WooCommerce Product.
+PowerOfficeGO Product to WooCommerce Product
+--------------------------------------------
+Every PowerOfficeGO Product will be synchronized with a WooCommerce Product.
 
-Once a link between a PowerOffice Product and a WooCommerce Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Product and a WooCommerce Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Product and a WooCommerce Product:
+The following properties are synchronized between a PowerOfficeGO Product and a WooCommerce Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Product Property
+   * - PowerOfficeGO Product Property
      - WooCommerce Product Property
      - WooCommerce Data Type
    * - costPrice
@@ -34,18 +34,18 @@ The following properties are synchronized between a PowerOffice Product and a Wo
      - "string"
 
 
-PowerOffice Salesorders to WooCommerce Order
---------------------------------------------
-Every PowerOffice Salesorders will be synchronized with a WooCommerce Order.
+PowerOfficeGO Salesorders to WooCommerce Order
+----------------------------------------------
+Every PowerOfficeGO Salesorders will be synchronized with a WooCommerce Order.
 
-Once a link between a PowerOffice Salesorders and a WooCommerce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Salesorders and a WooCommerce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Salesorders and a WooCommerce Order:
+The following properties are synchronized between a PowerOfficeGO Salesorders and a WooCommerce Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Salesorders Property
+   * - PowerOfficeGO Salesorders Property
      - WooCommerce Order Property
      - WooCommerce Data Type
    * - CurrencyCode
