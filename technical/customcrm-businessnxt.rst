@@ -1,13 +1,13 @@
-========================================
-CustomCRM to Visma Business Nxt Dataflow
-========================================
+=================================
+CustomCRM to BusinessNxt Dataflow
+=================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from CustomCRM to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from CustomCRM to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Custom Customer to Businessnxt Address
 --------------------------------------
@@ -57,34 +57,34 @@ The following properties are synchronized between a Custom User and a Businessnx
      - Businessnxt Data Type
 
 
-Custom Order to Visma Order
----------------------------
-Every Custom Order will be synchronized with a Visma Order.
+CustomCRM Order to BusinessNxt Order
+------------------------------------
+Every CustomCRM Order will be synchronized with a BusinessNxt Order.
 
-Once a link between a Custom Order and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Order and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Order and a Visma Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Custom Order Property
-     - Visma Order Property
-     - Visma Data Type
-
-
-Custom Product to Visma Product
--------------------------------
-Every Custom Product will be synchronized with a Visma Product.
-
-Once a link between a Custom Product and a Visma Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Custom Product and a Visma Product:
+The following properties are synchronized between a CustomCRM Order and a BusinessNxt Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Product Property
-     - Visma Product Property
-     - Visma Data Type
+   * - CustomCRM Order Property
+     - BusinessNxt Order Property
+     - BusinessNxt Data Type
+
+
+CustomCRM Product to BusinessNxt Product
+----------------------------------------
+Every CustomCRM Product will be synchronized with a BusinessNxt Product.
+
+Once a link between a CustomCRM Product and a BusinessNxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a CustomCRM Product and a BusinessNxt Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - CustomCRM Product Property
+     - BusinessNxt Product Property
+     - BusinessNxt Data Type
 
