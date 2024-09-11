@@ -1,28 +1,28 @@
-=================================
-ZohoCRM to Powerofficego Dataflow
-=================================
+==================================
+ZohoCRM to PowerOffice GO Dataflow
+==================================
 
-Generated: 2024-09-11 00:00:00
+Generated: 2024-09-11 07:53:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from ZohoCRM to Powerofficego. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from ZohoCRM to PowerOffice GO. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-ZohoCRM Contact to Powerofficego Customers person
--------------------------------------------------
-Every ZohoCRM Contact will be synchronized with a Powerofficego Customers person.
+ZohoCRM Contact to PowerOffice Customers person
+-----------------------------------------------
+Every ZohoCRM Contact will be synchronized with a PowerOffice Customers person.
 
-Once a link between a ZohoCRM Contact and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Contact and a PowerOffice Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Contact and a Powerofficego Customers person:
+The following properties are synchronized between a ZohoCRM Contact and a PowerOffice Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Contact Property
-     - Powerofficego Customers person Property
-     - Powerofficego Data Type
+     - PowerOffice Customers person Property
+     - PowerOffice Data Type
    * - Email
      - EmailAddress
      - "string"
