@@ -1,28 +1,28 @@
-=======================================
-Businesscentral to Woocommerce Dataflow
-=======================================
+========================================
+Business Central to WooCommerce Dataflow
+========================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:52:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to Woocommerce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to WooCommerce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Items to Woocommerce Product
---------------------------------------------
-Every Businesscentral Items will be synchronized with a Woocommerce Product.
+Business Items to WooCommerce Product
+-------------------------------------
+Every Business Items will be synchronized with a WooCommerce Product.
 
-Once a link between a Businesscentral Items and a Woocommerce Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Items and a WooCommerce Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Items and a Woocommerce Product:
+The following properties are synchronized between a Business Items and a WooCommerce Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Items Property
-     - Woocommerce Product Property
-     - Woocommerce Data Type
+   * - Business Items Property
+     - WooCommerce Product Property
+     - WooCommerce Data Type
    * - displayName
      - name
      - "string"
@@ -34,20 +34,20 @@ The following properties are synchronized between a Businesscentral Items and a 
      - "string"
 
 
-Businesscentral Salesorders to Woocommerce Order
-------------------------------------------------
-Every Businesscentral Salesorders will be synchronized with a Woocommerce Order.
+Business Salesorders to WooCommerce Order
+-----------------------------------------
+Every Business Salesorders will be synchronized with a WooCommerce Order.
 
-Once a link between a Businesscentral Salesorders and a Woocommerce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Salesorders and a WooCommerce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorders and a Woocommerce Order:
+The following properties are synchronized between a Business Salesorders and a WooCommerce Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Salesorders Property
-     - Woocommerce Order Property
-     - Woocommerce Data Type
+   * - Business Salesorders Property
+     - WooCommerce Order Property
+     - WooCommerce Data Type
    * - billToAddressLine1
      - billing.address_1
      - "string"
