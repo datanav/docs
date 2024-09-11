@@ -2,27 +2,27 @@
 Shopify to CRMOffice Dataflow
 =============================
 
-Generated: 2024-09-11 07:46:45
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to CRMOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Shopify Customer to Crmoffice Contacts
+Shopify Customer to CRMOffice Contacts
 --------------------------------------
-Every Shopify Customer will be synchronized with a Crmoffice Contacts.
+Every Shopify Customer will be synchronized with a CRMOffice Contacts.
 
-Once a link between a Shopify Customer and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Customer and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Customer and a Crmoffice Contacts:
+The following properties are synchronized between a Shopify Customer and a CRMOffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Customer Property
-     - Crmoffice Contacts Property
-     - Crmoffice Data Type
+     - CRMOffice Contacts Property
+     - CRMOffice Data Type
    * - default_address.phone
      - directPhone
      - "string"
@@ -37,50 +37,50 @@ The following properties are synchronized between a Shopify Customer and a Crmof
      - "string"
 
 
-Shopify Inventoryitem to Crmoffice Companies
+Shopify Inventoryitem to CRMOffice Companies
 --------------------------------------------
-Every Shopify Inventoryitem will be synchronized with a Crmoffice Companies.
+Every Shopify Inventoryitem will be synchronized with a CRMOffice Companies.
 
-Once a link between a Shopify Inventoryitem and a Crmoffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Inventoryitem and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Inventoryitem and a Crmoffice Companies:
+The following properties are synchronized between a Shopify Inventoryitem and a CRMOffice Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Inventoryitem Property
-     - Crmoffice Companies Property
-     - Crmoffice Data Type
+     - CRMOffice Companies Property
+     - CRMOffice Data Type
 
 
-Shopify Product to Crmoffice Companies
+Shopify Product to CRMOffice Companies
 --------------------------------------
-Every Shopify Product will be synchronized with a Crmoffice Companies.
+Every Shopify Product will be synchronized with a CRMOffice Companies.
 
-Once a link between a Shopify Product and a Crmoffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Product and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Product and a Crmoffice Companies:
+The following properties are synchronized between a Shopify Product and a CRMOffice Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Product Property
-     - Crmoffice Companies Property
-     - Crmoffice Data Type
+     - CRMOffice Companies Property
+     - CRMOffice Data Type
 
 
-Shopify Sesamproduct to Crmoffice Companies
+Shopify Sesamproduct to CRMOffice Companies
 -------------------------------------------
-Every Shopify Sesamproduct will be synchronized with a Crmoffice Companies.
+Every Shopify Sesamproduct will be synchronized with a CRMOffice Companies.
 
-Once a link between a Shopify Sesamproduct and a Crmoffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Sesamproduct and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Sesamproduct and a Crmoffice Companies:
+The following properties are synchronized between a Shopify Sesamproduct and a CRMOffice Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Sesamproduct Property
-     - Crmoffice Companies Property
-     - Crmoffice Data Type
+     - CRMOffice Companies Property
+     - CRMOffice Data Type
 
