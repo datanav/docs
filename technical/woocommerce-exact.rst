@@ -1,13 +1,13 @@
-===================================
-WooCommerce to ExactOnline Dataflow
-===================================
+====================================
+WooCommerce to Exact Online Dataflow
+====================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 WooCommerce Order to ExactOnline Quotations
 -------------------------------------------
@@ -31,55 +31,55 @@ The following properties are synchronized between a WooCommerce Order and a Exac
      - "string"
 
 
-WooCommerce Order to ExactOnline Currencies
--------------------------------------------
-Every WooCommerce Order will be synchronized with a ExactOnline Currencies.
+WooCommerce Order to Exact Online Currencies
+--------------------------------------------
+Every WooCommerce Order will be synchronized with a Exact Online Currencies.
 
-Once a link between a WooCommerce Order and a ExactOnline Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a Exact Online Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Order and a ExactOnline Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Order Property
-     - ExactOnline Currencies Property
-     - ExactOnline Data Type
-
-
-WooCommerce Order to ExactOnline Salesorderlines
-------------------------------------------------
-Every WooCommerce Order will be synchronized with a ExactOnline Salesorderlines.
-
-Once a link between a WooCommerce Order and a ExactOnline Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a WooCommerce Order and a ExactOnline Salesorderlines:
+The following properties are synchronized between a WooCommerce Order and a Exact Online Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Order Property
-     - ExactOnline Salesorderlines Property
-     - ExactOnline Data Type
+     - Exact Online Currencies Property
+     - Exact Online Data Type
+
+
+WooCommerce Order to Exact Online Salesorderlines
+-------------------------------------------------
+Every WooCommerce Order will be synchronized with a Exact Online Salesorderlines.
+
+Once a link between a WooCommerce Order and a Exact Online Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WooCommerce Order and a Exact Online Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WooCommerce Order Property
+     - Exact Online Salesorderlines Property
+     - Exact Online Data Type
    * - line_items.sku
      - CostPriceFC
      - "string"
 
 
-WooCommerce Order to ExactOnline Salesorders
---------------------------------------------
-Every WooCommerce Order will be synchronized with a ExactOnline Salesorders.
+WooCommerce Order to Exact Online Salesorders
+---------------------------------------------
+Every WooCommerce Order will be synchronized with a Exact Online Salesorders.
 
-Once a link between a WooCommerce Order and a ExactOnline Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a Exact Online Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Order and a ExactOnline Salesorders:
+The following properties are synchronized between a WooCommerce Order and a Exact Online Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Order Property
-     - ExactOnline Salesorders Property
-     - ExactOnline Data Type
+     - Exact Online Salesorders Property
+     - Exact Online Data Type
    * - currency
      - Currency
      - "string"
@@ -88,18 +88,18 @@ The following properties are synchronized between a WooCommerce Order and a Exac
      - "string"
 
 
-WooCommerce Product to ExactOnline Items
-----------------------------------------
-Every WooCommerce Product will be synchronized with a ExactOnline Items.
+WooCommerce Product to Exact Online Items
+-----------------------------------------
+Every WooCommerce Product will be synchronized with a Exact Online Items.
 
-Once a link between a WooCommerce Product and a ExactOnline Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Product and a Exact Online Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Product and a ExactOnline Items:
+The following properties are synchronized between a WooCommerce Product and a Exact Online Items:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Product Property
-     - ExactOnline Items Property
-     - ExactOnline Data Type
+     - Exact Online Items Property
+     - Exact Online Data Type
 
