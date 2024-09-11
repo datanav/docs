@@ -1,13 +1,13 @@
-============================
-Wave to BusinessNxt Dataflow
-============================
+=============================
+Wave to Business Nxt Dataflow
+=============================
 
-Generated: 2024-09-11 11:13:29
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Wave to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Wave to Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Wave Customer to BusinessNxt Address
 ------------------------------------
@@ -37,20 +37,20 @@ The following properties are synchronized between a Wave Customer and a Business
      - "string"
 
 
-Wave Country to BusinessNxt Country
------------------------------------
-Every Wave Country will be synchronized with a BusinessNxt Country.
+Wave Country to Business Nxt Country
+------------------------------------
+Every Wave Country will be synchronized with a Business Nxt Country.
 
-Once a link between a Wave Country and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Country and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Country and a BusinessNxt Country:
+The following properties are synchronized between a Wave Country and a Business Nxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Country Property
-     - BusinessNxt Country Property
-     - BusinessNxt Data Type
+     - Business Nxt Country Property
+     - Business Nxt Data Type
    * - currency.code
      - currencyNo
      - "string"
@@ -59,39 +59,39 @@ The following properties are synchronized between a Wave Country and a BusinessN
      - "string"
 
 
-Wave Currency to BusinessNxt Currency
--------------------------------------
-Every Wave Currency will be synchronized with a BusinessNxt Currency.
+Wave Currency to Business Nxt Currency
+--------------------------------------
+Every Wave Currency will be synchronized with a Business Nxt Currency.
 
-Once a link between a Wave Currency and a BusinessNxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Currency and a Business Nxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Currency and a BusinessNxt Currency:
+The following properties are synchronized between a Wave Currency and a Business Nxt Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Currency Property
-     - BusinessNxt Currency Property
-     - BusinessNxt Data Type
+     - Business Nxt Currency Property
+     - Business Nxt Data Type
    * - name
      - name
      - "string"
 
 
-Wave Invoice to BusinessNxt Order
----------------------------------
-Every Wave Invoice will be synchronized with a BusinessNxt Order.
+Wave Invoice to Business Nxt Order
+----------------------------------
+Every Wave Invoice will be synchronized with a Business Nxt Order.
 
-Once a link between a Wave Invoice and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a BusinessNxt Order:
+The following properties are synchronized between a Wave Invoice and a Business Nxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     - BusinessNxt Order Property
-     - BusinessNxt Data Type
+     - Business Nxt Order Property
+     - Business Nxt Data Type
    * - invoiceDate
      - invoiceDate
      - "string"
@@ -100,39 +100,39 @@ The following properties are synchronized between a Wave Invoice and a BusinessN
      - "string"
 
 
-Wave Invoice to BusinessNxt Orderline
--------------------------------------
-Every Wave Invoice will be synchronized with a BusinessNxt Orderline.
+Wave Invoice to Business Nxt Orderline
+--------------------------------------
+Every Wave Invoice will be synchronized with a Business Nxt Orderline.
 
-Once a link between a Wave Invoice and a BusinessNxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a Business Nxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a BusinessNxt Orderline:
+The following properties are synchronized between a Wave Invoice and a Business Nxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     - BusinessNxt Orderline Property
-     - BusinessNxt Data Type
+     - Business Nxt Orderline Property
+     - Business Nxt Data Type
    * - id
      - orderNo
      - "string"
 
 
-Wave Product to BusinessNxt Product
------------------------------------
-Every Wave Product will be synchronized with a BusinessNxt Product.
+Wave Product to Business Nxt Product
+------------------------------------
+Every Wave Product will be synchronized with a Business Nxt Product.
 
-Once a link between a Wave Product and a BusinessNxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a Business Nxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a BusinessNxt Product:
+The following properties are synchronized between a Wave Product and a Business Nxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Product Property
-     - BusinessNxt Product Property
-     - BusinessNxt Data Type
+     - Business Nxt Product Property
+     - Business Nxt Data Type
    * - description
      - description
      - "string"
