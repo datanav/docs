@@ -2,57 +2,57 @@
 MemberCare to Visma Business Nxt Dataflow
 =========================================
 
-Generated: 2024-09-11 07:48:17
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Membercare Companycategories to Businessnxt Country
+MemberCare Companycategories to Businessnxt Country
 ---------------------------------------------------
-Every Membercare Companycategories will be synchronized with a Businessnxt Country.
+Every MemberCare Companycategories will be synchronized with a Businessnxt Country.
 
-Once a link between a Membercare Companycategories and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companycategories and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Companycategories and a Businessnxt Country:
+The following properties are synchronized between a MemberCare Companycategories and a Businessnxt Country:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Companycategories Property
+   * - MemberCare Companycategories Property
      - Businessnxt Country Property
      - Businessnxt Data Type
 
 
-Membercare Invoices to Businessnxt Order
+MemberCare Invoices to Businessnxt Order
 ----------------------------------------
-Every Membercare Invoices will be synchronized with a Businessnxt Order.
+Every MemberCare Invoices will be synchronized with a Businessnxt Order.
 
-Once a link between a Membercare Invoices and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Invoices and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Invoices and a Businessnxt Order:
+The following properties are synchronized between a MemberCare Invoices and a Businessnxt Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Invoices Property
+   * - MemberCare Invoices Property
      - Businessnxt Order Property
      - Businessnxt Data Type
 
 
-Membercare Organizations to Businessnxt Address
+MemberCare Organizations to Businessnxt Address
 -----------------------------------------------
-Every Membercare Organizations will be synchronized with a Businessnxt Address.
+Every MemberCare Organizations will be synchronized with a Businessnxt Address.
 
-Once a link between a Membercare Organizations and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Organizations and a Businessnxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Organizations and a Businessnxt Address:
+The following properties are synchronized between a MemberCare Organizations and a Businessnxt Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Organizations Property
+   * - MemberCare Organizations Property
      - Businessnxt Address Property
      - Businessnxt Data Type
    * - addresses.country.id
@@ -87,18 +87,18 @@ The following properties are synchronized between a Membercare Organizations and
      - "string"
 
 
-Membercare Products to Businessnxt Product
+MemberCare Products to Businessnxt Product
 ------------------------------------------
-Every Membercare Products will be synchronized with a Businessnxt Product.
+Every MemberCare Products will be synchronized with a Businessnxt Product.
 
-Once a link between a Membercare Products and a Businessnxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Products and a Businessnxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Products and a Businessnxt Product:
+The following properties are synchronized between a MemberCare Products and a Businessnxt Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Products Property
+   * - MemberCare Products Property
      - Businessnxt Product Property
      - Businessnxt Data Type
 
