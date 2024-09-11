@@ -2,27 +2,27 @@
 BusinessNxt to BusinessNxt Dataflow
 ===================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from BusinessNxt to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Visma Currency to Visma Country
--------------------------------
-Every Visma Currency will be synchronized with a Visma Country.
+BusinessNxt Currency to BusinessNxt Country
+-------------------------------------------
+Every BusinessNxt Currency will be synchronized with a BusinessNxt Country.
 
-Once a link between a Visma Currency and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Currency and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Currency and a Visma Country:
+The following properties are synchronized between a BusinessNxt Currency and a BusinessNxt Country:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Currency Property
-     - Visma Country Property
-     - Visma Data Type
+   * - BusinessNxt Currency Property
+     - BusinessNxt Country Property
+     - BusinessNxt Data Type
    * - isoCode
      - isoCode
      - "string"
@@ -31,55 +31,55 @@ The following properties are synchronized between a Visma Currency and a Visma C
      - "string"
 
 
-Visma Orderline to Visma Order
-------------------------------
-Every Visma Orderline will be synchronized with a Visma Order.
+BusinessNxt Orderline to BusinessNxt Order
+------------------------------------------
+Every BusinessNxt Orderline will be synchronized with a BusinessNxt Order.
 
-Once a link between a Visma Orderline and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Orderline and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Orderline and a Visma Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Visma Orderline Property
-     - Visma Order Property
-     - Visma Data Type
-
-
-Visma Productcategory to Visma Country
---------------------------------------
-Every Visma Productcategory will be synchronized with a Visma Country.
-
-Once a link between a Visma Productcategory and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Visma Productcategory and a Visma Country:
+The following properties are synchronized between a BusinessNxt Orderline and a BusinessNxt Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Productcategory Property
-     - Visma Country Property
-     - Visma Data Type
+   * - BusinessNxt Orderline Property
+     - BusinessNxt Order Property
+     - BusinessNxt Data Type
+
+
+BusinessNxt Productcategory to BusinessNxt Country
+--------------------------------------------------
+Every BusinessNxt Productcategory will be synchronized with a BusinessNxt Country.
+
+Once a link between a BusinessNxt Productcategory and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a BusinessNxt Productcategory and a BusinessNxt Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - BusinessNxt Productcategory Property
+     - BusinessNxt Country Property
+     - BusinessNxt Data Type
    * - text
      - name
      - "string"
 
 
-Visma Vat to Visma Country
---------------------------
-Every Visma Vat will be synchronized with a Visma Country.
+BusinessNxt Vat to BusinessNxt Country
+--------------------------------------
+Every BusinessNxt Vat will be synchronized with a BusinessNxt Country.
 
-Once a link between a Visma Vat and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Vat and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Vat and a Visma Country:
+The following properties are synchronized between a BusinessNxt Vat and a BusinessNxt Country:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Vat Property
-     - Visma Country Property
-     - Visma Data Type
+   * - BusinessNxt Vat Property
+     - BusinessNxt Country Property
+     - BusinessNxt Data Type
 
 
 BusinessNxt Address to BusinessNxt Company
