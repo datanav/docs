@@ -2,43 +2,43 @@
 Invoiced to CustomCRM Dataflow
 ==============================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to CustomCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Invoiced Customers person to Custom Contact
--------------------------------------------
-Every Invoiced Customers person will be synchronized with a Custom Contact.
+Invoiced Customers person to CustomCRM Contact
+----------------------------------------------
+Every Invoiced Customers person will be synchronized with a CustomCRM Contact.
 
-Once a link between a Invoiced Customers person and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers person and a CustomCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers person and a Custom Contact:
+The following properties are synchronized between a Invoiced Customers person and a CustomCRM Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Customers person Property
-     - Custom Contact Property
-     - Custom Data Type
+     - CustomCRM Contact Property
+     - CustomCRM Data Type
 
 
-Invoiced Lineitem to Custom Order
----------------------------------
-Every Invoiced Lineitem will be synchronized with a Custom Order.
+Invoiced Lineitem to CustomCRM Order
+------------------------------------
+Every Invoiced Lineitem will be synchronized with a CustomCRM Order.
 
-Once a link between a Invoiced Lineitem and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Lineitem and a CustomCRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Lineitem and a Custom Order:
+The following properties are synchronized between a Invoiced Lineitem and a CustomCRM Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Lineitem Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomCRM Order Property
+     - CustomCRM Data Type
 
 
 Invoiced Contacts to CustomCRM Contact
