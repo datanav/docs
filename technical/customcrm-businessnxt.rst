@@ -2,59 +2,59 @@
 Custom CRM to Business Nxt Dataflow
 ===================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Custom CRM to Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-CustomCRM Customer to BusinessNxt Address
------------------------------------------
-Every CustomCRM Customer will be synchronized with a BusinessNxt Address.
+Custom CRM Customer to Business Nxt Address
+-------------------------------------------
+Every Custom CRM Customer will be synchronized with a Business Nxt Address.
 
-Once a link between a CustomCRM Customer and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom CRM Customer and a Business Nxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomCRM Customer and a BusinessNxt Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - CustomCRM Customer Property
-     - BusinessNxt Address Property
-     - BusinessNxt Data Type
-
-
-CustomCRM Quote to BusinessNxt Order
-------------------------------------
-Every CustomCRM Quote will be synchronized with a BusinessNxt Order.
-
-Once a link between a CustomCRM Quote and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a CustomCRM Quote and a BusinessNxt Order:
+The following properties are synchronized between a Custom CRM Customer and a Business Nxt Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomCRM Quote Property
-     - BusinessNxt Order Property
-     - BusinessNxt Data Type
+   * - Custom CRM Customer Property
+     - Business Nxt Address Property
+     - Business Nxt Data Type
 
 
-CustomCRM User to BusinessNxt Order
------------------------------------
-Every CustomCRM User will be synchronized with a BusinessNxt Order.
+Custom CRM Quote to Business Nxt Order
+--------------------------------------
+Every Custom CRM Quote will be synchronized with a Business Nxt Order.
 
-Once a link between a CustomCRM User and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom CRM Quote and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomCRM User and a BusinessNxt Order:
+The following properties are synchronized between a Custom CRM Quote and a Business Nxt Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomCRM User Property
-     - BusinessNxt Order Property
-     - BusinessNxt Data Type
+   * - Custom CRM Quote Property
+     - Business Nxt Order Property
+     - Business Nxt Data Type
+
+
+Custom CRM User to Business Nxt Order
+-------------------------------------
+Every Custom CRM User will be synchronized with a Business Nxt Order.
+
+Once a link between a Custom CRM User and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom CRM User and a Business Nxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom CRM User Property
+     - Business Nxt Order Property
+     - Business Nxt Data Type
 
 
 Custom CRM Order to Business Nxt Order
