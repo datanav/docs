@@ -1,108 +1,108 @@
-===================================
-Powerofficego to Customcrm Dataflow
-===================================
+====================================
+Powerofficego to Custom CRM Dataflow
+====================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Customcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Powerofficego Customers person to Customcrm Contact
----------------------------------------------------
-Every Powerofficego Customers person will be synchronized with a Customcrm Contact.
+Powerofficego Customers person to Custom Contact
+------------------------------------------------
+Every Powerofficego Customers person will be synchronized with a Custom Contact.
 
-Once a link between a Powerofficego Customers person and a Customcrm Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers person and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers person and a Customcrm Contact:
+The following properties are synchronized between a Powerofficego Customers person and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers person Property
-     - Customcrm Contact Property
-     - Customcrm Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
 
-Powerofficego Departments to Customcrm Customer
------------------------------------------------
-Every Powerofficego Departments will be synchronized with a Customcrm Customer.
+Powerofficego Departments to Custom Customer
+--------------------------------------------
+Every Powerofficego Departments will be synchronized with a Custom Customer.
 
-Once a link between a Powerofficego Departments and a Customcrm Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Departments and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Departments and a Customcrm Customer:
+The following properties are synchronized between a Powerofficego Departments and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Departments Property
-     - Customcrm Customer Property
-     - Customcrm Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Powerofficego Employees to Customcrm Contact
---------------------------------------------
-Every Powerofficego Employees will be synchronized with a Customcrm Contact.
+Powerofficego Employees to Custom Contact
+-----------------------------------------
+Every Powerofficego Employees will be synchronized with a Custom Contact.
 
-Once a link between a Powerofficego Employees and a Customcrm Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Employees and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Employees and a Customcrm Contact:
+The following properties are synchronized between a Powerofficego Employees and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Employees Property
-     - Customcrm Contact Property
-     - Customcrm Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
 
-Powerofficego Salesorderlines to Customcrm Order
-------------------------------------------------
-Every Powerofficego Salesorderlines will be synchronized with a Customcrm Order.
+Powerofficego Salesorderlines to Custom Order
+---------------------------------------------
+Every Powerofficego Salesorderlines will be synchronized with a Custom Order.
 
-Once a link between a Powerofficego Salesorderlines and a Customcrm Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Salesorderlines and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Salesorderlines and a Customcrm Order:
+The following properties are synchronized between a Powerofficego Salesorderlines and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Salesorderlines Property
-     - Customcrm Order Property
-     - Customcrm Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Powerofficego Contactperson to Customcrm Contact
-------------------------------------------------
-Every Powerofficego Contactperson will be synchronized with a Customcrm Contact.
+Powerofficego Contactperson to Custom Contact
+---------------------------------------------
+Every Powerofficego Contactperson will be synchronized with a Custom Contact.
 
-Once a link between a Powerofficego Contactperson and a Customcrm Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Contactperson and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Contactperson and a Customcrm Contact:
+The following properties are synchronized between a Powerofficego Contactperson and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Contactperson Property
-     - Customcrm Contact Property
-     - Customcrm Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
 
-Powerofficego Customers to Customcrm Customer
----------------------------------------------
-Every Powerofficego Customers will be synchronized with a Customcrm Customer.
+Powerofficego Customers to Custom Customer
+------------------------------------------
+Every Powerofficego Customers will be synchronized with a Custom Customer.
 
-Once a link between a Powerofficego Customers and a Customcrm Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Customers and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers and a Customcrm Customer:
+The following properties are synchronized between a Powerofficego Customers and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Customers Property
-     - Customcrm Customer Property
-     - Customcrm Data Type
+     - Custom Customer Property
+     - Custom Data Type
    * - MailAddress.AddressLine1
      - StreetAddress1
      - "string"
@@ -123,66 +123,66 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Product to Customcrm Product
-------------------------------------------
-Every Powerofficego Product will be synchronized with a Customcrm Product.
+Powerofficego Product to Custom Product
+---------------------------------------
+Every Powerofficego Product will be synchronized with a Custom Product.
 
-Once a link between a Powerofficego Product and a Customcrm Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Product and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Product and a Customcrm Product:
+The following properties are synchronized between a Powerofficego Product and a Custom Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Product Property
-     - Customcrm Product Property
-     - Customcrm Data Type
+     - Custom Product Property
+     - Custom Data Type
 
 
-Powerofficego Quote to Customcrm Quote
---------------------------------------
-Every Powerofficego Quote will be synchronized with a Customcrm Quote.
+Powerofficego Quote to Custom Quote
+-----------------------------------
+Every Powerofficego Quote will be synchronized with a Custom Quote.
 
-Once a link between a Powerofficego Quote and a Customcrm Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Quote and a Custom Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Quote and a Customcrm Quote:
+The following properties are synchronized between a Powerofficego Quote and a Custom Quote:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Quote Property
-     - Customcrm Quote Property
-     - Customcrm Data Type
+     - Custom Quote Property
+     - Custom Data Type
 
 
-Powerofficego Salesorders to Customcrm Order
---------------------------------------------
-Every Powerofficego Salesorders will be synchronized with a Customcrm Order.
+Powerofficego Salesorders to Custom Order
+-----------------------------------------
+Every Powerofficego Salesorders will be synchronized with a Custom Order.
 
-Once a link between a Powerofficego Salesorders and a Customcrm Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Salesorders and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Salesorders and a Customcrm Order:
+The following properties are synchronized between a Powerofficego Salesorders and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Salesorders Property
-     - Customcrm Order Property
-     - Customcrm Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Powerofficego Suppliers person to Customcrm Contact
----------------------------------------------------
-Every Powerofficego Suppliers person will be synchronized with a Customcrm Contact.
+Powerofficego Suppliers person to Custom Contact
+------------------------------------------------
+Every Powerofficego Suppliers person will be synchronized with a Custom Contact.
 
-Once a link between a Powerofficego Suppliers person and a Customcrm Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Powerofficego Suppliers person and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Suppliers person and a Customcrm Contact:
+The following properties are synchronized between a Powerofficego Suppliers person and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Powerofficego Suppliers person Property
-     - Customcrm Contact Property
-     - Customcrm Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
