@@ -2,43 +2,43 @@
 Chargebee to Business Nxt Dataflow
 ==================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Chargebee to Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Chargebee Currency to BusinessNxt Country
------------------------------------------
-Every Chargebee Currency will be synchronized with a BusinessNxt Country.
+Chargebee Currency to Business Nxt Country
+------------------------------------------
+Every Chargebee Currency will be synchronized with a Business Nxt Country.
 
-Once a link between a Chargebee Currency and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Currency and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Currency and a BusinessNxt Country:
+The following properties are synchronized between a Chargebee Currency and a Business Nxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Currency Property
-     - BusinessNxt Country Property
-     - BusinessNxt Data Type
+     - Business Nxt Country Property
+     - Business Nxt Data Type
 
 
-Chargebee Item_family to BusinessNxt Country
---------------------------------------------
-Every Chargebee Item_family will be synchronized with a BusinessNxt Country.
+Chargebee Item_family to Business Nxt Country
+---------------------------------------------
+Every Chargebee Item_family will be synchronized with a Business Nxt Country.
 
-Once a link between a Chargebee Item_family and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Item_family and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Item_family and a BusinessNxt Country:
+The following properties are synchronized between a Chargebee Item_family and a Business Nxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Item_family Property
-     - BusinessNxt Country Property
-     - BusinessNxt Data Type
+     - Business Nxt Country Property
+     - Business Nxt Data Type
 
 
 Chargebee Address to Business Nxt Country
