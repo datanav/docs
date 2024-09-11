@@ -2,46 +2,46 @@
 Chargebee to HubSpot Dataflow
 =============================
 
-Generated: 2024-09-11 07:56:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Chargebee to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Chargebee Business_entity to Hubspot Company
+Chargebee Business_entity to HubSpot Company
 --------------------------------------------
-Every Chargebee Business_entity will be synchronized with a Hubspot Company.
+Every Chargebee Business_entity will be synchronized with a HubSpot Company.
 
-Once a link between a Chargebee Business_entity and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Business_entity and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Business_entity and a Hubspot Company:
+The following properties are synchronized between a Chargebee Business_entity and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Business_entity Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
    * - name
      - properties.name
      - "string"
 
 
-Chargebee Customer to Hubspot Contact
+Chargebee Customer to HubSpot Contact
 -------------------------------------
-Every Chargebee Customer will be synchronized with a Hubspot Contact.
+Every Chargebee Customer will be synchronized with a HubSpot Contact.
 
-Once a link between a Chargebee Customer and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Customer and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Customer and a Hubspot Contact:
+The following properties are synchronized between a Chargebee Customer and a HubSpot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Customer Property
-     - Hubspot Contact Property
-     - Hubspot Data Type
+     - HubSpot Contact Property
+     - HubSpot Data Type
    * - email
      - properties.email
      - "string"
