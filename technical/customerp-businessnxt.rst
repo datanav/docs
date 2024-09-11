@@ -2,7 +2,7 @@
 CustomERP to Visma Business Nxt Dataflow
 ========================================
 
-Generated: 2024-09-11 08:00:24
+Generated: 2024-09-11 08:02:19
 
 Introduction
 ------------
@@ -41,34 +41,34 @@ The following properties are synchronized between a Custom Quote and a Businessn
      - Businessnxt Data Type
 
 
-Custom Order to Visma Order
----------------------------
-Every Custom Order will be synchronized with a Visma Order.
+CustomERP Order to Visma Order
+------------------------------
+Every CustomERP Order will be synchronized with a Visma Order.
 
-Once a link between a Custom Order and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Order and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Order and a Visma Order:
+The following properties are synchronized between a CustomERP Order and a Visma Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Order Property
+   * - CustomERP Order Property
      - Visma Order Property
      - Visma Data Type
 
 
-Custom Product to Visma Product
--------------------------------
-Every Custom Product will be synchronized with a Visma Product.
+CustomERP Product to Visma Product
+----------------------------------
+Every CustomERP Product will be synchronized with a Visma Product.
 
-Once a link between a Custom Product and a Visma Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Product and a Visma Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Product and a Visma Product:
+The following properties are synchronized between a CustomERP Product and a Visma Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Product Property
+   * - CustomERP Product Property
      - Visma Product Property
      - Visma Data Type
 
