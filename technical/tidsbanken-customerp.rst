@@ -2,7 +2,7 @@
 Tidsbanken to CustomERP Dataflow
 ================================
 
-Generated: 2024-09-11 08:01:30
+Generated: 2024-09-11 08:03:13
 
 Introduction
 ------------
@@ -41,50 +41,50 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Cu
      - Custom Data Type
 
 
-Tidsbanken Ansatt to Custom Employee
-------------------------------------
-Every Tidsbanken Ansatt will be synchronized with a Custom Employee.
+Tidsbanken Ansatt to CustomERP Employee
+---------------------------------------
+Every Tidsbanken Ansatt will be synchronized with a CustomERP Employee.
 
-Once a link between a Tidsbanken Ansatt and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Ansatt and a CustomERP Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Ansatt and a Custom Employee:
+The following properties are synchronized between a Tidsbanken Ansatt and a CustomERP Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Ansatt Property
-     - Custom Employee Property
-     - Custom Data Type
+     - CustomERP Employee Property
+     - CustomERP Data Type
 
 
-Tidsbanken Kunde to Custom Customer
------------------------------------
-Every Tidsbanken Kunde will be synchronized with a Custom Customer.
+Tidsbanken Kunde to CustomERP Customer
+--------------------------------------
+Every Tidsbanken Kunde will be synchronized with a CustomERP Customer.
 
-Once a link between a Tidsbanken Kunde and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Kunde and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Kunde and a Custom Customer:
+The following properties are synchronized between a Tidsbanken Kunde and a CustomERP Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Kunde Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomERP Customer Property
+     - CustomERP Data Type
 
 
-Tidsbanken Prosjekt to Custom Project
--------------------------------------
-Every Tidsbanken Prosjekt will be synchronized with a Custom Project.
+Tidsbanken Prosjekt to CustomERP Project
+----------------------------------------
+Every Tidsbanken Prosjekt will be synchronized with a CustomERP Project.
 
-Once a link between a Tidsbanken Prosjekt and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Prosjekt and a CustomERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Prosjekt and a Custom Project:
+The following properties are synchronized between a Tidsbanken Prosjekt and a CustomERP Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Prosjekt Property
-     - Custom Project Property
-     - Custom Data Type
+     - CustomERP Project Property
+     - CustomERP Data Type
 
