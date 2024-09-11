@@ -2,7 +2,7 @@
 PowerOfficeGO to PowerOfficeGO Dataflow
 =======================================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 09:12:16
 
 Introduction
 ------------
@@ -279,6 +279,32 @@ The following properties are synchronized between a PowerOfficeGO Employees and 
    * - JobTitle
      - DepartmentId (Dependant on having  in JobTitle)
      - "string"
+
+
+PowerOfficeGO Projectactivity to PowerOfficeGO Projectactivity
+--------------------------------------------------------------
+Before any synchronization can take place, a link between a PowerOfficeGO Projectactivity and a PowerOfficeGO Projectactivity must be established.
+
+A PowerOfficeGO Projectactivity will merge with a PowerOfficeGO Projectactivity if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOfficeGO Projectactivity Property
+     - PowerOfficeGO Projectactivity Property
+   * - activityCode
+     - activityCode
+
+Once a link between a PowerOfficeGO Projectactivity and a PowerOfficeGO Projectactivity is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOfficeGO Projectactivity and a PowerOfficeGO Projectactivity:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOfficeGO Projectactivity Property
+     - PowerOfficeGO Projectactivity Property
+     - PowerOfficeGO Data Type
 
 
 PowerOfficeGO Salesorders to PowerOfficeGO Salesorders
