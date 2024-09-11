@@ -1,13 +1,13 @@
-===========================
-Custom PMS to Wave Dataflow
-===========================
+==========================
+CustomPMS to Wave Dataflow
+==========================
 
-Generated: 2024-09-11 07:43:20
+Generated: 2024-09-11 07:53:23
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Custom PMS to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from CustomPMS to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Custom Customer to Wave Customer
 --------------------------------
