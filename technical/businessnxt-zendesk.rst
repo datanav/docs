@@ -2,25 +2,25 @@
 Visma Business Nxt to Zendesk Dataflow
 ======================================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Visma Business Nxt to Zendesk. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businessnxt Address to Zendesk Organizations
---------------------------------------------
-Every Businessnxt Address will be synchronized with a Zendesk Organizations.
+Visma Address to Zendesk Organizations
+--------------------------------------
+Every Visma Address will be synchronized with a Zendesk Organizations.
 
-Once a link between a Businessnxt Address and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Address and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Address and a Zendesk Organizations:
+The following properties are synchronized between a Visma Address and a Zendesk Organizations:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Address Property
+   * - Visma Address Property
      - Zendesk Organizations Property
      - Zendesk Data Type
    * - name
@@ -28,18 +28,18 @@ The following properties are synchronized between a Businessnxt Address and a Ze
      - "string"
 
 
-Businessnxt Company to Zendesk Organizations
---------------------------------------------
-Every Businessnxt Company will be synchronized with a Zendesk Organizations.
+Visma Company to Zendesk Organizations
+--------------------------------------
+Every Visma Company will be synchronized with a Zendesk Organizations.
 
-Once a link between a Businessnxt Company and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Company and a Zendesk Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Company and a Zendesk Organizations:
+The following properties are synchronized between a Visma Company and a Zendesk Organizations:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Company Property
+   * - Visma Company Property
      - Zendesk Organizations Property
      - Zendesk Data Type
    * - name
