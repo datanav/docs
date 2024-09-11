@@ -2,7 +2,7 @@
 Keap to CustomERP Dataflow
 ==========================
 
-Generated: 2024-09-11 08:01:30
+Generated: 2024-09-11 08:03:13
 
 Introduction
 ------------
@@ -57,18 +57,18 @@ The following properties are synchronized between a Keap Opportunity and a Custo
      - Custom Data Type
 
 
-Keap Product to Custom Product
-------------------------------
-Every Keap Product will be synchronized with a Custom Product.
+Keap Product to CustomERP Product
+---------------------------------
+Every Keap Product will be synchronized with a CustomERP Product.
 
-Once a link between a Keap Product and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Product and a CustomERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Product and a Custom Product:
+The following properties are synchronized between a Keap Product and a CustomERP Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Product Property
-     - Custom Product Property
-     - Custom Data Type
+     - CustomERP Product Property
+     - CustomERP Data Type
 
