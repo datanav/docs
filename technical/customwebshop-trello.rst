@@ -2,25 +2,25 @@
 CustomWebshop to Trello Dataflow
 ================================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CustomWebshop to Trello. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Custom Customer to Trello Organizations
----------------------------------------
-Every Custom Customer will be synchronized with a Trello Organizations.
+CustomWebshop Customer to Trello Organizations
+----------------------------------------------
+Every CustomWebshop Customer will be synchronized with a Trello Organizations.
 
-Once a link between a Custom Customer and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomWebshop Customer and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Customer and a Trello Organizations:
+The following properties are synchronized between a CustomWebshop Customer and a Trello Organizations:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Customer Property
+   * - CustomWebshop Customer Property
      - Trello Organizations Property
      - Trello Data Type
 
