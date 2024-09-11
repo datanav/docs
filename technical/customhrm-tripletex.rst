@@ -2,41 +2,41 @@
 Custom HRM to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-11 11:38:24
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Custom HRM to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-CustomHRM Department to Tripletex Department
---------------------------------------------
-Every CustomHRM Department will be synchronized with a Tripletex Department.
+Custom HRM Department to Tripletex Department
+---------------------------------------------
+Every Custom HRM Department will be synchronized with a Tripletex Department.
 
-Once a link between a CustomHRM Department and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom HRM Department and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomHRM Department and a Tripletex Department:
+The following properties are synchronized between a Custom HRM Department and a Tripletex Department:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomHRM Department Property
+   * - Custom HRM Department Property
      - Tripletex Department Property
      - Tripletex Data Type
 
 
-CustomHRM Employee to Tripletex Employee
-----------------------------------------
-Every CustomHRM Employee will be synchronized with a Tripletex Employee.
+Custom HRM Employee to Tripletex Employee
+-----------------------------------------
+Every Custom HRM Employee will be synchronized with a Tripletex Employee.
 
-Once a link between a CustomHRM Employee and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom HRM Employee and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomHRM Employee and a Tripletex Employee:
+The following properties are synchronized between a Custom HRM Employee and a Tripletex Employee:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomHRM Employee Property
+   * - Custom HRM Employee Property
      - Tripletex Employee Property
      - Tripletex Data Type
 
