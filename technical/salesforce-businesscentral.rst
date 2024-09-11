@@ -1,13 +1,13 @@
-=======================================
-Salesforce to Business Central Dataflow
-=======================================
+======================================
+Salesforce to BusinessCentral Dataflow
+======================================
 
-Generated: 2024-09-11 07:53:15
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to BusinessCentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Salesforce Division to Businesscentral Companies
 ------------------------------------------------
@@ -41,20 +41,20 @@ The following properties are synchronized between a Salesforce Organization and 
      - Businesscentral Data Type
 
 
-Salesforce Contact to Business Contacts person
-----------------------------------------------
-Every Salesforce Contact will be synchronized with a Business Contacts person.
+Salesforce Contact to BusinessCentral Contacts person
+-----------------------------------------------------
+Every Salesforce Contact will be synchronized with a BusinessCentral Contacts person.
 
-Once a link between a Salesforce Contact and a Business Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Contact and a BusinessCentral Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Contact and a Business Contacts person:
+The following properties are synchronized between a Salesforce Contact and a BusinessCentral Contacts person:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Contact Property
-     - Business Contacts person Property
-     - Business Data Type
+     - BusinessCentral Contacts person Property
+     - BusinessCentral Data Type
    * - Email
      - email
      - "string"
@@ -69,39 +69,39 @@ The following properties are synchronized between a Salesforce Contact and a Bus
      - "string"
 
 
-Salesforce Customer to Business Customers person
-------------------------------------------------
-Every Salesforce Customer will be synchronized with a Business Customers person.
+Salesforce Customer to BusinessCentral Customers person
+-------------------------------------------------------
+Every Salesforce Customer will be synchronized with a BusinessCentral Customers person.
 
-Once a link between a Salesforce Customer and a Business Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Customer and a BusinessCentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Customer and a Business Customers person:
+The following properties are synchronized between a Salesforce Customer and a BusinessCentral Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Customer Property
-     - Business Customers person Property
-     - Business Data Type
+     - BusinessCentral Customers person Property
+     - BusinessCentral Data Type
    * - Name
      - displayName
      - "string"
 
 
-Salesforce Invoiceline to Business Salesorderlines
---------------------------------------------------
-Every Salesforce Invoiceline will be synchronized with a Business Salesorderlines.
+Salesforce Invoiceline to BusinessCentral Salesorderlines
+---------------------------------------------------------
+Every Salesforce Invoiceline will be synchronized with a BusinessCentral Salesorderlines.
 
-Once a link between a Salesforce Invoiceline and a Business Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Invoiceline and a BusinessCentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Invoiceline and a Business Salesorderlines:
+The following properties are synchronized between a Salesforce Invoiceline and a BusinessCentral Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Invoiceline Property
-     - Business Salesorderlines Property
-     - Business Data Type
+     - BusinessCentral Salesorderlines Property
+     - BusinessCentral Data Type
    * - Name
      - description
      - "string"
@@ -116,20 +116,20 @@ The following properties are synchronized between a Salesforce Invoiceline and a
      - "float"
 
 
-Salesforce Order to Business Salesorders
-----------------------------------------
-Every Salesforce Order will be synchronized with a Business Salesorders.
+Salesforce Order to BusinessCentral Salesorders
+-----------------------------------------------
+Every Salesforce Order will be synchronized with a BusinessCentral Salesorders.
 
-Once a link between a Salesforce Order and a Business Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Order and a BusinessCentral Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Order and a Business Salesorders:
+The following properties are synchronized between a Salesforce Order and a BusinessCentral Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Order Property
-     - Business Salesorders Property
-     - Business Data Type
+     - BusinessCentral Salesorders Property
+     - BusinessCentral Data Type
    * - BillingCity
      - billToCity
      - "string"
@@ -192,20 +192,20 @@ The following properties are synchronized between a Salesforce Order and a Busin
      - "string"
 
 
-Salesforce Orderitem to Business Salesorderlines
-------------------------------------------------
-Every Salesforce Orderitem will be synchronized with a Business Salesorderlines.
+Salesforce Orderitem to BusinessCentral Salesorderlines
+-------------------------------------------------------
+Every Salesforce Orderitem will be synchronized with a BusinessCentral Salesorderlines.
 
-Once a link between a Salesforce Orderitem and a Business Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Orderitem and a BusinessCentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Orderitem and a Business Salesorderlines:
+The following properties are synchronized between a Salesforce Orderitem and a BusinessCentral Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Orderitem Property
-     - Business Salesorderlines Property
-     - Business Data Type
+     - BusinessCentral Salesorderlines Property
+     - BusinessCentral Data Type
    * - OrderId
      - documentId
      - "string"
@@ -217,20 +217,20 @@ The following properties are synchronized between a Salesforce Orderitem and a B
      - "float"
 
 
-Salesforce Product2 to Business Items
--------------------------------------
-Every Salesforce Product2 will be synchronized with a Business Items.
+Salesforce Product2 to BusinessCentral Items
+--------------------------------------------
+Every Salesforce Product2 will be synchronized with a BusinessCentral Items.
 
-Once a link between a Salesforce Product2 and a Business Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Product2 and a BusinessCentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Product2 and a Business Items:
+The following properties are synchronized between a Salesforce Product2 and a BusinessCentral Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Product2 Property
-     - Business Items Property
-     - Business Data Type
+     - BusinessCentral Items Property
+     - BusinessCentral Data Type
    * - Name
      - displayName
      - "string"
@@ -239,20 +239,20 @@ The following properties are synchronized between a Salesforce Product2 and a Bu
      - "string"
 
 
-Salesforce Quotelineitem to Business Salesorderlines
-----------------------------------------------------
-Every Salesforce Quotelineitem will be synchronized with a Business Salesorderlines.
+Salesforce Quotelineitem to BusinessCentral Salesorderlines
+-----------------------------------------------------------
+Every Salesforce Quotelineitem will be synchronized with a BusinessCentral Salesorderlines.
 
-Once a link between a Salesforce Quotelineitem and a Business Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quotelineitem and a BusinessCentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quotelineitem and a Business Salesorderlines:
+The following properties are synchronized between a Salesforce Quotelineitem and a BusinessCentral Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quotelineitem Property
-     - Business Salesorderlines Property
-     - Business Data Type
+     - BusinessCentral Salesorderlines Property
+     - BusinessCentral Data Type
    * - Discount
      - discountPercent
      - N/A
@@ -264,20 +264,20 @@ The following properties are synchronized between a Salesforce Quotelineitem and
      - "float"
 
 
-Salesforce User to Business Employees
--------------------------------------
-Every Salesforce User will be synchronized with a Business Employees.
+Salesforce User to BusinessCentral Employees
+--------------------------------------------
+Every Salesforce User will be synchronized with a BusinessCentral Employees.
 
-Once a link between a Salesforce User and a Business Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce User and a BusinessCentral Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce User and a Business Employees:
+The following properties are synchronized between a Salesforce User and a BusinessCentral Employees:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce User Property
-     - Business Employees Property
-     - Business Data Type
+     - BusinessCentral Employees Property
+     - BusinessCentral Data Type
    * - City
      - city
      - "string"
