@@ -2,7 +2,7 @@
 Custom ERP to WebCRM Dataflow
 =============================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -25,34 +25,34 @@ The following properties are synchronized between a CustomERP Customer and a Web
      - WebCRM Data Type
 
 
-CustomERP Contact to WebCRM Persons
------------------------------------
-Every CustomERP Contact will be synchronized with a WebCRM Persons.
+Custom ERP Contact to WebCRM Persons
+------------------------------------
+Every Custom ERP Contact will be synchronized with a WebCRM Persons.
 
-Once a link between a CustomERP Contact and a WebCRM Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Contact and a WebCRM Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Contact and a WebCRM Persons:
+The following properties are synchronized between a Custom ERP Contact and a WebCRM Persons:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Contact Property
+   * - Custom ERP Contact Property
      - WebCRM Persons Property
      - WebCRM Data Type
 
 
-CustomERP Product to WebCRM Products
-------------------------------------
-Every CustomERP Product will be synchronized with a WebCRM Products.
+Custom ERP Product to WebCRM Products
+-------------------------------------
+Every Custom ERP Product will be synchronized with a WebCRM Products.
 
-Once a link between a CustomERP Product and a WebCRM Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Product and a WebCRM Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Product and a WebCRM Products:
+The following properties are synchronized between a Custom ERP Product and a WebCRM Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Product Property
+   * - Custom ERP Product Property
      - WebCRM Products Property
      - WebCRM Data Type
 
