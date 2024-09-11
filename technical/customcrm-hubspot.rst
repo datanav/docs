@@ -2,43 +2,43 @@
 CustomCRM to HubSpot Dataflow
 =============================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CustomCRM to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Custom Contact to Hubspot Contact
+Custom Contact to HubSpot Contact
 ---------------------------------
-Every Custom Contact will be synchronized with a Hubspot Contact.
+Every Custom Contact will be synchronized with a HubSpot Contact.
 
-Once a link between a Custom Contact and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Contact and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Contact and a Hubspot Contact:
+The following properties are synchronized between a Custom Contact and a HubSpot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Custom Contact Property
-     - Hubspot Contact Property
-     - Hubspot Data Type
+     - HubSpot Contact Property
+     - HubSpot Data Type
 
 
-Custom Customer to Hubspot Company
+Custom Customer to HubSpot Company
 ----------------------------------
-Every Custom Customer will be synchronized with a Hubspot Company.
+Every Custom Customer will be synchronized with a HubSpot Company.
 
-Once a link between a Custom Customer and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Customer and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Customer and a Hubspot Company:
+The following properties are synchronized between a Custom Customer and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Custom Customer Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
 
 
 CustomCRM Product to HubSpot Product
