@@ -1,28 +1,28 @@
-===================================
-WooCommerce to Businessnxt Dataflow
-===================================
+==========================================
+WooCommerce to Visma Business Nxt Dataflow
+==========================================
 
-Generated: 2024-09-11 07:44:23
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Businessnxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Woocommerce Order to Businessnxt Currency
------------------------------------------
-Every Woocommerce Order will be synchronized with a Businessnxt Currency.
+WooCommerce Order to Visma Currency
+-----------------------------------
+Every WooCommerce Order will be synchronized with a Visma Currency.
 
-Once a link between a Woocommerce Order and a Businessnxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a Visma Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Order and a Businessnxt Currency:
+The following properties are synchronized between a WooCommerce Order and a Visma Currency:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Order Property
-     - Businessnxt Currency Property
-     - Businessnxt Data Type
+   * - WooCommerce Order Property
+     - Visma Currency Property
+     - Visma Data Type
    * - billing.country
      - isoCode
      - "string"
@@ -31,58 +31,58 @@ The following properties are synchronized between a Woocommerce Order and a Busi
      - "string"
 
 
-Woocommerce Order to Businessnxt Order
---------------------------------------
-Every Woocommerce Order will be synchronized with a Businessnxt Order.
+WooCommerce Order to Visma Order
+--------------------------------
+Every WooCommerce Order will be synchronized with a Visma Order.
 
-Once a link between a Woocommerce Order and a Businessnxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Order and a Businessnxt Order:
+The following properties are synchronized between a WooCommerce Order and a Visma Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Order Property
-     - Businessnxt Order Property
-     - Businessnxt Data Type
+   * - WooCommerce Order Property
+     - Visma Order Property
+     - Visma Data Type
    * - discount_total
      - totalDiscountAmountInCurrency
      - "string"
 
 
-Woocommerce Order to Businessnxt Orderline
-------------------------------------------
-Every Woocommerce Order will be synchronized with a Businessnxt Orderline.
+WooCommerce Order to Visma Orderline
+------------------------------------
+Every WooCommerce Order will be synchronized with a Visma Orderline.
 
-Once a link between a Woocommerce Order and a Businessnxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a Visma Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Order and a Businessnxt Orderline:
+The following properties are synchronized between a WooCommerce Order and a Visma Orderline:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Order Property
-     - Businessnxt Orderline Property
-     - Businessnxt Data Type
+   * - WooCommerce Order Property
+     - Visma Orderline Property
+     - Visma Data Type
    * - id
      - orderNo
      - "string"
 
 
-Woocommerce Product to Businessnxt Product
-------------------------------------------
-Every Woocommerce Product will be synchronized with a Businessnxt Product.
+WooCommerce Product to Visma Product
+------------------------------------
+Every WooCommerce Product will be synchronized with a Visma Product.
 
-Once a link between a Woocommerce Product and a Businessnxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Product and a Visma Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Woocommerce Product and a Businessnxt Product:
+The following properties are synchronized between a WooCommerce Product and a Visma Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Woocommerce Product Property
-     - Businessnxt Product Property
-     - Businessnxt Data Type
+   * - WooCommerce Product Property
+     - Visma Product Property
+     - Visma Data Type
    * - sale_price
      - priceQuantity
      - "string"
