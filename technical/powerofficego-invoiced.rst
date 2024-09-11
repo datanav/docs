@@ -1,26 +1,26 @@
-==================================
-Powerofficego to Invoiced Dataflow
-==================================
+===================================
+PowerOffice GO to Invoiced Dataflow
+===================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:52:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Invoiced. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from PowerOffice GO to Invoiced. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Powerofficego Customers to Invoiced Customers company
------------------------------------------------------
-Every Powerofficego Customers will be synchronized with a Invoiced Customers company.
+PowerOffice Customers to Invoiced Customers company
+---------------------------------------------------
+Every PowerOffice Customers will be synchronized with a Invoiced Customers company.
 
-Once a link between a Powerofficego Customers and a Invoiced Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Customers and a Invoiced Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers and a Invoiced Customers company:
+The following properties are synchronized between a PowerOffice Customers and a Invoiced Customers company:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Customers Property
+   * - PowerOffice Customers Property
      - Invoiced Customers company Property
      - Invoiced Data Type
    * - Name
@@ -28,18 +28,18 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Customers person to Invoiced Customers person
------------------------------------------------------------
-Every Powerofficego Customers person will be synchronized with a Invoiced Customers person.
+PowerOffice Customers person to Invoiced Customers person
+---------------------------------------------------------
+Every PowerOffice Customers person will be synchronized with a Invoiced Customers person.
 
-Once a link between a Powerofficego Customers person and a Invoiced Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Customers person and a Invoiced Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers person and a Invoiced Customers person:
+The following properties are synchronized between a PowerOffice Customers person and a Invoiced Customers person:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Customers person Property
+   * - PowerOffice Customers person Property
      - Invoiced Customers person Property
      - Invoiced Data Type
    * - Id
@@ -62,18 +62,18 @@ The following properties are synchronized between a Powerofficego Customers pers
      - "string"
 
 
-Powerofficego Product to Invoiced Items
----------------------------------------
-Every Powerofficego Product will be synchronized with a Invoiced Items.
+PowerOffice Product to Invoiced Items
+-------------------------------------
+Every PowerOffice Product will be synchronized with a Invoiced Items.
 
-Once a link between a Powerofficego Product and a Invoiced Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Product and a Invoiced Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Product and a Invoiced Items:
+The following properties are synchronized between a PowerOffice Product and a Invoiced Items:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Product Property
+   * - PowerOffice Product Property
      - Invoiced Items Property
      - Invoiced Data Type
    * - costPrice
@@ -87,18 +87,18 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "string"
 
 
-Powerofficego Salesorderlines to Invoiced Lineitem
---------------------------------------------------
-Every Powerofficego Salesorderlines will be synchronized with a Invoiced Lineitem.
+PowerOffice Salesorderlines to Invoiced Lineitem
+------------------------------------------------
+Every PowerOffice Salesorderlines will be synchronized with a Invoiced Lineitem.
 
-Once a link between a Powerofficego Salesorderlines and a Invoiced Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Salesorderlines and a Invoiced Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Salesorderlines and a Invoiced Lineitem:
+The following properties are synchronized between a PowerOffice Salesorderlines and a Invoiced Lineitem:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Salesorderlines Property
+   * - PowerOffice Salesorderlines Property
      - Invoiced Lineitem Property
      - Invoiced Data Type
    * - Allowance
@@ -115,18 +115,18 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - "string"
 
 
-Powerofficego Salesorders to Invoiced Invoices
-----------------------------------------------
-Every Powerofficego Salesorders will be synchronized with a Invoiced Invoices.
+PowerOffice Salesorders to Invoiced Invoices
+--------------------------------------------
+Every PowerOffice Salesorders will be synchronized with a Invoiced Invoices.
 
-Once a link between a Powerofficego Salesorders and a Invoiced Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Salesorders and a Invoiced Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Salesorders and a Invoiced Invoices:
+The following properties are synchronized between a PowerOffice Salesorders and a Invoiced Invoices:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Salesorders Property
+   * - PowerOffice Salesorders Property
      - Invoiced Invoices Property
      - Invoiced Data Type
    * - CurrencyCode
