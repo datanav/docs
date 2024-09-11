@@ -2,27 +2,27 @@
 Salesforce to HubSpot Dataflow
 ==============================
 
-Generated: 2024-09-11 07:56:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Salesforce Contact to Hubspot Contact
+Salesforce Contact to HubSpot Contact
 -------------------------------------
-Every Salesforce Contact will be synchronized with a Hubspot Contact.
+Every Salesforce Contact will be synchronized with a HubSpot Contact.
 
-Once a link between a Salesforce Contact and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Contact and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Contact and a Hubspot Contact:
+The following properties are synchronized between a Salesforce Contact and a HubSpot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Contact Property
-     - Hubspot Contact Property
-     - Hubspot Data Type
+     - HubSpot Contact Property
+     - HubSpot Data Type
    * - Birthdate
      - properties.date_of_birth
      - "string"
@@ -46,55 +46,55 @@ The following properties are synchronized between a Salesforce Contact and a Hub
      - "string"
 
 
-Salesforce Customer to Hubspot Contact
+Salesforce Customer to HubSpot Contact
 --------------------------------------
-Every Salesforce Customer will be synchronized with a Hubspot Contact.
+Every Salesforce Customer will be synchronized with a HubSpot Contact.
 
-Once a link between a Salesforce Customer and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Customer and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Customer and a Hubspot Contact:
+The following properties are synchronized between a Salesforce Customer and a HubSpot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Customer Property
-     - Hubspot Contact Property
-     - Hubspot Data Type
+     - HubSpot Contact Property
+     - HubSpot Data Type
 
 
-Salesforce Division to Hubspot Company
+Salesforce Division to HubSpot Company
 --------------------------------------
-Every Salesforce Division will be synchronized with a Hubspot Company.
+Every Salesforce Division will be synchronized with a HubSpot Company.
 
-Once a link between a Salesforce Division and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Division and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Division and a Hubspot Company:
+The following properties are synchronized between a Salesforce Division and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Division Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
    * - Name
      - properties.name
      - "string"
 
 
-Salesforce Organization to Hubspot Company
+Salesforce Organization to HubSpot Company
 ------------------------------------------
-Every Salesforce Organization will be synchronized with a Hubspot Company.
+Every Salesforce Organization will be synchronized with a HubSpot Company.
 
-Once a link between a Salesforce Organization and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Organization and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Organization and a Hubspot Company:
+The following properties are synchronized between a Salesforce Organization and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Organization Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
    * - Name
      - properties.name
      - "string"
@@ -109,36 +109,36 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
 
 
-Salesforce Seller to Hubspot Contact
+Salesforce Seller to HubSpot Contact
 ------------------------------------
-Every Salesforce Seller will be synchronized with a Hubspot Contact.
+Every Salesforce Seller will be synchronized with a HubSpot Contact.
 
-Once a link between a Salesforce Seller and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Seller and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Seller and a Hubspot Contact:
+The following properties are synchronized between a Salesforce Seller and a HubSpot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Seller Property
-     - Hubspot Contact Property
-     - Hubspot Data Type
+     - HubSpot Contact Property
+     - HubSpot Data Type
 
 
-Salesforce User to Hubspot Contact
+Salesforce User to HubSpot Contact
 ----------------------------------
-Every Salesforce User will be synchronized with a Hubspot Contact.
+Every Salesforce User will be synchronized with a HubSpot Contact.
 
-Once a link between a Salesforce User and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce User and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce User and a Hubspot Contact:
+The following properties are synchronized between a Salesforce User and a HubSpot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce User Property
-     - Hubspot Contact Property
-     - Hubspot Data Type
+     - HubSpot Contact Property
+     - HubSpot Data Type
    * - City
      - properties.city
      - "string"
