@@ -2,7 +2,7 @@
 CustomWebshop to Keap Dataflow
 ==============================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 07:55:13
 
 Introduction
 ------------
@@ -25,18 +25,18 @@ The following properties are synchronized between a Custom Customer and a Keap C
      - Keap Data Type
 
 
-Custom Product to Keap Product
-------------------------------
-Every Custom Product will be synchronized with a Keap Product.
+CustomWebshop Product to Keap Product
+-------------------------------------
+Every CustomWebshop Product will be synchronized with a Keap Product.
 
-Once a link between a Custom Product and a Keap Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomWebshop Product and a Keap Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Product and a Keap Product:
+The following properties are synchronized between a CustomWebshop Product and a Keap Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Product Property
+   * - CustomWebshop Product Property
      - Keap Product Property
      - Keap Data Type
 
