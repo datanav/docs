@@ -2,25 +2,25 @@
 CustomWebshop to ExactOnline Dataflow
 =====================================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CustomWebshop to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Custom Order to Exact Quotations
---------------------------------
-Every Custom Order will be synchronized with a Exact Quotations.
+CustomWebshop Order to Exact Quotations
+---------------------------------------
+Every CustomWebshop Order will be synchronized with a Exact Quotations.
 
-Once a link between a Custom Order and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomWebshop Order and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Order and a Exact Quotations:
+The following properties are synchronized between a CustomWebshop Order and a Exact Quotations:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Order Property
+   * - CustomWebshop Order Property
      - Exact Quotations Property
      - Exact Data Type
 
