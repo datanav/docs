@@ -2,27 +2,27 @@
 Freshteam to Business Central Dataflow
 ======================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Freshteam to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Freshteam Department to BusinessCentral Companies
--------------------------------------------------
-Every Freshteam Department will be synchronized with a BusinessCentral Companies.
+Freshteam Department to Business Central Companies
+--------------------------------------------------
+Every Freshteam Department will be synchronized with a Business Central Companies.
 
-Once a link between a Freshteam Department and a BusinessCentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Department and a Business Central Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Department and a BusinessCentral Companies:
+The following properties are synchronized between a Freshteam Department and a Business Central Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Department Property
-     - BusinessCentral Companies Property
-     - BusinessCentral Data Type
+     - Business Central Companies Property
+     - Business Central Data Type
 
 
 Freshteam Employee to Business Central Employees
