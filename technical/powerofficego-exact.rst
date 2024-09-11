@@ -1,13 +1,13 @@
-======================================
-PowerOfficeGO to Exact Online Dataflow
-======================================
+=====================================
+PowerOfficeGO to ExactOnline Dataflow
+=====================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from PowerOfficeGO to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from PowerOfficeGO to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Powerofficego Customers person to Exact Contacts
 ------------------------------------------------
@@ -140,20 +140,20 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - "string"
 
 
-PowerOffice Contactperson to Exact Addresses
---------------------------------------------
-Every PowerOffice Contactperson will be synchronized with a Exact Addresses.
+PowerOfficeGO Contactperson to ExactOnline Addresses
+----------------------------------------------------
+Every PowerOfficeGO Contactperson will be synchronized with a ExactOnline Addresses.
 
-Once a link between a PowerOffice Contactperson and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Contactperson and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Contactperson and a Exact Addresses:
+The following properties are synchronized between a PowerOfficeGO Contactperson and a ExactOnline Addresses:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Contactperson Property
-     - Exact Addresses Property
-     - Exact Data Type
+   * - PowerOfficeGO Contactperson Property
+     - ExactOnline Addresses Property
+     - ExactOnline Data Type
    * - address1
      - AddressLine1
      - "string"
@@ -168,20 +168,20 @@ The following properties are synchronized between a PowerOffice Contactperson an
      - "string"
 
 
-PowerOffice Contactperson to Exact Contacts
--------------------------------------------
-Every PowerOffice Contactperson will be synchronized with a Exact Contacts.
+PowerOfficeGO Contactperson to ExactOnline Contacts
+---------------------------------------------------
+Every PowerOfficeGO Contactperson will be synchronized with a ExactOnline Contacts.
 
-Once a link between a PowerOffice Contactperson and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Contactperson and a ExactOnline Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Contactperson and a Exact Contacts:
+The following properties are synchronized between a PowerOfficeGO Contactperson and a ExactOnline Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Contactperson Property
-     - Exact Contacts Property
-     - Exact Data Type
+   * - PowerOfficeGO Contactperson Property
+     - ExactOnline Contacts Property
+     - ExactOnline Data Type
    * - city
      - City
      - "string"
@@ -205,36 +205,36 @@ The following properties are synchronized between a PowerOffice Contactperson an
      - "string"
 
 
-PowerOffice Currency to Exact Currencies
-----------------------------------------
-Every PowerOffice Currency will be synchronized with a Exact Currencies.
+PowerOfficeGO Currency to ExactOnline Currencies
+------------------------------------------------
+Every PowerOfficeGO Currency will be synchronized with a ExactOnline Currencies.
 
-Once a link between a PowerOffice Currency and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Currency and a ExactOnline Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Currency and a Exact Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice Currency Property
-     - Exact Currencies Property
-     - Exact Data Type
-
-
-PowerOffice Customers to Exact Accounts
----------------------------------------
-Every PowerOffice Customers will be synchronized with a Exact Accounts.
-
-Once a link between a PowerOffice Customers and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice Customers and a Exact Accounts:
+The following properties are synchronized between a PowerOfficeGO Currency and a ExactOnline Currencies:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Customers Property
-     - Exact Accounts Property
-     - Exact Data Type
+   * - PowerOfficeGO Currency Property
+     - ExactOnline Currencies Property
+     - ExactOnline Data Type
+
+
+PowerOfficeGO Customers to ExactOnline Accounts
+-----------------------------------------------
+Every PowerOfficeGO Customers will be synchronized with a ExactOnline Accounts.
+
+Once a link between a PowerOfficeGO Customers and a ExactOnline Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOfficeGO Customers and a ExactOnline Accounts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOfficeGO Customers Property
+     - ExactOnline Accounts Property
+     - ExactOnline Data Type
    * - MailAddress.AddressLine1
      - AddressLine1
      - "string"
@@ -261,20 +261,20 @@ The following properties are synchronized between a PowerOffice Customers and a 
      - "string"
 
 
-PowerOffice Customers person to Exact Addresses
------------------------------------------------
-Every PowerOffice Customers person will be synchronized with a Exact Addresses.
+PowerOfficeGO Customers person to ExactOnline Addresses
+-------------------------------------------------------
+Every PowerOfficeGO Customers person will be synchronized with a ExactOnline Addresses.
 
-Once a link between a PowerOffice Customers person and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Customers person and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Customers person and a Exact Addresses:
+The following properties are synchronized between a PowerOfficeGO Customers person and a ExactOnline Addresses:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Customers person Property
-     - Exact Addresses Property
-     - Exact Data Type
+   * - PowerOfficeGO Customers person Property
+     - ExactOnline Addresses Property
+     - ExactOnline Data Type
    * - MailAddress.AddressLine1
      - AddressLine1
      - "string"
@@ -289,52 +289,52 @@ The following properties are synchronized between a PowerOffice Customers person
      - "string"
 
 
-PowerOffice Departments to Exact Departments
---------------------------------------------
-Every PowerOffice Departments will be synchronized with a Exact Departments.
+PowerOfficeGO Departments to ExactOnline Departments
+----------------------------------------------------
+Every PowerOfficeGO Departments will be synchronized with a ExactOnline Departments.
 
-If a matching Exact Departments already exists, the PowerOffice Departments will be merged with the existing one.
-If no matching Exact Departments is found, a new Exact Departments will be created.
+If a matching ExactOnline Departments already exists, the PowerOfficeGO Departments will be merged with the existing one.
+If no matching ExactOnline Departments is found, a new ExactOnline Departments will be created.
 
-A PowerOffice Departments will merge with a Exact Departments if one of the following property combinations match:
+A PowerOfficeGO Departments will merge with a ExactOnline Departments if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Departments Property
-     - Exact Departments Property
+   * - PowerOfficeGO Departments Property
+     - ExactOnline Departments Property
    * - Code
      - Code
 
-Once a link between a PowerOffice Departments and a Exact Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Departments and a ExactOnline Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Departments and a Exact Departments:
+The following properties are synchronized between a PowerOfficeGO Departments and a ExactOnline Departments:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Departments Property
-     - Exact Departments Property
-     - Exact Data Type
+   * - PowerOfficeGO Departments Property
+     - ExactOnline Departments Property
+     - ExactOnline Data Type
    * - Code
      - Code
      - "string"
 
 
-PowerOffice Employees to Exact Employees
-----------------------------------------
-Every PowerOffice Employees will be synchronized with a Exact Employees.
+PowerOfficeGO Employees to ExactOnline Employees
+------------------------------------------------
+Every PowerOfficeGO Employees will be synchronized with a ExactOnline Employees.
 
-Once a link between a PowerOffice Employees and a Exact Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Employees and a ExactOnline Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Employees and a Exact Employees:
+The following properties are synchronized between a PowerOfficeGO Employees and a ExactOnline Employees:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Employees Property
-     - Exact Employees Property
-     - Exact Data Type
+   * - PowerOfficeGO Employees Property
+     - ExactOnline Employees Property
+     - ExactOnline Data Type
    * - DateOfBirth
      - BirthDate
      - "string"
@@ -355,20 +355,20 @@ The following properties are synchronized between a PowerOffice Employees and a 
      - "string"
 
 
-PowerOffice Location to Exact Addresses
----------------------------------------
-Every PowerOffice Location will be synchronized with a Exact Addresses.
+PowerOfficeGO Location to ExactOnline Addresses
+-----------------------------------------------
+Every PowerOfficeGO Location will be synchronized with a ExactOnline Addresses.
 
-Once a link between a PowerOffice Location and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Location and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Location and a Exact Addresses:
+The following properties are synchronized between a PowerOfficeGO Location and a ExactOnline Addresses:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Location Property
-     - Exact Addresses Property
-     - Exact Data Type
+   * - PowerOfficeGO Location Property
+     - ExactOnline Addresses Property
+     - ExactOnline Data Type
    * - address1
      - AddressLine1
      - "string"
@@ -386,68 +386,68 @@ The following properties are synchronized between a PowerOffice Location and a E
      - "string"
 
 
-PowerOffice Product to Exact Items
-----------------------------------
-Every PowerOffice Product will be synchronized with a Exact Items.
+PowerOfficeGO Product to ExactOnline Items
+------------------------------------------
+Every PowerOfficeGO Product will be synchronized with a ExactOnline Items.
 
-Once a link between a PowerOffice Product and a Exact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Product and a ExactOnline Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Product and a Exact Items:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice Product Property
-     - Exact Items Property
-     - Exact Data Type
-
-
-PowerOffice Product to Exact Units
-----------------------------------
-Every PowerOffice Product will be synchronized with a Exact Units.
-
-Once a link between a PowerOffice Product and a Exact Units is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice Product and a Exact Units:
+The following properties are synchronized between a PowerOfficeGO Product and a ExactOnline Items:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Product Property
-     - Exact Units Property
-     - Exact Data Type
+   * - PowerOfficeGO Product Property
+     - ExactOnline Items Property
+     - ExactOnline Data Type
 
 
-PowerOffice Quote to Exact Quotations
--------------------------------------
-Every PowerOffice Quote will be synchronized with a Exact Quotations.
+PowerOfficeGO Product to ExactOnline Units
+------------------------------------------
+Every PowerOfficeGO Product will be synchronized with a ExactOnline Units.
 
-Once a link between a PowerOffice Quote and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Product and a ExactOnline Units is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Quote and a Exact Quotations:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice Quote Property
-     - Exact Quotations Property
-     - Exact Data Type
-
-
-PowerOffice Salesorderlines to Exact Salesorderlines
-----------------------------------------------------
-Every PowerOffice Salesorderlines will be synchronized with a Exact Salesorderlines.
-
-Once a link between a PowerOffice Salesorderlines and a Exact Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice Salesorderlines and a Exact Salesorderlines:
+The following properties are synchronized between a PowerOfficeGO Product and a ExactOnline Units:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Salesorderlines Property
-     - Exact Salesorderlines Property
-     - Exact Data Type
+   * - PowerOfficeGO Product Property
+     - ExactOnline Units Property
+     - ExactOnline Data Type
+
+
+PowerOfficeGO Quote to ExactOnline Quotations
+---------------------------------------------
+Every PowerOfficeGO Quote will be synchronized with a ExactOnline Quotations.
+
+Once a link between a PowerOfficeGO Quote and a ExactOnline Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOfficeGO Quote and a ExactOnline Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOfficeGO Quote Property
+     - ExactOnline Quotations Property
+     - ExactOnline Data Type
+
+
+PowerOfficeGO Salesorderlines to ExactOnline Salesorderlines
+------------------------------------------------------------
+Every PowerOfficeGO Salesorderlines will be synchronized with a ExactOnline Salesorderlines.
+
+Once a link between a PowerOfficeGO Salesorderlines and a ExactOnline Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOfficeGO Salesorderlines and a ExactOnline Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOfficeGO Salesorderlines Property
+     - ExactOnline Salesorderlines Property
+     - ExactOnline Data Type
    * - ProductId
      - Item
      - "string"
@@ -459,20 +459,20 @@ The following properties are synchronized between a PowerOffice Salesorderlines 
      - "string"
 
 
-PowerOffice Salesorders to Exact Salesorders
---------------------------------------------
-Every PowerOffice Salesorders will be synchronized with a Exact Salesorders.
+PowerOfficeGO Salesorders to ExactOnline Salesorders
+----------------------------------------------------
+Every PowerOfficeGO Salesorders will be synchronized with a ExactOnline Salesorders.
 
-Once a link between a PowerOffice Salesorders and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Salesorders and a ExactOnline Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Salesorders and a Exact Salesorders:
+The following properties are synchronized between a PowerOfficeGO Salesorders and a ExactOnline Salesorders:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Salesorders Property
-     - Exact Salesorders Property
-     - Exact Data Type
+   * - PowerOfficeGO Salesorders Property
+     - ExactOnline Salesorders Property
+     - ExactOnline Data Type
    * - CurrencyCode
      - Currency
      - "string"
@@ -481,20 +481,20 @@ The following properties are synchronized between a PowerOffice Salesorders and 
      - "string"
 
 
-PowerOffice Suppliers person to Exact Contacts
-----------------------------------------------
-Every PowerOffice Suppliers person will be synchronized with a Exact Contacts.
+PowerOfficeGO Suppliers person to ExactOnline Contacts
+------------------------------------------------------
+Every PowerOfficeGO Suppliers person will be synchronized with a ExactOnline Contacts.
 
-Once a link between a PowerOffice Suppliers person and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Suppliers person and a ExactOnline Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Suppliers person and a Exact Contacts:
+The following properties are synchronized between a PowerOfficeGO Suppliers person and a ExactOnline Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Suppliers person Property
-     - Exact Contacts Property
-     - Exact Data Type
+   * - PowerOfficeGO Suppliers person Property
+     - ExactOnline Contacts Property
+     - ExactOnline Data Type
    * - DateOfBirth
      - BirthDate
      - "string"
@@ -518,20 +518,20 @@ The following properties are synchronized between a PowerOffice Suppliers person
      - "string"
 
 
-PowerOffice Vatcodes to Exact Vatcodes
---------------------------------------
-Every PowerOffice Vatcodes will be synchronized with a Exact Vatcodes.
+PowerOfficeGO Vatcodes to ExactOnline Vatcodes
+----------------------------------------------
+Every PowerOfficeGO Vatcodes will be synchronized with a ExactOnline Vatcodes.
 
-Once a link between a PowerOffice Vatcodes and a Exact Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Vatcodes and a ExactOnline Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Vatcodes and a Exact Vatcodes:
+The following properties are synchronized between a PowerOfficeGO Vatcodes and a ExactOnline Vatcodes:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Vatcodes Property
-     - Exact Vatcodes Property
-     - Exact Data Type
+   * - PowerOfficeGO Vatcodes Property
+     - ExactOnline Vatcodes Property
+     - ExactOnline Data Type
    * - Description
      - Description
      - "string"
