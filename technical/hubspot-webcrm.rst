@@ -1,13 +1,13 @@
 ==========================
-HubSpot to Webcrm Dataflow
+HubSpot to WebCRM Dataflow
 ==========================
 
-Generated: 2024-09-11 00:00:24
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Webcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 HubSpot Company to Webcrm Organisations
 ---------------------------------------
@@ -34,20 +34,20 @@ The following properties are synchronized between a HubSpot Company and a Webcrm
      - "string"
 
 
-HubSpot Deal to Webcrm Opportunities
+HubSpot Deal to WebCRM Opportunities
 ------------------------------------
-Every HubSpot Deal will be synchronized with a Webcrm Opportunities.
+Every HubSpot Deal will be synchronized with a WebCRM Opportunities.
 
-Once a link between a HubSpot Deal and a Webcrm Opportunities is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a WebCRM Opportunities is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a Webcrm Opportunities:
+The following properties are synchronized between a HubSpot Deal and a WebCRM Opportunities:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     - Webcrm Opportunities Property
-     - Webcrm Data Type
+     - WebCRM Opportunities Property
+     - WebCRM Data Type
    * - properties.deal_currency_code
      - OpportunityCurrencyName
      - "string"
@@ -59,20 +59,20 @@ The following properties are synchronized between a HubSpot Deal and a Webcrm Op
      - "string"
 
 
-HubSpot Lineitem to Webcrm Quotationline
+HubSpot Lineitem to WebCRM Quotationline
 ----------------------------------------
-Every HubSpot Lineitem will be synchronized with a Webcrm Quotationline.
+Every HubSpot Lineitem will be synchronized with a WebCRM Quotationline.
 
-Once a link between a HubSpot Lineitem and a Webcrm Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitem and a WebCRM Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitem and a Webcrm Quotationline:
+The following properties are synchronized between a HubSpot Lineitem and a WebCRM Quotationline:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitem Property
-     - Webcrm Quotationline Property
-     - Webcrm Data Type
+     - WebCRM Quotationline Property
+     - WebCRM Data Type
    * - properties.hs_discount_percentage
      - QuotationLineDiscount
      - "string"
@@ -84,20 +84,20 @@ The following properties are synchronized between a HubSpot Lineitem and a Webcr
      - "string"
 
 
-HubSpot Product to Webcrm Products
+HubSpot Product to WebCRM Products
 ----------------------------------
-Every HubSpot Product will be synchronized with a Webcrm Products.
+Every HubSpot Product will be synchronized with a WebCRM Products.
 
-Once a link between a HubSpot Product and a Webcrm Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Product and a WebCRM Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Product and a Webcrm Products:
+The following properties are synchronized between a HubSpot Product and a WebCRM Products:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Product Property
-     - Webcrm Products Property
-     - Webcrm Data Type
+     - WebCRM Products Property
+     - WebCRM Data Type
    * - properties.hs_cost_of_goods_sold
      - ProductCostPrice
      - "string"
@@ -106,20 +106,20 @@ The following properties are synchronized between a HubSpot Product and a Webcrm
      - "string"
 
 
-HubSpot User to Webcrm Users
+HubSpot User to WebCRM Users
 ----------------------------
-Every HubSpot User will be synchronized with a Webcrm Users.
+Every HubSpot User will be synchronized with a WebCRM Users.
 
-Once a link between a HubSpot User and a Webcrm Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot User and a WebCRM Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot User and a Webcrm Users:
+The following properties are synchronized between a HubSpot User and a WebCRM Users:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot User Property
-     - Webcrm Users Property
-     - Webcrm Data Type
+     - WebCRM Users Property
+     - WebCRM Data Type
    * - email
      - UserEmail
      - "string"
