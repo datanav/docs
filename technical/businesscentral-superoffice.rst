@@ -2,7 +2,7 @@
 Business Central to SuperOffice Dataflow
 ========================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
@@ -48,34 +48,34 @@ The following properties are synchronized between a Business Central Salesorders
      - "float"
 
 
-BusinessCentral Companies to SuperOffice Contact
-------------------------------------------------
-Every BusinessCentral Companies will be synchronized with a SuperOffice Contact.
+Business Central Companies to SuperOffice Contact
+-------------------------------------------------
+Every Business Central Companies will be synchronized with a SuperOffice Contact.
 
-Once a link between a BusinessCentral Companies and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Companies and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Companies and a SuperOffice Contact:
+The following properties are synchronized between a Business Central Companies and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Companies Property
+   * - Business Central Companies Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
 
 
-BusinessCentral Contacts person to SuperOffice Person
------------------------------------------------------
-Every BusinessCentral Contacts person will be synchronized with a SuperOffice Person.
+Business Central Contacts person to SuperOffice Person
+------------------------------------------------------
+Every Business Central Contacts person will be synchronized with a SuperOffice Person.
 
-Once a link between a BusinessCentral Contacts person and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Contacts person and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Contacts person and a SuperOffice Person:
+The following properties are synchronized between a Business Central Contacts person and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Contacts person Property
+   * - Business Central Contacts person Property
      - SuperOffice Person Property
      - SuperOffice Data Type
    * - addressLine1
@@ -107,18 +107,18 @@ The following properties are synchronized between a BusinessCentral Contacts per
      - "string"
 
 
-BusinessCentral Customers company to SuperOffice Contact
---------------------------------------------------------
-Every BusinessCentral Customers company will be synchronized with a SuperOffice Contact.
+Business Central Customers company to SuperOffice Contact
+---------------------------------------------------------
+Every Business Central Customers company will be synchronized with a SuperOffice Contact.
 
-Once a link between a BusinessCentral Customers company and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers company and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Customers company and a SuperOffice Contact:
+The following properties are synchronized between a Business Central Customers company and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Customers company Property
+   * - Business Central Customers company Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
    * - address.city
@@ -177,18 +177,18 @@ The following properties are synchronized between a BusinessCentral Customers co
      - "string"
 
 
-BusinessCentral Customers person to SuperOffice Person
-------------------------------------------------------
-Every BusinessCentral Customers person will be synchronized with a SuperOffice Person.
+Business Central Customers person to SuperOffice Person
+-------------------------------------------------------
+Every Business Central Customers person will be synchronized with a SuperOffice Person.
 
-Once a link between a BusinessCentral Customers person and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers person and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Customers person and a SuperOffice Person:
+The following properties are synchronized between a Business Central Customers person and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Customers person Property
+   * - Business Central Customers person Property
      - SuperOffice Person Property
      - SuperOffice Data Type
    * - addressLine1
@@ -217,18 +217,18 @@ The following properties are synchronized between a BusinessCentral Customers pe
      - "string"
 
 
-BusinessCentral Employees to SuperOffice Person
------------------------------------------------
-Every BusinessCentral Employees will be synchronized with a SuperOffice Person.
+Business Central Employees to SuperOffice Person
+------------------------------------------------
+Every Business Central Employees will be synchronized with a SuperOffice Person.
 
-Once a link between a BusinessCentral Employees and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Employees and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Employees and a SuperOffice Person:
+The following properties are synchronized between a Business Central Employees and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Employees Property
+   * - Business Central Employees Property
      - SuperOffice Person Property
      - SuperOffice Data Type
    * - birthDate
