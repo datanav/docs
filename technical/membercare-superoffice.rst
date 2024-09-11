@@ -2,25 +2,25 @@
 MemberCare to SuperOffice Dataflow
 ==================================
 
-Generated: 2024-09-11 07:56:15
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Membercare Companies to Superoffice Contact
+MemberCare Companies to Superoffice Contact
 -------------------------------------------
-Every Membercare Companies will be synchronized with a Superoffice Contact.
+Every MemberCare Companies will be synchronized with a Superoffice Contact.
 
-Once a link between a Membercare Companies and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companies and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Companies and a Superoffice Contact:
+The following properties are synchronized between a MemberCare Companies and a Superoffice Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Companies Property
+   * - MemberCare Companies Property
      - Superoffice Contact Property
      - Superoffice Data Type
    * - companyName
@@ -31,18 +31,18 @@ The following properties are synchronized between a Membercare Companies and a S
      - "string"
 
 
-Membercare Organizations to Superoffice Contact
+MemberCare Organizations to Superoffice Contact
 -----------------------------------------------
-Every Membercare Organizations will be synchronized with a Superoffice Contact.
+Every MemberCare Organizations will be synchronized with a Superoffice Contact.
 
-Once a link between a Membercare Organizations and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Organizations and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Organizations and a Superoffice Contact:
+The following properties are synchronized between a MemberCare Organizations and a Superoffice Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Organizations Property
+   * - MemberCare Organizations Property
      - Superoffice Contact Property
      - Superoffice Data Type
    * - name
@@ -50,18 +50,18 @@ The following properties are synchronized between a Membercare Organizations and
      - "string"
 
 
-Membercare Persons to Superoffice Person
+MemberCare Persons to Superoffice Person
 ----------------------------------------
-Every Membercare Persons will be synchronized with a Superoffice Person.
+Every MemberCare Persons will be synchronized with a Superoffice Person.
 
-Once a link between a Membercare Persons and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Persons and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Persons and a Superoffice Person:
+The following properties are synchronized between a MemberCare Persons and a Superoffice Person:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Persons Property
+   * - MemberCare Persons Property
      - Superoffice Person Property
      - Superoffice Data Type
    * - addresses.country.id
