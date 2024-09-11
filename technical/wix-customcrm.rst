@@ -1,58 +1,58 @@
-=============================
-Wix.com to CustomCRM Dataflow
-=============================
+==============================
+Wix.com to Custom CRM Dataflow
+==============================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to CustomCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wix.com Contacts to CustomCRM Contact
--------------------------------------
-Every Wix.com Contacts will be synchronized with a CustomCRM Contact.
+Wix.com Contacts to Custom CRM Contact
+--------------------------------------
+Every Wix.com Contacts will be synchronized with a Custom CRM Contact.
 
-Once a link between a Wix.com Contacts and a CustomCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a CustomCRM Contact:
+The following properties are synchronized between a Wix.com Contacts and a Custom CRM Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     - CustomCRM Contact Property
-     - CustomCRM Data Type
+     - Custom CRM Contact Property
+     - Custom CRM Data Type
 
 
-Wix.com Orders to CustomCRM Order
----------------------------------
-Every Wix.com Orders will be synchronized with a CustomCRM Order.
+Wix.com Orders to Custom CRM Order
+----------------------------------
+Every Wix.com Orders will be synchronized with a Custom CRM Order.
 
-Once a link between a Wix.com Orders and a CustomCRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a Custom CRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a CustomCRM Order:
+The following properties are synchronized between a Wix.com Orders and a Custom CRM Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     - CustomCRM Order Property
-     - CustomCRM Data Type
+     - Custom CRM Order Property
+     - Custom CRM Data Type
 
 
-Wix.com Products to CustomCRM Product
--------------------------------------
-Every Wix.com Products will be synchronized with a CustomCRM Product.
+Wix.com Products to Custom CRM Product
+--------------------------------------
+Every Wix.com Products will be synchronized with a Custom CRM Product.
 
-Once a link between a Wix.com Products and a CustomCRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a Custom CRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a CustomCRM Product:
+The following properties are synchronized between a Wix.com Products and a Custom CRM Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     - CustomCRM Product Property
-     - CustomCRM Data Type
+     - Custom CRM Product Property
+     - Custom CRM Data Type
 
