@@ -2,91 +2,91 @@
 PowerOffice GO to Custom ERP Dataflow
 =====================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from PowerOffice GO to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-PowerOfficeGO Customers person to CustomERP Contact
----------------------------------------------------
-Every PowerOfficeGO Customers person will be synchronized with a CustomERP Contact.
+PowerOffice GO Customers person to Custom ERP Contact
+-----------------------------------------------------
+Every PowerOffice GO Customers person will be synchronized with a Custom ERP Contact.
 
-Once a link between a PowerOfficeGO Customers person and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Customers person and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Customers person and a CustomERP Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOfficeGO Customers person Property
-     - CustomERP Contact Property
-     - CustomERP Data Type
-
-
-PowerOfficeGO Departments to CustomERP Customer
------------------------------------------------
-Every PowerOfficeGO Departments will be synchronized with a CustomERP Customer.
-
-Once a link between a PowerOfficeGO Departments and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOfficeGO Departments and a CustomERP Customer:
+The following properties are synchronized between a PowerOffice GO Customers person and a Custom ERP Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Departments Property
-     - CustomERP Customer Property
-     - CustomERP Data Type
+   * - PowerOffice GO Customers person Property
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
 
 
-PowerOfficeGO Employees to CustomERP Contact
---------------------------------------------
-Every PowerOfficeGO Employees will be synchronized with a CustomERP Contact.
+PowerOffice GO Departments to Custom ERP Customer
+-------------------------------------------------
+Every PowerOffice GO Departments will be synchronized with a Custom ERP Customer.
 
-Once a link between a PowerOfficeGO Employees and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Departments and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Employees and a CustomERP Contact:
+The following properties are synchronized between a PowerOffice GO Departments and a Custom ERP Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Employees Property
-     - CustomERP Contact Property
-     - CustomERP Data Type
+   * - PowerOffice GO Departments Property
+     - Custom ERP Customer Property
+     - Custom ERP Data Type
 
 
-PowerOfficeGO Projectactivity to CustomERP Project
+PowerOffice GO Employees to Custom ERP Contact
+----------------------------------------------
+Every PowerOffice GO Employees will be synchronized with a Custom ERP Contact.
+
+Once a link between a PowerOffice GO Employees and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Employees and a Custom ERP Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Employees Property
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
+
+
+PowerOffice GO Projectactivity to Custom ERP Project
+----------------------------------------------------
+Every PowerOffice GO Projectactivity will be synchronized with a Custom ERP Project.
+
+Once a link between a PowerOffice GO Projectactivity and a Custom ERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Projectactivity and a Custom ERP Project:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Projectactivity Property
+     - Custom ERP Project Property
+     - Custom ERP Data Type
+
+
+PowerOffice GO Salesorderlines to Custom ERP Order
 --------------------------------------------------
-Every PowerOfficeGO Projectactivity will be synchronized with a CustomERP Project.
+Every PowerOffice GO Salesorderlines will be synchronized with a Custom ERP Order.
 
-Once a link between a PowerOfficeGO Projectactivity and a CustomERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Salesorderlines and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Projectactivity and a CustomERP Project:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOfficeGO Projectactivity Property
-     - CustomERP Project Property
-     - CustomERP Data Type
-
-
-PowerOfficeGO Salesorderlines to CustomERP Order
-------------------------------------------------
-Every PowerOfficeGO Salesorderlines will be synchronized with a CustomERP Order.
-
-Once a link between a PowerOfficeGO Salesorderlines and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOfficeGO Salesorderlines and a CustomERP Order:
+The following properties are synchronized between a PowerOffice GO Salesorderlines and a Custom ERP Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Salesorderlines Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+   * - PowerOffice GO Salesorderlines Property
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
 
 PowerOffice GO Contactperson to Custom ERP Contact
