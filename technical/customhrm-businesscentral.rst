@@ -1,13 +1,13 @@
-======================================
-Custom HRM to BusinessCentral Dataflow
-======================================
+=======================================
+Custom HRM to Business Central Dataflow
+=======================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Custom HRM to BusinessCentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Custom HRM to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 CustomHRM Department to BusinessCentral Companies
 -------------------------------------------------
@@ -25,18 +25,18 @@ The following properties are synchronized between a CustomHRM Department and a B
      - BusinessCentral Data Type
 
 
-CustomHRM Employee to BusinessCentral Employees
------------------------------------------------
-Every CustomHRM Employee will be synchronized with a BusinessCentral Employees.
+Custom HRM Employee to Business Central Employees
+-------------------------------------------------
+Every Custom HRM Employee will be synchronized with a Business Central Employees.
 
-Once a link between a CustomHRM Employee and a BusinessCentral Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom HRM Employee and a Business Central Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomHRM Employee and a BusinessCentral Employees:
+The following properties are synchronized between a Custom HRM Employee and a Business Central Employees:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomHRM Employee Property
-     - BusinessCentral Employees Property
-     - BusinessCentral Data Type
+   * - Custom HRM Employee Property
+     - Business Central Employees Property
+     - Business Central Data Type
 
