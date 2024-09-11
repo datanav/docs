@@ -2,29 +2,29 @@
 PowerOfficeGO to BusinessCentral Dataflow
 =========================================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 08:39:13
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from PowerOfficeGO to BusinessCentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-PowerOfficeGO Contactperson to Business Customers company
----------------------------------------------------------
-Before any synchronization can take place, a link between a PowerOfficeGO Contactperson and a Business Customers company must be established.
+PowerOfficeGO Contactperson to BusinessCentral Customers company
+----------------------------------------------------------------
+Before any synchronization can take place, a link between a PowerOfficeGO Contactperson and a BusinessCentral Customers company must be established.
 
-A new Business Customers company will be created from a PowerOfficeGO Contactperson if it is connected to a PowerOfficeGO Salesorders that is synchronized into Business.
+A new BusinessCentral Customers company will be created from a PowerOfficeGO Contactperson if it is connected to a PowerOfficeGO Salesorders that is synchronized into BusinessCentral.
 
-Once a link between a PowerOfficeGO Contactperson and a Business Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Contactperson and a BusinessCentral Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Contactperson and a Business Customers company:
+The following properties are synchronized between a PowerOfficeGO Contactperson and a BusinessCentral Customers company:
 
 .. list-table::
    :header-rows: 1
 
    * - PowerOfficeGO Contactperson Property
-     - Business Customers company Property
-     - Business Data Type
+     - BusinessCentral Customers company Property
+     - BusinessCentral Data Type
    * - address1
      - addressLine1
      - "string"
@@ -45,22 +45,22 @@ The following properties are synchronized between a PowerOfficeGO Contactperson 
      - "string"
 
 
-PowerOfficeGO Contactperson to Business Customers person
---------------------------------------------------------
-Before any synchronization can take place, a link between a PowerOfficeGO Contactperson and a Business Customers person must be established.
+PowerOfficeGO Contactperson to BusinessCentral Customers person
+---------------------------------------------------------------
+Before any synchronization can take place, a link between a PowerOfficeGO Contactperson and a BusinessCentral Customers person must be established.
 
-A new Business Customers person will be created from a PowerOfficeGO Contactperson if it is connected to a PowerOfficeGO Salesorders that is synchronized into Business.
+A new BusinessCentral Customers person will be created from a PowerOfficeGO Contactperson if it is connected to a PowerOfficeGO Salesorders that is synchronized into BusinessCentral.
 
-Once a link between a PowerOfficeGO Contactperson and a Business Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Contactperson and a BusinessCentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Contactperson and a Business Customers person:
+The following properties are synchronized between a PowerOfficeGO Contactperson and a BusinessCentral Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - PowerOfficeGO Contactperson Property
-     - Business Customers person Property
-     - Business Data Type
+     - BusinessCentral Customers person Property
+     - BusinessCentral Data Type
    * - SocialSecurityNumber
      - id (Dependant on having wd:Q1140371 in type)
      - "string"
