@@ -2,7 +2,7 @@
 Shopify to ExactOnline Dataflow
 ===============================
 
-Generated: 2024-09-11 08:39:13
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
@@ -25,20 +25,20 @@ The following properties are synchronized between a Shopify Product and a ExactO
      - ExactOnline Data Type
 
 
-Shopify Customer to Exact Contacts
-----------------------------------
-Every Shopify Customer will be synchronized with a Exact Contacts.
+Shopify Customer to ExactOnline Contacts
+----------------------------------------
+Every Shopify Customer will be synchronized with a ExactOnline Contacts.
 
-Once a link between a Shopify Customer and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Customer and a ExactOnline Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Customer and a Exact Contacts:
+The following properties are synchronized between a Shopify Customer and a ExactOnline Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Customer Property
-     - Exact Contacts Property
-     - Exact Data Type
+     - ExactOnline Contacts Property
+     - ExactOnline Data Type
    * - default_address.city
      - City
      - "string"
@@ -62,36 +62,36 @@ The following properties are synchronized between a Shopify Customer and a Exact
      - "string"
 
 
-Shopify Inventoryitem to Exact Items
-------------------------------------
-Every Shopify Inventoryitem will be synchronized with a Exact Items.
+Shopify Inventoryitem to ExactOnline Items
+------------------------------------------
+Every Shopify Inventoryitem will be synchronized with a ExactOnline Items.
 
-Once a link between a Shopify Inventoryitem and a Exact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Inventoryitem and a ExactOnline Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Inventoryitem and a Exact Items:
+The following properties are synchronized between a Shopify Inventoryitem and a ExactOnline Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Inventoryitem Property
-     - Exact Items Property
-     - Exact Data Type
+     - ExactOnline Items Property
+     - ExactOnline Data Type
 
 
-Shopify Order to Exact Quotations
----------------------------------
-Every Shopify Order will be synchronized with a Exact Quotations.
+Shopify Order to ExactOnline Quotations
+---------------------------------------
+Every Shopify Order will be synchronized with a ExactOnline Quotations.
 
-Once a link between a Shopify Order and a Exact Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a ExactOnline Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a Exact Quotations:
+The following properties are synchronized between a Shopify Order and a ExactOnline Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     - Exact Quotations Property
-     - Exact Data Type
+     - ExactOnline Quotations Property
+     - ExactOnline Data Type
    * - currency
      - Currency
      - "string"
