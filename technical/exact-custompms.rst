@@ -1,13 +1,13 @@
-==================================
-Exact Online to CustomPMS Dataflow
-==================================
+===================================
+Exact Online to Custom PMS Dataflow
+===================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to CustomPMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to Custom PMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 ExactOnline Departments to CustomPMS Customer
 ---------------------------------------------
@@ -41,18 +41,18 @@ The following properties are synchronized between a ExactOnline Divisions and a 
      - CustomPMS Data Type
 
 
-ExactOnline Accounts to CustomPMS Customer
-------------------------------------------
-Every ExactOnline Accounts will be synchronized with a CustomPMS Customer.
+Exact Online Accounts to Custom PMS Customer
+--------------------------------------------
+Every Exact Online Accounts will be synchronized with a Custom PMS Customer.
 
-Once a link between a ExactOnline Accounts and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Accounts and a Custom PMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Accounts and a CustomPMS Customer:
+The following properties are synchronized between a Exact Online Accounts and a Custom PMS Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Accounts Property
-     - CustomPMS Customer Property
-     - CustomPMS Data Type
+   * - Exact Online Accounts Property
+     - Custom PMS Customer Property
+     - Custom PMS Data Type
 
