@@ -2,47 +2,47 @@
 Wix.com to BusinessCentral Dataflow
 ===================================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 08:39:13
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to BusinessCentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wix.com Contacts to Business Customers company
-----------------------------------------------
-Before any synchronization can take place, a link between a Wix.com Contacts and a Business Customers company must be established.
+Wix.com Contacts to BusinessCentral Customers company
+-----------------------------------------------------
+Before any synchronization can take place, a link between a Wix.com Contacts and a BusinessCentral Customers company must be established.
 
-A new Business Customers company will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into Business.
+A new BusinessCentral Customers company will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into BusinessCentral.
 
-Once a link between a Wix.com Contacts and a Business Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a BusinessCentral Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a Business Customers company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Contacts Property
-     - Business Customers company Property
-     - Business Data Type
-
-
-Wix.com Contacts to Business Customers person
----------------------------------------------
-Before any synchronization can take place, a link between a Wix.com Contacts and a Business Customers person must be established.
-
-A new Business Customers person will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into Business.
-
-Once a link between a Wix.com Contacts and a Business Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Contacts and a Business Customers person:
+The following properties are synchronized between a Wix.com Contacts and a BusinessCentral Customers company:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     - Business Customers person Property
-     - Business Data Type
+     - BusinessCentral Customers company Property
+     - BusinessCentral Data Type
+
+
+Wix.com Contacts to BusinessCentral Customers person
+----------------------------------------------------
+Before any synchronization can take place, a link between a Wix.com Contacts and a BusinessCentral Customers person must be established.
+
+A new BusinessCentral Customers person will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into BusinessCentral.
+
+Once a link between a Wix.com Contacts and a BusinessCentral Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Contacts and a BusinessCentral Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Contacts Property
+     - BusinessCentral Customers person Property
+     - BusinessCentral Data Type
    * - info.name.first
      - displayName
      - "string"
