@@ -2,57 +2,57 @@
 Custom ERP to Keap Dataflow
 ===========================
 
-Generated: 2024-09-11 11:40:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Custom ERP to Keap. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-CustomERP Contact to Keap Contacts
-----------------------------------
-Every CustomERP Contact will be synchronized with a Keap Contacts.
+Custom ERP Contact to Keap Contacts
+-----------------------------------
+Every Custom ERP Contact will be synchronized with a Keap Contacts.
 
-Once a link between a CustomERP Contact and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Contact and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Contact and a Keap Contacts:
+The following properties are synchronized between a Custom ERP Contact and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Contact Property
+   * - Custom ERP Contact Property
      - Keap Contacts Property
      - Keap Data Type
 
 
-CustomERP Customer to Keap Companies
-------------------------------------
-Every CustomERP Customer will be synchronized with a Keap Companies.
+Custom ERP Customer to Keap Companies
+-------------------------------------
+Every Custom ERP Customer will be synchronized with a Keap Companies.
 
-Once a link between a CustomERP Customer and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Customer and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Customer and a Keap Companies:
+The following properties are synchronized between a Custom ERP Customer and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Customer Property
+   * - Custom ERP Customer Property
      - Keap Companies Property
      - Keap Data Type
 
 
-CustomERP Employee to Keap Contacts
------------------------------------
-Every CustomERP Employee will be synchronized with a Keap Contacts.
+Custom ERP Employee to Keap Contacts
+------------------------------------
+Every Custom ERP Employee will be synchronized with a Keap Contacts.
 
-Once a link between a CustomERP Employee and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom ERP Employee and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Employee and a Keap Contacts:
+The following properties are synchronized between a Custom ERP Employee and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomERP Employee Property
+   * - Custom ERP Employee Property
      - Keap Contacts Property
      - Keap Data Type
 
