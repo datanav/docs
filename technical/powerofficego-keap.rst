@@ -2,25 +2,25 @@
 PowerOffice GO to Keap Dataflow
 ===============================
 
-Generated: 2024-09-11 12:17:19
+Generated: 2024-09-11 12:18:13
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from PowerOffice GO to Keap. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-PowerOfficeGO Customers to Keap Companies
------------------------------------------
-Every PowerOfficeGO Customers will be synchronized with a Keap Companies.
+PowerOffice GO Customers to Keap Companies
+------------------------------------------
+Every PowerOffice GO Customers will be synchronized with a Keap Companies.
 
-Once a link between a PowerOfficeGO Customers and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Customers and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Customers and a Keap Companies:
+The following properties are synchronized between a PowerOffice GO Customers and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Customers Property
+   * - PowerOffice GO Customers Property
      - Keap Companies Property
      - Keap Data Type
    * - Id
