@@ -2,7 +2,7 @@
 Visma Business Nxt to Salesforce Dataflow
 =========================================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
@@ -136,18 +136,18 @@ The following properties are synchronized between a Businessnxt Vat and a Salesf
      - Salesforce Data Type
 
 
-Businessnxt Address to Salesforce Organization
-----------------------------------------------
-Every Businessnxt Address will be synchronized with a Salesforce Organization.
+Visma Address to Salesforce Organization
+----------------------------------------
+Every Visma Address will be synchronized with a Salesforce Organization.
 
-Once a link between a Businessnxt Address and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Address and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Address and a Salesforce Organization:
+The following properties are synchronized between a Visma Address and a Salesforce Organization:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Address Property
+   * - Visma Address Property
      - Salesforce Organization Property
      - Salesforce Data Type
    * - addressLine1
@@ -188,18 +188,18 @@ The following properties are synchronized between a Businessnxt Address and a Sa
      - "string"
 
 
-Businessnxt Company to Salesforce Organization
-----------------------------------------------
-Every Businessnxt Company will be synchronized with a Salesforce Organization.
+Visma Company to Salesforce Organization
+----------------------------------------
+Every Visma Company will be synchronized with a Salesforce Organization.
 
-Once a link between a Businessnxt Company and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Company and a Salesforce Organization is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Company and a Salesforce Organization:
+The following properties are synchronized between a Visma Company and a Salesforce Organization:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Company Property
+   * - Visma Company Property
      - Salesforce Organization Property
      - Salesforce Data Type
    * - companyNo
@@ -213,34 +213,34 @@ The following properties are synchronized between a Businessnxt Company and a Sa
      - "string"
 
 
-Businessnxt Currency to Salesforce Currencytype
------------------------------------------------
-Every Businessnxt Currency will be synchronized with a Salesforce Currencytype.
+Visma Currency to Salesforce Currencytype
+-----------------------------------------
+Every Visma Currency will be synchronized with a Salesforce Currencytype.
 
-Once a link between a Businessnxt Currency and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Currency and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Currency and a Salesforce Currencytype:
+The following properties are synchronized between a Visma Currency and a Salesforce Currencytype:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Currency Property
+   * - Visma Currency Property
      - Salesforce Currencytype Property
      - Salesforce Data Type
 
 
-Businessnxt Order to Salesforce Order
--------------------------------------
-Every Businessnxt Order will be synchronized with a Salesforce Order.
+Visma Order to Salesforce Order
+-------------------------------
+Every Visma Order will be synchronized with a Salesforce Order.
 
-Once a link between a Businessnxt Order and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Order and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Order and a Salesforce Order:
+The following properties are synchronized between a Visma Order and a Salesforce Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Order Property
+   * - Visma Order Property
      - Salesforce Order Property
      - Salesforce Data Type
    * - dueDate
@@ -263,34 +263,34 @@ The following properties are synchronized between a Businessnxt Order and a Sale
      - "string"
 
 
-Businessnxt Orderline to Salesforce Invoiceline
------------------------------------------------
-Every Businessnxt Orderline will be synchronized with a Salesforce Invoiceline.
+Visma Orderline to Salesforce Invoiceline
+-----------------------------------------
+Every Visma Orderline will be synchronized with a Salesforce Invoiceline.
 
-Once a link between a Businessnxt Orderline and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Orderline and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Orderline and a Salesforce Invoiceline:
+The following properties are synchronized between a Visma Orderline and a Salesforce Invoiceline:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Orderline Property
+   * - Visma Orderline Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
 
 
-Businessnxt Orderline to Salesforce Orderitem
----------------------------------------------
-Every Businessnxt Orderline will be synchronized with a Salesforce Orderitem.
+Visma Orderline to Salesforce Orderitem
+---------------------------------------
+Every Visma Orderline will be synchronized with a Salesforce Orderitem.
 
-Once a link between a Businessnxt Orderline and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Orderline and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Orderline and a Salesforce Orderitem:
+The following properties are synchronized between a Visma Orderline and a Salesforce Orderitem:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Orderline Property
+   * - Visma Orderline Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
    * - orderNo
@@ -298,34 +298,34 @@ The following properties are synchronized between a Businessnxt Orderline and a 
      - "string"
 
 
-Businessnxt Orderline to Salesforce Quotelineitem
--------------------------------------------------
-Every Businessnxt Orderline will be synchronized with a Salesforce Quotelineitem.
+Visma Orderline to Salesforce Quotelineitem
+-------------------------------------------
+Every Visma Orderline will be synchronized with a Salesforce Quotelineitem.
 
-Once a link between a Businessnxt Orderline and a Salesforce Quotelineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Orderline and a Salesforce Quotelineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Orderline and a Salesforce Quotelineitem:
+The following properties are synchronized between a Visma Orderline and a Salesforce Quotelineitem:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Orderline Property
+   * - Visma Orderline Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
 
 
-Businessnxt Product to Salesforce Product2
-------------------------------------------
-Every Businessnxt Product will be synchronized with a Salesforce Product2.
+Visma Product to Salesforce Product2
+------------------------------------
+Every Visma Product will be synchronized with a Salesforce Product2.
 
-Once a link between a Businessnxt Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Product and a Salesforce Product2:
+The following properties are synchronized between a Visma Product and a Salesforce Product2:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Product Property
+   * - Visma Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
    * - description
