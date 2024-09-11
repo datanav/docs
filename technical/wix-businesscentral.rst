@@ -1,13 +1,13 @@
-===================================
-Wix.com to Businesscentral Dataflow
-===================================
+====================================
+Wix.com to Business Central Dataflow
+====================================
 
-Generated: 2024-09-11 00:00:00
+Generated: 2024-09-11 07:53:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to Businesscentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Wix.com Contacts to Businesscentral Customers company
 -----------------------------------------------------
@@ -60,20 +60,20 @@ The following properties are synchronized between a Wix.com Contacts and a Busin
      - "string"
 
 
-Wix.com Contacts to Businesscentral Contacts person
----------------------------------------------------
-Every Wix.com Contacts will be synchronized with a Businesscentral Contacts person.
+Wix.com Contacts to Business Contacts person
+--------------------------------------------
+Every Wix.com Contacts will be synchronized with a Business Contacts person.
 
-Once a link between a Wix.com Contacts and a Businesscentral Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a Business Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a Businesscentral Contacts person:
+The following properties are synchronized between a Wix.com Contacts and a Business Contacts person:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     - Businesscentral Contacts person Property
-     - Businesscentral Data Type
+     - Business Contacts person Property
+     - Business Data Type
    * - info.name.first
      - displayName
      - "string"
@@ -91,20 +91,20 @@ The following properties are synchronized between a Wix.com Contacts and a Busin
      - "string"
 
 
-Wix.com Orders to Businesscentral Salesorderlines
--------------------------------------------------
-Every Wix.com Orders will be synchronized with a Businesscentral Salesorderlines.
+Wix.com Orders to Business Salesorderlines
+------------------------------------------
+Every Wix.com Orders will be synchronized with a Business Salesorderlines.
 
-Once a link between a Wix.com Orders and a Businesscentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a Business Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a Businesscentral Salesorderlines:
+The following properties are synchronized between a Wix.com Orders and a Business Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     - Businesscentral Salesorderlines Property
-     - Businesscentral Data Type
+     - Business Salesorderlines Property
+     - Business Data Type
    * - id
      - documentId
      - "string"
@@ -164,20 +164,20 @@ The following properties are synchronized between a Wix.com Orders and a Busines
      - "float"
 
 
-Wix.com Orders to Businesscentral Salesorders
----------------------------------------------
-Every Wix.com Orders will be synchronized with a Businesscentral Salesorders.
+Wix.com Orders to Business Salesorders
+--------------------------------------
+Every Wix.com Orders will be synchronized with a Business Salesorders.
 
-Once a link between a Wix.com Orders and a Businesscentral Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a Business Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a Businesscentral Salesorders:
+The following properties are synchronized between a Wix.com Orders and a Business Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     - Businesscentral Salesorders Property
-     - Businesscentral Data Type
+     - Business Salesorders Property
+     - Business Data Type
    * - buyerInfo.id
      - customerId
      - "string"
@@ -189,20 +189,20 @@ The following properties are synchronized between a Wix.com Orders and a Busines
      - "string"
 
 
-Wix.com Products to Businesscentral Items
------------------------------------------
-Every Wix.com Products will be synchronized with a Businesscentral Items.
+Wix.com Products to Business Items
+----------------------------------
+Every Wix.com Products will be synchronized with a Business Items.
 
-Once a link between a Wix.com Products and a Businesscentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a Business Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a Businesscentral Items:
+The following properties are synchronized between a Wix.com Products and a Business Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     - Businesscentral Items Property
-     - Businesscentral Data Type
+     - Business Items Property
+     - Business Data Type
    * - costAndProfitData.itemCost
      - unitCost
      - N/A
