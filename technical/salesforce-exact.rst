@@ -2,7 +2,7 @@
 Salesforce to ExactOnline Dataflow
 ==================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:13:29
 
 Introduction
 ------------
@@ -351,20 +351,20 @@ The following properties are synchronized between a Salesforce Invoiceline and a
      - "string"
 
 
-Salesforce Order to ExactOnline Salesorders
--------------------------------------------
-Every Salesforce Order will be synchronized with a ExactOnline Salesorders.
+Salesforce Order to ExactOnlineExact Salesorders
+------------------------------------------------
+Every Salesforce Order will be synchronized with a ExactOnlineExact Salesorders.
 
-Once a link between a Salesforce Order and a ExactOnline Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Order and a ExactOnlineExact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Order and a ExactOnline Salesorders:
+The following properties are synchronized between a Salesforce Order and a ExactOnlineExact Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Order Property
-     - ExactOnline Salesorders Property
-     - ExactOnline Data Type
+     - ExactOnlineExact Salesorders Property
+     - ExactOnlineExact Data Type
    * - CurrencyIsoCode
      - Currency
      - "string"
@@ -411,20 +411,20 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
 
 
-Salesforce Product2 to ExactOnline Items
-----------------------------------------
-Every Salesforce Product2 will be synchronized with a ExactOnline Items.
+Salesforce Product2 to ExactOnlineExact Items
+---------------------------------------------
+Every Salesforce Product2 will be synchronized with a ExactOnlineExact Items.
 
-Once a link between a Salesforce Product2 and a ExactOnline Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Product2 and a ExactOnlineExact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Product2 and a ExactOnline Items:
+The following properties are synchronized between a Salesforce Product2 and a ExactOnlineExact Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Product2 Property
-     - ExactOnline Items Property
-     - ExactOnline Data Type
+     - ExactOnlineExact Items Property
+     - ExactOnlineExact Data Type
 
 
 Salesforce Quote to ExactOnline Quotations
