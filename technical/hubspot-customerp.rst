@@ -1,282 +1,282 @@
-=============================
-HubSpot to Customerp Dataflow
-=============================
+==============================
+HubSpot to Custom ERP Dataflow
+==============================
 
-Generated: 2024-09-11 00:00:24
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Customerp. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-HubSpot Company to Customerp Customer
--------------------------------------
-Every HubSpot Company will be synchronized with a Customerp Customer.
+HubSpot Company to Custom Customer
+----------------------------------
+Every HubSpot Company will be synchronized with a Custom Customer.
 
-Once a link between a HubSpot Company and a Customerp Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a Customerp Customer:
+The following properties are synchronized between a HubSpot Company and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     - Customerp Customer Property
-     - Customerp Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-HubSpot Contact to Customerp Contact
-------------------------------------
-Every HubSpot Contact will be synchronized with a Customerp Contact.
+HubSpot Contact to Custom Contact
+---------------------------------
+Every HubSpot Contact will be synchronized with a Custom Contact.
 
-Once a link between a HubSpot Contact and a Customerp Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contact and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contact and a Customerp Contact:
+The following properties are synchronized between a HubSpot Contact and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contact Property
-     - Customerp Contact Property
-     - Customerp Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
 
-HubSpot Contactcompanyassociation to Customerp Contact
-------------------------------------------------------
-Every HubSpot Contactcompanyassociation will be synchronized with a Customerp Contact.
+HubSpot Contactcompanyassociation to Custom Contact
+---------------------------------------------------
+Every HubSpot Contactcompanyassociation will be synchronized with a Custom Contact.
 
-Once a link between a HubSpot Contactcompanyassociation and a Customerp Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contactcompanyassociation and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contactcompanyassociation and a Customerp Contact:
+The following properties are synchronized between a HubSpot Contactcompanyassociation and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contactcompanyassociation Property
-     - Customerp Contact Property
-     - Customerp Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
 
-HubSpot Dealcompanyassociation to Customerp Order
--------------------------------------------------
-Every HubSpot Dealcompanyassociation will be synchronized with a Customerp Order.
+HubSpot Dealcompanyassociation to Custom Order
+----------------------------------------------
+Every HubSpot Dealcompanyassociation will be synchronized with a Custom Order.
 
-Once a link between a HubSpot Dealcompanyassociation and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Dealcompanyassociation and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Dealcompanyassociation and a Customerp Order:
+The following properties are synchronized between a HubSpot Dealcompanyassociation and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Dealcompanyassociation Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-HubSpot Dealcontactassociation to Customerp Order
--------------------------------------------------
-Every HubSpot Dealcontactassociation will be synchronized with a Customerp Order.
+HubSpot Dealcontactassociation to Custom Order
+----------------------------------------------
+Every HubSpot Dealcontactassociation will be synchronized with a Custom Order.
 
-Once a link between a HubSpot Dealcontactassociation and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Dealcontactassociation and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Dealcontactassociation and a Customerp Order:
+The following properties are synchronized between a HubSpot Dealcontactassociation and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Dealcontactassociation Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-HubSpot Lineitem to Customerp Order
------------------------------------
-Every HubSpot Lineitem will be synchronized with a Customerp Order.
+HubSpot Lineitem to Custom Order
+--------------------------------
+Every HubSpot Lineitem will be synchronized with a Custom Order.
 
-Once a link between a HubSpot Lineitem and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitem and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitem and a Customerp Order:
+The following properties are synchronized between a HubSpot Lineitem and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitem Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-HubSpot Lineitemdealassociation to Customerp Order
---------------------------------------------------
-Every HubSpot Lineitemdealassociation will be synchronized with a Customerp Order.
+HubSpot Lineitemdealassociation to Custom Order
+-----------------------------------------------
+Every HubSpot Lineitemdealassociation will be synchronized with a Custom Order.
 
-Once a link between a HubSpot Lineitemdealassociation and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitemdealassociation and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitemdealassociation and a Customerp Order:
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitemdealassociation Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-HubSpot Lineitemquoteassociation to Customerp Order
----------------------------------------------------
-Every HubSpot Lineitemquoteassociation will be synchronized with a Customerp Order.
+HubSpot Lineitemquoteassociation to Custom Order
+------------------------------------------------
+Every HubSpot Lineitemquoteassociation will be synchronized with a Custom Order.
 
-Once a link between a HubSpot Lineitemquoteassociation and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitemquoteassociation and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitemquoteassociation and a Customerp Order:
+The following properties are synchronized between a HubSpot Lineitemquoteassociation and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitemquoteassociation Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-HubSpot Quote to Customerp Order
---------------------------------
-Every HubSpot Quote will be synchronized with a Customerp Order.
+HubSpot Quote to Custom Order
+-----------------------------
+Every HubSpot Quote will be synchronized with a Custom Order.
 
-Once a link between a HubSpot Quote and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quote and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quote and a Customerp Order:
+The following properties are synchronized between a HubSpot Quote and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quote Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-HubSpot Quotecompanyassociation to Customerp Order
---------------------------------------------------
-Every HubSpot Quotecompanyassociation will be synchronized with a Customerp Order.
+HubSpot Quotecompanyassociation to Custom Order
+-----------------------------------------------
+Every HubSpot Quotecompanyassociation will be synchronized with a Custom Order.
 
-Once a link between a HubSpot Quotecompanyassociation and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotecompanyassociation and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotecompanyassociation and a Customerp Order:
+The following properties are synchronized between a HubSpot Quotecompanyassociation and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotecompanyassociation Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-HubSpot Quotecontactassociation to Customerp Order
---------------------------------------------------
-Every HubSpot Quotecontactassociation will be synchronized with a Customerp Order.
+HubSpot Quotecontactassociation to Custom Order
+-----------------------------------------------
+Every HubSpot Quotecontactassociation will be synchronized with a Custom Order.
 
-Once a link between a HubSpot Quotecontactassociation and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotecontactassociation and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotecontactassociation and a Customerp Order:
+The following properties are synchronized between a HubSpot Quotecontactassociation and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotecontactassociation Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-HubSpot Quotedealassociation to Customerp Order
------------------------------------------------
-Every HubSpot Quotedealassociation will be synchronized with a Customerp Order.
+HubSpot Quotedealassociation to Custom Order
+--------------------------------------------
+Every HubSpot Quotedealassociation will be synchronized with a Custom Order.
 
-Once a link between a HubSpot Quotedealassociation and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotedealassociation and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotedealassociation and a Customerp Order:
+The following properties are synchronized between a HubSpot Quotedealassociation and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotedealassociation Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-HubSpot Quotequotetemplateassociation to Customerp Order
---------------------------------------------------------
-Every HubSpot Quotequotetemplateassociation will be synchronized with a Customerp Order.
+HubSpot Quotequotetemplateassociation to Custom Order
+-----------------------------------------------------
+Every HubSpot Quotequotetemplateassociation will be synchronized with a Custom Order.
 
-Once a link between a HubSpot Quotequotetemplateassociation and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotequotetemplateassociation and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotequotetemplateassociation and a Customerp Order:
+The following properties are synchronized between a HubSpot Quotequotetemplateassociation and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotequotetemplateassociation Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-HubSpot User to Customerp Contact
----------------------------------
-Every HubSpot User will be synchronized with a Customerp Contact.
+HubSpot User to Custom Contact
+------------------------------
+Every HubSpot User will be synchronized with a Custom Contact.
 
-Once a link between a HubSpot User and a Customerp Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot User and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot User and a Customerp Contact:
+The following properties are synchronized between a HubSpot User and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot User Property
-     - Customerp Contact Property
-     - Customerp Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
 
-HubSpot Deal to Customerp Order
--------------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Customerp Order.
+HubSpot Deal to Custom Order
+----------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Custom Order.
 
-Once a link between a HubSpot Deal and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a Customerp Order:
+The following properties are synchronized between a HubSpot Deal and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     - Customerp Order Property
-     - Customerp Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-HubSpot Product to Customerp Product
-------------------------------------
-Every HubSpot Product will be synchronized with a Customerp Product.
+HubSpot Product to Custom Product
+---------------------------------
+Every HubSpot Product will be synchronized with a Custom Product.
 
-Once a link between a HubSpot Product and a Customerp Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Product and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Product and a Customerp Product:
+The following properties are synchronized between a HubSpot Product and a Custom Product:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Product Property
-     - Customerp Product Property
-     - Customerp Data Type
+     - Custom Product Property
+     - Custom Data Type
 
 
-HubSpot Quote to Customerp Quote
---------------------------------
-Every HubSpot Quote will be synchronized with a Customerp Quote.
+HubSpot Quote to Custom Quote
+-----------------------------
+Every HubSpot Quote will be synchronized with a Custom Quote.
 
-Once a link between a HubSpot Quote and a Customerp Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quote and a Custom Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quote and a Customerp Quote:
+The following properties are synchronized between a HubSpot Quote and a Custom Quote:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quote Property
-     - Customerp Quote Property
-     - Customerp Data Type
+     - Custom Quote Property
+     - Custom Data Type
 
