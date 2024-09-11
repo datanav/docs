@@ -1,13 +1,13 @@
-===================================
-Tidsbanken to Exact Online Dataflow
-===================================
+==================================
+Tidsbanken to ExactOnline Dataflow
+==================================
 
-Generated: 2024-09-11 07:46:45
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Tidsbanken to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Tidsbanken to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Tidsbanken Ansatt to Exact Contacts
 -----------------------------------
@@ -74,20 +74,20 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Ex
      - "string"
 
 
-Tidsbanken Ansatt to Exact Addresses
-------------------------------------
-Every Tidsbanken Ansatt will be synchronized with a Exact Addresses.
+Tidsbanken Ansatt to ExactOnline Addresses
+------------------------------------------
+Every Tidsbanken Ansatt will be synchronized with a ExactOnline Addresses.
 
-Once a link between a Tidsbanken Ansatt and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Ansatt and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Ansatt and a Exact Addresses:
+The following properties are synchronized between a Tidsbanken Ansatt and a ExactOnline Addresses:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Ansatt Property
-     - Exact Addresses Property
-     - Exact Data Type
+     - ExactOnline Addresses Property
+     - ExactOnline Data Type
    * - Adresse
      - AddressLine1
      - "string"
@@ -96,20 +96,20 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Exac
      - "string"
 
 
-Tidsbanken Ansatt to Exact Employees
-------------------------------------
-Every Tidsbanken Ansatt will be synchronized with a Exact Employees.
+Tidsbanken Ansatt to ExactOnline Employees
+------------------------------------------
+Every Tidsbanken Ansatt will be synchronized with a ExactOnline Employees.
 
-Once a link between a Tidsbanken Ansatt and a Exact Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Ansatt and a ExactOnline Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Ansatt and a Exact Employees:
+The following properties are synchronized between a Tidsbanken Ansatt and a ExactOnline Employees:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Ansatt Property
-     - Exact Employees Property
-     - Exact Data Type
+     - ExactOnline Employees Property
+     - ExactOnline Data Type
    * - Adresse
      - AddressStreet
      - "string"
@@ -142,33 +142,33 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Exac
      - "string"
 
 
-Tidsbanken Avdeling to Exact Departments
-----------------------------------------
-Every Tidsbanken Avdeling will be synchronized with a Exact Departments.
+Tidsbanken Avdeling to ExactOnline Departments
+----------------------------------------------
+Every Tidsbanken Avdeling will be synchronized with a ExactOnline Departments.
 
-If a matching Exact Departments already exists, the Tidsbanken Avdeling will be merged with the existing one.
-If no matching Exact Departments is found, a new Exact Departments will be created.
+If a matching ExactOnline Departments already exists, the Tidsbanken Avdeling will be merged with the existing one.
+If no matching ExactOnline Departments is found, a new ExactOnline Departments will be created.
 
-A Tidsbanken Avdeling will merge with a Exact Departments if one of the following property combinations match:
+A Tidsbanken Avdeling will merge with a ExactOnline Departments if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Avdeling Property
-     - Exact Departments Property
+     - ExactOnline Departments Property
    * - Id
      - Code
 
-Once a link between a Tidsbanken Avdeling and a Exact Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Avdeling and a ExactOnline Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Avdeling and a Exact Departments:
+The following properties are synchronized between a Tidsbanken Avdeling and a ExactOnline Departments:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Avdeling Property
-     - Exact Departments Property
-     - Exact Data Type
+     - ExactOnline Departments Property
+     - ExactOnline Data Type
    * - Id
      - Code
      - "string"
@@ -177,20 +177,20 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Ex
      - "string"
 
 
-Tidsbanken Kunde to Exact Accounts
-----------------------------------
-Every Tidsbanken Kunde will be synchronized with a Exact Accounts.
+Tidsbanken Kunde to ExactOnline Accounts
+----------------------------------------
+Every Tidsbanken Kunde will be synchronized with a ExactOnline Accounts.
 
-Once a link between a Tidsbanken Kunde and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Kunde and a ExactOnline Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Kunde and a Exact Accounts:
+The following properties are synchronized between a Tidsbanken Kunde and a ExactOnline Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Kunde Property
-     - Exact Accounts Property
-     - Exact Data Type
+     - ExactOnline Accounts Property
+     - ExactOnline Data Type
    * - Gateadresse
      - AddressLine1
      - "string"
