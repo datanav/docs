@@ -2,7 +2,7 @@
 BusinessNxt to CustomERP Dataflow
 =================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:37:15
 
 Introduction
 ------------
@@ -57,34 +57,34 @@ The following properties are synchronized between a Visma Orderline and a Custom
      - Custom Data Type
 
 
-Visma Order to CustomERP Order
-------------------------------
-Every Visma Order will be synchronized with a CustomERP Order.
+BusinessNxt Order to CustomERP Order
+------------------------------------
+Every BusinessNxt Order will be synchronized with a CustomERP Order.
 
-Once a link between a Visma Order and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Order and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Order and a CustomERP Order:
+The following properties are synchronized between a BusinessNxt Order and a CustomERP Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Order Property
+   * - BusinessNxt Order Property
      - CustomERP Order Property
      - CustomERP Data Type
 
 
-Visma Product to CustomERP Product
-----------------------------------
-Every Visma Product will be synchronized with a CustomERP Product.
+BusinessNxt Product to CustomERP Product
+----------------------------------------
+Every BusinessNxt Product will be synchronized with a CustomERP Product.
 
-Once a link between a Visma Product and a CustomERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Product and a CustomERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Product and a CustomERP Product:
+The following properties are synchronized between a BusinessNxt Product and a CustomERP Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Product Property
+   * - BusinessNxt Product Property
      - CustomERP Product Property
      - CustomERP Data Type
 
