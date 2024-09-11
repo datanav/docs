@@ -1,13 +1,13 @@
 ======================================
-Custom PMS to Businesscentral Dataflow
+CustomPMS to Business Central Dataflow
 ======================================
 
-Generated: 2024-09-11 07:43:20
+Generated: 2024-09-11 07:53:23
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Custom PMS to Businesscentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from CustomPMS to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Custom Customer to Businesscentral Companies
 --------------------------------------------
@@ -25,18 +25,18 @@ The following properties are synchronized between a Custom Customer and a Busine
      - Businesscentral Data Type
 
 
-Custom Customer to Businesscentral Customers company
-----------------------------------------------------
-Every Custom Customer will be synchronized with a Businesscentral Customers company.
+Custom Customer to Business Customers company
+---------------------------------------------
+Every Custom Customer will be synchronized with a Business Customers company.
 
-Once a link between a Custom Customer and a Businesscentral Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Customer and a Business Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Customer and a Businesscentral Customers company:
+The following properties are synchronized between a Custom Customer and a Business Customers company:
 
 .. list-table::
    :header-rows: 1
 
    * - Custom Customer Property
-     - Businesscentral Customers company Property
-     - Businesscentral Data Type
+     - Business Customers company Property
+     - Business Data Type
 
