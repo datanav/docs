@@ -2,7 +2,7 @@
 WooCommerce to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-11 07:46:20
+Generated: 2024-09-11 07:53:59
 
 Introduction
 ------------
@@ -236,5 +236,8 @@ The following properties are synchronized between a WooCommerce Product and a Sa
      - "string"
    * - name
      - Name	
+     - "string"
+   * - status
+     - ProductCode
      - "string"
 
