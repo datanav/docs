@@ -2,59 +2,59 @@
 CustomERP to SuperOffice Dataflow
 =================================
 
-Generated: 2024-09-11 08:02:19
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CustomERP to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Custom Contact to Superoffice Person
-------------------------------------
-Every Custom Contact will be synchronized with a Superoffice Person.
+CustomERP Contact to SuperOffice Person
+---------------------------------------
+Every CustomERP Contact will be synchronized with a SuperOffice Person.
 
-Once a link between a Custom Contact and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Contact and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Contact and a Superoffice Person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Custom Contact Property
-     - Superoffice Person Property
-     - Superoffice Data Type
-
-
-Custom Customer to Superoffice Contact
---------------------------------------
-Every Custom Customer will be synchronized with a Superoffice Contact.
-
-Once a link between a Custom Customer and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Custom Customer and a Superoffice Contact:
+The following properties are synchronized between a CustomERP Contact and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Customer Property
-     - Superoffice Contact Property
-     - Superoffice Data Type
+   * - CustomERP Contact Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
 
 
-Custom Employee to Superoffice Person
--------------------------------------
-Every Custom Employee will be synchronized with a Superoffice Person.
+CustomERP Customer to SuperOffice Contact
+-----------------------------------------
+Every CustomERP Customer will be synchronized with a SuperOffice Contact.
 
-Once a link between a Custom Employee and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Customer and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Employee and a Superoffice Person:
+The following properties are synchronized between a CustomERP Customer and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Employee Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+   * - CustomERP Customer Property
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
+
+
+CustomERP Employee to SuperOffice Person
+----------------------------------------
+Every CustomERP Employee will be synchronized with a SuperOffice Person.
+
+Once a link between a CustomERP Employee and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a CustomERP Employee and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - CustomERP Employee Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
 
 
 CustomERP Product to SuperOffice Product
