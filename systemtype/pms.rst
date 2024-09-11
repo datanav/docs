@@ -42,7 +42,7 @@ Systems
         :text: Read more
         :classes: read-more
     ---
-    **CustomPMS**
+    **Custom PMS**
 
     
     .. link-button:: system/custompms
