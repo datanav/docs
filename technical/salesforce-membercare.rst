@@ -1,13 +1,13 @@
 =================================
-Salesforce to Membercare Dataflow
+Salesforce to MemberCare Dataflow
 =================================
 
-Generated: 2024-09-11 00:00:24
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Membercare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Salesforce Contact to Membercare Persons
 ----------------------------------------
@@ -279,58 +279,58 @@ The following properties are synchronized between a Salesforce User and a Member
      - "string"
 
 
-Salesforce Contact to Membercare Countries
+Salesforce Contact to MemberCare Countries
 ------------------------------------------
-Every Salesforce Contact will be synchronized with a Membercare Countries.
+Every Salesforce Contact will be synchronized with a MemberCare Countries.
 
-Once a link between a Salesforce Contact and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Contact and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Contact and a Membercare Countries:
+The following properties are synchronized between a Salesforce Contact and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Contact Property
-     - Membercare Countries Property
-     - Membercare Data Type
+     - MemberCare Countries Property
+     - MemberCare Data Type
    * - MailingCountry
      - name
      - "string"
 
 
-Salesforce Invoice to Membercare Invoices
+Salesforce Invoice to MemberCare Invoices
 -----------------------------------------
-Every Salesforce Invoice will be synchronized with a Membercare Invoices.
+Every Salesforce Invoice will be synchronized with a MemberCare Invoices.
 
-Once a link between a Salesforce Invoice and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Invoice and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Invoice and a Membercare Invoices:
+The following properties are synchronized between a Salesforce Invoice and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Invoice Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
    * - DueDate
      - payDueDate
      - "string"
 
 
-Salesforce Order to Membercare Countries
+Salesforce Order to MemberCare Countries
 ----------------------------------------
-Every Salesforce Order will be synchronized with a Membercare Countries.
+Every Salesforce Order will be synchronized with a MemberCare Countries.
 
-Once a link between a Salesforce Order and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Order and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Order and a Membercare Countries:
+The following properties are synchronized between a Salesforce Order and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Order Property
-     - Membercare Countries Property
-     - Membercare Data Type
+     - MemberCare Countries Property
+     - MemberCare Data Type
    * - BillingCountry
      - name
      - "string"
@@ -345,20 +345,20 @@ The following properties are synchronized between a Salesforce Order and a Membe
      - "string"
 
 
-Salesforce Organization to Membercare Companies
+Salesforce Organization to MemberCare Companies
 -----------------------------------------------
-Every Salesforce Organization will be synchronized with a Membercare Companies.
+Every Salesforce Organization will be synchronized with a MemberCare Companies.
 
-Once a link between a Salesforce Organization and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Organization and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Organization and a Membercare Companies:
+The following properties are synchronized between a Salesforce Organization and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Organization Property
-     - Membercare Companies Property
-     - Membercare Data Type
+     - MemberCare Companies Property
+     - MemberCare Data Type
    * - City
      - addresses.postalCode.city
      - "string"
@@ -391,20 +391,20 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
 
 
-Salesforce Quote to Membercare Countries
+Salesforce Quote to MemberCare Countries
 ----------------------------------------
-Every Salesforce Quote will be synchronized with a Membercare Countries.
+Every Salesforce Quote will be synchronized with a MemberCare Countries.
 
-Once a link between a Salesforce Quote and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quote and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quote and a Membercare Countries:
+The following properties are synchronized between a Salesforce Quote and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quote Property
-     - Membercare Countries Property
-     - Membercare Data Type
+     - MemberCare Countries Property
+     - MemberCare Data Type
    * - BillingCountry
      - name
      - "string"
@@ -419,20 +419,20 @@ The following properties are synchronized between a Salesforce Quote and a Membe
      - "string"
 
 
-Salesforce User to Membercare Countries
+Salesforce User to MemberCare Countries
 ---------------------------------------
-Every Salesforce User will be synchronized with a Membercare Countries.
+Every Salesforce User will be synchronized with a MemberCare Countries.
 
-Once a link between a Salesforce User and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce User and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce User and a Membercare Countries:
+The following properties are synchronized between a Salesforce User and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce User Property
-     - Membercare Countries Property
-     - Membercare Data Type
+     - MemberCare Countries Property
+     - MemberCare Data Type
    * - Country
      - name
      - "string"
