@@ -2,27 +2,27 @@
 Wave to Custom ERP Dataflow
 ===========================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Customer person to CustomERP Contact
------------------------------------------
-Every Wave Customer person will be synchronized with a CustomERP Contact.
+Wave Customer person to Custom ERP Contact
+------------------------------------------
+Every Wave Customer person will be synchronized with a Custom ERP Contact.
 
-Once a link between a Wave Customer person and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer person and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a CustomERP Contact:
+The following properties are synchronized between a Wave Customer person and a Custom ERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     - CustomERP Contact Property
-     - CustomERP Data Type
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
 
 
 Wave Customer to Custom ERP Contact
