@@ -1,13 +1,13 @@
 ================================
-Invoiced to Superoffice Dataflow
+Invoiced to SuperOffice Dataflow
 ================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Invoiced Customers company to Superoffice Contact
 -------------------------------------------------
@@ -92,20 +92,20 @@ The following properties are synchronized between a Invoiced Customers person an
      - "string"
 
 
-Invoiced Items to Superoffice Product
+Invoiced Items to SuperOffice Product
 -------------------------------------
-Every Invoiced Items will be synchronized with a Superoffice Product.
+Every Invoiced Items will be synchronized with a SuperOffice Product.
 
-Once a link between a Invoiced Items and a Superoffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Items and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Items and a Superoffice Product:
+The following properties are synchronized between a Invoiced Items and a SuperOffice Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Items Property
-     - Superoffice Product Property
-     - Superoffice Data Type
+     - SuperOffice Product Property
+     - SuperOffice Data Type
    * - currency
      - ERPPriceListKey
      - "string"
@@ -120,20 +120,20 @@ The following properties are synchronized between a Invoiced Items and a Superof
      - "string"
 
 
-Invoiced Lineitem to Superoffice Quoteline
+Invoiced Lineitem to SuperOffice Quoteline
 ------------------------------------------
-Every Invoiced Lineitem will be synchronized with a Superoffice Quoteline.
+Every Invoiced Lineitem will be synchronized with a SuperOffice Quoteline.
 
-Once a link between a Invoiced Lineitem and a Superoffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Lineitem and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Lineitem and a Superoffice Quoteline:
+The following properties are synchronized between a Invoiced Lineitem and a SuperOffice Quoteline:
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Lineitem Property
-     - Superoffice Quoteline Property
-     - Superoffice Data Type
+     - SuperOffice Quoteline Property
+     - SuperOffice Data Type
    * - $original_id
      - QuoteAlternativeId
      - "integer"
