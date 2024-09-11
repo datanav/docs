@@ -2,7 +2,7 @@
 Salesforce to SuperOffice Dataflow
 ==================================
 
-Generated: 2024-09-11 07:56:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
@@ -33,20 +33,20 @@ The following properties are synchronized between a Salesforce Order and a Super
      - "float"
 
 
-Salesforce Contact to Superoffice Person
+Salesforce Contact to SuperOffice Person
 ----------------------------------------
-Every Salesforce Contact will be synchronized with a Superoffice Person.
+Every Salesforce Contact will be synchronized with a SuperOffice Person.
 
-Once a link between a Salesforce Contact and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Contact and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Contact and a Superoffice Person:
+The following properties are synchronized between a Salesforce Contact and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Contact Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+     - SuperOffice Person Property
+     - SuperOffice Data Type
    * - Birthdate
      - BirthDate
      - N/A
@@ -73,55 +73,55 @@ The following properties are synchronized between a Salesforce Contact and a Sup
      - "string"
 
 
-Salesforce Customer to Superoffice Person
+Salesforce Customer to SuperOffice Person
 -----------------------------------------
-Every Salesforce Customer will be synchronized with a Superoffice Person.
+Every Salesforce Customer will be synchronized with a SuperOffice Person.
 
-Once a link between a Salesforce Customer and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Customer and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Customer and a Superoffice Person:
+The following properties are synchronized between a Salesforce Customer and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Customer Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+     - SuperOffice Person Property
+     - SuperOffice Data Type
 
 
-Salesforce Division to Superoffice Contact
+Salesforce Division to SuperOffice Contact
 ------------------------------------------
-Every Salesforce Division will be synchronized with a Superoffice Contact.
+Every Salesforce Division will be synchronized with a SuperOffice Contact.
 
-Once a link between a Salesforce Division and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Division and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Division and a Superoffice Contact:
+The following properties are synchronized between a Salesforce Division and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Division Property
-     - Superoffice Contact Property
-     - Superoffice Data Type
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
    * - Name
      - Name
      - "string"
 
 
-Salesforce Organization to Superoffice Contact
+Salesforce Organization to SuperOffice Contact
 ----------------------------------------------
-Every Salesforce Organization will be synchronized with a Superoffice Contact.
+Every Salesforce Organization will be synchronized with a SuperOffice Contact.
 
-Once a link between a Salesforce Organization and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Organization and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Organization and a Superoffice Contact:
+The following properties are synchronized between a Salesforce Organization and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Organization Property
-     - Superoffice Contact Property
-     - Superoffice Data Type
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
    * - Name
      - Name
      - "string"
@@ -136,36 +136,36 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
 
 
-Salesforce Seller to Superoffice Person
+Salesforce Seller to SuperOffice Person
 ---------------------------------------
-Every Salesforce Seller will be synchronized with a Superoffice Person.
+Every Salesforce Seller will be synchronized with a SuperOffice Person.
 
-Once a link between a Salesforce Seller and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Seller and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Seller and a Superoffice Person:
+The following properties are synchronized between a Salesforce Seller and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Seller Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+     - SuperOffice Person Property
+     - SuperOffice Data Type
 
 
-Salesforce User to Superoffice Person
+Salesforce User to SuperOffice Person
 -------------------------------------
-Every Salesforce User will be synchronized with a Superoffice Person.
+Every Salesforce User will be synchronized with a SuperOffice Person.
 
-Once a link between a Salesforce User and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce User and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce User and a Superoffice Person:
+The following properties are synchronized between a Salesforce User and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce User Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+     - SuperOffice Person Property
+     - SuperOffice Data Type
    * - City
      - Address.Street.City
      - "string"
