@@ -2,7 +2,7 @@
 CustomPMS to CustomERP Dataflow
 ===============================
 
-Generated: 2024-09-11 08:01:30
+Generated: 2024-09-11 08:03:13
 
 Introduction
 ------------
@@ -25,34 +25,34 @@ The following properties are synchronized between a Custom Task and a Custom Pro
      - Custom Data Type
 
 
-CustomPMS Customer to Custom Customer
--------------------------------------
-Every CustomPMS Customer will be synchronized with a Custom Customer.
+CustomPMS Customer to CustomERP Customer
+----------------------------------------
+Every CustomPMS Customer will be synchronized with a CustomERP Customer.
 
-Once a link between a CustomPMS Customer and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomPMS Customer and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomPMS Customer and a Custom Customer:
+The following properties are synchronized between a CustomPMS Customer and a CustomERP Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - CustomPMS Customer Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomERP Customer Property
+     - CustomERP Data Type
 
 
-CustomPMS Project to Custom Project
------------------------------------
-Every CustomPMS Project will be synchronized with a Custom Project.
+CustomPMS Project to CustomERP Project
+--------------------------------------
+Every CustomPMS Project will be synchronized with a CustomERP Project.
 
-Once a link between a CustomPMS Project and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomPMS Project and a CustomERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomPMS Project and a Custom Project:
+The following properties are synchronized between a CustomPMS Project and a CustomERP Project:
 
 .. list-table::
    :header-rows: 1
 
    * - CustomPMS Project Property
-     - Custom Project Property
-     - Custom Data Type
+     - CustomERP Project Property
+     - CustomERP Data Type
 
