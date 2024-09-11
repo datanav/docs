@@ -1,13 +1,13 @@
-========================================
-CustomERP to Visma Business Nxt Dataflow
-========================================
+=================================
+CustomERP to BusinessNxt Dataflow
+=================================
 
-Generated: 2024-09-11 08:02:19
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from CustomERP to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from CustomERP to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Custom Customer to Businessnxt Address
 --------------------------------------
@@ -41,34 +41,34 @@ The following properties are synchronized between a Custom Quote and a Businessn
      - Businessnxt Data Type
 
 
-CustomERP Order to Visma Order
-------------------------------
-Every CustomERP Order will be synchronized with a Visma Order.
+CustomERP Order to BusinessNxt Order
+------------------------------------
+Every CustomERP Order will be synchronized with a BusinessNxt Order.
 
-Once a link between a CustomERP Order and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Order and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Order and a Visma Order:
+The following properties are synchronized between a CustomERP Order and a BusinessNxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - CustomERP Order Property
-     - Visma Order Property
-     - Visma Data Type
+     - BusinessNxt Order Property
+     - BusinessNxt Data Type
 
 
-CustomERP Product to Visma Product
-----------------------------------
-Every CustomERP Product will be synchronized with a Visma Product.
+CustomERP Product to BusinessNxt Product
+----------------------------------------
+Every CustomERP Product will be synchronized with a BusinessNxt Product.
 
-Once a link between a CustomERP Product and a Visma Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Product and a BusinessNxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomERP Product and a Visma Product:
+The following properties are synchronized between a CustomERP Product and a BusinessNxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - CustomERP Product Property
-     - Visma Product Property
-     - Visma Data Type
+     - BusinessNxt Product Property
+     - BusinessNxt Data Type
 
