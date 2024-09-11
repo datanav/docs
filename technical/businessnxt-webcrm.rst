@@ -2,27 +2,27 @@
 BusinessNxt to WebCRM Dataflow
 ==============================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from BusinessNxt to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Visma Address to Webcrm Organisations
+Visma Address to WebCRM Organisations
 -------------------------------------
-Every Visma Address will be synchronized with a Webcrm Organisations.
+Every Visma Address will be synchronized with a WebCRM Organisations.
 
-Once a link between a Visma Address and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Address and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Address and a Webcrm Organisations:
+The following properties are synchronized between a Visma Address and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
    * - Visma Address Property
-     - Webcrm Organisations Property
-     - Webcrm Data Type
+     - WebCRM Organisations Property
+     - WebCRM Data Type
    * - name
      - OrganisationName
      - "string"
@@ -31,20 +31,20 @@ The following properties are synchronized between a Visma Address and a Webcrm O
      - "string"
 
 
-Visma Company to Webcrm Organisations
+Visma Company to WebCRM Organisations
 -------------------------------------
-Every Visma Company will be synchronized with a Webcrm Organisations.
+Every Visma Company will be synchronized with a WebCRM Organisations.
 
-Once a link between a Visma Company and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Company and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Company and a Webcrm Organisations:
+The following properties are synchronized between a Visma Company and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
    * - Visma Company Property
-     - Webcrm Organisations Property
-     - Webcrm Data Type
+     - WebCRM Organisations Property
+     - WebCRM Data Type
    * - name
      - OrganisationName
      - "string"
