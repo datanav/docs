@@ -2,7 +2,7 @@
 PowerOfficeGO to Youtrack Dataflow
 ==================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 09:50:20
 
 Introduction
 ------------
@@ -112,6 +112,22 @@ The following properties are synchronized between a PowerOfficeGO Departments an
    * - Name
      - name
      - "string"
+
+
+PowerOfficeGO Projectactivity to Youtrack Hubprojects
+-----------------------------------------------------
+Every PowerOfficeGO Projectactivity will be synchronized with a Youtrack Hubprojects.
+
+Once a link between a PowerOfficeGO Projectactivity and a Youtrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOfficeGO Projectactivity and a Youtrack Hubprojects:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOfficeGO Projectactivity Property
+     - Youtrack Hubprojects Property
+     - Youtrack Data Type
 
 
 PowerOfficeGO Projects to Youtrack Hubprojects
