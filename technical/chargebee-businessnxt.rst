@@ -1,13 +1,13 @@
-=================================
-Chargebee to BusinessNxt Dataflow
-=================================
+==================================
+Chargebee to Business Nxt Dataflow
+==================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Chargebee to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Chargebee to Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Chargebee Currency to BusinessNxt Country
 -----------------------------------------
@@ -41,110 +41,110 @@ The following properties are synchronized between a Chargebee Item_family and a 
      - BusinessNxt Data Type
 
 
-Chargebee Address to BusinessNxt Country
-----------------------------------------
-Every Chargebee Address will be synchronized with a BusinessNxt Country.
+Chargebee Address to Business Nxt Country
+-----------------------------------------
+Every Chargebee Address will be synchronized with a Business Nxt Country.
 
-Once a link between a Chargebee Address and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Address and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Address and a BusinessNxt Country:
+The following properties are synchronized between a Chargebee Address and a Business Nxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Address Property
-     - BusinessNxt Country Property
-     - BusinessNxt Data Type
+     - Business Nxt Country Property
+     - Business Nxt Data Type
    * - country
      - name
      - "string"
 
 
-Chargebee Business_entity to BusinessNxt Address
-------------------------------------------------
-Every Chargebee Business_entity will be synchronized with a BusinessNxt Address.
+Chargebee Business_entity to Business Nxt Address
+-------------------------------------------------
+Every Chargebee Business_entity will be synchronized with a Business Nxt Address.
 
-Once a link between a Chargebee Business_entity and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Business_entity and a Business Nxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Business_entity and a BusinessNxt Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Chargebee Business_entity Property
-     - BusinessNxt Address Property
-     - BusinessNxt Data Type
-   * - name
-     - name
-     - "string"
-
-
-Chargebee Business_entity to BusinessNxt Company
-------------------------------------------------
-Every Chargebee Business_entity will be synchronized with a BusinessNxt Company.
-
-Once a link between a Chargebee Business_entity and a BusinessNxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Chargebee Business_entity and a BusinessNxt Company:
+The following properties are synchronized between a Chargebee Business_entity and a Business Nxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Business_entity Property
-     - BusinessNxt Company Property
-     - BusinessNxt Data Type
+     - Business Nxt Address Property
+     - Business Nxt Data Type
    * - name
      - name
      - "string"
 
 
-Chargebee Customer to BusinessNxt Country
------------------------------------------
-Every Chargebee Customer will be synchronized with a BusinessNxt Country.
+Chargebee Business_entity to Business Nxt Company
+-------------------------------------------------
+Every Chargebee Business_entity will be synchronized with a Business Nxt Company.
 
-Once a link between a Chargebee Customer and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Business_entity and a Business Nxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Customer and a BusinessNxt Country:
+The following properties are synchronized between a Chargebee Business_entity and a Business Nxt Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Business_entity Property
+     - Business Nxt Company Property
+     - Business Nxt Data Type
+   * - name
+     - name
+     - "string"
+
+
+Chargebee Customer to Business Nxt Country
+------------------------------------------
+Every Chargebee Customer will be synchronized with a Business Nxt Country.
+
+Once a link between a Chargebee Customer and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Customer and a Business Nxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Customer Property
-     - BusinessNxt Country Property
-     - BusinessNxt Data Type
+     - Business Nxt Country Property
+     - Business Nxt Data Type
    * - billing_address.country
      - name
      - "string"
 
 
-Chargebee Item to BusinessNxt Product
--------------------------------------
-Every Chargebee Item will be synchronized with a BusinessNxt Product.
+Chargebee Item to Business Nxt Product
+--------------------------------------
+Every Chargebee Item will be synchronized with a Business Nxt Product.
 
-Once a link between a Chargebee Item and a BusinessNxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Item and a Business Nxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Item and a BusinessNxt Product:
+The following properties are synchronized between a Chargebee Item and a Business Nxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Item Property
-     - BusinessNxt Product Property
-     - BusinessNxt Data Type
+     - Business Nxt Product Property
+     - Business Nxt Data Type
 
 
-Chargebee Order to BusinessNxt Order
-------------------------------------
-Every Chargebee Order will be synchronized with a BusinessNxt Order.
+Chargebee Order to Business Nxt Order
+-------------------------------------
+Every Chargebee Order will be synchronized with a Business Nxt Order.
 
-Once a link between a Chargebee Order and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Order and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Order and a BusinessNxt Order:
+The following properties are synchronized between a Chargebee Order and a Business Nxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Order Property
-     - BusinessNxt Order Property
-     - BusinessNxt Data Type
+     - Business Nxt Order Property
+     - Business Nxt Data Type
 
