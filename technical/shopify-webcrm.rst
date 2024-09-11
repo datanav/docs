@@ -1,28 +1,28 @@
 ==========================
-Shopify to Webcrm Dataflow
+Shopify to WebCRM Dataflow
 ==========================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Webcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Shopify Order to Webcrm Quotationline
+Shopify Order to WebCRM Quotationline
 -------------------------------------
-Every Shopify Order will be synchronized with a Webcrm Quotationline.
+Every Shopify Order will be synchronized with a WebCRM Quotationline.
 
-Once a link between a Shopify Order and a Webcrm Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a WebCRM Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a Webcrm Quotationline:
+The following properties are synchronized between a Shopify Order and a WebCRM Quotationline:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     - Webcrm Quotationline Property
-     - Webcrm Data Type
+     - WebCRM Quotationline Property
+     - WebCRM Data Type
    * - id
      - QuotationLineOpportunityId
      - "string"
@@ -37,20 +37,20 @@ The following properties are synchronized between a Shopify Order and a Webcrm Q
      - "string"
 
 
-Shopify Sesamproduct to Webcrm Products
+Shopify Sesamproduct to WebCRM Products
 ---------------------------------------
-Every Shopify Sesamproduct will be synchronized with a Webcrm Products.
+Every Shopify Sesamproduct will be synchronized with a WebCRM Products.
 
-Once a link between a Shopify Sesamproduct and a Webcrm Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Sesamproduct and a WebCRM Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Sesamproduct and a Webcrm Products:
+The following properties are synchronized between a Shopify Sesamproduct and a WebCRM Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Sesamproduct Property
-     - Webcrm Products Property
-     - Webcrm Data Type
+     - WebCRM Products Property
+     - WebCRM Data Type
    * - sesam_priceExclVAT
      - ProductPrice
      - "string"
