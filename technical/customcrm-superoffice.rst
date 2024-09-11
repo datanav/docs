@@ -2,41 +2,41 @@
 Custom CRM to SuperOffice Dataflow
 ==================================
 
-Generated: 2024-09-11 11:40:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Custom CRM to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-CustomCRM Contact to SuperOffice Person
----------------------------------------
-Every CustomCRM Contact will be synchronized with a SuperOffice Person.
+Custom CRM Contact to SuperOffice Person
+----------------------------------------
+Every Custom CRM Contact will be synchronized with a SuperOffice Person.
 
-Once a link between a CustomCRM Contact and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom CRM Contact and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomCRM Contact and a SuperOffice Person:
+The following properties are synchronized between a Custom CRM Contact and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomCRM Contact Property
+   * - Custom CRM Contact Property
      - SuperOffice Person Property
      - SuperOffice Data Type
 
 
-CustomCRM Customer to SuperOffice Contact
------------------------------------------
-Every CustomCRM Customer will be synchronized with a SuperOffice Contact.
+Custom CRM Customer to SuperOffice Contact
+------------------------------------------
+Every Custom CRM Customer will be synchronized with a SuperOffice Contact.
 
-Once a link between a CustomCRM Customer and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom CRM Customer and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomCRM Customer and a SuperOffice Contact:
+The following properties are synchronized between a Custom CRM Customer and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomCRM Customer Property
+   * - Custom CRM Customer Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
 
