@@ -2,27 +2,27 @@
 BusinessCentral to SuperOffice Dataflow
 =======================================
 
-Generated: 2024-09-11 11:13:29
+Generated: 2024-09-11 11:28:31
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from BusinessCentral to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-BusinesscentralBusinessCentral Customers to SuperOffice Contact
----------------------------------------------------------------
-Before any synchronization can take place, a link between a BusinesscentralBusinessCentral Customers and a SuperOffice Contact must be established.
+Businesscentral Customers to SuperOffice Contact
+------------------------------------------------
+Before any synchronization can take place, a link between a Businesscentral Customers and a SuperOffice Contact must be established.
 
-A new SuperOffice Contact will be created from a BusinesscentralBusinessCentral Customers if it is connected to a BusinesscentralBusinessCentral Businesscentral-contact, Businesscentral-employee, Businesscentral-employees, Businesscentral-contacts-person, or Businesscentral-customers-person that is synchronized into SuperOffice.
+A new SuperOffice Contact will be created from a Businesscentral Customers if it is connected to a Businesscentral Contact, Employee, Employees, Contacts-person, or Customers-person that is synchronized into SuperOffice.
 
-Once a link between a BusinesscentralBusinessCentral Customers and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businesscentral Customers and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinesscentralBusinessCentral Customers and a SuperOffice Contact:
+The following properties are synchronized between a Businesscentral Customers and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinesscentralBusinessCentral Customers Property
+   * - Businesscentral Customers Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
 
