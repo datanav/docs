@@ -1,13 +1,13 @@
-===================================
-Businesscentral to ZohoCRM Dataflow
-===================================
+====================================
+Business Central to ZohoCRM Dataflow
+====================================
 
-Generated: 2024-09-11 00:00:00
+Generated: 2024-09-11 07:52:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to ZohoCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to ZohoCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Businesscentral Companies to ZohoCRM Account
 --------------------------------------------
@@ -92,18 +92,18 @@ The following properties are synchronized between a Businesscentral Customers co
      - "string"
 
 
-Businesscentral Customers person to ZohoCRM Contact
----------------------------------------------------
-Every Businesscentral Customers person will be synchronized with a ZohoCRM Contact.
+Business Customers person to ZohoCRM Contact
+--------------------------------------------
+Every Business Customers person will be synchronized with a ZohoCRM Contact.
 
-Once a link between a Businesscentral Customers person and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers person and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers person and a ZohoCRM Contact:
+The following properties are synchronized between a Business Customers person and a ZohoCRM Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Customers person Property
+   * - Business Customers person Property
      - ZohoCRM Contact Property
      - ZohoCRM Data Type
    * - address.city
