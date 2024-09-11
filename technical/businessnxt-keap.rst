@@ -2,25 +2,25 @@
 Visma Business Nxt to Keap Dataflow
 ===================================
 
-Generated: 2024-09-11 07:47:14
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Visma Business Nxt to Keap. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businessnxt Address to Keap Companies
--------------------------------------
-Every Businessnxt Address will be synchronized with a Keap Companies.
+Visma Address to Keap Companies
+-------------------------------
+Every Visma Address will be synchronized with a Keap Companies.
 
-Once a link between a Businessnxt Address and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Address and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Address and a Keap Companies:
+The following properties are synchronized between a Visma Address and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Address Property
+   * - Visma Address Property
      - Keap Companies Property
      - Keap Data Type
    * - name
@@ -28,18 +28,18 @@ The following properties are synchronized between a Businessnxt Address and a Ke
      - "string"
 
 
-Businessnxt Company to Keap Companies
--------------------------------------
-Every Businessnxt Company will be synchronized with a Keap Companies.
+Visma Company to Keap Companies
+-------------------------------
+Every Visma Company will be synchronized with a Keap Companies.
 
-Once a link between a Businessnxt Company and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Company and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Company and a Keap Companies:
+The following properties are synchronized between a Visma Company and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Company Property
+   * - Visma Company Property
      - Keap Companies Property
      - Keap Data Type
    * - name
