@@ -2,7 +2,7 @@
 CustomHRM to Exact Online Dataflow
 ==================================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 07:55:13
 
 Introduction
 ------------
@@ -41,34 +41,34 @@ The following properties are synchronized between a Custom Employee and a Exact 
      - Exact Data Type
 
 
-Custom Department to Exact Departments
---------------------------------------
-Every Custom Department will be synchronized with a Exact Departments.
+CustomHRM Department to Exact Departments
+-----------------------------------------
+Every CustomHRM Department will be synchronized with a Exact Departments.
 
-Once a link between a Custom Department and a Exact Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomHRM Department and a Exact Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Department and a Exact Departments:
+The following properties are synchronized between a CustomHRM Department and a Exact Departments:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Department Property
+   * - CustomHRM Department Property
      - Exact Departments Property
      - Exact Data Type
 
 
-Custom Employee to Exact Employees
-----------------------------------
-Every Custom Employee will be synchronized with a Exact Employees.
+CustomHRM Employee to Exact Employees
+-------------------------------------
+Every CustomHRM Employee will be synchronized with a Exact Employees.
 
-Once a link between a Custom Employee and a Exact Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomHRM Employee and a Exact Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Employee and a Exact Employees:
+The following properties are synchronized between a CustomHRM Employee and a Exact Employees:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Employee Property
+   * - CustomHRM Employee Property
      - Exact Employees Property
      - Exact Data Type
 
