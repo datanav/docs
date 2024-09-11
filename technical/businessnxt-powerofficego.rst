@@ -1,66 +1,66 @@
-======================================
-BusinessNxt to PowerOffice GO Dataflow
-======================================
+=====================================
+BusinessNxt to PowerOfficeGO Dataflow
+=====================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from BusinessNxt to PowerOffice GO. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from BusinessNxt to PowerOfficeGO. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Visma Order to PowerOffice Salesorders
---------------------------------------
-Every Visma Order will be synchronized with a PowerOffice Salesorders.
+BusinessNxt Order to PowerOfficeGO Salesorders
+----------------------------------------------
+Every BusinessNxt Order will be synchronized with a PowerOfficeGO Salesorders.
 
-Once a link between a Visma Order and a PowerOffice Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Order and a PowerOfficeGO Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Order and a PowerOffice Salesorders:
+The following properties are synchronized between a BusinessNxt Order and a PowerOfficeGO Salesorders:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Order Property
-     - PowerOffice Salesorders Property
-     - PowerOffice Data Type
+   * - BusinessNxt Order Property
+     - PowerOfficeGO Salesorders Property
+     - PowerOfficeGO Data Type
    * - orderDate
      - SalesOrderDate
      - "string"
 
 
-Visma Orderline to PowerOffice Salesorderlines
-----------------------------------------------
-Every Visma Orderline will be synchronized with a PowerOffice Salesorderlines.
+BusinessNxt Orderline to PowerOfficeGO Salesorderlines
+------------------------------------------------------
+Every BusinessNxt Orderline will be synchronized with a PowerOfficeGO Salesorderlines.
 
-Once a link between a Visma Orderline and a PowerOffice Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Orderline and a PowerOfficeGO Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Orderline and a PowerOffice Salesorderlines:
+The following properties are synchronized between a BusinessNxt Orderline and a PowerOfficeGO Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Orderline Property
-     - PowerOffice Salesorderlines Property
-     - PowerOffice Data Type
+   * - BusinessNxt Orderline Property
+     - PowerOfficeGO Salesorderlines Property
+     - PowerOfficeGO Data Type
    * - orderNo
      - sesam_SalesOrderId
      - "string"
 
 
-Visma Product to PowerOffice Product
-------------------------------------
-Every Visma Product will be synchronized with a PowerOffice Product.
+BusinessNxt Product to PowerOfficeGO Product
+--------------------------------------------
+Every BusinessNxt Product will be synchronized with a PowerOfficeGO Product.
 
-Once a link between a Visma Product and a PowerOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Product and a PowerOfficeGO Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Product and a PowerOffice Product:
+The following properties are synchronized between a BusinessNxt Product and a PowerOfficeGO Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Product Property
-     - PowerOffice Product Property
-     - PowerOffice Data Type
+   * - BusinessNxt Product Property
+     - PowerOfficeGO Product Property
+     - PowerOfficeGO Data Type
    * - description
      - description
      - "string"
