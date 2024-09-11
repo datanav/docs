@@ -2,27 +2,27 @@
 Wix.com to CRMOffice Dataflow
 =============================
 
-Generated: 2024-09-11 07:48:17
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to CRMOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wix.com Products to Crmoffice Companies
+Wix.com Products to CRMOffice Companies
 ---------------------------------------
-Every Wix.com Products will be synchronized with a Crmoffice Companies.
+Every Wix.com Products will be synchronized with a CRMOffice Companies.
 
-Once a link between a Wix.com Products and a Crmoffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a Crmoffice Companies:
+The following properties are synchronized between a Wix.com Products and a CRMOffice Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     - Crmoffice Companies Property
-     - Crmoffice Data Type
+     - CRMOffice Companies Property
+     - CRMOffice Data Type
 
 
 Wix.com Contacts to CRMOffice Contacts
