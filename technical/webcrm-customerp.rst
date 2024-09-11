@@ -1,13 +1,13 @@
-============================
-WebCRM to CustomERP Dataflow
-============================
+=============================
+WebCRM to Custom ERP Dataflow
+=============================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to CustomERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 WebCRM Opportunities to CustomERP Order
 ---------------------------------------
@@ -73,34 +73,34 @@ The following properties are synchronized between a WebCRM Users and a CustomERP
      - CustomERP Data Type
 
 
-WebCRM Persons to CustomERP Contact
------------------------------------
-Every WebCRM Persons will be synchronized with a CustomERP Contact.
+WebCRM Persons to Custom ERP Contact
+------------------------------------
+Every WebCRM Persons will be synchronized with a Custom ERP Contact.
 
-Once a link between a WebCRM Persons and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Persons and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Persons and a CustomERP Contact:
+The following properties are synchronized between a WebCRM Persons and a Custom ERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Persons Property
-     - CustomERP Contact Property
-     - CustomERP Data Type
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
 
 
-WebCRM Products to CustomERP Product
-------------------------------------
-Every WebCRM Products will be synchronized with a CustomERP Product.
+WebCRM Products to Custom ERP Product
+-------------------------------------
+Every WebCRM Products will be synchronized with a Custom ERP Product.
 
-Once a link between a WebCRM Products and a CustomERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Products and a Custom ERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Products and a CustomERP Product:
+The following properties are synchronized between a WebCRM Products and a Custom ERP Product:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Products Property
-     - CustomERP Product Property
-     - CustomERP Data Type
+     - Custom ERP Product Property
+     - Custom ERP Data Type
 
