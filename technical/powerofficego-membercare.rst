@@ -2,27 +2,27 @@
 PowerOfficeGO to MemberCare Dataflow
 ====================================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from PowerOfficeGO to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Powerofficego Contactperson to Membercare Persons
--------------------------------------------------
-Every Powerofficego Contactperson will be synchronized with a Membercare Persons.
+PowerOffice Contactperson to MemberCare Persons
+-----------------------------------------------
+Every PowerOffice Contactperson will be synchronized with a MemberCare Persons.
 
-Once a link between a Powerofficego Contactperson and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Contactperson and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Contactperson and a Membercare Persons:
+The following properties are synchronized between a PowerOffice Contactperson and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Contactperson Property
-     - Membercare Persons Property
-     - Membercare Data Type
+   * - PowerOffice Contactperson Property
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - SocialSecurityNumber
      - socialSecurityNumber.number (Dependant on having wd:Q1140371 in socialSecurityNumber.iso2Letter)
      - "string"
@@ -52,20 +52,20 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
 
 
-Powerofficego Customers to Membercare Companies
------------------------------------------------
-Every Powerofficego Customers will be synchronized with a Membercare Companies.
+PowerOffice Customers to MemberCare Companies
+---------------------------------------------
+Every PowerOffice Customers will be synchronized with a MemberCare Companies.
 
-Once a link between a Powerofficego Customers and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Customers and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers and a Membercare Companies:
+The following properties are synchronized between a PowerOffice Customers and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Customers Property
-     - Membercare Companies Property
-     - Membercare Data Type
+   * - PowerOffice Customers Property
+     - MemberCare Companies Property
+     - MemberCare Data Type
    * - Name
      - companyName
      - "string"
@@ -74,20 +74,20 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Customers person to Membercare Persons
-----------------------------------------------------
-Every Powerofficego Customers person will be synchronized with a Membercare Persons.
+PowerOffice Customers person to MemberCare Persons
+--------------------------------------------------
+Every PowerOffice Customers person will be synchronized with a MemberCare Persons.
 
-Once a link between a Powerofficego Customers person and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Customers person and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers person and a Membercare Persons:
+The following properties are synchronized between a PowerOffice Customers person and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Customers person Property
-     - Membercare Persons Property
-     - Membercare Data Type
+   * - PowerOffice Customers person Property
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - DateOfBirth
      - birthDate
      - "string"
@@ -114,39 +114,39 @@ The following properties are synchronized between a Powerofficego Customers pers
      - "string"
 
 
-Powerofficego Departments to Membercare Companies
--------------------------------------------------
-Every Powerofficego Departments will be synchronized with a Membercare Companies.
+PowerOffice Departments to MemberCare Companies
+-----------------------------------------------
+Every PowerOffice Departments will be synchronized with a MemberCare Companies.
 
-Once a link between a Powerofficego Departments and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Departments and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Departments and a Membercare Companies:
+The following properties are synchronized between a PowerOffice Departments and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Departments Property
-     - Membercare Companies Property
-     - Membercare Data Type
+   * - PowerOffice Departments Property
+     - MemberCare Companies Property
+     - MemberCare Data Type
    * - Name
      - companyName
      - "string"
 
 
-Powerofficego Employees to Membercare Persons
----------------------------------------------
-Every Powerofficego Employees will be synchronized with a Membercare Persons.
+PowerOffice Employees to MemberCare Persons
+-------------------------------------------
+Every PowerOffice Employees will be synchronized with a MemberCare Persons.
 
-Once a link between a Powerofficego Employees and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Employees and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Employees and a Membercare Persons:
+The following properties are synchronized between a PowerOffice Employees and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Employees Property
-     - Membercare Persons Property
-     - Membercare Data Type
+   * - PowerOffice Employees Property
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - DateOfBirth
      - birthDate
      - "string"
@@ -164,39 +164,39 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
 
 
-Powerofficego Product to Membercare Products
---------------------------------------------
-Every Powerofficego Product will be synchronized with a Membercare Products.
+PowerOffice Product to MemberCare Products
+------------------------------------------
+Every PowerOffice Product will be synchronized with a MemberCare Products.
 
-Once a link between a Powerofficego Product and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Product and a MemberCare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Product and a Membercare Products:
+The following properties are synchronized between a PowerOffice Product and a MemberCare Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Product Property
-     - Membercare Products Property
-     - Membercare Data Type
+   * - PowerOffice Product Property
+     - MemberCare Products Property
+     - MemberCare Data Type
    * - name
      - name
      - "string"
 
 
-Powerofficego Salesorderlines to Membercare Invoices
-----------------------------------------------------
-Every Powerofficego Salesorderlines will be synchronized with a Membercare Invoices.
+PowerOffice Salesorderlines to MemberCare Invoices
+--------------------------------------------------
+Every PowerOffice Salesorderlines will be synchronized with a MemberCare Invoices.
 
-Once a link between a Powerofficego Salesorderlines and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Salesorderlines and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Salesorderlines and a Membercare Invoices:
+The following properties are synchronized between a PowerOffice Salesorderlines and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Salesorderlines Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+   * - PowerOffice Salesorderlines Property
+     - MemberCare Invoices Property
+     - MemberCare Data Type
    * - ProductUnitPrice
      - invoiceItems.unitPrice
      - "string"
@@ -205,20 +205,20 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - "string"
 
 
-Powerofficego Salesorders to Membercare Invoices
-------------------------------------------------
-Every Powerofficego Salesorders will be synchronized with a Membercare Invoices.
+PowerOffice Salesorders to MemberCare Invoices
+----------------------------------------------
+Every PowerOffice Salesorders will be synchronized with a MemberCare Invoices.
 
-Once a link between a Powerofficego Salesorders and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Salesorders and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Salesorders and a Membercare Invoices:
+The following properties are synchronized between a PowerOffice Salesorders and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Salesorders Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+   * - PowerOffice Salesorders Property
+     - MemberCare Invoices Property
+     - MemberCare Data Type
 
 
 PowerOfficeGO Contactperson to MemberCare Countries
