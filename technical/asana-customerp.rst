@@ -2,7 +2,7 @@
 Asana to CustomERP Dataflow
 ===========================
 
-Generated: 2024-09-11 08:01:26
+Generated: 2024-09-11 08:03:13
 
 Introduction
 ------------
@@ -57,34 +57,34 @@ The following properties are synchronized between a Asana Workspaces and a Custo
      - Custom Data Type
 
 
-Asana Projects to Custom Project
---------------------------------
-Every Asana Projects will be synchronized with a Custom Project.
+Asana Projects to CustomERP Project
+-----------------------------------
+Every Asana Projects will be synchronized with a CustomERP Project.
 
-Once a link between a Asana Projects and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Projects and a CustomERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Projects and a Custom Project:
+The following properties are synchronized between a Asana Projects and a CustomERP Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Projects Property
-     - Custom Project Property
-     - Custom Data Type
+     - CustomERP Project Property
+     - CustomERP Data Type
 
 
-Asana Users to Custom Employee
-------------------------------
-Every Asana Users will be synchronized with a Custom Employee.
+Asana Users to CustomERP Employee
+---------------------------------
+Every Asana Users will be synchronized with a CustomERP Employee.
 
-Once a link between a Asana Users and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Users and a CustomERP Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Users and a Custom Employee:
+The following properties are synchronized between a Asana Users and a CustomERP Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Users Property
-     - Custom Employee Property
-     - Custom Data Type
+     - CustomERP Employee Property
+     - CustomERP Data Type
 
