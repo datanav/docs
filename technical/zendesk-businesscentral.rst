@@ -1,13 +1,13 @@
-===================================
-Zendesk to BusinessCentral Dataflow
-===================================
+====================================
+Zendesk to Business Central Dataflow
+====================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:39:33
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Zendesk to BusinessCentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Zendesk to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Zendesk Organizations to BusinessCentral Companies
 --------------------------------------------------
