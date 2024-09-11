@@ -2,25 +2,25 @@
 Business Nxt to WebCRM Dataflow
 ===============================
 
-Generated: 2024-09-11 11:40:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Business Nxt to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-BusinessNxt Address to WebCRM Organisations
--------------------------------------------
-Every BusinessNxt Address will be synchronized with a WebCRM Organisations.
+Business Nxt Address to WebCRM Organisations
+--------------------------------------------
+Every Business Nxt Address will be synchronized with a WebCRM Organisations.
 
-Once a link between a BusinessNxt Address and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Address and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Address and a WebCRM Organisations:
+The following properties are synchronized between a Business Nxt Address and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Address Property
+   * - Business Nxt Address Property
      - WebCRM Organisations Property
      - WebCRM Data Type
    * - name
@@ -31,18 +31,18 @@ The following properties are synchronized between a BusinessNxt Address and a We
      - "string"
 
 
-BusinessNxt Company to WebCRM Organisations
--------------------------------------------
-Every BusinessNxt Company will be synchronized with a WebCRM Organisations.
+Business Nxt Company to WebCRM Organisations
+--------------------------------------------
+Every Business Nxt Company will be synchronized with a WebCRM Organisations.
 
-Once a link between a BusinessNxt Company and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Company and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Company and a WebCRM Organisations:
+The following properties are synchronized between a Business Nxt Company and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Company Property
+   * - Business Nxt Company Property
      - WebCRM Organisations Property
      - WebCRM Data Type
    * - name
