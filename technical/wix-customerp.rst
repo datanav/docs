@@ -1,58 +1,58 @@
-=============================
-Wix.com to CustomERP Dataflow
-=============================
+==============================
+Wix.com to Custom ERP Dataflow
+==============================
 
-Generated: 2024-09-11 08:03:13
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to CustomERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wix.com Contacts to CustomERP Contact
--------------------------------------
-Every Wix.com Contacts will be synchronized with a CustomERP Contact.
+Wix.com Contacts to Custom ERP Contact
+--------------------------------------
+Every Wix.com Contacts will be synchronized with a Custom ERP Contact.
 
-Once a link between a Wix.com Contacts and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a CustomERP Contact:
+The following properties are synchronized between a Wix.com Contacts and a Custom ERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     - CustomERP Contact Property
-     - CustomERP Data Type
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
 
 
-Wix.com Orders to CustomERP Order
----------------------------------
-Every Wix.com Orders will be synchronized with a CustomERP Order.
+Wix.com Orders to Custom ERP Order
+----------------------------------
+Every Wix.com Orders will be synchronized with a Custom ERP Order.
 
-Once a link between a Wix.com Orders and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a CustomERP Order:
+The following properties are synchronized between a Wix.com Orders and a Custom ERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
 
-Wix.com Products to CustomERP Product
--------------------------------------
-Every Wix.com Products will be synchronized with a CustomERP Product.
+Wix.com Products to Custom ERP Product
+--------------------------------------
+Every Wix.com Products will be synchronized with a Custom ERP Product.
 
-Once a link between a Wix.com Products and a CustomERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a Custom ERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a CustomERP Product:
+The following properties are synchronized between a Wix.com Products and a Custom ERP Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     - CustomERP Product Property
-     - CustomERP Data Type
+     - Custom ERP Product Property
+     - Custom ERP Data Type
 
