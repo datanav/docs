@@ -1,13 +1,13 @@
 ==================================
-Exact Online to Crmoffice Dataflow
+Exact Online to CRMOffice Dataflow
 ==================================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to Crmoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to CRMOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Exact Employees to Crmoffice Contacts
 -------------------------------------
@@ -41,18 +41,18 @@ The following properties are synchronized between a Exact Items and a Crmoffice 
      - Crmoffice Data Type
 
 
-Exact Contacts to Crmoffice Contacts
+Exact Contacts to CRMOffice Contacts
 ------------------------------------
-Every Exact Contacts will be synchronized with a Crmoffice Contacts.
+Every Exact Contacts will be synchronized with a CRMOffice Contacts.
 
-Once a link between a Exact Contacts and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Contacts and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Contacts and a Crmoffice Contacts:
+The following properties are synchronized between a Exact Contacts and a CRMOffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Contacts Property
-     - Crmoffice Contacts Property
-     - Crmoffice Data Type
+     - CRMOffice Contacts Property
+     - CRMOffice Data Type
 
