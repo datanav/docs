@@ -2,7 +2,7 @@
 ExactOnline to Wave Dataflow
 ============================
 
-Generated: 2024-09-11 11:13:29
+Generated: 2024-09-11 11:28:31
 
 Introduction
 ------------
@@ -31,34 +31,34 @@ The following properties are synchronized between a ExactOnline Accounts and a W
      - "string"
 
 
-ExactOnlineExact OnlineExact Items to Wave Product
---------------------------------------------------
-Every ExactOnlineExact OnlineExact Items will be synchronized with a Wave Product.
+ExactOnline Items to Wave Product
+---------------------------------
+Every ExactOnline Items will be synchronized with a Wave Product.
 
-Once a link between a ExactOnlineExact OnlineExact Items and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Items and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnlineExact OnlineExact Items and a Wave Product:
+The following properties are synchronized between a ExactOnline Items and a Wave Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnlineExact OnlineExact Items Property
+   * - ExactOnline Items Property
      - Wave Product Property
      - Wave Data Type
 
 
-ExactOnlineExact OnlineExact Salesorders to Wave Invoice
---------------------------------------------------------
-Every ExactOnlineExact OnlineExact Salesorders will be synchronized with a Wave Invoice.
+ExactOnline Salesorders to Wave Invoice
+---------------------------------------
+Every ExactOnline Salesorders will be synchronized with a Wave Invoice.
 
-Once a link between a ExactOnlineExact OnlineExact Salesorders and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Salesorders and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnlineExact OnlineExact Salesorders and a Wave Invoice:
+The following properties are synchronized between a ExactOnline Salesorders and a Wave Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnlineExact OnlineExact Salesorders Property
+   * - ExactOnline Salesorders Property
      - Wave Invoice Property
      - Wave Data Type
    * - Currency
