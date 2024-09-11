@@ -2,41 +2,41 @@
 BusinessNxt to CustomHRM Dataflow
 =================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from BusinessNxt to CustomHRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Visma Address to Custom Department
-----------------------------------
-Every Visma Address will be synchronized with a Custom Department.
+Visma Address to CustomHRM Department
+-------------------------------------
+Every Visma Address will be synchronized with a CustomHRM Department.
 
-Once a link between a Visma Address and a Custom Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Address and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Address and a Custom Department:
+The following properties are synchronized between a Visma Address and a CustomHRM Department:
 
 .. list-table::
    :header-rows: 1
 
    * - Visma Address Property
-     - Custom Department Property
-     - Custom Data Type
+     - CustomHRM Department Property
+     - CustomHRM Data Type
 
 
-Visma Company to Custom Department
-----------------------------------
-Every Visma Company will be synchronized with a Custom Department.
+Visma Company to CustomHRM Department
+-------------------------------------
+Every Visma Company will be synchronized with a CustomHRM Department.
 
-Once a link between a Visma Company and a Custom Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Company and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Company and a Custom Department:
+The following properties are synchronized between a Visma Company and a CustomHRM Department:
 
 .. list-table::
    :header-rows: 1
 
    * - Visma Company Property
-     - Custom Department Property
-     - Custom Data Type
+     - CustomHRM Department Property
+     - CustomHRM Data Type
 
