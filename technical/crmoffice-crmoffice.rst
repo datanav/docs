@@ -1,38 +1,38 @@
 ===============================
-CRMOffice to Crmoffice Dataflow
+CRMOffice to CRMOffice Dataflow
 ===============================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from CRMOffice to Crmoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from CRMOffice to CRMOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Crmoffice Companies to Crmoffice Companies
+CRMOffice Companies to CRMOffice Companies
 ------------------------------------------
-Before any synchronization can take place, a link between a Crmoffice Companies and a Crmoffice Companies must be established.
+Before any synchronization can take place, a link between a CRMOffice Companies and a CRMOffice Companies must be established.
 
-A Crmoffice Companies will merge with a Crmoffice Companies if one of the following property combinations match:
+A CRMOffice Companies will merge with a CRMOffice Companies if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - Crmoffice Companies Property
-     - Crmoffice Companies Property
+   * - CRMOffice Companies Property
+     - CRMOffice Companies Property
    * - orgNr
      - orgNr
 
-Once a link between a Crmoffice Companies and a Crmoffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Companies and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Crmoffice Companies and a Crmoffice Companies:
+The following properties are synchronized between a CRMOffice Companies and a CRMOffice Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Crmoffice Companies Property
-     - Crmoffice Companies Property
-     - Crmoffice Data Type
+   * - CRMOffice Companies Property
+     - CRMOffice Companies Property
+     - CRMOffice Data Type
    * - id
      - id
      - "string"
