@@ -2,91 +2,91 @@
 Tripletex to Custom ERP Dataflow
 ================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Customer person to CustomERP Contact
-----------------------------------------------
-Every Tripletex Customer person will be synchronized with a CustomERP Contact.
+Tripletex Customer person to Custom ERP Contact
+-----------------------------------------------
+Every Tripletex Customer person will be synchronized with a Custom ERP Contact.
 
-Once a link between a Tripletex Customer person and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a CustomERP Contact:
+The following properties are synchronized between a Tripletex Customer person and a Custom ERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     - CustomERP Contact Property
-     - CustomERP Data Type
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
 
 
-Tripletex Department to CustomERP Customer
-------------------------------------------
-Every Tripletex Department will be synchronized with a CustomERP Customer.
+Tripletex Department to Custom ERP Customer
+-------------------------------------------
+Every Tripletex Department will be synchronized with a Custom ERP Customer.
 
-Once a link between a Tripletex Department and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a CustomERP Customer:
+The following properties are synchronized between a Tripletex Department and a Custom ERP Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     - CustomERP Customer Property
-     - CustomERP Data Type
+     - Custom ERP Customer Property
+     - Custom ERP Data Type
 
 
-Tripletex Employee to CustomERP Contact
----------------------------------------
-Every Tripletex Employee will be synchronized with a CustomERP Contact.
+Tripletex Employee to Custom ERP Contact
+----------------------------------------
+Every Tripletex Employee will be synchronized with a Custom ERP Contact.
 
-Once a link between a Tripletex Employee and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a CustomERP Contact:
+The following properties are synchronized between a Tripletex Employee and a Custom ERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     - CustomERP Contact Property
-     - CustomERP Data Type
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
 
 
-Tripletex Orderline to CustomERP Order
---------------------------------------
-Every Tripletex Orderline will be synchronized with a CustomERP Order.
+Tripletex Orderline to Custom ERP Order
+---------------------------------------
+Every Tripletex Orderline will be synchronized with a Custom ERP Order.
 
-Once a link between a Tripletex Orderline and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Orderline and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Orderline and a CustomERP Order:
+The following properties are synchronized between a Tripletex Orderline and a Custom ERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Orderline Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
 
-Tripletex Projectactivity to CustomERP Project
-----------------------------------------------
-Every Tripletex Projectactivity will be synchronized with a CustomERP Project.
+Tripletex Projectactivity to Custom ERP Project
+-----------------------------------------------
+Every Tripletex Projectactivity will be synchronized with a Custom ERP Project.
 
-Once a link between a Tripletex Projectactivity and a CustomERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Projectactivity and a Custom ERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Projectactivity and a CustomERP Project:
+The following properties are synchronized between a Tripletex Projectactivity and a Custom ERP Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Projectactivity Property
-     - CustomERP Project Property
-     - CustomERP Data Type
+     - Custom ERP Project Property
+     - Custom ERP Data Type
 
 
 Tripletex Contact to Custom ERP Contact
