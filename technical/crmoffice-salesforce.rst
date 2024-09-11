@@ -2,25 +2,25 @@
 CRMOffice to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-11 07:47:14
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CRMOffice to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Crmoffice Activities to Salesforce Task
+CRMOffice Activities to Salesforce Task
 ---------------------------------------
-Every Crmoffice Activities will be synchronized with a Salesforce Task.
+Every CRMOffice Activities will be synchronized with a Salesforce Task.
 
-Once a link between a Crmoffice Activities and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Activities and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Crmoffice Activities and a Salesforce Task:
+The following properties are synchronized between a CRMOffice Activities and a Salesforce Task:
 
 .. list-table::
    :header-rows: 1
 
-   * - Crmoffice Activities Property
+   * - CRMOffice Activities Property
      - Salesforce Task Property
      - Salesforce Data Type
    * - ownerId
@@ -31,18 +31,18 @@ The following properties are synchronized between a Crmoffice Activities and a S
      - "string"
 
 
-Crmoffice Companies to Salesforce Product2
+CRMOffice Companies to Salesforce Product2
 ------------------------------------------
-Every Crmoffice Companies will be synchronized with a Salesforce Product2.
+Every CRMOffice Companies will be synchronized with a Salesforce Product2.
 
-Once a link between a Crmoffice Companies and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Companies and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Crmoffice Companies and a Salesforce Product2:
+The following properties are synchronized between a CRMOffice Companies and a Salesforce Product2:
 
 .. list-table::
    :header-rows: 1
 
-   * - Crmoffice Companies Property
+   * - CRMOffice Companies Property
      - Salesforce Product2 Property
      - Salesforce Data Type
 
