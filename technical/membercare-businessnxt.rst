@@ -1,13 +1,13 @@
-=========================================
-MemberCare to Visma Business Nxt Dataflow
-=========================================
+==================================
+MemberCare to BusinessNxt Dataflow
+==================================
 
-Generated: 2024-09-11 08:07:20
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 MemberCare Companycategories to Businessnxt Country
 ---------------------------------------------------
@@ -103,20 +103,20 @@ The following properties are synchronized between a MemberCare Products and a Bu
      - Businessnxt Data Type
 
 
-MemberCare Companies to Visma Address
--------------------------------------
-Every MemberCare Companies will be synchronized with a Visma Address.
+MemberCare Companies to BusinessNxt Address
+-------------------------------------------
+Every MemberCare Companies will be synchronized with a BusinessNxt Address.
 
-Once a link between a MemberCare Companies and a Visma Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companies and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Companies and a Visma Address:
+The following properties are synchronized between a MemberCare Companies and a BusinessNxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Companies Property
-     - Visma Address Property
-     - Visma Data Type
+     - BusinessNxt Address Property
+     - BusinessNxt Data Type
    * - addresses.country.id
      - countryNo
      - "string"
@@ -137,20 +137,20 @@ The following properties are synchronized between a MemberCare Companies and a V
      - "string"
 
 
-MemberCare Companies to Visma Company
--------------------------------------
-Every MemberCare Companies will be synchronized with a Visma Company.
+MemberCare Companies to BusinessNxt Company
+-------------------------------------------
+Every MemberCare Companies will be synchronized with a BusinessNxt Company.
 
-Once a link between a MemberCare Companies and a Visma Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companies and a BusinessNxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Companies and a Visma Company:
+The following properties are synchronized between a MemberCare Companies and a BusinessNxt Company:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Companies Property
-     - Visma Company Property
-     - Visma Data Type
+     - BusinessNxt Company Property
+     - BusinessNxt Data Type
    * - addresses.id
      - companyNo
      - "string"
@@ -159,20 +159,20 @@ The following properties are synchronized between a MemberCare Companies and a V
      - "string"
 
 
-MemberCare Countries to Visma Country
--------------------------------------
-Every MemberCare Countries will be synchronized with a Visma Country.
+MemberCare Countries to BusinessNxt Country
+-------------------------------------------
+Every MemberCare Countries will be synchronized with a BusinessNxt Country.
 
-Once a link between a MemberCare Countries and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Countries and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Countries and a Visma Country:
+The following properties are synchronized between a MemberCare Countries and a BusinessNxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Countries Property
-     - Visma Country Property
-     - Visma Data Type
+     - BusinessNxt Country Property
+     - BusinessNxt Data Type
    * - iso2Letter
      - isoCode
      - "string"
@@ -181,18 +181,18 @@ The following properties are synchronized between a MemberCare Countries and a V
      - "string"
 
 
-MemberCare Invoices to Visma Orderline
---------------------------------------
-Every MemberCare Invoices will be synchronized with a Visma Orderline.
+MemberCare Invoices to BusinessNxt Orderline
+--------------------------------------------
+Every MemberCare Invoices will be synchronized with a BusinessNxt Orderline.
 
-Once a link between a MemberCare Invoices and a Visma Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Invoices and a BusinessNxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Invoices and a Visma Orderline:
+The following properties are synchronized between a MemberCare Invoices and a BusinessNxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Invoices Property
-     - Visma Orderline Property
-     - Visma Data Type
+     - BusinessNxt Orderline Property
+     - BusinessNxt Data Type
 
