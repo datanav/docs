@@ -2,25 +2,25 @@
 MemberCare to WebCRM Dataflow
 =============================
 
-Generated: 2024-09-11 07:48:17
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Membercare Companies to Webcrm Organisations
+MemberCare Companies to Webcrm Organisations
 --------------------------------------------
-Every Membercare Companies will be synchronized with a Webcrm Organisations.
+Every MemberCare Companies will be synchronized with a Webcrm Organisations.
 
-Once a link between a Membercare Companies and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companies and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Companies and a Webcrm Organisations:
+The following properties are synchronized between a MemberCare Companies and a Webcrm Organisations:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Companies Property
+   * - MemberCare Companies Property
      - Webcrm Organisations Property
      - Webcrm Data Type
    * - companyName
@@ -28,18 +28,18 @@ The following properties are synchronized between a Membercare Companies and a W
      - "string"
 
 
-Membercare Organizations to Webcrm Organisations
+MemberCare Organizations to Webcrm Organisations
 ------------------------------------------------
-Every Membercare Organizations will be synchronized with a Webcrm Organisations.
+Every MemberCare Organizations will be synchronized with a Webcrm Organisations.
 
-Once a link between a Membercare Organizations and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Organizations and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Organizations and a Webcrm Organisations:
+The following properties are synchronized between a MemberCare Organizations and a Webcrm Organisations:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Organizations Property
+   * - MemberCare Organizations Property
      - Webcrm Organisations Property
      - Webcrm Data Type
    * - name
