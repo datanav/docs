@@ -2,7 +2,7 @@
 Tidsbanken to HubSpot Dataflow
 ==============================
 
-Generated: 2024-09-11 07:55:13
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
@@ -62,39 +62,39 @@ The following properties are synchronized between a Tidsbanken Ansatt and a HubS
      - "string"
 
 
-Tidsbanken Avdeling to Hubspot Company
+Tidsbanken Avdeling to HubSpot Company
 --------------------------------------
-Every Tidsbanken Avdeling will be synchronized with a Hubspot Company.
+Every Tidsbanken Avdeling will be synchronized with a HubSpot Company.
 
-Once a link between a Tidsbanken Avdeling and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Avdeling and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Avdeling and a Hubspot Company:
+The following properties are synchronized between a Tidsbanken Avdeling and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Avdeling Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
    * - Navn
      - properties.name
      - "string"
 
 
-Tidsbanken Kunde to Hubspot Company
+Tidsbanken Kunde to HubSpot Company
 -----------------------------------
-Every Tidsbanken Kunde will be synchronized with a Hubspot Company.
+Every Tidsbanken Kunde will be synchronized with a HubSpot Company.
 
-Once a link between a Tidsbanken Kunde and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Kunde and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Kunde and a Hubspot Company:
+The following properties are synchronized between a Tidsbanken Kunde and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Kunde Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
    * - Gateadresse
      - properties.address
      - "string"
