@@ -2,7 +2,7 @@
 Custom HRM to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-11 11:38:24
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -25,18 +25,18 @@ The following properties are synchronized between a CustomHRM Department and a S
      - Salesforce Data Type
 
 
-CustomHRM Employee to Salesforce User
--------------------------------------
-Every CustomHRM Employee will be synchronized with a Salesforce User.
+Custom HRM Employee to Salesforce User
+--------------------------------------
+Every Custom HRM Employee will be synchronized with a Salesforce User.
 
-Once a link between a CustomHRM Employee and a Salesforce User is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom HRM Employee and a Salesforce User is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomHRM Employee and a Salesforce User:
+The following properties are synchronized between a Custom HRM Employee and a Salesforce User:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomHRM Employee Property
+   * - Custom HRM Employee Property
      - Salesforce User Property
      - Salesforce Data Type
 
