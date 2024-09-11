@@ -2,41 +2,41 @@
 Custom HRM to Keap Dataflow
 ===========================
 
-Generated: 2024-09-11 07:41:19
+Generated: 2024-09-11 07:43:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Custom HRM to Keap. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Customhrm Department to Keap Companies
---------------------------------------
-Every Customhrm Department will be synchronized with a Keap Companies.
+Custom Department to Keap Companies
+-----------------------------------
+Every Custom Department will be synchronized with a Keap Companies.
 
-Once a link between a Customhrm Department and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Department and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customhrm Department and a Keap Companies:
+The following properties are synchronized between a Custom Department and a Keap Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customhrm Department Property
+   * - Custom Department Property
      - Keap Companies Property
      - Keap Data Type
 
 
-Customhrm Employee to Keap Contacts
------------------------------------
-Every Customhrm Employee will be synchronized with a Keap Contacts.
+Custom Employee to Keap Contacts
+--------------------------------
+Every Custom Employee will be synchronized with a Keap Contacts.
 
-Once a link between a Customhrm Employee and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Employee and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customhrm Employee and a Keap Contacts:
+The following properties are synchronized between a Custom Employee and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customhrm Employee Property
+   * - Custom Employee Property
      - Keap Contacts Property
      - Keap Data Type
 
