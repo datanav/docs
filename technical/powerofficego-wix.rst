@@ -1,36 +1,36 @@
-=============================
-Powerofficego to Wix Dataflow
-=============================
+==============================
+PowerOffice GO to Wix Dataflow
+==============================
 
-Generated: 2024-09-11 00:00:00
+Generated: 2024-09-11 07:52:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Wix. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from PowerOffice GO to Wix. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Powerofficego Customers person to Wix Contacts
-----------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Customers person and a Wix Contacts must be established.
+PowerOffice Customers person to Wix Contacts
+--------------------------------------------
+Before any synchronization can take place, a link between a PowerOffice Customers person and a Wix Contacts must be established.
 
-A Powerofficego Customers person will merge with a Wix Contacts if one of the following property combinations match:
+A PowerOffice Customers person will merge with a Wix Contacts if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Customers person Property
+   * - PowerOffice Customers person Property
      - Wix Contacts Property
    * - EmailAddress
      - primaryInfo.email
 
-Once a link between a Powerofficego Customers person and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Customers person and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers person and a Wix Contacts:
+The following properties are synchronized between a PowerOffice Customers person and a Wix Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Customers person Property
+   * - PowerOffice Customers person Property
      - Wix Contacts Property
      - Wix Data Type
    * - EmailAddress
@@ -101,31 +101,31 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Contactperson to Wix Contacts
--------------------------------------------
-Every Powerofficego Contactperson will be synchronized with a Wix Contacts.
+PowerOffice Contactperson to Wix Contacts
+-----------------------------------------
+Every PowerOffice Contactperson will be synchronized with a Wix Contacts.
 
-If a matching Wix Contacts already exists, the Powerofficego Contactperson will be merged with the existing one.
+If a matching Wix Contacts already exists, the PowerOffice Contactperson will be merged with the existing one.
 If no matching Wix Contacts is found, a new Wix Contacts will be created.
 
-A Powerofficego Contactperson will merge with a Wix Contacts if one of the following property combinations match:
+A PowerOffice Contactperson will merge with a Wix Contacts if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Contactperson Property
+   * - PowerOffice Contactperson Property
      - Wix Contacts Property
    * - emailAddress
      - primaryInfo.email
 
-Once a link between a Powerofficego Contactperson and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Contactperson and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Contactperson and a Wix Contacts:
+The following properties are synchronized between a PowerOffice Contactperson and a Wix Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Contactperson Property
+   * - PowerOffice Contactperson Property
      - Wix Contacts Property
      - Wix Data Type
    * - address1
@@ -160,18 +160,18 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
 
 
-Powerofficego Product to Wix Products
--------------------------------------
-Every Powerofficego Product will be synchronized with a Wix Products.
+PowerOffice Product to Wix Products
+-----------------------------------
+Every PowerOffice Product will be synchronized with a Wix Products.
 
-Once a link between a Powerofficego Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Product and a Wix Products:
+The following properties are synchronized between a PowerOffice Product and a Wix Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Product Property
+   * - PowerOffice Product Property
      - Wix Products Property
      - Wix Data Type
    * - costPrice
@@ -194,18 +194,18 @@ The following properties are synchronized between a Powerofficego Product and a 
      - N/A
 
 
-Powerofficego Suppliers person to Wix Contacts
-----------------------------------------------
-Every Powerofficego Suppliers person will be synchronized with a Wix Contacts.
+PowerOffice Suppliers person to Wix Contacts
+--------------------------------------------
+Every PowerOffice Suppliers person will be synchronized with a Wix Contacts.
 
-Once a link between a Powerofficego Suppliers person and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Suppliers person and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Suppliers person and a Wix Contacts:
+The following properties are synchronized between a PowerOffice Suppliers person and a Wix Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Suppliers person Property
+   * - PowerOffice Suppliers person Property
      - Wix Contacts Property
      - Wix Data Type
    * - EmailAddress
