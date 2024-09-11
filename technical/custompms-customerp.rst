@@ -2,7 +2,7 @@
 CustomPMS to Custom ERP Dataflow
 ================================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 07:55:13
 
 Introduction
 ------------
@@ -25,34 +25,34 @@ The following properties are synchronized between a Custom Task and a Custom Pro
      - Custom Data Type
 
 
-Custom Customer to Custom Customer
-----------------------------------
-Every Custom Customer will be synchronized with a Custom Customer.
+CustomPMS Customer to Custom Customer
+-------------------------------------
+Every CustomPMS Customer will be synchronized with a Custom Customer.
 
-Once a link between a Custom Customer and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomPMS Customer and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Customer and a Custom Customer:
+The following properties are synchronized between a CustomPMS Customer and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Customer Property
+   * - CustomPMS Customer Property
      - Custom Customer Property
      - Custom Data Type
 
 
-Custom Project to Custom Project
---------------------------------
-Every Custom Project will be synchronized with a Custom Project.
+CustomPMS Project to Custom Project
+-----------------------------------
+Every CustomPMS Project will be synchronized with a Custom Project.
 
-Once a link between a Custom Project and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomPMS Project and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Project and a Custom Project:
+The following properties are synchronized between a CustomPMS Project and a Custom Project:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Project Property
+   * - CustomPMS Project Property
      - Custom Project Property
      - Custom Data Type
 
