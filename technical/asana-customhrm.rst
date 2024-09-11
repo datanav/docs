@@ -1,58 +1,58 @@
-===========================
-Asana to Customhrm Dataflow
-===========================
+============================
+Asana to Custom HRM Dataflow
+============================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Asana to Customhrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Asana to Custom HRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Asana Teams to Customhrm Department
------------------------------------
-Every Asana Teams will be synchronized with a Customhrm Department.
+Asana Teams to Custom Department
+--------------------------------
+Every Asana Teams will be synchronized with a Custom Department.
 
-Once a link between a Asana Teams and a Customhrm Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Teams and a Custom Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Teams and a Customhrm Department:
+The following properties are synchronized between a Asana Teams and a Custom Department:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Teams Property
-     - Customhrm Department Property
-     - Customhrm Data Type
+     - Custom Department Property
+     - Custom Data Type
 
 
-Asana Workspaces to Customhrm Department
-----------------------------------------
-Every Asana Workspaces will be synchronized with a Customhrm Department.
+Asana Workspaces to Custom Department
+-------------------------------------
+Every Asana Workspaces will be synchronized with a Custom Department.
 
-Once a link between a Asana Workspaces and a Customhrm Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Workspaces and a Custom Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Workspaces and a Customhrm Department:
+The following properties are synchronized between a Asana Workspaces and a Custom Department:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Workspaces Property
-     - Customhrm Department Property
-     - Customhrm Data Type
+     - Custom Department Property
+     - Custom Data Type
 
 
-Asana Users to Customhrm Employee
----------------------------------
-Every Asana Users will be synchronized with a Customhrm Employee.
+Asana Users to Custom Employee
+------------------------------
+Every Asana Users will be synchronized with a Custom Employee.
 
-Once a link between a Asana Users and a Customhrm Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Users and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Users and a Customhrm Employee:
+The following properties are synchronized between a Asana Users and a Custom Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Users Property
-     - Customhrm Employee Property
-     - Customhrm Data Type
+     - Custom Employee Property
+     - Custom Data Type
 
