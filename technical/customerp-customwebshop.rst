@@ -2,7 +2,7 @@
 CustomERP to CustomWebshop Dataflow
 ===================================
 
-Generated: 2024-09-11 08:00:24
+Generated: 2024-09-11 08:02:19
 
 Introduction
 ------------
@@ -25,50 +25,50 @@ The following properties are synchronized between a Custom Quote and a Custom Or
      - Custom Data Type
 
 
-Custom Customer to CustomWebshop Customer
------------------------------------------
-Every Custom Customer will be synchronized with a CustomWebshop Customer.
+CustomERP Customer to CustomWebshop Customer
+--------------------------------------------
+Every CustomERP Customer will be synchronized with a CustomWebshop Customer.
 
-Once a link between a Custom Customer and a CustomWebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Customer and a CustomWebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Customer and a CustomWebshop Customer:
+The following properties are synchronized between a CustomERP Customer and a CustomWebshop Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Customer Property
+   * - CustomERP Customer Property
      - CustomWebshop Customer Property
      - CustomWebshop Data Type
 
 
-Custom Order to CustomWebshop Order
------------------------------------
-Every Custom Order will be synchronized with a CustomWebshop Order.
+CustomERP Order to CustomWebshop Order
+--------------------------------------
+Every CustomERP Order will be synchronized with a CustomWebshop Order.
 
-Once a link between a Custom Order and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Order and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Order and a CustomWebshop Order:
+The following properties are synchronized between a CustomERP Order and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Order Property
+   * - CustomERP Order Property
      - CustomWebshop Order Property
      - CustomWebshop Data Type
 
 
-Custom Product to CustomWebshop Product
----------------------------------------
-Every Custom Product will be synchronized with a CustomWebshop Product.
+CustomERP Product to CustomWebshop Product
+------------------------------------------
+Every CustomERP Product will be synchronized with a CustomWebshop Product.
 
-Once a link between a Custom Product and a CustomWebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Product and a CustomWebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Product and a CustomWebshop Product:
+The following properties are synchronized between a CustomERP Product and a CustomWebshop Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Product Property
+   * - CustomERP Product Property
      - CustomWebshop Product Property
      - CustomWebshop Data Type
 
