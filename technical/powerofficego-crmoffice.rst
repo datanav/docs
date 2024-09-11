@@ -2,7 +2,7 @@
 PowerOfficeGO to CRMOffice Dataflow
 ===================================
 
-Generated: 2024-09-11 09:01:20
+Generated: 2024-09-11 09:03:20
 
 Introduction
 ------------
@@ -123,6 +123,22 @@ The following properties are synchronized between a PowerOfficeGO Contactperson 
    * - phoneNumber
      - directPhone
      - "string"
+
+
+PowerOfficeGO Projectactivity to CRMOffice Activities
+-----------------------------------------------------
+Every PowerOfficeGO Projectactivity will be synchronized with a CRMOffice Activities.
+
+Once a link between a PowerOfficeGO Projectactivity and a CRMOffice Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOfficeGO Projectactivity and a CRMOffice Activities:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOfficeGO Projectactivity Property
+     - CRMOffice Activities Property
+     - CRMOffice Data Type
 
 
 PowerOfficeGO Suppliers person to CRMOffice Contacts
