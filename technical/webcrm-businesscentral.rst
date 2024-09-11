@@ -1,13 +1,13 @@
-==================================
-Webcrm to Businesscentral Dataflow
-==================================
+===================================
+WebCRM to Business Central Dataflow
+===================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:53:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Webcrm to Businesscentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Webcrm Organisations to Businesscentral Companies
 -------------------------------------------------
@@ -25,20 +25,20 @@ The following properties are synchronized between a Webcrm Organisations and a B
      - Businesscentral Data Type
 
 
-Webcrm Persons to Businesscentral Contacts person
--------------------------------------------------
-Every Webcrm Persons will be synchronized with a Businesscentral Contacts person.
+WebCRM Persons to Business Contacts person
+------------------------------------------
+Every WebCRM Persons will be synchronized with a Business Contacts person.
 
-Once a link between a Webcrm Persons and a Businesscentral Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Persons and a Business Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Persons and a Businesscentral Contacts person:
+The following properties are synchronized between a WebCRM Persons and a Business Contacts person:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Persons Property
-     - Businesscentral Contacts person Property
-     - Businesscentral Data Type
+   * - WebCRM Persons Property
+     - Business Contacts person Property
+     - Business Data Type
    * - PersonDirectPhone
      - phoneNumber
      - "string"
@@ -50,20 +50,20 @@ The following properties are synchronized between a Webcrm Persons and a Busines
      - "string"
 
 
-Webcrm Products to Businesscentral Items
-----------------------------------------
-Every Webcrm Products will be synchronized with a Businesscentral Items.
+WebCRM Products to Business Items
+---------------------------------
+Every WebCRM Products will be synchronized with a Business Items.
 
-Once a link between a Webcrm Products and a Businesscentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Products and a Business Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Products and a Businesscentral Items:
+The following properties are synchronized between a WebCRM Products and a Business Items:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Products Property
-     - Businesscentral Items Property
-     - Businesscentral Data Type
+   * - WebCRM Products Property
+     - Business Items Property
+     - Business Data Type
    * - ProductCostPrice
      - unitCost
      - N/A
@@ -72,18 +72,18 @@ The following properties are synchronized between a Webcrm Products and a Busine
      - N/A
 
 
-Webcrm Quotationline to Businesscentral Salesorderlines
--------------------------------------------------------
-Every Webcrm Quotationline will be synchronized with a Businesscentral Salesorderlines.
+WebCRM Quotationline to Business Salesorderlines
+------------------------------------------------
+Every WebCRM Quotationline will be synchronized with a Business Salesorderlines.
 
-Once a link between a Webcrm Quotationline and a Businesscentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Quotationline and a Business Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Quotationline and a Businesscentral Salesorderlines:
+The following properties are synchronized between a WebCRM Quotationline and a Business Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Quotationline Property
-     - Businesscentral Salesorderlines Property
-     - Businesscentral Data Type
+   * - WebCRM Quotationline Property
+     - Business Salesorderlines Property
+     - Business Data Type
 
