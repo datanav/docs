@@ -2,73 +2,73 @@
 CustomCRM to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CustomCRM to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Custom Customer to Salesforce Division
---------------------------------------
-Every Custom Customer will be synchronized with a Salesforce Division.
+CustomCRM Customer to Salesforce Division
+-----------------------------------------
+Every CustomCRM Customer will be synchronized with a Salesforce Division.
 
-Once a link between a Custom Customer and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Customer and a Salesforce Division is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Customer and a Salesforce Division:
+The following properties are synchronized between a CustomCRM Customer and a Salesforce Division:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Customer Property
+   * - CustomCRM Customer Property
      - Salesforce Division Property
      - Salesforce Data Type
 
 
-Custom Order to Salesforce Invoice
-----------------------------------
-Every Custom Order will be synchronized with a Salesforce Invoice.
+CustomCRM Order to Salesforce Invoice
+-------------------------------------
+Every CustomCRM Order will be synchronized with a Salesforce Invoice.
 
-Once a link between a Custom Order and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Order and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Order and a Salesforce Invoice:
+The following properties are synchronized between a CustomCRM Order and a Salesforce Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Order Property
+   * - CustomCRM Order Property
      - Salesforce Invoice Property
      - Salesforce Data Type
 
 
-Custom Quote to Salesforce Invoice
-----------------------------------
-Every Custom Quote will be synchronized with a Salesforce Invoice.
+CustomCRM Quote to Salesforce Invoice
+-------------------------------------
+Every CustomCRM Quote will be synchronized with a Salesforce Invoice.
 
-Once a link between a Custom Quote and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Quote and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Quote and a Salesforce Invoice:
+The following properties are synchronized between a CustomCRM Quote and a Salesforce Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Quote Property
+   * - CustomCRM Quote Property
      - Salesforce Invoice Property
      - Salesforce Data Type
 
 
-Custom User to Salesforce Invoice
----------------------------------
-Every Custom User will be synchronized with a Salesforce Invoice.
+CustomCRM User to Salesforce Invoice
+------------------------------------
+Every CustomCRM User will be synchronized with a Salesforce Invoice.
 
-Once a link between a Custom User and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM User and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom User and a Salesforce Invoice:
+The following properties are synchronized between a CustomCRM User and a Salesforce Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom User Property
+   * - CustomCRM User Property
      - Salesforce Invoice Property
      - Salesforce Data Type
 
