@@ -1,62 +1,62 @@
-===================================
-Businesscentral to Shopify Dataflow
-===================================
+====================================
+Business Central to Shopify Dataflow
+====================================
 
-Generated: 2024-09-11 00:00:00
+Generated: 2024-09-11 07:53:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Businesscentral to Shopify. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to Shopify. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Customers to Shopify Customer
----------------------------------------------
-Before any synchronization can take place, a link between a Businesscentral Customers and a Shopify Customer must be established.
+Business Customers to Shopify Customer
+--------------------------------------
+Before any synchronization can take place, a link between a Business Customers and a Shopify Customer must be established.
 
-A new Shopify Customer will be created from a Businesscentral Customers if it is connected to a Businesscentral Salesorders, or Salesorderlines that is synchronized into Shopify.
+A new Shopify Customer will be created from a Business Customers if it is connected to a Business Businesscentral-salesorders, or Businesscentral-salesorderlines that is synchronized into Shopify.
 
-Once a link between a Businesscentral Customers and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers and a Shopify Customer:
+The following properties are synchronized between a Business Customers and a Shopify Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Customers Property
+   * - Business Customers Property
      - Shopify Customer Property
      - Shopify Data Type
 
 
-Businesscentral Items to Shopify Product
-----------------------------------------
-Before any synchronization can take place, a link between a Businesscentral Items and a Shopify Product must be established.
+Business Items to Shopify Product
+---------------------------------
+Before any synchronization can take place, a link between a Business Items and a Shopify Product must be established.
 
-A new Shopify Product will be created from a Businesscentral Items if it is connected to a Businesscentral Salesorders, or Salesorderlines that is synchronized into Shopify.
+A new Shopify Product will be created from a Business Items if it is connected to a Business Businesscentral-salesorders, or Businesscentral-salesorderlines that is synchronized into Shopify.
 
-Once a link between a Businesscentral Items and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Items and a Shopify Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Items and a Shopify Product:
+The following properties are synchronized between a Business Items and a Shopify Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Items Property
+   * - Business Items Property
      - Shopify Product Property
      - Shopify Data Type
 
 
-Businesscentral Customers person to Shopify Customer
-----------------------------------------------------
-Every Businesscentral Customers person will be synchronized with a Shopify Customer.
+Business Customers person to Shopify Customer
+---------------------------------------------
+Every Business Customers person will be synchronized with a Shopify Customer.
 
-Once a link between a Businesscentral Customers person and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers person and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers person and a Shopify Customer:
+The following properties are synchronized between a Business Customers person and a Shopify Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Customers person Property
+   * - Business Customers person Property
      - Shopify Customer Property
      - Shopify Data Type
    * - addressLine1
@@ -103,18 +103,18 @@ The following properties are synchronized between a Businesscentral Customers pe
      - "string"
 
 
-Businesscentral Items to Shopify Sesamproduct
----------------------------------------------
-Every Businesscentral Items will be synchronized with a Shopify Sesamproduct.
+Business Items to Shopify Sesamproduct
+--------------------------------------
+Every Business Items will be synchronized with a Shopify Sesamproduct.
 
-Once a link between a Businesscentral Items and a Shopify Sesamproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Items and a Shopify Sesamproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Items and a Shopify Sesamproduct:
+The following properties are synchronized between a Business Items and a Shopify Sesamproduct:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Items Property
+   * - Business Items Property
      - Shopify Sesamproduct Property
      - Shopify Data Type
    * - displayName
@@ -134,18 +134,18 @@ The following properties are synchronized between a Businesscentral Items and a 
      - "string"
 
 
-Businesscentral Salesorders to Shopify Order
---------------------------------------------
-Every Businesscentral Salesorders will be synchronized with a Shopify Order.
+Business Salesorders to Shopify Order
+-------------------------------------
+Every Business Salesorders will be synchronized with a Shopify Order.
 
-Once a link between a Businesscentral Salesorders and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Salesorders and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorders and a Shopify Order:
+The following properties are synchronized between a Business Salesorders and a Shopify Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Salesorders Property
+   * - Business Salesorders Property
      - Shopify Order Property
      - Shopify Data Type
    * - billToAddressLine1
