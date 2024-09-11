@@ -1,13 +1,13 @@
-==================================
-Tripletex to Exact Online Dataflow
-==================================
+=================================
+Tripletex to ExactOnline Dataflow
+=================================
 
-Generated: 2024-09-11 07:46:45
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Tripletex Customer person to Exact Contacts
 -------------------------------------------
@@ -155,20 +155,20 @@ The following properties are synchronized between a Tripletex Orderline and a Ex
      - "string"
 
 
-Tripletex Contact to Exact Contacts
------------------------------------
-Every Tripletex Contact will be synchronized with a Exact Contacts.
+Tripletex Contact to ExactOnline Contacts
+-----------------------------------------
+Every Tripletex Contact will be synchronized with a ExactOnline Contacts.
 
-Once a link between a Tripletex Contact and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Contact and a ExactOnline Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a Exact Contacts:
+The following properties are synchronized between a Tripletex Contact and a ExactOnline Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Contact Property
-     - Exact Contacts Property
-     - Exact Data Type
+     - ExactOnline Contacts Property
+     - ExactOnline Data Type
    * - email
      - Email
      - "string"
@@ -186,39 +186,39 @@ The following properties are synchronized between a Tripletex Contact and a Exac
      - "string"
 
 
-Tripletex Currency to Exact Currencies
---------------------------------------
-Every Tripletex Currency will be synchronized with a Exact Currencies.
+Tripletex Currency to ExactOnline Currencies
+--------------------------------------------
+Every Tripletex Currency will be synchronized with a ExactOnline Currencies.
 
-Once a link between a Tripletex Currency and a Exact Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Currency and a ExactOnline Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Currency and a Exact Currencies:
+The following properties are synchronized between a Tripletex Currency and a ExactOnline Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Currency Property
-     - Exact Currencies Property
-     - Exact Data Type
+     - ExactOnline Currencies Property
+     - ExactOnline Data Type
    * - displayName
      - Description
      - "string"
 
 
-Tripletex Customer to Exact Accounts
-------------------------------------
-removed person customers for now until that pattern is resolved, it  will be synchronized with a Exact Accounts.
+Tripletex Customer to ExactOnline Accounts
+------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a ExactOnline Accounts.
 
-Once a link between a Tripletex Customer and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a ExactOnline Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a Exact Accounts:
+The following properties are synchronized between a Tripletex Customer and a ExactOnline Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     - Exact Accounts Property
-     - Exact Data Type
+     - ExactOnline Accounts Property
+     - ExactOnline Data Type
    * - deliveryAddress.addressLine1
      - AddressLine1
      - "string"
@@ -275,20 +275,20 @@ The following properties are synchronized between a Tripletex Customer and a Exa
      - "string"
 
 
-Tripletex Customer person to Exact Addresses
---------------------------------------------
-Every Tripletex Customer person will be synchronized with a Exact Addresses.
+Tripletex Customer person to ExactOnline Addresses
+--------------------------------------------------
+Every Tripletex Customer person will be synchronized with a ExactOnline Addresses.
 
-Once a link between a Tripletex Customer person and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer person and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a Exact Addresses:
+The following properties are synchronized between a Tripletex Customer person and a ExactOnline Addresses:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer person Property
-     - Exact Addresses Property
-     - Exact Data Type
+     - ExactOnline Addresses Property
+     - ExactOnline Data Type
    * - deliveryAddress.addressLine1
      - AddressLine1
      - "string"
@@ -327,52 +327,52 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
 
 
-Tripletex Department to Exact Departments
------------------------------------------
-Every Tripletex Department will be synchronized with a Exact Departments.
+Tripletex Department to ExactOnline Departments
+-----------------------------------------------
+Every Tripletex Department will be synchronized with a ExactOnline Departments.
 
-If a matching Exact Departments already exists, the Tripletex Department will be merged with the existing one.
-If no matching Exact Departments is found, a new Exact Departments will be created.
+If a matching ExactOnline Departments already exists, the Tripletex Department will be merged with the existing one.
+If no matching ExactOnline Departments is found, a new ExactOnline Departments will be created.
 
-A Tripletex Department will merge with a Exact Departments if one of the following property combinations match:
+A Tripletex Department will merge with a ExactOnline Departments if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     - Exact Departments Property
+     - ExactOnline Departments Property
    * - departmentNumber
      - Code
 
-Once a link between a Tripletex Department and a Exact Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a ExactOnline Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a Exact Departments:
+The following properties are synchronized between a Tripletex Department and a ExactOnline Departments:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     - Exact Departments Property
-     - Exact Data Type
+     - ExactOnline Departments Property
+     - ExactOnline Data Type
    * - departmentNumber
      - Code
      - "string"
 
 
-Tripletex Employee to Exact Addresses
--------------------------------------
-Every Tripletex Employee will be synchronized with a Exact Addresses.
+Tripletex Employee to ExactOnline Addresses
+-------------------------------------------
+Every Tripletex Employee will be synchronized with a ExactOnline Addresses.
 
-Once a link between a Tripletex Employee and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a Exact Addresses:
+The following properties are synchronized between a Tripletex Employee and a ExactOnline Addresses:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     - Exact Addresses Property
-     - Exact Data Type
+     - ExactOnline Addresses Property
+     - ExactOnline Data Type
    * - address.addressLine1
      - AddressLine1
      - "string"
@@ -387,20 +387,20 @@ The following properties are synchronized between a Tripletex Employee and a Exa
      - "string"
 
 
-Tripletex Employee to Exact Employees
--------------------------------------
-Every Tripletex Employee will be synchronized with a Exact Employees.
+Tripletex Employee to ExactOnline Employees
+-------------------------------------------
+Every Tripletex Employee will be synchronized with a ExactOnline Employees.
 
-Once a link between a Tripletex Employee and a Exact Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Employee and a ExactOnline Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Employee and a Exact Employees:
+The following properties are synchronized between a Tripletex Employee and a ExactOnline Employees:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Employee Property
-     - Exact Employees Property
-     - Exact Data Type
+     - ExactOnline Employees Property
+     - ExactOnline Data Type
    * - address.addressLine1
      - AddressStreet
      - "string"
@@ -442,20 +442,20 @@ The following properties are synchronized between a Tripletex Employee and a Exa
      - "string"
 
 
-Tripletex Invoice to Exact Salesinvoices
-----------------------------------------
-Every Tripletex Invoice will be synchronized with a Exact Salesinvoices.
+Tripletex Invoice to ExactOnline Salesinvoices
+----------------------------------------------
+Every Tripletex Invoice will be synchronized with a ExactOnline Salesinvoices.
 
-Once a link between a Tripletex Invoice and a Exact Salesinvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Invoice and a ExactOnline Salesinvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Invoice and a Exact Salesinvoices:
+The following properties are synchronized between a Tripletex Invoice and a ExactOnline Salesinvoices:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Invoice Property
-     - Exact Salesinvoices Property
-     - Exact Data Type
+     - ExactOnline Salesinvoices Property
+     - ExactOnline Data Type
    * - currency.id
      - Currency
      - "string"
@@ -470,20 +470,20 @@ The following properties are synchronized between a Tripletex Invoice and a Exac
      - "string"
 
 
-Tripletex Order to Exact Salesorders
-------------------------------------
-Every Tripletex Order will be synchronized with a Exact Salesorders.
+Tripletex Order to ExactOnline Salesorders
+------------------------------------------
+Every Tripletex Order will be synchronized with a ExactOnline Salesorders.
 
-Once a link between a Tripletex Order and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Order and a ExactOnline Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Order and a Exact Salesorders:
+The following properties are synchronized between a Tripletex Order and a ExactOnline Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Order Property
-     - Exact Salesorders Property
-     - Exact Data Type
+     - ExactOnline Salesorders Property
+     - ExactOnline Data Type
    * - currency.id
      - Currency
      - "string"
@@ -495,20 +495,20 @@ The following properties are synchronized between a Tripletex Order and a Exact 
      - "string"
 
 
-Tripletex Orderline to Exact Salesorderlines
---------------------------------------------
-Every Tripletex Orderline will be synchronized with a Exact Salesorderlines.
+Tripletex Orderline to ExactOnline Salesorderlines
+--------------------------------------------------
+Every Tripletex Orderline will be synchronized with a ExactOnline Salesorderlines.
 
-Once a link between a Tripletex Orderline and a Exact Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Orderline and a ExactOnline Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Orderline and a Exact Salesorderlines:
+The following properties are synchronized between a Tripletex Orderline and a ExactOnline Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Orderline Property
-     - Exact Salesorderlines Property
-     - Exact Data Type
+     - ExactOnline Salesorderlines Property
+     - ExactOnline Data Type
    * - order.id
      - OrderID
      - "string"
@@ -520,36 +520,36 @@ The following properties are synchronized between a Tripletex Orderline and a Ex
      - "string"
 
 
-Tripletex Product to Exact Items
---------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Exact Items.
+Tripletex Product to ExactOnline Items
+--------------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a ExactOnline Items.
 
-Once a link between a Tripletex Product and a Exact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Product and a ExactOnline Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Product and a Exact Items:
+The following properties are synchronized between a Tripletex Product and a ExactOnline Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Product Property
-     - Exact Items Property
-     - Exact Data Type
+     - ExactOnline Items Property
+     - ExactOnline Data Type
 
 
-Tripletex Productunit to Exact Units
-------------------------------------
-Every Tripletex Productunit will be synchronized with a Exact Units.
+Tripletex Productunit to ExactOnline Units
+------------------------------------------
+Every Tripletex Productunit will be synchronized with a ExactOnline Units.
 
-Once a link between a Tripletex Productunit and a Exact Units is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Productunit and a ExactOnline Units is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Productunit and a Exact Units:
+The following properties are synchronized between a Tripletex Productunit and a ExactOnline Units:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Productunit Property
-     - Exact Units Property
-     - Exact Data Type
+     - ExactOnline Units Property
+     - ExactOnline Data Type
    * - commonCode
      - Code
      - "string"
@@ -558,20 +558,20 @@ The following properties are synchronized between a Tripletex Productunit and a 
      - "string"
 
 
-Tripletex Vattype to Exact Vatcodes
------------------------------------
-Every Tripletex Vattype will be synchronized with a Exact Vatcodes.
+Tripletex Vattype to ExactOnline Vatcodes
+-----------------------------------------
+Every Tripletex Vattype will be synchronized with a ExactOnline Vatcodes.
 
-Once a link between a Tripletex Vattype and a Exact Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Vattype and a ExactOnline Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Vattype and a Exact Vatcodes:
+The following properties are synchronized between a Tripletex Vattype and a ExactOnline Vatcodes:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Vattype Property
-     - Exact Vatcodes Property
-     - Exact Data Type
+     - ExactOnline Vatcodes Property
+     - ExactOnline Data Type
    * - number
      - Code
      - "string"
