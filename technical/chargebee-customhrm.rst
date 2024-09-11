@@ -1,42 +1,42 @@
-===============================
-Chargebee to Customhrm Dataflow
-===============================
+================================
+Chargebee to Custom HRM Dataflow
+================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Chargebee to Customhrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Chargebee to Custom HRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Chargebee Business_entity to Customhrm Department
--------------------------------------------------
-Every Chargebee Business_entity will be synchronized with a Customhrm Department.
+Chargebee Business_entity to Custom Department
+----------------------------------------------
+Every Chargebee Business_entity will be synchronized with a Custom Department.
 
-Once a link between a Chargebee Business_entity and a Customhrm Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Business_entity and a Custom Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Business_entity and a Customhrm Department:
+The following properties are synchronized between a Chargebee Business_entity and a Custom Department:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Business_entity Property
-     - Customhrm Department Property
-     - Customhrm Data Type
+     - Custom Department Property
+     - Custom Data Type
 
 
-Chargebee Customer to Customhrm Employee
-----------------------------------------
-Every Chargebee Customer will be synchronized with a Customhrm Employee.
+Chargebee Customer to Custom Employee
+-------------------------------------
+Every Chargebee Customer will be synchronized with a Custom Employee.
 
-Once a link between a Chargebee Customer and a Customhrm Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Customer and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Customer and a Customhrm Employee:
+The following properties are synchronized between a Chargebee Customer and a Custom Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Customer Property
-     - Customhrm Employee Property
-     - Customhrm Data Type
+     - Custom Employee Property
+     - Custom Data Type
 
