@@ -2,37 +2,37 @@
 PowerOffice GO to Tidsbanken Dataflow
 =====================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:39:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from PowerOffice GO to Tidsbanken. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-PowerOfficeGO Contactperson to Tidsbanken Ansatt
-------------------------------------------------
-Before any synchronization can take place, a link between a PowerOfficeGO Contactperson and a Tidsbanken Ansatt must be established.
+PowerOffice GO Contactperson to Tidsbanken Ansatt
+-------------------------------------------------
+Before any synchronization can take place, a link between a PowerOffice GO Contactperson and a Tidsbanken Ansatt must be established.
 
-A PowerOfficeGO Contactperson will merge with a Tidsbanken Ansatt if one of the following property combinations match:
+A PowerOffice GO Contactperson will merge with a Tidsbanken Ansatt if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Contactperson Property
+   * - PowerOffice GO Contactperson Property
      - Tidsbanken Ansatt Property
    * - emailAddress
      - Epost
    * - SocialSecurityNumber
      - Personnummer
 
-Once a link between a PowerOfficeGO Contactperson and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Contactperson and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Contactperson and a Tidsbanken Ansatt:
+The following properties are synchronized between a PowerOffice GO Contactperson and a Tidsbanken Ansatt:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Contactperson Property
+   * - PowerOffice GO Contactperson Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
    * - address1
@@ -67,28 +67,28 @@ The following properties are synchronized between a PowerOfficeGO Contactperson 
      - "string"
 
 
-PowerOfficeGO Customers person to Tidsbanken Ansatt
----------------------------------------------------
-Before any synchronization can take place, a link between a PowerOfficeGO Customers person and a Tidsbanken Ansatt must be established.
+PowerOffice GO Customers person to Tidsbanken Ansatt
+----------------------------------------------------
+Before any synchronization can take place, a link between a PowerOffice GO Customers person and a Tidsbanken Ansatt must be established.
 
-A PowerOfficeGO Customers person will merge with a Tidsbanken Ansatt if one of the following property combinations match:
+A PowerOffice GO Customers person will merge with a Tidsbanken Ansatt if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Customers person Property
+   * - PowerOffice GO Customers person Property
      - Tidsbanken Ansatt Property
    * - EmailAddress
      - Epost
 
-Once a link between a PowerOfficeGO Customers person and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Customers person and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Customers person and a Tidsbanken Ansatt:
+The following properties are synchronized between a PowerOffice GO Customers person and a Tidsbanken Ansatt:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Customers person Property
+   * - PowerOffice GO Customers person Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
    * - DateOfBirth
