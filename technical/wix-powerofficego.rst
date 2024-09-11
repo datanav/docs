@@ -2,7 +2,7 @@
 Wix.com to PowerOfficeGO Dataflow
 =================================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 08:39:13
 
 Introduction
 ------------
@@ -110,22 +110,22 @@ The following properties are synchronized between a Wix.com Members and a PowerO
      - "string"
 
 
-Wix.com Contacts to PowerOffice Customers
------------------------------------------
-Before any synchronization can take place, a link between a Wix.com Contacts and a PowerOffice Customers must be established.
+Wix.com Contacts to PowerOfficeGO Customers
+-------------------------------------------
+Before any synchronization can take place, a link between a Wix.com Contacts and a PowerOfficeGO Customers must be established.
 
-A new PowerOffice Customers will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into PowerOffice.
+A new PowerOfficeGO Customers will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into PowerOfficeGO.
 
-Once a link between a Wix.com Contacts and a PowerOffice Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Contacts and a PowerOfficeGO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Contacts and a PowerOffice Customers:
+The following properties are synchronized between a Wix.com Contacts and a PowerOfficeGO Customers:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Contacts Property
-     - PowerOffice Customers Property
-     - PowerOffice Data Type
+     - PowerOfficeGO Customers Property
+     - PowerOfficeGO Data Type
    * - info.addresses.items.address.country
      - MailAddress.CountryCode
      - "string"
