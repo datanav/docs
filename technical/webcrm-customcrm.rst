@@ -1,106 +1,106 @@
-============================
-Webcrm to Customcrm Dataflow
-============================
+=============================
+WebCRM to Custom CRM Dataflow
+=============================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Webcrm to Customcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Webcrm Opportunities to Customcrm Order
----------------------------------------
-Every Webcrm Opportunities will be synchronized with a Customcrm Order.
+Webcrm Opportunities to Custom Order
+------------------------------------
+Every Webcrm Opportunities will be synchronized with a Custom Order.
 
-Once a link between a Webcrm Opportunities and a Customcrm Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Webcrm Opportunities and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Opportunities and a Customcrm Order:
+The following properties are synchronized between a Webcrm Opportunities and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Webcrm Opportunities Property
-     - Customcrm Order Property
-     - Customcrm Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Webcrm Organisations to Customcrm Customer
-------------------------------------------
-Every Webcrm Organisations will be synchronized with a Customcrm Customer.
+Webcrm Organisations to Custom Customer
+---------------------------------------
+Every Webcrm Organisations will be synchronized with a Custom Customer.
 
-Once a link between a Webcrm Organisations and a Customcrm Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Webcrm Organisations and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Organisations and a Customcrm Customer:
+The following properties are synchronized between a Webcrm Organisations and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Webcrm Organisations Property
-     - Customcrm Customer Property
-     - Customcrm Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Webcrm Quotationline to Customcrm Order
----------------------------------------
-Every Webcrm Quotationline will be synchronized with a Customcrm Order.
+Webcrm Quotationline to Custom Order
+------------------------------------
+Every Webcrm Quotationline will be synchronized with a Custom Order.
 
-Once a link between a Webcrm Quotationline and a Customcrm Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Webcrm Quotationline and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Quotationline and a Customcrm Order:
+The following properties are synchronized between a Webcrm Quotationline and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Webcrm Quotationline Property
-     - Customcrm Order Property
-     - Customcrm Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Webcrm Users to Customcrm Contact
----------------------------------
-Every Webcrm Users will be synchronized with a Customcrm Contact.
+Webcrm Users to Custom Contact
+------------------------------
+Every Webcrm Users will be synchronized with a Custom Contact.
 
-Once a link between a Webcrm Users and a Customcrm Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Webcrm Users and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Users and a Customcrm Contact:
+The following properties are synchronized between a Webcrm Users and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Webcrm Users Property
-     - Customcrm Contact Property
-     - Customcrm Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
 
-Webcrm Persons to Customcrm Contact
------------------------------------
-Every Webcrm Persons will be synchronized with a Customcrm Contact.
+WebCRM Persons to Custom Contact
+--------------------------------
+Every WebCRM Persons will be synchronized with a Custom Contact.
 
-Once a link between a Webcrm Persons and a Customcrm Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Persons and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Persons and a Customcrm Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Webcrm Persons Property
-     - Customcrm Contact Property
-     - Customcrm Data Type
-
-
-Webcrm Products to Customcrm Product
-------------------------------------
-Every Webcrm Products will be synchronized with a Customcrm Product.
-
-Once a link between a Webcrm Products and a Customcrm Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Webcrm Products and a Customcrm Product:
+The following properties are synchronized between a WebCRM Persons and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Products Property
-     - Customcrm Product Property
-     - Customcrm Data Type
+   * - WebCRM Persons Property
+     - Custom Contact Property
+     - Custom Data Type
+
+
+WebCRM Products to Custom Product
+---------------------------------
+Every WebCRM Products will be synchronized with a Custom Product.
+
+Once a link between a WebCRM Products and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WebCRM Products and a Custom Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WebCRM Products Property
+     - Custom Product Property
+     - Custom Data Type
 
