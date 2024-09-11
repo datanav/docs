@@ -2,41 +2,41 @@
 BusinessCentral to Youtrack Dataflow
 ====================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from BusinessCentral to Youtrack. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Companies to Youtrack Groups
---------------------------------------------
-Every Businesscentral Companies will be synchronized with a Youtrack Groups.
+Business Companies to Youtrack Groups
+-------------------------------------
+Every Business Companies will be synchronized with a Youtrack Groups.
 
-Once a link between a Businesscentral Companies and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Companies and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Companies and a Youtrack Groups:
+The following properties are synchronized between a Business Companies and a Youtrack Groups:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Companies Property
+   * - Business Companies Property
      - Youtrack Groups Property
      - Youtrack Data Type
 
 
-Businesscentral Customers company to Youtrack Groups
-----------------------------------------------------
-Every Businesscentral Customers company will be synchronized with a Youtrack Groups.
+Business Customers company to Youtrack Groups
+---------------------------------------------
+Every Business Customers company will be synchronized with a Youtrack Groups.
 
-Once a link between a Businesscentral Customers company and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers company and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Customers company and a Youtrack Groups:
+The following properties are synchronized between a Business Customers company and a Youtrack Groups:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Customers company Property
+   * - Business Customers company Property
      - Youtrack Groups Property
      - Youtrack Data Type
 
