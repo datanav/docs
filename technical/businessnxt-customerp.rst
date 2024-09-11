@@ -2,59 +2,59 @@
 Business Nxt to Custom ERP Dataflow
 ===================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Business Nxt to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-BusinessNxt Address to CustomERP Customer
------------------------------------------
-Every BusinessNxt Address will be synchronized with a CustomERP Customer.
+Business Nxt Address to Custom ERP Customer
+-------------------------------------------
+Every Business Nxt Address will be synchronized with a Custom ERP Customer.
 
-Once a link between a BusinessNxt Address and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Address and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Address and a CustomERP Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - BusinessNxt Address Property
-     - CustomERP Customer Property
-     - CustomERP Data Type
-
-
-BusinessNxt Company to CustomERP Customer
------------------------------------------
-Every BusinessNxt Company will be synchronized with a CustomERP Customer.
-
-Once a link between a BusinessNxt Company and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a BusinessNxt Company and a CustomERP Customer:
+The following properties are synchronized between a Business Nxt Address and a Custom ERP Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Company Property
-     - CustomERP Customer Property
-     - CustomERP Data Type
+   * - Business Nxt Address Property
+     - Custom ERP Customer Property
+     - Custom ERP Data Type
 
 
-BusinessNxt Orderline to CustomERP Order
-----------------------------------------
-Every BusinessNxt Orderline will be synchronized with a CustomERP Order.
+Business Nxt Company to Custom ERP Customer
+-------------------------------------------
+Every Business Nxt Company will be synchronized with a Custom ERP Customer.
 
-Once a link between a BusinessNxt Orderline and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Company and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Orderline and a CustomERP Order:
+The following properties are synchronized between a Business Nxt Company and a Custom ERP Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Orderline Property
-     - CustomERP Order Property
-     - CustomERP Data Type
+   * - Business Nxt Company Property
+     - Custom ERP Customer Property
+     - Custom ERP Data Type
+
+
+Business Nxt Orderline to Custom ERP Order
+------------------------------------------
+Every Business Nxt Orderline will be synchronized with a Custom ERP Order.
+
+Once a link between a Business Nxt Orderline and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Orderline and a Custom ERP Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Orderline Property
+     - Custom ERP Order Property
+     - Custom ERP Data Type
 
 
 Business Nxt Order to Custom ERP Order
