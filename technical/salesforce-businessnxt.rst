@@ -1,13 +1,13 @@
-==================================
-Salesforce to BusinessNxt Dataflow
-==================================
+===================================
+Salesforce to Business Nxt Dataflow
+===================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Salesforce Currencytype to BusinessNxt Country
 ----------------------------------------------
@@ -142,71 +142,71 @@ The following properties are synchronized between a Salesforce Quotelineitem and
      - BusinessNxt Data Type
 
 
-Salesforce Contact to BusinessNxt Country
------------------------------------------
-Every Salesforce Contact will be synchronized with a BusinessNxt Country.
+Salesforce Contact to Business Nxt Country
+------------------------------------------
+Every Salesforce Contact will be synchronized with a Business Nxt Country.
 
-Once a link between a Salesforce Contact and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Contact and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Contact and a BusinessNxt Country:
+The following properties are synchronized between a Salesforce Contact and a Business Nxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Contact Property
-     - BusinessNxt Country Property
-     - BusinessNxt Data Type
+     - Business Nxt Country Property
+     - Business Nxt Data Type
    * - MailingCountry
      - name
      - "string"
 
 
-Salesforce Currencytype to BusinessNxt Currency
------------------------------------------------
-Every Salesforce Currencytype will be synchronized with a BusinessNxt Currency.
+Salesforce Currencytype to Business Nxt Currency
+------------------------------------------------
+Every Salesforce Currencytype will be synchronized with a Business Nxt Currency.
 
-Once a link between a Salesforce Currencytype and a BusinessNxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Currencytype and a Business Nxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Currencytype and a BusinessNxt Currency:
+The following properties are synchronized between a Salesforce Currencytype and a Business Nxt Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Currencytype Property
-     - BusinessNxt Currency Property
-     - BusinessNxt Data Type
+     - Business Nxt Currency Property
+     - Business Nxt Data Type
 
 
-Salesforce Invoiceline to BusinessNxt Orderline
------------------------------------------------
-Every Salesforce Invoiceline will be synchronized with a BusinessNxt Orderline.
+Salesforce Invoiceline to Business Nxt Orderline
+------------------------------------------------
+Every Salesforce Invoiceline will be synchronized with a Business Nxt Orderline.
 
-Once a link between a Salesforce Invoiceline and a BusinessNxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Invoiceline and a Business Nxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Invoiceline and a BusinessNxt Orderline:
+The following properties are synchronized between a Salesforce Invoiceline and a Business Nxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Invoiceline Property
-     - BusinessNxt Orderline Property
-     - BusinessNxt Data Type
+     - Business Nxt Orderline Property
+     - Business Nxt Data Type
 
 
-Salesforce Order to BusinessNxt Country
----------------------------------------
-Every Salesforce Order will be synchronized with a BusinessNxt Country.
+Salesforce Order to Business Nxt Country
+----------------------------------------
+Every Salesforce Order will be synchronized with a Business Nxt Country.
 
-Once a link between a Salesforce Order and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Order and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Order and a BusinessNxt Country:
+The following properties are synchronized between a Salesforce Order and a Business Nxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Order Property
-     - BusinessNxt Country Property
-     - BusinessNxt Data Type
+     - Business Nxt Country Property
+     - Business Nxt Data Type
    * - BillingCountry
      - name
      - "string"
@@ -221,20 +221,20 @@ The following properties are synchronized between a Salesforce Order and a Busin
      - "string"
 
 
-Salesforce Order to BusinessNxt Order
--------------------------------------
-Every Salesforce Order will be synchronized with a BusinessNxt Order.
+Salesforce Order to Business Nxt Order
+--------------------------------------
+Every Salesforce Order will be synchronized with a Business Nxt Order.
 
-Once a link between a Salesforce Order and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Order and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Order and a BusinessNxt Order:
+The following properties are synchronized between a Salesforce Order and a Business Nxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Order Property
-     - BusinessNxt Order Property
-     - BusinessNxt Data Type
+     - Business Nxt Order Property
+     - Business Nxt Data Type
    * - EffectiveDate
      - dueDate
      - "string"
@@ -255,39 +255,39 @@ The following properties are synchronized between a Salesforce Order and a Busin
      - "string"
 
 
-Salesforce Orderitem to BusinessNxt Orderline
----------------------------------------------
-Every Salesforce Orderitem will be synchronized with a BusinessNxt Orderline.
+Salesforce Orderitem to Business Nxt Orderline
+----------------------------------------------
+Every Salesforce Orderitem will be synchronized with a Business Nxt Orderline.
 
-Once a link between a Salesforce Orderitem and a BusinessNxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Orderitem and a Business Nxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Orderitem and a BusinessNxt Orderline:
+The following properties are synchronized between a Salesforce Orderitem and a Business Nxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Orderitem Property
-     - BusinessNxt Orderline Property
-     - BusinessNxt Data Type
+     - Business Nxt Orderline Property
+     - Business Nxt Data Type
    * - OrderId
      - orderNo
      - "string"
 
 
-Salesforce Organization to BusinessNxt Address
-----------------------------------------------
-Every Salesforce Organization will be synchronized with a BusinessNxt Address.
+Salesforce Organization to Business Nxt Address
+-----------------------------------------------
+Every Salesforce Organization will be synchronized with a Business Nxt Address.
 
-Once a link between a Salesforce Organization and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Organization and a Business Nxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Organization and a BusinessNxt Address:
+The following properties are synchronized between a Salesforce Organization and a Business Nxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Organization Property
-     - BusinessNxt Address Property
-     - BusinessNxt Data Type
+     - Business Nxt Address Property
+     - Business Nxt Data Type
    * - City
      - postalArea
      - "string"
@@ -326,20 +326,20 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
 
 
-Salesforce Organization to BusinessNxt Company
-----------------------------------------------
-Every Salesforce Organization will be synchronized with a BusinessNxt Company.
+Salesforce Organization to Business Nxt Company
+-----------------------------------------------
+Every Salesforce Organization will be synchronized with a Business Nxt Company.
 
-Once a link between a Salesforce Organization and a BusinessNxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Organization and a Business Nxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Organization and a BusinessNxt Company:
+The following properties are synchronized between a Salesforce Organization and a Business Nxt Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Organization Property
-     - BusinessNxt Company Property
-     - BusinessNxt Data Type
+     - Business Nxt Company Property
+     - Business Nxt Data Type
    * - ID
      - companyNo
      - "string"
@@ -351,20 +351,20 @@ The following properties are synchronized between a Salesforce Organization and 
      - "string"
 
 
-Salesforce Product2 to BusinessNxt Product
-------------------------------------------
-Every Salesforce Product2 will be synchronized with a BusinessNxt Product.
+Salesforce Product2 to Business Nxt Product
+-------------------------------------------
+Every Salesforce Product2 will be synchronized with a Business Nxt Product.
 
-Once a link between a Salesforce Product2 and a BusinessNxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Product2 and a Business Nxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Product2 and a BusinessNxt Product:
+The following properties are synchronized between a Salesforce Product2 and a Business Nxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Product2 Property
-     - BusinessNxt Product Property
-     - BusinessNxt Data Type
+     - Business Nxt Product Property
+     - Business Nxt Data Type
    * - Description
      - description
      - "string"
@@ -379,20 +379,20 @@ The following properties are synchronized between a Salesforce Product2 and a Bu
      - "string"
 
 
-Salesforce Quote to BusinessNxt Country
----------------------------------------
-Every Salesforce Quote will be synchronized with a BusinessNxt Country.
+Salesforce Quote to Business Nxt Country
+----------------------------------------
+Every Salesforce Quote will be synchronized with a Business Nxt Country.
 
-Once a link between a Salesforce Quote and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quote and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quote and a BusinessNxt Country:
+The following properties are synchronized between a Salesforce Quote and a Business Nxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quote Property
-     - BusinessNxt Country Property
-     - BusinessNxt Data Type
+     - Business Nxt Country Property
+     - Business Nxt Data Type
    * - BillingCountry
      - name
      - "string"
@@ -407,36 +407,36 @@ The following properties are synchronized between a Salesforce Quote and a Busin
      - "string"
 
 
-Salesforce Quotelineitem to BusinessNxt Orderline
--------------------------------------------------
-Every Salesforce Quotelineitem will be synchronized with a BusinessNxt Orderline.
+Salesforce Quotelineitem to Business Nxt Orderline
+--------------------------------------------------
+Every Salesforce Quotelineitem will be synchronized with a Business Nxt Orderline.
 
-Once a link between a Salesforce Quotelineitem and a BusinessNxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quotelineitem and a Business Nxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quotelineitem and a BusinessNxt Orderline:
+The following properties are synchronized between a Salesforce Quotelineitem and a Business Nxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quotelineitem Property
-     - BusinessNxt Orderline Property
-     - BusinessNxt Data Type
+     - Business Nxt Orderline Property
+     - Business Nxt Data Type
 
 
-Salesforce User to BusinessNxt Country
---------------------------------------
-Every Salesforce User will be synchronized with a BusinessNxt Country.
+Salesforce User to Business Nxt Country
+---------------------------------------
+Every Salesforce User will be synchronized with a Business Nxt Country.
 
-Once a link between a Salesforce User and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce User and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce User and a BusinessNxt Country:
+The following properties are synchronized between a Salesforce User and a Business Nxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce User Property
-     - BusinessNxt Country Property
-     - BusinessNxt Data Type
+     - Business Nxt Country Property
+     - Business Nxt Data Type
    * - Country
      - name
      - "string"
