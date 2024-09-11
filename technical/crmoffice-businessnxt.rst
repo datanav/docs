@@ -1,13 +1,13 @@
-=================================
-CRMOffice to Businessnxt Dataflow
-=================================
+========================================
+CRMOffice to Visma Business Nxt Dataflow
+========================================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from CRMOffice to Businessnxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from CRMOffice to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Crmoffice Companies to Businessnxt Product
 ------------------------------------------
@@ -25,39 +25,39 @@ The following properties are synchronized between a Crmoffice Companies and a Bu
      - Businessnxt Data Type
 
 
-Crmoffice Activities to Businessnxt Country
--------------------------------------------
-Every Crmoffice Activities will be synchronized with a Businessnxt Country.
+CRMOffice Activities to Visma Country
+-------------------------------------
+Every CRMOffice Activities will be synchronized with a Visma Country.
 
-Once a link between a Crmoffice Activities and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Activities and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Crmoffice Activities and a Businessnxt Country:
+The following properties are synchronized between a CRMOffice Activities and a Visma Country:
 
 .. list-table::
    :header-rows: 1
 
-   * - Crmoffice Activities Property
-     - Businessnxt Country Property
-     - Businessnxt Data Type
+   * - CRMOffice Activities Property
+     - Visma Country Property
+     - Visma Data Type
    * - address.country
      - name
      - "string"
 
 
-Crmoffice Companies to Businessnxt Country
-------------------------------------------
-Every Crmoffice Companies will be synchronized with a Businessnxt Country.
+CRMOffice Companies to Visma Country
+------------------------------------
+Every CRMOffice Companies will be synchronized with a Visma Country.
 
-Once a link between a Crmoffice Companies and a Businessnxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Companies and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Crmoffice Companies and a Businessnxt Country:
+The following properties are synchronized between a CRMOffice Companies and a Visma Country:
 
 .. list-table::
    :header-rows: 1
 
-   * - Crmoffice Companies Property
-     - Businessnxt Country Property
-     - Businessnxt Data Type
+   * - CRMOffice Companies Property
+     - Visma Country Property
+     - Visma Data Type
    * - postAddress.country
      - name
      - "string"
