@@ -2,7 +2,7 @@
 PowerOffice GO to Business Central Dataflow
 ===========================================
 
-Generated: 2024-09-11 11:42:14
+Generated: 2024-09-11 12:17:20
 
 Introduction
 ------------
@@ -102,36 +102,36 @@ The following properties are synchronized between a PowerOffice GO Contactperson
      - "string"
 
 
-PowerOfficeGO Customers to BusinessCentral Companies
-----------------------------------------------------
-Every PowerOfficeGO Customers will be synchronized with a BusinessCentral Companies.
-
-Once a link between a PowerOfficeGO Customers and a BusinessCentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOfficeGO Customers and a BusinessCentral Companies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOfficeGO Customers Property
-     - BusinessCentral Companies Property
-     - BusinessCentral Data Type
-
-
-PowerOfficeGO Departments to BusinessCentral Companies
+PowerOffice GO Customers to Business Central Companies
 ------------------------------------------------------
-Every PowerOfficeGO Departments will be synchronized with a BusinessCentral Companies.
+Every PowerOffice GO Customers will be synchronized with a Business Central Companies.
 
-Once a link between a PowerOfficeGO Departments and a BusinessCentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Customers and a Business Central Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Departments and a BusinessCentral Companies:
+The following properties are synchronized between a PowerOffice GO Customers and a Business Central Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Departments Property
-     - BusinessCentral Companies Property
-     - BusinessCentral Data Type
+   * - PowerOffice GO Customers Property
+     - Business Central Companies Property
+     - Business Central Data Type
+
+
+PowerOffice GO Departments to Business Central Companies
+--------------------------------------------------------
+Every PowerOffice GO Departments will be synchronized with a Business Central Companies.
+
+Once a link between a PowerOffice GO Departments and a Business Central Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Departments and a Business Central Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Departments Property
+     - Business Central Companies Property
+     - Business Central Data Type
 
 
 PowerOffice GO Contactperson to Business Central Contacts person
