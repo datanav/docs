@@ -1,58 +1,58 @@
-================================
-Custom ERP to Customhrm Dataflow
-================================
+=================================
+Custom ERP to Custom HRM Dataflow
+=================================
 
-Generated: 2024-09-11 07:41:19
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Custom ERP to Customhrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Custom ERP to Custom HRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Customerp Contact to Customhrm Employee
----------------------------------------
-Every Customerp Contact will be synchronized with a Customhrm Employee.
+Custom Contact to Custom Employee
+---------------------------------
+Every Custom Contact will be synchronized with a Custom Employee.
 
-Once a link between a Customerp Contact and a Customhrm Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Contact and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customerp Contact and a Customhrm Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Customerp Contact Property
-     - Customhrm Employee Property
-     - Customhrm Data Type
-
-
-Customerp Customer to Customhrm Department
-------------------------------------------
-Every Customerp Customer will be synchronized with a Customhrm Department.
-
-Once a link between a Customerp Customer and a Customhrm Department is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Customerp Customer and a Customhrm Department:
+The following properties are synchronized between a Custom Contact and a Custom Employee:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customerp Customer Property
-     - Customhrm Department Property
-     - Customhrm Data Type
+   * - Custom Contact Property
+     - Custom Employee Property
+     - Custom Data Type
 
 
-Customerp Employee to Customhrm Employee
-----------------------------------------
-Every Customerp Employee will be synchronized with a Customhrm Employee.
+Custom Customer to Custom Department
+------------------------------------
+Every Custom Customer will be synchronized with a Custom Department.
 
-Once a link between a Customerp Employee and a Customhrm Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Customer and a Custom Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customerp Employee and a Customhrm Employee:
+The following properties are synchronized between a Custom Customer and a Custom Department:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customerp Employee Property
-     - Customhrm Employee Property
-     - Customhrm Data Type
+   * - Custom Customer Property
+     - Custom Department Property
+     - Custom Data Type
+
+
+Custom Employee to Custom Employee
+----------------------------------
+Every Custom Employee will be synchronized with a Custom Employee.
+
+Once a link between a Custom Employee and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom Employee and a Custom Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom Employee Property
+     - Custom Employee Property
+     - Custom Data Type
 
