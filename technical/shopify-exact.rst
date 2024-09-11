@@ -2,27 +2,27 @@
 Shopify to ExactOnline Dataflow
 ===============================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 08:39:13
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Shopify Product to Exact Items
-------------------------------
-Every Shopify Product will be synchronized with a Exact Items.
+Shopify Product to ExactOnline Items
+------------------------------------
+Every Shopify Product will be synchronized with a ExactOnline Items.
 
-Once a link between a Shopify Product and a Exact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Product and a ExactOnline Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Product and a Exact Items:
+The following properties are synchronized between a Shopify Product and a ExactOnline Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Product Property
-     - Exact Items Property
-     - Exact Data Type
+     - ExactOnline Items Property
+     - ExactOnline Data Type
 
 
 Shopify Customer to Exact Contacts
