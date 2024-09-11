@@ -42,7 +42,7 @@ Other :ref:`Project management software <systemtypepms>` Systems
         :text: Read more
         :classes: read-more
     ---
-    **Custom PMS**
+    **CustomPMS**
 
     
     .. link-button:: system/custompms
