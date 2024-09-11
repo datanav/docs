@@ -2,43 +2,43 @@
 Tripletex to CustomPMS Dataflow
 ===============================
 
-Generated: 2024-09-11 07:56:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to CustomPMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Department to Custom Customer
----------------------------------------
-Every Tripletex Department will be synchronized with a Custom Customer.
+Tripletex Department to CustomPMS Customer
+------------------------------------------
+Every Tripletex Department will be synchronized with a CustomPMS Customer.
 
-Once a link between a Tripletex Department and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Department and a Custom Customer:
+The following properties are synchronized between a Tripletex Department and a CustomPMS Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Department Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomPMS Customer Property
+     - CustomPMS Data Type
 
 
-Tripletex Projectactivity to Custom Project
--------------------------------------------
-Every Tripletex Projectactivity will be synchronized with a Custom Project.
+Tripletex Projectactivity to CustomPMS Project
+----------------------------------------------
+Every Tripletex Projectactivity will be synchronized with a CustomPMS Project.
 
-Once a link between a Tripletex Projectactivity and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Projectactivity and a CustomPMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Projectactivity and a Custom Project:
+The following properties are synchronized between a Tripletex Projectactivity and a CustomPMS Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Projectactivity Property
-     - Custom Project Property
-     - Custom Data Type
+     - CustomPMS Project Property
+     - CustomPMS Data Type
 
 
 Tripletex Customer to CustomPMS Customer
