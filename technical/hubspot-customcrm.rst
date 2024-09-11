@@ -1,13 +1,13 @@
-=============================
-HubSpot to CustomCRM Dataflow
-=============================
+==============================
+HubSpot to Custom CRM Dataflow
+==============================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to CustomCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 HubSpot Company to CustomCRM Customer
 -------------------------------------
@@ -233,50 +233,50 @@ The following properties are synchronized between a HubSpot User and a CustomCRM
      - CustomCRM Data Type
 
 
-HubSpot Deal to CustomCRM Order
--------------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a CustomCRM Order.
+HubSpot Deal to Custom CRM Order
+--------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Custom CRM Order.
 
-Once a link between a HubSpot Deal and a CustomCRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a Custom CRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a CustomCRM Order:
+The following properties are synchronized between a HubSpot Deal and a Custom CRM Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     - CustomCRM Order Property
-     - CustomCRM Data Type
+     - Custom CRM Order Property
+     - Custom CRM Data Type
 
 
-HubSpot Product to CustomCRM Product
-------------------------------------
-Every HubSpot Product will be synchronized with a CustomCRM Product.
+HubSpot Product to Custom CRM Product
+-------------------------------------
+Every HubSpot Product will be synchronized with a Custom CRM Product.
 
-Once a link between a HubSpot Product and a CustomCRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Product and a Custom CRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Product and a CustomCRM Product:
+The following properties are synchronized between a HubSpot Product and a Custom CRM Product:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Product Property
-     - CustomCRM Product Property
-     - CustomCRM Data Type
+     - Custom CRM Product Property
+     - Custom CRM Data Type
 
 
-HubSpot Quote to CustomCRM Quote
---------------------------------
-Every HubSpot Quote will be synchronized with a CustomCRM Quote.
+HubSpot Quote to Custom CRM Quote
+---------------------------------
+Every HubSpot Quote will be synchronized with a Custom CRM Quote.
 
-Once a link between a HubSpot Quote and a CustomCRM Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quote and a Custom CRM Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quote and a CustomCRM Quote:
+The following properties are synchronized between a HubSpot Quote and a Custom CRM Quote:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quote Property
-     - CustomCRM Quote Property
-     - CustomCRM Data Type
+     - Custom CRM Quote Property
+     - Custom CRM Data Type
 
