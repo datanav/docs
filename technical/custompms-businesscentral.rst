@@ -2,7 +2,7 @@
 CustomPMS to Business Central Dataflow
 ======================================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 07:55:13
 
 Introduction
 ------------
@@ -25,18 +25,18 @@ The following properties are synchronized between a Custom Customer and a Busine
      - Businesscentral Data Type
 
 
-Custom Customer to Business Customers company
----------------------------------------------
-Every Custom Customer will be synchronized with a Business Customers company.
+CustomPMS Customer to Business Customers company
+------------------------------------------------
+Every CustomPMS Customer will be synchronized with a Business Customers company.
 
-Once a link between a Custom Customer and a Business Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomPMS Customer and a Business Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Customer and a Business Customers company:
+The following properties are synchronized between a CustomPMS Customer and a Business Customers company:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Customer Property
+   * - CustomPMS Customer Property
      - Business Customers company Property
      - Business Data Type
 
