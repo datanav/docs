@@ -2,7 +2,7 @@
 BusinessNxt to WebCRM Dataflow
 ==============================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:37:15
 
 Introduction
 ------------
@@ -50,34 +50,34 @@ The following properties are synchronized between a Visma Company and a Webcrm O
      - "string"
 
 
-Visma Orderline to WebCRM Quotationline
----------------------------------------
-Every Visma Orderline will be synchronized with a WebCRM Quotationline.
+BusinessNxt Orderline to WebCRM Quotationline
+---------------------------------------------
+Every BusinessNxt Orderline will be synchronized with a WebCRM Quotationline.
 
-Once a link between a Visma Orderline and a WebCRM Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Orderline and a WebCRM Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Orderline and a WebCRM Quotationline:
+The following properties are synchronized between a BusinessNxt Orderline and a WebCRM Quotationline:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Orderline Property
+   * - BusinessNxt Orderline Property
      - WebCRM Quotationline Property
      - WebCRM Data Type
 
 
-Visma Product to WebCRM Products
---------------------------------
-Every Visma Product will be synchronized with a WebCRM Products.
+BusinessNxt Product to WebCRM Products
+--------------------------------------
+Every BusinessNxt Product will be synchronized with a WebCRM Products.
 
-Once a link between a Visma Product and a WebCRM Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Product and a WebCRM Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Product and a WebCRM Products:
+The following properties are synchronized between a BusinessNxt Product and a WebCRM Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Product Property
+   * - BusinessNxt Product Property
      - WebCRM Products Property
      - WebCRM Data Type
    * - priceQuantity
