@@ -1,58 +1,58 @@
-==============================
-Wave to CustomWebshop Dataflow
-==============================
+===============================
+Wave to Custom Webshop Dataflow
+===============================
 
-Generated: 2024-09-11 07:56:15
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Wave to CustomWebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Wave to Custom Webshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Customer to CustomWebshop Customer
----------------------------------------
-Every Wave Customer will be synchronized with a CustomWebshop Customer.
+Wave Customer to Custom Webshop Customer
+----------------------------------------
+Every Wave Customer will be synchronized with a Custom Webshop Customer.
 
-Once a link between a Wave Customer and a CustomWebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Custom Webshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a CustomWebshop Customer:
+The following properties are synchronized between a Wave Customer and a Custom Webshop Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - CustomWebshop Customer Property
-     - CustomWebshop Data Type
+     - Custom Webshop Customer Property
+     - Custom Webshop Data Type
 
 
-Wave Invoice to CustomWebshop Order
------------------------------------
-Every Wave Invoice will be synchronized with a CustomWebshop Order.
+Wave Invoice to Custom Webshop Order
+------------------------------------
+Every Wave Invoice will be synchronized with a Custom Webshop Order.
 
-Once a link between a Wave Invoice and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a Custom Webshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a CustomWebshop Order:
+The following properties are synchronized between a Wave Invoice and a Custom Webshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     - CustomWebshop Order Property
-     - CustomWebshop Data Type
+     - Custom Webshop Order Property
+     - Custom Webshop Data Type
 
 
-Wave Product to CustomWebshop Product
--------------------------------------
-Every Wave Product will be synchronized with a CustomWebshop Product.
+Wave Product to Custom Webshop Product
+--------------------------------------
+Every Wave Product will be synchronized with a Custom Webshop Product.
 
-Once a link between a Wave Product and a CustomWebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a Custom Webshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a CustomWebshop Product:
+The following properties are synchronized between a Wave Product and a Custom Webshop Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Product Property
-     - CustomWebshop Product Property
-     - CustomWebshop Data Type
+     - Custom Webshop Product Property
+     - Custom Webshop Data Type
 
