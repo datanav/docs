@@ -2,7 +2,7 @@
 Exact Online to Exact Online Dataflow
 =====================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
@@ -87,55 +87,55 @@ The following properties are synchronized between a Exact Online Quotations and 
      - Exact Online Data Type
 
 
-ExactOnline Departments to ExactOnline Accounts
+Exact Online Departments to Exact Online Accounts
+-------------------------------------------------
+Every Exact Online Departments will be synchronized with a Exact Online Accounts.
+
+Once a link between a Exact Online Departments and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Departments and a Exact Online Accounts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Departments Property
+     - Exact Online Accounts Property
+     - Exact Online Data Type
+
+
+Exact Online Divisions to Exact Online Accounts
 -----------------------------------------------
-Every ExactOnline Departments will be synchronized with a ExactOnline Accounts.
+Every Exact Online Divisions will be synchronized with a Exact Online Accounts.
 
-Once a link between a ExactOnline Departments and a ExactOnline Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Divisions and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Departments and a ExactOnline Accounts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ExactOnline Departments Property
-     - ExactOnline Accounts Property
-     - ExactOnline Data Type
-
-
-ExactOnline Divisions to ExactOnline Accounts
----------------------------------------------
-Every ExactOnline Divisions will be synchronized with a ExactOnline Accounts.
-
-Once a link between a ExactOnline Divisions and a ExactOnline Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ExactOnline Divisions and a ExactOnline Accounts:
+The following properties are synchronized between a Exact Online Divisions and a Exact Online Accounts:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Divisions Property
-     - ExactOnline Accounts Property
-     - ExactOnline Data Type
+   * - Exact Online Divisions Property
+     - Exact Online Accounts Property
+     - Exact Online Data Type
    * - Website
      - Website
      - "string"
 
 
-ExactOnline Employees to ExactOnline Contacts
----------------------------------------------
-Every ExactOnline Employees will be synchronized with a ExactOnline Contacts.
+Exact Online Employees to Exact Online Contacts
+-----------------------------------------------
+Every Exact Online Employees will be synchronized with a Exact Online Contacts.
 
-Once a link between a ExactOnline Employees and a ExactOnline Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Employees and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Employees and a ExactOnline Contacts:
+The following properties are synchronized between a Exact Online Employees and a Exact Online Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Employees Property
-     - ExactOnline Contacts Property
-     - ExactOnline Data Type
+   * - Exact Online Employees Property
+     - Exact Online Contacts Property
+     - Exact Online Data Type
    * - BirthDate
      - BirthDate
      - "string"
@@ -186,20 +186,20 @@ The following properties are synchronized between a ExactOnline Employees and a 
      - "string"
 
 
-ExactOnline Salesinvoices to ExactOnline Quotations
----------------------------------------------------
-Every ExactOnline Salesinvoices will be synchronized with a ExactOnline Quotations.
+Exact Online Salesinvoices to Exact Online Quotations
+-----------------------------------------------------
+Every Exact Online Salesinvoices will be synchronized with a Exact Online Quotations.
 
-Once a link between a ExactOnline Salesinvoices and a ExactOnline Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Salesinvoices and a Exact Online Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Salesinvoices and a ExactOnline Quotations:
+The following properties are synchronized between a Exact Online Salesinvoices and a Exact Online Quotations:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Salesinvoices Property
-     - ExactOnline Quotations Property
-     - ExactOnline Data Type
+   * - Exact Online Salesinvoices Property
+     - Exact Online Quotations Property
+     - Exact Online Data Type
    * - Currency
      - Currency
      - "string"
@@ -211,36 +211,36 @@ The following properties are synchronized between a ExactOnline Salesinvoices an
      - "string"
 
 
-ExactOnline Salesorderlines to ExactOnline Quotations
------------------------------------------------------
-Every ExactOnline Salesorderlines will be synchronized with a ExactOnline Quotations.
+Exact Online Salesorderlines to Exact Online Quotations
+-------------------------------------------------------
+Every Exact Online Salesorderlines will be synchronized with a Exact Online Quotations.
 
-Once a link between a ExactOnline Salesorderlines and a ExactOnline Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Salesorderlines and a Exact Online Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Salesorderlines and a ExactOnline Quotations:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ExactOnline Salesorderlines Property
-     - ExactOnline Quotations Property
-     - ExactOnline Data Type
-
-
-ExactOnline Salesorders to ExactOnline Quotations
--------------------------------------------------
-Every ExactOnline Salesorders will be synchronized with a ExactOnline Quotations.
-
-Once a link between a ExactOnline Salesorders and a ExactOnline Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ExactOnline Salesorders and a ExactOnline Quotations:
+The following properties are synchronized between a Exact Online Salesorderlines and a Exact Online Quotations:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Salesorders Property
-     - ExactOnline Quotations Property
-     - ExactOnline Data Type
+   * - Exact Online Salesorderlines Property
+     - Exact Online Quotations Property
+     - Exact Online Data Type
+
+
+Exact Online Salesorders to Exact Online Quotations
+---------------------------------------------------
+Every Exact Online Salesorders will be synchronized with a Exact Online Quotations.
+
+Once a link between a Exact Online Salesorders and a Exact Online Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Salesorders and a Exact Online Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Salesorders Property
+     - Exact Online Quotations Property
+     - Exact Online Data Type
    * - Currency
      - Currency
      - "string"
@@ -252,39 +252,39 @@ The following properties are synchronized between a ExactOnline Salesorders and 
      - "string"
 
 
-ExactOnline Units to ExactOnline Currencies
--------------------------------------------
-Every ExactOnline Units will be synchronized with a ExactOnline Currencies.
+Exact Online Units to Exact Online Currencies
+---------------------------------------------
+Every Exact Online Units will be synchronized with a Exact Online Currencies.
 
-Once a link between a ExactOnline Units and a ExactOnline Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Units and a Exact Online Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Units and a ExactOnline Currencies:
+The following properties are synchronized between a Exact Online Units and a Exact Online Currencies:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Units Property
-     - ExactOnline Currencies Property
-     - ExactOnline Data Type
+   * - Exact Online Units Property
+     - Exact Online Currencies Property
+     - Exact Online Data Type
    * - Description
      - Description
      - "string"
 
 
-ExactOnline Vatcodes to ExactOnline Currencies
-----------------------------------------------
-Every ExactOnline Vatcodes will be synchronized with a ExactOnline Currencies.
+Exact Online Vatcodes to Exact Online Currencies
+------------------------------------------------
+Every Exact Online Vatcodes will be synchronized with a Exact Online Currencies.
 
-Once a link between a ExactOnline Vatcodes and a ExactOnline Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Vatcodes and a Exact Online Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Vatcodes and a ExactOnline Currencies:
+The following properties are synchronized between a Exact Online Vatcodes and a Exact Online Currencies:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Vatcodes Property
-     - ExactOnline Currencies Property
-     - ExactOnline Data Type
+   * - Exact Online Vatcodes Property
+     - Exact Online Currencies Property
+     - Exact Online Data Type
 
 
 Exact Online Accounts to Exact Online Addresses
