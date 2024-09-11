@@ -2,7 +2,7 @@
 SuperOffice to BusinessCentral Dataflow
 =======================================
 
-Generated: 2024-09-11 08:40:13
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
@@ -228,20 +228,20 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
 
 
-SuperOffice Contact to Businesscentral Companies
-------------------------------------------------
-Every SuperOffice Contact will be synchronized with a Businesscentral Companies.
+SuperOffice Contact to Business Companies
+-----------------------------------------
+Every SuperOffice Contact will be synchronized with a Business Companies.
 
-Once a link between a SuperOffice Contact and a Businesscentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a Business Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a Businesscentral Companies:
+The following properties are synchronized between a SuperOffice Contact and a Business Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - Businesscentral Companies Property
-     - Businesscentral Data Type
+     - Business Companies Property
+     - Business Data Type
 
 
 SuperOffice Product to BusinessCentral Items
