@@ -2,27 +2,27 @@
 CustomERP to CustomWebshop Dataflow
 ===================================
 
-Generated: 2024-09-11 08:02:19
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CustomERP to CustomWebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Custom Quote to Custom Order
-----------------------------
-Every Custom Quote will be synchronized with a Custom Order.
+CustomERP Quote to CustomWebshop Order
+--------------------------------------
+Every CustomERP Quote will be synchronized with a CustomWebshop Order.
 
-Once a link between a Custom Quote and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Quote and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Quote and a Custom Order:
+The following properties are synchronized between a CustomERP Quote and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Quote Property
-     - Custom Order Property
-     - Custom Data Type
+   * - CustomERP Quote Property
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
 CustomERP Customer to CustomWebshop Customer
