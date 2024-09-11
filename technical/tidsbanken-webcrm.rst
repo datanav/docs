@@ -2,27 +2,27 @@
 Tidsbanken to WebCRM Dataflow
 =============================
 
-Generated: 2024-09-11 07:46:45
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tidsbanken to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tidsbanken Avdeling to Webcrm Organisations
+Tidsbanken Avdeling to WebCRM Organisations
 -------------------------------------------
-Every Tidsbanken Avdeling will be synchronized with a Webcrm Organisations.
+Every Tidsbanken Avdeling will be synchronized with a WebCRM Organisations.
 
-Once a link between a Tidsbanken Avdeling and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Avdeling and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Avdeling and a Webcrm Organisations:
+The following properties are synchronized between a Tidsbanken Avdeling and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Avdeling Property
-     - Webcrm Organisations Property
-     - Webcrm Data Type
+     - WebCRM Organisations Property
+     - WebCRM Data Type
    * - Adresse
      - OrganisationAddress
      - "string"
@@ -49,20 +49,20 @@ The following properties are synchronized between a Tidsbanken Avdeling and a We
      - "string"
 
 
-Tidsbanken Kunde to Webcrm Organisations
+Tidsbanken Kunde to WebCRM Organisations
 ----------------------------------------
-Every Tidsbanken Kunde will be synchronized with a Webcrm Organisations.
+Every Tidsbanken Kunde will be synchronized with a WebCRM Organisations.
 
-Once a link between a Tidsbanken Kunde and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Kunde and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Kunde and a Webcrm Organisations:
+The following properties are synchronized between a Tidsbanken Kunde and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Kunde Property
-     - Webcrm Organisations Property
-     - Webcrm Data Type
+     - WebCRM Organisations Property
+     - WebCRM Data Type
    * - Gateadresse
      - OrganisationAddress
      - "string"
