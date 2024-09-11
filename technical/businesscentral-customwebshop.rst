@@ -2,7 +2,7 @@
 BusinessCentral to CustomWebshop Dataflow
 =========================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:37:15
 
 Introduction
 ------------
@@ -57,50 +57,50 @@ The following properties are synchronized between a Businesscentral Salesquotes 
      - Custom Data Type
 
 
-Business Customers company to CustomWebshop Customer
-----------------------------------------------------
-Every Business Customers company will be synchronized with a CustomWebshop Customer.
+BusinessCentral Customers company to CustomWebshop Customer
+-----------------------------------------------------------
+Every BusinessCentral Customers company will be synchronized with a CustomWebshop Customer.
 
-Once a link between a Business Customers company and a CustomWebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessCentral Customers company and a CustomWebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Customers company and a CustomWebshop Customer:
+The following properties are synchronized between a BusinessCentral Customers company and a CustomWebshop Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Customers company Property
+   * - BusinessCentral Customers company Property
      - CustomWebshop Customer Property
      - CustomWebshop Data Type
 
 
-Business Items to CustomWebshop Product
----------------------------------------
-Every Business Items will be synchronized with a CustomWebshop Product.
+BusinessCentral Items to CustomWebshop Product
+----------------------------------------------
+Every BusinessCentral Items will be synchronized with a CustomWebshop Product.
 
-Once a link between a Business Items and a CustomWebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessCentral Items and a CustomWebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Items and a CustomWebshop Product:
+The following properties are synchronized between a BusinessCentral Items and a CustomWebshop Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Items Property
+   * - BusinessCentral Items Property
      - CustomWebshop Product Property
      - CustomWebshop Data Type
 
 
-Business Salesorders to CustomWebshop Order
--------------------------------------------
-Every Business Salesorders will be synchronized with a CustomWebshop Order.
+BusinessCentral Salesorders to CustomWebshop Order
+--------------------------------------------------
+Every BusinessCentral Salesorders will be synchronized with a CustomWebshop Order.
 
-Once a link between a Business Salesorders and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessCentral Salesorders and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Salesorders and a CustomWebshop Order:
+The following properties are synchronized between a BusinessCentral Salesorders and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Salesorders Property
+   * - BusinessCentral Salesorders Property
      - CustomWebshop Order Property
      - CustomWebshop Data Type
 
