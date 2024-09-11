@@ -2,7 +2,7 @@
 Business Central to MemberCare Dataflow
 =======================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -194,18 +194,18 @@ The following properties are synchronized between a BusinessCentral Salesquotes 
      - MemberCare Data Type
 
 
-BusinessCentral Customers company to MemberCare Companies
----------------------------------------------------------
-Every BusinessCentral Customers company will be synchronized with a MemberCare Companies.
+Business Central Customers company to MemberCare Companies
+----------------------------------------------------------
+Every Business Central Customers company will be synchronized with a MemberCare Companies.
 
-Once a link between a BusinessCentral Customers company and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers company and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Customers company and a MemberCare Companies:
+The following properties are synchronized between a Business Central Customers company and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Customers company Property
+   * - Business Central Customers company Property
      - MemberCare Companies Property
      - MemberCare Data Type
    * - displayName
@@ -219,18 +219,18 @@ The following properties are synchronized between a BusinessCentral Customers co
      - "string"
 
 
-BusinessCentral Salesorders to MemberCare Countries
----------------------------------------------------
-Every BusinessCentral Salesorders will be synchronized with a MemberCare Countries.
+Business Central Salesorders to MemberCare Countries
+----------------------------------------------------
+Every Business Central Salesorders will be synchronized with a MemberCare Countries.
 
-Once a link between a BusinessCentral Salesorders and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Salesorders and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Salesorders and a MemberCare Countries:
+The following properties are synchronized between a Business Central Salesorders and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Salesorders Property
+   * - Business Central Salesorders Property
      - MemberCare Countries Property
      - MemberCare Data Type
    * - billToCountry
@@ -241,18 +241,18 @@ The following properties are synchronized between a BusinessCentral Salesorders 
      - "string"
 
 
-BusinessCentral Salesquotes to MemberCare Countries
----------------------------------------------------
-Every BusinessCentral Salesquotes will be synchronized with a MemberCare Countries.
+Business Central Salesquotes to MemberCare Countries
+----------------------------------------------------
+Every Business Central Salesquotes will be synchronized with a MemberCare Countries.
 
-Once a link between a BusinessCentral Salesquotes and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Salesquotes and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Salesquotes and a MemberCare Countries:
+The following properties are synchronized between a Business Central Salesquotes and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Salesquotes Property
+   * - Business Central Salesquotes Property
      - MemberCare Countries Property
      - MemberCare Data Type
    * - billToCountry
