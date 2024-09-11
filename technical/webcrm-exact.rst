@@ -1,13 +1,13 @@
-==============================
-WebCRM to ExactOnline Dataflow
-==============================
+===============================
+WebCRM to Exact Online Dataflow
+===============================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 WebCRM Opportunities to ExactOnline Quotations
 ----------------------------------------------
@@ -82,55 +82,55 @@ The following properties are synchronized between a WebCRM Users and a ExactOnli
      - ExactOnline Data Type
 
 
-WebCRM Persons to ExactOnline Contacts
---------------------------------------
-Every WebCRM Persons will be synchronized with a ExactOnline Contacts.
+WebCRM Persons to Exact Online Contacts
+---------------------------------------
+Every WebCRM Persons will be synchronized with a Exact Online Contacts.
 
-Once a link between a WebCRM Persons and a ExactOnline Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Persons and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Persons and a ExactOnline Contacts:
+The following properties are synchronized between a WebCRM Persons and a Exact Online Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Persons Property
-     - ExactOnline Contacts Property
-     - ExactOnline Data Type
+     - Exact Online Contacts Property
+     - Exact Online Data Type
    * - document_number
      - BirthDate
      - "string"
 
 
-WebCRM Products to ExactOnline Items
-------------------------------------
-Every WebCRM Products will be synchronized with a ExactOnline Items.
+WebCRM Products to Exact Online Items
+-------------------------------------
+Every WebCRM Products will be synchronized with a Exact Online Items.
 
-Once a link between a WebCRM Products and a ExactOnline Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Products and a Exact Online Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Products and a ExactOnline Items:
+The following properties are synchronized between a WebCRM Products and a Exact Online Items:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Products Property
-     - ExactOnline Items Property
-     - ExactOnline Data Type
+     - Exact Online Items Property
+     - Exact Online Data Type
 
 
-WebCRM Quotationline to ExactOnline Salesorderlines
----------------------------------------------------
-Every WebCRM Quotationline will be synchronized with a ExactOnline Salesorderlines.
+WebCRM Quotationline to Exact Online Salesorderlines
+----------------------------------------------------
+Every WebCRM Quotationline will be synchronized with a Exact Online Salesorderlines.
 
-Once a link between a WebCRM Quotationline and a ExactOnline Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Quotationline and a Exact Online Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Quotationline and a ExactOnline Salesorderlines:
+The following properties are synchronized between a WebCRM Quotationline and a Exact Online Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Quotationline Property
-     - ExactOnline Salesorderlines Property
-     - ExactOnline Data Type
+     - Exact Online Salesorderlines Property
+     - Exact Online Data Type
    * - QuotationLineCostPrice
      - CostPriceFC
      - "string"
