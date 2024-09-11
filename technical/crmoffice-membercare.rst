@@ -1,13 +1,13 @@
 ================================
-Crmoffice to Membercare Dataflow
+CRMOffice to MemberCare Dataflow
 ================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Crmoffice to Membercare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from CRMOffice to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Crmoffice Companies to Membercare Products
 ------------------------------------------
@@ -47,39 +47,39 @@ The following properties are synchronized between a Crmoffice Contacts and a Mem
      - "string"
 
 
-Crmoffice Activities to Membercare Countries
+CRMOffice Activities to MemberCare Countries
 --------------------------------------------
-Every Crmoffice Activities will be synchronized with a Membercare Countries.
+Every CRMOffice Activities will be synchronized with a MemberCare Countries.
 
-Once a link between a Crmoffice Activities and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Activities and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Crmoffice Activities and a Membercare Countries:
+The following properties are synchronized between a CRMOffice Activities and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
-   * - Crmoffice Activities Property
-     - Membercare Countries Property
-     - Membercare Data Type
+   * - CRMOffice Activities Property
+     - MemberCare Countries Property
+     - MemberCare Data Type
    * - address.country
      - name
      - "string"
 
 
-Crmoffice Companies to Membercare Countries
+CRMOffice Companies to MemberCare Countries
 -------------------------------------------
-Every Crmoffice Companies will be synchronized with a Membercare Countries.
+Every CRMOffice Companies will be synchronized with a MemberCare Countries.
 
-Once a link between a Crmoffice Companies and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Companies and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Crmoffice Companies and a Membercare Countries:
+The following properties are synchronized between a CRMOffice Companies and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
-   * - Crmoffice Companies Property
-     - Membercare Countries Property
-     - Membercare Data Type
+   * - CRMOffice Companies Property
+     - MemberCare Countries Property
+     - MemberCare Data Type
    * - postAddress.country
      - name
      - "string"
