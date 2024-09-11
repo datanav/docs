@@ -1,13 +1,13 @@
-========================================
-SuperOffice to Business Central Dataflow
-========================================
+=======================================
+SuperOffice to BusinessCentral Dataflow
+=======================================
 
-Generated: 2024-09-11 07:55:13
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to BusinessCentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 SuperOffice Contact to Business Customers company
 -------------------------------------------------
@@ -244,20 +244,20 @@ The following properties are synchronized between a SuperOffice Contact and a Bu
      - Businesscentral Data Type
 
 
-SuperOffice Product to Business Items
--------------------------------------
-Every SuperOffice Product will be synchronized with a Business Items.
+SuperOffice Product to BusinessCentral Items
+--------------------------------------------
+Every SuperOffice Product will be synchronized with a BusinessCentral Items.
 
-Once a link between a SuperOffice Product and a Business Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Product and a BusinessCentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Product and a Business Items:
+The following properties are synchronized between a SuperOffice Product and a BusinessCentral Items:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Product Property
-     - Business Items Property
-     - Business Data Type
+     - BusinessCentral Items Property
+     - BusinessCentral Data Type
    * - Name
      - displayName
      - "string"
@@ -287,20 +287,20 @@ The following properties are synchronized between a SuperOffice Product and a Bu
      - "string"
 
 
-SuperOffice Quoteline to Business Salesorderlines
--------------------------------------------------
-Every SuperOffice Quoteline will be synchronized with a Business Salesorderlines.
+SuperOffice Quoteline to BusinessCentral Salesorderlines
+--------------------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a BusinessCentral Salesorderlines.
 
-Once a link between a SuperOffice Quoteline and a Business Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quoteline and a BusinessCentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quoteline and a Business Salesorderlines:
+The following properties are synchronized between a SuperOffice Quoteline and a BusinessCentral Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quoteline Property
-     - Business Salesorderlines Property
-     - Business Data Type
+     - BusinessCentral Salesorderlines Property
+     - BusinessCentral Data Type
    * - Description
      - description
      - "string"
