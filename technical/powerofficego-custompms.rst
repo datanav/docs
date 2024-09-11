@@ -2,25 +2,25 @@
 PowerOfficeGO to CustomPMS Dataflow
 ===================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from PowerOfficeGO to CustomPMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-PowerOffice Departments to CustomPMS Customer
----------------------------------------------
-Every PowerOffice Departments will be synchronized with a CustomPMS Customer.
+PowerOfficeGO Departments to CustomPMS Customer
+-----------------------------------------------
+Every PowerOfficeGO Departments will be synchronized with a CustomPMS Customer.
 
-Once a link between a PowerOffice Departments and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Departments and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Departments and a CustomPMS Customer:
+The following properties are synchronized between a PowerOfficeGO Departments and a CustomPMS Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Departments Property
+   * - PowerOfficeGO Departments Property
      - CustomPMS Customer Property
      - CustomPMS Data Type
 
