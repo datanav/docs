@@ -2,73 +2,73 @@
 Custom HRM to Exact Dataflow
 ============================
 
-Generated: 2024-09-11 07:41:19
+Generated: 2024-09-11 07:43:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Custom HRM to Exact. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Customhrm Department to Exact Accounts
---------------------------------------
-Every Customhrm Department will be synchronized with a Exact Accounts.
+Custom Department to Exact Accounts
+-----------------------------------
+Every Custom Department will be synchronized with a Exact Accounts.
 
-Once a link between a Customhrm Department and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Department and a Exact Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customhrm Department and a Exact Accounts:
+The following properties are synchronized between a Custom Department and a Exact Accounts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customhrm Department Property
+   * - Custom Department Property
      - Exact Accounts Property
      - Exact Data Type
 
 
-Customhrm Employee to Exact Contacts
-------------------------------------
-Every Customhrm Employee will be synchronized with a Exact Contacts.
+Custom Employee to Exact Contacts
+---------------------------------
+Every Custom Employee will be synchronized with a Exact Contacts.
 
-Once a link between a Customhrm Employee and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Employee and a Exact Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customhrm Employee and a Exact Contacts:
+The following properties are synchronized between a Custom Employee and a Exact Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customhrm Employee Property
+   * - Custom Employee Property
      - Exact Contacts Property
      - Exact Data Type
 
 
-Customhrm Department to Exact Departments
------------------------------------------
-Every Customhrm Department will be synchronized with a Exact Departments.
+Custom Department to Exact Departments
+--------------------------------------
+Every Custom Department will be synchronized with a Exact Departments.
 
-Once a link between a Customhrm Department and a Exact Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Department and a Exact Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customhrm Department and a Exact Departments:
+The following properties are synchronized between a Custom Department and a Exact Departments:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customhrm Department Property
+   * - Custom Department Property
      - Exact Departments Property
      - Exact Data Type
 
 
-Customhrm Employee to Exact Employees
--------------------------------------
-Every Customhrm Employee will be synchronized with a Exact Employees.
+Custom Employee to Exact Employees
+----------------------------------
+Every Custom Employee will be synchronized with a Exact Employees.
 
-Once a link between a Customhrm Employee and a Exact Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Employee and a Exact Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customhrm Employee and a Exact Employees:
+The following properties are synchronized between a Custom Employee and a Exact Employees:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customhrm Employee Property
+   * - Custom Employee Property
      - Exact Employees Property
      - Exact Data Type
 
