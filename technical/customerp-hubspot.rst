@@ -1,13 +1,13 @@
-==============================
-Custom ERP to Hubspot Dataflow
-==============================
+=============================
+CustomERP to HubSpot Dataflow
+=============================
 
-Generated: 2024-09-11 07:43:20
+Generated: 2024-09-11 08:00:24
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Custom ERP to Hubspot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from CustomERP to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Custom Contact to Hubspot Contact
 ---------------------------------
@@ -57,34 +57,34 @@ The following properties are synchronized between a Custom Employee and a Hubspo
      - Hubspot Data Type
 
 
-Custom Product to Hubspot Product
+Custom Product to HubSpot Product
 ---------------------------------
-Every Custom Product will be synchronized with a Hubspot Product.
+Every Custom Product will be synchronized with a HubSpot Product.
 
-Once a link between a Custom Product and a Hubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Product and a Hubspot Product:
+The following properties are synchronized between a Custom Product and a HubSpot Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Custom Product Property
-     - Hubspot Product Property
-     - Hubspot Data Type
+     - HubSpot Product Property
+     - HubSpot Data Type
 
 
-Custom Quote to Hubspot Quote
+Custom Quote to HubSpot Quote
 -----------------------------
-Every Custom Quote will be synchronized with a Hubspot Quote.
+Every Custom Quote will be synchronized with a HubSpot Quote.
 
-Once a link between a Custom Quote and a Hubspot Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Quote and a HubSpot Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Quote and a Hubspot Quote:
+The following properties are synchronized between a Custom Quote and a HubSpot Quote:
 
 .. list-table::
    :header-rows: 1
 
    * - Custom Quote Property
-     - Hubspot Quote Property
-     - Hubspot Data Type
+     - HubSpot Quote Property
+     - HubSpot Data Type
 
