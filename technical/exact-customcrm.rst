@@ -2,107 +2,107 @@
 Exact Online to Custom CRM Dataflow
 ===================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-ExactOnline Departments to CustomCRM Customer
+Exact Online Departments to Custom CRM Customer
+-----------------------------------------------
+Every Exact Online Departments will be synchronized with a Custom CRM Customer.
+
+Once a link between a Exact Online Departments and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Departments and a Custom CRM Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Departments Property
+     - Custom CRM Customer Property
+     - Custom CRM Data Type
+
+
+Exact Online Divisions to Custom CRM Customer
 ---------------------------------------------
-Every ExactOnline Departments will be synchronized with a CustomCRM Customer.
+Every Exact Online Divisions will be synchronized with a Custom CRM Customer.
 
-Once a link between a ExactOnline Departments and a CustomCRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Divisions and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Departments and a CustomCRM Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ExactOnline Departments Property
-     - CustomCRM Customer Property
-     - CustomCRM Data Type
-
-
-ExactOnline Divisions to CustomCRM Customer
--------------------------------------------
-Every ExactOnline Divisions will be synchronized with a CustomCRM Customer.
-
-Once a link between a ExactOnline Divisions and a CustomCRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ExactOnline Divisions and a CustomCRM Customer:
+The following properties are synchronized between a Exact Online Divisions and a Custom CRM Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Divisions Property
-     - CustomCRM Customer Property
-     - CustomCRM Data Type
+   * - Exact Online Divisions Property
+     - Custom CRM Customer Property
+     - Custom CRM Data Type
 
 
-ExactOnline Employees to CustomCRM Contact
-------------------------------------------
-Every ExactOnline Employees will be synchronized with a CustomCRM Contact.
-
-Once a link between a ExactOnline Employees and a CustomCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ExactOnline Employees and a CustomCRM Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ExactOnline Employees Property
-     - CustomCRM Contact Property
-     - CustomCRM Data Type
-
-
-ExactOnline Quotations to CustomCRM Order
------------------------------------------
-Every ExactOnline Quotations will be synchronized with a CustomCRM Order.
-
-Once a link between a ExactOnline Quotations and a CustomCRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ExactOnline Quotations and a CustomCRM Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ExactOnline Quotations Property
-     - CustomCRM Order Property
-     - CustomCRM Data Type
-
-
-ExactOnline Salesinvoices to CustomCRM Order
+Exact Online Employees to Custom CRM Contact
 --------------------------------------------
-Every ExactOnline Salesinvoices will be synchronized with a CustomCRM Order.
+Every Exact Online Employees will be synchronized with a Custom CRM Contact.
 
-Once a link between a ExactOnline Salesinvoices and a CustomCRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Employees and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Salesinvoices and a CustomCRM Order:
+The following properties are synchronized between a Exact Online Employees and a Custom CRM Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Salesinvoices Property
-     - CustomCRM Order Property
-     - CustomCRM Data Type
+   * - Exact Online Employees Property
+     - Custom CRM Contact Property
+     - Custom CRM Data Type
 
 
-ExactOnline Salesorderlines to CustomCRM Order
+Exact Online Quotations to Custom CRM Order
+-------------------------------------------
+Every Exact Online Quotations will be synchronized with a Custom CRM Order.
+
+Once a link between a Exact Online Quotations and a Custom CRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Quotations and a Custom CRM Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Quotations Property
+     - Custom CRM Order Property
+     - Custom CRM Data Type
+
+
+Exact Online Salesinvoices to Custom CRM Order
 ----------------------------------------------
-Every ExactOnline Salesorderlines will be synchronized with a CustomCRM Order.
+Every Exact Online Salesinvoices will be synchronized with a Custom CRM Order.
 
-Once a link between a ExactOnline Salesorderlines and a CustomCRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Salesinvoices and a Custom CRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Salesorderlines and a CustomCRM Order:
+The following properties are synchronized between a Exact Online Salesinvoices and a Custom CRM Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Salesorderlines Property
-     - CustomCRM Order Property
-     - CustomCRM Data Type
+   * - Exact Online Salesinvoices Property
+     - Custom CRM Order Property
+     - Custom CRM Data Type
+
+
+Exact Online Salesorderlines to Custom CRM Order
+------------------------------------------------
+Every Exact Online Salesorderlines will be synchronized with a Custom CRM Order.
+
+Once a link between a Exact Online Salesorderlines and a Custom CRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Salesorderlines and a Custom CRM Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Salesorderlines Property
+     - Custom CRM Order Property
+     - Custom CRM Data Type
 
 
 Exact Online Accounts to Custom CRM Customer
