@@ -1,13 +1,13 @@
-================================
-Keap to Businesscentral Dataflow
-================================
+=================================
+Keap to Business Central Dataflow
+=================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:53:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Keap to Businesscentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Keap to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Keap Companies to Businesscentral Companies
 -------------------------------------------
@@ -25,20 +25,20 @@ The following properties are synchronized between a Keap Companies and a Busines
      - Businesscentral Data Type
 
 
-Keap Product to Businesscentral Items
--------------------------------------
-Every Keap Product will be synchronized with a Businesscentral Items.
+Keap Product to Business Items
+------------------------------
+Every Keap Product will be synchronized with a Business Items.
 
-Once a link between a Keap Product and a Businesscentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Product and a Business Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Product and a Businesscentral Items:
+The following properties are synchronized between a Keap Product and a Business Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Product Property
-     - Businesscentral Items Property
-     - Businesscentral Data Type
+     - Business Items Property
+     - Business Data Type
    * - product_name
      - displayName
      - "string"
