@@ -2,27 +2,27 @@
 Wave to CRMOffice Dataflow
 ==========================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave to CRMOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Customer person to Crmoffice Contacts
+Wave Customer person to CRMOffice Contacts
 ------------------------------------------
-Every Wave Customer person will be synchronized with a Crmoffice Contacts.
+Every Wave Customer person will be synchronized with a CRMOffice Contacts.
 
-Once a link between a Wave Customer person and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer person and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a Crmoffice Contacts:
+The following properties are synchronized between a Wave Customer person and a CRMOffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     - Crmoffice Contacts Property
-     - Crmoffice Data Type
+     - CRMOffice Contacts Property
+     - CRMOffice Data Type
    * - firstName
      - givenName
      - "string"
@@ -40,20 +40,20 @@ The following properties are synchronized between a Wave Customer person and a C
      - "string"
 
 
-Wave Product to Crmoffice Companies
+Wave Product to CRMOffice Companies
 -----------------------------------
-Every Wave Product will be synchronized with a Crmoffice Companies.
+Every Wave Product will be synchronized with a CRMOffice Companies.
 
-Once a link between a Wave Product and a Crmoffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a Crmoffice Companies:
+The following properties are synchronized between a Wave Product and a CRMOffice Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Product Property
-     - Crmoffice Companies Property
-     - Crmoffice Data Type
+     - CRMOffice Companies Property
+     - CRMOffice Data Type
 
 
 Wave Customer to CRMOffice Contacts
