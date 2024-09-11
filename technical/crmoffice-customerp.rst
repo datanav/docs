@@ -2,43 +2,43 @@
 CRMOffice to Custom ERP Dataflow
 ================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CRMOffice to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-CRMOffice Activities to CustomERP Project
------------------------------------------
-Every CRMOffice Activities will be synchronized with a CustomERP Project.
+CRMOffice Activities to Custom ERP Project
+------------------------------------------
+Every CRMOffice Activities will be synchronized with a Custom ERP Project.
 
-Once a link between a CRMOffice Activities and a CustomERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Activities and a Custom ERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CRMOffice Activities and a CustomERP Project:
+The following properties are synchronized between a CRMOffice Activities and a Custom ERP Project:
 
 .. list-table::
    :header-rows: 1
 
    * - CRMOffice Activities Property
-     - CustomERP Project Property
-     - CustomERP Data Type
+     - Custom ERP Project Property
+     - Custom ERP Data Type
 
 
-CRMOffice Companies to CustomERP Product
-----------------------------------------
-Every CRMOffice Companies will be synchronized with a CustomERP Product.
+CRMOffice Companies to Custom ERP Product
+-----------------------------------------
+Every CRMOffice Companies will be synchronized with a Custom ERP Product.
 
-Once a link between a CRMOffice Companies and a CustomERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Companies and a Custom ERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CRMOffice Companies and a CustomERP Product:
+The following properties are synchronized between a CRMOffice Companies and a Custom ERP Product:
 
 .. list-table::
    :header-rows: 1
 
    * - CRMOffice Companies Property
-     - CustomERP Product Property
-     - CustomERP Data Type
+     - Custom ERP Product Property
+     - Custom ERP Data Type
 
 
 CRMOffice Contacts to Custom ERP Contact
