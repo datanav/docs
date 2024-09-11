@@ -2,121 +2,121 @@
 YouTrack to Custom PMS Dataflow
 ===============================
 
-Generated: 2024-09-11 11:39:33
+Generated: 2024-09-11 12:17:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from YouTrack to Custom PMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-YouTrack Groups to CustomPMS Customer
--------------------------------------
-Every YouTrack Groups will be synchronized with a CustomPMS Customer.
+YouTrack Groups to Custom PMS Customer
+--------------------------------------
+Every YouTrack Groups will be synchronized with a Custom PMS Customer.
 
-Once a link between a YouTrack Groups and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Groups and a Custom PMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Groups and a CustomPMS Customer:
+The following properties are synchronized between a YouTrack Groups and a Custom PMS Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Groups Property
-     - CustomPMS Customer Property
-     - CustomPMS Data Type
+     - Custom PMS Customer Property
+     - Custom PMS Data Type
 
 
-YouTrack Hubprojects to CustomPMS Project
------------------------------------------
-Every YouTrack Hubprojects will be synchronized with a CustomPMS Project.
+YouTrack Hubprojects to Custom PMS Project
+------------------------------------------
+Every YouTrack Hubprojects will be synchronized with a Custom PMS Project.
 
-Once a link between a YouTrack Hubprojects and a CustomPMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Hubprojects and a Custom PMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Hubprojects and a CustomPMS Project:
+The following properties are synchronized between a YouTrack Hubprojects and a Custom PMS Project:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Hubprojects Property
-     - CustomPMS Project Property
-     - CustomPMS Data Type
+     - Custom PMS Project Property
+     - Custom PMS Data Type
 
 
-YouTrack Issues to CustomPMS Project
-------------------------------------
-Every YouTrack Issues will be synchronized with a CustomPMS Project.
+YouTrack Issues to Custom PMS Project
+-------------------------------------
+Every YouTrack Issues will be synchronized with a Custom PMS Project.
 
-Once a link between a YouTrack Issues and a CustomPMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Issues and a Custom PMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Issues and a CustomPMS Project:
+The following properties are synchronized between a YouTrack Issues and a Custom PMS Project:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Issues Property
-     - CustomPMS Project Property
-     - CustomPMS Data Type
+     - Custom PMS Project Property
+     - Custom PMS Data Type
 
 
-YouTrack Organizations to CustomPMS Customer
---------------------------------------------
-Every YouTrack Organizations will be synchronized with a CustomPMS Customer.
+YouTrack Organizations to Custom PMS Customer
+---------------------------------------------
+Every YouTrack Organizations will be synchronized with a Custom PMS Customer.
 
-Once a link between a YouTrack Organizations and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Organizations and a Custom PMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Organizations and a CustomPMS Customer:
+The following properties are synchronized between a YouTrack Organizations and a Custom PMS Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Organizations Property
-     - CustomPMS Customer Property
-     - CustomPMS Data Type
+     - Custom PMS Customer Property
+     - Custom PMS Data Type
 
 
-YouTrack Projectroles to CustomPMS Project
-------------------------------------------
-Every YouTrack Projectroles will be synchronized with a CustomPMS Project.
+YouTrack Projectroles to Custom PMS Project
+-------------------------------------------
+Every YouTrack Projectroles will be synchronized with a Custom PMS Project.
 
-Once a link between a YouTrack Projectroles and a CustomPMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Projectroles and a Custom PMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Projectroles and a CustomPMS Project:
+The following properties are synchronized between a YouTrack Projectroles and a Custom PMS Project:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Projectroles Property
-     - CustomPMS Project Property
-     - CustomPMS Data Type
+     - Custom PMS Project Property
+     - Custom PMS Data Type
 
 
-YouTrack Usergroups to CustomPMS Customer
------------------------------------------
-Every YouTrack Usergroups will be synchronized with a CustomPMS Customer.
+YouTrack Usergroups to Custom PMS Customer
+------------------------------------------
+Every YouTrack Usergroups will be synchronized with a Custom PMS Customer.
 
-Once a link between a YouTrack Usergroups and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Usergroups and a Custom PMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Usergroups and a CustomPMS Customer:
+The following properties are synchronized between a YouTrack Usergroups and a Custom PMS Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Usergroups Property
-     - CustomPMS Customer Property
-     - CustomPMS Data Type
+     - Custom PMS Customer Property
+     - Custom PMS Data Type
 
 
-YouTrack Workitems to CustomPMS Project
----------------------------------------
-Every YouTrack Workitems will be synchronized with a CustomPMS Project.
+YouTrack Workitems to Custom PMS Project
+----------------------------------------
+Every YouTrack Workitems will be synchronized with a Custom PMS Project.
 
-Once a link between a YouTrack Workitems and a CustomPMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Workitems and a Custom PMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Workitems and a CustomPMS Project:
+The following properties are synchronized between a YouTrack Workitems and a Custom PMS Project:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Workitems Property
-     - CustomPMS Project Property
-     - CustomPMS Data Type
+     - Custom PMS Project Property
+     - Custom PMS Data Type
 
