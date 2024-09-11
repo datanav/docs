@@ -1,26 +1,26 @@
 ======================
-Webcrm to Wix Dataflow
+WebCRM to Wix Dataflow
 ======================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Webcrm to Wix. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WebCRM to Wix. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Webcrm Persons to Wix Contacts
+WebCRM Persons to Wix Contacts
 ------------------------------
-Every Webcrm Persons will be synchronized with a Wix Contacts.
+Every WebCRM Persons will be synchronized with a Wix Contacts.
 
-Once a link between a Webcrm Persons and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Persons and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Persons and a Wix Contacts:
+The following properties are synchronized between a WebCRM Persons and a Wix Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Persons Property
+   * - WebCRM Persons Property
      - Wix Contacts Property
      - Wix Data Type
    * - PersonDirectPhone
@@ -34,18 +34,18 @@ The following properties are synchronized between a Webcrm Persons and a Wix Con
      - "string"
 
 
-Webcrm Products to Wix Products
+WebCRM Products to Wix Products
 -------------------------------
-Every Webcrm Products will be synchronized with a Wix Products.
+Every WebCRM Products will be synchronized with a Wix Products.
 
-Once a link between a Webcrm Products and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Products and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Webcrm Products and a Wix Products:
+The following properties are synchronized between a WebCRM Products and a Wix Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - Webcrm Products Property
+   * - WebCRM Products Property
      - Wix Products Property
      - Wix Data Type
    * - ProductCostPrice
