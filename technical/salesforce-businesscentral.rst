@@ -2,7 +2,7 @@
 Salesforce to BusinessCentral Dataflow
 ======================================
 
-Generated: 2024-09-11 11:13:29
+Generated: 2024-09-11 11:28:31
 
 Introduction
 ------------
@@ -116,20 +116,20 @@ The following properties are synchronized between a Salesforce Invoiceline and a
      - "float"
 
 
-Salesforce Order to BusinessCentralBusinesscentral Salesorders
---------------------------------------------------------------
-Every Salesforce Order will be synchronized with a BusinessCentralBusinesscentral Salesorders.
+Salesforce Order to BusinessCentral Salesorders
+-----------------------------------------------
+Every Salesforce Order will be synchronized with a BusinessCentral Salesorders.
 
-Once a link between a Salesforce Order and a BusinessCentralBusinesscentral Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Order and a BusinessCentral Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Order and a BusinessCentralBusinesscentral Salesorders:
+The following properties are synchronized between a Salesforce Order and a BusinessCentral Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Order Property
-     - BusinessCentralBusinesscentral Salesorders Property
-     - BusinessCentralBusinesscentral Data Type
+     - BusinessCentral Salesorders Property
+     - BusinessCentral Data Type
    * - BillingCity
      - billToCity
      - "string"
@@ -217,20 +217,20 @@ The following properties are synchronized between a Salesforce Orderitem and a B
      - "float"
 
 
-Salesforce Product2 to BusinessCentralBusinesscentral Items
------------------------------------------------------------
-Every Salesforce Product2 will be synchronized with a BusinessCentralBusinesscentral Items.
+Salesforce Product2 to BusinessCentral Items
+--------------------------------------------
+Every Salesforce Product2 will be synchronized with a BusinessCentral Items.
 
-Once a link between a Salesforce Product2 and a BusinessCentralBusinesscentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Product2 and a BusinessCentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Product2 and a BusinessCentralBusinesscentral Items:
+The following properties are synchronized between a Salesforce Product2 and a BusinessCentral Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Product2 Property
-     - BusinessCentralBusinesscentral Items Property
-     - BusinessCentralBusinesscentral Data Type
+     - BusinessCentral Items Property
+     - BusinessCentral Data Type
    * - Name
      - displayName
      - "string"
