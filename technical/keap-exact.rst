@@ -1,13 +1,13 @@
-=============================
-Keap to Exact Online Dataflow
-=============================
+============================
+Keap to ExactOnline Dataflow
+============================
 
-Generated: 2024-09-11 07:46:45
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Keap to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Keap to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Keap Companies to Exact Accounts
 --------------------------------
@@ -84,36 +84,36 @@ The following properties are synchronized between a Keap Opportunity and a Exact
      - Exact Data Type
 
 
-Keap Product to Exact Items
----------------------------
-Every Keap Product will be synchronized with a Exact Items.
+Keap Product to ExactOnline Items
+---------------------------------
+Every Keap Product will be synchronized with a ExactOnline Items.
 
-Once a link between a Keap Product and a Exact Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Product and a ExactOnline Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Product and a Exact Items:
+The following properties are synchronized between a Keap Product and a ExactOnline Items:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Product Property
-     - Exact Items Property
-     - Exact Data Type
+     - ExactOnline Items Property
+     - ExactOnline Data Type
 
 
-Keap Users to Exact Addresses
------------------------------
-Every Keap Users will be synchronized with a Exact Addresses.
+Keap Users to ExactOnline Addresses
+-----------------------------------
+Every Keap Users will be synchronized with a ExactOnline Addresses.
 
-Once a link between a Keap Users and a Exact Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Users and a ExactOnline Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Users and a Exact Addresses:
+The following properties are synchronized between a Keap Users and a ExactOnline Addresses:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Users Property
-     - Exact Addresses Property
-     - Exact Data Type
+     - ExactOnline Addresses Property
+     - ExactOnline Data Type
    * - address.locality
      - City
      - "string"
