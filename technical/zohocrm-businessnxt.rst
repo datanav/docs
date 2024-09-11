@@ -1,13 +1,13 @@
-===============================
-ZohoCRM to BusinessNxt Dataflow
-===============================
+================================
+ZohoCRM to Business Nxt Dataflow
+================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from ZohoCRM to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from ZohoCRM to Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 ZohoCRM Account to BusinessNxt Address
 --------------------------------------
@@ -56,20 +56,20 @@ The following properties are synchronized between a ZohoCRM Deal and a BusinessN
      - "string"
 
 
-ZohoCRM Account to BusinessNxt Country
---------------------------------------
-Every ZohoCRM Account will be synchronized with a BusinessNxt Country.
+ZohoCRM Account to Business Nxt Country
+---------------------------------------
+Every ZohoCRM Account will be synchronized with a Business Nxt Country.
 
-Once a link between a ZohoCRM Account and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Account and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Account and a BusinessNxt Country:
+The following properties are synchronized between a ZohoCRM Account and a Business Nxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Account Property
-     - BusinessNxt Country Property
-     - BusinessNxt Data Type
+     - Business Nxt Country Property
+     - Business Nxt Data Type
    * - Billing_Country
      - name
      - "string"
@@ -81,20 +81,20 @@ The following properties are synchronized between a ZohoCRM Account and a Busine
      - "string"
 
 
-ZohoCRM Contact to BusinessNxt Country
---------------------------------------
-Every ZohoCRM Contact will be synchronized with a BusinessNxt Country.
+ZohoCRM Contact to Business Nxt Country
+---------------------------------------
+Every ZohoCRM Contact will be synchronized with a Business Nxt Country.
 
-Once a link between a ZohoCRM Contact and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Contact and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Contact and a BusinessNxt Country:
+The following properties are synchronized between a ZohoCRM Contact and a Business Nxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Contact Property
-     - BusinessNxt Country Property
-     - BusinessNxt Data Type
+     - Business Nxt Country Property
+     - Business Nxt Data Type
    * - Mailing_Country
      - name
      - "string"
