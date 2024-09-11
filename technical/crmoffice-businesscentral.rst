@@ -1,28 +1,28 @@
-=====================================
-CRMOffice to Businesscentral Dataflow
-=====================================
+======================================
+CRMOffice to Business Central Dataflow
+======================================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:53:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from CRMOffice to Businesscentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from CRMOffice to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Crmoffice Contacts to Businesscentral Contacts person
------------------------------------------------------
-Every Crmoffice Contacts will be synchronized with a Businesscentral Contacts person.
+CRMOffice Contacts to Business Contacts person
+----------------------------------------------
+Every CRMOffice Contacts will be synchronized with a Business Contacts person.
 
-Once a link between a Crmoffice Contacts and a Businesscentral Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CRMOffice Contacts and a Business Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Crmoffice Contacts and a Businesscentral Contacts person:
+The following properties are synchronized between a CRMOffice Contacts and a Business Contacts person:
 
 .. list-table::
    :header-rows: 1
 
-   * - Crmoffice Contacts Property
-     - Businesscentral Contacts person Property
-     - Businesscentral Data Type
+   * - CRMOffice Contacts Property
+     - Business Contacts person Property
+     - Business Data Type
    * - directPhone
      - phoneNumber
      - "string"
