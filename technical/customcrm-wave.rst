@@ -2,57 +2,57 @@
 CustomCRM to Wave Dataflow
 ==========================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:37:15
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CustomCRM to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Custom Customer to Wave Customer
---------------------------------
-Every Custom Customer will be synchronized with a Wave Customer.
+CustomCRM Customer to Wave Customer
+-----------------------------------
+Every CustomCRM Customer will be synchronized with a Wave Customer.
 
-Once a link between a Custom Customer and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Customer and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Customer and a Wave Customer:
+The following properties are synchronized between a CustomCRM Customer and a Wave Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Customer Property
+   * - CustomCRM Customer Property
      - Wave Customer Property
      - Wave Data Type
 
 
-Custom Order to Wave Invoice
-----------------------------
-Every Custom Order will be synchronized with a Wave Invoice.
+CustomCRM Order to Wave Invoice
+-------------------------------
+Every CustomCRM Order will be synchronized with a Wave Invoice.
 
-Once a link between a Custom Order and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Order and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Order and a Wave Invoice:
+The following properties are synchronized between a CustomCRM Order and a Wave Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Order Property
+   * - CustomCRM Order Property
      - Wave Invoice Property
      - Wave Data Type
 
 
-Custom Product to Wave Product
-------------------------------
-Every Custom Product will be synchronized with a Wave Product.
+CustomCRM Product to Wave Product
+---------------------------------
+Every CustomCRM Product will be synchronized with a Wave Product.
 
-Once a link between a Custom Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Product and a Wave Product:
+The following properties are synchronized between a CustomCRM Product and a Wave Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Product Property
+   * - CustomCRM Product Property
      - Wave Product Property
      - Wave Data Type
 
