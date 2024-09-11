@@ -38,7 +38,7 @@ Other :ref:`Customer Relationship Management (CRM) <systemtypecrm>` Systems
         :text: Read more
         :classes: read-more
     ---
-    **CustomCRM**
+    **Custom CRM**
 
     
     .. link-button:: system/customcrm
