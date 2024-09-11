@@ -1,13 +1,13 @@
-===================================
-Exact Online to Custom HRM Dataflow
-===================================
+==================================
+Exact Online to CustomHRM Dataflow
+==================================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to Custom HRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to CustomHRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Exact Accounts to Custom Department
 -----------------------------------
@@ -57,34 +57,34 @@ The following properties are synchronized between a Exact Divisions and a Custom
      - Custom Data Type
 
 
-Exact Departments to Custom Department
---------------------------------------
-Every Exact Departments will be synchronized with a Custom Department.
+Exact Departments to CustomHRM Department
+-----------------------------------------
+Every Exact Departments will be synchronized with a CustomHRM Department.
 
-Once a link between a Exact Departments and a Custom Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Departments and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Departments and a Custom Department:
+The following properties are synchronized between a Exact Departments and a CustomHRM Department:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Departments Property
-     - Custom Department Property
-     - Custom Data Type
+     - CustomHRM Department Property
+     - CustomHRM Data Type
 
 
-Exact Employees to Custom Employee
-----------------------------------
-Every Exact Employees will be synchronized with a Custom Employee.
+Exact Employees to CustomHRM Employee
+-------------------------------------
+Every Exact Employees will be synchronized with a CustomHRM Employee.
 
-Once a link between a Exact Employees and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Employees and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Employees and a Custom Employee:
+The following properties are synchronized between a Exact Employees and a CustomHRM Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Employees Property
-     - Custom Employee Property
-     - Custom Data Type
+     - CustomHRM Employee Property
+     - CustomHRM Data Type
 
