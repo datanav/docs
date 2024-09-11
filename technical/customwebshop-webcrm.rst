@@ -2,7 +2,7 @@
 CustomWebshop to WebCRM Dataflow
 ================================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 07:55:13
 
 Introduction
 ------------
@@ -25,18 +25,18 @@ The following properties are synchronized between a Custom Customer and a Webcrm
      - Webcrm Data Type
 
 
-Custom Product to WebCRM Products
----------------------------------
-Every Custom Product will be synchronized with a WebCRM Products.
+CustomWebshop Product to WebCRM Products
+----------------------------------------
+Every CustomWebshop Product will be synchronized with a WebCRM Products.
 
-Once a link between a Custom Product and a WebCRM Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomWebshop Product and a WebCRM Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Product and a WebCRM Products:
+The following properties are synchronized between a CustomWebshop Product and a WebCRM Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Product Property
+   * - CustomWebshop Product Property
      - WebCRM Products Property
      - WebCRM Data Type
 
