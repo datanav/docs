@@ -2,27 +2,27 @@
 PowerOfficeGO to WebCRM Dataflow
 ================================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from PowerOfficeGO to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Powerofficego Customers to Webcrm Organisations
------------------------------------------------
-Every Powerofficego Customers will be synchronized with a Webcrm Organisations.
+PowerOffice Customers to WebCRM Organisations
+---------------------------------------------
+Every PowerOffice Customers will be synchronized with a WebCRM Organisations.
 
-Once a link between a Powerofficego Customers and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Customers and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers and a Webcrm Organisations:
+The following properties are synchronized between a PowerOffice Customers and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Customers Property
-     - Webcrm Organisations Property
-     - Webcrm Data Type
+   * - PowerOffice Customers Property
+     - WebCRM Organisations Property
+     - WebCRM Data Type
    * - Name
      - OrganisationName
      - "string"
@@ -31,20 +31,20 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Departments to Webcrm Organisations
--------------------------------------------------
-Every Powerofficego Departments will be synchronized with a Webcrm Organisations.
+PowerOffice Departments to WebCRM Organisations
+-----------------------------------------------
+Every PowerOffice Departments will be synchronized with a WebCRM Organisations.
 
-Once a link between a Powerofficego Departments and a Webcrm Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Departments and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Departments and a Webcrm Organisations:
+The following properties are synchronized between a PowerOffice Departments and a WebCRM Organisations:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Departments Property
-     - Webcrm Organisations Property
-     - Webcrm Data Type
+   * - PowerOffice Departments Property
+     - WebCRM Organisations Property
+     - WebCRM Data Type
    * - Name
      - OrganisationName
      - "string"
