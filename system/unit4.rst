@@ -46,7 +46,7 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
 
-    **Business Central**
+    **BusinessCentral**
 
     Microsoft Dynamics 365 Business Central (formerly Microsoft Dynamics NAV) – ERP and CRM software-as-a-service product meant for small and mid-sized businesses.
     .. link-button:: system/businesscentral
@@ -54,7 +54,7 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
         :text: Read more
         :classes: read-more
     ---
-    **Visma Business Nxt**
+    **BusinessNxt**
 
     
     .. link-button:: system/businessnxt
@@ -78,7 +78,7 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
         :text: Read more
         :classes: read-more
     ---
-    **Exact Online**
+    **ExactOnline**
 
     
     .. link-button:: system/exact
@@ -126,7 +126,7 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
         :text: Read more
         :classes: read-more
     ---
-    **PowerOffice GO**
+    **PowerOfficeGO**
 
     PowerOffice is an all-in-one business solution. It is a cloud-based software that allows small and medium businesses to manage their accounting, invoicing, payroll, and human resources. 
     .. link-button:: system/powerofficego
