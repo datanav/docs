@@ -2,7 +2,7 @@
 Custom CRM to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -73,34 +73,34 @@ The following properties are synchronized between a CustomCRM User and a Chargeb
      - Chargebee Data Type
 
 
-CustomCRM Order to Chargebee Order
-----------------------------------
-Every CustomCRM Order will be synchronized with a Chargebee Order.
+Custom CRM Order to Chargebee Order
+-----------------------------------
+Every Custom CRM Order will be synchronized with a Chargebee Order.
 
-Once a link between a CustomCRM Order and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom CRM Order and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomCRM Order and a Chargebee Order:
+The following properties are synchronized between a Custom CRM Order and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomCRM Order Property
+   * - Custom CRM Order Property
      - Chargebee Order Property
      - Chargebee Data Type
 
 
-CustomCRM Product to Chargebee Item
------------------------------------
-Every CustomCRM Product will be synchronized with a Chargebee Item.
+Custom CRM Product to Chargebee Item
+------------------------------------
+Every Custom CRM Product will be synchronized with a Chargebee Item.
 
-Once a link between a CustomCRM Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom CRM Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomCRM Product and a Chargebee Item:
+The following properties are synchronized between a Custom CRM Product and a Chargebee Item:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomCRM Product Property
+   * - Custom CRM Product Property
      - Chargebee Item Property
      - Chargebee Data Type
 
