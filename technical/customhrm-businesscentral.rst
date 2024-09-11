@@ -2,7 +2,7 @@
 CustomHRM to Business Central Dataflow
 ======================================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 07:55:13
 
 Introduction
 ------------
@@ -25,18 +25,18 @@ The following properties are synchronized between a Custom Department and a Busi
      - Businesscentral Data Type
 
 
-Custom Employee to Business Employees
--------------------------------------
-Every Custom Employee will be synchronized with a Business Employees.
+CustomHRM Employee to Business Employees
+----------------------------------------
+Every CustomHRM Employee will be synchronized with a Business Employees.
 
-Once a link between a Custom Employee and a Business Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomHRM Employee and a Business Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Employee and a Business Employees:
+The following properties are synchronized between a CustomHRM Employee and a Business Employees:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Employee Property
+   * - CustomHRM Employee Property
      - Business Employees Property
      - Business Data Type
 
