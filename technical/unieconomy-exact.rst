@@ -1,13 +1,13 @@
-==================================
-Unieconomy to ExactOnline Dataflow
-==================================
+===================================
+Unieconomy to Exact Online Dataflow
+===================================
 
-Generated: 2024-09-11 09:30:21
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Unieconomy to ExactOnline. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Unieconomy to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Unieconomy Companies to ExactOnline Accounts
 --------------------------------------------
@@ -47,20 +47,20 @@ The following properties are synchronized between a Unieconomy Departments and a
      - "string"
 
 
-Unieconomy Currencycodes to ExactOnline Currencies
---------------------------------------------------
-Every Unieconomy Currencycodes will be synchronized with a ExactOnline Currencies.
+Unieconomy Currencycodes to Exact Online Currencies
+---------------------------------------------------
+Every Unieconomy Currencycodes will be synchronized with a Exact Online Currencies.
 
-Once a link between a Unieconomy Currencycodes and a ExactOnline Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Currencycodes and a Exact Online Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Currencycodes and a ExactOnline Currencies:
+The following properties are synchronized between a Unieconomy Currencycodes and a Exact Online Currencies:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Currencycodes Property
-     - ExactOnline Currencies Property
-     - ExactOnline Data Type
+     - Exact Online Currencies Property
+     - Exact Online Data Type
    * - Code
      - Code
      - "string"
@@ -69,20 +69,20 @@ The following properties are synchronized between a Unieconomy Currencycodes and
      - "string"
 
 
-Unieconomy Customers to ExactOnline Accounts
---------------------------------------------
-Every Unieconomy Customers will be synchronized with a ExactOnline Accounts.
+Unieconomy Customers to Exact Online Accounts
+---------------------------------------------
+Every Unieconomy Customers will be synchronized with a Exact Online Accounts.
 
-Once a link between a Unieconomy Customers and a ExactOnline Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Customers and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Customers and a ExactOnline Accounts:
+The following properties are synchronized between a Unieconomy Customers and a Exact Online Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Customers Property
-     - ExactOnline Accounts Property
-     - ExactOnline Data Type
+     - Exact Online Accounts Property
+     - Exact Online Data Type
    * - CurrencyCodeID
      - Currency
      - "string"
@@ -91,20 +91,20 @@ The following properties are synchronized between a Unieconomy Customers and a E
      - "string"
 
 
-Unieconomy Departments to ExactOnline Departments
--------------------------------------------------
-Every Unieconomy Departments will be synchronized with a ExactOnline Departments.
+Unieconomy Departments to Exact Online Departments
+--------------------------------------------------
+Every Unieconomy Departments will be synchronized with a Exact Online Departments.
 
-Once a link between a Unieconomy Departments and a ExactOnline Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Departments and a Exact Online Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Departments and a ExactOnline Departments:
+The following properties are synchronized between a Unieconomy Departments and a Exact Online Departments:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Departments Property
-     - ExactOnline Departments Property
-     - ExactOnline Data Type
+     - Exact Online Departments Property
+     - Exact Online Data Type
    * - DepartmentNumber
      - Description
      - "string"
