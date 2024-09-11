@@ -1,13 +1,13 @@
 ======================================
-Custom HRM to Businesscentral Dataflow
+CustomHRM to Business Central Dataflow
 ======================================
 
-Generated: 2024-09-11 07:43:20
+Generated: 2024-09-11 07:53:23
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Custom HRM to Businesscentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from CustomHRM to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Custom Department to Businesscentral Companies
 ----------------------------------------------
@@ -25,18 +25,18 @@ The following properties are synchronized between a Custom Department and a Busi
      - Businesscentral Data Type
 
 
-Custom Employee to Businesscentral Employees
---------------------------------------------
-Every Custom Employee will be synchronized with a Businesscentral Employees.
+Custom Employee to Business Employees
+-------------------------------------
+Every Custom Employee will be synchronized with a Business Employees.
 
-Once a link between a Custom Employee and a Businesscentral Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Employee and a Business Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Employee and a Businesscentral Employees:
+The following properties are synchronized between a Custom Employee and a Business Employees:
 
 .. list-table::
    :header-rows: 1
 
    * - Custom Employee Property
-     - Businesscentral Employees Property
-     - Businesscentral Data Type
+     - Business Employees Property
+     - Business Data Type
 
