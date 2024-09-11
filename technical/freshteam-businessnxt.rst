@@ -2,27 +2,27 @@
 Freshteam to BusinessNxt Dataflow
 =================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Freshteam to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Freshteam Department to Visma Address
--------------------------------------
-Every Freshteam Department will be synchronized with a Visma Address.
+Freshteam Department to BusinessNxt Address
+-------------------------------------------
+Every Freshteam Department will be synchronized with a BusinessNxt Address.
 
-Once a link between a Freshteam Department and a Visma Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Department and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Department and a Visma Address:
+The following properties are synchronized between a Freshteam Department and a BusinessNxt Address:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Department Property
-     - Visma Address Property
-     - Visma Data Type
+     - BusinessNxt Address Property
+     - BusinessNxt Data Type
    * - name
      - name
      - "string"
