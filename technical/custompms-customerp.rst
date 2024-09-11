@@ -2,27 +2,27 @@
 Custom PMS to Custom ERP Dataflow
 =================================
 
-Generated: 2024-09-11 11:41:16
+Generated: 2024-09-11 12:17:19
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Custom PMS to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-CustomPMS Task to CustomERP Project
------------------------------------
-Every CustomPMS Task will be synchronized with a CustomERP Project.
+Custom PMS Task to Custom ERP Project
+-------------------------------------
+Every Custom PMS Task will be synchronized with a Custom ERP Project.
 
-Once a link between a CustomPMS Task and a CustomERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom PMS Task and a Custom ERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomPMS Task and a CustomERP Project:
+The following properties are synchronized between a Custom PMS Task and a Custom ERP Project:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomPMS Task Property
-     - CustomERP Project Property
-     - CustomERP Data Type
+   * - Custom PMS Task Property
+     - Custom ERP Project Property
+     - Custom ERP Data Type
 
 
 Custom PMS Customer to Custom ERP Customer
