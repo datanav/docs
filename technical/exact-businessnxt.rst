@@ -2,27 +2,27 @@
 ExactOnline to BusinessNxt Dataflow
 ===================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from ExactOnline to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Exact Accounts to Visma Address
--------------------------------
-Every Exact Accounts will be synchronized with a Visma Address.
+ExactOnline Accounts to BusinessNxt Address
+-------------------------------------------
+Every ExactOnline Accounts will be synchronized with a BusinessNxt Address.
 
-Once a link between a Exact Accounts and a Visma Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Accounts and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Accounts and a Visma Address:
+The following properties are synchronized between a ExactOnline Accounts and a BusinessNxt Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Accounts Property
-     - Visma Address Property
-     - Visma Data Type
+   * - ExactOnline Accounts Property
+     - BusinessNxt Address Property
+     - BusinessNxt Data Type
    * - City
      - postalArea
      - "string"
@@ -43,138 +43,138 @@ The following properties are synchronized between a Exact Accounts and a Visma A
      - "string"
 
 
-Exact Currencies to Visma Country
----------------------------------
-Every Exact Currencies will be synchronized with a Visma Country.
+ExactOnline Currencies to BusinessNxt Country
+---------------------------------------------
+Every ExactOnline Currencies will be synchronized with a BusinessNxt Country.
 
-Once a link between a Exact Currencies and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Currencies and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Currencies and a Visma Country:
+The following properties are synchronized between a ExactOnline Currencies and a BusinessNxt Country:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Currencies Property
-     - Visma Country Property
-     - Visma Data Type
+   * - ExactOnline Currencies Property
+     - BusinessNxt Country Property
+     - BusinessNxt Data Type
    * - Description
      - name
      - "string"
 
 
-Exact Departments to Visma Address
-----------------------------------
-Every Exact Departments will be synchronized with a Visma Address.
+ExactOnline Departments to BusinessNxt Address
+----------------------------------------------
+Every ExactOnline Departments will be synchronized with a BusinessNxt Address.
 
-Once a link between a Exact Departments and a Visma Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Departments and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Departments and a Visma Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Departments Property
-     - Visma Address Property
-     - Visma Data Type
-
-
-Exact Divisions to Visma Address
---------------------------------
-Every Exact Divisions will be synchronized with a Visma Address.
-
-Once a link between a Exact Divisions and a Visma Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Divisions and a Visma Address:
+The following properties are synchronized between a ExactOnline Departments and a BusinessNxt Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Divisions Property
-     - Visma Address Property
-     - Visma Data Type
+   * - ExactOnline Departments Property
+     - BusinessNxt Address Property
+     - BusinessNxt Data Type
 
 
-Exact Quotations to Visma Order
--------------------------------
-Every Exact Quotations will be synchronized with a Visma Order.
+ExactOnline Divisions to BusinessNxt Address
+--------------------------------------------
+Every ExactOnline Divisions will be synchronized with a BusinessNxt Address.
 
-Once a link between a Exact Quotations and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Divisions and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Quotations and a Visma Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Quotations Property
-     - Visma Order Property
-     - Visma Data Type
-
-
-Exact Salesinvoices to Visma Order
-----------------------------------
-Every Exact Salesinvoices will be synchronized with a Visma Order.
-
-Once a link between a Exact Salesinvoices and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Salesinvoices and a Visma Order:
+The following properties are synchronized between a ExactOnline Divisions and a BusinessNxt Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Salesinvoices Property
-     - Visma Order Property
-     - Visma Data Type
+   * - ExactOnline Divisions Property
+     - BusinessNxt Address Property
+     - BusinessNxt Data Type
 
 
-Exact Salesorderlines to Visma Order
-------------------------------------
-Every Exact Salesorderlines will be synchronized with a Visma Order.
+ExactOnline Quotations to BusinessNxt Order
+-------------------------------------------
+Every ExactOnline Quotations will be synchronized with a BusinessNxt Order.
 
-Once a link between a Exact Salesorderlines and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Quotations and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Salesorderlines and a Visma Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Salesorderlines Property
-     - Visma Order Property
-     - Visma Data Type
-
-
-Exact Units to Visma Country
-----------------------------
-Every Exact Units will be synchronized with a Visma Country.
-
-Once a link between a Exact Units and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Units and a Visma Country:
+The following properties are synchronized between a ExactOnline Quotations and a BusinessNxt Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Units Property
-     - Visma Country Property
-     - Visma Data Type
+   * - ExactOnline Quotations Property
+     - BusinessNxt Order Property
+     - BusinessNxt Data Type
+
+
+ExactOnline Salesinvoices to BusinessNxt Order
+----------------------------------------------
+Every ExactOnline Salesinvoices will be synchronized with a BusinessNxt Order.
+
+Once a link between a ExactOnline Salesinvoices and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ExactOnline Salesinvoices and a BusinessNxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ExactOnline Salesinvoices Property
+     - BusinessNxt Order Property
+     - BusinessNxt Data Type
+
+
+ExactOnline Salesorderlines to BusinessNxt Order
+------------------------------------------------
+Every ExactOnline Salesorderlines will be synchronized with a BusinessNxt Order.
+
+Once a link between a ExactOnline Salesorderlines and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ExactOnline Salesorderlines and a BusinessNxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ExactOnline Salesorderlines Property
+     - BusinessNxt Order Property
+     - BusinessNxt Data Type
+
+
+ExactOnline Units to BusinessNxt Country
+----------------------------------------
+Every ExactOnline Units will be synchronized with a BusinessNxt Country.
+
+Once a link between a ExactOnline Units and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ExactOnline Units and a BusinessNxt Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ExactOnline Units Property
+     - BusinessNxt Country Property
+     - BusinessNxt Data Type
    * - Description
      - name
      - "string"
 
 
-Exact Vatcodes to Visma Country
--------------------------------
-Every Exact Vatcodes will be synchronized with a Visma Country.
+ExactOnline Vatcodes to BusinessNxt Country
+-------------------------------------------
+Every ExactOnline Vatcodes will be synchronized with a BusinessNxt Country.
 
-Once a link between a Exact Vatcodes and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Vatcodes and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Vatcodes and a Visma Country:
+The following properties are synchronized between a ExactOnline Vatcodes and a BusinessNxt Country:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Vatcodes Property
-     - Visma Country Property
-     - Visma Data Type
+   * - ExactOnline Vatcodes Property
+     - BusinessNxt Country Property
+     - BusinessNxt Data Type
 
 
 ExactOnline Addresses to BusinessNxt Country
