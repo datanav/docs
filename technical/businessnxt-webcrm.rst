@@ -1,13 +1,13 @@
 =====================================
-Visma Business Nxt to Webcrm Dataflow
+Visma Business Nxt to WebCRM Dataflow
 =====================================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Visma Business Nxt to Webcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Visma Business Nxt to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Businessnxt Address to Webcrm Organisations
 -------------------------------------------
@@ -50,36 +50,36 @@ The following properties are synchronized between a Businessnxt Company and a We
      - "string"
 
 
-Businessnxt Orderline to Webcrm Quotationline
----------------------------------------------
-Every Businessnxt Orderline will be synchronized with a Webcrm Quotationline.
+Visma Orderline to WebCRM Quotationline
+---------------------------------------
+Every Visma Orderline will be synchronized with a WebCRM Quotationline.
 
-Once a link between a Businessnxt Orderline and a Webcrm Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Orderline and a WebCRM Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Orderline and a Webcrm Quotationline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businessnxt Orderline Property
-     - Webcrm Quotationline Property
-     - Webcrm Data Type
-
-
-Businessnxt Product to Webcrm Products
---------------------------------------
-Every Businessnxt Product will be synchronized with a Webcrm Products.
-
-Once a link between a Businessnxt Product and a Webcrm Products is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businessnxt Product and a Webcrm Products:
+The following properties are synchronized between a Visma Orderline and a WebCRM Quotationline:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Product Property
-     - Webcrm Products Property
-     - Webcrm Data Type
+   * - Visma Orderline Property
+     - WebCRM Quotationline Property
+     - WebCRM Data Type
+
+
+Visma Product to WebCRM Products
+--------------------------------
+Every Visma Product will be synchronized with a WebCRM Products.
+
+Once a link between a Visma Product and a WebCRM Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Visma Product and a WebCRM Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Visma Product Property
+     - WebCRM Products Property
+     - WebCRM Data Type
    * - priceQuantity
      - ProductPrice
      - "string"
