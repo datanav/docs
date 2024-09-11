@@ -1,13 +1,13 @@
-===================================
-Wave to Visma Business Nxt Dataflow
-===================================
+============================
+Wave to BusinessNxt Dataflow
+============================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Wave to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Wave to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Wave Customer to Businessnxt Address
 ------------------------------------
@@ -37,20 +37,20 @@ The following properties are synchronized between a Wave Customer and a Business
      - "string"
 
 
-Wave Country to Visma Country
------------------------------
-Every Wave Country will be synchronized with a Visma Country.
+Wave Country to BusinessNxt Country
+-----------------------------------
+Every Wave Country will be synchronized with a BusinessNxt Country.
 
-Once a link between a Wave Country and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Country and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Country and a Visma Country:
+The following properties are synchronized between a Wave Country and a BusinessNxt Country:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Country Property
-     - Visma Country Property
-     - Visma Data Type
+     - BusinessNxt Country Property
+     - BusinessNxt Data Type
    * - currency.code
      - currencyNo
      - "string"
@@ -59,39 +59,39 @@ The following properties are synchronized between a Wave Country and a Visma Cou
      - "string"
 
 
-Wave Currency to Visma Currency
--------------------------------
-Every Wave Currency will be synchronized with a Visma Currency.
+Wave Currency to BusinessNxt Currency
+-------------------------------------
+Every Wave Currency will be synchronized with a BusinessNxt Currency.
 
-Once a link between a Wave Currency and a Visma Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Currency and a BusinessNxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Currency and a Visma Currency:
+The following properties are synchronized between a Wave Currency and a BusinessNxt Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Currency Property
-     - Visma Currency Property
-     - Visma Data Type
+     - BusinessNxt Currency Property
+     - BusinessNxt Data Type
    * - name
      - name
      - "string"
 
 
-Wave Invoice to Visma Order
----------------------------
-Every Wave Invoice will be synchronized with a Visma Order.
+Wave Invoice to BusinessNxt Order
+---------------------------------
+Every Wave Invoice will be synchronized with a BusinessNxt Order.
 
-Once a link between a Wave Invoice and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a Visma Order:
+The following properties are synchronized between a Wave Invoice and a BusinessNxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     - Visma Order Property
-     - Visma Data Type
+     - BusinessNxt Order Property
+     - BusinessNxt Data Type
    * - invoiceDate
      - invoiceDate
      - "string"
@@ -100,39 +100,39 @@ The following properties are synchronized between a Wave Invoice and a Visma Ord
      - "string"
 
 
-Wave Invoice to Visma Orderline
--------------------------------
-Every Wave Invoice will be synchronized with a Visma Orderline.
+Wave Invoice to BusinessNxt Orderline
+-------------------------------------
+Every Wave Invoice will be synchronized with a BusinessNxt Orderline.
 
-Once a link between a Wave Invoice and a Visma Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a BusinessNxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a Visma Orderline:
+The following properties are synchronized between a Wave Invoice and a BusinessNxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     - Visma Orderline Property
-     - Visma Data Type
+     - BusinessNxt Orderline Property
+     - BusinessNxt Data Type
    * - id
      - orderNo
      - "string"
 
 
-Wave Product to Visma Product
------------------------------
-Every Wave Product will be synchronized with a Visma Product.
+Wave Product to BusinessNxt Product
+-----------------------------------
+Every Wave Product will be synchronized with a BusinessNxt Product.
 
-Once a link between a Wave Product and a Visma Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a BusinessNxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a Visma Product:
+The following properties are synchronized between a Wave Product and a BusinessNxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Product Property
-     - Visma Product Property
-     - Visma Data Type
+     - BusinessNxt Product Property
+     - BusinessNxt Data Type
    * - description
      - description
      - "string"
