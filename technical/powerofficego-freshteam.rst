@@ -1,26 +1,26 @@
-===================================
-Powerofficego to Freshteam Dataflow
-===================================
+====================================
+PowerOffice GO to Freshteam Dataflow
+====================================
 
-Generated: 2024-09-11 00:00:00
+Generated: 2024-09-11 07:52:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Freshteam. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from PowerOffice GO to Freshteam. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Powerofficego Departments to Freshteam Department
--------------------------------------------------
-Every Powerofficego Departments will be synchronized with a Freshteam Department.
+PowerOffice Departments to Freshteam Department
+-----------------------------------------------
+Every PowerOffice Departments will be synchronized with a Freshteam Department.
 
-Once a link between a Powerofficego Departments and a Freshteam Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Departments and a Freshteam Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Departments and a Freshteam Department:
+The following properties are synchronized between a PowerOffice Departments and a Freshteam Department:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Departments Property
+   * - PowerOffice Departments Property
      - Freshteam Department Property
      - Freshteam Data Type
    * - CreatedDateTimeOffset
@@ -31,31 +31,31 @@ The following properties are synchronized between a Powerofficego Departments an
      - "string"
 
 
-Powerofficego Employees to Freshteam Employee
----------------------------------------------
-Every Powerofficego Employees will be synchronized with a Freshteam Employee.
+PowerOffice Employees to Freshteam Employee
+-------------------------------------------
+Every PowerOffice Employees will be synchronized with a Freshteam Employee.
 
-If a matching Freshteam Employee already exists, the Powerofficego Employees will be merged with the existing one.
+If a matching Freshteam Employee already exists, the PowerOffice Employees will be merged with the existing one.
 If no matching Freshteam Employee is found, a new Freshteam Employee will be created.
 
-A Powerofficego Employees will merge with a Freshteam Employee if one of the following property combinations match:
+A PowerOffice Employees will merge with a Freshteam Employee if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Employees Property
+   * - PowerOffice Employees Property
      - Freshteam Employee Property
    * - Number
      - employee_id
 
-Once a link between a Powerofficego Employees and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice Employees and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Employees and a Freshteam Employee:
+The following properties are synchronized between a PowerOffice Employees and a Freshteam Employee:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Employees Property
+   * - PowerOffice Employees Property
      - Freshteam Employee Property
      - Freshteam Data Type
    * - DateOfBirth
