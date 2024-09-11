@@ -2,41 +2,41 @@
 Exact Online to Wix Dataflow
 ============================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to Wix. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-ExactOnline Contacts to Wix Contacts
-------------------------------------
-Every ExactOnline Contacts will be synchronized with a Wix Contacts.
+Exact Online Contacts to Wix Contacts
+-------------------------------------
+Every Exact Online Contacts will be synchronized with a Wix Contacts.
 
-Once a link between a ExactOnline Contacts and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Contacts and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Contacts and a Wix Contacts:
+The following properties are synchronized between a Exact Online Contacts and a Wix Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Contacts Property
+   * - Exact Online Contacts Property
      - Wix Contacts Property
      - Wix Data Type
 
 
-ExactOnline Items to Wix Products
----------------------------------
-Every ExactOnline Items will be synchronized with a Wix Products.
+Exact Online Items to Wix Products
+----------------------------------
+Every Exact Online Items will be synchronized with a Wix Products.
 
-Once a link between a ExactOnline Items and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Items and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Items and a Wix Products:
+The following properties are synchronized between a Exact Online Items and a Wix Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Items Property
+   * - Exact Online Items Property
      - Wix Products Property
      - Wix Data Type
 
