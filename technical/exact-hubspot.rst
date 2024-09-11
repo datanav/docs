@@ -1,13 +1,13 @@
 ================================
-Exact Online to Hubspot Dataflow
+Exact Online to HubSpot Dataflow
 ================================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to Hubspot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Exact Accounts to Hubspot Company
 ---------------------------------
@@ -122,50 +122,50 @@ The following properties are synchronized between a Exact Employees and a Hubspo
      - "string"
 
 
-Exact Items to Hubspot Product
+Exact Items to HubSpot Product
 ------------------------------
-Every Exact Items will be synchronized with a Hubspot Product.
+Every Exact Items will be synchronized with a HubSpot Product.
 
-Once a link between a Exact Items and a Hubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Items and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Items and a Hubspot Product:
+The following properties are synchronized between a Exact Items and a HubSpot Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Items Property
-     - Hubspot Product Property
-     - Hubspot Data Type
+     - HubSpot Product Property
+     - HubSpot Data Type
 
 
-Exact Quotations to Hubspot Quote
+Exact Quotations to HubSpot Quote
 ---------------------------------
-Every Exact Quotations will be synchronized with a Hubspot Quote.
+Every Exact Quotations will be synchronized with a HubSpot Quote.
 
-Once a link between a Exact Quotations and a Hubspot Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Quotations and a HubSpot Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Quotations and a Hubspot Quote:
+The following properties are synchronized between a Exact Quotations and a HubSpot Quote:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Quotations Property
-     - Hubspot Quote Property
-     - Hubspot Data Type
+     - HubSpot Quote Property
+     - HubSpot Data Type
 
 
-Exact Salesorderlines to Hubspot Lineitem
+Exact Salesorderlines to HubSpot Lineitem
 -----------------------------------------
-Every Exact Salesorderlines will be synchronized with a Hubspot Lineitem.
+Every Exact Salesorderlines will be synchronized with a HubSpot Lineitem.
 
-Once a link between a Exact Salesorderlines and a Hubspot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Salesorderlines and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Salesorderlines and a Hubspot Lineitem:
+The following properties are synchronized between a Exact Salesorderlines and a HubSpot Lineitem:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Salesorderlines Property
-     - Hubspot Lineitem Property
-     - Hubspot Data Type
+     - HubSpot Lineitem Property
+     - HubSpot Data Type
 
