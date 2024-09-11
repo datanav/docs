@@ -2,7 +2,7 @@
 PowerOffice GO to SuperOffice Dataflow
 ======================================
 
-Generated: 2024-09-11 11:39:19
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -347,18 +347,18 @@ The following properties are synchronized between a PowerOfficeGO Employees and 
      - "string"
 
 
-PowerOfficeGO Product to SuperOffice Product
---------------------------------------------
-Every PowerOfficeGO Product will be synchronized with a SuperOffice Product.
+PowerOffice GO Product to SuperOffice Product
+---------------------------------------------
+Every PowerOffice GO Product will be synchronized with a SuperOffice Product.
 
-Once a link between a PowerOfficeGO Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Product and a SuperOffice Product:
+The following properties are synchronized between a PowerOffice GO Product and a SuperOffice Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Product Property
+   * - PowerOffice GO Product Property
      - SuperOffice Product Property
      - SuperOffice Data Type
    * - CostPrice
@@ -417,18 +417,18 @@ The following properties are synchronized between a PowerOfficeGO Product and a 
      - N/A
 
 
-PowerOfficeGO Quote to SuperOffice Quotealternative
----------------------------------------------------
-Every PowerOfficeGO Quote will be synchronized with a SuperOffice Quotealternative.
+PowerOffice GO Quote to SuperOffice Quotealternative
+----------------------------------------------------
+Every PowerOffice GO Quote will be synchronized with a SuperOffice Quotealternative.
 
-Once a link between a PowerOfficeGO Quote and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Quote and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Quote and a SuperOffice Quotealternative:
+The following properties are synchronized between a PowerOffice GO Quote and a SuperOffice Quotealternative:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Quote Property
+   * - PowerOffice GO Quote Property
      - SuperOffice Quotealternative Property
      - SuperOffice Data Type
    * - TotalAmount
@@ -436,18 +436,18 @@ The following properties are synchronized between a PowerOfficeGO Quote and a Su
      - "float"
 
 
-PowerOfficeGO Salesorderlines to SuperOffice Quoteline
-------------------------------------------------------
-Every PowerOfficeGO Salesorderlines will be synchronized with a SuperOffice Quoteline.
+PowerOffice GO Salesorderlines to SuperOffice Quoteline
+-------------------------------------------------------
+Every PowerOffice GO Salesorderlines will be synchronized with a SuperOffice Quoteline.
 
-Once a link between a PowerOfficeGO Salesorderlines and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Salesorderlines and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOfficeGO Salesorderlines and a SuperOffice Quoteline:
+The following properties are synchronized between a PowerOffice GO Salesorderlines and a SuperOffice Quoteline:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOfficeGO Salesorderlines Property
+   * - PowerOffice GO Salesorderlines Property
      - SuperOffice Quoteline Property
      - SuperOffice Data Type
    * - Allowance
