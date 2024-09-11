@@ -2,7 +2,7 @@
 Wave to HubSpot Dataflow
 ========================
 
-Generated: 2024-09-11 11:13:29
+Generated: 2024-09-11 11:28:31
 
 Introduction
 ------------
@@ -380,18 +380,18 @@ The following properties are synchronized between a Wave Invoice and a HubSpot L
      - "string"
 
 
-WaveWave Financial Product to HubSpot Product
----------------------------------------------
-Every WaveWave Financial Product will be synchronized with a HubSpot Product.
+Wave Product to HubSpot Product
+-------------------------------
+Every Wave Product will be synchronized with a HubSpot Product.
 
-Once a link between a WaveWave Financial Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WaveWave Financial Product and a HubSpot Product:
+The following properties are synchronized between a Wave Product and a HubSpot Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - WaveWave Financial Product Property
+   * - Wave Product Property
      - HubSpot Product Property
      - HubSpot Data Type
    * - description
