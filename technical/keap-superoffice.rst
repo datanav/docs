@@ -1,13 +1,13 @@
 ============================
-Keap to Superoffice Dataflow
+Keap to SuperOffice Dataflow
 ============================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Keap to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Keap to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Keap Companies to Superoffice Contact
 -------------------------------------
@@ -62,39 +62,39 @@ The following properties are synchronized between a Keap Contacts and a Superoff
      - N/A
 
 
-Keap Opportunity to Superoffice Sale
+Keap Opportunity to SuperOffice Sale
 ------------------------------------
-Every Keap Opportunity will be synchronized with a Superoffice Sale.
+Every Keap Opportunity will be synchronized with a SuperOffice Sale.
 
-Once a link between a Keap Opportunity and a Superoffice Sale is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Opportunity and a SuperOffice Sale is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Opportunity and a Superoffice Sale:
+The following properties are synchronized between a Keap Opportunity and a SuperOffice Sale:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Opportunity Property
-     - Superoffice Sale Property
-     - Superoffice Data Type
+     - SuperOffice Sale Property
+     - SuperOffice Data Type
    * - opportunity_title
      - Heading
      - "string"
 
 
-Keap Product to Superoffice Product
+Keap Product to SuperOffice Product
 -----------------------------------
-Every Keap Product will be synchronized with a Superoffice Product.
+Every Keap Product will be synchronized with a SuperOffice Product.
 
-Once a link between a Keap Product and a Superoffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Keap Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Keap Product and a Superoffice Product:
+The following properties are synchronized between a Keap Product and a SuperOffice Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Keap Product Property
-     - Superoffice Product Property
-     - Superoffice Data Type
+     - SuperOffice Product Property
+     - SuperOffice Data Type
    * - product_desc
      - Description
      - "string"
