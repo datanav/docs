@@ -2,59 +2,59 @@
 BusinessCentral to CustomWebshop Dataflow
 =========================================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from BusinessCentral to CustomWebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businesscentral Companies to Custom Customer
+Business Companies to CustomWebshop Customer
 --------------------------------------------
-Every Businesscentral Companies will be synchronized with a Custom Customer.
+Every Business Companies will be synchronized with a CustomWebshop Customer.
 
-Once a link between a Businesscentral Companies and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Companies and a CustomWebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Companies and a Custom Customer:
+The following properties are synchronized between a Business Companies and a CustomWebshop Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Companies Property
-     - Custom Customer Property
-     - Custom Data Type
+   * - Business Companies Property
+     - CustomWebshop Customer Property
+     - CustomWebshop Data Type
 
 
-Businesscentral Salesorderlines to Custom Order
+Business Salesorderlines to CustomWebshop Order
 -----------------------------------------------
-Every Businesscentral Salesorderlines will be synchronized with a Custom Order.
+Every Business Salesorderlines will be synchronized with a CustomWebshop Order.
 
-Once a link between a Businesscentral Salesorderlines and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Salesorderlines and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesorderlines and a Custom Order:
+The following properties are synchronized between a Business Salesorderlines and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Salesorderlines Property
-     - Custom Order Property
-     - Custom Data Type
+   * - Business Salesorderlines Property
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
-Businesscentral Salesquotes to Custom Order
+Business Salesquotes to CustomWebshop Order
 -------------------------------------------
-Every Businesscentral Salesquotes will be synchronized with a Custom Order.
+Every Business Salesquotes will be synchronized with a CustomWebshop Order.
 
-Once a link between a Businesscentral Salesquotes and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Salesquotes and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businesscentral Salesquotes and a Custom Order:
+The following properties are synchronized between a Business Salesquotes and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businesscentral Salesquotes Property
-     - Custom Order Property
-     - Custom Data Type
+   * - Business Salesquotes Property
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
 BusinessCentral Customers company to CustomWebshop Customer
