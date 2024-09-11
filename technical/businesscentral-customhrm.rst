@@ -2,7 +2,7 @@
 BusinessCentral to CustomHRM Dataflow
 =====================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:37:15
 
 Introduction
 ------------
@@ -73,18 +73,18 @@ The following properties are synchronized between a Businesscentral Customers pe
      - Custom Data Type
 
 
-Business Employees to CustomHRM Employee
-----------------------------------------
-Every Business Employees will be synchronized with a CustomHRM Employee.
+BusinessCentral Employees to CustomHRM Employee
+-----------------------------------------------
+Every BusinessCentral Employees will be synchronized with a CustomHRM Employee.
 
-Once a link between a Business Employees and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessCentral Employees and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Employees and a CustomHRM Employee:
+The following properties are synchronized between a BusinessCentral Employees and a CustomHRM Employee:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Employees Property
+   * - BusinessCentral Employees Property
      - CustomHRM Employee Property
      - CustomHRM Data Type
 
