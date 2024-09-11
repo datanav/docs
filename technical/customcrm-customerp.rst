@@ -1,122 +1,122 @@
-================================
-Custom CRM to Customerp Dataflow
-================================
+=================================
+Custom CRM to Custom ERP Dataflow
+=================================
 
-Generated: 2024-09-11 07:41:19
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Custom CRM to Customerp. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Custom CRM to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Customcrm Quote to Customerp Order
+Custom Quote to Custom Order
+----------------------------
+Every Custom Quote will be synchronized with a Custom Order.
+
+Once a link between a Custom Quote and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom Quote and a Custom Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom Quote Property
+     - Custom Order Property
+     - Custom Data Type
+
+
+Custom User to Custom Order
+---------------------------
+Every Custom User will be synchronized with a Custom Order.
+
+Once a link between a Custom User and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom User and a Custom Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom User Property
+     - Custom Order Property
+     - Custom Data Type
+
+
+Custom Contact to Custom Contact
+--------------------------------
+Every Custom Contact will be synchronized with a Custom Contact.
+
+Once a link between a Custom Contact and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom Contact and a Custom Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom Contact Property
+     - Custom Contact Property
+     - Custom Data Type
+
+
+Custom Customer to Custom Customer
 ----------------------------------
-Every Customcrm Quote will be synchronized with a Customerp Order.
+Every Custom Customer will be synchronized with a Custom Customer.
 
-Once a link between a Customcrm Quote and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Customer and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customcrm Quote and a Customerp Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Customcrm Quote Property
-     - Customerp Order Property
-     - Customerp Data Type
-
-
-Customcrm User to Customerp Order
----------------------------------
-Every Customcrm User will be synchronized with a Customerp Order.
-
-Once a link between a Customcrm User and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Customcrm User and a Customerp Order:
+The following properties are synchronized between a Custom Customer and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customcrm User Property
-     - Customerp Order Property
-     - Customerp Data Type
+   * - Custom Customer Property
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Customcrm Contact to Customerp Contact
---------------------------------------
-Every Customcrm Contact will be synchronized with a Customerp Contact.
+Custom Order to Custom Order
+----------------------------
+Every Custom Order will be synchronized with a Custom Order.
 
-Once a link between a Customcrm Contact and a Customerp Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Order and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customcrm Contact and a Customerp Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Customcrm Contact Property
-     - Customerp Contact Property
-     - Customerp Data Type
-
-
-Customcrm Customer to Customerp Customer
-----------------------------------------
-Every Customcrm Customer will be synchronized with a Customerp Customer.
-
-Once a link between a Customcrm Customer and a Customerp Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Customcrm Customer and a Customerp Customer:
+The following properties are synchronized between a Custom Order and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customcrm Customer Property
-     - Customerp Customer Property
-     - Customerp Data Type
+   * - Custom Order Property
+     - Custom Order Property
+     - Custom Data Type
 
 
-Customcrm Order to Customerp Order
-----------------------------------
-Every Customcrm Order will be synchronized with a Customerp Order.
+Custom Product to Custom Product
+--------------------------------
+Every Custom Product will be synchronized with a Custom Product.
 
-Once a link between a Customcrm Order and a Customerp Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Product and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customcrm Order and a Customerp Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Customcrm Order Property
-     - Customerp Order Property
-     - Customerp Data Type
-
-
-Customcrm Product to Customerp Product
---------------------------------------
-Every Customcrm Product will be synchronized with a Customerp Product.
-
-Once a link between a Customcrm Product and a Customerp Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Customcrm Product and a Customerp Product:
+The following properties are synchronized between a Custom Product and a Custom Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customcrm Product Property
-     - Customerp Product Property
-     - Customerp Data Type
+   * - Custom Product Property
+     - Custom Product Property
+     - Custom Data Type
 
 
-Customcrm Quote to Customerp Quote
-----------------------------------
-Every Customcrm Quote will be synchronized with a Customerp Quote.
+Custom Quote to Custom Quote
+----------------------------
+Every Custom Quote will be synchronized with a Custom Quote.
 
-Once a link between a Customcrm Quote and a Customerp Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Quote and a Custom Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customcrm Quote and a Customerp Quote:
+The following properties are synchronized between a Custom Quote and a Custom Quote:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customcrm Quote Property
-     - Customerp Quote Property
-     - Customerp Data Type
+   * - Custom Quote Property
+     - Custom Quote Property
+     - Custom Data Type
 
