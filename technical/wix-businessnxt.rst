@@ -1,44 +1,44 @@
-===============================
-Wix.com to BusinessNxt Dataflow
-===============================
+================================
+Wix.com to Business Nxt Dataflow
+================================
 
-Generated: 2024-09-11 08:38:15
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wix.com Currencies to BusinessNxt Currency
-------------------------------------------
-Every Wix.com Currencies will be synchronized with a BusinessNxt Currency.
+Wix.com Currencies to Business Nxt Currency
+-------------------------------------------
+Every Wix.com Currencies will be synchronized with a Business Nxt Currency.
 
-Once a link between a Wix.com Currencies and a BusinessNxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Currencies and a Business Nxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Currencies and a BusinessNxt Currency:
+The following properties are synchronized between a Wix.com Currencies and a Business Nxt Currency:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Currencies Property
-     - BusinessNxt Currency Property
-     - BusinessNxt Data Type
+     - Business Nxt Currency Property
+     - Business Nxt Data Type
 
 
-Wix.com Orders to BusinessNxt Order
------------------------------------
-Every Wix.com Orders will be synchronized with a BusinessNxt Order.
+Wix.com Orders to Business Nxt Order
+------------------------------------
+Every Wix.com Orders will be synchronized with a Business Nxt Order.
 
-Once a link between a Wix.com Orders and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a BusinessNxt Order:
+The following properties are synchronized between a Wix.com Orders and a Business Nxt Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     - BusinessNxt Order Property
-     - BusinessNxt Data Type
+     - Business Nxt Order Property
+     - Business Nxt Data Type
    * - billingInfo.paidDate
      - settlementDate
      - "string"
@@ -47,39 +47,39 @@ The following properties are synchronized between a Wix.com Orders and a Busines
      - "string"
 
 
-Wix.com Orders to BusinessNxt Orderline
----------------------------------------
-Every Wix.com Orders will be synchronized with a BusinessNxt Orderline.
+Wix.com Orders to Business Nxt Orderline
+----------------------------------------
+Every Wix.com Orders will be synchronized with a Business Nxt Orderline.
 
-Once a link between a Wix.com Orders and a BusinessNxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Orders and a Business Nxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Orders and a BusinessNxt Orderline:
+The following properties are synchronized between a Wix.com Orders and a Business Nxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Orders Property
-     - BusinessNxt Orderline Property
-     - BusinessNxt Data Type
+     - Business Nxt Orderline Property
+     - Business Nxt Data Type
    * - id
      - orderNo
      - "string"
 
 
-Wix.com Products to BusinessNxt Product
----------------------------------------
-Every Wix.com Products will be synchronized with a BusinessNxt Product.
+Wix.com Products to Business Nxt Product
+----------------------------------------
+Every Wix.com Products will be synchronized with a Business Nxt Product.
 
-Once a link between a Wix.com Products and a BusinessNxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wix.com Products and a Business Nxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wix.com Products and a BusinessNxt Product:
+The following properties are synchronized between a Wix.com Products and a Business Nxt Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wix.com Products Property
-     - BusinessNxt Product Property
-     - BusinessNxt Data Type
+     - Business Nxt Product Property
+     - Business Nxt Data Type
    * - priceData.price
      - priceQuantity
      - "string"
