@@ -2,7 +2,7 @@
 Shopify to HubSpot Dataflow
 ===========================
 
-Generated: 2024-09-11 07:57:12
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
@@ -27,20 +27,20 @@ The following properties are synchronized between a Shopify Product and a HubSpo
      - HubSpot Data Type
 
 
-Shopify Customer to Hubspot Contact
+Shopify Customer to HubSpot Contact
 -----------------------------------
-Every Shopify Customer will be synchronized with a Hubspot Contact.
+Every Shopify Customer will be synchronized with a HubSpot Contact.
 
-Once a link between a Shopify Customer and a Hubspot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Customer and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Customer and a Hubspot Contact:
+The following properties are synchronized between a Shopify Customer and a HubSpot Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Customer Property
-     - Hubspot Contact Property
-     - Hubspot Data Type
+     - HubSpot Contact Property
+     - HubSpot Data Type
    * - addresses.address1
      - properties.address
      - "string"
