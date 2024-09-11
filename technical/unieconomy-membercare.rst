@@ -1,13 +1,13 @@
 =================================
-Unieconomy to Membercare Dataflow
+Unieconomy to MemberCare Dataflow
 =================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Unieconomy to Membercare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Unieconomy to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Unieconomy Customers to Membercare Companies
 --------------------------------------------
@@ -47,20 +47,20 @@ The following properties are synchronized between a Unieconomy Departments and a
      - "string"
 
 
-Unieconomy Companies to Membercare Companies
+Unieconomy Companies to MemberCare Companies
 --------------------------------------------
-Every Unieconomy Companies will be synchronized with a Membercare Companies.
+Every Unieconomy Companies will be synchronized with a MemberCare Companies.
 
-Once a link between a Unieconomy Companies and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Companies and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Companies and a Membercare Companies:
+The following properties are synchronized between a Unieconomy Companies and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Companies Property
-     - Membercare Companies Property
-     - Membercare Data Type
+     - MemberCare Companies Property
+     - MemberCare Data Type
    * - Name
      - companyName
      - "string"
@@ -69,20 +69,20 @@ The following properties are synchronized between a Unieconomy Companies and a M
      - "string"
 
 
-Unieconomy Countries to Membercare Countries
+Unieconomy Countries to MemberCare Countries
 --------------------------------------------
-Every Unieconomy Countries will be synchronized with a Membercare Countries.
+Every Unieconomy Countries will be synchronized with a MemberCare Countries.
 
-Once a link between a Unieconomy Countries and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Countries and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Countries and a Membercare Countries:
+The following properties are synchronized between a Unieconomy Countries and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Countries Property
-     - Membercare Countries Property
-     - Membercare Data Type
+     - MemberCare Countries Property
+     - MemberCare Data Type
    * - Name
      - name
      - "string"
