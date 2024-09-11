@@ -1,13 +1,13 @@
-==========================================
-BusinessNxt to Visma Business Nxt Dataflow
-==========================================
+===================================
+BusinessNxt to BusinessNxt Dataflow
+===================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from BusinessNxt to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from BusinessNxt to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Visma Currency to Businessnxt Country
 -------------------------------------
@@ -82,20 +82,20 @@ The following properties are synchronized between a Visma Vat and a Businessnxt 
      - Businessnxt Data Type
 
 
-Visma Address to Visma Company
-------------------------------
-Every Visma Address will be synchronized with a Visma Company.
+BusinessNxt Address to BusinessNxt Company
+------------------------------------------
+Every BusinessNxt Address will be synchronized with a BusinessNxt Company.
 
-Once a link between a Visma Address and a Visma Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Address and a BusinessNxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Address and a Visma Company:
+The following properties are synchronized between a BusinessNxt Address and a BusinessNxt Company:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Address Property
-     - Visma Company Property
-     - Visma Data Type
+   * - BusinessNxt Address Property
+     - BusinessNxt Company Property
+     - BusinessNxt Data Type
    * - addressNo
      - companyNo
      - "string"
@@ -104,20 +104,20 @@ The following properties are synchronized between a Visma Address and a Visma Co
      - "string"
 
 
-Visma Company to Visma Address
-------------------------------
-Every Visma Company will be synchronized with a Visma Address.
+BusinessNxt Company to BusinessNxt Address
+------------------------------------------
+Every BusinessNxt Company will be synchronized with a BusinessNxt Address.
 
-Once a link between a Visma Company and a Visma Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessNxt Company and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Visma Company and a Visma Address:
+The following properties are synchronized between a BusinessNxt Company and a BusinessNxt Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - Visma Company Property
-     - Visma Address Property
-     - Visma Data Type
+   * - BusinessNxt Company Property
+     - BusinessNxt Address Property
+     - BusinessNxt Data Type
    * - companyNo
      - addressNo
      - "string"
