@@ -1,41 +1,41 @@
 ============================
-Wave to Superoffice Dataflow
+Wave to SuperOffice Dataflow
 ============================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 07:57:12
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Wave to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Wave to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Customer person to Superoffice Person
+Wave Customer person to SuperOffice Person
 ------------------------------------------
-Every Wave Customer person will be synchronized with a Superoffice Person.
+Every Wave Customer person will be synchronized with a SuperOffice Person.
 
-If a matching Superoffice Person already exists, the Wave Customer person will be merged with the existing one.
-If no matching Superoffice Person is found, a new Superoffice Person will be created.
+If a matching SuperOffice Person already exists, the Wave Customer person will be merged with the existing one.
+If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
 
-A Wave Customer person will merge with a Superoffice Person if one of the following property combinations match:
+A Wave Customer person will merge with a SuperOffice Person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     - Superoffice Person Property
+     - SuperOffice Person Property
    * - email
      - Emails.Value
 
-Once a link between a Wave Customer person and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer person and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a Superoffice Person:
+The following properties are synchronized between a Wave Customer person and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+     - SuperOffice Person Property
+     - SuperOffice Data Type
    * - address.addressLine1
      - Address.Street.Address1
      - "string"
@@ -89,32 +89,32 @@ The following properties are synchronized between a Wave Customer person and a S
      - "string"
 
 
-Wave Customer to Superoffice Person
+Wave Customer to SuperOffice Person
 -----------------------------------
-Before any synchronization can take place, a link between a Wave Customer and a Superoffice Person must be established.
+Before any synchronization can take place, a link between a Wave Customer and a SuperOffice Person must be established.
 
-A new Superoffice Person will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into Superoffice.
+A new SuperOffice Person will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into SuperOffice.
 
-A Wave Customer will merge with a Superoffice Person if one of the following property combinations match:
+A Wave Customer will merge with a SuperOffice Person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - Superoffice Person Property
+     - SuperOffice Person Property
    * - email
      - Emails.Value
 
-Once a link between a Wave Customer and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a Superoffice Person:
+The following properties are synchronized between a Wave Customer and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+     - SuperOffice Person Property
+     - SuperOffice Data Type
    * - address.addressLine1
      - Address.Street.Address1
      - "string"
@@ -168,30 +168,30 @@ The following properties are synchronized between a Wave Customer and a Superoff
      - "string"
 
 
-Wave Vendor to Superoffice Person
+Wave Vendor to SuperOffice Person
 ---------------------------------
-Before any synchronization can take place, a link between a Wave Vendor and a Superoffice Person must be established.
+Before any synchronization can take place, a link between a Wave Vendor and a SuperOffice Person must be established.
 
-A Wave Vendor will merge with a Superoffice Person if one of the following property combinations match:
+A Wave Vendor will merge with a SuperOffice Person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     - Superoffice Person Property
+     - SuperOffice Person Property
    * - email
      - Emails.Value
 
-Once a link between a Wave Vendor and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a Superoffice Person:
+The following properties are synchronized between a Wave Vendor and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+     - SuperOffice Person Property
+     - SuperOffice Data Type
    * - address.addressLine1
      - Address.Street.Address1
      - "string"
@@ -230,20 +230,20 @@ The following properties are synchronized between a Wave Vendor and a Superoffic
      - "string"
 
 
-Wave Customer to Superoffice Contact
+Wave Customer to SuperOffice Contact
 ------------------------------------
-Every Wave Customer will be synchronized with a Superoffice Contact.
+Every Wave Customer will be synchronized with a SuperOffice Contact.
 
-Once a link between a Wave Customer and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a Superoffice Contact:
+The following properties are synchronized between a Wave Customer and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - Superoffice Contact Property
-     - Superoffice Data Type
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
    * - address.addressLine1
      - Address.Postal.Address1
      - "string"
@@ -321,22 +321,22 @@ The following properties are synchronized between a Wave Customer and a Superoff
      - "string"
 
 
-Wave Invoice to Superoffice Quotealternative
+Wave Invoice to SuperOffice Quotealternative
 --------------------------------------------
-Before any synchronization can take place, a link between a Wave Invoice and a Superoffice Quotealternative must be established.
+Before any synchronization can take place, a link between a Wave Invoice and a SuperOffice Quotealternative must be established.
 
-A new Superoffice Quotealternative will be created from a Wave Invoice if it is connected to a Wave Invoice that is synchronized into Superoffice.
+A new SuperOffice Quotealternative will be created from a Wave Invoice if it is connected to a Wave Invoice that is synchronized into SuperOffice.
 
-Once a link between a Wave Invoice and a Superoffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a Superoffice Quotealternative:
+The following properties are synchronized between a Wave Invoice and a SuperOffice Quotealternative:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     - Superoffice Quotealternative Property
-     - Superoffice Data Type
+     - SuperOffice Quotealternative Property
+     - SuperOffice Data Type
    * - memo
      - Description
      - "string"
@@ -351,22 +351,22 @@ The following properties are synchronized between a Wave Invoice and a Superoffi
      - "float"
 
 
-Wave Vendor to Superoffice Contact
+Wave Vendor to SuperOffice Contact
 ----------------------------------
-Before any synchronization can take place, a link between a Wave Vendor and a Superoffice Contact must be established.
+Before any synchronization can take place, a link between a Wave Vendor and a SuperOffice Contact must be established.
 
-A new Superoffice Contact will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, Customer-person, or Customer-contact that is synchronized into Superoffice.
+A new SuperOffice Contact will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, Customer-person, or Customer-contact that is synchronized into SuperOffice.
 
-Once a link between a Wave Vendor and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a Superoffice Contact:
+The following properties are synchronized between a Wave Vendor and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     - Superoffice Contact Property
-     - Superoffice Data Type
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
    * - address.addressLine1
      - Address.Postal.Address1
      - "string"
@@ -405,20 +405,20 @@ The following properties are synchronized between a Wave Vendor and a Superoffic
      - "string"
 
 
-Wave Invoice to Superoffice Quoteline
+Wave Invoice to SuperOffice Quoteline
 -------------------------------------
-Every Wave Invoice will be synchronized with a Superoffice Quoteline.
+Every Wave Invoice will be synchronized with a SuperOffice Quoteline.
 
-Once a link between a Wave Invoice and a Superoffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a Superoffice Quoteline:
+The following properties are synchronized between a Wave Invoice and a SuperOffice Quoteline:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     - Superoffice Quoteline Property
-     - Superoffice Data Type
+     - SuperOffice Quoteline Property
+     - SuperOffice Data Type
    * - id
      - QuoteAlternativeId
      - "integer"
@@ -439,20 +439,20 @@ The following properties are synchronized between a Wave Invoice and a Superoffi
      - N/A
 
 
-Wave Product to Superoffice Product
+Wave Product to SuperOffice Product
 -----------------------------------
-Every Wave Product will be synchronized with a Superoffice Product.
+Every Wave Product will be synchronized with a SuperOffice Product.
 
-Once a link between a Wave Product and a Superoffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a Superoffice Product:
+The following properties are synchronized between a Wave Product and a SuperOffice Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Product Property
-     - Superoffice Product Property
-     - Superoffice Data Type
+     - SuperOffice Product Property
+     - SuperOffice Data Type
    * - description
      - Description
      - "string"
