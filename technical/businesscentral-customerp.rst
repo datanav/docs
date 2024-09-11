@@ -2,7 +2,7 @@
 Business Central to CustomERP Dataflow
 ======================================
 
-Generated: 2024-09-11 08:01:26
+Generated: 2024-09-11 08:03:13
 
 Introduction
 ------------
@@ -89,82 +89,82 @@ The following properties are synchronized between a Businesscentral Salesquotes 
      - Custom Data Type
 
 
-Business Contacts person to Custom Contact
-------------------------------------------
-Every Business Contacts person will be synchronized with a Custom Contact.
+Business Contacts person to CustomERP Contact
+---------------------------------------------
+Every Business Contacts person will be synchronized with a CustomERP Contact.
 
-Once a link between a Business Contacts person and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Contacts person and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Contacts person and a Custom Contact:
+The following properties are synchronized between a Business Contacts person and a CustomERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Business Contacts person Property
-     - Custom Contact Property
-     - Custom Data Type
+     - CustomERP Contact Property
+     - CustomERP Data Type
 
 
-Business Customers company to Custom Customer
----------------------------------------------
-Every Business Customers company will be synchronized with a Custom Customer.
+Business Customers company to CustomERP Customer
+------------------------------------------------
+Every Business Customers company will be synchronized with a CustomERP Customer.
 
-Once a link between a Business Customers company and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Customers company and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Customers company and a Custom Customer:
+The following properties are synchronized between a Business Customers company and a CustomERP Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Business Customers company Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomERP Customer Property
+     - CustomERP Data Type
 
 
-Business Employees to Custom Employee
--------------------------------------
-Every Business Employees will be synchronized with a Custom Employee.
+Business Employees to CustomERP Employee
+----------------------------------------
+Every Business Employees will be synchronized with a CustomERP Employee.
 
-Once a link between a Business Employees and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Employees and a CustomERP Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Employees and a Custom Employee:
+The following properties are synchronized between a Business Employees and a CustomERP Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Business Employees Property
-     - Custom Employee Property
-     - Custom Data Type
+     - CustomERP Employee Property
+     - CustomERP Data Type
 
 
-Business Items to Custom Product
---------------------------------
-Every Business Items will be synchronized with a Custom Product.
+Business Items to CustomERP Product
+-----------------------------------
+Every Business Items will be synchronized with a CustomERP Product.
 
-Once a link between a Business Items and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Items and a CustomERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Items and a Custom Product:
+The following properties are synchronized between a Business Items and a CustomERP Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Business Items Property
-     - Custom Product Property
-     - Custom Data Type
+     - CustomERP Product Property
+     - CustomERP Data Type
 
 
-Business Salesorders to Custom Order
-------------------------------------
-Every Business Salesorders will be synchronized with a Custom Order.
+Business Salesorders to CustomERP Order
+---------------------------------------
+Every Business Salesorders will be synchronized with a CustomERP Order.
 
-Once a link between a Business Salesorders and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Salesorders and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Salesorders and a Custom Order:
+The following properties are synchronized between a Business Salesorders and a CustomERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Business Salesorders Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomERP Order Property
+     - CustomERP Data Type
 
