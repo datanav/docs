@@ -2,7 +2,7 @@
 PowerOfficeGO to CustomPMS Dataflow
 ===================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:37:15
 
 Introduction
 ------------
@@ -25,34 +25,34 @@ The following properties are synchronized between a Powerofficego Departments an
      - Custom Data Type
 
 
-PowerOffice Customers to CustomPMS Customer
--------------------------------------------
-Every PowerOffice Customers will be synchronized with a CustomPMS Customer.
+PowerOfficeGO Customers to CustomPMS Customer
+---------------------------------------------
+Every PowerOfficeGO Customers will be synchronized with a CustomPMS Customer.
 
-Once a link between a PowerOffice Customers and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Customers and a CustomPMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Customers and a CustomPMS Customer:
+The following properties are synchronized between a PowerOfficeGO Customers and a CustomPMS Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Customers Property
+   * - PowerOfficeGO Customers Property
      - CustomPMS Customer Property
      - CustomPMS Data Type
 
 
-PowerOffice Projects to CustomPMS Project
------------------------------------------
-Every PowerOffice Projects will be synchronized with a CustomPMS Project.
+PowerOfficeGO Projects to CustomPMS Project
+-------------------------------------------
+Every PowerOfficeGO Projects will be synchronized with a CustomPMS Project.
 
-Once a link between a PowerOffice Projects and a CustomPMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Projects and a CustomPMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Projects and a CustomPMS Project:
+The following properties are synchronized between a PowerOfficeGO Projects and a CustomPMS Project:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Projects Property
+   * - PowerOfficeGO Projects Property
      - CustomPMS Project Property
      - CustomPMS Data Type
 
