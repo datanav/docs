@@ -2,7 +2,7 @@
 PowerOfficeGO to Trello Dataflow
 ================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:03:20
 
 Introduction
 ------------
@@ -127,4 +127,20 @@ The following properties are synchronized between a PowerOfficeGO Employees and 
    * - EmailAddress
      - email
      - "string"
+
+
+PowerOfficeGO Projectactivity to Trello Actions
+-----------------------------------------------
+Every PowerOfficeGO Projectactivity will be synchronized with a Trello Actions.
+
+Once a link between a PowerOfficeGO Projectactivity and a Trello Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOfficeGO Projectactivity and a Trello Actions:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOfficeGO Projectactivity Property
+     - Trello Actions Property
+     - Trello Data Type
 
