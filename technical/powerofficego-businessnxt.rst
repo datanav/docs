@@ -1,13 +1,13 @@
-============================================
-PowerOfficeGO to Visma Business Nxt Dataflow
-============================================
+=====================================
+PowerOfficeGO to BusinessNxt Dataflow
+=====================================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 08:38:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from PowerOfficeGO to Visma Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from PowerOfficeGO to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Powerofficego Customers to Businessnxt Address
 ----------------------------------------------
@@ -66,106 +66,106 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - Businessnxt Data Type
 
 
-PowerOffice Contactperson to Visma Country
-------------------------------------------
-Every PowerOffice Contactperson will be synchronized with a Visma Country.
+PowerOfficeGO Contactperson to BusinessNxt Country
+--------------------------------------------------
+Every PowerOfficeGO Contactperson will be synchronized with a BusinessNxt Country.
 
-Once a link between a PowerOffice Contactperson and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Contactperson and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Contactperson and a Visma Country:
+The following properties are synchronized between a PowerOfficeGO Contactperson and a BusinessNxt Country:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Contactperson Property
-     - Visma Country Property
-     - Visma Data Type
+   * - PowerOfficeGO Contactperson Property
+     - BusinessNxt Country Property
+     - BusinessNxt Data Type
    * - residenceCountryCode
      - isoCode
      - "string"
 
 
-PowerOffice Currency to Visma Currency
---------------------------------------
-Every PowerOffice Currency will be synchronized with a Visma Currency.
+PowerOfficeGO Currency to BusinessNxt Currency
+----------------------------------------------
+Every PowerOfficeGO Currency will be synchronized with a BusinessNxt Currency.
 
-Once a link between a PowerOffice Currency and a Visma Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Currency and a BusinessNxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Currency and a Visma Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice Currency Property
-     - Visma Currency Property
-     - Visma Data Type
-
-
-PowerOffice Customers to Visma Country
---------------------------------------
-Every PowerOffice Customers will be synchronized with a Visma Country.
-
-Once a link between a PowerOffice Customers and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice Customers and a Visma Country:
+The following properties are synchronized between a PowerOfficeGO Currency and a BusinessNxt Currency:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Customers Property
-     - Visma Country Property
-     - Visma Data Type
+   * - PowerOfficeGO Currency Property
+     - BusinessNxt Currency Property
+     - BusinessNxt Data Type
+
+
+PowerOfficeGO Customers to BusinessNxt Country
+----------------------------------------------
+Every PowerOfficeGO Customers will be synchronized with a BusinessNxt Country.
+
+Once a link between a PowerOfficeGO Customers and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOfficeGO Customers and a BusinessNxt Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOfficeGO Customers Property
+     - BusinessNxt Country Property
+     - BusinessNxt Data Type
    * - MailAddress.CountryCode
      - isoCode
      - "string"
 
 
-PowerOffice Location to Visma Country
--------------------------------------
-Every PowerOffice Location will be synchronized with a Visma Country.
-
-Once a link between a PowerOffice Location and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice Location and a Visma Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice Location Property
-     - Visma Country Property
-     - Visma Data Type
-
-
-PowerOffice Outgoinginvoices to Visma Country
+PowerOfficeGO Location to BusinessNxt Country
 ---------------------------------------------
-Every PowerOffice Outgoinginvoices will be synchronized with a Visma Country.
+Every PowerOfficeGO Location will be synchronized with a BusinessNxt Country.
 
-Once a link between a PowerOffice Outgoinginvoices and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Location and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Outgoinginvoices and a Visma Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice Outgoinginvoices Property
-     - Visma Country Property
-     - Visma Data Type
-
-
-PowerOffice Product to Visma Product
-------------------------------------
-Every PowerOffice Product will be synchronized with a Visma Product.
-
-Once a link between a PowerOffice Product and a Visma Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice Product and a Visma Product:
+The following properties are synchronized between a PowerOfficeGO Location and a BusinessNxt Country:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Product Property
-     - Visma Product Property
-     - Visma Data Type
+   * - PowerOfficeGO Location Property
+     - BusinessNxt Country Property
+     - BusinessNxt Data Type
+
+
+PowerOfficeGO Outgoinginvoices to BusinessNxt Country
+-----------------------------------------------------
+Every PowerOfficeGO Outgoinginvoices will be synchronized with a BusinessNxt Country.
+
+Once a link between a PowerOfficeGO Outgoinginvoices and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOfficeGO Outgoinginvoices and a BusinessNxt Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOfficeGO Outgoinginvoices Property
+     - BusinessNxt Country Property
+     - BusinessNxt Data Type
+
+
+PowerOfficeGO Product to BusinessNxt Product
+--------------------------------------------
+Every PowerOfficeGO Product will be synchronized with a BusinessNxt Product.
+
+Once a link between a PowerOfficeGO Product and a BusinessNxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOfficeGO Product and a BusinessNxt Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOfficeGO Product Property
+     - BusinessNxt Product Property
+     - BusinessNxt Data Type
    * - availableStock
      - quantityPerUnit
      - "string"
@@ -177,91 +177,91 @@ The following properties are synchronized between a PowerOffice Product and a Vi
      - "string"
 
 
-PowerOffice Productgroup to Visma Productcategory
--------------------------------------------------
-Every PowerOffice Productgroup will be synchronized with a Visma Productcategory.
+PowerOfficeGO Productgroup to BusinessNxt Productcategory
+---------------------------------------------------------
+Every PowerOfficeGO Productgroup will be synchronized with a BusinessNxt Productcategory.
 
-Once a link between a PowerOffice Productgroup and a Visma Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Productgroup and a BusinessNxt Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Productgroup and a Visma Productcategory:
+The following properties are synchronized between a PowerOfficeGO Productgroup and a BusinessNxt Productcategory:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Productgroup Property
-     - Visma Productcategory Property
-     - Visma Data Type
+   * - PowerOfficeGO Productgroup Property
+     - BusinessNxt Productcategory Property
+     - BusinessNxt Data Type
    * - name
      - text
      - "string"
 
 
-PowerOffice Salesorderlines to Visma Orderline
-----------------------------------------------
-Every PowerOffice Salesorderlines will be synchronized with a Visma Orderline.
+PowerOfficeGO Salesorderlines to BusinessNxt Orderline
+------------------------------------------------------
+Every PowerOfficeGO Salesorderlines will be synchronized with a BusinessNxt Orderline.
 
-Once a link between a PowerOffice Salesorderlines and a Visma Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Salesorderlines and a BusinessNxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Salesorderlines and a Visma Orderline:
+The following properties are synchronized between a PowerOfficeGO Salesorderlines and a BusinessNxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Salesorderlines Property
-     - Visma Orderline Property
-     - Visma Data Type
+   * - PowerOfficeGO Salesorderlines Property
+     - BusinessNxt Orderline Property
+     - BusinessNxt Data Type
    * - sesam_SalesOrderId
      - orderNo
      - "string"
 
 
-PowerOffice Salesorders to Visma Order
---------------------------------------
-Every PowerOffice Salesorders will be synchronized with a Visma Order.
+PowerOfficeGO Salesorders to BusinessNxt Order
+----------------------------------------------
+Every PowerOfficeGO Salesorders will be synchronized with a BusinessNxt Order.
 
-Once a link between a PowerOffice Salesorders and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Salesorders and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Salesorders and a Visma Order:
+The following properties are synchronized between a PowerOfficeGO Salesorders and a BusinessNxt Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Salesorders Property
-     - Visma Order Property
-     - Visma Data Type
+   * - PowerOfficeGO Salesorders Property
+     - BusinessNxt Order Property
+     - BusinessNxt Data Type
    * - SalesOrderDate
      - orderDate
      - "string"
 
 
-PowerOffice Suppliers to Visma Country
---------------------------------------
-Every PowerOffice Suppliers will be synchronized with a Visma Country.
+PowerOfficeGO Suppliers to BusinessNxt Country
+----------------------------------------------
+Every PowerOfficeGO Suppliers will be synchronized with a BusinessNxt Country.
 
-Once a link between a PowerOffice Suppliers and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOfficeGO Suppliers and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice Suppliers and a Visma Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice Suppliers Property
-     - Visma Country Property
-     - Visma Data Type
-
-
-PowerOffice Suppliers person to Visma Country
----------------------------------------------
-Every PowerOffice Suppliers person will be synchronized with a Visma Country.
-
-Once a link between a PowerOffice Suppliers person and a Visma Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice Suppliers person and a Visma Country:
+The following properties are synchronized between a PowerOfficeGO Suppliers and a BusinessNxt Country:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice Suppliers person Property
-     - Visma Country Property
-     - Visma Data Type
+   * - PowerOfficeGO Suppliers Property
+     - BusinessNxt Country Property
+     - BusinessNxt Data Type
+
+
+PowerOfficeGO Suppliers person to BusinessNxt Country
+-----------------------------------------------------
+Every PowerOfficeGO Suppliers person will be synchronized with a BusinessNxt Country.
+
+Once a link between a PowerOfficeGO Suppliers person and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOfficeGO Suppliers person and a BusinessNxt Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOfficeGO Suppliers person Property
+     - BusinessNxt Country Property
+     - BusinessNxt Data Type
 
