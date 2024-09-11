@@ -1,13 +1,13 @@
-=====================================
-Wave Financial to Membercare Dataflow
-=====================================
+===========================
+Wave to MemberCare Dataflow
+===========================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:53:23
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Membercare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Wave to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Wave Customer to Membercare Companies
 -------------------------------------
@@ -127,20 +127,20 @@ The following properties are synchronized between a Wave Product and a Membercar
      - "string"
 
 
-Wave Country to Membercare Countries
+Wave Country to MemberCare Countries
 ------------------------------------
-Every Wave Country will be synchronized with a Membercare Countries.
+Every Wave Country will be synchronized with a MemberCare Countries.
 
-Once a link between a Wave Country and a Membercare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Country and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Country and a Membercare Countries:
+The following properties are synchronized between a Wave Country and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Country Property
-     - Membercare Countries Property
-     - Membercare Data Type
+     - MemberCare Countries Property
+     - MemberCare Data Type
    * - name
      - name
      - "string"
