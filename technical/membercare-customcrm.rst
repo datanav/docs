@@ -2,89 +2,89 @@
 MemberCare to Custom CRM Dataflow
 =================================
 
-Generated: 2024-09-11 11:39:33
+Generated: 2024-09-11 12:17:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-MemberCare Companies to CustomCRM Customer
-------------------------------------------
-Every MemberCare Companies will be synchronized with a CustomCRM Customer.
+MemberCare Companies to Custom CRM Customer
+-------------------------------------------
+Every MemberCare Companies will be synchronized with a Custom CRM Customer.
 
-Once a link between a MemberCare Companies and a CustomCRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companies and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Companies and a CustomCRM Customer:
+The following properties are synchronized between a MemberCare Companies and a Custom CRM Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Companies Property
-     - CustomCRM Customer Property
-     - CustomCRM Data Type
+     - Custom CRM Customer Property
+     - Custom CRM Data Type
 
 
-MemberCare Invoices to CustomCRM Order
---------------------------------------
-Every MemberCare Invoices will be synchronized with a CustomCRM Order.
+MemberCare Invoices to Custom CRM Order
+---------------------------------------
+Every MemberCare Invoices will be synchronized with a Custom CRM Order.
 
-Once a link between a MemberCare Invoices and a CustomCRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Invoices and a Custom CRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Invoices and a CustomCRM Order:
+The following properties are synchronized between a MemberCare Invoices and a Custom CRM Order:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Invoices Property
-     - CustomCRM Order Property
-     - CustomCRM Data Type
+     - Custom CRM Order Property
+     - Custom CRM Data Type
 
 
-MemberCare Organizations to CustomCRM Customer
-----------------------------------------------
-Every MemberCare Organizations will be synchronized with a CustomCRM Customer.
+MemberCare Organizations to Custom CRM Customer
+-----------------------------------------------
+Every MemberCare Organizations will be synchronized with a Custom CRM Customer.
 
-Once a link between a MemberCare Organizations and a CustomCRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Organizations and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Organizations and a CustomCRM Customer:
+The following properties are synchronized between a MemberCare Organizations and a Custom CRM Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Organizations Property
-     - CustomCRM Customer Property
-     - CustomCRM Data Type
+     - Custom CRM Customer Property
+     - Custom CRM Data Type
 
 
-MemberCare Persons to CustomCRM Contact
----------------------------------------
-Every MemberCare Persons will be synchronized with a CustomCRM Contact.
+MemberCare Persons to Custom CRM Contact
+----------------------------------------
+Every MemberCare Persons will be synchronized with a Custom CRM Contact.
 
-Once a link between a MemberCare Persons and a CustomCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Persons and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Persons and a CustomCRM Contact:
+The following properties are synchronized between a MemberCare Persons and a Custom CRM Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Persons Property
-     - CustomCRM Contact Property
-     - CustomCRM Data Type
+     - Custom CRM Contact Property
+     - Custom CRM Data Type
 
 
-MemberCare Products to CustomCRM Product
-----------------------------------------
-Every MemberCare Products will be synchronized with a CustomCRM Product.
+MemberCare Products to Custom CRM Product
+-----------------------------------------
+Every MemberCare Products will be synchronized with a Custom CRM Product.
 
-Once a link between a MemberCare Products and a CustomCRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Products and a Custom CRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a MemberCare Products and a CustomCRM Product:
+The following properties are synchronized between a MemberCare Products and a Custom CRM Product:
 
 .. list-table::
    :header-rows: 1
 
    * - MemberCare Products Property
-     - CustomCRM Product Property
-     - CustomCRM Data Type
+     - Custom CRM Product Property
+     - Custom CRM Data Type
 
