@@ -2,57 +2,57 @@
 ExactOnline to CustomHRM Dataflow
 =================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from ExactOnline to CustomHRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Exact Accounts to CustomHRM Department
---------------------------------------
-Every Exact Accounts will be synchronized with a CustomHRM Department.
+ExactOnline Accounts to CustomHRM Department
+--------------------------------------------
+Every ExactOnline Accounts will be synchronized with a CustomHRM Department.
 
-Once a link between a Exact Accounts and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Accounts and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Accounts and a CustomHRM Department:
+The following properties are synchronized between a ExactOnline Accounts and a CustomHRM Department:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Accounts Property
+   * - ExactOnline Accounts Property
      - CustomHRM Department Property
      - CustomHRM Data Type
 
 
-Exact Contacts to CustomHRM Employee
-------------------------------------
-Every Exact Contacts will be synchronized with a CustomHRM Employee.
+ExactOnline Contacts to CustomHRM Employee
+------------------------------------------
+Every ExactOnline Contacts will be synchronized with a CustomHRM Employee.
 
-Once a link between a Exact Contacts and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Contacts and a CustomHRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Contacts and a CustomHRM Employee:
+The following properties are synchronized between a ExactOnline Contacts and a CustomHRM Employee:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Contacts Property
+   * - ExactOnline Contacts Property
      - CustomHRM Employee Property
      - CustomHRM Data Type
 
 
-Exact Divisions to CustomHRM Department
----------------------------------------
-Every Exact Divisions will be synchronized with a CustomHRM Department.
+ExactOnline Divisions to CustomHRM Department
+---------------------------------------------
+Every ExactOnline Divisions will be synchronized with a CustomHRM Department.
 
-Once a link between a Exact Divisions and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ExactOnline Divisions and a CustomHRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Divisions and a CustomHRM Department:
+The following properties are synchronized between a ExactOnline Divisions and a CustomHRM Department:
 
 .. list-table::
    :header-rows: 1
 
-   * - Exact Divisions Property
+   * - ExactOnline Divisions Property
      - CustomHRM Department Property
      - CustomHRM Data Type
 
