@@ -1,90 +1,90 @@
-===========================
-Asana to Customerp Dataflow
-===========================
+============================
+Asana to Custom ERP Dataflow
+============================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Asana to Customerp. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Asana to Custom ERP. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Asana Tasks to Customerp Project
---------------------------------
-Every Asana Tasks will be synchronized with a Customerp Project.
+Asana Tasks to Custom Project
+-----------------------------
+Every Asana Tasks will be synchronized with a Custom Project.
 
-Once a link between a Asana Tasks and a Customerp Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Tasks and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Tasks and a Customerp Project:
+The following properties are synchronized between a Asana Tasks and a Custom Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Tasks Property
-     - Customerp Project Property
-     - Customerp Data Type
+     - Custom Project Property
+     - Custom Data Type
 
 
-Asana Teams to Customerp Customer
----------------------------------
-Every Asana Teams will be synchronized with a Customerp Customer.
+Asana Teams to Custom Customer
+------------------------------
+Every Asana Teams will be synchronized with a Custom Customer.
 
-Once a link between a Asana Teams and a Customerp Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Teams and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Teams and a Customerp Customer:
+The following properties are synchronized between a Asana Teams and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Teams Property
-     - Customerp Customer Property
-     - Customerp Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Asana Workspaces to Customerp Customer
---------------------------------------
-Every Asana Workspaces will be synchronized with a Customerp Customer.
+Asana Workspaces to Custom Customer
+-----------------------------------
+Every Asana Workspaces will be synchronized with a Custom Customer.
 
-Once a link between a Asana Workspaces and a Customerp Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Workspaces and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Workspaces and a Customerp Customer:
+The following properties are synchronized between a Asana Workspaces and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Workspaces Property
-     - Customerp Customer Property
-     - Customerp Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Asana Projects to Customerp Project
------------------------------------
-Every Asana Projects will be synchronized with a Customerp Project.
+Asana Projects to Custom Project
+--------------------------------
+Every Asana Projects will be synchronized with a Custom Project.
 
-Once a link between a Asana Projects and a Customerp Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Projects and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Projects and a Customerp Project:
+The following properties are synchronized between a Asana Projects and a Custom Project:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Projects Property
-     - Customerp Project Property
-     - Customerp Data Type
+     - Custom Project Property
+     - Custom Data Type
 
 
-Asana Users to Customerp Employee
----------------------------------
-Every Asana Users will be synchronized with a Customerp Employee.
+Asana Users to Custom Employee
+------------------------------
+Every Asana Users will be synchronized with a Custom Employee.
 
-Once a link between a Asana Users and a Customerp Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Asana Users and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Asana Users and a Customerp Employee:
+The following properties are synchronized between a Asana Users and a Custom Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Asana Users Property
-     - Customerp Employee Property
-     - Customerp Data Type
+     - Custom Employee Property
+     - Custom Data Type
 
