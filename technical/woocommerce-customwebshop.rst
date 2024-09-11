@@ -1,42 +1,42 @@
-======================================
-WooCommerce to Custom Webshop Dataflow
-======================================
+=====================================
+WooCommerce to CustomWebshop Dataflow
+=====================================
 
-Generated: 2024-09-11 07:46:20
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Custom Webshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to CustomWebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-WooCommerce Order to Custom Order
----------------------------------
-Every WooCommerce Order will be synchronized with a Custom Order.
+WooCommerce Order to CustomWebshop Order
+----------------------------------------
+Every WooCommerce Order will be synchronized with a CustomWebshop Order.
 
-Once a link between a WooCommerce Order and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Order and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Order and a Custom Order:
+The following properties are synchronized between a WooCommerce Order and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Order Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
-WooCommerce Product to Custom Product
--------------------------------------
-Every WooCommerce Product will be synchronized with a Custom Product.
+WooCommerce Product to CustomWebshop Product
+--------------------------------------------
+Every WooCommerce Product will be synchronized with a CustomWebshop Product.
 
-Once a link between a WooCommerce Product and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Product and a CustomWebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Product and a Custom Product:
+The following properties are synchronized between a WooCommerce Product and a CustomWebshop Product:
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Product Property
-     - Custom Product Property
-     - Custom Data Type
+     - CustomWebshop Product Property
+     - CustomWebshop Data Type
 
