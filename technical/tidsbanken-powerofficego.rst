@@ -2,7 +2,7 @@
 Tidsbanken to PowerOffice GO Dataflow
 =====================================
 
-Generated: 2024-09-11 07:53:15
+Generated: 2024-09-11 07:54:14
 
 Introduction
 ------------
@@ -105,22 +105,22 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Powe
      - "string"
 
 
-Tidsbanken Kunde to Powerofficego Customers person
---------------------------------------------------
-Before any synchronization can take place, a link between a Tidsbanken Kunde and a Powerofficego Customers person must be established.
+Tidsbanken Kunde to PowerOffice Customers person
+------------------------------------------------
+Before any synchronization can take place, a link between a Tidsbanken Kunde and a PowerOffice Customers person must be established.
 
-A new Powerofficego Customers person will be created from a Tidsbanken Kunde if it is connected to a Tidsbanken Prosjekt that is synchronized into Powerofficego.
+A new PowerOffice Customers person will be created from a Tidsbanken Kunde if it is connected to a Tidsbanken Prosjekt that is synchronized into PowerOffice.
 
-Once a link between a Tidsbanken Kunde and a Powerofficego Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Kunde and a PowerOffice Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Kunde and a Powerofficego Customers person:
+The following properties are synchronized between a Tidsbanken Kunde and a PowerOffice Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Kunde Property
-     - Powerofficego Customers person Property
-     - Powerofficego Data Type
+     - PowerOffice Customers person Property
+     - PowerOffice Data Type
 
 
 Tidsbanken Ansatt to PowerOffice Employees
