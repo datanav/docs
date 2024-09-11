@@ -2,7 +2,7 @@
 Custom HRM to Trello Dataflow
 =============================
 
-Generated: 2024-09-11 11:38:24
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -25,18 +25,18 @@ The following properties are synchronized between a CustomHRM Department and a T
      - Trello Data Type
 
 
-CustomHRM Employee to Trello Members
-------------------------------------
-Every CustomHRM Employee will be synchronized with a Trello Members.
+Custom HRM Employee to Trello Members
+-------------------------------------
+Every Custom HRM Employee will be synchronized with a Trello Members.
 
-Once a link between a CustomHRM Employee and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom HRM Employee and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a CustomHRM Employee and a Trello Members:
+The following properties are synchronized between a Custom HRM Employee and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
-   * - CustomHRM Employee Property
+   * - Custom HRM Employee Property
      - Trello Members Property
      - Trello Data Type
 
