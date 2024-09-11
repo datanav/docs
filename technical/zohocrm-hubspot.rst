@@ -1,13 +1,13 @@
 ===========================
-ZohoCRM to Hubspot Dataflow
+ZohoCRM to HubSpot Dataflow
 ===========================
 
-Generated: 2024-09-11 00:00:00
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from ZohoCRM to Hubspot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from ZohoCRM to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 ZohoCRM Account to Hubspot Company
 ----------------------------------
@@ -128,20 +128,20 @@ The following properties are synchronized between a ZohoCRM Contact and a Hubspo
      - "string"
 
 
-ZohoCRM Deal to Hubspot Deal
+ZohoCRM Deal to HubSpot Deal
 ----------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Hubspot Deal.
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a HubSpot Deal.
 
-Once a link between a ZohoCRM Deal and a Hubspot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a ZohoCRM Deal and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ZohoCRM Deal and a Hubspot Deal:
+The following properties are synchronized between a ZohoCRM Deal and a HubSpot Deal:
 
 .. list-table::
    :header-rows: 1
 
    * - ZohoCRM Deal Property
-     - Hubspot Deal Property
-     - Hubspot Data Type
+     - HubSpot Deal Property
+     - HubSpot Data Type
    * - Amount
      - properties.amount
      - "string"
