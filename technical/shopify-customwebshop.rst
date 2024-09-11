@@ -1,13 +1,13 @@
-=================================
-Shopify to CustomWebshop Dataflow
-=================================
+==================================
+Shopify to Custom Webshop Dataflow
+==================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to CustomWebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Custom Webshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Shopify Inventoryitem to CustomWebshop Product
 ----------------------------------------------
@@ -41,34 +41,34 @@ The following properties are synchronized between a Shopify Product and a Custom
      - CustomWebshop Data Type
 
 
-Shopify Order to CustomWebshop Order
-------------------------------------
-Every Shopify Order will be synchronized with a CustomWebshop Order.
+Shopify Order to Custom Webshop Order
+-------------------------------------
+Every Shopify Order will be synchronized with a Custom Webshop Order.
 
-Once a link between a Shopify Order and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a Custom Webshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a CustomWebshop Order:
+The following properties are synchronized between a Shopify Order and a Custom Webshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     - CustomWebshop Order Property
-     - CustomWebshop Data Type
+     - Custom Webshop Order Property
+     - Custom Webshop Data Type
 
 
-Shopify Sesamproduct to CustomWebshop Product
----------------------------------------------
-Every Shopify Sesamproduct will be synchronized with a CustomWebshop Product.
+Shopify Sesamproduct to Custom Webshop Product
+----------------------------------------------
+Every Shopify Sesamproduct will be synchronized with a Custom Webshop Product.
 
-Once a link between a Shopify Sesamproduct and a CustomWebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Sesamproduct and a Custom Webshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Sesamproduct and a CustomWebshop Product:
+The following properties are synchronized between a Shopify Sesamproduct and a Custom Webshop Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Sesamproduct Property
-     - CustomWebshop Product Property
-     - CustomWebshop Data Type
+     - Custom Webshop Product Property
+     - Custom Webshop Data Type
 
