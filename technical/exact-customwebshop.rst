@@ -1,13 +1,13 @@
-=======================================
-Exact Online to Custom Webshop Dataflow
-=======================================
+======================================
+Exact Online to CustomWebshop Dataflow
+======================================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:56:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to Custom Webshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to CustomWebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 Exact Departments to Custom Customer
 ------------------------------------
@@ -89,50 +89,50 @@ The following properties are synchronized between a Exact Salesorderlines and a 
      - Custom Data Type
 
 
-Exact Accounts to Custom Customer
----------------------------------
-Every Exact Accounts will be synchronized with a Custom Customer.
+Exact Accounts to CustomWebshop Customer
+----------------------------------------
+Every Exact Accounts will be synchronized with a CustomWebshop Customer.
 
-Once a link between a Exact Accounts and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Accounts and a CustomWebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Accounts and a Custom Customer:
+The following properties are synchronized between a Exact Accounts and a CustomWebshop Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Accounts Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomWebshop Customer Property
+     - CustomWebshop Data Type
 
 
-Exact Items to Custom Product
------------------------------
-Every Exact Items will be synchronized with a Custom Product.
+Exact Items to CustomWebshop Product
+------------------------------------
+Every Exact Items will be synchronized with a CustomWebshop Product.
 
-Once a link between a Exact Items and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Items and a CustomWebshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Items and a Custom Product:
+The following properties are synchronized between a Exact Items and a CustomWebshop Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Items Property
-     - Custom Product Property
-     - Custom Data Type
+     - CustomWebshop Product Property
+     - CustomWebshop Data Type
 
 
-Exact Salesorders to Custom Order
----------------------------------
-Every Exact Salesorders will be synchronized with a Custom Order.
+Exact Salesorders to CustomWebshop Order
+----------------------------------------
+Every Exact Salesorders will be synchronized with a CustomWebshop Order.
 
-Once a link between a Exact Salesorders and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Salesorders and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Salesorders and a Custom Order:
+The following properties are synchronized between a Exact Salesorders and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Salesorders Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
