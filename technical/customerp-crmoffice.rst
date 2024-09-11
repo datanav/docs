@@ -2,59 +2,59 @@
 CustomERP to CRMOffice Dataflow
 ===============================
 
-Generated: 2024-09-11 08:02:19
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CustomERP to CRMOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Custom Employee to Crmoffice Contacts
--------------------------------------
-Every Custom Employee will be synchronized with a Crmoffice Contacts.
+CustomERP Employee to CRMOffice Contacts
+----------------------------------------
+Every CustomERP Employee will be synchronized with a CRMOffice Contacts.
 
-Once a link between a Custom Employee and a Crmoffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Employee and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Employee and a Crmoffice Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Custom Employee Property
-     - Crmoffice Contacts Property
-     - Crmoffice Data Type
-
-
-Custom Product to Crmoffice Companies
--------------------------------------
-Every Custom Product will be synchronized with a Crmoffice Companies.
-
-Once a link between a Custom Product and a Crmoffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Custom Product and a Crmoffice Companies:
+The following properties are synchronized between a CustomERP Employee and a CRMOffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Product Property
-     - Crmoffice Companies Property
-     - Crmoffice Data Type
+   * - CustomERP Employee Property
+     - CRMOffice Contacts Property
+     - CRMOffice Data Type
 
 
-Custom Project to Crmoffice Activities
---------------------------------------
-Every Custom Project will be synchronized with a Crmoffice Activities.
+CustomERP Product to CRMOffice Companies
+----------------------------------------
+Every CustomERP Product will be synchronized with a CRMOffice Companies.
 
-Once a link between a Custom Project and a Crmoffice Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomERP Product and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Project and a Crmoffice Activities:
+The following properties are synchronized between a CustomERP Product and a CRMOffice Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Project Property
-     - Crmoffice Activities Property
-     - Crmoffice Data Type
+   * - CustomERP Product Property
+     - CRMOffice Companies Property
+     - CRMOffice Data Type
+
+
+CustomERP Project to CRMOffice Activities
+-----------------------------------------
+Every CustomERP Project will be synchronized with a CRMOffice Activities.
+
+Once a link between a CustomERP Project and a CRMOffice Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a CustomERP Project and a CRMOffice Activities:
+
+.. list-table::
+   :header-rows: 1
+
+   * - CustomERP Project Property
+     - CRMOffice Activities Property
+     - CRMOffice Data Type
 
 
 CustomERP Contact to CRMOffice Contacts
