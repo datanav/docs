@@ -2,7 +2,7 @@
 PowerOfficeGO to Tripletex Dataflow
 ===================================
 
-Generated: 2024-09-11 08:37:15
+Generated: 2024-09-11 09:08:19
 
 Introduction
 ------------
@@ -247,6 +247,32 @@ The following properties are synchronized between a PowerOfficeGO Customers pers
    * - PhoneNumber
      - phoneNumberWork
      - "string"
+
+
+PowerOfficeGO Projectactivity to Tripletex Projectactivity
+----------------------------------------------------------
+Before any synchronization can take place, a link between a PowerOfficeGO Projectactivity and a Tripletex Projectactivity must be established.
+
+A PowerOfficeGO Projectactivity will merge with a Tripletex Projectactivity if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOfficeGO Projectactivity Property
+     - Tripletex Projectactivity Property
+   * - activityCode
+     - activity.id
+
+Once a link between a PowerOfficeGO Projectactivity and a Tripletex Projectactivity is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOfficeGO Projectactivity and a Tripletex Projectactivity:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOfficeGO Projectactivity Property
+     - Tripletex Projectactivity Property
+     - Tripletex Data Type
 
 
 Powerofficego Contactperson to Tripletex Customer
