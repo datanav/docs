@@ -2,25 +2,25 @@
 Business Nxt to Invoiced Dataflow
 =================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Business Nxt to Invoiced. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-BusinessNxt Order to Invoiced Invoices
---------------------------------------
-Every BusinessNxt Order will be synchronized with a Invoiced Invoices.
+Business Nxt Order to Invoiced Invoices
+---------------------------------------
+Every Business Nxt Order will be synchronized with a Invoiced Invoices.
 
-Once a link between a BusinessNxt Order and a Invoiced Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Order and a Invoiced Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Order and a Invoiced Invoices:
+The following properties are synchronized between a Business Nxt Order and a Invoiced Invoices:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Order Property
+   * - Business Nxt Order Property
      - Invoiced Invoices Property
      - Invoiced Data Type
    * - totalDiscountAmountInCurrency
@@ -28,34 +28,34 @@ The following properties are synchronized between a BusinessNxt Order and a Invo
      - "string"
 
 
-BusinessNxt Orderline to Invoiced Lineitem
-------------------------------------------
-Every BusinessNxt Orderline will be synchronized with a Invoiced Lineitem.
+Business Nxt Orderline to Invoiced Lineitem
+-------------------------------------------
+Every Business Nxt Orderline will be synchronized with a Invoiced Lineitem.
 
-Once a link between a BusinessNxt Orderline and a Invoiced Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Orderline and a Invoiced Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Orderline and a Invoiced Lineitem:
+The following properties are synchronized between a Business Nxt Orderline and a Invoiced Lineitem:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Orderline Property
+   * - Business Nxt Orderline Property
      - Invoiced Lineitem Property
      - Invoiced Data Type
 
 
-BusinessNxt Product to Invoiced Items
--------------------------------------
-Every BusinessNxt Product will be synchronized with a Invoiced Items.
+Business Nxt Product to Invoiced Items
+--------------------------------------
+Every Business Nxt Product will be synchronized with a Invoiced Items.
 
-Once a link between a BusinessNxt Product and a Invoiced Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Product and a Invoiced Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessNxt Product and a Invoiced Items:
+The following properties are synchronized between a Business Nxt Product and a Invoiced Items:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessNxt Product Property
+   * - Business Nxt Product Property
      - Invoiced Items Property
      - Invoiced Data Type
    * - description
