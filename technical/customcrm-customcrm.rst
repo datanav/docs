@@ -1,42 +1,42 @@
-================================
-Custom CRM to Customcrm Dataflow
-================================
+=================================
+Custom CRM to Custom CRM Dataflow
+=================================
 
-Generated: 2024-09-11 07:41:19
+Generated: 2024-09-11 07:44:14
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Custom CRM to Customcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Custom CRM to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Customcrm Quote to Customcrm Order
-----------------------------------
-Every Customcrm Quote will be synchronized with a Customcrm Order.
+Custom Quote to Custom Order
+----------------------------
+Every Custom Quote will be synchronized with a Custom Order.
 
-Once a link between a Customcrm Quote and a Customcrm Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Quote and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Customcrm Quote and a Customcrm Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Customcrm Quote Property
-     - Customcrm Order Property
-     - Customcrm Data Type
-
-
-Customcrm User to Customcrm Order
----------------------------------
-Every Customcrm User will be synchronized with a Customcrm Order.
-
-Once a link between a Customcrm User and a Customcrm Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Customcrm User and a Customcrm Order:
+The following properties are synchronized between a Custom Quote and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Customcrm User Property
-     - Customcrm Order Property
-     - Customcrm Data Type
+   * - Custom Quote Property
+     - Custom Order Property
+     - Custom Data Type
+
+
+Custom User to Custom Order
+---------------------------
+Every Custom User will be synchronized with a Custom Order.
+
+Once a link between a Custom User and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom User and a Custom Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom User Property
+     - Custom Order Property
+     - Custom Data Type
 
