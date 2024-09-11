@@ -1,90 +1,90 @@
-=================================
-Businessnxt to Customcrm Dataflow
-=================================
+=========================================
+Visma Business Nxt to Custom CRM Dataflow
+=========================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:45:31
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Businessnxt to Customcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Visma Business Nxt to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businessnxt Address to Customcrm Customer
------------------------------------------
-Every Businessnxt Address will be synchronized with a Customcrm Customer.
+Businessnxt Address to Custom Customer
+--------------------------------------
+Every Businessnxt Address will be synchronized with a Custom Customer.
 
-Once a link between a Businessnxt Address and a Customcrm Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businessnxt Address and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Address and a Customcrm Customer:
+The following properties are synchronized between a Businessnxt Address and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Businessnxt Address Property
-     - Customcrm Customer Property
-     - Customcrm Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Businessnxt Company to Customcrm Customer
------------------------------------------
-Every Businessnxt Company will be synchronized with a Customcrm Customer.
+Businessnxt Company to Custom Customer
+--------------------------------------
+Every Businessnxt Company will be synchronized with a Custom Customer.
 
-Once a link between a Businessnxt Company and a Customcrm Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businessnxt Company and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Company and a Customcrm Customer:
+The following properties are synchronized between a Businessnxt Company and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Businessnxt Company Property
-     - Customcrm Customer Property
-     - Customcrm Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Businessnxt Orderline to Customcrm Order
-----------------------------------------
-Every Businessnxt Orderline will be synchronized with a Customcrm Order.
+Businessnxt Orderline to Custom Order
+-------------------------------------
+Every Businessnxt Orderline will be synchronized with a Custom Order.
 
-Once a link between a Businessnxt Orderline and a Customcrm Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businessnxt Orderline and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Orderline and a Customcrm Order:
+The following properties are synchronized between a Businessnxt Orderline and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Businessnxt Orderline Property
-     - Customcrm Order Property
-     - Customcrm Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Businessnxt Order to Customcrm Order
-------------------------------------
-Every Businessnxt Order will be synchronized with a Customcrm Order.
+Businessnxt Order to Custom Order
+---------------------------------
+Every Businessnxt Order will be synchronized with a Custom Order.
 
-Once a link between a Businessnxt Order and a Customcrm Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businessnxt Order and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Order and a Customcrm Order:
+The following properties are synchronized between a Businessnxt Order and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Businessnxt Order Property
-     - Customcrm Order Property
-     - Customcrm Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Businessnxt Product to Customcrm Product
-----------------------------------------
-Every Businessnxt Product will be synchronized with a Customcrm Product.
+Businessnxt Product to Custom Product
+-------------------------------------
+Every Businessnxt Product will be synchronized with a Custom Product.
 
-Once a link between a Businessnxt Product and a Customcrm Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Businessnxt Product and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Product and a Customcrm Product:
+The following properties are synchronized between a Businessnxt Product and a Custom Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Businessnxt Product Property
-     - Customcrm Product Property
-     - Customcrm Data Type
+     - Custom Product Property
+     - Custom Data Type
 
