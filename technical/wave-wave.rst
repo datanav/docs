@@ -2,7 +2,7 @@
 Wave to Wave Dataflow
 =====================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 11:13:29
 
 Introduction
 ------------
@@ -74,30 +74,30 @@ The following properties are synchronized between a Wave Customer person and a W
      - "string"
 
 
-Wave Customer to Wave Customer person
--------------------------------------
-Before any synchronization can take place, a link between a Wave Customer and a Wave Customer person must be established.
+WaveWave Financial Customer to Wave Customer person
+---------------------------------------------------
+Before any synchronization can take place, a link between a WaveWave Financial Customer and a Wave Customer person must be established.
 
-A new Wave Customer person will be created from a Wave Customer if it is connected to a Wave Vendor, Invoice, Business, or Customer that is synchronized into Wave.
+A new Wave Customer person will be created from a WaveWave Financial Customer if it is connected to a WaveWave Financial Wave-vendor, Wave-invoice, Wave-business, or Wave-customer that is synchronized into Wave.
 
-A Wave Customer will merge with a Wave Customer person if one of the following property combinations match:
+A WaveWave Financial Customer will merge with a Wave Customer person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Customer Property
+   * - WaveWave Financial Customer Property
      - Wave Customer person Property
    * - email
      - email
 
-Once a link between a Wave Customer and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WaveWave Financial Customer and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a Wave Customer person:
+The following properties are synchronized between a WaveWave Financial Customer and a Wave Customer person:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Customer Property
+   * - WaveWave Financial Customer Property
      - Wave Customer person Property
      - Wave Data Type
    * - address.addressLine1
@@ -186,30 +186,30 @@ The following properties are synchronized between a Wave Customer and a Wave Cus
      - "string"
 
 
-Wave Vendor to Wave Customer person
------------------------------------
-Before any synchronization can take place, a link between a Wave Vendor and a Wave Customer person must be established.
+WaveWave Financial Vendor to Wave Customer person
+-------------------------------------------------
+Before any synchronization can take place, a link between a WaveWave Financial Vendor and a Wave Customer person must be established.
 
-A new Wave Customer person will be created from a Wave Vendor if it is connected to a Wave Vendor, Invoice, Business, or Customer that is synchronized into Wave.
+A new Wave Customer person will be created from a WaveWave Financial Vendor if it is connected to a WaveWave Financial Wave-vendor, Wave-invoice, Wave-business, or Wave-customer that is synchronized into Wave.
 
-A Wave Vendor will merge with a Wave Customer person if one of the following property combinations match:
+A WaveWave Financial Vendor will merge with a Wave Customer person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Vendor Property
+   * - WaveWave Financial Vendor Property
      - Wave Customer person Property
    * - email
      - email
 
-Once a link between a Wave Vendor and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WaveWave Financial Vendor and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a Wave Customer person:
+The following properties are synchronized between a WaveWave Financial Vendor and a Wave Customer person:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Vendor Property
+   * - WaveWave Financial Vendor Property
      - Wave Customer person Property
      - Wave Data Type
    * - address.addressLine1
@@ -250,20 +250,20 @@ The following properties are synchronized between a Wave Vendor and a Wave Custo
      - "string"
 
 
-Wave Vendor to Wave Customer
-----------------------------
-Before any synchronization can take place, a link between a Wave Vendor and a Wave Customer must be established.
+Wave Financial Vendor to Wave Customer
+--------------------------------------
+Before any synchronization can take place, a link between a Wave Financial Vendor and a Wave Customer must be established.
 
-A new Wave Customer will be created from a Wave Vendor if it is connected to a Wave Vendor, Invoice, Business, or Customer that is synchronized into Wave.
+A new Wave Customer will be created from a Wave Financial Vendor if it is connected to a Wave Financial Wave-vendor, Wave-invoice, Wave-business, or Wave-customer that is synchronized into Wave.
 
-Once a link between a Wave Vendor and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Financial Vendor and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a Wave Customer:
+The following properties are synchronized between a Wave Financial Vendor and a Wave Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Vendor Property
+   * - Wave Financial Vendor Property
      - Wave Customer Property
      - Wave Data Type
    * - address.addressLine1
