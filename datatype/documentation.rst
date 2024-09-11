@@ -141,7 +141,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
-    **Customerp**
+    **Custom ERP**
 
     
     .. link-button:: system/customerp
