@@ -2,57 +2,57 @@
 CustomWebshop to PowerOffice GO Dataflow
 ========================================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 07:55:13
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CustomWebshop to PowerOffice GO. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Custom Customer to PowerOffice Customers
-----------------------------------------
-Every Custom Customer will be synchronized with a PowerOffice Customers.
+CustomWebshop Customer to PowerOffice Customers
+-----------------------------------------------
+Every CustomWebshop Customer will be synchronized with a PowerOffice Customers.
 
-Once a link between a Custom Customer and a PowerOffice Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomWebshop Customer and a PowerOffice Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Customer and a PowerOffice Customers:
+The following properties are synchronized between a CustomWebshop Customer and a PowerOffice Customers:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Customer Property
+   * - CustomWebshop Customer Property
      - PowerOffice Customers Property
      - PowerOffice Data Type
 
 
-Custom Order to PowerOffice Salesorders
----------------------------------------
-Every Custom Order will be synchronized with a PowerOffice Salesorders.
+CustomWebshop Order to PowerOffice Salesorders
+----------------------------------------------
+Every CustomWebshop Order will be synchronized with a PowerOffice Salesorders.
 
-Once a link between a Custom Order and a PowerOffice Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomWebshop Order and a PowerOffice Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Order and a PowerOffice Salesorders:
+The following properties are synchronized between a CustomWebshop Order and a PowerOffice Salesorders:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Order Property
+   * - CustomWebshop Order Property
      - PowerOffice Salesorders Property
      - PowerOffice Data Type
 
 
-Custom Product to PowerOffice Product
--------------------------------------
-Every Custom Product will be synchronized with a PowerOffice Product.
+CustomWebshop Product to PowerOffice Product
+--------------------------------------------
+Every CustomWebshop Product will be synchronized with a PowerOffice Product.
 
-Once a link between a Custom Product and a PowerOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomWebshop Product and a PowerOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Product and a PowerOffice Product:
+The following properties are synchronized between a CustomWebshop Product and a PowerOffice Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Product Property
+   * - CustomWebshop Product Property
      - PowerOffice Product Property
      - PowerOffice Data Type
 
