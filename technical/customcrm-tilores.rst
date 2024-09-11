@@ -2,25 +2,25 @@
 CustomCRM to Tilores Dataflow
 =============================
 
-Generated: 2024-09-11 08:35:29
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CustomCRM to Tilores. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Custom Contact to Tilores Human
--------------------------------
-Every Custom Contact will be synchronized with a Tilores Human.
+CustomCRM Contact to Tilores Human
+----------------------------------
+Every CustomCRM Contact will be synchronized with a Tilores Human.
 
-Once a link between a Custom Contact and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomCRM Contact and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Contact and a Tilores Human:
+The following properties are synchronized between a CustomCRM Contact and a Tilores Human:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Contact Property
+   * - CustomCRM Contact Property
      - Tilores Human Property
      - Tilores Data Type
 
