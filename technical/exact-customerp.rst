@@ -2,7 +2,7 @@
 Exact Online to CustomERP Dataflow
 ==================================
 
-Generated: 2024-09-11 08:01:30
+Generated: 2024-09-11 08:03:13
 
 Introduction
 ------------
@@ -105,98 +105,98 @@ The following properties are synchronized between a Exact Salesorderlines and a 
      - Custom Data Type
 
 
-Exact Accounts to Custom Customer
----------------------------------
-Every Exact Accounts will be synchronized with a Custom Customer.
+Exact Accounts to CustomERP Customer
+------------------------------------
+Every Exact Accounts will be synchronized with a CustomERP Customer.
 
-Once a link between a Exact Accounts and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Accounts and a CustomERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Accounts and a Custom Customer:
+The following properties are synchronized between a Exact Accounts and a CustomERP Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Accounts Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomERP Customer Property
+     - CustomERP Data Type
 
 
-Exact Contacts to Custom Contact
---------------------------------
-Every Exact Contacts will be synchronized with a Custom Contact.
+Exact Contacts to CustomERP Contact
+-----------------------------------
+Every Exact Contacts will be synchronized with a CustomERP Contact.
 
-Once a link between a Exact Contacts and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Contacts and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Contacts and a Custom Contact:
+The following properties are synchronized between a Exact Contacts and a CustomERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Contacts Property
-     - Custom Contact Property
-     - Custom Data Type
+     - CustomERP Contact Property
+     - CustomERP Data Type
 
 
-Exact Employees to Custom Employee
-----------------------------------
-Every Exact Employees will be synchronized with a Custom Employee.
+Exact Employees to CustomERP Employee
+-------------------------------------
+Every Exact Employees will be synchronized with a CustomERP Employee.
 
-Once a link between a Exact Employees and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Employees and a CustomERP Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Employees and a Custom Employee:
+The following properties are synchronized between a Exact Employees and a CustomERP Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Employees Property
-     - Custom Employee Property
-     - Custom Data Type
+     - CustomERP Employee Property
+     - CustomERP Data Type
 
 
-Exact Items to Custom Product
------------------------------
-Every Exact Items will be synchronized with a Custom Product.
+Exact Items to CustomERP Product
+--------------------------------
+Every Exact Items will be synchronized with a CustomERP Product.
 
-Once a link between a Exact Items and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Items and a CustomERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Items and a Custom Product:
+The following properties are synchronized between a Exact Items and a CustomERP Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Items Property
-     - Custom Product Property
-     - Custom Data Type
+     - CustomERP Product Property
+     - CustomERP Data Type
 
 
-Exact Quotations to Custom Quote
---------------------------------
-Every Exact Quotations will be synchronized with a Custom Quote.
+Exact Quotations to CustomERP Quote
+-----------------------------------
+Every Exact Quotations will be synchronized with a CustomERP Quote.
 
-Once a link between a Exact Quotations and a Custom Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Quotations and a CustomERP Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Quotations and a Custom Quote:
+The following properties are synchronized between a Exact Quotations and a CustomERP Quote:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Quotations Property
-     - Custom Quote Property
-     - Custom Data Type
+     - CustomERP Quote Property
+     - CustomERP Data Type
 
 
-Exact Salesorders to Custom Order
----------------------------------
-Every Exact Salesorders will be synchronized with a Custom Order.
+Exact Salesorders to CustomERP Order
+------------------------------------
+Every Exact Salesorders will be synchronized with a CustomERP Order.
 
-Once a link between a Exact Salesorders and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Salesorders and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Exact Salesorders and a Custom Order:
+The following properties are synchronized between a Exact Salesorders and a CustomERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Exact Salesorders Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomERP Order Property
+     - CustomERP Data Type
 
