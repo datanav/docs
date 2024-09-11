@@ -1,13 +1,13 @@
-===================================
-HubSpot to Businesscentral Dataflow
-===================================
+====================================
+HubSpot to Business Central Dataflow
+====================================
 
-Generated: 2024-09-11 00:00:24
+Generated: 2024-09-11 07:53:15
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Businesscentral. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 HubSpot Company to Businesscentral Customers company
 ----------------------------------------------------
@@ -181,20 +181,20 @@ The following properties are synchronized between a HubSpot Company and a Busine
      - Businesscentral Data Type
 
 
-HubSpot Deal to Businesscentral Salesorders
--------------------------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Businesscentral Salesorders.
+HubSpot Deal to Business Salesorders
+------------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Business Salesorders.
 
-Once a link between a HubSpot Deal and a Businesscentral Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Deal and a Business Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Deal and a Businesscentral Salesorders:
+The following properties are synchronized between a HubSpot Deal and a Business Salesorders:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Deal Property
-     - Businesscentral Salesorders Property
-     - Businesscentral Data Type
+     - Business Salesorders Property
+     - Business Data Type
    * - properties.amount
      - totalAmountExcludingTax
      - "string"
@@ -221,20 +221,20 @@ The following properties are synchronized between a HubSpot Deal and a Businessc
      - "string"
 
 
-HubSpot Lineitem to Businesscentral Salesorderlines
----------------------------------------------------
-Every HubSpot Lineitem will be synchronized with a Businesscentral Salesorderlines.
+HubSpot Lineitem to Business Salesorderlines
+--------------------------------------------
+Every HubSpot Lineitem will be synchronized with a Business Salesorderlines.
 
-Once a link between a HubSpot Lineitem and a Businesscentral Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitem and a Business Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitem and a Businesscentral Salesorderlines:
+The following properties are synchronized between a HubSpot Lineitem and a Business Salesorderlines:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitem Property
-     - Businesscentral Salesorderlines Property
-     - Businesscentral Data Type
+     - Business Salesorderlines Property
+     - Business Data Type
    * - properties.description
      - description
      - "string"
@@ -261,20 +261,20 @@ The following properties are synchronized between a HubSpot Lineitem and a Busin
      - N/A
 
 
-HubSpot Product to Businesscentral Items
-----------------------------------------
-Every HubSpot Product will be synchronized with a Businesscentral Items.
+HubSpot Product to Business Items
+---------------------------------
+Every HubSpot Product will be synchronized with a Business Items.
 
-Once a link between a HubSpot Product and a Businesscentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Product and a Business Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Product and a Businesscentral Items:
+The following properties are synchronized between a HubSpot Product and a Business Items:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Product Property
-     - Businesscentral Items Property
-     - Businesscentral Data Type
+     - Business Items Property
+     - Business Data Type
    * - properties.hs_cost_of_goods_sold
      - unitCost
      - N/A
