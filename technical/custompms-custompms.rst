@@ -2,25 +2,25 @@
 CustomPMS to CustomPMS Dataflow
 ===============================
 
-Generated: 2024-09-11 07:54:34
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from CustomPMS to CustomPMS. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Custom Task to Custom Project
------------------------------
-Every Custom Task will be synchronized with a Custom Project.
+CustomPMS Task to CustomPMS Project
+-----------------------------------
+Every CustomPMS Task will be synchronized with a CustomPMS Project.
 
-Once a link between a Custom Task and a Custom Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a CustomPMS Task and a CustomPMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Task and a Custom Project:
+The following properties are synchronized between a CustomPMS Task and a CustomPMS Project:
 
 .. list-table::
    :header-rows: 1
 
-   * - Custom Task Property
-     - Custom Project Property
-     - Custom Data Type
+   * - CustomPMS Task Property
+     - CustomPMS Project Property
+     - CustomPMS Data Type
 
