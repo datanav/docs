@@ -2,7 +2,7 @@
 Business Central to CRMOffice Dataflow
 ======================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -72,18 +72,18 @@ The following properties are synchronized between a BusinessCentral Items and a 
      - CRMOffice Data Type
 
 
-BusinessCentral Contacts person to CRMOffice Contacts
------------------------------------------------------
-Every BusinessCentral Contacts person will be synchronized with a CRMOffice Contacts.
+Business Central Contacts person to CRMOffice Contacts
+------------------------------------------------------
+Every Business Central Contacts person will be synchronized with a CRMOffice Contacts.
 
-Once a link between a BusinessCentral Contacts person and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Contacts person and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Contacts person and a CRMOffice Contacts:
+The following properties are synchronized between a Business Central Contacts person and a CRMOffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Contacts person Property
+   * - Business Central Contacts person Property
      - CRMOffice Contacts Property
      - CRMOffice Data Type
    * - mobilePhoneNumber
@@ -94,18 +94,18 @@ The following properties are synchronized between a BusinessCentral Contacts per
      - "string"
 
 
-BusinessCentral Customers company to CRMOffice Companies
---------------------------------------------------------
-Every BusinessCentral Customers company will be synchronized with a CRMOffice Companies.
+Business Central Customers company to CRMOffice Companies
+---------------------------------------------------------
+Every Business Central Customers company will be synchronized with a CRMOffice Companies.
 
-Once a link between a BusinessCentral Customers company and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers company and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Customers company and a CRMOffice Companies:
+The following properties are synchronized between a Business Central Customers company and a CRMOffice Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Customers company Property
+   * - Business Central Customers company Property
      - CRMOffice Companies Property
      - CRMOffice Data Type
    * - city
