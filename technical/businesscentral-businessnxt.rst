@@ -2,59 +2,59 @@
 BusinessCentral to BusinessNxt Dataflow
 =======================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from BusinessCentral to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Business Companies to Visma Address
------------------------------------
-Every Business Companies will be synchronized with a Visma Address.
+BusinessCentral Companies to BusinessNxt Address
+------------------------------------------------
+Every BusinessCentral Companies will be synchronized with a BusinessNxt Address.
 
-Once a link between a Business Companies and a Visma Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessCentral Companies and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Companies and a Visma Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Companies Property
-     - Visma Address Property
-     - Visma Data Type
-
-
-Business Salesorderlines to Visma Order
----------------------------------------
-Every Business Salesorderlines will be synchronized with a Visma Order.
-
-Once a link between a Business Salesorderlines and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Salesorderlines and a Visma Order:
+The following properties are synchronized between a BusinessCentral Companies and a BusinessNxt Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Salesorderlines Property
-     - Visma Order Property
-     - Visma Data Type
+   * - BusinessCentral Companies Property
+     - BusinessNxt Address Property
+     - BusinessNxt Data Type
 
 
-Business Salesquotes to Visma Order
------------------------------------
-Every Business Salesquotes will be synchronized with a Visma Order.
+BusinessCentral Salesorderlines to BusinessNxt Order
+----------------------------------------------------
+Every BusinessCentral Salesorderlines will be synchronized with a BusinessNxt Order.
 
-Once a link between a Business Salesquotes and a Visma Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a BusinessCentral Salesorderlines and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Salesquotes and a Visma Order:
+The following properties are synchronized between a BusinessCentral Salesorderlines and a BusinessNxt Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Salesquotes Property
-     - Visma Order Property
-     - Visma Data Type
+   * - BusinessCentral Salesorderlines Property
+     - BusinessNxt Order Property
+     - BusinessNxt Data Type
+
+
+BusinessCentral Salesquotes to BusinessNxt Order
+------------------------------------------------
+Every BusinessCentral Salesquotes will be synchronized with a BusinessNxt Order.
+
+Once a link between a BusinessCentral Salesquotes and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a BusinessCentral Salesquotes and a BusinessNxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - BusinessCentral Salesquotes Property
+     - BusinessNxt Order Property
+     - BusinessNxt Data Type
 
 
 BusinessCentral Currencies to BusinessNxt Currency
