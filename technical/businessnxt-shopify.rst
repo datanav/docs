@@ -2,25 +2,25 @@
 Visma Business Nxt to Shopify Dataflow
 ======================================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:47:14
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Visma Business Nxt to Shopify. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Businessnxt Order to Shopify Order
-----------------------------------
-Every Businessnxt Order will be synchronized with a Shopify Order.
+Visma Order to Shopify Order
+----------------------------
+Every Visma Order will be synchronized with a Shopify Order.
 
-Once a link between a Businessnxt Order and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Order and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Order and a Shopify Order:
+The following properties are synchronized between a Visma Order and a Shopify Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Order Property
+   * - Visma Order Property
      - Shopify Order Property
      - Shopify Data Type
    * - name
@@ -28,18 +28,18 @@ The following properties are synchronized between a Businessnxt Order and a Shop
      - "string"
 
 
-Businessnxt Product to Shopify Sesamproduct
--------------------------------------------
-Every Businessnxt Product will be synchronized with a Shopify Sesamproduct.
+Visma Product to Shopify Sesamproduct
+-------------------------------------
+Every Visma Product will be synchronized with a Shopify Sesamproduct.
 
-Once a link between a Businessnxt Product and a Shopify Sesamproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Visma Product and a Shopify Sesamproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Businessnxt Product and a Shopify Sesamproduct:
+The following properties are synchronized between a Visma Product and a Shopify Sesamproduct:
 
 .. list-table::
    :header-rows: 1
 
-   * - Businessnxt Product Property
+   * - Visma Product Property
      - Shopify Sesamproduct Property
      - Shopify Data Type
    * - description
