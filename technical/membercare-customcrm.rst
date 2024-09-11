@@ -1,90 +1,90 @@
-================================
-Membercare to Customcrm Dataflow
-================================
+=================================
+MemberCare to Custom CRM Dataflow
+=================================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:45:31
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Membercare to Customcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Membercare Companies to Customcrm Customer
-------------------------------------------
-Every Membercare Companies will be synchronized with a Customcrm Customer.
+Membercare Companies to Custom Customer
+---------------------------------------
+Every Membercare Companies will be synchronized with a Custom Customer.
 
-Once a link between a Membercare Companies and a Customcrm Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Membercare Companies and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Companies and a Customcrm Customer:
+The following properties are synchronized between a Membercare Companies and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Membercare Companies Property
-     - Customcrm Customer Property
-     - Customcrm Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Membercare Invoices to Customcrm Order
---------------------------------------
-Every Membercare Invoices will be synchronized with a Customcrm Order.
+Membercare Invoices to Custom Order
+-----------------------------------
+Every Membercare Invoices will be synchronized with a Custom Order.
 
-Once a link between a Membercare Invoices and a Customcrm Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Membercare Invoices and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Invoices and a Customcrm Order:
+The following properties are synchronized between a Membercare Invoices and a Custom Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Membercare Invoices Property
-     - Customcrm Order Property
-     - Customcrm Data Type
+     - Custom Order Property
+     - Custom Data Type
 
 
-Membercare Organizations to Customcrm Customer
-----------------------------------------------
-Every Membercare Organizations will be synchronized with a Customcrm Customer.
+Membercare Organizations to Custom Customer
+-------------------------------------------
+Every Membercare Organizations will be synchronized with a Custom Customer.
 
-Once a link between a Membercare Organizations and a Customcrm Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Membercare Organizations and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Organizations and a Customcrm Customer:
+The following properties are synchronized between a Membercare Organizations and a Custom Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Membercare Organizations Property
-     - Customcrm Customer Property
-     - Customcrm Data Type
+     - Custom Customer Property
+     - Custom Data Type
 
 
-Membercare Persons to Customcrm Contact
----------------------------------------
-Every Membercare Persons will be synchronized with a Customcrm Contact.
+Membercare Persons to Custom Contact
+------------------------------------
+Every Membercare Persons will be synchronized with a Custom Contact.
 
-Once a link between a Membercare Persons and a Customcrm Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Membercare Persons and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Persons and a Customcrm Contact:
+The following properties are synchronized between a Membercare Persons and a Custom Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Membercare Persons Property
-     - Customcrm Contact Property
-     - Customcrm Data Type
+     - Custom Contact Property
+     - Custom Data Type
 
 
-Membercare Products to Customcrm Product
-----------------------------------------
-Every Membercare Products will be synchronized with a Customcrm Product.
+Membercare Products to Custom Product
+-------------------------------------
+Every Membercare Products will be synchronized with a Custom Product.
 
-Once a link between a Membercare Products and a Customcrm Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Membercare Products and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Products and a Customcrm Product:
+The following properties are synchronized between a Membercare Products and a Custom Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Membercare Products Property
-     - Customcrm Product Property
-     - Customcrm Data Type
+     - Custom Product Property
+     - Custom Data Type
 
