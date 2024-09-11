@@ -2,7 +2,7 @@
 PowerOfficeGO to Salesforce Dataflow
 ====================================
 
-Generated: 2024-09-11 09:50:20
+Generated: 2024-09-11 09:50:49
 
 Introduction
 ------------
@@ -64,6 +64,9 @@ The following properties are synchronized between a PowerOfficeGO Projectactivit
    * - PowerOfficeGO Projectactivity Property
      - Salesforce Task Property
      - Salesforce Data Type
+   * - name
+     - Subject
+     - "string"
 
 
 PowerOfficeGO Projects to Salesforce Task
