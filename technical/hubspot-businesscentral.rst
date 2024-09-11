@@ -2,7 +2,7 @@
 HubSpot to BusinessCentral Dataflow
 ===================================
 
-Generated: 2024-09-11 08:49:20
+Generated: 2024-09-11 09:30:21
 
 Introduction
 ------------
@@ -165,20 +165,20 @@ The following properties are synchronized between a HubSpot Contact and a Busine
      - "string"
 
 
-HubSpot Company to Business Companies
--------------------------------------
-Every HubSpot Company will be synchronized with a Business Companies.
+HubSpot Company to BusinessCentral Companies
+--------------------------------------------
+Every HubSpot Company will be synchronized with a BusinessCentral Companies.
 
-Once a link between a HubSpot Company and a Business Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a BusinessCentral Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a Business Companies:
+The following properties are synchronized between a HubSpot Company and a BusinessCentral Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     - Business Companies Property
-     - Business Data Type
+     - BusinessCentral Companies Property
+     - BusinessCentral Data Type
 
 
 HubSpot Deal to BusinessCentral Salesorders
