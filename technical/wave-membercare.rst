@@ -2,27 +2,27 @@
 Wave to MemberCare Dataflow
 ===========================
 
-Generated: 2024-09-11 07:53:23
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Customer to Membercare Companies
+Wave Customer to MemberCare Companies
 -------------------------------------
-Every Wave Customer will be synchronized with a Membercare Companies.
+Every Wave Customer will be synchronized with a MemberCare Companies.
 
-Once a link between a Wave Customer and a Membercare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a Membercare Companies:
+The following properties are synchronized between a Wave Customer and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - Membercare Companies Property
-     - Membercare Data Type
+     - MemberCare Companies Property
+     - MemberCare Data Type
    * - name
      - companyName
      - "string"
@@ -31,20 +31,20 @@ The following properties are synchronized between a Wave Customer and a Memberca
      - "string"
 
 
-Wave Customer person to Membercare Persons
+Wave Customer person to MemberCare Persons
 ------------------------------------------
-Every Wave Customer person will be synchronized with a Membercare Persons.
+Every Wave Customer person will be synchronized with a MemberCare Persons.
 
-Once a link between a Wave Customer person and a Membercare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer person and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a Membercare Persons:
+The following properties are synchronized between a Wave Customer person and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer person Property
-     - Membercare Persons Property
-     - Membercare Data Type
+     - MemberCare Persons Property
+     - MemberCare Data Type
    * - address.city
      - addresses.postalCode.city
      - "string"
@@ -80,20 +80,20 @@ The following properties are synchronized between a Wave Customer person and a M
      - "string"
 
 
-Wave Invoice to Membercare Invoices
+Wave Invoice to MemberCare Invoices
 -----------------------------------
-Every Wave Invoice will be synchronized with a Membercare Invoices.
+Every Wave Invoice will be synchronized with a MemberCare Invoices.
 
-Once a link between a Wave Invoice and a Membercare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Invoice and a Membercare Invoices:
+The following properties are synchronized between a Wave Invoice and a MemberCare Invoices:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Invoice Property
-     - Membercare Invoices Property
-     - Membercare Data Type
+     - MemberCare Invoices Property
+     - MemberCare Data Type
    * - dueDate
      - payDueDate
      - "string"
@@ -108,20 +108,20 @@ The following properties are synchronized between a Wave Invoice and a Membercar
      - "string"
 
 
-Wave Product to Membercare Products
+Wave Product to MemberCare Products
 -----------------------------------
-Every Wave Product will be synchronized with a Membercare Products.
+Every Wave Product will be synchronized with a MemberCare Products.
 
-Once a link between a Wave Product and a Membercare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a MemberCare Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a Membercare Products:
+The following properties are synchronized between a Wave Product and a MemberCare Products:
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Product Property
-     - Membercare Products Property
-     - Membercare Data Type
+     - MemberCare Products Property
+     - MemberCare Data Type
    * - name
      - name
      - "string"
