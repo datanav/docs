@@ -1,30 +1,30 @@
 ===============================
-Shopify to Superoffice Dataflow
+Shopify to SuperOffice Dataflow
 ===============================
 
-Generated: 2024-09-11 00:00:00
+Generated: 2024-09-11 07:57:12
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Superoffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Shopify Order to Superoffice Quotealternative
+Shopify Order to SuperOffice Quotealternative
 ---------------------------------------------
-Before any synchronization can take place, a link between a Shopify Order and a Superoffice Quotealternative must be established.
+Before any synchronization can take place, a link between a Shopify Order and a SuperOffice Quotealternative must be established.
 
-A new Superoffice Quotealternative will be created from a Shopify Order if it is connected to a Shopify Order that is synchronized into Superoffice.
+A new SuperOffice Quotealternative will be created from a Shopify Order if it is connected to a Shopify Order that is synchronized into SuperOffice.
 
-Once a link between a Shopify Order and a Superoffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a Superoffice Quotealternative:
+The following properties are synchronized between a Shopify Order and a SuperOffice Quotealternative:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     - Superoffice Quotealternative Property
-     - Superoffice Data Type
+     - SuperOffice Quotealternative Property
+     - SuperOffice Data Type
    * - current_total_price
      - TotalPrice
      - "float"
@@ -33,22 +33,22 @@ The following properties are synchronized between a Shopify Order and a Superoff
      - "float"
 
 
-Shopify Product to Superoffice Product
+Shopify Product to SuperOffice Product
 --------------------------------------
-Before any synchronization can take place, a link between a Shopify Product and a Superoffice Product must be established.
+Before any synchronization can take place, a link between a Shopify Product and a SuperOffice Product must be established.
 
-A new Superoffice Product will be created from a Shopify Product if it is connected to a Shopify Order that is synchronized into Superoffice.
+A new SuperOffice Product will be created from a Shopify Product if it is connected to a Shopify Order that is synchronized into SuperOffice.
 
-Once a link between a Shopify Product and a Superoffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Product and a Superoffice Product:
+The following properties are synchronized between a Shopify Product and a SuperOffice Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Product Property
-     - Superoffice Product Property
-     - Superoffice Data Type
+     - SuperOffice Product Property
+     - SuperOffice Data Type
 
 
 Shopify Customer to Superoffice Person
@@ -118,20 +118,20 @@ The following properties are synchronized between a Shopify Customer and a Super
      - "string"
 
 
-Shopify Order to Superoffice Quoteline
+Shopify Order to SuperOffice Quoteline
 --------------------------------------
-Every Shopify Order will be synchronized with a Superoffice Quoteline.
+Every Shopify Order will be synchronized with a SuperOffice Quoteline.
 
-Once a link between a Shopify Order and a Superoffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Order and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Order and a Superoffice Quoteline:
+The following properties are synchronized between a Shopify Order and a SuperOffice Quoteline:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Order Property
-     - Superoffice Quoteline Property
-     - Superoffice Data Type
+     - SuperOffice Quoteline Property
+     - SuperOffice Data Type
    * - id
      - QuoteAlternativeId
      - "integer"
@@ -149,20 +149,20 @@ The following properties are synchronized between a Shopify Order and a Superoff
      - "integer"
 
 
-Shopify Sesamproduct to Superoffice Product
+Shopify Sesamproduct to SuperOffice Product
 -------------------------------------------
-Every Shopify Sesamproduct will be synchronized with a Superoffice Product.
+Every Shopify Sesamproduct will be synchronized with a SuperOffice Product.
 
-Once a link between a Shopify Sesamproduct and a Superoffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Sesamproduct and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Sesamproduct and a Superoffice Product:
+The following properties are synchronized between a Shopify Sesamproduct and a SuperOffice Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Sesamproduct Property
-     - Superoffice Product Property
-     - Superoffice Data Type
+     - SuperOffice Product Property
+     - SuperOffice Data Type
    * - sesam_priceExclVAT
      - UnitListPrice
      - N/A
