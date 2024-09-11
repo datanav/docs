@@ -2,187 +2,187 @@
 HubSpot to CustomWebshop Dataflow
 =================================
 
-Generated: 2024-09-11 07:56:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to CustomWebshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-HubSpot Company to Custom Customer
-----------------------------------
-Every HubSpot Company will be synchronized with a Custom Customer.
+HubSpot Company to CustomWebshop Customer
+-----------------------------------------
+Every HubSpot Company will be synchronized with a CustomWebshop Customer.
 
-Once a link between a HubSpot Company and a Custom Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a CustomWebshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a Custom Customer:
+The following properties are synchronized between a HubSpot Company and a CustomWebshop Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     - Custom Customer Property
-     - Custom Data Type
+     - CustomWebshop Customer Property
+     - CustomWebshop Data Type
 
 
-HubSpot Dealcompanyassociation to Custom Order
-----------------------------------------------
-Every HubSpot Dealcompanyassociation will be synchronized with a Custom Order.
+HubSpot Dealcompanyassociation to CustomWebshop Order
+-----------------------------------------------------
+Every HubSpot Dealcompanyassociation will be synchronized with a CustomWebshop Order.
 
-Once a link between a HubSpot Dealcompanyassociation and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Dealcompanyassociation and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Dealcompanyassociation and a Custom Order:
+The following properties are synchronized between a HubSpot Dealcompanyassociation and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Dealcompanyassociation Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
-HubSpot Dealcontactassociation to Custom Order
-----------------------------------------------
-Every HubSpot Dealcontactassociation will be synchronized with a Custom Order.
+HubSpot Dealcontactassociation to CustomWebshop Order
+-----------------------------------------------------
+Every HubSpot Dealcontactassociation will be synchronized with a CustomWebshop Order.
 
-Once a link between a HubSpot Dealcontactassociation and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Dealcontactassociation and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Dealcontactassociation and a Custom Order:
+The following properties are synchronized between a HubSpot Dealcontactassociation and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Dealcontactassociation Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
-HubSpot Lineitem to Custom Order
---------------------------------
-Every HubSpot Lineitem will be synchronized with a Custom Order.
+HubSpot Lineitem to CustomWebshop Order
+---------------------------------------
+Every HubSpot Lineitem will be synchronized with a CustomWebshop Order.
 
-Once a link between a HubSpot Lineitem and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitem and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitem and a Custom Order:
+The following properties are synchronized between a HubSpot Lineitem and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitem Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
-HubSpot Lineitemdealassociation to Custom Order
------------------------------------------------
-Every HubSpot Lineitemdealassociation will be synchronized with a Custom Order.
+HubSpot Lineitemdealassociation to CustomWebshop Order
+------------------------------------------------------
+Every HubSpot Lineitemdealassociation will be synchronized with a CustomWebshop Order.
 
-Once a link between a HubSpot Lineitemdealassociation and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitemdealassociation and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitemdealassociation and a Custom Order:
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitemdealassociation Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
-HubSpot Lineitemquoteassociation to Custom Order
-------------------------------------------------
-Every HubSpot Lineitemquoteassociation will be synchronized with a Custom Order.
+HubSpot Lineitemquoteassociation to CustomWebshop Order
+-------------------------------------------------------
+Every HubSpot Lineitemquoteassociation will be synchronized with a CustomWebshop Order.
 
-Once a link between a HubSpot Lineitemquoteassociation and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Lineitemquoteassociation and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Lineitemquoteassociation and a Custom Order:
+The following properties are synchronized between a HubSpot Lineitemquoteassociation and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Lineitemquoteassociation Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
-HubSpot Quote to Custom Order
------------------------------
-Every HubSpot Quote will be synchronized with a Custom Order.
+HubSpot Quote to CustomWebshop Order
+------------------------------------
+Every HubSpot Quote will be synchronized with a CustomWebshop Order.
 
-Once a link between a HubSpot Quote and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quote and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quote and a Custom Order:
+The following properties are synchronized between a HubSpot Quote and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quote Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
-HubSpot Quotecompanyassociation to Custom Order
------------------------------------------------
-Every HubSpot Quotecompanyassociation will be synchronized with a Custom Order.
+HubSpot Quotecompanyassociation to CustomWebshop Order
+------------------------------------------------------
+Every HubSpot Quotecompanyassociation will be synchronized with a CustomWebshop Order.
 
-Once a link between a HubSpot Quotecompanyassociation and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotecompanyassociation and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotecompanyassociation and a Custom Order:
+The following properties are synchronized between a HubSpot Quotecompanyassociation and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotecompanyassociation Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
-HubSpot Quotecontactassociation to Custom Order
------------------------------------------------
-Every HubSpot Quotecontactassociation will be synchronized with a Custom Order.
+HubSpot Quotecontactassociation to CustomWebshop Order
+------------------------------------------------------
+Every HubSpot Quotecontactassociation will be synchronized with a CustomWebshop Order.
 
-Once a link between a HubSpot Quotecontactassociation and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotecontactassociation and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotecontactassociation and a Custom Order:
+The following properties are synchronized between a HubSpot Quotecontactassociation and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotecontactassociation Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
-HubSpot Quotedealassociation to Custom Order
---------------------------------------------
-Every HubSpot Quotedealassociation will be synchronized with a Custom Order.
+HubSpot Quotedealassociation to CustomWebshop Order
+---------------------------------------------------
+Every HubSpot Quotedealassociation will be synchronized with a CustomWebshop Order.
 
-Once a link between a HubSpot Quotedealassociation and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotedealassociation and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotedealassociation and a Custom Order:
+The following properties are synchronized between a HubSpot Quotedealassociation and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotedealassociation Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
-HubSpot Quotequotetemplateassociation to Custom Order
------------------------------------------------------
-Every HubSpot Quotequotetemplateassociation will be synchronized with a Custom Order.
+HubSpot Quotequotetemplateassociation to CustomWebshop Order
+------------------------------------------------------------
+Every HubSpot Quotequotetemplateassociation will be synchronized with a CustomWebshop Order.
 
-Once a link between a HubSpot Quotequotetemplateassociation and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Quotequotetemplateassociation and a CustomWebshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotequotetemplateassociation and a Custom Order:
+The following properties are synchronized between a HubSpot Quotequotetemplateassociation and a CustomWebshop Order:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Quotequotetemplateassociation Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomWebshop Order Property
+     - CustomWebshop Data Type
 
 
 HubSpot Deal to CustomWebshop Order
