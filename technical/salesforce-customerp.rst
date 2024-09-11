@@ -2,7 +2,7 @@
 Salesforce to CustomERP Dataflow
 ================================
 
-Generated: 2024-09-11 08:01:30
+Generated: 2024-09-11 08:03:13
 
 Introduction
 ------------
@@ -185,82 +185,82 @@ The following properties are synchronized between a Salesforce User and a Custom
      - Custom Data Type
 
 
-Salesforce Contact to Custom Contact
-------------------------------------
-Every Salesforce Contact will be synchronized with a Custom Contact.
+Salesforce Contact to CustomERP Contact
+---------------------------------------
+Every Salesforce Contact will be synchronized with a CustomERP Contact.
 
-Once a link between a Salesforce Contact and a Custom Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Contact and a CustomERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Contact and a Custom Contact:
+The following properties are synchronized between a Salesforce Contact and a CustomERP Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Contact Property
-     - Custom Contact Property
-     - Custom Data Type
+     - CustomERP Contact Property
+     - CustomERP Data Type
 
 
-Salesforce Order to Custom Order
---------------------------------
-Every Salesforce Order will be synchronized with a Custom Order.
+Salesforce Order to CustomERP Order
+-----------------------------------
+Every Salesforce Order will be synchronized with a CustomERP Order.
 
-Once a link between a Salesforce Order and a Custom Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Order and a CustomERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Order and a Custom Order:
+The following properties are synchronized between a Salesforce Order and a CustomERP Order:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Order Property
-     - Custom Order Property
-     - Custom Data Type
+     - CustomERP Order Property
+     - CustomERP Data Type
 
 
-Salesforce Product2 to Custom Product
--------------------------------------
-Every Salesforce Product2 will be synchronized with a Custom Product.
+Salesforce Product2 to CustomERP Product
+----------------------------------------
+Every Salesforce Product2 will be synchronized with a CustomERP Product.
 
-Once a link between a Salesforce Product2 and a Custom Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Product2 and a CustomERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Product2 and a Custom Product:
+The following properties are synchronized between a Salesforce Product2 and a CustomERP Product:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Product2 Property
-     - Custom Product Property
-     - Custom Data Type
+     - CustomERP Product Property
+     - CustomERP Data Type
 
 
-Salesforce Quote to Custom Quote
---------------------------------
-Every Salesforce Quote will be synchronized with a Custom Quote.
+Salesforce Quote to CustomERP Quote
+-----------------------------------
+Every Salesforce Quote will be synchronized with a CustomERP Quote.
 
-Once a link between a Salesforce Quote and a Custom Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Quote and a CustomERP Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Quote and a Custom Quote:
+The following properties are synchronized between a Salesforce Quote and a CustomERP Quote:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Quote Property
-     - Custom Quote Property
-     - Custom Data Type
+     - CustomERP Quote Property
+     - CustomERP Data Type
 
 
-Salesforce User to Custom Employee
-----------------------------------
-Every Salesforce User will be synchronized with a Custom Employee.
+Salesforce User to CustomERP Employee
+-------------------------------------
+Every Salesforce User will be synchronized with a CustomERP Employee.
 
-Once a link between a Salesforce User and a Custom Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce User and a CustomERP Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce User and a Custom Employee:
+The following properties are synchronized between a Salesforce User and a CustomERP Employee:
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce User Property
-     - Custom Employee Property
-     - Custom Data Type
+     - CustomERP Employee Property
+     - CustomERP Data Type
 
