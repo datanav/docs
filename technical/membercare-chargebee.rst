@@ -2,57 +2,57 @@
 MemberCare to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-11 07:47:14
+Generated: 2024-09-11 08:07:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Membercare Companycategories to Chargebee Currency
+MemberCare Companycategories to Chargebee Currency
 --------------------------------------------------
-Every Membercare Companycategories will be synchronized with a Chargebee Currency.
+Every MemberCare Companycategories will be synchronized with a Chargebee Currency.
 
-Once a link between a Membercare Companycategories and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Companycategories and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Companycategories and a Chargebee Currency:
+The following properties are synchronized between a MemberCare Companycategories and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Companycategories Property
+   * - MemberCare Companycategories Property
      - Chargebee Currency Property
      - Chargebee Data Type
 
 
-Membercare Countries to Chargebee Currency
+MemberCare Countries to Chargebee Currency
 ------------------------------------------
-Every Membercare Countries will be synchronized with a Chargebee Currency.
+Every MemberCare Countries will be synchronized with a Chargebee Currency.
 
-Once a link between a Membercare Countries and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Countries and a Chargebee Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Countries and a Chargebee Currency:
+The following properties are synchronized between a MemberCare Countries and a Chargebee Currency:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Countries Property
+   * - MemberCare Countries Property
      - Chargebee Currency Property
      - Chargebee Data Type
 
 
-Membercare Invoices to Chargebee Order
+MemberCare Invoices to Chargebee Order
 --------------------------------------
-Every Membercare Invoices will be synchronized with a Chargebee Order.
+Every MemberCare Invoices will be synchronized with a Chargebee Order.
 
-Once a link between a Membercare Invoices and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Invoices and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Invoices and a Chargebee Order:
+The following properties are synchronized between a MemberCare Invoices and a Chargebee Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Invoices Property
+   * - MemberCare Invoices Property
      - Chargebee Order Property
      - Chargebee Data Type
    * - invoiceItems.description
@@ -66,18 +66,18 @@ The following properties are synchronized between a Membercare Invoices and a Ch
      - "string"
 
 
-Membercare Organizations to Chargebee Business_entity
+MemberCare Organizations to Chargebee Business_entity
 -----------------------------------------------------
-Every Membercare Organizations will be synchronized with a Chargebee Business_entity.
+Every MemberCare Organizations will be synchronized with a Chargebee Business_entity.
 
-Once a link between a Membercare Organizations and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Organizations and a Chargebee Business_entity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Organizations and a Chargebee Business_entity:
+The following properties are synchronized between a MemberCare Organizations and a Chargebee Business_entity:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Organizations Property
+   * - MemberCare Organizations Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
    * - name
@@ -85,18 +85,18 @@ The following properties are synchronized between a Membercare Organizations and
      - "string"
 
 
-Membercare Persons to Chargebee Customer
+MemberCare Persons to Chargebee Customer
 ----------------------------------------
-Every Membercare Persons will be synchronized with a Chargebee Customer.
+Every MemberCare Persons will be synchronized with a Chargebee Customer.
 
-Once a link between a Membercare Persons and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Persons and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Persons and a Chargebee Customer:
+The following properties are synchronized between a MemberCare Persons and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Persons Property
+   * - MemberCare Persons Property
      - Chargebee Customer Property
      - Chargebee Data Type
    * - firstname
@@ -107,18 +107,18 @@ The following properties are synchronized between a Membercare Persons and a Cha
      - "string"
 
 
-Membercare Products to Chargebee Item
+MemberCare Products to Chargebee Item
 -------------------------------------
-Every Membercare Products will be synchronized with a Chargebee Item.
+Every MemberCare Products will be synchronized with a Chargebee Item.
 
-Once a link between a Membercare Products and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a MemberCare Products and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Membercare Products and a Chargebee Item:
+The following properties are synchronized between a MemberCare Products and a Chargebee Item:
 
 .. list-table::
    :header-rows: 1
 
-   * - Membercare Products Property
+   * - MemberCare Products Property
      - Chargebee Item Property
      - Chargebee Data Type
 
