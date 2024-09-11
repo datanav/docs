@@ -67,7 +67,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
-    **Customcrm**
+    **Custom CRM**
 
     
     .. link-button:: system/customcrm
@@ -270,7 +270,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
-    **Customerp**
+    **Custom ERP**
 
     
     .. link-button:: system/customerp
@@ -415,7 +415,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
-    **Customhrm**
+    **Custom HRM**
 
     
     .. link-button:: system/customhrm
@@ -547,7 +547,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
-    **Custompms**
+    **Custom PMS**
 
     
     .. link-button:: system/custompms
