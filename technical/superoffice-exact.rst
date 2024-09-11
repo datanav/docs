@@ -2,7 +2,7 @@
 SuperOffice to Exact Online Dataflow
 ====================================
 
-Generated: 2024-09-11 11:42:14
+Generated: 2024-09-11 12:17:20
 
 Introduction
 ------------
@@ -33,20 +33,20 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
 
 
-SuperOffice Contact to ExactOnline Accounts
--------------------------------------------
-Every SuperOffice Contact will be synchronized with a ExactOnline Accounts.
+SuperOffice Contact to Exact Online Accounts
+--------------------------------------------
+Every SuperOffice Contact will be synchronized with a Exact Online Accounts.
 
-Once a link between a SuperOffice Contact and a ExactOnline Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Contact and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Contact and a ExactOnline Accounts:
+The following properties are synchronized between a SuperOffice Contact and a Exact Online Accounts:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Contact Property
-     - ExactOnline Accounts Property
-     - ExactOnline Data Type
+     - Exact Online Accounts Property
+     - Exact Online Data Type
    * - Address.Postal.Address1
      - AddressLine1
      - "string"
@@ -91,20 +91,20 @@ The following properties are synchronized between a SuperOffice Contact and a Ex
      - "string"
 
 
-SuperOffice Person to ExactOnline Contacts
-------------------------------------------
-Every SuperOffice Person will be synchronized with a ExactOnline Contacts.
+SuperOffice Person to Exact Online Contacts
+-------------------------------------------
+Every SuperOffice Person will be synchronized with a Exact Online Contacts.
 
-Once a link between a SuperOffice Person and a ExactOnline Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a ExactOnline Contacts:
+The following properties are synchronized between a SuperOffice Person and a Exact Online Contacts:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - ExactOnline Contacts Property
-     - ExactOnline Data Type
+     - Exact Online Contacts Property
+     - Exact Online Data Type
    * - Address.Street.City
      - City
      - "string"
@@ -131,36 +131,36 @@ The following properties are synchronized between a SuperOffice Person and a Exa
      - "string"
 
 
-SuperOffice Quoteline to ExactOnline Quotations
------------------------------------------------
-Every SuperOffice Quoteline will be synchronized with a ExactOnline Quotations.
+SuperOffice Quoteline to Exact Online Quotations
+------------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Exact Online Quotations.
 
-Once a link between a SuperOffice Quoteline and a ExactOnline Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quoteline and a Exact Online Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quoteline and a ExactOnline Quotations:
+The following properties are synchronized between a SuperOffice Quoteline and a Exact Online Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Quoteline Property
-     - ExactOnline Quotations Property
-     - ExactOnline Data Type
+     - Exact Online Quotations Property
+     - Exact Online Data Type
 
 
-SuperOffice Sale to ExactOnline Quotations
-------------------------------------------
-Every SuperOffice Sale will be synchronized with a ExactOnline Quotations.
+SuperOffice Sale to Exact Online Quotations
+-------------------------------------------
+Every SuperOffice Sale will be synchronized with a Exact Online Quotations.
 
-Once a link between a SuperOffice Sale and a ExactOnline Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Sale and a Exact Online Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Sale and a ExactOnline Quotations:
+The following properties are synchronized between a SuperOffice Sale and a Exact Online Quotations:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Sale Property
-     - ExactOnline Quotations Property
-     - ExactOnline Data Type
+     - Exact Online Quotations Property
+     - Exact Online Data Type
    * - Currency.Id
      - Currency
      - "string"
