@@ -2,7 +2,7 @@
 Tidsbanken to SuperOffice Dataflow
 ==================================
 
-Generated: 2024-09-11 07:55:13
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
@@ -163,20 +163,20 @@ The following properties are synchronized between a Tidsbanken Kunde and a Super
      - "string"
 
 
-Tidsbanken Avdeling to Superoffice Contact
+Tidsbanken Avdeling to SuperOffice Contact
 ------------------------------------------
-Every Tidsbanken Avdeling will be synchronized with a Superoffice Contact.
+Every Tidsbanken Avdeling will be synchronized with a SuperOffice Contact.
 
-Once a link between a Tidsbanken Avdeling and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Avdeling and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Avdeling and a Superoffice Contact:
+The following properties are synchronized between a Tidsbanken Avdeling and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Avdeling Property
-     - Superoffice Contact Property
-     - Superoffice Data Type
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
    * - Adresse
      - Address.Postal.Address1
      - "string"
