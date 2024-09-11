@@ -2,46 +2,46 @@
 Freshteam to SuperOffice Dataflow
 =================================
 
-Generated: 2024-09-11 07:54:34
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Freshteam to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Freshteam Department to Superoffice Contact
+Freshteam Department to SuperOffice Contact
 -------------------------------------------
-Every Freshteam Department will be synchronized with a Superoffice Contact.
+Every Freshteam Department will be synchronized with a SuperOffice Contact.
 
-Once a link between a Freshteam Department and a Superoffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Department and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Department and a Superoffice Contact:
+The following properties are synchronized between a Freshteam Department and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Department Property
-     - Superoffice Contact Property
-     - Superoffice Data Type
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
    * - name
      - Name
      - "string"
 
 
-Freshteam Employee to Superoffice Person
+Freshteam Employee to SuperOffice Person
 ----------------------------------------
-Every Freshteam Employee will be synchronized with a Superoffice Person.
+Every Freshteam Employee will be synchronized with a SuperOffice Person.
 
-Once a link between a Freshteam Employee and a Superoffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Freshteam Employee and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Freshteam Employee and a Superoffice Person:
+The following properties are synchronized between a Freshteam Employee and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
    * - Freshteam Employee Property
-     - Superoffice Person Property
-     - Superoffice Data Type
+     - SuperOffice Person Property
+     - SuperOffice Data Type
    * - address.city
      - Address.Street.City
      - "string"
