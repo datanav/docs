@@ -1,13 +1,13 @@
-========================================
-Business Central to BusinessNxt Dataflow
-========================================
+=========================================
+Business Central to Business Nxt Dataflow
+=========================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:41:16
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to BusinessNxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 BusinessCentral Companies to BusinessNxt Address
 ------------------------------------------------
@@ -57,20 +57,20 @@ The following properties are synchronized between a BusinessCentral Salesquotes 
      - BusinessNxt Data Type
 
 
-BusinessCentral Currencies to BusinessNxt Currency
---------------------------------------------------
-Every BusinessCentral Currencies will be synchronized with a BusinessNxt Currency.
+Business Central Currencies to Business Nxt Currency
+----------------------------------------------------
+Every Business Central Currencies will be synchronized with a Business Nxt Currency.
 
-Once a link between a BusinessCentral Currencies and a BusinessNxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Currencies and a Business Nxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Currencies and a BusinessNxt Currency:
+The following properties are synchronized between a Business Central Currencies and a Business Nxt Currency:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Currencies Property
-     - BusinessNxt Currency Property
-     - BusinessNxt Data Type
+   * - Business Central Currencies Property
+     - Business Nxt Currency Property
+     - Business Nxt Data Type
    * - code
      - isoCode
      - "string"
@@ -79,20 +79,20 @@ The following properties are synchronized between a BusinessCentral Currencies a
      - "string"
 
 
-BusinessCentral Customers company to BusinessNxt Address
---------------------------------------------------------
-Every BusinessCentral Customers company will be synchronized with a BusinessNxt Address.
+Business Central Customers company to Business Nxt Address
+----------------------------------------------------------
+Every Business Central Customers company will be synchronized with a Business Nxt Address.
 
-Once a link between a BusinessCentral Customers company and a BusinessNxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers company and a Business Nxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Customers company and a BusinessNxt Address:
+The following properties are synchronized between a Business Central Customers company and a Business Nxt Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Customers company Property
-     - BusinessNxt Address Property
-     - BusinessNxt Data Type
+   * - Business Central Customers company Property
+     - Business Nxt Address Property
+     - Business Nxt Data Type
    * - displayName
      - name
      - "string"
@@ -104,58 +104,58 @@ The following properties are synchronized between a BusinessCentral Customers co
      - "string"
 
 
-BusinessCentral Customers company to BusinessNxt Company
---------------------------------------------------------
-Every BusinessCentral Customers company will be synchronized with a BusinessNxt Company.
+Business Central Customers company to Business Nxt Company
+----------------------------------------------------------
+Every Business Central Customers company will be synchronized with a Business Nxt Company.
 
-Once a link between a BusinessCentral Customers company and a BusinessNxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers company and a Business Nxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Customers company and a BusinessNxt Company:
+The following properties are synchronized between a Business Central Customers company and a Business Nxt Company:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Customers company Property
-     - BusinessNxt Company Property
-     - BusinessNxt Data Type
+   * - Business Central Customers company Property
+     - Business Nxt Company Property
+     - Business Nxt Data Type
    * - displayName
      - name
      - "string"
 
 
-BusinessCentral Itemcategories to BusinessNxt Productcategory
--------------------------------------------------------------
-Every BusinessCentral Itemcategories will be synchronized with a BusinessNxt Productcategory.
+Business Central Itemcategories to Business Nxt Productcategory
+---------------------------------------------------------------
+Every Business Central Itemcategories will be synchronized with a Business Nxt Productcategory.
 
-Once a link between a BusinessCentral Itemcategories and a BusinessNxt Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Itemcategories and a Business Nxt Productcategory is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Itemcategories and a BusinessNxt Productcategory:
+The following properties are synchronized between a Business Central Itemcategories and a Business Nxt Productcategory:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Itemcategories Property
-     - BusinessNxt Productcategory Property
-     - BusinessNxt Data Type
+   * - Business Central Itemcategories Property
+     - Business Nxt Productcategory Property
+     - Business Nxt Data Type
    * - displayName
      - text
      - "string"
 
 
-BusinessCentral Items to BusinessNxt Product
---------------------------------------------
-Every BusinessCentral Items will be synchronized with a BusinessNxt Product.
+Business Central Items to Business Nxt Product
+----------------------------------------------
+Every Business Central Items will be synchronized with a Business Nxt Product.
 
-Once a link between a BusinessCentral Items and a BusinessNxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Items and a Business Nxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Items and a BusinessNxt Product:
+The following properties are synchronized between a Business Central Items and a Business Nxt Product:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Items Property
-     - BusinessNxt Product Property
-     - BusinessNxt Data Type
+   * - Business Central Items Property
+     - Business Nxt Product Property
+     - Business Nxt Data Type
    * - inventory
      - quantityPerUnit
      - "string"
@@ -164,39 +164,39 @@ The following properties are synchronized between a BusinessCentral Items and a 
      - "string"
 
 
-BusinessCentral Salesorderlines to BusinessNxt Orderline
---------------------------------------------------------
-Every BusinessCentral Salesorderlines will be synchronized with a BusinessNxt Orderline.
+Business Central Salesorderlines to Business Nxt Orderline
+----------------------------------------------------------
+Every Business Central Salesorderlines will be synchronized with a Business Nxt Orderline.
 
-Once a link between a BusinessCentral Salesorderlines and a BusinessNxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Salesorderlines and a Business Nxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Salesorderlines and a BusinessNxt Orderline:
+The following properties are synchronized between a Business Central Salesorderlines and a Business Nxt Orderline:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Salesorderlines Property
-     - BusinessNxt Orderline Property
-     - BusinessNxt Data Type
+   * - Business Central Salesorderlines Property
+     - Business Nxt Orderline Property
+     - Business Nxt Data Type
    * - documentId
      - orderNo
      - "string"
 
 
-BusinessCentral Salesorders to BusinessNxt Country
---------------------------------------------------
-Every BusinessCentral Salesorders will be synchronized with a BusinessNxt Country.
+Business Central Salesorders to Business Nxt Country
+----------------------------------------------------
+Every Business Central Salesorders will be synchronized with a Business Nxt Country.
 
-Once a link between a BusinessCentral Salesorders and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Salesorders and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Salesorders and a BusinessNxt Country:
+The following properties are synchronized between a Business Central Salesorders and a Business Nxt Country:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Salesorders Property
-     - BusinessNxt Country Property
-     - BusinessNxt Data Type
+   * - Business Central Salesorders Property
+     - Business Nxt Country Property
+     - Business Nxt Data Type
    * - billToCountry
      - isoCode
      - "string"
@@ -205,20 +205,20 @@ The following properties are synchronized between a BusinessCentral Salesorders 
      - "string"
 
 
-BusinessCentral Salesorders to BusinessNxt Order
-------------------------------------------------
-Every BusinessCentral Salesorders will be synchronized with a BusinessNxt Order.
+Business Central Salesorders to Business Nxt Order
+--------------------------------------------------
+Every Business Central Salesorders will be synchronized with a Business Nxt Order.
 
-Once a link between a BusinessCentral Salesorders and a BusinessNxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Salesorders and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Salesorders and a BusinessNxt Order:
+The following properties are synchronized between a Business Central Salesorders and a Business Nxt Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Salesorders Property
-     - BusinessNxt Order Property
-     - BusinessNxt Data Type
+   * - Business Central Salesorders Property
+     - Business Nxt Order Property
+     - Business Nxt Data Type
    * - orderDate
      - orderDate
      - "string"
@@ -227,20 +227,20 @@ The following properties are synchronized between a BusinessCentral Salesorders 
      - "string"
 
 
-BusinessCentral Salesquotes to BusinessNxt Country
---------------------------------------------------
-Every BusinessCentral Salesquotes will be synchronized with a BusinessNxt Country.
+Business Central Salesquotes to Business Nxt Country
+----------------------------------------------------
+Every Business Central Salesquotes will be synchronized with a Business Nxt Country.
 
-Once a link between a BusinessCentral Salesquotes and a BusinessNxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Salesquotes and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a BusinessCentral Salesquotes and a BusinessNxt Country:
+The following properties are synchronized between a Business Central Salesquotes and a Business Nxt Country:
 
 .. list-table::
    :header-rows: 1
 
-   * - BusinessCentral Salesquotes Property
-     - BusinessNxt Country Property
-     - BusinessNxt Data Type
+   * - Business Central Salesquotes Property
+     - Business Nxt Country Property
+     - Business Nxt Data Type
    * - billToCountry
      - name
      - "string"
