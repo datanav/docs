@@ -2,7 +2,7 @@
 Wave to Wix Dataflow
 ====================
 
-Generated: 2024-09-11 11:13:29
+Generated: 2024-09-11 11:28:31
 
 Introduction
 ------------
@@ -77,31 +77,31 @@ The following properties are synchronized between a Wave Customer person and a W
      - "string"
 
 
-WaveWave Financial Customer to Wix Contacts
--------------------------------------------
-Every WaveWave Financial Customer will be synchronized with a Wix Contacts.
+Wave Customer to Wix Contacts
+-----------------------------
+Every Wave Customer will be synchronized with a Wix Contacts.
 
-If a matching Wix Contacts already exists, the WaveWave Financial Customer will be merged with the existing one.
+If a matching Wix Contacts already exists, the Wave Customer will be merged with the existing one.
 If no matching Wix Contacts is found, a new Wix Contacts will be created.
 
-A WaveWave Financial Customer will merge with a Wix Contacts if one of the following property combinations match:
+A Wave Customer will merge with a Wix Contacts if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - WaveWave Financial Customer Property
+   * - Wave Customer Property
      - Wix Contacts Property
    * - email
      - primaryInfo.email
 
-Once a link between a WaveWave Financial Customer and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WaveWave Financial Customer and a Wix Contacts:
+The following properties are synchronized between a Wave Customer and a Wix Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - WaveWave Financial Customer Property
+   * - Wave Customer Property
      - Wix Contacts Property
      - Wix Data Type
    * - address.addressLine1
@@ -157,18 +157,18 @@ The following properties are synchronized between a WaveWave Financial Customer 
      - "string"
 
 
-WaveWave Financial Product to Wix Products
-------------------------------------------
-Every WaveWave Financial Product will be synchronized with a Wix Products.
+Wave Product to Wix Products
+----------------------------
+Every Wave Product will be synchronized with a Wix Products.
 
-Once a link between a WaveWave Financial Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WaveWave Financial Product and a Wix Products:
+The following properties are synchronized between a Wave Product and a Wix Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - WaveWave Financial Product Property
+   * - Wave Product Property
      - Wix Products Property
      - Wix Data Type
    * - description
