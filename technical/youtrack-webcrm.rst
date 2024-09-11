@@ -1,13 +1,13 @@
 ===========================
-YouTrack to Webcrm Dataflow
+YouTrack to WebCRM Dataflow
 ===========================
 
-Generated: 2024-09-11 00:00:01
+Generated: 2024-09-11 07:48:17
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from YouTrack to Webcrm. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from YouTrack to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
 YouTrack Groups to Webcrm Organisations
 ---------------------------------------
@@ -60,20 +60,20 @@ The following properties are synchronized between a YouTrack Usergroups and a We
      - Webcrm Data Type
 
 
-YouTrack Users to Webcrm Users
+YouTrack Users to WebCRM Users
 ------------------------------
-Every YouTrack Users will be synchronized with a Webcrm Users.
+Every YouTrack Users will be synchronized with a WebCRM Users.
 
-Once a link between a YouTrack Users and a Webcrm Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Users and a WebCRM Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Users and a Webcrm Users:
+The following properties are synchronized between a YouTrack Users and a WebCRM Users:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     - Webcrm Users Property
-     - Webcrm Data Type
+     - WebCRM Users Property
+     - WebCRM Data Type
    * - profile.email.email
      - UserEmail
      - "string"
