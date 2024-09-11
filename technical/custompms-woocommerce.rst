@@ -1,10 +1,10 @@
-==================================
-Custom PMS to WooCommerce Dataflow
-==================================
+=================================
+CustomPMS to WooCommerce Dataflow
+=================================
 
-Generated: 2024-09-11 07:45:31
+Generated: 2024-09-11 07:53:23
 
 Introduction
 ------------
 
-This technical document provides a detailed overview of the Sesam Talk data flow from Custom PMS to WooCommerce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+This technical document provides a detailed overview of the Sesam Talk data flow from CustomPMS to WooCommerce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
