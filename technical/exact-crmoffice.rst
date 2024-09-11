@@ -2,7 +2,7 @@
 Exact Online to CRMOffice Dataflow
 ==================================
 
-Generated: 2024-09-11 11:38:23
+Generated: 2024-09-11 11:40:16
 
 Introduction
 ------------
@@ -41,18 +41,18 @@ The following properties are synchronized between a ExactOnline Items and a CRMO
      - CRMOffice Data Type
 
 
-ExactOnline Contacts to CRMOffice Contacts
-------------------------------------------
-Every ExactOnline Contacts will be synchronized with a CRMOffice Contacts.
+Exact Online Contacts to CRMOffice Contacts
+-------------------------------------------
+Every Exact Online Contacts will be synchronized with a CRMOffice Contacts.
 
-Once a link between a ExactOnline Contacts and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Exact Online Contacts and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a ExactOnline Contacts and a CRMOffice Contacts:
+The following properties are synchronized between a Exact Online Contacts and a CRMOffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - ExactOnline Contacts Property
+   * - Exact Online Contacts Property
      - CRMOffice Contacts Property
      - CRMOffice Data Type
 
