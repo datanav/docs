@@ -2,65 +2,65 @@
 Unieconomy to HubSpot Dataflow
 ==============================
 
-Generated: 2024-09-11 07:56:15
+Generated: 2024-09-11 08:49:20
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Unieconomy to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Unieconomy Companies to Hubspot Company
+Unieconomy Companies to HubSpot Company
 ---------------------------------------
-Every Unieconomy Companies will be synchronized with a Hubspot Company.
+Every Unieconomy Companies will be synchronized with a HubSpot Company.
 
-Once a link between a Unieconomy Companies and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Companies and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Companies and a Hubspot Company:
+The following properties are synchronized between a Unieconomy Companies and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Companies Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
    * - Name
      - properties.name
      - "string"
 
 
-Unieconomy Customers to Hubspot Company
+Unieconomy Customers to HubSpot Company
 ---------------------------------------
-Every Unieconomy Customers will be synchronized with a Hubspot Company.
+Every Unieconomy Customers will be synchronized with a HubSpot Company.
 
-Once a link between a Unieconomy Customers and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Customers and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Customers and a Hubspot Company:
+The following properties are synchronized between a Unieconomy Customers and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Customers Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
    * - WebUrl
      - properties.website
      - "string"
 
 
-Unieconomy Departments to Hubspot Company
+Unieconomy Departments to HubSpot Company
 -----------------------------------------
-Every Unieconomy Departments will be synchronized with a Hubspot Company.
+Every Unieconomy Departments will be synchronized with a HubSpot Company.
 
-Once a link between a Unieconomy Departments and a Hubspot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Departments and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Departments and a Hubspot Company:
+The following properties are synchronized between a Unieconomy Departments and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Departments Property
-     - Hubspot Company Property
-     - Hubspot Data Type
+     - HubSpot Company Property
+     - HubSpot Data Type
    * - DepartmentNumber
      - properties.description
      - "string"
