@@ -2,116 +2,12 @@
 Business Central to Tripletex Dataflow
 ======================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Business Central Contacts person to Tripletex Country
------------------------------------------------------
-Before any synchronization can take place, a link between a Business Central Contacts person and a Tripletex Country must be established.
-
-A Business Central Contacts person will merge with a Tripletex Country if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Contacts person Property
-     - Tripletex Country Property
-   * - country
-     - isoAlpha2Code
-
-Once a link between a Business Central Contacts person and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Contacts person and a Tripletex Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Contacts person Property
-     - Tripletex Country Property
-     - Tripletex Data Type
-
-
-Business Central Customers company to Tripletex Country
--------------------------------------------------------
-Before any synchronization can take place, a link between a Business Central Customers company and a Tripletex Country must be established.
-
-A Business Central Customers company will merge with a Tripletex Country if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Customers company Property
-     - Tripletex Country Property
-   * - country
-     - isoAlpha2Code
-
-Once a link between a Business Central Customers company and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Customers company and a Tripletex Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Customers company Property
-     - Tripletex Country Property
-     - Tripletex Data Type
-
-
-Business Central Customers person to Tripletex Country
-------------------------------------------------------
-Before any synchronization can take place, a link between a Business Central Customers person and a Tripletex Country must be established.
-
-A Business Central Customers person will merge with a Tripletex Country if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Customers person Property
-     - Tripletex Country Property
-   * - country
-     - isoAlpha2Code
-
-Once a link between a Business Central Customers person and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Customers person and a Tripletex Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Customers person Property
-     - Tripletex Country Property
-     - Tripletex Data Type
-
-
-Business Central Employees to Tripletex Country
------------------------------------------------
-Before any synchronization can take place, a link between a Business Central Employees and a Tripletex Country must be established.
-
-A Business Central Employees will merge with a Tripletex Country if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Employees Property
-     - Tripletex Country Property
-   * - country
-     - isoAlpha2Code
-
-Once a link between a Business Central Employees and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Employees and a Tripletex Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Employees Property
-     - Tripletex Country Property
-     - Tripletex Data Type
-
 
 Business Central Customers to Tripletex Contact
 -----------------------------------------------
@@ -269,35 +165,6 @@ The following properties are synchronized between a Business Central Contacts pe
    * - type
      - isPrivateIndividual
      - "string"
-
-
-Business Central Currencies to Tripletex Currency
--------------------------------------------------
-Every Business Central Currencies will be synchronized with a Tripletex Currency.
-
-If a matching Tripletex Currency already exists, the Business Central Currencies will be merged with the existing one.
-If no matching Tripletex Currency is found, a new Tripletex Currency will be created.
-
-A Business Central Currencies will merge with a Tripletex Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Currencies Property
-     - Tripletex Currency Property
-   * - code
-     - code
-
-Once a link between a Business Central Currencies and a Tripletex Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Currencies and a Tripletex Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Currencies Property
-     - Tripletex Currency Property
-     - Tripletex Data Type
 
 
 Business Central Customers company to Tripletex Customer
@@ -528,25 +395,6 @@ The following properties are synchronized between a Business Central Employees a
      - "string"
 
 
-Business Central Itemcategories to Tripletex Productgroup
----------------------------------------------------------
-Every Business Central Itemcategories will be synchronized with a Tripletex Productgroup.
-
-Once a link between a Business Central Itemcategories and a Tripletex Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Itemcategories and a Tripletex Productgroup:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Itemcategories Property
-     - Tripletex Productgroup Property
-     - Tripletex Data Type
-   * - displayName
-     - name
-     - "string"
-
-
 Business Central Items to Tripletex Product
 -------------------------------------------
 Every Business Central Items will be synchronized with a Tripletex Product.
@@ -718,53 +566,6 @@ The following properties are synchronized between a Business Central Salesorderl
      - "integer"
 
 
-Business Central Salesorderlines to Tripletex Vattype
------------------------------------------------------
-Every Business Central Salesorderlines will be synchronized with a Tripletex Vattype.
-
-Once a link between a Business Central Salesorderlines and a Tripletex Vattype is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Salesorderlines and a Tripletex Vattype:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Salesorderlines Property
-     - Tripletex Vattype Property
-     - Tripletex Data Type
-
-
-Business Central Salesorders to Tripletex Country
--------------------------------------------------
-Every Business Central Salesorders will be synchronized with a Tripletex Country.
-
-If a matching Tripletex Country already exists, the Business Central Salesorders will be merged with the existing one.
-If no matching Tripletex Country is found, a new Tripletex Country will be created.
-
-A Business Central Salesorders will merge with a Tripletex Country if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Salesorders Property
-     - Tripletex Country Property
-   * - billToCountry
-     - isoAlpha2Code
-   * - shipToCountry
-     - isoAlpha2Code
-
-Once a link between a Business Central Salesorders and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Salesorders and a Tripletex Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Salesorders Property
-     - Tripletex Country Property
-     - Tripletex Data Type
-
-
 Business Central Salesorders to Tripletex Order
 -----------------------------------------------
 Every Business Central Salesorders will be synchronized with a Tripletex Order.
@@ -797,35 +598,4 @@ The following properties are synchronized between a Business Central Salesorders
    * - salesperson
      - ourContactEmployee.id
      - "integer"
-
-
-Business Central Salesquotes to Tripletex Country
--------------------------------------------------
-Every Business Central Salesquotes will be synchronized with a Tripletex Country.
-
-If a matching Tripletex Country already exists, the Business Central Salesquotes will be merged with the existing one.
-If no matching Tripletex Country is found, a new Tripletex Country will be created.
-
-A Business Central Salesquotes will merge with a Tripletex Country if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Salesquotes Property
-     - Tripletex Country Property
-   * - billToCountry
-     - name
-   * - shipToCountry
-     - name
-
-Once a link between a Business Central Salesquotes and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Salesquotes and a Tripletex Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Salesquotes Property
-     - Tripletex Country Property
-     - Tripletex Data Type
 
