@@ -2,7 +2,7 @@
 Custom CRM to Wix Dataflow
 ==========================
 
-Generated: 2024-09-12 00:00:03
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -22,6 +22,22 @@ The following properties are synchronized between a Custom CRM Contact and a Wix
 
    * - Custom CRM Contact Property
      - Wix Contacts Property
+     - Wix Data Type
+
+
+Custom CRM Order to Wix Orders
+------------------------------
+Every Custom CRM Order will be synchronized with a Wix Orders.
+
+Once a link between a Custom CRM Order and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom CRM Order and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom CRM Order Property
+     - Wix Orders Property
      - Wix Data Type
 
 
