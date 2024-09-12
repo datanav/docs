@@ -2,68 +2,12 @@
 WooCommerce to Wave Dataflow
 ============================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-WooCommerce Customer to Wave Country
-------------------------------------
-Before any synchronization can take place, a link between a WooCommerce Customer and a Wave Country must be established.
-
-A WooCommerce Customer will merge with a Wave Country if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Customer Property
-     - Wave Country Property
-   * - billing.country
-     - code
-   * - shipping.country
-     - code
-
-Once a link between a WooCommerce Customer and a Wave Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a WooCommerce Customer and a Wave Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Customer Property
-     - Wave Country Property
-     - Wave Data Type
-
-
-WooCommerce Order to Wave Country
----------------------------------
-Before any synchronization can take place, a link between a WooCommerce Order and a Wave Country must be established.
-
-A WooCommerce Order will merge with a Wave Country if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Order Property
-     - Wave Country Property
-   * - billing.country
-     - code
-   * - shipping.country
-     - code
-
-Once a link between a WooCommerce Order and a Wave Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a WooCommerce Order and a Wave Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Order Property
-     - Wave Country Property
-     - Wave Data Type
-
 
 WooCommerce Customer to Wave Customer person
 --------------------------------------------
@@ -157,35 +101,6 @@ The following properties are synchronized between a WooCommerce Customer and a W
    * - shipping.state
      - shippingDetails.address.province.code
      - "string"
-
-
-WooCommerce Order to Wave Currency
-----------------------------------
-Every WooCommerce Order will be synchronized with a Wave Currency.
-
-If a matching Wave Currency already exists, the WooCommerce Order will be merged with the existing one.
-If no matching Wave Currency is found, a new Wave Currency will be created.
-
-A WooCommerce Order will merge with a Wave Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Order Property
-     - Wave Currency Property
-   * - currency
-     - code
-
-Once a link between a WooCommerce Order and a Wave Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a WooCommerce Order and a Wave Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Order Property
-     - Wave Currency Property
-     - Wave Data Type
 
 
 WooCommerce Order to Wave Invoice
