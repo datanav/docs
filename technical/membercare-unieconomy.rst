@@ -2,7 +2,7 @@
 MemberCare to Unieconomy Dataflow
 =================================
 
-Generated: 2024-09-12 00:00:02
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -26,4 +26,20 @@ The following properties are synchronized between a MemberCare Companies and a U
    * - companyName
      - Name
      - "string"
+
+
+MemberCare Countries to Unieconomy Countries
+--------------------------------------------
+Every MemberCare Countries will be synchronized with a Unieconomy Countries.
+
+Once a link between a MemberCare Countries and a Unieconomy Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a MemberCare Countries and a Unieconomy Countries:
+
+.. list-table::
+   :header-rows: 1
+
+   * - MemberCare Countries Property
+     - Unieconomy Countries Property
+     - Unieconomy Data Type
 
