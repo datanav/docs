@@ -2,7 +2,7 @@
 WooCommerce to Business Central Dataflow
 ========================================
 
-Generated: 2024-09-12 00:00:04
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -26,6 +26,35 @@ The following properties are synchronized between a WooCommerce Customer and a B
    * - email
      - email
      - "string"
+
+
+WooCommerce Order to Business Central Currencies
+------------------------------------------------
+Every WooCommerce Order will be synchronized with a Business Central Currencies.
+
+If a matching Business Central Currencies already exists, the WooCommerce Order will be merged with the existing one.
+If no matching Business Central Currencies is found, a new Business Central Currencies will be created.
+
+A WooCommerce Order will merge with a Business Central Currencies if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WooCommerce Order Property
+     - Business Central Currencies Property
+   * - currency
+     - code
+
+Once a link between a WooCommerce Order and a Business Central Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WooCommerce Order and a Business Central Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WooCommerce Order Property
+     - Business Central Currencies Property
+     - Business Central Data Type
 
 
 WooCommerce Order to Business Central Salesorderlines
