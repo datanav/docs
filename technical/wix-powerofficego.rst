@@ -2,7 +2,7 @@
 Wix.com to PowerOffice GO Dataflow
 ==================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -173,51 +173,6 @@ The following properties are synchronized between a Wix.com Contacts and a Power
    * - primaryInfo.phone
      - phoneNumber
      - "string"
-
-
-Wix.com Contacts to PowerOffice GO Suppliers person
----------------------------------------------------
-Every Wix.com Contacts will be synchronized with a PowerOffice GO Suppliers person.
-
-Once a link between a Wix.com Contacts and a PowerOffice GO Suppliers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Contacts and a PowerOffice GO Suppliers person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Contacts Property
-     - PowerOffice GO Suppliers person Property
-     - PowerOffice GO Data Type
-
-
-Wix.com Currencies to PowerOffice GO Currency
----------------------------------------------
-Every Wix.com Currencies will be synchronized with a PowerOffice GO Currency.
-
-If a matching PowerOffice GO Currency already exists, the Wix.com Currencies will be merged with the existing one.
-If no matching PowerOffice GO Currency is found, a new PowerOffice GO Currency will be created.
-
-A Wix.com Currencies will merge with a PowerOffice GO Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Currencies Property
-     - PowerOffice GO Currency Property
-   * - code
-     - code
-
-Once a link between a Wix.com Currencies and a PowerOffice GO Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Currencies and a PowerOffice GO Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Currencies Property
-     - PowerOffice GO Currency Property
-     - PowerOffice GO Data Type
 
 
 Wix.com Orders to PowerOffice GO Salesorderlines
