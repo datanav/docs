@@ -2,7 +2,7 @@
 MemberCare to SuperOffice Dataflow
 ==================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -85,22 +85,6 @@ The following properties are synchronized between a MemberCare Persons and a Sup
    * - lastname
      - Lastname
      - "string"
-
-
-MemberCare Countries to SuperOffice Listcountryitems
-----------------------------------------------------
-Every MemberCare Countries will be synchronized with a SuperOffice Listcountryitems.
-
-Once a link between a MemberCare Countries and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a MemberCare Countries and a SuperOffice Listcountryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - MemberCare Countries Property
-     - SuperOffice Listcountryitems Property
-     - SuperOffice Data Type
 
 
 MemberCare Invoices to SuperOffice Quoteline
