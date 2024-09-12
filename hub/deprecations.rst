@@ -520,8 +520,10 @@ Properties
      -
      - Yes*
 
-Note that ``rule`` and ``id`` and ``properties`` are mutually exclusive. If all three are present,
-``rule`` is given precedence and ``id`` and ``properties`` are ignored.
+.. note:: 
+
+   ``rule`` and ``id`` and ``properties`` are mutually exclusive. If all three are present,
+  ``rule`` is given precedence and ``id`` and ``properties`` are ignored.
 
 Example
 ^^^^^^^
@@ -752,7 +754,8 @@ The transform will output the following compact/"compressed" transformed entity:
     }
 
 
-Note that the transform will not attempt to unquote the remainder elements after the matched prefixes.
+.. note::
+  The transform will not attempt to unquote the remainder elements after the matched prefixes.
 
 
 .. _lower_keys_transform:
@@ -762,10 +765,57 @@ The lower keys transform
 
 This transform transforms all the keys of an entity to lower case (optionally recursively).
 
+.. Note::
+  We strongely recommend using DTL transform to replace ``lower_keys`` transform. See example of DTL transform bellow.
+
+Example of DTL transform to replace lower_keys:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: json
+  
+  {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["merge",
+          ["apply", "lower_keys", "_S."]
+        ]
+      ],
+      "lower_keys": [
+        ["comment", "Lowercases all keys in a dictionary."],
+        ["comment", "It will recursively lower case keys in nested dictionaries."],
+        ["comment", "Dictionaries in lists will also have their keys lowercased, not matter if the list is mixed."],
+        ["merge",
+          ["apply", "lower_keys_iter",
+            ["key-values", "_S."]
+          ]
+        ]
+      ],
+      "lower_keys_iter": [
+        ["add",
+          ["lower", "_S.key"],
+          ["case",
+            ["is-dict", "_S.value"],
+            ["apply", "lower_keys", "_S.value"],
+            ["and",
+              ["is-list", "_S.value"],
+              ["any",
+                ["is-dict", "_."], "_S.value"]
+            ],
+            ["map",
+              ["if",
+                ["is-dict", "_."],
+                ["apply", "lower_keys", "_."], "_."], "_S.value"], "_S.value"]
+        ]
+      ]
+    }
+  }
+
+
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block:: json
 
     {
         "type": "lower_keys",
@@ -797,7 +847,7 @@ Example
 
 With the default transform configuration:
 
-::
+.. code-block:: json
 
     {
         "type": "lower_keys",
@@ -805,7 +855,7 @@ With the default transform configuration:
 
 And given the the input entity:
 
-::
+.. code-block:: json
 
     {
         "_id": "http://psi.test.com/2",
@@ -827,7 +877,7 @@ And given the the input entity:
 
 The transform will output the following transformed entity:
 
-::
+.. code-block:: json
 
     {
         "_id": "http://psi.test.com/2",
@@ -847,10 +897,11 @@ The transform will output the following transformed entity:
         }
     }
 
-Note that only the root keys are transformed. If the ``recurse`` property is set to ``true`` in the configuration,
-however, the result would instead become:
+.. note::
+  Only the root keys are transformed. If the ``recurse`` property is set to ``true`` in the configuration,
+  however, the result would instead become:
 
-::
+.. code-block:: json
 
     {
         "_id": "http://psi.test.com/2",
@@ -894,7 +945,7 @@ See the example section for an example.
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block:: json
 
     {
         "type": "undirected_graph",
@@ -941,7 +992,7 @@ Example
 
 Given the configuration:
 
-::
+.. code-block:: json
 
     {
         "transform": [
@@ -956,7 +1007,7 @@ Given the configuration:
 
 And the input entity:
 
-::
+.. code-block:: json
 
     {
        "_id": "foo",
@@ -965,7 +1016,7 @@ And the input entity:
 
 The transform will output the following edges of the graph as entities on its output stream:
 
-::
+.. code-block:: json
 
    {
        "_id": "foo.bar",
@@ -1050,7 +1101,7 @@ The sink will flush to Kafka after every batch.
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block:: json
 
     {
         "type": "kafka",
@@ -1090,7 +1141,7 @@ Example configuration
 The outermost object would be your :ref:`pipe <pipe_section>`
 configuration, which is omitted here for brevity.
 
-::
+.. code-block:: json
 
     {
         "sink": {
@@ -1151,7 +1202,7 @@ This system can be used to read and write data from `Apache Kafka <https://kafka
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block:: json
 
     {
         "_id": "id-of-system",
@@ -1204,7 +1255,7 @@ When working with RDF data in Sesam, we would like to be able to define, maintai
 among our datasets and DTL transforms. For this purpose Sesam has a built-in *RDF registry*.
 You can configure the registry by including an entity in your configuration on the form:
 
-::
+.. code-block:: json
 
     {
        "_id": "node"
@@ -1247,7 +1298,7 @@ RDF registry items
 
 The "prototype" of a RDF registry entry ``entry_id`` look like:
 
-::
+.. code-block::
 
     ..
     "entry_id": {
@@ -1267,12 +1318,14 @@ The "prototype" of a RDF registry entry ``entry_id`` look like:
         "quote_safe_characters": "/æåø",
     }
 
-Note that the ``quote_safe_characters`` is an optional property of the RDF registry entity. If specified, it should
-contains a string of characters that should be excluded from URL quoting when constructing CURIEs. It can also be
-specified on the :ref:`properties to CURIEs transform <properties_to_curies>` where, if specified, will take precedence
-over any value it might have in the RDF registry entry. This property defaults to "/" and would normally not need
-to be changed. A value of "" (the emtpy string) means "quote all characters". See below for more detail on the use of
-this transform.
+.. note:: 
+
+  The ``quote_safe_characters`` is an optional property of the RDF registry entity. If specified, it should
+  contains a string of characters that should be excluded from URL quoting when constructing CURIEs. It can also be
+  specified on the :ref:`properties to CURIEs transform <properties_to_curies>` where, if specified, will take precedence
+  over any value it might have in the RDF registry entry. This property defaults to "/" and would normally not need
+  to be changed. A value of "" (the emtpy string) means "quote all characters". See below for more detail on the use of
+  this transform.
 
 Prefixes
 ^^^^^^^^
@@ -1542,9 +1595,10 @@ other function) to its "full" form:
       ..
     }
 
-Note that expanding CURIEs is normally done at the endpoint of your flow (i.e. by the sink or a SDShare feed, see below).
-However, if the sink you are using to output the final data is not RDF aware (i.e. supports automatic prefix expansion)
-you can use the ``uri-expand`` function to achieve the same functionality.
+.. note:: 
+  Expanding CURIEs is normally done at the endpoint of your flow (i.e. by the sink or a SDShare feed, see below).
+  However, if the sink you are using to output the final data is not RDF aware (i.e. supports automatic prefix expansion)
+  you can use the ``uri-expand`` function to achieve the same functionality.
 
 
 Pipes
