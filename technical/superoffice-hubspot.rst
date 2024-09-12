@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -215,58 +215,6 @@ The following properties are synchronized between a SuperOffice Person and a Hub
      - HubSpot Data Type
 
 
-SuperOffice Quotealternative to HubSpot Pipelinedeal
-----------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Quotealternative and a HubSpot Pipelinedeal must be established.
-
-A new HubSpot Pipelinedeal will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Sale, Quote, Quoteline, or Quotealternative that is synchronized into HubSpot.
-
-Once a link between a SuperOffice Quotealternative and a HubSpot Pipelinedeal is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quotealternative and a HubSpot Pipelinedeal:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quotealternative Property
-     - HubSpot Pipelinedeal Property
-     - HubSpot Data Type
-
-
-SuperOffice Sale classification status to HubSpot Pipelinedeal
---------------------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Sale classification status and a HubSpot Pipelinedeal must be established.
-
-A new HubSpot Pipelinedeal will be created from a SuperOffice Sale classification status if it is connected to a SuperOffice Sale, Quote, Quoteline, or Quotealternative that is synchronized into HubSpot.
-
-Once a link between a SuperOffice Sale classification status and a HubSpot Pipelinedeal is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Sale classification status and a HubSpot Pipelinedeal:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Sale classification status Property
-     - HubSpot Pipelinedeal Property
-     - HubSpot Data Type
-
-
-SuperOffice Ownercontactlink to HubSpot Account
------------------------------------------------
-Every SuperOffice Ownercontactlink will be synchronized with a HubSpot Account.
-
-Once a link between a SuperOffice Ownercontactlink and a HubSpot Account is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Ownercontactlink and a HubSpot Account:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Ownercontactlink Property
-     - HubSpot Account Property
-     - HubSpot Data Type
-
-
 SuperOffice Product to HubSpot Product
 --------------------------------------
 Every SuperOffice Product will be synchronized with a HubSpot Product.
@@ -385,47 +333,6 @@ The following properties are synchronized between a SuperOffice Sale and a HubSp
      - "string"
    * - Saledate
      - properties.closedate
-     - "string"
-
-
-SuperOffice Sale to HubSpot Pipelinedeal
-----------------------------------------
-Every SuperOffice Sale will be synchronized with a HubSpot Pipelinedeal.
-
-Once a link between a SuperOffice Sale and a HubSpot Pipelinedeal is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Sale and a HubSpot Pipelinedeal:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Sale Property
-     - HubSpot Pipelinedeal Property
-     - HubSpot Data Type
-   * - Status
-     - label
-     - "string"
-
-
-SuperOffice Ticket to HubSpot Ticket
-------------------------------------
-Every SuperOffice Ticket will be synchronized with a HubSpot Ticket.
-
-Once a link between a SuperOffice Ticket and a HubSpot Ticket is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Ticket and a HubSpot Ticket:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Ticket Property
-     - HubSpot Ticket Property
-     - HubSpot Data Type
-   * - OwnedBy.AssociateId
-     - properties.hubspot_owner_id
-     - "string"
-   * - Title
-     - properties.subject
      - "string"
 
 
