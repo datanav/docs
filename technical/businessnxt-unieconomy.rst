@@ -2,7 +2,7 @@
 Business Nxt to Unieconomy Dataflow
 ===================================
 
-Generated: 2024-09-12 00:00:03
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -45,4 +45,36 @@ The following properties are synchronized between a Business Nxt Company and a U
    * - name
      - Name
      - "string"
+
+
+Business Nxt Country to Unieconomy Countries
+--------------------------------------------
+Every Business Nxt Country will be synchronized with a Unieconomy Countries.
+
+Once a link between a Business Nxt Country and a Unieconomy Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Country and a Unieconomy Countries:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Country Property
+     - Unieconomy Countries Property
+     - Unieconomy Data Type
+
+
+Business Nxt Currency to Unieconomy Currencycodes
+-------------------------------------------------
+Every Business Nxt Currency will be synchronized with a Unieconomy Currencycodes.
+
+Once a link between a Business Nxt Currency and a Unieconomy Currencycodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Currency and a Unieconomy Currencycodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Currency Property
+     - Unieconomy Currencycodes Property
+     - Unieconomy Data Type
 
