@@ -2,7 +2,7 @@
 Shopify to Wave Dataflow
 ========================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -90,51 +90,6 @@ The following properties are synchronized between a Shopify Product and a Wave P
 
    * - Shopify Product Property
      - Wave Product Property
-     - Wave Data Type
-
-
-Shopify Customer to Wave Country
---------------------------------
-Every Shopify Customer will be synchronized with a Wave Country.
-
-If a matching Wave Country already exists, the Shopify Customer will be merged with the existing one.
-If no matching Wave Country is found, a new Wave Country will be created.
-
-A Shopify Customer will merge with a Wave Country if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Customer Property
-     - Wave Country Property
-   * - default_address.country_code
-     - code
-
-Once a link between a Shopify Customer and a Wave Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Customer and a Wave Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Customer Property
-     - Wave Country Property
-     - Wave Data Type
-
-
-Shopify Customer to Wave Currency
----------------------------------
-Every Shopify Customer will be synchronized with a Wave Currency.
-
-Once a link between a Shopify Customer and a Wave Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Customer and a Wave Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Customer Property
-     - Wave Currency Property
      - Wave Data Type
 
 
@@ -242,37 +197,6 @@ The following properties are synchronized between a Shopify Customer and a Wave 
    * - phone
      - phone
      - "string"
-
-
-Shopify Order to Wave Country
------------------------------
-Every Shopify Order will be synchronized with a Wave Country.
-
-If a matching Wave Country already exists, the Shopify Order will be merged with the existing one.
-If no matching Wave Country is found, a new Wave Country will be created.
-
-A Shopify Order will merge with a Wave Country if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Order Property
-     - Wave Country Property
-   * - billing_address.country_code
-     - code
-   * - shipping_address.country_code
-     - code
-
-Once a link between a Shopify Order and a Wave Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Order and a Wave Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Order Property
-     - Wave Country Property
-     - Wave Data Type
 
 
 Shopify Order to Wave Invoice
