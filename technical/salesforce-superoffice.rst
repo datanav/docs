@@ -2,7 +2,7 @@
 Salesforce to SuperOffice Dataflow
 ==================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -198,38 +198,6 @@ The following properties are synchronized between a Salesforce User and a SuperO
      - "string"
 
 
-Salesforce Contact to SuperOffice Listcountryitems
---------------------------------------------------
-Every Salesforce Contact will be synchronized with a SuperOffice Listcountryitems.
-
-Once a link between a Salesforce Contact and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Contact and a SuperOffice Listcountryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Contact Property
-     - SuperOffice Listcountryitems Property
-     - SuperOffice Data Type
-
-
-Salesforce Currencytype to SuperOffice Listcurrencyitems
---------------------------------------------------------
-Every Salesforce Currencytype will be synchronized with a SuperOffice Listcurrencyitems.
-
-Once a link between a Salesforce Currencytype and a SuperOffice Listcurrencyitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Currencytype and a SuperOffice Listcurrencyitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Currencytype Property
-     - SuperOffice Listcurrencyitems Property
-     - SuperOffice Data Type
-
-
 Salesforce Invoiceline to SuperOffice Quoteline
 -----------------------------------------------
 Every Salesforce Invoiceline will be synchronized with a SuperOffice Quoteline.
@@ -259,37 +227,6 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - UnitPrice
      - UnitListPrice
      - N/A
-
-
-Salesforce Order to SuperOffice Listcountryitems
-------------------------------------------------
-Every Salesforce Order will be synchronized with a SuperOffice Listcountryitems.
-
-If a matching SuperOffice Listcountryitems already exists, the Salesforce Order will be merged with the existing one.
-If no matching SuperOffice Listcountryitems is found, a new SuperOffice Listcountryitems will be created.
-
-A Salesforce Order will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Order Property
-     - SuperOffice Listcountryitems Property
-   * - BillingCountryCode
-     - TwoLetterISOCountry
-   * - ShippingCountryCode
-     - TwoLetterISOCountry
-
-Once a link between a Salesforce Order and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Order and a SuperOffice Listcountryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Order Property
-     - SuperOffice Listcountryitems Property
-     - SuperOffice Data Type
 
 
 Salesforce Orderitem to SuperOffice Quoteline
@@ -351,37 +288,6 @@ The following properties are synchronized between a Salesforce Product2 and a Su
      - "string"
 
 
-Salesforce Quote to SuperOffice Listcountryitems
-------------------------------------------------
-Every Salesforce Quote will be synchronized with a SuperOffice Listcountryitems.
-
-If a matching SuperOffice Listcountryitems already exists, the Salesforce Quote will be merged with the existing one.
-If no matching SuperOffice Listcountryitems is found, a new SuperOffice Listcountryitems will be created.
-
-A Salesforce Quote will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Quote Property
-     - SuperOffice Listcountryitems Property
-   * - BillingCountryCode
-     - TwoLetterISOCountry
-   * - ShippingCountryCode
-     - TwoLetterISOCountry
-
-Once a link between a Salesforce Quote and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Quote and a SuperOffice Listcountryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Quote Property
-     - SuperOffice Listcountryitems Property
-     - SuperOffice Data Type
-
-
 Salesforce Quote to SuperOffice Quotealternative
 ------------------------------------------------
 Every Salesforce Quote will be synchronized with a SuperOffice Quotealternative.
@@ -436,33 +342,4 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - TotalPriceWithTax
      - UnitListPrice
      - N/A
-
-
-Salesforce User to SuperOffice Listcountryitems
------------------------------------------------
-Every Salesforce User will be synchronized with a SuperOffice Listcountryitems.
-
-If a matching SuperOffice Listcountryitems already exists, the Salesforce User will be merged with the existing one.
-If no matching SuperOffice Listcountryitems is found, a new SuperOffice Listcountryitems will be created.
-
-A Salesforce User will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce User Property
-     - SuperOffice Listcountryitems Property
-   * - CountryCode
-     - TwoLetterISOCountry
-
-Once a link between a Salesforce User and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce User and a SuperOffice Listcountryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce User Property
-     - SuperOffice Listcountryitems Property
-     - SuperOffice Data Type
 
