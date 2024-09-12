@@ -2,7 +2,7 @@
 Tidsbanken to SuperOffice Dataflow
 ==================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -63,32 +63,6 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Supe
    * - TlfPrivat
      - PrivatePhones.Value
      - "string"
-
-
-Tidsbanken Ansatt to SuperOffice User
--------------------------------------
-Before any synchronization can take place, a link between a Tidsbanken Ansatt and a SuperOffice User must be established.
-
-A Tidsbanken Ansatt will merge with a SuperOffice User if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Ansatt Property
-     - SuperOffice User Property
-   * - Epost
-     - personEmail
-
-Once a link between a Tidsbanken Ansatt and a SuperOffice User is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tidsbanken Ansatt and a SuperOffice User:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Ansatt Property
-     - SuperOffice User Property
-     - SuperOffice Data Type
 
 
 Tidsbanken Kunde to SuperOffice Contact
