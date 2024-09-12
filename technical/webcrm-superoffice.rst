@@ -2,7 +2,7 @@
 WebCRM to SuperOffice Dataflow
 ==============================
 
-Generated: 2024-09-12 00:00:02
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -145,6 +145,35 @@ The following properties are synchronized between a WebCRM Opportunities and a S
      - "integer"
 
 
+WebCRM Organisations to SuperOffice Listcountryitems
+----------------------------------------------------
+Every WebCRM Organisations will be synchronized with a SuperOffice Listcountryitems.
+
+If a matching SuperOffice Listcountryitems already exists, the WebCRM Organisations will be merged with the existing one.
+If no matching SuperOffice Listcountryitems is found, a new SuperOffice Listcountryitems will be created.
+
+A WebCRM Organisations will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WebCRM Organisations Property
+     - SuperOffice Listcountryitems Property
+   * - OrganisationCountryData.CodeISO
+     - TwoLetterISOCountry
+
+Once a link between a WebCRM Organisations and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WebCRM Organisations and a SuperOffice Listcountryitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WebCRM Organisations Property
+     - SuperOffice Listcountryitems Property
+     - SuperOffice Data Type
+
+
 WebCRM Products to SuperOffice Product
 --------------------------------------
 Every WebCRM Products will be synchronized with a SuperOffice Product.
@@ -183,5 +212,21 @@ The following properties are synchronized between a WebCRM Quotationline and a S
 
    * - WebCRM Quotationline Property
      - SuperOffice Quoteline Property
+     - SuperOffice Data Type
+
+
+WebCRM Users to SuperOffice User
+--------------------------------
+Every WebCRM Users will be synchronized with a SuperOffice User.
+
+Once a link between a WebCRM Users and a SuperOffice User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WebCRM Users and a SuperOffice User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WebCRM Users Property
+     - SuperOffice User Property
      - SuperOffice Data Type
 
