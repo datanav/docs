@@ -2,7 +2,7 @@
 Wave to PowerOffice GO Dataflow
 ===============================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -244,35 +244,6 @@ The following properties are synchronized between a Wave Vendor and a PowerOffic
      - "string"
 
 
-Wave Currency to PowerOffice GO Currency
-----------------------------------------
-Every Wave Currency will be synchronized with a PowerOffice GO Currency.
-
-If a matching PowerOffice GO Currency already exists, the Wave Currency will be merged with the existing one.
-If no matching PowerOffice GO Currency is found, a new PowerOffice GO Currency will be created.
-
-A Wave Currency will merge with a PowerOffice GO Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Currency Property
-     - PowerOffice GO Currency Property
-   * - code
-     - code
-
-Once a link between a Wave Currency and a PowerOffice GO Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Currency and a PowerOffice GO Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Currency Property
-     - PowerOffice GO Currency Property
-     - PowerOffice GO Data Type
-
-
 Wave Customer person to PowerOffice GO Customers person
 -------------------------------------------------------
 Every Wave Customer person will be synchronized with a PowerOffice GO Customers person.
@@ -503,22 +474,6 @@ The following properties are synchronized between a Wave Customer and a PowerOff
      - "string"
 
 
-Wave Customer to PowerOffice GO Suppliers person
-------------------------------------------------
-Every Wave Customer will be synchronized with a PowerOffice GO Suppliers person.
-
-Once a link between a Wave Customer and a PowerOffice GO Suppliers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a PowerOffice GO Suppliers person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - PowerOffice GO Suppliers person Property
-     - PowerOffice GO Data Type
-
-
 Wave Invoice to PowerOffice GO Salesorderlines
 ----------------------------------------------
 Every Wave Invoice will be synchronized with a PowerOffice GO Salesorderlines.
@@ -702,45 +657,4 @@ The following properties are synchronized between a Wave Vendor and a PowerOffic
    * - phone
      - phoneNumber
      - "string"
-
-
-Wave Vendor to PowerOffice GO Suppliers
----------------------------------------
-Every Wave Vendor will be synchronized with a PowerOffice GO Suppliers.
-
-Once a link between a Wave Vendor and a PowerOffice GO Suppliers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a PowerOffice GO Suppliers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     - PowerOffice GO Suppliers Property
-     - PowerOffice GO Data Type
-   * - modifiedAt
-     - LastChanged
-     - "string"
-   * - name
-     - LegalName
-     - "string"
-   * - website
-     - WebsiteUrl
-     - "string"
-
-
-Wave Vendor to PowerOffice GO Suppliers person
-----------------------------------------------
-Every Wave Vendor will be synchronized with a PowerOffice GO Suppliers person.
-
-Once a link between a Wave Vendor and a PowerOffice GO Suppliers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a PowerOffice GO Suppliers person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     - PowerOffice GO Suppliers person Property
-     - PowerOffice GO Data Type
 
