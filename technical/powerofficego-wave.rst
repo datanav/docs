@@ -2,7 +2,7 @@
 PowerOffice GO to Wave Dataflow
 ===============================
 
-Generated: 2024-09-12 00:00:03
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -77,6 +77,32 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - zipCode
      - shippingDetails.address.postalCode
      - "string"
+
+
+PowerOffice GO Employees to Wave Country
+----------------------------------------
+Before any synchronization can take place, a link between a PowerOffice GO Employees and a Wave Country must be established.
+
+A PowerOffice GO Employees will merge with a Wave Country if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Employees Property
+     - Wave Country Property
+   * - MailAddress.CountryCode
+     - code
+
+Once a link between a PowerOffice GO Employees and a Wave Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Employees and a Wave Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Employees Property
+     - Wave Country Property
+     - Wave Data Type
 
 
 Powerofficego Contactperson to Wave Customer
@@ -184,6 +210,82 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
+Powerofficego Customers to Wave Vendor
+--------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers and a Wave Vendor must be established.
+
+A new Wave Vendor will be created from a Powerofficego Customers if it is connected to a Powerofficego Supplier, or Suppliers that is synchronized into Wave.
+
+Once a link between a Powerofficego Customers and a Wave Vendor is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a Wave Vendor:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - Wave Vendor Property
+     - Wave Data Type
+
+
+PowerOffice GO Contactperson to Wave Country
+--------------------------------------------
+Every PowerOffice GO Contactperson will be synchronized with a Wave Country.
+
+If a matching Wave Country already exists, the PowerOffice GO Contactperson will be merged with the existing one.
+If no matching Wave Country is found, a new Wave Country will be created.
+
+A PowerOffice GO Contactperson will merge with a Wave Country if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Contactperson Property
+     - Wave Country Property
+   * - residenceCountryCode
+     - code
+
+Once a link between a PowerOffice GO Contactperson and a Wave Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Contactperson and a Wave Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Contactperson Property
+     - Wave Country Property
+     - Wave Data Type
+
+
+PowerOffice GO Currency to Wave Currency
+----------------------------------------
+Every PowerOffice GO Currency will be synchronized with a Wave Currency.
+
+If a matching Wave Currency already exists, the PowerOffice GO Currency will be merged with the existing one.
+If no matching Wave Currency is found, a new Wave Currency will be created.
+
+A PowerOffice GO Currency will merge with a Wave Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Currency Property
+     - Wave Currency Property
+   * - code
+     - code
+
+Once a link between a PowerOffice GO Currency and a Wave Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Currency and a Wave Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Currency Property
+     - Wave Currency Property
+     - Wave Data Type
+
+
 PowerOffice GO Customers person to Wave Customer person
 -------------------------------------------------------
 Every PowerOffice GO Customers person will be synchronized with a Wave Customer person.
@@ -253,6 +355,35 @@ The following properties are synchronized between a PowerOffice GO Customers per
    * - PhoneNumber
      - phone
      - "string"
+
+
+PowerOffice GO Customers to Wave Country
+----------------------------------------
+Every PowerOffice GO Customers will be synchronized with a Wave Country.
+
+If a matching Wave Country already exists, the PowerOffice GO Customers will be merged with the existing one.
+If no matching Wave Country is found, a new Wave Country will be created.
+
+A PowerOffice GO Customers will merge with a Wave Country if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Customers Property
+     - Wave Country Property
+   * - MailAddress.CountryCode
+     - code
+
+Once a link between a PowerOffice GO Customers and a Wave Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Customers and a Wave Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Customers Property
+     - Wave Country Property
+     - Wave Data Type
 
 
 PowerOffice GO Customers to Wave Customer
@@ -355,6 +486,64 @@ The following properties are synchronized between a PowerOffice GO Customers and
      - "string"
 
 
+PowerOffice GO Location to Wave Country
+---------------------------------------
+Every PowerOffice GO Location will be synchronized with a Wave Country.
+
+If a matching Wave Country already exists, the PowerOffice GO Location will be merged with the existing one.
+If no matching Wave Country is found, a new Wave Country will be created.
+
+A PowerOffice GO Location will merge with a Wave Country if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Location Property
+     - Wave Country Property
+   * - countryCode
+     - code
+
+Once a link between a PowerOffice GO Location and a Wave Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Location and a Wave Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Location Property
+     - Wave Country Property
+     - Wave Data Type
+
+
+PowerOffice GO Outgoinginvoices to Wave Country
+-----------------------------------------------
+Every PowerOffice GO Outgoinginvoices will be synchronized with a Wave Country.
+
+If a matching Wave Country already exists, the PowerOffice GO Outgoinginvoices will be merged with the existing one.
+If no matching Wave Country is found, a new Wave Country will be created.
+
+A PowerOffice GO Outgoinginvoices will merge with a Wave Country if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Outgoinginvoices Property
+     - Wave Country Property
+   * - DeliveryAddressCountryCode
+     - code
+
+Once a link between a PowerOffice GO Outgoinginvoices and a Wave Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Outgoinginvoices and a Wave Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Outgoinginvoices Property
+     - Wave Country Property
+     - Wave Data Type
+
+
 PowerOffice GO Product to Wave Product
 --------------------------------------
 Every PowerOffice GO Product will be synchronized with a Wave Product.
@@ -414,5 +603,94 @@ The following properties are synchronized between a PowerOffice GO Salesorders a
      - "string"
    * - PurchaseOrderReference
      - poNumber
+     - "string"
+
+
+PowerOffice GO Suppliers person to Wave Country
+-----------------------------------------------
+Every PowerOffice GO Suppliers person will be synchronized with a Wave Country.
+
+If a matching Wave Country already exists, the PowerOffice GO Suppliers person will be merged with the existing one.
+If no matching Wave Country is found, a new Wave Country will be created.
+
+A PowerOffice GO Suppliers person will merge with a Wave Country if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Suppliers person Property
+     - Wave Country Property
+   * - MailAddress.CountryCode
+     - code
+
+Once a link between a PowerOffice GO Suppliers person and a Wave Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Suppliers person and a Wave Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Suppliers person Property
+     - Wave Country Property
+     - Wave Data Type
+
+
+PowerOffice GO Suppliers to Wave Country
+----------------------------------------
+Every PowerOffice GO Suppliers will be synchronized with a Wave Country.
+
+If a matching Wave Country already exists, the PowerOffice GO Suppliers will be merged with the existing one.
+If no matching Wave Country is found, a new Wave Country will be created.
+
+A PowerOffice GO Suppliers will merge with a Wave Country if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Suppliers Property
+     - Wave Country Property
+   * - MailAddress.CountryCode
+     - code
+
+Once a link between a PowerOffice GO Suppliers and a Wave Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Suppliers and a Wave Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Suppliers Property
+     - Wave Country Property
+     - Wave Data Type
+
+
+PowerOffice GO Suppliers to Wave Vendor
+---------------------------------------
+Every PowerOffice GO Suppliers will be synchronized with a Wave Vendor.
+
+Once a link between a PowerOffice GO Suppliers and a Wave Vendor is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Suppliers and a Wave Vendor:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Suppliers Property
+     - Wave Vendor Property
+     - Wave Data Type
+   * - FirstName
+     - firstName
+     - "string"
+   * - LastName
+     - firstName
+     - "string"
+   * - LegalName
+     - name
+     - "string"
+   * - PhoneNumber
+     - phone
+     - "string"
+   * - WebsiteUrl
+     - website
      - "string"
 
