@@ -2,7 +2,7 @@
 HubSpot to Business Central Dataflow
 ====================================
 
-Generated: 2024-09-12 00:00:20
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -178,6 +178,64 @@ The following properties are synchronized between a HubSpot Company and a Busine
 
    * - HubSpot Company Property
      - Business Central Companies Property
+     - Business Central Data Type
+
+
+HubSpot Account to Business Central Currencies
+----------------------------------------------
+Every HubSpot Account will be synchronized with a Business Central Currencies.
+
+If a matching Business Central Currencies already exists, the HubSpot Account will be merged with the existing one.
+If no matching Business Central Currencies is found, a new Business Central Currencies will be created.
+
+A HubSpot Account will merge with a Business Central Currencies if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Account Property
+     - Business Central Currencies Property
+   * - companyCurrency
+     - code
+
+Once a link between a HubSpot Account and a Business Central Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Account and a Business Central Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Account Property
+     - Business Central Currencies Property
+     - Business Central Data Type
+
+
+HubSpot Deal to Business Central Currencies
+-------------------------------------------
+Every HubSpot Deal will be synchronized with a Business Central Currencies.
+
+If a matching Business Central Currencies already exists, the HubSpot Deal will be merged with the existing one.
+If no matching Business Central Currencies is found, a new Business Central Currencies will be created.
+
+A HubSpot Deal will merge with a Business Central Currencies if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - Business Central Currencies Property
+   * - properties.deal_currency_code
+     - code
+
+Once a link between a HubSpot Deal and a Business Central Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a Business Central Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - Business Central Currencies Property
      - Business Central Data Type
 
 
