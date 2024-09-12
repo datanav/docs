@@ -2,7 +2,7 @@
 Salesforce to PowerOffice GO Dataflow
 =====================================
 
-Generated: 2024-09-12 00:00:20
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -41,6 +41,38 @@ The following properties are synchronized between a Salesforce Contact and a Pow
    * - Phone
      - phoneNumber
      - "string"
+
+
+Salesforce Contact to PowerOffice GO Suppliers person
+-----------------------------------------------------
+Every Salesforce Contact will be synchronized with a PowerOffice GO Suppliers person.
+
+Once a link between a Salesforce Contact and a PowerOffice GO Suppliers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Contact and a PowerOffice GO Suppliers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Contact Property
+     - PowerOffice GO Suppliers person Property
+     - PowerOffice GO Data Type
+
+
+Salesforce Currencytype to PowerOffice GO Currency
+--------------------------------------------------
+Every Salesforce Currencytype will be synchronized with a PowerOffice GO Currency.
+
+Once a link between a Salesforce Currencytype and a PowerOffice GO Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Currencytype and a PowerOffice GO Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Currencytype Property
+     - PowerOffice GO Currency Property
+     - PowerOffice GO Data Type
 
 
 Salesforce Customer to PowerOffice GO Customers person
