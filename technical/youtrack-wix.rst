@@ -2,7 +2,7 @@
 YouTrack to Wix Dataflow
 ========================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -44,37 +44,5 @@ The following properties are synchronized between a YouTrack Users and a Wix Con
      - "string"
    * - profile.email.email
      - primaryInfo.email
-     - "string"
-
-
-YouTrack Users to Wix Members
------------------------------
-Before any synchronization can take place, a link between a YouTrack Users and a Wix Members must be established.
-
-A YouTrack Users will merge with a Wix Members if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Users Property
-     - Wix Members Property
-   * - profile.email.email
-     - loginEmail
-
-Once a link between a YouTrack Users and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Users and a Wix Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Users Property
-     - Wix Members Property
-     - Wix Data Type
-   * - profile.email
-     - loginEmail
-     - "string"
-   * - profile.email.email
-     - loginEmail
      - "string"
 
