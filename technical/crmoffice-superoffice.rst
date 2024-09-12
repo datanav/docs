@@ -2,7 +2,7 @@
 CRMOffice to SuperOffice Dataflow
 =================================
 
-Generated: 2024-09-12 00:00:02
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -35,4 +35,36 @@ The following properties are synchronized between a CRMOffice Contacts and a Sup
    * - mobilePhone
      - MobilePhones.Value
      - "string"
+
+
+CRMOffice Activities to SuperOffice Listcountryitems
+----------------------------------------------------
+Every CRMOffice Activities will be synchronized with a SuperOffice Listcountryitems.
+
+Once a link between a CRMOffice Activities and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a CRMOffice Activities and a SuperOffice Listcountryitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - CRMOffice Activities Property
+     - SuperOffice Listcountryitems Property
+     - SuperOffice Data Type
+
+
+CRMOffice Companies to SuperOffice Listcountryitems
+---------------------------------------------------
+Every CRMOffice Companies will be synchronized with a SuperOffice Listcountryitems.
+
+Once a link between a CRMOffice Companies and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a CRMOffice Companies and a SuperOffice Listcountryitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - CRMOffice Companies Property
+     - SuperOffice Listcountryitems Property
+     - SuperOffice Data Type
 
