@@ -522,8 +522,7 @@ Properties
 
 .. note:: 
 
-   ``rule`` and ``id`` and ``properties`` are mutually exclusive. If all three are present,
-  ``rule`` is given precedence and ``id`` and ``properties`` are ignored.
+  ``rule`` and ``id`` and ``properties`` are mutually exclusive. If all three are present, ``rule`` is given precedence and ``id`` and ``properties`` are ignored.
 
 Example
 ^^^^^^^
