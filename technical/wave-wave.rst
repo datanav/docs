@@ -2,12 +2,118 @@
 Wave to Wave Dataflow
 =====================
 
-Generated: 2024-09-12 00:00:02
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wave Account to Wave Account
+----------------------------
+Before any synchronization can take place, a link between a Wave Account and a Wave Account must be established.
+
+A Wave Account will merge with a Wave Account if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Account Property
+     - Wave Account Property
+   * - subtype.value
+     - subtype.value
+
+Once a link between a Wave Account and a Wave Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Account and a Wave Account:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Account Property
+     - Wave Account Property
+     - Wave Data Type
+
+
+Wave Business to Wave Business
+------------------------------
+Before any synchronization can take place, a link between a Wave Business and a Wave Business must be established.
+
+A Wave Business will merge with a Wave Business if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Business Property
+     - Wave Business Property
+   * - id
+     - id
+
+Once a link between a Wave Business and a Wave Business is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Business and a Wave Business:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Business Property
+     - Wave Business Property
+     - Wave Data Type
+
+
+Wave Country to Wave Country
+----------------------------
+Before any synchronization can take place, a link between a Wave Country and a Wave Country must be established.
+
+A Wave Country will merge with a Wave Country if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Country Property
+     - Wave Country Property
+   * - code
+     - code
+   * - name
+     - name
+
+Once a link between a Wave Country and a Wave Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Country and a Wave Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Country Property
+     - Wave Country Property
+     - Wave Data Type
+
+
+Wave Currency to Wave Currency
+------------------------------
+Before any synchronization can take place, a link between a Wave Currency and a Wave Currency must be established.
+
+A Wave Currency will merge with a Wave Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Currency Property
+     - Wave Currency Property
+   * - code
+     - code
+
+Once a link between a Wave Currency and a Wave Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Currency and a Wave Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Currency Property
+     - Wave Currency Property
+     - Wave Data Type
+
 
 Wave Customer person to Wave Customer person
 --------------------------------------------
