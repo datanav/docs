@@ -2,68 +2,12 @@
 WooCommerce to Tripletex Dataflow
 =================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-WooCommerce Customer to Tripletex Country
------------------------------------------
-Before any synchronization can take place, a link between a WooCommerce Customer and a Tripletex Country must be established.
-
-A WooCommerce Customer will merge with a Tripletex Country if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Customer Property
-     - Tripletex Country Property
-   * - billing.country
-     - isoAlpha2Code
-   * - shipping.country
-     - isoAlpha2Code
-
-Once a link between a WooCommerce Customer and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a WooCommerce Customer and a Tripletex Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Customer Property
-     - Tripletex Country Property
-     - Tripletex Data Type
-
-
-WooCommerce Order to Tripletex Country
---------------------------------------
-Before any synchronization can take place, a link between a WooCommerce Order and a Tripletex Country must be established.
-
-A WooCommerce Order will merge with a Tripletex Country if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Order Property
-     - Tripletex Country Property
-   * - billing.country
-     - isoAlpha2Code
-   * - shipping.country
-     - isoAlpha2Code
-
-Once a link between a WooCommerce Order and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a WooCommerce Order and a Tripletex Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Order Property
-     - Tripletex Country Property
-     - Tripletex Data Type
-
 
 WooCommerce Customer to Tripletex Customer person
 -------------------------------------------------
@@ -175,35 +119,6 @@ The following properties are synchronized between a WooCommerce Customer and a T
    * - shipping.postcode
      - postalAddress.postalCode
      - "string"
-
-
-WooCommerce Order to Tripletex Currency
----------------------------------------
-Every WooCommerce Order will be synchronized with a Tripletex Currency.
-
-If a matching Tripletex Currency already exists, the WooCommerce Order will be merged with the existing one.
-If no matching Tripletex Currency is found, a new Tripletex Currency will be created.
-
-A WooCommerce Order will merge with a Tripletex Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Order Property
-     - Tripletex Currency Property
-   * - currency
-     - code
-
-Once a link between a WooCommerce Order and a Tripletex Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a WooCommerce Order and a Tripletex Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Order Property
-     - Tripletex Currency Property
-     - Tripletex Data Type
 
 
 WooCommerce Order to Tripletex Order
