@@ -2,7 +2,7 @@
 YouTrack to Keap Dataflow
 =========================
 
-Generated: 2024-09-12 00:00:01
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -70,5 +70,21 @@ The following properties are synchronized between a YouTrack Users and a Keap Co
 
    * - YouTrack Users Property
      - Keap Contacts Property
+     - Keap Data Type
+
+
+YouTrack Users to Keap Users
+----------------------------
+Every YouTrack Users will be synchronized with a Keap Users.
+
+Once a link between a YouTrack Users and a Keap Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Users and a Keap Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Users Property
+     - Keap Users Property
      - Keap Data Type
 
