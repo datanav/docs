@@ -2,7 +2,7 @@
 PowerOffice GO to SuperOffice Dataflow
 ======================================
 
-Generated: 2024-09-12 00:00:02
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -92,6 +92,58 @@ The following properties are synchronized between a PowerOffice GO Contactperson
      - "string"
 
 
+PowerOffice GO Contactperson to SuperOffice User
+------------------------------------------------
+Before any synchronization can take place, a link between a PowerOffice GO Contactperson and a SuperOffice User must be established.
+
+A PowerOffice GO Contactperson will merge with a SuperOffice User if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Contactperson Property
+     - SuperOffice User Property
+   * - emailAddress
+     - personEmail
+
+Once a link between a PowerOffice GO Contactperson and a SuperOffice User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Contactperson and a SuperOffice User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Contactperson Property
+     - SuperOffice User Property
+     - SuperOffice Data Type
+
+
+PowerOffice GO Currency to SuperOffice Pricelist
+------------------------------------------------
+Before any synchronization can take place, a link between a PowerOffice GO Currency and a SuperOffice Pricelist must be established.
+
+A PowerOffice GO Currency will merge with a SuperOffice Pricelist if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Currency Property
+     - SuperOffice Pricelist Property
+   * - code
+     - Currency
+
+Once a link between a PowerOffice GO Currency and a SuperOffice Pricelist is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Currency and a SuperOffice Pricelist:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Currency Property
+     - SuperOffice Pricelist Property
+     - SuperOffice Data Type
+
+
 PowerOffice GO Customers person to SuperOffice Person
 -----------------------------------------------------
 Every PowerOffice GO Customers person will be synchronized with a SuperOffice Person.
@@ -152,6 +204,32 @@ The following properties are synchronized between a PowerOffice GO Customers per
    * - PhoneNumber
      - OfficePhones.Value
      - "string"
+
+
+PowerOffice GO Customers person to SuperOffice User
+---------------------------------------------------
+Before any synchronization can take place, a link between a PowerOffice GO Customers person and a SuperOffice User must be established.
+
+A PowerOffice GO Customers person will merge with a SuperOffice User if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Customers person Property
+     - SuperOffice User Property
+   * - EmailAddress
+     - personEmail
+
+Once a link between a PowerOffice GO Customers person and a SuperOffice User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Customers person and a SuperOffice User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Customers person Property
+     - SuperOffice User Property
+     - SuperOffice Data Type
 
 
 PowerOffice GO Customers to SuperOffice Contact
@@ -247,6 +325,32 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - WebsiteUrl
      - Urls.Value
      - "string"
+
+
+PowerOffice GO Employees to SuperOffice Listcountryitems
+--------------------------------------------------------
+Before any synchronization can take place, a link between a PowerOffice GO Employees and a SuperOffice Listcountryitems must be established.
+
+A PowerOffice GO Employees will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Employees Property
+     - SuperOffice Listcountryitems Property
+   * - MailAddress.CountryCode
+     - TwoLetterISOCountry
+
+Once a link between a PowerOffice GO Employees and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Employees and a SuperOffice Listcountryitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Employees Property
+     - SuperOffice Listcountryitems Property
+     - SuperOffice Data Type
 
 
 Powerofficego Salesorders to SuperOffice Quotealternative
@@ -347,6 +451,167 @@ The following properties are synchronized between a PowerOffice GO Employees and
      - "string"
 
 
+PowerOffice GO Contactperson to SuperOffice Listcountryitems
+------------------------------------------------------------
+Every PowerOffice GO Contactperson will be synchronized with a SuperOffice Listcountryitems.
+
+If a matching SuperOffice Listcountryitems already exists, the PowerOffice GO Contactperson will be merged with the existing one.
+If no matching SuperOffice Listcountryitems is found, a new SuperOffice Listcountryitems will be created.
+
+A PowerOffice GO Contactperson will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Contactperson Property
+     - SuperOffice Listcountryitems Property
+   * - residenceCountryCode
+     - TwoLetterISOCountry
+
+Once a link between a PowerOffice GO Contactperson and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Contactperson and a SuperOffice Listcountryitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Contactperson Property
+     - SuperOffice Listcountryitems Property
+     - SuperOffice Data Type
+
+
+PowerOffice GO Currency to SuperOffice Listcurrencyitems
+--------------------------------------------------------
+Every PowerOffice GO Currency will be synchronized with a SuperOffice Listcurrencyitems.
+
+If a matching SuperOffice Listcurrencyitems already exists, the PowerOffice GO Currency will be merged with the existing one.
+If no matching SuperOffice Listcurrencyitems is found, a new SuperOffice Listcurrencyitems will be created.
+
+A PowerOffice GO Currency will merge with a SuperOffice Listcurrencyitems if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Currency Property
+     - SuperOffice Listcurrencyitems Property
+   * - code
+     - Name
+
+Once a link between a PowerOffice GO Currency and a SuperOffice Listcurrencyitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Currency and a SuperOffice Listcurrencyitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Currency Property
+     - SuperOffice Listcurrencyitems Property
+     - SuperOffice Data Type
+
+
+PowerOffice GO Customers to SuperOffice Listcountryitems
+--------------------------------------------------------
+Every PowerOffice GO Customers will be synchronized with a SuperOffice Listcountryitems.
+
+If a matching SuperOffice Listcountryitems already exists, the PowerOffice GO Customers will be merged with the existing one.
+If no matching SuperOffice Listcountryitems is found, a new SuperOffice Listcountryitems will be created.
+
+A PowerOffice GO Customers will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Customers Property
+     - SuperOffice Listcountryitems Property
+   * - MailAddress.CountryCode
+     - TwoLetterISOCountry
+
+Once a link between a PowerOffice GO Customers and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Customers and a SuperOffice Listcountryitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Customers Property
+     - SuperOffice Listcountryitems Property
+     - SuperOffice Data Type
+
+
+PowerOffice GO Location to SuperOffice Listcountryitems
+-------------------------------------------------------
+Every PowerOffice GO Location will be synchronized with a SuperOffice Listcountryitems.
+
+If a matching SuperOffice Listcountryitems already exists, the PowerOffice GO Location will be merged with the existing one.
+If no matching SuperOffice Listcountryitems is found, a new SuperOffice Listcountryitems will be created.
+
+A PowerOffice GO Location will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Location Property
+     - SuperOffice Listcountryitems Property
+   * - countryCode
+     - TwoLetterISOCountry
+
+Once a link between a PowerOffice GO Location and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Location and a SuperOffice Listcountryitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Location Property
+     - SuperOffice Listcountryitems Property
+     - SuperOffice Data Type
+
+
+PowerOffice GO Outgoinginvoices to SuperOffice Listcountryitems
+---------------------------------------------------------------
+Every PowerOffice GO Outgoinginvoices will be synchronized with a SuperOffice Listcountryitems.
+
+If a matching SuperOffice Listcountryitems already exists, the PowerOffice GO Outgoinginvoices will be merged with the existing one.
+If no matching SuperOffice Listcountryitems is found, a new SuperOffice Listcountryitems will be created.
+
+A PowerOffice GO Outgoinginvoices will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Outgoinginvoices Property
+     - SuperOffice Listcountryitems Property
+   * - DeliveryAddressCountryCode
+     - TwoLetterISOCountry
+
+Once a link between a PowerOffice GO Outgoinginvoices and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Outgoinginvoices and a SuperOffice Listcountryitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Outgoinginvoices Property
+     - SuperOffice Listcountryitems Property
+     - SuperOffice Data Type
+
+
+PowerOffice GO Product to SuperOffice Listproducttypeitems
+----------------------------------------------------------
+Every PowerOffice GO Product will be synchronized with a SuperOffice Listproducttypeitems.
+
+Once a link between a PowerOffice GO Product and a SuperOffice Listproducttypeitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Product and a SuperOffice Listproducttypeitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Product Property
+     - SuperOffice Listproducttypeitems Property
+     - SuperOffice Data Type
+
+
 PowerOffice GO Product to SuperOffice Product
 ---------------------------------------------
 Every PowerOffice GO Product will be synchronized with a SuperOffice Product.
@@ -417,6 +682,25 @@ The following properties are synchronized between a PowerOffice GO Product and a
      - N/A
 
 
+PowerOffice GO Productgroup to SuperOffice Listproductcategoryitems
+-------------------------------------------------------------------
+Every PowerOffice GO Productgroup will be synchronized with a SuperOffice Listproductcategoryitems.
+
+Once a link between a PowerOffice GO Productgroup and a SuperOffice Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Productgroup and a SuperOffice Listproductcategoryitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Productgroup Property
+     - SuperOffice Listproductcategoryitems Property
+     - SuperOffice Data Type
+   * - Name
+     - Name
+     - "string"
+
+
 PowerOffice GO Quote to SuperOffice Quotealternative
 ----------------------------------------------------
 Every PowerOffice GO Quote will be synchronized with a SuperOffice Quotealternative.
@@ -483,4 +767,62 @@ The following properties are synchronized between a PowerOffice GO Salesorderlin
    * - sesam_SalesOrderId
      - QuoteAlternativeId
      - "integer"
+
+
+PowerOffice GO Suppliers person to SuperOffice Listcountryitems
+---------------------------------------------------------------
+Every PowerOffice GO Suppliers person will be synchronized with a SuperOffice Listcountryitems.
+
+If a matching SuperOffice Listcountryitems already exists, the PowerOffice GO Suppliers person will be merged with the existing one.
+If no matching SuperOffice Listcountryitems is found, a new SuperOffice Listcountryitems will be created.
+
+A PowerOffice GO Suppliers person will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Suppliers person Property
+     - SuperOffice Listcountryitems Property
+   * - MailAddress.CountryCode
+     - TwoLetterISOCountry
+
+Once a link between a PowerOffice GO Suppliers person and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Suppliers person and a SuperOffice Listcountryitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Suppliers person Property
+     - SuperOffice Listcountryitems Property
+     - SuperOffice Data Type
+
+
+PowerOffice GO Suppliers to SuperOffice Listcountryitems
+--------------------------------------------------------
+Every PowerOffice GO Suppliers will be synchronized with a SuperOffice Listcountryitems.
+
+If a matching SuperOffice Listcountryitems already exists, the PowerOffice GO Suppliers will be merged with the existing one.
+If no matching SuperOffice Listcountryitems is found, a new SuperOffice Listcountryitems will be created.
+
+A PowerOffice GO Suppliers will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Suppliers Property
+     - SuperOffice Listcountryitems Property
+   * - MailAddress.CountryCode
+     - TwoLetterISOCountry
+
+Once a link between a PowerOffice GO Suppliers and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Suppliers and a SuperOffice Listcountryitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Suppliers Property
+     - SuperOffice Listcountryitems Property
+     - SuperOffice Data Type
 
