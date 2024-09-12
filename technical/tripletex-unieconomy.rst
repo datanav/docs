@@ -2,7 +2,7 @@
 Tripletex to Unieconomy Dataflow
 ================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -103,66 +103,6 @@ The following properties are synchronized between a Tripletex Supplier and a Uni
    * - url
      - WebUrl
      - "string"
-
-
-Tripletex Country to Unieconomy Countries
------------------------------------------
-Every Tripletex Country will be synchronized with a Unieconomy Countries.
-
-If a matching Unieconomy Countries already exists, the Tripletex Country will be merged with the existing one.
-If no matching Unieconomy Countries is found, a new Unieconomy Countries will be created.
-
-A Tripletex Country will merge with a Unieconomy Countries if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Country Property
-     - Unieconomy Countries Property
-   * - name
-     - Name
-   * - isoAlpha2Code
-     - CountryCode
-
-Once a link between a Tripletex Country and a Unieconomy Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Country and a Unieconomy Countries:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Country Property
-     - Unieconomy Countries Property
-     - Unieconomy Data Type
-
-
-Tripletex Currency to Unieconomy Currencycodes
-----------------------------------------------
-Every Tripletex Currency will be synchronized with a Unieconomy Currencycodes.
-
-If a matching Unieconomy Currencycodes already exists, the Tripletex Currency will be merged with the existing one.
-If no matching Unieconomy Currencycodes is found, a new Unieconomy Currencycodes will be created.
-
-A Tripletex Currency will merge with a Unieconomy Currencycodes if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     - Unieconomy Currencycodes Property
-   * - code
-     - Code
-
-Once a link between a Tripletex Currency and a Unieconomy Currencycodes is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Currency and a Unieconomy Currencycodes:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     - Unieconomy Currencycodes Property
-     - Unieconomy Data Type
 
 
 Tripletex Customer to Unieconomy Customers
