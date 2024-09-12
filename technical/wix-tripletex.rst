@@ -2,7 +2,7 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -255,35 +255,6 @@ The following properties are synchronized between a Wix.com Contacts and a Tripl
    * - primaryInfo.phone
      - phoneNumberWork
      - "string"
-
-
-Wix.com Currencies to Tripletex Currency
-----------------------------------------
-Every Wix.com Currencies will be synchronized with a Tripletex Currency.
-
-If a matching Tripletex Currency already exists, the Wix.com Currencies will be merged with the existing one.
-If no matching Tripletex Currency is found, a new Tripletex Currency will be created.
-
-A Wix.com Currencies will merge with a Tripletex Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Currencies Property
-     - Tripletex Currency Property
-   * - code
-     - code
-
-Once a link between a Wix.com Currencies and a Tripletex Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Currencies and a Tripletex Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Currencies Property
-     - Tripletex Currency Property
-     - Tripletex Data Type
 
 
 Wix.com Orders to Tripletex Order
