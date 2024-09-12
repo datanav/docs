@@ -2,7 +2,7 @@
 Exact Online to PowerOffice GO Dataflow
 =======================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -48,38 +48,6 @@ The following properties are synchronized between a Exact Online Contacts and a 
    * - BirthDate
      - dateOfBirth
      - N/A
-
-
-Exact Online Contacts to PowerOffice GO Suppliers person
---------------------------------------------------------
-Every Exact Online Contacts will be synchronized with a PowerOffice GO Suppliers person.
-
-Once a link between a Exact Online Contacts and a PowerOffice GO Suppliers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Online Contacts and a PowerOffice GO Suppliers person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Online Contacts Property
-     - PowerOffice GO Suppliers person Property
-     - PowerOffice GO Data Type
-
-
-Exact Online Currencies to PowerOffice GO Currency
---------------------------------------------------
-Every Exact Online Currencies will be synchronized with a PowerOffice GO Currency.
-
-Once a link between a Exact Online Currencies and a PowerOffice GO Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Online Currencies and a PowerOffice GO Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Online Currencies Property
-     - PowerOffice GO Currency Property
-     - PowerOffice GO Data Type
 
 
 Exact Online Departments to PowerOffice GO Departments
@@ -182,20 +150,4 @@ The following properties are synchronized between a Exact Online Salesorders and
    * - Currency
      - CurrencyCode
      - "string"
-
-
-Exact Online Vatcodes to PowerOffice GO Vatcodes
-------------------------------------------------
-Every Exact Online Vatcodes will be synchronized with a PowerOffice GO Vatcodes.
-
-Once a link between a Exact Online Vatcodes and a PowerOffice GO Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Online Vatcodes and a PowerOffice GO Vatcodes:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Online Vatcodes Property
-     - PowerOffice GO Vatcodes Property
-     - PowerOffice GO Data Type
 
