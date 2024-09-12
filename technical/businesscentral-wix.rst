@@ -2,7 +2,7 @@
 Business Central to Wix Dataflow
 ================================
 
-Generated: 2024-09-12 00:00:03
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -40,6 +40,35 @@ The following properties are synchronized between a Business Central Contacts pe
      - "string"
 
 
+Business Central Currencies to Wix Currencies
+---------------------------------------------
+Every Business Central Currencies will be synchronized with a Wix Currencies.
+
+If a matching Wix Currencies already exists, the Business Central Currencies will be merged with the existing one.
+If no matching Wix Currencies is found, a new Wix Currencies will be created.
+
+A Business Central Currencies will merge with a Wix Currencies if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Currencies Property
+     - Wix Currencies Property
+   * - code
+     - code
+
+Once a link between a Business Central Currencies and a Wix Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Currencies and a Wix Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Currencies Property
+     - Wix Currencies Property
+     - Wix Data Type
+
+
 Business Central Items to Wix Products
 --------------------------------------
 Every Business Central Items will be synchronized with a Wix Products.
@@ -72,4 +101,20 @@ The following properties are synchronized between a Business Central Items and a
    * - unitPrice
      - priceData.price
      - N/A
+
+
+Business Central Salesorders to Wix Orders
+------------------------------------------
+Every Business Central Salesorders will be synchronized with a Wix Orders.
+
+Once a link between a Business Central Salesorders and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Salesorders and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Salesorders Property
+     - Wix Orders Property
+     - Wix Data Type
 
