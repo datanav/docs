@@ -2,7 +2,7 @@
 PowerOffice GO to PowerOffice GO Dataflow
 =========================================
 
-Generated: 2024-09-12 00:00:03
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -96,6 +96,32 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - zipCode
      - MailAddress.ZipCode
      - "string"
+
+
+PowerOffice GO Currency to PowerOffice GO Currency
+--------------------------------------------------
+Before any synchronization can take place, a link between a PowerOffice GO Currency and a PowerOffice GO Currency must be established.
+
+A PowerOffice GO Currency will merge with a PowerOffice GO Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Currency Property
+     - PowerOffice GO Currency Property
+   * - code
+     - code
+
+Once a link between a PowerOffice GO Currency and a PowerOffice GO Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Currency and a PowerOffice GO Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Currency Property
+     - PowerOffice GO Currency Property
+     - PowerOffice GO Data Type
 
 
 PowerOffice GO Customers person to PowerOffice GO Contactperson
@@ -339,6 +365,84 @@ The following properties are synchronized between a PowerOffice GO Salesorders a
      - "integer"
 
 
+PowerOffice GO Suppliers person to PowerOffice GO Suppliers person
+------------------------------------------------------------------
+Before any synchronization can take place, a link between a PowerOffice GO Suppliers person and a PowerOffice GO Suppliers person must be established.
+
+A PowerOffice GO Suppliers person will merge with a PowerOffice GO Suppliers person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Suppliers person Property
+     - PowerOffice GO Suppliers person Property
+   * - Id
+     - Id
+
+Once a link between a PowerOffice GO Suppliers person and a PowerOffice GO Suppliers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Suppliers person and a PowerOffice GO Suppliers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Suppliers person Property
+     - PowerOffice GO Suppliers person Property
+     - PowerOffice GO Data Type
+
+
+PowerOffice GO Suppliers to PowerOffice GO Suppliers
+----------------------------------------------------
+Before any synchronization can take place, a link between a PowerOffice GO Suppliers and a PowerOffice GO Suppliers must be established.
+
+A PowerOffice GO Suppliers will merge with a PowerOffice GO Suppliers if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Suppliers Property
+     - PowerOffice GO Suppliers Property
+   * - Id
+     - Id
+
+Once a link between a PowerOffice GO Suppliers and a PowerOffice GO Suppliers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Suppliers and a PowerOffice GO Suppliers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Suppliers Property
+     - PowerOffice GO Suppliers Property
+     - PowerOffice GO Data Type
+
+
+PowerOffice GO Vatcodes to PowerOffice GO Vatcodes
+--------------------------------------------------
+Before any synchronization can take place, a link between a PowerOffice GO Vatcodes and a PowerOffice GO Vatcodes must be established.
+
+A PowerOffice GO Vatcodes will merge with a PowerOffice GO Vatcodes if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Vatcodes Property
+     - PowerOffice GO Vatcodes Property
+   * - Id
+     - Id
+
+Once a link between a PowerOffice GO Vatcodes and a PowerOffice GO Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Vatcodes and a PowerOffice GO Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Vatcodes Property
+     - PowerOffice GO Vatcodes Property
+     - PowerOffice GO Data Type
+
+
 Powerofficego Contactperson to PowerOfficeGo Customers
 ------------------------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Contactperson and a PowerOfficeGo Customers must be established.
@@ -379,6 +483,22 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - MailAddress.CountryCode
      - residenceCountryCode
      - "string"
+
+
+PowerOffice GO Contactperson to PowerOffice GO Suppliers person
+---------------------------------------------------------------
+Every PowerOffice GO Contactperson will be synchronized with a PowerOffice GO Suppliers person.
+
+Once a link between a PowerOffice GO Contactperson and a PowerOffice GO Suppliers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Contactperson and a PowerOffice GO Suppliers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Contactperson Property
+     - PowerOffice GO Suppliers person Property
+     - PowerOffice GO Data Type
 
 
 PowerOffice GO Customers person to PowerOffice GO Customers
