@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -142,139 +142,6 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - "string"
    * - Urls.Value
      - website
-     - "string"
-
-
-SuperOffice Contact to Tripletex Supplier
------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a Tripletex Supplier must be established.
-
-A new Tripletex Supplier will be created from a SuperOffice Contact if it is connected to a SuperOffice Product that is synchronized into Tripletex.
-
-A SuperOffice Contact will merge with a Tripletex Supplier if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Contact Property
-     - Tripletex Supplier Property
-   * - Emails.Value
-     - email
-
-Once a link between a SuperOffice Contact and a Tripletex Supplier is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Contact and a Tripletex Supplier:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Contact Property
-     - Tripletex Supplier Property
-     - Tripletex Data Type
-   * - Address.Postal.Address1
-     - deliveryAddress.addressLine1
-     - "string"
-   * - Address.Postal.Address1
-     - physicalAddress.addressLine1
-     - "string"
-   * - Address.Postal.Address1
-     - postalAddress.addressLine1
-     - "string"
-   * - Address.Postal.Address2
-     - deliveryAddress.addressLine2
-     - "string"
-   * - Address.Postal.Address2
-     - physicalAddress.addressLine2
-     - "string"
-   * - Address.Postal.Address2
-     - postalAddress.addressLine2
-     - "string"
-   * - Address.Postal.City
-     - deliveryAddress.changes
-     - "string"
-   * - Address.Postal.City
-     - deliveryAddress.city
-     - "string"
-   * - Address.Postal.City
-     - physicalAddress.city
-     - "string"
-   * - Address.Postal.City
-     - postalAddress.city
-     - "string"
-   * - Address.Postal.Zipcode
-     - deliveryAddress.postalCode
-     - "string"
-   * - Address.Postal.Zipcode
-     - physicalAddress.postalCode
-     - "string"
-   * - Address.Postal.Zipcode
-     - postalAddress.postalCode
-     - "string"
-   * - Address.Street.Address1
-     - deliveryAddress.addressLine1
-     - "string"
-   * - Address.Street.Address1
-     - physicalAddress.addressLine1
-     - "string"
-   * - Address.Street.Address1
-     - postalAddress.addressLine1
-     - "string"
-   * - Address.Street.Address2
-     - deliveryAddress.addressLine2
-     - "string"
-   * - Address.Street.Address2
-     - physicalAddress.addressLine2
-     - "string"
-   * - Address.Street.Address2
-     - postalAddress.addressLine2
-     - "string"
-   * - Address.Street.City
-     - deliveryAddress.changes
-     - "string"
-   * - Address.Street.City
-     - deliveryAddress.city
-     - "string"
-   * - Address.Street.City
-     - physicalAddress.city
-     - "string"
-   * - Address.Street.City
-     - postalAddress.city
-     - "string"
-   * - Address.Street.Zipcode
-     - deliveryAddress.postalCode
-     - "string"
-   * - Address.Street.Zipcode
-     - physicalAddress.postalCode
-     - "string"
-   * - Address.Street.Zipcode
-     - postalAddress.postalCode
-     - "string"
-   * - ContactId
-     - id
-     - "integer"
-   * - Country.CountryId
-     - deliveryAddress.city
-     - "string"
-   * - Country.CountryId
-     - deliveryAddress.country.id
-     - "integer"
-   * - Country.CountryId
-     - physicalAddress.country.id
-     - "integer"
-   * - Country.CountryId
-     - postalAddress.country.id
-     - "integer"
-   * - Emails.Value
-     - email
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - OrgNr (Dependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.ThreeLetterISOCountryDependant on having wd:Q11994066 in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having wd:Q11994066 in Country.TwoLetterISOCountry)
-     - organizationNumber
-     - "string"
-   * - Phones.Value
-     - phoneNumber
      - "string"
 
 
@@ -478,32 +345,6 @@ The following properties are synchronized between a SuperOffice Person and a Tri
    * - PrivatePhones.Value
      - phoneNumberHome
      - "string"
-
-
-SuperOffice Pricelist to Tripletex Currency
--------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Pricelist and a Tripletex Currency must be established.
-
-A SuperOffice Pricelist will merge with a Tripletex Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Pricelist Property
-     - Tripletex Currency Property
-   * - Currency
-     - code
-
-Once a link between a SuperOffice Pricelist and a Tripletex Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Pricelist and a Tripletex Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Pricelist Property
-     - Tripletex Currency Property
-     - Tripletex Data Type
 
 
 SuperOffice User to Tripletex Contact
@@ -770,87 +611,6 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
 
 
-SuperOffice Listcountryitems to Tripletex Country
--------------------------------------------------
-Every SuperOffice Listcountryitems will be synchronized with a Tripletex Country.
-
-If a matching Tripletex Country already exists, the SuperOffice Listcountryitems will be merged with the existing one.
-If no matching Tripletex Country is found, a new Tripletex Country will be created.
-
-A SuperOffice Listcountryitems will merge with a Tripletex Country if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listcountryitems Property
-     - Tripletex Country Property
-   * - Name
-     - name
-   * - TwoLetterISOCountry
-     - isoAlpha2Code
-   * - ThreeLetterISOCountry
-     - isoAlpha3Code
-
-Once a link between a SuperOffice Listcountryitems and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listcountryitems and a Tripletex Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listcountryitems Property
-     - Tripletex Country Property
-     - Tripletex Data Type
-
-
-SuperOffice Listcurrencyitems to Tripletex Currency
----------------------------------------------------
-Every SuperOffice Listcurrencyitems will be synchronized with a Tripletex Currency.
-
-If a matching Tripletex Currency already exists, the SuperOffice Listcurrencyitems will be merged with the existing one.
-If no matching Tripletex Currency is found, a new Tripletex Currency will be created.
-
-A SuperOffice Listcurrencyitems will merge with a Tripletex Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listcurrencyitems Property
-     - Tripletex Currency Property
-   * - Name
-     - code
-
-Once a link between a SuperOffice Listcurrencyitems and a Tripletex Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listcurrencyitems and a Tripletex Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listcurrencyitems Property
-     - Tripletex Currency Property
-     - Tripletex Data Type
-
-
-SuperOffice Listproductcategoryitems to Tripletex Productgroup
---------------------------------------------------------------
-Every SuperOffice Listproductcategoryitems will be synchronized with a Tripletex Productgroup.
-
-Once a link between a SuperOffice Listproductcategoryitems and a Tripletex Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listproductcategoryitems and a Tripletex Productgroup:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listproductcategoryitems Property
-     - Tripletex Productgroup Property
-     - Tripletex Data Type
-   * - Name
-     - name
-     - "string"
-
-
 SuperOffice Product to Tripletex Product
 ----------------------------------------
 Every SuperOffice Product will be synchronized with a Tripletex Product.
@@ -897,22 +657,6 @@ The following properties are synchronized between a SuperOffice Product and a Tr
      - "integer"
 
 
-SuperOffice Product to Tripletex Vattype
-----------------------------------------
-Every SuperOffice Product will be synchronized with a Tripletex Vattype.
-
-Once a link between a SuperOffice Product and a Tripletex Vattype is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Product and a Tripletex Vattype:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - Tripletex Vattype Property
-     - Tripletex Data Type
-
-
 SuperOffice Project to Tripletex Project
 ----------------------------------------
 Every SuperOffice Project will be synchronized with a Tripletex Project.
@@ -942,22 +686,6 @@ The following properties are synchronized between a SuperOffice Project and a Tr
    * - ProjectMembers.PersonId
      - contact.id
      - "integer"
-
-
-SuperOffice Quotealternative to Tripletex Vattype
--------------------------------------------------
-Every SuperOffice Quotealternative will be synchronized with a Tripletex Vattype.
-
-Once a link between a SuperOffice Quotealternative and a Tripletex Vattype is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quotealternative and a Tripletex Vattype:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quotealternative Property
-     - Tripletex Vattype Property
-     - Tripletex Data Type
 
 
 SuperOffice Quoteline to Tripletex Orderline
@@ -1112,20 +840,4 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - VAT
      - vatType.id
      - "integer"
-
-
-SuperOffice Quoteline to Tripletex Vattype
-------------------------------------------
-Every SuperOffice Quoteline will be synchronized with a Tripletex Vattype.
-
-Once a link between a SuperOffice Quoteline and a Tripletex Vattype is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quoteline and a Tripletex Vattype:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quoteline Property
-     - Tripletex Vattype Property
-     - Tripletex Data Type
 
