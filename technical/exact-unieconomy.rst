@@ -2,7 +2,7 @@
 Exact Online to Unieconomy Dataflow
 ===================================
 
-Generated: 2024-09-12 00:00:03
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -26,6 +26,38 @@ The following properties are synchronized between a Exact Online Accounts and a 
    * - Website
      - WebUrl
      - "string"
+
+
+Exact Online Addresses to Unieconomy Countries
+----------------------------------------------
+Every Exact Online Addresses will be synchronized with a Unieconomy Countries.
+
+Once a link between a Exact Online Addresses and a Unieconomy Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Addresses and a Unieconomy Countries:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Addresses Property
+     - Unieconomy Countries Property
+     - Unieconomy Data Type
+
+
+Exact Online Currencies to Unieconomy Currencycodes
+---------------------------------------------------
+Every Exact Online Currencies will be synchronized with a Unieconomy Currencycodes.
+
+Once a link between a Exact Online Currencies and a Unieconomy Currencycodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Currencies and a Unieconomy Currencycodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Currencies Property
+     - Unieconomy Currencycodes Property
+     - Unieconomy Data Type
 
 
 Exact Online Departments to Unieconomy Departments
