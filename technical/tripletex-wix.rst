@@ -2,12 +2,41 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2024-09-12 00:00:00
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Wix. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Contact to Wix Members
+--------------------------------
+Before any synchronization can take place, a link between a Tripletex Contact and a Wix Members must be established.
+
+A Tripletex Contact will merge with a Wix Members if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Wix Members Property
+   * - email
+     - loginEmail
+
+Once a link between a Tripletex Contact and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a Wix Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Wix Members Property
+     - Wix Data Type
+   * - email
+     - loginEmail
+     - "string"
+
 
 Tripletex Customer person to Wix Contacts
 -----------------------------------------
@@ -39,6 +68,32 @@ The following properties are synchronized between a Tripletex Customer person an
    * - phoneNumber
      - primaryInfo.phone
      - "string"
+
+
+Tripletex Customer person to Wix Members
+----------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer person and a Wix Members must be established.
+
+A Tripletex Customer person will merge with a Wix Members if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     - Wix Members Property
+   * - email
+     - loginEmail
+
+Once a link between a Tripletex Customer person and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a Wix Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     - Wix Members Property
+     - Wix Data Type
 
 
 Tripletex Employee to Wix Contacts
@@ -106,6 +161,35 @@ The following properties are synchronized between a Tripletex Employee and a Wix
      - "string"
    * - phoneNumberWork
      - primaryInfo.phone
+     - "string"
+
+
+Tripletex Employee to Wix Members
+---------------------------------
+Before any synchronization can take place, a link between a Tripletex Employee and a Wix Members must be established.
+
+A Tripletex Employee will merge with a Wix Members if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - Wix Members Property
+   * - email
+     - loginEmail
+
+Once a link between a Tripletex Employee and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a Wix Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - Wix Members Property
+     - Wix Data Type
+   * - email
+     - loginEmail
      - "string"
 
 
@@ -213,6 +297,63 @@ The following properties are synchronized between a Tripletex Contact and a Wix 
      - "string"
    * - phoneNumberWork
      - primaryInfo.phone
+     - "string"
+
+
+Tripletex Currency to Wix Currencies
+------------------------------------
+Every Tripletex Currency will be synchronized with a Wix Currencies.
+
+If a matching Wix Currencies already exists, the Tripletex Currency will be merged with the existing one.
+If no matching Wix Currencies is found, a new Wix Currencies will be created.
+
+A Tripletex Currency will merge with a Wix Currencies if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Currency Property
+     - Wix Currencies Property
+   * - code
+     - code
+
+Once a link between a Tripletex Currency and a Wix Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Currency and a Wix Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Currency Property
+     - Wix Currencies Property
+     - Wix Data Type
+
+
+Tripletex Order to Wix Orders
+-----------------------------
+Every Tripletex Order will be synchronized with a Wix Orders.
+
+Once a link between a Tripletex Order and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - Wix Orders Property
+     - Wix Data Type
+   * - contact.id
+     - buyerInfo.id
+     - "string"
+   * - currency.id
+     - currency
+     - "string"
+   * - customer.id
+     - buyerInfo.contactId
+     - "string"
+   * - customer.id
+     - buyerInfo.id
      - "string"
 
 
