@@ -2,7 +2,7 @@
 Asana to SuperOffice Dataflow
 =============================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -57,20 +57,4 @@ The following properties are synchronized between a Asana Workspaces and a Super
    * - name
      - Name
      - "string"
-
-
-Asana Teams to SuperOffice Ownercontactlink
--------------------------------------------
-Every Asana Teams will be synchronized with a SuperOffice Ownercontactlink.
-
-Once a link between a Asana Teams and a SuperOffice Ownercontactlink is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Asana Teams and a SuperOffice Ownercontactlink:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Asana Teams Property
-     - SuperOffice Ownercontactlink Property
-     - SuperOffice Data Type
 
