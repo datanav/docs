@@ -2,7 +2,7 @@
 Zendesk to SuperOffice Dataflow
 ===============================
 
-Generated: 2024-09-12 00:00:02
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -64,4 +64,61 @@ The following properties are synchronized between a Zendesk Organizations and a 
    * - name
      - Name
      - "string"
+
+
+Zendesk Tickets to SuperOffice Ticket
+-------------------------------------
+Every Zendesk Tickets will be synchronized with a SuperOffice Ticket.
+
+Once a link between a Zendesk Tickets and a SuperOffice Ticket is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Tickets and a SuperOffice Ticket:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Tickets Property
+     - SuperOffice Ticket Property
+     - SuperOffice Data Type
+   * - assignee_id
+     - Person.PersonId
+     - "integer"
+   * - due_at
+     - TimeToReply
+     - "integer"
+   * - requester_id
+     - OwnedBy.AssociateId
+     - "integer"
+   * - subject
+     - Title
+     - "string"
+
+
+Zendesk Users to SuperOffice User
+---------------------------------
+When a Zendesk User is of type Agent, it  will be synchronized with a SuperOffice User.
+
+If a matching SuperOffice User already exists, the Zendesk Users will be merged with the existing one.
+If no matching SuperOffice User is found, a new SuperOffice User will be created.
+
+A Zendesk Users will merge with a SuperOffice User if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Users Property
+     - SuperOffice User Property
+   * - email
+     - personEmail
+
+Once a link between a Zendesk Users and a SuperOffice User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Users and a SuperOffice User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Users Property
+     - SuperOffice User Property
+     - SuperOffice Data Type
 
