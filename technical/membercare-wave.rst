@@ -2,25 +2,9 @@
 MemberCare to Wave Dataflow
 ===========================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from MemberCare to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-MemberCare Countries to Wave Country
-------------------------------------
-Every MemberCare Countries will be synchronized with a Wave Country.
-
-Once a link between a MemberCare Countries and a Wave Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a MemberCare Countries and a Wave Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - MemberCare Countries Property
-     - Wave Country Property
-     - Wave Data Type
-
