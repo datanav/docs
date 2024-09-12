@@ -2,7 +2,7 @@
 Salesforce to Business Central Dataflow
 =======================================
 
-Generated: 2024-09-12 00:00:20
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -67,6 +67,22 @@ The following properties are synchronized between a Salesforce Contact and a Bus
    * - Phone
      - phoneNumber
      - "string"
+
+
+Salesforce Currencytype to Business Central Currencies
+------------------------------------------------------
+Every Salesforce Currencytype will be synchronized with a Business Central Currencies.
+
+Once a link between a Salesforce Currencytype and a Business Central Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Currencytype and a Business Central Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Currencytype Property
+     - Business Central Currencies Property
+     - Business Central Data Type
 
 
 Salesforce Customer to Business Central Customers person
