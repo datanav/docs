@@ -2,12 +2,40 @@
 Freshteam to SuperOffice Dataflow
 =================================
 
-Generated: 2024-09-12 00:00:02
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Freshteam to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Freshteam Employee to SuperOffice Listcountryitems
+--------------------------------------------------
+Before any synchronization can take place, a link between a Freshteam Employee and a SuperOffice Listcountryitems must be established.
+
+A Freshteam Employee will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Freshteam Employee Property
+     - SuperOffice Listcountryitems Property
+   * - address.country
+     - Name
+   * - communication_address.communication_country
+     - Name
+
+Once a link between a Freshteam Employee and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Freshteam Employee and a SuperOffice Listcountryitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Freshteam Employee Property
+     - SuperOffice Listcountryitems Property
+     - SuperOffice Data Type
+
 
 Freshteam Department to SuperOffice Contact
 -------------------------------------------
