@@ -2,7 +2,7 @@
 Shopify to Tripletex Dataflow
 =============================
 
-Generated: 2024-09-12 00:00:01
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -129,6 +129,51 @@ The following properties are synchronized between a Shopify Product and a Triple
      - Tripletex Data Type
 
 
+Shopify Customer to Tripletex Country
+-------------------------------------
+Every Shopify Customer will be synchronized with a Tripletex Country.
+
+If a matching Tripletex Country already exists, the Shopify Customer will be merged with the existing one.
+If no matching Tripletex Country is found, a new Tripletex Country will be created.
+
+A Shopify Customer will merge with a Tripletex Country if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Customer Property
+     - Tripletex Country Property
+   * - default_address.country_code
+     - isoAlpha2Code
+
+Once a link between a Shopify Customer and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Customer and a Tripletex Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Customer Property
+     - Tripletex Country Property
+     - Tripletex Data Type
+
+
+Shopify Customer to Tripletex Currency
+--------------------------------------
+Every Shopify Customer will be synchronized with a Tripletex Currency.
+
+Once a link between a Shopify Customer and a Tripletex Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Customer and a Tripletex Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Customer Property
+     - Tripletex Currency Property
+     - Tripletex Data Type
+
+
 Shopify Customer to Tripletex Customer person
 ---------------------------------------------
 Every Shopify Customer will be synchronized with a Tripletex Customer person.
@@ -248,6 +293,37 @@ The following properties are synchronized between a Shopify Customer and a Tripl
    * - phone
      - phoneNumberMobile
      - "string"
+
+
+Shopify Order to Tripletex Country
+----------------------------------
+Every Shopify Order will be synchronized with a Tripletex Country.
+
+If a matching Tripletex Country already exists, the Shopify Order will be merged with the existing one.
+If no matching Tripletex Country is found, a new Tripletex Country will be created.
+
+A Shopify Order will merge with a Tripletex Country if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - Tripletex Country Property
+   * - billing_address.country_code
+     - isoAlpha2Code
+   * - shipping_address.country_code
+     - isoAlpha2Code
+
+Once a link between a Shopify Order and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a Tripletex Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - Tripletex Country Property
+     - Tripletex Data Type
 
 
 Shopify Order to Tripletex Order
