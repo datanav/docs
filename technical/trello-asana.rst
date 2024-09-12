@@ -2,7 +2,7 @@
 Trello to Asana Dataflow
 ========================
 
-Generated: 2024-09-12 00:00:01
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -35,6 +35,22 @@ The following properties are synchronized between a Trello Cards and a Asana Tas
    * - start
      - start_at
      - "string"
+
+
+Trello Members to Asana Users
+-----------------------------
+Every Trello Members will be synchronized with a Asana Users.
+
+Once a link between a Trello Members and a Asana Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Trello Members and a Asana Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Trello Members Property
+     - Asana Users Property
+     - Asana Data Type
 
 
 Trello Organizations to Asana Workspaces
