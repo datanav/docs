@@ -2,7 +2,7 @@
 Chargebee to Tripletex Dataflow
 ===============================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -51,38 +51,6 @@ The following properties are synchronized between a Chargebee Customer and a Tri
 
    * - Chargebee Customer Property
      - Tripletex Customer Property
-     - Tripletex Data Type
-
-
-Chargebee Address to Tripletex Country
---------------------------------------
-Every Chargebee Address will be synchronized with a Tripletex Country.
-
-Once a link between a Chargebee Address and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Chargebee Address and a Tripletex Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Chargebee Address Property
-     - Tripletex Country Property
-     - Tripletex Data Type
-
-
-Chargebee Customer to Tripletex Country
----------------------------------------
-Every Chargebee Customer will be synchronized with a Tripletex Country.
-
-Once a link between a Chargebee Customer and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Chargebee Customer and a Tripletex Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Chargebee Customer Property
-     - Tripletex Country Property
      - Tripletex Data Type
 
 
