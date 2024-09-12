@@ -2,7 +2,7 @@
 Wix.com to Wave Dataflow
 ========================
 
-Generated: 2024-09-12 00:00:01
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -127,6 +127,35 @@ The following properties are synchronized between a Wix.com Contacts and a Wave 
    * - primaryInfo.phone
      - mobile
      - "string"
+
+
+Wix.com Currencies to Wave Currency
+-----------------------------------
+Every Wix.com Currencies will be synchronized with a Wave Currency.
+
+If a matching Wave Currency already exists, the Wix.com Currencies will be merged with the existing one.
+If no matching Wave Currency is found, a new Wave Currency will be created.
+
+A Wix.com Currencies will merge with a Wave Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Currencies Property
+     - Wave Currency Property
+   * - code
+     - code
+
+Once a link between a Wix.com Currencies and a Wave Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Currencies and a Wave Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Currencies Property
+     - Wave Currency Property
+     - Wave Data Type
 
 
 Wix.com Orders to Wave Invoice
