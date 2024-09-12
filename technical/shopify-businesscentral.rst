@@ -2,7 +2,7 @@
 Shopify to Business Central Dataflow
 ====================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -42,22 +42,6 @@ The following properties are synchronized between a Shopify Product and a Busine
 
    * - Shopify Product Property
      - Business Central Items Property
-     - Business Central Data Type
-
-
-Shopify Customer to Business Central Currencies
------------------------------------------------
-Every Shopify Customer will be synchronized with a Business Central Currencies.
-
-Once a link between a Shopify Customer and a Business Central Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Customer and a Business Central Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Customer Property
-     - Business Central Currencies Property
      - Business Central Data Type
 
 
