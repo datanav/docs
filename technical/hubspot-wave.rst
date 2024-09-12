@@ -2,12 +2,38 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2024-09-12 00:00:20
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+HubSpot Contact to Wave Country
+-------------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a Wave Country must be established.
+
+A HubSpot Contact will merge with a Wave Country if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - Wave Country Property
+   * - properties.country
+     - name
+
+Once a link between a HubSpot Contact and a Wave Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a Wave Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - Wave Country Property
+     - Wave Data Type
+
 
 HubSpot Contact to Wave Customer person
 ---------------------------------------
@@ -283,6 +309,122 @@ The following properties are synchronized between a HubSpot Contact and a Wave C
      - "string"
 
 
+HubSpot Account to Wave Business
+--------------------------------
+Every HubSpot Account will be synchronized with a Wave Business.
+
+If a matching Wave Business already exists, the HubSpot Account will be merged with the existing one.
+If no matching Wave Business is found, a new Wave Business will be created.
+
+A HubSpot Account will merge with a Wave Business if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Account Property
+     - Wave Business Property
+   * - portalId
+     - id
+
+Once a link between a HubSpot Account and a Wave Business is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Account and a Wave Business:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Account Property
+     - Wave Business Property
+     - Wave Data Type
+
+
+HubSpot Account to Wave Currency
+--------------------------------
+Every HubSpot Account will be synchronized with a Wave Currency.
+
+If a matching Wave Currency already exists, the HubSpot Account will be merged with the existing one.
+If no matching Wave Currency is found, a new Wave Currency will be created.
+
+A HubSpot Account will merge with a Wave Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Account Property
+     - Wave Currency Property
+   * - companyCurrency
+     - code
+
+Once a link between a HubSpot Account and a Wave Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Account and a Wave Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Account Property
+     - Wave Currency Property
+     - Wave Data Type
+
+
+HubSpot Company to Wave Country
+-------------------------------
+Every HubSpot Company will be synchronized with a Wave Country.
+
+If a matching Wave Country already exists, the HubSpot Company will be merged with the existing one.
+If no matching Wave Country is found, a new Wave Country will be created.
+
+A HubSpot Company will merge with a Wave Country if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Company Property
+     - Wave Country Property
+   * - properties.country
+     - name
+
+Once a link between a HubSpot Company and a Wave Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Company and a Wave Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Company Property
+     - Wave Country Property
+     - Wave Data Type
+
+
+HubSpot Deal to Wave Currency
+-----------------------------
+Every HubSpot Deal will be synchronized with a Wave Currency.
+
+If a matching Wave Currency already exists, the HubSpot Deal will be merged with the existing one.
+If no matching Wave Currency is found, a new Wave Currency will be created.
+
+A HubSpot Deal will merge with a Wave Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - Wave Currency Property
+   * - properties.deal_currency_code
+     - code
+
+Once a link between a HubSpot Deal and a Wave Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a Wave Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - Wave Currency Property
+     - Wave Data Type
+
+
 HubSpot Deal to Wave Invoice
 ----------------------------
 When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Wave Invoice.
@@ -334,4 +476,20 @@ The following properties are synchronized between a HubSpot Product and a Wave P
    * - properties.price
      - unitPrice
      - "string"
+
+
+HubSpot User to Wave User
+-------------------------
+Every HubSpot User will be synchronized with a Wave User.
+
+Once a link between a HubSpot User and a Wave User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot User and a Wave User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot User Property
+     - Wave User Property
+     - Wave Data Type
 
