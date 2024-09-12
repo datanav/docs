@@ -2,7 +2,7 @@
 YouTrack to Wave Dataflow
 =========================
 
-Generated: 2024-09-12 00:00:01
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -36,4 +36,20 @@ The following properties are synchronized between a YouTrack Users and a Wave Cu
    * - name
      - name
      - N/A
+
+
+YouTrack Users to Wave User
+---------------------------
+Every YouTrack Users will be synchronized with a Wave User.
+
+Once a link between a YouTrack Users and a Wave User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a YouTrack Users and a Wave User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - YouTrack Users Property
+     - Wave User Property
+     - Wave Data Type
 
