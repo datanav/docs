@@ -2,7 +2,7 @@
 Wave to Keap Dataflow
 =====================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -112,20 +112,4 @@ The following properties are synchronized between a Wave Product and a Keap Prod
    * - unitPrice
      - product_price
      - "string"
-
-
-Wave User to Keap Users
------------------------
-Every Wave User will be synchronized with a Keap Users.
-
-Once a link between a Wave User and a Keap Users is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave User and a Keap Users:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave User Property
-     - Keap Users Property
-     - Keap Data Type
 
