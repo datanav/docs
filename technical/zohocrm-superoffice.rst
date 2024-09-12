@@ -2,7 +2,7 @@
 ZohoCRM to SuperOffice Dataflow
 ===============================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -162,68 +162,6 @@ The following properties are synchronized between a ZohoCRM Contact and a SuperO
    * - id
      - PersonId
      - "integer"
-
-
-ZohoCRM Account to SuperOffice Listcountryitems
------------------------------------------------
-Every ZohoCRM Account will be synchronized with a SuperOffice Listcountryitems.
-
-If a matching SuperOffice Listcountryitems already exists, the ZohoCRM Account will be merged with the existing one.
-If no matching SuperOffice Listcountryitems is found, a new SuperOffice Listcountryitems will be created.
-
-A ZohoCRM Account will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ZohoCRM Account Property
-     - SuperOffice Listcountryitems Property
-   * - Billing_Country
-     - Name
-   * - Shipping_Country
-     - Name
-
-Once a link between a ZohoCRM Account and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ZohoCRM Account and a SuperOffice Listcountryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ZohoCRM Account Property
-     - SuperOffice Listcountryitems Property
-     - SuperOffice Data Type
-
-
-ZohoCRM Contact to SuperOffice Listcountryitems
------------------------------------------------
-Every ZohoCRM Contact will be synchronized with a SuperOffice Listcountryitems.
-
-If a matching SuperOffice Listcountryitems already exists, the ZohoCRM Contact will be merged with the existing one.
-If no matching SuperOffice Listcountryitems is found, a new SuperOffice Listcountryitems will be created.
-
-A ZohoCRM Contact will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ZohoCRM Contact Property
-     - SuperOffice Listcountryitems Property
-   * - Other_Country
-     - Name
-   * - Mailing_Country
-     - Name
-
-Once a link between a ZohoCRM Contact and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ZohoCRM Contact and a SuperOffice Listcountryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ZohoCRM Contact Property
-     - SuperOffice Listcountryitems Property
-     - SuperOffice Data Type
 
 
 ZohoCRM Deal to SuperOffice Sale
