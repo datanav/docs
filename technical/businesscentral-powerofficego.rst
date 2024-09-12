@@ -2,7 +2,7 @@
 Business Central to PowerOffice GO Dataflow
 ===========================================
 
-Generated: 2024-09-12 00:00:03
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -160,6 +160,51 @@ The following properties are synchronized between a Business Central Contacts pe
    * - type
      - IsPerson
      - N/A
+
+
+Business Central Contacts person to PowerOffice GO Suppliers person
+-------------------------------------------------------------------
+Every Business Central Contacts person will be synchronized with a PowerOffice GO Suppliers person.
+
+Once a link between a Business Central Contacts person and a PowerOffice GO Suppliers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Contacts person and a PowerOffice GO Suppliers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Contacts person Property
+     - PowerOffice GO Suppliers person Property
+     - PowerOffice GO Data Type
+
+
+Business Central Currencies to PowerOffice GO Currency
+------------------------------------------------------
+Every Business Central Currencies will be synchronized with a PowerOffice GO Currency.
+
+If a matching PowerOffice GO Currency already exists, the Business Central Currencies will be merged with the existing one.
+If no matching PowerOffice GO Currency is found, a new PowerOffice GO Currency will be created.
+
+A Business Central Currencies will merge with a PowerOffice GO Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Currencies Property
+     - PowerOffice GO Currency Property
+   * - code
+     - code
+
+Once a link between a Business Central Currencies and a PowerOffice GO Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Currencies and a PowerOffice GO Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Currencies Property
+     - PowerOffice GO Currency Property
+     - PowerOffice GO Data Type
 
 
 Business Central Customers company to PowerOffice GO Customers
@@ -322,6 +367,28 @@ The following properties are synchronized between a Business Central Employees a
      - "string"
 
 
+Business Central Itemcategories to PowerOffice GO Productgroup
+--------------------------------------------------------------
+Every Business Central Itemcategories will be synchronized with a PowerOffice GO Productgroup.
+
+Once a link between a Business Central Itemcategories and a PowerOffice GO Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Itemcategories and a PowerOffice GO Productgroup:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Itemcategories Property
+     - PowerOffice GO Productgroup Property
+     - PowerOffice GO Data Type
+   * - code
+     - Code
+     - "string"
+   * - displayName
+     - Name
+     - "string"
+
+
 Business Central Items to PowerOffice GO Product
 ------------------------------------------------
 Every Business Central Items will be synchronized with a PowerOffice GO Product.
@@ -403,6 +470,22 @@ The following properties are synchronized between a Business Central Salesorderl
    * - unitPrice
      - ProductUnitPrice
      - N/A
+
+
+Business Central Salesorderlines to PowerOffice GO Vatcodes
+-----------------------------------------------------------
+Every Business Central Salesorderlines will be synchronized with a PowerOffice GO Vatcodes.
+
+Once a link between a Business Central Salesorderlines and a PowerOffice GO Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Salesorderlines and a PowerOffice GO Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Salesorderlines Property
+     - PowerOffice GO Vatcodes Property
+     - PowerOffice GO Data Type
 
 
 Business Central Salesorders to PowerOffice GO Salesorders
