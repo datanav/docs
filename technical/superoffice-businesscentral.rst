@@ -2,38 +2,12 @@
 SuperOffice to Business Central Dataflow
 ========================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-SuperOffice Pricelist to Business Central Currencies
-----------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Pricelist and a Business Central Currencies must be established.
-
-A SuperOffice Pricelist will merge with a Business Central Currencies if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Pricelist Property
-     - Business Central Currencies Property
-   * - Currency
-     - code
-
-Once a link between a SuperOffice Pricelist and a Business Central Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Pricelist and a Business Central Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Pricelist Property
-     - Business Central Currencies Property
-     - Business Central Data Type
-
 
 SuperOffice Contact to Business Central Customers company
 ---------------------------------------------------------
@@ -267,51 +241,6 @@ The following properties are synchronized between a SuperOffice Contact and a Bu
 
    * - SuperOffice Contact Property
      - Business Central Companies Property
-     - Business Central Data Type
-
-
-SuperOffice Listcurrencyitems to Business Central Currencies
-------------------------------------------------------------
-Every SuperOffice Listcurrencyitems will be synchronized with a Business Central Currencies.
-
-If a matching Business Central Currencies already exists, the SuperOffice Listcurrencyitems will be merged with the existing one.
-If no matching Business Central Currencies is found, a new Business Central Currencies will be created.
-
-A SuperOffice Listcurrencyitems will merge with a Business Central Currencies if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listcurrencyitems Property
-     - Business Central Currencies Property
-   * - Name
-     - code
-
-Once a link between a SuperOffice Listcurrencyitems and a Business Central Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listcurrencyitems and a Business Central Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listcurrencyitems Property
-     - Business Central Currencies Property
-     - Business Central Data Type
-
-
-SuperOffice Listproductcategoryitems to Business Central Itemcategories
------------------------------------------------------------------------
-Every SuperOffice Listproductcategoryitems will be synchronized with a Business Central Itemcategories.
-
-Once a link between a SuperOffice Listproductcategoryitems and a Business Central Itemcategories is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listproductcategoryitems and a Business Central Itemcategories:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listproductcategoryitems Property
-     - Business Central Itemcategories Property
      - Business Central Data Type
 
 
