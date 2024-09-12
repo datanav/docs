@@ -2,7 +2,7 @@
 Tripletex to Business Central Dataflow
 ======================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -127,35 +127,6 @@ The following properties are synchronized between a Tripletex Contact and a Busi
    * - phoneNumberWork
      - phoneNumber
      - "string"
-
-
-Tripletex Currency to Business Central Currencies
--------------------------------------------------
-Every Tripletex Currency will be synchronized with a Business Central Currencies.
-
-If a matching Business Central Currencies already exists, the Tripletex Currency will be merged with the existing one.
-If no matching Business Central Currencies is found, a new Business Central Currencies will be created.
-
-A Tripletex Currency will merge with a Business Central Currencies if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     - Business Central Currencies Property
-   * - code
-     - code
-
-Once a link between a Tripletex Currency and a Business Central Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Currency and a Business Central Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     - Business Central Currencies Property
-     - Business Central Data Type
 
 
 Tripletex Customer to Business Central Customers company
@@ -686,20 +657,4 @@ The following properties are synchronized between a Tripletex Product and a Busi
    * - vatType.id
      - taxGroupCode
      - "string"
-
-
-Tripletex Productgroup to Business Central Itemcategories
----------------------------------------------------------
-Every Tripletex Productgroup will be synchronized with a Business Central Itemcategories.
-
-Once a link between a Tripletex Productgroup and a Business Central Itemcategories is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Productgroup and a Business Central Itemcategories:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productgroup Property
-     - Business Central Itemcategories Property
-     - Business Central Data Type
 
