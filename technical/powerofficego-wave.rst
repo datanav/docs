@@ -2,7 +2,7 @@
 PowerOffice GO to Wave Dataflow
 ===============================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 12:58:47
 
 Introduction
 ------------
@@ -214,7 +214,7 @@ Powerofficego Customers to Wave Vendor
 --------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Customers and a Wave Vendor must be established.
 
-A new Wave Vendor will be created from a Powerofficego Customers if it is connected to a Powerofficego Supplier, or Suppliers that is synchronized into Wave.
+A new Wave Vendor will be created from a Powerofficego Customers if it is connected to a Powerofficego Supplier, Customers, or Suppliers that is synchronized into Wave.
 
 Once a link between a Powerofficego Customers and a Wave Vendor is established, it will keep in sync between the two systems, regardless of where it is edited.
 
