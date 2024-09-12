@@ -2,7 +2,7 @@
 Business Nxt to SuperOffice Dataflow
 ====================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -53,38 +53,6 @@ The following properties are synchronized between a Business Nxt Company and a S
      - "string"
 
 
-Business Nxt Country to SuperOffice Listcountryitems
-----------------------------------------------------
-Every Business Nxt Country will be synchronized with a SuperOffice Listcountryitems.
-
-Once a link between a Business Nxt Country and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Nxt Country and a SuperOffice Listcountryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Nxt Country Property
-     - SuperOffice Listcountryitems Property
-     - SuperOffice Data Type
-
-
-Business Nxt Currency to SuperOffice Listcurrencyitems
-------------------------------------------------------
-Every Business Nxt Currency will be synchronized with a SuperOffice Listcurrencyitems.
-
-Once a link between a Business Nxt Currency and a SuperOffice Listcurrencyitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Nxt Currency and a SuperOffice Listcurrencyitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Nxt Currency Property
-     - SuperOffice Listcurrencyitems Property
-     - SuperOffice Data Type
-
-
 Business Nxt Orderline to SuperOffice Quoteline
 -----------------------------------------------
 Every Business Nxt Orderline will be synchronized with a SuperOffice Quoteline.
@@ -127,20 +95,4 @@ The following properties are synchronized between a Business Nxt Product and a S
    * - webPage
      - Url
      - "string"
-
-
-Business Nxt Productcategory to SuperOffice Listproductcategoryitems
---------------------------------------------------------------------
-Every Business Nxt Productcategory will be synchronized with a SuperOffice Listproductcategoryitems.
-
-Once a link between a Business Nxt Productcategory and a SuperOffice Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Nxt Productcategory and a SuperOffice Listproductcategoryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Nxt Productcategory Property
-     - SuperOffice Listproductcategoryitems Property
-     - SuperOffice Data Type
 
