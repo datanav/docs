@@ -2,7 +2,7 @@
 Exact Online to Tripletex Dataflow
 ==================================
 
-Generated: 2024-09-12 00:00:03
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -31,6 +31,22 @@ The following properties are synchronized between a Exact Online Accounts and a 
      - "string"
 
 
+Exact Online Addresses to Tripletex Country
+-------------------------------------------
+Every Exact Online Addresses will be synchronized with a Tripletex Country.
+
+Once a link between a Exact Online Addresses and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Addresses and a Tripletex Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Addresses Property
+     - Tripletex Country Property
+     - Tripletex Data Type
+
+
 Exact Online Contacts to Tripletex Contact
 ------------------------------------------
 Every Exact Online Contacts will be synchronized with a Tripletex Contact.
@@ -44,6 +60,22 @@ The following properties are synchronized between a Exact Online Contacts and a 
 
    * - Exact Online Contacts Property
      - Tripletex Contact Property
+     - Tripletex Data Type
+
+
+Exact Online Currencies to Tripletex Currency
+---------------------------------------------
+Every Exact Online Currencies will be synchronized with a Tripletex Currency.
+
+Once a link between a Exact Online Currencies and a Tripletex Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Currencies and a Tripletex Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Currencies Property
+     - Tripletex Currency Property
      - Tripletex Data Type
 
 
@@ -126,6 +158,22 @@ The following properties are synchronized between a Exact Online Items and a Tri
      - Tripletex Data Type
 
 
+Exact Online Salesinvoices to Tripletex Invoice
+-----------------------------------------------
+Every Exact Online Salesinvoices will be synchronized with a Tripletex Invoice.
+
+Once a link between a Exact Online Salesinvoices and a Tripletex Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Salesinvoices and a Tripletex Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Salesinvoices Property
+     - Tripletex Invoice Property
+     - Tripletex Data Type
+
+
 Exact Online Salesorderlines to Tripletex Orderline
 ---------------------------------------------------
 Every Exact Online Salesorderlines will be synchronized with a Tripletex Orderline.
@@ -159,4 +207,36 @@ The following properties are synchronized between a Exact Online Salesorders and
    * - Currency
      - currency.id
      - "integer"
+
+
+Exact Online Units to Tripletex Productunit
+-------------------------------------------
+Every Exact Online Units will be synchronized with a Tripletex Productunit.
+
+Once a link between a Exact Online Units and a Tripletex Productunit is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Units and a Tripletex Productunit:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Units Property
+     - Tripletex Productunit Property
+     - Tripletex Data Type
+
+
+Exact Online Vatcodes to Tripletex Vattype
+------------------------------------------
+Every Exact Online Vatcodes will be synchronized with a Tripletex Vattype.
+
+Once a link between a Exact Online Vatcodes and a Tripletex Vattype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Vatcodes and a Tripletex Vattype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Vatcodes Property
+     - Tripletex Vattype Property
+     - Tripletex Data Type
 
