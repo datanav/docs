@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -50,32 +50,6 @@ The following properties are synchronized between a HubSpot Contact and a Triple
    * - properties.phone
      - phoneNumberWork
      - "string"
-
-
-HubSpot Contact to Tripletex Country
-------------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a Tripletex Country must be established.
-
-A HubSpot Contact will merge with a Tripletex Country if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     - Tripletex Country Property
-   * - properties.country
-     - name
-
-Once a link between a HubSpot Contact and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contact and a Tripletex Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     - Tripletex Country Property
-     - Tripletex Data Type
 
 
 HubSpot Contact to Tripletex Customer person
@@ -408,93 +382,6 @@ The following properties are synchronized between a HubSpot Contact and a Triple
 
    * - HubSpot Contact Property
      - Tripletex Customer Property
-     - Tripletex Data Type
-
-
-HubSpot Account to Tripletex Currency
--------------------------------------
-Every HubSpot Account will be synchronized with a Tripletex Currency.
-
-If a matching Tripletex Currency already exists, the HubSpot Account will be merged with the existing one.
-If no matching Tripletex Currency is found, a new Tripletex Currency will be created.
-
-A HubSpot Account will merge with a Tripletex Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Account Property
-     - Tripletex Currency Property
-   * - companyCurrency
-     - code
-
-Once a link between a HubSpot Account and a Tripletex Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Account and a Tripletex Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Account Property
-     - Tripletex Currency Property
-     - Tripletex Data Type
-
-
-HubSpot Company to Tripletex Country
-------------------------------------
-Every HubSpot Company will be synchronized with a Tripletex Country.
-
-If a matching Tripletex Country already exists, the HubSpot Company will be merged with the existing one.
-If no matching Tripletex Country is found, a new Tripletex Country will be created.
-
-A HubSpot Company will merge with a Tripletex Country if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Company Property
-     - Tripletex Country Property
-   * - properties.country
-     - name
-
-Once a link between a HubSpot Company and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Company and a Tripletex Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Company Property
-     - Tripletex Country Property
-     - Tripletex Data Type
-
-
-HubSpot Deal to Tripletex Currency
-----------------------------------
-Every HubSpot Deal will be synchronized with a Tripletex Currency.
-
-If a matching Tripletex Currency already exists, the HubSpot Deal will be merged with the existing one.
-If no matching Tripletex Currency is found, a new Tripletex Currency will be created.
-
-A HubSpot Deal will merge with a Tripletex Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     - Tripletex Currency Property
-   * - properties.deal_currency_code
-     - code
-
-Once a link between a HubSpot Deal and a Tripletex Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Deal and a Tripletex Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     - Tripletex Currency Property
      - Tripletex Data Type
 
 
