@@ -2,7 +2,7 @@
 Zendesk to Wave Dataflow
 ========================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -39,20 +39,4 @@ The following properties are synchronized between a Zendesk Users and a Wave Cus
    * - name
      - name
      - N/A
-
-
-Zendesk Users to Wave User
---------------------------
-When a Zendesk User is of type Agent, it  will be synchronized with a Wave User.
-
-Once a link between a Zendesk Users and a Wave User is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Users and a Wave User:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Users Property
-     - Wave User Property
-     - Wave Data Type
 
