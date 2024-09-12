@@ -2,94 +2,12 @@
 WooCommerce to SuperOffice Dataflow
 ===================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-WooCommerce Customer to SuperOffice Listcountryitems
-----------------------------------------------------
-Before any synchronization can take place, a link between a WooCommerce Customer and a SuperOffice Listcountryitems must be established.
-
-A WooCommerce Customer will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Customer Property
-     - SuperOffice Listcountryitems Property
-   * - billing.country
-     - TwoLetterISOCountry
-   * - shipping.country
-     - TwoLetterISOCountry
-
-Once a link between a WooCommerce Customer and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a WooCommerce Customer and a SuperOffice Listcountryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Customer Property
-     - SuperOffice Listcountryitems Property
-     - SuperOffice Data Type
-
-
-WooCommerce Order to SuperOffice Listcountryitems
--------------------------------------------------
-Before any synchronization can take place, a link between a WooCommerce Order and a SuperOffice Listcountryitems must be established.
-
-A WooCommerce Order will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Order Property
-     - SuperOffice Listcountryitems Property
-   * - billing.country
-     - TwoLetterISOCountry
-   * - shipping.country
-     - TwoLetterISOCountry
-
-Once a link between a WooCommerce Order and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a WooCommerce Order and a SuperOffice Listcountryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Order Property
-     - SuperOffice Listcountryitems Property
-     - SuperOffice Data Type
-
-
-WooCommerce Order to SuperOffice Pricelist
-------------------------------------------
-Before any synchronization can take place, a link between a WooCommerce Order and a SuperOffice Pricelist must be established.
-
-A WooCommerce Order will merge with a SuperOffice Pricelist if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Order Property
-     - SuperOffice Pricelist Property
-   * - currency
-     - Currency
-
-Once a link between a WooCommerce Order and a SuperOffice Pricelist is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a WooCommerce Order and a SuperOffice Pricelist:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Order Property
-     - SuperOffice Pricelist Property
-     - SuperOffice Data Type
-
 
 WooCommerce Order to SuperOffice Quotealternative
 -------------------------------------------------
@@ -110,35 +28,6 @@ The following properties are synchronized between a WooCommerce Order and a Supe
    * - discount_total
      - DiscountPercent
      - "integer"
-
-
-WooCommerce Order to SuperOffice Listcurrencyitems
---------------------------------------------------
-Every WooCommerce Order will be synchronized with a SuperOffice Listcurrencyitems.
-
-If a matching SuperOffice Listcurrencyitems already exists, the WooCommerce Order will be merged with the existing one.
-If no matching SuperOffice Listcurrencyitems is found, a new SuperOffice Listcurrencyitems will be created.
-
-A WooCommerce Order will merge with a SuperOffice Listcurrencyitems if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Order Property
-     - SuperOffice Listcurrencyitems Property
-   * - currency
-     - Name
-
-Once a link between a WooCommerce Order and a SuperOffice Listcurrencyitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a WooCommerce Order and a SuperOffice Listcurrencyitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Order Property
-     - SuperOffice Listcurrencyitems Property
-     - SuperOffice Data Type
 
 
 WooCommerce Order to SuperOffice Quoteline
