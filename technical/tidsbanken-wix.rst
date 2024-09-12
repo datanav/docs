@@ -2,7 +2,7 @@
 Tidsbanken to Wix Dataflow
 ==========================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -39,30 +39,4 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Wix 
    * - Fornavn
      - info.name.first
      - "string"
-
-
-Tidsbanken Ansatt to Wix Members
---------------------------------
-Before any synchronization can take place, a link between a Tidsbanken Ansatt and a Wix Members must be established.
-
-A Tidsbanken Ansatt will merge with a Wix Members if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Ansatt Property
-     - Wix Members Property
-   * - Epost
-     - loginEmail
-
-Once a link between a Tidsbanken Ansatt and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tidsbanken Ansatt and a Wix Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Ansatt Property
-     - Wix Members Property
-     - Wix Data Type
 
