@@ -2,7 +2,7 @@
 Keap to SuperOffice Dataflow
 ============================
 
-Generated: 2024-09-12 00:00:02
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -104,4 +104,20 @@ The following properties are synchronized between a Keap Product and a SuperOffi
    * - product_price
      - UnitListPrice
      - N/A
+
+
+Keap Users to SuperOffice User
+------------------------------
+Every Keap Users will be synchronized with a SuperOffice User.
+
+Once a link between a Keap Users and a SuperOffice User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Keap Users and a SuperOffice User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Keap Users Property
+     - SuperOffice User Property
+     - SuperOffice Data Type
 
