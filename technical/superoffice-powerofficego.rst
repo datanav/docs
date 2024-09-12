@@ -2,7 +2,7 @@
 SuperOffice to PowerOffice GO Dataflow
 ======================================
 
-Generated: 2024-09-12 12:59:45
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -237,32 +237,6 @@ The following properties are synchronized between a SuperOffice Person and a Pow
      - "integer"
 
 
-SuperOffice Pricelist to PowerOffice GO Currency
-------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Pricelist and a PowerOffice GO Currency must be established.
-
-A SuperOffice Pricelist will merge with a PowerOffice GO Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Pricelist Property
-     - PowerOffice GO Currency Property
-   * - Currency
-     - code
-
-Once a link between a SuperOffice Pricelist and a PowerOffice GO Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Pricelist and a PowerOffice GO Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Pricelist Property
-     - PowerOffice GO Currency Property
-     - PowerOffice GO Data Type
-
-
 SuperOffice User to PowerOffice GO Contactperson
 ------------------------------------------------
 Before any synchronization can take place, a link between a SuperOffice User and a PowerOffice GO Contactperson must be established.
@@ -444,54 +418,6 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
 
 
-SuperOffice Listcurrencyitems to PowerOffice GO Currency
---------------------------------------------------------
-Every SuperOffice Listcurrencyitems will be synchronized with a PowerOffice GO Currency.
-
-If a matching PowerOffice GO Currency already exists, the SuperOffice Listcurrencyitems will be merged with the existing one.
-If no matching PowerOffice GO Currency is found, a new PowerOffice GO Currency will be created.
-
-A SuperOffice Listcurrencyitems will merge with a PowerOffice GO Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listcurrencyitems Property
-     - PowerOffice GO Currency Property
-   * - Name
-     - code
-
-Once a link between a SuperOffice Listcurrencyitems and a PowerOffice GO Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listcurrencyitems and a PowerOffice GO Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listcurrencyitems Property
-     - PowerOffice GO Currency Property
-     - PowerOffice GO Data Type
-
-
-SuperOffice Listproductcategoryitems to PowerOffice GO Productgroup
--------------------------------------------------------------------
-Every SuperOffice Listproductcategoryitems will be synchronized with a PowerOffice GO Productgroup.
-
-Once a link between a SuperOffice Listproductcategoryitems and a PowerOffice GO Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listproductcategoryitems and a PowerOffice GO Productgroup:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listproductcategoryitems Property
-     - PowerOffice GO Productgroup Property
-     - PowerOffice GO Data Type
-   * - Name
-     - Name
-     - "string"
-
-
 SuperOffice Product to PowerOffice GO Product
 ---------------------------------------------
 Every SuperOffice Product will be synchronized with a PowerOffice GO Product.
@@ -565,37 +491,6 @@ The following properties are synchronized between a SuperOffice Product and a Po
      - "string"
 
 
-SuperOffice Product to PowerOffice GO Vatcodes
-----------------------------------------------
-Every SuperOffice Product will be synchronized with a PowerOffice GO Vatcodes.
-
-Once a link between a SuperOffice Product and a PowerOffice GO Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Product and a PowerOffice GO Vatcodes:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - PowerOffice GO Vatcodes Property
-     - PowerOffice GO Data Type
-   * - QuantityUnit
-     - Name
-     - "string"
-   * - VAT
-     - Rate
-     - "string"
-   * - VAT
-     - rate
-     - "string"
-   * - VATInfo
-     - Name
-     - "string"
-   * - VATInfo
-     - name
-     - "string"
-
-
 SuperOffice Project to PowerOffice GO Projects
 ----------------------------------------------
 Every SuperOffice Project will be synchronized with a PowerOffice GO Projects.
@@ -615,34 +510,6 @@ The following properties are synchronized between a SuperOffice Project and a Po
      - "integer"
    * - Name
      - Name
-     - "string"
-
-
-SuperOffice Quotealternative to PowerOffice GO Vatcodes
--------------------------------------------------------
-Every SuperOffice Quotealternative will be synchronized with a PowerOffice GO Vatcodes.
-
-Once a link between a SuperOffice Quotealternative and a PowerOffice GO Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quotealternative and a PowerOffice GO Vatcodes:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quotealternative Property
-     - PowerOffice GO Vatcodes Property
-     - PowerOffice GO Data Type
-   * - VAT
-     - Rate
-     - "string"
-   * - VAT
-     - rate
-     - "string"
-   * - VATInfo
-     - Name
-     - "string"
-   * - VATInfo
-     - name
      - "string"
 
 
@@ -704,33 +571,5 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
    * - VAT
      - VatReturnSpecification
-     - "string"
-
-
-SuperOffice Quoteline to PowerOffice GO Vatcodes
-------------------------------------------------
-Every SuperOffice Quoteline will be synchronized with a PowerOffice GO Vatcodes.
-
-Once a link between a SuperOffice Quoteline and a PowerOffice GO Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quoteline and a PowerOffice GO Vatcodes:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quoteline Property
-     - PowerOffice GO Vatcodes Property
-     - PowerOffice GO Data Type
-   * - VAT
-     - Rate
-     - "string"
-   * - VAT
-     - rate
-     - "string"
-   * - VATInfo
-     - Name
-     - "string"
-   * - VATInfo
-     - name
      - "string"
 
