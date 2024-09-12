@@ -2,7 +2,7 @@
 PowerOffice GO to Tripletex Dataflow
 ====================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 12:58:47
 
 Introduction
 ------------
@@ -13,7 +13,7 @@ PowerOffice GO Contactperson to Tripletex Customer person
 ---------------------------------------------------------
 Before any synchronization can take place, a link between a PowerOffice GO Contactperson and a Tripletex Customer person must be established.
 
-A new Tripletex Customer person will be created from a PowerOffice GO Contactperson if it is connected to a PowerOffice GO Powerofficego-salesorder, Powerofficego-salesorders, Powerofficego-salesorderlines, or Powerofficego-outgoinginvoices that is synchronized into Tripletex.
+A new Tripletex Customer person will be created from a PowerOffice GO Contactperson if it is connected to a PowerOffice GO Powerofficego-salesorder, Powerofficego-salesorders, Powerofficego-outgoinginvoice, Powerofficego-salesorderlines, or Powerofficego-outgoinginvoices that is synchronized into Tripletex.
 
 A PowerOffice GO Contactperson will merge with a Tripletex Customer person if one of the following property combinations match:
 
@@ -394,7 +394,7 @@ Powerofficego Contactperson to Tripletex Customer
 -------------------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Contactperson and a Tripletex Customer must be established.
 
-A new Tripletex Customer will be created from a Powerofficego Contactperson if it is connected to a Powerofficego Salesorder, Salesorders, Salesorderlines, or Outgoinginvoices that is synchronized into Tripletex.
+A new Tripletex Customer will be created from a Powerofficego Contactperson if it is connected to a Powerofficego Salesorder, Salesorders, Outgoinginvoice, Salesorderlines, or Outgoinginvoices that is synchronized into Tripletex.
 
 Once a link between a Powerofficego Contactperson and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
