@@ -2,7 +2,7 @@
 Wave to HubSpot Dataflow
 ========================
 
-Generated: 2024-09-12 00:00:02
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -344,6 +344,35 @@ The following properties are synchronized between a Wave Customer and a HubSpot 
    * - website
      - properties.website
      - "string"
+
+
+Wave Business to HubSpot Account
+--------------------------------
+Every Wave Business will be synchronized with a HubSpot Account.
+
+If a matching HubSpot Account already exists, the Wave Business will be merged with the existing one.
+If no matching HubSpot Account is found, a new HubSpot Account will be created.
+
+A Wave Business will merge with a HubSpot Account if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Business Property
+     - HubSpot Account Property
+   * - id
+     - portalId
+
+Once a link between a Wave Business and a HubSpot Account is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Business and a HubSpot Account:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Business Property
+     - HubSpot Account Property
+     - HubSpot Data Type
 
 
 Wave Invoice to HubSpot Lineitem
