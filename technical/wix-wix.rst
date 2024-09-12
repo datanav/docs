@@ -2,7 +2,7 @@
 Wix.com to Wix Dataflow
 =======================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -39,92 +39,6 @@ The following properties are synchronized between a Wix.com Contacts and a Wix C
    * - info.name.last
      - info.name.first
      - "string"
-
-
-Wix.com Contacts to Wix Members
--------------------------------
-Before any synchronization can take place, a link between a Wix.com Contacts and a Wix Members must be established.
-
-A Wix.com Contacts will merge with a Wix Members if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Contacts Property
-     - Wix Members Property
-   * - primaryInfo.email
-     - loginEmail
-
-Once a link between a Wix.com Contacts and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Contacts and a Wix Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Contacts Property
-     - Wix Members Property
-     - Wix Data Type
-   * - info.emails
-     - loginEmail
-     - "string"
-   * - primaryInfo.email
-     - loginEmail
-     - "string"
-
-
-Wix.com Currencies to Wix Currencies
-------------------------------------
-Before any synchronization can take place, a link between a Wix.com Currencies and a Wix Currencies must be established.
-
-A Wix.com Currencies will merge with a Wix Currencies if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Currencies Property
-     - Wix Currencies Property
-   * - code
-     - code
-
-Once a link between a Wix.com Currencies and a Wix Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Currencies and a Wix Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Currencies Property
-     - Wix Currencies Property
-     - Wix Data Type
-
-
-Wix.com Inventory to Wix Inventory
-----------------------------------
-Before any synchronization can take place, a link between a Wix.com Inventory and a Wix Inventory must be established.
-
-A Wix.com Inventory will merge with a Wix Inventory if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Inventory Property
-     - Wix Inventory Property
-   * - id
-     - id
-   * - productId
-     - productId
-
-Once a link between a Wix.com Inventory and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Inventory and a Wix Inventory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Inventory Property
-     - Wix Inventory Property
-     - Wix Data Type
 
 
 Wix.com Inventory to Wix Products
@@ -188,60 +102,6 @@ The following properties are synchronized between a Wix.com Members and a Wix Co
    * - loginEmail
      - primaryInfo.email
      - "string"
-
-
-Wix.com Members to Wix Members
-------------------------------
-Before any synchronization can take place, a link between a Wix.com Members and a Wix Members must be established.
-
-A Wix.com Members will merge with a Wix Members if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Members Property
-     - Wix Members Property
-   * - loginEmail
-     - loginEmail
-
-Once a link between a Wix.com Members and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Members and a Wix Members:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Members Property
-     - Wix Members Property
-     - Wix Data Type
-
-
-Wix.com Products to Wix Inventory
----------------------------------
-Before any synchronization can take place, a link between a Wix.com Products and a Wix Inventory must be established.
-
-A Wix.com Products will merge with a Wix Inventory if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Products Property
-     - Wix Inventory Property
-   * - id
-     - productId
-   * - inventoryItemId
-     - id
-
-Once a link between a Wix.com Products and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Products and a Wix Inventory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Products Property
-     - Wix Inventory Property
-     - Wix Data Type
 
 
 Wix.com Products to Wix Products
