@@ -2,7 +2,7 @@
 CRMOffice to PowerOffice GO Dataflow
 ====================================
 
-Generated: 2024-09-12 00:00:03
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -51,4 +51,20 @@ The following properties are synchronized between a CRMOffice Contacts and a Pow
    * - givenName
      - firstName
      - "string"
+
+
+CRMOffice Contacts to PowerOffice GO Suppliers person
+-----------------------------------------------------
+Every CRMOffice Contacts will be synchronized with a PowerOffice GO Suppliers person.
+
+Once a link between a CRMOffice Contacts and a PowerOffice GO Suppliers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a CRMOffice Contacts and a PowerOffice GO Suppliers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - CRMOffice Contacts Property
+     - PowerOffice GO Suppliers person Property
+     - PowerOffice GO Data Type
 
