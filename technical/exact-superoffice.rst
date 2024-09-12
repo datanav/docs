@@ -2,7 +2,7 @@
 Exact Online to SuperOffice Dataflow
 ====================================
 
-Generated: 2024-09-12 00:00:03
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -141,6 +141,38 @@ The following properties are synchronized between a Exact Online Employees and a
    * - Postcode
      - Address.Street.Zipcode
      - "string"
+
+
+Exact Online Addresses to SuperOffice Listcountryitems
+------------------------------------------------------
+Every Exact Online Addresses will be synchronized with a SuperOffice Listcountryitems.
+
+Once a link between a Exact Online Addresses and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Addresses and a SuperOffice Listcountryitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Addresses Property
+     - SuperOffice Listcountryitems Property
+     - SuperOffice Data Type
+
+
+Exact Online Currencies to SuperOffice Listcurrencyitems
+--------------------------------------------------------
+Every Exact Online Currencies will be synchronized with a SuperOffice Listcurrencyitems.
+
+Once a link between a Exact Online Currencies and a SuperOffice Listcurrencyitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Currencies and a SuperOffice Listcurrencyitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Currencies Property
+     - SuperOffice Listcurrencyitems Property
+     - SuperOffice Data Type
 
 
 Exact Online Items to SuperOffice Product
