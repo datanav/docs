@@ -2,7 +2,7 @@
 Chargebee to Wix Dataflow
 =========================
 
-Generated: 2024-09-12 00:00:01
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -22,5 +22,21 @@ The following properties are synchronized between a Chargebee Item and a Wix Pro
 
    * - Chargebee Item Property
      - Wix Products Property
+     - Wix Data Type
+
+
+Chargebee Order to Wix Orders
+-----------------------------
+Every Chargebee Order will be synchronized with a Wix Orders.
+
+Once a link between a Chargebee Order and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Order and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Order Property
+     - Wix Orders Property
      - Wix Data Type
 
