@@ -2,7 +2,7 @@
 Wave to Business Central Dataflow
 =================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -91,35 +91,6 @@ The following properties are synchronized between a Wave Customer and a Business
 
    * - Wave Customer Property
      - Business Central Companies Property
-     - Business Central Data Type
-
-
-Wave Currency to Business Central Currencies
---------------------------------------------
-Every Wave Currency will be synchronized with a Business Central Currencies.
-
-If a matching Business Central Currencies already exists, the Wave Currency will be merged with the existing one.
-If no matching Business Central Currencies is found, a new Business Central Currencies will be created.
-
-A Wave Currency will merge with a Business Central Currencies if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Currency Property
-     - Business Central Currencies Property
-   * - code
-     - code
-
-Once a link between a Wave Currency and a Business Central Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Currency and a Business Central Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Currency Property
-     - Business Central Currencies Property
      - Business Central Data Type
 
 
