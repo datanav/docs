@@ -2,7 +2,7 @@
 Salesforce to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -43,38 +43,6 @@ The following properties are synchronized between a Salesforce Contact and a Tri
      - "string"
 
 
-Salesforce Contact to Tripletex Country
----------------------------------------
-Every Salesforce Contact will be synchronized with a Tripletex Country.
-
-Once a link between a Salesforce Contact and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Contact and a Tripletex Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Contact Property
-     - Tripletex Country Property
-     - Tripletex Data Type
-
-
-Salesforce Currencytype to Tripletex Currency
----------------------------------------------
-Every Salesforce Currencytype will be synchronized with a Tripletex Currency.
-
-Once a link between a Salesforce Currencytype and a Tripletex Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Currencytype and a Tripletex Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Currencytype Property
-     - Tripletex Currency Property
-     - Tripletex Data Type
-
-
 Salesforce Customer to Tripletex Customer person
 ------------------------------------------------
 Every Salesforce Customer will be synchronized with a Tripletex Customer person.
@@ -92,22 +60,6 @@ The following properties are synchronized between a Salesforce Customer and a Tr
    * - Name
      - name
      - "string"
-
-
-Salesforce Invoice to Tripletex Invoice
----------------------------------------
-Every Salesforce Invoice will be synchronized with a Tripletex Invoice.
-
-Once a link between a Salesforce Invoice and a Tripletex Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Invoice and a Tripletex Invoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Invoice Property
-     - Tripletex Invoice Property
-     - Tripletex Data Type
 
 
 Salesforce Invoiceline to Tripletex Orderline
@@ -136,37 +88,6 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - UnitPrice
      - unitPriceExcludingVatCurrency
      - "float"
-
-
-Salesforce Order to Tripletex Country
--------------------------------------
-Every Salesforce Order will be synchronized with a Tripletex Country.
-
-If a matching Tripletex Country already exists, the Salesforce Order will be merged with the existing one.
-If no matching Tripletex Country is found, a new Tripletex Country will be created.
-
-A Salesforce Order will merge with a Tripletex Country if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Order Property
-     - Tripletex Country Property
-   * - BillingCountryCode
-     - isoAlpha2Code
-   * - ShippingCountryCode
-     - isoAlpha2Code
-
-Once a link between a Salesforce Order and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Order and a Tripletex Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Order Property
-     - Tripletex Country Property
-     - Tripletex Data Type
 
 
 Salesforce Order to Tripletex Order
@@ -253,37 +174,6 @@ The following properties are synchronized between a Salesforce Product2 and a Tr
      - "string"
 
 
-Salesforce Quote to Tripletex Country
--------------------------------------
-Every Salesforce Quote will be synchronized with a Tripletex Country.
-
-If a matching Tripletex Country already exists, the Salesforce Quote will be merged with the existing one.
-If no matching Tripletex Country is found, a new Tripletex Country will be created.
-
-A Salesforce Quote will merge with a Tripletex Country if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Quote Property
-     - Tripletex Country Property
-   * - BillingCountryCode
-     - isoAlpha2Code
-   * - ShippingCountryCode
-     - isoAlpha2Code
-
-Once a link between a Salesforce Quote and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Quote and a Tripletex Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Quote Property
-     - Tripletex Country Property
-     - Tripletex Data Type
-
-
 Salesforce Quotelineitem to Tripletex Orderline
 -----------------------------------------------
 Every Salesforce Quotelineitem will be synchronized with a Tripletex Orderline.
@@ -310,35 +200,6 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - TotalPriceWithTax
      - unitPriceExcludingVatCurrency
      - "float"
-
-
-Salesforce User to Tripletex Country
-------------------------------------
-Every Salesforce User will be synchronized with a Tripletex Country.
-
-If a matching Tripletex Country already exists, the Salesforce User will be merged with the existing one.
-If no matching Tripletex Country is found, a new Tripletex Country will be created.
-
-A Salesforce User will merge with a Tripletex Country if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce User Property
-     - Tripletex Country Property
-   * - CountryCode
-     - isoAlpha2Code
-
-Once a link between a Salesforce User and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce User and a Tripletex Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce User Property
-     - Tripletex Country Property
-     - Tripletex Data Type
 
 
 Salesforce User to Tripletex Employee
