@@ -2,7 +2,7 @@
 PowerOffice GO to HubSpot Dataflow
 ==================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -339,22 +339,6 @@ The following properties are synchronized between a PowerOffice GO Product and a
    * - salesPrice
      - properties.price
      - "string"
-
-
-PowerOffice GO Quote to HubSpot Pipelinedeal
---------------------------------------------
-Every PowerOffice GO Quote will be synchronized with a HubSpot Pipelinedeal.
-
-Once a link between a PowerOffice GO Quote and a HubSpot Pipelinedeal is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice GO Quote and a HubSpot Pipelinedeal:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice GO Quote Property
-     - HubSpot Pipelinedeal Property
-     - HubSpot Data Type
 
 
 PowerOffice GO Quote to HubSpot Quote
