@@ -2,7 +2,7 @@
 Exact Online to Business Central Dataflow
 =========================================
 
-Generated: 2024-09-12 00:00:03
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -92,6 +92,22 @@ The following properties are synchronized between a Exact Online Contacts and a 
 
    * - Exact Online Contacts Property
      - Business Central Contacts person Property
+     - Business Central Data Type
+
+
+Exact Online Currencies to Business Central Currencies
+------------------------------------------------------
+Every Exact Online Currencies will be synchronized with a Business Central Currencies.
+
+Once a link between a Exact Online Currencies and a Business Central Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Currencies and a Business Central Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Currencies Property
+     - Business Central Currencies Property
      - Business Central Data Type
 
 
