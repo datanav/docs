@@ -2,7 +2,7 @@
 Exact Online to Wave Dataflow
 =============================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -29,38 +29,6 @@ The following properties are synchronized between a Exact Online Accounts and a 
    * - Website
      - website
      - "string"
-
-
-Exact Online Addresses to Wave Country
---------------------------------------
-Every Exact Online Addresses will be synchronized with a Wave Country.
-
-Once a link between a Exact Online Addresses and a Wave Country is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Online Addresses and a Wave Country:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Online Addresses Property
-     - Wave Country Property
-     - Wave Data Type
-
-
-Exact Online Currencies to Wave Currency
-----------------------------------------
-Every Exact Online Currencies will be synchronized with a Wave Currency.
-
-Once a link between a Exact Online Currencies and a Wave Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Online Currencies and a Wave Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Online Currencies Property
-     - Wave Currency Property
-     - Wave Data Type
 
 
 Exact Online Items to Wave Product
