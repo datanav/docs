@@ -2,7 +2,7 @@
 Business Central to Business Central Dataflow
 =============================================
 
-Generated: 2024-09-12 00:00:03
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -50,6 +50,32 @@ The following properties are synchronized between a Business Central Contacts pe
      - "string"
 
 
+Business Central Contacts person to Business Central Contactsinformation person customer relation
+-------------------------------------------------------------------------------------------------
+Before any synchronization can take place, a link between a Business Central Contacts person and a Business Central Contactsinformation person customer relation must be established.
+
+A Business Central Contacts person will merge with a Business Central Contactsinformation person customer relation if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Contacts person Property
+     - Business Central Contactsinformation person customer relation Property
+   * - id
+     - contactId
+
+Once a link between a Business Central Contacts person and a Business Central Contactsinformation person customer relation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Contacts person and a Business Central Contactsinformation person customer relation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Contacts person Property
+     - Business Central Contactsinformation person customer relation Property
+     - Business Central Data Type
+
+
 Business Central Contactsinformation person customer relation to Business Central Contacts person
 -------------------------------------------------------------------------------------------------
 Before any synchronization can take place, a link between a Business Central Contactsinformation person customer relation and a Business Central Contacts person must be established.
@@ -83,6 +109,84 @@ The following properties are synchronized between a Business Central Contactsinf
    * - contactName.contactName
      - displayName
      - "string"
+
+
+Business Central Contactsinformation person customer relation to Business Central Contactsinformation person customer relation
+------------------------------------------------------------------------------------------------------------------------------
+Before any synchronization can take place, a link between a Business Central Contactsinformation person customer relation and a Business Central Contactsinformation person customer relation must be established.
+
+A Business Central Contactsinformation person customer relation will merge with a Business Central Contactsinformation person customer relation if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Contactsinformation person customer relation Property
+     - Business Central Contactsinformation person customer relation Property
+   * - contactId
+     - contactId
+
+Once a link between a Business Central Contactsinformation person customer relation and a Business Central Contactsinformation person customer relation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Contactsinformation person customer relation and a Business Central Contactsinformation person customer relation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Contactsinformation person customer relation Property
+     - Business Central Contactsinformation person customer relation Property
+     - Business Central Data Type
+
+
+Business Central Currencies to Business Central Currencies
+----------------------------------------------------------
+Before any synchronization can take place, a link between a Business Central Currencies and a Business Central Currencies must be established.
+
+A Business Central Currencies will merge with a Business Central Currencies if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Currencies Property
+     - Business Central Currencies Property
+   * - code
+     - code
+
+Once a link between a Business Central Currencies and a Business Central Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Currencies and a Business Central Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Currencies Property
+     - Business Central Currencies Property
+     - Business Central Data Type
+
+
+Business Central Itemcategories to Business Central Itemcategories
+------------------------------------------------------------------
+Before any synchronization can take place, a link between a Business Central Itemcategories and a Business Central Itemcategories must be established.
+
+A Business Central Itemcategories will merge with a Business Central Itemcategories if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Itemcategories Property
+     - Business Central Itemcategories Property
+   * - code
+     - code
+
+Once a link between a Business Central Itemcategories and a Business Central Itemcategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Itemcategories and a Business Central Itemcategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Itemcategories Property
+     - Business Central Itemcategories Property
+     - Business Central Data Type
 
 
 Business Central Items to Business Central Items
