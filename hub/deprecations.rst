@@ -765,7 +765,7 @@ The lower keys transform
 This transform transforms all the keys of an entity to lower case (optionally recursively).
 
 .. Note::
-  We strongely recommend using DTL transform to replace ``lower_keys`` transform. See example of DTL transform bellow.
+  We strongly recommend using DTL transform to replace ``lower_keys`` transform. See example of DTL transform below.
 
 Example of DTL transform to replace lower_keys:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -783,7 +783,7 @@ Example of DTL transform to replace lower_keys:
       "lower_keys": [
         ["comment", "Lowercases all keys in a dictionary."],
         ["comment", "It will recursively lower case keys in nested dictionaries."],
-        ["comment", "Dictionaries in lists will also have their keys lowercased, not matter if the list is mixed."],
+        ["comment", "Dictionaries in lists will also have their keys lowercased, no matter if the list is mixed."],
         ["merge",
           ["apply", "lower_keys_iter",
             ["key-values", "_S."]
