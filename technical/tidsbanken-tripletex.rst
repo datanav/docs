@@ -2,7 +2,7 @@
 Tidsbanken to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -104,34 +104,6 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Trip
    * - Poststed
      - postalAddress.city
      - "string"
-
-
-Tidsbanken Kunde to Tripletex Supplier
---------------------------------------
-Before any synchronization can take place, a link between a Tidsbanken Kunde and a Tripletex Supplier must be established.
-
-A Tidsbanken Kunde will merge with a Tripletex Supplier if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Kunde Property
-     - Tripletex Supplier Property
-   * - Epost
-     - email
-   * - Organisasjonsnummer
-     - organizationNumber
-
-Once a link between a Tidsbanken Kunde and a Tripletex Supplier is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tidsbanken Kunde and a Tripletex Supplier:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Kunde Property
-     - Tripletex Supplier Property
-     - Tripletex Data Type
 
 
 Tidsbanken Kunde to Tripletex Customer person
