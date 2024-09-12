@@ -2,7 +2,7 @@
 Shopify to SuperOffice Dataflow
 ===============================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -116,82 +116,6 @@ The following properties are synchronized between a Shopify Customer and a Super
    * - phone
      - OfficePhones.Value
      - "string"
-
-
-Shopify Customer to SuperOffice Listcountryitems
-------------------------------------------------
-Every Shopify Customer will be synchronized with a SuperOffice Listcountryitems.
-
-If a matching SuperOffice Listcountryitems already exists, the Shopify Customer will be merged with the existing one.
-If no matching SuperOffice Listcountryitems is found, a new SuperOffice Listcountryitems will be created.
-
-A Shopify Customer will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Customer Property
-     - SuperOffice Listcountryitems Property
-   * - default_address.country_code
-     - TwoLetterISOCountry
-
-Once a link between a Shopify Customer and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Customer and a SuperOffice Listcountryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Customer Property
-     - SuperOffice Listcountryitems Property
-     - SuperOffice Data Type
-
-
-Shopify Customer to SuperOffice Listcurrencyitems
--------------------------------------------------
-Every Shopify Customer will be synchronized with a SuperOffice Listcurrencyitems.
-
-Once a link between a Shopify Customer and a SuperOffice Listcurrencyitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Customer and a SuperOffice Listcurrencyitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Customer Property
-     - SuperOffice Listcurrencyitems Property
-     - SuperOffice Data Type
-
-
-Shopify Order to SuperOffice Listcountryitems
----------------------------------------------
-Every Shopify Order will be synchronized with a SuperOffice Listcountryitems.
-
-If a matching SuperOffice Listcountryitems already exists, the Shopify Order will be merged with the existing one.
-If no matching SuperOffice Listcountryitems is found, a new SuperOffice Listcountryitems will be created.
-
-A Shopify Order will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Order Property
-     - SuperOffice Listcountryitems Property
-   * - billing_address.country_code
-     - TwoLetterISOCountry
-   * - shipping_address.country_code
-     - TwoLetterISOCountry
-
-Once a link between a Shopify Order and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Order and a SuperOffice Listcountryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Order Property
-     - SuperOffice Listcountryitems Property
-     - SuperOffice Data Type
 
 
 Shopify Order to SuperOffice Quoteline
