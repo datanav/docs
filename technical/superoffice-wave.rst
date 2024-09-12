@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2024-09-12 00:00:01
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -82,6 +82,35 @@ The following properties are synchronized between a SuperOffice Person and a Wav
      - "string"
    * - OfficePhones.Value
      - phone
+     - "string"
+
+
+SuperOffice Pricelist to Wave Currency
+--------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Pricelist and a Wave Currency must be established.
+
+A SuperOffice Pricelist will merge with a Wave Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Pricelist Property
+     - Wave Currency Property
+   * - Currency
+     - code
+
+Once a link between a SuperOffice Pricelist and a Wave Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Pricelist and a Wave Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Pricelist Property
+     - Wave Currency Property
+     - Wave Data Type
+   * - Name
+     - name
      - "string"
 
 
@@ -381,6 +410,82 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
 
 
+SuperOffice Listcountryitems to Wave Country
+--------------------------------------------
+Every SuperOffice Listcountryitems will be synchronized with a Wave Country.
+
+If a matching Wave Country already exists, the SuperOffice Listcountryitems will be merged with the existing one.
+If no matching Wave Country is found, a new Wave Country will be created.
+
+A SuperOffice Listcountryitems will merge with a Wave Country if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Listcountryitems Property
+     - Wave Country Property
+   * - Name
+     - name
+   * - TwoLetterISOCountry
+     - code
+
+Once a link between a SuperOffice Listcountryitems and a Wave Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Listcountryitems and a Wave Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Listcountryitems Property
+     - Wave Country Property
+     - Wave Data Type
+
+
+SuperOffice Listcurrencyitems to Wave Currency
+----------------------------------------------
+Every SuperOffice Listcurrencyitems will be synchronized with a Wave Currency.
+
+If a matching Wave Currency already exists, the SuperOffice Listcurrencyitems will be merged with the existing one.
+If no matching Wave Currency is found, a new Wave Currency will be created.
+
+A SuperOffice Listcurrencyitems will merge with a Wave Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Listcurrencyitems Property
+     - Wave Currency Property
+   * - Name
+     - code
+
+Once a link between a SuperOffice Listcurrencyitems and a Wave Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Listcurrencyitems and a Wave Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Listcurrencyitems Property
+     - Wave Currency Property
+     - Wave Data Type
+
+
+SuperOffice Ownercontactlink to Wave Business
+---------------------------------------------
+Every SuperOffice Ownercontactlink will be synchronized with a Wave Business.
+
+Once a link between a SuperOffice Ownercontactlink and a Wave Business is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Ownercontactlink and a Wave Business:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Ownercontactlink Property
+     - Wave Business Property
+     - Wave Data Type
+
+
 SuperOffice Product to Wave Product
 -----------------------------------
 Every SuperOffice Product will be synchronized with a Wave Product.
@@ -404,4 +509,20 @@ The following properties are synchronized between a SuperOffice Product and a Wa
    * - UnitListPrice
      - unitPrice
      - "string"
+
+
+SuperOffice User to Wave User
+-----------------------------
+Every SuperOffice User will be synchronized with a Wave User.
+
+Once a link between a SuperOffice User and a Wave User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice User and a Wave User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - Wave User Property
+     - Wave Data Type
 
