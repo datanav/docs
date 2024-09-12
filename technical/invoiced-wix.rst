@@ -2,7 +2,7 @@
 Invoiced to Wix Dataflow
 ========================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -26,22 +26,6 @@ The following properties are synchronized between a Invoiced Contacts and a Wix 
    * - email
      - primaryInfo.email
      - "string"
-
-
-Invoiced Invoices to Wix Orders
--------------------------------
-Every Invoiced Invoices will be synchronized with a Wix Orders.
-
-Once a link between a Invoiced Invoices and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Invoiced Invoices and a Wix Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Invoiced Invoices Property
-     - Wix Orders Property
-     - Wix Data Type
 
 
 Invoiced Items to Wix Products
