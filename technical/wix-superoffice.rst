@@ -2,7 +2,7 @@
 Wix.com to SuperOffice Dataflow
 ===============================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -59,58 +59,6 @@ The following properties are synchronized between a Wix.com Contacts and a Super
      - "string"
 
 
-Wix.com Contacts to SuperOffice User
-------------------------------------
-Before any synchronization can take place, a link between a Wix.com Contacts and a SuperOffice User must be established.
-
-A Wix.com Contacts will merge with a SuperOffice User if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Contacts Property
-     - SuperOffice User Property
-   * - primaryInfo.email
-     - personEmail
-
-Once a link between a Wix.com Contacts and a SuperOffice User is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Contacts and a SuperOffice User:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Contacts Property
-     - SuperOffice User Property
-     - SuperOffice Data Type
-
-
-Wix.com Currencies to SuperOffice Pricelist
--------------------------------------------
-Before any synchronization can take place, a link between a Wix.com Currencies and a SuperOffice Pricelist must be established.
-
-A Wix.com Currencies will merge with a SuperOffice Pricelist if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Currencies Property
-     - SuperOffice Pricelist Property
-   * - code
-     - Currency
-
-Once a link between a Wix.com Currencies and a SuperOffice Pricelist is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Currencies and a SuperOffice Pricelist:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Currencies Property
-     - SuperOffice Pricelist Property
-     - SuperOffice Data Type
-
-
 Wix.com Members to SuperOffice Person
 -------------------------------------
 Before any synchronization can take place, a link between a Wix.com Members and a SuperOffice Person must be established.
@@ -140,32 +88,6 @@ The following properties are synchronized between a Wix.com Members and a SuperO
      - "string"
 
 
-Wix.com Members to SuperOffice User
------------------------------------
-Before any synchronization can take place, a link between a Wix.com Members and a SuperOffice User must be established.
-
-A Wix.com Members will merge with a SuperOffice User if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Members Property
-     - SuperOffice User Property
-   * - loginEmail
-     - personEmail
-
-Once a link between a Wix.com Members and a SuperOffice User is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Members and a SuperOffice User:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Members Property
-     - SuperOffice User Property
-     - SuperOffice Data Type
-
-
 Wix.com Orders to SuperOffice Quotealternative
 ----------------------------------------------
 Before any synchronization can take place, a link between a Wix.com Orders and a SuperOffice Quotealternative must be established.
@@ -185,53 +107,6 @@ The following properties are synchronized between a Wix.com Orders and a SuperOf
    * - totals.total
      - TotalPrice
      - "float"
-
-
-Wix.com Products classification producttype typegroup to SuperOffice Listproducttypeitems
------------------------------------------------------------------------------------------
-Before any synchronization can take place, a link between a Wix.com Products classification producttype typegroup and a SuperOffice Listproducttypeitems must be established.
-
-A new SuperOffice Listproducttypeitems will be created from a Wix.com Products classification producttype typegroup if it is connected to a Wix.com Wix-products, or Wix-inventory that is synchronized into SuperOffice.
-
-Once a link between a Wix.com Products classification producttype typegroup and a SuperOffice Listproducttypeitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Products classification producttype typegroup and a SuperOffice Listproducttypeitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Products classification producttype typegroup Property
-     - SuperOffice Listproducttypeitems Property
-     - SuperOffice Data Type
-
-
-Wix.com Currencies to SuperOffice Listcurrencyitems
----------------------------------------------------
-Every Wix.com Currencies will be synchronized with a SuperOffice Listcurrencyitems.
-
-If a matching SuperOffice Listcurrencyitems already exists, the Wix.com Currencies will be merged with the existing one.
-If no matching SuperOffice Listcurrencyitems is found, a new SuperOffice Listcurrencyitems will be created.
-
-A Wix.com Currencies will merge with a SuperOffice Listcurrencyitems if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Currencies Property
-     - SuperOffice Listcurrencyitems Property
-   * - code
-     - Name
-
-Once a link between a Wix.com Currencies and a SuperOffice Listcurrencyitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Currencies and a SuperOffice Listcurrencyitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Currencies Property
-     - SuperOffice Listcurrencyitems Property
-     - SuperOffice Data Type
 
 
 Wix.com Orders to SuperOffice Quoteline
@@ -266,25 +141,6 @@ The following properties are synchronized between a Wix.com Orders and a SuperOf
    * - totals.total
      - TotalPrice
      - N/A
-
-
-Wix.com Products to SuperOffice Listproducttypeitems
-----------------------------------------------------
-Every Wix.com Products will be synchronized with a SuperOffice Listproducttypeitems.
-
-Once a link between a Wix.com Products and a SuperOffice Listproducttypeitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Products and a SuperOffice Listproducttypeitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Products Property
-     - SuperOffice Listproducttypeitems Property
-     - SuperOffice Data Type
-   * - productType
-     - Name
-     - "string"
 
 
 Wix.com Products to SuperOffice Product
