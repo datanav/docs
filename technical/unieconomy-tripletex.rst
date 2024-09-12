@@ -2,7 +2,7 @@
 Unieconomy to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-12 00:00:01
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -36,6 +36,118 @@ The following properties are synchronized between a Unieconomy Companies and a T
    * - Name
      - name
      - "string"
+
+
+Unieconomy Companies to Tripletex Supplier
+------------------------------------------
+Before any synchronization can take place, a link between a Unieconomy Companies and a Tripletex Supplier must be established.
+
+A Unieconomy Companies will merge with a Tripletex Supplier if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Companies Property
+     - Tripletex Supplier Property
+   * - OrganizationNumber
+     - organizationNumber
+
+Once a link between a Unieconomy Companies and a Tripletex Supplier is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Companies and a Tripletex Supplier:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Companies Property
+     - Tripletex Supplier Property
+     - Tripletex Data Type
+
+
+Unieconomy Customers to Tripletex Supplier
+------------------------------------------
+Before any synchronization can take place, a link between a Unieconomy Customers and a Tripletex Supplier must be established.
+
+A Unieconomy Customers will merge with a Tripletex Supplier if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Customers Property
+     - Tripletex Supplier Property
+   * - OrgNumber
+     - organizationNumber
+
+Once a link between a Unieconomy Customers and a Tripletex Supplier is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Customers and a Tripletex Supplier:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Customers Property
+     - Tripletex Supplier Property
+     - Tripletex Data Type
+
+
+Unieconomy Countries to Tripletex Country
+-----------------------------------------
+Every Unieconomy Countries will be synchronized with a Tripletex Country.
+
+If a matching Tripletex Country already exists, the Unieconomy Countries will be merged with the existing one.
+If no matching Tripletex Country is found, a new Tripletex Country will be created.
+
+A Unieconomy Countries will merge with a Tripletex Country if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Countries Property
+     - Tripletex Country Property
+   * - Name
+     - name
+   * - CountryCode
+     - isoAlpha2Code
+
+Once a link between a Unieconomy Countries and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Countries and a Tripletex Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Countries Property
+     - Tripletex Country Property
+     - Tripletex Data Type
+
+
+Unieconomy Currencycodes to Tripletex Currency
+----------------------------------------------
+Every Unieconomy Currencycodes will be synchronized with a Tripletex Currency.
+
+If a matching Tripletex Currency already exists, the Unieconomy Currencycodes will be merged with the existing one.
+If no matching Tripletex Currency is found, a new Tripletex Currency will be created.
+
+A Unieconomy Currencycodes will merge with a Tripletex Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Currencycodes Property
+     - Tripletex Currency Property
+   * - Code
+     - code
+
+Once a link between a Unieconomy Currencycodes and a Tripletex Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Currencycodes and a Tripletex Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Currencycodes Property
+     - Tripletex Currency Property
+     - Tripletex Data Type
 
 
 Unieconomy Customers to Tripletex Customer
