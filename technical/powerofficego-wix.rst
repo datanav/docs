@@ -2,7 +2,7 @@
 PowerOffice GO to Wix Dataflow
 ==============================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 12:59:45
 
 Introduction
 ------------
@@ -120,20 +120,20 @@ The following properties are synchronized between a PowerOffice GO Customers per
      - Wix Data Type
 
 
-Powerofficego Customers to Wix Contacts
----------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Customers and a Wix Contacts must be established.
+PowerOffice GO Customers to Wix Contacts
+----------------------------------------
+Before any synchronization can take place, a link between a PowerOffice GO Customers and a Wix Contacts must be established.
 
-A new Wix Contacts will be created from a Powerofficego Customers if it is connected to a Powerofficego Salesorders, Salesorderline, Salesorderlines, or Outgoinginvoices that is synchronized into Wix.
+A new Wix Contacts will be created from a PowerOffice GO Customers if it is connected to a PowerOffice GO Powerofficego-salesorders, Powerofficego-salesorderline, Powerofficego-salesorderlines, or Powerofficego-outgoinginvoices that is synchronized into Wix.
 
-Once a link between a Powerofficego Customers and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Customers and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Powerofficego Customers and a Wix Contacts:
+The following properties are synchronized between a PowerOffice GO Customers and a Wix Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Powerofficego Customers Property
+   * - PowerOffice GO Customers Property
      - Wix Contacts Property
      - Wix Data Type
    * - Id
