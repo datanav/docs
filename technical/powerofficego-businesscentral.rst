@@ -2,7 +2,7 @@
 PowerOffice GO to Business Central Dataflow
 ===========================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -172,35 +172,6 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - zipCode
      - postalCode
      - "string"
-
-
-PowerOffice GO Currency to Business Central Currencies
-------------------------------------------------------
-Every PowerOffice GO Currency will be synchronized with a Business Central Currencies.
-
-If a matching Business Central Currencies already exists, the PowerOffice GO Currency will be merged with the existing one.
-If no matching Business Central Currencies is found, a new Business Central Currencies will be created.
-
-A PowerOffice GO Currency will merge with a Business Central Currencies if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice GO Currency Property
-     - Business Central Currencies Property
-   * - code
-     - code
-
-Once a link between a PowerOffice GO Currency and a Business Central Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice GO Currency and a Business Central Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice GO Currency Property
-     - Business Central Currencies Property
-     - Business Central Data Type
 
 
 PowerOffice GO Customers to Business Central Contacts person
@@ -496,22 +467,6 @@ The following properties are synchronized between a PowerOffice GO Product and a
    * - vatCode
      - taxGroupCode
      - "string"
-
-
-PowerOffice GO Productgroup to Business Central Itemcategories
---------------------------------------------------------------
-Every PowerOffice GO Productgroup will be synchronized with a Business Central Itemcategories.
-
-Once a link between a PowerOffice GO Productgroup and a Business Central Itemcategories is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice GO Productgroup and a Business Central Itemcategories:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice GO Productgroup Property
-     - Business Central Itemcategories Property
-     - Business Central Data Type
 
 
 PowerOffice GO Salesorderlines to Business Central Salesorderlines
