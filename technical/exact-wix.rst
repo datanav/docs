@@ -2,7 +2,7 @@
 Exact Online to Wix Dataflow
 ============================
 
-Generated: 2024-09-12 00:00:03
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -25,6 +25,22 @@ The following properties are synchronized between a Exact Online Contacts and a 
      - Wix Data Type
 
 
+Exact Online Currencies to Wix Currencies
+-----------------------------------------
+Every Exact Online Currencies will be synchronized with a Wix Currencies.
+
+Once a link between a Exact Online Currencies and a Wix Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Currencies and a Wix Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Currencies Property
+     - Wix Currencies Property
+     - Wix Data Type
+
+
 Exact Online Items to Wix Products
 ----------------------------------
 Every Exact Online Items will be synchronized with a Wix Products.
@@ -38,5 +54,21 @@ The following properties are synchronized between a Exact Online Items and a Wix
 
    * - Exact Online Items Property
      - Wix Products Property
+     - Wix Data Type
+
+
+Exact Online Salesorders to Wix Orders
+--------------------------------------
+Every Exact Online Salesorders will be synchronized with a Wix Orders.
+
+Once a link between a Exact Online Salesorders and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Salesorders and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Salesorders Property
+     - Wix Orders Property
      - Wix Data Type
 
