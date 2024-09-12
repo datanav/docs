@@ -2,7 +2,7 @@
 Zendesk to Wix Dataflow
 =======================
 
-Generated: 2024-09-12 00:00:01
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -44,5 +44,34 @@ The following properties are synchronized between a Zendesk Users and a Wix Cont
      - "string"
    * - name
      - info.name.last
+     - "string"
+
+
+Zendesk Users to Wix Members
+----------------------------
+Before any synchronization can take place, a link between a Zendesk Users and a Wix Members must be established.
+
+A Zendesk Users will merge with a Wix Members if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Users Property
+     - Wix Members Property
+   * - email
+     - loginEmail
+
+Once a link between a Zendesk Users and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Users and a Wix Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Users Property
+     - Wix Members Property
+     - Wix Data Type
+   * - email
+     - loginEmail
      - "string"
 
