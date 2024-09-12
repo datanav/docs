@@ -2,7 +2,7 @@
 Wix.com to Wikidata Dataflow
 ============================
 
-Generated: 2024-09-12 00:00:01
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
