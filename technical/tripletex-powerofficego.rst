@@ -2,7 +2,7 @@
 Tripletex to PowerOffice GO Dataflow
 ====================================
 
-Generated: 2024-09-12 12:58:47
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -558,51 +558,6 @@ The following properties are synchronized between a Tripletex Contact and a Powe
    * - phoneNumberWork
      - phoneNumber
      - "string"
-
-
-Tripletex Contact to PowerOffice GO Suppliers person
-----------------------------------------------------
-Every Tripletex Contact will be synchronized with a PowerOffice GO Suppliers person.
-
-Once a link between a Tripletex Contact and a PowerOffice GO Suppliers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Contact and a PowerOffice GO Suppliers person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Contact Property
-     - PowerOffice GO Suppliers person Property
-     - PowerOffice GO Data Type
-
-
-Tripletex Currency to PowerOffice GO Currency
----------------------------------------------
-Every Tripletex Currency will be synchronized with a PowerOffice GO Currency.
-
-If a matching PowerOffice GO Currency already exists, the Tripletex Currency will be merged with the existing one.
-If no matching PowerOffice GO Currency is found, a new PowerOffice GO Currency will be created.
-
-A Tripletex Currency will merge with a PowerOffice GO Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     - PowerOffice GO Currency Property
-   * - code
-     - code
-
-Once a link between a Tripletex Currency and a PowerOffice GO Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Currency and a PowerOffice GO Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     - PowerOffice GO Currency Property
-     - PowerOffice GO Data Type
 
 
 Tripletex Customer person to PowerOffice GO Customers
@@ -1199,25 +1154,6 @@ The following properties are synchronized between a Tripletex Product and a Powe
      - "string"
 
 
-Tripletex Productgroup to PowerOffice GO Productgroup
------------------------------------------------------
-Every Tripletex Productgroup will be synchronized with a PowerOffice GO Productgroup.
-
-Once a link between a Tripletex Productgroup and a PowerOffice GO Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Productgroup and a PowerOffice GO Productgroup:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productgroup Property
-     - PowerOffice GO Productgroup Property
-     - PowerOffice GO Data Type
-   * - name
-     - Name
-     - "string"
-
-
 Tripletex Project to PowerOffice GO Projects
 --------------------------------------------
 Every Tripletex Project will be synchronized with a PowerOffice GO Projects.
@@ -1273,112 +1209,5 @@ The following properties are synchronized between a Tripletex Project and a Powe
      - "integer"
    * - startDate
      - StartDate
-     - "string"
-
-
-Tripletex Supplier to PowerOffice GO Suppliers
-----------------------------------------------
-Every Tripletex Supplier will be synchronized with a PowerOffice GO Suppliers.
-
-Once a link between a Tripletex Supplier and a PowerOffice GO Suppliers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Supplier and a PowerOffice GO Suppliers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Supplier Property
-     - PowerOffice GO Suppliers Property
-     - PowerOffice GO Data Type
-   * - deliveryAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - deliveryAddress.changes
-     - MailAddress.City
-     - "string"
-   * - deliveryAddress.city
-     - MailAddress.City
-     - "string"
-   * - deliveryAddress.city
-     - MailAddress.CountryCode
-     - "string"
-   * - deliveryAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - deliveryAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - email
-     - EmailAddress
-     - "string"
-   * - id
-     - Id
-     - "string"
-   * - name
-     - LegalName
-     - "string"
-   * - phoneNumber
-     - PhoneNumber
-     - "string"
-   * - physicalAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - physicalAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - physicalAddress.city
-     - MailAddress.City
-     - "string"
-   * - physicalAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - physicalAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - postalAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - postalAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - postalAddress.city
-     - MailAddress.City
-     - "string"
-   * - postalAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - postalAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-
-
-Tripletex Vattype to PowerOffice GO Vatcodes
---------------------------------------------
-Every Tripletex Vattype will be synchronized with a PowerOffice GO Vatcodes.
-
-Once a link between a Tripletex Vattype and a PowerOffice GO Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Vattype and a PowerOffice GO Vatcodes:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Vattype Property
-     - PowerOffice GO Vatcodes Property
-     - PowerOffice GO Data Type
-   * - name
-     - Name
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - percentage
-     - Rate
-     - "string"
-   * - percentage
-     - rate
      - "string"
 
