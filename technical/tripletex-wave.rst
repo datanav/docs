@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 12:58:47
 
 Introduction
 ------------
@@ -273,22 +273,22 @@ The following properties are synchronized between a Tripletex Customer and a Wav
      - "string"
 
 
-Tripletex Customer to  Vendor
------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer and a  Vendor must be established.
+Tripletex Customer to Wave Vendor
+---------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a Wave Vendor must be established.
 
-A new  Vendor will be created from a Tripletex Customer if it is connected to a Tripletex Supplier that is synchronized into .
+A new Wave Vendor will be created from a Tripletex Customer if it is connected to a Tripletex Customer, or Supplier that is synchronized into Wave.
 
-Once a link between a Tripletex Customer and a  Vendor is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Wave Vendor is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a  Vendor:
+The following properties are synchronized between a Tripletex Customer and a Wave Vendor:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     -  Vendor Property
-     -  Data Type
+     - Wave Vendor Property
+     - Wave Data Type
 
 
 Tripletex Country to Wave Country
