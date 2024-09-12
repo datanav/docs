@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2024-09-12 00:00:20
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -70,6 +70,35 @@ The following properties are synchronized between a HubSpot Contact and a Wix Co
      - "string"
 
 
+HubSpot Contact to Wix Members
+------------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a Wix Members must be established.
+
+A HubSpot Contact will merge with a Wix Members if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - Wix Members Property
+   * - properties.email
+     - loginEmail
+
+Once a link between a HubSpot Contact and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a Wix Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - Wix Members Property
+     - Wix Data Type
+   * - properties.email
+     - loginEmail
+     - "string"
+
+
 HubSpot Company to Wix Contacts
 -------------------------------
 Before any synchronization can take place, a link between a HubSpot Company and a Wix Contacts must be established.
@@ -112,6 +141,86 @@ The following properties are synchronized between a HubSpot Company and a Wix Co
      - "string"
    * - properties.zip
      - info.addresses.items.address.postalCode
+     - "string"
+
+
+HubSpot Account to Wix Currencies
+---------------------------------
+Every HubSpot Account will be synchronized with a Wix Currencies.
+
+If a matching Wix Currencies already exists, the HubSpot Account will be merged with the existing one.
+If no matching Wix Currencies is found, a new Wix Currencies will be created.
+
+A HubSpot Account will merge with a Wix Currencies if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Account Property
+     - Wix Currencies Property
+   * - companyCurrency
+     - code
+
+Once a link between a HubSpot Account and a Wix Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Account and a Wix Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Account Property
+     - Wix Currencies Property
+     - Wix Data Type
+
+
+HubSpot Deal to Wix Currencies
+------------------------------
+Every HubSpot Deal will be synchronized with a Wix Currencies.
+
+If a matching Wix Currencies already exists, the HubSpot Deal will be merged with the existing one.
+If no matching Wix Currencies is found, a new Wix Currencies will be created.
+
+A HubSpot Deal will merge with a Wix Currencies if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - Wix Currencies Property
+   * - properties.deal_currency_code
+     - code
+
+Once a link between a HubSpot Deal and a Wix Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a Wix Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - Wix Currencies Property
+     - Wix Data Type
+
+
+HubSpot Deal to Wix Orders
+--------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Wix Orders.
+
+Once a link between a HubSpot Deal and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - Wix Orders Property
+     - Wix Data Type
+   * - properties.amount
+     - totals.total
+     - "string"
+   * - properties.deal_currency_code
+     - currency
      - "string"
 
 
