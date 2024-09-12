@@ -2,7 +2,7 @@
 WooCommerce to PowerOffice GO Dataflow
 ======================================
 
-Generated: 2024-09-12 00:00:04
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -29,6 +29,35 @@ The following properties are synchronized between a WooCommerce Customer and a P
    * - last_name
      - LastName
      - "string"
+
+
+WooCommerce Order to PowerOffice GO Currency
+--------------------------------------------
+Every WooCommerce Order will be synchronized with a PowerOffice GO Currency.
+
+If a matching PowerOffice GO Currency already exists, the WooCommerce Order will be merged with the existing one.
+If no matching PowerOffice GO Currency is found, a new PowerOffice GO Currency will be created.
+
+A WooCommerce Order will merge with a PowerOffice GO Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WooCommerce Order Property
+     - PowerOffice GO Currency Property
+   * - currency
+     - code
+
+Once a link between a WooCommerce Order and a PowerOffice GO Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WooCommerce Order and a PowerOffice GO Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WooCommerce Order Property
+     - PowerOffice GO Currency Property
+     - PowerOffice GO Data Type
 
 
 WooCommerce Order to PowerOffice GO Salesorderlines
