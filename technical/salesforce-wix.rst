@@ -2,7 +2,7 @@
 Salesforce to Wix Dataflow
 ==========================
 
-Generated: 2024-09-12 00:00:20
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -38,6 +38,38 @@ The following properties are synchronized between a Salesforce Contact and a Wix
    * - Phone
      - primaryInfo.phone
      - "string"
+
+
+Salesforce Currencytype to Wix Currencies
+-----------------------------------------
+Every Salesforce Currencytype will be synchronized with a Wix Currencies.
+
+Once a link between a Salesforce Currencytype and a Wix Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Currencytype and a Wix Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Currencytype Property
+     - Wix Currencies Property
+     - Wix Data Type
+
+
+Salesforce Order to Wix Orders
+------------------------------
+Every Salesforce Order will be synchronized with a Wix Orders.
+
+Once a link between a Salesforce Order and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Order and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Order Property
+     - Wix Orders Property
+     - Wix Data Type
 
 
 Salesforce Product2 to Wix Products
