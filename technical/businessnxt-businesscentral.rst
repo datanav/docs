@@ -2,7 +2,7 @@
 Business Nxt to Business Central Dataflow
 =========================================
 
-Generated: 2024-09-12 00:00:03
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -38,6 +38,22 @@ The following properties are synchronized between a Business Nxt Company and a B
 
    * - Business Nxt Company Property
      - Business Central Companies Property
+     - Business Central Data Type
+
+
+Business Nxt Currency to Business Central Currencies
+----------------------------------------------------
+Every Business Nxt Currency will be synchronized with a Business Central Currencies.
+
+Once a link between a Business Nxt Currency and a Business Central Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Currency and a Business Central Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Currency Property
+     - Business Central Currencies Property
      - Business Central Data Type
 
 
@@ -99,4 +115,20 @@ The following properties are synchronized between a Business Nxt Product and a B
    * - priceQuantity
      - unitPrice
      - N/A
+
+
+Business Nxt Productcategory to Business Central Itemcategories
+---------------------------------------------------------------
+Every Business Nxt Productcategory will be synchronized with a Business Central Itemcategories.
+
+Once a link between a Business Nxt Productcategory and a Business Central Itemcategories is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Productcategory and a Business Central Itemcategories:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Productcategory Property
+     - Business Central Itemcategories Property
+     - Business Central Data Type
 
