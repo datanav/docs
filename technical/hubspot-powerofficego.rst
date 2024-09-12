@@ -2,7 +2,7 @@
 HubSpot to PowerOffice GO Dataflow
 ==================================
 
-Generated: 2024-09-12 12:58:47
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -258,64 +258,6 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
    * - properties.country
      - MailAddress.CountryCode
      - "string"
-
-
-HubSpot Account to PowerOffice GO Currency
-------------------------------------------
-Every HubSpot Account will be synchronized with a PowerOffice GO Currency.
-
-If a matching PowerOffice GO Currency already exists, the HubSpot Account will be merged with the existing one.
-If no matching PowerOffice GO Currency is found, a new PowerOffice GO Currency will be created.
-
-A HubSpot Account will merge with a PowerOffice GO Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Account Property
-     - PowerOffice GO Currency Property
-   * - companyCurrency
-     - code
-
-Once a link between a HubSpot Account and a PowerOffice GO Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Account and a PowerOffice GO Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Account Property
-     - PowerOffice GO Currency Property
-     - PowerOffice GO Data Type
-
-
-HubSpot Deal to PowerOffice GO Currency
----------------------------------------
-Every HubSpot Deal will be synchronized with a PowerOffice GO Currency.
-
-If a matching PowerOffice GO Currency already exists, the HubSpot Deal will be merged with the existing one.
-If no matching PowerOffice GO Currency is found, a new PowerOffice GO Currency will be created.
-
-A HubSpot Deal will merge with a PowerOffice GO Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     - PowerOffice GO Currency Property
-   * - properties.deal_currency_code
-     - code
-
-Once a link between a HubSpot Deal and a PowerOffice GO Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Deal and a PowerOffice GO Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     - PowerOffice GO Currency Property
-     - PowerOffice GO Data Type
 
 
 HubSpot Deal to PowerOffice GO Salesorders
