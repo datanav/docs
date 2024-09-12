@@ -2,7 +2,7 @@
 HubSpot to PowerOffice GO Dataflow
 ==================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 12:58:47
 
 Introduction
 ------------
@@ -143,22 +143,22 @@ The following properties are synchronized between a HubSpot Company and a PowerO
      - PowerOffice GO Data Type
 
 
-HubSpot Company to PowerOffice GO Customers
--------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Company and a PowerOffice GO Customers must be established.
+HubSpot Company to PowerOfficeGo Customers
+------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Company and a PowerOfficeGo Customers must be established.
 
-A new PowerOffice GO Customers will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into PowerOffice GO.
+A new PowerOfficeGo Customers will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into PowerOfficeGo.
 
-Once a link between a HubSpot Company and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a PowerOffice GO Customers:
+The following properties are synchronized between a HubSpot Company and a PowerOfficeGo Customers:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     - PowerOffice GO Customers Property
-     - PowerOffice GO Data Type
+     - PowerOfficeGo Customers Property
+     - PowerOfficeGo Data Type
    * - id
      - Id
      - "integer"
@@ -212,22 +212,22 @@ The following properties are synchronized between a HubSpot Company and a PowerO
      - "string"
 
 
-HubSpot Company to PowerOffice GO Customers person
---------------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Company and a PowerOffice GO Customers person must be established.
+HubSpot Company to PowerOfficeGo Customers person
+-------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Company and a PowerOfficeGo Customers person must be established.
 
-A new PowerOffice GO Customers person will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into PowerOffice GO.
+A new PowerOfficeGo Customers person will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into PowerOfficeGo.
 
-Once a link between a HubSpot Company and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Company and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a PowerOffice GO Customers person:
+The following properties are synchronized between a HubSpot Company and a PowerOfficeGo Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Company Property
-     - PowerOffice GO Customers person Property
-     - PowerOffice GO Data Type
+     - PowerOfficeGo Customers person Property
+     - PowerOfficeGo Data Type
    * - properties.country
      - MailAddress.CountryCode
      - "string"
@@ -239,22 +239,22 @@ The following properties are synchronized between a HubSpot Company and a PowerO
      - "string"
 
 
-HubSpot Contact to PowerOffice GO Customers
--------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a PowerOffice GO Customers must be established.
+HubSpot Contact to PowerOfficeGo Customers
+------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a PowerOfficeGo Customers must be established.
 
-A new PowerOffice GO Customers will be created from a HubSpot Contact if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into PowerOffice GO.
+A new PowerOfficeGo Customers will be created from a HubSpot Contact if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into PowerOfficeGo.
 
-Once a link between a HubSpot Contact and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a HubSpot Contact and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Contact and a PowerOffice GO Customers:
+The following properties are synchronized between a HubSpot Contact and a PowerOfficeGo Customers:
 
 .. list-table::
    :header-rows: 1
 
    * - HubSpot Contact Property
-     - PowerOffice GO Customers Property
-     - PowerOffice GO Data Type
+     - PowerOfficeGo Customers Property
+     - PowerOfficeGo Data Type
    * - properties.country
      - MailAddress.CountryCode
      - "string"
