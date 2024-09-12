@@ -2,7 +2,7 @@
 Wix.com to Business Central Dataflow
 ====================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -89,35 +89,6 @@ The following properties are synchronized between a Wix.com Contacts and a Busin
    * - primaryInfo.phone
      - phoneNumber
      - "string"
-
-
-Wix.com Currencies to Business Central Currencies
--------------------------------------------------
-Every Wix.com Currencies will be synchronized with a Business Central Currencies.
-
-If a matching Business Central Currencies already exists, the Wix.com Currencies will be merged with the existing one.
-If no matching Business Central Currencies is found, a new Business Central Currencies will be created.
-
-A Wix.com Currencies will merge with a Business Central Currencies if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Currencies Property
-     - Business Central Currencies Property
-   * - code
-     - code
-
-Once a link between a Wix.com Currencies and a Business Central Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Currencies and a Business Central Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Currencies Property
-     - Business Central Currencies Property
-     - Business Central Data Type
 
 
 Wix.com Orders to Business Central Salesorderlines
