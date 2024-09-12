@@ -2,7 +2,7 @@
 Unieconomy to Unieconomy Dataflow
 =================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -62,60 +62,6 @@ The following properties are synchronized between a Unieconomy Companies and a U
    * - OrganizationNumber
      - OrgNumber
      - "string"
-
-
-Unieconomy Countries to Unieconomy Countries
---------------------------------------------
-Before any synchronization can take place, a link between a Unieconomy Countries and a Unieconomy Countries must be established.
-
-A Unieconomy Countries will merge with a Unieconomy Countries if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Unieconomy Countries Property
-     - Unieconomy Countries Property
-   * - Name
-     - Name
-   * - CountryCode
-     - CountryCode
-
-Once a link between a Unieconomy Countries and a Unieconomy Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Unieconomy Countries and a Unieconomy Countries:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Unieconomy Countries Property
-     - Unieconomy Countries Property
-     - Unieconomy Data Type
-
-
-Unieconomy Currencycodes to Unieconomy Currencycodes
-----------------------------------------------------
-Before any synchronization can take place, a link between a Unieconomy Currencycodes and a Unieconomy Currencycodes must be established.
-
-A Unieconomy Currencycodes will merge with a Unieconomy Currencycodes if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Unieconomy Currencycodes Property
-     - Unieconomy Currencycodes Property
-   * - Code
-     - Code
-
-Once a link between a Unieconomy Currencycodes and a Unieconomy Currencycodes is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Unieconomy Currencycodes and a Unieconomy Currencycodes:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Unieconomy Currencycodes Property
-     - Unieconomy Currencycodes Property
-     - Unieconomy Data Type
 
 
 Unieconomy Customers to Unieconomy Companies
