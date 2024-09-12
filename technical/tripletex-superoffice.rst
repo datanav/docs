@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -53,61 +53,6 @@ The following properties are synchronized between a Tripletex Contact and a Supe
      - "string"
    * - phoneNumberWork
      - OfficePhones.Value
-     - "string"
-
-
-Tripletex Contact to SuperOffice User
--------------------------------------
-Before any synchronization can take place, a link between a Tripletex Contact and a SuperOffice User must be established.
-
-A Tripletex Contact will merge with a SuperOffice User if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Contact Property
-     - SuperOffice User Property
-   * - email
-     - personEmail
-
-Once a link between a Tripletex Contact and a SuperOffice User is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Contact and a SuperOffice User:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Contact Property
-     - SuperOffice User Property
-     - SuperOffice Data Type
-
-
-Tripletex Currency to SuperOffice Pricelist
--------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Currency and a SuperOffice Pricelist must be established.
-
-A Tripletex Currency will merge with a SuperOffice Pricelist if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     - SuperOffice Pricelist Property
-   * - code
-     - Currency
-
-Once a link between a Tripletex Currency and a SuperOffice Pricelist is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Currency and a SuperOffice Pricelist:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     - SuperOffice Pricelist Property
-     - SuperOffice Data Type
-   * - code
-     - Currency
      - "string"
 
 
@@ -195,32 +140,6 @@ The following properties are synchronized between a Tripletex Customer person an
    * - postalAddress.postalCode
      - Address.Street.Zipcode
      - "string"
-
-
-Tripletex Customer person to SuperOffice User
----------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer person and a SuperOffice User must be established.
-
-A Tripletex Customer person will merge with a SuperOffice User if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer person Property
-     - SuperOffice User Property
-   * - email
-     - personEmail
-
-Once a link between a Tripletex Customer person and a SuperOffice User is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer person and a SuperOffice User:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer person Property
-     - SuperOffice User Property
-     - SuperOffice Data Type
 
 
 Tripletex Customer to SuperOffice Contact
@@ -426,32 +345,6 @@ The following properties are synchronized between a Tripletex Employee and a Sup
    * - phoneNumberWork
      - OfficePhones.Value
      - "string"
-
-
-Tripletex Employee to SuperOffice User
---------------------------------------
-Before any synchronization can take place, a link between a Tripletex Employee and a SuperOffice User must be established.
-
-A Tripletex Employee will merge with a SuperOffice User if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - SuperOffice User Property
-   * - email
-     - personEmail
-
-Once a link between a Tripletex Employee and a SuperOffice User is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Employee and a SuperOffice User:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - SuperOffice User Property
-     - SuperOffice Data Type
 
 
 Tripletex Supplier to SuperOffice Contact
@@ -669,74 +562,6 @@ The following properties are synchronized between a Tripletex Department and a S
      - "string"
 
 
-Tripletex Country to SuperOffice Listcountryitems
--------------------------------------------------
-Every Tripletex Country will be synchronized with a SuperOffice Listcountryitems.
-
-If a matching SuperOffice Listcountryitems already exists, the Tripletex Country will be merged with the existing one.
-If no matching SuperOffice Listcountryitems is found, a new SuperOffice Listcountryitems will be created.
-
-A Tripletex Country will merge with a SuperOffice Listcountryitems if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Country Property
-     - SuperOffice Listcountryitems Property
-   * - name
-     - Name
-   * - isoAlpha2Code
-     - TwoLetterISOCountry
-   * - isoAlpha3Code
-     - ThreeLetterISOCountry
-
-Once a link between a Tripletex Country and a SuperOffice Listcountryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Country and a SuperOffice Listcountryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Country Property
-     - SuperOffice Listcountryitems Property
-     - SuperOffice Data Type
-
-
-Tripletex Currency to SuperOffice Listcurrencyitems
----------------------------------------------------
-Every Tripletex Currency will be synchronized with a SuperOffice Listcurrencyitems.
-
-If a matching SuperOffice Listcurrencyitems already exists, the Tripletex Currency will be merged with the existing one.
-If no matching SuperOffice Listcurrencyitems is found, a new SuperOffice Listcurrencyitems will be created.
-
-A Tripletex Currency will merge with a SuperOffice Listcurrencyitems if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     - SuperOffice Listcurrencyitems Property
-   * - code
-     - Name
-
-Once a link between a Tripletex Currency and a SuperOffice Listcurrencyitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Currency and a SuperOffice Listcurrencyitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     - SuperOffice Listcurrencyitems Property
-     - SuperOffice Data Type
-   * - code
-     - Name
-     - "string"
-   * - description
-     - Tooltip
-     - "string"
-
-
 Tripletex Orderline to SuperOffice Quoteline
 --------------------------------------------
 Every Tripletex Orderline will be synchronized with a SuperOffice Quoteline.
@@ -935,23 +760,4 @@ The following properties are synchronized between a Tripletex Product and a Supe
    * - vatType.id
      - VAT
      - "integer"
-
-
-Tripletex Productgroup to SuperOffice Listproductcategoryitems
---------------------------------------------------------------
-Every Tripletex Productgroup will be synchronized with a SuperOffice Listproductcategoryitems.
-
-Once a link between a Tripletex Productgroup and a SuperOffice Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Productgroup and a SuperOffice Listproductcategoryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productgroup Property
-     - SuperOffice Listproductcategoryitems Property
-     - SuperOffice Data Type
-   * - name
-     - Name
-     - "string"
 
