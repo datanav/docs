@@ -2,7 +2,7 @@
 Wave to SuperOffice Dataflow
 ============================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 12:58:47
 
 Introduction
 ------------
@@ -459,7 +459,7 @@ Wave Vendor to SuperOffice Contact
 ----------------------------------
 Before any synchronization can take place, a link between a Wave Vendor and a SuperOffice Contact must be established.
 
-A new SuperOffice Contact will be created from a Wave Vendor if it is connected to a Wave Vendor, Customer, Customer-person, or Customer-contact that is synchronized into SuperOffice.
+A new SuperOffice Contact will be created from a Wave Vendor if it is connected to a Wave User, Vendor, Customer, Customer-person, or Customer-contact that is synchronized into SuperOffice.
 
 Once a link between a Wave Vendor and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
