@@ -2,7 +2,7 @@
 Unieconomy to HubSpot Dataflow
 ==============================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -162,21 +162,5 @@ The following properties are synchronized between a Unieconomy Dimensions and a 
 
    * - Unieconomy Dimensions Property
      - HubSpot Quotequotetemplateassociationtype Property
-     - HubSpot Data Type
-
-
-Unieconomy Dimensions to HubSpot Ticketcompanyassociationtype
--------------------------------------------------------------
-Every Unieconomy Dimensions will be synchronized with a HubSpot Ticketcompanyassociationtype.
-
-Once a link between a Unieconomy Dimensions and a HubSpot Ticketcompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Unieconomy Dimensions and a HubSpot Ticketcompanyassociationtype:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Unieconomy Dimensions Property
-     - HubSpot Ticketcompanyassociationtype Property
      - HubSpot Data Type
 
