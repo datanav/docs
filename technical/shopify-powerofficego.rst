@@ -2,7 +2,7 @@
 Shopify to PowerOffice GO Dataflow
 ==================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 13:14:11
 
 Introduction
 ------------
@@ -75,22 +75,6 @@ The following properties are synchronized between a Shopify Product and a PowerO
 
    * - Shopify Product Property
      - PowerOffice GO Product Property
-     - PowerOffice GO Data Type
-
-
-Shopify Customer to PowerOffice GO Currency
--------------------------------------------
-Every Shopify Customer will be synchronized with a PowerOffice GO Currency.
-
-Once a link between a Shopify Customer and a PowerOffice GO Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Customer and a PowerOffice GO Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Customer Property
-     - PowerOffice GO Currency Property
      - PowerOffice GO Data Type
 
 
