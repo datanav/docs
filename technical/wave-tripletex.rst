@@ -2,7 +2,7 @@
 Wave to Tripletex Dataflow
 ==========================
 
-Generated: 2024-09-12 00:00:02
+Generated: 2024-09-12 12:58:41
 
 Introduction
 ------------
@@ -529,6 +529,66 @@ The following properties are synchronized between a Wave Vendor and a Tripletex 
      - "string"
 
 
+Wave Country to Tripletex Country
+---------------------------------
+Every Wave Country will be synchronized with a Tripletex Country.
+
+If a matching Tripletex Country already exists, the Wave Country will be merged with the existing one.
+If no matching Tripletex Country is found, a new Tripletex Country will be created.
+
+A Wave Country will merge with a Tripletex Country if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Country Property
+     - Tripletex Country Property
+   * - name
+     - name
+   * - code
+     - isoAlpha2Code
+
+Once a link between a Wave Country and a Tripletex Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Country and a Tripletex Country:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Country Property
+     - Tripletex Country Property
+     - Tripletex Data Type
+
+
+Wave Currency to Tripletex Currency
+-----------------------------------
+Every Wave Currency will be synchronized with a Tripletex Currency.
+
+If a matching Tripletex Currency already exists, the Wave Currency will be merged with the existing one.
+If no matching Tripletex Currency is found, a new Tripletex Currency will be created.
+
+A Wave Currency will merge with a Tripletex Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Currency Property
+     - Tripletex Currency Property
+   * - code
+     - code
+
+Once a link between a Wave Currency and a Tripletex Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Currency and a Tripletex Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Currency Property
+     - Tripletex Currency Property
+     - Tripletex Data Type
+
+
 Wave Customer person to Tripletex Customer person
 -------------------------------------------------
 Every Wave Customer person will be synchronized with a Tripletex Customer person.
@@ -1022,5 +1082,81 @@ The following properties are synchronized between a Wave Vendor and a Tripletex 
      - N/A
    * - phone
      - phoneNumberWork
+     - "string"
+
+
+Wave Vendor to Tripletex Supplier
+---------------------------------
+Every Wave Vendor will be synchronized with a Tripletex Supplier.
+
+Once a link between a Wave Vendor and a Tripletex Supplier is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a Tripletex Supplier:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - Tripletex Supplier Property
+     - Tripletex Data Type
+   * - address.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - address.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - address.addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - address.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - address.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - address.addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - address.city
+     - deliveryAddress.changes
+     - "string"
+   * - address.city
+     - deliveryAddress.city
+     - "string"
+   * - address.city
+     - physicalAddress.city
+     - "string"
+   * - address.city
+     - postalAddress.city
+     - "string"
+   * - address.country.code
+     - deliveryAddress.city
+     - "string"
+   * - address.country.code
+     - deliveryAddress.country.id
+     - "integer"
+   * - address.country.code
+     - physicalAddress.country.id
+     - "integer"
+   * - address.country.code
+     - postalAddress.country.id
+     - "integer"
+   * - address.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - address.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - address.postalCode
+     - postalAddress.postalCode
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - name
+     - name
+     - "string"
+   * - phone
+     - phoneNumber
      - "string"
 
