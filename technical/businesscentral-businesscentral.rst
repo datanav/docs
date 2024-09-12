@@ -2,7 +2,7 @@
 Business Central to Business Central Dataflow
 =============================================
 
-Generated: 2024-09-12 12:58:41
+Generated: 2024-09-12 12:58:47
 
 Introduction
 ------------
@@ -225,6 +225,42 @@ The following properties are synchronized between a Business Central Items and a
    * - taxGroupId
      - itemCategoryId
      - "string"
+
+
+Business Central Customers to Business Central Customers company
+----------------------------------------------------------------
+Before any synchronization can take place, a link between a Business Central Customers and a Business Central Customers company must be established.
+
+A new Business Central Customers company will be created from a Business Central Customers if it is connected to a Business Central Businesscentral-contacts-person, or Businesscentral-contactsinformation-person-customer-relation that is synchronized into Business Central.
+
+Once a link between a Business Central Customers and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Customers and a Business Central Customers company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Customers Property
+     - Business Central Customers company Property
+     - Business Central Data Type
+
+
+Business Central Customers to Business Central Customers person
+---------------------------------------------------------------
+Before any synchronization can take place, a link between a Business Central Customers and a Business Central Customers person must be established.
+
+A new Business Central Customers person will be created from a Business Central Customers if it is connected to a Business Central Businesscentral-contacts-person, or Businesscentral-contactsinformation-person-customer-relation that is synchronized into Business Central.
+
+Once a link between a Business Central Customers and a Business Central Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Customers and a Business Central Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Customers Property
+     - Business Central Customers person Property
+     - Business Central Data Type
 
 
 Business Central Customers company to Business Central Companies
