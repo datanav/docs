@@ -2,7 +2,7 @@
 PowerOffice GO to Youtrack Dataflow
 ===================================
 
-Generated: 2024-09-13 00:00:01
+Generated: 2024-09-13 08:22:50
 
 Introduction
 ------------
@@ -142,6 +142,22 @@ The following properties are synchronized between a PowerOffice GO Projects and 
    :header-rows: 1
 
    * - PowerOffice GO Projects Property
+     - Youtrack Hubprojects Property
+     - Youtrack Data Type
+
+
+PowerOffice GO Timetrackingactivity to Youtrack Hubprojects
+-----------------------------------------------------------
+Every PowerOffice GO Timetrackingactivity will be synchronized with a Youtrack Hubprojects.
+
+Once a link between a PowerOffice GO Timetrackingactivity and a Youtrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Timetrackingactivity and a Youtrack Hubprojects:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Timetrackingactivity Property
      - Youtrack Hubprojects Property
      - Youtrack Data Type
 
