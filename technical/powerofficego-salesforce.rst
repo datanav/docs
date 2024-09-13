@@ -2,7 +2,7 @@
 PowerOffice GO to Salesforce Dataflow
 =====================================
 
-Generated: 2024-09-13 00:00:01
+Generated: 2024-09-13 08:22:50
 
 Introduction
 ------------
@@ -135,6 +135,25 @@ The following properties are synchronized between a PowerOffice GO Salesorders a
      - "string"
    * - RelatedInvoiceNo
      - InvoiceNumber
+     - "string"
+
+
+PowerOffice GO Timetrackingactivity to Salesforce Task
+------------------------------------------------------
+Every PowerOffice GO Timetrackingactivity will be synchronized with a Salesforce Task.
+
+Once a link between a PowerOffice GO Timetrackingactivity and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Timetrackingactivity and a Salesforce Task:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Timetrackingactivity Property
+     - Salesforce Task Property
+     - Salesforce Data Type
+   * - name
+     - Subject
      - "string"
 
 
