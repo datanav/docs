@@ -2,7 +2,7 @@
 PowerOffice GO to PowerOffice GO Dataflow
 =========================================
 
-Generated: 2024-09-13 00:00:27
+Generated: 2024-09-13 07:58:19
 
 Introduction
 ------------
@@ -475,4 +475,20 @@ The following properties are synchronized between a PowerOffice GO Suppliers per
    * - PhoneNumber
      - phoneNumber
      - "string"
+
+
+PowerOffice GO Timetrackingactivity to PowerOffice GO Projectactivity
+---------------------------------------------------------------------
+Every PowerOffice GO Timetrackingactivity will be synchronized with a PowerOffice GO Projectactivity.
+
+Once a link between a PowerOffice GO Timetrackingactivity and a PowerOffice GO Projectactivity is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Timetrackingactivity and a PowerOffice GO Projectactivity:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Timetrackingactivity Property
+     - PowerOffice GO Projectactivity Property
+     - PowerOffice GO Data Type
 
