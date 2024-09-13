@@ -2,7 +2,7 @@
 PowerOffice GO to PowerOffice GO Dataflow
 =========================================
 
-Generated: 2024-09-13 07:58:19
+Generated: 2024-09-13 08:00:22
 
 Introduction
 ------------
@@ -480,6 +480,19 @@ The following properties are synchronized between a PowerOffice GO Suppliers per
 PowerOffice GO Timetrackingactivity to PowerOffice GO Projectactivity
 ---------------------------------------------------------------------
 Every PowerOffice GO Timetrackingactivity will be synchronized with a PowerOffice GO Projectactivity.
+
+If a matching PowerOffice GO Projectactivity already exists, the PowerOffice GO Timetrackingactivity will be merged with the existing one.
+If no matching PowerOffice GO Projectactivity is found, a new PowerOffice GO Projectactivity will be created.
+
+A PowerOffice GO Timetrackingactivity will merge with a PowerOffice GO Projectactivity if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Timetrackingactivity Property
+     - PowerOffice GO Projectactivity Property
+   * - code
+     - activityCode
 
 Once a link between a PowerOffice GO Timetrackingactivity and a PowerOffice GO Projectactivity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
