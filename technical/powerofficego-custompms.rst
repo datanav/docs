@@ -2,7 +2,7 @@
 PowerOffice GO to Custom PMS Dataflow
 =====================================
 
-Generated: 2024-09-13 00:00:02
+Generated: 2024-09-13 08:22:50
 
 Introduction
 ------------
@@ -37,6 +37,22 @@ The following properties are synchronized between a PowerOffice GO Projectactivi
    :header-rows: 1
 
    * - PowerOffice GO Projectactivity Property
+     - Custom PMS Project Property
+     - Custom PMS Data Type
+
+
+PowerOffice GO Timetrackingactivity to Custom PMS Project
+---------------------------------------------------------
+Every PowerOffice GO Timetrackingactivity will be synchronized with a Custom PMS Project.
+
+Once a link between a PowerOffice GO Timetrackingactivity and a Custom PMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Timetrackingactivity and a Custom PMS Project:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Timetrackingactivity Property
      - Custom PMS Project Property
      - Custom PMS Data Type
 
