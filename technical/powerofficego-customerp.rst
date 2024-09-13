@@ -2,7 +2,7 @@
 PowerOffice GO to Custom ERP Dataflow
 =====================================
 
-Generated: 2024-09-13 00:00:02
+Generated: 2024-09-13 08:17:47
 
 Introduction
 ------------
@@ -86,6 +86,22 @@ The following properties are synchronized between a PowerOffice GO Salesorderlin
 
    * - PowerOffice GO Salesorderlines Property
      - Custom ERP Order Property
+     - Custom ERP Data Type
+
+
+PowerOffice GO Timetrackingactivity to Custom ERP Project
+---------------------------------------------------------
+Every PowerOffice GO Timetrackingactivity will be synchronized with a Custom ERP Project.
+
+Once a link between a PowerOffice GO Timetrackingactivity and a Custom ERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Timetrackingactivity and a Custom ERP Project:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Timetrackingactivity Property
+     - Custom ERP Project Property
      - Custom ERP Data Type
 
 
