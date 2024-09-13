@@ -2,7 +2,7 @@
 PowerOffice GO to Trello Dataflow
 =================================
 
-Generated: 2024-09-13 00:00:01
+Generated: 2024-09-13 07:58:19
 
 Introduction
 ------------
@@ -141,6 +141,22 @@ The following properties are synchronized between a PowerOffice GO Projectactivi
    :header-rows: 1
 
    * - PowerOffice GO Projectactivity Property
+     - Trello Actions Property
+     - Trello Data Type
+
+
+PowerOffice GO Timetrackingactivity to Trello Actions
+-----------------------------------------------------
+Every PowerOffice GO Timetrackingactivity will be synchronized with a Trello Actions.
+
+Once a link between a PowerOffice GO Timetrackingactivity and a Trello Actions is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Timetrackingactivity and a Trello Actions:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Timetrackingactivity Property
      - Trello Actions Property
      - Trello Data Type
 
