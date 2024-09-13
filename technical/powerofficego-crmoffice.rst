@@ -2,7 +2,7 @@
 PowerOffice GO to CRMOffice Dataflow
 ====================================
 
-Generated: 2024-09-13 00:00:01
+Generated: 2024-09-13 07:58:19
 
 Introduction
 ------------
@@ -167,4 +167,20 @@ The following properties are synchronized between a PowerOffice GO Suppliers per
    * - PhoneNumber
      - directPhone
      - "string"
+
+
+PowerOffice GO Timetrackingactivity to CRMOffice Activities
+-----------------------------------------------------------
+Every PowerOffice GO Timetrackingactivity will be synchronized with a CRMOffice Activities.
+
+Once a link between a PowerOffice GO Timetrackingactivity and a CRMOffice Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Timetrackingactivity and a CRMOffice Activities:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Timetrackingactivity Property
+     - CRMOffice Activities Property
+     - CRMOffice Data Type
 
