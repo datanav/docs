@@ -2,7 +2,7 @@
 Tripletex to PowerOffice GO Dataflow
 ====================================
 
-Generated: 2024-09-16 00:00:00
+Generated: 2024-09-16 10:04:53
 
 Introduction
 ------------
@@ -535,6 +535,9 @@ The following properties are synchronized between a Tripletex Activity and a Pow
      - PowerOffice GO Projectactivity Property
      - PowerOffice GO Data Type
    * - activityType
+     - isBillable
+     - "string"
+   * - isChargeable
      - isBillable
      - "string"
    * - name
