@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-16 12:42:42
+Generated: 2024-09-16 12:42:49
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Tripletex Activity and a Sal
    * - Tripletex Activity Property
      - Salesforce Task Property
      - Salesforce Data Type
+   * - name
+     - Subject
+     - "string"
 
 
 Tripletex Customer to Salesforce Division
