@@ -2,7 +2,7 @@
 Tripletex to Youtrack Dataflow
 ==============================
 
-Generated: 2024-09-16 00:00:00
+Generated: 2024-09-16 12:42:42
 
 Introduction
 ------------
@@ -136,6 +136,22 @@ The following properties are synchronized between a Tripletex Employee and a You
    * - userType
      - userType.id
      - "string"
+
+
+Tripletex Activity to Youtrack Hubprojects
+------------------------------------------
+Every Tripletex Activity will be synchronized with a Youtrack Hubprojects.
+
+Once a link between a Tripletex Activity and a Youtrack Hubprojects is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Activity and a Youtrack Hubprojects:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Activity Property
+     - Youtrack Hubprojects Property
+     - Youtrack Data Type
 
 
 Tripletex Customer to Youtrack Groups
