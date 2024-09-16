@@ -49,9 +49,7 @@ Properties
 
        .. WARNING::
 
-          A value less than ``2`` means that dependency tracking is best effort only,
-          and it will not be able to find all reprocessable entities. Do full or partial
-          rescans as a counter measure.
+          If the value is less than ``2``, :ref:`dependency tracking <dependency_tracking>` is performed on a best-effort basis, and it may not identify all reprocessable entities. This is particularly relevant for hops involving the sink dataset. As a countermeasure, consider performing full or partial rescans to ensure all necessary entities are captured.
 
      - ``2``
      - No
