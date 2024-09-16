@@ -27,3 +27,6 @@ Integrated Search is now available for all subscriptions with clustered architec
 
 If your subscription is not yet on clustered architecture please contact support to start the migration.
 
+.. admonition:: Read data permissions
+
+   Integrated search results are limited to the data that users have permission to read.
