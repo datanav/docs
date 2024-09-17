@@ -2,12 +2,44 @@
 Business Nxt to MemberCare Dataflow
 ===================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Business Nxt to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Business Nxt Address to MemberCare Companies
+--------------------------------------------
+Every Business Nxt Address will be synchronized with a MemberCare Companies.
+
+Once a link between a Business Nxt Address and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Address and a MemberCare Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Address Property
+     - MemberCare Companies Property
+     - MemberCare Data Type
+
+
+Business Nxt Company to MemberCare Companies
+--------------------------------------------
+Every Business Nxt Company will be synchronized with a MemberCare Companies.
+
+Once a link between a Business Nxt Company and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Company and a MemberCare Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Company Property
+     - MemberCare Companies Property
+     - MemberCare Data Type
+
 
 Business Nxt Country to MemberCare Companycategories
 ----------------------------------------------------
@@ -141,24 +173,6 @@ The following properties are synchronized between a Business Nxt Address and a M
    * - Business Nxt Address Property
      - MemberCare Companies Property
      - MemberCare Data Type
-   * - addressLine1
-     - addresses.street
-     - "string"
-   * - addressNo
-     - addresses.id
-     - "string"
-   * - countryNo
-     - addresses.country.id
-     - "string"
-   * - name
-     - companyName
-     - "string"
-   * - postCode
-     - addresses.postalCode.zipCode
-     - "string"
-   * - postalArea
-     - addresses.postalCode.city
-     - "string"
 
 
 Business Nxt Company to MemberCare Companies
@@ -175,12 +189,6 @@ The following properties are synchronized between a Business Nxt Company and a M
    * - Business Nxt Company Property
      - MemberCare Companies Property
      - MemberCare Data Type
-   * - companyNo
-     - addresses.id
-     - "string"
-   * - name
-     - companyName
-     - "string"
 
 
 Business Nxt Country to MemberCare Countries
@@ -197,10 +205,4 @@ The following properties are synchronized between a Business Nxt Country and a M
    * - Business Nxt Country Property
      - MemberCare Countries Property
      - MemberCare Data Type
-   * - isoCode
-     - iso2Letter
-     - "string"
-   * - name
-     - name
-     - "string"
 
