@@ -2,7 +2,7 @@
 Tripletex to Exact Online Dataflow
 ==================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -112,18 +112,6 @@ The following properties are synchronized between a Tripletex Customer (human da
    * - deliveryAddress.country.id
      - Country
      - "string"
-   * - email
-     - Email
-     - "string"
-   * - name
-     - FullName
-     - "string"
-   * - phoneNumber
-     - Phone
-     - "string"
-   * - phoneNumberMobile
-     - Mobile
-     - "string"
    * - physicalAddress.city
      - City
      - "string"
@@ -180,21 +168,6 @@ The following properties are synchronized between a Tripletex Employee and a Exa
    * - dateOfBirth
      - BirthDate
      - "string"
-   * - email
-     - BusinessEmail
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - lastName
-     - LastName
-     - "string"
-   * - phoneNumberMobile
-     - Mobile
-     - "string"
-   * - phoneNumberWork
-     - Phone
-     - "string"
 
 
 Tripletex Order to Exact Online Quotations
@@ -213,9 +186,6 @@ The following properties are synchronized between a Tripletex Order and a Exact 
      - Exact Online Data Type
    * - currency.id
      - Currency
-     - "string"
-   * - deliveryDate
-     - DeliveryDate
      - "string"
 
 
