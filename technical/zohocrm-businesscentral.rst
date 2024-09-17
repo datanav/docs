@@ -2,7 +2,7 @@
 ZohoCRM to Business Central Dataflow
 ====================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -25,6 +25,22 @@ The following properties are synchronized between a ZohoCRM Account and a Busine
      - Business Central Data Type
 
 
+ZohoCRM Contact to Business Central Customers company
+-----------------------------------------------------
+Every ZohoCRM Contact will be synchronized with a Business Central Customers company.
+
+Once a link between a ZohoCRM Contact and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Contact and a Business Central Customers company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Contact Property
+     - Business Central Customers company Property
+     - Business Central Data Type
+
+
 ZohoCRM Contact to Business Central Customers person
 ----------------------------------------------------
 Every ZohoCRM Contact will be synchronized with a Business Central Customers person.
@@ -39,40 +55,20 @@ The following properties are synchronized between a ZohoCRM Contact and a Busine
    * - ZohoCRM Contact Property
      - Business Central Customers person Property
      - Business Central Data Type
-   * - Email
-     - email
-     - "string"
-   * - Full_Name
-     - displayName
-     - "string"
-   * - Mailing_City
-     - city
-     - "string"
-   * - Mailing_Country
-     - country
-     - "string"
-   * - Mailing_Zip
-     - postalCode
-     - "string"
-   * - Other_City
-     - city
-     - "string"
-   * - Other_Country
-     - country
-     - "string"
-   * - Other_Phone
-     - phoneNumber
-     - "string"
-   * - Other_Zip
-     - postalCode
-     - "string"
-   * - Phone
-     - phoneNumber
-     - "string"
-   * - Secondary_Email
-     - email
-     - "string"
-   * - id
-     - id
-     - "string"
+
+
+ZohoCRM Deal to Business Central Salesorders
+--------------------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Business Central Salesorders.
+
+Once a link between a ZohoCRM Deal and a Business Central Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Deal and a Business Central Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Deal Property
+     - Business Central Salesorders Property
+     - Business Central Data Type
 
