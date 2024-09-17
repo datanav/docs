@@ -2,7 +2,7 @@
 ZohoCRM to MemberCare Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -1181,15 +1181,6 @@ The following properties are synchronized between a ZohoCRM Account and a Member
    * - ZohoCRM Account Property
      - MemberCare Countries Property
      - MemberCare Data Type
-   * - Billing_Country
-     - name
-     - "string"
-   * - Industry
-     - name
-     - "string"
-   * - Shipping_Country
-     - name
-     - "string"
 
 
 ZohoCRM Contact to MemberCare Countries
@@ -1206,10 +1197,4 @@ The following properties are synchronized between a ZohoCRM Contact and a Member
    * - ZohoCRM Contact Property
      - MemberCare Countries Property
      - MemberCare Data Type
-   * - Mailing_Country
-     - name
-     - "string"
-   * - Other_Country
-     - name
-     - "string"
 
