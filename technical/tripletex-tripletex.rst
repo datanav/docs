@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 08:51:55
 
 Introduction
 ------------
@@ -1568,12 +1568,6 @@ The following properties are synchronized between a Tripletex Customer and a Tri
    * - Tripletex Customer Property
      - Tripletex Customer person Property
      - Tripletex Data Type
-   * - deliveryAddress.addressLine1
-     - deliveryAddress.addressLine1
-     - "string"
-   * - deliveryAddress.addressLine1
-     - physicalAddress.addressLine1
-     - "string"
    * - deliveryAddress.addressLine1
      - postalAddress.addressLine1
      - "string"
