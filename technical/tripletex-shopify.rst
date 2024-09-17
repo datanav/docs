@@ -2,7 +2,7 @@
 Tripletex to Shopify Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -108,6 +108,24 @@ The following properties are synchronized between a Tripletex Customer and a Sho
      - "string"
 
 
+Tripletex Order to Shopify Order
+--------------------------------
+Before any synchronization can take place, a link between a Tripletex Order and a Shopify Order must be established.
+
+A new Shopify Order will be created from a Tripletex Order if it is connected to a Tripletex Order, or Orderline that is synchronized into Shopify.
+
+Once a link between a Tripletex Order and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a Shopify Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - Shopify Order Property
+     - Shopify Data Type
+
+
 Tripletex Product to Shopify Product
 ------------------------------------
 Before any synchronization can take place, a link between a Tripletex Product and a Shopify Product must be established.
@@ -140,111 +158,22 @@ The following properties are synchronized between a Tripletex Customer person an
    * - Tripletex Customer person Property
      - Shopify Customer Property
      - Shopify Data Type
-   * - deliveryAddress.addressLine1
-     - addresses.address1
-     - "string"
-   * - deliveryAddress.addressLine1
-     - default_address.address1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - addresses.address2
-     - "string"
-   * - deliveryAddress.addressLine2
-     - default_address.address2
-     - "string"
-   * - deliveryAddress.city
-     - addresses.city
-     - "string"
-   * - deliveryAddress.city
-     - default_address.city
-     - "string"
-   * - deliveryAddress.country.id
-     - addresses.country
-     - "string"
-   * - deliveryAddress.country.id
-     - default_address.country
-     - "string"
-   * - deliveryAddress.postalCode
-     - addresses.zip
-     - "string"
-   * - deliveryAddress.postalCode
-     - default_address.zip
-     - "string"
-   * - email
-     - email
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - phoneNumber
-     - default_address.phone
-     - "string"
-   * - phoneNumber
-     - phone
-     - "string"
-   * - phoneNumberMobile
-     - phone
-     - "string"
-   * - physicalAddress.addressLine1
-     - addresses.address1
-     - "string"
-   * - physicalAddress.addressLine1
-     - default_address.address1
-     - "string"
-   * - physicalAddress.addressLine2
-     - addresses.address2
-     - "string"
-   * - physicalAddress.addressLine2
-     - default_address.address2
-     - "string"
-   * - physicalAddress.city
-     - addresses.city
-     - "string"
-   * - physicalAddress.city
-     - default_address.city
-     - "string"
-   * - physicalAddress.country.id
-     - addresses.country
-     - "string"
-   * - physicalAddress.country.id
-     - default_address.country
-     - "string"
-   * - physicalAddress.postalCode
-     - addresses.zip
-     - "string"
-   * - physicalAddress.postalCode
-     - default_address.zip
-     - "string"
-   * - postalAddress.addressLine1
-     - addresses.address1
-     - "string"
-   * - postalAddress.addressLine1
-     - default_address.address1
-     - "string"
-   * - postalAddress.addressLine2
-     - addresses.address2
-     - "string"
-   * - postalAddress.addressLine2
-     - default_address.address2
-     - "string"
-   * - postalAddress.city
-     - addresses.city
-     - "string"
-   * - postalAddress.city
-     - default_address.city
-     - "string"
-   * - postalAddress.country.id
-     - addresses.country
-     - "string"
-   * - postalAddress.country.id
-     - default_address.country
-     - "string"
-   * - postalAddress.postalCode
-     - addresses.zip
-     - "string"
-   * - postalAddress.postalCode
-     - default_address.zip
-     - "string"
+
+
+Tripletex Customer to Shopify Customer
+--------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Shopify Customer.
+
+Once a link between a Tripletex Customer and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a Shopify Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - Shopify Customer Property
+     - Shopify Data Type
 
 
 Tripletex Order to Shopify Order
@@ -261,18 +190,6 @@ The following properties are synchronized between a Tripletex Order and a Shopif
    * - Tripletex Order Property
      - Shopify Order Property
      - Shopify Data Type
-   * - contact.id
-     - customer.id
-     - "string"
-   * - currency.id
-     - currency
-     - "string"
-   * - customer.id
-     - customer.id
-     - "string"
-   * - reference
-     - po_number
-     - "string"
 
 
 Tripletex Product to Shopify Sesamproduct
@@ -289,22 +206,4 @@ The following properties are synchronized between a Tripletex Product and a Shop
    * - Tripletex Product Property
      - Shopify Sesamproduct Property
      - Shopify Data Type
-   * - description
-     - variants.title
-     - "string"
-   * - name
-     - title
-     - "string"
-   * - priceExcludingVatCurrency
-     - sesam_priceExclVAT
-     - "string"
-   * - priceExcludingVatCurrency
-     - variants.price
-     - "string"
-   * - stockOfGoods
-     - variants.inventory_quantity
-     - "integer"
-   * - stockOfGoods
-     - variants.inventory_quantity.inventory_quantity
-     - "string"
 
