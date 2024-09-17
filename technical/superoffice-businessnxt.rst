@@ -2,7 +2,7 @@
 SuperOffice to Business Nxt Dataflow
 ====================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -29,6 +29,22 @@ The following properties are synchronized between a SuperOffice Contact and a Bu
    * - Phones.Value
      - phone
      - "string"
+
+
+SuperOffice Product to Business Nxt Product
+-------------------------------------------
+Every SuperOffice Product will be synchronized with a Business Nxt Product.
+
+Once a link between a SuperOffice Product and a Business Nxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a Business Nxt Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Business Nxt Product Property
+     - Business Nxt Data Type
 
 
 SuperOffice Quotealternative to Business Nxt Order
@@ -108,12 +124,6 @@ The following properties are synchronized between a SuperOffice Listcountryitems
    * - SuperOffice Listcountryitems Property
      - Business Nxt Country Property
      - Business Nxt Data Type
-   * - Name
-     - name
-     - "string"
-   * - TwoLetterISOCountry
-     - isoCode
-     - "string"
 
 
 SuperOffice Listcurrencyitems to Business Nxt Currency
@@ -130,9 +140,6 @@ The following properties are synchronized between a SuperOffice Listcurrencyitem
    * - SuperOffice Listcurrencyitems Property
      - Business Nxt Currency Property
      - Business Nxt Data Type
-   * - Name
-     - isoCode
-     - "string"
 
 
 SuperOffice Listproductcategoryitems to Business Nxt Productcategory
@@ -149,12 +156,6 @@ The following properties are synchronized between a SuperOffice Listproductcateg
    * - SuperOffice Listproductcategoryitems Property
      - Business Nxt Productcategory Property
      - Business Nxt Data Type
-   * - Name
-     - text
-     - "string"
-   * - Tooltip
-     - description
-     - "string"
 
 
 SuperOffice Product to Business Nxt Product
@@ -171,15 +172,6 @@ The following properties are synchronized between a SuperOffice Product and a Bu
    * - SuperOffice Product Property
      - Business Nxt Product Property
      - Business Nxt Data Type
-   * - Description
-     - description
-     - "string"
-   * - UnitListPrice
-     - priceQuantity
-     - "string"
-   * - Url
-     - webPage
-     - "string"
 
 
 SuperOffice Quoteline to Business Nxt Orderline
@@ -196,7 +188,4 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - Business Nxt Orderline Property
      - Business Nxt Data Type
-   * - QuoteAlternativeId
-     - orderNo
-     - "string"
 
