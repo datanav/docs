@@ -2,7 +2,7 @@
 Exact Online to ZohoCRM Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -70,4 +70,20 @@ The following properties are synchronized between a Exact Online Divisions and a
    * - Website
      - Website
      - "string"
+
+
+Exact Online Accounts to ZohoCRM Contact
+----------------------------------------
+Every Exact Online Accounts will be synchronized with a ZohoCRM Contact.
+
+Once a link between a Exact Online Accounts and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Accounts and a ZohoCRM Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Accounts Property
+     - ZohoCRM Contact Property
+     - ZohoCRM Data Type
 
