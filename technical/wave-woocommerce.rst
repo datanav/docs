@@ -2,7 +2,7 @@
 Wave to WooCommerce Dataflow
 ============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -25,6 +25,18 @@ The following properties are synchronized between a Wave Invoice and a WooCommer
    * - Wave Invoice Property
      - WooCommerce Order Property
      - WooCommerce Data Type
+   * - currency.code
+     - currency
+     - "string"
+   * - customer.id
+     - customer_id
+     - "string"
+   * - items.price
+     - line_items.price
+     - "string"
+   * - items.quantity
+     - line_items.quantity
+     - "string"
 
 
 Wave Product to WooCommerce Product
@@ -43,6 +55,12 @@ The following properties are synchronized between a Wave Product and a WooCommer
    * - Wave Product Property
      - WooCommerce Product Property
      - WooCommerce Data Type
+   * - name
+     - name
+     - "string"
+   * - unitPrice
+     - sale_price
+     - "string"
 
 
 Wave Invoice to WooCommerce Order
