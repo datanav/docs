@@ -2,7 +2,7 @@
 Shopify to HubSpot Dataflow
 ===========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -94,6 +94,22 @@ The following properties are synchronized between a Shopify Customer and a HubSp
      - "string"
 
 
+Shopify Order to HubSpot Deal
+-----------------------------
+Every Shopify Order will be synchronized with a HubSpot Deal.
+
+Once a link between a Shopify Order and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
+
+
 Shopify Order to HubSpot Lineitem
 ---------------------------------
 Every Shopify Order will be synchronized with a HubSpot Lineitem.
@@ -108,18 +124,38 @@ The following properties are synchronized between a Shopify Order and a HubSpot 
    * - Shopify Order Property
      - HubSpot Lineitem Property
      - HubSpot Data Type
-   * - line_items.price
-     - properties.price
-     - "string"
-   * - line_items.quantity
-     - properties.quantity
-     - N/A
-   * - line_items.title
-     - properties.name
-     - "string"
-   * - line_items.total_discount
-     - properties.hs_discount_percentage
-     - "string"
+
+
+Shopify Order to HubSpot Lineitemdealassociationtype
+----------------------------------------------------
+Every Shopify Order will be synchronized with a HubSpot Lineitemdealassociationtype.
+
+Once a link between a Shopify Order and a HubSpot Lineitemdealassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a HubSpot Lineitemdealassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - HubSpot Lineitemdealassociationtype Property
+     - HubSpot Data Type
+
+
+Shopify Order to HubSpot Lineitemquoteassociationtype
+-----------------------------------------------------
+Every Shopify Order will be synchronized with a HubSpot Lineitemquoteassociationtype.
+
+Once a link between a Shopify Order and a HubSpot Lineitemquoteassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a HubSpot Lineitemquoteassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - HubSpot Lineitemquoteassociationtype Property
+     - HubSpot Data Type
 
 
 Shopify Sesamproduct to HubSpot Product
@@ -136,22 +172,4 @@ The following properties are synchronized between a Shopify Sesamproduct and a H
    * - Shopify Sesamproduct Property
      - HubSpot Product Property
      - HubSpot Data Type
-   * - sesam_priceExclVAT
-     - properties.price
-     - "string"
-   * - title
-     - properties.name
-     - "string"
-   * - variants..sku
-     - properties.hs_sku
-     - "string"
-   * - variants.price
-     - properties.price
-     - "string"
-   * - variants.sku
-     - properties.hs_sku
-     - "string"
-   * - variants.title
-     - properties.description
-     - "string"
 
