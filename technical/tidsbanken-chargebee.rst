@@ -2,7 +2,7 @@
 Tidsbanken to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -67,4 +67,36 @@ The following properties are synchronized between a Tidsbanken Kunde and a Charg
    * - Navn
      - name
      - "string"
+
+
+Tidsbanken Kunde to Chargebee Address
+-------------------------------------
+Every Tidsbanken Kunde will be synchronized with a Chargebee Address.
+
+Once a link between a Tidsbanken Kunde and a Chargebee Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Kunde and a Chargebee Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Kunde Property
+     - Chargebee Address Property
+     - Chargebee Data Type
+
+
+Tidsbanken Kunde to Chargebee Customer
+--------------------------------------
+Every Tidsbanken Kunde will be synchronized with a Chargebee Customer.
+
+Once a link between a Tidsbanken Kunde and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Kunde and a Chargebee Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Kunde Property
+     - Chargebee Customer Property
+     - Chargebee Data Type
 
