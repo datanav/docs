@@ -2,7 +2,7 @@
 Wave to ZohoCRM Dataflow
 ========================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -130,4 +130,52 @@ The following properties are synchronized between a Wave Customer and a ZohoCRM 
    * - Wave Customer Property
      - ZohoCRM Contact Property
      - ZohoCRM Data Type
+   * - address.city
+     - Mailing_City
+     - "string"
+   * - address.city
+     - Other_City
+     - "string"
+   * - address.country.code
+     - Mailing_Country
+     - "string"
+   * - address.country.code
+     - Other_Country
+     - "string"
+   * - address.postalCode
+     - Mailing_Zip
+     - "string"
+   * - address.postalCode
+     - Other_Zip
+     - "string"
+   * - address.province.code
+     - Mailing_State
+     - "string"
+   * - address.province.code
+     - Other_State
+     - "string"
+   * - shippingDetails.address.city
+     - Mailing_City
+     - "string"
+   * - shippingDetails.address.city
+     - Other_City
+     - "string"
+   * - shippingDetails.address.country.code
+     - Mailing_Country
+     - "string"
+   * - shippingDetails.address.country.code
+     - Other_Country
+     - "string"
+   * - shippingDetails.address.postalCode
+     - Mailing_Zip
+     - "string"
+   * - shippingDetails.address.postalCode
+     - Other_Zip
+     - "string"
+   * - shippingDetails.address.province.code
+     - Mailing_State
+     - "string"
+   * - shippingDetails.address.province.code
+     - Other_State
+     - "string"
 
