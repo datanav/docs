@@ -2,7 +2,7 @@
 WooCommerce to Business Central Dataflow
 ========================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -25,6 +25,75 @@ The following properties are synchronized between a WooCommerce Order and a Busi
    * - WooCommerce Order Property
      - Business Central Salesorders Property
      - Business Central Data Type
+   * - billing.address_1
+     - billToAddressLine1
+     - "string"
+   * - billing.address_1
+     - shipToAddressLine1
+     - "string"
+   * - billing.address_2
+     - billToAddressLine2
+     - "string"
+   * - billing.address_2
+     - shipToAddressLine2
+     - "string"
+   * - billing.city
+     - billToCity
+     - "string"
+   * - billing.city
+     - shipToCity
+     - "string"
+   * - billing.country
+     - billToCountry
+     - "string"
+   * - billing.country
+     - shipToCountry
+     - "string"
+   * - billing.postcode
+     - billToPostCode
+     - "string"
+   * - billing.postcode
+     - shipToPostCode
+     - "string"
+   * - currency
+     - currencyId
+     - "string"
+   * - customer_id
+     - customerId
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - shipping.address_1
+     - billToAddressLine1
+     - "string"
+   * - shipping.address_1
+     - shipToAddressLine1
+     - "string"
+   * - shipping.address_2
+     - billToAddressLine2
+     - "string"
+   * - shipping.address_2
+     - shipToAddressLine2
+     - "string"
+   * - shipping.city
+     - billToCity
+     - "string"
+   * - shipping.city
+     - shipToCity
+     - "string"
+   * - shipping.country
+     - billToCountry
+     - "string"
+   * - shipping.country
+     - shipToCountry
+     - "string"
+   * - shipping.postcode
+     - billToPostCode
+     - "string"
+   * - shipping.postcode
+     - shipToPostCode
+     - "string"
 
 
 WooCommerce Product to Business Central Items
@@ -43,6 +112,15 @@ The following properties are synchronized between a WooCommerce Product and a Bu
    * - WooCommerce Product Property
      - Business Central Items Property
      - Business Central Data Type
+   * - name
+     - displayName
+     - "string"
+   * - price
+     - unitCost
+     - N/A
+   * - sale_price
+     - unitPrice
+     - N/A
 
 
 WooCommerce Customer to Business Central Customers company
