@@ -2,7 +2,7 @@
 Business Central to Business Nxt Dataflow
 =========================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -25,18 +25,18 @@ The following properties are synchronized between a Business Central Companies a
      - Business Nxt Data Type
 
 
-Business Central Customers company to Business Nxt Address
-----------------------------------------------------------
-Every Business Central Customers company will be synchronized with a Business Nxt Address.
+Business Central Customers (organisation data) to Business Nxt Address
+----------------------------------------------------------------------
+Every Business Central Customers (organisation data) will be synchronized with a Business Nxt Address.
 
-Once a link between a Business Central Customers company and a Business Nxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (organisation data) and a Business Nxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers company and a Business Nxt Address:
+The following properties are synchronized between a Business Central Customers (organisation data) and a Business Nxt Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers company Property
+   * - Business Central Customers (organisation data) Property
      - Business Nxt Address Property
      - Business Nxt Data Type
    * - displayName
@@ -142,34 +142,34 @@ The following properties are synchronized between a Business Central Currencies 
      - Business Nxt Data Type
 
 
-Business Central Customers company to Business Nxt Address
-----------------------------------------------------------
-Every Business Central Customers company will be synchronized with a Business Nxt Address.
+Business Central Customers (organisation data) to Business Nxt Address
+----------------------------------------------------------------------
+Every Business Central Customers (organisation data) will be synchronized with a Business Nxt Address.
 
-Once a link between a Business Central Customers company and a Business Nxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (organisation data) and a Business Nxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers company and a Business Nxt Address:
+The following properties are synchronized between a Business Central Customers (organisation data) and a Business Nxt Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers company Property
+   * - Business Central Customers (organisation data) Property
      - Business Nxt Address Property
      - Business Nxt Data Type
 
 
-Business Central Customers company to Business Nxt Company
-----------------------------------------------------------
-Every Business Central Customers company will be synchronized with a Business Nxt Company.
+Business Central Customers (organisation data) to Business Nxt Company
+----------------------------------------------------------------------
+Every Business Central Customers (organisation data) will be synchronized with a Business Nxt Company.
 
-Once a link between a Business Central Customers company and a Business Nxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (organisation data) and a Business Nxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers company and a Business Nxt Company:
+The following properties are synchronized between a Business Central Customers (organisation data) and a Business Nxt Company:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers company Property
+   * - Business Central Customers (organisation data) Property
      - Business Nxt Company Property
      - Business Nxt Data Type
 
