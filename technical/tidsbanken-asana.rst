@@ -2,7 +2,7 @@
 Tidsbanken to Asana Dataflow
 ============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 12:35:48
 
 Introduction
 ------------
@@ -23,4 +23,10 @@ The following properties are synchronized between a Tidsbanken Prosjekt and a As
    * - Tidsbanken Prosjekt Property
      - Asana Projects Property
      - Asana Data Type
+   * - AnsvarligId
+     - owner.gid
+     - "string"
+   * - Navn
+     - name
+     - "string"
 
