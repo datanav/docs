@@ -2,7 +2,7 @@
 Salesforce to WebCRM Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -70,21 +70,6 @@ The following properties are synchronized between a Salesforce Contact and a Web
    * - Salesforce Contact Property
      - WebCRM Persons Property
      - WebCRM Data Type
-   * - Birthdate
-     - document_number
-     - "string"
-   * - FirstName
-     - PersonFirstName
-     - "string"
-   * - LastName
-     - PersonLastName
-     - "string"
-   * - MobilePhone
-     - PersonMobilePhone
-     - "string"
-   * - Phone
-     - PersonDirectPhone
-     - "string"
 
 
 Salesforce Invoiceline to WebCRM Quotationline
@@ -101,21 +86,6 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Salesforce Invoiceline Property
      - WebCRM Quotationline Property
      - WebCRM Data Type
-   * - Description
-     - QuotationLineCostPrice
-     - "string"
-   * - Description
-     - QuotationLineDiscount
-     - "string"
-   * - Description
-     - QuotationLinePrice
-     - "string"
-   * - Description
-     - QuotationLineQuantity
-     - "string"
-   * - Description
-     - QuotationLineVatPercentage
-     - "string"
 
 
 Salesforce Orderitem to WebCRM Quotationline
