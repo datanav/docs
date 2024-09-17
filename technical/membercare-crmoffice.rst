@@ -2,7 +2,7 @@
 MemberCare to CRMOffice Dataflow
 ================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -61,4 +61,25 @@ The following properties are synchronized between a MemberCare Companies and a C
    * - MemberCare Companies Property
      - CRMOffice Companies Property
      - CRMOffice Data Type
+   * - addresses.country.id
+     - postAddress.country
+     - "string"
+   * - addresses.country.id
+     - visitAddress.country
+     - "string"
+   * - addresses.id
+     - id
+     - "string"
+   * - addresses.postalCode.city
+     - postAddress.postalArea
+     - "string"
+   * - addresses.postalCode.city
+     - visitAddress.postalArea
+     - "string"
+   * - addresses.postalCode.zipCode
+     - postAddress.postCode
+     - "string"
+   * - addresses.postalCode.zipCode
+     - visitAddress.postCode
+     - "string"
 
