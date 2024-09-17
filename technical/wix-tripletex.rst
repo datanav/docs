@@ -2,7 +2,7 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -35,18 +35,12 @@ The following properties are synchronized between a Wix.com Contacts and a Tripl
    * - Wix.com Contacts Property
      - Tripletex Contact Property
      - Tripletex Data Type
-   * - info.emails
-     - email
-     - "string"
    * - info.name.first
      - firstName
      - "string"
    * - info.name.last
      - lastName
      - "string"
-   * - info.phones
-     - phoneNumberMobile
-     - N/A
    * - primaryInfo.email
      - email
      - "string"
@@ -81,12 +75,6 @@ The following properties are synchronized between a Wix.com Contacts and a Tripl
    * - Wix.com Contacts Property
      - Tripletex Customer Property
      - Tripletex Data Type
-   * - info.name.first
-     - name
-     - "string"
-   * - info.name.last
-     - name
-     - "string"
    * - primaryInfo.email
      - email
      - "string"
@@ -119,29 +107,11 @@ The following properties are synchronized between a Wix.com Contacts and a Tripl
    * - Wix.com Contacts Property
      - Tripletex Employee Property
      - Tripletex Data Type
-   * - info.emails
-     - email
-     - "string"
    * - info.name.first
-     - firstName
-     - "string"
-   * - info.name.first
-     - lastName
-     - "string"
-   * - info.name.last
      - firstName
      - "string"
    * - info.name.last
      - lastName
-     - "string"
-   * - info.phones
-     - phoneNumberMobile
-     - "string"
-   * - primaryInfo.email
-     - email
-     - "string"
-   * - primaryInfo.phone
-     - phoneNumberMobile
      - "string"
    * - primaryInfo.phone
      - phoneNumberWork
@@ -230,9 +200,6 @@ The following properties are synchronized between a Wix.com Members and a Triple
    * - Wix.com Members Property
      - Tripletex Employee Property
      - Tripletex Data Type
-   * - loginEmail
-     - email
-     - "string"
 
 
 Wix.com Contacts to Tripletex Contact
