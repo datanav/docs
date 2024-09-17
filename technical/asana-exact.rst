@@ -2,7 +2,7 @@
 Asana to Exact Online Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -67,7 +67,4 @@ The following properties are synchronized between a Asana Users and a Exact Onli
    * - Asana Users Property
      - Exact Online Employees Property
      - Exact Online Data Type
-   * - email
-     - Email
-     - "string"
 
