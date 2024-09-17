@@ -2,7 +2,7 @@
 Tripletex to Business Nxt Dataflow
 ==================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -53,6 +53,22 @@ The following properties are synchronized between a Tripletex Department and a B
      - "string"
 
 
+Tripletex Order to Business Nxt Order
+-------------------------------------
+Every Tripletex Order will be synchronized with a Business Nxt Order.
+
+Once a link between a Tripletex Order and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a Business Nxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - Business Nxt Order Property
+     - Business Nxt Data Type
+
+
 Tripletex Orderline to Business Nxt Order
 -----------------------------------------
 Every Tripletex Orderline will be synchronized with a Business Nxt Order.
@@ -66,6 +82,22 @@ The following properties are synchronized between a Tripletex Orderline and a Bu
 
    * - Tripletex Orderline Property
      - Business Nxt Order Property
+     - Business Nxt Data Type
+
+
+Tripletex Product to Business Nxt Product
+-----------------------------------------
+Every Tripletex Product will be synchronized with a Business Nxt Product.
+
+Once a link between a Tripletex Product and a Business Nxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a Business Nxt Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - Business Nxt Product Property
      - Business Nxt Data Type
 
 
@@ -83,12 +115,6 @@ The following properties are synchronized between a Tripletex Country and a Busi
    * - Tripletex Country Property
      - Business Nxt Country Property
      - Business Nxt Data Type
-   * - isoAlpha2Code
-     - isoCode
-     - "string"
-   * - name
-     - name
-     - "string"
 
 
 Tripletex Currency to Business Nxt Currency
@@ -105,9 +131,6 @@ The following properties are synchronized between a Tripletex Currency and a Bus
    * - Tripletex Currency Property
      - Business Nxt Currency Property
      - Business Nxt Data Type
-   * - displayName
-     - name
-     - "string"
 
 
 Tripletex Order to Business Nxt Order
@@ -124,12 +147,6 @@ The following properties are synchronized between a Tripletex Order and a Busine
    * - Tripletex Order Property
      - Business Nxt Order Property
      - Business Nxt Data Type
-   * - deliveryDate
-     - dueDate
-     - "string"
-   * - orderDate
-     - orderDate
-     - "string"
 
 
 Tripletex Orderline to Business Nxt Orderline
@@ -146,9 +163,6 @@ The following properties are synchronized between a Tripletex Orderline and a Bu
    * - Tripletex Orderline Property
      - Business Nxt Orderline Property
      - Business Nxt Data Type
-   * - order.id
-     - orderNo
-     - "string"
 
 
 Tripletex Product to Business Nxt Product
@@ -165,15 +179,6 @@ The following properties are synchronized between a Tripletex Product and a Busi
    * - Tripletex Product Property
      - Business Nxt Product Property
      - Business Nxt Data Type
-   * - description
-     - description
-     - "string"
-   * - priceExcludingVatCurrency
-     - priceQuantity
-     - "string"
-   * - stockOfGoods
-     - quantityPerUnit
-     - "string"
 
 
 Tripletex Productgroup to Business Nxt Productcategory
@@ -190,7 +195,4 @@ The following properties are synchronized between a Tripletex Productgroup and a
    * - Tripletex Productgroup Property
      - Business Nxt Productcategory Property
      - Business Nxt Data Type
-   * - name
-     - text
-     - "string"
 
