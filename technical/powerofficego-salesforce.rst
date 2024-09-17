@@ -2,7 +2,7 @@
 PowerOffice GO to Salesforce Dataflow
 =====================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 12:31:51
 
 Introduction
 ------------
@@ -193,6 +193,21 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - PowerOffice GO Contactperson Property
      - Salesforce Contact Property
      - Salesforce Data Type
+   * - dateOfBirth
+     - Birthdate
+     - "string"
+   * - emailAddress
+     - Email
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - lastName
+     - LastName
+     - "string"
+   * - phoneNumber
+     - Phone
+     - "string"
 
 
 PowerOffice GO Currency to Salesforce Currencytype
@@ -369,6 +384,24 @@ The following properties are synchronized between a PowerOffice GO Suppliers (hu
    * - PowerOffice GO Suppliers (human data) Property
      - Salesforce Contact Property
      - Salesforce Data Type
+   * - DateOfBirth
+     - Birthdate
+     - "string"
+   * - EmailAddress
+     - Email
+     - "string"
+   * - FirstName
+     - FirstName
+     - "string"
+   * - LastName
+     - LastName
+     - "string"
+   * - MailAddress.CountryCode
+     - MailingCountryCode
+     - "string"
+   * - PhoneNumber
+     - Phone
+     - "string"
 
 
 PowerOffice GO Suppliers to Salesforce Seller
