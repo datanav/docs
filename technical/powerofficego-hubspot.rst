@@ -2,7 +2,7 @@
 PowerOffice GO to HubSpot Dataflow
 ==================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -47,9 +47,6 @@ The following properties are synchronized between a PowerOffice GO Contactperson
      - "string"
    * - emailAddress
      - properties.email
-     - "string"
-   * - emailAddress
-     - properties.work_email
      - "string"
    * - firstName
      - properties.firstname
@@ -165,18 +162,6 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - Name
      - properties.name
      - "string"
-   * - Number
-     - properties.phone
-     - "string"
-   * - OrganizationNumber (Dependant on having NO in MailAddress.CountryCode)
-     - properties.sesam_org_number_no
-     - "string"
-   * - OrganizationNumber (Dependant on having SE in MailAddress.CountryCode)
-     - properties.sesam_org_number_se
-     - "string"
-   * - OrganizationNumber (Dependant on having  in MailAddress.CountryCodeDependant on having NO in MailAddress.CountryCode)
-     - sync_org_nr
-     - "string"
    * - PhoneNumber
      - properties.phone
      - "string"
@@ -224,41 +209,14 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - EmailAddress
      - properties.email
      - "string"
-   * - EmailAddress
-     - properties.work_email
-     - "string"
    * - FirstName
      - properties.firstname
      - "string"
    * - LastName
      - properties.lastname
      - "string"
-   * - MailAddress.CountryCode
-     - properties.country
-     - "string"
-   * - MailAddress.CountryCode
-     - properties.state
-     - "string"
-   * - MailAddress.countryCode
-     - properties.country
-     - "string"
-   * - MailAddress.countryCode
-     - properties.state
-     - "string"
    * - PhoneNumber
      - properties.mobilephone
-     - "string"
-   * - dateOfBirth
-     - properties.date_of_birth
-     - "string"
-   * - emailAddress
-     - properties.work_email
-     - "string"
-   * - firstName
-     - properties.firstname
-     - "string"
-   * - lastName
-     - properties.lastname
      - "string"
 
 
