@@ -2,7 +2,7 @@
 ZohoCRM to Exact Online Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -120,6 +120,22 @@ The following properties are synchronized between a ZohoCRM Deal and a Exact Onl
      - Exact Online Data Type
 
 
+ZohoCRM Contact to Exact Online Accounts
+----------------------------------------
+Every ZohoCRM Contact will be synchronized with a Exact Online Accounts.
+
+Once a link between a ZohoCRM Contact and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Contact and a Exact Online Accounts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Contact Property
+     - Exact Online Accounts Property
+     - Exact Online Data Type
+
+
 ZohoCRM Contact to Exact Online Addresses
 -----------------------------------------
 Every ZohoCRM Contact will be synchronized with a Exact Online Addresses.
@@ -134,22 +150,20 @@ The following properties are synchronized between a ZohoCRM Contact and a Exact 
    * - ZohoCRM Contact Property
      - Exact Online Addresses Property
      - Exact Online Data Type
-   * - Mailing_City
-     - City
-     - "string"
-   * - Mailing_Country
-     - Country
-     - "string"
-   * - Mailing_Country
-     - CountryName
-     - "string"
-   * - Other_City
-     - City
-     - "string"
-   * - Other_Country
-     - Country
-     - "string"
-   * - Other_Country
-     - CountryName
-     - "string"
+
+
+ZohoCRM Deal to Exact Online Salesorders
+----------------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Exact Online Salesorders.
+
+Once a link between a ZohoCRM Deal and a Exact Online Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Deal and a Exact Online Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Deal Property
+     - Exact Online Salesorders Property
+     - Exact Online Data Type
 
