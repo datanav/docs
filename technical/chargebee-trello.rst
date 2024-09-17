@@ -2,12 +2,28 @@
 Chargebee to Trello Dataflow
 ============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Chargebee to Trello. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Chargebee Business_entity to Trello Organizations
+-------------------------------------------------
+Every Chargebee Business_entity will be synchronized with a Trello Organizations.
+
+Once a link between a Chargebee Business_entity and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Business_entity and a Trello Organizations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Business_entity Property
+     - Trello Organizations Property
+     - Trello Data Type
+
 
 Chargebee Customer to Trello Members
 ------------------------------------
@@ -42,7 +58,4 @@ The following properties are synchronized between a Chargebee Business_entity an
    * - Chargebee Business_entity Property
      - Trello Organizations Property
      - Trello Data Type
-   * - name
-     - name
-     - "string"
 
