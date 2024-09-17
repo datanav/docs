@@ -2,7 +2,7 @@
 ZohoCRM to SuperOffice Dataflow
 ===============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 09:13:06
 
 Introduction
 ------------
@@ -65,42 +65,6 @@ The following properties are synchronized between a ZohoCRM Account and a SuperO
    * - id
      - ContactId
      - "integer"
-
-
-ZohoCRM Account to SuperOffice Person
--------------------------------------
-Before any synchronization can take place, a link between a ZohoCRM Account and a SuperOffice Person must be established.
-
-A new SuperOffice Person will be created from a ZohoCRM Account if it is connected to a ZohoCRM Deal that is synchronized into SuperOffice.
-
-Once a link between a ZohoCRM Account and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ZohoCRM Account and a SuperOffice Person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ZohoCRM Account Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
-
-
-ZohoCRM Contact to SuperOffice Contact
---------------------------------------
-Before any synchronization can take place, a link between a ZohoCRM Contact and a SuperOffice Contact must be established.
-
-A new SuperOffice Contact will be created from a ZohoCRM Contact if it is connected to a ZohoCRM Deal that is synchronized into SuperOffice.
-
-Once a link between a ZohoCRM Contact and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a ZohoCRM Contact and a SuperOffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - ZohoCRM Contact Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
 
 
 ZohoCRM Contact to SuperOffice Person
