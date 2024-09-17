@@ -2,7 +2,7 @@
 Shopify to Business Nxt Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -25,6 +25,22 @@ The following properties are synchronized between a Shopify Inventoryitem and a 
      - Business Nxt Data Type
 
 
+Shopify Order to Business Nxt Order
+-----------------------------------
+Every Shopify Order will be synchronized with a Business Nxt Order.
+
+Once a link between a Shopify Order and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a Business Nxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - Business Nxt Order Property
+     - Business Nxt Data Type
+
+
 Shopify Product to Business Nxt Product
 ---------------------------------------
 Every Shopify Product will be synchronized with a Business Nxt Product.
@@ -37,6 +53,22 @@ The following properties are synchronized between a Shopify Product and a Busine
    :header-rows: 1
 
    * - Shopify Product Property
+     - Business Nxt Product Property
+     - Business Nxt Data Type
+
+
+Shopify Sesamproduct to Business Nxt Product
+--------------------------------------------
+Every Shopify Sesamproduct will be synchronized with a Business Nxt Product.
+
+Once a link between a Shopify Sesamproduct and a Business Nxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Sesamproduct and a Business Nxt Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Sesamproduct Property
      - Business Nxt Product Property
      - Business Nxt Data Type
 
@@ -55,15 +87,6 @@ The following properties are synchronized between a Shopify Customer and a Busin
    * - Shopify Customer Property
      - Business Nxt Country Property
      - Business Nxt Data Type
-   * - currency
-     - isoCode
-     - "string"
-   * - default_address.country_code
-     - isoCode
-     - "string"
-   * - default_address.country_name
-     - name
-     - "string"
 
 
 Shopify Customer to Business Nxt Currency
@@ -80,15 +103,6 @@ The following properties are synchronized between a Shopify Customer and a Busin
    * - Shopify Customer Property
      - Business Nxt Currency Property
      - Business Nxt Data Type
-   * - currency
-     - isoCode
-     - "string"
-   * - default_address.country_code
-     - isoCode
-     - "string"
-   * - default_address.country_name
-     - name
-     - "string"
 
 
 Shopify Order to Business Nxt Country
@@ -105,18 +119,6 @@ The following properties are synchronized between a Shopify Order and a Business
    * - Shopify Order Property
      - Business Nxt Country Property
      - Business Nxt Data Type
-   * - billing_address.country
-     - name
-     - "string"
-   * - billing_address.country_code
-     - isoCode
-     - "string"
-   * - shipping_address.country
-     - name
-     - "string"
-   * - shipping_address.country_code
-     - isoCode
-     - "string"
 
 
 Shopify Order to Business Nxt Order
@@ -133,12 +135,6 @@ The following properties are synchronized between a Shopify Order and a Business
    * - Shopify Order Property
      - Business Nxt Order Property
      - Business Nxt Data Type
-   * - created_at
-     - orderDate
-     - "string"
-   * - name
-     - name
-     - "string"
 
 
 Shopify Order to Business Nxt Orderline
@@ -155,9 +151,6 @@ The following properties are synchronized between a Shopify Order and a Business
    * - Shopify Order Property
      - Business Nxt Orderline Property
      - Business Nxt Data Type
-   * - id
-     - orderNo
-     - "string"
 
 
 Shopify Sesamproduct to Business Nxt Product
@@ -174,16 +167,4 @@ The following properties are synchronized between a Shopify Sesamproduct and a B
    * - Shopify Sesamproduct Property
      - Business Nxt Product Property
      - Business Nxt Data Type
-   * - sesam_priceExclVAT
-     - priceQuantity
-     - "string"
-   * - variants.inventory_quantity
-     - quantityPerUnit
-     - "string"
-   * - variants.price
-     - priceQuantity
-     - "string"
-   * - variants.title
-     - description
-     - "string"
 
