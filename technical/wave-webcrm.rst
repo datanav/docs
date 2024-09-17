@@ -2,7 +2,7 @@
 Wave to WebCRM Dataflow
 =======================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -96,18 +96,6 @@ The following properties are synchronized between a Wave Customer and a WebCRM P
    * - Wave Customer Property
      - WebCRM Persons Property
      - WebCRM Data Type
-   * - firstName
-     - PersonFirstName
-     - "string"
-   * - id
-     - PersonOrganisationId
-     - "string"
-   * - lastName
-     - PersonLastName
-     - "string"
-   * - mobile
-     - PersonMobilePhone
-     - "string"
 
 
 Wave Invoice to WebCRM Quotationline
@@ -124,15 +112,6 @@ The following properties are synchronized between a Wave Invoice and a WebCRM Qu
    * - Wave Invoice Property
      - WebCRM Quotationline Property
      - WebCRM Data Type
-   * - id
-     - QuotationLineOpportunityId
-     - "string"
-   * - items.price
-     - QuotationLinePrice
-     - "string"
-   * - items.quantity
-     - QuotationLineQuantity
-     - "string"
 
 
 Wave Product to WebCRM Products
@@ -149,9 +128,6 @@ The following properties are synchronized between a Wave Product and a WebCRM Pr
    * - Wave Product Property
      - WebCRM Products Property
      - WebCRM Data Type
-   * - unitPrice
-     - ProductPrice
-     - "string"
 
 
 Wave User to WebCRM Users
@@ -184,19 +160,4 @@ The following properties are synchronized between a Wave Vendor and a WebCRM Per
    * - Wave Vendor Property
      - WebCRM Persons Property
      - WebCRM Data Type
-   * - firstName
-     - PersonFirstName
-     - "string"
-   * - id
-     - PersonOrganisationId
-     - "string"
-   * - lastName
-     - PersonLastName
-     - "string"
-   * - mobile
-     - PersonMobilePhone
-     - "string"
-   * - phone
-     - PersonDirectPhone
-     - "string"
 
