@@ -2,12 +2,28 @@
 HubSpot to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+HubSpot Product to Salesforce Product2
+--------------------------------------
+Every HubSpot Product will be synchronized with a Salesforce Product2.
+
+Once a link between a HubSpot Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a Salesforce Product2:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     - Salesforce Product2 Property
+     - Salesforce Data Type
+
 
 HubSpot Company to Salesforce Division
 --------------------------------------
@@ -377,9 +393,6 @@ The following properties are synchronized between a HubSpot Account and a Salesf
    * - HubSpot Account Property
      - Salesforce Currencytype Property
      - Salesforce Data Type
-   * - accountType
-     - IsoCode
-     - "string"
 
 
 HubSpot Deal to Salesforce Currencytype
@@ -396,9 +409,6 @@ The following properties are synchronized between a HubSpot Deal and a Salesforc
    * - HubSpot Deal Property
      - Salesforce Currencytype Property
      - Salesforce Data Type
-   * - properties.deal_currency_code
-     - IsoCode
-     - "string"
 
 
 HubSpot Deal to Salesforce Order
@@ -415,27 +425,6 @@ The following properties are synchronized between a HubSpot Deal and a Salesforc
    * - HubSpot Deal Property
      - Salesforce Order Property
      - Salesforce Data Type
-   * - properties.amount
-     - TotalAmount
-     - "string"
-   * - properties.closedate
-     - EffectiveDate
-     - "string"
-   * - properties.closedate
-     - EndDate
-     - "string"
-   * - properties.closedate
-     - OrderedDate
-     - "string"
-   * - properties.deal_currency_code
-     - CurrencyIsoCode
-     - "string"
-   * - properties.dealname
-     - Name
-     - "string"
-   * - properties.description
-     - Description
-     - "string"
 
 
 HubSpot Lineitem to Salesforce Invoiceline
@@ -452,18 +441,6 @@ The following properties are synchronized between a HubSpot Lineitem and a Sales
    * - HubSpot Lineitem Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
-   * - properties.description
-     - Description
-     - "string"
-   * - properties.name
-     - Name
-     - "string"
-   * - properties.price
-     - UnitPrice
-     - "string"
-   * - properties.quantity
-     - Quantity
-     - "string"
 
 
 HubSpot Lineitem to Salesforce Orderitem
@@ -480,12 +457,6 @@ The following properties are synchronized between a HubSpot Lineitem and a Sales
    * - HubSpot Lineitem Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
-   * - properties.price
-     - TotalPrice
-     - "string"
-   * - properties.quantity
-     - Quantity
-     - "string"
 
 
 HubSpot Lineitem to Salesforce Quotelineitem
@@ -502,18 +473,102 @@ The following properties are synchronized between a HubSpot Lineitem and a Sales
    * - HubSpot Lineitem Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
-   * - properties.description
-     - Description
-     - "string"
-   * - properties.hs_discount_percentage
-     - Discount
-     - "string"
-   * - properties.price
-     - TotalPriceWithTax
-     - "string"
-   * - properties.quantity
-     - Quantity
-     - "string"
+
+
+HubSpot Lineitemdealassociationtype to Salesforce Invoiceline
+-------------------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a HubSpot Lineitemdealassociationtype and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociationtype Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
+
+
+HubSpot Lineitemdealassociationtype to Salesforce Orderitem
+-----------------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a Salesforce Orderitem.
+
+Once a link between a HubSpot Lineitemdealassociationtype and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a Salesforce Orderitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociationtype Property
+     - Salesforce Orderitem Property
+     - Salesforce Data Type
+
+
+HubSpot Lineitemdealassociationtype to Salesforce Quotelineitem
+---------------------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a Salesforce Quotelineitem.
+
+Once a link between a HubSpot Lineitemdealassociationtype and a Salesforce Quotelineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a Salesforce Quotelineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociationtype Property
+     - Salesforce Quotelineitem Property
+     - Salesforce Data Type
+
+
+HubSpot Lineitemquoteassociationtype to Salesforce Invoiceline
+--------------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a Salesforce Invoiceline.
+
+Once a link between a HubSpot Lineitemquoteassociationtype and a Salesforce Invoiceline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a Salesforce Invoiceline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociationtype Property
+     - Salesforce Invoiceline Property
+     - Salesforce Data Type
+
+
+HubSpot Lineitemquoteassociationtype to Salesforce Orderitem
+------------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a Salesforce Orderitem.
+
+Once a link between a HubSpot Lineitemquoteassociationtype and a Salesforce Orderitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a Salesforce Orderitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociationtype Property
+     - Salesforce Orderitem Property
+     - Salesforce Data Type
+
+
+HubSpot Lineitemquoteassociationtype to Salesforce Quotelineitem
+----------------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a Salesforce Quotelineitem.
+
+Once a link between a HubSpot Lineitemquoteassociationtype and a Salesforce Quotelineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a Salesforce Quotelineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociationtype Property
+     - Salesforce Quotelineitem Property
+     - Salesforce Data Type
 
 
 HubSpot Product to Salesforce Product2
@@ -530,18 +585,6 @@ The following properties are synchronized between a HubSpot Product and a Salesf
    * - HubSpot Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-   * - properties.description
-     - Description
-     - "string"
-   * - properties.description
-     - Description	
-     - "string"
-   * - properties.name
-     - Name
-     - "string"
-   * - properties.name
-     - Name	
-     - "string"
 
 
 HubSpot Quote to Salesforce Quote
@@ -558,10 +601,4 @@ The following properties are synchronized between a HubSpot Quote and a Salesfor
    * - HubSpot Quote Property
      - Salesforce Quote Property
      - Salesforce Data Type
-   * - properties.hs_quote_amount
-     - TotalPriceWithTax
-     - "string"
-   * - properties.hs_title
-     - Name
-     - "string"
 
