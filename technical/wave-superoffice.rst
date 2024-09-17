@@ -2,7 +2,7 @@
 Wave to SuperOffice Dataflow
 ============================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -115,21 +115,6 @@ The following properties are synchronized between a Wave Customer and a SuperOff
    * - Wave Customer Property
      - SuperOffice Person Property
      - SuperOffice Data Type
-   * - address.addressLine1
-     - Address.Street.Address1
-     - "string"
-   * - address.addressLine2
-     - Address.Street.Address2
-     - "string"
-   * - address.city
-     - Address.Street.City
-     - "string"
-   * - address.country.code
-     - Country.CountryId
-     - "integer"
-   * - address.postalCode
-     - Address.Street.Zipcode
-     - "string"
    * - email
      - Emails.Value
      - "string"
@@ -139,32 +124,11 @@ The following properties are synchronized between a Wave Customer and a SuperOff
    * - id
      - Contact.ContactId
      - "integer"
-   * - id
-     - PersonId
-     - "integer"
    * - lastName
      - Lastname
      - "string"
    * - mobile
      - MobilePhones.Value
-     - "string"
-   * - phone
-     - OfficePhones.Value
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - Address.Street.Address1
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - Address.Street.Address2
-     - "string"
-   * - shippingDetails.address.city
-     - Address.Street.City
-     - "string"
-   * - shippingDetails.address.country.code
-     - Country.CountryId
-     - "integer"
-   * - shippingDetails.address.postalCode
-     - Address.Street.Zipcode
      - "string"
 
 
@@ -265,9 +229,6 @@ The following properties are synchronized between a Wave Customer and a SuperOff
    * - address.country.code
      - Country.CountryId
      - "integer"
-   * - address.countryCode
-     - Country.CountryId
-     - "integer"
    * - address.postalCode
      - Address.Postal.Zipcode
      - "string"
@@ -313,9 +274,6 @@ The following properties are synchronized between a Wave Customer and a SuperOff
    * - shippingDetails.phone
      - Phones.Value
      - "string"
-   * - website
-     - Domains
-     - N/A
    * - website
      - Urls.Value
      - "string"
