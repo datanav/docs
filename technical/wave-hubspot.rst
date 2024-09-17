@@ -2,7 +2,7 @@
 Wave to HubSpot Dataflow
 ========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -258,6 +258,24 @@ The following properties are synchronized between a Wave Vendor and a HubSpot Co
      - "string"
 
 
+Wave Financial Product to HubSpot Product
+-----------------------------------------
+Before any synchronization can take place, a link between a Wave Financial Product and a HubSpot Product must be established.
+
+A new HubSpot Product will be created from a Wave Financial Product if it is connected to a Wave Financial Wave-orders, or Wave-invoice that is synchronized into HubSpot.
+
+Once a link between a Wave Financial Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Financial Product and a HubSpot Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Financial Product Property
+     - HubSpot Product Property
+     - HubSpot Data Type
+
+
 Wave Customer to HubSpot Company
 --------------------------------
 Every Wave Customer will be synchronized with a HubSpot Company.
@@ -346,6 +364,22 @@ The following properties are synchronized between a Wave Customer and a HubSpot 
      - "string"
 
 
+Wave Invoice to HubSpot Deal
+----------------------------
+Every Wave Invoice will be synchronized with a HubSpot Deal.
+
+Once a link between a Wave Invoice and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
+
+
 Wave Invoice to HubSpot Lineitem
 --------------------------------
 Every Wave Invoice will be synchronized with a HubSpot Lineitem.
@@ -360,24 +394,38 @@ The following properties are synchronized between a Wave Invoice and a HubSpot L
    * - Wave Invoice Property
      - HubSpot Lineitem Property
      - HubSpot Data Type
-   * - items.description
-     - properties.description
-     - "string"
-   * - items.description
-     - properties.name
-     - "string"
-   * - items.price
-     - properties.price
-     - "string"
-   * - items.product.id
-     - properties.hs_product_id
-     - "string"
-   * - items.quantity
-     - properties.quantity
-     - N/A
-   * - items.unitPrice
-     - properties.price
-     - "string"
+
+
+Wave Invoice to HubSpot Lineitemdealassociationtype
+---------------------------------------------------
+Every Wave Invoice will be synchronized with a HubSpot Lineitemdealassociationtype.
+
+Once a link between a Wave Invoice and a HubSpot Lineitemdealassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a HubSpot Lineitemdealassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     - HubSpot Lineitemdealassociationtype Property
+     - HubSpot Data Type
+
+
+Wave Invoice to HubSpot Lineitemquoteassociationtype
+----------------------------------------------------
+Every Wave Invoice will be synchronized with a HubSpot Lineitemquoteassociationtype.
+
+Once a link between a Wave Invoice and a HubSpot Lineitemquoteassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a HubSpot Lineitemquoteassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     - HubSpot Lineitemquoteassociationtype Property
+     - HubSpot Data Type
 
 
 Wave Product to HubSpot Product
@@ -394,15 +442,6 @@ The following properties are synchronized between a Wave Product and a HubSpot P
    * - Wave Product Property
      - HubSpot Product Property
      - HubSpot Data Type
-   * - description
-     - properties.description
-     - "string"
-   * - name
-     - properties.name
-     - "string"
-   * - unitPrice
-     - properties.price
-     - "string"
 
 
 Wave User to HubSpot User
