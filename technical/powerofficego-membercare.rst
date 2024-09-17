@@ -2,7 +2,7 @@
 PowerOffice GO to MemberCare Dataflow
 =====================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -74,18 +74,18 @@ The following properties are synchronized between a PowerOffice GO Customers and
      - "string"
 
 
-PowerOffice GO Customers person to MemberCare Persons
------------------------------------------------------
-Every PowerOffice GO Customers person will be synchronized with a MemberCare Persons.
+PowerOffice GO Customers (human data) to MemberCare Persons
+-----------------------------------------------------------
+Every PowerOffice GO Customers (human data) will be synchronized with a MemberCare Persons.
 
-Once a link between a PowerOffice GO Customers person and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Customers (human data) and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice GO Customers person and a MemberCare Persons:
+The following properties are synchronized between a PowerOffice GO Customers (human data) and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice GO Customers person Property
+   * - PowerOffice GO Customers (human data) Property
      - MemberCare Persons Property
      - MemberCare Data Type
    * - DateOfBirth
@@ -301,18 +301,18 @@ The following properties are synchronized between a PowerOffice GO Suppliers and
      - MemberCare Data Type
 
 
-PowerOffice GO Suppliers person to MemberCare Countries
--------------------------------------------------------
-Every PowerOffice GO Suppliers person will be synchronized with a MemberCare Countries.
+PowerOffice GO Suppliers (classification data) to MemberCare Countries
+----------------------------------------------------------------------
+Every PowerOffice GO Suppliers (classification data) will be synchronized with a MemberCare Countries.
 
-Once a link between a PowerOffice GO Suppliers person and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Suppliers (classification data) and a MemberCare Countries is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice GO Suppliers person and a MemberCare Countries:
+The following properties are synchronized between a PowerOffice GO Suppliers (classification data) and a MemberCare Countries:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice GO Suppliers person Property
+   * - PowerOffice GO Suppliers (classification data) Property
      - MemberCare Countries Property
      - MemberCare Data Type
 
