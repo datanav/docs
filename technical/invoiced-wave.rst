@@ -2,74 +2,74 @@
 Invoiced to Wave Dataflow
 =========================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Invoiced Customers company to Wave Customer
--------------------------------------------
-Every Invoiced Customers company will be synchronized with a Wave Customer.
+Invoiced Customers (organisation data) to Wave Customer
+-------------------------------------------------------
+Every Invoiced Customers (organisation data) will be synchronized with a Wave Customer.
 
-Once a link between a Invoiced Customers company and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (organisation data) and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a Wave Customer:
+The following properties are synchronized between a Invoiced Customers (organisation data) and a Wave Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers company Property
+   * - Invoiced Customers (organisation data) Property
      - Wave Customer Property
      - Wave Data Type
 
 
-Invoiced Customers company to Wave Customer person
---------------------------------------------------
-Every Invoiced Customers company will be synchronized with a Wave Customer person.
+Invoiced Customers (human data) to Wave Customer (human data)
+-------------------------------------------------------------
+Every Invoiced Customers (human data) will be synchronized with a Wave Customer (human data).
 
-Once a link between a Invoiced Customers company and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (human data) and a Wave Customer (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a Wave Customer person:
+The following properties are synchronized between a Invoiced Customers (human data) and a Wave Customer (human data):
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers company Property
-     - Wave Customer person Property
+   * - Invoiced Customers (human data) Property
+     - Wave Customer (human data) Property
      - Wave Data Type
 
 
-Invoiced Customers person to Wave Customer
-------------------------------------------
-Every Invoiced Customers person will be synchronized with a Wave Customer.
+Invoiced Customers (organisation data) to Wave Customer
+-------------------------------------------------------
+Every Invoiced Customers (organisation data) will be synchronized with a Wave Customer.
 
-Once a link between a Invoiced Customers person and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (organisation data) and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers person and a Wave Customer:
+The following properties are synchronized between a Invoiced Customers (organisation data) and a Wave Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers person Property
+   * - Invoiced Customers (organisation data) Property
      - Wave Customer Property
      - Wave Data Type
 
 
-Invoiced Customers person to Wave Customer person
--------------------------------------------------
-Every Invoiced Customers person will be synchronized with a Wave Customer person.
+Invoiced Customers (human data) to Wave Customer (human data)
+-------------------------------------------------------------
+Every Invoiced Customers (human data) will be synchronized with a Wave Customer (human data).
 
-Once a link between a Invoiced Customers person and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (human data) and a Wave Customer (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers person and a Wave Customer person:
+The following properties are synchronized between a Invoiced Customers (human data) and a Wave Customer (human data):
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers person Property
-     - Wave Customer person Property
+   * - Invoiced Customers (human data) Property
+     - Wave Customer (human data) Property
      - Wave Data Type
 
 
