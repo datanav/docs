@@ -2,7 +2,7 @@
 PowerOffice GO to WebCRM Dataflow
 =================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -98,18 +98,18 @@ The following properties are synchronized between a PowerOffice GO Salesorderlin
      - WebCRM Data Type
 
 
-PowerOffice GO Suppliers person to WebCRM Persons
--------------------------------------------------
-Every PowerOffice GO Suppliers person will be synchronized with a WebCRM Persons.
+PowerOffice GO Suppliers (human data) to WebCRM Persons
+-------------------------------------------------------
+Every PowerOffice GO Suppliers (human data) will be synchronized with a WebCRM Persons.
 
-Once a link between a PowerOffice GO Suppliers person and a WebCRM Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Suppliers (human data) and a WebCRM Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice GO Suppliers person and a WebCRM Persons:
+The following properties are synchronized between a PowerOffice GO Suppliers (human data) and a WebCRM Persons:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice GO Suppliers person Property
+   * - PowerOffice GO Suppliers (human data) Property
      - WebCRM Persons Property
      - WebCRM Data Type
 
