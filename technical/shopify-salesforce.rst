@@ -2,12 +2,30 @@
 Shopify to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Shopify Order to Salesforce Order
+---------------------------------
+Before any synchronization can take place, a link between a Shopify Order and a Salesforce Order must be established.
+
+A new Salesforce Order will be created from a Shopify Order if it is connected to a Shopify Order that is synchronized into Salesforce.
+
+Once a link between a Shopify Order and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a Salesforce Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - Salesforce Order Property
+     - Salesforce Data Type
+
 
 Shopify Product to Salesforce Product2
 --------------------------------------
@@ -66,6 +84,22 @@ The following properties are synchronized between a Shopify Order and a Salesfor
      - "string"
 
 
+Shopify Sesamproduct to Salesforce Product2
+-------------------------------------------
+Every Shopify Sesamproduct will be synchronized with a Salesforce Product2.
+
+Once a link between a Shopify Sesamproduct and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Sesamproduct and a Salesforce Product2:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Sesamproduct Property
+     - Salesforce Product2 Property
+     - Salesforce Data Type
+
+
 Shopify Customer to Salesforce Currencytype
 -------------------------------------------
 Every Shopify Customer will be synchronized with a Salesforce Currencytype.
@@ -98,6 +132,22 @@ The following properties are synchronized between a Shopify Customer and a Sales
      - Salesforce Data Type
 
 
+Shopify Order to Salesforce Invoice
+-----------------------------------
+Every Shopify Order will be synchronized with a Salesforce Invoice.
+
+Once a link between a Shopify Order and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
 Shopify Order to Salesforce Invoiceline
 ---------------------------------------
 Every Shopify Order will be synchronized with a Salesforce Invoiceline.
@@ -112,18 +162,6 @@ The following properties are synchronized between a Shopify Order and a Salesfor
    * - Shopify Order Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
-   * - currency
-     - CurrencyIsoCode
-     - "string"
-   * - line_items.price
-     - UnitPrice
-     - "string"
-   * - line_items.quantity
-     - Quantity
-     - "string"
-   * - line_items.title
-     - Name
-     - "string"
 
 
 Shopify Order to Salesforce Order
@@ -140,84 +178,6 @@ The following properties are synchronized between a Shopify Order and a Salesfor
    * - Shopify Order Property
      - Salesforce Order Property
      - Salesforce Data Type
-   * - billing_address.address1
-     - BillingStreet
-     - "string"
-   * - billing_address.city
-     - BillingCity
-     - "string"
-   * - billing_address.city
-     - ShippingCity
-     - "string"
-   * - billing_address.country
-     - BillingCountry
-     - "string"
-   * - billing_address.country
-     - ShippingCountry
-     - "string"
-   * - billing_address.country_code
-     - BillingCountryCode
-     - "string"
-   * - billing_address.country_code
-     - ShippingCountryCode
-     - "string"
-   * - billing_address.zip
-     - BillingPostalCode
-     - "string"
-   * - billing_address.zip
-     - ShippingStateCode
-     - "string"
-   * - created_at
-     - EffectiveDate
-     - "string"
-   * - created_at
-     - OrderedDate
-     - "string"
-   * - currency
-     - CurrencyIsoCode
-     - "string"
-   * - current_total_price
-     - TotalAmount
-     - "string"
-   * - customer.id
-     - ID
-     - "string"
-   * - id
-     - ID
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - shipping_address.address1
-     - BillingStreet
-     - "string"
-   * - shipping_address.city
-     - BillingCity
-     - "string"
-   * - shipping_address.city
-     - ShippingCity
-     - "string"
-   * - shipping_address.country
-     - BillingCountry
-     - "string"
-   * - shipping_address.country
-     - ShippingCountry
-     - "string"
-   * - shipping_address.country_code
-     - BillingCountryCode
-     - "string"
-   * - shipping_address.country_code
-     - ShippingCountryCode
-     - "string"
-   * - shipping_address.zip
-     - BillingPostalCode
-     - "string"
-   * - shipping_address.zip
-     - ShippingStateCode
-     - "string"
-   * - total_price
-     - TotalAmount
-     - "string"
 
 
 Shopify Order to Salesforce Orderitem
@@ -234,21 +194,6 @@ The following properties are synchronized between a Shopify Order and a Salesfor
    * - Shopify Order Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
-   * - currency
-     - CurrencyIsoCode
-     - "string"
-   * - id
-     - OrderId
-     - "string"
-   * - line_items.price
-     - TotalPrice
-     - "string"
-   * - line_items.product_id
-     - Product2Id
-     - "string"
-   * - line_items.quantity
-     - Quantity
-     - "string"
 
 
 Shopify Order to Salesforce Quotelineitem
@@ -265,18 +210,6 @@ The following properties are synchronized between a Shopify Order and a Salesfor
    * - Shopify Order Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
-   * - currency
-     - CurrencyIsoCode
-     - "string"
-   * - line_items.price
-     - TotalPriceWithTax
-     - "string"
-   * - line_items.quantity
-     - Quantity
-     - "string"
-   * - line_items.total_discount
-     - Discount
-     - "string"
 
 
 Shopify Sesamproduct to Salesforce Product2
@@ -293,16 +226,4 @@ The following properties are synchronized between a Shopify Sesamproduct and a S
    * - Shopify Sesamproduct Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-   * - title
-     - Name
-     - "string"
-   * - title
-     - Name	
-     - "string"
-   * - variants.title
-     - Description
-     - "string"
-   * - variants.title
-     - Description	
-     - "string"
 
