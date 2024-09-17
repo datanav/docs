@@ -2,7 +2,7 @@
 Asana to Custom CRM Dataflow
 ============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -23,15 +23,6 @@ The following properties are synchronized between a Asana Teams and a Custom CRM
    * - Asana Teams Property
      - Custom CRM Customer Property
      - Custom CRM Data Type
-   * - description
-     - Description
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - permalink_url
-     - Website
-     - "string"
 
 
 Asana Workspaces to Custom CRM Customer
@@ -48,10 +39,4 @@ The following properties are synchronized between a Asana Workspaces and a Custo
    * - Asana Workspaces Property
      - Custom CRM Customer Property
      - Custom CRM Data Type
-   * - email_domains
-     - Website
-     - "string"
-   * - name
-     - Name
-     - "string"
 
