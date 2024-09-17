@@ -2,240 +2,12 @@
 Shopify to Tripletex Dataflow
 =============================
 
-Generated: 2024-09-17 08:52:07
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Shopify Customer to Tripletex Contact
--------------------------------------
-Before any synchronization can take place, a link between a Shopify Customer and a Tripletex Contact must be established.
-
-A new Tripletex Contact will be created from a Shopify Customer if it is connected to a Shopify Order that is synchronized into Tripletex.
-
-Once a link between a Shopify Customer and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Customer and a Tripletex Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Customer Property
-     - Tripletex Contact Property
-     - Tripletex Data Type
-   * - default_address.phone
-     - phoneNumberWork
-     - "string"
-   * - email
-     - email
-     - "string"
-   * - first_name
-     - firstName
-     - "string"
-   * - last_name
-     - lastName
-     - "string"
-   * - phone
-     - phoneNumberMobile
-     - N/A
-   * - phone
-     - phoneNumberWork
-     - "string"
-
-
-Shopify Customer to Tripletex Customer person
----------------------------------------------
-Before any synchronization can take place, a link between a Shopify Customer and a Tripletex Customer person must be established.
-
-A new Tripletex Customer person will be created from a Shopify Customer if it is connected to a Shopify Order that is synchronized into Tripletex.
-
-Once a link between a Shopify Customer and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Customer and a Tripletex Customer person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Customer Property
-     - Tripletex Customer person Property
-     - Tripletex Data Type
-   * - default_address.address1
-     - deliveryAddress.addressLine1
-     - "string"
-   * - default_address.address1
-     - physicalAddress.addressLine1
-     - "string"
-   * - default_address.address1
-     - postalAddress.addressLine1
-     - "string"
-   * - default_address.address2
-     - deliveryAddress.addressLine2
-     - "string"
-   * - default_address.address2
-     - physicalAddress.addressLine2
-     - "string"
-   * - default_address.address2
-     - postalAddress.addressLine2
-     - "string"
-   * - default_address.city
-     - deliveryAddress.city
-     - "string"
-   * - default_address.city
-     - physicalAddress.city
-     - "string"
-   * - default_address.city
-     - postalAddress.city
-     - "string"
-   * - default_address.country
-     - deliveryAddress.country.id
-     - "string"
-   * - default_address.country
-     - physicalAddress.country.id
-     - "integer"
-   * - default_address.country
-     - postalAddress.country.id
-     - "integer"
-   * - default_address.phone
-     - phoneNumber
-     - "string"
-   * - default_address.zip
-     - deliveryAddress.postalCode
-     - "string"
-   * - default_address.zip
-     - physicalAddress.postalCode
-     - "string"
-   * - default_address.zip
-     - postalAddress.postalCode
-     - "string"
-   * - email
-     - email
-     - "string"
-   * - id
-     - id
-     - "integer"
-   * - phone
-     - phoneNumberMobile
-     - "string"
-
-
-Shopify Customer to Tripletex Customer
---------------------------------------
-Before any synchronization can take place, a link between a Shopify Customer and a Tripletex Customer must be established.
-
-A new Tripletex Customer will be created from a Shopify Customer if it is connected to a Shopify Order that is synchronized into Tripletex.
-
-Once a link between a Shopify Customer and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Customer and a Tripletex Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Customer Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
-   * - default_address.address1
-     - deliveryAddress.addressLine1
-     - "string"
-   * - default_address.address1
-     - physicalAddress.addressLine1
-     - "string"
-   * - default_address.address1
-     - postalAddress.addressLine1
-     - "string"
-   * - default_address.address2
-     - deliveryAddress.addressLine2
-     - "string"
-   * - default_address.address2
-     - physicalAddress.addressLine2
-     - "string"
-   * - default_address.address2
-     - postalAddress.addressLine2
-     - "string"
-   * - default_address.city
-     - deliveryAddress.city
-     - "string"
-   * - default_address.city
-     - physicalAddress.city
-     - "string"
-   * - default_address.city
-     - postalAddress.city
-     - "string"
-   * - default_address.country
-     - deliveryAddress.country.id
-     - "string"
-   * - default_address.country
-     - physicalAddress.country.id
-     - "integer"
-   * - default_address.country
-     - postalAddress.country.id
-     - "integer"
-   * - default_address.zip
-     - deliveryAddress.postalCode
-     - "string"
-   * - default_address.zip
-     - physicalAddress.postalCode
-     - "string"
-   * - default_address.zip
-     - postalAddress.postalCode
-     - "string"
-   * - id
-     - id
-     - "integer"
-
-
-Shopify Order to Tripletex Order
---------------------------------
-Before any synchronization can take place, a link between a Shopify Order and a Tripletex Order must be established.
-
-A new Tripletex Order will be created from a Shopify Order if it is connected to a Shopify Order that is synchronized into Tripletex.
-
-Once a link between a Shopify Order and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Order and a Tripletex Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Order Property
-     - Tripletex Order Property
-     - Tripletex Data Type
-   * - created_at
-     - orderDate
-     - N/A
-   * - currency
-     - currency.id
-     - "integer"
-   * - customer.id
-     - contact.id
-     - "integer"
-   * - customer.id
-     - customer.id
-     - "integer"
-   * - po_number
-     - reference
-     - "string"
-
-
-Shopify Product to Tripletex Product
-------------------------------------
-Before any synchronization can take place, a link between a Shopify Product and a Tripletex Product must be established.
-
-A new Tripletex Product will be created from a Shopify Product if it is connected to a Shopify Order that is synchronized into Tripletex.
-
-Once a link between a Shopify Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Product and a Tripletex Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Product Property
-     - Tripletex Product Property
-     - Tripletex Data Type
-
 
 Shopify Customer to Tripletex Customer
 --------------------------------------
@@ -253,19 +25,19 @@ The following properties are synchronized between a Shopify Customer and a Tripl
      - Tripletex Data Type
 
 
-Shopify Customer to Tripletex Customer person
----------------------------------------------
-Every Shopify Customer will be synchronized with a Tripletex Customer person.
+Shopify Customer to Tripletex Customer (human data)
+---------------------------------------------------
+Every Shopify Customer will be synchronized with a Tripletex Customer (human data).
 
-Once a link between a Shopify Customer and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Shopify Customer and a Tripletex Customer (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Shopify Customer and a Tripletex Customer person:
+The following properties are synchronized between a Shopify Customer and a Tripletex Customer (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Shopify Customer Property
-     - Tripletex Customer person Property
+     - Tripletex Customer (human data) Property
      - Tripletex Data Type
 
 
