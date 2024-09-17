@@ -2,7 +2,7 @@
 MemberCare to CRMOffice Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -43,6 +43,22 @@ The following properties are synchronized between a MemberCare Products and a CR
    :header-rows: 1
 
    * - MemberCare Products Property
+     - CRMOffice Companies Property
+     - CRMOffice Data Type
+
+
+MemberCare Companies to CRMOffice Companies
+-------------------------------------------
+Every MemberCare Companies will be synchronized with a CRMOffice Companies.
+
+Once a link between a MemberCare Companies and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a MemberCare Companies and a CRMOffice Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - MemberCare Companies Property
      - CRMOffice Companies Property
      - CRMOffice Data Type
 
