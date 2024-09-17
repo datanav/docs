@@ -2,7 +2,7 @@
 Shopify to HubSpot Dataflow
 ===========================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -23,38 +23,8 @@ The following properties are synchronized between a Shopify Customer and a HubSp
    * - Shopify Customer Property
      - HubSpot Contact Property
      - HubSpot Data Type
-   * - addresses.address1
-     - properties.address
-     - "string"
-   * - addresses.city
-     - properties.city
-     - "string"
-   * - addresses.country
-     - properties.country
-     - "string"
-   * - addresses.province_code
-     - properties.state
-     - "string"
-   * - addresses.zip
-     - properties.zip
-     - "string"
-   * - default_address.address1
-     - properties.address
-     - "string"
-   * - default_address.city
-     - properties.city
-     - "string"
-   * - default_address.country
-     - properties.country
-     - "string"
    * - default_address.phone
      - properties.phone
-     - "string"
-   * - default_address.province_code
-     - properties.state
-     - "string"
-   * - default_address.zip
-     - properties.zip
      - "string"
    * - email
      - properties.email
@@ -62,17 +32,11 @@ The following properties are synchronized between a Shopify Customer and a HubSp
    * - first_name
      - properties.firstname
      - "string"
-   * - id
-     - id
-     - "string"
    * - last_name
      - properties.lastname
      - "string"
    * - phone
      - properties.mobilephone
-     - "string"
-   * - phone
-     - properties.phone
      - "string"
 
 
