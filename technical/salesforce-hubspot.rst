@@ -2,7 +2,7 @@
 Salesforce to HubSpot Dataflow
 ==============================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -25,6 +25,12 @@ The following properties are synchronized between a Salesforce Product2 and a Hu
    * - Salesforce Product2 Property
      - Hubspot Product Property
      - Hubspot Data Type
+   * - Description
+     - properties.description
+     - "string"
+   * - Name
+     - properties.name
+     - "string"
 
 
 Salesforce Contact to HubSpot Contact
@@ -248,6 +254,21 @@ The following properties are synchronized between a Salesforce Order and a HubSp
    * - Salesforce Order Property
      - HubSpot Deal Property
      - HubSpot Data Type
+   * - CurrencyIsoCode
+     - properties.deal_currency_code
+     - "string"
+   * - Description
+     - properties.description
+     - "string"
+   * - Name
+     - properties.dealname
+     - "string"
+   * - OrderedDate
+     - properties.closedate
+     - "string"
+   * - TotalAmount
+     - properties.amount
+     - "string"
 
 
 Salesforce Orderitem to HubSpot Lineitem
