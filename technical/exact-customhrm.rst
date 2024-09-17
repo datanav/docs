@@ -2,7 +2,7 @@
 Exact Online to Custom HRM Dataflow
 ===================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -41,6 +41,22 @@ The following properties are synchronized between a Exact Online Contacts and a 
      - Custom HRM Data Type
 
 
+Exact Online Departments to Custom HRM Department
+-------------------------------------------------
+Every Exact Online Departments will be synchronized with a Custom HRM Department.
+
+Once a link between a Exact Online Departments and a Custom HRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Departments and a Custom HRM Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Departments Property
+     - Custom HRM Department Property
+     - Custom HRM Data Type
+
+
 Exact Online Divisions to Custom HRM Department
 -----------------------------------------------
 Every Exact Online Divisions will be synchronized with a Custom HRM Department.
@@ -54,6 +70,22 @@ The following properties are synchronized between a Exact Online Divisions and a
 
    * - Exact Online Divisions Property
      - Custom HRM Department Property
+     - Custom HRM Data Type
+
+
+Exact Online Employees to Custom HRM Employee
+---------------------------------------------
+Every Exact Online Employees will be synchronized with a Custom HRM Employee.
+
+Once a link between a Exact Online Employees and a Custom HRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Employees and a Custom HRM Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Employees Property
+     - Custom HRM Employee Property
      - Custom HRM Data Type
 
 
