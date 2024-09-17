@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2024-09-17 09:13:06
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -95,12 +95,6 @@ The following properties are synchronized between a SuperOffice User and a HubSp
    * - SuperOffice User Property
      - HubSpot Contact Property
      - HubSpot Data Type
-   * - contactCategory
-     - properties.country
-     - "string"
-   * - contactCategory
-     - properties.state
-     - "string"
    * - firstName
      - properties.firstname
      - "string"
@@ -156,20 +150,8 @@ The following properties are synchronized between a SuperOffice Contact and a Hu
    * - Country.CountryId
      - properties.country
      - "string"
-   * - Domains
-     - properties.website
-     - "string"
    * - Name
      - properties.name
-     - "string"
-   * - OrgNr (Dependant on having NO in Country.TwoLetterISOCountry)
-     - properties.sesam_org_number_no
-     - "string"
-   * - OrgNr (Dependant on having SE in Country.TwoLetterISOCountry)
-     - properties.sesam_org_number_se
-     - "string"
-   * - OrgNr (Dependant on having  in Country.ThreeLetterISOCountryDependant on having NO in Country.ThreeLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountry)
-     - sync_org_nr
      - "string"
    * - Phones.Value
      - properties.phone
