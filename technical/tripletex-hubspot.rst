@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -198,6 +198,24 @@ The following properties are synchronized between a Tripletex Employee and a Hub
      - "string"
 
 
+Tripletex Product to HubSpot Product
+------------------------------------
+Before any synchronization can take place, a link between a Tripletex Product and a HubSpot Product must be established.
+
+A new HubSpot Product will be created from a Tripletex Product if it is connected to a Tripletex Orderline that is synchronized into HubSpot.
+
+Once a link between a Tripletex Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a HubSpot Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - HubSpot Product Property
+     - HubSpot Data Type
+
+
 Tripletex Customer to HubSpot Company
 -------------------------------------
 Every Tripletex Customer will be synchronized with a HubSpot Company.
@@ -296,6 +314,22 @@ The following properties are synchronized between a Tripletex Department and a H
      - "string"
 
 
+Tripletex Order to HubSpot Deal
+-------------------------------
+Every Tripletex Order will be synchronized with a HubSpot Deal.
+
+Once a link between a Tripletex Order and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
+
+
 Tripletex Orderline to HubSpot Lineitem
 ---------------------------------------
 Every Tripletex Orderline will be synchronized with a HubSpot Lineitem.
@@ -310,24 +344,38 @@ The following properties are synchronized between a Tripletex Orderline and a Hu
    * - Tripletex Orderline Property
      - HubSpot Lineitem Property
      - HubSpot Data Type
-   * - count
-     - properties.quantity
-     - N/A
-   * - description
-     - properties.description
-     - "string"
-   * - description
-     - properties.name
-     - "string"
-   * - discount
-     - properties.hs_discount_percentage
-     - "string"
-   * - product.id
-     - properties.hs_product_id
-     - "string"
-   * - unitPriceExcludingVatCurrency
-     - properties.price
-     - "string"
+
+
+Tripletex Orderline to HubSpot Lineitemdealassociationtype
+----------------------------------------------------------
+Every Tripletex Orderline will be synchronized with a HubSpot Lineitemdealassociationtype.
+
+Once a link between a Tripletex Orderline and a HubSpot Lineitemdealassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a HubSpot Lineitemdealassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     - HubSpot Lineitemdealassociationtype Property
+     - HubSpot Data Type
+
+
+Tripletex Orderline to HubSpot Lineitemquoteassociationtype
+-----------------------------------------------------------
+Every Tripletex Orderline will be synchronized with a HubSpot Lineitemquoteassociationtype.
+
+Once a link between a Tripletex Orderline and a HubSpot Lineitemquoteassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a HubSpot Lineitemquoteassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     - HubSpot Lineitemquoteassociationtype Property
+     - HubSpot Data Type
 
 
 Tripletex Product to HubSpot Product
@@ -344,19 +392,4 @@ The following properties are synchronized between a Tripletex Product and a HubS
    * - Tripletex Product Property
      - HubSpot Product Property
      - HubSpot Data Type
-   * - costExcludingVatCurrency
-     - properties.hs_cost_of_goods_sold
-     - "string"
-   * - description
-     - properties.description
-     - "string"
-   * - name
-     - properties.name
-     - "string"
-   * - number
-     - properties.hs_sku
-     - "string"
-   * - priceExcludingVatCurrency
-     - properties.price
-     - "string"
 
