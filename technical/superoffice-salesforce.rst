@@ -2,7 +2,7 @@
 SuperOffice to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:06
 
 Introduction
 ------------
@@ -31,30 +31,6 @@ The following properties are synchronized between a SuperOffice Product and a Sa
      - "string"
    * - Url
      - DisplayUrl
-     - "string"
-
-
-SuperOffice Quotealternative to Salesforce Order
-------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Salesforce Order must be established.
-
-A new Salesforce Order will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into Salesforce.
-
-Once a link between a SuperOffice Quotealternative and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quotealternative and a Salesforce Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quotealternative Property
-     - Salesforce Order Property
-     - Salesforce Data Type
-   * - Name
-     - Description
-     - "string"
-   * - TotalPrice
-     - TotalAmount
      - "string"
 
 
