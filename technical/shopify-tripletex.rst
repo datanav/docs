@@ -2,7 +2,7 @@
 Shopify to Tripletex Dataflow
 =============================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 08:52:07
 
 Introduction
 ------------
@@ -136,6 +136,54 @@ The following properties are synchronized between a Shopify Customer and a Tripl
    * - Shopify Customer Property
      - Tripletex Customer Property
      - Tripletex Data Type
+   * - default_address.address1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - default_address.address1
+     - physicalAddress.addressLine1
+     - "string"
+   * - default_address.address1
+     - postalAddress.addressLine1
+     - "string"
+   * - default_address.address2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - default_address.address2
+     - physicalAddress.addressLine2
+     - "string"
+   * - default_address.address2
+     - postalAddress.addressLine2
+     - "string"
+   * - default_address.city
+     - deliveryAddress.city
+     - "string"
+   * - default_address.city
+     - physicalAddress.city
+     - "string"
+   * - default_address.city
+     - postalAddress.city
+     - "string"
+   * - default_address.country
+     - deliveryAddress.country.id
+     - "string"
+   * - default_address.country
+     - physicalAddress.country.id
+     - "integer"
+   * - default_address.country
+     - postalAddress.country.id
+     - "integer"
+   * - default_address.zip
+     - deliveryAddress.postalCode
+     - "string"
+   * - default_address.zip
+     - physicalAddress.postalCode
+     - "string"
+   * - default_address.zip
+     - postalAddress.postalCode
+     - "string"
+   * - id
+     - id
+     - "integer"
 
 
 Shopify Order to Tripletex Order
@@ -203,54 +251,6 @@ The following properties are synchronized between a Shopify Customer and a Tripl
    * - Shopify Customer Property
      - Tripletex Customer Property
      - Tripletex Data Type
-   * - default_address.address1
-     - deliveryAddress.addressLine1
-     - "string"
-   * - default_address.address1
-     - physicalAddress.addressLine1
-     - "string"
-   * - default_address.address1
-     - postalAddress.addressLine1
-     - "string"
-   * - default_address.address2
-     - deliveryAddress.addressLine2
-     - "string"
-   * - default_address.address2
-     - physicalAddress.addressLine2
-     - "string"
-   * - default_address.address2
-     - postalAddress.addressLine2
-     - "string"
-   * - default_address.city
-     - deliveryAddress.city
-     - "string"
-   * - default_address.city
-     - physicalAddress.city
-     - "string"
-   * - default_address.city
-     - postalAddress.city
-     - "string"
-   * - default_address.country
-     - deliveryAddress.country.id
-     - "string"
-   * - default_address.country
-     - physicalAddress.country.id
-     - "integer"
-   * - default_address.country
-     - postalAddress.country.id
-     - "integer"
-   * - default_address.zip
-     - deliveryAddress.postalCode
-     - "string"
-   * - default_address.zip
-     - physicalAddress.postalCode
-     - "string"
-   * - default_address.zip
-     - postalAddress.postalCode
-     - "string"
-   * - id
-     - id
-     - "integer"
 
 
 Shopify Customer to Tripletex Customer person
