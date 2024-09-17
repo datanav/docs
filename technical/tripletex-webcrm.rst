@@ -2,7 +2,7 @@
 Tripletex to WebCRM Dataflow
 ============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -121,21 +121,6 @@ The following properties are synchronized between a Tripletex Contact and a WebC
    * - Tripletex Contact Property
      - WebCRM Persons Property
      - WebCRM Data Type
-   * - customer.id
-     - PersonOrganisationId
-     - "string"
-   * - firstName
-     - PersonFirstName
-     - "string"
-   * - lastName
-     - PersonLastName
-     - "string"
-   * - phoneNumberMobile
-     - PersonMobilePhone
-     - "string"
-   * - phoneNumberWork
-     - PersonDirectPhone
-     - "string"
 
 
 Tripletex Orderline to WebCRM Quotationline
@@ -152,24 +137,6 @@ The following properties are synchronized between a Tripletex Orderline and a We
    * - Tripletex Orderline Property
      - WebCRM Quotationline Property
      - WebCRM Data Type
-   * - count
-     - QuotationLineQuantity
-     - "string"
-   * - discount
-     - QuotationLineDiscount
-     - "string"
-   * - order.id
-     - QuotationLineOpportunityId
-     - "string"
-   * - unitCostCurrency
-     - QuotationLineCostPrice
-     - "string"
-   * - unitPriceExcludingVatCurrency
-     - QuotationLinePrice
-     - "string"
-   * - vatType.id
-     - QuotationLineVatPercentage
-     - "string"
 
 
 Tripletex Product to WebCRM Products
@@ -186,16 +153,4 @@ The following properties are synchronized between a Tripletex Product and a WebC
    * - Tripletex Product Property
      - WebCRM Products Property
      - WebCRM Data Type
-   * - costExcludingVatCurrency
-     - ProductCostPrice
-     - "string"
-   * - priceExcludingVatCurrency
-     - ProductPrice
-     - "string"
-   * - stockOfGoods
-     - ProductQuantity
-     - "string"
-   * - vatType.id
-     - ProductVatCode
-     - "string"
 
