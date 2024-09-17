@@ -2,7 +2,7 @@
 Chargebee to HubSpot Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -66,5 +66,21 @@ The following properties are synchronized between a Chargebee Item and a HubSpot
 
    * - Chargebee Item Property
      - HubSpot Product Property
+     - HubSpot Data Type
+
+
+Chargebee Order to HubSpot Deal
+-------------------------------
+Every Chargebee Order will be synchronized with a HubSpot Deal.
+
+Once a link between a Chargebee Order and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Order and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Order Property
+     - HubSpot Deal Property
      - HubSpot Data Type
 
