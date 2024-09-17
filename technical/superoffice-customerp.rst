@@ -2,7 +2,7 @@
 SuperOffice to Custom ERP Dataflow
 ==================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -38,6 +38,22 @@ The following properties are synchronized between a SuperOffice Person and a Cus
 
    * - SuperOffice Person Property
      - Custom ERP Contact Property
+     - Custom ERP Data Type
+
+
+SuperOffice Product to Custom ERP Product
+-----------------------------------------
+Every SuperOffice Product will be synchronized with a Custom ERP Product.
+
+Once a link between a SuperOffice Product and a Custom ERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a Custom ERP Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Custom ERP Product Property
      - Custom ERP Data Type
 
 
