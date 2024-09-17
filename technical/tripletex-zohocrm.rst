@@ -2,7 +2,7 @@
 Tripletex to ZohoCRM Dataflow
 =============================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -82,9 +82,6 @@ The following properties are synchronized between a Tripletex Customer and a Zoh
      - "string"
    * - postalAddress.postalCode
      - Shipping_Code
-     - "string"
-   * - url
-     - Website
      - "string"
    * - website
      - Website
