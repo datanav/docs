@@ -767,8 +767,8 @@ This transform transforms all the keys of an entity to lower case (optionally re
 .. Note::
   We strongly recommend using DTL transform to replace ``lower_keys`` transform. See example of DTL transform below.
 
-Example of DTL transform to replace lower_keys:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Example of DTL transform to replace lower_keys (recursive):
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: json
   
@@ -807,6 +807,34 @@ Example of DTL transform to replace lower_keys:
                 ["apply", "lower_keys", "_."], "_."], "_S.value"], "_S.value"]
         ]
       ]
+    }
+  }
+
+Non-recursive example:
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: json
+
+  {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["merge",
+          ["apply", "lower_keys", "_S."]
+        ]
+      ],
+      "lower_keys": [
+        ["comment", "Lowercases all keys in a dictionary. Not recursive"],
+        ["merge",
+          ["apply", "lower_keys_iter",
+            ["key-values", "_S."]
+          ]
+        ]
+      ],
+      "lower_keys_iter": [
+        ["add",
+          ["lower", "_S.key"], "_S.value"]
+        ]
     }
   }
 
