@@ -2,12 +2,28 @@
 Invoiced to Shopify Dataflow
 ============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Shopify. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Invoiced Customers company to Shopify Customer
+----------------------------------------------
+Every Invoiced Customers company will be synchronized with a Shopify Customer.
+
+Once a link between a Invoiced Customers company and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Customers company and a Shopify Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Customers company Property
+     - Shopify Customer Property
+     - Shopify Data Type
+
 
 Invoiced Customers person to Shopify Customer
 ---------------------------------------------
@@ -39,12 +55,6 @@ The following properties are synchronized between a Invoiced Invoices and a Shop
    * - Invoiced Invoices Property
      - Shopify Order Property
      - Shopify Data Type
-   * - currency
-     - currency
-     - "string"
-   * - customer
-     - customer.id
-     - "string"
 
 
 Invoiced Items to Shopify Sesamproduct
@@ -61,10 +71,4 @@ The following properties are synchronized between a Invoiced Items and a Shopify
    * - Invoiced Items Property
      - Shopify Sesamproduct Property
      - Shopify Data Type
-   * - description
-     - variants.title
-     - "string"
-   * - name
-     - title
-     - "string"
 
