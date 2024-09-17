@@ -2,7 +2,7 @@
 Tidsbanken to PowerOffice GO Dataflow
 =====================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -129,6 +129,33 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Powe
    * - Tidsbanken Ansatt Property
      - PowerOffice GO Employees Property
      - PowerOffice GO Data Type
+   * - Aktiv
+     - IsArchived
+     - "boolean"
+   * - AvdelingId
+     - DepartmentId
+     - "integer"
+   * - Epost
+     - EmailAddress
+     - "string"
+   * - Etternavn
+     - LastName
+     - "string"
+   * - Fodt
+     - DateOfBirth
+     - N/A
+   * - Fornavn
+     - FirstName
+     - "string"
+   * - Mobil
+     - PhoneNumber
+     - "string"
+   * - Tittel
+     - JobTitle
+     - "string"
+   * - sesam_ansattId
+     - Number
+     - "string"
 
 
 Tidsbanken Avdeling to PowerOffice GO Departments
@@ -157,6 +184,15 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Po
    * - Tidsbanken Avdeling Property
      - PowerOffice GO Departments Property
      - PowerOffice GO Data Type
+   * - Navn
+     - Name
+     - "string"
+   * - Synlig
+     - IsActive
+     - "string"
+   * - sesam_avdelingId
+     - Code
+     - "string"
 
 
 Tidsbanken Kunde to PowerOffice GO Customers
@@ -185,6 +221,54 @@ The following properties are synchronized between a Tidsbanken Kunde and a Power
    * - Tidsbanken Kunde Property
      - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
+   * - Epost
+     - EmailAddress
+     - "string"
+   * - Gateadresse
+     - MailAddress.AddressLine1
+     - "string"
+   * - Id
+     - Id
+     - "integer"
+   * - LevPostNr
+     - MailAddress.ZipCode
+     - "string"
+   * - LevPoststed
+     - MailAddress.City
+     - "string"
+   * - Leveringsadresse
+     - MailAddress.AddressLine1
+     - "string"
+   * - Leveringsadresse2
+     - MailAddress.AddressLine2
+     - "string"
+   * - Navn
+     - Name
+     - "string"
+   * - Organisasjonsnummer
+     - OrganizationNumber (Dependant on having NO in MailAddress.CountryCodeDependant on having wd:Q11994066 in MailAddress.CountryCode)
+     - "string"
+   * - Postadresse
+     - MailAddress.AddressLine2
+     - "string"
+   * - Postnr
+     - MailAddress.ZipCode
+     - "string"
+   * - Poststed
+     - MailAddress.City
+     - "string"
+   * - Telefon
+     - PhoneNumber
+     - "string"
+   * - Url
+     - WebsiteUrl
+     - "string"
+   * - sesam_kundeId
+     - Number
+     - "string"
+   * - sesam_kundeId
+     - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCode)
+     - "string"
 
 
 Tidsbanken Kunde to PowerOffice GO Customers person
