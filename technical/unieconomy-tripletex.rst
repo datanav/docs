@@ -2,7 +2,7 @@
 Unieconomy to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -40,10 +40,7 @@ The following properties are synchronized between a Unieconomy Companies and a T
 
 Unieconomy Customers to Tripletex Customer
 ------------------------------------------
-Every Unieconomy Customers will be synchronized with a Tripletex Customer.
-
-If a matching Tripletex Customer already exists, the Unieconomy Customers will be merged with the existing one.
-If no matching Tripletex Customer is found, a new Tripletex Customer will be created.
+Before any synchronization can take place, a link between a Unieconomy Customers and a Tripletex Customer must be established.
 
 A Unieconomy Customers will merge with a Tripletex Customer if one of the following property combinations match:
 
@@ -65,9 +62,38 @@ The following properties are synchronized between a Unieconomy Customers and a T
    * - Unieconomy Customers Property
      - Tripletex Customer Property
      - Tripletex Data Type
-   * - WebUrl
-     - website
-     - "string"
+
+
+Unieconomy Customers to Tripletex Customer
+------------------------------------------
+Every Unieconomy Customers will be synchronized with a Tripletex Customer.
+
+Once a link between a Unieconomy Customers and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Customers and a Tripletex Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Customers Property
+     - Tripletex Customer Property
+     - Tripletex Data Type
+
+
+Unieconomy Customers to Tripletex Customer person
+-------------------------------------------------
+Every Unieconomy Customers will be synchronized with a Tripletex Customer person.
+
+Once a link between a Unieconomy Customers and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Customers and a Tripletex Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Customers Property
+     - Tripletex Customer person Property
+     - Tripletex Data Type
 
 
 Unieconomy Departments to Tripletex Department
@@ -84,7 +110,4 @@ The following properties are synchronized between a Unieconomy Departments and a
    * - Unieconomy Departments Property
      - Tripletex Department Property
      - Tripletex Data Type
-   * - Name
-     - name
-     - "string"
 
