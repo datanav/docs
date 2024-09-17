@@ -2,7 +2,7 @@
 Shopify to ZohoCRM Dataflow
 ===========================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,79 +23,4 @@ The following properties are synchronized between a Shopify Customer and a ZohoC
    * - Shopify Customer Property
      - ZohoCRM Contact Property
      - ZohoCRM Data Type
-   * - addresses.city
-     - Mailing_City
-     - "string"
-   * - addresses.city
-     - Other_City
-     - "string"
-   * - addresses.country
-     - Mailing_Country
-     - "string"
-   * - addresses.country
-     - Other_Country
-     - "string"
-   * - addresses.province_code
-     - Mailing_State
-     - "string"
-   * - addresses.province_code
-     - Other_State
-     - "string"
-   * - addresses.zip
-     - Mailing_Zip
-     - "string"
-   * - addresses.zip
-     - Other_Zip
-     - "string"
-   * - default_address.city
-     - Mailing_City
-     - "string"
-   * - default_address.city
-     - Other_City
-     - "string"
-   * - default_address.country
-     - Mailing_Country
-     - "string"
-   * - default_address.country
-     - Other_Country
-     - "string"
-   * - default_address.phone
-     - Other_Phone
-     - "string"
-   * - default_address.phone
-     - Phone
-     - "string"
-   * - default_address.province_code
-     - Mailing_State
-     - "string"
-   * - default_address.province_code
-     - Other_State
-     - "string"
-   * - default_address.zip
-     - Mailing_Zip
-     - "string"
-   * - default_address.zip
-     - Other_Zip
-     - "string"
-   * - email
-     - Email
-     - "string"
-   * - email
-     - Secondary_Email
-     - "string"
-   * - first_name
-     - First_Name
-     - "string"
-   * - last_name
-     - Last_Name
-     - "string"
-   * - phone
-     - Mobile
-     - "string"
-   * - phone
-     - Other_Phone
-     - "string"
-   * - phone
-     - Phone
-     - "string"
 
