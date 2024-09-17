@@ -2,7 +2,7 @@
 ZohoCRM to Chargebee Dataflow
 =============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -50,6 +50,24 @@ The following properties are synchronized between a ZohoCRM Contact and a Charge
    * - ZohoCRM Contact Property
      - Chargebee Customer Property
      - Chargebee Data Type
+   * - Email
+     - email
+     - "string"
+   * - First_Name
+     - first_name
+     - "string"
+   * - Last_Name
+     - last_name
+     - "string"
+   * - Mailing_Country
+     - billing_address.country
+     - "string"
+   * - Other_Country
+     - billing_address.country
+     - "string"
+   * - Secondary_Email
+     - email
+     - "string"
 
 
 ZohoCRM Account to Chargebee Business_entity
@@ -85,12 +103,6 @@ The following properties are synchronized between a ZohoCRM Deal and a Chargebee
    * - ZohoCRM Deal Property
      - Chargebee Order Property
      - Chargebee Data Type
-   * - Account_Name.id
-     - customer_id
-     - "string"
-   * - Contact_Name.id
-     - customer_id
-     - "string"
 
 
 ZohoCRM Contact to Chargebee Address
@@ -107,6 +119,12 @@ The following properties are synchronized between a ZohoCRM Contact and a Charge
    * - ZohoCRM Contact Property
      - Chargebee Address Property
      - Chargebee Data Type
+   * - Mailing_Country
+     - country
+     - "string"
+   * - Other_Country
+     - country
+     - "string"
 
 
 ZohoCRM Contact to Chargebee Customer
@@ -139,4 +157,10 @@ The following properties are synchronized between a ZohoCRM Deal and a Chargebee
    * - ZohoCRM Deal Property
      - Chargebee Order Property
      - Chargebee Data Type
+   * - Account_Name.id
+     - customer_id
+     - "string"
+   * - Contact_Name.id
+     - customer_id
+     - "string"
 
