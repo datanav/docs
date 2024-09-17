@@ -2,7 +2,7 @@
 Business Central to Trello Dataflow
 ===================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -47,6 +47,22 @@ The following properties are synchronized between a Business Central Contacts pe
      - "string"
 
 
+Business Central Customers company to Trello Organizations
+----------------------------------------------------------
+Every Business Central Customers company will be synchronized with a Trello Organizations.
+
+Once a link between a Business Central Customers company and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Customers company and a Trello Organizations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Customers company Property
+     - Trello Organizations Property
+     - Trello Data Type
+
+
 Business Central Customers person to Trello Members
 ---------------------------------------------------
 Every Business Central Customers person will be synchronized with a Trello Members.
@@ -69,6 +85,22 @@ The following properties are synchronized between a Business Central Customers p
      - "string"
 
 
+Business Central Employees to Trello Members
+--------------------------------------------
+Every Business Central Employees will be synchronized with a Trello Members.
+
+Once a link between a Business Central Employees and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Employees and a Trello Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Employees Property
+     - Trello Members Property
+     - Trello Data Type
+
+
 Business Central Customers company to Trello Organizations
 ----------------------------------------------------------
 Every Business Central Customers company will be synchronized with a Trello Organizations.
@@ -83,12 +115,6 @@ The following properties are synchronized between a Business Central Customers c
    * - Business Central Customers company Property
      - Trello Organizations Property
      - Trello Data Type
-   * - displayName
-     - name
-     - "string"
-   * - website
-     - website
-     - "string"
 
 
 Business Central Employees to Trello Members
@@ -105,10 +131,4 @@ The following properties are synchronized between a Business Central Employees a
    * - Business Central Employees Property
      - Trello Members Property
      - Trello Data Type
-   * - displayName
-     - fullName
-     - "string"
-   * - personalEmail
-     - email
-     - "string"
 
