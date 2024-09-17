@@ -2,7 +2,7 @@
 Keap to PowerOffice GO Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -23,13 +23,4 @@ The following properties are synchronized between a Keap Product and a PowerOffi
    * - Keap Product Property
      - PowerOffice GO Product Property
      - PowerOffice GO Data Type
-   * - product_desc
-     - description
-     - "string"
-   * - product_name
-     - name
-     - "string"
-   * - product_price
-     - salesPrice
-     - N/A
 
