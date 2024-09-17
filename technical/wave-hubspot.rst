@@ -2,7 +2,7 @@
 Wave to HubSpot Dataflow
 ========================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -274,6 +274,15 @@ The following properties are synchronized between a Wave Financial Product and a
    * - Wave Financial Product Property
      - HubSpot Product Property
      - HubSpot Data Type
+   * - description
+     - properties.description
+     - "string"
+   * - name
+     - properties.name
+     - "string"
+   * - unitPrice
+     - properties.price
+     - "string"
 
 
 Wave Customer to HubSpot Company
@@ -378,6 +387,18 @@ The following properties are synchronized between a Wave Invoice and a HubSpot D
    * - Wave Invoice Property
      - HubSpot Deal Property
      - HubSpot Data Type
+   * - currency.code
+     - properties.deal_currency_code
+     - "string"
+   * - memo
+     - properties.description
+     - "string"
+   * - title
+     - properties.dealname
+     - "string"
+   * - total.value
+     - properties.amount
+     - "string"
 
 
 Wave Invoice to HubSpot Lineitem
