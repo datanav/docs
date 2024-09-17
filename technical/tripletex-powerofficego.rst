@@ -2,7 +2,7 @@
 Tripletex to PowerOffice GO Dataflow
 ====================================
 
-Generated: 2024-09-17 11:33:51
+Generated: 2024-09-17 12:29:50
 
 Introduction
 ------------
@@ -960,5 +960,37 @@ The following properties are synchronized between a Tripletex Project and a Powe
 
    * - Tripletex Project Property
      - PowerOffice GO Projects Property
+     - PowerOffice GO Data Type
+
+
+Tripletex Projectactivity to PowerOffice GO Projectactivity
+-----------------------------------------------------------
+Every Tripletex Projectactivity will be synchronized with a PowerOffice GO Projectactivity.
+
+Once a link between a Tripletex Projectactivity and a PowerOffice GO Projectactivity is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Projectactivity and a PowerOffice GO Projectactivity:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Projectactivity Property
+     - PowerOffice GO Projectactivity Property
+     - PowerOffice GO Data Type
+
+
+Tripletex Projectactivity to PowerOffice GO Timetrackingactivity
+----------------------------------------------------------------
+Every Tripletex Projectactivity will be synchronized with a PowerOffice GO Timetrackingactivity.
+
+Once a link between a Tripletex Projectactivity and a PowerOffice GO Timetrackingactivity is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Projectactivity and a PowerOffice GO Timetrackingactivity:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Projectactivity Property
+     - PowerOffice GO Timetrackingactivity Property
      - PowerOffice GO Data Type
 
