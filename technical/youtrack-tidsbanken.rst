@@ -2,7 +2,7 @@
 YouTrack to Tidsbanken Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -33,12 +33,6 @@ The following properties are synchronized between a YouTrack Users and a Tidsban
    * - YouTrack Users Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
-   * - name
-     - Etternavn
-     - "string"
-   * - name
-     - Fornavn
-     - "string"
    * - name
      - Navn
      - "string"
