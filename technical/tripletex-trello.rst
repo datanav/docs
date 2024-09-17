@@ -2,7 +2,7 @@
 Tripletex to Trello Dataflow
 ============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -44,18 +44,18 @@ The following properties are synchronized between a Tripletex Contact and a Trel
      - "string"
 
 
-Tripletex Customer person to Trello Members
--------------------------------------------
-Every Tripletex Customer person will be synchronized with a Trello Members.
+Tripletex Customer (human data) to Trello Members
+-------------------------------------------------
+Every Tripletex Customer (human data) will be synchronized with a Trello Members.
 
-Once a link between a Tripletex Customer person and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer (human data) and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a Trello Members:
+The following properties are synchronized between a Tripletex Customer (human data) and a Trello Members:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer person Property
+   * - Tripletex Customer (human data) Property
      - Trello Members Property
      - Trello Data Type
    * - email
