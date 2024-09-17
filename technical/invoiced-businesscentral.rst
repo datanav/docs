@@ -2,106 +2,106 @@
 Invoiced to Business Central Dataflow
 =====================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Invoiced Customers company to Business Central Companies
---------------------------------------------------------
-Every Invoiced Customers company will be synchronized with a Business Central Companies.
+Invoiced Customers (organisation data) to Business Central Companies
+--------------------------------------------------------------------
+Every Invoiced Customers (organisation data) will be synchronized with a Business Central Companies.
 
-Once a link between a Invoiced Customers company and a Business Central Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (organisation data) and a Business Central Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a Business Central Companies:
+The following properties are synchronized between a Invoiced Customers (organisation data) and a Business Central Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers company Property
+   * - Invoiced Customers (organisation data) Property
      - Business Central Companies Property
      - Business Central Data Type
 
 
-Invoiced Contacts to Business Central Contacts person
------------------------------------------------------
-Every Invoiced Contacts will be synchronized with a Business Central Contacts person.
+Invoiced Contacts to Business Central Contacts (human data)
+-----------------------------------------------------------
+Every Invoiced Contacts will be synchronized with a Business Central Contacts (human data).
 
-Once a link between a Invoiced Contacts and a Business Central Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Contacts and a Business Central Contacts (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Contacts and a Business Central Contacts person:
+The following properties are synchronized between a Invoiced Contacts and a Business Central Contacts (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Invoiced Contacts Property
-     - Business Central Contacts person Property
+     - Business Central Contacts (human data) Property
      - Business Central Data Type
 
 
-Invoiced Customers company to Business Central Customers company
-----------------------------------------------------------------
-Every Invoiced Customers company will be synchronized with a Business Central Customers company.
+Invoiced Customers (organisation data) to Business Central Customers (organisation data)
+----------------------------------------------------------------------------------------
+Every Invoiced Customers (organisation data) will be synchronized with a Business Central Customers (organisation data).
 
-Once a link between a Invoiced Customers company and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (organisation data) and a Business Central Customers (organisation data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a Business Central Customers company:
+The following properties are synchronized between a Invoiced Customers (organisation data) and a Business Central Customers (organisation data):
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers company Property
-     - Business Central Customers company Property
+   * - Invoiced Customers (organisation data) Property
+     - Business Central Customers (organisation data) Property
      - Business Central Data Type
 
 
-Invoiced Customers company to Business Central Customers person
----------------------------------------------------------------
-Every Invoiced Customers company will be synchronized with a Business Central Customers person.
+Invoiced Customers (human data) to Business Central Customers (human data)
+--------------------------------------------------------------------------
+Every Invoiced Customers (human data) will be synchronized with a Business Central Customers (human data).
 
-Once a link between a Invoiced Customers company and a Business Central Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (human data) and a Business Central Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a Business Central Customers person:
+The following properties are synchronized between a Invoiced Customers (human data) and a Business Central Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers company Property
-     - Business Central Customers person Property
+   * - Invoiced Customers (human data) Property
+     - Business Central Customers (human data) Property
      - Business Central Data Type
 
 
-Invoiced Customers person to Business Central Customers company
----------------------------------------------------------------
-Every Invoiced Customers person will be synchronized with a Business Central Customers company.
+Invoiced Customers (organisation data) to Business Central Customers (organisation data)
+----------------------------------------------------------------------------------------
+Every Invoiced Customers (organisation data) will be synchronized with a Business Central Customers (organisation data).
 
-Once a link between a Invoiced Customers person and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (organisation data) and a Business Central Customers (organisation data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers person and a Business Central Customers company:
+The following properties are synchronized between a Invoiced Customers (organisation data) and a Business Central Customers (organisation data):
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers person Property
-     - Business Central Customers company Property
+   * - Invoiced Customers (organisation data) Property
+     - Business Central Customers (organisation data) Property
      - Business Central Data Type
 
 
-Invoiced Customers person to Business Central Customers person
---------------------------------------------------------------
-Every Invoiced Customers person will be synchronized with a Business Central Customers person.
+Invoiced Customers (human data) to Business Central Customers (human data)
+--------------------------------------------------------------------------
+Every Invoiced Customers (human data) will be synchronized with a Business Central Customers (human data).
 
-Once a link between a Invoiced Customers person and a Business Central Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (human data) and a Business Central Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers person and a Business Central Customers person:
+The following properties are synchronized between a Invoiced Customers (human data) and a Business Central Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers person Property
-     - Business Central Customers person Property
+   * - Invoiced Customers (human data) Property
+     - Business Central Customers (human data) Property
      - Business Central Data Type
 
 
