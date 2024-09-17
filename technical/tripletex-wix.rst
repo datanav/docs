@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -36,9 +36,6 @@ The following properties are synchronized between a Tripletex Contact and a Wix 
      - Wix Contacts Property
      - Wix Data Type
    * - email
-     - info.emails
-     - "string"
-   * - email
      - primaryInfo.email
      - "string"
    * - firstName
@@ -46,9 +43,6 @@ The following properties are synchronized between a Tripletex Contact and a Wix 
      - "string"
    * - lastName
      - info.name.last
-     - "string"
-   * - phoneNumberMobile
-     - info.phones
      - "string"
    * - phoneNumberWork
      - primaryInfo.phone
@@ -111,44 +105,11 @@ The following properties are synchronized between a Tripletex Employee and a Wix
    * - Tripletex Employee Property
      - Wix Contacts Property
      - Wix Data Type
-   * - address.addressLine1
-     - info.addresses.items.address.addressLine
-     - "string"
-   * - address.addressLine2
-     - info.addresses.items.address.addressLine2
-     - "string"
-   * - address.city
-     - info.addresses.items.address.city
-     - "string"
-   * - address.postalCode
-     - info.addresses.items.address.postalCode
-     - "string"
-   * - email
-     - info.emails
-     - "string"
-   * - email
-     - primaryInfo.email
-     - "string"
    * - firstName
-     - info.name.first
-     - "string"
-   * - firstName
-     - info.name.last
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - lastName
      - info.name.first
      - "string"
    * - lastName
      - info.name.last
-     - "string"
-   * - phoneNumberMobile
-     - info.phones
-     - "string"
-   * - phoneNumberMobile
-     - primaryInfo.phone
      - "string"
    * - phoneNumberWork
      - primaryInfo.phone
