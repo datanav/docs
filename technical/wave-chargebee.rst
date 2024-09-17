@@ -2,7 +2,7 @@
 Wave to Chargebee Dataflow
 ==========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -60,15 +60,6 @@ The following properties are synchronized between a Wave Customer person and a C
    * - Wave Customer person Property
      - Chargebee Customer Property
      - Chargebee Data Type
-   * - email
-     - email
-     - "string"
-   * - firstName
-     - first_name
-     - "string"
-   * - lastName
-     - last_name
-     - "string"
 
 
 Wave Invoice to Chargebee Order
@@ -85,21 +76,6 @@ The following properties are synchronized between a Wave Invoice and a Chargebee
    * - Wave Invoice Property
      - Chargebee Order Property
      - Chargebee Data Type
-   * - currency.code
-     - currency_code
-     - "string"
-   * - customer.id
-     - customer_id
-     - "string"
-   * - items.description
-     - order_line_items.description
-     - "string"
-   * - items.price
-     - order_line_items.unit_price
-     - "string"
-   * - items.quantity
-     - order_line_items.amount
-     - "string"
 
 
 Wave Product to Chargebee Item
@@ -116,7 +92,100 @@ The following properties are synchronized between a Wave Product and a Chargebee
    * - Wave Product Property
      - Chargebee Item Property
      - Chargebee Data Type
-   * - name
-     - name
-     - "string"
+
+
+Wave Customer to Chargebee Address
+----------------------------------
+Every Wave Customer will be synchronized with a Chargebee Address.
+
+Once a link between a Wave Customer and a Chargebee Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Chargebee Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Chargebee Address Property
+     - Chargebee Data Type
+
+
+Wave Customer to Chargebee Customer
+-----------------------------------
+Every Wave Customer will be synchronized with a Chargebee Customer.
+
+Once a link between a Wave Customer and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Chargebee Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Chargebee Customer Property
+     - Chargebee Data Type
+
+
+Wave Customer person to Chargebee Address
+-----------------------------------------
+Every Wave Customer person will be synchronized with a Chargebee Address.
+
+Once a link between a Wave Customer person and a Chargebee Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer person and a Chargebee Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - Chargebee Address Property
+     - Chargebee Data Type
+
+
+Wave Customer person to Chargebee Customer
+------------------------------------------
+Every Wave Customer person will be synchronized with a Chargebee Customer.
+
+Once a link between a Wave Customer person and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer person and a Chargebee Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - Chargebee Customer Property
+     - Chargebee Data Type
+
+
+Wave Invoice to Chargebee Order
+-------------------------------
+Every Wave Invoice will be synchronized with a Chargebee Order.
+
+Once a link between a Wave Invoice and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a Chargebee Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     - Chargebee Order Property
+     - Chargebee Data Type
+
+
+Wave Product to Chargebee Item
+------------------------------
+Every Wave Product will be synchronized with a Chargebee Item.
+
+Once a link between a Wave Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Product and a Chargebee Item:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Product Property
+     - Chargebee Item Property
+     - Chargebee Data Type
 
