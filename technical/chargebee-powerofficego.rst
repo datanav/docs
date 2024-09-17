@@ -2,84 +2,12 @@
 Chargebee to PowerOffice GO Dataflow
 ====================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Chargebee to PowerOffice GO. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Chargebee Customer to PowerOffice GO Contactperson
---------------------------------------------------
-Before any synchronization can take place, a link between a Chargebee Customer and a PowerOffice GO Contactperson must be established.
-
-A new PowerOffice GO Contactperson will be created from a Chargebee Customer if it is connected to a Chargebee Order that is synchronized into PowerOffice GO.
-
-Once a link between a Chargebee Customer and a PowerOffice GO Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Chargebee Customer and a PowerOffice GO Contactperson:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Chargebee Customer Property
-     - PowerOffice GO Contactperson Property
-     - PowerOffice GO Data Type
-   * - email
-     - emailAddress
-     - "string"
-   * - first_name
-     - firstName
-     - "string"
-   * - last_name
-     - lastName
-     - "string"
-
-
-Chargebee Customer to PowerOffice GO Customers
-----------------------------------------------
-Before any synchronization can take place, a link between a Chargebee Customer and a PowerOffice GO Customers must be established.
-
-A new PowerOffice GO Customers will be created from a Chargebee Customer if it is connected to a Chargebee Order that is synchronized into PowerOffice GO.
-
-Once a link between a Chargebee Customer and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Chargebee Customer and a PowerOffice GO Customers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Chargebee Customer Property
-     - PowerOffice GO Customers Property
-     - PowerOffice GO Data Type
-
-
-Chargebee Customer to PowerOffice GO Customers person
------------------------------------------------------
-Before any synchronization can take place, a link between a Chargebee Customer and a PowerOffice GO Customers person must be established.
-
-A new PowerOffice GO Customers person will be created from a Chargebee Customer if it is connected to a Chargebee Order that is synchronized into PowerOffice GO.
-
-Once a link between a Chargebee Customer and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Chargebee Customer and a PowerOffice GO Customers person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Chargebee Customer Property
-     - PowerOffice GO Customers person Property
-     - PowerOffice GO Data Type
-   * - email
-     - EmailAddress
-     - "string"
-   * - first_name
-     - FirstName
-     - "string"
-   * - last_name
-     - LastName
-     - "string"
-
 
 Chargebee Address to PowerOffice GO Customers
 ---------------------------------------------
@@ -112,19 +40,19 @@ The following properties are synchronized between a Chargebee Address and a Powe
      - "string"
 
 
-Chargebee Address to PowerOffice GO Customers person
-----------------------------------------------------
-Every Chargebee Address will be synchronized with a PowerOffice GO Customers person.
+Chargebee Address to PowerOffice GO Customers (human data)
+----------------------------------------------------------
+Every Chargebee Address will be synchronized with a PowerOffice GO Customers (human data).
 
-Once a link between a Chargebee Address and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Address and a PowerOffice GO Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Address and a PowerOffice GO Customers person:
+The following properties are synchronized between a Chargebee Address and a PowerOffice GO Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Address Property
-     - PowerOffice GO Customers person Property
+     - PowerOffice GO Customers (human data) Property
      - PowerOffice GO Data Type
    * - addr
      - MailAddress.AddressLine1
@@ -159,19 +87,19 @@ The following properties are synchronized between a Chargebee Customer and a Pow
      - PowerOffice GO Data Type
 
 
-Chargebee Customer to PowerOffice GO Customers person
------------------------------------------------------
-Every Chargebee Customer will be synchronized with a PowerOffice GO Customers person.
+Chargebee Customer to PowerOffice GO Customers (human data)
+-----------------------------------------------------------
+Every Chargebee Customer will be synchronized with a PowerOffice GO Customers (human data).
 
-Once a link between a Chargebee Customer and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Chargebee Customer and a PowerOffice GO Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Chargebee Customer and a PowerOffice GO Customers person:
+The following properties are synchronized between a Chargebee Customer and a PowerOffice GO Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Chargebee Customer Property
-     - PowerOffice GO Customers person Property
+     - PowerOffice GO Customers (human data) Property
      - PowerOffice GO Data Type
 
 
