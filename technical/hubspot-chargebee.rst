@@ -2,7 +2,7 @@
 HubSpot to Chargebee Dataflow
 =============================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -129,6 +129,9 @@ The following properties are synchronized between a HubSpot Deal and a Chargebee
    * - HubSpot Deal Property
      - Chargebee Order Property
      - Chargebee Data Type
+   * - properties.deal_currency_code
+     - currency_code
+     - "string"
 
 
 HubSpot Dealcompanyassociation to Chargebee Order
