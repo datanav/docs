@@ -2,7 +2,7 @@
 Keap to Shopify Dataflow
 ========================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -59,6 +59,15 @@ The following properties are synchronized between a Keap Product and a Shopify S
    * - Keap Product Property
      - Shopify Sesamproduct Property
      - Shopify Data Type
+   * - product_desc
+     - variants.title
+     - "string"
+   * - product_name
+     - title
+     - "string"
+   * - product_price
+     - sesam_priceExclVAT
+     - "string"
 
 
 Keap Product to Shopify Sesamproduct
