@@ -2,7 +2,7 @@
 Invoiced to Keap Dataflow
 =========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -58,10 +58,4 @@ The following properties are synchronized between a Invoiced Items and a Keap Pr
    * - Invoiced Items Property
      - Keap Product Property
      - Keap Data Type
-   * - description
-     - product_desc
-     - "string"
-   * - name
-     - product_name
-     - "string"
 
