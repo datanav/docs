@@ -2,7 +2,7 @@
 Keap to ZohoCRM Dataflow
 ========================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -54,10 +54,4 @@ The following properties are synchronized between a Keap Opportunity and a ZohoC
    * - Keap Opportunity Property
      - ZohoCRM Deal Property
      - ZohoCRM Data Type
-   * - contact.id
-     - Owner.id
-     - "string"
-   * - opportunity_title
-     - Deal_Name
-     - "string"
 
