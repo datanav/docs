@@ -2,7 +2,7 @@
 WooCommerce to SuperOffice Dataflow
 ===================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -46,6 +46,15 @@ The following properties are synchronized between a WooCommerce Product and a Su
    * - WooCommerce Product Property
      - SuperOffice Product Property
      - SuperOffice Data Type
+   * - name
+     - Name
+     - "string"
+   * - price
+     - UnitCost
+     - "string"
+   * - sale_price
+     - UnitListPrice
+     - N/A
 
 
 WooCommerce Order to SuperOffice Quoteline
