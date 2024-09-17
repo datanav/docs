@@ -2,7 +2,7 @@
 WebCRM to Youtrack Dataflow
 ===========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -39,7 +39,4 @@ The following properties are synchronized between a WebCRM Users and a Youtrack 
    * - WebCRM Users Property
      - Youtrack Users Property
      - Youtrack Data Type
-   * - UserEmail
-     - profile.email.email
-     - "string"
 
