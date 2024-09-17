@@ -2,7 +2,7 @@
 Tripletex to Custom HRM Dataflow
 ================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -41,18 +41,18 @@ The following properties are synchronized between a Tripletex Customer and a Cus
      - Custom HRM Data Type
 
 
-Tripletex Customer person to Custom HRM Employee
-------------------------------------------------
-Every Tripletex Customer person will be synchronized with a Custom HRM Employee.
+Tripletex Customer (human data) to Custom HRM Employee
+------------------------------------------------------
+Every Tripletex Customer (human data) will be synchronized with a Custom HRM Employee.
 
-Once a link between a Tripletex Customer person and a Custom HRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer (human data) and a Custom HRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a Custom HRM Employee:
+The following properties are synchronized between a Tripletex Customer (human data) and a Custom HRM Employee:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer person Property
+   * - Tripletex Customer (human data) Property
      - Custom HRM Employee Property
      - Custom HRM Data Type
 
