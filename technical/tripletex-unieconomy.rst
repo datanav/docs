@@ -2,7 +2,7 @@
 Tripletex to Unieconomy Dataflow
 ================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -137,18 +137,18 @@ The following properties are synchronized between a Tripletex Supplier and a Uni
      - "string"
 
 
-Tripletex Customer person to Unieconomy Customers
--------------------------------------------------
+Tripletex Customer (organisation data) to Unieconomy Customers
+--------------------------------------------------------------
 removed person customers for now until that pattern is resolved, it  will be synchronized with a Unieconomy Customers.
 
-Once a link between a Tripletex Customer person and a Unieconomy Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer (organisation data) and a Unieconomy Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a Unieconomy Customers:
+The following properties are synchronized between a Tripletex Customer (organisation data) and a Unieconomy Customers:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer person Property
+   * - Tripletex Customer (organisation data) Property
      - Unieconomy Customers Property
      - Unieconomy Data Type
 
