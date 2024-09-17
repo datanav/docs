@@ -2,7 +2,7 @@
 ZohoCRM to Custom PMS Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -21,6 +21,22 @@ The following properties are synchronized between a ZohoCRM Account and a Custom
    :header-rows: 1
 
    * - ZohoCRM Account Property
+     - Custom PMS Customer Property
+     - Custom PMS Data Type
+
+
+ZohoCRM Contact to Custom PMS Customer
+--------------------------------------
+Every ZohoCRM Contact will be synchronized with a Custom PMS Customer.
+
+Once a link between a ZohoCRM Contact and a Custom PMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Contact and a Custom PMS Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Contact Property
      - Custom PMS Customer Property
      - Custom PMS Data Type
 
