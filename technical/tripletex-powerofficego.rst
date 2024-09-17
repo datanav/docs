@@ -2,12 +2,68 @@
 Tripletex to PowerOffice GO Dataflow
 ====================================
 
-Generated: 2024-09-17 00:01:48
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to PowerOffice GO. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Activity to PowerOffice GO Timetrackingactivity
+---------------------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Activity and a PowerOffice GO Timetrackingactivity must be established.
+
+A new PowerOffice GO Timetrackingactivity will be created from a Tripletex Activity if it is connected to a Tripletex Activity, or Projectactivity that is synchronized into PowerOffice GO.
+
+A Tripletex Activity will merge with a PowerOffice GO Timetrackingactivity if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Activity Property
+     - PowerOffice GO Timetrackingactivity Property
+   * - id
+     - code
+
+Once a link between a Tripletex Activity and a PowerOffice GO Timetrackingactivity is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Activity and a PowerOffice GO Timetrackingactivity:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Activity Property
+     - PowerOffice GO Timetrackingactivity Property
+     - PowerOffice GO Data Type
+
+
+Tripletex Contact to PowerOffice GO Contactperson
+-------------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Contact and a PowerOffice GO Contactperson must be established.
+
+A new PowerOffice GO Contactperson will be created from a Tripletex Contact if it is connected to a Tripletex Order, or Project that is synchronized into PowerOffice GO.
+
+A Tripletex Contact will merge with a PowerOffice GO Contactperson if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - PowerOffice GO Contactperson Property
+   * - email
+     - emailAddress
+
+Once a link between a Tripletex Contact and a PowerOffice GO Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a PowerOffice GO Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - PowerOffice GO Contactperson Property
+     - PowerOffice GO Data Type
+
 
 Tripletex Contact to PowerOffice GO Customers person
 ----------------------------------------------------
@@ -129,6 +185,169 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
 
 
+Tripletex Customer person to PowerOffice GO Customers person
+------------------------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer person and a PowerOffice GO Customers person must be established.
+
+A Tripletex Customer person will merge with a PowerOffice GO Customers person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     - PowerOffice GO Customers person Property
+   * - email
+     - EmailAddress
+
+Once a link between a Tripletex Customer person and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a PowerOffice GO Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     - PowerOffice GO Customers person Property
+     - PowerOffice GO Data Type
+
+
+Tripletex Customer to PowerOffice GO Customers
+----------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a PowerOffice GO Customers must be established.
+
+A new PowerOffice GO Customers will be created from a Tripletex Customer if it is connected to a Tripletex Order, Contact, Invoice, Project, Customer, Employee, Orderline, or Customer-person that is synchronized into PowerOffice GO.
+
+A Tripletex Customer will merge with a PowerOffice GO Customers if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - PowerOffice GO Customers Property
+   * - email
+     - EmailAddress
+
+Once a link between a Tripletex Customer and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a PowerOffice GO Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - PowerOffice GO Customers Property
+     - PowerOffice GO Data Type
+   * - deliveryAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - deliveryAddress.city
+     - MailAddress.City
+     - "string"
+   * - deliveryAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - email
+     - EmailAddress
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - invoiceEmail
+     - InvoiceEmailAddress
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - organizationNumber
+     - OrganizationNumber (Dependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCode)
+     - "string"
+   * - phoneNumber
+     - Number
+     - "string"
+   * - phoneNumber
+     - PhoneNumber
+     - "string"
+   * - physicalAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - physicalAddress.city
+     - MailAddress.City
+     - "string"
+   * - physicalAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - physicalAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - postalAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - postalAddress.addressLine1
+     - MailAddress.addressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - postalAddress.addressLine2
+     - MailAddress.addressLine2
+     - "string"
+   * - postalAddress.city
+     - MailAddress.City
+     - "string"
+   * - postalAddress.city
+     - MailAddress.city
+     - "string"
+   * - postalAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - postalAddress.country.id
+     - MailAddress.countryCode
+     - "string"
+   * - postalAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - postalAddress.postalCode
+     - MailAddress.zipCode
+     - "string"
+
+
+Tripletex Department to PowerOffice GO Departments
+--------------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Department and a PowerOffice GO Departments must be established.
+
+A new PowerOffice GO Departments will be created from a Tripletex Department if it is connected to a Tripletex Project, or Employee that is synchronized into PowerOffice GO.
+
+A Tripletex Department will merge with a PowerOffice GO Departments if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - PowerOffice GO Departments Property
+   * - departmentNumber
+     - Code
+
+Once a link between a Tripletex Department and a PowerOffice GO Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a PowerOffice GO Departments:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - PowerOffice GO Departments Property
+     - PowerOffice GO Data Type
+
+
 Tripletex Employee to PowerOffice GO Contactperson
 --------------------------------------------------
 Before any synchronization can take place, a link between a Tripletex Employee and a PowerOffice GO Contactperson must be established.
@@ -247,6 +466,32 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - phoneNumberWork
      - PhoneNumber
      - "string"
+
+
+Tripletex Employee to PowerOffice GO Employees
+----------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Employee and a PowerOffice GO Employees must be established.
+
+A Tripletex Employee will merge with a PowerOffice GO Employees if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - PowerOffice GO Employees Property
+   * - employeeNumber
+     - Number
+
+Once a link between a Tripletex Employee and a PowerOffice GO Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a PowerOffice GO Employees:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - PowerOffice GO Employees Property
+     - PowerOffice GO Data Type
 
 
 Tripletex Projectactivity to PowerOffice GO Timetrackingactivity
@@ -481,6 +726,60 @@ The following properties are synchronized between a Tripletex Customer and a Pow
      - "string"
 
 
+Tripletex Order to PowerOfficeGo Salesorders
+--------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Order and a PowerOfficeGo Salesorders must be established.
+
+A new PowerOfficeGo Salesorders will be created from a Tripletex Order if it is connected to a Tripletex Order, Invoice, or Orderline that is synchronized into PowerOfficeGo.
+
+Once a link between a Tripletex Order and a PowerOfficeGo Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a PowerOfficeGo Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - PowerOfficeGo Salesorders Property
+     - PowerOfficeGo Data Type
+
+
+Tripletex Product to PowerOffice GO Product
+-------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Product and a PowerOffice GO Product must be established.
+
+A new PowerOffice GO Product will be created from a Tripletex Product if it is connected to a Tripletex Orderline that is synchronized into PowerOffice GO.
+
+Once a link between a Tripletex Product and a PowerOffice GO Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a PowerOffice GO Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - PowerOffice GO Product Property
+     - PowerOffice GO Data Type
+
+
+Tripletex Project to PowerOffice GO Projects
+--------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Project and a PowerOffice GO Projects must be established.
+
+A new PowerOffice GO Projects will be created from a Tripletex Project if it is connected to a Tripletex Project, Activity, or Projectactivity that is synchronized into PowerOffice GO.
+
+Once a link between a Tripletex Project and a PowerOffice GO Projects is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Project and a PowerOffice GO Projects:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Project Property
+     - PowerOffice GO Projects Property
+     - PowerOffice GO Data Type
+
+
 Tripletex Activity to PowerOffice GO Projectactivity
 ----------------------------------------------------
 Every Tripletex Activity will be synchronized with a PowerOffice GO Projectactivity.
@@ -495,33 +794,11 @@ The following properties are synchronized between a Tripletex Activity and a Pow
    * - Tripletex Activity Property
      - PowerOffice GO Projectactivity Property
      - PowerOffice GO Data Type
-   * - activityType
-     - isBillable
-     - "string"
-   * - isChargeable
-     - isBillable
-     - "string"
-   * - name
-     - name
-     - "string"
 
 
 Tripletex Activity to PowerOffice GO Timetrackingactivity
 ---------------------------------------------------------
 Every Tripletex Activity will be synchronized with a PowerOffice GO Timetrackingactivity.
-
-If a matching PowerOffice GO Timetrackingactivity already exists, the Tripletex Activity will be merged with the existing one.
-If no matching PowerOffice GO Timetrackingactivity is found, a new PowerOffice GO Timetrackingactivity will be created.
-
-A Tripletex Activity will merge with a PowerOffice GO Timetrackingactivity if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Activity Property
-     - PowerOffice GO Timetrackingactivity Property
-   * - id
-     - code
 
 Once a link between a Tripletex Activity and a PowerOffice GO Timetrackingactivity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -533,33 +810,11 @@ The following properties are synchronized between a Tripletex Activity and a Pow
    * - Tripletex Activity Property
      - PowerOffice GO Timetrackingactivity Property
      - PowerOffice GO Data Type
-   * - id
-     - code
-     - "string"
-   * - isProjectActivity
-     - requireProject
-     - "string"
-   * - name
-     - name
-     - "string"
 
 
 Tripletex Contact to PowerOffice GO Contactperson
 -------------------------------------------------
 Every Tripletex Contact will be synchronized with a PowerOffice GO Contactperson.
-
-If a matching PowerOffice GO Contactperson already exists, the Tripletex Contact will be merged with the existing one.
-If no matching PowerOffice GO Contactperson is found, a new PowerOffice GO Contactperson will be created.
-
-A Tripletex Contact will merge with a PowerOffice GO Contactperson if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Contact Property
-     - PowerOffice GO Contactperson Property
-   * - email
-     - emailAddress
 
 Once a link between a Tripletex Contact and a PowerOffice GO Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -571,27 +826,6 @@ The following properties are synchronized between a Tripletex Contact and a Powe
    * - Tripletex Contact Property
      - PowerOffice GO Contactperson Property
      - PowerOffice GO Data Type
-   * - customer.id
-     - partyCustomerCode
-     - "string"
-   * - customer.id
-     - partyId
-     - "string"
-   * - customer.id
-     - partySupplierCode
-     - "string"
-   * - email
-     - emailAddress
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - lastName
-     - lastName
-     - "string"
-   * - phoneNumberWork
-     - phoneNumber
-     - "string"
 
 
 Tripletex Customer person to PowerOffice GO Customers
@@ -606,6 +840,70 @@ The following properties are synchronized between a Tripletex Customer person an
    :header-rows: 1
 
    * - Tripletex Customer person Property
+     - PowerOffice GO Customers Property
+     - PowerOffice GO Data Type
+
+
+Tripletex Customer person to PowerOffice GO Customers
+-----------------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a PowerOffice GO Customers.
+
+Once a link between a Tripletex Customer person and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a PowerOffice GO Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     - PowerOffice GO Customers Property
+     - PowerOffice GO Data Type
+
+
+Tripletex Customer person to PowerOffice GO Customers person
+------------------------------------------------------------
+Every Tripletex Customer person will be synchronized with a PowerOffice GO Customers person.
+
+Once a link between a Tripletex Customer person and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a PowerOffice GO Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     - PowerOffice GO Customers person Property
+     - PowerOffice GO Data Type
+
+
+Tripletex Customer person to PowerOffice GO Customers person
+------------------------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a PowerOffice GO Customers person.
+
+Once a link between a Tripletex Customer person and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a PowerOffice GO Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     - PowerOffice GO Customers person Property
+     - PowerOffice GO Data Type
+
+
+Tripletex Customer to PowerOffice GO Customers
+----------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a PowerOffice GO Customers.
+
+Once a link between a Tripletex Customer and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a PowerOffice GO Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
      - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
    * - deliveryAddress.addressLine1
@@ -676,245 +974,25 @@ The following properties are synchronized between a Tripletex Customer person an
      - "string"
 
 
-Tripletex Customer person to PowerOffice GO Customers person
-------------------------------------------------------------
-Every Tripletex Customer person will be synchronized with a PowerOffice GO Customers person.
+Tripletex Customer to PowerOffice GO Customers person
+-----------------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a PowerOffice GO Customers person.
 
-If a matching PowerOffice GO Customers person already exists, the Tripletex Customer person will be merged with the existing one.
-If no matching PowerOffice GO Customers person is found, a new PowerOffice GO Customers person will be created.
+Once a link between a Tripletex Customer and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-A Tripletex Customer person will merge with a PowerOffice GO Customers person if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer person Property
-     - PowerOffice GO Customers person Property
-   * - email
-     - EmailAddress
-
-Once a link between a Tripletex Customer person and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer person and a PowerOffice GO Customers person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer person Property
-     - PowerOffice GO Customers person Property
-     - PowerOffice GO Data Type
-   * - deliveryAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - deliveryAddress.city
-     - MailAddress.City
-     - "string"
-   * - deliveryAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - deliveryAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - email
-     - EmailAddress
-     - "string"
-   * - id
-     - Id
-     - "integer"
-   * - invoiceEmail
-     - InvoiceEmailAddress
-     - "string"
-   * - isPrivateIndividual
-     - IsPerson
-     - N/A
-   * - phoneNumber
-     - PhoneNumber
-     - "string"
-   * - physicalAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - physicalAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - physicalAddress.city
-     - MailAddress.City
-     - "string"
-   * - physicalAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - physicalAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - postalAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - postalAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - postalAddress.city
-     - MailAddress.City
-     - "string"
-   * - postalAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - postalAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-
-
-Tripletex Customer to PowerOffice GO Customers
-----------------------------------------------
-removed person customers for now until that pattern is resolved, it  will be synchronized with a PowerOffice GO Customers.
-
-If a matching PowerOffice GO Customers already exists, the Tripletex Customer will be merged with the existing one.
-If no matching PowerOffice GO Customers is found, a new PowerOffice GO Customers will be created.
-
-A Tripletex Customer will merge with a PowerOffice GO Customers if one of the following property combinations match:
+The following properties are synchronized between a Tripletex Customer and a PowerOffice GO Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     - PowerOffice GO Customers Property
-   * - email
-     - EmailAddress
-
-Once a link between a Tripletex Customer and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer and a PowerOffice GO Customers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer Property
-     - PowerOffice GO Customers Property
+     - PowerOffice GO Customers person Property
      - PowerOffice GO Data Type
-   * - customerNumber
-     - Number
-     - "string"
-   * - customerNumber
-     - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCodeDependant on having wd:Q852835 in MailAddress.CountryCodeDependant on having wd:Q852835 in MailAddress.CountryCode)
-     - "string"
-   * - deliveryAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - deliveryAddress.city
-     - MailAddress.City
-     - "string"
-   * - deliveryAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - deliveryAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - email
-     - EmailAddress
-     - "string"
-   * - email
-     - PaymentReminderEmailAddress
-     - "string"
-   * - id
-     - Id
-     - "string"
-   * - invoiceEmail
-     - InvoiceEmailAddress
-     - "string"
-   * - invoiceEmail
-     - PaymentReminderEmailAddress
-     - "string"
-   * - isPrivateIndividual
-     - IsPerson
-     - "boolean"
-   * - name
-     - Name
-     - "string"
-   * - organizationNumber
-     - OrganizationNumber (Dependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.CountryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCode)
-     - "string"
-   * - overdueNoticeEmail
-     - PaymentReminderEmailAddress
-     - "string"
-   * - phoneNumber
-     - Number
-     - "string"
-   * - phoneNumber
-     - PhoneNumber
-     - "string"
-   * - physicalAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - physicalAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - physicalAddress.city
-     - MailAddress.City
-     - "string"
-   * - physicalAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - physicalAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - postalAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - postalAddress.addressLine1
-     - MailAddress.addressLine1
-     - "string"
-   * - postalAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - postalAddress.addressLine2
-     - MailAddress.addressLine2
-     - "string"
-   * - postalAddress.city
-     - MailAddress.City
-     - "string"
-   * - postalAddress.city
-     - MailAddress.city
-     - "string"
-   * - postalAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - postalAddress.country.id
-     - MailAddress.countryCode
-     - "string"
-   * - postalAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - postalAddress.postalCode
-     - MailAddress.zipCode
-     - "string"
-   * - url
-     - WebsiteUrl
-     - "string"
-   * - website
-     - WebsiteUrl
-     - "string"
 
 
 Tripletex Department to PowerOffice GO Departments
 --------------------------------------------------
 Every Tripletex Department will be synchronized with a PowerOffice GO Departments.
-
-If a matching PowerOffice GO Departments already exists, the Tripletex Department will be merged with the existing one.
-If no matching PowerOffice GO Departments is found, a new PowerOffice GO Departments will be created.
-
-A Tripletex Department will merge with a PowerOffice GO Departments if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Department Property
-     - PowerOffice GO Departments Property
-   * - departmentNumber
-     - Code
 
 Once a link between a Tripletex Department and a PowerOffice GO Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -926,36 +1004,11 @@ The following properties are synchronized between a Tripletex Department and a P
    * - Tripletex Department Property
      - PowerOffice GO Departments Property
      - PowerOffice GO Data Type
-   * - changes.timestamp
-     - CreatedDateTimeOffset
-     - "string"
-   * - departmentNumber
-     - Code
-     - "string"
-   * - isInactive
-     - IsActive
-     - "string"
-   * - name
-     - Name
-     - "string"
 
 
 Tripletex Employee to PowerOffice GO Employees
 ----------------------------------------------
 Every Tripletex Employee will be synchronized with a PowerOffice GO Employees.
-
-If a matching PowerOffice GO Employees already exists, the Tripletex Employee will be merged with the existing one.
-If no matching PowerOffice GO Employees is found, a new PowerOffice GO Employees will be created.
-
-A Tripletex Employee will merge with a PowerOffice GO Employees if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - PowerOffice GO Employees Property
-   * - employeeNumber
-     - Number
 
 Once a link between a Tripletex Employee and a PowerOffice GO Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -967,60 +1020,6 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - Tripletex Employee Property
      - PowerOffice GO Employees Property
      - PowerOffice GO Data Type
-   * - changes.timestamp
-     - EmployeeCreatedDateTimeOffset
-     - "string"
-   * - changes.timestamp
-     - employeeCreatedDateTimeOffset
-     - "string"
-   * - dateOfBirth
-     - DateOfBirth
-     - N/A
-   * - dateOfBirth
-     - dateOfBirth
-     - "string"
-   * - department.id
-     - DepartmendId
-     - "string"
-   * - department.id (Dependant on having wd:Q2366457 in  Dependant on having wd:Q2366457 in  )
-     - DepartmentId (Dependant on having wd:Q703534 in JobTitle)
-     - "string"
-   * - department.id (Dependant on having wd:Q29415466 in  Dependant on having wd:Q29415466 in  Dependant on having wd:Q29415492 in  )
-     - IsArchived
-     - "boolean"
-   * - email
-     - EmailAddress
-     - "string"
-   * - employeeNumber
-     - Number
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - lastName
-     - LastName
-     - "string"
-   * - lastName
-     - lastName
-     - "string"
-   * - phoneNumberMobile
-     - PhoneNumber
-     - "string"
-   * - phoneNumberMobile
-     - phoneNumber
-     - "string"
-   * - sesam_employment_status
-     - IsArchived
-     - "boolean"
-   * - userType
-     - MailAddress.CountryCode
-     - "string"
-   * - userType
-     - MailAddress.countryCode
-     - "string"
 
 
 Tripletex Order to PowerOffice GO Salesorders
@@ -1037,33 +1036,6 @@ The following properties are synchronized between a Tripletex Order and a PowerO
    * - Tripletex Order Property
      - PowerOffice GO Salesorders Property
      - PowerOffice GO Data Type
-   * - changes.timestamp
-     - CreatedDateTimeOffset
-     - "string"
-   * - contact.id
-     - CustomerId
-     - "integer"
-   * - contact.id
-     - CustomerReferenceContactPersonId
-     - "string"
-   * - currency.id
-     - CurrencyCode
-     - "string"
-   * - customer.id
-     - CustomerId
-     - "integer"
-   * - customer.id
-     - CustomerReferenceContactPersonId
-     - "string"
-   * - orderDate
-     - OrderDate
-     - "string"
-   * - orderDate
-     - SalesOrderDate
-     - "string"
-   * - reference
-     - PurchaseOrderReference
-     - "string"
 
 
 Tripletex Orderline to PowerOffice GO Salesorderlines
@@ -1080,45 +1052,6 @@ The following properties are synchronized between a Tripletex Orderline and a Po
    * - Tripletex Orderline Property
      - PowerOffice GO Salesorderlines Property
      - PowerOffice GO Data Type
-   * - count
-     - Quantity
-     - N/A
-   * - description
-     - Description
-     - "string"
-   * - discount
-     - Allowance
-     - "float"
-   * - discount
-     - Discount
-     - "string"
-   * - order.id
-     - sesam_SalesOrderId
-     - "string"
-   * - order.id
-     - sesam_SalesOrdersId
-     - "string"
-   * - product.id
-     - ProductCode
-     - "string"
-   * - product.id
-     - ProductId
-     - "integer"
-   * - unitCostCurrency
-     - ProductUnitCost
-     - N/A
-   * - unitPriceExcludingVatCurrency
-     - ProductUnitPrice
-     - N/A
-   * - unitPriceExcludingVatCurrency
-     - SalesOrderLineUnitPrice
-     - "string"
-   * - vatType.id
-     - VatId
-     - "string"
-   * - vatType.id
-     - VatReturnSpecification
-     - "string"
 
 
 Tripletex Product to PowerOffice GO Product
@@ -1135,57 +1068,6 @@ The following properties are synchronized between a Tripletex Product and a Powe
    * - Tripletex Product Property
      - PowerOffice GO Product Property
      - PowerOffice GO Data Type
-   * - costExcludingVatCurrency
-     - CostPrice
-     - "string"
-   * - costExcludingVatCurrency
-     - costPrice
-     - "string"
-   * - description
-     - Description
-     - "string"
-   * - description
-     - description
-     - "string"
-   * - ean
-     - Gtin
-     - "string"
-   * - ean
-     - gtin
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - priceExcludingVatCurrency
-     - SalesPrice
-     - "string"
-   * - priceExcludingVatCurrency
-     - salesPrice
-     - "string"
-   * - productUnit.id
-     - Unit
-     - "string"
-   * - productUnit.id
-     - unit
-     - "string"
-   * - productUnit.id
-     - unitOfMeasureCode
-     - "string"
-   * - stockOfGoods
-     - AvailableStock
-     - "string"
-   * - stockOfGoods
-     - availableStock
-     - "integer"
-   * - vatType.id
-     - VatCode
-     - "string"
-   * - vatType.id
-     - vatCode
-     - "string"
 
 
 Tripletex Project to PowerOffice GO Projects
@@ -1202,46 +1084,4 @@ The following properties are synchronized between a Tripletex Project and a Powe
    * - Tripletex Project Property
      - PowerOffice GO Projects Property
      - PowerOffice GO Data Type
-   * - contact.id
-     - ContactPersonId
-     - "integer"
-   * - customer.id
-     - CustomerId
-     - "integer"
-   * - department.id
-     - DepartmentId
-     - "integer"
-   * - endDate
-     - EndDate
-     - "string"
-   * - hierarchyLevel
-     - _sesam_hierarchy_level
-     - "integer"
-   * - hierarchyLevel
-     - sesam_hierarchy_level
-     - "integer"
-   * - isClosed
-     - IsActive
-     - "string"
-   * - isClosed
-     - IsInternal
-     - "string"
-   * - isInternal
-     - IsActive
-     - "string"
-   * - isInternal
-     - IsInternal
-     - "string"
-   * - mainProject.id
-     - ParentProjectId
-     - "integer"
-   * - name
-     - Name
-     - "string"
-   * - projectManager.id
-     - ProjectManagerEmployeeId
-     - "integer"
-   * - startDate
-     - StartDate
-     - "string"
 
