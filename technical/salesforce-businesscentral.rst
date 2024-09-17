@@ -2,105 +2,12 @@
 Salesforce to Business Central Dataflow
 =======================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Salesforce Order to Businesscentral Salesorders
------------------------------------------------
-Before any synchronization can take place, a link between a Salesforce Order and a Businesscentral Salesorders must be established.
-
-A new Businesscentral Salesorders will be created from a Salesforce Order if it is connected to a Salesforce Order, Seller, Orderitem, Invoiceline, or Quotelineitem that is synchronized into Businesscentral.
-
-Once a link between a Salesforce Order and a Businesscentral Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Order and a Businesscentral Salesorders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Order Property
-     - Businesscentral Salesorders Property
-     - Businesscentral Data Type
-   * - BillingCity
-     - billToCity
-     - "string"
-   * - BillingCity
-     - shipToCity
-     - "string"
-   * - BillingCountry
-     - billToCountry
-     - "string"
-   * - BillingCountry
-     - shipToCountry
-     - "string"
-   * - BillingPostalCode
-     - billToPostCode
-     - "string"
-   * - BillingPostalCode
-     - shipToPostCode
-     - "string"
-   * - BillingStreet
-     - billToAddressLine1
-     - "string"
-   * - BillingStreet
-     - shipToAddressLine1
-     - "string"
-   * - CurrencyIsoCode
-     - currencyId
-     - "string"
-   * - EffectiveDate
-     - requestedDeliveryDate
-     - N/A
-   * - ID
-     - id
-     - "string"
-   * - OrderedDate
-     - orderDate
-     - N/A
-   * - ShippingCity
-     - billToCity
-     - "string"
-   * - ShippingCity
-     - shipToCity
-     - "string"
-   * - ShippingCountry
-     - billToCountry
-     - "string"
-   * - ShippingCountry
-     - shipToCountry
-     - "string"
-   * - ShippingStateCode
-     - billToPostCode
-     - "string"
-   * - ShippingStateCode
-     - shipToPostCode
-     - "string"
-
-
-Salesforce Product2 to Businesscentral Items
---------------------------------------------
-Before any synchronization can take place, a link between a Salesforce Product2 and a Businesscentral Items must be established.
-
-A new Businesscentral Items will be created from a Salesforce Product2 if it is connected to a Salesforce Order, Seller, Orderitem, Invoiceline, or Quotelineitem that is synchronized into Businesscentral.
-
-Once a link between a Salesforce Product2 and a Businesscentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Product2 and a Businesscentral Items:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Product2 Property
-     - Businesscentral Items Property
-     - Businesscentral Data Type
-   * - Name
-     - displayName
-     - "string"
-
 
 Salesforce Division to Business Central Companies
 -------------------------------------------------
@@ -134,51 +41,51 @@ The following properties are synchronized between a Salesforce Organization and 
      - Business Central Data Type
 
 
-Salesforce Contact to Business Central Contacts person
-------------------------------------------------------
-Every Salesforce Contact will be synchronized with a Business Central Contacts person.
+Salesforce Contact to Business Central Contacts (human data)
+------------------------------------------------------------
+Every Salesforce Contact will be synchronized with a Business Central Contacts (human data).
 
-Once a link between a Salesforce Contact and a Business Central Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Contact and a Business Central Contacts (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Contact and a Business Central Contacts person:
+The following properties are synchronized between a Salesforce Contact and a Business Central Contacts (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Contact Property
-     - Business Central Contacts person Property
+     - Business Central Contacts (human data) Property
      - Business Central Data Type
 
 
-Salesforce Customer to Business Central Customers company
----------------------------------------------------------
-Every Salesforce Customer will be synchronized with a Business Central Customers company.
+Salesforce Customer to Business Central Customers (organisation data)
+---------------------------------------------------------------------
+Every Salesforce Customer will be synchronized with a Business Central Customers (organisation data).
 
-Once a link between a Salesforce Customer and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Customer and a Business Central Customers (organisation data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Customer and a Business Central Customers company:
+The following properties are synchronized between a Salesforce Customer and a Business Central Customers (organisation data):
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Customer Property
-     - Business Central Customers company Property
+     - Business Central Customers (organisation data) Property
      - Business Central Data Type
 
 
-Salesforce Customer to Business Central Customers person
---------------------------------------------------------
-Every Salesforce Customer will be synchronized with a Business Central Customers person.
+Salesforce Customer to Business Central Customers (human data)
+--------------------------------------------------------------
+Every Salesforce Customer will be synchronized with a Business Central Customers (human data).
 
-Once a link between a Salesforce Customer and a Business Central Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Customer and a Business Central Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Customer and a Business Central Customers person:
+The following properties are synchronized between a Salesforce Customer and a Business Central Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Customer Property
-     - Business Central Customers person Property
+     - Business Central Customers (human data) Property
      - Business Central Data Type
 
 
@@ -230,19 +137,19 @@ The following properties are synchronized between a Salesforce Orderitem and a B
      - Business Central Data Type
 
 
-Salesforce Organization to Business Central Customers company
--------------------------------------------------------------
-Every Salesforce Organization will be synchronized with a Business Central Customers company.
+Salesforce Organization to Business Central Customers (classification data)
+---------------------------------------------------------------------------
+Every Salesforce Organization will be synchronized with a Business Central Customers (classification data).
 
-Once a link between a Salesforce Organization and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Organization and a Business Central Customers (classification data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Organization and a Business Central Customers company:
+The following properties are synchronized between a Salesforce Organization and a Business Central Customers (classification data):
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Organization Property
-     - Business Central Customers company Property
+     - Business Central Customers (classification data) Property
      - Business Central Data Type
    * - Name
      - displayName
