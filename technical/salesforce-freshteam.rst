@@ -2,7 +2,7 @@
 Salesforce to Freshteam Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -23,19 +23,4 @@ The following properties are synchronized between a Salesforce User and a Fresht
    * - Salesforce User Property
      - Freshteam Employee Property
      - Freshteam Data Type
-   * - Division
-     - designation
-     - "string"
-   * - Email
-     - personal_email
-     - "string"
-   * - FirstName
-     - first_name
-     - "string"
-   * - LastName
-     - last_name
-     - "string"
-   * - MobilePhone
-     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
-     - "string"
 
