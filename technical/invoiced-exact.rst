@@ -2,25 +2,25 @@
 Invoiced to Exact Online Dataflow
 =================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Invoiced Customers company to Exact Online Accounts
----------------------------------------------------
-Every Invoiced Customers company will be synchronized with a Exact Online Accounts.
+Invoiced Customers (organisation data) to Exact Online Accounts
+---------------------------------------------------------------
+Every Invoiced Customers (organisation data) will be synchronized with a Exact Online Accounts.
 
-Once a link between a Invoiced Customers company and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (organisation data) and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a Exact Online Accounts:
+The following properties are synchronized between a Invoiced Customers (organisation data) and a Exact Online Accounts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers company Property
+   * - Invoiced Customers (organisation data) Property
      - Exact Online Accounts Property
      - Exact Online Data Type
    * - name
@@ -28,18 +28,18 @@ The following properties are synchronized between a Invoiced Customers company a
      - "string"
 
 
-Invoiced Customers person to Exact Online Contacts
---------------------------------------------------
-Every Invoiced Customers person will be synchronized with a Exact Online Contacts.
+Invoiced Customers (human data) to Exact Online Contacts
+--------------------------------------------------------
+Every Invoiced Customers (human data) will be synchronized with a Exact Online Contacts.
 
-Once a link between a Invoiced Customers person and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (human data) and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers person and a Exact Online Contacts:
+The following properties are synchronized between a Invoiced Customers (human data) and a Exact Online Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers person Property
+   * - Invoiced Customers (human data) Property
      - Exact Online Contacts Property
      - Exact Online Data Type
    * - city
@@ -133,34 +133,34 @@ The following properties are synchronized between a Invoiced Contacts and a Exac
      - Exact Online Data Type
 
 
-Invoiced Customers company to Exact Online Accounts
----------------------------------------------------
-Every Invoiced Customers company will be synchronized with a Exact Online Accounts.
+Invoiced Customers (organisation data) to Exact Online Accounts
+---------------------------------------------------------------
+Every Invoiced Customers (organisation data) will be synchronized with a Exact Online Accounts.
 
-Once a link between a Invoiced Customers company and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (organisation data) and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a Exact Online Accounts:
+The following properties are synchronized between a Invoiced Customers (organisation data) and a Exact Online Accounts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers company Property
+   * - Invoiced Customers (organisation data) Property
      - Exact Online Accounts Property
      - Exact Online Data Type
 
 
-Invoiced Customers person to Exact Online Accounts
---------------------------------------------------
-Every Invoiced Customers person will be synchronized with a Exact Online Accounts.
+Invoiced Customers (organisation data) to Exact Online Accounts
+---------------------------------------------------------------
+Every Invoiced Customers (organisation data) will be synchronized with a Exact Online Accounts.
 
-Once a link between a Invoiced Customers person and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (organisation data) and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers person and a Exact Online Accounts:
+The following properties are synchronized between a Invoiced Customers (organisation data) and a Exact Online Accounts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers person Property
+   * - Invoiced Customers (organisation data) Property
      - Exact Online Accounts Property
      - Exact Online Data Type
    * - city
@@ -177,18 +177,18 @@ The following properties are synchronized between a Invoiced Customers person an
      - "string"
 
 
-Invoiced Customers person to Exact Online Addresses
----------------------------------------------------
-Every Invoiced Customers person will be synchronized with a Exact Online Addresses.
+Invoiced Customers (location data) to Exact Online Addresses
+------------------------------------------------------------
+Every Invoiced Customers (location data) will be synchronized with a Exact Online Addresses.
 
-Once a link between a Invoiced Customers person and a Exact Online Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (location data) and a Exact Online Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers person and a Exact Online Addresses:
+The following properties are synchronized between a Invoiced Customers (location data) and a Exact Online Addresses:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers person Property
+   * - Invoiced Customers (location data) Property
      - Exact Online Addresses Property
      - Exact Online Data Type
 
