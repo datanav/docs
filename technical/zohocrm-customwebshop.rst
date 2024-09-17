@@ -2,7 +2,7 @@
 ZohoCRM to Custom Webshop Dataflow
 ==================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -28,6 +28,38 @@ The following properties are synchronized between a ZohoCRM Account and a Custom
 ZohoCRM Deal to Custom Webshop Order
 ------------------------------------
 Every ZohoCRM Deal will be synchronized with a Custom Webshop Order.
+
+Once a link between a ZohoCRM Deal and a Custom Webshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Deal and a Custom Webshop Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Deal Property
+     - Custom Webshop Order Property
+     - Custom Webshop Data Type
+
+
+ZohoCRM Contact to Custom Webshop Customer
+------------------------------------------
+Every ZohoCRM Contact will be synchronized with a Custom Webshop Customer.
+
+Once a link between a ZohoCRM Contact and a Custom Webshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Contact and a Custom Webshop Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Contact Property
+     - Custom Webshop Customer Property
+     - Custom Webshop Data Type
+
+
+ZohoCRM Deal to Custom Webshop Order
+------------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Custom Webshop Order.
 
 Once a link between a ZohoCRM Deal and a Custom Webshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
