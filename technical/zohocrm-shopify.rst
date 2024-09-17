@@ -2,7 +2,7 @@
 ZohoCRM to Shopify Dataflow
 ===========================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,82 +23,20 @@ The following properties are synchronized between a ZohoCRM Contact and a Shopif
    * - ZohoCRM Contact Property
      - Shopify Customer Property
      - Shopify Data Type
-   * - Email
-     - email
-     - "string"
-   * - First_Name
-     - first_name
-     - "string"
-   * - Last_Name
-     - last_name
-     - "string"
-   * - Mailing_City
-     - addresses.city
-     - "string"
-   * - Mailing_City
-     - default_address.city
-     - "string"
-   * - Mailing_Country
-     - addresses.country
-     - "string"
-   * - Mailing_Country
-     - default_address.country
-     - "string"
-   * - Mailing_State
-     - addresses.province_code
-     - "string"
-   * - Mailing_State
-     - default_address.province_code
-     - "string"
-   * - Mailing_Zip
-     - addresses.zip
-     - "string"
-   * - Mailing_Zip
-     - default_address.zip
-     - "string"
-   * - Mobile
-     - phone
-     - "string"
-   * - Other_City
-     - addresses.city
-     - "string"
-   * - Other_City
-     - default_address.city
-     - "string"
-   * - Other_Country
-     - addresses.country
-     - "string"
-   * - Other_Country
-     - default_address.country
-     - "string"
-   * - Other_Phone
-     - default_address.phone
-     - "string"
-   * - Other_Phone
-     - phone
-     - "string"
-   * - Other_State
-     - addresses.province_code
-     - "string"
-   * - Other_State
-     - default_address.province_code
-     - "string"
-   * - Other_Zip
-     - addresses.zip
-     - "string"
-   * - Other_Zip
-     - default_address.zip
-     - "string"
-   * - Phone
-     - default_address.phone
-     - "string"
-   * - Phone
-     - phone
-     - "string"
-   * - Secondary_Email
-     - email
-     - "string"
-   * - id
-     - id
-     - "string"
+
+
+ZohoCRM Deal to Shopify Order
+-----------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Shopify Order.
+
+Once a link between a ZohoCRM Deal and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Deal and a Shopify Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Deal Property
+     - Shopify Order Property
+     - Shopify Data Type
 
