@@ -2,7 +2,7 @@
 Zendesk to Custom CRM Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -38,5 +38,21 @@ The following properties are synchronized between a Zendesk Users and a Custom C
 
    * - Zendesk Users Property
      - Custom CRM Contact Property
+     - Custom CRM Data Type
+
+
+Zendesk Users to Custom CRM User
+--------------------------------
+When a Zendesk User is of type Agent, it  will be synchronized with a Custom CRM User.
+
+Once a link between a Zendesk Users and a Custom CRM User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Users and a Custom CRM User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Users Property
+     - Custom CRM User Property
      - Custom CRM Data Type
 
