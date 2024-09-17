@@ -2,7 +2,7 @@
 Business Nxt to Custom CRM Dataflow
 ===================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -41,6 +41,22 @@ The following properties are synchronized between a Business Nxt Company and a C
      - Custom CRM Data Type
 
 
+Business Nxt Order to Custom CRM Order
+--------------------------------------
+Every Business Nxt Order will be synchronized with a Custom CRM Order.
+
+Once a link between a Business Nxt Order and a Custom CRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Order and a Custom CRM Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Order Property
+     - Custom CRM Order Property
+     - Custom CRM Data Type
+
+
 Business Nxt Orderline to Custom CRM Order
 ------------------------------------------
 Every Business Nxt Orderline will be synchronized with a Custom CRM Order.
@@ -54,6 +70,22 @@ The following properties are synchronized between a Business Nxt Orderline and a
 
    * - Business Nxt Orderline Property
      - Custom CRM Order Property
+     - Custom CRM Data Type
+
+
+Business Nxt Product to Custom CRM Product
+------------------------------------------
+Every Business Nxt Product will be synchronized with a Custom CRM Product.
+
+Once a link between a Business Nxt Product and a Custom CRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Product and a Custom CRM Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Product Property
+     - Custom CRM Product Property
      - Custom CRM Data Type
 
 
