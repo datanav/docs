@@ -2,7 +2,7 @@
 Wix.com to WooCommerce Dataflow
 ===============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -25,6 +25,21 @@ The following properties are synchronized between a Wix.com Orders and a WooComm
    * - Wix.com Orders Property
      - WooCommerce Order Property
      - WooCommerce Data Type
+   * - buyerInfo.id
+     - customer_id
+     - "string"
+   * - currency
+     - currency
+     - "string"
+   * - lineItems.name
+     - line_items.name
+     - "string"
+   * - lineItems.price
+     - line_items.price
+     - "string"
+   * - lineItems.quantity
+     - line_items.quantity
+     - "string"
 
 
 Wix.com Products to WooCommerce Product
@@ -43,6 +58,21 @@ The following properties are synchronized between a Wix.com Products and a WooCo
    * - Wix.com Products Property
      - WooCommerce Product Property
      - WooCommerce Data Type
+   * - costAndProfitData.itemCost
+     - price
+     - "string"
+   * - costRange.maxValue
+     - price
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - priceData.price
+     - sale_price
+     - "string"
+   * - sku
+     - sku
+     - "string"
 
 
 Wix.com Orders to WooCommerce Order
