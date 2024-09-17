@@ -2,12 +2,28 @@
 Salesforce to CRMOffice Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to CRMOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Salesforce Contact to CRMOffice Contacts
+----------------------------------------
+Every Salesforce Contact will be synchronized with a CRMOffice Contacts.
+
+Once a link between a Salesforce Contact and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Contact and a CRMOffice Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Contact Property
+     - CRMOffice Contacts Property
+     - CRMOffice Data Type
+
 
 Salesforce Customer to CRMOffice Contacts
 -----------------------------------------
@@ -121,16 +137,20 @@ The following properties are synchronized between a Salesforce Contact and a CRM
    * - Salesforce Contact Property
      - CRMOffice Contacts Property
      - CRMOffice Data Type
-   * - FirstName
-     - givenName
-     - "string"
-   * - LastName
-     - familyName
-     - "string"
-   * - MobilePhone
-     - mobilePhone
-     - "string"
-   * - Phone
-     - directPhone
-     - "string"
+
+
+Salesforce Organization to CRMOffice Companies
+----------------------------------------------
+Every Salesforce Organization will be synchronized with a CRMOffice Companies.
+
+Once a link between a Salesforce Organization and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Organization and a CRMOffice Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Organization Property
+     - CRMOffice Companies Property
+     - CRMOffice Data Type
 
