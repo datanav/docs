@@ -2,7 +2,7 @@
 SuperOffice to Tidsbanken Dataflow
 ==================================
 
-Generated: 2024-09-17 09:14:34
+Generated: 2024-09-17 12:35:48
 
 Introduction
 ------------
@@ -206,4 +206,10 @@ The following properties are synchronized between a SuperOffice Project and a Ti
    * - SuperOffice Project Property
      - Tidsbanken Prosjekt Property
      - Tidsbanken Data Type
+   * - Associate.AssociateId
+     - AnsvarligId
+     - "integer"
+   * - Name
+     - Navn
+     - "string"
 
