@@ -2,7 +2,7 @@
 Salesforce to CRMOffice Dataflow
 ================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -121,9 +121,6 @@ The following properties are synchronized between a Salesforce User and a CRMOff
    * - Salesforce User Property
      - CRMOffice Contacts Property
      - CRMOffice Data Type
-   * - EmployeeNumber
-     - company.id
-     - "string"
    * - FirstName
      - givenName
      - "string"
