@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -42,18 +42,6 @@ The following properties are synchronized between a Salesforce Order and a Sales
    * - Salesforce Order Property
      - Salesforce Invoice Property
      - Salesforce Data Type
-   * - CurrencyIsoCode
-     - CurrencyIsoCode
-     - "string"
-   * - Description
-     - Description
-     - "string"
-   * - EffectiveDate
-     - FullSettlementDate
-     - "string"
-   * - TotalAmount
-     - TotalAmount
-     - "string"
 
 
 Salesforce Orderitem to Salesforce Invoice
@@ -111,15 +99,6 @@ The following properties are synchronized between a Salesforce Quote and a Sales
    * - Salesforce Quote Property
      - Salesforce Invoice Property
      - Salesforce Data Type
-   * - CurrencyIsoCode
-     - CurrencyIsoCode
-     - "string"
-   * - Description
-     - Description
-     - "string"
-   * - TotalPriceWithTax
-     - TotalAmount
-     - "string"
 
 
 Salesforce Quotelineitem to Salesforce Invoice
@@ -187,6 +166,18 @@ The following properties are synchronized between a Salesforce Order and a Sales
    * - Salesforce Order Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - CurrencyIsoCode
+     - CurrencyIsoCode
+     - "string"
+   * - Description
+     - Description
+     - "string"
+   * - EffectiveDate
+     - FullSettlementDate
+     - "string"
+   * - TotalAmount
+     - TotalAmount
+     - "string"
 
 
 Salesforce Orderitem to Salesforce Invoiceline
@@ -235,6 +226,15 @@ The following properties are synchronized between a Salesforce Quote and a Sales
    * - Salesforce Quote Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - CurrencyIsoCode
+     - CurrencyIsoCode
+     - "string"
+   * - Description
+     - Description
+     - "string"
+   * - TotalPriceWithTax
+     - TotalAmount
+     - "string"
 
 
 Salesforce Quotelineitem to Salesforce Invoiceline
