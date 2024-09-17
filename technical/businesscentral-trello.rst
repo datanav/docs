@@ -2,7 +2,7 @@
 Business Central to Trello Dataflow
 ===================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -61,6 +61,12 @@ The following properties are synchronized between a Business Central Customers c
    * - Business Central Customers company Property
      - Trello Organizations Property
      - Trello Data Type
+   * - displayName
+     - name
+     - "string"
+   * - website
+     - website
+     - "string"
 
 
 Business Central Customers person to Trello Members
@@ -99,6 +105,12 @@ The following properties are synchronized between a Business Central Employees a
    * - Business Central Employees Property
      - Trello Members Property
      - Trello Data Type
+   * - displayName
+     - fullName
+     - "string"
+   * - personalEmail
+     - email
+     - "string"
 
 
 Business Central Customers company to Trello Organizations
