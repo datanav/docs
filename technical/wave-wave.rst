@@ -2,7 +2,7 @@
 Wave to Wave Dataflow
 =====================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:49
 
 Introduction
 ------------
@@ -78,7 +78,7 @@ Wave Customer to Wave Customer person
 -------------------------------------
 Before any synchronization can take place, a link between a Wave Customer and a Wave Customer person must be established.
 
-A new Wave Customer person will be created from a Wave Customer if it is connected to a Wave Vendor, Invoice, Business, or Customer that is synchronized into Wave.
+A new Wave Customer person will be created from a Wave Customer if it is connected to a Wave Vendor, Invoice, Business, Customer, or Customer-person that is synchronized into Wave.
 
 A Wave Customer will merge with a Wave Customer person if one of the following property combinations match:
 
@@ -190,7 +190,7 @@ Wave Vendor to Wave Customer person
 -----------------------------------
 Before any synchronization can take place, a link between a Wave Vendor and a Wave Customer person must be established.
 
-A new Wave Customer person will be created from a Wave Vendor if it is connected to a Wave Vendor, Invoice, Business, or Customer that is synchronized into Wave.
+A new Wave Customer person will be created from a Wave Vendor if it is connected to a Wave Vendor, Invoice, Business, Customer, or Customer-person that is synchronized into Wave.
 
 A Wave Vendor will merge with a Wave Customer person if one of the following property combinations match:
 
@@ -254,7 +254,7 @@ Wave Financial Vendor to Wave Customer
 --------------------------------------
 Before any synchronization can take place, a link between a Wave Financial Vendor and a Wave Customer must be established.
 
-A new Wave Customer will be created from a Wave Financial Vendor if it is connected to a Wave Financial Wave-vendor, Wave-invoice, Wave-business, or Wave-customer that is synchronized into Wave.
+A new Wave Customer will be created from a Wave Financial Vendor if it is connected to a Wave Financial Wave-vendor, Wave-invoice, Wave-business, Wave-customer, or Wave-customer-person that is synchronized into Wave.
 
 Once a link between a Wave Financial Vendor and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -348,6 +348,90 @@ The following properties are synchronized between a Wave Customer person and a W
    * - Wave Customer person Property
      - Wave Customer Property
      - Wave Data Type
+   * - address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - address.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - address.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - address.city
+     - address.city
+     - "string"
+   * - address.city
+     - shippingDetails.address.city
+     - "string"
+   * - address.country.code
+     - address.country.code
+     - "string"
+   * - address.country.code
+     - shippingDetails.address.country.code
+     - "string"
+   * - address.postalCode
+     - address.postalCode
+     - "string"
+   * - address.postalCode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - address.province.code
+     - address.province.code
+     - "string"
+   * - address.province.code
+     - shippingDetails.address.province.code
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - mobile
+     - mobile
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - shippingDetails.address.city
+     - address.city
+     - "string"
+   * - shippingDetails.address.city
+     - shippingDetails.address.city
+     - "string"
+   * - shippingDetails.address.country.code
+     - address.country.code
+     - "string"
+   * - shippingDetails.address.country.code
+     - shippingDetails.address.country.code
+     - "string"
+   * - shippingDetails.address.postalCode
+     - address.postalCode
+     - "string"
+   * - shippingDetails.address.postalCode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - shippingDetails.address.province.code
+     - address.province.code
+     - "string"
+   * - shippingDetails.address.province.code
+     - shippingDetails.address.province.code
+     - "string"
 
 
 Wave Customer to Wave Customer person
