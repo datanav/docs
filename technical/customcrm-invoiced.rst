@@ -2,7 +2,7 @@
 Custom CRM to Invoiced Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -22,6 +22,22 @@ The following properties are synchronized between a Custom CRM Customer and a In
 
    * - Custom CRM Customer Property
      - Invoiced Customers company Property
+     - Invoiced Data Type
+
+
+Custom CRM Customer to Invoiced Customers person
+------------------------------------------------
+Every Custom CRM Customer will be synchronized with a Invoiced Customers person.
+
+Once a link between a Custom CRM Customer and a Invoiced Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom CRM Customer and a Invoiced Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom CRM Customer Property
+     - Invoiced Customers person Property
      - Invoiced Data Type
 
 
