@@ -2,7 +2,7 @@
 CRMOffice to Exact Online Dataflow
 ==================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -25,6 +25,22 @@ The following properties are synchronized between a CRMOffice Companies and a Ex
      - Exact Online Data Type
 
 
+CRMOffice Contacts to Exact Online Contacts
+-------------------------------------------
+Every CRMOffice Contacts will be synchronized with a Exact Online Contacts.
+
+Once a link between a CRMOffice Contacts and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a CRMOffice Contacts and a Exact Online Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - CRMOffice Contacts Property
+     - Exact Online Contacts Property
+     - Exact Online Data Type
+
+
 CRMOffice Activities to Exact Online Addresses
 ----------------------------------------------
 Every CRMOffice Activities will be synchronized with a Exact Online Addresses.
@@ -39,15 +55,6 @@ The following properties are synchronized between a CRMOffice Activities and a E
    * - CRMOffice Activities Property
      - Exact Online Addresses Property
      - Exact Online Data Type
-   * - address.country
-     - Country
-     - "string"
-   * - address.country
-     - CountryName
-     - "string"
-   * - address.postalArea
-     - City
-     - "string"
 
 
 CRMOffice Companies to Exact Online Addresses
@@ -64,24 +71,6 @@ The following properties are synchronized between a CRMOffice Companies and a Ex
    * - CRMOffice Companies Property
      - Exact Online Addresses Property
      - Exact Online Data Type
-   * - postAddress.country
-     - Country
-     - "string"
-   * - postAddress.country
-     - CountryName
-     - "string"
-   * - postAddress.postalArea
-     - City
-     - "string"
-   * - visitAddress.country
-     - Country
-     - "string"
-   * - visitAddress.country
-     - CountryName
-     - "string"
-   * - visitAddress.postalArea
-     - City
-     - "string"
 
 
 CRMOffice Contacts to Exact Online Contacts
