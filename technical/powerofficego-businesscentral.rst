@@ -2,7 +2,7 @@
 PowerOffice GO to Business Central Dataflow
 ===========================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -118,6 +118,36 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Business Central Customers company Property
      - Business Central Data Type
+   * - Id
+     - id
+     - "string"
+   * - IsPerson
+     - type
+     - "string"
+   * - MailAddress.AddressLine1
+     - addressLine1
+     - "string"
+   * - MailAddress.AddressLine2
+     - addressLine2
+     - "string"
+   * - MailAddress.City
+     - city
+     - "string"
+   * - MailAddress.CountryCode
+     - country
+     - "string"
+   * - MailAddress.ZipCode
+     - postalCode
+     - "string"
+   * - Name
+     - displayName
+     - "string"
+   * - PhoneNumber
+     - phoneNumber
+     - "string"
+   * - WebsiteUrl
+     - website
+     - "string"
 
 
 PowerOffice GO Customers to Business Central Customers person
@@ -154,6 +184,18 @@ The following properties are synchronized between a PowerOffice GO Product and a
    * - PowerOffice GO Product Property
      - Business Central Items Property
      - Business Central Data Type
+   * - costPrice
+     - unitCost
+     - N/A
+   * - gtin
+     - gtin
+     - "string"
+   * - name
+     - displayName
+     - "string"
+   * - salesPrice
+     - unitPrice
+     - N/A
 
 
 PowerOffice GO Salesorders to Business Central Salesorders
@@ -172,6 +214,18 @@ The following properties are synchronized between a PowerOffice GO Salesorders a
    * - PowerOffice GO Salesorders Property
      - Business Central Salesorders Property
      - Business Central Data Type
+   * - CurrencyCode
+     - currencyId
+     - "string"
+   * - CustomerId
+     - customerId
+     - "string"
+   * - CustomerReferenceContactPersonId
+     - customerId
+     - "string"
+   * - SalesOrderDate
+     - orderDate
+     - N/A
 
 
 PowerOffice GO Customers to Business Central Companies
