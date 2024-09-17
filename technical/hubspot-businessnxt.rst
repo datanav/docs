@@ -2,7 +2,7 @@
 HubSpot to Business Nxt Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -48,6 +48,22 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
    * - label
      - name
      - "string"
+
+
+HubSpot Deal to Business Nxt Order
+----------------------------------
+Every HubSpot Deal will be synchronized with a Business Nxt Order.
+
+Once a link between a HubSpot Deal and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a Business Nxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - Business Nxt Order Property
+     - Business Nxt Data Type
 
 
 HubSpot Dealcompanyassociation to Business Nxt Order
@@ -204,6 +220,22 @@ The following properties are synchronized between a HubSpot Lineitemquoteassocia
    * - label
      - name
      - "string"
+
+
+HubSpot Product to Business Nxt Product
+---------------------------------------
+Every HubSpot Product will be synchronized with a Business Nxt Product.
+
+Once a link between a HubSpot Product and a Business Nxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a Business Nxt Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     - Business Nxt Product Property
+     - Business Nxt Data Type
 
 
 HubSpot Quote to Business Nxt Order
@@ -379,9 +411,6 @@ The following properties are synchronized between a HubSpot Account and a Busine
    * - HubSpot Account Property
      - Business Nxt Currency Property
      - Business Nxt Data Type
-   * - accountType
-     - isoCode
-     - "string"
 
 
 HubSpot Company to Business Nxt Country
@@ -398,18 +427,6 @@ The following properties are synchronized between a HubSpot Company and a Busine
    * - HubSpot Company Property
      - Business Nxt Country Property
      - Business Nxt Data Type
-   * - properties.country
-     - name
-     - "string"
-   * - properties.industry
-     - name
-     - "string"
-   * - properties.state
-     - name
-     - "string"
-   * - properties.type
-     - name
-     - "string"
 
 
 HubSpot Deal to Business Nxt Currency
@@ -426,9 +443,6 @@ The following properties are synchronized between a HubSpot Deal and a Business 
    * - HubSpot Deal Property
      - Business Nxt Currency Property
      - Business Nxt Data Type
-   * - properties.deal_currency_code
-     - isoCode
-     - "string"
 
 
 HubSpot Deal to Business Nxt Order
@@ -445,15 +459,6 @@ The following properties are synchronized between a HubSpot Deal and a Business 
    * - HubSpot Deal Property
      - Business Nxt Order Property
      - Business Nxt Data Type
-   * - properties.closedate
-     - dueDate
-     - "string"
-   * - properties.closedate
-     - orderDate
-     - "string"
-   * - properties.dealname
-     - name
-     - "string"
 
 
 HubSpot Lineitem to Business Nxt Orderline
@@ -472,6 +477,38 @@ The following properties are synchronized between a HubSpot Lineitem and a Busin
      - Business Nxt Data Type
 
 
+HubSpot Lineitemdealassociationtype to Business Nxt Orderline
+-------------------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a Business Nxt Orderline.
+
+Once a link between a HubSpot Lineitemdealassociationtype and a Business Nxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a Business Nxt Orderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociationtype Property
+     - Business Nxt Orderline Property
+     - Business Nxt Data Type
+
+
+HubSpot Lineitemquoteassociationtype to Business Nxt Orderline
+--------------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a Business Nxt Orderline.
+
+Once a link between a HubSpot Lineitemquoteassociationtype and a Business Nxt Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a Business Nxt Orderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociationtype Property
+     - Business Nxt Orderline Property
+     - Business Nxt Data Type
+
+
 HubSpot Product to Business Nxt Product
 ---------------------------------------
 Every HubSpot Product will be synchronized with a Business Nxt Product.
@@ -486,10 +523,4 @@ The following properties are synchronized between a HubSpot Product and a Busine
    * - HubSpot Product Property
      - Business Nxt Product Property
      - Business Nxt Data Type
-   * - properties.description
-     - description
-     - "string"
-   * - properties.price
-     - priceQuantity
-     - "string"
 
