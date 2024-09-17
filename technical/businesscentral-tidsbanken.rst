@@ -2,7 +2,7 @@
 Business Central to Tidsbanken Dataflow
 =======================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,48 +23,22 @@ The following properties are synchronized between a Business Central Customers c
    * - Business Central Customers company Property
      - Tidsbanken Kunde Property
      - Tidsbanken Data Type
-   * - addressLine1
-     - Gateadresse
-     - "string"
-   * - addressLine1
-     - Leveringsadresse
-     - "string"
-   * - addressLine1
-     - Postadresse
-     - "string"
-   * - addressLine2
-     - Gateadresse
-     - "string"
-   * - addressLine2
-     - Leveringsadresse2
-     - "string"
-   * - addressLine2
-     - Postadresse
-     - "string"
-   * - city
-     - LevPoststed
-     - "string"
-   * - city
-     - Poststed
-     - "string"
-   * - displayName
-     - Navn
-     - "string"
-   * - id
-     - Id
-     - "string"
-   * - phoneNumber
-     - Telefon
-     - "string"
-   * - postalCode
-     - LevPostNr
-     - "string"
-   * - postalCode
-     - Postnr
-     - "string"
-   * - website
-     - Url
-     - "string"
+
+
+Business Central Customers person to Tidsbanken Kunde
+-----------------------------------------------------
+Every Business Central Customers person will be synchronized with a Tidsbanken Kunde.
+
+Once a link between a Business Central Customers person and a Tidsbanken Kunde is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Customers person and a Tidsbanken Kunde:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Customers person Property
+     - Tidsbanken Kunde Property
+     - Tidsbanken Data Type
 
 
 Business Central Employees to Tidsbanken Ansatt
@@ -81,46 +55,4 @@ The following properties are synchronized between a Business Central Employees a
    * - Business Central Employees Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
-   * - birthDate
-     - Fodt
-     - "string"
-   * - displayName
-     - Etternavn
-     - "string"
-   * - displayName
-     - Fornavn
-     - "string"
-   * - displayName
-     - Navn
-     - "string"
-   * - email
-     - Epost
-     - "string"
-   * - givenName
-     - Etternavn
-     - "string"
-   * - givenName
-     - Fornavn
-     - "string"
-   * - givenName
-     - Navn
-     - "string"
-   * - jobTitle
-     - AvdelingId
-     - "string"
-   * - jobTitle
-     - Tittel
-     - "string"
-   * - mobilePhone
-     - Mobil
-     - "string"
-   * - surname
-     - Etternavn
-     - "string"
-   * - surname
-     - Fornavn
-     - "string"
-   * - surname
-     - Navn
-     - "string"
 
