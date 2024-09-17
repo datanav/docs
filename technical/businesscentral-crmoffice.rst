@@ -2,7 +2,7 @@
 Business Central to CRMOffice Dataflow
 ======================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Business Central Contacts pe
    * - Business Central Contacts person Property
      - CRMOffice Contacts Property
      - CRMOffice Data Type
+   * - mobilePhoneNumber
+     - mobilePhone
+     - "string"
+   * - phoneNumber
+     - directPhone
+     - "string"
 
 
 Business Central Customers person to CRMOffice Contacts
