@@ -2,156 +2,42 @@
 WooCommerce to Business Central Dataflow
 ========================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-WooCommerce Order to Business Central Salesorders
--------------------------------------------------
-Before any synchronization can take place, a link between a WooCommerce Order and a Business Central Salesorders must be established.
+WooCommerce Customer to Business Central Customers (organisation data)
+----------------------------------------------------------------------
+Every WooCommerce Customer will be synchronized with a Business Central Customers (organisation data).
 
-A new Business Central Salesorders will be created from a WooCommerce Order if it is connected to a WooCommerce Order that is synchronized into Business Central.
+Once a link between a WooCommerce Customer and a Business Central Customers (organisation data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-Once a link between a WooCommerce Order and a Business Central Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a WooCommerce Order and a Business Central Salesorders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Order Property
-     - Business Central Salesorders Property
-     - Business Central Data Type
-   * - billing.address_1
-     - billToAddressLine1
-     - "string"
-   * - billing.address_1
-     - shipToAddressLine1
-     - "string"
-   * - billing.address_2
-     - billToAddressLine2
-     - "string"
-   * - billing.address_2
-     - shipToAddressLine2
-     - "string"
-   * - billing.city
-     - billToCity
-     - "string"
-   * - billing.city
-     - shipToCity
-     - "string"
-   * - billing.country
-     - billToCountry
-     - "string"
-   * - billing.country
-     - shipToCountry
-     - "string"
-   * - billing.postcode
-     - billToPostCode
-     - "string"
-   * - billing.postcode
-     - shipToPostCode
-     - "string"
-   * - currency
-     - currencyId
-     - "string"
-   * - customer_id
-     - customerId
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - shipping.address_1
-     - billToAddressLine1
-     - "string"
-   * - shipping.address_1
-     - shipToAddressLine1
-     - "string"
-   * - shipping.address_2
-     - billToAddressLine2
-     - "string"
-   * - shipping.address_2
-     - shipToAddressLine2
-     - "string"
-   * - shipping.city
-     - billToCity
-     - "string"
-   * - shipping.city
-     - shipToCity
-     - "string"
-   * - shipping.country
-     - billToCountry
-     - "string"
-   * - shipping.country
-     - shipToCountry
-     - "string"
-   * - shipping.postcode
-     - billToPostCode
-     - "string"
-   * - shipping.postcode
-     - shipToPostCode
-     - "string"
-
-
-WooCommerce Product to Business Central Items
----------------------------------------------
-Before any synchronization can take place, a link between a WooCommerce Product and a Business Central Items must be established.
-
-A new Business Central Items will be created from a WooCommerce Product if it is connected to a WooCommerce Order that is synchronized into Business Central.
-
-Once a link between a WooCommerce Product and a Business Central Items is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a WooCommerce Product and a Business Central Items:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Product Property
-     - Business Central Items Property
-     - Business Central Data Type
-   * - name
-     - displayName
-     - "string"
-   * - price
-     - unitCost
-     - N/A
-   * - sale_price
-     - unitPrice
-     - N/A
-
-
-WooCommerce Customer to Business Central Customers company
-----------------------------------------------------------
-Every WooCommerce Customer will be synchronized with a Business Central Customers company.
-
-Once a link between a WooCommerce Customer and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a WooCommerce Customer and a Business Central Customers company:
+The following properties are synchronized between a WooCommerce Customer and a Business Central Customers (organisation data):
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Customer Property
-     - Business Central Customers company Property
+     - Business Central Customers (organisation data) Property
      - Business Central Data Type
 
 
-WooCommerce Customer to Business Central Customers person
----------------------------------------------------------
-Every WooCommerce Customer will be synchronized with a Business Central Customers person.
+WooCommerce Customer to Business Central Customers (human data)
+---------------------------------------------------------------
+Every WooCommerce Customer will be synchronized with a Business Central Customers (human data).
 
-Once a link between a WooCommerce Customer and a Business Central Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Customer and a Business Central Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Customer and a Business Central Customers person:
+The following properties are synchronized between a WooCommerce Customer and a Business Central Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Customer Property
-     - Business Central Customers person Property
+     - Business Central Customers (human data) Property
      - Business Central Data Type
 
 
