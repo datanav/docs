@@ -2,66 +2,12 @@
 WooCommerce to Tripletex Dataflow
 =================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-WooCommerce Order to Tripletex Order
-------------------------------------
-Before any synchronization can take place, a link between a WooCommerce Order and a Tripletex Order must be established.
-
-A new Tripletex Order will be created from a WooCommerce Order if it is connected to a WooCommerce Order that is synchronized into Tripletex.
-
-Once a link between a WooCommerce Order and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a WooCommerce Order and a Tripletex Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Order Property
-     - Tripletex Order Property
-     - Tripletex Data Type
-   * - currency
-     - currency.id
-     - "integer"
-   * - customer_id
-     - contact.id
-     - "integer"
-   * - customer_id
-     - customer.id
-     - "integer"
-
-
-WooCommerce Product to Tripletex Product
-----------------------------------------
-Before any synchronization can take place, a link between a WooCommerce Product and a Tripletex Product must be established.
-
-A new Tripletex Product will be created from a WooCommerce Product if it is connected to a WooCommerce Order that is synchronized into Tripletex.
-
-Once a link between a WooCommerce Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a WooCommerce Product and a Tripletex Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Product Property
-     - Tripletex Product Property
-     - Tripletex Data Type
-   * - name
-     - name
-     - "string"
-   * - price
-     - costExcludingVatCurrency
-     - "float"
-   * - sale_price
-     - priceExcludingVatCurrency
-     - "float"
-
 
 WooCommerce Customer to Tripletex Customer
 ------------------------------------------
@@ -172,19 +118,19 @@ The following properties are synchronized between a WooCommerce Customer and a T
      - "string"
 
 
-WooCommerce Customer to Tripletex Customer person
--------------------------------------------------
-Every WooCommerce Customer will be synchronized with a Tripletex Customer person.
+WooCommerce Customer to Tripletex Customer (human data)
+-------------------------------------------------------
+Every WooCommerce Customer will be synchronized with a Tripletex Customer (human data).
 
-Once a link between a WooCommerce Customer and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WooCommerce Customer and a Tripletex Customer (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WooCommerce Customer and a Tripletex Customer person:
+The following properties are synchronized between a WooCommerce Customer and a Tripletex Customer (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - WooCommerce Customer Property
-     - Tripletex Customer person Property
+     - Tripletex Customer (human data) Property
      - Tripletex Data Type
 
 
