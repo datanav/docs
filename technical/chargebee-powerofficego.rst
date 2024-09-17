@@ -2,7 +2,7 @@
 Chargebee to PowerOffice GO Dataflow
 ====================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -70,6 +70,15 @@ The following properties are synchronized between a Chargebee Customer and a Pow
    * - Chargebee Customer Property
      - PowerOffice GO Customers person Property
      - PowerOffice GO Data Type
+   * - email
+     - EmailAddress
+     - "string"
+   * - first_name
+     - FirstName
+     - "string"
+   * - last_name
+     - LastName
+     - "string"
 
 
 Chargebee Address to PowerOffice GO Customers
@@ -86,6 +95,21 @@ The following properties are synchronized between a Chargebee Address and a Powe
    * - Chargebee Address Property
      - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
+   * - addr
+     - MailAddress.AddressLine1
+     - "string"
+   * - city
+     - MailAddress.City
+     - "string"
+   * - country
+     - MailAddress.CountryCode
+     - "string"
+   * - subscription_id
+     - Id
+     - "integer"
+   * - zip
+     - MailAddress.ZipCode
+     - "string"
 
 
 Chargebee Address to PowerOffice GO Customers person
@@ -102,6 +126,21 @@ The following properties are synchronized between a Chargebee Address and a Powe
    * - Chargebee Address Property
      - PowerOffice GO Customers person Property
      - PowerOffice GO Data Type
+   * - addr
+     - MailAddress.AddressLine1
+     - "string"
+   * - city
+     - MailAddress.City
+     - "string"
+   * - country
+     - MailAddress.CountryCode
+     - "string"
+   * - subscription_id
+     - Id
+     - "integer"
+   * - zip
+     - MailAddress.ZipCode
+     - "string"
 
 
 Chargebee Customer to PowerOffice GO Customers
