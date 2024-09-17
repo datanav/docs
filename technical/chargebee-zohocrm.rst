@@ -2,7 +2,7 @@
 Chargebee to ZohoCRM Dataflow
 =============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -42,6 +42,24 @@ The following properties are synchronized between a Chargebee Address and a Zoho
    * - Chargebee Address Property
      - ZohoCRM Contact Property
      - ZohoCRM Data Type
+   * - city
+     - Mailing_City
+     - "string"
+   * - city
+     - Other_City
+     - "string"
+   * - country
+     - Mailing_Country
+     - "string"
+   * - country
+     - Other_Country
+     - "string"
+   * - zip
+     - Mailing_Zip
+     - "string"
+   * - zip
+     - Other_Zip
+     - "string"
 
 
 Chargebee Customer to ZohoCRM Contact
