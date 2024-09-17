@@ -2,7 +2,7 @@
 MemberCare to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -74,6 +74,9 @@ The following properties are synchronized between a MemberCare Invoices and a Sa
    * - MemberCare Invoices Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - payDueDate
+     - DueDate
+     - "string"
 
 
 MemberCare Organizations to Salesforce Division
