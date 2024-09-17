@@ -2,7 +2,7 @@
 Business Nxt to Unieconomy Dataflow
 ===================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,9 +23,6 @@ The following properties are synchronized between a Business Nxt Address and a U
    * - Business Nxt Address Property
      - Unieconomy Companies Property
      - Unieconomy Data Type
-   * - name
-     - Name
-     - "string"
 
 
 Business Nxt Company to Unieconomy Companies
@@ -42,7 +39,4 @@ The following properties are synchronized between a Business Nxt Company and a U
    * - Business Nxt Company Property
      - Unieconomy Companies Property
      - Unieconomy Data Type
-   * - name
-     - Name
-     - "string"
 
