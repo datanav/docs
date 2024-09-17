@@ -2,7 +2,7 @@
 Chargebee to WooCommerce Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -39,16 +39,4 @@ The following properties are synchronized between a Chargebee Order and a WooCom
    * - Chargebee Order Property
      - WooCommerce Order Property
      - WooCommerce Data Type
-   * - currency_code
-     - currency
-     - "string"
-   * - customer_id
-     - customer_id
-     - "string"
-   * - order_line_items.amount
-     - line_items.quantity
-     - "string"
-   * - order_line_items.unit_price
-     - line_items.price
-     - "string"
 
