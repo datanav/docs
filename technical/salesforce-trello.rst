@@ -2,7 +2,7 @@
 Salesforce to Trello Dataflow
 =============================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -80,6 +80,9 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      - Trello Organizations Property
      - Trello Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Salesforce Seller to Trello Members
@@ -134,6 +137,12 @@ The following properties are synchronized between a Salesforce User and a Trello
    * - Salesforce User Property
      - Trello Members Property
      - Trello Data Type
+   * - Email
+     - email
+     - "string"
+   * - Name
+     - fullName
+     - "string"
 
 
 Salesforce Organization to Trello Organizations
