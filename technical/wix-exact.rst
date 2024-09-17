@@ -2,7 +2,7 @@
 Wix.com to Exact Online Dataflow
 ================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -25,6 +25,9 @@ The following properties are synchronized between a Wix.com Orders and a Exact O
    * - Wix.com Orders Property
      - Exact Online Salesorders Property
      - Exact Online Data Type
+   * - currency
+     - Currency
+     - "string"
 
 
 Wix.com Products to Exact Online Items
