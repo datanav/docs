@@ -2,7 +2,7 @@
 Chargebee to Custom Webshop Dataflow
 ====================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -21,6 +21,70 @@ The following properties are synchronized between a Chargebee Business_entity an
    :header-rows: 1
 
    * - Chargebee Business_entity Property
+     - Custom Webshop Customer Property
+     - Custom Webshop Data Type
+
+
+Chargebee Item to Custom Webshop Product
+----------------------------------------
+Every Chargebee Item will be synchronized with a Custom Webshop Product.
+
+Once a link between a Chargebee Item and a Custom Webshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Item and a Custom Webshop Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Item Property
+     - Custom Webshop Product Property
+     - Custom Webshop Data Type
+
+
+Chargebee Order to Custom Webshop Order
+---------------------------------------
+Every Chargebee Order will be synchronized with a Custom Webshop Order.
+
+Once a link between a Chargebee Order and a Custom Webshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Order and a Custom Webshop Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Order Property
+     - Custom Webshop Order Property
+     - Custom Webshop Data Type
+
+
+Chargebee Address to Custom Webshop Customer
+--------------------------------------------
+Every Chargebee Address will be synchronized with a Custom Webshop Customer.
+
+Once a link between a Chargebee Address and a Custom Webshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Address and a Custom Webshop Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Address Property
+     - Custom Webshop Customer Property
+     - Custom Webshop Data Type
+
+
+Chargebee Customer to Custom Webshop Customer
+---------------------------------------------
+Every Chargebee Customer will be synchronized with a Custom Webshop Customer.
+
+Once a link between a Chargebee Customer and a Custom Webshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Customer and a Custom Webshop Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Customer Property
      - Custom Webshop Customer Property
      - Custom Webshop Data Type
 
