@@ -2,7 +2,7 @@
 Asana to PowerOffice GO Dataflow
 ================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 12:35:48
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Asana Projects and a PowerOf
    * - Asana Projects Property
      - PowerOffice GO Projects Property
      - PowerOffice GO Data Type
+   * - name
+     - Name
+     - "string"
+   * - owner.gid
+     - ProjectManagerEmployeeId
+     - "integer"
 
 
 Asana Users to PowerOffice GO Employees
