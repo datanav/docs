@@ -2,7 +2,7 @@
 Chargebee to Business Nxt Dataflow
 ==================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Chargebee Business_entity an
    * - Chargebee Business_entity Property
      - Business Nxt Address Property
      - Business Nxt Data Type
+   * - name
+     - name
+     - "string"
 
 
 Chargebee Currency to Business Nxt Country
