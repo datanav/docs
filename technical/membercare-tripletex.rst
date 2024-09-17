@@ -2,7 +2,7 @@
 MemberCare to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,13 +23,4 @@ The following properties are synchronized between a MemberCare Invoices and a Tr
    * - MemberCare Invoices Property
      - Tripletex Orderline Property
      - Tripletex Data Type
-   * - invoiceItems.description
-     - description
-     - "string"
-   * - invoiceItems.quantity
-     - count
-     - N/A
-   * - invoiceItems.unitPrice
-     - unitPriceExcludingVatCurrency
-     - "float"
 
