@@ -2,7 +2,7 @@
 Trello to Business Central Dataflow
 ===================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -41,19 +41,19 @@ The following properties are synchronized between a Trello Members and a Busines
      - Business Central Data Type
 
 
-Trello Organizations to Business Central Customers company
-----------------------------------------------------------
-Every Trello Organizations will be synchronized with a Business Central Customers company.
+Trello Organizations to Business Central Customers (classification data)
+------------------------------------------------------------------------
+Every Trello Organizations will be synchronized with a Business Central Customers (classification data).
 
-Once a link between a Trello Organizations and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Trello Organizations and a Business Central Customers (classification data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Trello Organizations and a Business Central Customers company:
+The following properties are synchronized between a Trello Organizations and a Business Central Customers (classification data):
 
 .. list-table::
    :header-rows: 1
 
    * - Trello Organizations Property
-     - Business Central Customers company Property
+     - Business Central Customers (classification data) Property
      - Business Central Data Type
    * - name
      - displayName
