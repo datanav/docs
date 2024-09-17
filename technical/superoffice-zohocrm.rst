@@ -2,7 +2,7 @@
 SuperOffice to ZohoCRM Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -177,37 +177,4 @@ The following properties are synchronized between a SuperOffice Sale and a ZohoC
    * - SuperOffice Sale Property
      - ZohoCRM Deal Property
      - ZohoCRM Data Type
-   * - Amount
-     - Amount
-     - "string"
-   * - Contact.ContactId
-     - Account_Name.id
-     - "string"
-   * - Contact.ContactId
-     - Contact_Name.id
-     - "string"
-   * - Heading
-     - Deal_Name
-     - "string"
-   * - Person.PersonId
-     - Account_Name.id
-     - "string"
-   * - Person.PersonId
-     - Contact_Name.id
-     - "string"
-   * - SaleText
-     - Deal_Name
-     - "string"
-   * - Saledate
-     - Closing_Date
-     - N/A
-   * - Status
-     - Probability
-     - "string"
-   * - Status
-     - Stage
-     - "string"
-   * - Status
-     - Type
-     - "string"
 
