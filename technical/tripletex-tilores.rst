@@ -2,7 +2,7 @@
 Tripletex to Tilores Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -37,18 +37,18 @@ The following properties are synchronized between a Tripletex Contact and a Tilo
      - "string"
 
 
-Tripletex Customer person to Tilores Human
-------------------------------------------
-Every Tripletex Customer person will be synchronized with a Tilores Human.
+Tripletex Customer (human data) to Tilores Human
+------------------------------------------------
+Every Tripletex Customer (human data) will be synchronized with a Tilores Human.
 
-Once a link between a Tripletex Customer person and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer (human data) and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a Tilores Human:
+The following properties are synchronized between a Tripletex Customer (human data) and a Tilores Human:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer person Property
+   * - Tripletex Customer (human data) Property
      - Tilores Human Property
      - Tilores Data Type
    * - deliveryAddress.city
