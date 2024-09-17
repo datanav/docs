@@ -2,7 +2,7 @@
 Custom CRM to Youtrack Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -22,5 +22,21 @@ The following properties are synchronized between a Custom CRM Customer and a Yo
 
    * - Custom CRM Customer Property
      - Youtrack Groups Property
+     - Youtrack Data Type
+
+
+Custom CRM User to Youtrack Users
+---------------------------------
+Every Custom CRM User will be synchronized with a Youtrack Users.
+
+Once a link between a Custom CRM User and a Youtrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom CRM User and a Youtrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom CRM User Property
+     - Youtrack Users Property
      - Youtrack Data Type
 
