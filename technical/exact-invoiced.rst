@@ -2,7 +2,7 @@
 Exact Online to Invoiced Dataflow
 =================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -39,6 +39,18 @@ The following properties are synchronized between a Exact Online Accounts and a 
    * - Exact Online Accounts Property
      - Invoiced Customers person Property
      - Invoiced Data Type
+   * - City
+     - city
+     - "string"
+   * - Country
+     - country
+     - "string"
+   * - ID
+     - id
+     - "string"
+   * - Postcode
+     - postal_code
+     - "string"
 
 
 Exact Online Items to Invoiced Items
