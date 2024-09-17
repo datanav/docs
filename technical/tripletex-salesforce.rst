@@ -2,12 +2,46 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Order to Salesforce Order
+-----------------------------------
+Before any synchronization can take place, a link between a Tripletex Order and a Salesforce Order must be established.
+
+A new Salesforce Order will be created from a Tripletex Order if it is connected to a Tripletex Order, or Orderline that is synchronized into Salesforce.
+
+Once a link between a Tripletex Order and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a Salesforce Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - Salesforce Order Property
+     - Salesforce Data Type
+
+
+Tripletex Product to Salesforce Product2
+----------------------------------------
+Every Tripletex Product will be synchronized with a Salesforce Product2.
+
+Once a link between a Tripletex Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a Salesforce Product2:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - Salesforce Product2 Property
+     - Salesforce Data Type
+
 
 Tripletex Activity to Salesforce Task
 -------------------------------------
@@ -165,24 +199,6 @@ The following properties are synchronized between a Tripletex Contact and a Sale
    * - Tripletex Contact Property
      - Salesforce Contact Property
      - Salesforce Data Type
-   * - email
-     - Email
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - lastName
-     - LastName
-     - "string"
-   * - phoneNumberMobile
-     - MobilePhone
-     - "string"
-   * - phoneNumberWork
-     - HomePhone
-     - "string"
-   * - phoneNumberWork
-     - Phone
-     - "string"
 
 
 Tripletex Currency to Salesforce Currencytype
@@ -215,9 +231,22 @@ The following properties are synchronized between a Tripletex Customer person an
    * - Tripletex Customer person Property
      - Salesforce Customer Property
      - Salesforce Data Type
-   * - name
-     - Name
-     - "string"
+
+
+Tripletex Customer to Salesforce Customer
+-----------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Salesforce Customer.
+
+Once a link between a Tripletex Customer and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a Salesforce Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - Salesforce Customer Property
+     - Salesforce Data Type
 
 
 Tripletex Employee to Salesforce User
@@ -234,33 +263,6 @@ The following properties are synchronized between a Tripletex Employee and a Sal
    * - Tripletex Employee Property
      - Salesforce User Property
      - Salesforce Data Type
-   * - address.addressLine1
-     - Street
-     - "string"
-   * - address.city
-     - City
-     - "string"
-   * - address.country.id
-     - Country
-     - "string"
-   * - address.postalCode
-     - PostalCode
-     - "string"
-   * - employeeNumber
-     - EmployeeNumber
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - id
-     - ID
-     - "string"
-   * - lastName
-     - LastName
-     - "string"
-   * - phoneNumberMobile
-     - MobilePhone
-     - "string"
 
 
 Tripletex Invoice to Salesforce Invoice
@@ -277,27 +279,6 @@ The following properties are synchronized between a Tripletex Invoice and a Sale
    * - Tripletex Invoice Property
      - Salesforce Invoice Property
      - Salesforce Data Type
-   * - amountExcludingVat
-     - TotalAmount
-     - "string"
-   * - currency.id
-     - CurrencyIsoCode
-     - "string"
-   * - deliveryDate
-     - FullSettlementDate
-     - "string"
-   * - invoiceDate
-     - InvoiceDate
-     - "string"
-   * - invoiceDate
-     - PostedDate
-     - "string"
-   * - invoiceDueDate
-     - DueDate
-     - "string"
-   * - invoiceNumber
-     - InvoiceNumber
-     - "string"
 
 
 Tripletex Order to Salesforce Order
@@ -314,21 +295,6 @@ The following properties are synchronized between a Tripletex Order and a Salesf
    * - Tripletex Order Property
      - Salesforce Order Property
      - Salesforce Data Type
-   * - currency.id
-     - CurrencyIsoCode
-     - "string"
-   * - deliveryDate
-     - EffectiveDate
-     - "string"
-   * - deliveryDate
-     - EndDate
-     - "string"
-   * - orderDate
-     - EffectiveDate
-     - "string"
-   * - orderDate
-     - OrderedDate
-     - "string"
 
 
 Tripletex Orderline to Salesforce Invoiceline
@@ -345,21 +311,6 @@ The following properties are synchronized between a Tripletex Orderline and a Sa
    * - Tripletex Orderline Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
-   * - count
-     - Quantity
-     - "string"
-   * - currency.id
-     - CurrencyIsoCode
-     - "string"
-   * - description
-     - Description
-     - "string"
-   * - unitPriceExcludingVatCurrency
-     - UnitPrice
-     - "string"
-   * - vatType.id
-     - TaxRate
-     - "string"
 
 
 Tripletex Orderline to Salesforce Orderitem
@@ -376,18 +327,6 @@ The following properties are synchronized between a Tripletex Orderline and a Sa
    * - Tripletex Orderline Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
-   * - count
-     - Quantity
-     - "string"
-   * - currency.id
-     - CurrencyIsoCode
-     - "string"
-   * - order.id
-     - OrderId
-     - "string"
-   * - unitPriceExcludingVatCurrency
-     - TotalPrice
-     - "string"
 
 
 Tripletex Orderline to Salesforce Quotelineitem
@@ -404,21 +343,6 @@ The following properties are synchronized between a Tripletex Orderline and a Sa
    * - Tripletex Orderline Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
-   * - count
-     - Quantity
-     - "string"
-   * - currency.id
-     - CurrencyIsoCode
-     - "string"
-   * - description
-     - Description
-     - "string"
-   * - discount
-     - Discount
-     - "string"
-   * - unitPriceExcludingVatCurrency
-     - TotalPriceWithTax
-     - "string"
 
 
 Tripletex Product to Salesforce Product2
@@ -435,16 +359,20 @@ The following properties are synchronized between a Tripletex Product and a Sale
    * - Tripletex Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-   * - description
-     - Description
-     - "string"
-   * - description
-     - Description	
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - name
-     - Name	
-     - "string"
+
+
+Tripletex Supplier to Salesforce Seller
+---------------------------------------
+Every Tripletex Supplier will be synchronized with a Salesforce Seller.
+
+Once a link between a Tripletex Supplier and a Salesforce Seller is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Supplier and a Salesforce Seller:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Supplier Property
+     - Salesforce Seller Property
+     - Salesforce Data Type
 
