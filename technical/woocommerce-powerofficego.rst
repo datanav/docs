@@ -2,7 +2,7 @@
 WooCommerce to PowerOffice GO Dataflow
 ======================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -25,6 +25,15 @@ The following properties are synchronized between a WooCommerce Order and a Powe
    * - WooCommerce Order Property
      - PowerOffice GO Salesorders Property
      - PowerOffice GO Data Type
+   * - currency
+     - CurrencyCode
+     - "string"
+   * - customer_id
+     - CustomerId
+     - "integer"
+   * - customer_id
+     - CustomerReferenceContactPersonId
+     - "integer"
 
 
 WooCommerce Product to PowerOffice GO Product
@@ -43,6 +52,15 @@ The following properties are synchronized between a WooCommerce Product and a Po
    * - WooCommerce Product Property
      - PowerOffice GO Product Property
      - PowerOffice GO Data Type
+   * - name
+     - name
+     - "string"
+   * - price
+     - costPrice
+     - N/A
+   * - sale_price
+     - salesPrice
+     - N/A
 
 
 WooCommerce Customer to PowerOffice GO Customers
