@@ -2,7 +2,7 @@
 Shopify to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -55,15 +55,6 @@ The following properties are synchronized between a Shopify Order and a Salesfor
    * - Shopify Order Property
      - Salesforce Invoice Property
      - Salesforce Data Type
-   * - currency
-     - CurrencyIsoCode
-     - "string"
-   * - current_total_price
-     - TotalAmount
-     - "string"
-   * - total_price
-     - TotalAmount
-     - "string"
 
 
 Shopify Sesamproduct to Salesforce Product2
