@@ -2,7 +2,7 @@
 PowerOffice GO to Tidsbanken Dataflow
 =====================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -53,15 +53,6 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - lastName
      - Etternavn
      - "string"
-   * - partyId
-     - AvdelingId
-     - "string"
-   * - partyId
-     - Tittel
-     - "string"
-   * - partyId
-     - sesam_ansattId
-     - "integer"
    * - zipCode
      - Postnummer
      - "string"
