@@ -2,7 +2,7 @@
 PowerOffice GO to Wave Dataflow
 ===============================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -202,15 +202,6 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Wave Customer Property
      - Wave Data Type
-   * - Name
-     - name
-     - N/A
-   * - PhoneNumber
-     - phone
-     - "string"
-   * - WebsiteUrl
-     - website
-     - "string"
 
 
 PowerOffice GO Customers to Wave Customer (human data)
