@@ -2,7 +2,7 @@
 YouTrack to Tripletex Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -41,29 +41,29 @@ The following properties are synchronized between a YouTrack Users and a Triplet
      - "string"
 
 
-YouTrack Users to Tripletex Customer person
--------------------------------------------
-Before any synchronization can take place, a link between a YouTrack Users and a Tripletex Customer person must be established.
+YouTrack Users to Tripletex Customer
+------------------------------------
+Before any synchronization can take place, a link between a YouTrack Users and a Tripletex Customer must be established.
 
-A YouTrack Users will merge with a Tripletex Customer person if one of the following property combinations match:
+A YouTrack Users will merge with a Tripletex Customer if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     - Tripletex Customer person Property
+     - Tripletex Customer Property
    * - profile.email.email
      - email
 
-Once a link between a YouTrack Users and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a YouTrack Users and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a YouTrack Users and a Tripletex Customer person:
+The following properties are synchronized between a YouTrack Users and a Tripletex Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - YouTrack Users Property
-     - Tripletex Customer person Property
+     - Tripletex Customer Property
      - Tripletex Data Type
    * - name
      - name
