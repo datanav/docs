@@ -2,7 +2,7 @@
 Business Central to PowerOffice GO Dataflow
 ===========================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -79,6 +79,21 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      - PowerOffice GO Product Property
      - PowerOffice GO Data Type
+   * - displayName
+     - name
+     - "string"
+   * - gtin
+     - gtin
+     - "string"
+   * - inventory
+     - availableStock
+     - "integer"
+   * - unitCost
+     - costPrice
+     - N/A
+   * - unitPrice
+     - salesPrice
+     - N/A
 
 
 Business Central Salesorders to PowerOffice GO Salesorders
@@ -97,6 +112,18 @@ The following properties are synchronized between a Business Central Salesorders
    * - Business Central Salesorders Property
      - PowerOffice GO Salesorders Property
      - PowerOffice GO Data Type
+   * - currencyId
+     - CurrencyCode
+     - "string"
+   * - customerId
+     - CustomerId
+     - "integer"
+   * - customerId
+     - CustomerReferenceContactPersonId
+     - "integer"
+   * - orderDate
+     - SalesOrderDate
+     - "string"
 
 
 Business Central Contacts person to PowerOffice GO Contactperson
