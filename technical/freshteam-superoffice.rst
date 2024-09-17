@@ -2,7 +2,7 @@
 Freshteam to SuperOffice Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -42,21 +42,6 @@ The following properties are synchronized between a Freshteam Employee and a Sup
    * - Freshteam Employee Property
      - SuperOffice Person Property
      - SuperOffice Data Type
-   * - address.city
-     - Address.Street.City
-     - "string"
-   * - address.zip_code
-     - Address.Street.Zipcode
-     - "string"
-   * - communication_address.communication_city
-     - Address.Postal.City
-     - "string"
-   * - communication_address.communication_country_code
-     - Country.CountryId
-     - "integer"
-   * - communication_address.communication_zip_code
-     - Address.Postal.Zipcode
-     - "string"
    * - date_of_birth
      - BirthDate
      - N/A
@@ -66,22 +51,19 @@ The following properties are synchronized between a Freshteam Employee and a Sup
    * - first_name
      - Firstname
      - "string"
-   * - id
-     - PersonId
-     - "integer"
    * - last_name
      - Lastname
      - "string"
    * - personal_email
      - Emails.Value
      - "string"
-   * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
+   * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
      - MobilePhones.Value
      - "string"
-   * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.name)
+   * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
      - OfficePhones.Value
      - "string"
-   * - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.name)
+   * - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.name)
      - PrivatePhones.Value
      - "string"
 
