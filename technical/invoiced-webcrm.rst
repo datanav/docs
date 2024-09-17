@@ -2,7 +2,7 @@
 Invoiced to WebCRM Dataflow
 ===========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -63,15 +63,6 @@ The following properties are synchronized between a Invoiced Contacts and a WebC
    * - Invoiced Contacts Property
      - WebCRM Persons Property
      - WebCRM Data Type
-   * - name
-     - PersonName
-     - "string"
-   * - phone
-     - PersonMobilePhone
-     - "string"
-   * - title
-     - PersonTitle
-     - "string"
 
 
 Invoiced Items to WebCRM Products
@@ -88,9 +79,6 @@ The following properties are synchronized between a Invoiced Items and a WebCRM 
    * - Invoiced Items Property
      - WebCRM Products Property
      - WebCRM Data Type
-   * - unit_cost
-     - ProductCostPrice
-     - "string"
 
 
 Invoiced Lineitem to WebCRM Quotationline
