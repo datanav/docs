@@ -2,7 +2,7 @@
 Business Central to ZohoCRM Dataflow
 ====================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -92,6 +92,22 @@ The following properties are synchronized between a Business Central Customers c
      - "string"
 
 
+Business Central Customers company to ZohoCRM Contact
+-----------------------------------------------------
+Every Business Central Customers company will be synchronized with a ZohoCRM Contact.
+
+Once a link between a Business Central Customers company and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Customers company and a ZohoCRM Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Customers company Property
+     - ZohoCRM Contact Property
+     - ZohoCRM Data Type
+
+
 Business Central Customers person to ZohoCRM Contact
 ----------------------------------------------------
 Every Business Central Customers person will be synchronized with a ZohoCRM Contact.
@@ -106,73 +122,4 @@ The following properties are synchronized between a Business Central Customers p
    * - Business Central Customers person Property
      - ZohoCRM Contact Property
      - ZohoCRM Data Type
-   * - address.city
-     - Mailing_City
-     - "string"
-   * - address.city
-     - Other_City
-     - "string"
-   * - address.postalCode
-     - Mailing_Zip
-     - "string"
-   * - address.postalCode
-     - Other_Zip
-     - "string"
-   * - address.street
-     - Mailing_Street
-     - "string"
-   * - address.street
-     - Other_Street
-     - "string"
-   * - addressLine1
-     - Mailing_Street
-     - "string"
-   * - addressLine1
-     - Other_Street
-     - "string"
-   * - addressLine2
-     - Mailing_City
-     - "string"
-   * - addressLine2
-     - Other_City
-     - "string"
-   * - city
-     - Mailing_City
-     - "string"
-   * - city
-     - Other_City
-     - "string"
-   * - country
-     - Mailing_Country
-     - "string"
-   * - country
-     - Other_Country
-     - "string"
-   * - displayName
-     - First_Name
-     - "string"
-   * - displayName
-     - Full_Name
-     - "string"
-   * - displayName
-     - Last_Name
-     - "string"
-   * - email
-     - Email
-     - "string"
-   * - email
-     - Secondary_Email
-     - "string"
-   * - phoneNumber
-     - Other_Phone
-     - "string"
-   * - phoneNumber
-     - Phone
-     - "string"
-   * - postalCode
-     - Mailing_Zip
-     - "string"
-   * - postalCode
-     - Other_Zip
-     - "string"
 
