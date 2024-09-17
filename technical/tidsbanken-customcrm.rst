@@ -2,7 +2,7 @@
 Tidsbanken to Custom CRM Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -55,37 +55,20 @@ The following properties are synchronized between a Tidsbanken Kunde and a Custo
    * - Tidsbanken Kunde Property
      - Custom CRM Customer Property
      - Custom CRM Data Type
-   * - Gateadresse
-     - StreetAddress1
-     - "string"
-   * - LevPostNr
-     - ZipCode
-     - "string"
-   * - LevPoststed
-     - City
-     - "string"
-   * - Leveringsadresse
-     - StreetAddress1
-     - "string"
-   * - Leveringsadresse2
-     - StreetAddress2
-     - "string"
-   * - Mobil
-     - Phone
-     - "string"
-   * - Navn
-     - Name
-     - "string"
-   * - Postadresse
-     - StreetAddress2
-     - "string"
-   * - Postnr
-     - ZipCode
-     - "string"
-   * - Poststed
-     - City
-     - "string"
-   * - Url
-     - Website
-     - "string"
+
+
+Tidsbanken Kunde to Custom CRM Customer
+---------------------------------------
+Every Tidsbanken Kunde will be synchronized with a Custom CRM Customer.
+
+Once a link between a Tidsbanken Kunde and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Kunde and a Custom CRM Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Kunde Property
+     - Custom CRM Customer Property
+     - Custom CRM Data Type
 
