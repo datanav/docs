@@ -2,7 +2,7 @@
 Business Central to Keap Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -136,10 +136,4 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      - Keap Product Property
      - Keap Data Type
-   * - displayName
-     - product_name
-     - "string"
-   * - unitPrice
-     - product_price
-     - "string"
 
