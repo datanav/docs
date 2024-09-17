@@ -2,7 +2,7 @@
 Tidsbanken to PowerOffice GO Dataflow
 =====================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -58,29 +58,29 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Powe
      - "string"
 
 
-Tidsbanken Ansatt to PowerOffice GO Customers person
-----------------------------------------------------
-Before any synchronization can take place, a link between a Tidsbanken Ansatt and a PowerOffice GO Customers person must be established.
+Tidsbanken Ansatt to PowerOffice GO Customers
+---------------------------------------------
+Before any synchronization can take place, a link between a Tidsbanken Ansatt and a PowerOffice GO Customers must be established.
 
-A Tidsbanken Ansatt will merge with a PowerOffice GO Customers person if one of the following property combinations match:
+A Tidsbanken Ansatt will merge with a PowerOffice GO Customers if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Ansatt Property
-     - PowerOffice GO Customers person Property
+     - PowerOffice GO Customers Property
    * - Epost
      - EmailAddress
 
-Once a link between a Tidsbanken Ansatt and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Ansatt and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Ansatt and a PowerOffice GO Customers person:
+The following properties are synchronized between a Tidsbanken Ansatt and a PowerOffice GO Customers:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Ansatt Property
-     - PowerOffice GO Customers person Property
+     - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
    * - Adresse
      - MailAddress.AddressLine1
@@ -271,24 +271,6 @@ The following properties are synchronized between a Tidsbanken Kunde and a Power
      - "string"
 
 
-Tidsbanken Kunde to PowerOffice GO Customers person
----------------------------------------------------
-Before any synchronization can take place, a link between a Tidsbanken Kunde and a PowerOffice GO Customers person must be established.
-
-A new PowerOffice GO Customers person will be created from a Tidsbanken Kunde if it is connected to a Tidsbanken Prosjekt that is synchronized into PowerOffice GO.
-
-Once a link between a Tidsbanken Kunde and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tidsbanken Kunde and a PowerOffice GO Customers person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Kunde Property
-     - PowerOffice GO Customers person Property
-     - PowerOffice GO Data Type
-
-
 Tidsbanken Ansatt to PowerOffice GO Employees
 ---------------------------------------------
 Every Tidsbanken Ansatt will be synchronized with a PowerOffice GO Employees.
@@ -337,19 +319,19 @@ The following properties are synchronized between a Tidsbanken Kunde and a Power
      - PowerOffice GO Data Type
 
 
-Tidsbanken Kunde to PowerOffice GO Customers person
----------------------------------------------------
-Every Tidsbanken Kunde will be synchronized with a PowerOffice GO Customers person.
+Tidsbanken Kunde to PowerOffice GO Customers (human data)
+---------------------------------------------------------
+Every Tidsbanken Kunde will be synchronized with a PowerOffice GO Customers (human data).
 
-Once a link between a Tidsbanken Kunde and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Kunde and a PowerOffice GO Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Kunde and a PowerOffice GO Customers person:
+The following properties are synchronized between a Tidsbanken Kunde and a PowerOffice GO Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Kunde Property
-     - PowerOffice GO Customers person Property
+     - PowerOffice GO Customers (human data) Property
      - PowerOffice GO Data Type
 
 
