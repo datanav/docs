@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -195,6 +195,36 @@ The following properties are synchronized between a HubSpot Pipelinedeal and a S
      - "string"
 
 
+HubSpot Product to SuperOffice Product
+--------------------------------------
+Before any synchronization can take place, a link between a HubSpot Product and a SuperOffice Product must be established.
+
+A new SuperOffice Product will be created from a HubSpot Product if it is connected to a HubSpot Lineitem, or Lineitemdealassociation that is synchronized into SuperOffice.
+
+Once a link between a HubSpot Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a SuperOffice Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     - SuperOffice Product Property
+     - SuperOffice Data Type
+   * - properties.description
+     - Description
+     - "string"
+   * - properties.hs_cost_of_goods_sold
+     - UnitCost
+     - "string"
+   * - properties.name
+     - Name
+     - "string"
+   * - properties.price
+     - UnitListPrice
+     - N/A
+
+
 HubSpot Contactcompanyassociation to SuperOffice Person
 -------------------------------------------------------
 Every HubSpot Contactcompanyassociation will be synchronized with a SuperOffice Person.
@@ -247,24 +277,6 @@ The following properties are synchronized between a HubSpot Deal and a SuperOffi
    * - HubSpot Deal Property
      - SuperOffice Sale Property
      - SuperOffice Data Type
-   * - properties.amount
-     - Amount
-     - "float"
-   * - properties.closedate
-     - Saledate
-     - N/A
-   * - properties.deal_currency_code
-     - Currency.Id
-     - "integer"
-   * - properties.dealname
-     - Heading
-     - "string"
-   * - properties.dealname
-     - SaleText
-     - "string"
-   * - properties.description
-     - SaleText
-     - "string"
 
 
 HubSpot Lineitem to SuperOffice Quoteline
@@ -281,27 +293,38 @@ The following properties are synchronized between a HubSpot Lineitem and a Super
    * - HubSpot Lineitem Property
      - SuperOffice Quoteline Property
      - SuperOffice Data Type
-   * - properties.description
-     - Description
-     - "string"
-   * - properties.hs_discount_percentage
-     - DiscountPercent
-     - "integer"
-   * - properties.hs_discount_percentage
-     - ERPDiscountPercent
-     - N/A
-   * - properties.hs_product_id
-     - ERPProductKey
-     - "string"
-   * - properties.name
-     - Name
-     - "string"
-   * - properties.price
-     - UnitListPrice
-     - N/A
-   * - properties.quantity
-     - Quantity
-     - N/A
+
+
+HubSpot Lineitemdealassociationtype to SuperOffice Quoteline
+------------------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a SuperOffice Quoteline.
+
+Once a link between a HubSpot Lineitemdealassociationtype and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a SuperOffice Quoteline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociationtype Property
+     - SuperOffice Quoteline Property
+     - SuperOffice Data Type
+
+
+HubSpot Lineitemquoteassociationtype to SuperOffice Quoteline
+-------------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a SuperOffice Quoteline.
+
+Once a link between a HubSpot Lineitemquoteassociationtype and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a SuperOffice Quoteline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociationtype Property
+     - SuperOffice Quoteline Property
+     - SuperOffice Data Type
 
 
 HubSpot Product to SuperOffice Product
@@ -318,18 +341,6 @@ The following properties are synchronized between a HubSpot Product and a SuperO
    * - HubSpot Product Property
      - SuperOffice Product Property
      - SuperOffice Data Type
-   * - properties.description
-     - Description
-     - "string"
-   * - properties.hs_cost_of_goods_sold
-     - UnitCost
-     - "string"
-   * - properties.name
-     - Name
-     - "string"
-   * - properties.price
-     - UnitListPrice
-     - N/A
 
 
 HubSpot Quote to SuperOffice Quotealternative
@@ -346,10 +357,4 @@ The following properties are synchronized between a HubSpot Quote and a SuperOff
    * - HubSpot Quote Property
      - SuperOffice Quotealternative Property
      - SuperOffice Data Type
-   * - properties.hs_quote_amount
-     - TotalPrice
-     - "float"
-   * - properties.hs_title
-     - Name
-     - "string"
 
