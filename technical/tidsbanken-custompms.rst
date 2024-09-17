@@ -2,7 +2,7 @@
 Tidsbanken to Custom PMS Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -22,6 +22,38 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Cu
 
    * - Tidsbanken Avdeling Property
      - Custom PMS Customer Property
+     - Custom PMS Data Type
+
+
+Tidsbanken Kunde to Custom PMS Customer
+---------------------------------------
+Every Tidsbanken Kunde will be synchronized with a Custom PMS Customer.
+
+Once a link between a Tidsbanken Kunde and a Custom PMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Kunde and a Custom PMS Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Kunde Property
+     - Custom PMS Customer Property
+     - Custom PMS Data Type
+
+
+Tidsbanken Prosjekt to Custom PMS Project
+-----------------------------------------
+Every Tidsbanken Prosjekt will be synchronized with a Custom PMS Project.
+
+Once a link between a Tidsbanken Prosjekt and a Custom PMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Prosjekt and a Custom PMS Project:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Prosjekt Property
+     - Custom PMS Project Property
      - Custom PMS Data Type
 
 
