@@ -2,7 +2,7 @@
 Keap to Shopify Dataflow
 ========================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -37,10 +37,7 @@ The following properties are synchronized between a Keap Product and a Shopify I
 
 Keap Product to Shopify Sesamproduct
 ------------------------------------
-Every Keap Product will be synchronized with a Shopify Sesamproduct.
-
-If a matching Shopify Sesamproduct already exists, the Keap Product will be merged with the existing one.
-If no matching Shopify Sesamproduct is found, a new Shopify Sesamproduct will be created.
+Before any synchronization can take place, a link between a Keap Product and a Shopify Sesamproduct must be established.
 
 A Keap Product will merge with a Shopify Sesamproduct if one of the following property combinations match:
 
@@ -62,13 +59,20 @@ The following properties are synchronized between a Keap Product and a Shopify S
    * - Keap Product Property
      - Shopify Sesamproduct Property
      - Shopify Data Type
-   * - product_desc
-     - variants.title
-     - "string"
-   * - product_name
-     - title
-     - "string"
-   * - product_price
-     - sesam_priceExclVAT
-     - "string"
+
+
+Keap Product to Shopify Sesamproduct
+------------------------------------
+Every Keap Product will be synchronized with a Shopify Sesamproduct.
+
+Once a link between a Keap Product and a Shopify Sesamproduct is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Keap Product and a Shopify Sesamproduct:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Keap Product Property
+     - Shopify Sesamproduct Property
+     - Shopify Data Type
 
