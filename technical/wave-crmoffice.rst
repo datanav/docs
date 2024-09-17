@@ -2,7 +2,7 @@
 Wave to CRMOffice Dataflow
 ==========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -70,15 +70,6 @@ The following properties are synchronized between a Wave Customer and a CRMOffic
    * - Wave Customer Property
      - CRMOffice Contacts Property
      - CRMOffice Data Type
-   * - firstName
-     - givenName
-     - "string"
-   * - lastName
-     - familyName
-     - "string"
-   * - mobile
-     - mobilePhone
-     - "string"
 
 
 Wave Vendor to CRMOffice Contacts
@@ -95,16 +86,4 @@ The following properties are synchronized between a Wave Vendor and a CRMOffice 
    * - Wave Vendor Property
      - CRMOffice Contacts Property
      - CRMOffice Data Type
-   * - firstName
-     - givenName
-     - "string"
-   * - lastName
-     - familyName
-     - "string"
-   * - mobile
-     - mobilePhone
-     - "string"
-   * - phone
-     - directPhone
-     - "string"
 
