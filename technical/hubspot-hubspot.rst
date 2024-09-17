@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:13:06
 
 Introduction
 ------------
@@ -1598,66 +1598,6 @@ The following properties are synchronized between a HubSpot User and a HubSpot U
    * - email
      - email
      - "string"
-
-
-HubSpot Company to HubSpot Contact
-----------------------------------
-Before any synchronization can take place, a link between a HubSpot Company and a HubSpot Contact must be established.
-
-A new HubSpot Contact will be created from a HubSpot Company if it is connected to a HubSpot Quote, Quotedealassociation, Quotecompanyassociation, Quotecontactassociation, or Quotequotetemplateassociation that is synchronized into HubSpot.
-
-Once a link between a HubSpot Company and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Company and a HubSpot Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Company Property
-     - HubSpot Contact Property
-     - HubSpot Data Type
-   * - properties.country
-     - properties.country
-     - "string"
-   * - properties.country
-     - properties.state
-     - "string"
-   * - properties.industry
-     - properties.country
-     - "string"
-   * - properties.industry
-     - properties.state
-     - "string"
-   * - properties.state
-     - properties.country
-     - "string"
-   * - properties.state
-     - properties.state
-     - "string"
-   * - properties.type
-     - properties.country
-     - "string"
-   * - properties.type
-     - properties.state
-     - "string"
-
-
-HubSpot Contact to HubSpot Company
-----------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a HubSpot Company must be established.
-
-A new HubSpot Company will be created from a HubSpot Contact if it is connected to a HubSpot Quote, Quotedealassociation, Quotecompanyassociation, Quotecontactassociation, or Quotequotetemplateassociation that is synchronized into HubSpot.
-
-Once a link between a HubSpot Contact and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contact and a HubSpot Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     - HubSpot Company Property
-     - HubSpot Data Type
 
 
 HubSpot User to HubSpot Contact
