@@ -2,66 +2,12 @@
 YouTrack to CRMOffice Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 09:13:06
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from YouTrack to CRMOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-YouTrack Groups to CRMOffice Companies
---------------------------------------
-Before any synchronization can take place, a link between a YouTrack Groups and a CRMOffice Companies must be established.
-
-A new CRMOffice Companies will be created from a YouTrack Groups if it is connected to a YouTrack Issues, Workitems, Hubprojects, or Projectroles that is synchronized into CRMOffice.
-
-Once a link between a YouTrack Groups and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Groups and a CRMOffice Companies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Groups Property
-     - CRMOffice Companies Property
-     - CRMOffice Data Type
-
-
-YouTrack Organization to CRMOffice Companies
---------------------------------------------
-Before any synchronization can take place, a link between a YouTrack Organization and a CRMOffice Companies must be established.
-
-A new CRMOffice Companies will be created from a YouTrack Organization if it is connected to a YouTrack Issues, Workitems, Hubprojects, or Projectroles that is synchronized into CRMOffice.
-
-Once a link between a YouTrack Organization and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Organization and a CRMOffice Companies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Organization Property
-     - CRMOffice Companies Property
-     - CRMOffice Data Type
-
-
-YouTrack Usergroups to CRMOffice Companies
-------------------------------------------
-Before any synchronization can take place, a link between a YouTrack Usergroups and a CRMOffice Companies must be established.
-
-A new CRMOffice Companies will be created from a YouTrack Usergroups if it is connected to a YouTrack Issues, Workitems, Hubprojects, or Projectroles that is synchronized into CRMOffice.
-
-Once a link between a YouTrack Usergroups and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a YouTrack Usergroups and a CRMOffice Companies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - YouTrack Usergroups Property
-     - CRMOffice Companies Property
-     - CRMOffice Data Type
-
 
 YouTrack Hubprojects to CRMOffice Activities
 --------------------------------------------
