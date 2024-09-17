@@ -2,7 +2,7 @@
 Unieconomy to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 12:31:51
 
 Introduction
 ------------
@@ -93,6 +93,9 @@ The following properties are synchronized between a Unieconomy Currencycodes and
    * - Unieconomy Currencycodes Property
      - Salesforce Currencytype Property
      - Salesforce Data Type
+   * - Code
+     - IsoCode
+     - "string"
 
 
 Unieconomy Customers to Salesforce Customer
