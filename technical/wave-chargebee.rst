@@ -2,30 +2,12 @@
 Wave to Chargebee Dataflow
 ==========================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Wave Customer to Chargebee Customer
------------------------------------
-Before any synchronization can take place, a link between a Wave Customer and a Chargebee Customer must be established.
-
-A new Chargebee Customer will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into Chargebee.
-
-Once a link between a Wave Customer and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a Chargebee Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Chargebee Customer Property
-     - Chargebee Data Type
-
 
 Wave Customer to Chargebee Business_entity
 ------------------------------------------
@@ -46,18 +28,18 @@ The following properties are synchronized between a Wave Customer and a Chargebe
      - "string"
 
 
-Wave Customer person to Chargebee Customer
-------------------------------------------
-Every Wave Customer person will be synchronized with a Chargebee Customer.
+Wave Customer (human data) to Chargebee Customer
+------------------------------------------------
+Every Wave Customer (human data) will be synchronized with a Chargebee Customer.
 
-Once a link between a Wave Customer person and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer (human data) and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a Chargebee Customer:
+The following properties are synchronized between a Wave Customer (human data) and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Customer person Property
+   * - Wave Customer (human data) Property
      - Chargebee Customer Property
      - Chargebee Data Type
    * - email
@@ -150,34 +132,34 @@ The following properties are synchronized between a Wave Customer and a Chargebe
      - Chargebee Data Type
 
 
-Wave Customer person to Chargebee Address
------------------------------------------
-Every Wave Customer person will be synchronized with a Chargebee Address.
+Wave Customer (location data) to Chargebee Address
+--------------------------------------------------
+Every Wave Customer (location data) will be synchronized with a Chargebee Address.
 
-Once a link between a Wave Customer person and a Chargebee Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer (location data) and a Chargebee Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a Chargebee Address:
+The following properties are synchronized between a Wave Customer (location data) and a Chargebee Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Customer person Property
+   * - Wave Customer (location data) Property
      - Chargebee Address Property
      - Chargebee Data Type
 
 
-Wave Customer person to Chargebee Customer
-------------------------------------------
-Every Wave Customer person will be synchronized with a Chargebee Customer.
+Wave Customer (human data) to Chargebee Customer
+------------------------------------------------
+Every Wave Customer (human data) will be synchronized with a Chargebee Customer.
 
-Once a link between a Wave Customer person and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer (human data) and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a Chargebee Customer:
+The following properties are synchronized between a Wave Customer (human data) and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Customer person Property
+   * - Wave Customer (human data) Property
      - Chargebee Customer Property
      - Chargebee Data Type
 
