@@ -2,7 +2,7 @@
 Shopify to Custom ERP Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -41,6 +41,22 @@ The following properties are synchronized between a Shopify Inventoryitem and a 
      - Custom ERP Data Type
 
 
+Shopify Order to Custom ERP Order
+---------------------------------
+Every Shopify Order will be synchronized with a Custom ERP Order.
+
+Once a link between a Shopify Order and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a Custom ERP Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - Custom ERP Order Property
+     - Custom ERP Data Type
+
+
 Shopify Product to Custom ERP Product
 -------------------------------------
 Every Shopify Product will be synchronized with a Custom ERP Product.
@@ -54,6 +70,38 @@ The following properties are synchronized between a Shopify Product and a Custom
 
    * - Shopify Product Property
      - Custom ERP Product Property
+     - Custom ERP Data Type
+
+
+Shopify Sesamproduct to Custom ERP Product
+------------------------------------------
+Every Shopify Sesamproduct will be synchronized with a Custom ERP Product.
+
+Once a link between a Shopify Sesamproduct and a Custom ERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Sesamproduct and a Custom ERP Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Sesamproduct Property
+     - Custom ERP Product Property
+     - Custom ERP Data Type
+
+
+Shopify Customer to Custom ERP Customer
+---------------------------------------
+Every Shopify Customer will be synchronized with a Custom ERP Customer.
+
+Once a link between a Shopify Customer and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Customer and a Custom ERP Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Customer Property
+     - Custom ERP Customer Property
      - Custom ERP Data Type
 
 
