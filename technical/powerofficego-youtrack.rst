@@ -2,7 +2,7 @@
 PowerOffice GO to Youtrack Dataflow
 ===================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -33,15 +33,6 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - PowerOffice GO Contactperson Property
      - Youtrack Users Property
      - Youtrack Data Type
-   * - emailAddress
-     - profile.email
-     - "string"
-   * - emailAddress
-     - profile.email.email
-     - "string"
-   * - residenceCountryCode
-     - userType.id
-     - "string"
 
 
 PowerOffice GO Customers to Youtrack Users
@@ -68,12 +59,6 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Youtrack Users Property
      - Youtrack Data Type
-   * - EmailAddress
-     - profile.email
-     - "string"
-   * - MailAddress.CountryCode
-     - userType.id
-     - "string"
 
 
 PowerOffice GO Customers to Youtrack Groups
@@ -90,9 +75,6 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Youtrack Groups Property
      - Youtrack Data Type
-   * - Name
-     - name
-     - "string"
 
 
 PowerOffice GO Departments to Youtrack Groups
@@ -109,9 +91,6 @@ The following properties are synchronized between a PowerOffice GO Departments a
    * - PowerOffice GO Departments Property
      - Youtrack Groups Property
      - Youtrack Data Type
-   * - Name
-     - name
-     - "string"
 
 
 PowerOffice GO Projectactivity to Youtrack Hubprojects
