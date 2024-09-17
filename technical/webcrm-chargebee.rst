@@ -2,7 +2,7 @@
 WebCRM to Chargebee Dataflow
 ============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -67,6 +67,22 @@ The following properties are synchronized between a WebCRM Persons and a Chargeb
    * - PersonLastName
      - last_name
      - "string"
+
+
+WebCRM Products to Chargebee Item
+---------------------------------
+Every WebCRM Products will be synchronized with a Chargebee Item.
+
+Once a link between a WebCRM Products and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WebCRM Products and a Chargebee Item:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WebCRM Products Property
+     - Chargebee Item Property
+     - Chargebee Data Type
 
 
 WebCRM Quotationline to Chargebee Order
