@@ -2,12 +2,28 @@
 Tripletex to Custom Webshop Dataflow
 ====================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Custom Webshop. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Customer to Custom Webshop Customer
+---------------------------------------------
+Every Tripletex Customer will be synchronized with a Custom Webshop Customer.
+
+Once a link between a Tripletex Customer and a Custom Webshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a Custom Webshop Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - Custom Webshop Customer Property
+     - Custom Webshop Data Type
+
 
 Tripletex Department to Custom Webshop Customer
 -----------------------------------------------
@@ -22,6 +38,22 @@ The following properties are synchronized between a Tripletex Department and a C
 
    * - Tripletex Department Property
      - Custom Webshop Customer Property
+     - Custom Webshop Data Type
+
+
+Tripletex Order to Custom Webshop Order
+---------------------------------------
+Every Tripletex Order will be synchronized with a Custom Webshop Order.
+
+Once a link between a Tripletex Order and a Custom Webshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a Custom Webshop Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - Custom Webshop Order Property
      - Custom Webshop Data Type
 
 
@@ -41,6 +73,22 @@ The following properties are synchronized between a Tripletex Orderline and a Cu
      - Custom Webshop Data Type
 
 
+Tripletex Product to Custom Webshop Product
+-------------------------------------------
+Every Tripletex Product will be synchronized with a Custom Webshop Product.
+
+Once a link between a Tripletex Product and a Custom Webshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a Custom Webshop Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - Custom Webshop Product Property
+     - Custom Webshop Data Type
+
+
 Tripletex Customer to Custom Webshop Customer
 ---------------------------------------------
 removed person customers for now until that pattern is resolved, it  will be synchronized with a Custom Webshop Customer.
@@ -53,6 +101,22 @@ The following properties are synchronized between a Tripletex Customer and a Cus
    :header-rows: 1
 
    * - Tripletex Customer Property
+     - Custom Webshop Customer Property
+     - Custom Webshop Data Type
+
+
+Tripletex Customer person to Custom Webshop Customer
+----------------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Custom Webshop Customer.
+
+Once a link between a Tripletex Customer person and a Custom Webshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a Custom Webshop Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
      - Custom Webshop Customer Property
      - Custom Webshop Data Type
 
