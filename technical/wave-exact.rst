@@ -2,7 +2,7 @@
 Wave to Exact Online Dataflow
 =============================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -13,7 +13,7 @@ Wave Currency to Exact Online Currencies
 ----------------------------------------
 Before any synchronization can take place, a link between a Wave Currency and a Exact Online Currencies must be established.
 
-A new Exact Online Currencies will be created from a Wave Currency if it is connected to a Wave Customer that is synchronized into Exact Online.
+A new Exact Online Currencies will be created from a Wave Currency if it is connected to a Wave Customer, or Customer-person that is synchronized into Exact Online.
 
 Once a link between a Wave Currency and a Exact Online Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -25,6 +25,9 @@ The following properties are synchronized between a Wave Currency and a Exact On
    * - Wave Currency Property
      - Exact Online Currencies Property
      - Exact Online Data Type
+   * - name
+     - Description
+     - "string"
 
 
 Wave Invoice to Exact Online Salesorders
@@ -43,6 +46,12 @@ The following properties are synchronized between a Wave Invoice and a Exact Onl
    * - Wave Invoice Property
      - Exact Online Salesorders Property
      - Exact Online Data Type
+   * - currency.code
+     - Currency
+     - "string"
+   * - memo
+     - Description
+     - "string"
 
 
 Wave Product to Exact Online Items
@@ -75,6 +84,12 @@ The following properties are synchronized between a Wave Customer and a Exact On
    * - Wave Customer Property
      - Exact Online Accounts Property
      - Exact Online Data Type
+   * - name
+     - Name
+     - "string"
+   * - website
+     - Website
+     - "string"
 
 
 Wave Customer person to Exact Online Contacts
@@ -213,6 +228,27 @@ The following properties are synchronized between a Wave Customer person and a E
    * - Wave Customer person Property
      - Exact Online Accounts Property
      - Exact Online Data Type
+   * - address.city
+     - City
+     - "string"
+   * - address.country.code
+     - Country
+     - "string"
+   * - address.postalCode
+     - Postcode
+     - "string"
+   * - id
+     - ID
+     - "string"
+   * - shippingDetails.address.city
+     - City
+     - "string"
+   * - shippingDetails.address.country.code
+     - Country
+     - "string"
+   * - shippingDetails.address.postalCode
+     - Postcode
+     - "string"
 
 
 Wave Customer person to Exact Online Addresses
