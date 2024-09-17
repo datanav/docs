@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -1696,9 +1696,6 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - HubSpot Dealcompanyassociationtype Property
      - HubSpot Dealcontactassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Dealcompanyassociationtype to HubSpot Quotecompanyassociationtype
@@ -1715,9 +1712,6 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - HubSpot Dealcompanyassociationtype Property
      - HubSpot Quotecompanyassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Dealcompanyassociationtype to HubSpot Quotecontactassociationtype
@@ -1734,9 +1728,6 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - HubSpot Dealcompanyassociationtype Property
      - HubSpot Quotecontactassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Dealcompanyassociationtype to HubSpot Quotedealassociationtype
@@ -1753,9 +1744,6 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - HubSpot Dealcompanyassociationtype Property
      - HubSpot Quotedealassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Dealcompanyassociationtype to HubSpot Quotequotetemplateassociationtype
@@ -1772,9 +1760,6 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - HubSpot Dealcompanyassociationtype Property
      - HubSpot Quotequotetemplateassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Dealcontactassociationtype to HubSpot Dealcompanyassociationtype
@@ -1791,9 +1776,6 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - HubSpot Dealcontactassociationtype Property
      - HubSpot Dealcompanyassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Dealcontactassociationtype to HubSpot Quotecompanyassociationtype
@@ -1810,9 +1792,6 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - HubSpot Dealcontactassociationtype Property
      - HubSpot Quotecompanyassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Dealcontactassociationtype to HubSpot Quotecontactassociationtype
@@ -1829,9 +1808,6 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - HubSpot Dealcontactassociationtype Property
      - HubSpot Quotecontactassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Dealcontactassociationtype to HubSpot Quotedealassociationtype
@@ -1848,9 +1824,6 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - HubSpot Dealcontactassociationtype Property
      - HubSpot Quotedealassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Dealcontactassociationtype to HubSpot Quotequotetemplateassociationtype
@@ -1867,9 +1840,54 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - HubSpot Dealcontactassociationtype Property
      - HubSpot Quotequotetemplateassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
+
+
+HubSpot Lineitem to HubSpot Lineitemdealassociationtype
+-------------------------------------------------------
+Every HubSpot Lineitem will be synchronized with a HubSpot Lineitemdealassociationtype.
+
+Once a link between a HubSpot Lineitem and a HubSpot Lineitemdealassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a HubSpot Lineitemdealassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     - HubSpot Lineitemdealassociationtype Property
+     - HubSpot Data Type
+
+
+HubSpot Lineitem to HubSpot Lineitemquoteassociationtype
+--------------------------------------------------------
+Every HubSpot Lineitem will be synchronized with a HubSpot Lineitemquoteassociationtype.
+
+Once a link between a HubSpot Lineitem and a HubSpot Lineitemquoteassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a HubSpot Lineitemquoteassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     - HubSpot Lineitemquoteassociationtype Property
+     - HubSpot Data Type
+
+
+HubSpot Lineitemdealassociationtype to HubSpot Lineitem
+-------------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a HubSpot Lineitem.
+
+Once a link between a HubSpot Lineitemdealassociationtype and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a HubSpot Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociationtype Property
+     - HubSpot Lineitem Property
+     - HubSpot Data Type
 
 
 HubSpot Lineitemdealassociationtype to HubSpot Lineitemquoteassociationtype
@@ -1886,9 +1904,22 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - HubSpot Lineitemdealassociationtype Property
      - HubSpot Lineitemquoteassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
+
+
+HubSpot Lineitemquoteassociationtype to HubSpot Lineitem
+--------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a HubSpot Lineitem.
+
+Once a link between a HubSpot Lineitemquoteassociationtype and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a HubSpot Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociationtype Property
+     - HubSpot Lineitem Property
+     - HubSpot Data Type
 
 
 HubSpot Lineitemquoteassociationtype to HubSpot Lineitemdealassociationtype
@@ -1905,9 +1936,6 @@ The following properties are synchronized between a HubSpot Lineitemquoteassocia
    * - HubSpot Lineitemquoteassociationtype Property
      - HubSpot Lineitemdealassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotecompanyassociationtype to HubSpot Dealcompanyassociationtype
@@ -1924,9 +1952,6 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
    * - HubSpot Quotecompanyassociationtype Property
      - HubSpot Dealcompanyassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotecompanyassociationtype to HubSpot Dealcontactassociationtype
@@ -1943,9 +1968,6 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
    * - HubSpot Quotecompanyassociationtype Property
      - HubSpot Dealcontactassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotecompanyassociationtype to HubSpot Quotecontactassociationtype
@@ -1962,9 +1984,6 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
    * - HubSpot Quotecompanyassociationtype Property
      - HubSpot Quotecontactassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotecompanyassociationtype to HubSpot Quotedealassociationtype
@@ -1981,9 +2000,6 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
    * - HubSpot Quotecompanyassociationtype Property
      - HubSpot Quotedealassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotecompanyassociationtype to HubSpot Quotequotetemplateassociationtype
@@ -2000,9 +2016,6 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
    * - HubSpot Quotecompanyassociationtype Property
      - HubSpot Quotequotetemplateassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotecontactassociationtype to HubSpot Dealcompanyassociationtype
@@ -2019,9 +2032,6 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
    * - HubSpot Quotecontactassociationtype Property
      - HubSpot Dealcompanyassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotecontactassociationtype to HubSpot Dealcontactassociationtype
@@ -2038,9 +2048,6 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
    * - HubSpot Quotecontactassociationtype Property
      - HubSpot Dealcontactassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotecontactassociationtype to HubSpot Quotecompanyassociationtype
@@ -2057,9 +2064,6 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
    * - HubSpot Quotecontactassociationtype Property
      - HubSpot Quotecompanyassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotecontactassociationtype to HubSpot Quotedealassociationtype
@@ -2076,9 +2080,6 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
    * - HubSpot Quotecontactassociationtype Property
      - HubSpot Quotedealassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotecontactassociationtype to HubSpot Quotequotetemplateassociationtype
@@ -2095,9 +2096,6 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
    * - HubSpot Quotecontactassociationtype Property
      - HubSpot Quotequotetemplateassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotedealassociationtype to HubSpot Dealcompanyassociationtype
@@ -2114,9 +2112,6 @@ The following properties are synchronized between a HubSpot Quotedealassociation
    * - HubSpot Quotedealassociationtype Property
      - HubSpot Dealcompanyassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotedealassociationtype to HubSpot Dealcontactassociationtype
@@ -2133,9 +2128,6 @@ The following properties are synchronized between a HubSpot Quotedealassociation
    * - HubSpot Quotedealassociationtype Property
      - HubSpot Dealcontactassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotedealassociationtype to HubSpot Quotecompanyassociationtype
@@ -2152,9 +2144,6 @@ The following properties are synchronized between a HubSpot Quotedealassociation
    * - HubSpot Quotedealassociationtype Property
      - HubSpot Quotecompanyassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotedealassociationtype to HubSpot Quotecontactassociationtype
@@ -2171,9 +2160,6 @@ The following properties are synchronized between a HubSpot Quotedealassociation
    * - HubSpot Quotedealassociationtype Property
      - HubSpot Quotecontactassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotedealassociationtype to HubSpot Quotequotetemplateassociationtype
@@ -2190,9 +2176,6 @@ The following properties are synchronized between a HubSpot Quotedealassociation
    * - HubSpot Quotedealassociationtype Property
      - HubSpot Quotequotetemplateassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotequotetemplateassociationtype to HubSpot Dealcompanyassociationtype
@@ -2209,9 +2192,6 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
    * - HubSpot Quotequotetemplateassociationtype Property
      - HubSpot Dealcompanyassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotequotetemplateassociationtype to HubSpot Dealcontactassociationtype
@@ -2228,9 +2208,6 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
    * - HubSpot Quotequotetemplateassociationtype Property
      - HubSpot Dealcontactassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotequotetemplateassociationtype to HubSpot Quotecompanyassociationtype
@@ -2247,9 +2224,6 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
    * - HubSpot Quotequotetemplateassociationtype Property
      - HubSpot Quotecompanyassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotequotetemplateassociationtype to HubSpot Quotecontactassociationtype
@@ -2266,9 +2240,6 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
    * - HubSpot Quotequotetemplateassociationtype Property
      - HubSpot Quotecontactassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Quotequotetemplateassociationtype to HubSpot Quotedealassociationtype
@@ -2285,9 +2256,6 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
    * - HubSpot Quotequotetemplateassociationtype Property
      - HubSpot Quotedealassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Ticketcompanyassociationtype to HubSpot Dealcompanyassociationtype
@@ -2304,9 +2272,6 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
    * - HubSpot Ticketcompanyassociationtype Property
      - HubSpot Dealcompanyassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Ticketcompanyassociationtype to HubSpot Dealcontactassociationtype
@@ -2323,9 +2288,6 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
    * - HubSpot Ticketcompanyassociationtype Property
      - HubSpot Dealcontactassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Ticketcompanyassociationtype to HubSpot Quotecompanyassociationtype
@@ -2342,9 +2304,6 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
    * - HubSpot Ticketcompanyassociationtype Property
      - HubSpot Quotecompanyassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Ticketcompanyassociationtype to HubSpot Quotecontactassociationtype
@@ -2361,9 +2320,6 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
    * - HubSpot Ticketcompanyassociationtype Property
      - HubSpot Quotecontactassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Ticketcompanyassociationtype to HubSpot Quotedealassociationtype
@@ -2380,9 +2336,6 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
    * - HubSpot Ticketcompanyassociationtype Property
      - HubSpot Quotedealassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
 
 HubSpot Ticketcompanyassociationtype to HubSpot Quotequotetemplateassociationtype
@@ -2399,7 +2352,4 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
    * - HubSpot Ticketcompanyassociationtype Property
      - HubSpot Quotequotetemplateassociationtype Property
      - HubSpot Data Type
-   * - label
-     - label
-     - "string"
 
