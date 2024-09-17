@@ -2,7 +2,7 @@
 Business Central to Salesforce Dataflow
 =======================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Businesscentral Items and a 
    * - Businesscentral Items Property
      - Salesforce Product2 Property
      - Salesforce Data Type
+   * - displayName
+     - Name
+     - "string"
 
 
 Businesscentral Salesorders to Salesforce Order
@@ -41,6 +44,75 @@ The following properties are synchronized between a Businesscentral Salesorders 
    * - Businesscentral Salesorders Property
      - Salesforce Order Property
      - Salesforce Data Type
+   * - billToAddressLine1
+     - BillingStreet
+     - "string"
+   * - billToCity
+     - BillingCity
+     - "string"
+   * - billToCity
+     - ShippingCity
+     - "string"
+   * - billToCountry
+     - BillingCountry
+     - "string"
+   * - billToCountry
+     - BillingCountryCode
+     - "string"
+   * - billToCountry
+     - ShippingCountry
+     - "string"
+   * - billToCountry
+     - ShippingCountryCode
+     - "string"
+   * - billToPostCode
+     - BillingPostalCode
+     - "string"
+   * - billToPostCode
+     - ShippingStateCode
+     - "string"
+   * - currencyId
+     - CurrencyIsoCode
+     - "string"
+   * - id
+     - ID
+     - "string"
+   * - orderDate
+     - OrderedDate
+     - "string"
+   * - requestedDeliveryDate
+     - EffectiveDate
+     - "string"
+   * - shipToAddressLine1
+     - BillingStreet
+     - "string"
+   * - shipToCity
+     - BillingCity
+     - "string"
+   * - shipToCity
+     - ShippingCity
+     - "string"
+   * - shipToCountry
+     - BillingCountry
+     - "string"
+   * - shipToCountry
+     - BillingCountryCode
+     - "string"
+   * - shipToCountry
+     - ShippingCountry
+     - "string"
+   * - shipToCountry
+     - ShippingCountryCode
+     - "string"
+   * - shipToPostCode
+     - BillingPostalCode
+     - "string"
+   * - shipToPostCode
+     - ShippingStateCode
+     - "string"
+   * - totalAmountExcludingTax
+     - TotalAmount
+     - "string"
 
 
 Business Central Companies to Salesforce Division
