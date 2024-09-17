@@ -100,7 +100,7 @@ Other :ref:`Customer Relationship Management (CRM) <systemtypecrm>` Systems
     ---
     **Salesforce**
 
-    
+    Salesforce is a CRM platform, providing services such as marketing, sales, commerce, service and IT.
     .. link-button:: system/salesforce
         :type: ref
         :text: Read more
