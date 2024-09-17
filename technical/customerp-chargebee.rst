@@ -2,7 +2,7 @@
 Custom ERP to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -57,6 +57,38 @@ The following properties are synchronized between a Custom ERP Employee and a Ch
      - Chargebee Data Type
 
 
+Custom ERP Order to Chargebee Order
+-----------------------------------
+Every Custom ERP Order will be synchronized with a Chargebee Order.
+
+Once a link between a Custom ERP Order and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom ERP Order and a Chargebee Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom ERP Order Property
+     - Chargebee Order Property
+     - Chargebee Data Type
+
+
+Custom ERP Product to Chargebee Item
+------------------------------------
+Every Custom ERP Product will be synchronized with a Chargebee Item.
+
+Once a link between a Custom ERP Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom ERP Product and a Chargebee Item:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom ERP Product Property
+     - Chargebee Item Property
+     - Chargebee Data Type
+
+
 Custom ERP Quote to Chargebee Order
 -----------------------------------
 Every Custom ERP Quote will be synchronized with a Chargebee Order.
@@ -70,6 +102,38 @@ The following properties are synchronized between a Custom ERP Quote and a Charg
 
    * - Custom ERP Quote Property
      - Chargebee Order Property
+     - Chargebee Data Type
+
+
+Custom ERP Customer to Chargebee Address
+----------------------------------------
+Every Custom ERP Customer will be synchronized with a Chargebee Address.
+
+Once a link between a Custom ERP Customer and a Chargebee Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom ERP Customer and a Chargebee Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom ERP Customer Property
+     - Chargebee Address Property
+     - Chargebee Data Type
+
+
+Custom ERP Customer to Chargebee Customer
+-----------------------------------------
+Every Custom ERP Customer will be synchronized with a Chargebee Customer.
+
+Once a link between a Custom ERP Customer and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom ERP Customer and a Chargebee Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom ERP Customer Property
+     - Chargebee Customer Property
      - Chargebee Data Type
 
 
