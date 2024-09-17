@@ -2,7 +2,7 @@
 Wix.com to Chargebee Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -34,6 +34,22 @@ The following properties are synchronized between a Wix.com Contacts and a Charg
      - "string"
 
 
+Wix.com Products to Chargebee Item
+----------------------------------
+Every Wix.com Products will be synchronized with a Chargebee Item.
+
+Once a link between a Wix.com Products and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a Chargebee Item:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
+     - Chargebee Item Property
+     - Chargebee Data Type
+
+
 Wix.com Orders to Chargebee Order
 ---------------------------------
 Every Wix.com Orders will be synchronized with a Chargebee Order.
@@ -48,18 +64,6 @@ The following properties are synchronized between a Wix.com Orders and a Chargeb
    * - Wix.com Orders Property
      - Chargebee Order Property
      - Chargebee Data Type
-   * - buyerInfo.id
-     - customer_id
-     - "string"
-   * - currency
-     - currency_code
-     - "string"
-   * - lineItems.price
-     - order_line_items.unit_price
-     - "string"
-   * - lineItems.quantity
-     - order_line_items.amount
-     - "string"
 
 
 Wix.com Products to Chargebee Item
@@ -76,7 +80,4 @@ The following properties are synchronized between a Wix.com Products and a Charg
    * - Wix.com Products Property
      - Chargebee Item Property
      - Chargebee Data Type
-   * - name
-     - name
-     - "string"
 
