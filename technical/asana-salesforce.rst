@@ -2,7 +2,7 @@
 Asana to Salesforce Dataflow
 ============================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -35,6 +35,22 @@ The following properties are synchronized between a Asana Projects and a Salesfo
    * - owner.gid
      - OwnerId
      - "string"
+
+
+Asana Tasks to Salesforce Task
+------------------------------
+Every Asana Tasks will be synchronized with a Salesforce Task.
+
+Once a link between a Asana Tasks and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Asana Tasks and a Salesforce Task:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Asana Tasks Property
+     - Salesforce Task Property
+     - Salesforce Data Type
 
 
 Asana Teams to Salesforce Division
@@ -89,15 +105,6 @@ The following properties are synchronized between a Asana Tasks and a Salesforce
    * - Asana Tasks Property
      - Salesforce Task Property
      - Salesforce Data Type
-   * - completed_at
-     - CompletedDateTime
-     - "string"
-   * - due_on
-     - ActivityDate
-     - "string"
-   * - name
-     - Subject
-     - "string"
 
 
 Asana Users to Salesforce User
@@ -114,15 +121,6 @@ The following properties are synchronized between a Asana Users and a Salesforce
    * - Asana Users Property
      - Salesforce User Property
      - Salesforce Data Type
-   * - email
-     - Email
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - workspaces.gid
-     - EmployeeNumber
-     - "string"
 
 
 Asana Workspaces to Salesforce Organization
@@ -139,10 +137,4 @@ The following properties are synchronized between a Asana Workspaces and a Sales
    * - Asana Workspaces Property
      - Salesforce Organization Property
      - Salesforce Data Type
-   * - name
-     - Name
-     - "string"
-   * - name
-     - Name	
-     - "string"
 
