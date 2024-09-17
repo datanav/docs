@@ -2,7 +2,7 @@
 SuperOffice to Tidsbanken Dataflow
 ==================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -39,12 +39,6 @@ The following properties are synchronized between a SuperOffice Contact and a Ti
    * - Address.Postal.Address1
      - Leveringsadresse
      - "string"
-   * - Address.Postal.Address1
-     - Postadresse
-     - "string"
-   * - Address.Postal.Address2
-     - Gateadresse
-     - "string"
    * - Address.Postal.Address2
      - Leveringsadresse2
      - "string"
@@ -68,12 +62,6 @@ The following properties are synchronized between a SuperOffice Contact and a Ti
      - "string"
    * - Address.Street.Address1
      - Leveringsadresse
-     - "string"
-   * - Address.Street.Address1
-     - Postadresse
-     - "string"
-   * - Address.Street.Address2
-     - Gateadresse
      - "string"
    * - Address.Street.Address2
      - Leveringsadresse2
@@ -102,7 +90,7 @@ The following properties are synchronized between a SuperOffice Contact and a Ti
    * - Name
      - Navn
      - "string"
-   * - OrgNr (Dependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having wd:Q11994066 in Country.TwoLetterISOCountryDependant on having wd:Q11994066 in Country.TwoLetterISOCountry)
+   * - OrgNr (Dependant on having NO in Country.TwoLetterISOCountry)
      - Organisasjonsnummer
      - "string"
    * - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountry)
@@ -152,15 +140,6 @@ The following properties are synchronized between a SuperOffice Person and a Tid
    * - BirthDate
      - Fodt
      - "string"
-   * - Contact.ContactId
-     - AvdelingId
-     - "string"
-   * - Contact.ContactId
-     - Tittel
-     - "string"
-   * - Contact.ContactId
-     - sesam_ansattId
-     - "integer"
    * - Firstname
      - Fornavn
      - "string"
@@ -202,15 +181,6 @@ The following properties are synchronized between a SuperOffice User and a Tidsb
    * - SuperOffice User Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
-   * - contactId
-     - AvdelingId
-     - "string"
-   * - contactId
-     - Tittel
-     - "string"
-   * - contactId
-     - sesam_ansattId
-     - "integer"
    * - firstName
      - Fornavn
      - "string"
