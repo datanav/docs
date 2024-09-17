@@ -2,7 +2,7 @@
 Custom ERP to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -38,6 +38,22 @@ The following properties are synchronized between a Custom ERP Order and a Sales
 
    * - Custom ERP Order Property
      - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+Custom ERP Product to Salesforce Product2
+-----------------------------------------
+Every Custom ERP Product will be synchronized with a Salesforce Product2.
+
+Once a link between a Custom ERP Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom ERP Product and a Salesforce Product2:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom ERP Product Property
+     - Salesforce Product2 Property
      - Salesforce Data Type
 
 
@@ -86,6 +102,22 @@ The following properties are synchronized between a Custom ERP Contact and a Sal
 
    * - Custom ERP Contact Property
      - Salesforce Contact Property
+     - Salesforce Data Type
+
+
+Custom ERP Customer to Salesforce Customer
+------------------------------------------
+Every Custom ERP Customer will be synchronized with a Salesforce Customer.
+
+Once a link between a Custom ERP Customer and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom ERP Customer and a Salesforce Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom ERP Customer Property
+     - Salesforce Customer Property
      - Salesforce Data Type
 
 
