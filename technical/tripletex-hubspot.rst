@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -214,6 +214,18 @@ The following properties are synchronized between a Tripletex Product and a HubS
    * - Tripletex Product Property
      - HubSpot Product Property
      - HubSpot Data Type
+   * - costExcludingVatCurrency
+     - properties.hs_cost_of_goods_sold
+     - "string"
+   * - description
+     - properties.description
+     - "string"
+   * - name
+     - properties.name
+     - "string"
+   * - priceExcludingVatCurrency
+     - properties.price
+     - "string"
 
 
 Tripletex Customer to HubSpot Company
@@ -328,6 +340,12 @@ The following properties are synchronized between a Tripletex Order and a HubSpo
    * - Tripletex Order Property
      - HubSpot Deal Property
      - HubSpot Data Type
+   * - currency.id
+     - properties.deal_currency_code
+     - "string"
+   * - orderDate
+     - properties.closedate
+     - "string"
 
 
 Tripletex Orderline to HubSpot Lineitem
