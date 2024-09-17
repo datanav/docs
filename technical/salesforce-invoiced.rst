@@ -2,12 +2,28 @@
 Salesforce to Invoiced Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Invoiced. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Salesforce Customer to Invoiced Customers company
+-------------------------------------------------
+Every Salesforce Customer will be synchronized with a Invoiced Customers company.
+
+Once a link between a Salesforce Customer and a Invoiced Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Customer and a Invoiced Customers company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Customer Property
+     - Invoiced Customers company Property
+     - Invoiced Data Type
+
 
 Salesforce Customer to Invoiced Customers person
 ------------------------------------------------
@@ -23,9 +39,6 @@ The following properties are synchronized between a Salesforce Customer and a In
    * - Salesforce Customer Property
      - Invoiced Customers person Property
      - Invoiced Data Type
-   * - Name
-     - name
-     - "string"
 
 
 Salesforce Invoiceline to Invoiced Lineitem
@@ -42,18 +55,6 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Salesforce Invoiceline Property
      - Invoiced Lineitem Property
      - Invoiced Data Type
-   * - Description
-     - items.description
-     - "string"
-   * - Name
-     - items.name
-     - "string"
-   * - Quantity
-     - items.quantity
-     - "string"
-   * - UnitPrice
-     - items.amount
-     - "string"
 
 
 Salesforce Order to Invoiced Invoices
@@ -70,9 +71,6 @@ The following properties are synchronized between a Salesforce Order and a Invoi
    * - Salesforce Order Property
      - Invoiced Invoices Property
      - Invoiced Data Type
-   * - CurrencyIsoCode
-     - currency
-     - "string"
 
 
 Salesforce Orderitem to Invoiced Lineitem
@@ -89,12 +87,6 @@ The following properties are synchronized between a Salesforce Orderitem and a I
    * - Salesforce Orderitem Property
      - Invoiced Lineitem Property
      - Invoiced Data Type
-   * - Quantity
-     - items.quantity
-     - "string"
-   * - TotalPrice
-     - items.amount
-     - "string"
 
 
 Salesforce Product2 to Invoiced Items
@@ -111,18 +103,6 @@ The following properties are synchronized between a Salesforce Product2 and a In
    * - Salesforce Product2 Property
      - Invoiced Items Property
      - Invoiced Data Type
-   * - Description
-     - description
-     - "string"
-   * - Description	
-     - description
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - Name	
-     - name
-     - "string"
 
 
 Salesforce Quotelineitem to Invoiced Lineitem
@@ -139,16 +119,4 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - Salesforce Quotelineitem Property
      - Invoiced Lineitem Property
      - Invoiced Data Type
-   * - Description
-     - items.description
-     - "string"
-   * - Discount
-     - items.discounts
-     - "string"
-   * - Quantity
-     - items.quantity
-     - "string"
-   * - TotalPriceWithTax
-     - items.amount
-     - "string"
 
