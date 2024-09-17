@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2024-09-17 09:14:34
+Generated: 2024-09-17 12:31:51
 
 Introduction
 ------------
@@ -501,6 +501,27 @@ The following properties are synchronized between a Tripletex Orderline and a Su
    * - Tripletex Orderline Property
      - SuperOffice Quoteline Property
      - SuperOffice Data Type
+   * - count
+     - Quantity
+     - N/A
+   * - description
+     - Description
+     - "string"
+   * - discount
+     - ERPDiscountPercent
+     - "integer"
+   * - order.id
+     - QuoteAlternativeId
+     - "integer"
+   * - product.id
+     - ERPProductKey
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - UnitListPrice
+     - N/A
+   * - vatType.id
+     - VAT
+     - "integer"
 
 
 Tripletex Product to SuperOffice Product
