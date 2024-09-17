@@ -2,7 +2,7 @@
 Wix.com to Business Central Dataflow
 ====================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -60,6 +60,42 @@ The following properties are synchronized between a Wix.com Contacts and a Busin
      - "string"
 
 
+Wix.com Orders to Business Central Salesorders
+----------------------------------------------
+Before any synchronization can take place, a link between a Wix.com Orders and a Business Central Salesorders must be established.
+
+A new Business Central Salesorders will be created from a Wix.com Orders if it is connected to a Wix.com Wix-orders that is synchronized into Business Central.
+
+Once a link between a Wix.com Orders and a Business Central Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Orders and a Business Central Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Orders Property
+     - Business Central Salesorders Property
+     - Business Central Data Type
+
+
+Wix.com Products to Business Central Items
+------------------------------------------
+Before any synchronization can take place, a link between a Wix.com Products and a Business Central Items must be established.
+
+A new Business Central Items will be created from a Wix.com Products if it is connected to a Wix.com Wix-orders that is synchronized into Business Central.
+
+Once a link between a Wix.com Products and a Business Central Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a Business Central Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
+     - Business Central Items Property
+     - Business Central Data Type
+
+
 Wix.com Contacts to Business Central Contacts person
 ----------------------------------------------------
 Every Wix.com Contacts will be synchronized with a Business Central Contacts person.
@@ -74,21 +110,6 @@ The following properties are synchronized between a Wix.com Contacts and a Busin
    * - Wix.com Contacts Property
      - Business Central Contacts person Property
      - Business Central Data Type
-   * - info.name.first
-     - displayName
-     - "string"
-   * - info.name.last
-     - displayName
-     - "string"
-   * - primaryInfo.email
-     - email
-     - "string"
-   * - primaryInfo.phone
-     - mobilePhoneNumber
-     - "string"
-   * - primaryInfo.phone
-     - phoneNumber
-     - "string"
 
 
 Wix.com Orders to Business Central Salesorderlines
@@ -105,63 +126,6 @@ The following properties are synchronized between a Wix.com Orders and a Busines
    * - Wix.com Orders Property
      - Business Central Salesorderlines Property
      - Business Central Data Type
-   * - id
-     - documentId
-     - "string"
-   * - lineItems.name
-     - description
-     - "string"
-   * - lineItems.name
-     - discountPercent
-     - N/A
-   * - lineItems.name
-     - quantity
-     - N/A
-   * - lineItems.name
-     - taxPercent
-     - N/A
-   * - lineItems.name
-     - unitPrice
-     - "float"
-   * - lineItems.price
-     - amountExcludingTax
-     - "string"
-   * - lineItems.price
-     - description
-     - "string"
-   * - lineItems.price
-     - discountPercent
-     - N/A
-   * - lineItems.price
-     - quantity
-     - N/A
-   * - lineItems.price
-     - taxPercent
-     - N/A
-   * - lineItems.price
-     - unitPrice
-     - "float"
-   * - lineItems.productId
-     - itemId
-     - "string"
-   * - lineItems.quantity
-     - description
-     - "string"
-   * - lineItems.quantity
-     - discountPercent
-     - N/A
-   * - lineItems.quantity
-     - invoiceQuantity
-     - "string"
-   * - lineItems.quantity
-     - quantity
-     - N/A
-   * - lineItems.quantity
-     - taxPercent
-     - N/A
-   * - lineItems.quantity
-     - unitPrice
-     - "float"
 
 
 Wix.com Orders to Business Central Salesorders
@@ -178,15 +142,6 @@ The following properties are synchronized between a Wix.com Orders and a Busines
    * - Wix.com Orders Property
      - Business Central Salesorders Property
      - Business Central Data Type
-   * - buyerInfo.id
-     - customerId
-     - "string"
-   * - currency
-     - currencyId
-     - "string"
-   * - totals.total
-     - totalAmountExcludingTax
-     - "string"
 
 
 Wix.com Products to Business Central Items
@@ -203,22 +158,4 @@ The following properties are synchronized between a Wix.com Products and a Busin
    * - Wix.com Products Property
      - Business Central Items Property
      - Business Central Data Type
-   * - costAndProfitData.itemCost
-     - unitCost
-     - N/A
-   * - costRange.maxValue
-     - unitCost
-     - N/A
-   * - name
-     - displayName
-     - "string"
-   * - name
-     - displayName.string
-     - "string"
-   * - name
-     - displayName2
-     - "string"
-   * - priceData.price
-     - unitPrice
-     - N/A
 
