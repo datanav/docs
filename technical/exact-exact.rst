@@ -2,7 +2,7 @@
 Exact Online to Exact Online Dataflow
 =====================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -301,21 +301,6 @@ The following properties are synchronized between a Exact Online Accounts and a 
    * - Exact Online Accounts Property
      - Exact Online Addresses Property
      - Exact Online Data Type
-   * - AddressLine1
-     - AddressLine1
-     - "string"
-   * - AddressLine2
-     - AddressLine2
-     - "string"
-   * - AddressLine3
-     - AddressLine3
-     - "string"
-   * - City
-     - City
-     - "string"
-   * - Country
-     - Country
-     - "string"
 
 
 Exact Online Employees to Exact Online Addresses
@@ -332,19 +317,4 @@ The following properties are synchronized between a Exact Online Employees and a
    * - Exact Online Employees Property
      - Exact Online Addresses Property
      - Exact Online Data Type
-   * - AddressLine2
-     - AddressLine2
-     - "string"
-   * - AddressLine3
-     - AddressLine3
-     - "string"
-   * - AddressStreet
-     - AddressLine1
-     - "string"
-   * - City
-     - City
-     - "string"
-   * - Country
-     - Country
-     - "string"
 
