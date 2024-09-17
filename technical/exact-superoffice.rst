@@ -2,57 +2,12 @@
 Exact Online to SuperOffice Dataflow
 ====================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Exact Online Items to SuperOffice Product
------------------------------------------
-Before any synchronization can take place, a link between a Exact Online Items and a SuperOffice Product must be established.
-
-A new SuperOffice Product will be created from a Exact Online Items if it is connected to a Exact Online Exact-salesorderlines that is synchronized into SuperOffice.
-
-Once a link between a Exact Online Items and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Online Items and a SuperOffice Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Online Items Property
-     - SuperOffice Product Property
-     - SuperOffice Data Type
-   * - Code
-     - Code
-     - "string"
-
-
-Exact Online Salesorders to SuperOffice Quotealternative
---------------------------------------------------------
-Before any synchronization can take place, a link between a Exact Online Salesorders and a SuperOffice Quotealternative must be established.
-
-A new SuperOffice Quotealternative will be created from a Exact Online Salesorders if it is connected to a Exact Online Exact-salesorderlines that is synchronized into SuperOffice.
-
-Once a link between a Exact Online Salesorders and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Online Salesorders and a SuperOffice Quotealternative:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Online Salesorders Property
-     - SuperOffice Quotealternative Property
-     - SuperOffice Data Type
-   * - Description
-     - Name
-     - "string"
-   * - Discount
-     - DiscountPercent
-     - "integer"
-
 
 Exact Online Accounts to SuperOffice Contact
 --------------------------------------------
