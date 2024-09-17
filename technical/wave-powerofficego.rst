@@ -2,7 +2,7 @@
 Wave to PowerOffice GO Dataflow
 ===============================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -110,6 +110,54 @@ The following properties are synchronized between a Wave Customer person and a P
    * - Wave Customer person Property
      - PowerOffice GO Customers person Property
      - PowerOffice GO Data Type
+   * - address.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - address.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - address.city
+     - MailAddress.City
+     - "string"
+   * - address.country.code
+     - MailAddress.CountryCode
+     - "string"
+   * - address.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - email
+     - EmailAddress
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - id
+     - Id
+     - "integer"
+   * - lastName
+     - LastName
+     - "string"
+   * - phone
+     - PhoneNumber
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - shippingDetails.address.city
+     - MailAddress.City
+     - "string"
+   * - shippingDetails.address.country.code
+     - MailAddress.CountryCode
+     - "string"
+   * - shippingDetails.address.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - shippingDetails.phone
+     - PhoneNumber
+     - "string"
 
 
 Wave Customer to PowerOffice GO Contactperson
@@ -138,6 +186,18 @@ The following properties are synchronized between a Wave Customer and a PowerOff
    * - Wave Customer Property
      - PowerOffice GO Contactperson Property
      - PowerOffice GO Data Type
+   * - email
+     - emailAddress
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - partyId
+     - "integer"
+   * - lastName
+     - lastName
+     - "string"
 
 
 Wave Customer to PowerOffice GO Customers person
@@ -234,6 +294,39 @@ The following properties are synchronized between a Wave Vendor and a PowerOffic
    * - Wave Vendor Property
      - PowerOffice GO Contactperson Property
      - PowerOffice GO Data Type
+   * - address.addressLine1
+     - address1
+     - "string"
+   * - address.addressLine2
+     - address2
+     - "string"
+   * - address.city
+     - city
+     - "string"
+   * - address.country.code
+     - residenceCountryCode
+     - "string"
+   * - address.postalCode
+     - zipCode
+     - "string"
+   * - email
+     - emailAddress
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - id
+     - partyId
+     - "integer"
+   * - lastName
+     - lastName
+     - "string"
+   * - phone
+     - phoneNumber
+     - "string"
 
 
 Wave Vendor to PowerOffice GO Customers person
@@ -298,12 +391,30 @@ The following properties are synchronized between a Wave Customer and a PowerOff
    * - Wave Customer Property
      - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
+   * - address.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - address.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - address.city
+     - MailAddress.City
+     - "string"
+   * - address.country.code
+     - MailAddress.CountryCode
+     - "string"
+   * - address.postalCode
+     - MailAddress.ZipCode
+     - "string"
    * - email
      - EmailAddress
      - "string"
    * - firstName
      - FirstName
      - "string"
+   * - id
+     - Id
+     - "integer"
    * - lastName
      - LastName
      - "string"
@@ -313,30 +424,66 @@ The following properties are synchronized between a Wave Customer and a PowerOff
    * - phone
      - Number
      - "string"
+   * - phone
+     - PhoneNumber
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - shippingDetails.address.city
+     - MailAddress.City
+     - "string"
+   * - shippingDetails.address.country.code
+     - MailAddress.CountryCode
+     - "string"
+   * - shippingDetails.address.postalCode
+     - MailAddress.ZipCode
+     - "string"
    * - shippingDetails.phone
      - Number
+     - "string"
+   * - shippingDetails.phone
+     - PhoneNumber
      - "string"
    * - website
      - WebsiteUrl
      - "string"
 
 
-Wave Financial Invoice to PowerOfficeGo Salesorders
----------------------------------------------------
-Before any synchronization can take place, a link between a Wave Financial Invoice and a PowerOfficeGo Salesorders must be established.
+Wave Invoice to PowerOffice GO Salesorders
+------------------------------------------
+Before any synchronization can take place, a link between a Wave Invoice and a PowerOffice GO Salesorders must be established.
 
-A new PowerOfficeGo Salesorders will be created from a Wave Financial Invoice if it is connected to a Wave Financial Wave-invoice that is synchronized into PowerOfficeGo.
+A new PowerOffice GO Salesorders will be created from a Wave Invoice if it is connected to a Wave Invoice that is synchronized into PowerOffice GO.
 
-Once a link between a Wave Financial Invoice and a PowerOfficeGo Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Invoice and a PowerOffice GO Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Financial Invoice and a PowerOfficeGo Salesorders:
+The following properties are synchronized between a Wave Invoice and a PowerOffice GO Salesorders:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Financial Invoice Property
-     - PowerOfficeGo Salesorders Property
-     - PowerOfficeGo Data Type
+   * - Wave Invoice Property
+     - PowerOffice GO Salesorders Property
+     - PowerOffice GO Data Type
+   * - currency.code
+     - CurrencyCode
+     - "string"
+   * - customer.id
+     - CustomerId
+     - "integer"
+   * - customer.id
+     - CustomerReferenceContactPersonId
+     - "integer"
+   * - invoiceNumber
+     - RelatedInvoiceNo
+     - "string"
+   * - poNumber
+     - PurchaseOrderReference
+     - "string"
 
 
 Wave Product to PowerOffice GO Product
@@ -355,6 +502,15 @@ The following properties are synchronized between a Wave Product and a PowerOffi
    * - Wave Product Property
      - PowerOffice GO Product Property
      - PowerOffice GO Data Type
+   * - description
+     - description
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - unitPrice
+     - salesPrice
+     - N/A
 
 
 Wave Vendor to PowerOffice GO Customers
