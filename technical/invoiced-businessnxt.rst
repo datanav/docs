@@ -2,25 +2,25 @@
 Invoiced to Business Nxt Dataflow
 =================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Invoiced Customers company to Business Nxt Address
---------------------------------------------------
-Every Invoiced Customers company will be synchronized with a Business Nxt Address.
+Invoiced Customers (organisation data) to Business Nxt Address
+--------------------------------------------------------------
+Every Invoiced Customers (organisation data) will be synchronized with a Business Nxt Address.
 
-Once a link between a Invoiced Customers company and a Business Nxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (organisation data) and a Business Nxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a Business Nxt Address:
+The following properties are synchronized between a Invoiced Customers (organisation data) and a Business Nxt Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers company Property
+   * - Invoiced Customers (organisation data) Property
      - Business Nxt Address Property
      - Business Nxt Data Type
    * - name
