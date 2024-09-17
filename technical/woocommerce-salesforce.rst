@@ -2,78 +2,12 @@
 WooCommerce to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-WooCommerce Order to Salesforce Order
--------------------------------------
-Before any synchronization can take place, a link between a WooCommerce Order and a Salesforce Order must be established.
-
-A new Salesforce Order will be created from a WooCommerce Order if it is connected to a WooCommerce Order that is synchronized into Salesforce.
-
-Once a link between a WooCommerce Order and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a WooCommerce Order and a Salesforce Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - WooCommerce Order Property
-     - Salesforce Order Property
-     - Salesforce Data Type
-   * - billing.address_1
-     - BillingStreet
-     - "string"
-   * - billing.city
-     - BillingCity
-     - "string"
-   * - billing.city
-     - ShippingCity
-     - "string"
-   * - billing.country
-     - BillingCountry
-     - "string"
-   * - billing.country
-     - ShippingCountry
-     - "string"
-   * - billing.postcode
-     - BillingPostalCode
-     - "string"
-   * - billing.postcode
-     - ShippingStateCode
-     - "string"
-   * - currency
-     - CurrencyIsoCode
-     - "string"
-   * - id
-     - ID
-     - "string"
-   * - shipping.address_1
-     - BillingStreet
-     - "string"
-   * - shipping.city
-     - BillingCity
-     - "string"
-   * - shipping.city
-     - ShippingCity
-     - "string"
-   * - shipping.country
-     - BillingCountry
-     - "string"
-   * - shipping.country
-     - ShippingCountry
-     - "string"
-   * - shipping.postcode
-     - BillingPostalCode
-     - "string"
-   * - shipping.postcode
-     - ShippingStateCode
-     - "string"
-
 
 WooCommerce Product to Salesforce Product2
 ------------------------------------------
