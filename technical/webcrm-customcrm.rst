@@ -2,7 +2,7 @@
 WebCRM to Custom CRM Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -38,6 +38,38 @@ The following properties are synchronized between a WebCRM Organisations and a C
 
    * - WebCRM Organisations Property
      - Custom CRM Customer Property
+     - Custom CRM Data Type
+
+
+WebCRM Persons to Custom CRM Contact
+------------------------------------
+Every WebCRM Persons will be synchronized with a Custom CRM Contact.
+
+Once a link between a WebCRM Persons and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WebCRM Persons and a Custom CRM Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WebCRM Persons Property
+     - Custom CRM Contact Property
+     - Custom CRM Data Type
+
+
+WebCRM Products to Custom CRM Product
+-------------------------------------
+Every WebCRM Products will be synchronized with a Custom CRM Product.
+
+Once a link between a WebCRM Products and a Custom CRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WebCRM Products and a Custom CRM Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WebCRM Products Property
+     - Custom CRM Product Property
      - Custom CRM Data Type
 
 
@@ -102,5 +134,21 @@ The following properties are synchronized between a WebCRM Products and a Custom
 
    * - WebCRM Products Property
      - Custom CRM Product Property
+     - Custom CRM Data Type
+
+
+WebCRM Users to Custom CRM User
+-------------------------------
+Every WebCRM Users will be synchronized with a Custom CRM User.
+
+Once a link between a WebCRM Users and a Custom CRM User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WebCRM Users and a Custom CRM User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WebCRM Users Property
+     - Custom CRM User Property
      - Custom CRM Data Type
 
