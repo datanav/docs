@@ -2,7 +2,7 @@
 Invoiced to PowerOffice GO Dataflow
 ===================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -23,21 +23,6 @@ The following properties are synchronized between a Invoiced Contacts and a Powe
    * - Invoiced Contacts Property
      - PowerOffice GO Contactperson Property
      - PowerOffice GO Data Type
-   * - address1
-     - address1
-     - "string"
-   * - address2
-     - address2
-     - "string"
-   * - city
-     - city
-     - "string"
-   * - email
-     - emailAddress
-     - "string"
-   * - postal_code
-     - zipCode
-     - "string"
 
 
 Invoiced Customers company to PowerOffice GO Customers
@@ -54,9 +39,38 @@ The following properties are synchronized between a Invoiced Customers company a
    * - Invoiced Customers company Property
      - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
-   * - name
-     - Name
-     - "string"
+
+
+Invoiced Customers company to PowerOffice GO Customers person
+-------------------------------------------------------------
+Every Invoiced Customers company will be synchronized with a PowerOffice GO Customers person.
+
+Once a link between a Invoiced Customers company and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Customers company and a PowerOffice GO Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Customers company Property
+     - PowerOffice GO Customers person Property
+     - PowerOffice GO Data Type
+
+
+Invoiced Customers person to PowerOffice GO Customers
+-----------------------------------------------------
+Every Invoiced Customers person will be synchronized with a PowerOffice GO Customers.
+
+Once a link between a Invoiced Customers person and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Customers person and a PowerOffice GO Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Customers person Property
+     - PowerOffice GO Customers Property
+     - PowerOffice GO Data Type
 
 
 Invoiced Customers person to PowerOffice GO Customers person
@@ -73,24 +87,6 @@ The following properties are synchronized between a Invoiced Customers person an
    * - Invoiced Customers person Property
      - PowerOffice GO Customers person Property
      - PowerOffice GO Data Type
-   * - address1
-     - MailAddress.AddressLine1
-     - "string"
-   * - address2
-     - MailAddress.AddressLine2
-     - "string"
-   * - city
-     - MailAddress.City
-     - "string"
-   * - country
-     - MailAddress.CountryCode
-     - "string"
-   * - id
-     - Id
-     - "integer"
-   * - postal_code
-     - MailAddress.ZipCode
-     - "string"
 
 
 Invoiced Invoices to PowerOffice GO Salesorders
@@ -107,15 +103,6 @@ The following properties are synchronized between a Invoiced Invoices and a Powe
    * - Invoiced Invoices Property
      - PowerOffice GO Salesorders Property
      - PowerOffice GO Data Type
-   * - currency
-     - CurrencyCode
-     - "string"
-   * - customer
-     - CustomerId
-     - "integer"
-   * - customer
-     - CustomerReferenceContactPersonId
-     - "integer"
 
 
 Invoiced Items to PowerOffice GO Product
@@ -132,15 +119,6 @@ The following properties are synchronized between a Invoiced Items and a PowerOf
    * - Invoiced Items Property
      - PowerOffice GO Product Property
      - PowerOffice GO Data Type
-   * - description
-     - description
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - unit_cost
-     - costPrice
-     - N/A
 
 
 Invoiced Lineitem to PowerOffice GO Salesorderlines
@@ -157,19 +135,4 @@ The following properties are synchronized between a Invoiced Lineitem and a Powe
    * - Invoiced Lineitem Property
      - PowerOffice GO Salesorderlines Property
      - PowerOffice GO Data Type
-   * - $original_id
-     - sesam_SalesOrderId
-     - "string"
-   * - items.amount
-     - ProductUnitPrice
-     - N/A
-   * - items.discounts
-     - Allowance
-     - "float"
-   * - items.name
-     - Description
-     - "string"
-   * - items.quantity
-     - Quantity
-     - N/A
 
