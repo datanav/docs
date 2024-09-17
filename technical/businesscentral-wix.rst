@@ -2,7 +2,7 @@
 Business Central to Wix Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -27,6 +27,24 @@ The following properties are synchronized between a Business Central Customers a
      - Wix Data Type
 
 
+Business Central Items to Wix Products
+--------------------------------------
+Before any synchronization can take place, a link between a Business Central Items and a Wix Products must be established.
+
+A new Wix Products will be created from a Business Central Items if it is connected to a Business Central Businesscentral-salesorders that is synchronized into Wix.
+
+Once a link between a Business Central Items and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Items and a Wix Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Items Property
+     - Wix Products Property
+     - Wix Data Type
+
+
 Business Central Contacts person to Wix Contacts
 ------------------------------------------------
 Every Business Central Contacts person will be synchronized with a Wix Contacts.
@@ -41,21 +59,6 @@ The following properties are synchronized between a Business Central Contacts pe
    * - Business Central Contacts person Property
      - Wix Contacts Property
      - Wix Data Type
-   * - displayName
-     - info.name.first
-     - "string"
-   * - displayName
-     - info.name.last
-     - "string"
-   * - email
-     - primaryInfo.email
-     - "string"
-   * - mobilePhoneNumber
-     - primaryInfo.phone
-     - "string"
-   * - phoneNumber
-     - primaryInfo.phone
-     - "string"
 
 
 Business Central Items to Wix Products
@@ -72,22 +75,4 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      - Wix Products Property
      - Wix Data Type
-   * - displayName
-     - name
-     - "string"
-   * - displayName.string
-     - name
-     - "string"
-   * - displayName2
-     - name
-     - "string"
-   * - unitCost
-     - costAndProfitData.itemCost
-     - N/A
-   * - unitCost
-     - costRange.maxValue
-     - "string"
-   * - unitPrice
-     - priceData.price
-     - N/A
 
