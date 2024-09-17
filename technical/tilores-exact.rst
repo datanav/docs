@@ -2,7 +2,7 @@
 Tilores to Exact Online Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -28,14 +28,5 @@ The following properties are synchronized between a Tilores Human and a Exact On
      - "string"
    * - dateOfBirth
      - BirthDate
-     - "string"
-   * - email
-     - Email
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - lastName
-     - LastName
      - "string"
 
