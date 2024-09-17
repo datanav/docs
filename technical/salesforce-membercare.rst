@@ -2,7 +2,7 @@
 Salesforce to MemberCare Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -94,6 +94,22 @@ The following properties are synchronized between a Salesforce Division and a Me
      - "string"
 
 
+Salesforce Invoice to MemberCare Invoices
+-----------------------------------------
+Every Salesforce Invoice will be synchronized with a MemberCare Invoices.
+
+Once a link between a Salesforce Invoice and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Invoice and a MemberCare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Invoice Property
+     - MemberCare Invoices Property
+     - MemberCare Data Type
+
+
 Salesforce Invoiceline to MemberCare Invoices
 ---------------------------------------------
 Every Salesforce Invoiceline will be synchronized with a MemberCare Invoices.
@@ -158,6 +174,22 @@ The following properties are synchronized between a Salesforce Orderitem and a M
    * - TotalPrice
      - invoiceItems.unitPrice
      - "string"
+
+
+Salesforce Organization to MemberCare Companies
+-----------------------------------------------
+Every Salesforce Organization will be synchronized with a MemberCare Companies.
+
+Once a link between a Salesforce Organization and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Organization and a MemberCare Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Organization Property
+     - MemberCare Companies Property
+     - MemberCare Data Type
 
 
 Salesforce Product2 to MemberCare Products
@@ -293,9 +325,6 @@ The following properties are synchronized between a Salesforce Contact and a Mem
    * - Salesforce Contact Property
      - MemberCare Countries Property
      - MemberCare Data Type
-   * - MailingCountry
-     - name
-     - "string"
 
 
 Salesforce Invoice to MemberCare Invoices
@@ -312,9 +341,6 @@ The following properties are synchronized between a Salesforce Invoice and a Mem
    * - Salesforce Invoice Property
      - MemberCare Invoices Property
      - MemberCare Data Type
-   * - DueDate
-     - payDueDate
-     - "string"
 
 
 Salesforce Order to MemberCare Countries
@@ -331,18 +357,22 @@ The following properties are synchronized between a Salesforce Order and a Membe
    * - Salesforce Order Property
      - MemberCare Countries Property
      - MemberCare Data Type
-   * - BillingCountry
-     - name
-     - "string"
-   * - BillingCountryCode
-     - iso2Letter
-     - "string"
-   * - ShippingCountry
-     - name
-     - "string"
-   * - ShippingCountryCode
-     - iso2Letter
-     - "string"
+
+
+Salesforce Order to MemberCare Invoices
+---------------------------------------
+Every Salesforce Order will be synchronized with a MemberCare Invoices.
+
+Once a link between a Salesforce Order and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Order and a MemberCare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Order Property
+     - MemberCare Invoices Property
+     - MemberCare Data Type
 
 
 Salesforce Organization to MemberCare Companies
@@ -359,36 +389,6 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      - MemberCare Companies Property
      - MemberCare Data Type
-   * - City
-     - addresses.postalCode.city
-     - "string"
-   * - Country
-     - addresses.country.id
-     - "string"
-   * - ID
-     - addresses.id
-     - "string"
-   * - Name
-     - companyName
-     - "string"
-   * - Name	
-     - companyName
-     - "string"
-   * - Name	
-     - name
-     - "string"
-   * - PostalCode
-     - addresses.postalCode.zipCode
-     - "string"
-   * - PostalCode	
-     - addresses.postalCode.zipCode
-     - "string"
-   * - Street
-     - addresses.street
-     - "string"
-   * - Street	
-     - addresses.street
-     - "string"
 
 
 Salesforce Quote to MemberCare Countries
@@ -405,18 +405,22 @@ The following properties are synchronized between a Salesforce Quote and a Membe
    * - Salesforce Quote Property
      - MemberCare Countries Property
      - MemberCare Data Type
-   * - BillingCountry
-     - name
-     - "string"
-   * - BillingCountryCode
-     - iso2Letter
-     - "string"
-   * - ShippingCountry
-     - name
-     - "string"
-   * - ShippingCountryCode
-     - iso2Letter
-     - "string"
+
+
+Salesforce Quote to MemberCare Invoices
+---------------------------------------
+Every Salesforce Quote will be synchronized with a MemberCare Invoices.
+
+Once a link between a Salesforce Quote and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quote and a MemberCare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quote Property
+     - MemberCare Invoices Property
+     - MemberCare Data Type
 
 
 Salesforce User to MemberCare Countries
@@ -433,10 +437,4 @@ The following properties are synchronized between a Salesforce User and a Member
    * - Salesforce User Property
      - MemberCare Countries Property
      - MemberCare Data Type
-   * - Country
-     - name
-     - "string"
-   * - CountryCode
-     - iso2Letter
-     - "string"
 
