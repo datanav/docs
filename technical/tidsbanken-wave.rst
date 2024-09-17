@@ -2,7 +2,7 @@
 Tidsbanken to Wave Dataflow
 ===========================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -79,15 +79,6 @@ The following properties are synchronized between a Tidsbanken Kunde and a Wave 
    * - Tidsbanken Kunde Property
      - Wave Customer Property
      - Wave Data Type
-   * - Navn
-     - name
-     - N/A
-   * - Telefon
-     - phone
-     - "string"
-   * - Url
-     - website
-     - "string"
 
 
 Tidsbanken Kunde to Wave Customer (human data)
