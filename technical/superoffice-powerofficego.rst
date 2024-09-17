@@ -2,7 +2,7 @@
 SuperOffice to PowerOffice GO Dataflow
 ======================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -394,6 +394,42 @@ The following properties are synchronized between a SuperOffice Person and a Pow
      - PowerOfficeGo Data Type
 
 
+SuperOffice Product to PowerOffice GO Product
+---------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Product and a PowerOffice GO Product must be established.
+
+A new PowerOffice GO Product will be created from a SuperOffice Product if it is connected to a SuperOffice Quoteline that is synchronized into PowerOffice GO.
+
+Once a link between a SuperOffice Product and a PowerOffice GO Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a PowerOffice GO Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - PowerOffice GO Product Property
+     - PowerOffice GO Data Type
+
+
+SuperOffice Project to PowerOffice GO Projects
+----------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Project and a PowerOffice GO Projects must be established.
+
+A new PowerOffice GO Projects will be created from a SuperOffice Project if it is connected to a SuperOffice Project that is synchronized into PowerOffice GO.
+
+Once a link between a SuperOffice Project and a PowerOffice GO Projects is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Project and a PowerOffice GO Projects:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Project Property
+     - PowerOffice GO Projects Property
+     - PowerOffice GO Data Type
+
+
 SuperOffice Quotealternative to PowerOfficeGo Salesorders
 ---------------------------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Quotealternative and a PowerOfficeGo Salesorders must be established.
@@ -432,63 +468,6 @@ The following properties are synchronized between a SuperOffice Product and a Po
    * - SuperOffice Product Property
      - PowerOffice GO Product Property
      - PowerOffice GO Data Type
-   * - Description
-     - Description
-     - "string"
-   * - Description
-     - description
-     - "string"
-   * - Name
-     - Name
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - ProductCategoryKey
-     - ProductGroupId
-     - "string"
-   * - ProductCategoryKey
-     - productGroupId
-     - "integer"
-   * - ProductTypeKey
-     - Type
-     - "string"
-   * - ProductTypeKey
-     - type
-     - "integer"
-   * - QuantityUnit
-     - Unit
-     - "string"
-   * - QuantityUnit
-     - unit
-     - "string"
-   * - QuantityUnit
-     - unitOfMeasureCode
-     - "string"
-   * - UnitCost
-     - CostPrice
-     - "string"
-   * - UnitCost
-     - costPrice
-     - N/A
-   * - UnitListPrice
-     - SalesPrice
-     - "string"
-   * - UnitListPrice
-     - salesPrice
-     - N/A
-   * - VAT
-     - VatCode
-     - "string"
-   * - VAT
-     - unitOfMeasureCode
-     - "string"
-   * - VAT
-     - vatCode
-     - "string"
-   * - VATInfo
-     - unitOfMeasureCode
-     - "string"
 
 
 SuperOffice Project to PowerOffice GO Projects
@@ -505,12 +484,6 @@ The following properties are synchronized between a SuperOffice Project and a Po
    * - SuperOffice Project Property
      - PowerOffice GO Projects Property
      - PowerOffice GO Data Type
-   * - Associate.AssociateId
-     - ProjectManagerEmployeeId
-     - "integer"
-   * - Name
-     - Name
-     - "string"
 
 
 SuperOffice Quoteline to PowerOffice GO Salesorderlines
@@ -527,49 +500,4 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - PowerOffice GO Salesorderlines Property
      - PowerOffice GO Data Type
-   * - DiscountPercent
-     - Allowance
-     - "float"
-   * - DiscountPercent
-     - Discount
-     - "string"
-   * - ERPDiscountPercent
-     - Allowance
-     - "float"
-   * - ERPProductKey
-     - ProductCode
-     - "string"
-   * - ERPProductKey
-     - ProductId
-     - "integer"
-   * - Name
-     - Description
-     - "string"
-   * - Quantity
-     - Quantity
-     - N/A
-   * - QuoteAlternativeId
-     - sesam_SalesOrderId
-     - "string"
-   * - QuoteAlternativeId
-     - sesam_SalesOrdersId
-     - "string"
-   * - Rank
-     - SortOrder
-     - "integer"
-   * - TotalPrice
-     - TotalAmount
-     - "string"
-   * - UnitListPrice
-     - ProductUnitPrice
-     - N/A
-   * - UnitListPrice
-     - SalesOrderLineUnitPrice
-     - "string"
-   * - VAT
-     - VatId
-     - "string"
-   * - VAT
-     - VatReturnSpecification
-     - "string"
 
