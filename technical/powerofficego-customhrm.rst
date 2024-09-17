@@ -2,7 +2,7 @@
 PowerOffice GO to Custom HRM Dataflow
 =====================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -41,18 +41,18 @@ The following properties are synchronized between a PowerOffice GO Customers and
      - Custom HRM Data Type
 
 
-PowerOffice GO Customers person to Custom HRM Employee
-------------------------------------------------------
-Every PowerOffice GO Customers person will be synchronized with a Custom HRM Employee.
+PowerOffice GO Customers (human data) to Custom HRM Employee
+------------------------------------------------------------
+Every PowerOffice GO Customers (human data) will be synchronized with a Custom HRM Employee.
 
-Once a link between a PowerOffice GO Customers person and a Custom HRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Customers (human data) and a Custom HRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice GO Customers person and a Custom HRM Employee:
+The following properties are synchronized between a PowerOffice GO Customers (human data) and a Custom HRM Employee:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice GO Customers person Property
+   * - PowerOffice GO Customers (human data) Property
      - Custom HRM Employee Property
      - Custom HRM Data Type
 
