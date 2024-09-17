@@ -2,7 +2,7 @@
 Tripletex to Custom ERP Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -22,6 +22,38 @@ The following properties are synchronized between a Tripletex Activity and a Cus
 
    * - Tripletex Activity Property
      - Custom ERP Project Property
+     - Custom ERP Data Type
+
+
+Tripletex Contact to Custom ERP Contact
+---------------------------------------
+Every Tripletex Contact will be synchronized with a Custom ERP Contact.
+
+Once a link between a Tripletex Contact and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a Custom ERP Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
+
+
+Tripletex Customer to Custom ERP Customer
+-----------------------------------------
+Every Tripletex Customer will be synchronized with a Custom ERP Customer.
+
+Once a link between a Tripletex Customer and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a Custom ERP Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - Custom ERP Customer Property
      - Custom ERP Data Type
 
 
@@ -73,6 +105,22 @@ The following properties are synchronized between a Tripletex Employee and a Cus
      - Custom ERP Data Type
 
 
+Tripletex Order to Custom ERP Order
+-----------------------------------
+Every Tripletex Order will be synchronized with a Custom ERP Order.
+
+Once a link between a Tripletex Order and a Custom ERP Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a Custom ERP Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - Custom ERP Order Property
+     - Custom ERP Data Type
+
+
 Tripletex Orderline to Custom ERP Order
 ---------------------------------------
 Every Tripletex Orderline will be synchronized with a Custom ERP Order.
@@ -86,6 +134,38 @@ The following properties are synchronized between a Tripletex Orderline and a Cu
 
    * - Tripletex Orderline Property
      - Custom ERP Order Property
+     - Custom ERP Data Type
+
+
+Tripletex Product to Custom ERP Product
+---------------------------------------
+Every Tripletex Product will be synchronized with a Custom ERP Product.
+
+Once a link between a Tripletex Product and a Custom ERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a Custom ERP Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - Custom ERP Product Property
+     - Custom ERP Data Type
+
+
+Tripletex Project to Custom ERP Project
+---------------------------------------
+Every Tripletex Project will be synchronized with a Custom ERP Project.
+
+Once a link between a Tripletex Project and a Custom ERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Project and a Custom ERP Project:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Project Property
+     - Custom ERP Project Property
      - Custom ERP Data Type
 
 
@@ -133,6 +213,22 @@ The following properties are synchronized between a Tripletex Customer and a Cus
    :header-rows: 1
 
    * - Tripletex Customer Property
+     - Custom ERP Customer Property
+     - Custom ERP Data Type
+
+
+Tripletex Customer person to Custom ERP Customer
+------------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Custom ERP Customer.
+
+Once a link between a Tripletex Customer person and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a Custom ERP Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
      - Custom ERP Customer Property
      - Custom ERP Data Type
 
