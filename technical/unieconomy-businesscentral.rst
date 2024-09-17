@@ -2,7 +2,7 @@
 Unieconomy to Business Central Dataflow
 =======================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -57,53 +57,53 @@ The following properties are synchronized between a Unieconomy Departments and a
      - Business Central Data Type
 
 
-Unieconomy Companies to Business Central Customers company
-----------------------------------------------------------
-Every Unieconomy Companies will be synchronized with a Business Central Customers company.
+Unieconomy Companies to Business Central Customers (classification data)
+------------------------------------------------------------------------
+Every Unieconomy Companies will be synchronized with a Business Central Customers (classification data).
 
-Once a link between a Unieconomy Companies and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Companies and a Business Central Customers (classification data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Companies and a Business Central Customers company:
+The following properties are synchronized between a Unieconomy Companies and a Business Central Customers (classification data):
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Companies Property
-     - Business Central Customers company Property
+     - Business Central Customers (classification data) Property
      - Business Central Data Type
    * - Name
      - displayName
      - "string"
 
 
-Unieconomy Customers to Business Central Customers company
-----------------------------------------------------------
-Every Unieconomy Customers will be synchronized with a Business Central Customers company.
+Unieconomy Customers to Business Central Customers (organisation data)
+----------------------------------------------------------------------
+Every Unieconomy Customers will be synchronized with a Business Central Customers (organisation data).
 
-Once a link between a Unieconomy Customers and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Customers and a Business Central Customers (organisation data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Customers and a Business Central Customers company:
+The following properties are synchronized between a Unieconomy Customers and a Business Central Customers (organisation data):
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Customers Property
-     - Business Central Customers company Property
+     - Business Central Customers (organisation data) Property
      - Business Central Data Type
 
 
-Unieconomy Customers to Business Central Customers person
----------------------------------------------------------
-Every Unieconomy Customers will be synchronized with a Business Central Customers person.
+Unieconomy Customers to Business Central Customers (human data)
+---------------------------------------------------------------
+Every Unieconomy Customers will be synchronized with a Business Central Customers (human data).
 
-Once a link between a Unieconomy Customers and a Business Central Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Customers and a Business Central Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Customers and a Business Central Customers person:
+The following properties are synchronized between a Unieconomy Customers and a Business Central Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Customers Property
-     - Business Central Customers person Property
+     - Business Central Customers (human data) Property
      - Business Central Data Type
 
