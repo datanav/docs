@@ -2,7 +2,7 @@
 PowerOffice GO to PowerOffice GO Dataflow
 =========================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -134,9 +134,6 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - Id
      - id
      - "integer"
-   * - IsPerson
-     - residenceCountryCode
-     - "string"
    * - LastName
      - lastName
      - "string"
@@ -211,9 +208,9 @@ The following properties are synchronized between a PowerOffice GO Customers and
      - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
    * - Number
-     - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCodeDependant on having wd:Q852835 in MailAddress.CountryCode)
+     - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCode)
      - "string"
-   * - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCodeDependant on having wd:Q852835 in MailAddress.CountryCode)
+   * - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCode)
      - Number
      - "string"
 
@@ -270,15 +267,6 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - PowerOffice GO Employees Property
      - PowerOffice GO Employees Property
      - PowerOffice GO Data Type
-   * - DepartmentId (Dependant on having  in JobTitle)
-     - JobTitle
-     - "string"
-   * - IsArchived
-     - IsArchived
-     - "boolean"
-   * - JobTitle
-     - DepartmentId (Dependant on having  in JobTitle)
-     - "string"
 
 
 PowerOffice GO Salesorders to PowerOffice GO Salesorders
