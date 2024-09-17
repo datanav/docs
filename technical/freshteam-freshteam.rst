@@ -2,7 +2,7 @@
 Freshteam to Freshteam Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 09:14:22
 
 Introduction
 ------------
@@ -36,31 +36,16 @@ The following properties are synchronized between a Freshteam Employee and a Fre
      - Freshteam Employee Property
      - Freshteam Data Type
    * - address.city
-     - address.city
-     - "string"
-   * - address.city
      - communication_address.communication_city
      - "string"
    * - address.country
      - communication_address.communication_country
      - "string"
-   * - address.country_code
-     - address.country_code
-     - "string"
-   * - address.street
-     - address.street
-     - "string"
    * - address.street
      - communication_address.communication_street
      - "string"
    * - address.zip_code
-     - address.zip_code
-     - "string"
-   * - address.zip_code
      - communication_address.communication_zip_code
-     - "string"
-   * - branch_id
-     - branch_id
      - "string"
    * - branch_id
      - business_unit_id
@@ -76,9 +61,6 @@ The following properties are synchronized between a Freshteam Employee and a Fre
      - "string"
    * - business_unit_id
      - branch_id
-     - "string"
-   * - business_unit_id
-     - business_unit_id
      - "string"
    * - business_unit_id
      - department_id
@@ -92,38 +74,20 @@ The following properties are synchronized between a Freshteam Employee and a Fre
    * - communication_address.communication_city
      - address.city
      - "string"
-   * - communication_address.communication_city
-     - communication_address.communication_city
-     - "string"
    * - communication_address.communication_country
      - address.country
-     - "string"
-   * - communication_address.communication_country_code
-     - communication_address.communication_country_code
      - "string"
    * - communication_address.communication_street
      - address.street
      - "string"
-   * - communication_address.communication_street
-     - communication_address.communication_street
-     - "string"
    * - communication_address.communication_zip_code
      - address.zip_code
-     - "string"
-   * - communication_address.communication_zip_code
-     - communication_address.communication_zip_code
-     - "string"
-   * - date_of_birth
-     - date_of_birth
      - "string"
    * - department_id
      - branch_id
      - "string"
    * - department_id
      - business_unit_id
-     - "string"
-   * - department_id
-     - department_id
      - "string"
    * - department_id
      - hr_incharge_id
@@ -131,12 +95,6 @@ The following properties are synchronized between a Freshteam Employee and a Fre
    * - department_id
      - sub_department_id
      - "string"
-   * - designation
-     - designation
-     - "string"
-   * - first_name
-     - first_name
-     - "string"
    * - hr_incharge_id
      - branch_id
      - "string"
@@ -145,9 +103,6 @@ The following properties are synchronized between a Freshteam Employee and a Fre
      - "string"
    * - hr_incharge_id
      - department_id
-     - "string"
-   * - hr_incharge_id
-     - hr_incharge_id
      - "string"
    * - hr_incharge_id
      - sub_department_id
@@ -155,18 +110,6 @@ The following properties are synchronized between a Freshteam Employee and a Fre
    * - id
      - id
      - "string"
-   * - last_name
-     - last_name
-     - "string"
-   * - official_email
-     - official_email
-     - "string"
-   * - personal_email
-     - personal_email
-     - "string"
-   * - phone_numbers.number
-     - phone_numbers.number (Dependant on having  in phone_numbers.nameDependant on having  in phone_numbers.name)
-     - "string"
    * - sub_department_id
      - branch_id
      - "string"
@@ -178,11 +121,5 @@ The following properties are synchronized between a Freshteam Employee and a Fre
      - "string"
    * - sub_department_id
      - hr_incharge_id
-     - "string"
-   * - sub_department_id
-     - sub_department_id
-     - "string"
-   * - updated_at
-     - updated_at
      - "string"
 
