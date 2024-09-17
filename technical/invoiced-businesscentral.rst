@@ -2,7 +2,7 @@
 Invoiced to Business Central Dataflow
 =====================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -39,27 +39,6 @@ The following properties are synchronized between a Invoiced Contacts and a Busi
    * - Invoiced Contacts Property
      - Business Central Contacts person Property
      - Business Central Data Type
-   * - address1
-     - addressLine1
-     - "string"
-   * - address2
-     - addressLine2
-     - "string"
-   * - city
-     - city
-     - "string"
-   * - email
-     - email
-     - "string"
-   * - name
-     - displayName
-     - "string"
-   * - phone
-     - mobilePhoneNumber
-     - "string"
-   * - postal_code
-     - postalCode
-     - "string"
 
 
 Invoiced Customers company to Business Central Customers company
@@ -76,9 +55,38 @@ The following properties are synchronized between a Invoiced Customers company a
    * - Invoiced Customers company Property
      - Business Central Customers company Property
      - Business Central Data Type
-   * - name
-     - displayName
-     - "string"
+
+
+Invoiced Customers company to Business Central Customers person
+---------------------------------------------------------------
+Every Invoiced Customers company will be synchronized with a Business Central Customers person.
+
+Once a link between a Invoiced Customers company and a Business Central Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Customers company and a Business Central Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Customers company Property
+     - Business Central Customers person Property
+     - Business Central Data Type
+
+
+Invoiced Customers person to Business Central Customers company
+---------------------------------------------------------------
+Every Invoiced Customers person will be synchronized with a Business Central Customers company.
+
+Once a link between a Invoiced Customers person and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Customers person and a Business Central Customers company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Customers person Property
+     - Business Central Customers company Property
+     - Business Central Data Type
 
 
 Invoiced Customers person to Business Central Customers person
@@ -95,27 +103,6 @@ The following properties are synchronized between a Invoiced Customers person an
    * - Invoiced Customers person Property
      - Business Central Customers person Property
      - Business Central Data Type
-   * - address1
-     - addressLine1
-     - "string"
-   * - address2
-     - addressLine2
-     - "string"
-   * - city
-     - city
-     - "string"
-   * - country
-     - country
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - name
-     - displayName
-     - "string"
-   * - postal_code
-     - postalCode
-     - "string"
 
 
 Invoiced Invoices to Business Central Salesorders
@@ -132,12 +119,6 @@ The following properties are synchronized between a Invoiced Invoices and a Busi
    * - Invoiced Invoices Property
      - Business Central Salesorders Property
      - Business Central Data Type
-   * - currency
-     - currencyId
-     - "string"
-   * - customer
-     - customerId
-     - "string"
 
 
 Invoiced Items to Business Central Items
@@ -154,12 +135,6 @@ The following properties are synchronized between a Invoiced Items and a Busines
    * - Invoiced Items Property
      - Business Central Items Property
      - Business Central Data Type
-   * - name
-     - displayName
-     - "string"
-   * - unit_cost
-     - unitCost
-     - N/A
 
 
 Invoiced Lineitem to Business Central Salesorderlines
@@ -176,19 +151,4 @@ The following properties are synchronized between a Invoiced Lineitem and a Busi
    * - Invoiced Lineitem Property
      - Business Central Salesorderlines Property
      - Business Central Data Type
-   * - $original_id
-     - documentId
-     - "string"
-   * - items.amount
-     - unitPrice
-     - "float"
-   * - items.discounts
-     - discountPercent
-     - N/A
-   * - items.name
-     - description
-     - "string"
-   * - items.quantity
-     - quantity
-     - N/A
 
