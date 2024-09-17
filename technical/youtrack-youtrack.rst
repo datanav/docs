@@ -2,7 +2,7 @@
 YouTrack to Youtrack Dataflow
 =============================
 
-Generated: 2024-09-17 09:13:06
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -213,9 +213,6 @@ The following properties are synchronized between a YouTrack Usergroups and a Yo
    * - YouTrack Usergroups Property
      - YouTrack Groups Property
      - YouTrack Data Type
-   * - name
-     - name
-     - "string"
 
 
 YouTrack Issues to Youtrack Hubprojects
@@ -232,69 +229,6 @@ The following properties are synchronized between a YouTrack Issues and a Youtra
    * - YouTrack Issues Property
      - Youtrack Hubprojects Property
      - Youtrack Data Type
-   * - attachments.id
-     - owner.id
-     - "string"
-   * - attachments.id
-     - projectRoles.id
-     - "string"
-   * - attachments.id
-     - projectType.id
-     - "string"
-   * - attachments.id
-     - resources.id
-     - "string"
-   * - attachments.id
-     - team.id
-     - "string"
-   * - attachments.id
-     - transitiveProjectRoles.id
-     - "string"
-   * - comments.id
-     - owner.id
-     - "string"
-   * - comments.id
-     - projectRoles.id
-     - "string"
-   * - comments.id
-     - projectType.id
-     - "string"
-   * - comments.id
-     - resources.id
-     - "string"
-   * - comments.id
-     - team.id
-     - "string"
-   * - comments.id
-     - transitiveProjectRoles.id
-     - "string"
-   * - created
-     - creationTime
-     - "string"
-   * - externalIssue.id
-     - projectType.id
-     - "string"
-   * - links.id
-     - projectType.id
-     - "string"
-   * - parent.id
-     - projectType.id
-     - "string"
-   * - project.id
-     - projectType.id
-     - "string"
-   * - reporter.id
-     - owner.id
-     - "string"
-   * - reporter.id
-     - team.id
-     - "string"
-   * - reporter.id
-     - transitiveProjectRoles.id
-     - "string"
-   * - subtasks.id
-     - projectType.id
-     - "string"
 
 
 YouTrack Organizations to Youtrack Groups
@@ -311,9 +245,6 @@ The following properties are synchronized between a YouTrack Organizations and a
    * - YouTrack Organizations Property
      - Youtrack Groups Property
      - Youtrack Data Type
-   * - name
-     - name
-     - "string"
 
 
 YouTrack Projectroles to Youtrack Hubprojects
@@ -334,19 +265,10 @@ The following properties are synchronized between a YouTrack Projectroles and a 
      - owner.id
      - "string"
    * - owner.id
-     - team.id
-     - "string"
-   * - owner.id
      - transitiveProjectRoles.id
-     - "string"
-   * - project.id
-     - projectType.id
      - "string"
    * - role.id
      - projectRoles.id
-     - "string"
-   * - role.id
-     - team.id
      - "string"
 
 
@@ -391,8 +313,5 @@ The following properties are synchronized between a YouTrack Workitems and a You
      - "string"
    * - creator.id
      - transitiveProjectRoles.id
-     - "string"
-   * - updated
-     - creationTime
      - "string"
 
