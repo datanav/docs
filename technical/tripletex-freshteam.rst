@@ -2,7 +2,7 @@
 Tripletex to Freshteam Dataflow
 ===============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -36,6 +36,9 @@ The following properties are synchronized between a Tripletex Employee and a Fre
    * - dateOfBirth
      - date_of_birth
      - "string"
+   * - email
+     - official_email
+     - "string"
    * - firstName
      - first_name
      - "string"
@@ -44,6 +47,15 @@ The following properties are synchronized between a Tripletex Employee and a Fre
      - "string"
    * - lastName
      - last_name
+     - "string"
+   * - phoneNumberHome
+     - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.name)
+     - "string"
+   * - phoneNumberMobile
+     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
+     - "string"
+   * - phoneNumberWork
+     - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
      - "string"
 
 
