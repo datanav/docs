@@ -2,7 +2,7 @@
 Asana to CRMOffice Dataflow
 ===========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -48,4 +48,20 @@ The following properties are synchronized between a Asana Tasks and a CRMOffice 
    * - name
      - subject
      - "string"
+
+
+Asana Workspaces to CRMOffice Companies
+---------------------------------------
+Every Asana Workspaces will be synchronized with a CRMOffice Companies.
+
+Once a link between a Asana Workspaces and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Asana Workspaces and a CRMOffice Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Asana Workspaces Property
+     - CRMOffice Companies Property
+     - CRMOffice Data Type
 
