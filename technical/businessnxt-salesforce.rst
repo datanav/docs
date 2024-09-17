@@ -2,7 +2,7 @@
 Business Nxt to Salesforce Dataflow
 ===================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -63,6 +63,22 @@ The following properties are synchronized between a Business Nxt Country and a S
      - Salesforce Data Type
 
 
+Business Nxt Currency to Salesforce Currencytype
+------------------------------------------------
+Every Business Nxt Currency will be synchronized with a Salesforce Currencytype.
+
+Once a link between a Business Nxt Currency and a Salesforce Currencytype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Currency and a Salesforce Currencytype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Currency Property
+     - Salesforce Currencytype Property
+     - Salesforce Data Type
+
+
 Business Nxt Order to Salesforce Invoice
 ----------------------------------------
 Every Business Nxt Order will be synchronized with a Salesforce Invoice.
@@ -101,6 +117,22 @@ The following properties are synchronized between a Business Nxt Orderline and a
 
    * - Business Nxt Orderline Property
      - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+Business Nxt Product to Salesforce Product2
+-------------------------------------------
+Every Business Nxt Product will be synchronized with a Salesforce Product2.
+
+Once a link between a Business Nxt Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Product and a Salesforce Product2:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Product Property
+     - Salesforce Product2 Property
      - Salesforce Data Type
 
 
@@ -150,42 +182,6 @@ The following properties are synchronized between a Business Nxt Address and a S
    * - Business Nxt Address Property
      - Salesforce Organization Property
      - Salesforce Data Type
-   * - addressLine1
-     - Street
-     - "string"
-   * - addressNo
-     - ID
-     - "string"
-   * - countryNo
-     - Country
-     - "string"
-   * - fax
-     - Fax
-     - "string"
-   * - fax
-     - Fax	
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - name
-     - Name	
-     - "string"
-   * - phone
-     - Phone
-     - "string"
-   * - phone
-     - Phone	
-     - "string"
-   * - postCode
-     - PostalCode
-     - "string"
-   * - postCode
-     - PostalCode	
-     - "string"
-   * - postalArea
-     - City
-     - "string"
 
 
 Business Nxt Company to Salesforce Organization
@@ -202,15 +198,6 @@ The following properties are synchronized between a Business Nxt Company and a S
    * - Business Nxt Company Property
      - Salesforce Organization Property
      - Salesforce Data Type
-   * - companyNo
-     - ID
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - name
-     - Name	
-     - "string"
 
 
 Business Nxt Currency to Salesforce Currencytype
@@ -243,24 +230,6 @@ The following properties are synchronized between a Business Nxt Order and a Sal
    * - Business Nxt Order Property
      - Salesforce Order Property
      - Salesforce Data Type
-   * - dueDate
-     - EffectiveDate
-     - "string"
-   * - dueDate
-     - EndDate
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - orderDate
-     - EffectiveDate
-     - "string"
-   * - orderDate
-     - OrderedDate
-     - "string"
-   * - settlementDate
-     - EndDate
-     - "string"
 
 
 Business Nxt Orderline to Salesforce Invoiceline
@@ -293,9 +262,6 @@ The following properties are synchronized between a Business Nxt Orderline and a
    * - Business Nxt Orderline Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
-   * - orderNo
-     - OrderId
-     - "string"
 
 
 Business Nxt Orderline to Salesforce Quotelineitem
@@ -328,16 +294,4 @@ The following properties are synchronized between a Business Nxt Product and a S
    * - Business Nxt Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-   * - description
-     - Description
-     - "string"
-   * - description
-     - Description	
-     - "string"
-   * - webPage
-     - DisplayUrl
-     - "string"
-   * - webPage
-     - DisplayUrl	
-     - "string"
 
