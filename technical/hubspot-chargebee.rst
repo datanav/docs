@@ -2,42 +2,12 @@
 HubSpot to Chargebee Dataflow
 =============================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Chargebee. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-HubSpot Company to Chargebee Customer
--------------------------------------
-Before any synchronization can take place, a link between a HubSpot Company and a Chargebee Customer must be established.
-
-A new Chargebee Customer will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, or Quotequotetemplateassociation that is synchronized into Chargebee.
-
-Once a link between a HubSpot Company and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Company and a Chargebee Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Company Property
-     - Chargebee Customer Property
-     - Chargebee Data Type
-   * - properties.country
-     - billing_address.country
-     - "string"
-   * - properties.industry
-     - billing_address.country
-     - "string"
-   * - properties.state
-     - billing_address.country
-     - "string"
-   * - properties.type
-     - billing_address.country
-     - "string"
-
 
 HubSpot Contact to Chargebee Customer
 -------------------------------------
