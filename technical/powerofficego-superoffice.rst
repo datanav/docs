@@ -2,7 +2,7 @@
 PowerOffice GO to SuperOffice Dataflow
 ======================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -249,6 +249,24 @@ The following properties are synchronized between a PowerOffice GO Customers and
      - "string"
 
 
+Powerofficego Product to SuperOffice Product
+--------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Product and a SuperOffice Product must be established.
+
+A new SuperOffice Product will be created from a Powerofficego Product if it is connected to a Powerofficego Salesorderline, or Salesorderlines that is synchronized into SuperOffice.
+
+Once a link between a Powerofficego Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product and a SuperOffice Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     - SuperOffice Product Property
+     - SuperOffice Data Type
+
+
 Powerofficego Salesorders to SuperOffice Quotealternative
 ---------------------------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Salesorders and a SuperOffice Quotealternative must be established.
@@ -361,60 +379,6 @@ The following properties are synchronized between a PowerOffice GO Product and a
    * - PowerOffice GO Product Property
      - SuperOffice Product Property
      - SuperOffice Data Type
-   * - CostPrice
-     - UnitCost
-     - "string"
-   * - Description
-     - Description
-     - "string"
-   * - Name
-     - Name
-     - "string"
-   * - ProductGroupId
-     - ProductCategoryKey
-     - "string"
-   * - SalesPrice
-     - UnitListPrice
-     - N/A
-   * - Type
-     - ProductTypeKey
-     - "string"
-   * - Unit
-     - QuantityUnit
-     - "string"
-   * - VatCode
-     - VAT
-     - "integer"
-   * - costPrice
-     - UnitCost
-     - "string"
-   * - description
-     - Description
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - productGroupId
-     - ProductCategoryKey
-     - "string"
-   * - salesPrice
-     - UnitListPrice
-     - N/A
-   * - type
-     - ProductTypeKey
-     - "string"
-   * - unit
-     - QuantityUnit
-     - "string"
-   * - unitOfMeasureCode
-     - QuantityUnit
-     - "string"
-   * - unitOfMeasureCode
-     - VAT
-     - "integer"
-   * - vatCode
-     - VAT
-     - N/A
 
 
 PowerOffice GO Quote to SuperOffice Quotealternative
@@ -431,9 +395,6 @@ The following properties are synchronized between a PowerOffice GO Quote and a S
    * - PowerOffice GO Quote Property
      - SuperOffice Quotealternative Property
      - SuperOffice Data Type
-   * - TotalAmount
-     - TotalPrice
-     - "float"
 
 
 PowerOffice GO Salesorderlines to SuperOffice Quoteline
@@ -450,37 +411,4 @@ The following properties are synchronized between a PowerOffice GO Salesorderlin
    * - PowerOffice GO Salesorderlines Property
      - SuperOffice Quoteline Property
      - SuperOffice Data Type
-   * - Allowance
-     - DiscountPercent
-     - "integer"
-   * - Allowance
-     - ERPDiscountPercent
-     - N/A
-   * - Description
-     - Name
-     - "string"
-   * - ProductId
-     - ERPProductKey
-     - "string"
-   * - ProductUnitPrice
-     - UnitListPrice
-     - N/A
-   * - Quantity
-     - Quantity
-     - N/A
-   * - SortOrder
-     - Rank
-     - "integer"
-   * - TotalAmount
-     - TotalPrice
-     - N/A
-   * - VatId
-     - VAT
-     - "integer"
-   * - VatRate
-     - VAT
-     - "integer"
-   * - sesam_SalesOrderId
-     - QuoteAlternativeId
-     - "integer"
 
