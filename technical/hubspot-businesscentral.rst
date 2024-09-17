@@ -2,7 +2,7 @@
 HubSpot to Business Central Dataflow
 ====================================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -165,6 +165,24 @@ The following properties are synchronized between a HubSpot Contact and a Busine
      - "string"
 
 
+HubSpot Product to Business Central Items
+-----------------------------------------
+Before any synchronization can take place, a link between a HubSpot Product and a Business Central Items must be established.
+
+A new Business Central Items will be created from a HubSpot Product if it is connected to a HubSpot Lineitem, or Lineitemdealassociation that is synchronized into Business Central.
+
+Once a link between a HubSpot Product and a Business Central Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a Business Central Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     - Business Central Items Property
+     - Business Central Data Type
+
+
 HubSpot Company to Business Central Companies
 ---------------------------------------------
 Every HubSpot Company will be synchronized with a Business Central Companies.
@@ -195,30 +213,6 @@ The following properties are synchronized between a HubSpot Deal and a Business 
    * - HubSpot Deal Property
      - Business Central Salesorders Property
      - Business Central Data Type
-   * - properties.amount
-     - totalAmountExcludingTax
-     - "string"
-   * - properties.closedate
-     - orderDate
-     - N/A
-   * - properties.closedate
-     - requestedDeliveryDate
-     - N/A
-   * - properties.deal_currency_code
-     - billToCountry
-     - "string"
-   * - properties.deal_currency_code
-     - billingPostalAddress.countryLetterCode
-     - "string"
-   * - properties.deal_currency_code
-     - currencyId
-     - "string"
-   * - properties.deal_currency_code
-     - shipToCountry
-     - "string"
-   * - properties.deal_currency_code
-     - shippingPostalAddress.countryLetterCode
-     - "string"
 
 
 HubSpot Lineitem to Business Central Salesorderlines
@@ -235,30 +229,38 @@ The following properties are synchronized between a HubSpot Lineitem and a Busin
    * - HubSpot Lineitem Property
      - Business Central Salesorderlines Property
      - Business Central Data Type
-   * - properties.description
-     - description
-     - "string"
-   * - properties.hs_discount_percentage
-     - discountPercent
-     - N/A
-   * - properties.hs_product_id
-     - itemId
-     - "string"
-   * - properties.name
-     - description
-     - "string"
-   * - properties.price
-     - amountExcludingTax
-     - "string"
-   * - properties.price
-     - unitPrice
-     - "float"
-   * - properties.quantity
-     - invoiceQuantity
-     - "string"
-   * - properties.quantity
-     - quantity
-     - N/A
+
+
+HubSpot Lineitemdealassociationtype to Business Central Salesorderlines
+-----------------------------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a Business Central Salesorderlines.
+
+Once a link between a HubSpot Lineitemdealassociationtype and a Business Central Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a Business Central Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociationtype Property
+     - Business Central Salesorderlines Property
+     - Business Central Data Type
+
+
+HubSpot Lineitemquoteassociationtype to Business Central Salesorderlines
+------------------------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a Business Central Salesorderlines.
+
+Once a link between a HubSpot Lineitemquoteassociationtype and a Business Central Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a Business Central Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociationtype Property
+     - Business Central Salesorderlines Property
+     - Business Central Data Type
 
 
 HubSpot Product to Business Central Items
@@ -275,19 +277,4 @@ The following properties are synchronized between a HubSpot Product and a Busine
    * - HubSpot Product Property
      - Business Central Items Property
      - Business Central Data Type
-   * - properties.hs_cost_of_goods_sold
-     - unitCost
-     - N/A
-   * - properties.name
-     - displayName
-     - "string"
-   * - properties.name
-     - displayName.string
-     - "string"
-   * - properties.name
-     - displayName2
-     - "string"
-   * - properties.price
-     - unitPrice
-     - N/A
 
