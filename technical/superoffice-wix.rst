@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -158,6 +158,24 @@ The following properties are synchronized between a SuperOffice Contact and a Wi
 
 SuperOffice Product to Wix Products
 -----------------------------------
+Before any synchronization can take place, a link between a SuperOffice Product and a Wix Products must be established.
+
+A new Wix Products will be created from a SuperOffice Product if it is connected to a SuperOffice Quoteline, or Quotealternative that is synchronized into Wix.
+
+Once a link between a SuperOffice Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a Wix Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Wix Products Property
+     - Wix Data Type
+
+
+SuperOffice Product to Wix Products
+-----------------------------------
 Every SuperOffice Product will be synchronized with a Wix Products.
 
 Once a link between a SuperOffice Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
@@ -170,28 +188,4 @@ The following properties are synchronized between a SuperOffice Product and a Wi
    * - SuperOffice Product Property
      - Wix Products Property
      - Wix Data Type
-   * - Description
-     - description
-     - "string"
-   * - ERPPriceListKey
-     - price.currency
-     - "string"
-   * - ERPPriceListKey
-     - priceData.currency
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - UnitCost
-     - costAndProfitData.itemCost
-     - N/A
-   * - UnitCost
-     - costRange.maxValue
-     - "string"
-   * - UnitListPrice
-     - price.price
-     - "string"
-   * - UnitListPrice
-     - priceData.price
-     - N/A
 
