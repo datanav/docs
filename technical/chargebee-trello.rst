@@ -2,7 +2,7 @@
 Chargebee to Trello Dataflow
 ============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Chargebee Business_entity an
    * - Chargebee Business_entity Property
      - Trello Organizations Property
      - Trello Data Type
+   * - name
+     - name
+     - "string"
 
 
 Chargebee Customer to Trello Members
