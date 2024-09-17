@@ -2,7 +2,7 @@
 Business Central to Custom HRM Dataflow
 =======================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -25,50 +25,50 @@ The following properties are synchronized between a Business Central Companies a
      - Custom HRM Data Type
 
 
-Business Central Contacts person to Custom HRM Employee
--------------------------------------------------------
-Every Business Central Contacts person will be synchronized with a Custom HRM Employee.
+Business Central Contacts (human data) to Custom HRM Employee
+-------------------------------------------------------------
+Every Business Central Contacts (human data) will be synchronized with a Custom HRM Employee.
 
-Once a link between a Business Central Contacts person and a Custom HRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Contacts (human data) and a Custom HRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Contacts person and a Custom HRM Employee:
+The following properties are synchronized between a Business Central Contacts (human data) and a Custom HRM Employee:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Contacts person Property
+   * - Business Central Contacts (human data) Property
      - Custom HRM Employee Property
      - Custom HRM Data Type
 
 
-Business Central Customers company to Custom HRM Department
------------------------------------------------------------
-Every Business Central Customers company will be synchronized with a Custom HRM Department.
+Business Central Customers (organisation data) to Custom HRM Department
+-----------------------------------------------------------------------
+Every Business Central Customers (organisation data) will be synchronized with a Custom HRM Department.
 
-Once a link between a Business Central Customers company and a Custom HRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (organisation data) and a Custom HRM Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers company and a Custom HRM Department:
+The following properties are synchronized between a Business Central Customers (organisation data) and a Custom HRM Department:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers company Property
+   * - Business Central Customers (organisation data) Property
      - Custom HRM Department Property
      - Custom HRM Data Type
 
 
-Business Central Customers person to Custom HRM Employee
---------------------------------------------------------
-Every Business Central Customers person will be synchronized with a Custom HRM Employee.
+Business Central Customers (human data) to Custom HRM Employee
+--------------------------------------------------------------
+Every Business Central Customers (human data) will be synchronized with a Custom HRM Employee.
 
-Once a link between a Business Central Customers person and a Custom HRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (human data) and a Custom HRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers person and a Custom HRM Employee:
+The following properties are synchronized between a Business Central Customers (human data) and a Custom HRM Employee:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers person Property
+   * - Business Central Customers (human data) Property
      - Custom HRM Employee Property
      - Custom HRM Data Type
 
