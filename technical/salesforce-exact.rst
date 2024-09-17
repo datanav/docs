@@ -2,36 +2,12 @@
 Salesforce to Exact Online Dataflow
 ===================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Salesforce Order to Exact Salesorders
--------------------------------------
-Before any synchronization can take place, a link between a Salesforce Order and a Exact Salesorders must be established.
-
-A new Exact Salesorders will be created from a Salesforce Order if it is connected to a Salesforce Order, Seller, Orderitem, Invoiceline, or Quotelineitem that is synchronized into Exact.
-
-Once a link between a Salesforce Order and a Exact Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Order and a Exact Salesorders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Order Property
-     - Exact Salesorders Property
-     - Exact Data Type
-   * - CurrencyIsoCode
-     - Currency
-     - "string"
-   * - Description
-     - Description
-     - "string"
-
 
 Salesforce Product2 to Exact Items
 ----------------------------------
