@@ -2,42 +2,12 @@
 Wave to Salesforce Dataflow
 ===========================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Wave Invoice to Salesforce Order
---------------------------------
-Before any synchronization can take place, a link between a Wave Invoice and a Salesforce Order must be established.
-
-A new Salesforce Order will be created from a Wave Invoice if it is connected to a Wave Invoice that is synchronized into Salesforce.
-
-Once a link between a Wave Invoice and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Invoice and a Salesforce Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Invoice Property
-     - Salesforce Order Property
-     - Salesforce Data Type
-   * - currency.code
-     - CurrencyIsoCode
-     - "string"
-   * - memo
-     - Description
-     - "string"
-   * - title
-     - Name
-     - "string"
-   * - total.value
-     - TotalAmount
-     - "string"
-
 
 Wave Product to Salesforce Product2
 -----------------------------------
@@ -133,18 +103,18 @@ The following properties are synchronized between a Wave Currency and a Salesfor
      - Salesforce Data Type
 
 
-Wave Customer person to Salesforce Customer
--------------------------------------------
-Every Wave Customer person will be synchronized with a Salesforce Customer.
+Wave Customer (human data) to Salesforce Customer
+-------------------------------------------------
+Every Wave Customer (human data) will be synchronized with a Salesforce Customer.
 
-Once a link between a Wave Customer person and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer (human data) and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a Salesforce Customer:
+The following properties are synchronized between a Wave Customer (human data) and a Salesforce Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Customer person Property
+   * - Wave Customer (human data) Property
      - Salesforce Customer Property
      - Salesforce Data Type
 
