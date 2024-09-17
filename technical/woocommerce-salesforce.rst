@@ -2,12 +2,46 @@
 WooCommerce to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+WooCommerce Order to Salesforce Order
+-------------------------------------
+Before any synchronization can take place, a link between a WooCommerce Order and a Salesforce Order must be established.
+
+A new Salesforce Order will be created from a WooCommerce Order if it is connected to a WooCommerce Order that is synchronized into Salesforce.
+
+Once a link between a WooCommerce Order and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WooCommerce Order and a Salesforce Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WooCommerce Order Property
+     - Salesforce Order Property
+     - Salesforce Data Type
+
+
+WooCommerce Product to Salesforce Product2
+------------------------------------------
+Every WooCommerce Product will be synchronized with a Salesforce Product2.
+
+Once a link between a WooCommerce Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WooCommerce Product and a Salesforce Product2:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WooCommerce Product Property
+     - Salesforce Product2 Property
+     - Salesforce Data Type
+
 
 WooCommerce Order to Salesforce Invoice
 ---------------------------------------
@@ -44,6 +78,22 @@ The following properties are synchronized between a WooCommerce Customer and a S
      - Salesforce Data Type
 
 
+WooCommerce Customer to Salesforce Invoice
+------------------------------------------
+Every WooCommerce Customer will be synchronized with a Salesforce Invoice.
+
+Once a link between a WooCommerce Customer and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WooCommerce Customer and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WooCommerce Customer Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
 WooCommerce Order to Salesforce Currencytype
 --------------------------------------------
 Every WooCommerce Order will be synchronized with a Salesforce Currencytype.
@@ -57,6 +107,22 @@ The following properties are synchronized between a WooCommerce Order and a Sale
 
    * - WooCommerce Order Property
      - Salesforce Currencytype Property
+     - Salesforce Data Type
+
+
+WooCommerce Order to Salesforce Invoice
+---------------------------------------
+Every WooCommerce Order will be synchronized with a Salesforce Invoice.
+
+Once a link between a WooCommerce Order and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WooCommerce Order and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WooCommerce Order Property
+     - Salesforce Invoice Property
      - Salesforce Data Type
 
 
@@ -74,21 +140,6 @@ The following properties are synchronized between a WooCommerce Order and a Sale
    * - WooCommerce Order Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
-   * - currency
-     - CurrencyIsoCode
-     - "string"
-   * - line_items.name
-     - Name
-     - "string"
-   * - line_items.price
-     - UnitPrice
-     - "string"
-   * - line_items.quantity
-     - Quantity
-     - "string"
-   * - line_items.sku
-     - Description
-     - "string"
 
 
 WooCommerce Order to Salesforce Order
@@ -105,54 +156,6 @@ The following properties are synchronized between a WooCommerce Order and a Sale
    * - WooCommerce Order Property
      - Salesforce Order Property
      - Salesforce Data Type
-   * - billing.address_1
-     - BillingStreet
-     - "string"
-   * - billing.city
-     - BillingCity
-     - "string"
-   * - billing.city
-     - ShippingCity
-     - "string"
-   * - billing.country
-     - BillingCountry
-     - "string"
-   * - billing.country
-     - ShippingCountry
-     - "string"
-   * - billing.postcode
-     - BillingPostalCode
-     - "string"
-   * - billing.postcode
-     - ShippingStateCode
-     - "string"
-   * - currency
-     - CurrencyIsoCode
-     - "string"
-   * - id
-     - ID
-     - "string"
-   * - shipping.address_1
-     - BillingStreet
-     - "string"
-   * - shipping.city
-     - BillingCity
-     - "string"
-   * - shipping.city
-     - ShippingCity
-     - "string"
-   * - shipping.country
-     - BillingCountry
-     - "string"
-   * - shipping.country
-     - ShippingCountry
-     - "string"
-   * - shipping.postcode
-     - BillingPostalCode
-     - "string"
-   * - shipping.postcode
-     - ShippingStateCode
-     - "string"
 
 
 WooCommerce Order to Salesforce Orderitem
@@ -169,27 +172,6 @@ The following properties are synchronized between a WooCommerce Order and a Sale
    * - WooCommerce Order Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
-   * - currency
-     - CurrencyIsoCode
-     - "string"
-   * - id
-     - OrderId
-     - "string"
-   * - line_items.price
-     - TotalPrice
-     - "string"
-   * - line_items.product_id
-     - Product2Id
-     - "string"
-   * - line_items.quantity
-     - Quantity
-     - "string"
-   * - line_items.sku
-     - Quantity
-     - "string"
-   * - line_items.sku
-     - UnitPrice
-     - "string"
 
 
 WooCommerce Order to Salesforce Quotelineitem
@@ -206,15 +188,6 @@ The following properties are synchronized between a WooCommerce Order and a Sale
    * - WooCommerce Order Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
-   * - currency
-     - CurrencyIsoCode
-     - "string"
-   * - line_items.price
-     - TotalPriceWithTax
-     - "string"
-   * - line_items.quantity
-     - Quantity
-     - "string"
 
 
 WooCommerce Product to Salesforce Product2
@@ -231,13 +204,4 @@ The following properties are synchronized between a WooCommerce Product and a Sa
    * - WooCommerce Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-   * - name
-     - Name
-     - "string"
-   * - name
-     - Name	
-     - "string"
-   * - status
-     - ProductCode
-     - "string"
 
