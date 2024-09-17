@@ -2,7 +2,7 @@
 Tripletex to WooCommerce Dataflow
 =================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -25,6 +25,15 @@ The following properties are synchronized between a Tripletex Order and a WooCom
    * - Tripletex Order Property
      - WooCommerce Order Property
      - WooCommerce Data Type
+   * - contact.id
+     - customer_id
+     - "string"
+   * - currency.id
+     - currency
+     - "string"
+   * - customer.id
+     - customer_id
+     - "string"
 
 
 Tripletex Product to WooCommerce Product
@@ -43,6 +52,15 @@ The following properties are synchronized between a Tripletex Product and a WooC
    * - Tripletex Product Property
      - WooCommerce Product Property
      - WooCommerce Data Type
+   * - costExcludingVatCurrency
+     - price
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - priceExcludingVatCurrency
+     - sale_price
+     - "string"
 
 
 Tripletex Order to WooCommerce Order
