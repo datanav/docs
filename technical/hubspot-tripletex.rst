@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -385,71 +385,11 @@ The following properties are synchronized between a HubSpot Contact and a Triple
      - Tripletex Data Type
 
 
-HubSpot Deal to Tripletex Order
--------------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Tripletex Order.
-
-Once a link between a HubSpot Deal and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Deal and a Tripletex Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     - Tripletex Order Property
-     - Tripletex Data Type
-   * - properties.closedate
-     - deliveryDate
-     - N/A
-   * - properties.closedate
-     - orderDate
-     - N/A
-   * - properties.deal_currency_code
-     - currency.id
-     - "integer"
-   * - properties.dealname
-     - invoiceComment
-     - "string"
-
-
-HubSpot Lineitem to Tripletex Orderline
----------------------------------------
-Every HubSpot Lineitem will be synchronized with a Tripletex Orderline.
-
-Once a link between a HubSpot Lineitem and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Lineitem and a Tripletex Orderline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Lineitem Property
-     - Tripletex Orderline Property
-     - Tripletex Data Type
-   * - properties.description
-     - description
-     - "string"
-   * - properties.hs_discount_percentage
-     - discount
-     - "float"
-   * - properties.hs_product_id
-     - product.id
-     - "integer"
-   * - properties.name
-     - description
-     - "string"
-   * - properties.price
-     - unitPriceExcludingVatCurrency
-     - "float"
-   * - properties.quantity
-     - count
-     - N/A
-
-
 HubSpot Product to Tripletex Product
 ------------------------------------
-Every HubSpot Product will be synchronized with a Tripletex Product.
+Before any synchronization can take place, a link between a HubSpot Product and a Tripletex Product must be established.
+
+A new Tripletex Product will be created from a HubSpot Product if it is connected to a HubSpot Lineitem, or Lineitemdealassociation that is synchronized into Tripletex.
 
 Once a link between a HubSpot Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -476,4 +416,84 @@ The following properties are synchronized between a HubSpot Product and a Triple
    * - properties.price
      - priceExcludingVatCurrency
      - "float"
+
+
+HubSpot Deal to Tripletex Order
+-------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Tripletex Order.
+
+Once a link between a HubSpot Deal and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - Tripletex Order Property
+     - Tripletex Data Type
+
+
+HubSpot Lineitem to Tripletex Orderline
+---------------------------------------
+Every HubSpot Lineitem will be synchronized with a Tripletex Orderline.
+
+Once a link between a HubSpot Lineitem and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a Tripletex Orderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     - Tripletex Orderline Property
+     - Tripletex Data Type
+
+
+HubSpot Lineitemdealassociationtype to Tripletex Orderline
+----------------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a Tripletex Orderline.
+
+Once a link between a HubSpot Lineitemdealassociationtype and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a Tripletex Orderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociationtype Property
+     - Tripletex Orderline Property
+     - Tripletex Data Type
+
+
+HubSpot Lineitemquoteassociationtype to Tripletex Orderline
+-----------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a Tripletex Orderline.
+
+Once a link between a HubSpot Lineitemquoteassociationtype and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a Tripletex Orderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociationtype Property
+     - Tripletex Orderline Property
+     - Tripletex Data Type
+
+
+HubSpot Product to Tripletex Product
+------------------------------------
+Every HubSpot Product will be synchronized with a Tripletex Product.
+
+Once a link between a HubSpot Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a Tripletex Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     - Tripletex Product Property
+     - Tripletex Data Type
 
