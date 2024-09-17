@@ -2,12 +2,44 @@
 Tripletex to CRMOffice Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to CRMOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Activity to CRMOffice Activities
+------------------------------------------
+Every Tripletex Activity will be synchronized with a CRMOffice Activities.
+
+Once a link between a Tripletex Activity and a CRMOffice Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Activity and a CRMOffice Activities:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Activity Property
+     - CRMOffice Activities Property
+     - CRMOffice Data Type
+
+
+Tripletex Contact to CRMOffice Contacts
+---------------------------------------
+Every Tripletex Contact will be synchronized with a CRMOffice Contacts.
+
+Once a link between a Tripletex Contact and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a CRMOffice Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - CRMOffice Contacts Property
+     - CRMOffice Data Type
+
 
 Tripletex Customer person to CRMOffice Contacts
 -----------------------------------------------
@@ -130,9 +162,6 @@ The following properties are synchronized between a Tripletex Activity and a CRM
    * - Tripletex Activity Property
      - CRMOffice Activities Property
      - CRMOffice Data Type
-   * - name
-     - subject
-     - "string"
 
 
 Tripletex Contact to CRMOffice Contacts
@@ -149,16 +178,4 @@ The following properties are synchronized between a Tripletex Contact and a CRMO
    * - Tripletex Contact Property
      - CRMOffice Contacts Property
      - CRMOffice Data Type
-   * - firstName
-     - givenName
-     - "string"
-   * - lastName
-     - familyName
-     - "string"
-   * - phoneNumberMobile
-     - mobilePhone
-     - "string"
-   * - phoneNumberWork
-     - directPhone
-     - "string"
 
