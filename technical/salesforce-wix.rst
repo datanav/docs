@@ -2,33 +2,12 @@
 Salesforce to Wix Dataflow
 ==========================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:06
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Wix. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Salesforce Product2 to Wix Products
------------------------------------
-Before any synchronization can take place, a link between a Salesforce Product2 and a Wix Products must be established.
-
-A new Wix Products will be created from a Salesforce Product2 if it is connected to a Salesforce Order, Quote, or Orderitem that is synchronized into Wix.
-
-Once a link between a Salesforce Product2 and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Product2 and a Wix Products:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Product2 Property
-     - Wix Products Property
-     - Wix Data Type
-   * - Name
-     - name
-     - "string"
-
 
 Salesforce Contact to Wix Contacts
 ----------------------------------
