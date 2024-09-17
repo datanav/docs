@@ -2,7 +2,7 @@
 Custom Webshop to Salesforce Dataflow
 =====================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -38,6 +38,38 @@ The following properties are synchronized between a Custom Webshop Order and a S
 
    * - Custom Webshop Order Property
      - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+Custom Webshop Product to Salesforce Product2
+---------------------------------------------
+Every Custom Webshop Product will be synchronized with a Salesforce Product2.
+
+Once a link between a Custom Webshop Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom Webshop Product and a Salesforce Product2:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom Webshop Product Property
+     - Salesforce Product2 Property
+     - Salesforce Data Type
+
+
+Custom Webshop Customer to Salesforce Customer
+----------------------------------------------
+Every Custom Webshop Customer will be synchronized with a Salesforce Customer.
+
+Once a link between a Custom Webshop Customer and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom Webshop Customer and a Salesforce Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom Webshop Customer Property
+     - Salesforce Customer Property
      - Salesforce Data Type
 
 
