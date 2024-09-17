@@ -2,7 +2,7 @@
 Tripletex to Exact Online Dataflow
 ==================================
 
-Generated: 2024-09-17 09:14:34
+Generated: 2024-09-17 12:31:51
 
 Introduction
 ------------
@@ -238,6 +238,9 @@ The following properties are synchronized between a Tripletex Currency and a Exa
    * - Tripletex Currency Property
      - Exact Online Currencies Property
      - Exact Online Data Type
+   * - displayName
+     - Description
+     - "string"
 
 
 Tripletex Customer to Exact Online Accounts
