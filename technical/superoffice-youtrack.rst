@@ -2,7 +2,7 @@
 SuperOffice to Youtrack Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -41,6 +41,35 @@ The following properties are synchronized between a SuperOffice Person and a You
      - "string"
 
 
+SuperOffice User to Youtrack Users
+----------------------------------
+Before any synchronization can take place, a link between a SuperOffice User and a Youtrack Users must be established.
+
+A SuperOffice User will merge with a Youtrack Users if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - Youtrack Users Property
+   * - personEmail
+     - profile.email.email
+
+Once a link between a SuperOffice User and a Youtrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice User and a Youtrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - Youtrack Users Property
+     - Youtrack Data Type
+   * - personEmail
+     - profile.email.email
+     - "string"
+
+
 SuperOffice Contact to Youtrack Groups
 --------------------------------------
 Every SuperOffice Contact will be synchronized with a Youtrack Groups.
@@ -74,27 +103,11 @@ The following properties are synchronized between a SuperOffice Ticket and a You
    * - SuperOffice Ticket Property
      - Youtrack Issues Property
      - Youtrack Data Type
-   * - OwnedBy.AssociateId
-     - reporter.id
-     - "string"
 
 
 SuperOffice User to Youtrack Users
 ----------------------------------
 Every SuperOffice User will be synchronized with a Youtrack Users.
-
-If a matching Youtrack Users already exists, the SuperOffice User will be merged with the existing one.
-If no matching Youtrack Users is found, a new Youtrack Users will be created.
-
-A SuperOffice User will merge with a Youtrack Users if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice User Property
-     - Youtrack Users Property
-   * - personEmail
-     - profile.email.email
 
 Once a link between a SuperOffice User and a Youtrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -106,10 +119,4 @@ The following properties are synchronized between a SuperOffice User and a Youtr
    * - SuperOffice User Property
      - Youtrack Users Property
      - Youtrack Data Type
-   * - personEmail
-     - profile.email
-     - "string"
-   * - personEmail
-     - profile.email.email
-     - "string"
 
