@@ -2,7 +2,7 @@
 Unieconomy to PowerOffice GO Dataflow
 =====================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -25,19 +25,19 @@ The following properties are synchronized between a Unieconomy Customers and a P
      - PowerOffice GO Data Type
 
 
-Unieconomy Customers to PowerOffice GO Customers person
--------------------------------------------------------
-Every Unieconomy Customers will be synchronized with a PowerOffice GO Customers person.
+Unieconomy Customers to PowerOffice GO Customers (human data)
+-------------------------------------------------------------
+Every Unieconomy Customers will be synchronized with a PowerOffice GO Customers (human data).
 
-Once a link between a Unieconomy Customers and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Unieconomy Customers and a PowerOffice GO Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Unieconomy Customers and a PowerOffice GO Customers person:
+The following properties are synchronized between a Unieconomy Customers and a PowerOffice GO Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Unieconomy Customers Property
-     - PowerOffice GO Customers person Property
+     - PowerOffice GO Customers (human data) Property
      - PowerOffice GO Data Type
 
 
