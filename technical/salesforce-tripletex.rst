@@ -2,63 +2,12 @@
 Salesforce to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Salesforce Order to Tripletex Order
------------------------------------
-Before any synchronization can take place, a link between a Salesforce Order and a Tripletex Order must be established.
-
-A new Tripletex Order will be created from a Salesforce Order if it is connected to a Salesforce Order, Seller, Invoice, Orderitem, Invoiceline, or Quotelineitem that is synchronized into Tripletex.
-
-Once a link between a Salesforce Order and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Order and a Tripletex Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Order Property
-     - Tripletex Order Property
-     - Tripletex Data Type
-   * - CurrencyIsoCode
-     - currency.id
-     - "integer"
-   * - EffectiveDate
-     - deliveryDate
-     - N/A
-   * - OrderedDate
-     - orderDate
-     - N/A
-
-
-Salesforce Product2 to Tripletex Product
-----------------------------------------
-Before any synchronization can take place, a link between a Salesforce Product2 and a Tripletex Product must be established.
-
-A new Tripletex Product will be created from a Salesforce Product2 if it is connected to a Salesforce Order, Seller, Orderitem, Invoiceline, or Quotelineitem that is synchronized into Tripletex.
-
-Once a link between a Salesforce Product2 and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Product2 and a Tripletex Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Product2 Property
-     - Tripletex Product Property
-     - Tripletex Data Type
-   * - Description
-     - description
-     - "string"
-   * - Name
-     - name
-     - "string"
-
 
 Salesforce Contact to Tripletex Contact
 ---------------------------------------
@@ -92,19 +41,19 @@ The following properties are synchronized between a Salesforce Customer and a Tr
      - Tripletex Data Type
 
 
-Salesforce Customer to Tripletex Customer person
-------------------------------------------------
-Every Salesforce Customer will be synchronized with a Tripletex Customer person.
+Salesforce Customer to Tripletex Customer (human data)
+------------------------------------------------------
+Every Salesforce Customer will be synchronized with a Tripletex Customer (human data).
 
-Once a link between a Salesforce Customer and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Customer and a Tripletex Customer (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Customer and a Tripletex Customer person:
+The following properties are synchronized between a Salesforce Customer and a Tripletex Customer (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Customer Property
-     - Tripletex Customer person Property
+     - Tripletex Customer (human data) Property
      - Tripletex Data Type
 
 
