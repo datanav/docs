@@ -2,7 +2,7 @@
 Custom ERP to ZohoCRM Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -22,5 +22,21 @@ The following properties are synchronized between a Custom ERP Customer and a Zo
 
    * - Custom ERP Customer Property
      - ZohoCRM Account Property
+     - ZohoCRM Data Type
+
+
+Custom ERP Customer to ZohoCRM Contact
+--------------------------------------
+Every Custom ERP Customer will be synchronized with a ZohoCRM Contact.
+
+Once a link between a Custom ERP Customer and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom ERP Customer and a ZohoCRM Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom ERP Customer Property
+     - ZohoCRM Contact Property
      - ZohoCRM Data Type
 
