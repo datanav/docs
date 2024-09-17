@@ -2,12 +2,38 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 00:00:27
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Activity to Tripletex Activity
+----------------------------------------
+Before any synchronization can take place, a link between a Tripletex Activity and a Tripletex Activity must be established.
+
+A Tripletex Activity will merge with a Tripletex Activity if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Activity Property
+     - Tripletex Activity Property
+   * - id
+     - id
+
+Once a link between a Tripletex Activity and a Tripletex Activity is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Activity and a Tripletex Activity:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Activity Property
+     - Tripletex Activity Property
+     - Tripletex Data Type
+
 
 Tripletex Activity to Tripletex Projectactivity
 -----------------------------------------------
@@ -919,6 +945,32 @@ The following properties are synchronized between a Tripletex Productgrouprelati
 
    * - Tripletex Productgrouprelation Property
      - Tripletex Product Property
+     - Tripletex Data Type
+
+
+Tripletex Projectactivity to Tripletex Activity
+-----------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Projectactivity and a Tripletex Activity must be established.
+
+A Tripletex Projectactivity will merge with a Tripletex Activity if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Projectactivity Property
+     - Tripletex Activity Property
+   * - activity.id
+     - id
+
+Once a link between a Tripletex Projectactivity and a Tripletex Activity is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Projectactivity and a Tripletex Activity:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Projectactivity Property
+     - Tripletex Activity Property
      - Tripletex Data Type
 
 
