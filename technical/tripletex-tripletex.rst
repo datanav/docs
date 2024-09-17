@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:27
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -1398,4 +1398,36 @@ The following properties are synchronized between a Tripletex Customer and a Tri
    * - postalAddress.postalCode
      - postalAddress.postalCode
      - "string"
+
+
+Tripletex Customer person to Tripletex Customer
+-----------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Tripletex Customer.
+
+Once a link between a Tripletex Customer person and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a Tripletex Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
+     - Tripletex Customer Property
+     - Tripletex Data Type
+
+
+Tripletex Customer to Tripletex Customer person
+-----------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Tripletex Customer person.
+
+Once a link between a Tripletex Customer and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a Tripletex Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - Tripletex Customer person Property
+     - Tripletex Data Type
 
