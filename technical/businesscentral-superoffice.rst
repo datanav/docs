@@ -2,7 +2,7 @@
 Business Central to SuperOffice Dataflow
 ========================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -82,21 +82,6 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (organisation data) Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
-   * - address.city
-     - Address.Postal.City
-     - "string"
-   * - address.city
-     - Address.Street.City
-     - "string"
-   * - address.countryLetterCode
-     - Country.CountryId
-     - "integer"
-   * - address.postalCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - address.postalCode
-     - Address.Street.Zipcode
-     - "string"
    * - addressLine1
      - Address.Postal.Address1
      - "string"
@@ -195,15 +180,9 @@ The following properties are synchronized between a Business Central Employees a
    * - birthDate
      - BirthDate
      - N/A
-   * - email
-     - Emails.Value
-     - "string"
    * - givenName
      - Firstname
      - "string"
-   * - jobTitle
-     - Contact.ContactId
-     - "integer"
    * - mobilePhone
      - MobilePhones.Value
      - "string"
