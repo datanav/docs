@@ -2,7 +2,7 @@
 Tripletex to Shopify Dataflow
 =============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -61,51 +61,6 @@ The following properties are synchronized between a Tripletex Customer and a Sho
    * - Tripletex Customer Property
      - Shopify Customer Property
      - Shopify Data Type
-   * - deliveryAddress.addressLine1
-     - default_address.address1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - default_address.address2
-     - "string"
-   * - deliveryAddress.city
-     - default_address.city
-     - "string"
-   * - deliveryAddress.country.id
-     - default_address.country
-     - "string"
-   * - deliveryAddress.postalCode
-     - default_address.zip
-     - "string"
-   * - physicalAddress.addressLine1
-     - default_address.address1
-     - "string"
-   * - physicalAddress.addressLine2
-     - default_address.address2
-     - "string"
-   * - physicalAddress.city
-     - default_address.city
-     - "string"
-   * - physicalAddress.country.id
-     - default_address.country
-     - "string"
-   * - physicalAddress.postalCode
-     - default_address.zip
-     - "string"
-   * - postalAddress.addressLine1
-     - default_address.address1
-     - "string"
-   * - postalAddress.addressLine2
-     - default_address.address2
-     - "string"
-   * - postalAddress.city
-     - default_address.city
-     - "string"
-   * - postalAddress.country.id
-     - default_address.country
-     - "string"
-   * - postalAddress.postalCode
-     - default_address.zip
-     - "string"
 
 
 Tripletex Order to Shopify Order
@@ -124,6 +79,18 @@ The following properties are synchronized between a Tripletex Order and a Shopif
    * - Tripletex Order Property
      - Shopify Order Property
      - Shopify Data Type
+   * - contact.id
+     - customer.id
+     - "string"
+   * - currency.id
+     - currency
+     - "string"
+   * - customer.id
+     - customer.id
+     - "string"
+   * - reference
+     - po_number
+     - "string"
 
 
 Tripletex Product to Shopify Product
@@ -174,6 +141,51 @@ The following properties are synchronized between a Tripletex Customer and a Sho
    * - Tripletex Customer Property
      - Shopify Customer Property
      - Shopify Data Type
+   * - deliveryAddress.addressLine1
+     - default_address.address1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - default_address.address2
+     - "string"
+   * - deliveryAddress.city
+     - default_address.city
+     - "string"
+   * - deliveryAddress.country.id
+     - default_address.country
+     - "string"
+   * - deliveryAddress.postalCode
+     - default_address.zip
+     - "string"
+   * - physicalAddress.addressLine1
+     - default_address.address1
+     - "string"
+   * - physicalAddress.addressLine2
+     - default_address.address2
+     - "string"
+   * - physicalAddress.city
+     - default_address.city
+     - "string"
+   * - physicalAddress.country.id
+     - default_address.country
+     - "string"
+   * - physicalAddress.postalCode
+     - default_address.zip
+     - "string"
+   * - postalAddress.addressLine1
+     - default_address.address1
+     - "string"
+   * - postalAddress.addressLine2
+     - default_address.address2
+     - "string"
+   * - postalAddress.city
+     - default_address.city
+     - "string"
+   * - postalAddress.country.id
+     - default_address.country
+     - "string"
+   * - postalAddress.postalCode
+     - default_address.zip
+     - "string"
 
 
 Tripletex Order to Shopify Order
