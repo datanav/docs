@@ -2,7 +2,7 @@
 Chargebee to Custom PMS Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -21,6 +21,38 @@ The following properties are synchronized between a Chargebee Business_entity an
    :header-rows: 1
 
    * - Chargebee Business_entity Property
+     - Custom PMS Customer Property
+     - Custom PMS Data Type
+
+
+Chargebee Address to Custom PMS Customer
+----------------------------------------
+Every Chargebee Address will be synchronized with a Custom PMS Customer.
+
+Once a link between a Chargebee Address and a Custom PMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Address and a Custom PMS Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Address Property
+     - Custom PMS Customer Property
+     - Custom PMS Data Type
+
+
+Chargebee Customer to Custom PMS Customer
+-----------------------------------------
+Every Chargebee Customer will be synchronized with a Custom PMS Customer.
+
+Once a link between a Chargebee Customer and a Custom PMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Customer and a Custom PMS Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Customer Property
      - Custom PMS Customer Property
      - Custom PMS Data Type
 
