@@ -2,7 +2,7 @@
 HubSpot to Business Central Dataflow
 ====================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -169,7 +169,7 @@ HubSpot Product to Business Central Items
 -----------------------------------------
 Before any synchronization can take place, a link between a HubSpot Product and a Business Central Items must be established.
 
-A new Business Central Items will be created from a HubSpot Product if it is connected to a HubSpot Lineitem, or Lineitemdealassociation that is synchronized into Business Central.
+A new Business Central Items will be created from a HubSpot Product if it is connected to a HubSpot Lineitem, Lineitemdealassociation, Lineitemdealassociationtype, or Lineitemquoteassociationtype that is synchronized into Business Central.
 
 Once a link between a HubSpot Product and a Business Central Items is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -181,6 +181,15 @@ The following properties are synchronized between a HubSpot Product and a Busine
    * - HubSpot Product Property
      - Business Central Items Property
      - Business Central Data Type
+   * - properties.hs_cost_of_goods_sold
+     - unitCost
+     - N/A
+   * - properties.name
+     - displayName
+     - "string"
+   * - properties.price
+     - unitPrice
+     - N/A
 
 
 HubSpot Company to Business Central Companies
