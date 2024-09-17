@@ -2,60 +2,12 @@
 Salesforce to PowerOffice GO Dataflow
 =====================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to PowerOffice GO. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Salesforce Order to Powerofficego Salesorders
----------------------------------------------
-Before any synchronization can take place, a link between a Salesforce Order and a Powerofficego Salesorders must be established.
-
-A new Powerofficego Salesorders will be created from a Salesforce Order if it is connected to a Salesforce Order, Seller, Orderitem, Invoiceline, or Quotelineitem that is synchronized into Powerofficego.
-
-Once a link between a Salesforce Order and a Powerofficego Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Order and a Powerofficego Salesorders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Order Property
-     - Powerofficego Salesorders Property
-     - Powerofficego Data Type
-   * - CurrencyIsoCode
-     - CurrencyCode
-     - "string"
-   * - OrderedDate
-     - SalesOrderDate
-     - "string"
-
-
-Salesforce Product2 to Powerofficego Product
---------------------------------------------
-Before any synchronization can take place, a link between a Salesforce Product2 and a Powerofficego Product must be established.
-
-A new Powerofficego Product will be created from a Salesforce Product2 if it is connected to a Salesforce Order, Seller, Orderitem, Invoiceline, or Quotelineitem that is synchronized into Powerofficego.
-
-Once a link between a Salesforce Product2 and a Powerofficego Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Product2 and a Powerofficego Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Product2 Property
-     - Powerofficego Product Property
-     - Powerofficego Data Type
-   * - Description
-     - description
-     - "string"
-   * - Name
-     - name
-     - "string"
-
 
 Salesforce Contact to PowerOffice GO Contactperson
 --------------------------------------------------
@@ -89,19 +41,19 @@ The following properties are synchronized between a Salesforce Customer and a Po
      - PowerOffice GO Data Type
 
 
-Salesforce Customer to PowerOffice GO Customers person
-------------------------------------------------------
-Every Salesforce Customer will be synchronized with a PowerOffice GO Customers person.
+Salesforce Customer to PowerOffice GO Customers (human data)
+------------------------------------------------------------
+Every Salesforce Customer will be synchronized with a PowerOffice GO Customers (human data).
 
-Once a link between a Salesforce Customer and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Salesforce Customer and a PowerOffice GO Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Salesforce Customer and a PowerOffice GO Customers person:
+The following properties are synchronized between a Salesforce Customer and a PowerOffice GO Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Salesforce Customer Property
-     - PowerOffice GO Customers person Property
+     - PowerOffice GO Customers (human data) Property
      - PowerOffice GO Data Type
 
 
