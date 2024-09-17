@@ -2,7 +2,7 @@
 Exact Online to MemberCare Dataflow
 ===================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -59,24 +59,6 @@ The following properties are synchronized between a Exact Online Contacts and a 
      - MemberCare Data Type
    * - BirthDate
      - birthDate
-     - "string"
-   * - FirstName
-     - firstname
-     - "string"
-   * - FirstName
-     - name
-     - "string"
-   * - FullName
-     - firstname
-     - "string"
-   * - FullName
-     - name
-     - "string"
-   * - LastName
-     - firstname
-     - "string"
-   * - LastName
-     - name
      - "string"
 
 
@@ -154,26 +136,8 @@ The following properties are synchronized between a Exact Online Employees and a
    * - Country
      - addresses.country.id
      - "string"
-   * - FirstName
-     - firstname
-     - "string"
-   * - FirstName
-     - name
-     - "string"
-   * - FullName
-     - firstname
-     - "string"
-   * - FullName
-     - name
-     - "string"
    * - ID
      - addresses.id
-     - "string"
-   * - LastName
-     - firstname
-     - "string"
-   * - LastName
-     - name
      - "string"
    * - Postcode
      - addresses.postalCode.zipCode
@@ -242,9 +206,6 @@ The following properties are synchronized between a Exact Online Salesorderlines
    * - Exact Online Salesorderlines Property
      - MemberCare Invoices Property
      - MemberCare Data Type
-   * - Quantity
-     - id
-     - "string"
 
 
 Exact Online Salesorders to MemberCare Invoices
