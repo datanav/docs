@@ -2,7 +2,7 @@
 Business Central to MemberCare Dataflow
 =======================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -73,6 +73,12 @@ The following properties are synchronized between a Business Central Customers c
    * - Business Central Customers company Property
      - MemberCare Companies Property
      - MemberCare Data Type
+   * - displayName
+     - companyName
+     - "string"
+   * - website
+     - url
+     - "string"
 
 
 Business Central Customers person to MemberCare Persons
