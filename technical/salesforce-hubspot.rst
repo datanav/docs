@@ -2,36 +2,12 @@
 Salesforce to HubSpot Dataflow
 ==============================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:06
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Salesforce Product2 to Hubspot Product
---------------------------------------
-Before any synchronization can take place, a link between a Salesforce Product2 and a Hubspot Product must be established.
-
-A new Hubspot Product will be created from a Salesforce Product2 if it is connected to a Salesforce Order, Seller, Orderitem, Invoiceline, or Quotelineitem that is synchronized into Hubspot.
-
-Once a link between a Salesforce Product2 and a Hubspot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce Product2 and a Hubspot Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce Product2 Property
-     - Hubspot Product Property
-     - Hubspot Data Type
-   * - Description
-     - properties.description
-     - "string"
-   * - Name
-     - properties.name
-     - "string"
-
 
 Salesforce Contact to HubSpot Contact
 -------------------------------------
