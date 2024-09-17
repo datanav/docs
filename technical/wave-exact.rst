@@ -2,7 +2,7 @@
 Wave to Exact Online Dataflow
 =============================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -67,32 +67,11 @@ The following properties are synchronized between a Wave Customer (human data) a
    * - address.country.code
      - Country
      - "string"
-   * - email
-     - Email
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - lastName
-     - LastName
-     - "string"
-   * - mobile
-     - Mobile
-     - "string"
-   * - name
-     - FullName
-     - "string"
-   * - phone
-     - Phone
-     - "string"
    * - shippingDetails.address.city
      - City
      - "string"
    * - shippingDetails.address.country.code
      - Country
-     - "string"
-   * - shippingDetails.phone
-     - Phone
      - "string"
 
 
@@ -112,9 +91,6 @@ The following properties are synchronized between a Wave Invoice and a Exact Onl
      - Exact Online Data Type
    * - currency.code
      - Currency
-     - "string"
-   * - dueDate
-     - DueDate
      - "string"
    * - memo
      - Description
