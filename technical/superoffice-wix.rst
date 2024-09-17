@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -109,81 +109,6 @@ The following properties are synchronized between a SuperOffice User and a Wix C
    * - personEmail
      - primaryInfo.email
      - "string"
-
-
-SuperOffice Contact to Wix Contacts
------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a Wix Contacts must be established.
-
-A new Wix Contacts will be created from a SuperOffice Contact if it is connected to a SuperOffice Quoteline, or Quotealternative that is synchronized into Wix.
-
-Once a link between a SuperOffice Contact and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Contact and a Wix Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Contact Property
-     - Wix Contacts Property
-     - Wix Data Type
-   * - Address.Postal.Address1
-     - info.addresses.items.address.addressLine
-     - "string"
-   * - Address.Postal.Address2
-     - info.addresses.items.address.addressLine2
-     - "string"
-   * - Address.Postal.City
-     - info.addresses.items.address.city
-     - "string"
-   * - Address.Postal.Zipcode
-     - info.addresses.items.address.postalCode
-     - "string"
-   * - Address.Street.Address1
-     - info.addresses.items.address.addressLine
-     - "string"
-   * - Address.Street.Address2
-     - info.addresses.items.address.addressLine2
-     - "string"
-   * - Address.Street.City
-     - info.addresses.items.address.city
-     - "string"
-   * - Address.Street.Zipcode
-     - info.addresses.items.address.postalCode
-     - "string"
-   * - ContactId
-     - id
-     - "string"
-
-
-SuperOffice Product to Wix Products
------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Product and a Wix Products must be established.
-
-A new Wix Products will be created from a SuperOffice Product if it is connected to a SuperOffice Quoteline, or Quotealternative that is synchronized into Wix.
-
-Once a link between a SuperOffice Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Product and a Wix Products:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - Wix Products Property
-     - Wix Data Type
-   * - ERPPriceListKey
-     - priceData.currency
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - UnitCost
-     - costAndProfitData.itemCost
-     - N/A
-   * - UnitListPrice
-     - priceData.price
-     - N/A
 
 
 SuperOffice Product to Wix Products
