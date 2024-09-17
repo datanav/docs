@@ -2,25 +2,25 @@
 Wave to CRMOffice Dataflow
 ==========================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave to CRMOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Customer person to CRMOffice Contacts
-------------------------------------------
-Every Wave Customer person will be synchronized with a CRMOffice Contacts.
+Wave Customer (human data) to CRMOffice Contacts
+------------------------------------------------
+Every Wave Customer (human data) will be synchronized with a CRMOffice Contacts.
 
-Once a link between a Wave Customer person and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer (human data) and a CRMOffice Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a CRMOffice Contacts:
+The following properties are synchronized between a Wave Customer (human data) and a CRMOffice Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Customer person Property
+   * - Wave Customer (human data) Property
      - CRMOffice Contacts Property
      - CRMOffice Data Type
    * - firstName
