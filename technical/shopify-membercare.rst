@@ -2,7 +2,7 @@
 Shopify to MemberCare Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -118,15 +118,6 @@ The following properties are synchronized between a Shopify Customer and a Membe
    * - Shopify Customer Property
      - MemberCare Countries Property
      - MemberCare Data Type
-   * - currency
-     - iso2Letter
-     - "string"
-   * - default_address.country_code
-     - iso2Letter
-     - "string"
-   * - default_address.country_name
-     - name
-     - "string"
 
 
 Shopify Order to MemberCare Countries
@@ -143,16 +134,20 @@ The following properties are synchronized between a Shopify Order and a MemberCa
    * - Shopify Order Property
      - MemberCare Countries Property
      - MemberCare Data Type
-   * - billing_address.country
-     - name
-     - "string"
-   * - billing_address.country_code
-     - iso2Letter
-     - "string"
-   * - shipping_address.country
-     - name
-     - "string"
-   * - shipping_address.country_code
-     - iso2Letter
-     - "string"
+
+
+Shopify Order to MemberCare Invoices
+------------------------------------
+Every Shopify Order will be synchronized with a MemberCare Invoices.
+
+Once a link between a Shopify Order and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a MemberCare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - MemberCare Invoices Property
+     - MemberCare Data Type
 
