@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:06
 
 Introduction
 ------------
@@ -133,96 +133,6 @@ The following properties are synchronized between a HubSpot Company and a SuperO
    * - properties.zip
      - Address.Street.Zipcode
      - "string"
-
-
-HubSpot Company to SuperOffice Person
--------------------------------------
-Before any synchronization can take place, a link between a HubSpot Company and a SuperOffice Person must be established.
-
-A new SuperOffice Person will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into SuperOffice.
-
-Once a link between a HubSpot Company and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Company and a SuperOffice Person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Company Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
-
-
-HubSpot Contact to SuperOffice Contact
---------------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a SuperOffice Contact must be established.
-
-A new SuperOffice Contact will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into SuperOffice.
-
-Once a link between a HubSpot Contact and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contact and a SuperOffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
-
-
-HubSpot Pipelinedeal to SuperOffice Quotealternative
-----------------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Pipelinedeal and a SuperOffice Quotealternative must be established.
-
-A new SuperOffice Quotealternative will be created from a HubSpot Pipelinedeal if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into SuperOffice.
-
-Once a link between a HubSpot Pipelinedeal and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Pipelinedeal and a SuperOffice Quotealternative:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Pipelinedeal Property
-     - SuperOffice Quotealternative Property
-     - SuperOffice Data Type
-   * - label
-     - VATInfo
-     - "string"
-   * - stages.label
-     - VATInfo
-     - "string"
-
-
-HubSpot Product to SuperOffice Product
---------------------------------------
-Before any synchronization can take place, a link between a HubSpot Product and a SuperOffice Product must be established.
-
-A new SuperOffice Product will be created from a HubSpot Product if it is connected to a HubSpot Lineitem, Lineitemdealassociation, Lineitemdealassociationtype, or Lineitemquoteassociationtype that is synchronized into SuperOffice.
-
-Once a link between a HubSpot Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Product and a SuperOffice Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Product Property
-     - SuperOffice Product Property
-     - SuperOffice Data Type
-   * - properties.description
-     - Description
-     - "string"
-   * - properties.hs_cost_of_goods_sold
-     - UnitCost
-     - "string"
-   * - properties.name
-     - Name
-     - "string"
-   * - properties.price
-     - UnitListPrice
-     - N/A
 
 
 HubSpot Contactcompanyassociation to SuperOffice Person
