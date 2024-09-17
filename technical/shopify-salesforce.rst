@@ -2,105 +2,12 @@
 Shopify to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Shopify Order to Salesforce Order
----------------------------------
-Before any synchronization can take place, a link between a Shopify Order and a Salesforce Order must be established.
-
-A new Salesforce Order will be created from a Shopify Order if it is connected to a Shopify Order that is synchronized into Salesforce.
-
-Once a link between a Shopify Order and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Shopify Order and a Salesforce Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Shopify Order Property
-     - Salesforce Order Property
-     - Salesforce Data Type
-   * - billing_address.address1
-     - BillingStreet
-     - "string"
-   * - billing_address.city
-     - BillingCity
-     - "string"
-   * - billing_address.city
-     - ShippingCity
-     - "string"
-   * - billing_address.country
-     - BillingCountry
-     - "string"
-   * - billing_address.country
-     - ShippingCountry
-     - "string"
-   * - billing_address.country_code
-     - BillingCountryCode
-     - "string"
-   * - billing_address.country_code
-     - ShippingCountryCode
-     - "string"
-   * - billing_address.zip
-     - BillingPostalCode
-     - "string"
-   * - billing_address.zip
-     - ShippingStateCode
-     - "string"
-   * - created_at
-     - OrderedDate
-     - "string"
-   * - currency
-     - CurrencyIsoCode
-     - "string"
-   * - current_total_price
-     - TotalAmount
-     - "string"
-   * - customer.id
-     - ID
-     - "string"
-   * - id
-     - ID
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - shipping_address.address1
-     - BillingStreet
-     - "string"
-   * - shipping_address.city
-     - BillingCity
-     - "string"
-   * - shipping_address.city
-     - ShippingCity
-     - "string"
-   * - shipping_address.country
-     - BillingCountry
-     - "string"
-   * - shipping_address.country
-     - ShippingCountry
-     - "string"
-   * - shipping_address.country_code
-     - BillingCountryCode
-     - "string"
-   * - shipping_address.country_code
-     - ShippingCountryCode
-     - "string"
-   * - shipping_address.zip
-     - BillingPostalCode
-     - "string"
-   * - shipping_address.zip
-     - ShippingStateCode
-     - "string"
-   * - total_price
-     - TotalAmount
-     - "string"
-
 
 Shopify Product to Salesforce Product2
 --------------------------------------
