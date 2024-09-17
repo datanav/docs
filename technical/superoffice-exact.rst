@@ -2,12 +2,28 @@
 SuperOffice to Exact Online Dataflow
 ====================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+SuperOffice Product to Exact Online Items
+-----------------------------------------
+Every SuperOffice Product will be synchronized with a Exact Online Items.
+
+Once a link between a SuperOffice Product and a Exact Online Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a Exact Online Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Exact Online Items Property
+     - Exact Online Data Type
+
 
 SuperOffice Quotealternative to Exact Online Salesorders
 --------------------------------------------------------
@@ -131,6 +147,22 @@ The following properties are synchronized between a SuperOffice Person and a Exa
      - "string"
 
 
+SuperOffice Quotealternative to Exact Online Quotations
+-------------------------------------------------------
+Every SuperOffice Quotealternative will be synchronized with a Exact Online Quotations.
+
+Once a link between a SuperOffice Quotealternative and a Exact Online Quotations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a Exact Online Quotations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quotealternative Property
+     - Exact Online Quotations Property
+     - Exact Online Data Type
+
+
 SuperOffice Quoteline to Exact Online Quotations
 ------------------------------------------------
 Every SuperOffice Quoteline will be synchronized with a Exact Online Quotations.
@@ -183,9 +215,6 @@ The following properties are synchronized between a SuperOffice Listcurrencyitem
    * - SuperOffice Listcurrencyitems Property
      - Exact Online Currencies Property
      - Exact Online Data Type
-   * - Name
-     - Code
-     - "string"
 
 
 SuperOffice Person to Exact Online Addresses
@@ -202,21 +231,6 @@ The following properties are synchronized between a SuperOffice Person and a Exa
    * - SuperOffice Person Property
      - Exact Online Addresses Property
      - Exact Online Data Type
-   * - Address.Street.Address1
-     - AddressLine1
-     - "string"
-   * - Address.Street.Address2
-     - AddressLine2
-     - "string"
-   * - Address.Street.Address3
-     - AddressLine3
-     - "string"
-   * - Address.Street.City
-     - City
-     - "string"
-   * - Country.CountryId
-     - Country
-     - "string"
 
 
 SuperOffice Product to Exact Online Items
@@ -233,9 +247,6 @@ The following properties are synchronized between a SuperOffice Product and a Ex
    * - SuperOffice Product Property
      - Exact Online Items Property
      - Exact Online Data Type
-   * - Code
-     - Code
-     - "string"
 
 
 SuperOffice Product to Exact Online Vatcodes
@@ -252,9 +263,6 @@ The following properties are synchronized between a SuperOffice Product and a Ex
    * - SuperOffice Product Property
      - Exact Online Vatcodes Property
      - Exact Online Data Type
-   * - Code
-     - Code
-     - "string"
 
 
 SuperOffice Quotealternative to Exact Online Quotations
@@ -271,9 +279,6 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - SuperOffice Quotealternative Property
      - Exact Online Quotations Property
      - Exact Online Data Type
-   * - Name
-     - Description
-     - "string"
 
 
 SuperOffice Quotealternative to Exact Online Vatcodes
@@ -290,9 +295,6 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - SuperOffice Quotealternative Property
      - Exact Online Vatcodes Property
      - Exact Online Data Type
-   * - VAT
-     - Code
-     - "string"
 
 
 SuperOffice Quoteline to Exact Online Salesorderlines
@@ -309,12 +311,6 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - Exact Online Salesorderlines Property
      - Exact Online Data Type
-   * - ERPProductKey
-     - Item
-     - "string"
-   * - QuoteAlternativeId
-     - OrderID
-     - "string"
 
 
 SuperOffice Quoteline to Exact Online Vatcodes
@@ -331,7 +327,4 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - Exact Online Vatcodes Property
      - Exact Online Data Type
-   * - VAT
-     - Code
-     - "string"
 
