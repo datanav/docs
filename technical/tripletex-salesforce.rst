@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-17 12:31:51
+Generated: 2024-09-17 12:35:48
 
 Introduction
 ------------
@@ -171,6 +171,9 @@ The following properties are synchronized between a Tripletex Projectactivity an
    * - Tripletex Projectactivity Property
      - Salesforce Task Property
      - Salesforce Data Type
+   * - activity.name
+     - Subject
+     - "string"
 
 
 Tripletex Contact to Salesforce Contact
