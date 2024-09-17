@@ -2,42 +2,12 @@
 HubSpot to WooCommerce Dataflow
 ===============================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to WooCommerce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-HubSpot Product to WooCommerce Product
---------------------------------------
-Before any synchronization can take place, a link between a HubSpot Product and a WooCommerce Product must be established.
-
-A new WooCommerce Product will be created from a HubSpot Product if it is connected to a HubSpot Deal that is synchronized into WooCommerce.
-
-Once a link between a HubSpot Product and a WooCommerce Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Product and a WooCommerce Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Product Property
-     - WooCommerce Product Property
-     - WooCommerce Data Type
-   * - properties.hs_cost_of_goods_sold
-     - price
-     - "string"
-   * - properties.hs_sku
-     - sku
-     - "string"
-   * - properties.name
-     - name
-     - "string"
-   * - properties.price
-     - sale_price
-     - "string"
-
 
 HubSpot Deal to WooCommerce Order
 ---------------------------------
