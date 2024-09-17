@@ -2,7 +2,7 @@
 CRMOffice to MemberCare Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -61,9 +61,22 @@ The following properties are synchronized between a CRMOffice Activities and a M
    * - CRMOffice Activities Property
      - MemberCare Countries Property
      - MemberCare Data Type
-   * - address.country
-     - name
-     - "string"
+
+
+CRMOffice Companies to MemberCare Companies
+-------------------------------------------
+Every CRMOffice Companies will be synchronized with a MemberCare Companies.
+
+Once a link between a CRMOffice Companies and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a CRMOffice Companies and a MemberCare Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - CRMOffice Companies Property
+     - MemberCare Companies Property
+     - MemberCare Data Type
 
 
 CRMOffice Companies to MemberCare Countries
@@ -80,10 +93,4 @@ The following properties are synchronized between a CRMOffice Companies and a Me
    * - CRMOffice Companies Property
      - MemberCare Countries Property
      - MemberCare Data Type
-   * - postAddress.country
-     - name
-     - "string"
-   * - visitAddress.country
-     - name
-     - "string"
 
