@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -68,81 +68,6 @@ The following properties are synchronized between a HubSpot Contact and a Wix Co
    * - properties.zip
      - info.addresses.items.address.postalCode
      - "string"
-
-
-HubSpot Company to Wix Contacts
--------------------------------
-Before any synchronization can take place, a link between a HubSpot Company and a Wix Contacts must be established.
-
-A new Wix Contacts will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Wix.
-
-Once a link between a HubSpot Company and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Company and a Wix Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Company Property
-     - Wix Contacts Property
-     - Wix Data Type
-   * - id
-     - id
-     - "string"
-   * - properties.address
-     - info.addresses.items.address.addressLine
-     - "string"
-   * - properties.address2
-     - info.addresses.items.address.addressLine2
-     - "string"
-   * - properties.city
-     - info.addresses.items.address.city
-     - "string"
-   * - properties.country
-     - info.addresses.items.address.countryFullname
-     - "string"
-   * - properties.industry
-     - info.addresses.items.address.countryFullname
-     - "string"
-   * - properties.state
-     - info.addresses.items.address.countryFullname
-     - "string"
-   * - properties.type
-     - info.addresses.items.address.countryFullname
-     - "string"
-   * - properties.zip
-     - info.addresses.items.address.postalCode
-     - "string"
-
-
-HubSpot Product to Wix Products
--------------------------------
-Before any synchronization can take place, a link between a HubSpot Product and a Wix Products must be established.
-
-A new Wix Products will be created from a HubSpot Product if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Wix.
-
-Once a link between a HubSpot Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Product and a Wix Products:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Product Property
-     - Wix Products Property
-     - Wix Data Type
-   * - properties.hs_cost_of_goods_sold
-     - costAndProfitData.itemCost
-     - N/A
-   * - properties.hs_sku
-     - sku
-     - "string"
-   * - properties.name
-     - name
-     - "string"
-   * - properties.price
-     - priceData.price
-     - N/A
 
 
 HubSpot Product to Wix Products
