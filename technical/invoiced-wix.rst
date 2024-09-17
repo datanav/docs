@@ -2,7 +2,7 @@
 Invoiced to Wix Dataflow
 ========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,9 +23,6 @@ The following properties are synchronized between a Invoiced Contacts and a Wix 
    * - Invoiced Contacts Property
      - Wix Contacts Property
      - Wix Data Type
-   * - email
-     - primaryInfo.email
-     - "string"
 
 
 Invoiced Items to Wix Products
@@ -42,13 +39,4 @@ The following properties are synchronized between a Invoiced Items and a Wix Pro
    * - Invoiced Items Property
      - Wix Products Property
      - Wix Data Type
-   * - currency
-     - priceData.currency
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - unit_cost
-     - costAndProfitData.itemCost
-     - N/A
 
