@@ -2,7 +2,7 @@
 Chargebee to Chargebee Dataflow
 ===============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -39,6 +39,21 @@ The following properties are synchronized between a Chargebee Address and a Char
    * - Chargebee Address Property
      - Chargebee Customer Property
      - Chargebee Data Type
+   * - addr
+     - billing_address.line1
+     - "string"
+   * - city
+     - billing_address.city
+     - "string"
+   * - country
+     - billing_address.country
+     - "string"
+   * - subscription_id
+     - id
+     - "string"
+   * - zip
+     - billing_address.zip
+     - "string"
 
 
 Chargebee Customer to Chargebee Address
@@ -55,4 +70,7 @@ The following properties are synchronized between a Chargebee Customer and a Cha
    * - Chargebee Customer Property
      - Chargebee Address Property
      - Chargebee Data Type
+   * - billing_address.country
+     - country
+     - "string"
 
