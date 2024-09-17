@@ -2,7 +2,7 @@
 Chargebee to Invoiced Dataflow
 ==============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -23,6 +23,21 @@ The following properties are synchronized between a Chargebee Address and a Invo
    * - Chargebee Address Property
      - Invoiced Customers company Property
      - Invoiced Data Type
+   * - addr
+     - address1
+     - "string"
+   * - city
+     - city
+     - "string"
+   * - country
+     - country
+     - "string"
+   * - subscription_id
+     - id
+     - "string"
+   * - zip
+     - postal_code
+     - "string"
 
 
 Chargebee Address to Invoiced Customers person
@@ -39,6 +54,21 @@ The following properties are synchronized between a Chargebee Address and a Invo
    * - Chargebee Address Property
      - Invoiced Customers person Property
      - Invoiced Data Type
+   * - addr
+     - address1
+     - "string"
+   * - city
+     - city
+     - "string"
+   * - country
+     - country
+     - "string"
+   * - subscription_id
+     - id
+     - "string"
+   * - zip
+     - postal_code
+     - "string"
 
 
 Chargebee Customer to Invoiced Customers company
