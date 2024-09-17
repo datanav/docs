@@ -2,7 +2,7 @@
 Keap to Business Nxt Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -61,10 +61,20 @@ The following properties are synchronized between a Keap Product and a Business 
    * - Keap Product Property
      - Business Nxt Product Property
      - Business Nxt Data Type
-   * - product_desc
-     - description
-     - "string"
-   * - product_price
-     - priceQuantity
-     - "string"
+
+
+Keap Product to Business Nxt Product
+------------------------------------
+Every Keap Product will be synchronized with a Business Nxt Product.
+
+Once a link between a Keap Product and a Business Nxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Keap Product and a Business Nxt Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Keap Product Property
+     - Business Nxt Product Property
+     - Business Nxt Data Type
 
