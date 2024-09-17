@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -170,7 +170,7 @@ The following properties are synchronized between a Tripletex Customer and a Sup
      - SuperOffice Contact Property
      - SuperOffice Data Type
    * - customerNumber
-     - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountryDependant on having wd:Q852835 in Country.TwoLetterISOCountry)
+     - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountry)
      - "string"
    * - deliveryAddress.addressLine1
      - Address.Postal.Address1
@@ -209,7 +209,7 @@ The following properties are synchronized between a Tripletex Customer and a Sup
      - Name
      - "string"
    * - organizationNumber
-     - OrgNr (Dependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountry)
+     - OrgNr (Dependant on having NO in Country.TwoLetterISOCountry)
      - "string"
    * - phoneNumber
      - Phones.Value
@@ -268,9 +268,6 @@ The following properties are synchronized between a Tripletex Customer and a Sup
    * - postalAddress.postalCode
      - Address.Street.Zipcode
      - "string"
-   * - url
-     - Urls.Value
-     - "string"
    * - website
      - Urls.Value
      - "string"
@@ -321,12 +318,6 @@ The following properties are synchronized between a Tripletex Employee and a Sup
    * - dateOfBirth
      - BirthDate
      - N/A
-   * - department.id (Dependant on having wd:Q703534 in  )
-     - Contact.ContactId
-     - "integer"
-   * - email
-     - Emails.Value
-     - "string"
    * - firstName
      - Firstname
      - "string"
@@ -385,21 +376,12 @@ The following properties are synchronized between a Tripletex Supplier and a Sup
    * - deliveryAddress.addressLine2
      - Address.Street.Address2
      - "string"
-   * - deliveryAddress.changes
-     - Address.Postal.City
-     - "string"
-   * - deliveryAddress.changes
-     - Address.Street.City
-     - "string"
    * - deliveryAddress.city
      - Address.Postal.City
      - "string"
    * - deliveryAddress.city
      - Address.Street.City
      - "string"
-   * - deliveryAddress.city
-     - Country.CountryId
-     - "integer"
    * - deliveryAddress.country.id
      - Country.CountryId
      - "integer"
@@ -498,7 +480,7 @@ The following properties are synchronized between a Tripletex Department and a S
      - SuperOffice Contact Property
      - SuperOffice Data Type
    * - departmentNumber
-     - OrgNr (Dependant on having wd:Q2366457 in Country.TwoLetterISOCountryDependant on having wd:Q2366457 in Country.TwoLetterISOCountry)
+     - OrgNr (Dependant on having wd:Q2366457 in Country.TwoLetterISOCountry)
      - "string"
    * - name
      - Name
