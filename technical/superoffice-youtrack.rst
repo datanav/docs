@@ -2,7 +2,7 @@
 SuperOffice to Youtrack Dataflow
 ================================
 
-Generated: 2024-09-17 09:14:34
+Generated: 2024-09-17 12:35:50
 
 Introduction
 ------------
@@ -94,6 +94,9 @@ The following properties are synchronized between a SuperOffice Ticket and a You
    * - SuperOffice Ticket Property
      - Youtrack Issues Property
      - Youtrack Data Type
+   * - OwnedBy.AssociateId
+     - reporter.id
+     - "string"
 
 
 SuperOffice User to Youtrack Users
