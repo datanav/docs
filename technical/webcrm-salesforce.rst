@@ -2,7 +2,7 @@
 WebCRM to Salesforce Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -50,6 +50,22 @@ The following properties are synchronized between a WebCRM Organisations and a S
      - "string"
 
 
+WebCRM Products to Salesforce Product2
+--------------------------------------
+Every WebCRM Products will be synchronized with a Salesforce Product2.
+
+Once a link between a WebCRM Products and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WebCRM Products and a Salesforce Product2:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WebCRM Products Property
+     - Salesforce Product2 Property
+     - Salesforce Data Type
+
+
 WebCRM Quotationline to Salesforce Invoice
 ------------------------------------------
 Every WebCRM Quotationline will be synchronized with a Salesforce Invoice.
@@ -80,21 +96,6 @@ The following properties are synchronized between a WebCRM Persons and a Salesfo
    * - WebCRM Persons Property
      - Salesforce Contact Property
      - Salesforce Data Type
-   * - PersonDirectPhone
-     - Phone
-     - "string"
-   * - PersonFirstName
-     - FirstName
-     - "string"
-   * - PersonLastName
-     - LastName
-     - "string"
-   * - PersonMobilePhone
-     - MobilePhone
-     - "string"
-   * - document_number
-     - Birthdate
-     - "string"
 
 
 WebCRM Products to Salesforce Product2
@@ -127,21 +128,6 @@ The following properties are synchronized between a WebCRM Quotationline and a S
    * - WebCRM Quotationline Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
-   * - QuotationLineCostPrice
-     - Description
-     - "string"
-   * - QuotationLineDiscount
-     - Description
-     - "string"
-   * - QuotationLinePrice
-     - Description
-     - "string"
-   * - QuotationLineQuantity
-     - Description
-     - "string"
-   * - QuotationLineVatPercentage
-     - Description
-     - "string"
 
 
 WebCRM Quotationline to Salesforce Orderitem
