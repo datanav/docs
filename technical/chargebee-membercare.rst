@@ -2,12 +2,28 @@
 Chargebee to MemberCare Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Chargebee to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Chargebee Business_entity to MemberCare Companies
+-------------------------------------------------
+Every Chargebee Business_entity will be synchronized with a MemberCare Companies.
+
+Once a link between a Chargebee Business_entity and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Business_entity and a MemberCare Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Business_entity Property
+     - MemberCare Companies Property
+     - MemberCare Data Type
+
 
 Chargebee Currency to MemberCare Companycategories
 --------------------------------------------------
@@ -118,9 +134,6 @@ The following properties are synchronized between a Chargebee Address and a Memb
    * - Chargebee Address Property
      - MemberCare Countries Property
      - MemberCare Data Type
-   * - country
-     - name
-     - "string"
 
 
 Chargebee Business_entity to MemberCare Companies
@@ -137,9 +150,6 @@ The following properties are synchronized between a Chargebee Business_entity an
    * - Chargebee Business_entity Property
      - MemberCare Companies Property
      - MemberCare Data Type
-   * - name
-     - companyName
-     - "string"
 
 
 Chargebee Customer to MemberCare Countries
@@ -156,7 +166,20 @@ The following properties are synchronized between a Chargebee Customer and a Mem
    * - Chargebee Customer Property
      - MemberCare Countries Property
      - MemberCare Data Type
-   * - billing_address.country
-     - name
-     - "string"
+
+
+Chargebee Customer to MemberCare Invoices
+-----------------------------------------
+Every Chargebee Customer will be synchronized with a MemberCare Invoices.
+
+Once a link between a Chargebee Customer and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Customer and a MemberCare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Customer Property
+     - MemberCare Invoices Property
+     - MemberCare Data Type
 
