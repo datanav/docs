@@ -2,7 +2,7 @@
 PowerOffice GO to Business Nxt Dataflow
 =======================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -50,6 +50,22 @@ The following properties are synchronized between a PowerOffice GO Departments a
      - "string"
 
 
+PowerOffice GO Product to Business Nxt Product
+----------------------------------------------
+Every PowerOffice GO Product will be synchronized with a Business Nxt Product.
+
+Once a link between a PowerOffice GO Product and a Business Nxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Product and a Business Nxt Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Product Property
+     - Business Nxt Product Property
+     - Business Nxt Data Type
+
+
 PowerOffice GO Salesorderlines to Business Nxt Order
 ----------------------------------------------------
 Every PowerOffice GO Salesorderlines will be synchronized with a Business Nxt Order.
@@ -62,6 +78,22 @@ The following properties are synchronized between a PowerOffice GO Salesorderlin
    :header-rows: 1
 
    * - PowerOffice GO Salesorderlines Property
+     - Business Nxt Order Property
+     - Business Nxt Data Type
+
+
+PowerOffice GO Salesorders to Business Nxt Order
+------------------------------------------------
+Every PowerOffice GO Salesorders will be synchronized with a Business Nxt Order.
+
+Once a link between a PowerOffice GO Salesorders and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Salesorders and a Business Nxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Salesorders Property
      - Business Nxt Order Property
      - Business Nxt Data Type
 
@@ -80,9 +112,6 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - PowerOffice GO Contactperson Property
      - Business Nxt Country Property
      - Business Nxt Data Type
-   * - residenceCountryCode
-     - isoCode
-     - "string"
 
 
 PowerOffice GO Currency to Business Nxt Currency
@@ -115,9 +144,6 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Business Nxt Country Property
      - Business Nxt Data Type
-   * - MailAddress.CountryCode
-     - isoCode
-     - "string"
 
 
 PowerOffice GO Location to Business Nxt Country
@@ -166,15 +192,6 @@ The following properties are synchronized between a PowerOffice GO Product and a
    * - PowerOffice GO Product Property
      - Business Nxt Product Property
      - Business Nxt Data Type
-   * - availableStock
-     - quantityPerUnit
-     - "string"
-   * - description
-     - description
-     - "string"
-   * - salesPrice
-     - priceQuantity
-     - "string"
 
 
 PowerOffice GO Productgroup to Business Nxt Productcategory
@@ -191,9 +208,6 @@ The following properties are synchronized between a PowerOffice GO Productgroup 
    * - PowerOffice GO Productgroup Property
      - Business Nxt Productcategory Property
      - Business Nxt Data Type
-   * - name
-     - text
-     - "string"
 
 
 PowerOffice GO Salesorderlines to Business Nxt Orderline
@@ -210,9 +224,6 @@ The following properties are synchronized between a PowerOffice GO Salesorderlin
    * - PowerOffice GO Salesorderlines Property
      - Business Nxt Orderline Property
      - Business Nxt Data Type
-   * - sesam_SalesOrderId
-     - orderNo
-     - "string"
 
 
 PowerOffice GO Salesorders to Business Nxt Order
@@ -229,9 +240,6 @@ The following properties are synchronized between a PowerOffice GO Salesorders a
    * - PowerOffice GO Salesorders Property
      - Business Nxt Order Property
      - Business Nxt Data Type
-   * - SalesOrderDate
-     - orderDate
-     - "string"
 
 
 PowerOffice GO Suppliers to Business Nxt Country
