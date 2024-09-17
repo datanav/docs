@@ -2,7 +2,7 @@
 Wave to SuperOffice Dataflow
 ============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -351,6 +351,24 @@ The following properties are synchronized between a Wave Invoice and a SuperOffi
      - "float"
 
 
+Wave Product to SuperOffice Product
+-----------------------------------
+Before any synchronization can take place, a link between a Wave Product and a SuperOffice Product must be established.
+
+A new SuperOffice Product will be created from a Wave Product if it is connected to a Wave Invoice that is synchronized into SuperOffice.
+
+Once a link between a Wave Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Product and a SuperOffice Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Product Property
+     - SuperOffice Product Property
+     - SuperOffice Data Type
+
+
 Wave Vendor to SuperOffice Contact
 ----------------------------------
 Before any synchronization can take place, a link between a Wave Vendor and a SuperOffice Contact must be established.
@@ -419,24 +437,6 @@ The following properties are synchronized between a Wave Invoice and a SuperOffi
    * - Wave Invoice Property
      - SuperOffice Quoteline Property
      - SuperOffice Data Type
-   * - id
-     - QuoteAlternativeId
-     - "integer"
-   * - items.description
-     - Description
-     - "string"
-   * - items.price
-     - UnitListPrice
-     - N/A
-   * - items.product.id
-     - ERPProductKey
-     - "string"
-   * - items.quantity
-     - Quantity
-     - N/A
-   * - total.value
-     - TotalPrice
-     - N/A
 
 
 Wave Product to SuperOffice Product
@@ -453,13 +453,4 @@ The following properties are synchronized between a Wave Product and a SuperOffi
    * - Wave Product Property
      - SuperOffice Product Property
      - SuperOffice Data Type
-   * - description
-     - Description
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - unitPrice
-     - UnitListPrice
-     - N/A
 
