@@ -2,57 +2,12 @@
 Wave to Exact Online Dataflow
 =============================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Wave Currency to Exact Online Currencies
-----------------------------------------
-Before any synchronization can take place, a link between a Wave Currency and a Exact Online Currencies must be established.
-
-A new Exact Online Currencies will be created from a Wave Currency if it is connected to a Wave Customer, or Customer-person that is synchronized into Exact Online.
-
-Once a link between a Wave Currency and a Exact Online Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Currency and a Exact Online Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Currency Property
-     - Exact Online Currencies Property
-     - Exact Online Data Type
-   * - name
-     - Description
-     - "string"
-
-
-Wave Invoice to Exact Online Salesorders
-----------------------------------------
-Before any synchronization can take place, a link between a Wave Invoice and a Exact Online Salesorders must be established.
-
-A new Exact Online Salesorders will be created from a Wave Invoice if it is connected to a Wave Invoice that is synchronized into Exact Online.
-
-Once a link between a Wave Invoice and a Exact Online Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Invoice and a Exact Online Salesorders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Invoice Property
-     - Exact Online Salesorders Property
-     - Exact Online Data Type
-   * - currency.code
-     - Currency
-     - "string"
-   * - memo
-     - Description
-     - "string"
-
 
 Wave Product to Exact Online Items
 ----------------------------------
@@ -92,18 +47,18 @@ The following properties are synchronized between a Wave Customer and a Exact On
      - "string"
 
 
-Wave Customer person to Exact Online Contacts
----------------------------------------------
-Every Wave Customer person will be synchronized with a Exact Online Contacts.
+Wave Customer (human data) to Exact Online Contacts
+---------------------------------------------------
+Every Wave Customer (human data) will be synchronized with a Exact Online Contacts.
 
-Once a link between a Wave Customer person and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer (human data) and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a Exact Online Contacts:
+The following properties are synchronized between a Wave Customer (human data) and a Exact Online Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Customer person Property
+   * - Wave Customer (human data) Property
      - Exact Online Contacts Property
      - Exact Online Data Type
    * - address.city
@@ -214,18 +169,18 @@ The following properties are synchronized between a Wave Customer and a Exact On
      - Exact Online Data Type
 
 
-Wave Customer person to Exact Online Accounts
----------------------------------------------
-Every Wave Customer person will be synchronized with a Exact Online Accounts.
+Wave Customer (organisation data) to Exact Online Accounts
+----------------------------------------------------------
+Every Wave Customer (organisation data) will be synchronized with a Exact Online Accounts.
 
-Once a link between a Wave Customer person and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer (organisation data) and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a Exact Online Accounts:
+The following properties are synchronized between a Wave Customer (organisation data) and a Exact Online Accounts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Customer person Property
+   * - Wave Customer (organisation data) Property
      - Exact Online Accounts Property
      - Exact Online Data Type
    * - address.city
@@ -251,18 +206,18 @@ The following properties are synchronized between a Wave Customer person and a E
      - "string"
 
 
-Wave Customer person to Exact Online Addresses
-----------------------------------------------
-Every Wave Customer person will be synchronized with a Exact Online Addresses.
+Wave Customer (location data) to Exact Online Addresses
+-------------------------------------------------------
+Every Wave Customer (location data) will be synchronized with a Exact Online Addresses.
 
-Once a link between a Wave Customer person and a Exact Online Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer (location data) and a Exact Online Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a Exact Online Addresses:
+The following properties are synchronized between a Wave Customer (location data) and a Exact Online Addresses:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Customer person Property
+   * - Wave Customer (location data) Property
      - Exact Online Addresses Property
      - Exact Online Data Type
 
