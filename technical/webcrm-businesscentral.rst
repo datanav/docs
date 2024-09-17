@@ -2,7 +2,7 @@
 WebCRM to Business Central Dataflow
 ===================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -25,19 +25,19 @@ The following properties are synchronized between a WebCRM Organisations and a B
      - Business Central Data Type
 
 
-WebCRM Persons to Business Central Contacts person
---------------------------------------------------
-Every WebCRM Persons will be synchronized with a Business Central Contacts person.
+WebCRM Persons to Business Central Contacts (human data)
+--------------------------------------------------------
+Every WebCRM Persons will be synchronized with a Business Central Contacts (human data).
 
-Once a link between a WebCRM Persons and a Business Central Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a WebCRM Persons and a Business Central Contacts (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a WebCRM Persons and a Business Central Contacts person:
+The following properties are synchronized between a WebCRM Persons and a Business Central Contacts (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - WebCRM Persons Property
-     - Business Central Contacts person Property
+     - Business Central Contacts (human data) Property
      - Business Central Data Type
 
 
