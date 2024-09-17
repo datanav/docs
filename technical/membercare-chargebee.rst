@@ -2,7 +2,7 @@
 MemberCare to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -74,15 +74,6 @@ The following properties are synchronized between a MemberCare Invoices and a Ch
    * - MemberCare Invoices Property
      - Chargebee Order Property
      - Chargebee Data Type
-   * - invoiceItems.description
-     - order_line_items.description
-     - "string"
-   * - invoiceItems.quantity
-     - order_line_items.amount
-     - "string"
-   * - invoiceItems.unitPrice
-     - order_line_items.unit_price
-     - "string"
 
 
 MemberCare Organizations to Chargebee Business_entity
