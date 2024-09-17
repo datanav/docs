@@ -2,7 +2,7 @@
 Exact Online to Tidsbanken Dataflow
 ===================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -33,6 +33,9 @@ The following properties are synchronized between a Exact Online Departments and
    * - Exact Online Departments Property
      - Tidsbanken Avdeling Property
      - Tidsbanken Data Type
+   * - Code
+     - sesam_avdelingId
+     - "string"
 
 
 Exact Online Accounts to Tidsbanken Kunde
