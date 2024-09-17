@@ -2,7 +2,7 @@
 Wave to Tidsbanken Dataflow
 ===========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -153,6 +153,22 @@ The following properties are synchronized between a Wave Vendor and a Tidsbanken
      - "integer"
 
 
+Wave Customer person to Tidsbanken Kunde
+----------------------------------------
+Every Wave Customer person will be synchronized with a Tidsbanken Kunde.
+
+Once a link between a Wave Customer person and a Tidsbanken Kunde is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer person and a Tidsbanken Kunde:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - Tidsbanken Kunde Property
+     - Tidsbanken Data Type
+
+
 Wave Customer to Tidsbanken Kunde
 ---------------------------------
 Every Wave Customer will be synchronized with a Tidsbanken Kunde.
@@ -167,79 +183,4 @@ The following properties are synchronized between a Wave Customer and a Tidsbank
    * - Wave Customer Property
      - Tidsbanken Kunde Property
      - Tidsbanken Data Type
-   * - address.addressLine1
-     - Gateadresse
-     - "string"
-   * - address.addressLine1
-     - Leveringsadresse
-     - "string"
-   * - address.addressLine1
-     - Postadresse
-     - "string"
-   * - address.addressLine2
-     - Gateadresse
-     - "string"
-   * - address.addressLine2
-     - Leveringsadresse2
-     - "string"
-   * - address.addressLine2
-     - Postadresse
-     - "string"
-   * - address.city
-     - LevPoststed
-     - "string"
-   * - address.city
-     - Poststed
-     - "string"
-   * - address.postalCode
-     - LevPostNr
-     - "string"
-   * - address.postalCode
-     - Postnr
-     - "string"
-   * - id
-     - Id
-     - "string"
-   * - name
-     - Navn
-     - "string"
-   * - phone
-     - Telefon
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - Gateadresse
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - Leveringsadresse
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - Postadresse
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - Gateadresse
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - Leveringsadresse2
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - Postadresse
-     - "string"
-   * - shippingDetails.address.city
-     - LevPoststed
-     - "string"
-   * - shippingDetails.address.city
-     - Poststed
-     - "string"
-   * - shippingDetails.address.postalCode
-     - LevPostNr
-     - "string"
-   * - shippingDetails.address.postalCode
-     - Postnr
-     - "string"
-   * - shippingDetails.phone
-     - Telefon
-     - "string"
-   * - website
-     - Url
-     - "string"
 
