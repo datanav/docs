@@ -2,7 +2,7 @@
 Exact Online to Salesforce Dataflow
 ===================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -23,30 +23,6 @@ The following properties are synchronized between a Exact Items and a Salesforce
    * - Exact Items Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-
-
-Exact Salesorders to Salesforce Order
--------------------------------------
-Before any synchronization can take place, a link between a Exact Salesorders and a Salesforce Order must be established.
-
-A new Salesforce Order will be created from a Exact Salesorders if it is connected to a Exact Salesorders, or Salesorderlines that is synchronized into Salesforce.
-
-Once a link between a Exact Salesorders and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Exact Salesorders and a Salesforce Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Salesorders Property
-     - Salesforce Order Property
-     - Salesforce Data Type
-   * - Currency
-     - CurrencyIsoCode
-     - "string"
-   * - Description
-     - Description
-     - "string"
 
 
 Exact Online Accounts to Salesforce Division
