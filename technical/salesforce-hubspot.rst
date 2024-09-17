@@ -2,7 +2,7 @@
 Salesforce to HubSpot Dataflow
 ==============================
 
-Generated: 2024-09-17 09:13:06
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -31,9 +31,6 @@ The following properties are synchronized between a Salesforce Contact and a Hub
      - "string"
    * - FirstName
      - properties.firstname
-     - "string"
-   * - HomePhone
-     - properties.phone
      - "string"
    * - LastName
      - properties.lastname
@@ -98,13 +95,7 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Name
      - properties.name
      - "string"
-   * - Name	
-     - properties.name
-     - "string"
    * - Phone
-     - properties.phone
-     - "string"
-   * - Phone	
      - properties.phone
      - "string"
 
