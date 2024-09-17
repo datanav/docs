@@ -2,7 +2,7 @@
 Custom Webshop to HubSpot Dataflow
 ==================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -22,6 +22,22 @@ The following properties are synchronized between a Custom Webshop Customer and 
 
    * - Custom Webshop Customer Property
      - HubSpot Company Property
+     - HubSpot Data Type
+
+
+Custom Webshop Order to HubSpot Deal
+------------------------------------
+Every Custom Webshop Order will be synchronized with a HubSpot Deal.
+
+Once a link between a Custom Webshop Order and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom Webshop Order and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom Webshop Order Property
+     - HubSpot Deal Property
      - HubSpot Data Type
 
 
