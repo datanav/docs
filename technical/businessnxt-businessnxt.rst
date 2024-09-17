@@ -2,7 +2,7 @@
 Business Nxt to Business Nxt Dataflow
 =====================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Business Nxt Company and a B
    * - Business Nxt Company Property
      - Business Nxt Address Property
      - Business Nxt Data Type
+   * - companyNo
+     - addressNo
+     - "string"
+   * - name
+     - name
+     - "string"
 
 
 Business Nxt Currency to Business Nxt Country
