@@ -2,7 +2,7 @@
 Invoiced to Business Nxt Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -26,6 +26,38 @@ The following properties are synchronized between a Invoiced Customers company a
    * - name
      - name
      - "string"
+
+
+Invoiced Invoices to Business Nxt Order
+---------------------------------------
+Every Invoiced Invoices will be synchronized with a Business Nxt Order.
+
+Once a link between a Invoiced Invoices and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Invoices and a Business Nxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Invoices Property
+     - Business Nxt Order Property
+     - Business Nxt Data Type
+
+
+Invoiced Items to Business Nxt Product
+--------------------------------------
+Every Invoiced Items will be synchronized with a Business Nxt Product.
+
+Once a link between a Invoiced Items and a Business Nxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Items and a Business Nxt Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Items Property
+     - Business Nxt Product Property
+     - Business Nxt Data Type
 
 
 Invoiced Lineitem to Business Nxt Order
@@ -58,9 +90,6 @@ The following properties are synchronized between a Invoiced Invoices and a Busi
    * - Invoiced Invoices Property
      - Business Nxt Order Property
      - Business Nxt Data Type
-   * - discounts
-     - totalDiscountAmountInCurrency
-     - "string"
 
 
 Invoiced Items to Business Nxt Product
@@ -77,9 +106,6 @@ The following properties are synchronized between a Invoiced Items and a Busines
    * - Invoiced Items Property
      - Business Nxt Product Property
      - Business Nxt Data Type
-   * - description
-     - description
-     - "string"
 
 
 Invoiced Lineitem to Business Nxt Orderline
@@ -96,7 +122,4 @@ The following properties are synchronized between a Invoiced Lineitem and a Busi
    * - Invoiced Lineitem Property
      - Business Nxt Orderline Property
      - Business Nxt Data Type
-   * - $original_id
-     - orderNo
-     - "string"
 
