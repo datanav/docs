@@ -2,7 +2,7 @@
 Salesforce to Business Central Dataflow
 =======================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -25,6 +25,60 @@ The following properties are synchronized between a Salesforce Order and a Busin
    * - Salesforce Order Property
      - Businesscentral Salesorders Property
      - Businesscentral Data Type
+   * - BillingCity
+     - billToCity
+     - "string"
+   * - BillingCity
+     - shipToCity
+     - "string"
+   * - BillingCountry
+     - billToCountry
+     - "string"
+   * - BillingCountry
+     - shipToCountry
+     - "string"
+   * - BillingPostalCode
+     - billToPostCode
+     - "string"
+   * - BillingPostalCode
+     - shipToPostCode
+     - "string"
+   * - BillingStreet
+     - billToAddressLine1
+     - "string"
+   * - BillingStreet
+     - shipToAddressLine1
+     - "string"
+   * - CurrencyIsoCode
+     - currencyId
+     - "string"
+   * - EffectiveDate
+     - requestedDeliveryDate
+     - N/A
+   * - ID
+     - id
+     - "string"
+   * - OrderedDate
+     - orderDate
+     - N/A
+   * - ShippingCity
+     - billToCity
+     - "string"
+   * - ShippingCity
+     - shipToCity
+     - "string"
+   * - ShippingCountry
+     - billToCountry
+     - "string"
+   * - ShippingCountry
+     - shipToCountry
+     - "string"
+   * - ShippingStateCode
+     - billToPostCode
+     - "string"
+   * - ShippingStateCode
+     - shipToPostCode
+     - "string"
 
 
 Salesforce Product2 to Businesscentral Items
@@ -43,6 +97,9 @@ The following properties are synchronized between a Salesforce Product2 and a Bu
    * - Salesforce Product2 Property
      - Businesscentral Items Property
      - Businesscentral Data Type
+   * - Name
+     - displayName
+     - "string"
 
 
 Salesforce Division to Business Central Companies
@@ -187,6 +244,12 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      - Business Central Customers company Property
      - Business Central Data Type
+   * - Name
+     - displayName
+     - "string"
+   * - Phone
+     - phoneNumber
+     - "string"
 
 
 Salesforce Product2 to Business Central Items
