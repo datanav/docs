@@ -2,7 +2,7 @@
 ZohoCRM to Chargebee Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -34,6 +34,22 @@ The following properties are synchronized between a ZohoCRM Account and a Charge
    * - Shipping_Country
      - billing_address.country
      - "string"
+
+
+ZohoCRM Contact to Chargebee Customer
+-------------------------------------
+Every ZohoCRM Contact will be synchronized with a Chargebee Customer.
+
+Once a link between a ZohoCRM Contact and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Contact and a Chargebee Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Contact Property
+     - Chargebee Customer Property
+     - Chargebee Data Type
 
 
 ZohoCRM Account to Chargebee Business_entity
@@ -77,6 +93,22 @@ The following properties are synchronized between a ZohoCRM Deal and a Chargebee
      - "string"
 
 
+ZohoCRM Contact to Chargebee Address
+------------------------------------
+Every ZohoCRM Contact will be synchronized with a Chargebee Address.
+
+Once a link between a ZohoCRM Contact and a Chargebee Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Contact and a Chargebee Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Contact Property
+     - Chargebee Address Property
+     - Chargebee Data Type
+
+
 ZohoCRM Contact to Chargebee Customer
 -------------------------------------
 Every ZohoCRM Contact will be synchronized with a Chargebee Customer.
@@ -91,22 +123,20 @@ The following properties are synchronized between a ZohoCRM Contact and a Charge
    * - ZohoCRM Contact Property
      - Chargebee Customer Property
      - Chargebee Data Type
-   * - Email
-     - email
-     - "string"
-   * - First_Name
-     - first_name
-     - "string"
-   * - Last_Name
-     - last_name
-     - "string"
-   * - Mailing_Country
-     - billing_address.country
-     - "string"
-   * - Other_Country
-     - billing_address.country
-     - "string"
-   * - Secondary_Email
-     - email
-     - "string"
+
+
+ZohoCRM Deal to Chargebee Order
+-------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Chargebee Order.
+
+Once a link between a ZohoCRM Deal and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Deal and a Chargebee Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Deal Property
+     - Chargebee Order Property
+     - Chargebee Data Type
 
