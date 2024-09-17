@@ -2,7 +2,7 @@
 SuperOffice to PowerOffice GO Dataflow
 ======================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -38,26 +38,14 @@ The following properties are synchronized between a SuperOffice Contact and a Po
    * - Address.Postal.Address1
      - MailAddress.AddressLine1
      - "string"
-   * - Address.Postal.Address1
-     - MailAddress.addressLine1
-     - "string"
    * - Address.Postal.Address2
      - MailAddress.AddressLine2
-     - "string"
-   * - Address.Postal.Address2
-     - MailAddress.addressLine2
      - "string"
    * - Address.Postal.City
      - MailAddress.City
      - "string"
-   * - Address.Postal.City
-     - MailAddress.city
-     - "string"
    * - Address.Postal.Zipcode
      - MailAddress.ZipCode
-     - "string"
-   * - Address.Postal.Zipcode
-     - MailAddress.zipCode
      - "string"
    * - Address.Street.Address1
      - MailAddress.AddressLine1
@@ -73,36 +61,24 @@ The following properties are synchronized between a SuperOffice Contact and a Po
      - "string"
    * - ContactId
      - Id
-     - "string"
+     - "integer"
    * - Country.CountryId
      - MailAddress.CountryCode
      - "string"
-   * - Country.CountryId
-     - MailAddress.countryCode
-     - "string"
    * - Country.ThreeLetterISOCountry
-     - OrganizationNumber (Dependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.CountryCodeDependant on having wd:Q906278 in MailAddress.CountryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCode)
+     - OrganizationNumber (Dependant on having wd:Q906278 in MailAddress.CountryCode)
      - "string"
    * - Emails.Value
      - EmailAddress
      - "string"
-   * - Emails.Value
-     - PaymentReminderEmailAddress
-     - "string"
    * - Name
      - Name
      - "string"
-   * - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountryDependant on having wd:Q852835 in Country.TwoLetterISOCountry)
+   * - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountry)
      - Number
      - "string"
    * - OrgNr
-     - OrganizationNumber (Dependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.CountryCodeDependant on having  in MailAddress.CountryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCode)
-     - "string"
-   * - OrgNr (Dependant on having wd:Q1273217 in Country.ThreeLetterISOCountryDependant on having wd:Q1273217 in Country.TwoLetterISOCountry)
-     - PaymentReminderEmailAddress
-     - "string"
-   * - Phones.Value
-     - Number
+     - OrganizationNumber (Dependant on having  in MailAddress.CountryCode)
      - "string"
    * - Phones.Value
      - PhoneNumber
