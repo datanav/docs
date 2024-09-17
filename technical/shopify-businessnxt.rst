@@ -2,7 +2,7 @@
 Shopify to Business Nxt Dataflow
 ================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -39,6 +39,12 @@ The following properties are synchronized between a Shopify Order and a Business
    * - Shopify Order Property
      - Business Nxt Order Property
      - Business Nxt Data Type
+   * - created_at
+     - orderDate
+     - "string"
+   * - name
+     - name
+     - "string"
 
 
 Shopify Product to Business Nxt Product
@@ -71,6 +77,15 @@ The following properties are synchronized between a Shopify Sesamproduct and a B
    * - Shopify Sesamproduct Property
      - Business Nxt Product Property
      - Business Nxt Data Type
+   * - sesam_priceExclVAT
+     - priceQuantity
+     - "string"
+   * - variants.inventory_quantity
+     - quantityPerUnit
+     - "string"
+   * - variants.title
+     - description
+     - "string"
 
 
 Shopify Customer to Business Nxt Country
