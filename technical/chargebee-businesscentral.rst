@@ -2,7 +2,7 @@
 Chargebee to Business Central Dataflow
 ======================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -43,6 +43,9 @@ The following properties are synchronized between a Chargebee Customer and a Bus
    * - Chargebee Customer Property
      - Business Central Customers person Property
      - Business Central Data Type
+   * - email
+     - email
+     - "string"
 
 
 Chargebee Business_entity to Business Central Companies
@@ -75,6 +78,21 @@ The following properties are synchronized between a Chargebee Address and a Busi
    * - Chargebee Address Property
      - Business Central Customers company Property
      - Business Central Data Type
+   * - addr
+     - addressLine1
+     - "string"
+   * - city
+     - city
+     - "string"
+   * - country
+     - country
+     - "string"
+   * - subscription_id
+     - id
+     - "string"
+   * - zip
+     - postalCode
+     - "string"
 
 
 Chargebee Address to Business Central Customers person
@@ -91,6 +109,21 @@ The following properties are synchronized between a Chargebee Address and a Busi
    * - Chargebee Address Property
      - Business Central Customers person Property
      - Business Central Data Type
+   * - addr
+     - addressLine1
+     - "string"
+   * - city
+     - city
+     - "string"
+   * - country
+     - country
+     - "string"
+   * - subscription_id
+     - id
+     - "string"
+   * - zip
+     - postalCode
+     - "string"
 
 
 Chargebee Business_entity to Business Central Customers company
@@ -107,6 +140,9 @@ The following properties are synchronized between a Chargebee Business_entity an
    * - Chargebee Business_entity Property
      - Business Central Customers company Property
      - Business Central Data Type
+   * - name
+     - displayName
+     - "string"
 
 
 Chargebee Customer to Business Central Customers company
