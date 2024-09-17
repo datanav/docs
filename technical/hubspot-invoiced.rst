@@ -2,7 +2,7 @@
 HubSpot to Invoiced Dataflow
 ============================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -23,9 +23,6 @@ The following properties are synchronized between a HubSpot Deal and a Invoiced 
    * - HubSpot Deal Property
      - Invoiced Invoices Property
      - Invoiced Data Type
-   * - properties.deal_currency_code
-     - currency
-     - "string"
 
 
 HubSpot Lineitem to Invoiced Lineitem
@@ -42,21 +39,38 @@ The following properties are synchronized between a HubSpot Lineitem and a Invoi
    * - HubSpot Lineitem Property
      - Invoiced Lineitem Property
      - Invoiced Data Type
-   * - properties.description
-     - items.description
-     - "string"
-   * - properties.hs_discount_percentage
-     - items.discounts
-     - "string"
-   * - properties.name
-     - items.name
-     - "string"
-   * - properties.price
-     - items.amount
-     - "string"
-   * - properties.quantity
-     - items.quantity
-     - "string"
+
+
+HubSpot Lineitemdealassociationtype to Invoiced Lineitem
+--------------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a Invoiced Lineitem.
+
+Once a link between a HubSpot Lineitemdealassociationtype and a Invoiced Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a Invoiced Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociationtype Property
+     - Invoiced Lineitem Property
+     - Invoiced Data Type
+
+
+HubSpot Lineitemquoteassociationtype to Invoiced Lineitem
+---------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a Invoiced Lineitem.
+
+Once a link between a HubSpot Lineitemquoteassociationtype and a Invoiced Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a Invoiced Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociationtype Property
+     - Invoiced Lineitem Property
+     - Invoiced Data Type
 
 
 HubSpot Product to Invoiced Items
@@ -73,13 +87,4 @@ The following properties are synchronized between a HubSpot Product and a Invoic
    * - HubSpot Product Property
      - Invoiced Items Property
      - Invoiced Data Type
-   * - properties.description
-     - description
-     - "string"
-   * - properties.hs_cost_of_goods_sold
-     - unit_cost
-     - "string"
-   * - properties.name
-     - name
-     - "string"
 
