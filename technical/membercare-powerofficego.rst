@@ -2,7 +2,7 @@
 MemberCare to PowerOffice GO Dataflow
 =====================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -23,10 +23,4 @@ The following properties are synchronized between a MemberCare Invoices and a Po
    * - MemberCare Invoices Property
      - PowerOffice GO Salesorderlines Property
      - PowerOffice GO Data Type
-   * - invoiceItems.quantity
-     - Quantity
-     - N/A
-   * - invoiceItems.unitPrice
-     - ProductUnitPrice
-     - N/A
 
