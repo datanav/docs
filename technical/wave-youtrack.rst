@@ -2,7 +2,7 @@
 Wave to Youtrack Dataflow
 =========================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -33,9 +33,6 @@ The following properties are synchronized between a Wave Customer and a Youtrack
    * - Wave Customer Property
      - Youtrack Users Property
      - Youtrack Data Type
-   * - email
-     - profile.email
-     - "string"
    * - name
      - name
      - "string"
@@ -65,9 +62,6 @@ The following properties are synchronized between a Wave Customer and a Youtrack
    * - Wave Customer Property
      - Youtrack Users Property
      - Youtrack Data Type
-   * - email
-     - profile.email
-     - "string"
 
 
 Wave Vendor to Youtrack Users
@@ -94,9 +88,6 @@ The following properties are synchronized between a Wave Vendor and a Youtrack U
    * - Wave Vendor Property
      - Youtrack Users Property
      - Youtrack Data Type
-   * - email
-     - profile.email
-     - "string"
 
 
 Wave Customer to Youtrack Groups
@@ -113,9 +104,6 @@ The following properties are synchronized between a Wave Customer and a Youtrack
    * - Wave Customer Property
      - Youtrack Groups Property
      - Youtrack Data Type
-   * - name
-     - name
-     - "string"
 
 
 Wave User to Youtrack Users
