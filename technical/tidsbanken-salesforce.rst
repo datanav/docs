@@ -2,7 +2,7 @@
 Tidsbanken to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -89,34 +89,20 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Sale
    * - Tidsbanken Ansatt Property
      - Salesforce User Property
      - Salesforce Data Type
-   * - Adresse
-     - Street
-     - "string"
-   * - Etternavn
-     - LastName
-     - "string"
-   * - Fornavn
-     - FirstName
-     - "string"
-   * - Id
-     - ID
-     - "string"
-   * - Mobil
-     - MobilePhone
-     - "string"
-   * - Navn
-     - Name
-     - "string"
-   * - Postnummer
-     - PostalCode
-     - "string"
-   * - Poststed
-     - City
-     - "string"
-   * - Tittel
-     - Title
-     - "string"
-   * - sesam_ansattId
-     - EmployeeNumber
-     - "string"
+
+
+Tidsbanken Kunde to Salesforce Customer
+---------------------------------------
+Every Tidsbanken Kunde will be synchronized with a Salesforce Customer.
+
+Once a link between a Tidsbanken Kunde and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Kunde and a Salesforce Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Kunde Property
+     - Salesforce Customer Property
+     - Salesforce Data Type
 
