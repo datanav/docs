@@ -2,7 +2,7 @@
 HubSpot to Exact Online Dataflow
 ================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -39,29 +39,11 @@ The following properties are synchronized between a HubSpot Company and a Exact 
    * - HubSpot Company Property
      - Exact Online Accounts Property
      - Exact Online Data Type
-   * - properties.address
-     - AddressLine1
-     - "string"
-   * - properties.address2
-     - AddressLine2
-     - "string"
-   * - properties.city
-     - City
-     - "string"
-   * - properties.country
-     - Country
-     - "string"
    * - properties.name
      - Name
      - "string"
-   * - properties.phone
-     - Phone
-     - "string"
    * - properties.website
      - Website
-     - "string"
-   * - properties.zip
-     - Postcode
      - "string"
 
 
@@ -87,21 +69,6 @@ The following properties are synchronized between a HubSpot Contact and a Exact 
      - "string"
    * - properties.date_of_birth
      - BirthDate
-     - "string"
-   * - properties.email
-     - Email
-     - "string"
-   * - properties.firstname
-     - FirstName
-     - "string"
-   * - properties.lastname
-     - LastName
-     - "string"
-   * - properties.mobilephone
-     - Mobile
-     - "string"
-   * - properties.phone
-     - Phone
      - "string"
 
 
@@ -154,9 +121,6 @@ The following properties are synchronized between a HubSpot Deal and a Exact Onl
    * - HubSpot Deal Property
      - Exact Online Quotations Property
      - Exact Online Data Type
-   * - properties.closedate
-     - DeliveryDate
-     - "string"
    * - properties.deal_currency_code
      - Currency
      - "string"
@@ -491,9 +455,6 @@ The following properties are synchronized between a HubSpot User and a Exact Onl
    * - HubSpot User Property
      - Exact Online Contacts Property
      - Exact Online Data Type
-   * - email
-     - BusinessEmail
-     - "string"
 
 
 HubSpot Account to Exact Online Currencies
