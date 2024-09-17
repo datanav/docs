@@ -2,7 +2,7 @@
 Business Central to WooCommerce Dataflow
 ========================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -25,6 +25,15 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      - WooCommerce Product Property
      - WooCommerce Data Type
+   * - displayName
+     - name
+     - "string"
+   * - unitCost
+     - price
+     - "string"
+   * - unitPrice
+     - sale_price
+     - "string"
 
 
 Business Central Salesorders to WooCommerce Order
@@ -43,6 +52,75 @@ The following properties are synchronized between a Business Central Salesorders
    * - Business Central Salesorders Property
      - WooCommerce Order Property
      - WooCommerce Data Type
+   * - billToAddressLine1
+     - billing.address_1
+     - "string"
+   * - billToAddressLine1
+     - shipping.address_1
+     - "string"
+   * - billToAddressLine2
+     - billing.address_2
+     - "string"
+   * - billToAddressLine2
+     - shipping.address_2
+     - "string"
+   * - billToCity
+     - billing.city
+     - "string"
+   * - billToCity
+     - shipping.city
+     - "string"
+   * - billToCountry
+     - billing.country
+     - "string"
+   * - billToCountry
+     - shipping.country
+     - "string"
+   * - billToPostCode
+     - billing.postcode
+     - "string"
+   * - billToPostCode
+     - shipping.postcode
+     - "string"
+   * - currencyId
+     - currency
+     - "string"
+   * - customerId
+     - customer_id
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - shipToAddressLine1
+     - billing.address_1
+     - "string"
+   * - shipToAddressLine1
+     - shipping.address_1
+     - "string"
+   * - shipToAddressLine2
+     - billing.address_2
+     - "string"
+   * - shipToAddressLine2
+     - shipping.address_2
+     - "string"
+   * - shipToCity
+     - billing.city
+     - "string"
+   * - shipToCity
+     - shipping.city
+     - "string"
+   * - shipToCountry
+     - billing.country
+     - "string"
+   * - shipToCountry
+     - shipping.country
+     - "string"
+   * - shipToPostCode
+     - billing.postcode
+     - "string"
+   * - shipToPostCode
+     - shipping.postcode
+     - "string"
 
 
 Business Central Items to WooCommerce Product
