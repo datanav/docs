@@ -2,7 +2,7 @@
 Shopify to PowerOffice GO Dataflow
 ==================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -58,6 +58,18 @@ The following properties are synchronized between a Shopify Customer and a Power
    * - Shopify Customer Property
      - PowerOffice GO Customers person Property
      - PowerOffice GO Data Type
+   * - default_address.phone
+     - PhoneNumber
+     - "string"
+   * - email
+     - EmailAddress
+     - "string"
+   * - first_name
+     - FirstName
+     - "string"
+   * - last_name
+     - LastName
+     - "string"
 
 
 Shopify Customer to PowerOffice GO Customers
@@ -94,6 +106,21 @@ The following properties are synchronized between a Shopify Order and a PowerOff
    * - Shopify Order Property
      - PowerOffice GO Salesorders Property
      - PowerOffice GO Data Type
+   * - created_at
+     - SalesOrderDate
+     - "string"
+   * - currency
+     - CurrencyCode
+     - "string"
+   * - customer.id
+     - CustomerId
+     - "integer"
+   * - customer.id
+     - CustomerReferenceContactPersonId
+     - "integer"
+   * - po_number
+     - PurchaseOrderReference
+     - "string"
 
 
 Shopify Product to PowerOffice GO Product
