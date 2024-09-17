@@ -2,12 +2,74 @@
 Exact Online to Tripletex Dataflow
 ==================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Exact Online Departments to Tripletex Department
+------------------------------------------------
+Before any synchronization can take place, a link between a Exact Online Departments and a Tripletex Department must be established.
+
+A Exact Online Departments will merge with a Tripletex Department if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Departments Property
+     - Tripletex Department Property
+   * - Code
+     - departmentNumber
+
+Once a link between a Exact Online Departments and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Departments and a Tripletex Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Departments Property
+     - Tripletex Department Property
+     - Tripletex Data Type
+
+
+Exact Online Items to Tripletex Product
+---------------------------------------
+Before any synchronization can take place, a link between a Exact Online Items and a Tripletex Product must be established.
+
+A new Tripletex Product will be created from a Exact Online Items if it is connected to a Exact Online Exact-salesorderlines that is synchronized into Tripletex.
+
+Once a link between a Exact Online Items and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Items and a Tripletex Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Items Property
+     - Tripletex Product Property
+     - Tripletex Data Type
+
+
+Exact Online Salesorders to Tripletex Order
+-------------------------------------------
+Before any synchronization can take place, a link between a Exact Online Salesorders and a Tripletex Order must be established.
+
+A new Tripletex Order will be created from a Exact Online Salesorders if it is connected to a Exact Online Exact-salesinvoices, or Exact-salesorderlines that is synchronized into Tripletex.
+
+Once a link between a Exact Online Salesorders and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Salesorders and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Salesorders Property
+     - Tripletex Order Property
+     - Tripletex Data Type
+
 
 Exact Online Accounts to Tripletex Customer
 -------------------------------------------
@@ -23,12 +85,22 @@ The following properties are synchronized between a Exact Online Accounts and a 
    * - Exact Online Accounts Property
      - Tripletex Customer Property
      - Tripletex Data Type
-   * - Name
-     - name
-     - "string"
-   * - Website
-     - website
-     - "string"
+
+
+Exact Online Accounts to Tripletex Customer person
+--------------------------------------------------
+Every Exact Online Accounts will be synchronized with a Tripletex Customer person.
+
+Once a link between a Exact Online Accounts and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Accounts and a Tripletex Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Accounts Property
+     - Tripletex Customer person Property
+     - Tripletex Data Type
 
 
 Exact Online Contacts to Tripletex Contact
@@ -51,19 +123,6 @@ Exact Online Departments to Tripletex Department
 ------------------------------------------------
 Every Exact Online Departments will be synchronized with a Tripletex Department.
 
-If a matching Tripletex Department already exists, the Exact Online Departments will be merged with the existing one.
-If no matching Tripletex Department is found, a new Tripletex Department will be created.
-
-A Exact Online Departments will merge with a Tripletex Department if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Exact Online Departments Property
-     - Tripletex Department Property
-   * - Code
-     - departmentNumber
-
 Once a link between a Exact Online Departments and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
 The following properties are synchronized between a Exact Online Departments and a Tripletex Department:
@@ -74,9 +133,6 @@ The following properties are synchronized between a Exact Online Departments and
    * - Exact Online Departments Property
      - Tripletex Department Property
      - Tripletex Data Type
-   * - Code
-     - departmentNumber
-     - "string"
 
 
 Exact Online Employees to Tripletex Employee
@@ -93,21 +149,6 @@ The following properties are synchronized between a Exact Online Employees and a
    * - Exact Online Employees Property
      - Tripletex Employee Property
      - Tripletex Data Type
-   * - BirthDate
-     - dateOfBirth
-     - N/A
-   * - City
-     - address.city
-     - "string"
-   * - Country
-     - address.country.id
-     - "integer"
-   * - ID
-     - id
-     - "integer"
-   * - Postcode
-     - address.postalCode
-     - "string"
 
 
 Exact Online Items to Tripletex Product
@@ -156,7 +197,4 @@ The following properties are synchronized between a Exact Online Salesorders and
    * - Exact Online Salesorders Property
      - Tripletex Order Property
      - Tripletex Data Type
-   * - Currency
-     - currency.id
-     - "integer"
 
