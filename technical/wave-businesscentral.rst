@@ -2,192 +2,12 @@
 Wave to Business Central Dataflow
 =================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Wave Customer to Business Central Customers company
----------------------------------------------------
-Before any synchronization can take place, a link between a Wave Customer and a Business Central Customers company must be established.
-
-A new Business Central Customers company will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into Business Central.
-
-Once a link between a Wave Customer and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a Business Central Customers company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Business Central Customers company Property
-     - Business Central Data Type
-   * - address.addressLine1
-     - addressLine1
-     - "string"
-   * - address.addressLine2
-     - addressLine2
-     - "string"
-   * - address.city
-     - city
-     - "string"
-   * - address.country.code
-     - country
-     - "string"
-   * - address.postalCode
-     - postalCode
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - name
-     - displayName
-     - "string"
-   * - phone
-     - phoneNumber
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - addressLine1
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - addressLine2
-     - "string"
-   * - shippingDetails.address.city
-     - city
-     - "string"
-   * - shippingDetails.address.country.code
-     - country
-     - "string"
-   * - shippingDetails.address.postalCode
-     - postalCode
-     - "string"
-   * - shippingDetails.phone
-     - phoneNumber
-     - "string"
-   * - website
-     - website
-     - "string"
-
-
-Wave Customer to Business Central Customers person
---------------------------------------------------
-Before any synchronization can take place, a link between a Wave Customer and a Business Central Customers person must be established.
-
-A new Business Central Customers person will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into Business Central.
-
-Once a link between a Wave Customer and a Business Central Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a Business Central Customers person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Business Central Customers person Property
-     - Business Central Data Type
-   * - address.addressLine1
-     - addressLine1
-     - "string"
-   * - address.addressLine2
-     - addressLine2
-     - "string"
-   * - address.city
-     - address.city
-     - "string"
-   * - address.city
-     - addressLine2
-     - "string"
-   * - address.city
-     - city
-     - "string"
-   * - address.country.code
-     - country
-     - "string"
-   * - address.postalCode
-     - address.postalCode
-     - "string"
-   * - address.postalCode
-     - postalCode
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - addressLine1
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - addressLine2
-     - "string"
-   * - shippingDetails.address.city
-     - address.city
-     - "string"
-   * - shippingDetails.address.city
-     - addressLine2
-     - "string"
-   * - shippingDetails.address.city
-     - city
-     - "string"
-   * - shippingDetails.address.country.code
-     - country
-     - "string"
-   * - shippingDetails.address.postalCode
-     - address.postalCode
-     - "string"
-   * - shippingDetails.address.postalCode
-     - postalCode
-     - "string"
-
-
-Wave Invoice to Business Central Salesorders
---------------------------------------------
-Before any synchronization can take place, a link between a Wave Invoice and a Business Central Salesorders must be established.
-
-A new Business Central Salesorders will be created from a Wave Invoice if it is connected to a Wave Invoice that is synchronized into Business Central.
-
-Once a link between a Wave Invoice and a Business Central Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Invoice and a Business Central Salesorders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Invoice Property
-     - Business Central Salesorders Property
-     - Business Central Data Type
-   * - currency.code
-     - currencyId
-     - "string"
-   * - customer.id
-     - customerId
-     - "string"
-
-
-Wave Product to Business Central Items
---------------------------------------
-Before any synchronization can take place, a link between a Wave Product and a Business Central Items must be established.
-
-A new Business Central Items will be created from a Wave Product if it is connected to a Wave Invoice that is synchronized into Business Central.
-
-Once a link between a Wave Product and a Business Central Items is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Product and a Business Central Items:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Product Property
-     - Business Central Items Property
-     - Business Central Data Type
-   * - name
-     - displayName
-     - "string"
-   * - unitPrice
-     - unitPrice
-     - N/A
-
 
 Wave Customer to Business Central Companies
 -------------------------------------------
@@ -205,83 +25,83 @@ The following properties are synchronized between a Wave Customer and a Business
      - Business Central Data Type
 
 
-Wave Customer to Business Central Contacts person
--------------------------------------------------
-Every Wave Customer will be synchronized with a Business Central Contacts person.
+Wave Customer to Business Central Contacts (human data)
+-------------------------------------------------------
+Every Wave Customer will be synchronized with a Business Central Contacts (human data).
 
-Once a link between a Wave Customer and a Business Central Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Business Central Contacts (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a Business Central Contacts person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Business Central Contacts person Property
-     - Business Central Data Type
-
-
-Wave Customer to Business Central Customers company
----------------------------------------------------
-Every Wave Customer will be synchronized with a Business Central Customers company.
-
-Once a link between a Wave Customer and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a Business Central Customers company:
+The following properties are synchronized between a Wave Customer and a Business Central Contacts (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - Business Central Customers company Property
+     - Business Central Contacts (human data) Property
      - Business Central Data Type
 
 
-Wave Customer to Business Central Customers person
---------------------------------------------------
-Every Wave Customer will be synchronized with a Business Central Customers person.
+Wave Customer to Business Central Customers (organisation data)
+---------------------------------------------------------------
+Every Wave Customer will be synchronized with a Business Central Customers (organisation data).
 
-Once a link between a Wave Customer and a Business Central Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Business Central Customers (organisation data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer and a Business Central Customers person:
+The following properties are synchronized between a Wave Customer and a Business Central Customers (organisation data):
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Customer Property
-     - Business Central Customers person Property
+     - Business Central Customers (organisation data) Property
      - Business Central Data Type
 
 
-Wave Customer person to Business Central Customers company
-----------------------------------------------------------
-Every Wave Customer person will be synchronized with a Business Central Customers company.
+Wave Customer to Business Central Customers (human data)
+--------------------------------------------------------
+Every Wave Customer will be synchronized with a Business Central Customers (human data).
 
-Once a link between a Wave Customer person and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer and a Business Central Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a Business Central Customers company:
+The following properties are synchronized between a Wave Customer and a Business Central Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Customer person Property
-     - Business Central Customers company Property
+   * - Wave Customer Property
+     - Business Central Customers (human data) Property
      - Business Central Data Type
 
 
-Wave Customer person to Business Central Customers person
----------------------------------------------------------
-Every Wave Customer person will be synchronized with a Business Central Customers person.
+Wave Customer (organisation data) to Business Central Customers (organisation data)
+-----------------------------------------------------------------------------------
+Every Wave Customer (organisation data) will be synchronized with a Business Central Customers (organisation data).
 
-Once a link between a Wave Customer person and a Business Central Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer (organisation data) and a Business Central Customers (organisation data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a Business Central Customers person:
+The following properties are synchronized between a Wave Customer (organisation data) and a Business Central Customers (organisation data):
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Customer person Property
-     - Business Central Customers person Property
+   * - Wave Customer (organisation data) Property
+     - Business Central Customers (organisation data) Property
+     - Business Central Data Type
+
+
+Wave Customer (human data) to Business Central Customers (human data)
+---------------------------------------------------------------------
+Every Wave Customer (human data) will be synchronized with a Business Central Customers (human data).
+
+Once a link between a Wave Customer (human data) and a Business Central Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer (human data) and a Business Central Customers (human data):
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer (human data) Property
+     - Business Central Customers (human data) Property
      - Business Central Data Type
 
 
@@ -333,18 +153,18 @@ The following properties are synchronized between a Wave Product and a Business 
      - Business Central Data Type
 
 
-Wave Vendor to Business Central Contacts person
------------------------------------------------
-Every Wave Vendor will be synchronized with a Business Central Contacts person.
+Wave Vendor to Business Central Contacts (human data)
+-----------------------------------------------------
+Every Wave Vendor will be synchronized with a Business Central Contacts (human data).
 
-Once a link between a Wave Vendor and a Business Central Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Vendor and a Business Central Contacts (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Vendor and a Business Central Contacts person:
+The following properties are synchronized between a Wave Vendor and a Business Central Contacts (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Wave Vendor Property
-     - Business Central Contacts person Property
+     - Business Central Contacts (human data) Property
      - Business Central Data Type
 
