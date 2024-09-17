@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -579,7 +579,7 @@ The following properties are synchronized between a Tripletex Product and a Supe
      - "string"
    * - vatType.id
      - VAT
-     - "integer"
+     - N/A
 
 
 Tripletex Department to SuperOffice Contact
