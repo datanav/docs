@@ -2,7 +2,7 @@
 Business Central to MemberCare Dataflow
 =======================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -57,6 +57,22 @@ The following properties are synchronized between a Business Central Contacts pe
    * - postalCode
      - addresses.postalCode.zipCode
      - "string"
+
+
+Business Central Customers company to MemberCare Companies
+----------------------------------------------------------
+Every Business Central Customers company will be synchronized with a MemberCare Companies.
+
+Once a link between a Business Central Customers company and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Customers company and a MemberCare Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Customers company Property
+     - MemberCare Companies Property
+     - MemberCare Data Type
 
 
 Business Central Customers person to MemberCare Persons
@@ -208,15 +224,6 @@ The following properties are synchronized between a Business Central Customers c
    * - Business Central Customers company Property
      - MemberCare Companies Property
      - MemberCare Data Type
-   * - displayName
-     - companyName
-     - "string"
-   * - displayName
-     - name
-     - "string"
-   * - website
-     - url
-     - "string"
 
 
 Business Central Salesorders to MemberCare Countries
@@ -233,12 +240,6 @@ The following properties are synchronized between a Business Central Salesorders
    * - Business Central Salesorders Property
      - MemberCare Countries Property
      - MemberCare Data Type
-   * - billToCountry
-     - iso2Letter
-     - "string"
-   * - shipToCountry
-     - iso2Letter
-     - "string"
 
 
 Business Central Salesquotes to MemberCare Countries
@@ -255,10 +256,4 @@ The following properties are synchronized between a Business Central Salesquotes
    * - Business Central Salesquotes Property
      - MemberCare Countries Property
      - MemberCare Data Type
-   * - billToCountry
-     - name
-     - "string"
-   * - shipToCountry
-     - name
-     - "string"
 
