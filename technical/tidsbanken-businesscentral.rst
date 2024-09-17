@@ -2,7 +2,7 @@
 Tidsbanken to Business Central Dataflow
 =======================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -55,39 +55,6 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Busi
    * - Tidsbanken Ansatt Property
      - Business Central Employees Property
      - Business Central Data Type
-   * - Adresse
-     - addressLine1
-     - "string"
-   * - Epost
-     - email
-     - "string"
-   * - Etternavn
-     - surname
-     - "string"
-   * - Fodt
-     - birthDate
-     - "string"
-   * - Fornavn
-     - givenName
-     - "string"
-   * - Id
-     - id
-     - "string"
-   * - Mobil
-     - mobilePhone
-     - "string"
-   * - Navn
-     - displayName
-     - "string"
-   * - Postnummer
-     - postalCode
-     - "string"
-   * - Poststed
-     - city
-     - "string"
-   * - Tittel
-     - jobTitle
-     - "string"
 
 
 Tidsbanken Kunde to Business Central Customers company
@@ -104,40 +71,20 @@ The following properties are synchronized between a Tidsbanken Kunde and a Busin
    * - Tidsbanken Kunde Property
      - Business Central Customers company Property
      - Business Central Data Type
-   * - Gateadresse
-     - addressLine1
-     - "string"
-   * - Id
-     - id
-     - "string"
-   * - LevPostNr
-     - postalCode
-     - "string"
-   * - LevPoststed
-     - city
-     - "string"
-   * - Leveringsadresse
-     - addressLine1
-     - "string"
-   * - Leveringsadresse2
-     - addressLine2
-     - "string"
-   * - Navn
-     - displayName
-     - "string"
-   * - Postadresse
-     - addressLine2
-     - "string"
-   * - Postnr
-     - postalCode
-     - "string"
-   * - Poststed
-     - city
-     - "string"
-   * - Telefon
-     - phoneNumber
-     - "string"
-   * - Url
-     - website
-     - "string"
+
+
+Tidsbanken Kunde to Business Central Customers person
+-----------------------------------------------------
+Every Tidsbanken Kunde will be synchronized with a Business Central Customers person.
+
+Once a link between a Tidsbanken Kunde and a Business Central Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Kunde and a Business Central Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Kunde Property
+     - Business Central Customers person Property
+     - Business Central Data Type
 
