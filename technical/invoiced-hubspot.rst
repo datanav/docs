@@ -2,7 +2,7 @@
 Invoiced to HubSpot Dataflow
 ============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -73,6 +73,9 @@ The following properties are synchronized between a Invoiced Invoices and a HubS
    * - Invoiced Invoices Property
      - HubSpot Deal Property
      - HubSpot Data Type
+   * - currency
+     - properties.deal_currency_code
+     - "string"
 
 
 Invoiced Items to HubSpot Product
