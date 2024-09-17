@@ -2,7 +2,7 @@
 Business Central to Business Central Dataflow
 =============================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -189,45 +189,22 @@ The following properties are synchronized between a Business Central Contacts pe
    * - Business Central Contacts person Property
      - Business Central Customers person Property
      - Business Central Data Type
-   * - addressLine1
-     - addressLine1
-     - "string"
-   * - addressLine2
-     - addressLine2
-     - "string"
-   * - city
-     - address.city
-     - "string"
-   * - city
-     - addressLine2
-     - "string"
-   * - city
-     - city
-     - "string"
-   * - country
-     - country
-     - "string"
-   * - displayName
-     - displayName
-     - "string"
-   * - email
-     - email
-     - "string"
-   * - id
-     - id (Dependant on having BusinessCentral-contact in type)
-     - "string"
-   * - phoneNumber
-     - phoneNumber
-     - "string"
-   * - postalCode
-     - address.postalCode
-     - "string"
-   * - postalCode
-     - postalCode
-     - "string"
-   * - type
-     - type
-     - "string"
+
+
+Business Central Customers company to Business Central Customers person
+-----------------------------------------------------------------------
+Every Business Central Customers company will be synchronized with a Business Central Customers person.
+
+Once a link between a Business Central Customers company and a Business Central Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Customers company and a Business Central Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Customers company Property
+     - Business Central Customers person Property
+     - Business Central Data Type
 
 
 Business Central Customers person to Business Central Contacts person
@@ -244,43 +221,20 @@ The following properties are synchronized between a Business Central Customers p
    * - Business Central Customers person Property
      - Business Central Contacts person Property
      - Business Central Data Type
-   * - address.city
-     - city
-     - "string"
-   * - address.postalCode
-     - postalCode
-     - "string"
-   * - addressLine1
-     - addressLine1
-     - "string"
-   * - addressLine2
-     - addressLine2
-     - "string"
-   * - addressLine2
-     - city
-     - "string"
-   * - city
-     - city
-     - "string"
-   * - country
-     - country
-     - "string"
-   * - displayName
-     - displayName
-     - "string"
-   * - email
-     - email
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - phoneNumber
-     - phoneNumber
-     - "string"
-   * - postalCode
-     - postalCode
-     - "string"
-   * - type
-     - type
-     - "string"
+
+
+Business Central Customers person to Business Central Customers company
+-----------------------------------------------------------------------
+Every Business Central Customers person will be synchronized with a Business Central Customers company.
+
+Once a link between a Business Central Customers person and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Customers person and a Business Central Customers company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Customers person Property
+     - Business Central Customers company Property
+     - Business Central Data Type
 
