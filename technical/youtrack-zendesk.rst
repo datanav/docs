@@ -2,7 +2,7 @@
 YouTrack to Zendesk Dataflow
 ============================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -36,12 +36,6 @@ The following properties are synchronized between a YouTrack Users and a Zendesk
    * - name
      - name
      - "string"
-   * - profile.email
-     - email
-     - "string"
-   * - profile.email.email
-     - email
-     - "string"
 
 
 YouTrack Groups to Zendesk Organizations
@@ -58,9 +52,6 @@ The following properties are synchronized between a YouTrack Groups and a Zendes
    * - YouTrack Groups Property
      - Zendesk Organizations Property
      - Zendesk Data Type
-   * - name
-     - name
-     - "string"
 
 
 YouTrack Organizations to Zendesk Organizations
@@ -77,9 +68,6 @@ The following properties are synchronized between a YouTrack Organizations and a
    * - YouTrack Organizations Property
      - Zendesk Organizations Property
      - Zendesk Data Type
-   * - name
-     - name
-     - "string"
 
 
 YouTrack Usergroups to Zendesk Organizations
@@ -96,9 +84,6 @@ The following properties are synchronized between a YouTrack Usergroups and a Ze
    * - YouTrack Usergroups Property
      - Zendesk Organizations Property
      - Zendesk Data Type
-   * - name
-     - name
-     - "string"
 
 
 YouTrack Issues to Zendesk Tickets
