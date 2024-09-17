@@ -2,7 +2,7 @@
 Business Central to Tripletex Dataflow
 ======================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -35,6 +35,21 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      - Tripletex Product Property
      - Tripletex Data Type
+   * - displayName
+     - name
+     - "string"
+   * - gtin
+     - ean
+     - "string"
+   * - inventory
+     - stockOfGoods
+     - "integer"
+   * - unitCost
+     - costExcludingVatCurrency
+     - "float"
+   * - unitPrice
+     - priceExcludingVatCurrency
+     - "float"
 
 
 Business Central Customers to Tripletex Contact
@@ -107,6 +122,24 @@ The following properties are synchronized between a Business Central Salesorders
    * - Business Central Salesorders Property
      - Tripletex Order Property
      - Tripletex Data Type
+   * - currencyId
+     - currency.id
+     - "integer"
+   * - customerId
+     - contact.id
+     - "integer"
+   * - customerId
+     - customer.id
+     - "integer"
+   * - orderDate
+     - orderDate
+     - N/A
+   * - requestedDeliveryDate
+     - deliveryDate
+     - N/A
+   * - salesperson
+     - ourContactEmployee.id
+     - "integer"
 
 
 Business Central Contacts person to Tripletex Contact
@@ -171,6 +204,54 @@ The following properties are synchronized between a Business Central Customers c
    * - Business Central Customers company Property
      - Tripletex Customer person Property
      - Tripletex Data Type
+   * - addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - city
+     - deliveryAddress.city
+     - "string"
+   * - city
+     - physicalAddress.city
+     - "string"
+   * - city
+     - postalAddress.city
+     - "string"
+   * - country
+     - deliveryAddress.country.id
+     - "string"
+   * - country
+     - physicalAddress.country.id
+     - "integer"
+   * - country
+     - postalAddress.country.id
+     - "integer"
+   * - id
+     - id
+     - "integer"
+   * - postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - postalCode
+     - postalAddress.postalCode
+     - "string"
 
 
 Business Central Customers person to Tripletex Customer
