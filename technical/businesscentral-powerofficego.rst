@@ -2,190 +2,73 @@
 Business Central to PowerOffice GO Dataflow
 ===========================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to PowerOffice GO. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Business Central Customers to PowerOffice GO Contactperson
-----------------------------------------------------------
-Before any synchronization can take place, a link between a Business Central Customers and a PowerOffice GO Contactperson must be established.
+Business Central Contacts (human data) to PowerOffice GO Contactperson
+----------------------------------------------------------------------
+Every Business Central Contacts (human data) will be synchronized with a PowerOffice GO Contactperson.
 
-A new PowerOffice GO Contactperson will be created from a Business Central Customers if it is connected to a Business Central Businesscentral-salesorders that is synchronized into PowerOffice GO.
+Once a link between a Business Central Contacts (human data) and a PowerOffice GO Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-Once a link between a Business Central Customers and a PowerOffice GO Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Customers and a PowerOffice GO Contactperson:
+The following properties are synchronized between a Business Central Contacts (human data) and a PowerOffice GO Contactperson:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers Property
+   * - Business Central Contacts (human data) Property
      - PowerOffice GO Contactperson Property
      - PowerOffice GO Data Type
 
 
-Business Central Customers to PowerOffice GO Customers
-------------------------------------------------------
-Before any synchronization can take place, a link between a Business Central Customers and a PowerOffice GO Customers must be established.
+Business Central Contacts (classification data) to PowerOffice GO Customers
+---------------------------------------------------------------------------
+Every Business Central Contacts (classification data) will be synchronized with a PowerOffice GO Customers.
 
-A new PowerOffice GO Customers will be created from a Business Central Customers if it is connected to a Business Central Businesscentral-customers, Businesscentral-salesorders, Businesscentral-contact-person, or Businesscentral-contacts-person that is synchronized into PowerOffice GO.
+Once a link between a Business Central Contacts (classification data) and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-Once a link between a Business Central Customers and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Customers and a PowerOffice GO Customers:
+The following properties are synchronized between a Business Central Contacts (classification data) and a PowerOffice GO Customers:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers Property
+   * - Business Central Contacts (classification data) Property
      - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
 
 
-Business Central Customers to PowerOffice GO Customers person
--------------------------------------------------------------
-Before any synchronization can take place, a link between a Business Central Customers and a PowerOffice GO Customers person must be established.
+Business Central Contacts (classification data) to PowerOffice GO Customers (classification data)
+-------------------------------------------------------------------------------------------------
+Every Business Central Contacts (classification data) will be synchronized with a PowerOffice GO Customers (classification data).
 
-A new PowerOffice GO Customers person will be created from a Business Central Customers if it is connected to a Business Central Businesscentral-customers, Businesscentral-salesorders, Businesscentral-contact-person, or Businesscentral-contacts-person that is synchronized into PowerOffice GO.
+Once a link between a Business Central Contacts (classification data) and a PowerOffice GO Customers (classification data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-Once a link between a Business Central Customers and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Customers and a PowerOffice GO Customers person:
+The following properties are synchronized between a Business Central Contacts (classification data) and a PowerOffice GO Customers (classification data):
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers Property
-     - PowerOffice GO Customers person Property
+   * - Business Central Contacts (classification data) Property
+     - PowerOffice GO Customers (classification data) Property
      - PowerOffice GO Data Type
 
 
-Business Central Items to PowerOffice GO Product
-------------------------------------------------
-Before any synchronization can take place, a link between a Business Central Items and a PowerOffice GO Product must be established.
+Business Central Customers (organisation data) to PowerOffice GO Customers
+--------------------------------------------------------------------------
+Every Business Central Customers (organisation data) will be synchronized with a PowerOffice GO Customers.
 
-A new PowerOffice GO Product will be created from a Business Central Items if it is connected to a Business Central Businesscentral-salesorderlines that is synchronized into PowerOffice GO.
+Once a link between a Business Central Customers (organisation data) and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-Once a link between a Business Central Items and a PowerOffice GO Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Items and a PowerOffice GO Product:
+The following properties are synchronized between a Business Central Customers (organisation data) and a PowerOffice GO Customers:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Items Property
-     - PowerOffice GO Product Property
-     - PowerOffice GO Data Type
-   * - displayName
-     - name
-     - "string"
-   * - gtin
-     - gtin
-     - "string"
-   * - inventory
-     - availableStock
-     - "integer"
-   * - unitCost
-     - costPrice
-     - N/A
-   * - unitPrice
-     - salesPrice
-     - N/A
-
-
-Business Central Salesorders to PowerOffice GO Salesorders
-----------------------------------------------------------
-Before any synchronization can take place, a link between a Business Central Salesorders and a PowerOffice GO Salesorders must be established.
-
-A new PowerOffice GO Salesorders will be created from a Business Central Salesorders if it is connected to a Business Central Businesscentral-salesorderlines that is synchronized into PowerOffice GO.
-
-Once a link between a Business Central Salesorders and a PowerOffice GO Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Salesorders and a PowerOffice GO Salesorders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Salesorders Property
-     - PowerOffice GO Salesorders Property
-     - PowerOffice GO Data Type
-   * - currencyId
-     - CurrencyCode
-     - "string"
-   * - customerId
-     - CustomerId
-     - "integer"
-   * - customerId
-     - CustomerReferenceContactPersonId
-     - "integer"
-   * - orderDate
-     - SalesOrderDate
-     - "string"
-
-
-Business Central Contacts person to PowerOffice GO Contactperson
-----------------------------------------------------------------
-Every Business Central Contacts person will be synchronized with a PowerOffice GO Contactperson.
-
-Once a link between a Business Central Contacts person and a PowerOffice GO Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Contacts person and a PowerOffice GO Contactperson:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Contacts person Property
-     - PowerOffice GO Contactperson Property
-     - PowerOffice GO Data Type
-
-
-Business Central Contacts person to PowerOffice GO Customers
-------------------------------------------------------------
-Every Business Central Contacts person will be synchronized with a PowerOffice GO Customers.
-
-Once a link between a Business Central Contacts person and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Contacts person and a PowerOffice GO Customers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Contacts person Property
-     - PowerOffice GO Customers Property
-     - PowerOffice GO Data Type
-
-
-Business Central Contacts person to PowerOffice GO Customers person
--------------------------------------------------------------------
-Every Business Central Contacts person will be synchronized with a PowerOffice GO Customers person.
-
-Once a link between a Business Central Contacts person and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Contacts person and a PowerOffice GO Customers person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Contacts person Property
-     - PowerOffice GO Customers person Property
-     - PowerOffice GO Data Type
-
-
-Business Central Customers company to PowerOffice GO Customers
---------------------------------------------------------------
-Every Business Central Customers company will be synchronized with a PowerOffice GO Customers.
-
-Once a link between a Business Central Customers company and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Customers company and a PowerOffice GO Customers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Customers company Property
+   * - Business Central Customers (organisation data) Property
      - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
    * - addressLine1
@@ -220,83 +103,83 @@ The following properties are synchronized between a Business Central Customers c
      - "string"
 
 
-Business Central Customers company to PowerOffice GO Customers person
----------------------------------------------------------------------
-Every Business Central Customers company will be synchronized with a PowerOffice GO Customers person.
+Business Central Customers (human data) to PowerOffice GO Customers (human data)
+--------------------------------------------------------------------------------
+Every Business Central Customers (human data) will be synchronized with a PowerOffice GO Customers (human data).
 
-Once a link between a Business Central Customers company and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (human data) and a PowerOffice GO Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers company and a PowerOffice GO Customers person:
+The following properties are synchronized between a Business Central Customers (human data) and a PowerOffice GO Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers company Property
-     - PowerOffice GO Customers person Property
+   * - Business Central Customers (human data) Property
+     - PowerOffice GO Customers (human data) Property
      - PowerOffice GO Data Type
 
 
-Business Central Customers person to PowerOffice GO Customers
--------------------------------------------------------------
-Every Business Central Customers person will be synchronized with a PowerOffice GO Customers.
+Business Central Customers (classification data) to PowerOffice GO Customers
+----------------------------------------------------------------------------
+Every Business Central Customers (classification data) will be synchronized with a PowerOffice GO Customers.
 
-Once a link between a Business Central Customers person and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (classification data) and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers person and a PowerOffice GO Customers:
+The following properties are synchronized between a Business Central Customers (classification data) and a PowerOffice GO Customers:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers person Property
+   * - Business Central Customers (classification data) Property
      - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
 
 
-Business Central Customers person to PowerOffice GO Customers
--------------------------------------------------------------
-Every Business Central Customers person will be synchronized with a PowerOffice GO Customers.
+Business Central Customers (organisation data) to PowerOffice GO Customers
+--------------------------------------------------------------------------
+Every Business Central Customers (organisation data) will be synchronized with a PowerOffice GO Customers.
 
-Once a link between a Business Central Customers person and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (organisation data) and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers person and a PowerOffice GO Customers:
+The following properties are synchronized between a Business Central Customers (organisation data) and a PowerOffice GO Customers:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers person Property
+   * - Business Central Customers (organisation data) Property
      - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
 
 
-Business Central Customers person to PowerOffice GO Customers person
---------------------------------------------------------------------
-Every Business Central Customers person will be synchronized with a PowerOffice GO Customers person.
+Business Central Customers (classification data) to PowerOffice GO Customers (classification data)
+--------------------------------------------------------------------------------------------------
+Every Business Central Customers (classification data) will be synchronized with a PowerOffice GO Customers (classification data).
 
-Once a link between a Business Central Customers person and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (classification data) and a PowerOffice GO Customers (classification data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers person and a PowerOffice GO Customers person:
+The following properties are synchronized between a Business Central Customers (classification data) and a PowerOffice GO Customers (classification data):
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers person Property
-     - PowerOffice GO Customers person Property
+   * - Business Central Customers (classification data) Property
+     - PowerOffice GO Customers (classification data) Property
      - PowerOffice GO Data Type
 
 
-Business Central Customers person to PowerOffice GO Customers person
---------------------------------------------------------------------
-Every Business Central Customers person will be synchronized with a PowerOffice GO Customers person.
+Business Central Customers (human data) to PowerOffice GO Customers (human data)
+--------------------------------------------------------------------------------
+Every Business Central Customers (human data) will be synchronized with a PowerOffice GO Customers (human data).
 
-Once a link between a Business Central Customers person and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (human data) and a PowerOffice GO Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers person and a PowerOffice GO Customers person:
+The following properties are synchronized between a Business Central Customers (human data) and a PowerOffice GO Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers person Property
-     - PowerOffice GO Customers person Property
+   * - Business Central Customers (human data) Property
+     - PowerOffice GO Customers (human data) Property
      - PowerOffice GO Data Type
 
 
