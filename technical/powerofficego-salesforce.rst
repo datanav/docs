@@ -2,12 +2,46 @@
 PowerOffice GO to Salesforce Dataflow
 =====================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from PowerOffice GO to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Powerofficego Product to Salesforce Product2
+--------------------------------------------
+Every Powerofficego Product will be synchronized with a Salesforce Product2.
+
+Once a link between a Powerofficego Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product and a Salesforce Product2:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     - Salesforce Product2 Property
+     - Salesforce Data Type
+
+
+Powerofficego Salesorders to Salesforce Order
+---------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Salesorders and a Salesforce Order must be established.
+
+A new Salesforce Order will be created from a Powerofficego Salesorders if it is connected to a Powerofficego Salesorders, or Salesorderlines that is synchronized into Salesforce.
+
+Once a link between a Powerofficego Salesorders and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorders and a Salesforce Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorders Property
+     - Salesforce Order Property
+     - Salesforce Data Type
+
 
 PowerOffice GO Customers to Salesforce Division
 -----------------------------------------------
@@ -171,33 +205,6 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - PowerOffice GO Contactperson Property
      - Salesforce Contact Property
      - Salesforce Data Type
-   * - city
-     - MailingCity
-     - "string"
-   * - dateOfBirth
-     - Birthdate
-     - "string"
-   * - emailAddress
-     - Email
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - id
-     - Id
-     - "string"
-   * - lastName
-     - LastName
-     - "string"
-   * - phoneNumber
-     - HomePhone
-     - "string"
-   * - phoneNumber
-     - Phone
-     - "string"
-   * - zipCode
-     - MailingPostalCode
-     - "string"
 
 
 PowerOffice GO Currency to Salesforce Currencytype
@@ -232,6 +239,22 @@ The following properties are synchronized between a PowerOffice GO Customers per
      - Salesforce Data Type
 
 
+PowerOffice GO Customers to Salesforce Customer
+-----------------------------------------------
+Every PowerOffice GO Customers will be synchronized with a Salesforce Customer.
+
+Once a link between a PowerOffice GO Customers and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Customers and a Salesforce Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Customers Property
+     - Salesforce Customer Property
+     - Salesforce Data Type
+
+
 PowerOffice GO Employees to Salesforce User
 -------------------------------------------
 Every PowerOffice GO Employees will be synchronized with a Salesforce User.
@@ -246,24 +269,6 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - PowerOffice GO Employees Property
      - Salesforce User Property
      - Salesforce Data Type
-   * - EmailAddress
-     - Email
-     - "string"
-   * - FirstName
-     - FirstName
-     - "string"
-   * - JobTitle
-     - Title
-     - "string"
-   * - LastName
-     - LastName
-     - "string"
-   * - Number
-     - EmployeeNumber
-     - "string"
-   * - PhoneNumber
-     - MobilePhone
-     - "string"
 
 
 PowerOffice GO Product to Salesforce Product2
@@ -280,18 +285,6 @@ The following properties are synchronized between a PowerOffice GO Product and a
    * - PowerOffice GO Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-   * - description
-     - Description
-     - "string"
-   * - description
-     - Description	
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - name
-     - Name	
-     - "string"
 
 
 PowerOffice GO Quote to Salesforce Quote
@@ -308,9 +301,6 @@ The following properties are synchronized between a PowerOffice GO Quote and a S
    * - PowerOffice GO Quote Property
      - Salesforce Quote Property
      - Salesforce Data Type
-   * - TotalAmount
-     - TotalPriceWithTax
-     - "string"
 
 
 PowerOffice GO Salesorderlines to Salesforce Invoiceline
@@ -327,18 +317,6 @@ The following properties are synchronized between a PowerOffice GO Salesorderlin
    * - PowerOffice GO Salesorderlines Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
-   * - Description
-     - Name
-     - "string"
-   * - ProductUnitPrice
-     - UnitPrice
-     - "string"
-   * - Quantity
-     - Quantity
-     - "string"
-   * - VatRate
-     - TaxRate
-     - "string"
 
 
 PowerOffice GO Salesorderlines to Salesforce Orderitem
@@ -355,15 +333,6 @@ The following properties are synchronized between a PowerOffice GO Salesorderlin
    * - PowerOffice GO Salesorderlines Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
-   * - ProductUnitPrice
-     - TotalPrice
-     - "string"
-   * - Quantity
-     - Quantity
-     - "string"
-   * - sesam_SalesOrderId
-     - OrderId
-     - "string"
 
 
 PowerOffice GO Salesorderlines to Salesforce Quotelineitem
@@ -380,15 +349,6 @@ The following properties are synchronized between a PowerOffice GO Salesorderlin
    * - PowerOffice GO Salesorderlines Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
-   * - Allowance
-     - Discount
-     - "string"
-   * - ProductUnitPrice
-     - TotalPriceWithTax
-     - "string"
-   * - Quantity
-     - Quantity
-     - "string"
 
 
 PowerOffice GO Salesorders to Salesforce Order
@@ -405,18 +365,6 @@ The following properties are synchronized between a PowerOffice GO Salesorders a
    * - PowerOffice GO Salesorders Property
      - Salesforce Order Property
      - Salesforce Data Type
-   * - CurrencyCode
-     - CurrencyIsoCode
-     - "string"
-   * - NetAmount
-     - TotalAmount
-     - "string"
-   * - SalesOrderDate
-     - EffectiveDate
-     - "string"
-   * - SalesOrderDate
-     - OrderedDate
-     - "string"
 
 
 PowerOffice GO Suppliers person to Salesforce Contact
@@ -433,34 +381,20 @@ The following properties are synchronized between a PowerOffice GO Suppliers per
    * - PowerOffice GO Suppliers person Property
      - Salesforce Contact Property
      - Salesforce Data Type
-   * - DateOfBirth
-     - Birthdate
-     - "string"
-   * - EmailAddress
-     - Email
-     - "string"
-   * - FirstName
-     - FirstName
-     - "string"
-   * - Id
-     - Id
-     - "string"
-   * - LastName
-     - LastName
-     - "string"
-   * - MailAddress.City
-     - MailingCity
-     - "string"
-   * - MailAddress.CountryCode
-     - MailingCountryCode
-     - "string"
-   * - MailAddress.ZipCode
-     - MailingPostalCode
-     - "string"
-   * - PhoneNumber
-     - HomePhone
-     - "string"
-   * - PhoneNumber
-     - Phone
-     - "string"
+
+
+PowerOffice GO Suppliers to Salesforce Seller
+---------------------------------------------
+Every PowerOffice GO Suppliers will be synchronized with a Salesforce Seller.
+
+Once a link between a PowerOffice GO Suppliers and a Salesforce Seller is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Suppliers and a Salesforce Seller:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Suppliers Property
+     - Salesforce Seller Property
+     - Salesforce Data Type
 
