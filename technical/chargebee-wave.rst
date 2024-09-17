@@ -2,7 +2,7 @@
 Chargebee to Wave Dataflow
 ==========================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -25,15 +25,6 @@ The following properties are synchronized between a Chargebee Customer and a Wav
    * - Chargebee Customer Property
      - Wave Customer Property
      - Wave Data Type
-   * - email
-     - email
-     - "string"
-   * - first_name
-     - firstName
-     - "string"
-   * - last_name
-     - lastName
-     - "string"
 
 
 Chargebee Customer to Wave Customer person
@@ -52,6 +43,15 @@ The following properties are synchronized between a Chargebee Customer and a Wav
    * - Chargebee Customer Property
      - Wave Customer person Property
      - Wave Data Type
+   * - email
+     - email
+     - "string"
+   * - first_name
+     - firstName
+     - "string"
+   * - last_name
+     - lastName
+     - N/A
 
 
 Chargebee Address to Wave Customer
@@ -68,6 +68,30 @@ The following properties are synchronized between a Chargebee Address and a Wave
    * - Chargebee Address Property
      - Wave Customer Property
      - Wave Data Type
+   * - addr
+     - address.addressLine1
+     - "string"
+   * - addr
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - city
+     - address.city
+     - "string"
+   * - city
+     - shippingDetails.address.city
+     - "string"
+   * - country
+     - address.country.code
+     - "string"
+   * - country
+     - shippingDetails.address.country.code
+     - "string"
+   * - zip
+     - address.postalCode
+     - "string"
+   * - zip
+     - shippingDetails.address.postalCode
+     - "string"
 
 
 Chargebee Address to Wave Customer person
@@ -84,6 +108,30 @@ The following properties are synchronized between a Chargebee Address and a Wave
    * - Chargebee Address Property
      - Wave Customer person Property
      - Wave Data Type
+   * - addr
+     - address.addressLine1
+     - "string"
+   * - addr
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - city
+     - address.city
+     - "string"
+   * - city
+     - shippingDetails.address.city
+     - "string"
+   * - country
+     - address.country.code
+     - "string"
+   * - country
+     - shippingDetails.address.country.code
+     - "string"
+   * - zip
+     - address.postalCode
+     - "string"
+   * - zip
+     - shippingDetails.address.postalCode
+     - "string"
 
 
 Chargebee Customer to Wave Customer
@@ -100,6 +148,15 @@ The following properties are synchronized between a Chargebee Customer and a Wav
    * - Chargebee Customer Property
      - Wave Customer Property
      - Wave Data Type
+   * - email
+     - email
+     - "string"
+   * - first_name
+     - firstName
+     - "string"
+   * - last_name
+     - lastName
+     - "string"
 
 
 Chargebee Customer to Wave Customer person
