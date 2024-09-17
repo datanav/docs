@@ -2,7 +2,7 @@
 Wave to Wix Dataflow
 ====================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -33,44 +33,17 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
    * - Wave Customer Property
      - Wix Contacts Property
      - Wix Data Type
-   * - address.addressLine1
-     - info.addresses.items.address.addressLine
-     - "string"
-   * - address.addressLine2
-     - info.addresses.items.address.addressLine2
-     - "string"
-   * - address.city
-     - info.addresses.items.address.city
-     - "string"
-   * - address.postalCode
-     - info.addresses.items.address.postalCode
-     - "string"
    * - email
      - primaryInfo.email
      - "string"
    * - firstName
      - info.name.first
      - "string"
-   * - id
-     - id
-     - "string"
    * - lastName
      - info.name.last
      - "string"
    * - phone
      - primaryInfo.phone
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - info.addresses.items.address.addressLine
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - info.addresses.items.address.addressLine2
-     - "string"
-   * - shippingDetails.address.city
-     - info.addresses.items.address.city
-     - "string"
-   * - shippingDetails.address.postalCode
-     - info.addresses.items.address.postalCode
      - "string"
    * - shippingDetails.phone
      - primaryInfo.phone
@@ -104,9 +77,6 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
      - Wix Contacts Property
      - Wix Data Type
    * - email
-     - info.emails
-     - "string"
-   * - email
      - primaryInfo.email
      - "string"
    * - firstName
@@ -114,12 +84,6 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
      - "string"
    * - lastName
      - info.name.last
-     - "string"
-   * - mobile
-     - info.phones
-     - "string"
-   * - mobile
-     - primaryInfo.phone
      - "string"
 
 
@@ -147,38 +111,14 @@ The following properties are synchronized between a Wave Vendor and a Wix Contac
    * - Wave Vendor Property
      - Wix Contacts Property
      - Wix Data Type
-   * - address.addressLine1
-     - info.addresses.items.address.addressLine
-     - "string"
-   * - address.addressLine2
-     - info.addresses.items.address.addressLine2
-     - "string"
-   * - address.city
-     - info.addresses.items.address.city
-     - "string"
-   * - address.postalCode
-     - info.addresses.items.address.postalCode
-     - "string"
-   * - email
-     - info.emails
-     - "string"
    * - email
      - primaryInfo.email
      - "string"
    * - firstName
      - info.name.first
      - "string"
-   * - id
-     - id
-     - "string"
    * - lastName
      - info.name.last
-     - "string"
-   * - mobile
-     - info.phones
-     - "string"
-   * - mobile
-     - primaryInfo.phone
      - "string"
    * - phone
      - primaryInfo.phone
