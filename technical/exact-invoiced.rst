@@ -2,7 +2,7 @@
 Exact Online to Invoiced Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,9 +23,22 @@ The following properties are synchronized between a Exact Online Accounts and a 
    * - Exact Online Accounts Property
      - Invoiced Customers company Property
      - Invoiced Data Type
-   * - Name
-     - name
-     - "string"
+
+
+Exact Online Accounts to Invoiced Customers person
+--------------------------------------------------
+Every Exact Online Accounts will be synchronized with a Invoiced Customers person.
+
+Once a link between a Exact Online Accounts and a Invoiced Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Accounts and a Invoiced Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Accounts Property
+     - Invoiced Customers person Property
+     - Invoiced Data Type
 
 
 Exact Online Items to Invoiced Items
@@ -74,10 +87,4 @@ The following properties are synchronized between a Exact Online Salesorders and
    * - Exact Online Salesorders Property
      - Invoiced Invoices Property
      - Invoiced Data Type
-   * - Currency
-     - currency
-     - "string"
-   * - Discount
-     - discounts
-     - "string"
 
