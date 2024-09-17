@@ -2,7 +2,7 @@
 Exact Online to HubSpot Dataflow
 ================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -234,4 +234,10 @@ The following properties are synchronized between a Exact Online Salesorders and
    * - Exact Online Salesorders Property
      - HubSpot Deal Property
      - HubSpot Data Type
+   * - Currency
+     - properties.deal_currency_code
+     - "string"
+   * - Description
+     - properties.description
+     - "string"
 
