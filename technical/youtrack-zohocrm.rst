@@ -2,7 +2,7 @@
 YouTrack to ZohoCRM Dataflow
 ============================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -23,9 +23,6 @@ The following properties are synchronized between a YouTrack Groups and a ZohoCR
    * - YouTrack Groups Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
-   * - name
-     - Account_Name
-     - "string"
 
 
 YouTrack Organizations to ZohoCRM Account
@@ -45,9 +42,6 @@ The following properties are synchronized between a YouTrack Organizations and a
    * - description
      - Created_Time
      - "string"
-   * - name
-     - Account_Name
-     - "string"
 
 
 YouTrack Usergroups to ZohoCRM Account
@@ -64,7 +58,4 @@ The following properties are synchronized between a YouTrack Usergroups and a Zo
    * - YouTrack Usergroups Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
-   * - name
-     - Account_Name
-     - "string"
 
