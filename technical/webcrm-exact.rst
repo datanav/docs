@@ -2,7 +2,7 @@
 WebCRM to Exact Online Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -48,6 +48,38 @@ The following properties are synchronized between a WebCRM Organisations and a E
    * - OrganisationName
      - Name
      - "string"
+
+
+WebCRM Persons to Exact Online Contacts
+---------------------------------------
+Every WebCRM Persons will be synchronized with a Exact Online Contacts.
+
+Once a link between a WebCRM Persons and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WebCRM Persons and a Exact Online Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WebCRM Persons Property
+     - Exact Online Contacts Property
+     - Exact Online Data Type
+
+
+WebCRM Products to Exact Online Items
+-------------------------------------
+Every WebCRM Products will be synchronized with a Exact Online Items.
+
+Once a link between a WebCRM Products and a Exact Online Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WebCRM Products and a Exact Online Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WebCRM Products Property
+     - Exact Online Items Property
+     - Exact Online Data Type
 
 
 WebCRM Quotationline to Exact Online Quotations
@@ -96,9 +128,6 @@ The following properties are synchronized between a WebCRM Persons and a Exact O
    * - WebCRM Persons Property
      - Exact Online Contacts Property
      - Exact Online Data Type
-   * - document_number
-     - BirthDate
-     - "string"
 
 
 WebCRM Products to Exact Online Items
@@ -131,22 +160,4 @@ The following properties are synchronized between a WebCRM Quotationline and a E
    * - WebCRM Quotationline Property
      - Exact Online Salesorderlines Property
      - Exact Online Data Type
-   * - QuotationLineCostPrice
-     - CostPriceFC
-     - "string"
-   * - QuotationLineDiscount
-     - CostPriceFC
-     - "string"
-   * - QuotationLineOpportunityId
-     - OrderID
-     - "string"
-   * - QuotationLinePrice
-     - CostPriceFC
-     - "string"
-   * - QuotationLineQuantity
-     - CostPriceFC
-     - "string"
-   * - QuotationLineVatPercentage
-     - CostPriceFC
-     - "string"
 
