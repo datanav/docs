@@ -2,7 +2,7 @@
 PowerOffice GO to Custom CRM Dataflow
 =====================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -41,18 +41,18 @@ The following properties are synchronized between a PowerOffice GO Customers and
      - Custom CRM Data Type
 
 
-PowerOffice GO Customers person to Custom CRM Contact
------------------------------------------------------
-Every PowerOffice GO Customers person will be synchronized with a Custom CRM Contact.
+PowerOffice GO Customers (human data) to Custom CRM Contact
+-----------------------------------------------------------
+Every PowerOffice GO Customers (human data) will be synchronized with a Custom CRM Contact.
 
-Once a link between a PowerOffice GO Customers person and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Customers (human data) and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice GO Customers person and a Custom CRM Contact:
+The following properties are synchronized between a PowerOffice GO Customers (human data) and a Custom CRM Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice GO Customers person Property
+   * - PowerOffice GO Customers (human data) Property
      - Custom CRM Contact Property
      - Custom CRM Data Type
 
@@ -169,18 +169,18 @@ The following properties are synchronized between a PowerOffice GO Customers and
      - Custom CRM Data Type
 
 
-PowerOffice GO Customers person to Custom CRM Customer
-------------------------------------------------------
-Every PowerOffice GO Customers person will be synchronized with a Custom CRM Customer.
+PowerOffice GO Customers (organisation data) to Custom CRM Customer
+-------------------------------------------------------------------
+Every PowerOffice GO Customers (organisation data) will be synchronized with a Custom CRM Customer.
 
-Once a link between a PowerOffice GO Customers person and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Customers (organisation data) and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice GO Customers person and a Custom CRM Customer:
+The following properties are synchronized between a PowerOffice GO Customers (organisation data) and a Custom CRM Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice GO Customers person Property
+   * - PowerOffice GO Customers (organisation data) Property
      - Custom CRM Customer Property
      - Custom CRM Data Type
 
@@ -233,18 +233,18 @@ The following properties are synchronized between a PowerOffice GO Salesorders a
      - Custom CRM Data Type
 
 
-PowerOffice GO Suppliers person to Custom CRM Contact
------------------------------------------------------
-Every PowerOffice GO Suppliers person will be synchronized with a Custom CRM Contact.
+PowerOffice GO Suppliers (human data) to Custom CRM Contact
+-----------------------------------------------------------
+Every PowerOffice GO Suppliers (human data) will be synchronized with a Custom CRM Contact.
 
-Once a link between a PowerOffice GO Suppliers person and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Suppliers (human data) and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice GO Suppliers person and a Custom CRM Contact:
+The following properties are synchronized between a PowerOffice GO Suppliers (human data) and a Custom CRM Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice GO Suppliers person Property
+   * - PowerOffice GO Suppliers (human data) Property
      - Custom CRM Contact Property
      - Custom CRM Data Type
 
