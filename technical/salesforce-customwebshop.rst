@@ -2,7 +2,7 @@
 Salesforce to Custom Webshop Dataflow
 =====================================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -57,6 +57,22 @@ The following properties are synchronized between a Salesforce Invoiceline and a
      - Custom Webshop Data Type
 
 
+Salesforce Order to Custom Webshop Order
+----------------------------------------
+Every Salesforce Order will be synchronized with a Custom Webshop Order.
+
+Once a link between a Salesforce Order and a Custom Webshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Order and a Custom Webshop Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Order Property
+     - Custom Webshop Order Property
+     - Custom Webshop Data Type
+
+
 Salesforce Orderitem to Custom Webshop Order
 --------------------------------------------
 Every Salesforce Orderitem will be synchronized with a Custom Webshop Order.
@@ -89,6 +105,22 @@ The following properties are synchronized between a Salesforce Organization and 
      - Custom Webshop Data Type
 
 
+Salesforce Product2 to Custom Webshop Product
+---------------------------------------------
+Every Salesforce Product2 will be synchronized with a Custom Webshop Product.
+
+Once a link between a Salesforce Product2 and a Custom Webshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Product2 and a Custom Webshop Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Product2 Property
+     - Custom Webshop Product Property
+     - Custom Webshop Data Type
+
+
 Salesforce Quote to Custom Webshop Order
 ----------------------------------------
 Every Salesforce Quote will be synchronized with a Custom Webshop Order.
@@ -118,6 +150,22 @@ The following properties are synchronized between a Salesforce Quotelineitem and
 
    * - Salesforce Quotelineitem Property
      - Custom Webshop Order Property
+     - Custom Webshop Data Type
+
+
+Salesforce Customer to Custom Webshop Customer
+----------------------------------------------
+Every Salesforce Customer will be synchronized with a Custom Webshop Customer.
+
+Once a link between a Salesforce Customer and a Custom Webshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Customer and a Custom Webshop Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Customer Property
+     - Custom Webshop Customer Property
      - Custom Webshop Data Type
 
 
