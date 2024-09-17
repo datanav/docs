@@ -2,7 +2,7 @@
 Shopify to Exact Online Dataflow
 ================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -25,6 +25,9 @@ The following properties are synchronized between a Shopify Order and a Exact On
    * - Shopify Order Property
      - Exact Online Salesorders Property
      - Exact Online Data Type
+   * - currency
+     - Currency
+     - "string"
 
 
 Shopify Product to Exact Online Items
@@ -183,6 +186,9 @@ The following properties are synchronized between a Shopify Order and a Exact On
    * - Shopify Order Property
      - Exact Online Salesinvoices Property
      - Exact Online Data Type
+   * - currency
+     - Currency
+     - "string"
 
 
 Shopify Order to Exact Online Salesorderlines
