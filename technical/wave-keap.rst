@@ -2,7 +2,7 @@
 Wave to Keap Dataflow
 =====================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -43,48 +43,18 @@ The following properties are synchronized between a Wave Customer and a Keap Com
      - "string"
 
 
-Wave Vendor to Keap Companies
------------------------------
-Before any synchronization can take place, a link between a Wave Vendor and a Keap Companies must be established.
+Wave Customer (human data) to Keap Contacts
+-------------------------------------------
+Every Wave Customer (human data) will be synchronized with a Keap Contacts.
 
-A new Keap Companies will be created from a Wave Vendor if it is connected to a Wave Customer-person that is synchronized into Keap.
+Once a link between a Wave Customer (human data) and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-Once a link between a Wave Vendor and a Keap Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a Keap Companies:
+The following properties are synchronized between a Wave Customer (human data) and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Vendor Property
-     - Keap Companies Property
-     - Keap Data Type
-   * - address.city
-     - address.locality
-     - "string"
-   * - address.postalCode
-     - address.zip_code
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - name
-     - company_name
-     - "string"
-
-
-Wave Customer person to Keap Contacts
--------------------------------------
-Every Wave Customer person will be synchronized with a Keap Contacts.
-
-Once a link between a Wave Customer person and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer person and a Keap Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer person Property
+   * - Wave Customer (human data) Property
      - Keap Contacts Property
      - Keap Data Type
 
