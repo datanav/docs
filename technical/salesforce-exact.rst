@@ -2,7 +2,7 @@
 Salesforce to Exact Online Dataflow
 ===================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -224,16 +224,7 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Name
      - Name
      - "string"
-   * - Name	
-     - Name
-     - "string"
-   * - Phone	
-     - Phone
-     - "string"
    * - PostalCode
-     - Postcode
-     - "string"
-   * - PostalCode	
      - Postcode
      - "string"
 
