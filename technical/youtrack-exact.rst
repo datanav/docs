@@ -2,7 +2,7 @@
 YouTrack to Exact Online Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -103,10 +103,4 @@ The following properties are synchronized between a YouTrack Users and a Exact O
    * - YouTrack Users Property
      - Exact Online Contacts Property
      - Exact Online Data Type
-   * - name
-     - FullName
-     - "string"
-   * - profile.email.email
-     - BusinessEmail
-     - "string"
 
