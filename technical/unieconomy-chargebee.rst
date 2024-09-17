@@ -2,7 +2,7 @@
 Unieconomy to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Unieconomy Companies and a C
    * - Unieconomy Companies Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Unieconomy Customers to Chargebee Business_entity
