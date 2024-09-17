@@ -2,7 +2,7 @@
 Business Central to Custom PMS Dataflow
 =======================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -37,6 +37,38 @@ The following properties are synchronized between a Business Central Customers c
    :header-rows: 1
 
    * - Business Central Customers company Property
+     - Custom PMS Customer Property
+     - Custom PMS Data Type
+
+
+Business Central Customers company to Custom PMS Customer
+---------------------------------------------------------
+Every Business Central Customers company will be synchronized with a Custom PMS Customer.
+
+Once a link between a Business Central Customers company and a Custom PMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Customers company and a Custom PMS Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Customers company Property
+     - Custom PMS Customer Property
+     - Custom PMS Data Type
+
+
+Business Central Customers person to Custom PMS Customer
+--------------------------------------------------------
+Every Business Central Customers person will be synchronized with a Custom PMS Customer.
+
+Once a link between a Business Central Customers person and a Custom PMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Customers person and a Custom PMS Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Customers person Property
      - Custom PMS Customer Property
      - Custom PMS Data Type
 
