@@ -2,7 +2,7 @@
 PowerOffice GO to SuperOffice Dataflow
 ======================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -37,19 +37,10 @@ The following properties are synchronized between a PowerOffice GO Contactperson
      - SuperOffice Person Property
      - SuperOffice Data Type
    * - address1
-     - Address.Postal.Address1
-     - "string"
-   * - address1
      - Address.Street.Address1
      - "string"
    * - address2
-     - Address.Postal.Address2
-     - "string"
-   * - address2
      - Address.Street.Address2
-     - "string"
-   * - city
-     - Address.Postal.City
      - "string"
    * - city
      - Address.Street.City
@@ -69,13 +60,7 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - lastName
      - Lastname
      - "string"
-   * - partyCustomerCode
-     - Contact.ContactId
-     - "integer"
    * - partyId
-     - Contact.ContactId
-     - "integer"
-   * - partySupplierCode
      - Contact.ContactId
      - "integer"
    * - phoneNumber
@@ -84,9 +69,6 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - residenceCountryCode
      - Country.CountryId
      - "integer"
-   * - zipCode
-     - Address.Postal.Zipcode
-     - "string"
    * - zipCode
      - Address.Street.Zipcode
      - "string"
@@ -214,32 +196,14 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - MailAddress.ZipCode
      - Address.Street.Zipcode
      - "string"
-   * - MailAddress.addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - MailAddress.addressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - MailAddress.city
-     - Address.Postal.City
-     - "string"
-   * - MailAddress.countryCode
-     - Country.CountryId
-     - "integer"
-   * - MailAddress.zipCode
-     - Address.Postal.Zipcode
-     - "string"
    * - Name
      - Name
      - "string"
    * - Number
-     - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountryDependant on having wd:Q852835 in Country.TwoLetterISOCountry)
-     - "string"
-   * - Number
-     - Phones.Value
+     - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountry)
      - "string"
    * - OrganizationNumber
-     - OrgNr (Dependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountry)
+     - OrgNr (Dependant on having  in Country.TwoLetterISOCountry)
      - "string"
    * - PhoneNumber
      - Phones.Value
@@ -288,37 +252,16 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - DateOfBirth
      - BirthDate
      - N/A
-   * - DepartmendId
-     - Contact.ContactId
-     - "integer"
-   * - DepartmentId (Dependant on having wd:Q703534 in JobTitle)
-     - Contact.ContactId
-     - "integer"
    * - EmailAddress
      - Emails.Value
      - "string"
    * - FirstName
      - Firstname
      - "string"
-   * - JobTitle
-     - Contact.ContactId
-     - "integer"
    * - LastName
      - Lastname
      - "string"
    * - PhoneNumber
-     - MobilePhones.Value
-     - "string"
-   * - dateOfBirth
-     - BirthDate
-     - N/A
-   * - firstName
-     - Firstname
-     - "string"
-   * - lastName
-     - Lastname
-     - "string"
-   * - phoneNumber
      - MobilePhones.Value
      - "string"
 
