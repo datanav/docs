@@ -2,25 +2,25 @@
 Invoiced to MemberCare Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to MemberCare. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Invoiced Customers company to MemberCare Companies
---------------------------------------------------
-Every Invoiced Customers company will be synchronized with a MemberCare Companies.
+Invoiced Customers (organisation data) to MemberCare Companies
+--------------------------------------------------------------
+Every Invoiced Customers (organisation data) will be synchronized with a MemberCare Companies.
 
-Once a link between a Invoiced Customers company and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (organisation data) and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a MemberCare Companies:
+The following properties are synchronized between a Invoiced Customers (organisation data) and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers company Property
+   * - Invoiced Customers (organisation data) Property
      - MemberCare Companies Property
      - MemberCare Data Type
    * - name
@@ -28,18 +28,18 @@ The following properties are synchronized between a Invoiced Customers company a
      - "string"
 
 
-Invoiced Customers person to MemberCare Persons
------------------------------------------------
-Every Invoiced Customers person will be synchronized with a MemberCare Persons.
+Invoiced Customers (human data) to MemberCare Persons
+-----------------------------------------------------
+Every Invoiced Customers (human data) will be synchronized with a MemberCare Persons.
 
-Once a link between a Invoiced Customers person and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (human data) and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers person and a MemberCare Persons:
+The following properties are synchronized between a Invoiced Customers (human data) and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers person Property
+   * - Invoiced Customers (human data) Property
      - MemberCare Persons Property
      - MemberCare Data Type
    * - city
