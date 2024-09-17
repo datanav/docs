@@ -2,7 +2,7 @@
 ZohoCRM to HubSpot Dataflow
 ===========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -130,6 +130,22 @@ The following properties are synchronized between a ZohoCRM Contact and a HubSpo
 
 ZohoCRM Deal to HubSpot Deal
 ----------------------------
+Every ZohoCRM Deal will be synchronized with a HubSpot Deal.
+
+Once a link between a ZohoCRM Deal and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Deal and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Deal Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
+
+
+ZohoCRM Deal to HubSpot Deal
+----------------------------
 When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a HubSpot Deal.
 
 Once a link between a ZohoCRM Deal and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
@@ -142,22 +158,4 @@ The following properties are synchronized between a ZohoCRM Deal and a HubSpot D
    * - ZohoCRM Deal Property
      - HubSpot Deal Property
      - HubSpot Data Type
-   * - Amount
-     - properties.amount
-     - "string"
-   * - Closing_Date
-     - properties.closedate
-     - "string"
-   * - Deal_Name
-     - properties.dealname
-     - "string"
-   * - Owner.id
-     - properties.hubspot_owner_id
-     - "string"
-   * - Probability
-     - properties.dealstage
-     - "string"
-   * - Stage
-     - properties.pipeline
-     - "string"
 
