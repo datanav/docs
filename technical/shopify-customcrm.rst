@@ -2,7 +2,7 @@
 Shopify to Custom CRM Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -41,6 +41,22 @@ The following properties are synchronized between a Shopify Inventoryitem and a 
      - Custom CRM Data Type
 
 
+Shopify Order to Custom CRM Order
+---------------------------------
+Every Shopify Order will be synchronized with a Custom CRM Order.
+
+Once a link between a Shopify Order and a Custom CRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a Custom CRM Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - Custom CRM Order Property
+     - Custom CRM Data Type
+
+
 Shopify Product to Custom CRM Product
 -------------------------------------
 Every Shopify Product will be synchronized with a Custom CRM Product.
@@ -54,6 +70,38 @@ The following properties are synchronized between a Shopify Product and a Custom
 
    * - Shopify Product Property
      - Custom CRM Product Property
+     - Custom CRM Data Type
+
+
+Shopify Sesamproduct to Custom CRM Product
+------------------------------------------
+Every Shopify Sesamproduct will be synchronized with a Custom CRM Product.
+
+Once a link between a Shopify Sesamproduct and a Custom CRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Sesamproduct and a Custom CRM Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Sesamproduct Property
+     - Custom CRM Product Property
+     - Custom CRM Data Type
+
+
+Shopify Customer to Custom CRM Customer
+---------------------------------------
+Every Shopify Customer will be synchronized with a Custom CRM Customer.
+
+Once a link between a Shopify Customer and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Customer and a Custom CRM Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Customer Property
+     - Custom CRM Customer Property
      - Custom CRM Data Type
 
 
