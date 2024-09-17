@@ -2,7 +2,7 @@
 Wave to Tripletex Dataflow
 ==========================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -223,9 +223,6 @@ The following properties are synchronized between a Wave Customer and a Triplete
    * - address.country.code
      - address.country.id
      - "integer"
-   * - address.countryCode
-     - address.country.id
-     - "integer"
    * - address.postalCode
      - address.postalCode
      - "string"
@@ -305,9 +302,6 @@ The following properties are synchronized between a Wave Customer and a Triplete
    * - mobile
      - phoneNumberMobile
      - N/A
-   * - phone
-     - phoneNumberWork
-     - "string"
 
 
 Wave Customer to Tripletex Customer
@@ -455,54 +449,6 @@ The following properties are synchronized between a Wave Customer and a Triplete
    * - Wave Customer Property
      - Tripletex Employee Property
      - Tripletex Data Type
-   * - address.addressLine1
-     - address.addressLine1
-     - "string"
-   * - address.addressLine2
-     - address.addressLine2
-     - "string"
-   * - address.city
-     - address.city
-     - "string"
-   * - address.country.code
-     - address.country.id
-     - "integer"
-   * - address.countryCode
-     - address.country.id
-     - "integer"
-   * - address.postalCode
-     - address.postalCode
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - id
-     - id
-     - "integer"
-   * - lastName
-     - lastName
-     - "string"
-   * - mobile
-     - phoneNumberMobile
-     - "string"
-   * - phone
-     - phoneNumberWork
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - address.addressLine1
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - address.addressLine2
-     - "string"
-   * - shippingDetails.address.city
-     - address.city
-     - "string"
-   * - shippingDetails.address.country.code
-     - address.country.id
-     - "integer"
-   * - shippingDetails.address.postalCode
-     - address.postalCode
-     - "string"
 
 
 Wave Vendor to Tripletex Contact
@@ -664,21 +610,9 @@ The following properties are synchronized between a Wave Vendor and a Tripletex 
    * - address.postalCode
      - address.postalCode
      - "string"
-   * - firstName
-     - firstName
-     - "string"
    * - id
      - id
      - "integer"
-   * - lastName
-     - lastName
-     - "string"
-   * - mobile
-     - phoneNumberMobile
-     - "string"
-   * - phone
-     - phoneNumberWork
-     - "string"
 
 
 Wave Customer (organisation data) to Tripletex Customer
