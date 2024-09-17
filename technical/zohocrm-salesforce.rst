@@ -2,7 +2,7 @@
 ZohoCRM to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -61,7 +61,20 @@ The following properties are synchronized between a ZohoCRM Contact and a Salesf
    * - ZohoCRM Contact Property
      - Salesforce Customer Property
      - Salesforce Data Type
-   * - Full_Name
-     - Name
-     - "string"
+
+
+ZohoCRM Deal to Salesforce Order
+--------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Salesforce Order.
+
+Once a link between a ZohoCRM Deal and a Salesforce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Deal and a Salesforce Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Deal Property
+     - Salesforce Order Property
+     - Salesforce Data Type
 
