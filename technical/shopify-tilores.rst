@@ -2,7 +2,7 @@
 Shopify to Tilores Dataflow
 ===========================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -23,12 +23,6 @@ The following properties are synchronized between a Shopify Customer and a Tilor
    * - Shopify Customer Property
      - Tilores Human Property
      - Tilores Data Type
-   * - addresses.city
-     - city
-     - "string"
-   * - addresses.zip
-     - postalCode
-     - "string"
    * - default_address.city
      - city
      - "string"
