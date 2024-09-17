@@ -2,7 +2,7 @@
 Unieconomy to ZohoCRM Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -67,4 +67,20 @@ The following properties are synchronized between a Unieconomy Departments and a
    * - Name
      - Account_Name
      - "string"
+
+
+Unieconomy Customers to ZohoCRM Contact
+---------------------------------------
+Every Unieconomy Customers will be synchronized with a ZohoCRM Contact.
+
+Once a link between a Unieconomy Customers and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Customers and a ZohoCRM Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Customers Property
+     - ZohoCRM Contact Property
+     - ZohoCRM Data Type
 
