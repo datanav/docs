@@ -2,7 +2,7 @@
 HubSpot to WebCRM Dataflow
 ==========================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -48,15 +48,6 @@ The following properties are synchronized between a HubSpot Deal and a WebCRM Op
    * - HubSpot Deal Property
      - WebCRM Opportunities Property
      - WebCRM Data Type
-   * - properties.deal_currency_code
-     - OpportunityCurrencyName
-     - "string"
-   * - properties.description
-     - OpportunityCurrencySymbol
-     - "string"
-   * - properties.hubspot_owner_id
-     - OpportunityPersonId
-     - "string"
 
 
 HubSpot Lineitem to WebCRM Quotationline
@@ -73,15 +64,38 @@ The following properties are synchronized between a HubSpot Lineitem and a WebCR
    * - HubSpot Lineitem Property
      - WebCRM Quotationline Property
      - WebCRM Data Type
-   * - properties.hs_discount_percentage
-     - QuotationLineDiscount
-     - "string"
-   * - properties.price
-     - QuotationLinePrice
-     - "string"
-   * - properties.quantity
-     - QuotationLineQuantity
-     - "string"
+
+
+HubSpot Lineitemdealassociationtype to WebCRM Quotationline
+-----------------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a WebCRM Quotationline.
+
+Once a link between a HubSpot Lineitemdealassociationtype and a WebCRM Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a WebCRM Quotationline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociationtype Property
+     - WebCRM Quotationline Property
+     - WebCRM Data Type
+
+
+HubSpot Lineitemquoteassociationtype to WebCRM Quotationline
+------------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a WebCRM Quotationline.
+
+Once a link between a HubSpot Lineitemquoteassociationtype and a WebCRM Quotationline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a WebCRM Quotationline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociationtype Property
+     - WebCRM Quotationline Property
+     - WebCRM Data Type
 
 
 HubSpot Product to WebCRM Products
@@ -98,12 +112,6 @@ The following properties are synchronized between a HubSpot Product and a WebCRM
    * - HubSpot Product Property
      - WebCRM Products Property
      - WebCRM Data Type
-   * - properties.hs_cost_of_goods_sold
-     - ProductCostPrice
-     - "string"
-   * - properties.price
-     - ProductPrice
-     - "string"
 
 
 HubSpot User to WebCRM Users
@@ -120,7 +128,4 @@ The following properties are synchronized between a HubSpot User and a WebCRM Us
    * - HubSpot User Property
      - WebCRM Users Property
      - WebCRM Data Type
-   * - email
-     - UserEmail
-     - "string"
 
