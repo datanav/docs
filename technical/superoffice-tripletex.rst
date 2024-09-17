@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -590,6 +590,69 @@ The following properties are synchronized between a SuperOffice Person and a Tri
      - Tripletex Data Type
 
 
+SuperOffice Product to Tripletex Product
+----------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Product and a Tripletex Product must be established.
+
+A new Tripletex Product will be created from a SuperOffice Product if it is connected to a SuperOffice Quoteline that is synchronized into Tripletex.
+
+Once a link between a SuperOffice Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a Tripletex Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Tripletex Product Property
+     - Tripletex Data Type
+   * - Description
+     - description
+     - "string"
+   * - ERPPriceListKey
+     - currency.id
+     - "integer"
+   * - ERPProductKey
+     - number
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - QuantityUnit
+     - productUnit.id
+     - "integer"
+   * - Supplier
+     - supplier.id
+     - "integer"
+   * - UnitCost
+     - costExcludingVatCurrency
+     - "integer"
+   * - UnitListPrice
+     - priceExcludingVatCurrency
+     - "float"
+   * - VAT
+     - vatType.id
+     - "integer"
+
+
+SuperOffice Project to Tripletex Project
+----------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Project and a Tripletex Project must be established.
+
+A new Tripletex Project will be created from a SuperOffice Project if it is connected to a SuperOffice Project that is synchronized into Tripletex.
+
+Once a link between a SuperOffice Project and a Tripletex Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Project and a Tripletex Project:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Project Property
+     - Tripletex Project Property
+     - Tripletex Data Type
+
+
 SuperOffice Quotealternative to Tripletex Order
 -----------------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Tripletex Order must be established.
@@ -625,36 +688,6 @@ The following properties are synchronized between a SuperOffice Product and a Tr
    * - SuperOffice Product Property
      - Tripletex Product Property
      - Tripletex Data Type
-   * - Code
-     - number
-     - "string"
-   * - Description
-     - description
-     - "string"
-   * - ERPPriceListKey
-     - currency.id
-     - "integer"
-   * - ERPProductKey
-     - number
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - QuantityUnit
-     - productUnit.id
-     - "integer"
-   * - Supplier
-     - supplier.id
-     - "integer"
-   * - UnitCost
-     - costExcludingVatCurrency
-     - "integer"
-   * - UnitListPrice
-     - priceExcludingVatCurrency
-     - "float"
-   * - VAT
-     - vatType.id
-     - "integer"
 
 
 SuperOffice Project to Tripletex Project
@@ -671,21 +704,6 @@ The following properties are synchronized between a SuperOffice Project and a Tr
    * - SuperOffice Project Property
      - Tripletex Project Property
      - Tripletex Data Type
-   * - Associate.AssociateId
-     - projectManager.id
-     - "integer"
-   * - EndDate
-     - endDate
-     - N/A
-   * - Name
-     - name
-     - "string"
-   * - NextMilestoneDate
-     - startDate
-     - N/A
-   * - ProjectMembers.PersonId
-     - contact.id
-     - "integer"
 
 
 SuperOffice Quoteline to Tripletex Orderline
@@ -702,142 +720,4 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - Tripletex Orderline Property
      - Tripletex Data Type
-   * - Description
-     - description
-     - "string"
-   * - DiscountPercent
-     - count
-     - "float"
-   * - DiscountPercent
-     - description
-     - "string"
-   * - DiscountPercent
-     - discount
-     - "float"
-   * - DiscountPercent
-     - unitCostCurrency
-     - "float"
-   * - DiscountPercent
-     - unitPriceExcludingVatCurrency
-     - "float"
-   * - DiscountPercent
-     - vatType.id
-     - "integer"
-   * - ERPDiscountPercent
-     - discount
-     - "float"
-   * - ERPProductKey
-     - product.id
-     - "integer"
-   * - Name
-     - count
-     - "float"
-   * - Name
-     - description
-     - "string"
-   * - Name
-     - discount
-     - "float"
-   * - Name
-     - unitCostCurrency
-     - "float"
-   * - Name
-     - unitPriceExcludingVatCurrency
-     - "float"
-   * - Name
-     - vatType.id
-     - "integer"
-   * - Quantity
-     - count
-     - N/A
-   * - Quantity
-     - description
-     - "string"
-   * - Quantity
-     - discount
-     - "float"
-   * - Quantity
-     - unitCostCurrency
-     - "float"
-   * - Quantity
-     - unitPriceExcludingVatCurrency
-     - "float"
-   * - Quantity
-     - vatType.id
-     - "integer"
-   * - QuantityUnit
-     - count
-     - "float"
-   * - QuantityUnit
-     - description
-     - "string"
-   * - QuantityUnit
-     - discount
-     - "float"
-   * - QuantityUnit
-     - unitCostCurrency
-     - "float"
-   * - QuantityUnit
-     - unitPriceExcludingVatCurrency
-     - "float"
-   * - QuantityUnit
-     - vatType.id
-     - "integer"
-   * - QuoteAlternativeId
-     - order.id
-     - "integer"
-   * - Rank (Dependant on having  in Rank)
-     - count
-     - "float"
-   * - Rank (Dependant on having  in Rank)
-     - description
-     - "string"
-   * - Rank (Dependant on having  in Rank)
-     - discount
-     - "float"
-   * - Rank (Dependant on having  in Rank)
-     - unitCostCurrency
-     - "float"
-   * - Rank (Dependant on having  in Rank)
-     - unitPriceExcludingVatCurrency
-     - "float"
-   * - Rank (Dependant on having  in Rank)
-     - vatType.id
-     - "integer"
-   * - UnitListPrice
-     - count
-     - "float"
-   * - UnitListPrice
-     - description
-     - "string"
-   * - UnitListPrice
-     - discount
-     - "float"
-   * - UnitListPrice
-     - unitCostCurrency
-     - "float"
-   * - UnitListPrice
-     - unitPriceExcludingVatCurrency
-     - "float"
-   * - UnitListPrice
-     - vatType.id
-     - "integer"
-   * - VAT
-     - count
-     - "float"
-   * - VAT
-     - description
-     - "string"
-   * - VAT
-     - discount
-     - "float"
-   * - VAT
-     - unitCostCurrency
-     - "float"
-   * - VAT
-     - unitPriceExcludingVatCurrency
-     - "float"
-   * - VAT
-     - vatType.id
-     - "integer"
 
