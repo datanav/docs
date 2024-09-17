@@ -2,7 +2,7 @@
 PowerOffice GO to HubSpot Dataflow
 ==================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -224,6 +224,24 @@ The following properties are synchronized between a PowerOffice GO Customers and
      - "string"
 
 
+PowerOffice GO Product to HubSpot Product
+-----------------------------------------
+Before any synchronization can take place, a link between a PowerOffice GO Product and a HubSpot Product must be established.
+
+A new HubSpot Product will be created from a PowerOffice GO Product if it is connected to a PowerOffice GO Powerofficego-salesorderlines that is synchronized into HubSpot.
+
+Once a link between a PowerOffice GO Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Product and a HubSpot Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Product Property
+     - HubSpot Product Property
+     - HubSpot Data Type
+
+
 PowerOffice GO Departments to HubSpot Company
 ---------------------------------------------
 Every PowerOffice GO Departments will be synchronized with a HubSpot Company.
@@ -315,30 +333,6 @@ The following properties are synchronized between a PowerOffice GO Product and a
    * - PowerOffice GO Product Property
      - HubSpot Product Property
      - HubSpot Data Type
-   * - CostPrice
-     - properties.hs_cost_of_goods_sold
-     - "string"
-   * - Description
-     - properties.description
-     - "string"
-   * - Name
-     - properties.name
-     - "string"
-   * - SalesPrice
-     - properties.price
-     - "string"
-   * - costPrice
-     - properties.hs_cost_of_goods_sold
-     - "string"
-   * - description
-     - properties.description
-     - "string"
-   * - name
-     - properties.name
-     - "string"
-   * - salesPrice
-     - properties.price
-     - "string"
 
 
 PowerOffice GO Quote to HubSpot Quote
@@ -355,9 +349,6 @@ The following properties are synchronized between a PowerOffice GO Quote and a H
    * - PowerOffice GO Quote Property
      - HubSpot Quote Property
      - HubSpot Data Type
-   * - CreatedDate
-     - properties.hs_createdate
-     - "string"
 
 
 PowerOffice GO Salesorderlines to HubSpot Lineitem
@@ -374,22 +365,52 @@ The following properties are synchronized between a PowerOffice GO Salesorderlin
    * - PowerOffice GO Salesorderlines Property
      - HubSpot Lineitem Property
      - HubSpot Data Type
-   * - Allowance
-     - properties.hs_discount_percentage
-     - "string"
-   * - Description
-     - properties.name
-     - "string"
-   * - ProductCode
-     - properties.hs_product_id
-     - "string"
-   * - ProductId
-     - properties.hs_product_id
-     - "string"
-   * - ProductUnitPrice
-     - properties.price
-     - "string"
-   * - Quantity
-     - properties.quantity
-     - N/A
+
+
+PowerOffice GO Salesorderlines to HubSpot Lineitemdealassociationtype
+---------------------------------------------------------------------
+Every PowerOffice GO Salesorderlines will be synchronized with a HubSpot Lineitemdealassociationtype.
+
+Once a link between a PowerOffice GO Salesorderlines and a HubSpot Lineitemdealassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Salesorderlines and a HubSpot Lineitemdealassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Salesorderlines Property
+     - HubSpot Lineitemdealassociationtype Property
+     - HubSpot Data Type
+
+
+PowerOffice GO Salesorderlines to HubSpot Lineitemquoteassociationtype
+----------------------------------------------------------------------
+Every PowerOffice GO Salesorderlines will be synchronized with a HubSpot Lineitemquoteassociationtype.
+
+Once a link between a PowerOffice GO Salesorderlines and a HubSpot Lineitemquoteassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Salesorderlines and a HubSpot Lineitemquoteassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Salesorderlines Property
+     - HubSpot Lineitemquoteassociationtype Property
+     - HubSpot Data Type
+
+
+PowerOffice GO Salesorders to HubSpot Deal
+------------------------------------------
+Every PowerOffice GO Salesorders will be synchronized with a HubSpot Deal.
+
+Once a link between a PowerOffice GO Salesorders and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Salesorders and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Salesorders Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
 
