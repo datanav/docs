@@ -2,7 +2,7 @@
 Business Nxt to Custom Webshop Dataflow
 =======================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -41,6 +41,22 @@ The following properties are synchronized between a Business Nxt Company and a C
      - Custom Webshop Data Type
 
 
+Business Nxt Order to Custom Webshop Order
+------------------------------------------
+Every Business Nxt Order will be synchronized with a Custom Webshop Order.
+
+Once a link between a Business Nxt Order and a Custom Webshop Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Order and a Custom Webshop Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Order Property
+     - Custom Webshop Order Property
+     - Custom Webshop Data Type
+
+
 Business Nxt Orderline to Custom Webshop Order
 ----------------------------------------------
 Every Business Nxt Orderline will be synchronized with a Custom Webshop Order.
@@ -54,6 +70,22 @@ The following properties are synchronized between a Business Nxt Orderline and a
 
    * - Business Nxt Orderline Property
      - Custom Webshop Order Property
+     - Custom Webshop Data Type
+
+
+Business Nxt Product to Custom Webshop Product
+----------------------------------------------
+Every Business Nxt Product will be synchronized with a Custom Webshop Product.
+
+Once a link between a Business Nxt Product and a Custom Webshop Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Product and a Custom Webshop Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Product Property
+     - Custom Webshop Product Property
      - Custom Webshop Data Type
 
 
