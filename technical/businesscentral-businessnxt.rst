@@ -2,7 +2,7 @@
 Business Central to Business Nxt Dataflow
 =========================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -39,6 +39,15 @@ The following properties are synchronized between a Business Central Customers c
    * - Business Central Customers company Property
      - Business Nxt Address Property
      - Business Nxt Data Type
+   * - displayName
+     - name
+     - "string"
+   * - email
+     - emailAddress
+     - "string"
+   * - phoneNumber
+     - phone
+     - "string"
 
 
 Business Central Items to Business Nxt Product
@@ -55,6 +64,12 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      - Business Nxt Product Property
      - Business Nxt Data Type
+   * - inventory
+     - quantityPerUnit
+     - "string"
+   * - unitPrice
+     - priceQuantity
+     - "string"
 
 
 Business Central Salesorderlines to Business Nxt Order
@@ -87,6 +102,12 @@ The following properties are synchronized between a Business Central Salesorders
    * - Business Central Salesorders Property
      - Business Nxt Order Property
      - Business Nxt Data Type
+   * - orderDate
+     - orderDate
+     - "string"
+   * - requestedDeliveryDate
+     - dueDate
+     - "string"
 
 
 Business Central Salesquotes to Business Nxt Order
