@@ -2,7 +2,7 @@
 Wave to Keap Dataflow
 =====================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -103,13 +103,4 @@ The following properties are synchronized between a Wave Product and a Keap Prod
    * - Wave Product Property
      - Keap Product Property
      - Keap Data Type
-   * - description
-     - product_desc
-     - "string"
-   * - name
-     - product_name
-     - "string"
-   * - unitPrice
-     - product_price
-     - "string"
 
