@@ -2,7 +2,7 @@
 PowerOffice GO to Wix Dataflow
 ==============================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -79,26 +79,8 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - FirstName
      - info.name.first
      - "string"
-   * - Id
-     - id
-     - "string"
    * - LastName
      - info.name.last
-     - "string"
-   * - MailAddress.AddressLine1
-     - info.addresses.items.address.addressLine
-     - "string"
-   * - MailAddress.AddressLine2
-     - info.addresses.items.address.addressLine2
-     - "string"
-   * - MailAddress.City
-     - info.addresses.items.address.city
-     - "string"
-   * - MailAddress.CountryCode
-     - info.addresses.items.address.country
-     - "string"
-   * - MailAddress.ZipCode
-     - info.addresses.items.address.postalCode
      - "string"
    * - PhoneNumber
      - primaryInfo.phone
