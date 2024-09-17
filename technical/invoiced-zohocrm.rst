@@ -2,7 +2,7 @@
 Invoiced to ZohoCRM Dataflow
 ============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -28,6 +28,22 @@ The following properties are synchronized between a Invoiced Customers company a
      - "string"
 
 
+Invoiced Customers company to ZohoCRM Contact
+---------------------------------------------
+Every Invoiced Customers company will be synchronized with a ZohoCRM Contact.
+
+Once a link between a Invoiced Customers company and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Customers company and a ZohoCRM Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Customers company Property
+     - ZohoCRM Contact Property
+     - ZohoCRM Data Type
+
+
 Invoiced Customers person to ZohoCRM Contact
 --------------------------------------------
 Every Invoiced Customers person will be synchronized with a ZohoCRM Contact.
@@ -42,25 +58,4 @@ The following properties are synchronized between a Invoiced Customers person an
    * - Invoiced Customers person Property
      - ZohoCRM Contact Property
      - ZohoCRM Data Type
-   * - city
-     - Mailing_City
-     - "string"
-   * - city
-     - Other_City
-     - "string"
-   * - country
-     - Mailing_Country
-     - "string"
-   * - country
-     - Other_Country
-     - "string"
-   * - name
-     - Full_Name
-     - "string"
-   * - postal_code
-     - Mailing_Zip
-     - "string"
-   * - postal_code
-     - Other_Zip
-     - "string"
 
