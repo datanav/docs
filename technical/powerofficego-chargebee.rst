@@ -2,7 +2,7 @@
 PowerOffice GO to Chargebee Dataflow
 ====================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -71,6 +71,22 @@ The following properties are synchronized between a PowerOffice GO Customers and
      - "string"
 
 
+PowerOffice GO Customers person to Chargebee Customer
+-----------------------------------------------------
+Every PowerOffice GO Customers person will be synchronized with a Chargebee Customer.
+
+Once a link between a PowerOffice GO Customers person and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Customers person and a Chargebee Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Customers person Property
+     - Chargebee Customer Property
+     - Chargebee Data Type
+
+
 PowerOffice GO Departments to Chargebee Business_entity
 -------------------------------------------------------
 Every PowerOffice GO Departments will be synchronized with a Chargebee Business_entity.
@@ -115,6 +131,22 @@ The following properties are synchronized between a PowerOffice GO Employees and
      - "string"
 
 
+PowerOffice GO Product to Chargebee Item
+----------------------------------------
+Every PowerOffice GO Product will be synchronized with a Chargebee Item.
+
+Once a link between a PowerOffice GO Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Product and a Chargebee Item:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Product Property
+     - Chargebee Item Property
+     - Chargebee Data Type
+
+
 PowerOffice GO Salesorderlines to Chargebee Order
 -------------------------------------------------
 Every PowerOffice GO Salesorderlines will be synchronized with a Chargebee Order.
@@ -140,6 +172,70 @@ The following properties are synchronized between a PowerOffice GO Salesorderlin
      - "string"
 
 
+PowerOffice GO Salesorders to Chargebee Order
+---------------------------------------------
+Every PowerOffice GO Salesorders will be synchronized with a Chargebee Order.
+
+Once a link between a PowerOffice GO Salesorders and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Salesorders and a Chargebee Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Salesorders Property
+     - Chargebee Order Property
+     - Chargebee Data Type
+
+
+PowerOffice GO Customers to Chargebee Address
+---------------------------------------------
+Every PowerOffice GO Customers will be synchronized with a Chargebee Address.
+
+Once a link between a PowerOffice GO Customers and a Chargebee Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Customers and a Chargebee Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Customers Property
+     - Chargebee Address Property
+     - Chargebee Data Type
+
+
+PowerOffice GO Customers to Chargebee Customer
+----------------------------------------------
+Every PowerOffice GO Customers will be synchronized with a Chargebee Customer.
+
+Once a link between a PowerOffice GO Customers and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Customers and a Chargebee Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Customers Property
+     - Chargebee Customer Property
+     - Chargebee Data Type
+
+
+PowerOffice GO Customers person to Chargebee Address
+----------------------------------------------------
+Every PowerOffice GO Customers person will be synchronized with a Chargebee Address.
+
+Once a link between a PowerOffice GO Customers person and a Chargebee Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Customers person and a Chargebee Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Customers person Property
+     - Chargebee Address Property
+     - Chargebee Data Type
+
+
 PowerOffice GO Customers person to Chargebee Customer
 -----------------------------------------------------
 Every PowerOffice GO Customers person will be synchronized with a Chargebee Customer.
@@ -154,15 +250,6 @@ The following properties are synchronized between a PowerOffice GO Customers per
    * - PowerOffice GO Customers person Property
      - Chargebee Customer Property
      - Chargebee Data Type
-   * - EmailAddress
-     - email
-     - "string"
-   * - FirstName
-     - first_name
-     - "string"
-   * - LastName
-     - last_name
-     - "string"
 
 
 PowerOffice GO Product to Chargebee Item
@@ -179,9 +266,6 @@ The following properties are synchronized between a PowerOffice GO Product and a
    * - PowerOffice GO Product Property
      - Chargebee Item Property
      - Chargebee Data Type
-   * - name
-     - name
-     - "string"
 
 
 PowerOffice GO Salesorders to Chargebee Order
@@ -198,13 +282,4 @@ The following properties are synchronized between a PowerOffice GO Salesorders a
    * - PowerOffice GO Salesorders Property
      - Chargebee Order Property
      - Chargebee Data Type
-   * - CurrencyCode
-     - currency_code
-     - "string"
-   * - CustomerId
-     - customer_id
-     - "string"
-   * - CustomerReferenceContactPersonId
-     - customer_id
-     - "string"
 
