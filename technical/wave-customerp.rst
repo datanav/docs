@@ -2,7 +2,7 @@
 Wave to Custom ERP Dataflow
 ===========================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -25,18 +25,18 @@ The following properties are synchronized between a Wave Customer and a Custom E
      - Custom ERP Data Type
 
 
-Wave Customer person to Custom ERP Contact
-------------------------------------------
-Every Wave Customer person will be synchronized with a Custom ERP Contact.
+Wave Customer (human data) to Custom ERP Contact
+------------------------------------------------
+Every Wave Customer (human data) will be synchronized with a Custom ERP Contact.
 
-Once a link between a Wave Customer person and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer (human data) and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a Custom ERP Contact:
+The following properties are synchronized between a Wave Customer (human data) and a Custom ERP Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Customer person Property
+   * - Wave Customer (human data) Property
      - Custom ERP Contact Property
      - Custom ERP Data Type
 
@@ -105,18 +105,18 @@ The following properties are synchronized between a Wave Customer and a Custom E
      - Custom ERP Data Type
 
 
-Wave Customer person to Custom ERP Customer
--------------------------------------------
-Every Wave Customer person will be synchronized with a Custom ERP Customer.
+Wave Customer (organisation data) to Custom ERP Customer
+--------------------------------------------------------
+Every Wave Customer (organisation data) will be synchronized with a Custom ERP Customer.
 
-Once a link between a Wave Customer person and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer (organisation data) and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a Custom ERP Customer:
+The following properties are synchronized between a Wave Customer (organisation data) and a Custom ERP Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Customer person Property
+   * - Wave Customer (organisation data) Property
      - Custom ERP Customer Property
      - Custom ERP Data Type
 
