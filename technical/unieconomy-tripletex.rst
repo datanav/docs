@@ -2,7 +2,7 @@
 Unieconomy to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -62,6 +62,9 @@ The following properties are synchronized between a Unieconomy Customers and a T
    * - Unieconomy Customers Property
      - Tripletex Customer Property
      - Tripletex Data Type
+   * - WebUrl
+     - website
+     - "string"
 
 
 Unieconomy Customers to Tripletex Customer
