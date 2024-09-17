@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -128,17 +128,14 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
    * - Name
      - name
      - "string"
-   * - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountryDependant on having wd:Q852835 in Country.TwoLetterISOCountry)
+   * - OrgNr (Dependant on having wd:Q852835 in Country.TwoLetterISOCountry)
      - customerNumber
      - "string"
-   * - OrgNr (Dependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountry)
+   * - OrgNr (Dependant on having NO in Country.TwoLetterISOCountry)
      - organizationNumber
      - N/A
    * - Phones.Value
      - phoneNumber
-     - "string"
-   * - Urls.Value
-     - url
      - "string"
    * - Urls.Value
      - website
@@ -318,15 +315,9 @@ The following properties are synchronized between a SuperOffice Person and a Tri
    * - BirthDate
      - dateOfBirth
      - N/A
-   * - Contact.ContactId
-     - department.id (Dependant on having wd:Q703534 in  )
-     - N/A
    * - Country.CountryId
      - address.country.id
      - "integer"
-   * - Emails.Value
-     - email
-     - "string"
    * - Firstname
      - firstName
      - "string"
@@ -438,9 +429,6 @@ The following properties are synchronized between a SuperOffice User and a Tripl
    * - SuperOffice User Property
      - Tripletex Employee Property
      - Tripletex Data Type
-   * - contactId
-     - department.id
-     - N/A
    * - firstName
      - firstName
      - "string"
