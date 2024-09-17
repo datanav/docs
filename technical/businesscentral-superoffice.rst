@@ -2,78 +2,12 @@
 Business Central to SuperOffice Dataflow
 ========================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Business Central to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Businesscentral Customers to SuperOffice Contact
-------------------------------------------------
-Before any synchronization can take place, a link between a Businesscentral Customers and a SuperOffice Contact must be established.
-
-A new SuperOffice Contact will be created from a Businesscentral Customers if it is connected to a Businesscentral Contact, Employee, Employees, Contacts-person, or Customers-person that is synchronized into SuperOffice.
-
-Once a link between a Businesscentral Customers and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Customers and a SuperOffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Customers Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
-
-
-Business Central Items to SuperOffice Product
----------------------------------------------
-Before any synchronization can take place, a link between a Business Central Items and a SuperOffice Product must be established.
-
-A new SuperOffice Product will be created from a Business Central Items if it is connected to a Business Central Businesscentral-salesorderlines that is synchronized into SuperOffice.
-
-Once a link between a Business Central Items and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Items and a SuperOffice Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Items Property
-     - SuperOffice Product Property
-     - SuperOffice Data Type
-   * - displayName
-     - Name
-     - "string"
-   * - unitCost
-     - UnitCost
-     - "string"
-   * - unitPrice
-     - UnitListPrice
-     - N/A
-
-
-Business Central Salesorders to SuperOffice Quotealternative
-------------------------------------------------------------
-Before any synchronization can take place, a link between a Business Central Salesorders and a SuperOffice Quotealternative must be established.
-
-A new SuperOffice Quotealternative will be created from a Business Central Salesorders if it is connected to a Business Central Businesscentral-salesorderlines that is synchronized into SuperOffice.
-
-Once a link between a Business Central Salesorders and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Business Central Salesorders and a SuperOffice Quotealternative:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Business Central Salesorders Property
-     - SuperOffice Quotealternative Property
-     - SuperOffice Data Type
-   * - totalAmountExcludingTax
-     - TotalPrice
-     - "float"
-
 
 Business Central Companies to SuperOffice Contact
 -------------------------------------------------
@@ -91,18 +25,18 @@ The following properties are synchronized between a Business Central Companies a
      - SuperOffice Data Type
 
 
-Business Central Contacts person to SuperOffice Person
-------------------------------------------------------
-Every Business Central Contacts person will be synchronized with a SuperOffice Person.
+Business Central Contacts (human data) to SuperOffice Person
+------------------------------------------------------------
+Every Business Central Contacts (human data) will be synchronized with a SuperOffice Person.
 
-Once a link between a Business Central Contacts person and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Contacts (human data) and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Contacts person and a SuperOffice Person:
+The following properties are synchronized between a Business Central Contacts (human data) and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Contacts person Property
+   * - Business Central Contacts (human data) Property
      - SuperOffice Person Property
      - SuperOffice Data Type
    * - addressLine1
@@ -134,18 +68,18 @@ The following properties are synchronized between a Business Central Contacts pe
      - "string"
 
 
-Business Central Customers company to SuperOffice Contact
----------------------------------------------------------
-Every Business Central Customers company will be synchronized with a SuperOffice Contact.
+Business Central Customers (organisation data) to SuperOffice Contact
+---------------------------------------------------------------------
+Every Business Central Customers (organisation data) will be synchronized with a SuperOffice Contact.
 
-Once a link between a Business Central Customers company and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (organisation data) and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers company and a SuperOffice Contact:
+The following properties are synchronized between a Business Central Customers (organisation data) and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers company Property
+   * - Business Central Customers (organisation data) Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
    * - address.city
@@ -204,18 +138,18 @@ The following properties are synchronized between a Business Central Customers c
      - "string"
 
 
-Business Central Customers person to SuperOffice Person
--------------------------------------------------------
-Every Business Central Customers person will be synchronized with a SuperOffice Person.
+Business Central Customers (human data) to SuperOffice Person
+-------------------------------------------------------------
+Every Business Central Customers (human data) will be synchronized with a SuperOffice Person.
 
-Once a link between a Business Central Customers person and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (human data) and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers person and a SuperOffice Person:
+The following properties are synchronized between a Business Central Customers (human data) and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers person Property
+   * - Business Central Customers (human data) Property
      - SuperOffice Person Property
      - SuperOffice Data Type
    * - addressLine1
