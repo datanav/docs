@@ -2,7 +2,7 @@
 Custom ERP to HubSpot Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -54,6 +54,22 @@ The following properties are synchronized between a Custom ERP Employee and a Hu
 
    * - Custom ERP Employee Property
      - HubSpot Contact Property
+     - HubSpot Data Type
+
+
+Custom ERP Order to HubSpot Deal
+--------------------------------
+Every Custom ERP Order will be synchronized with a HubSpot Deal.
+
+Once a link between a Custom ERP Order and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom ERP Order and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom ERP Order Property
+     - HubSpot Deal Property
      - HubSpot Data Type
 
 
