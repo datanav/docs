@@ -2,7 +2,7 @@
 Business Central to Youtrack Dataflow
 =====================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -25,18 +25,18 @@ The following properties are synchronized between a Business Central Companies a
      - Youtrack Data Type
 
 
-Business Central Customers company to Youtrack Groups
------------------------------------------------------
-Every Business Central Customers company will be synchronized with a Youtrack Groups.
+Business Central Customers (organisation data) to Youtrack Groups
+-----------------------------------------------------------------
+Every Business Central Customers (organisation data) will be synchronized with a Youtrack Groups.
 
-Once a link between a Business Central Customers company and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (organisation data) and a Youtrack Groups is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers company and a Youtrack Groups:
+The following properties are synchronized between a Business Central Customers (organisation data) and a Youtrack Groups:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers company Property
+   * - Business Central Customers (organisation data) Property
      - Youtrack Groups Property
      - Youtrack Data Type
 
