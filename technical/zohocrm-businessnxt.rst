@@ -2,7 +2,7 @@
 ZohoCRM to Business Nxt Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -70,15 +70,6 @@ The following properties are synchronized between a ZohoCRM Account and a Busine
    * - ZohoCRM Account Property
      - Business Nxt Country Property
      - Business Nxt Data Type
-   * - Billing_Country
-     - name
-     - "string"
-   * - Industry
-     - name
-     - "string"
-   * - Shipping_Country
-     - name
-     - "string"
 
 
 ZohoCRM Contact to Business Nxt Country
@@ -95,10 +86,20 @@ The following properties are synchronized between a ZohoCRM Contact and a Busine
    * - ZohoCRM Contact Property
      - Business Nxt Country Property
      - Business Nxt Data Type
-   * - Mailing_Country
-     - name
-     - "string"
-   * - Other_Country
-     - name
-     - "string"
+
+
+ZohoCRM Deal to Business Nxt Order
+----------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Business Nxt Order.
+
+Once a link between a ZohoCRM Deal and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Deal and a Business Nxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Deal Property
+     - Business Nxt Order Property
+     - Business Nxt Data Type
 
