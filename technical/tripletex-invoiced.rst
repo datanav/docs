@@ -2,74 +2,74 @@
 Tripletex to Invoiced Dataflow
 ==============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Invoiced. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Customer to Invoiced Customers company
-------------------------------------------------
-removed person customers for now until that pattern is resolved, it  will be synchronized with a Invoiced Customers company.
+Tripletex Customer to Invoiced Customers (organisation data)
+------------------------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Invoiced Customers (organisation data).
 
-Once a link between a Tripletex Customer and a Invoiced Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Invoiced Customers (organisation data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a Invoiced Customers company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer Property
-     - Invoiced Customers company Property
-     - Invoiced Data Type
-
-
-Tripletex Customer to Invoiced Customers person
------------------------------------------------
-removed person customers for now until that pattern is resolved, it  will be synchronized with a Invoiced Customers person.
-
-Once a link between a Tripletex Customer and a Invoiced Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer and a Invoiced Customers person:
+The following properties are synchronized between a Tripletex Customer and a Invoiced Customers (organisation data):
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     - Invoiced Customers person Property
+     - Invoiced Customers (organisation data) Property
      - Invoiced Data Type
 
 
-Tripletex Customer person to Invoiced Customers company
--------------------------------------------------------
-removed person customers for now until that pattern is resolved, it  will be synchronized with a Invoiced Customers company.
+Tripletex Customer to Invoiced Customers (human data)
+-----------------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Invoiced Customers (human data).
 
-Once a link between a Tripletex Customer person and a Invoiced Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Invoiced Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a Invoiced Customers company:
+The following properties are synchronized between a Tripletex Customer and a Invoiced Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer person Property
-     - Invoiced Customers company Property
+   * - Tripletex Customer Property
+     - Invoiced Customers (human data) Property
      - Invoiced Data Type
 
 
-Tripletex Customer person to Invoiced Customers person
-------------------------------------------------------
-removed person customers for now until that pattern is resolved, it  will be synchronized with a Invoiced Customers person.
+Tripletex Customer (organisation data) to Invoiced Customers (organisation data)
+--------------------------------------------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Invoiced Customers (organisation data).
 
-Once a link between a Tripletex Customer person and a Invoiced Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer (organisation data) and a Invoiced Customers (organisation data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a Invoiced Customers person:
+The following properties are synchronized between a Tripletex Customer (organisation data) and a Invoiced Customers (organisation data):
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer person Property
-     - Invoiced Customers person Property
+   * - Tripletex Customer (organisation data) Property
+     - Invoiced Customers (organisation data) Property
+     - Invoiced Data Type
+
+
+Tripletex Customer (human data) to Invoiced Customers (human data)
+------------------------------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Invoiced Customers (human data).
+
+Once a link between a Tripletex Customer (human data) and a Invoiced Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer (human data) and a Invoiced Customers (human data):
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer (human data) Property
+     - Invoiced Customers (human data) Property
      - Invoiced Data Type
 
 
