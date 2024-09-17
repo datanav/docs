@@ -2,7 +2,7 @@
 SuperOffice to WebCRM Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -84,15 +84,6 @@ The following properties are synchronized between a SuperOffice Product and a We
    * - SuperOffice Product Property
      - WebCRM Products Property
      - WebCRM Data Type
-   * - UnitCost
-     - ProductCostPrice
-     - "string"
-   * - UnitListPrice
-     - ProductPrice
-     - "string"
-   * - VAT
-     - ProductVatCode
-     - "string"
 
 
 SuperOffice Quoteline to WebCRM Quotationline
@@ -109,24 +100,6 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - WebCRM Quotationline Property
      - WebCRM Data Type
-   * - DiscountPercent
-     - QuotationLineDiscount
-     - "string"
-   * - ERPDiscountPercent
-     - QuotationLineDiscount
-     - "string"
-   * - Quantity
-     - QuotationLineQuantity
-     - "string"
-   * - QuoteAlternativeId
-     - QuotationLineOpportunityId
-     - "string"
-   * - UnitListPrice
-     - QuotationLinePrice
-     - "string"
-   * - VAT
-     - QuotationLineVatPercentage
-     - "string"
 
 
 SuperOffice Sale to WebCRM Opportunities
@@ -143,15 +116,6 @@ The following properties are synchronized between a SuperOffice Sale and a WebCR
    * - SuperOffice Sale Property
      - WebCRM Opportunities Property
      - WebCRM Data Type
-   * - Contact.ContactId
-     - OpportunityOrganisationId
-     - "string"
-   * - Currency.Id
-     - OpportunityCurrencyName
-     - "string"
-   * - Person.PersonId
-     - OpportunityOrganisationId
-     - "string"
 
 
 SuperOffice User to WebCRM Users
@@ -168,7 +132,4 @@ The following properties are synchronized between a SuperOffice User and a WebCR
    * - SuperOffice User Property
      - WebCRM Users Property
      - WebCRM Data Type
-   * - personEmail
-     - UserEmail
-     - "string"
 
