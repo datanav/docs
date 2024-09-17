@@ -2,7 +2,7 @@
 YouTrack to Tripletex Dataflow
 ==============================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -33,12 +33,6 @@ The following properties are synchronized between a YouTrack Users and a Triplet
    * - YouTrack Users Property
      - Tripletex Contact Property
      - Tripletex Data Type
-   * - profile.email
-     - email
-     - "string"
-   * - profile.email.email
-     - email
-     - "string"
 
 
 YouTrack Users to Tripletex Customer
@@ -95,42 +89,36 @@ The following properties are synchronized between a YouTrack Users and a Triplet
      - Tripletex Employee Property
      - Tripletex Data Type
    * - groups.id
-     - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
+     - department.id (Dependant on having wd:Q43229 in  )
      - N/A
-   * - name
-     - firstName
-     - "string"
-   * - name
-     - lastName
-     - "string"
    * - organizationRoles.id
-     - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+     - department.id (Dependant on having wd:Q214339 in  )
      - N/A
    * - profile.email.email
      - email
      - "string"
    * - projectRoles.id
-     - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+     - department.id (Dependant on having wd:Q214339 in  )
      - N/A
    * - sourcedOrganizationRoles.id
-     - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+     - department.id (Dependant on having wd:Q214339 in  )
      - N/A
    * - sourcedProjectRoles.id
-     - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+     - department.id (Dependant on having wd:Q214339 in  )
      - N/A
    * - teams.id
-     - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
+     - department.id (Dependant on having wd:Q43229 in  )
      - N/A
    * - transitiveGroups.id
-     - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
+     - department.id (Dependant on having wd:Q43229 in  )
      - N/A
    * - transitiveOrganizationRoles.id
-     - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+     - department.id (Dependant on having wd:Q214339 in  )
      - N/A
    * - transitiveProjectRoles.id
-     - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+     - department.id (Dependant on having wd:Q214339 in  )
      - N/A
    * - transitiveTeams.id
-     - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
+     - department.id (Dependant on having wd:Q43229 in  )
      - N/A
 
