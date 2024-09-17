@@ -2,7 +2,7 @@
 PowerOffice GO to Business Nxt Dataflow
 =======================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -270,18 +270,18 @@ The following properties are synchronized between a PowerOffice GO Suppliers and
      - Business Nxt Data Type
 
 
-PowerOffice GO Suppliers person to Business Nxt Country
--------------------------------------------------------
-Every PowerOffice GO Suppliers person will be synchronized with a Business Nxt Country.
+PowerOffice GO Suppliers (classification data) to Business Nxt Country
+----------------------------------------------------------------------
+Every PowerOffice GO Suppliers (classification data) will be synchronized with a Business Nxt Country.
 
-Once a link between a PowerOffice GO Suppliers person and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Suppliers (classification data) and a Business Nxt Country is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice GO Suppliers person and a Business Nxt Country:
+The following properties are synchronized between a PowerOffice GO Suppliers (classification data) and a Business Nxt Country:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice GO Suppliers person Property
+   * - PowerOffice GO Suppliers (classification data) Property
      - Business Nxt Country Property
      - Business Nxt Data Type
 
