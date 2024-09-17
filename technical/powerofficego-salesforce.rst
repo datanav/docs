@@ -2,7 +2,7 @@
 PowerOffice GO to Salesforce Dataflow
 =====================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Powerofficego Product and a 
    * - Powerofficego Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
+   * - description
+     - Description
+     - "string"
+   * - name
+     - Name
+     - "string"
 
 
 Powerofficego Salesorders to Salesforce Order
@@ -41,6 +47,15 @@ The following properties are synchronized between a Powerofficego Salesorders an
    * - Powerofficego Salesorders Property
      - Salesforce Order Property
      - Salesforce Data Type
+   * - CurrencyCode
+     - CurrencyIsoCode
+     - "string"
+   * - NetAmount
+     - TotalAmount
+     - "string"
+   * - SalesOrderDate
+     - OrderedDate
+     - "string"
 
 
 PowerOffice GO Customers to Salesforce Division
