@@ -2,7 +2,7 @@
 Business Nxt to CRMOffice Dataflow
 ==================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -21,6 +21,38 @@ The following properties are synchronized between a Business Nxt Product and a C
    :header-rows: 1
 
    * - Business Nxt Product Property
+     - CRMOffice Companies Property
+     - CRMOffice Data Type
+
+
+Business Nxt Address to CRMOffice Companies
+-------------------------------------------
+Every Business Nxt Address will be synchronized with a CRMOffice Companies.
+
+Once a link between a Business Nxt Address and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Address and a CRMOffice Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Address Property
+     - CRMOffice Companies Property
+     - CRMOffice Data Type
+
+
+Business Nxt Company to CRMOffice Companies
+-------------------------------------------
+Every Business Nxt Company will be synchronized with a CRMOffice Companies.
+
+Once a link between a Business Nxt Company and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Company and a CRMOffice Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Company Property
      - CRMOffice Companies Property
      - CRMOffice Data Type
 
