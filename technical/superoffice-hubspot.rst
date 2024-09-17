@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:06
 
 Introduction
 ------------
@@ -176,72 +176,6 @@ The following properties are synchronized between a SuperOffice Contact and a Hu
      - "string"
    * - Urls.Value
      - properties.website
-     - "string"
-
-
-SuperOffice Contact to HubSpot Contact
---------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a HubSpot Contact must be established.
-
-A new HubSpot Contact will be created from a SuperOffice Contact if it is connected to a SuperOffice Quote, or Quotealternative that is synchronized into HubSpot.
-
-Once a link between a SuperOffice Contact and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Contact and a HubSpot Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Contact Property
-     - HubSpot Contact Property
-     - HubSpot Data Type
-
-
-SuperOffice Person to HubSpot Company
--------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a HubSpot Company must be established.
-
-A new HubSpot Company will be created from a SuperOffice Person if it is connected to a SuperOffice Quote, or Quotealternative that is synchronized into HubSpot.
-
-Once a link between a SuperOffice Person and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Person and a HubSpot Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Person Property
-     - HubSpot Company Property
-     - HubSpot Data Type
-
-
-SuperOffice Product to HubSpot Product
---------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Product and a HubSpot Product must be established.
-
-A new HubSpot Product will be created from a SuperOffice Product if it is connected to a SuperOffice Quoteline that is synchronized into HubSpot.
-
-Once a link between a SuperOffice Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Product and a HubSpot Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - HubSpot Product Property
-     - HubSpot Data Type
-   * - Description
-     - properties.description
-     - "string"
-   * - Name
-     - properties.name
-     - "string"
-   * - UnitCost
-     - properties.hs_cost_of_goods_sold
-     - "string"
-   * - UnitListPrice
-     - properties.price
      - "string"
 
 
