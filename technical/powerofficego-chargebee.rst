@@ -2,7 +2,7 @@
 PowerOffice GO to Chargebee Dataflow
 ====================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -85,6 +85,15 @@ The following properties are synchronized between a PowerOffice GO Customers per
    * - PowerOffice GO Customers person Property
      - Chargebee Customer Property
      - Chargebee Data Type
+   * - EmailAddress
+     - email
+     - "string"
+   * - FirstName
+     - first_name
+     - "string"
+   * - LastName
+     - last_name
+     - "string"
 
 
 PowerOffice GO Departments to Chargebee Business_entity
@@ -186,6 +195,15 @@ The following properties are synchronized between a PowerOffice GO Salesorders a
    * - PowerOffice GO Salesorders Property
      - Chargebee Order Property
      - Chargebee Data Type
+   * - CurrencyCode
+     - currency_code
+     - "string"
+   * - CustomerId
+     - customer_id
+     - "string"
+   * - CustomerReferenceContactPersonId
+     - customer_id
+     - "string"
 
 
 PowerOffice GO Customers to Chargebee Address
