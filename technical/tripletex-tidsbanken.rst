@@ -2,7 +2,7 @@
 Tripletex to Tidsbanken Dataflow
 ================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -33,15 +33,6 @@ The following properties are synchronized between a Tripletex Contact and a Tids
    * - Tripletex Contact Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
-   * - customer.id
-     - AvdelingId
-     - "string"
-   * - customer.id
-     - Tittel
-     - "string"
-   * - customer.id
-     - sesam_ansattId
-     - "integer"
    * - firstName
      - Fornavn
      - "string"
@@ -384,12 +375,6 @@ The following properties are synchronized between a Tripletex Supplier and a Tid
    * - deliveryAddress.addressLine1
      - Leveringsadresse
      - "string"
-   * - deliveryAddress.addressLine1
-     - Postadresse
-     - "string"
-   * - deliveryAddress.addressLine2
-     - Gateadresse
-     - "string"
    * - deliveryAddress.addressLine2
      - Leveringsadresse2
      - "string"
@@ -432,12 +417,6 @@ The following properties are synchronized between a Tripletex Supplier and a Tid
    * - physicalAddress.addressLine1
      - Leveringsadresse
      - "string"
-   * - physicalAddress.addressLine1
-     - Postadresse
-     - "string"
-   * - physicalAddress.addressLine2
-     - Gateadresse
-     - "string"
    * - physicalAddress.addressLine2
      - Leveringsadresse2
      - "string"
@@ -461,12 +440,6 @@ The following properties are synchronized between a Tripletex Supplier and a Tid
      - "string"
    * - postalAddress.addressLine1
      - Leveringsadresse
-     - "string"
-   * - postalAddress.addressLine1
-     - Postadresse
-     - "string"
-   * - postalAddress.addressLine2
-     - Gateadresse
      - "string"
    * - postalAddress.addressLine2
      - Leveringsadresse2
