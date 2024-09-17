@@ -2,7 +2,7 @@
 Custom CRM to Business Central Dataflow
 =======================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -25,51 +25,51 @@ The following properties are synchronized between a Custom CRM Customer and a Bu
      - Business Central Data Type
 
 
-Custom CRM Contact to Business Central Contacts person
-------------------------------------------------------
-Every Custom CRM Contact will be synchronized with a Business Central Contacts person.
+Custom CRM Contact to Business Central Contacts (human data)
+------------------------------------------------------------
+Every Custom CRM Contact will be synchronized with a Business Central Contacts (human data).
 
-Once a link between a Custom CRM Contact and a Business Central Contacts person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom CRM Contact and a Business Central Contacts (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom CRM Contact and a Business Central Contacts person:
+The following properties are synchronized between a Custom CRM Contact and a Business Central Contacts (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Custom CRM Contact Property
-     - Business Central Contacts person Property
+     - Business Central Contacts (human data) Property
      - Business Central Data Type
 
 
-Custom CRM Customer to Business Central Customers company
----------------------------------------------------------
-Every Custom CRM Customer will be synchronized with a Business Central Customers company.
+Custom CRM Customer to Business Central Customers (organisation data)
+---------------------------------------------------------------------
+Every Custom CRM Customer will be synchronized with a Business Central Customers (organisation data).
 
-Once a link between a Custom CRM Customer and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom CRM Customer and a Business Central Customers (organisation data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom CRM Customer and a Business Central Customers company:
+The following properties are synchronized between a Custom CRM Customer and a Business Central Customers (organisation data):
 
 .. list-table::
    :header-rows: 1
 
    * - Custom CRM Customer Property
-     - Business Central Customers company Property
+     - Business Central Customers (organisation data) Property
      - Business Central Data Type
 
 
-Custom CRM Customer to Business Central Customers person
---------------------------------------------------------
-Every Custom CRM Customer will be synchronized with a Business Central Customers person.
+Custom CRM Customer to Business Central Customers (human data)
+--------------------------------------------------------------
+Every Custom CRM Customer will be synchronized with a Business Central Customers (human data).
 
-Once a link between a Custom CRM Customer and a Business Central Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom CRM Customer and a Business Central Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom CRM Customer and a Business Central Customers person:
+The following properties are synchronized between a Custom CRM Customer and a Business Central Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Custom CRM Customer Property
-     - Business Central Customers person Property
+     - Business Central Customers (human data) Property
      - Business Central Data Type
 
 
