@@ -2,7 +2,7 @@
 Business Nxt to HubSpot Dataflow
 ================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -64,6 +64,12 @@ The following properties are synchronized between a Business Nxt Order and a Hub
    * - Business Nxt Order Property
      - HubSpot Deal Property
      - HubSpot Data Type
+   * - name
+     - properties.dealname
+     - "string"
+   * - orderDate
+     - properties.closedate
+     - "string"
 
 
 Business Nxt Orderline to HubSpot Lineitem
