@@ -2,7 +2,7 @@
 Custom Webshop to PowerOffice GO Dataflow
 =========================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -22,6 +22,22 @@ The following properties are synchronized between a Custom Webshop Customer and 
 
    * - Custom Webshop Customer Property
      - PowerOffice GO Customers Property
+     - PowerOffice GO Data Type
+
+
+Custom Webshop Customer to PowerOffice GO Customers person
+----------------------------------------------------------
+Every Custom Webshop Customer will be synchronized with a PowerOffice GO Customers person.
+
+Once a link between a Custom Webshop Customer and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom Webshop Customer and a PowerOffice GO Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom Webshop Customer Property
+     - PowerOffice GO Customers person Property
      - PowerOffice GO Data Type
 
 
