@@ -2,7 +2,7 @@
 Chargebee to PowerOffice GO Dataflow
 ====================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -56,6 +56,72 @@ The following properties are synchronized between a Chargebee Customer and a Pow
 
 Chargebee Customer to PowerOffice GO Customers person
 -----------------------------------------------------
+Before any synchronization can take place, a link between a Chargebee Customer and a PowerOffice GO Customers person must be established.
+
+A new PowerOffice GO Customers person will be created from a Chargebee Customer if it is connected to a Chargebee Order that is synchronized into PowerOffice GO.
+
+Once a link between a Chargebee Customer and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Customer and a PowerOffice GO Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Customer Property
+     - PowerOffice GO Customers person Property
+     - PowerOffice GO Data Type
+
+
+Chargebee Address to PowerOffice GO Customers
+---------------------------------------------
+Every Chargebee Address will be synchronized with a PowerOffice GO Customers.
+
+Once a link between a Chargebee Address and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Address and a PowerOffice GO Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Address Property
+     - PowerOffice GO Customers Property
+     - PowerOffice GO Data Type
+
+
+Chargebee Address to PowerOffice GO Customers person
+----------------------------------------------------
+Every Chargebee Address will be synchronized with a PowerOffice GO Customers person.
+
+Once a link between a Chargebee Address and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Address and a PowerOffice GO Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Address Property
+     - PowerOffice GO Customers person Property
+     - PowerOffice GO Data Type
+
+
+Chargebee Customer to PowerOffice GO Customers
+----------------------------------------------
+Every Chargebee Customer will be synchronized with a PowerOffice GO Customers.
+
+Once a link between a Chargebee Customer and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Customer and a PowerOffice GO Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Customer Property
+     - PowerOffice GO Customers Property
+     - PowerOffice GO Data Type
+
+
+Chargebee Customer to PowerOffice GO Customers person
+-----------------------------------------------------
 Every Chargebee Customer will be synchronized with a PowerOffice GO Customers person.
 
 Once a link between a Chargebee Customer and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
@@ -68,15 +134,6 @@ The following properties are synchronized between a Chargebee Customer and a Pow
    * - Chargebee Customer Property
      - PowerOffice GO Customers person Property
      - PowerOffice GO Data Type
-   * - email
-     - EmailAddress
-     - "string"
-   * - first_name
-     - FirstName
-     - "string"
-   * - last_name
-     - LastName
-     - "string"
 
 
 Chargebee Item to PowerOffice GO Product
@@ -109,13 +166,4 @@ The following properties are synchronized between a Chargebee Order and a PowerO
    * - Chargebee Order Property
      - PowerOffice GO Salesorders Property
      - PowerOffice GO Data Type
-   * - currency_code
-     - CurrencyCode
-     - "string"
-   * - customer_id
-     - CustomerId
-     - "integer"
-   * - customer_id
-     - CustomerReferenceContactPersonId
-     - "integer"
 
