@@ -2,7 +2,7 @@
 SuperOffice to Exact Online Dataflow
 ====================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -42,44 +42,8 @@ The following properties are synchronized between a SuperOffice Contact and a Ex
    * - SuperOffice Contact Property
      - Exact Online Accounts Property
      - Exact Online Data Type
-   * - Address.Postal.Address1
-     - AddressLine1
-     - "string"
-   * - Address.Postal.Address2
-     - AddressLine2
-     - "string"
-   * - Address.Postal.Address3
-     - AddressLine3
-     - "string"
-   * - Address.Postal.City
-     - City
-     - "string"
-   * - Address.Postal.Zipcode
-     - Postcode
-     - "string"
-   * - Address.Street.Address1
-     - AddressLine1
-     - "string"
-   * - Address.Street.Address2
-     - AddressLine2
-     - "string"
-   * - Address.Street.Address3
-     - AddressLine3
-     - "string"
-   * - Address.Street.City
-     - City
-     - "string"
-   * - Address.Street.Zipcode
-     - Postcode
-     - "string"
-   * - Country.CountryId
-     - Country
-     - "string"
    * - Name
      - Name
-     - "string"
-   * - Phones.Value
-     - Phone
      - "string"
    * - Urls.Value
      - Website
@@ -108,21 +72,6 @@ The following properties are synchronized between a SuperOffice Person and a Exa
      - "string"
    * - Country.CountryId
      - Country
-     - "string"
-   * - Emails.Value
-     - Email
-     - "string"
-   * - Firstname
-     - FirstName
-     - "string"
-   * - Lastname
-     - LastName
-     - "string"
-   * - MobilePhones.Value
-     - Mobile
-     - "string"
-   * - OfficePhones.Value
-     - Phone
      - "string"
 
 
@@ -177,9 +126,6 @@ The following properties are synchronized between a SuperOffice Sale and a Exact
      - Exact Online Data Type
    * - Currency.Id
      - Currency
-     - "string"
-   * - Saledate
-     - DeliveryDate
      - "string"
 
 
