@@ -2,7 +2,7 @@
 MemberCare to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -57,6 +57,22 @@ The following properties are synchronized between a MemberCare Countries and a S
 
    * - MemberCare Countries Property
      - Salesforce Currencytype Property
+     - Salesforce Data Type
+
+
+MemberCare Invoices to Salesforce Invoice
+-----------------------------------------
+Every MemberCare Invoices will be synchronized with a Salesforce Invoice.
+
+Once a link between a MemberCare Invoices and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a MemberCare Invoices and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - MemberCare Invoices Property
+     - Salesforce Invoice Property
      - Salesforce Data Type
 
 
@@ -115,30 +131,6 @@ The following properties are synchronized between a MemberCare Companies and a S
    * - MemberCare Companies Property
      - Salesforce Organization Property
      - Salesforce Data Type
-   * - addresses.country.id
-     - Country
-     - "string"
-   * - addresses.id
-     - ID
-     - "string"
-   * - addresses.postalCode.city
-     - City
-     - "string"
-   * - addresses.postalCode.zipCode
-     - PostalCode
-     - "string"
-   * - addresses.postalCode.zipCode
-     - PostalCode	
-     - "string"
-   * - addresses.street
-     - Street
-     - "string"
-   * - companyName
-     - Name
-     - "string"
-   * - companyName
-     - Name	
-     - "string"
 
 
 MemberCare Invoices to Salesforce Invoice
@@ -155,9 +147,6 @@ The following properties are synchronized between a MemberCare Invoices and a Sa
    * - MemberCare Invoices Property
      - Salesforce Invoice Property
      - Salesforce Data Type
-   * - payDueDate
-     - DueDate
-     - "string"
 
 
 MemberCare Invoices to Salesforce Invoiceline
@@ -174,18 +163,6 @@ The following properties are synchronized between a MemberCare Invoices and a Sa
    * - MemberCare Invoices Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
-   * - id
-     - InvoiceId
-     - "string"
-   * - invoiceItems.description
-     - Description
-     - "string"
-   * - invoiceItems.quantity
-     - Quantity
-     - "string"
-   * - invoiceItems.unitPrice
-     - UnitPrice
-     - "string"
 
 
 MemberCare Invoices to Salesforce Orderitem
@@ -202,12 +179,6 @@ The following properties are synchronized between a MemberCare Invoices and a Sa
    * - MemberCare Invoices Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
-   * - invoiceItems.quantity
-     - Quantity
-     - "string"
-   * - invoiceItems.unitPrice
-     - TotalPrice
-     - "string"
 
 
 MemberCare Invoices to Salesforce Quotelineitem
@@ -224,13 +195,4 @@ The following properties are synchronized between a MemberCare Invoices and a Sa
    * - MemberCare Invoices Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
-   * - invoiceItems.description
-     - Description
-     - "string"
-   * - invoiceItems.quantity
-     - Quantity
-     - "string"
-   * - invoiceItems.unitPrice
-     - TotalPriceWithTax
-     - "string"
 
