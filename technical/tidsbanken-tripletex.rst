@@ -2,7 +2,7 @@
 Tidsbanken to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-17 08:52:07
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -44,29 +44,29 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Trip
      - N/A
 
 
-Tidsbanken Ansatt to Tripletex Customer person
-----------------------------------------------
-Before any synchronization can take place, a link between a Tidsbanken Ansatt and a Tripletex Customer person must be established.
+Tidsbanken Ansatt to Tripletex Customer
+---------------------------------------
+Before any synchronization can take place, a link between a Tidsbanken Ansatt and a Tripletex Customer must be established.
 
-A Tidsbanken Ansatt will merge with a Tripletex Customer person if one of the following property combinations match:
+A Tidsbanken Ansatt will merge with a Tripletex Customer if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Ansatt Property
-     - Tripletex Customer person Property
+     - Tripletex Customer Property
    * - Epost
      - email
 
-Once a link between a Tidsbanken Ansatt and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Ansatt and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Ansatt and a Tripletex Customer person:
+The following properties are synchronized between a Tidsbanken Ansatt and a Tripletex Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Ansatt Property
-     - Tripletex Customer person Property
+     - Tripletex Customer Property
      - Tripletex Data Type
    * - Adresse
      - deliveryAddress.addressLine1
@@ -346,99 +346,6 @@ The following properties are synchronized between a Tidsbanken Kunde and a Tripl
      - "string"
 
 
-Tidsbanken Kunde to Tripletex Customer person
----------------------------------------------
-Before any synchronization can take place, a link between a Tidsbanken Kunde and a Tripletex Customer person must be established.
-
-A new Tripletex Customer person will be created from a Tidsbanken Kunde if it is connected to a Tidsbanken Prosjekt that is synchronized into Tripletex.
-
-Once a link between a Tidsbanken Kunde and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tidsbanken Kunde and a Tripletex Customer person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Kunde Property
-     - Tripletex Customer person Property
-     - Tripletex Data Type
-   * - Gateadresse
-     - deliveryAddress.addressLine1
-     - "string"
-   * - Gateadresse
-     - physicalAddress.addressLine1
-     - "string"
-   * - Gateadresse
-     - postalAddress.addressLine1
-     - "string"
-   * - Id
-     - id
-     - "integer"
-   * - LevPostNr
-     - deliveryAddress.postalCode
-     - "string"
-   * - LevPostNr
-     - physicalAddress.postalCode
-     - "string"
-   * - LevPostNr
-     - postalAddress.postalCode
-     - "string"
-   * - LevPoststed
-     - deliveryAddress.city
-     - "string"
-   * - LevPoststed
-     - physicalAddress.city
-     - "string"
-   * - LevPoststed
-     - postalAddress.city
-     - "string"
-   * - Leveringsadresse
-     - deliveryAddress.addressLine1
-     - "string"
-   * - Leveringsadresse
-     - physicalAddress.addressLine1
-     - "string"
-   * - Leveringsadresse
-     - postalAddress.addressLine1
-     - "string"
-   * - Leveringsadresse2
-     - deliveryAddress.addressLine2
-     - "string"
-   * - Leveringsadresse2
-     - physicalAddress.addressLine2
-     - "string"
-   * - Leveringsadresse2
-     - postalAddress.addressLine2
-     - "string"
-   * - Postadresse
-     - deliveryAddress.addressLine2
-     - "string"
-   * - Postadresse
-     - physicalAddress.addressLine2
-     - "string"
-   * - Postadresse
-     - postalAddress.addressLine2
-     - "string"
-   * - Postnr
-     - deliveryAddress.postalCode
-     - "string"
-   * - Postnr
-     - physicalAddress.postalCode
-     - "string"
-   * - Postnr
-     - postalAddress.postalCode
-     - "string"
-   * - Poststed
-     - deliveryAddress.city
-     - "string"
-   * - Poststed
-     - physicalAddress.city
-     - "string"
-   * - Poststed
-     - postalAddress.city
-     - "string"
-
-
 Tidsbanken Ansatt to Tripletex Employee
 ---------------------------------------
 Every Tidsbanken Ansatt will be synchronized with a Tripletex Employee.
@@ -487,19 +394,19 @@ The following properties are synchronized between a Tidsbanken Kunde and a Tripl
      - Tripletex Data Type
 
 
-Tidsbanken Kunde to Tripletex Customer person
----------------------------------------------
-Every Tidsbanken Kunde will be synchronized with a Tripletex Customer person.
+Tidsbanken Kunde to Tripletex Customer (human data)
+---------------------------------------------------
+Every Tidsbanken Kunde will be synchronized with a Tripletex Customer (human data).
 
-Once a link between a Tidsbanken Kunde and a Tripletex Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Kunde and a Tripletex Customer (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Kunde and a Tripletex Customer person:
+The following properties are synchronized between a Tidsbanken Kunde and a Tripletex Customer (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Kunde Property
-     - Tripletex Customer person Property
+     - Tripletex Customer (human data) Property
      - Tripletex Data Type
 
 
