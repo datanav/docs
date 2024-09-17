@@ -2,12 +2,28 @@
 Trello to CRMOffice Dataflow
 ============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Trello to CRMOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Trello Actions to CRMOffice Activities
+--------------------------------------
+Every Trello Actions will be synchronized with a CRMOffice Activities.
+
+Once a link between a Trello Actions and a CRMOffice Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Trello Actions and a CRMOffice Activities:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Trello Actions Property
+     - CRMOffice Activities Property
+     - CRMOffice Data Type
+
 
 Trello Boards to CRMOffice Activities
 -------------------------------------
@@ -96,10 +112,20 @@ The following properties are synchronized between a Trello Actions and a CRMOffi
    * - Trello Actions Property
      - CRMOffice Activities Property
      - CRMOffice Data Type
-   * - date
-     - startsAt
-     - "string"
-   * - memberCreator.id
-     - ownerId
-     - "string"
+
+
+Trello Organizations to CRMOffice Companies
+-------------------------------------------
+Every Trello Organizations will be synchronized with a CRMOffice Companies.
+
+Once a link between a Trello Organizations and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Trello Organizations and a CRMOffice Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Trello Organizations Property
+     - CRMOffice Companies Property
+     - CRMOffice Data Type
 
