@@ -2,7 +2,7 @@
 Exact Online to MemberCare Dataflow
 ===================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -212,6 +212,22 @@ The following properties are synchronized between a Exact Online Quotations and 
      - MemberCare Data Type
 
 
+Exact Online Salesinvoices to MemberCare Invoices
+-------------------------------------------------
+Every Exact Online Salesinvoices will be synchronized with a MemberCare Invoices.
+
+Once a link between a Exact Online Salesinvoices and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Salesinvoices and a MemberCare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Salesinvoices Property
+     - MemberCare Invoices Property
+     - MemberCare Data Type
+
+
 Exact Online Salesorderlines to MemberCare Invoices
 ---------------------------------------------------
 Every Exact Online Salesorderlines will be synchronized with a MemberCare Invoices.
@@ -296,9 +312,6 @@ The following properties are synchronized between a Exact Online Addresses and a
    * - Exact Online Addresses Property
      - MemberCare Countries Property
      - MemberCare Data Type
-   * - CountryName
-     - name
-     - "string"
 
 
 Exact Online Salesinvoices to MemberCare Invoices
