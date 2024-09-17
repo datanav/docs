@@ -2,7 +2,7 @@
 Custom Webshop to Business Central Dataflow
 ===========================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -25,35 +25,35 @@ The following properties are synchronized between a Custom Webshop Customer and 
      - Business Central Data Type
 
 
-Custom Webshop Customer to Business Central Customers company
--------------------------------------------------------------
-Every Custom Webshop Customer will be synchronized with a Business Central Customers company.
+Custom Webshop Customer to Business Central Customers (organisation data)
+-------------------------------------------------------------------------
+Every Custom Webshop Customer will be synchronized with a Business Central Customers (organisation data).
 
-Once a link between a Custom Webshop Customer and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Webshop Customer and a Business Central Customers (organisation data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Webshop Customer and a Business Central Customers company:
+The following properties are synchronized between a Custom Webshop Customer and a Business Central Customers (organisation data):
 
 .. list-table::
    :header-rows: 1
 
    * - Custom Webshop Customer Property
-     - Business Central Customers company Property
+     - Business Central Customers (organisation data) Property
      - Business Central Data Type
 
 
-Custom Webshop Customer to Business Central Customers person
-------------------------------------------------------------
-Every Custom Webshop Customer will be synchronized with a Business Central Customers person.
+Custom Webshop Customer to Business Central Customers (human data)
+------------------------------------------------------------------
+Every Custom Webshop Customer will be synchronized with a Business Central Customers (human data).
 
-Once a link between a Custom Webshop Customer and a Business Central Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom Webshop Customer and a Business Central Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom Webshop Customer and a Business Central Customers person:
+The following properties are synchronized between a Custom Webshop Customer and a Business Central Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Custom Webshop Customer Property
-     - Business Central Customers person Property
+     - Business Central Customers (human data) Property
      - Business Central Data Type
 
 
