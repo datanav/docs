@@ -2,7 +2,7 @@
 Keap to WebCRM Dataflow
 =======================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -58,9 +58,6 @@ The following properties are synchronized between a Keap Product and a WebCRM Pr
    * - Keap Product Property
      - WebCRM Products Property
      - WebCRM Data Type
-   * - product_price
-     - ProductPrice
-     - "string"
 
 
 Keap Users to WebCRM Users
@@ -77,10 +74,4 @@ The following properties are synchronized between a Keap Users and a WebCRM User
    * - Keap Users Property
      - WebCRM Users Property
      - WebCRM Data Type
-   * - email_address
-     - UserEmail
-     - "string"
-   * - job_title
-     - UserTitle
-     - "string"
 
