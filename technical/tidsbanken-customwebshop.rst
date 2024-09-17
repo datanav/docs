@@ -2,7 +2,7 @@
 Tidsbanken to Custom Webshop Dataflow
 =====================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -21,6 +21,22 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Cu
    :header-rows: 1
 
    * - Tidsbanken Avdeling Property
+     - Custom Webshop Customer Property
+     - Custom Webshop Data Type
+
+
+Tidsbanken Kunde to Custom Webshop Customer
+-------------------------------------------
+Every Tidsbanken Kunde will be synchronized with a Custom Webshop Customer.
+
+Once a link between a Tidsbanken Kunde and a Custom Webshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Kunde and a Custom Webshop Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Kunde Property
      - Custom Webshop Customer Property
      - Custom Webshop Data Type
 
