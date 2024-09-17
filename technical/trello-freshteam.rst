@@ -2,7 +2,7 @@
 Trello to Freshteam Dataflow
 ============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,7 +23,4 @@ The following properties are synchronized between a Trello Members and a Freshte
    * - Trello Members Property
      - Freshteam Employee Property
      - Freshteam Data Type
-   * - email
-     - personal_email
-     - "string"
 
