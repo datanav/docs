@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -172,12 +172,6 @@ The following properties are synchronized between a Tripletex Employee and a Hub
    * - dateOfBirth
      - properties.date_of_birth
      - "string"
-   * - email
-     - properties.email
-     - "string"
-   * - email
-     - properties.work_email
-     - "string"
    * - firstName
      - properties.firstname
      - "string"
@@ -192,9 +186,6 @@ The following properties are synchronized between a Tripletex Employee and a Hub
      - "string"
    * - phoneNumberWork
      - properties.phone
-     - "string"
-   * - userType
-     - properties.country
      - "string"
 
 
@@ -266,9 +257,6 @@ The following properties are synchronized between a Tripletex Customer and a Hub
    * - postalAddress.postalCode
      - properties.zip
      - "string"
-   * - url
-     - properties.website
-     - "string"
    * - website
      - properties.website
      - "string"
@@ -288,9 +276,6 @@ The following properties are synchronized between a Tripletex Department and a H
    * - Tripletex Department Property
      - HubSpot Company Property
      - HubSpot Data Type
-   * - departmentNumber
-     - properties.description
-     - "string"
    * - name
      - properties.name
      - "string"
