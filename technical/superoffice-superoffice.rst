@@ -2,7 +2,7 @@
 SuperOffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 09:13:06
 
 Introduction
 ------------
@@ -430,58 +430,4 @@ The following properties are synchronized between a SuperOffice User and a Super
    * - personEmail
      - Emails.Value
      - "string"
-
-
-SuperOffice Contact to SuperOffice Person
------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a SuperOffice Person must be established.
-
-A new SuperOffice Person will be created from a SuperOffice Contact if it is connected to a SuperOffice Sale, or Quote that is synchronized into SuperOffice.
-
-Once a link between a SuperOffice Contact and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Contact and a SuperOffice Person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Contact Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
-
-
-SuperOffice Person to SuperOffice Contact
------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a SuperOffice Contact must be established.
-
-A new SuperOffice Contact will be created from a SuperOffice Person if it is connected to a SuperOffice Sale, or Quote that is synchronized into SuperOffice.
-
-Once a link between a SuperOffice Person and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Person and a SuperOffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Person Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
-
-
-SuperOffice Sale classification status to SuperOffice Quotealternative
-----------------------------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Sale classification status and a SuperOffice Quotealternative must be established.
-
-A new SuperOffice Quotealternative will be created from a SuperOffice Sale classification status if it is connected to a SuperOffice Sale, Quote, Quoteline, or Quotealternative that is synchronized into SuperOffice.
-
-Once a link between a SuperOffice Sale classification status and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Sale classification status and a SuperOffice Quotealternative:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Sale classification status Property
-     - SuperOffice Quotealternative Property
-     - SuperOffice Data Type
 
