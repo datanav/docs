@@ -2,7 +2,7 @@
 Custom CRM to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -38,6 +38,22 @@ The following properties are synchronized between a Custom CRM Order and a Sales
 
    * - Custom CRM Order Property
      - Salesforce Invoice Property
+     - Salesforce Data Type
+
+
+Custom CRM Product to Salesforce Product2
+-----------------------------------------
+Every Custom CRM Product will be synchronized with a Salesforce Product2.
+
+Once a link between a Custom CRM Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom CRM Product and a Salesforce Product2:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom CRM Product Property
+     - Salesforce Product2 Property
      - Salesforce Data Type
 
 
@@ -86,6 +102,22 @@ The following properties are synchronized between a Custom CRM Contact and a Sal
 
    * - Custom CRM Contact Property
      - Salesforce Contact Property
+     - Salesforce Data Type
+
+
+Custom CRM Customer to Salesforce Customer
+------------------------------------------
+Every Custom CRM Customer will be synchronized with a Salesforce Customer.
+
+Once a link between a Custom CRM Customer and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom CRM Customer and a Salesforce Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom CRM Customer Property
+     - Salesforce Customer Property
      - Salesforce Data Type
 
 
