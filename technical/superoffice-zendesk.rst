@@ -2,7 +2,7 @@
 SuperOffice to Zendesk Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -46,6 +46,38 @@ The following properties are synchronized between a SuperOffice Person and a Zen
      - "string"
 
 
+SuperOffice User to Zendesk Users
+---------------------------------
+Before any synchronization can take place, a link between a SuperOffice User and a Zendesk Users must be established.
+
+A SuperOffice User will merge with a Zendesk Users if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - Zendesk Users Property
+   * - personEmail
+     - email
+
+Once a link between a SuperOffice User and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice User and a Zendesk Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - Zendesk Users Property
+     - Zendesk Data Type
+   * - contactId
+     - organization_id
+     - "string"
+   * - personEmail
+     - email
+     - "string"
+
+
 SuperOffice Contact to Zendesk Organizations
 --------------------------------------------
 Every SuperOffice Contact will be synchronized with a Zendesk Organizations.
@@ -79,36 +111,11 @@ The following properties are synchronized between a SuperOffice Ticket and a Zen
    * - SuperOffice Ticket Property
      - Zendesk Tickets Property
      - Zendesk Data Type
-   * - OwnedBy.AssociateId
-     - requester_id
-     - "string"
-   * - Person.PersonId
-     - assignee_id
-     - "string"
-   * - TimeToReply
-     - due_at
-     - "string"
-   * - Title
-     - subject
-     - "string"
 
 
 SuperOffice User to Zendesk Users
 ---------------------------------
 Every SuperOffice User will be synchronized with a Zendesk Users.
-
-If a matching Zendesk Users already exists, the SuperOffice User will be merged with the existing one.
-If no matching Zendesk Users is found, a new Zendesk Users will be created.
-
-A SuperOffice User will merge with a Zendesk Users if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice User Property
-     - Zendesk Users Property
-   * - personEmail
-     - email
 
 Once a link between a SuperOffice User and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -120,10 +127,4 @@ The following properties are synchronized between a SuperOffice User and a Zende
    * - SuperOffice User Property
      - Zendesk Users Property
      - Zendesk Data Type
-   * - contactId
-     - organization_id
-     - "string"
-   * - personEmail
-     - email
-     - "string"
 
