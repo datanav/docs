@@ -2,7 +2,7 @@
 Chargebee to Tripletex Dataflow
 ===============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -70,6 +70,9 @@ The following properties are synchronized between a Chargebee Customer and a Tri
    * - Chargebee Customer Property
      - Tripletex Customer person Property
      - Tripletex Data Type
+   * - email
+     - email
+     - "string"
 
 
 Chargebee Address to Tripletex Customer
@@ -86,6 +89,45 @@ The following properties are synchronized between a Chargebee Address and a Trip
    * - Chargebee Address Property
      - Tripletex Customer Property
      - Tripletex Data Type
+   * - addr
+     - deliveryAddress.addressLine1
+     - "string"
+   * - addr
+     - physicalAddress.addressLine1
+     - "string"
+   * - addr
+     - postalAddress.addressLine1
+     - "string"
+   * - city
+     - deliveryAddress.city
+     - "string"
+   * - city
+     - physicalAddress.city
+     - "string"
+   * - city
+     - postalAddress.city
+     - "string"
+   * - country
+     - deliveryAddress.country.id
+     - "string"
+   * - country
+     - physicalAddress.country.id
+     - "integer"
+   * - country
+     - postalAddress.country.id
+     - "integer"
+   * - subscription_id
+     - id
+     - "integer"
+   * - zip
+     - deliveryAddress.postalCode
+     - "string"
+   * - zip
+     - physicalAddress.postalCode
+     - "string"
+   * - zip
+     - postalAddress.postalCode
+     - "string"
 
 
 Chargebee Address to Tripletex Customer person
@@ -102,6 +144,45 @@ The following properties are synchronized between a Chargebee Address and a Trip
    * - Chargebee Address Property
      - Tripletex Customer person Property
      - Tripletex Data Type
+   * - addr
+     - deliveryAddress.addressLine1
+     - "string"
+   * - addr
+     - physicalAddress.addressLine1
+     - "string"
+   * - addr
+     - postalAddress.addressLine1
+     - "string"
+   * - city
+     - deliveryAddress.city
+     - "string"
+   * - city
+     - physicalAddress.city
+     - "string"
+   * - city
+     - postalAddress.city
+     - "string"
+   * - country
+     - deliveryAddress.country.id
+     - "string"
+   * - country
+     - physicalAddress.country.id
+     - "integer"
+   * - country
+     - postalAddress.country.id
+     - "integer"
+   * - subscription_id
+     - id
+     - "integer"
+   * - zip
+     - deliveryAddress.postalCode
+     - "string"
+   * - zip
+     - physicalAddress.postalCode
+     - "string"
+   * - zip
+     - postalAddress.postalCode
+     - "string"
 
 
 Chargebee Customer to Tripletex Customer
