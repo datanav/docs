@@ -2,7 +2,7 @@
 Custom CRM to WebCRM Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -54,5 +54,21 @@ The following properties are synchronized between a Custom CRM Product and a Web
 
    * - Custom CRM Product Property
      - WebCRM Products Property
+     - WebCRM Data Type
+
+
+Custom CRM User to WebCRM Users
+-------------------------------
+Every Custom CRM User will be synchronized with a WebCRM Users.
+
+Once a link between a Custom CRM User and a WebCRM Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom CRM User and a WebCRM Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom CRM User Property
+     - WebCRM Users Property
      - WebCRM Data Type
 
