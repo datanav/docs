@@ -2,7 +2,7 @@
 WooCommerce to MemberCare Dataflow
 ==================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -48,4 +48,36 @@ The following properties are synchronized between a WooCommerce Product and a Me
    * - name
      - name
      - "string"
+
+
+WooCommerce Customer to MemberCare Invoices
+-------------------------------------------
+Every WooCommerce Customer will be synchronized with a MemberCare Invoices.
+
+Once a link between a WooCommerce Customer and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WooCommerce Customer and a MemberCare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WooCommerce Customer Property
+     - MemberCare Invoices Property
+     - MemberCare Data Type
+
+
+WooCommerce Order to MemberCare Invoices
+----------------------------------------
+Every WooCommerce Order will be synchronized with a MemberCare Invoices.
+
+Once a link between a WooCommerce Order and a MemberCare Invoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WooCommerce Order and a MemberCare Invoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WooCommerce Order Property
+     - MemberCare Invoices Property
+     - MemberCare Data Type
 
