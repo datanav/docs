@@ -2,7 +2,7 @@
 Wave to HubSpot Dataflow
 ========================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -33,68 +33,17 @@ The following properties are synchronized between a Wave Customer and a HubSpot 
    * - Wave Customer Property
      - HubSpot Contact Property
      - HubSpot Data Type
-   * - address.addressLine1
-     - properties.address
-     - "string"
-   * - address.city
-     - properties.city
-     - "string"
-   * - address.country.code
-     - properties.country
-     - "string"
-   * - address.countryCode
-     - properties.country
-     - "string"
-   * - address.postalCode
-     - properties.zip
-     - "string"
-   * - address.province.code
-     - properties.state
-     - "string"
-   * - address.province.name
-     - properties.country
-     - "string"
-   * - address.province.name
-     - properties.state
-     - "string"
    * - email
      - properties.email
      - "string"
    * - firstName
      - properties.firstname
      - "string"
-   * - id
-     - id
-     - "string"
    * - lastName
      - properties.lastname
      - "string"
    * - mobile
      - properties.mobilephone
-     - "string"
-   * - phone
-     - properties.phone
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - properties.address
-     - "string"
-   * - shippingDetails.address.city
-     - properties.city
-     - "string"
-   * - shippingDetails.address.country.code
-     - properties.country
-     - "string"
-   * - shippingDetails.address.postalCode
-     - properties.zip
-     - "string"
-   * - shippingDetails.address.province.code
-     - properties.state
-     - "string"
-   * - shippingDetails.address.province.name
-     - properties.country
-     - "string"
-   * - shippingDetails.address.province.name
-     - properties.state
      - "string"
 
 
@@ -134,19 +83,10 @@ The following properties are synchronized between a Wave Customer (human data) a
    * - address.country.code
      - properties.country
      - "string"
-   * - address.countryCode
-     - properties.country
-     - "string"
    * - address.postalCode
      - properties.zip
      - "string"
    * - address.province.code
-     - properties.state
-     - "string"
-   * - address.province.name
-     - properties.country
-     - "string"
-   * - address.province.name
      - properties.state
      - "string"
    * - email
@@ -180,12 +120,6 @@ The following properties are synchronized between a Wave Customer (human data) a
      - properties.zip
      - "string"
    * - shippingDetails.address.province.code
-     - properties.state
-     - "string"
-   * - shippingDetails.address.province.name
-     - properties.country
-     - "string"
-   * - shippingDetails.address.province.name
      - properties.state
      - "string"
    * - shippingDetails.phone
@@ -230,12 +164,6 @@ The following properties are synchronized between a Wave Vendor and a HubSpot Co
      - properties.zip
      - "string"
    * - address.province.code
-     - properties.state
-     - "string"
-   * - address.province.name
-     - properties.country
-     - "string"
-   * - address.province.name
      - properties.state
      - "string"
    * - email
@@ -284,26 +212,14 @@ The following properties are synchronized between a Wave Customer and a HubSpot 
    * - address.country.code
      - properties.country
      - "string"
-   * - address.countryCode
-     - properties.country
-     - "string"
    * - address.postalCode
      - properties.zip
-     - "string"
-   * - address.province
-     - properties.state
      - "string"
    * - address.province.code
      - properties.state
      - "string"
-   * - address.province.name
-     - properties.state
-     - "string"
    * - id
      - id
-     - "string"
-   * - id
-     - properties.description
      - "string"
    * - internalNotes
      - properties.description
@@ -329,13 +245,7 @@ The following properties are synchronized between a Wave Customer and a HubSpot 
    * - shippingDetails.address.postalCode
      - properties.zip
      - "string"
-   * - shippingDetails.address.province
-     - properties.state
-     - "string"
    * - shippingDetails.address.province.code
-     - properties.state
-     - "string"
-   * - shippingDetails.address.province.name
      - properties.state
      - "string"
    * - shippingDetails.phone
