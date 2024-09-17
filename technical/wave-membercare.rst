@@ -2,7 +2,7 @@
 Wave to MemberCare Dataflow
 ===========================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -31,18 +31,18 @@ The following properties are synchronized between a Wave Customer and a MemberCa
      - "string"
 
 
-Wave Customer person to MemberCare Persons
-------------------------------------------
-Every Wave Customer person will be synchronized with a MemberCare Persons.
+Wave Customer (human data) to MemberCare Persons
+------------------------------------------------
+Every Wave Customer (human data) will be synchronized with a MemberCare Persons.
 
-Once a link between a Wave Customer person and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer (human data) and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a MemberCare Persons:
+The following properties are synchronized between a Wave Customer (human data) and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Customer person Property
+   * - Wave Customer (human data) Property
      - MemberCare Persons Property
      - MemberCare Data Type
    * - address.city
