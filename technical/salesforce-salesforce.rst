@@ -2,7 +2,7 @@
 Salesforce to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -155,15 +155,6 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Salesforce Invoiceline Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
-   * - CurrencyIsoCode
-     - CurrencyIsoCode
-     - "string"
-   * - Quantity
-     - Quantity
-     - "string"
-   * - UnitPrice
-     - TotalPrice
-     - "string"
 
 
 Salesforce Invoiceline to Salesforce Quotelineitem
@@ -180,18 +171,22 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Salesforce Invoiceline Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
-   * - CurrencyIsoCode
-     - CurrencyIsoCode
-     - "string"
-   * - Description
-     - Description
-     - "string"
-   * - Quantity
-     - Quantity
-     - "string"
-   * - UnitPrice
-     - TotalPriceWithTax
-     - "string"
+
+
+Salesforce Order to Salesforce Invoice
+--------------------------------------
+Every Salesforce Order will be synchronized with a Salesforce Invoice.
+
+Once a link between a Salesforce Order and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Order and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Order Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
 
 
 Salesforce Orderitem to Salesforce Invoiceline
@@ -208,15 +203,6 @@ The following properties are synchronized between a Salesforce Orderitem and a S
    * - Salesforce Orderitem Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
-   * - CurrencyIsoCode
-     - CurrencyIsoCode
-     - "string"
-   * - Quantity
-     - Quantity
-     - "string"
-   * - TotalPrice
-     - UnitPrice
-     - "string"
 
 
 Salesforce Orderitem to Salesforce Quotelineitem
@@ -233,15 +219,22 @@ The following properties are synchronized between a Salesforce Orderitem and a S
    * - Salesforce Orderitem Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
-   * - CurrencyIsoCode
-     - CurrencyIsoCode
-     - "string"
-   * - Quantity
-     - Quantity
-     - "string"
-   * - TotalPrice
-     - TotalPriceWithTax
-     - "string"
+
+
+Salesforce Quote to Salesforce Invoice
+--------------------------------------
+Every Salesforce Quote will be synchronized with a Salesforce Invoice.
+
+Once a link between a Salesforce Quote and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Quote and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Quote Property
+     - Salesforce Invoice Property
+     - Salesforce Data Type
 
 
 Salesforce Quotelineitem to Salesforce Invoiceline
@@ -258,18 +251,6 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - Salesforce Quotelineitem Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
-   * - CurrencyIsoCode
-     - CurrencyIsoCode
-     - "string"
-   * - Description
-     - Description
-     - "string"
-   * - Quantity
-     - Quantity
-     - "string"
-   * - TotalPriceWithTax
-     - UnitPrice
-     - "string"
 
 
 Salesforce Quotelineitem to Salesforce Orderitem
@@ -286,13 +267,4 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - Salesforce Quotelineitem Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
-   * - CurrencyIsoCode
-     - CurrencyIsoCode
-     - "string"
-   * - Quantity
-     - Quantity
-     - "string"
-   * - TotalPriceWithTax
-     - TotalPrice
-     - "string"
 
