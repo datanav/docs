@@ -2,7 +2,7 @@
 SuperOffice to Exact Online Dataflow
 ====================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -25,30 +25,6 @@ The following properties are synchronized between a SuperOffice Product and a Ex
      - Exact Online Data Type
    * - Code
      - Code
-     - "string"
-
-
-SuperOffice Quotealternative to Exact Online Salesorders
---------------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Exact Online Salesorders must be established.
-
-A new Exact Online Salesorders will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into Exact Online.
-
-Once a link between a SuperOffice Quotealternative and a Exact Online Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quotealternative and a Exact Online Salesorders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quotealternative Property
-     - Exact Online Salesorders Property
-     - Exact Online Data Type
-   * - DiscountPercent
-     - Discount
-     - "string"
-   * - Name
-     - Description
      - "string"
 
 
