@@ -2,7 +2,7 @@
 Business Nxt to Trello Dataflow
 ===============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Business Nxt Address and a T
    * - Business Nxt Address Property
      - Trello Organizations Property
      - Trello Data Type
+   * - name
+     - name
+     - "string"
 
 
 Business Nxt Company to Trello Organizations
@@ -39,6 +42,9 @@ The following properties are synchronized between a Business Nxt Company and a T
    * - Business Nxt Company Property
      - Trello Organizations Property
      - Trello Data Type
+   * - name
+     - name
+     - "string"
 
 
 Business Nxt Address to Trello Organizations
