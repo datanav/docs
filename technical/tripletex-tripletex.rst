@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-09-17 12:29:50
+Generated: 2024-09-17 12:31:51
 
 Introduction
 ------------
@@ -1081,6 +1081,9 @@ The following properties are synchronized between a Tripletex Activity and a Tri
    * - Tripletex Activity Property
      - Tripletex Projectactivity Property
      - Tripletex Data Type
+   * - activityType
+     - activity.activityType
+     - "string"
 
 
 Tripletex Customer (organisation data) to Tripletex Customer
@@ -1267,4 +1270,7 @@ The following properties are synchronized between a Tripletex Projectactivity an
    * - Tripletex Projectactivity Property
      - Tripletex Activity Property
      - Tripletex Data Type
+   * - activity.activityType
+     - activityType
+     - "string"
 
