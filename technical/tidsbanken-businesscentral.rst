@@ -2,7 +2,7 @@
 Tidsbanken to Business Central Dataflow
 =======================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -57,34 +57,34 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Busi
      - Business Central Data Type
 
 
-Tidsbanken Kunde to Business Central Customers company
-------------------------------------------------------
-Every Tidsbanken Kunde will be synchronized with a Business Central Customers company.
+Tidsbanken Kunde to Business Central Customers (organisation data)
+------------------------------------------------------------------
+Every Tidsbanken Kunde will be synchronized with a Business Central Customers (organisation data).
 
-Once a link between a Tidsbanken Kunde and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Kunde and a Business Central Customers (organisation data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Kunde and a Business Central Customers company:
+The following properties are synchronized between a Tidsbanken Kunde and a Business Central Customers (organisation data):
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Kunde Property
-     - Business Central Customers company Property
+     - Business Central Customers (organisation data) Property
      - Business Central Data Type
 
 
-Tidsbanken Kunde to Business Central Customers person
------------------------------------------------------
-Every Tidsbanken Kunde will be synchronized with a Business Central Customers person.
+Tidsbanken Kunde to Business Central Customers (human data)
+-----------------------------------------------------------
+Every Tidsbanken Kunde will be synchronized with a Business Central Customers (human data).
 
-Once a link between a Tidsbanken Kunde and a Business Central Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tidsbanken Kunde and a Business Central Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tidsbanken Kunde and a Business Central Customers person:
+The following properties are synchronized between a Tidsbanken Kunde and a Business Central Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Tidsbanken Kunde Property
-     - Business Central Customers person Property
+     - Business Central Customers (human data) Property
      - Business Central Data Type
 
