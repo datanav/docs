@@ -2,7 +2,7 @@
 Tidsbanken to ZohoCRM Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -75,4 +75,20 @@ The following properties are synchronized between a Tidsbanken Kunde and a ZohoC
    * - Url
      - Website
      - "string"
+
+
+Tidsbanken Kunde to ZohoCRM Contact
+-----------------------------------
+Every Tidsbanken Kunde will be synchronized with a ZohoCRM Contact.
+
+Once a link between a Tidsbanken Kunde and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Kunde and a ZohoCRM Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Kunde Property
+     - ZohoCRM Contact Property
+     - ZohoCRM Data Type
 
