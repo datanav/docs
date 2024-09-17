@@ -2,78 +2,12 @@
 Wix.com to WooCommerce Dataflow
 ===============================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to WooCommerce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Wix.com Orders to WooCommerce Order
------------------------------------
-Before any synchronization can take place, a link between a Wix.com Orders and a WooCommerce Order must be established.
-
-A new WooCommerce Order will be created from a Wix.com Orders if it is connected to a Wix.com Wix-orders that is synchronized into WooCommerce.
-
-Once a link between a Wix.com Orders and a WooCommerce Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Orders and a WooCommerce Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Orders Property
-     - WooCommerce Order Property
-     - WooCommerce Data Type
-   * - buyerInfo.id
-     - customer_id
-     - "string"
-   * - currency
-     - currency
-     - "string"
-   * - lineItems.name
-     - line_items.name
-     - "string"
-   * - lineItems.price
-     - line_items.price
-     - "string"
-   * - lineItems.quantity
-     - line_items.quantity
-     - "string"
-
-
-Wix.com Products to WooCommerce Product
----------------------------------------
-Before any synchronization can take place, a link between a Wix.com Products and a WooCommerce Product must be established.
-
-A new WooCommerce Product will be created from a Wix.com Products if it is connected to a Wix.com Wix-orders that is synchronized into WooCommerce.
-
-Once a link between a Wix.com Products and a WooCommerce Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Products and a WooCommerce Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Products Property
-     - WooCommerce Product Property
-     - WooCommerce Data Type
-   * - costAndProfitData.itemCost
-     - price
-     - "string"
-   * - costRange.maxValue
-     - price
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - priceData.price
-     - sale_price
-     - "string"
-   * - sku
-     - sku
-     - "string"
-
 
 Wix.com Orders to WooCommerce Order
 -----------------------------------
