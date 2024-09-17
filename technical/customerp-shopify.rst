@@ -2,12 +2,28 @@
 Custom ERP to Shopify Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Custom ERP to Shopify. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Custom ERP Customer to Shopify Customer
+---------------------------------------
+Every Custom ERP Customer will be synchronized with a Shopify Customer.
+
+Once a link between a Custom ERP Customer and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom ERP Customer and a Shopify Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom ERP Customer Property
+     - Shopify Customer Property
+     - Shopify Data Type
+
 
 Custom ERP Order to Shopify Order
 ---------------------------------
