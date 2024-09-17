@@ -2,7 +2,7 @@
 CRMOffice to Trello Dataflow
 ============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a CRMOffice Activities and a T
    * - CRMOffice Activities Property
      - Trello Actions Property
      - Trello Data Type
+   * - ownerId
+     - memberCreator.id
+     - "string"
+   * - startsAt
+     - date
+     - "string"
 
 
 CRMOffice Contacts to Trello Members
