@@ -2,7 +2,7 @@
 WooCommerce to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -25,6 +25,54 @@ The following properties are synchronized between a WooCommerce Order and a Sale
    * - WooCommerce Order Property
      - Salesforce Order Property
      - Salesforce Data Type
+   * - billing.address_1
+     - BillingStreet
+     - "string"
+   * - billing.city
+     - BillingCity
+     - "string"
+   * - billing.city
+     - ShippingCity
+     - "string"
+   * - billing.country
+     - BillingCountry
+     - "string"
+   * - billing.country
+     - ShippingCountry
+     - "string"
+   * - billing.postcode
+     - BillingPostalCode
+     - "string"
+   * - billing.postcode
+     - ShippingStateCode
+     - "string"
+   * - currency
+     - CurrencyIsoCode
+     - "string"
+   * - id
+     - ID
+     - "string"
+   * - shipping.address_1
+     - BillingStreet
+     - "string"
+   * - shipping.city
+     - BillingCity
+     - "string"
+   * - shipping.city
+     - ShippingCity
+     - "string"
+   * - shipping.country
+     - BillingCountry
+     - "string"
+   * - shipping.country
+     - ShippingCountry
+     - "string"
+   * - shipping.postcode
+     - BillingPostalCode
+     - "string"
+   * - shipping.postcode
+     - ShippingStateCode
+     - "string"
 
 
 WooCommerce Product to Salesforce Product2
@@ -41,6 +89,9 @@ The following properties are synchronized between a WooCommerce Product and a Sa
    * - WooCommerce Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
+   * - name
+     - Name
+     - "string"
 
 
 WooCommerce Order to Salesforce Invoice
@@ -124,6 +175,9 @@ The following properties are synchronized between a WooCommerce Order and a Sale
    * - WooCommerce Order Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - currency
+     - CurrencyIsoCode
+     - "string"
 
 
 WooCommerce Order to Salesforce Invoiceline
