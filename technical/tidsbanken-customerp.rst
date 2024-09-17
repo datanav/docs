@@ -2,7 +2,7 @@
 Tidsbanken to Custom ERP Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -38,6 +38,38 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Cu
 
    * - Tidsbanken Avdeling Property
      - Custom ERP Customer Property
+     - Custom ERP Data Type
+
+
+Tidsbanken Kunde to Custom ERP Customer
+---------------------------------------
+Every Tidsbanken Kunde will be synchronized with a Custom ERP Customer.
+
+Once a link between a Tidsbanken Kunde and a Custom ERP Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Kunde and a Custom ERP Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Kunde Property
+     - Custom ERP Customer Property
+     - Custom ERP Data Type
+
+
+Tidsbanken Prosjekt to Custom ERP Project
+-----------------------------------------
+Every Tidsbanken Prosjekt will be synchronized with a Custom ERP Project.
+
+Once a link between a Tidsbanken Prosjekt and a Custom ERP Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Prosjekt and a Custom ERP Project:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Prosjekt Property
+     - Custom ERP Project Property
      - Custom ERP Data Type
 
 
