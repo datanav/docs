@@ -2,7 +2,7 @@
 Business Central to Business Central Dataflow
 =============================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -33,21 +33,6 @@ The following properties are synchronized between a Business Central Contacts an
    * - Business Central Contacts Property
      - Business Central Contacts Property
      - Business Central Data Type
-   * - addressLine1
-     - addressLine2
-     - "string"
-   * - addressLine2
-     - addressLine1
-     - "string"
-   * - mobilePhoneNumber
-     - mobilePhoneNumber
-     - "string"
-   * - mobilePhoneNumber
-     - phoneNumber
-     - "string"
-   * - phoneNumber
-     - mobilePhoneNumber
-     - "string"
 
 
 Business Central Contactsinformation to Business Central Contacts
@@ -74,13 +59,7 @@ The following properties are synchronized between a Business Central Contactsinf
    * - Business Central Contactsinformation Property
      - Business Central Contacts Property
      - Business Central Data Type
-   * - contactId
-     - id
-     - "string"
    * - contactName
-     - displayName
-     - "string"
-   * - contactName.contactName
      - displayName
      - "string"
 
@@ -109,18 +88,6 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      - Business Central Items Property
      - Business Central Data Type
-   * - displayName
-     - displayName2
-     - "string"
-   * - displayName2
-     - displayName
-     - "string"
-   * - itemCategoryId
-     - taxGroupId
-     - "string"
-   * - taxGroupId
-     - itemCategoryId
-     - "string"
 
 
 Business Central Customers (organisation data) to Business Central Companies
