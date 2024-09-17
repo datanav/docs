@@ -2,7 +2,7 @@
 PowerOffice GO to Exact Online Dataflow
 =======================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -54,27 +54,6 @@ The following properties are synchronized between a Powerofficego Product and a 
      - Exact Online Data Type
 
 
-Powerofficego Salesorders to Exact Online Salesorders
------------------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Salesorders and a Exact Online Salesorders must be established.
-
-A new Exact Online Salesorders will be created from a Powerofficego Salesorders if it is connected to a Powerofficego Salesorders, or Salesorderlines that is synchronized into Exact Online.
-
-Once a link between a Powerofficego Salesorders and a Exact Online Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorders and a Exact Online Salesorders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorders Property
-     - Exact Online Salesorders Property
-     - Exact Online Data Type
-   * - CurrencyCode
-     - Currency
-     - "string"
-
-
 PowerOffice GO Contactperson to Exact Online Contacts
 -----------------------------------------------------
 Every PowerOffice GO Contactperson will be synchronized with a Exact Online Contacts.
@@ -122,18 +101,18 @@ The following properties are synchronized between a PowerOffice GO Customers and
      - "string"
 
 
-PowerOffice GO Customers person to Exact Online Contacts
---------------------------------------------------------
-Every PowerOffice GO Customers person will be synchronized with a Exact Online Contacts.
+PowerOffice GO Customers (human data) to Exact Online Contacts
+--------------------------------------------------------------
+Every PowerOffice GO Customers (human data) will be synchronized with a Exact Online Contacts.
 
-Once a link between a PowerOffice GO Customers person and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Customers (human data) and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice GO Customers person and a Exact Online Contacts:
+The following properties are synchronized between a PowerOffice GO Customers (human data) and a Exact Online Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice GO Customers person Property
+   * - PowerOffice GO Customers (human data) Property
      - Exact Online Contacts Property
      - Exact Online Data Type
    * - DateOfBirth
@@ -317,18 +296,18 @@ The following properties are synchronized between a PowerOffice GO Customers and
      - Exact Online Data Type
 
 
-PowerOffice GO Customers person to Exact Online Accounts
---------------------------------------------------------
-Every PowerOffice GO Customers person will be synchronized with a Exact Online Accounts.
+PowerOffice GO Customers (organisation data) to Exact Online Accounts
+---------------------------------------------------------------------
+Every PowerOffice GO Customers (organisation data) will be synchronized with a Exact Online Accounts.
 
-Once a link between a PowerOffice GO Customers person and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Customers (organisation data) and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice GO Customers person and a Exact Online Accounts:
+The following properties are synchronized between a PowerOffice GO Customers (organisation data) and a Exact Online Accounts:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice GO Customers person Property
+   * - PowerOffice GO Customers (organisation data) Property
      - Exact Online Accounts Property
      - Exact Online Data Type
    * - Id
@@ -345,18 +324,18 @@ The following properties are synchronized between a PowerOffice GO Customers per
      - "string"
 
 
-PowerOffice GO Customers person to Exact Online Addresses
----------------------------------------------------------
-Every PowerOffice GO Customers person will be synchronized with a Exact Online Addresses.
+PowerOffice GO Customers (location data) to Exact Online Addresses
+------------------------------------------------------------------
+Every PowerOffice GO Customers (location data) will be synchronized with a Exact Online Addresses.
 
-Once a link between a PowerOffice GO Customers person and a Exact Online Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Customers (location data) and a Exact Online Addresses is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice GO Customers person and a Exact Online Addresses:
+The following properties are synchronized between a PowerOffice GO Customers (location data) and a Exact Online Addresses:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice GO Customers person Property
+   * - PowerOffice GO Customers (location data) Property
      - Exact Online Addresses Property
      - Exact Online Data Type
 
@@ -489,18 +468,18 @@ The following properties are synchronized between a PowerOffice GO Salesorders a
      - Exact Online Data Type
 
 
-PowerOffice GO Suppliers person to Exact Online Contacts
---------------------------------------------------------
-Every PowerOffice GO Suppliers person will be synchronized with a Exact Online Contacts.
+PowerOffice GO Suppliers (human data) to Exact Online Contacts
+--------------------------------------------------------------
+Every PowerOffice GO Suppliers (human data) will be synchronized with a Exact Online Contacts.
 
-Once a link between a PowerOffice GO Suppliers person and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Suppliers (human data) and a Exact Online Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice GO Suppliers person and a Exact Online Contacts:
+The following properties are synchronized between a PowerOffice GO Suppliers (human data) and a Exact Online Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice GO Suppliers person Property
+   * - PowerOffice GO Suppliers (human data) Property
      - Exact Online Contacts Property
      - Exact Online Data Type
 
