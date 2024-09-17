@@ -2,7 +2,7 @@
 Unieconomy to Invoiced Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -22,5 +22,21 @@ The following properties are synchronized between a Unieconomy Customers and a I
 
    * - Unieconomy Customers Property
      - Invoiced Customers company Property
+     - Invoiced Data Type
+
+
+Unieconomy Customers to Invoiced Customers person
+-------------------------------------------------
+Every Unieconomy Customers will be synchronized with a Invoiced Customers person.
+
+Once a link between a Unieconomy Customers and a Invoiced Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Customers and a Invoiced Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Customers Property
+     - Invoiced Customers person Property
      - Invoiced Data Type
 
