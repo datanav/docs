@@ -2,7 +2,7 @@
 PowerOffice GO to PowerOffice GO Dataflow
 =========================================
 
-Generated: 2024-09-17 00:01:48
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -381,36 +381,22 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-PowerOffice GO Customers person to PowerOffice GO Customers
------------------------------------------------------------
-Every PowerOffice GO Customers person will be synchronized with a PowerOffice GO Customers.
+Powerofficego Customers to PowerOfficeGo Customers person
+---------------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers and a PowerOfficeGo Customers person must be established.
 
-Once a link between a PowerOffice GO Customers person and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+A new PowerOfficeGo Customers person will be created from a Powerofficego Customers if it is connected to a Powerofficego Customer, Customers, Suppliers, Salesorder, Salesorders, Contactperson, Salesorderline, Outgoinginvoice, Salesorderlines, Customers-person, or Suppliers-person that is synchronized into PowerOfficeGo.
 
-The following properties are synchronized between a PowerOffice GO Customers person and a PowerOffice GO Customers:
+Once a link between a Powerofficego Customers and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice GO Customers person Property
-     - PowerOffice GO Customers Property
-     - PowerOffice GO Data Type
-
-
-PowerOffice GO Customers to PowerOffice GO Customers person
------------------------------------------------------------
-Every PowerOffice GO Customers will be synchronized with a PowerOffice GO Customers person.
-
-Once a link between a PowerOffice GO Customers and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice GO Customers and a PowerOffice GO Customers person:
+The following properties are synchronized between a Powerofficego Customers and a PowerOfficeGo Customers person:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice GO Customers Property
-     - PowerOffice GO Customers person Property
-     - PowerOffice GO Data Type
+   * - Powerofficego Customers Property
+     - PowerOfficeGo Customers person Property
+     - PowerOfficeGo Data Type
    * - Id
      - Id
      - "string"
@@ -443,6 +429,70 @@ The following properties are synchronized between a PowerOffice GO Customers and
      - "string"
 
 
+PowerOffice GO Customers person to PowerOffice GO Customers
+-----------------------------------------------------------
+Every PowerOffice GO Customers person will be synchronized with a PowerOffice GO Customers.
+
+Once a link between a PowerOffice GO Customers person and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Customers person and a PowerOffice GO Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Customers person Property
+     - PowerOffice GO Customers Property
+     - PowerOffice GO Data Type
+
+
+PowerOffice GO Customers person to PowerOffice GO Customers
+-----------------------------------------------------------
+Every PowerOffice GO Customers person will be synchronized with a PowerOffice GO Customers.
+
+Once a link between a PowerOffice GO Customers person and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Customers person and a PowerOffice GO Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Customers person Property
+     - PowerOffice GO Customers Property
+     - PowerOffice GO Data Type
+
+
+PowerOffice GO Customers to PowerOffice GO Customers person
+-----------------------------------------------------------
+Every PowerOffice GO Customers will be synchronized with a PowerOffice GO Customers person.
+
+Once a link between a PowerOffice GO Customers and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Customers and a PowerOffice GO Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Customers Property
+     - PowerOffice GO Customers person Property
+     - PowerOffice GO Data Type
+
+
+PowerOffice GO Customers to PowerOffice GO Customers person
+-----------------------------------------------------------
+Every PowerOffice GO Customers will be synchronized with a PowerOffice GO Customers person.
+
+Once a link between a PowerOffice GO Customers and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Customers and a PowerOffice GO Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Customers Property
+     - PowerOffice GO Customers person Property
+     - PowerOffice GO Data Type
+
+
 PowerOffice GO Projectactivity to PowerOffice GO Timetrackingactivity
 ---------------------------------------------------------------------
 Every PowerOffice GO Projectactivity will be synchronized with a PowerOffice GO Timetrackingactivity.
@@ -457,9 +507,6 @@ The following properties are synchronized between a PowerOffice GO Projectactivi
    * - PowerOffice GO Projectactivity Property
      - PowerOffice GO Timetrackingactivity Property
      - PowerOffice GO Data Type
-   * - name
-     - name
-     - "string"
 
 
 PowerOffice GO Suppliers person to PowerOffice GO Contactperson
@@ -476,24 +523,6 @@ The following properties are synchronized between a PowerOffice GO Suppliers per
    * - PowerOffice GO Suppliers person Property
      - PowerOffice GO Contactperson Property
      - PowerOffice GO Data Type
-   * - DateOfBirth
-     - dateOfBirth
-     - N/A
-   * - EmailAddress
-     - emailAddress
-     - "string"
-   * - FirstName
-     - firstName
-     - "string"
-   * - LastName
-     - lastName
-     - "string"
-   * - MailAddress.CountryCode
-     - residenceCountryCode
-     - "string"
-   * - PhoneNumber
-     - phoneNumber
-     - "string"
 
 
 PowerOffice GO Timetrackingactivity to PowerOffice GO Projectactivity
@@ -510,7 +539,4 @@ The following properties are synchronized between a PowerOffice GO Timetrackinga
    * - PowerOffice GO Timetrackingactivity Property
      - PowerOffice GO Projectactivity Property
      - PowerOffice GO Data Type
-   * - name
-     - name
-     - "string"
 
