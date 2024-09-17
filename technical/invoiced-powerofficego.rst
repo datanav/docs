@@ -2,7 +2,7 @@
 Invoiced to PowerOffice GO Dataflow
 ===================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -25,67 +25,67 @@ The following properties are synchronized between a Invoiced Contacts and a Powe
      - PowerOffice GO Data Type
 
 
-Invoiced Customers company to PowerOffice GO Customers
-------------------------------------------------------
-Every Invoiced Customers company will be synchronized with a PowerOffice GO Customers.
+Invoiced Customers (organisation data) to PowerOffice GO Customers
+------------------------------------------------------------------
+Every Invoiced Customers (organisation data) will be synchronized with a PowerOffice GO Customers.
 
-Once a link between a Invoiced Customers company and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (organisation data) and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a PowerOffice GO Customers:
+The following properties are synchronized between a Invoiced Customers (organisation data) and a PowerOffice GO Customers:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers company Property
+   * - Invoiced Customers (organisation data) Property
      - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
 
 
-Invoiced Customers company to PowerOffice GO Customers person
--------------------------------------------------------------
-Every Invoiced Customers company will be synchronized with a PowerOffice GO Customers person.
+Invoiced Customers (human data) to PowerOffice GO Customers (human data)
+------------------------------------------------------------------------
+Every Invoiced Customers (human data) will be synchronized with a PowerOffice GO Customers (human data).
 
-Once a link between a Invoiced Customers company and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (human data) and a PowerOffice GO Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a PowerOffice GO Customers person:
+The following properties are synchronized between a Invoiced Customers (human data) and a PowerOffice GO Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers company Property
-     - PowerOffice GO Customers person Property
+   * - Invoiced Customers (human data) Property
+     - PowerOffice GO Customers (human data) Property
      - PowerOffice GO Data Type
 
 
-Invoiced Customers person to PowerOffice GO Customers
------------------------------------------------------
-Every Invoiced Customers person will be synchronized with a PowerOffice GO Customers.
+Invoiced Customers (organisation data) to PowerOffice GO Customers
+------------------------------------------------------------------
+Every Invoiced Customers (organisation data) will be synchronized with a PowerOffice GO Customers.
 
-Once a link between a Invoiced Customers person and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (organisation data) and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers person and a PowerOffice GO Customers:
+The following properties are synchronized between a Invoiced Customers (organisation data) and a PowerOffice GO Customers:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers person Property
+   * - Invoiced Customers (organisation data) Property
      - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
 
 
-Invoiced Customers person to PowerOffice GO Customers person
-------------------------------------------------------------
-Every Invoiced Customers person will be synchronized with a PowerOffice GO Customers person.
+Invoiced Customers (human data) to PowerOffice GO Customers (human data)
+------------------------------------------------------------------------
+Every Invoiced Customers (human data) will be synchronized with a PowerOffice GO Customers (human data).
 
-Once a link between a Invoiced Customers person and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (human data) and a PowerOffice GO Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers person and a PowerOffice GO Customers person:
+The following properties are synchronized between a Invoiced Customers (human data) and a PowerOffice GO Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers person Property
-     - PowerOffice GO Customers person Property
+   * - Invoiced Customers (human data) Property
+     - PowerOffice GO Customers (human data) Property
      - PowerOffice GO Data Type
 
 
