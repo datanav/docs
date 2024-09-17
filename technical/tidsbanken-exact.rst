@@ -2,7 +2,7 @@
 Tidsbanken to Exact Online Dataflow
 ===================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -55,23 +55,8 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Exac
    * - Tidsbanken Ansatt Property
      - Exact Online Contacts Property
      - Exact Online Data Type
-   * - Epost
-     - BusinessEmail
-     - "string"
-   * - Etternavn
-     - LastName
-     - "string"
    * - Fodt
      - BirthDate
-     - "string"
-   * - Fornavn
-     - FirstName
-     - "string"
-   * - Mobil
-     - Mobile
-     - "string"
-   * - Navn
-     - FullName
      - "string"
    * - Poststed
      - City
@@ -92,17 +77,8 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Ex
    * - Tidsbanken Avdeling Property
      - Exact Online Accounts Property
      - Exact Online Data Type
-   * - Adresse
-     - AddressLine1
-     - "string"
    * - Navn
      - Name
-     - "string"
-   * - Postnr
-     - Postcode
-     - "string"
-   * - Poststed
-     - City
      - "string"
 
 
