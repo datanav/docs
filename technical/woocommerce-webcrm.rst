@@ -2,7 +2,7 @@
 WooCommerce to WebCRM Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,21 +23,6 @@ The following properties are synchronized between a WooCommerce Order and a WebC
    * - WooCommerce Order Property
      - WebCRM Quotationline Property
      - WebCRM Data Type
-   * - line_items.sku
-     - QuotationLineCostPrice
-     - "string"
-   * - line_items.sku
-     - QuotationLineDiscount
-     - "string"
-   * - line_items.sku
-     - QuotationLinePrice
-     - "string"
-   * - line_items.sku
-     - QuotationLineQuantity
-     - "string"
-   * - line_items.sku
-     - QuotationLineVatPercentage
-     - "string"
 
 
 WooCommerce Product to WebCRM Products
@@ -54,10 +39,4 @@ The following properties are synchronized between a WooCommerce Product and a We
    * - WooCommerce Product Property
      - WebCRM Products Property
      - WebCRM Data Type
-   * - price
-     - ProductCostPrice
-     - "string"
-   * - sale_price
-     - ProductPrice
-     - "string"
 
