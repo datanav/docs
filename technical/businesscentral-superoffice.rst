@@ -2,7 +2,7 @@
 Business Central to SuperOffice Dataflow
 ========================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -24,6 +24,24 @@ The following properties are synchronized between a Businesscentral Customers an
 
    * - Businesscentral Customers Property
      - SuperOffice Contact Property
+     - SuperOffice Data Type
+
+
+Business Central Items to SuperOffice Product
+---------------------------------------------
+Before any synchronization can take place, a link between a Business Central Items and a SuperOffice Product must be established.
+
+A new SuperOffice Product will be created from a Business Central Items if it is connected to a Business Central Businesscentral-salesorderlines that is synchronized into SuperOffice.
+
+Once a link between a Business Central Items and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Items and a SuperOffice Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Items Property
+     - SuperOffice Product Property
      - SuperOffice Data Type
 
 
@@ -271,27 +289,6 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      - SuperOffice Product Property
      - SuperOffice Data Type
-   * - displayName
-     - Name
-     - "string"
-   * - displayName.string
-     - Name
-     - "string"
-   * - displayName2
-     - Name
-     - "string"
-   * - itemCategoryId
-     - ProductCategoryKey
-     - "string"
-   * - taxGroupCode
-     - VAT
-     - N/A
-   * - unitCost
-     - UnitCost
-     - "string"
-   * - unitPrice
-     - UnitListPrice
-     - N/A
 
 
 Business Central Salesorderlines to SuperOffice Quoteline
@@ -308,31 +305,4 @@ The following properties are synchronized between a Business Central Salesorderl
    * - Business Central Salesorderlines Property
      - SuperOffice Quoteline Property
      - SuperOffice Data Type
-   * - description
-     - Description
-     - "string"
-   * - description
-     - Name
-     - "string"
-   * - discountPercent
-     - DiscountPercent
-     - "integer"
-   * - discountPercent
-     - ERPDiscountPercent
-     - N/A
-   * - documentId
-     - QuoteAlternativeId
-     - "integer"
-   * - itemId
-     - ERPProductKey
-     - "string"
-   * - quantity
-     - Quantity
-     - N/A
-   * - taxPercent
-     - VAT
-     - "integer"
-   * - unitPrice
-     - UnitListPrice
-     - N/A
 
