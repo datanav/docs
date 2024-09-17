@@ -2,7 +2,7 @@
 Exact Online to Trello Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -86,6 +86,22 @@ The following properties are synchronized between a Exact Online Divisions and a
    * - Website
      - website
      - "string"
+
+
+Exact Online Employees to Trello Members
+----------------------------------------
+Every Exact Online Employees will be synchronized with a Trello Members.
+
+Once a link between a Exact Online Employees and a Trello Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Employees and a Trello Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Employees Property
+     - Trello Members Property
+     - Trello Data Type
 
 
 Exact Online Employees to Trello Members
