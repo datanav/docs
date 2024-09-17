@@ -2,7 +2,7 @@
 Wix.com to Zendesk Dataflow
 ===========================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -33,15 +33,6 @@ The following properties are synchronized between a Wix.com Contacts and a Zende
    * - Wix.com Contacts Property
      - Zendesk Users Property
      - Zendesk Data Type
-   * - info.emails
-     - email
-     - "string"
-   * - info.name.first
-     - name
-     - "string"
-   * - info.name.last
-     - name
-     - "string"
    * - primaryInfo.email
      - email
      - "string"
