@@ -2,7 +2,7 @@
 SuperOffice to Custom CRM Dataflow
 ==================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -38,6 +38,22 @@ The following properties are synchronized between a SuperOffice Person and a Cus
 
    * - SuperOffice Person Property
      - Custom CRM Contact Property
+     - Custom CRM Data Type
+
+
+SuperOffice Product to Custom CRM Product
+-----------------------------------------
+Every SuperOffice Product will be synchronized with a Custom CRM Product.
+
+Once a link between a SuperOffice Product and a Custom CRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a Custom CRM Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Custom CRM Product Property
      - Custom CRM Data Type
 
 
@@ -118,5 +134,21 @@ The following properties are synchronized between a SuperOffice Quotealternative
 
    * - SuperOffice Quotealternative Property
      - Custom CRM Quote Property
+     - Custom CRM Data Type
+
+
+SuperOffice User to Custom CRM User
+-----------------------------------
+Every SuperOffice User will be synchronized with a Custom CRM User.
+
+Once a link between a SuperOffice User and a Custom CRM User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice User and a Custom CRM User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - Custom CRM User Property
      - Custom CRM Data Type
 
