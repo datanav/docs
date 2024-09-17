@@ -2,12 +2,46 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Wix. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Contact to Wix Contacts
+---------------------------------
+Before any synchronization can take place, a link between a Tripletex Contact and a Wix Contacts must be established.
+
+A new Wix Contacts will be created from a Tripletex Contact if it is connected to a Tripletex Order, or Orderline that is synchronized into Wix.
+
+A Tripletex Contact will merge with a Wix Contacts if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Wix Contacts Property
+   * - email
+     - primaryInfo.email
+
+Once a link between a Tripletex Contact and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a Wix Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Wix Contacts Property
+     - Wix Data Type
+   * - email
+     - info.emails
+     - "string"
+   * - phoneNumberMobile
+     - info.phones
+     - "string"
+
 
 Tripletex Customer person to Wix Contacts
 -----------------------------------------
@@ -166,22 +200,27 @@ The following properties are synchronized between a Tripletex Customer and a Wix
      - "string"
 
 
-Tripletex Contact to Wix Contacts
+Tripletex Product to Wix Products
 ---------------------------------
-Every Tripletex Contact will be synchronized with a Wix Contacts.
+Before any synchronization can take place, a link between a Tripletex Product and a Wix Products must be established.
 
-If a matching Wix Contacts already exists, the Tripletex Contact will be merged with the existing one.
-If no matching Wix Contacts is found, a new Wix Contacts will be created.
+A new Wix Products will be created from a Tripletex Product if it is connected to a Tripletex Order, or Orderline that is synchronized into Wix.
 
-A Tripletex Contact will merge with a Wix Contacts if one of the following property combinations match:
+Once a link between a Tripletex Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a Wix Products:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Contact Property
-     - Wix Contacts Property
-   * - email
-     - primaryInfo.email
+   * - Tripletex Product Property
+     - Wix Products Property
+     - Wix Data Type
+
+
+Tripletex Contact to Wix Contacts
+---------------------------------
+Every Tripletex Contact will be synchronized with a Wix Contacts.
 
 Once a link between a Tripletex Contact and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -193,27 +232,6 @@ The following properties are synchronized between a Tripletex Contact and a Wix 
    * - Tripletex Contact Property
      - Wix Contacts Property
      - Wix Data Type
-   * - email
-     - info.emails
-     - "string"
-   * - email
-     - primaryInfo.email
-     - "string"
-   * - firstName
-     - info.name.first
-     - "string"
-   * - lastName
-     - info.name.last
-     - "string"
-   * - phoneNumberMobile
-     - info.phones
-     - "string"
-   * - phoneNumberMobile
-     - primaryInfo.phone
-     - "string"
-   * - phoneNumberWork
-     - primaryInfo.phone
-     - "string"
 
 
 Tripletex Product to Wix Products
@@ -230,28 +248,4 @@ The following properties are synchronized between a Tripletex Product and a Wix 
    * - Tripletex Product Property
      - Wix Products Property
      - Wix Data Type
-   * - costExcludingVatCurrency
-     - costAndProfitData.itemCost
-     - N/A
-   * - costExcludingVatCurrency
-     - costRange.maxValue
-     - "string"
-   * - currency.id
-     - price.currency
-     - "string"
-   * - currency.id
-     - priceData.currency
-     - "string"
-   * - description
-     - description
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - priceExcludingVatCurrency
-     - price.price
-     - "string"
-   * - priceExcludingVatCurrency
-     - priceData.price
-     - N/A
 
