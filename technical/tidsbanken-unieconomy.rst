@@ -2,7 +2,7 @@
 Tidsbanken to Unieconomy Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -41,31 +41,9 @@ The following properties are synchronized between a Tidsbanken Kunde and a Uniec
      - "string"
 
 
-Tidsbanken Avdeling to Unieconomy Departments
----------------------------------------------
-Every Tidsbanken Avdeling will be synchronized with a Unieconomy Departments.
-
-Once a link between a Tidsbanken Avdeling and a Unieconomy Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tidsbanken Avdeling and a Unieconomy Departments:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Avdeling Property
-     - Unieconomy Departments Property
-     - Unieconomy Data Type
-   * - Navn
-     - Name
-     - "string"
-
-
 Tidsbanken Kunde to Unieconomy Customers
 ----------------------------------------
-Every Tidsbanken Kunde will be synchronized with a Unieconomy Customers.
-
-If a matching Unieconomy Customers already exists, the Tidsbanken Kunde will be merged with the existing one.
-If no matching Unieconomy Customers is found, a new Unieconomy Customers will be created.
+Before any synchronization can take place, a link between a Tidsbanken Kunde and a Unieconomy Customers must be established.
 
 A Tidsbanken Kunde will merge with a Unieconomy Customers if one of the following property combinations match:
 
@@ -87,10 +65,36 @@ The following properties are synchronized between a Tidsbanken Kunde and a Uniec
    * - Tidsbanken Kunde Property
      - Unieconomy Customers Property
      - Unieconomy Data Type
-   * - Organisasjonsnummer
-     - OrgNumber
-     - "string"
-   * - Url
-     - WebUrl
-     - "string"
+
+
+Tidsbanken Avdeling to Unieconomy Departments
+---------------------------------------------
+Every Tidsbanken Avdeling will be synchronized with a Unieconomy Departments.
+
+Once a link between a Tidsbanken Avdeling and a Unieconomy Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Avdeling and a Unieconomy Departments:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     - Unieconomy Departments Property
+     - Unieconomy Data Type
+
+
+Tidsbanken Kunde to Unieconomy Customers
+----------------------------------------
+Every Tidsbanken Kunde will be synchronized with a Unieconomy Customers.
+
+Once a link between a Tidsbanken Kunde and a Unieconomy Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Kunde and a Unieconomy Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Kunde Property
+     - Unieconomy Customers Property
+     - Unieconomy Data Type
 
