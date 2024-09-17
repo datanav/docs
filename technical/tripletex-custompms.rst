@@ -2,7 +2,7 @@
 Tripletex to Custom PMS Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -25,6 +25,22 @@ The following properties are synchronized between a Tripletex Activity and a Cus
      - Custom PMS Data Type
 
 
+Tripletex Customer to Custom PMS Customer
+-----------------------------------------
+Every Tripletex Customer will be synchronized with a Custom PMS Customer.
+
+Once a link between a Tripletex Customer and a Custom PMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a Custom PMS Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - Custom PMS Customer Property
+     - Custom PMS Data Type
+
+
 Tripletex Department to Custom PMS Customer
 -------------------------------------------
 Every Tripletex Department will be synchronized with a Custom PMS Customer.
@@ -38,6 +54,22 @@ The following properties are synchronized between a Tripletex Department and a C
 
    * - Tripletex Department Property
      - Custom PMS Customer Property
+     - Custom PMS Data Type
+
+
+Tripletex Project to Custom PMS Project
+---------------------------------------
+Every Tripletex Project will be synchronized with a Custom PMS Project.
+
+Once a link between a Tripletex Project and a Custom PMS Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Project and a Custom PMS Project:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Project Property
+     - Custom PMS Project Property
      - Custom PMS Data Type
 
 
@@ -69,6 +101,22 @@ The following properties are synchronized between a Tripletex Customer and a Cus
    :header-rows: 1
 
    * - Tripletex Customer Property
+     - Custom PMS Customer Property
+     - Custom PMS Data Type
+
+
+Tripletex Customer person to Custom PMS Customer
+------------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Custom PMS Customer.
+
+Once a link between a Tripletex Customer person and a Custom PMS Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer person and a Custom PMS Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer person Property
      - Custom PMS Customer Property
      - Custom PMS Data Type
 
