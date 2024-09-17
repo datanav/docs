@@ -2,7 +2,7 @@
 Tidsbanken to Freshteam Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -11,10 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Tidsbanken Ansatt to Freshteam Employee
 ---------------------------------------
-Every Tidsbanken Ansatt will be synchronized with a Freshteam Employee.
-
-If a matching Freshteam Employee already exists, the Tidsbanken Ansatt will be merged with the existing one.
-If no matching Freshteam Employee is found, a new Freshteam Employee will be created.
+Before any synchronization can take place, a link between a Tidsbanken Ansatt and a Freshteam Employee must be established.
 
 A Tidsbanken Ansatt will merge with a Freshteam Employee if one of the following property combinations match:
 
@@ -36,24 +33,22 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Fres
    * - Tidsbanken Ansatt Property
      - Freshteam Employee Property
      - Freshteam Data Type
-   * - Epost
-     - official_email
-     - "string"
-   * - Etternavn
-     - last_name
-     - "string"
-   * - Fodt
-     - date_of_birth
-     - "string"
-   * - Fornavn
-     - first_name
-     - "string"
-   * - Mobil
-     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
-     - "string"
-   * - TlfPrivat
-     - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.name)
-     - "string"
+
+
+Tidsbanken Ansatt to Freshteam Employee
+---------------------------------------
+Every Tidsbanken Ansatt will be synchronized with a Freshteam Employee.
+
+Once a link between a Tidsbanken Ansatt and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Ansatt and a Freshteam Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Ansatt Property
+     - Freshteam Employee Property
+     - Freshteam Data Type
 
 
 Tidsbanken Avdeling to Freshteam Department
@@ -70,7 +65,4 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Fr
    * - Tidsbanken Avdeling Property
      - Freshteam Department Property
      - Freshteam Data Type
-   * - Navn
-     - name
-     - "string"
 
