@@ -2,7 +2,7 @@
 Wave to ZohoCRM Dataflow
 ========================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -35,12 +35,6 @@ The following properties are synchronized between a Wave Customer and a ZohoCRM 
    * - address.country.code
      - Shipping_Country
      - "string"
-   * - address.countryCode
-     - Billing_Country
-     - "string"
-   * - address.countryCode
-     - Shipping_Country
-     - "string"
    * - address.postalCode
      - Billing_Code
      - "string"
@@ -55,9 +49,6 @@ The following properties are synchronized between a Wave Customer and a ZohoCRM 
      - "string"
    * - fax
      - Fax
-     - "string"
-   * - id
-     - Created_Time
      - "string"
    * - internalNotes
      - Created_Time
