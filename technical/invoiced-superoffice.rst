@@ -2,25 +2,25 @@
 Invoiced to SuperOffice Dataflow
 ================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Invoiced Customers company to SuperOffice Contact
--------------------------------------------------
-Every Invoiced Customers company will be synchronized with a SuperOffice Contact.
+Invoiced Customers (organisation data) to SuperOffice Contact
+-------------------------------------------------------------
+Every Invoiced Customers (organisation data) will be synchronized with a SuperOffice Contact.
 
-Once a link between a Invoiced Customers company and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (organisation data) and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a SuperOffice Contact:
+The following properties are synchronized between a Invoiced Customers (organisation data) and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers company Property
+   * - Invoiced Customers (organisation data) Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
    * - address1
@@ -58,18 +58,18 @@ The following properties are synchronized between a Invoiced Customers company a
      - "string"
 
 
-Invoiced Customers person to SuperOffice Person
------------------------------------------------
-Every Invoiced Customers person will be synchronized with a SuperOffice Person.
+Invoiced Customers (human data) to SuperOffice Person
+-----------------------------------------------------
+Every Invoiced Customers (human data) will be synchronized with a SuperOffice Person.
 
-Once a link between a Invoiced Customers person and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (human data) and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers person and a SuperOffice Person:
+The following properties are synchronized between a Invoiced Customers (human data) and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers person Property
+   * - Invoiced Customers (human data) Property
      - SuperOffice Person Property
      - SuperOffice Data Type
    * - address1
