@@ -2,41 +2,41 @@
 Invoiced to Custom CRM Dataflow
 ===============================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Custom CRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Invoiced Customers company to Custom CRM Customer
--------------------------------------------------
-Every Invoiced Customers company will be synchronized with a Custom CRM Customer.
+Invoiced Customers (organisation data) to Custom CRM Customer
+-------------------------------------------------------------
+Every Invoiced Customers (organisation data) will be synchronized with a Custom CRM Customer.
 
-Once a link between a Invoiced Customers company and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (organisation data) and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a Custom CRM Customer:
+The following properties are synchronized between a Invoiced Customers (organisation data) and a Custom CRM Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers company Property
+   * - Invoiced Customers (organisation data) Property
      - Custom CRM Customer Property
      - Custom CRM Data Type
 
 
-Invoiced Customers person to Custom CRM Contact
------------------------------------------------
-Every Invoiced Customers person will be synchronized with a Custom CRM Contact.
+Invoiced Customers (human data) to Custom CRM Contact
+-----------------------------------------------------
+Every Invoiced Customers (human data) will be synchronized with a Custom CRM Contact.
 
-Once a link between a Invoiced Customers person and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (human data) and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers person and a Custom CRM Contact:
+The following properties are synchronized between a Invoiced Customers (human data) and a Custom CRM Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers person Property
+   * - Invoiced Customers (human data) Property
      - Custom CRM Contact Property
      - Custom CRM Data Type
 
@@ -105,34 +105,34 @@ The following properties are synchronized between a Invoiced Contacts and a Cust
      - Custom CRM Data Type
 
 
-Invoiced Customers company to Custom CRM Customer
--------------------------------------------------
-Every Invoiced Customers company will be synchronized with a Custom CRM Customer.
+Invoiced Customers (organisation data) to Custom CRM Customer
+-------------------------------------------------------------
+Every Invoiced Customers (organisation data) will be synchronized with a Custom CRM Customer.
 
-Once a link between a Invoiced Customers company and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (organisation data) and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers company and a Custom CRM Customer:
+The following properties are synchronized between a Invoiced Customers (organisation data) and a Custom CRM Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers company Property
+   * - Invoiced Customers (organisation data) Property
      - Custom CRM Customer Property
      - Custom CRM Data Type
 
 
-Invoiced Customers person to Custom CRM Customer
-------------------------------------------------
-Every Invoiced Customers person will be synchronized with a Custom CRM Customer.
+Invoiced Customers (organisation data) to Custom CRM Customer
+-------------------------------------------------------------
+Every Invoiced Customers (organisation data) will be synchronized with a Custom CRM Customer.
 
-Once a link between a Invoiced Customers person and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Invoiced Customers (organisation data) and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Invoiced Customers person and a Custom CRM Customer:
+The following properties are synchronized between a Invoiced Customers (organisation data) and a Custom CRM Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Invoiced Customers person Property
+   * - Invoiced Customers (organisation data) Property
      - Custom CRM Customer Property
      - Custom CRM Data Type
 
