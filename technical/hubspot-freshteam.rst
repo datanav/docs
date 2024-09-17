@@ -2,7 +2,7 @@
 HubSpot to Freshteam Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -35,12 +35,6 @@ The following properties are synchronized between a HubSpot Owner and a Freshtea
      - Freshteam Data Type
    * - email
      - official_email
-     - "string"
-   * - firstName
-     - first_name
-     - "string"
-   * - lastName
-     - last_name
      - "string"
 
 
