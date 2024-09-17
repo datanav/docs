@@ -2,7 +2,7 @@
 Business Central to Tilores Dataflow
 ====================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -31,12 +31,6 @@ The following properties are synchronized between a Business Central Contacts (h
      - "string"
    * - id
      - id
-     - "string"
-   * - mobilePhoneNumber
-     - phoneNumber
-     - "string"
-   * - phoneNumber
-     - phoneNumber
      - "string"
    * - postalCode
      - postalCode
@@ -90,9 +84,6 @@ The following properties are synchronized between a Business Central Employees a
      - "string"
    * - city
      - city
-     - "string"
-   * - email
-     - email
      - "string"
    * - givenName
      - firstName
