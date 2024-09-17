@@ -2,7 +2,7 @@
 Business Nxt to Business Central Dataflow
 =========================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -41,19 +41,19 @@ The following properties are synchronized between a Business Nxt Company and a B
      - Business Central Data Type
 
 
-Business Nxt Address to Business Central Customers company
-----------------------------------------------------------
-Every Business Nxt Address will be synchronized with a Business Central Customers company.
+Business Nxt Address to Business Central Customers (classification data)
+------------------------------------------------------------------------
+Every Business Nxt Address will be synchronized with a Business Central Customers (classification data).
 
-Once a link between a Business Nxt Address and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Address and a Business Central Customers (classification data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Nxt Address and a Business Central Customers company:
+The following properties are synchronized between a Business Nxt Address and a Business Central Customers (classification data):
 
 .. list-table::
    :header-rows: 1
 
    * - Business Nxt Address Property
-     - Business Central Customers company Property
+     - Business Central Customers (classification data) Property
      - Business Central Data Type
    * - emailAddress
      - email
@@ -66,19 +66,19 @@ The following properties are synchronized between a Business Nxt Address and a B
      - "string"
 
 
-Business Nxt Company to Business Central Customers company
-----------------------------------------------------------
-Every Business Nxt Company will be synchronized with a Business Central Customers company.
+Business Nxt Company to Business Central Customers (classification data)
+------------------------------------------------------------------------
+Every Business Nxt Company will be synchronized with a Business Central Customers (classification data).
 
-Once a link between a Business Nxt Company and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Nxt Company and a Business Central Customers (classification data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Nxt Company and a Business Central Customers company:
+The following properties are synchronized between a Business Nxt Company and a Business Central Customers (classification data):
 
 .. list-table::
    :header-rows: 1
 
    * - Business Nxt Company Property
-     - Business Central Customers company Property
+     - Business Central Customers (classification data) Property
      - Business Central Data Type
    * - name
      - displayName
