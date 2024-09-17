@@ -2,7 +2,7 @@
 PowerOffice GO to Exact Online Dataflow
 =======================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -118,23 +118,11 @@ The following properties are synchronized between a PowerOffice GO Customers (hu
    * - DateOfBirth
      - BirthDate
      - "string"
-   * - EmailAddress
-     - Email
-     - "string"
-   * - FirstName
-     - FirstName
-     - "string"
-   * - LastName
-     - LastName
-     - "string"
    * - MailAddress.City
      - City
      - "string"
    * - MailAddress.CountryCode
      - Country
-     - "string"
-   * - PhoneNumber
-     - Phone
      - "string"
 
 
@@ -174,26 +162,11 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - DateOfBirth
      - BirthDate
      - "string"
-   * - EmailAddress
-     - BusinessEmail
-     - "string"
-   * - EmailAddress
-     - Email
-     - "string"
-   * - FirstName
-     - FirstName
-     - "string"
-   * - LastName
-     - LastName
-     - "string"
    * - MailAddress.City
      - City
      - "string"
    * - MailAddress.CountryCode
      - Country
-     - "string"
-   * - PhoneNumber
-     - Mobile
      - "string"
 
 
