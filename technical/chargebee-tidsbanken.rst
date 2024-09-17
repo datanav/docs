@@ -2,7 +2,7 @@
 Chargebee to Tidsbanken Dataflow
 ================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -23,6 +23,27 @@ The following properties are synchronized between a Chargebee Address and a Tids
    * - Chargebee Address Property
      - Tidsbanken Kunde Property
      - Tidsbanken Data Type
+   * - addr
+     - Gateadresse
+     - "string"
+   * - addr
+     - Leveringsadresse
+     - "string"
+   * - city
+     - LevPoststed
+     - "string"
+   * - city
+     - Poststed
+     - "string"
+   * - subscription_id
+     - Id
+     - "string"
+   * - zip
+     - LevPostNr
+     - "string"
+   * - zip
+     - Postnr
+     - "string"
 
 
 Chargebee Customer to Tidsbanken Kunde
