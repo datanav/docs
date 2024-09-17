@@ -2,7 +2,7 @@
 Business Central to Exact Online Dataflow
 =========================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -105,15 +105,6 @@ The following properties are synchronized between a Business Central Customers (
    * - country
      - Country
      - "string"
-   * - displayName
-     - FullName
-     - "string"
-   * - email
-     - Email
-     - "string"
-   * - phoneNumber
-     - Phone
-     - "string"
 
 
 Business Central Employees to Exact Online Contacts
@@ -138,27 +129,6 @@ The following properties are synchronized between a Business Central Employees a
      - "string"
    * - country
      - Country
-     - "string"
-   * - displayName
-     - FullName
-     - "string"
-   * - email
-     - BusinessEmail
-     - "string"
-   * - givenName
-     - FirstName
-     - "string"
-   * - mobilePhone
-     - Mobile
-     - "string"
-   * - personalEmail
-     - Email
-     - "string"
-   * - phoneNumber
-     - Phone
-     - "string"
-   * - surname
-     - LastName
      - "string"
 
 
@@ -197,9 +167,6 @@ The following properties are synchronized between a Business Central Salesorders
      - "string"
    * - id
      - DeliveryAddress
-     - "string"
-   * - requestedDeliveryDate
-     - DeliveryDate
      - "string"
 
 
