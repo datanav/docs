@@ -2,7 +2,7 @@
 Business Nxt to Wave Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,12 +23,6 @@ The following properties are synchronized between a Business Nxt Order and a Wav
    * - Business Nxt Order Property
      - Wave Invoice Property
      - Wave Data Type
-   * - invoiceDate
-     - invoiceDate
-     - N/A
-   * - name
-     - title
-     - "string"
 
 
 Business Nxt Product to Wave Product
@@ -45,10 +39,4 @@ The following properties are synchronized between a Business Nxt Product and a W
    * - Business Nxt Product Property
      - Wave Product Property
      - Wave Data Type
-   * - description
-     - description
-     - "string"
-   * - priceQuantity
-     - unitPrice
-     - "string"
 
