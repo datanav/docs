@@ -2,7 +2,7 @@
 HubSpot to Zendesk Dataflow
 ===========================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -69,6 +69,22 @@ The following properties are synchronized between a HubSpot Company and a Zendes
      - "string"
 
 
+HubSpot Pipelineticket to Zendesk Tickets
+-----------------------------------------
+Every HubSpot Pipelineticket will be synchronized with a Zendesk Tickets.
+
+Once a link between a HubSpot Pipelineticket and a Zendesk Tickets is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Pipelineticket and a Zendesk Tickets:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Pipelineticket Property
+     - Zendesk Tickets Property
+     - Zendesk Data Type
+
+
 HubSpot Ticket to Zendesk Tickets
 ---------------------------------
 Every HubSpot Ticket will be synchronized with a Zendesk Tickets.
@@ -83,12 +99,6 @@ The following properties are synchronized between a HubSpot Ticket and a Zendesk
    * - HubSpot Ticket Property
      - Zendesk Tickets Property
      - Zendesk Data Type
-   * - properties.hubspot_owner_id
-     - requester_id
-     - "string"
-   * - properties.subject
-     - subject
-     - "string"
 
 
 HubSpot User to Zendesk Users
