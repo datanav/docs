@@ -2,7 +2,7 @@
 Asana to Trello Dataflow
 ========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -69,6 +69,22 @@ The following properties are synchronized between a Asana Teams and a Trello Org
      - "string"
 
 
+Asana Workspaces to Trello Organizations
+----------------------------------------
+Every Asana Workspaces will be synchronized with a Trello Organizations.
+
+Once a link between a Asana Workspaces and a Trello Organizations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Asana Workspaces and a Trello Organizations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Asana Workspaces Property
+     - Trello Organizations Property
+     - Trello Data Type
+
+
 Asana Tasks to Trello Cards
 ---------------------------
 Every Asana Tasks will be synchronized with a Trello Cards.
@@ -83,42 +99,6 @@ The following properties are synchronized between a Asana Tasks and a Trello Car
    * - Asana Tasks Property
      - Trello Cards Property
      - Trello Data Type
-   * - completed_at
-     - dueComplete
-     - "string"
-   * - due_on
-     - due
-     - "string"
-   * - name
-     - closed
-     - "string"
-   * - name
-     - desc
-     - "string"
-   * - name
-     - descData
-     - "string"
-   * - name
-     - idMemberCreator
-     - "string"
-   * - name
-     - idOrganization
-     - "string"
-   * - name
-     - invited
-     - "string"
-   * - name
-     - limits
-     - "string"
-   * - name
-     - memberships
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - start_at
-     - start
-     - "string"
 
 
 Asana Users to Trello Members
@@ -135,12 +115,6 @@ The following properties are synchronized between a Asana Users and a Trello Mem
    * - Asana Users Property
      - Trello Members Property
      - Trello Data Type
-   * - email
-     - email
-     - "string"
-   * - name
-     - fullName
-     - "string"
 
 
 Asana Workspaces to Trello Organizations
@@ -157,10 +131,4 @@ The following properties are synchronized between a Asana Workspaces and a Trell
    * - Asana Workspaces Property
      - Trello Organizations Property
      - Trello Data Type
-   * - email_domains
-     - website
-     - "string"
-   * - name
-     - name
-     - "string"
 
