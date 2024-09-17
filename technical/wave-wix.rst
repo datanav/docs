@@ -2,7 +2,7 @@
 Wave to Wix Dataflow
 ====================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -180,6 +180,9 @@ The following properties are synchronized between a Wave Vendor and a Wix Contac
    * - mobile
      - primaryInfo.phone
      - "string"
+   * - phone
+     - primaryInfo.phone
+     - "string"
 
 
 Wave Product to Wix Products
@@ -198,6 +201,12 @@ The following properties are synchronized between a Wave Product and a Wix Produ
    * - Wave Product Property
      - Wix Products Property
      - Wix Data Type
+   * - name
+     - name
+     - "string"
+   * - unitPrice
+     - priceData.price
+     - N/A
 
 
 Wave Customer to Wix Contacts
