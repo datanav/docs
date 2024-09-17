@@ -2,7 +2,7 @@
 PowerOffice GO to WebCRM Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -64,21 +64,6 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - PowerOffice GO Contactperson Property
      - WebCRM Persons Property
      - WebCRM Data Type
-   * - dateOfBirth
-     - document_number
-     - "string"
-   * - firstName
-     - PersonFirstName
-     - "string"
-   * - lastName
-     - PersonLastName
-     - "string"
-   * - partyId
-     - PersonOrganisationId
-     - "string"
-   * - phoneNumber
-     - PersonDirectPhone
-     - "string"
 
 
 PowerOffice GO Product to WebCRM Products
@@ -95,18 +80,6 @@ The following properties are synchronized between a PowerOffice GO Product and a
    * - PowerOffice GO Product Property
      - WebCRM Products Property
      - WebCRM Data Type
-   * - availableStock
-     - ProductQuantity
-     - "string"
-   * - costPrice
-     - ProductCostPrice
-     - "string"
-   * - salesPrice
-     - ProductPrice
-     - "string"
-   * - vatCode
-     - ProductVatCode
-     - "string"
 
 
 PowerOffice GO Salesorderlines to WebCRM Quotationline
@@ -123,24 +96,6 @@ The following properties are synchronized between a PowerOffice GO Salesorderlin
    * - PowerOffice GO Salesorderlines Property
      - WebCRM Quotationline Property
      - WebCRM Data Type
-   * - Allowance
-     - QuotationLineDiscount
-     - "string"
-   * - ProductUnitCost
-     - QuotationLineCostPrice
-     - "string"
-   * - ProductUnitPrice
-     - QuotationLinePrice
-     - "string"
-   * - Quantity
-     - QuotationLineQuantity
-     - "string"
-   * - VatRate
-     - QuotationLineVatPercentage
-     - "string"
-   * - sesam_SalesOrderId
-     - QuotationLineOpportunityId
-     - "string"
 
 
 PowerOffice GO Suppliers person to WebCRM Persons
@@ -157,16 +112,4 @@ The following properties are synchronized between a PowerOffice GO Suppliers per
    * - PowerOffice GO Suppliers person Property
      - WebCRM Persons Property
      - WebCRM Data Type
-   * - DateOfBirth
-     - document_number
-     - "string"
-   * - FirstName
-     - PersonFirstName
-     - "string"
-   * - LastName
-     - PersonLastName
-     - "string"
-   * - PhoneNumber
-     - PersonDirectPhone
-     - "string"
 
