@@ -2,7 +2,7 @@
 Tripletex to Zendesk Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -41,28 +41,28 @@ The following properties are synchronized between a Tripletex Contact and a Zend
      - "string"
 
 
-Tripletex Customer person to Zendesk Users
-------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer person and a Zendesk Users must be established.
+Tripletex Customer to Zendesk Users
+-----------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a Zendesk Users must be established.
 
-A Tripletex Customer person will merge with a Zendesk Users if one of the following property combinations match:
+A Tripletex Customer will merge with a Zendesk Users if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer person Property
+   * - Tripletex Customer Property
      - Zendesk Users Property
    * - email
      - email
 
-Once a link between a Tripletex Customer person and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a Zendesk Users:
+The following properties are synchronized between a Tripletex Customer and a Zendesk Users:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer person Property
+   * - Tripletex Customer Property
      - Zendesk Users Property
      - Zendesk Data Type
    * - email
