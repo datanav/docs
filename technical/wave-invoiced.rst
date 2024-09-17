@@ -2,7 +2,7 @@
 Wave to Invoiced Dataflow
 =========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,9 +23,38 @@ The following properties are synchronized between a Wave Customer and a Invoiced
    * - Wave Customer Property
      - Invoiced Customers company Property
      - Invoiced Data Type
-   * - name
-     - name
-     - "string"
+
+
+Wave Customer to Invoiced Customers person
+------------------------------------------
+Every Wave Customer will be synchronized with a Invoiced Customers person.
+
+Once a link between a Wave Customer and a Invoiced Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Invoiced Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Invoiced Customers person Property
+     - Invoiced Data Type
+
+
+Wave Customer person to Invoiced Customers company
+--------------------------------------------------
+Every Wave Customer person will be synchronized with a Invoiced Customers company.
+
+Once a link between a Wave Customer person and a Invoiced Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer person and a Invoiced Customers company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - Invoiced Customers company Property
+     - Invoiced Data Type
 
 
 Wave Customer person to Invoiced Customers person
@@ -42,42 +71,6 @@ The following properties are synchronized between a Wave Customer person and a I
    * - Wave Customer person Property
      - Invoiced Customers person Property
      - Invoiced Data Type
-   * - address.addressLine1
-     - address1
-     - "string"
-   * - address.addressLine2
-     - address2
-     - "string"
-   * - address.city
-     - city
-     - "string"
-   * - address.country.code
-     - country
-     - "string"
-   * - address.postalCode
-     - postal_code
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - address1
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - address2
-     - "string"
-   * - shippingDetails.address.city
-     - city
-     - "string"
-   * - shippingDetails.address.country.code
-     - country
-     - "string"
-   * - shippingDetails.address.postalCode
-     - postal_code
-     - "string"
 
 
 Wave Invoice to Invoiced Invoices
@@ -94,12 +87,6 @@ The following properties are synchronized between a Wave Invoice and a Invoiced 
    * - Wave Invoice Property
      - Invoiced Invoices Property
      - Invoiced Data Type
-   * - currency.code
-     - currency
-     - "string"
-   * - customer.id
-     - customer
-     - "string"
 
 
 Wave Invoice to Invoiced Lineitem
@@ -116,15 +103,6 @@ The following properties are synchronized between a Wave Invoice and a Invoiced 
    * - Wave Invoice Property
      - Invoiced Lineitem Property
      - Invoiced Data Type
-   * - items.description
-     - items.description
-     - "string"
-   * - items.price
-     - items.amount
-     - "string"
-   * - items.quantity
-     - items.quantity
-     - "string"
 
 
 Wave Product to Invoiced Items
@@ -141,10 +119,4 @@ The following properties are synchronized between a Wave Product and a Invoiced 
    * - Wave Product Property
      - Invoiced Items Property
      - Invoiced Data Type
-   * - description
-     - description
-     - "string"
-   * - name
-     - name
-     - "string"
 
