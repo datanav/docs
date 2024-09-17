@@ -2,7 +2,7 @@
 Keap to WooCommerce Dataflow
 ============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,10 +23,4 @@ The following properties are synchronized between a Keap Product and a WooCommer
    * - Keap Product Property
      - WooCommerce Product Property
      - WooCommerce Data Type
-   * - product_name
-     - name
-     - "string"
-   * - product_price
-     - sale_price
-     - "string"
 
