@@ -2,7 +2,7 @@
 Shopify to WebCRM Dataflow
 ==========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,18 +23,6 @@ The following properties are synchronized between a Shopify Order and a WebCRM Q
    * - Shopify Order Property
      - WebCRM Quotationline Property
      - WebCRM Data Type
-   * - id
-     - QuotationLineOpportunityId
-     - "string"
-   * - line_items.price
-     - QuotationLinePrice
-     - "string"
-   * - line_items.quantity
-     - QuotationLineQuantity
-     - "string"
-   * - line_items.total_discount
-     - QuotationLineDiscount
-     - "string"
 
 
 Shopify Sesamproduct to WebCRM Products
@@ -51,10 +39,4 @@ The following properties are synchronized between a Shopify Sesamproduct and a W
    * - Shopify Sesamproduct Property
      - WebCRM Products Property
      - WebCRM Data Type
-   * - sesam_priceExclVAT
-     - ProductPrice
-     - "string"
-   * - variants.inventory_quantity
-     - ProductQuantity
-     - "string"
 
