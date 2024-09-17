@@ -2,7 +2,7 @@
 Wave to Zendesk Dataflow
 ========================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -65,9 +65,6 @@ The following properties are synchronized between a Wave Customer and a Zendesk 
    * - Wave Customer Property
      - Zendesk Users Property
      - Zendesk Data Type
-   * - id
-     - organization_id
-     - "string"
 
 
 Wave Vendor to Zendesk Users
@@ -94,9 +91,6 @@ The following properties are synchronized between a Wave Vendor and a Zendesk Us
    * - Wave Vendor Property
      - Zendesk Users Property
      - Zendesk Data Type
-   * - id
-     - organization_id
-     - "string"
 
 
 Wave Customer to Zendesk Organizations
