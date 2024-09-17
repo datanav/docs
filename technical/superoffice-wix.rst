@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -35,21 +35,6 @@ The following properties are synchronized between a SuperOffice Person and a Wix
    * - SuperOffice Person Property
      - Wix Contacts Property
      - Wix Data Type
-   * - Address.Street.Address1
-     - info.addresses.items.address.addressLine
-     - "string"
-   * - Address.Street.Address2
-     - info.addresses.items.address.addressLine2
-     - "string"
-   * - Address.Street.City
-     - info.addresses.items.address.city
-     - "string"
-   * - Address.Street.Zipcode
-     - info.addresses.items.address.postalCode
-     - "string"
-   * - Emails.Value
-     - info.emails
-     - "string"
    * - Emails.Value
      - primaryInfo.email
      - "string"
@@ -59,17 +44,8 @@ The following properties are synchronized between a SuperOffice Person and a Wix
    * - Lastname
      - info.name.last
      - "string"
-   * - MobilePhones.Value
-     - info.phones
-     - "string"
-   * - MobilePhones.Value
-     - primaryInfo.phone
-     - "string"
    * - OfficePhones.Value
      - primaryInfo.phone
-     - "string"
-   * - PersonId
-     - id
      - "string"
 
 
@@ -102,9 +78,6 @@ The following properties are synchronized between a SuperOffice User and a Wix C
      - "string"
    * - lastName
      - info.name.last
-     - "string"
-   * - personEmail
-     - info.emails
      - "string"
    * - personEmail
      - primaryInfo.email
