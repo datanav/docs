@@ -2,7 +2,7 @@
 Tripletex to Chargebee Dataflow
 ===============================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -34,24 +34,6 @@ The following properties are synchronized between a Tripletex Contact and a Char
      - "string"
 
 
-Tripletex Customer to Chargebee Customer
-----------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer and a Chargebee Customer must be established.
-
-A new Chargebee Customer will be created from a Tripletex Customer if it is connected to a Tripletex Order, or Orderline that is synchronized into Chargebee.
-
-Once a link between a Tripletex Customer and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer and a Chargebee Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer Property
-     - Chargebee Customer Property
-     - Chargebee Data Type
-
-
 Tripletex Customer to Chargebee Business_entity
 -----------------------------------------------
 Every Tripletex Customer will be synchronized with a Chargebee Business_entity.
@@ -71,18 +53,18 @@ The following properties are synchronized between a Tripletex Customer and a Cha
      - "string"
 
 
-Tripletex Customer person to Chargebee Customer
------------------------------------------------
-Every Tripletex Customer person will be synchronized with a Chargebee Customer.
+Tripletex Customer (human data) to Chargebee Customer
+-----------------------------------------------------
+Every Tripletex Customer (human data) will be synchronized with a Chargebee Customer.
 
-Once a link between a Tripletex Customer person and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer (human data) and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a Chargebee Customer:
+The following properties are synchronized between a Tripletex Customer (human data) and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer person Property
+   * - Tripletex Customer (human data) Property
      - Chargebee Customer Property
      - Chargebee Data Type
    * - email
@@ -235,34 +217,34 @@ The following properties are synchronized between a Tripletex Customer and a Cha
      - Chargebee Data Type
 
 
-Tripletex Customer person to Chargebee Address
-----------------------------------------------
+Tripletex Customer (location data) to Chargebee Address
+-------------------------------------------------------
 removed person customers for now until that pattern is resolved, it  will be synchronized with a Chargebee Address.
 
-Once a link between a Tripletex Customer person and a Chargebee Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer (location data) and a Chargebee Address is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a Chargebee Address:
+The following properties are synchronized between a Tripletex Customer (location data) and a Chargebee Address:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer person Property
+   * - Tripletex Customer (location data) Property
      - Chargebee Address Property
      - Chargebee Data Type
 
 
-Tripletex Customer person to Chargebee Customer
------------------------------------------------
+Tripletex Customer (human data) to Chargebee Customer
+-----------------------------------------------------
 removed person customers for now until that pattern is resolved, it  will be synchronized with a Chargebee Customer.
 
-Once a link between a Tripletex Customer person and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer (human data) and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a Chargebee Customer:
+The following properties are synchronized between a Tripletex Customer (human data) and a Chargebee Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer person Property
+   * - Tripletex Customer (human data) Property
      - Chargebee Customer Property
      - Chargebee Data Type
 
