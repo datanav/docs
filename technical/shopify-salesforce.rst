@@ -2,7 +2,7 @@
 Shopify to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -25,6 +25,81 @@ The following properties are synchronized between a Shopify Order and a Salesfor
    * - Shopify Order Property
      - Salesforce Order Property
      - Salesforce Data Type
+   * - billing_address.address1
+     - BillingStreet
+     - "string"
+   * - billing_address.city
+     - BillingCity
+     - "string"
+   * - billing_address.city
+     - ShippingCity
+     - "string"
+   * - billing_address.country
+     - BillingCountry
+     - "string"
+   * - billing_address.country
+     - ShippingCountry
+     - "string"
+   * - billing_address.country_code
+     - BillingCountryCode
+     - "string"
+   * - billing_address.country_code
+     - ShippingCountryCode
+     - "string"
+   * - billing_address.zip
+     - BillingPostalCode
+     - "string"
+   * - billing_address.zip
+     - ShippingStateCode
+     - "string"
+   * - created_at
+     - OrderedDate
+     - "string"
+   * - currency
+     - CurrencyIsoCode
+     - "string"
+   * - current_total_price
+     - TotalAmount
+     - "string"
+   * - customer.id
+     - ID
+     - "string"
+   * - id
+     - ID
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - shipping_address.address1
+     - BillingStreet
+     - "string"
+   * - shipping_address.city
+     - BillingCity
+     - "string"
+   * - shipping_address.city
+     - ShippingCity
+     - "string"
+   * - shipping_address.country
+     - BillingCountry
+     - "string"
+   * - shipping_address.country
+     - ShippingCountry
+     - "string"
+   * - shipping_address.country_code
+     - BillingCountryCode
+     - "string"
+   * - shipping_address.country_code
+     - ShippingCountryCode
+     - "string"
+   * - shipping_address.zip
+     - BillingPostalCode
+     - "string"
+   * - shipping_address.zip
+     - ShippingStateCode
+     - "string"
+   * - total_price
+     - TotalAmount
+     - "string"
 
 
 Shopify Product to Salesforce Product2
@@ -98,6 +173,12 @@ The following properties are synchronized between a Shopify Sesamproduct and a S
    * - Shopify Sesamproduct Property
      - Salesforce Product2 Property
      - Salesforce Data Type
+   * - title
+     - Name
+     - "string"
+   * - variants.title
+     - Description
+     - "string"
 
 
 Shopify Customer to Salesforce Currencytype
@@ -146,6 +227,15 @@ The following properties are synchronized between a Shopify Order and a Salesfor
    * - Shopify Order Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - currency
+     - CurrencyIsoCode
+     - "string"
+   * - current_total_price
+     - TotalAmount
+     - "string"
+   * - total_price
+     - TotalAmount
+     - "string"
 
 
 Shopify Order to Salesforce Invoiceline
