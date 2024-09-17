@@ -2,7 +2,7 @@
 Invoiced to Salesforce Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -47,6 +47,22 @@ The following properties are synchronized between a Invoiced Invoices and a Sale
      - "string"
 
 
+Invoiced Items to Salesforce Product2
+-------------------------------------
+Every Invoiced Items will be synchronized with a Salesforce Product2.
+
+Once a link between a Invoiced Items and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Items and a Salesforce Product2:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Items Property
+     - Salesforce Product2 Property
+     - Salesforce Data Type
+
+
 Invoiced Lineitem to Salesforce Invoice
 ---------------------------------------
 Every Invoiced Lineitem will be synchronized with a Salesforce Invoice.
@@ -77,12 +93,22 @@ The following properties are synchronized between a Invoiced Contacts and a Sale
    * - Invoiced Contacts Property
      - Salesforce Contact Property
      - Salesforce Data Type
-   * - email
-     - Email
-     - "string"
-   * - phone
-     - MobilePhone
-     - "string"
+
+
+Invoiced Customers company to Salesforce Customer
+-------------------------------------------------
+Every Invoiced Customers company will be synchronized with a Salesforce Customer.
+
+Once a link between a Invoiced Customers company and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Customers company and a Salesforce Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Customers company Property
+     - Salesforce Customer Property
+     - Salesforce Data Type
 
 
 Invoiced Customers person to Salesforce Customer
@@ -99,9 +125,6 @@ The following properties are synchronized between a Invoiced Customers person an
    * - Invoiced Customers person Property
      - Salesforce Customer Property
      - Salesforce Data Type
-   * - name
-     - Name
-     - "string"
 
 
 Invoiced Invoices to Salesforce Order
@@ -118,9 +141,6 @@ The following properties are synchronized between a Invoiced Invoices and a Sale
    * - Invoiced Invoices Property
      - Salesforce Order Property
      - Salesforce Data Type
-   * - currency
-     - CurrencyIsoCode
-     - "string"
 
 
 Invoiced Items to Salesforce Product2
@@ -137,18 +157,6 @@ The following properties are synchronized between a Invoiced Items and a Salesfo
    * - Invoiced Items Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-   * - description
-     - Description
-     - "string"
-   * - description
-     - Description	
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - name
-     - Name	
-     - "string"
 
 
 Invoiced Lineitem to Salesforce Invoiceline
@@ -165,18 +173,6 @@ The following properties are synchronized between a Invoiced Lineitem and a Sale
    * - Invoiced Lineitem Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
-   * - items.amount
-     - UnitPrice
-     - "string"
-   * - items.description
-     - Description
-     - "string"
-   * - items.name
-     - Name
-     - "string"
-   * - items.quantity
-     - Quantity
-     - "string"
 
 
 Invoiced Lineitem to Salesforce Orderitem
@@ -193,15 +189,6 @@ The following properties are synchronized between a Invoiced Lineitem and a Sale
    * - Invoiced Lineitem Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
-   * - $original_id
-     - OrderId
-     - "string"
-   * - items.amount
-     - TotalPrice
-     - "string"
-   * - items.quantity
-     - Quantity
-     - "string"
 
 
 Invoiced Lineitem to Salesforce Quotelineitem
@@ -218,16 +205,4 @@ The following properties are synchronized between a Invoiced Lineitem and a Sale
    * - Invoiced Lineitem Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
-   * - items.amount
-     - TotalPriceWithTax
-     - "string"
-   * - items.description
-     - Description
-     - "string"
-   * - items.discounts
-     - Discount
-     - "string"
-   * - items.quantity
-     - Quantity
-     - "string"
 
