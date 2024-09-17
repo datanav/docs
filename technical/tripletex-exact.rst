@@ -2,7 +2,7 @@
 Tripletex to Exact Online Dataflow
 ==================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -33,6 +33,9 @@ The following properties are synchronized between a Tripletex Department and a E
    * - Tripletex Department Property
      - Exact Online Departments Property
      - Exact Online Data Type
+   * - departmentNumber
+     - Code
+     - "string"
 
 
 Tripletex Order to Exact Online Salesorders
@@ -51,6 +54,9 @@ The following properties are synchronized between a Tripletex Order and a Exact 
    * - Tripletex Order Property
      - Exact Online Salesorders Property
      - Exact Online Data Type
+   * - currency.id
+     - Currency
+     - "string"
 
 
 Tripletex Product to Exact Online Items
@@ -99,6 +105,12 @@ The following properties are synchronized between a Tripletex Customer and a Exa
    * - Tripletex Customer Property
      - Exact Online Accounts Property
      - Exact Online Data Type
+   * - name
+     - Name
+     - "string"
+   * - website
+     - Website
+     - "string"
 
 
 Tripletex Customer person to Exact Online Contacts
@@ -309,6 +321,36 @@ The following properties are synchronized between a Tripletex Customer person an
    * - Tripletex Customer person Property
      - Exact Online Accounts Property
      - Exact Online Data Type
+   * - deliveryAddress.city
+     - City
+     - "string"
+   * - deliveryAddress.country.id
+     - Country
+     - "string"
+   * - deliveryAddress.postalCode
+     - Postcode
+     - "string"
+   * - id
+     - ID
+     - "string"
+   * - physicalAddress.city
+     - City
+     - "string"
+   * - physicalAddress.country.id
+     - Country
+     - "string"
+   * - physicalAddress.postalCode
+     - Postcode
+     - "string"
+   * - postalAddress.city
+     - City
+     - "string"
+   * - postalAddress.country.id
+     - Country
+     - "string"
+   * - postalAddress.postalCode
+     - Postcode
+     - "string"
 
 
 Tripletex Customer person to Exact Online Addresses
