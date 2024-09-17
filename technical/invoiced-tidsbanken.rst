@@ -2,7 +2,7 @@
 Invoiced to Tidsbanken Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,34 +23,20 @@ The following properties are synchronized between a Invoiced Customers company a
    * - Invoiced Customers company Property
      - Tidsbanken Kunde Property
      - Tidsbanken Data Type
-   * - address1
-     - Gateadresse
-     - "string"
-   * - address1
-     - Leveringsadresse
-     - "string"
-   * - address2
-     - Leveringsadresse2
-     - "string"
-   * - address2
-     - Postadresse
-     - "string"
-   * - city
-     - LevPoststed
-     - "string"
-   * - city
-     - Poststed
-     - "string"
-   * - id
-     - Id
-     - "string"
-   * - name
-     - Navn
-     - "string"
-   * - postal_code
-     - LevPostNr
-     - "string"
-   * - postal_code
-     - Postnr
-     - "string"
+
+
+Invoiced Customers person to Tidsbanken Kunde
+---------------------------------------------
+Every Invoiced Customers person will be synchronized with a Tidsbanken Kunde.
+
+Once a link between a Invoiced Customers person and a Tidsbanken Kunde is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Customers person and a Tidsbanken Kunde:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Customers person Property
+     - Tidsbanken Kunde Property
+     - Tidsbanken Data Type
 
