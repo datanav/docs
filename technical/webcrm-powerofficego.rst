@@ -2,7 +2,7 @@
 WebCRM to PowerOffice GO Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -23,21 +23,6 @@ The following properties are synchronized between a WebCRM Persons and a PowerOf
    * - WebCRM Persons Property
      - PowerOffice GO Contactperson Property
      - PowerOffice GO Data Type
-   * - PersonDirectPhone
-     - phoneNumber
-     - "string"
-   * - PersonFirstName
-     - firstName
-     - "string"
-   * - PersonLastName
-     - lastName
-     - "string"
-   * - PersonOrganisationId
-     - partyId
-     - "integer"
-   * - document_number
-     - dateOfBirth
-     - N/A
 
 
 WebCRM Products to PowerOffice GO Product
@@ -54,18 +39,6 @@ The following properties are synchronized between a WebCRM Products and a PowerO
    * - WebCRM Products Property
      - PowerOffice GO Product Property
      - PowerOffice GO Data Type
-   * - ProductCostPrice
-     - costPrice
-     - N/A
-   * - ProductPrice
-     - salesPrice
-     - N/A
-   * - ProductQuantity
-     - availableStock
-     - "integer"
-   * - ProductVatCode
-     - vatCode
-     - "string"
 
 
 WebCRM Quotationline to PowerOffice GO Salesorderlines
