@@ -2,7 +2,7 @@
 Tripletex to Custom Webshop Dataflow
 ====================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -105,18 +105,18 @@ The following properties are synchronized between a Tripletex Customer and a Cus
      - Custom Webshop Data Type
 
 
-Tripletex Customer person to Custom Webshop Customer
-----------------------------------------------------
+Tripletex Customer (organisation data) to Custom Webshop Customer
+-----------------------------------------------------------------
 removed person customers for now until that pattern is resolved, it  will be synchronized with a Custom Webshop Customer.
 
-Once a link between a Tripletex Customer person and a Custom Webshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer (organisation data) and a Custom Webshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a Custom Webshop Customer:
+The following properties are synchronized between a Tripletex Customer (organisation data) and a Custom Webshop Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer person Property
+   * - Tripletex Customer (organisation data) Property
      - Custom Webshop Customer Property
      - Custom Webshop Data Type
 
