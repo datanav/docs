@@ -2,7 +2,7 @@
 Freshteam to Exact Online Dataflow
 ==================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -56,27 +56,6 @@ The following properties are synchronized between a Freshteam Employee and a Exa
      - "string"
    * - date_of_birth
      - BirthDate
-     - "string"
-   * - first_name
-     - FirstName
-     - "string"
-   * - last_name
-     - LastName
-     - "string"
-   * - official_email
-     - BusinessEmail
-     - "string"
-   * - personal_email
-     - Email
-     - "string"
-   * - phone_numbers.number (Dependant on having wd:Q4830453 in phone_numbers.name)
-     - BusinessMobile
-     - "string"
-   * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
-     - Mobile
-     - "string"
-   * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
-     - Phone
      - "string"
 
 
