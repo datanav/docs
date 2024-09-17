@@ -2,7 +2,7 @@
 Chargebee to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -44,6 +44,22 @@ The following properties are synchronized between a Chargebee Currency and a Sal
      - Salesforce Data Type
 
 
+Chargebee Item to Salesforce Product2
+-------------------------------------
+Every Chargebee Item will be synchronized with a Salesforce Product2.
+
+Once a link between a Chargebee Item and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Item and a Salesforce Product2:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Item Property
+     - Salesforce Product2 Property
+     - Salesforce Data Type
+
+
 Chargebee Item_family to Salesforce Currencytype
 ------------------------------------------------
 Every Chargebee Item_family will be synchronized with a Salesforce Currencytype.
@@ -79,6 +95,22 @@ The following properties are synchronized between a Chargebee Order and a Salesf
      - "string"
 
 
+Chargebee Address to Salesforce Customer
+----------------------------------------
+Every Chargebee Address will be synchronized with a Salesforce Customer.
+
+Once a link between a Chargebee Address and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Address and a Salesforce Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Address Property
+     - Salesforce Customer Property
+     - Salesforce Data Type
+
+
 Chargebee Business_entity to Salesforce Organization
 ----------------------------------------------------
 Every Chargebee Business_entity will be synchronized with a Salesforce Organization.
@@ -93,12 +125,6 @@ The following properties are synchronized between a Chargebee Business_entity an
    * - Chargebee Business_entity Property
      - Salesforce Organization Property
      - Salesforce Data Type
-   * - name
-     - Name
-     - "string"
-   * - name
-     - Name	
-     - "string"
 
 
 Chargebee Customer to Salesforce Customer
@@ -114,6 +140,22 @@ The following properties are synchronized between a Chargebee Customer and a Sal
 
    * - Chargebee Customer Property
      - Salesforce Customer Property
+     - Salesforce Data Type
+
+
+Chargebee Customer to Salesforce Invoice
+----------------------------------------
+Every Chargebee Customer will be synchronized with a Salesforce Invoice.
+
+Once a link between a Chargebee Customer and a Salesforce Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Customer and a Salesforce Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Customer Property
+     - Salesforce Invoice Property
      - Salesforce Data Type
 
 
@@ -147,7 +189,4 @@ The following properties are synchronized between a Chargebee Order and a Salesf
    * - Chargebee Order Property
      - Salesforce Order Property
      - Salesforce Data Type
-   * - currency_code
-     - CurrencyIsoCode
-     - "string"
 
