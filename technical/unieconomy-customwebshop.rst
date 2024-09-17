@@ -2,7 +2,7 @@
 Unieconomy to Custom Webshop Dataflow
 =====================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -21,6 +21,22 @@ The following properties are synchronized between a Unieconomy Companies and a C
    :header-rows: 1
 
    * - Unieconomy Companies Property
+     - Custom Webshop Customer Property
+     - Custom Webshop Data Type
+
+
+Unieconomy Customers to Custom Webshop Customer
+-----------------------------------------------
+Every Unieconomy Customers will be synchronized with a Custom Webshop Customer.
+
+Once a link between a Unieconomy Customers and a Custom Webshop Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Unieconomy Customers and a Custom Webshop Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Unieconomy Customers Property
      - Custom Webshop Customer Property
      - Custom Webshop Data Type
 
