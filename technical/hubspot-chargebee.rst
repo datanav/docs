@@ -2,7 +2,7 @@
 HubSpot to Chargebee Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -112,6 +112,22 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
 
    * - HubSpot Contactcompanyassociationtype Property
      - Chargebee Currency Property
+     - Chargebee Data Type
+
+
+HubSpot Deal to Chargebee Order
+-------------------------------
+Every HubSpot Deal will be synchronized with a Chargebee Order.
+
+Once a link between a HubSpot Deal and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a Chargebee Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - Chargebee Order Property
      - Chargebee Data Type
 
 
@@ -271,6 +287,22 @@ The following properties are synchronized between a HubSpot Lineitemquoteassocia
 
    * - HubSpot Lineitemquoteassociationtype Property
      - Chargebee Currency Property
+     - Chargebee Data Type
+
+
+HubSpot Product to Chargebee Item
+---------------------------------
+Every HubSpot Product will be synchronized with a Chargebee Item.
+
+Once a link between a HubSpot Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a Chargebee Item:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     - Chargebee Item Property
      - Chargebee Data Type
 
 
@@ -460,9 +492,6 @@ The following properties are synchronized between a HubSpot Deal and a Chargebee
    * - HubSpot Deal Property
      - Chargebee Order Property
      - Chargebee Data Type
-   * - properties.deal_currency_code
-     - currency_code
-     - "string"
 
 
 HubSpot Product to Chargebee Item
@@ -479,7 +508,4 @@ The following properties are synchronized between a HubSpot Product and a Charge
    * - HubSpot Product Property
      - Chargebee Item Property
      - Chargebee Data Type
-   * - properties.name
-     - name
-     - "string"
 
