@@ -2,7 +2,7 @@
 Tripletex to Unieconomy Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -39,6 +39,32 @@ The following properties are synchronized between a Tripletex Customer and a Uni
    * - organizationNumber
      - OrganizationNumber
      - "string"
+
+
+Tripletex Customer to Unieconomy Customers
+------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a Unieconomy Customers must be established.
+
+A Tripletex Customer will merge with a Unieconomy Customers if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - Unieconomy Customers Property
+   * - organizationNumber
+     - OrgNumber
+
+Once a link between a Tripletex Customer and a Unieconomy Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a Unieconomy Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - Unieconomy Customers Property
+     - Unieconomy Data Type
 
 
 Tripletex Supplier to Unieconomy Companies
@@ -105,22 +131,25 @@ The following properties are synchronized between a Tripletex Supplier and a Uni
      - "string"
 
 
-Tripletex Customer to Unieconomy Customers
-------------------------------------------
+Tripletex Customer person to Unieconomy Customers
+-------------------------------------------------
 removed person customers for now until that pattern is resolved, it  will be synchronized with a Unieconomy Customers.
 
-If a matching Unieconomy Customers already exists, the Tripletex Customer will be merged with the existing one.
-If no matching Unieconomy Customers is found, a new Unieconomy Customers will be created.
+Once a link between a Tripletex Customer person and a Unieconomy Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-A Tripletex Customer will merge with a Unieconomy Customers if one of the following property combinations match:
+The following properties are synchronized between a Tripletex Customer person and a Unieconomy Customers:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer Property
+   * - Tripletex Customer person Property
      - Unieconomy Customers Property
-   * - organizationNumber
-     - OrgNumber
+     - Unieconomy Data Type
+
+
+Tripletex Customer to Unieconomy Customers
+------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a Unieconomy Customers.
 
 Once a link between a Tripletex Customer and a Unieconomy Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -132,15 +161,6 @@ The following properties are synchronized between a Tripletex Customer and a Uni
    * - Tripletex Customer Property
      - Unieconomy Customers Property
      - Unieconomy Data Type
-   * - organizationNumber
-     - OrgNumber
-     - "string"
-   * - url
-     - WebUrl
-     - "string"
-   * - website
-     - WebUrl
-     - "string"
 
 
 Tripletex Department to Unieconomy Departments
@@ -157,10 +177,4 @@ The following properties are synchronized between a Tripletex Department and a U
    * - Tripletex Department Property
      - Unieconomy Departments Property
      - Unieconomy Data Type
-   * - departmentNumber
-     - DepartmentNumber
-     - "string"
-   * - name
-     - Name
-     - "string"
 
