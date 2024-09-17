@@ -2,7 +2,7 @@
 Exact Online to WebCRM Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -80,9 +80,6 @@ The following properties are synchronized between a Exact Online Contacts and a 
    * - Exact Online Contacts Property
      - WebCRM Persons Property
      - WebCRM Data Type
-   * - BirthDate
-     - document_number
-     - "string"
 
 
 Exact Online Items to WebCRM Products
@@ -115,22 +112,4 @@ The following properties are synchronized between a Exact Online Salesorderlines
    * - Exact Online Salesorderlines Property
      - WebCRM Quotationline Property
      - WebCRM Data Type
-   * - CostPriceFC
-     - QuotationLineCostPrice
-     - "string"
-   * - CostPriceFC
-     - QuotationLineDiscount
-     - "string"
-   * - CostPriceFC
-     - QuotationLinePrice
-     - "string"
-   * - CostPriceFC
-     - QuotationLineQuantity
-     - "string"
-   * - CostPriceFC
-     - QuotationLineVatPercentage
-     - "string"
-   * - OrderID
-     - QuotationLineOpportunityId
-     - "string"
 
