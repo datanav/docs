@@ -2,7 +2,7 @@
 Wave to Wave Dataflow
 =====================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -122,16 +122,7 @@ The following properties are synchronized between a Wave Customer and a Wave Cus
      - address.country.code
      - "string"
    * - address.country.code
-     - address.countryCode
-     - "string"
-   * - address.country.code
      - shippingDetails.address.country.code
-     - "string"
-   * - address.countryCode
-     - address.country.code
-     - "string"
-   * - address.countryCode
-     - address.countryCode
      - "string"
    * - address.postalCode
      - address.postalCode
@@ -165,9 +156,6 @@ The following properties are synchronized between a Wave Customer and a Wave Cus
      - "string"
    * - shippingDetails.address.country.code
      - address.country.code
-     - "string"
-   * - shippingDetails.address.country.code
-     - address.countryCode
      - "string"
    * - shippingDetails.address.country.code
      - shippingDetails.address.country.code
