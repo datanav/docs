@@ -2,7 +2,7 @@
 Wix.com to HubSpot Dataflow
 ===========================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -91,39 +91,6 @@ The following properties are synchronized between a Wix.com Members and a HubSpo
      - HubSpot Data Type
    * - loginEmail
      - properties.email
-     - "string"
-
-
-Wix.com Products to HubSpot Product
------------------------------------
-Before any synchronization can take place, a link between a Wix.com Products and a HubSpot Product must be established.
-
-A new HubSpot Product will be created from a Wix.com Products if it is connected to a Wix.com Wix-orders that is synchronized into HubSpot.
-
-Once a link between a Wix.com Products and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Products and a HubSpot Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Products Property
-     - HubSpot Product Property
-     - HubSpot Data Type
-   * - costAndProfitData.itemCost
-     - properties.hs_cost_of_goods_sold
-     - "string"
-   * - costRange.maxValue
-     - properties.hs_cost_of_goods_sold
-     - "string"
-   * - name
-     - properties.name
-     - "string"
-   * - priceData.price
-     - properties.price
-     - "string"
-   * - sku
-     - properties.hs_sku
      - "string"
 
 
