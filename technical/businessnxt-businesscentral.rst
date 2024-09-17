@@ -2,7 +2,7 @@
 Business Nxt to Business Central Dataflow
 =========================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -41,6 +41,38 @@ The following properties are synchronized between a Business Nxt Company and a B
      - Business Central Data Type
 
 
+Business Nxt Address to Business Central Customers company
+----------------------------------------------------------
+Every Business Nxt Address will be synchronized with a Business Central Customers company.
+
+Once a link between a Business Nxt Address and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Address and a Business Central Customers company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Address Property
+     - Business Central Customers company Property
+     - Business Central Data Type
+
+
+Business Nxt Company to Business Central Customers company
+----------------------------------------------------------
+Every Business Nxt Company will be synchronized with a Business Central Customers company.
+
+Once a link between a Business Nxt Company and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Company and a Business Central Customers company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Company Property
+     - Business Central Customers company Property
+     - Business Central Data Type
+
+
 Business Nxt Order to Business Central Salesorders
 --------------------------------------------------
 Every Business Nxt Order will be synchronized with a Business Central Salesorders.
@@ -55,12 +87,6 @@ The following properties are synchronized between a Business Nxt Order and a Bus
    * - Business Nxt Order Property
      - Business Central Salesorders Property
      - Business Central Data Type
-   * - dueDate
-     - requestedDeliveryDate
-     - N/A
-   * - orderDate
-     - orderDate
-     - N/A
 
 
 Business Nxt Orderline to Business Central Salesorderlines
@@ -77,9 +103,6 @@ The following properties are synchronized between a Business Nxt Orderline and a
    * - Business Nxt Orderline Property
      - Business Central Salesorderlines Property
      - Business Central Data Type
-   * - orderNo
-     - documentId
-     - "string"
 
 
 Business Nxt Product to Business Central Items
@@ -96,7 +119,4 @@ The following properties are synchronized between a Business Nxt Product and a B
    * - Business Nxt Product Property
      - Business Central Items Property
      - Business Central Data Type
-   * - priceQuantity
-     - unitPrice
-     - N/A
 
