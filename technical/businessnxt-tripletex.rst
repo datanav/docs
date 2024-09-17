@@ -2,7 +2,7 @@
 Business Nxt to Tripletex Dataflow
 ==================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,12 +23,6 @@ The following properties are synchronized between a Business Nxt Order and a Tri
    * - Business Nxt Order Property
      - Tripletex Order Property
      - Tripletex Data Type
-   * - dueDate
-     - deliveryDate
-     - N/A
-   * - orderDate
-     - orderDate
-     - N/A
 
 
 Business Nxt Orderline to Tripletex Orderline
@@ -45,9 +39,6 @@ The following properties are synchronized between a Business Nxt Orderline and a
    * - Business Nxt Orderline Property
      - Tripletex Orderline Property
      - Tripletex Data Type
-   * - orderNo
-     - order.id
-     - "integer"
 
 
 Business Nxt Product to Tripletex Product
@@ -64,13 +55,4 @@ The following properties are synchronized between a Business Nxt Product and a T
    * - Business Nxt Product Property
      - Tripletex Product Property
      - Tripletex Data Type
-   * - description
-     - description
-     - "string"
-   * - priceQuantity
-     - priceExcludingVatCurrency
-     - "float"
-   * - quantityPerUnit
-     - stockOfGoods
-     - "integer"
 
