@@ -2,12 +2,28 @@
 WooCommerce to Invoiced Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from WooCommerce to Invoiced. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+WooCommerce Customer to Invoiced Customers company
+--------------------------------------------------
+Every WooCommerce Customer will be synchronized with a Invoiced Customers company.
+
+Once a link between a WooCommerce Customer and a Invoiced Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WooCommerce Customer and a Invoiced Customers company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WooCommerce Customer Property
+     - Invoiced Customers company Property
+     - Invoiced Data Type
+
 
 WooCommerce Customer to Invoiced Customers person
 -------------------------------------------------
@@ -39,15 +55,6 @@ The following properties are synchronized between a WooCommerce Order and a Invo
    * - WooCommerce Order Property
      - Invoiced Invoices Property
      - Invoiced Data Type
-   * - currency
-     - currency
-     - "string"
-   * - customer_id
-     - customer
-     - "string"
-   * - discount_total
-     - discounts
-     - "string"
 
 
 WooCommerce Order to Invoiced Lineitem
@@ -64,15 +71,6 @@ The following properties are synchronized between a WooCommerce Order and a Invo
    * - WooCommerce Order Property
      - Invoiced Lineitem Property
      - Invoiced Data Type
-   * - line_items.name
-     - items.name
-     - "string"
-   * - line_items.price
-     - items.amount
-     - "string"
-   * - line_items.quantity
-     - items.quantity
-     - "string"
 
 
 WooCommerce Product to Invoiced Items
@@ -89,10 +87,4 @@ The following properties are synchronized between a WooCommerce Product and a In
    * - WooCommerce Product Property
      - Invoiced Items Property
      - Invoiced Data Type
-   * - name
-     - name
-     - "string"
-   * - price
-     - unit_cost
-     - "string"
 
