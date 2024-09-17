@@ -2,12 +2,48 @@
 Salesforce to PowerOffice GO Dataflow
 =====================================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to PowerOffice GO. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Salesforce Order to Powerofficego Salesorders
+---------------------------------------------
+Before any synchronization can take place, a link between a Salesforce Order and a Powerofficego Salesorders must be established.
+
+A new Powerofficego Salesorders will be created from a Salesforce Order if it is connected to a Salesforce Order, Seller, Orderitem, Invoiceline, or Quotelineitem that is synchronized into Powerofficego.
+
+Once a link between a Salesforce Order and a Powerofficego Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Order and a Powerofficego Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Order Property
+     - Powerofficego Salesorders Property
+     - Powerofficego Data Type
+
+
+Salesforce Product2 to Powerofficego Product
+--------------------------------------------
+Before any synchronization can take place, a link between a Salesforce Product2 and a Powerofficego Product must be established.
+
+A new Powerofficego Product will be created from a Salesforce Product2 if it is connected to a Salesforce Order, Seller, Orderitem, Invoiceline, or Quotelineitem that is synchronized into Powerofficego.
+
+Once a link between a Salesforce Product2 and a Powerofficego Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Product2 and a Powerofficego Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Product2 Property
+     - Powerofficego Product Property
+     - Powerofficego Data Type
+
 
 Salesforce Contact to PowerOffice GO Contactperson
 --------------------------------------------------
@@ -23,24 +59,22 @@ The following properties are synchronized between a Salesforce Contact and a Pow
    * - Salesforce Contact Property
      - PowerOffice GO Contactperson Property
      - PowerOffice GO Data Type
-   * - Birthdate
-     - dateOfBirth
-     - N/A
-   * - Email
-     - emailAddress
-     - "string"
-   * - FirstName
-     - firstName
-     - "string"
-   * - HomePhone
-     - phoneNumber
-     - "string"
-   * - LastName
-     - lastName
-     - "string"
-   * - Phone
-     - phoneNumber
-     - "string"
+
+
+Salesforce Customer to PowerOffice GO Customers
+-----------------------------------------------
+Every Salesforce Customer will be synchronized with a PowerOffice GO Customers.
+
+Once a link between a Salesforce Customer and a PowerOffice GO Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Customer and a PowerOffice GO Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Customer Property
+     - PowerOffice GO Customers Property
+     - PowerOffice GO Data Type
 
 
 Salesforce Customer to PowerOffice GO Customers person
@@ -73,15 +107,6 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Salesforce Invoiceline Property
      - PowerOffice GO Salesorderlines Property
      - PowerOffice GO Data Type
-   * - Name
-     - Description
-     - "string"
-   * - Quantity
-     - Quantity
-     - N/A
-   * - UnitPrice
-     - ProductUnitPrice
-     - N/A
 
 
 Salesforce Order to PowerOffice GO Salesorders
@@ -98,15 +123,6 @@ The following properties are synchronized between a Salesforce Order and a Power
    * - Salesforce Order Property
      - PowerOffice GO Salesorders Property
      - PowerOffice GO Data Type
-   * - CurrencyIsoCode
-     - CurrencyCode
-     - "string"
-   * - EffectiveDate
-     - SalesOrderDate
-     - "string"
-   * - OrderedDate
-     - SalesOrderDate
-     - "string"
 
 
 Salesforce Orderitem to PowerOffice GO Salesorderlines
@@ -123,15 +139,6 @@ The following properties are synchronized between a Salesforce Orderitem and a P
    * - Salesforce Orderitem Property
      - PowerOffice GO Salesorderlines Property
      - PowerOffice GO Data Type
-   * - OrderId
-     - sesam_SalesOrderId
-     - "string"
-   * - Quantity
-     - Quantity
-     - N/A
-   * - TotalPrice
-     - ProductUnitPrice
-     - N/A
 
 
 Salesforce Product2 to PowerOffice GO Product
@@ -148,18 +155,6 @@ The following properties are synchronized between a Salesforce Product2 and a Po
    * - Salesforce Product2 Property
      - PowerOffice GO Product Property
      - PowerOffice GO Data Type
-   * - Description
-     - description
-     - "string"
-   * - Description	
-     - description
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - Name	
-     - name
-     - "string"
 
 
 Salesforce Quotelineitem to PowerOffice GO Salesorderlines
@@ -176,15 +171,6 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - Salesforce Quotelineitem Property
      - PowerOffice GO Salesorderlines Property
      - PowerOffice GO Data Type
-   * - Discount
-     - Allowance
-     - "float"
-   * - Quantity
-     - Quantity
-     - N/A
-   * - TotalPriceWithTax
-     - ProductUnitPrice
-     - N/A
 
 
 Salesforce User to PowerOffice GO Employees
@@ -201,19 +187,4 @@ The following properties are synchronized between a Salesforce User and a PowerO
    * - Salesforce User Property
      - PowerOffice GO Employees Property
      - PowerOffice GO Data Type
-   * - EmployeeNumber
-     - Number
-     - "string"
-   * - FirstName
-     - FirstName
-     - "string"
-   * - LastName
-     - LastName
-     - "string"
-   * - MobilePhone
-     - PhoneNumber
-     - "string"
-   * - Title
-     - JobTitle
-     - "string"
 
