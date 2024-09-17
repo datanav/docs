@@ -2,7 +2,7 @@
 Custom CRM to HubSpot Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -41,6 +41,22 @@ The following properties are synchronized between a Custom CRM Customer and a Hu
      - HubSpot Data Type
 
 
+Custom CRM Order to HubSpot Deal
+--------------------------------
+Every Custom CRM Order will be synchronized with a HubSpot Deal.
+
+Once a link between a Custom CRM Order and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom CRM Order and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom CRM Order Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
+
+
 Custom CRM Product to HubSpot Product
 -------------------------------------
 Every Custom CRM Product will be synchronized with a HubSpot Product.
@@ -70,5 +86,21 @@ The following properties are synchronized between a Custom CRM Quote and a HubSp
 
    * - Custom CRM Quote Property
      - HubSpot Quote Property
+     - HubSpot Data Type
+
+
+Custom CRM User to HubSpot User
+-------------------------------
+Every Custom CRM User will be synchronized with a HubSpot User.
+
+Once a link between a Custom CRM User and a HubSpot User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom CRM User and a HubSpot User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom CRM User Property
+     - HubSpot User Property
      - HubSpot Data Type
 
