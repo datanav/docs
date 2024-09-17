@@ -2,7 +2,7 @@
 Wix.com to WebCRM Dataflow
 ==========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,15 +23,6 @@ The following properties are synchronized between a Wix.com Contacts and a WebCR
    * - Wix.com Contacts Property
      - WebCRM Persons Property
      - WebCRM Data Type
-   * - info.name.first
-     - PersonFirstName
-     - "string"
-   * - info.name.last
-     - PersonLastName
-     - "string"
-   * - primaryInfo.phone
-     - PersonDirectPhone
-     - "string"
 
 
 Wix.com Orders to WebCRM Quotationline
@@ -48,15 +39,6 @@ The following properties are synchronized between a Wix.com Orders and a WebCRM 
    * - Wix.com Orders Property
      - WebCRM Quotationline Property
      - WebCRM Data Type
-   * - id
-     - QuotationLineOpportunityId
-     - "string"
-   * - lineItems.price
-     - QuotationLinePrice
-     - "string"
-   * - lineItems.quantity
-     - QuotationLineQuantity
-     - "string"
 
 
 Wix.com Products to WebCRM Products
@@ -73,13 +55,4 @@ The following properties are synchronized between a Wix.com Products and a WebCR
    * - Wix.com Products Property
      - WebCRM Products Property
      - WebCRM Data Type
-   * - costAndProfitData.itemCost
-     - ProductCostPrice
-     - "string"
-   * - costRange.maxValue
-     - ProductCostPrice
-     - "string"
-   * - priceData.price
-     - ProductPrice
-     - "string"
 
