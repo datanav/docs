@@ -2,7 +2,7 @@
 WebCRM to Shopify Dataflow
 ==========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,10 +23,4 @@ The following properties are synchronized between a WebCRM Products and a Shopif
    * - WebCRM Products Property
      - Shopify Sesamproduct Property
      - Shopify Data Type
-   * - ProductPrice
-     - sesam_priceExclVAT
-     - "string"
-   * - ProductQuantity
-     - variants.inventory_quantity
-     - "integer"
 
