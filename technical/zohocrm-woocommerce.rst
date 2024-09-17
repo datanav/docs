@@ -2,7 +2,7 @@
 ZohoCRM to WooCommerce Dataflow
 ===============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -23,4 +23,10 @@ The following properties are synchronized between a ZohoCRM Deal and a WooCommer
    * - ZohoCRM Deal Property
      - WooCommerce Order Property
      - WooCommerce Data Type
+   * - Account_Name.id
+     - customer_id
+     - "string"
+   * - Contact_Name.id
+     - customer_id
+     - "string"
 
