@@ -2,7 +2,7 @@
 Exact Online to Salesforce Dataflow
 ===================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -41,6 +41,12 @@ The following properties are synchronized between a Exact Salesorders and a Sale
    * - Exact Salesorders Property
      - Salesforce Order Property
      - Salesforce Data Type
+   * - Currency
+     - CurrencyIsoCode
+     - "string"
+   * - Description
+     - Description
+     - "string"
 
 
 Exact Online Accounts to Salesforce Division
@@ -76,6 +82,9 @@ The following properties are synchronized between a Exact Online Currencies and 
    * - Exact Online Currencies Property
      - Salesforce Currencytype Property
      - Salesforce Data Type
+   * - Code
+     - IsoCode
+     - "string"
 
 
 Exact Online Departments to Salesforce Division
@@ -146,6 +155,12 @@ The following properties are synchronized between a Exact Online Salesinvoices a
    * - Exact Online Salesinvoices Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - Currency
+     - CurrencyIsoCode
+     - "string"
+   * - Description
+     - Description
+     - "string"
 
 
 Exact Online Salesorderlines to Salesforce Invoice
