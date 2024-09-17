@@ -2,7 +2,7 @@
 MemberCare to HubSpot Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -101,13 +101,36 @@ The following properties are synchronized between a MemberCare Invoices and a Hu
    * - MemberCare Invoices Property
      - HubSpot Lineitem Property
      - HubSpot Data Type
-   * - invoiceItems.description
-     - properties.description
-     - "string"
-   * - invoiceItems.quantity
-     - properties.quantity
-     - N/A
-   * - invoiceItems.unitPrice
-     - properties.price
-     - "string"
+
+
+MemberCare Invoices to HubSpot Lineitemdealassociationtype
+----------------------------------------------------------
+Every MemberCare Invoices will be synchronized with a HubSpot Lineitemdealassociationtype.
+
+Once a link between a MemberCare Invoices and a HubSpot Lineitemdealassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a MemberCare Invoices and a HubSpot Lineitemdealassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - MemberCare Invoices Property
+     - HubSpot Lineitemdealassociationtype Property
+     - HubSpot Data Type
+
+
+MemberCare Invoices to HubSpot Lineitemquoteassociationtype
+-----------------------------------------------------------
+Every MemberCare Invoices will be synchronized with a HubSpot Lineitemquoteassociationtype.
+
+Once a link between a MemberCare Invoices and a HubSpot Lineitemquoteassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a MemberCare Invoices and a HubSpot Lineitemquoteassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - MemberCare Invoices Property
+     - HubSpot Lineitemquoteassociationtype Property
+     - HubSpot Data Type
 
