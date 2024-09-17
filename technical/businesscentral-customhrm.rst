@@ -2,7 +2,7 @@
 Business Central to Custom HRM Dataflow
 =======================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -69,6 +69,22 @@ The following properties are synchronized between a Business Central Customers p
    :header-rows: 1
 
    * - Business Central Customers person Property
+     - Custom HRM Employee Property
+     - Custom HRM Data Type
+
+
+Business Central Employees to Custom HRM Employee
+-------------------------------------------------
+Every Business Central Employees will be synchronized with a Custom HRM Employee.
+
+Once a link between a Business Central Employees and a Custom HRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Employees and a Custom HRM Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Employees Property
      - Custom HRM Employee Property
      - Custom HRM Data Type
 
