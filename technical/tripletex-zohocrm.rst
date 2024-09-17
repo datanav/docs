@@ -2,7 +2,7 @@
 Tripletex to ZohoCRM Dataflow
 =============================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -110,18 +110,18 @@ The following properties are synchronized between a Tripletex Department and a Z
      - "string"
 
 
-Tripletex Customer person to ZohoCRM Contact
---------------------------------------------
+Tripletex Customer (human data) to ZohoCRM Contact
+--------------------------------------------------
 removed person customers for now until that pattern is resolved, it  will be synchronized with a ZohoCRM Contact.
 
-Once a link between a Tripletex Customer person and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer (human data) and a ZohoCRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a ZohoCRM Contact:
+The following properties are synchronized between a Tripletex Customer (human data) and a ZohoCRM Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer person Property
+   * - Tripletex Customer (human data) Property
      - ZohoCRM Contact Property
      - ZohoCRM Data Type
 
