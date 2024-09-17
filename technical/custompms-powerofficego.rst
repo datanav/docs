@@ -2,7 +2,7 @@
 Custom PMS to PowerOffice GO Dataflow
 =====================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -25,19 +25,19 @@ The following properties are synchronized between a Custom PMS Customer and a Po
      - PowerOffice GO Data Type
 
 
-Custom PMS Customer to PowerOffice GO Customers person
-------------------------------------------------------
-Every Custom PMS Customer will be synchronized with a PowerOffice GO Customers person.
+Custom PMS Customer to PowerOffice GO Customers (human data)
+------------------------------------------------------------
+Every Custom PMS Customer will be synchronized with a PowerOffice GO Customers (human data).
 
-Once a link between a Custom PMS Customer and a PowerOffice GO Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Custom PMS Customer and a PowerOffice GO Customers (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Custom PMS Customer and a PowerOffice GO Customers person:
+The following properties are synchronized between a Custom PMS Customer and a PowerOffice GO Customers (human data):
 
 .. list-table::
    :header-rows: 1
 
    * - Custom PMS Customer Property
-     - PowerOffice GO Customers person Property
+     - PowerOffice GO Customers (human data) Property
      - PowerOffice GO Data Type
 
 
