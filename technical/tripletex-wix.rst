@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -55,28 +55,28 @@ The following properties are synchronized between a Tripletex Contact and a Wix 
      - "string"
 
 
-Tripletex Customer person to Wix Contacts
------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer person and a Wix Contacts must be established.
+Tripletex Customer to Wix Contacts
+----------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a Wix Contacts must be established.
 
-A Tripletex Customer person will merge with a Wix Contacts if one of the following property combinations match:
+A Tripletex Customer will merge with a Wix Contacts if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer person Property
+   * - Tripletex Customer Property
      - Wix Contacts Property
    * - email
      - primaryInfo.email
 
-Once a link between a Tripletex Customer person and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a Wix Contacts:
+The following properties are synchronized between a Tripletex Customer and a Wix Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer person Property
+   * - Tripletex Customer Property
      - Wix Contacts Property
      - Wix Data Type
    * - email
@@ -153,93 +153,6 @@ The following properties are synchronized between a Tripletex Employee and a Wix
    * - phoneNumberWork
      - primaryInfo.phone
      - "string"
-
-
-Tripletex Customer to Wix Contacts
-----------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer and a Wix Contacts must be established.
-
-A new Wix Contacts will be created from a Tripletex Customer if it is connected to a Tripletex Order, or Orderline that is synchronized into Wix.
-
-Once a link between a Tripletex Customer and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer and a Wix Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer Property
-     - Wix Contacts Property
-     - Wix Data Type
-   * - deliveryAddress.addressLine1
-     - info.addresses.items.address.addressLine
-     - "string"
-   * - deliveryAddress.addressLine2
-     - info.addresses.items.address.addressLine2
-     - "string"
-   * - deliveryAddress.city
-     - info.addresses.items.address.city
-     - "string"
-   * - deliveryAddress.postalCode
-     - info.addresses.items.address.postalCode
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - physicalAddress.addressLine1
-     - info.addresses.items.address.addressLine
-     - "string"
-   * - physicalAddress.addressLine2
-     - info.addresses.items.address.addressLine2
-     - "string"
-   * - physicalAddress.city
-     - info.addresses.items.address.city
-     - "string"
-   * - physicalAddress.postalCode
-     - info.addresses.items.address.postalCode
-     - "string"
-   * - postalAddress.addressLine1
-     - info.addresses.items.address.addressLine
-     - "string"
-   * - postalAddress.addressLine2
-     - info.addresses.items.address.addressLine2
-     - "string"
-   * - postalAddress.city
-     - info.addresses.items.address.city
-     - "string"
-   * - postalAddress.postalCode
-     - info.addresses.items.address.postalCode
-     - "string"
-
-
-Tripletex Product to Wix Products
----------------------------------
-Before any synchronization can take place, a link between a Tripletex Product and a Wix Products must be established.
-
-A new Wix Products will be created from a Tripletex Product if it is connected to a Tripletex Order, or Orderline that is synchronized into Wix.
-
-Once a link between a Tripletex Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Product and a Wix Products:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     - Wix Products Property
-     - Wix Data Type
-   * - costExcludingVatCurrency
-     - costAndProfitData.itemCost
-     - N/A
-   * - currency.id
-     - priceData.currency
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - priceExcludingVatCurrency
-     - priceData.price
-     - N/A
 
 
 Tripletex Contact to Wix Contacts
