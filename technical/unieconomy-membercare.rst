@@ -2,7 +2,7 @@
 Unieconomy to MemberCare Dataflow
 =================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Unieconomy Companies and a M
    * - Unieconomy Companies Property
      - MemberCare Companies Property
      - MemberCare Data Type
+   * - Name
+     - companyName
+     - "string"
 
 
 Unieconomy Customers to MemberCare Companies
