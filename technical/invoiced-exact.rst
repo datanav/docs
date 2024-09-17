@@ -2,12 +2,28 @@
 Invoiced to Exact Online Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Invoiced to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Invoiced Customers company to Exact Online Accounts
+---------------------------------------------------
+Every Invoiced Customers company will be synchronized with a Exact Online Accounts.
+
+Once a link between a Invoiced Customers company and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Customers company and a Exact Online Accounts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Customers company Property
+     - Exact Online Accounts Property
+     - Exact Online Data Type
+
 
 Invoiced Customers person to Exact Online Contacts
 --------------------------------------------------
@@ -50,6 +66,22 @@ The following properties are synchronized between a Invoiced Invoices and a Exac
      - "string"
 
 
+Invoiced Items to Exact Online Items
+------------------------------------
+Every Invoiced Items will be synchronized with a Exact Online Items.
+
+Once a link between a Invoiced Items and a Exact Online Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Items and a Exact Online Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Items Property
+     - Exact Online Items Property
+     - Exact Online Data Type
+
+
 Invoiced Lineitem to Exact Online Quotations
 --------------------------------------------
 Every Invoiced Lineitem will be synchronized with a Exact Online Quotations.
@@ -80,9 +112,6 @@ The following properties are synchronized between a Invoiced Contacts and a Exac
    * - Invoiced Contacts Property
      - Exact Online Addresses Property
      - Exact Online Data Type
-   * - city
-     - City
-     - "string"
 
 
 Invoiced Contacts to Exact Online Contacts
@@ -99,9 +128,6 @@ The following properties are synchronized between a Invoiced Contacts and a Exac
    * - Invoiced Contacts Property
      - Exact Online Contacts Property
      - Exact Online Data Type
-   * - city
-     - City
-     - "string"
 
 
 Invoiced Customers company to Exact Online Accounts
@@ -118,9 +144,22 @@ The following properties are synchronized between a Invoiced Customers company a
    * - Invoiced Customers company Property
      - Exact Online Accounts Property
      - Exact Online Data Type
-   * - name
-     - Name
-     - "string"
+
+
+Invoiced Customers person to Exact Online Accounts
+--------------------------------------------------
+Every Invoiced Customers person will be synchronized with a Exact Online Accounts.
+
+Once a link between a Invoiced Customers person and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Invoiced Customers person and a Exact Online Accounts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Invoiced Customers person Property
+     - Exact Online Accounts Property
+     - Exact Online Data Type
 
 
 Invoiced Customers person to Exact Online Addresses
@@ -137,12 +176,6 @@ The following properties are synchronized between a Invoiced Customers person an
    * - Invoiced Customers person Property
      - Exact Online Addresses Property
      - Exact Online Data Type
-   * - city
-     - City
-     - "string"
-   * - country
-     - Country
-     - "string"
 
 
 Invoiced Invoices to Exact Online Salesorders
@@ -159,12 +192,6 @@ The following properties are synchronized between a Invoiced Invoices and a Exac
    * - Invoiced Invoices Property
      - Exact Online Salesorders Property
      - Exact Online Data Type
-   * - currency
-     - Currency
-     - "string"
-   * - discounts
-     - Discount
-     - "string"
 
 
 Invoiced Items to Exact Online Items
