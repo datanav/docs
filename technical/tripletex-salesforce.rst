@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -25,6 +25,15 @@ The following properties are synchronized between a Tripletex Order and a Salesf
    * - Tripletex Order Property
      - Salesforce Order Property
      - Salesforce Data Type
+   * - currency.id
+     - CurrencyIsoCode
+     - "string"
+   * - deliveryDate
+     - EffectiveDate
+     - "string"
+   * - orderDate
+     - OrderedDate
+     - "string"
 
 
 Tripletex Product to Salesforce Product2
@@ -41,6 +50,12 @@ The following properties are synchronized between a Tripletex Product and a Sale
    * - Tripletex Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
+   * - description
+     - Description
+     - "string"
+   * - name
+     - Name
+     - "string"
 
 
 Tripletex Activity to Salesforce Task
