@@ -2,7 +2,7 @@
 PowerOffice GO to Exact Online Dataflow
 =======================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -33,6 +33,9 @@ The following properties are synchronized between a PowerOffice GO Departments a
    * - PowerOffice GO Departments Property
      - Exact Online Departments Property
      - Exact Online Data Type
+   * - Code
+     - Code
+     - "string"
 
 
 Powerofficego Product to Exact Online Items
@@ -67,6 +70,9 @@ The following properties are synchronized between a Powerofficego Salesorders an
    * - Powerofficego Salesorders Property
      - Exact Online Salesorders Property
      - Exact Online Data Type
+   * - CurrencyCode
+     - Currency
+     - "string"
 
 
 PowerOffice GO Contactperson to Exact Online Contacts
@@ -83,6 +89,15 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - PowerOffice GO Contactperson Property
      - Exact Online Contacts Property
      - Exact Online Data Type
+   * - city
+     - City
+     - "string"
+   * - dateOfBirth
+     - BirthDate
+     - "string"
+   * - residenceCountryCode
+     - Country
+     - "string"
 
 
 PowerOffice GO Customers to Exact Online Accounts
@@ -99,6 +114,12 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Exact Online Accounts Property
      - Exact Online Data Type
+   * - Name
+     - Name
+     - "string"
+   * - WebsiteUrl
+     - Website
+     - "string"
 
 
 PowerOffice GO Customers person to Exact Online Contacts
@@ -310,6 +331,18 @@ The following properties are synchronized between a PowerOffice GO Customers per
    * - PowerOffice GO Customers person Property
      - Exact Online Accounts Property
      - Exact Online Data Type
+   * - Id
+     - ID
+     - "string"
+   * - MailAddress.City
+     - City
+     - "string"
+   * - MailAddress.CountryCode
+     - Country
+     - "string"
+   * - MailAddress.ZipCode
+     - Postcode
+     - "string"
 
 
 PowerOffice GO Customers person to Exact Online Addresses
