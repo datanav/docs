@@ -2,7 +2,7 @@
 Business Central to ZohoCRM Dataflow
 ====================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -39,30 +39,6 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (organisation data) Property
      - ZohoCRM Account Property
      - ZohoCRM Data Type
-   * - address.city
-     - Billing_City
-     - "string"
-   * - address.city
-     - Shipping_City
-     - "string"
-   * - address.countryLetterCode
-     - Billing_Country
-     - "string"
-   * - address.countryLetterCode
-     - Shipping_Country
-     - "string"
-   * - address.postalCode
-     - Billing_Code
-     - "string"
-   * - address.postalCode
-     - Shipping_Code
-     - "string"
-   * - address.street
-     - Billing_Street
-     - "string"
-   * - address.street
-     - Shipping_Street
-     - "string"
    * - city
      - Billing_City
      - "string"
