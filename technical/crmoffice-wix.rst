@@ -2,7 +2,7 @@
 CRMOffice to Wix Dataflow
 =========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,13 +23,4 @@ The following properties are synchronized between a CRMOffice Contacts and a Wix
    * - CRMOffice Contacts Property
      - Wix Contacts Property
      - Wix Data Type
-   * - directPhone
-     - primaryInfo.phone
-     - "string"
-   * - familyName
-     - info.name.last
-     - "string"
-   * - givenName
-     - info.name.first
-     - "string"
 
