@@ -2,12 +2,48 @@
 Salesforce to Business Central Dataflow
 =======================================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to Business Central. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Salesforce Order to Businesscentral Salesorders
+-----------------------------------------------
+Before any synchronization can take place, a link between a Salesforce Order and a Businesscentral Salesorders must be established.
+
+A new Businesscentral Salesorders will be created from a Salesforce Order if it is connected to a Salesforce Order, Seller, Orderitem, Invoiceline, or Quotelineitem that is synchronized into Businesscentral.
+
+Once a link between a Salesforce Order and a Businesscentral Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Order and a Businesscentral Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Order Property
+     - Businesscentral Salesorders Property
+     - Businesscentral Data Type
+
+
+Salesforce Product2 to Businesscentral Items
+--------------------------------------------
+Before any synchronization can take place, a link between a Salesforce Product2 and a Businesscentral Items must be established.
+
+A new Businesscentral Items will be created from a Salesforce Product2 if it is connected to a Salesforce Order, Seller, Orderitem, Invoiceline, or Quotelineitem that is synchronized into Businesscentral.
+
+Once a link between a Salesforce Product2 and a Businesscentral Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Product2 and a Businesscentral Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Product2 Property
+     - Businesscentral Items Property
+     - Businesscentral Data Type
+
 
 Salesforce Division to Business Central Companies
 -------------------------------------------------
@@ -55,18 +91,22 @@ The following properties are synchronized between a Salesforce Contact and a Bus
    * - Salesforce Contact Property
      - Business Central Contacts person Property
      - Business Central Data Type
-   * - Email
-     - email
-     - "string"
-   * - HomePhone
-     - phoneNumber
-     - "string"
-   * - MobilePhone
-     - mobilePhoneNumber
-     - "string"
-   * - Phone
-     - phoneNumber
-     - "string"
+
+
+Salesforce Customer to Business Central Customers company
+---------------------------------------------------------
+Every Salesforce Customer will be synchronized with a Business Central Customers company.
+
+Once a link between a Salesforce Customer and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Customer and a Business Central Customers company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Customer Property
+     - Business Central Customers company Property
+     - Business Central Data Type
 
 
 Salesforce Customer to Business Central Customers person
@@ -83,9 +123,6 @@ The following properties are synchronized between a Salesforce Customer and a Bu
    * - Salesforce Customer Property
      - Business Central Customers person Property
      - Business Central Data Type
-   * - Name
-     - displayName
-     - "string"
 
 
 Salesforce Invoiceline to Business Central Salesorderlines
@@ -102,18 +139,6 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Salesforce Invoiceline Property
      - Business Central Salesorderlines Property
      - Business Central Data Type
-   * - Name
-     - description
-     - "string"
-   * - Quantity
-     - quantity
-     - N/A
-   * - TaxRate
-     - taxPercent
-     - N/A
-   * - UnitPrice
-     - unitPrice
-     - "float"
 
 
 Salesforce Order to Business Central Salesorders
@@ -130,66 +155,6 @@ The following properties are synchronized between a Salesforce Order and a Busin
    * - Salesforce Order Property
      - Business Central Salesorders Property
      - Business Central Data Type
-   * - BillingCity
-     - billToCity
-     - "string"
-   * - BillingCity
-     - shipToCity
-     - "string"
-   * - BillingCountry
-     - billToCountry
-     - "string"
-   * - BillingCountry
-     - shipToCountry
-     - "string"
-   * - BillingPostalCode
-     - billToPostCode
-     - "string"
-   * - BillingPostalCode
-     - shipToPostCode
-     - "string"
-   * - BillingStreet
-     - billToAddressLine1
-     - "string"
-   * - BillingStreet
-     - shipToAddressLine1
-     - "string"
-   * - CurrencyIsoCode
-     - currencyId
-     - "string"
-   * - EffectiveDate
-     - orderDate
-     - N/A
-   * - EffectiveDate
-     - requestedDeliveryDate
-     - N/A
-   * - EndDate
-     - requestedDeliveryDate
-     - N/A
-   * - ID
-     - id
-     - "string"
-   * - OrderedDate
-     - orderDate
-     - N/A
-   * - ShippingCity
-     - billToCity
-     - "string"
-   * - ShippingCity
-     - shipToCity
-     - "string"
-   * - ShippingCountry
-     - billToCountry
-     - "string"
-   * - ShippingCountry
-     - shipToCountry
-     - "string"
-   * - ShippingStateCode
-     - billToPostCode
-     - "string"
-   * - ShippingStateCode
-     - shipToPostCode
-     - "string"
 
 
 Salesforce Orderitem to Business Central Salesorderlines
@@ -206,15 +171,22 @@ The following properties are synchronized between a Salesforce Orderitem and a B
    * - Salesforce Orderitem Property
      - Business Central Salesorderlines Property
      - Business Central Data Type
-   * - OrderId
-     - documentId
-     - "string"
-   * - Quantity
-     - quantity
-     - N/A
-   * - TotalPrice
-     - unitPrice
-     - "float"
+
+
+Salesforce Organization to Business Central Customers company
+-------------------------------------------------------------
+Every Salesforce Organization will be synchronized with a Business Central Customers company.
+
+Once a link between a Salesforce Organization and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Organization and a Business Central Customers company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Organization Property
+     - Business Central Customers company Property
+     - Business Central Data Type
 
 
 Salesforce Product2 to Business Central Items
@@ -231,12 +203,6 @@ The following properties are synchronized between a Salesforce Product2 and a Bu
    * - Salesforce Product2 Property
      - Business Central Items Property
      - Business Central Data Type
-   * - Name
-     - displayName
-     - "string"
-   * - Name	
-     - displayName
-     - "string"
 
 
 Salesforce Quotelineitem to Business Central Salesorderlines
@@ -253,15 +219,6 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - Salesforce Quotelineitem Property
      - Business Central Salesorderlines Property
      - Business Central Data Type
-   * - Discount
-     - discountPercent
-     - N/A
-   * - Quantity
-     - quantity
-     - N/A
-   * - TotalPriceWithTax
-     - unitPrice
-     - "float"
 
 
 Salesforce User to Business Central Employees
@@ -278,37 +235,4 @@ The following properties are synchronized between a Salesforce User and a Busine
    * - Salesforce User Property
      - Business Central Employees Property
      - Business Central Data Type
-   * - City
-     - city
-     - "string"
-   * - Country
-     - country
-     - "string"
-   * - Email
-     - personalEmail
-     - "string"
-   * - FirstName
-     - givenName
-     - "string"
-   * - ID
-     - id
-     - "string"
-   * - LastName
-     - surname
-     - "string"
-   * - MobilePhone
-     - mobilePhone
-     - "string"
-   * - Name
-     - displayName
-     - "string"
-   * - PostalCode
-     - postalCode
-     - "string"
-   * - Street
-     - addressLine1
-     - "string"
-   * - Title
-     - jobTitle
-     - "string"
 
