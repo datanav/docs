@@ -2,7 +2,7 @@
 Exact Online to Business Nxt Dataflow
 =====================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -172,6 +172,9 @@ The following properties are synchronized between a Exact Online Salesorders and
    * - Exact Online Salesorders Property
      - Business Nxt Order Property
      - Business Nxt Data Type
+   * - Discount
+     - totalDiscountAmountInCurrency
+     - "string"
 
 
 Exact Online Units to Business Nxt Country
