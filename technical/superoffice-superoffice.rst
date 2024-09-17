@@ -2,7 +2,7 @@
 SuperOffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2024-09-17 09:13:06
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -36,31 +36,16 @@ The following properties are synchronized between a SuperOffice Contact and a Su
      - SuperOffice Contact Property
      - SuperOffice Data Type
    * - Address.Postal.Address1
-     - Address.Postal.Address1
-     - "string"
-   * - Address.Postal.Address1
      - Address.Street.Address1
-     - "string"
-   * - Address.Postal.Address2
-     - Address.Postal.Address2
      - "string"
    * - Address.Postal.Address2
      - Address.Street.Address2
      - "string"
    * - Address.Postal.Address3
-     - Address.Postal.Address3
-     - "string"
-   * - Address.Postal.Address3
      - Address.Street.Address3
      - "string"
    * - Address.Postal.City
-     - Address.Postal.City
-     - "string"
-   * - Address.Postal.City
      - Address.Street.City
-     - "string"
-   * - Address.Postal.Zipcode
-     - Address.Postal.Zipcode
      - "string"
    * - Address.Postal.Zipcode
      - Address.Street.Zipcode
@@ -68,32 +53,17 @@ The following properties are synchronized between a SuperOffice Contact and a Su
    * - Address.Street.Address1
      - Address.Postal.Address1
      - "string"
-   * - Address.Street.Address1
-     - Address.Street.Address1
-     - "string"
    * - Address.Street.Address2
      - Address.Postal.Address2
-     - "string"
-   * - Address.Street.Address2
-     - Address.Street.Address2
      - "string"
    * - Address.Street.Address3
      - Address.Postal.Address3
      - "string"
-   * - Address.Street.Address3
-     - Address.Street.Address3
-     - "string"
    * - Address.Street.City
      - Address.Postal.City
      - "string"
-   * - Address.Street.City
-     - Address.Street.City
-     - "string"
    * - Address.Street.Zipcode
      - Address.Postal.Zipcode
-     - "string"
-   * - Address.Street.Zipcode
-     - Address.Street.Zipcode
      - "string"
    * - ContactId
      - ContactId
@@ -102,22 +72,7 @@ The following properties are synchronized between a SuperOffice Contact and a Su
      - Country.CountryId
      - N/A
    * - Country.ThreeLetterISOCountry
-     - OrgNr (Dependant on having wd:Q906278 in Country.TwoLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountryDependant on having wd:Q906278 in Country.TwoLetterISOCountryDependant on having wd:Q906278 in Country.ThreeLetterISOCountry)
-     - "string"
-   * - Domains
-     - Domains
-     - N/A
-   * - Emails.Value
-     - Emails.Value
-     - "string"
-   * - Name
-     - Name
-     - "string"
-   * - OrgNr
-     - OrgNr (Dependant on having  in Country.ThreeLetterISOCountryDependant on having  in Country.ThreeLetterISOCountry)
-     - "string"
-   * - Phones.Value
-     - Phones.Value
+     - OrgNr (Dependant on having wd:Q906278 in Country.TwoLetterISOCountry)
      - "string"
 
 
@@ -145,9 +100,6 @@ The following properties are synchronized between a SuperOffice Ownercontactlink
    * - SuperOffice Ownercontactlink Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
-   * - contact_id
-     - ContactId
-     - "string"
    * - name
      - Name
      - "string"
@@ -177,66 +129,6 @@ The following properties are synchronized between a SuperOffice Person and a Sup
    * - SuperOffice Person Property
      - SuperOffice Person Property
      - SuperOffice Data Type
-   * - Address.Postal.Address1
-     - Address.Postal.Address1
-     - "string"
-   * - Address.Postal.Address2
-     - Address.Postal.Address2
-     - "string"
-   * - Address.Postal.Address3
-     - Address.Postal.Address3
-     - "string"
-   * - Address.Postal.City
-     - Address.Postal.City
-     - "string"
-   * - Address.Postal.Zipcode
-     - Address.Postal.Zipcode
-     - "string"
-   * - Address.Street.Address1
-     - Address.Street.Address1
-     - "string"
-   * - Address.Street.Address2
-     - Address.Street.Address2
-     - "string"
-   * - Address.Street.Address3
-     - Address.Street.Address3
-     - "string"
-   * - Address.Street.City
-     - Address.Street.City
-     - "string"
-   * - Address.Street.Zipcode
-     - Address.Street.Zipcode
-     - "string"
-   * - BirthDate
-     - BirthDate
-     - N/A
-   * - Contact.ContactId
-     - Contact.ContactId
-     - "integer"
-   * - Country.CountryId
-     - Country.CountryId
-     - "integer"
-   * - Emails.Value
-     - Emails.Value
-     - "string"
-   * - Firstname
-     - Firstname
-     - "string"
-   * - Lastname
-     - Lastname
-     - "string"
-   * - MobilePhones.Value
-     - MobilePhones.Value
-     - "string"
-   * - OfficePhones.Value
-     - OfficePhones.Value
-     - "string"
-   * - PersonId
-     - PersonId
-     - "integer"
-   * - PrivatePhones.Value
-     - PrivatePhones.Value
-     - "string"
 
 
 SuperOffice Product to SuperOffice Product
@@ -265,45 +157,6 @@ The following properties are synchronized between a SuperOffice Product and a Su
    * - SuperOffice Product Property
      - SuperOffice Product Property
      - SuperOffice Data Type
-   * - Description
-     - Description
-     - "string"
-   * - ERPPriceListKey
-     - ERPPriceListKey
-     - "string"
-   * - Name
-     - Name
-     - "string"
-   * - ProductCategoryKey
-     - ProductCategoryKey
-     - "string"
-   * - ProductFamilyKey
-     - ProductFamilyKey
-     - "string"
-   * - ProductId
-     - ProductId
-     - "integer"
-   * - ProductTypeKey
-     - ProductTypeKey
-     - "string"
-   * - QuantityUnit
-     - QuantityUnit
-     - "string"
-   * - Supplier
-     - Supplier
-     - "string"
-   * - UnitCost
-     - UnitCost
-     - "string"
-   * - UnitListPrice
-     - UnitListPrice
-     - N/A
-   * - Url
-     - Url
-     - "string"
-   * - VAT
-     - VAT
-     - "integer"
 
 
 SuperOffice Quote to SuperOffice Sale
@@ -359,39 +212,12 @@ The following properties are synchronized between a SuperOffice Sale and a Super
    * - SuperOffice Sale Property
      - SuperOffice Sale Property
      - SuperOffice Data Type
-   * - Amount
-     - Amount
-     - "float"
-   * - Contact.ContactId
-     - Contact.ContactId
-     - "integer"
    * - Contact.ContactId
      - Person.PersonId
      - "integer"
-   * - Currency.Id
-     - Currency.Id
-     - "integer"
-   * - Heading
-     - Heading
-     - "string"
    * - Person.PersonId
      - Contact.ContactId
      - "integer"
-   * - Person.PersonId
-     - Person.PersonId
-     - "integer"
-   * - Project.ProjectId
-     - Project.ProjectId
-     - "integer"
-   * - SaleText
-     - SaleText
-     - "string"
-   * - Saledate
-     - Saledate
-     - N/A
-   * - Status
-     - Status
-     - "string"
 
 
 SuperOffice User to SuperOffice Person
