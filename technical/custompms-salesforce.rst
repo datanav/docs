@@ -2,7 +2,7 @@
 Custom PMS to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -38,6 +38,38 @@ The following properties are synchronized between a Custom PMS Project and a Sal
 
    * - Custom PMS Project Property
      - Salesforce Task Property
+     - Salesforce Data Type
+
+
+Custom PMS Task to Salesforce Task
+----------------------------------
+Every Custom PMS Task will be synchronized with a Salesforce Task.
+
+Once a link between a Custom PMS Task and a Salesforce Task is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom PMS Task and a Salesforce Task:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom PMS Task Property
+     - Salesforce Task Property
+     - Salesforce Data Type
+
+
+Custom PMS Customer to Salesforce Customer
+------------------------------------------
+Every Custom PMS Customer will be synchronized with a Salesforce Customer.
+
+Once a link between a Custom PMS Customer and a Salesforce Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom PMS Customer and a Salesforce Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom PMS Customer Property
+     - Salesforce Customer Property
      - Salesforce Data Type
 
 
