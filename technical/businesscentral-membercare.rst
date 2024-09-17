@@ -2,7 +2,7 @@
 Business Central to MemberCare Dataflow
 =======================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -25,18 +25,18 @@ The following properties are synchronized between a Business Central Companies a
      - MemberCare Data Type
 
 
-Business Central Contacts person to MemberCare Persons
-------------------------------------------------------
-Every Business Central Contacts person will be synchronized with a MemberCare Persons.
+Business Central Contacts (human data) to MemberCare Persons
+------------------------------------------------------------
+Every Business Central Contacts (human data) will be synchronized with a MemberCare Persons.
 
-Once a link between a Business Central Contacts person and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Contacts (human data) and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Contacts person and a MemberCare Persons:
+The following properties are synchronized between a Business Central Contacts (human data) and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Contacts person Property
+   * - Business Central Contacts (human data) Property
      - MemberCare Persons Property
      - MemberCare Data Type
    * - city
@@ -59,18 +59,18 @@ The following properties are synchronized between a Business Central Contacts pe
      - "string"
 
 
-Business Central Customers company to MemberCare Companies
-----------------------------------------------------------
-Every Business Central Customers company will be synchronized with a MemberCare Companies.
+Business Central Customers (organisation data) to MemberCare Companies
+----------------------------------------------------------------------
+Every Business Central Customers (organisation data) will be synchronized with a MemberCare Companies.
 
-Once a link between a Business Central Customers company and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (organisation data) and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers company and a MemberCare Companies:
+The following properties are synchronized between a Business Central Customers (organisation data) and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers company Property
+   * - Business Central Customers (organisation data) Property
      - MemberCare Companies Property
      - MemberCare Data Type
    * - displayName
@@ -81,18 +81,18 @@ The following properties are synchronized between a Business Central Customers c
      - "string"
 
 
-Business Central Customers person to MemberCare Persons
--------------------------------------------------------
-Every Business Central Customers person will be synchronized with a MemberCare Persons.
+Business Central Customers (human data) to MemberCare Persons
+-------------------------------------------------------------
+Every Business Central Customers (human data) will be synchronized with a MemberCare Persons.
 
-Once a link between a Business Central Customers person and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (human data) and a MemberCare Persons is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers person and a MemberCare Persons:
+The following properties are synchronized between a Business Central Customers (human data) and a MemberCare Persons:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers person Property
+   * - Business Central Customers (human data) Property
      - MemberCare Persons Property
      - MemberCare Data Type
    * - city
@@ -216,18 +216,18 @@ The following properties are synchronized between a Business Central Salesquotes
      - MemberCare Data Type
 
 
-Business Central Customers company to MemberCare Companies
-----------------------------------------------------------
-Every Business Central Customers company will be synchronized with a MemberCare Companies.
+Business Central Customers (organisation data) to MemberCare Companies
+----------------------------------------------------------------------
+Every Business Central Customers (organisation data) will be synchronized with a MemberCare Companies.
 
-Once a link between a Business Central Customers company and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (organisation data) and a MemberCare Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers company and a MemberCare Companies:
+The following properties are synchronized between a Business Central Customers (organisation data) and a MemberCare Companies:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers company Property
+   * - Business Central Customers (organisation data) Property
      - MemberCare Companies Property
      - MemberCare Data Type
 
