@@ -2,7 +2,7 @@
 Tripletex to Youtrack Dataflow
 ==============================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -33,12 +33,6 @@ The following properties are synchronized between a Tripletex Contact and a Yout
    * - Tripletex Contact Property
      - Youtrack Users Property
      - Youtrack Data Type
-   * - email
-     - profile.email
-     - "string"
-   * - email
-     - profile.email.email
-     - "string"
 
 
 Tripletex Customer to Youtrack Users
@@ -94,47 +88,38 @@ The following properties are synchronized between a Tripletex Employee and a You
    * - Tripletex Employee Property
      - Youtrack Users Property
      - Youtrack Data Type
-   * - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
+   * - department.id (Dependant on having wd:Q43229 in  )
      - groups.id
      - "string"
-   * - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+   * - department.id (Dependant on having wd:Q214339 in  )
      - organizationRoles.id
      - "string"
-   * - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+   * - department.id (Dependant on having wd:Q214339 in  )
      - projectRoles.id
      - "string"
-   * - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+   * - department.id (Dependant on having wd:Q214339 in  )
      - sourcedOrganizationRoles.id
      - "string"
-   * - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+   * - department.id (Dependant on having wd:Q214339 in  )
      - sourcedProjectRoles.id
      - "string"
-   * - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
+   * - department.id (Dependant on having wd:Q43229 in  )
      - teams.id
      - "string"
-   * - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
+   * - department.id (Dependant on having wd:Q43229 in  )
      - transitiveGroups.id
      - "string"
-   * - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+   * - department.id (Dependant on having wd:Q214339 in  )
      - transitiveOrganizationRoles.id
      - "string"
-   * - department.id (Dependant on having wd:Q214339 in  Dependant on having wd:Q214339 in  )
+   * - department.id (Dependant on having wd:Q214339 in  )
      - transitiveProjectRoles.id
      - "string"
-   * - department.id (Dependant on having wd:Q43229 in  Dependant on having wd:Q43229 in  )
+   * - department.id (Dependant on having wd:Q43229 in  )
      - transitiveTeams.id
      - "string"
    * - email
      - profile.email.email
-     - "string"
-   * - firstName
-     - name
-     - "string"
-   * - lastName
-     - name
-     - "string"
-   * - userType
-     - userType.id
      - "string"
 
 
@@ -168,9 +153,6 @@ The following properties are synchronized between a Tripletex Customer and a You
    * - Tripletex Customer Property
      - Youtrack Groups Property
      - Youtrack Data Type
-   * - name
-     - name
-     - "string"
 
 
 Tripletex Department to Youtrack Groups
@@ -187,9 +169,6 @@ The following properties are synchronized between a Tripletex Department and a Y
    * - Tripletex Department Property
      - Youtrack Groups Property
      - Youtrack Data Type
-   * - name
-     - name
-     - "string"
 
 
 Tripletex Project to Youtrack Hubprojects
