@@ -2,7 +2,7 @@
 Keap to Chargebee Dataflow
 ==========================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -57,6 +57,22 @@ The following properties are synchronized between a Keap Opportunity and a Charg
 
    * - Keap Opportunity Property
      - Chargebee Order Property
+     - Chargebee Data Type
+
+
+Keap Product to Chargebee Item
+------------------------------
+Every Keap Product will be synchronized with a Chargebee Item.
+
+Once a link between a Keap Product and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Keap Product and a Chargebee Item:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Keap Product Property
+     - Chargebee Item Property
      - Chargebee Data Type
 
 
