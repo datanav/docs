@@ -2,7 +2,7 @@
 Wix.com to SuperOffice Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -109,6 +109,24 @@ The following properties are synchronized between a Wix.com Orders and a SuperOf
      - "float"
 
 
+Wix.com Products to SuperOffice Product
+---------------------------------------
+Before any synchronization can take place, a link between a Wix.com Products and a SuperOffice Product must be established.
+
+A new SuperOffice Product will be created from a Wix.com Products if it is connected to a Wix.com Wix-orders that is synchronized into SuperOffice.
+
+Once a link between a Wix.com Products and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a SuperOffice Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
+     - SuperOffice Product Property
+     - SuperOffice Data Type
+
+
 Wix.com Orders to SuperOffice Quoteline
 ---------------------------------------
 Every Wix.com Orders will be synchronized with a SuperOffice Quoteline.
@@ -123,24 +141,6 @@ The following properties are synchronized between a Wix.com Orders and a SuperOf
    * - Wix.com Orders Property
      - SuperOffice Quoteline Property
      - SuperOffice Data Type
-   * - id
-     - QuoteAlternativeId
-     - "integer"
-   * - lineItems.name
-     - Name
-     - "string"
-   * - lineItems.price
-     - UnitListPrice
-     - N/A
-   * - lineItems.productId
-     - ERPProductKey
-     - "string"
-   * - lineItems.quantity
-     - Quantity
-     - N/A
-   * - totals.total
-     - TotalPrice
-     - N/A
 
 
 Wix.com Products to SuperOffice Product
@@ -157,28 +157,4 @@ The following properties are synchronized between a Wix.com Products and a Super
    * - Wix.com Products Property
      - SuperOffice Product Property
      - SuperOffice Data Type
-   * - costAndProfitData.itemCost
-     - UnitCost
-     - "string"
-   * - costRange.maxValue
-     - UnitCost
-     - "string"
-   * - description
-     - Description
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - price.currency
-     - ERPPriceListKey
-     - "string"
-   * - price.price
-     - UnitListPrice
-     - N/A
-   * - priceData.currency
-     - ERPPriceListKey
-     - "string"
-   * - priceData.price
-     - UnitListPrice
-     - N/A
 
