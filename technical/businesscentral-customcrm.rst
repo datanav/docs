@@ -2,7 +2,7 @@
 Business Central to Custom CRM Dataflow
 =======================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -25,50 +25,50 @@ The following properties are synchronized between a Business Central Companies a
      - Custom CRM Data Type
 
 
-Business Central Contacts person to Custom CRM Contact
-------------------------------------------------------
-Every Business Central Contacts person will be synchronized with a Custom CRM Contact.
+Business Central Contacts (human data) to Custom CRM Contact
+------------------------------------------------------------
+Every Business Central Contacts (human data) will be synchronized with a Custom CRM Contact.
 
-Once a link between a Business Central Contacts person and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Contacts (human data) and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Contacts person and a Custom CRM Contact:
+The following properties are synchronized between a Business Central Contacts (human data) and a Custom CRM Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Contacts person Property
+   * - Business Central Contacts (human data) Property
      - Custom CRM Contact Property
      - Custom CRM Data Type
 
 
-Business Central Customers company to Custom CRM Customer
----------------------------------------------------------
-Every Business Central Customers company will be synchronized with a Custom CRM Customer.
+Business Central Customers (organisation data) to Custom CRM Customer
+---------------------------------------------------------------------
+Every Business Central Customers (organisation data) will be synchronized with a Custom CRM Customer.
 
-Once a link between a Business Central Customers company and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (organisation data) and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers company and a Custom CRM Customer:
+The following properties are synchronized between a Business Central Customers (organisation data) and a Custom CRM Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers company Property
+   * - Business Central Customers (organisation data) Property
      - Custom CRM Customer Property
      - Custom CRM Data Type
 
 
-Business Central Customers person to Custom CRM Contact
--------------------------------------------------------
-Every Business Central Customers person will be synchronized with a Custom CRM Contact.
+Business Central Customers (human data) to Custom CRM Contact
+-------------------------------------------------------------
+Every Business Central Customers (human data) will be synchronized with a Custom CRM Contact.
 
-Once a link between a Business Central Customers person and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (human data) and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers person and a Custom CRM Contact:
+The following properties are synchronized between a Business Central Customers (human data) and a Custom CRM Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers person Property
+   * - Business Central Customers (human data) Property
      - Custom CRM Contact Property
      - Custom CRM Data Type
 
@@ -153,50 +153,50 @@ The following properties are synchronized between a Business Central Salesquotes
      - Custom CRM Data Type
 
 
-Business Central Contacts person to Custom CRM Contact
-------------------------------------------------------
-Every Business Central Contacts person will be synchronized with a Custom CRM Contact.
+Business Central Contacts (human data) to Custom CRM Contact
+------------------------------------------------------------
+Every Business Central Contacts (human data) will be synchronized with a Custom CRM Contact.
 
-Once a link between a Business Central Contacts person and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Contacts (human data) and a Custom CRM Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Contacts person and a Custom CRM Contact:
+The following properties are synchronized between a Business Central Contacts (human data) and a Custom CRM Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Contacts person Property
+   * - Business Central Contacts (human data) Property
      - Custom CRM Contact Property
      - Custom CRM Data Type
 
 
-Business Central Customers company to Custom CRM Customer
----------------------------------------------------------
-Every Business Central Customers company will be synchronized with a Custom CRM Customer.
+Business Central Customers (organisation data) to Custom CRM Customer
+---------------------------------------------------------------------
+Every Business Central Customers (organisation data) will be synchronized with a Custom CRM Customer.
 
-Once a link between a Business Central Customers company and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (organisation data) and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers company and a Custom CRM Customer:
+The following properties are synchronized between a Business Central Customers (organisation data) and a Custom CRM Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers company Property
+   * - Business Central Customers (organisation data) Property
      - Custom CRM Customer Property
      - Custom CRM Data Type
 
 
-Business Central Customers person to Custom CRM Customer
---------------------------------------------------------
-Every Business Central Customers person will be synchronized with a Custom CRM Customer.
+Business Central Customers (organisation data) to Custom CRM Customer
+---------------------------------------------------------------------
+Every Business Central Customers (organisation data) will be synchronized with a Custom CRM Customer.
 
-Once a link between a Business Central Customers person and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Business Central Customers (organisation data) and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Business Central Customers person and a Custom CRM Customer:
+The following properties are synchronized between a Business Central Customers (organisation data) and a Custom CRM Customer:
 
 .. list-table::
    :header-rows: 1
 
-   * - Business Central Customers person Property
+   * - Business Central Customers (organisation data) Property
      - Custom CRM Customer Property
      - Custom CRM Data Type
 
