@@ -2,12 +2,28 @@
 Wave to Unieconomy Dataflow
 ===========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave to Unieconomy. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wave Customer person to Unieconomy Customers
+--------------------------------------------
+Every Wave Customer person will be synchronized with a Unieconomy Customers.
+
+Once a link between a Wave Customer person and a Unieconomy Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer person and a Unieconomy Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - Unieconomy Customers Property
+     - Unieconomy Data Type
+
 
 Wave Customer to Unieconomy Customers
 -------------------------------------
@@ -23,7 +39,4 @@ The following properties are synchronized between a Wave Customer and a Uniecono
    * - Wave Customer Property
      - Unieconomy Customers Property
      - Unieconomy Data Type
-   * - website
-     - WebUrl
-     - "string"
 
