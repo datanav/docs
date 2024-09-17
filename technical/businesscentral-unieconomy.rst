@@ -2,7 +2,7 @@
 Business Central to Unieconomy Dataflow
 =======================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,12 +23,6 @@ The following properties are synchronized between a Business Central Customers c
    * - Business Central Customers company Property
      - Unieconomy Companies Property
      - Unieconomy Data Type
-   * - displayName
-     - Name
-     - "string"
-   * - id (Dependant on having wd:Q11994066 in typeDependant on having wd:Q11994066 in type)
-     - OrganizationNumber
-     - "string"
 
 
 Business Central Customers company to Unieconomy Customers
@@ -45,10 +39,20 @@ The following properties are synchronized between a Business Central Customers c
    * - Business Central Customers company Property
      - Unieconomy Customers Property
      - Unieconomy Data Type
-   * - id (Dependant on having wd:Q11994066 in typeDependant on having wd:Q11994066 in type)
-     - OrgNumber
-     - "string"
-   * - website
-     - WebUrl
-     - "string"
+
+
+Business Central Customers person to Unieconomy Customers
+---------------------------------------------------------
+Every Business Central Customers person will be synchronized with a Unieconomy Customers.
+
+Once a link between a Business Central Customers person and a Unieconomy Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Customers person and a Unieconomy Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Customers person Property
+     - Unieconomy Customers Property
+     - Unieconomy Data Type
 
