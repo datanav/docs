@@ -2,7 +2,7 @@
 Tripletex to Keap Dataflow
 ==========================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -65,18 +65,18 @@ The following properties are synchronized between a Tripletex Contact and a Keap
      - Keap Data Type
 
 
-Tripletex Customer person to Keap Contacts
-------------------------------------------
-Every Tripletex Customer person will be synchronized with a Keap Contacts.
+Tripletex Customer (human data) to Keap Contacts
+------------------------------------------------
+Every Tripletex Customer (human data) will be synchronized with a Keap Contacts.
 
-Once a link between a Tripletex Customer person and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer (human data) and a Keap Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a Keap Contacts:
+The following properties are synchronized between a Tripletex Customer (human data) and a Keap Contacts:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer person Property
+   * - Tripletex Customer (human data) Property
      - Keap Contacts Property
      - Keap Data Type
 
