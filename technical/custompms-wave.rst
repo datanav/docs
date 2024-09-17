@@ -2,7 +2,7 @@
 Custom PMS to Wave Dataflow
 ===========================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -22,5 +22,21 @@ The following properties are synchronized between a Custom PMS Customer and a Wa
 
    * - Custom PMS Customer Property
      - Wave Customer Property
+     - Wave Data Type
+
+
+Custom PMS Customer to Wave Customer person
+-------------------------------------------
+Every Custom PMS Customer will be synchronized with a Wave Customer person.
+
+Once a link between a Custom PMS Customer and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom PMS Customer and a Wave Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom PMS Customer Property
+     - Wave Customer person Property
      - Wave Data Type
 
