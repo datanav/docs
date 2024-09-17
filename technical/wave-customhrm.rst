@@ -2,7 +2,7 @@
 Wave to Custom HRM Dataflow
 ===========================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -25,18 +25,18 @@ The following properties are synchronized between a Wave Customer and a Custom H
      - Custom HRM Data Type
 
 
-Wave Customer person to Custom HRM Employee
--------------------------------------------
-Every Wave Customer person will be synchronized with a Custom HRM Employee.
+Wave Customer (human data) to Custom HRM Employee
+-------------------------------------------------
+Every Wave Customer (human data) will be synchronized with a Custom HRM Employee.
 
-Once a link between a Wave Customer person and a Custom HRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Customer (human data) and a Custom HRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Customer person and a Custom HRM Employee:
+The following properties are synchronized between a Wave Customer (human data) and a Custom HRM Employee:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Customer person Property
+   * - Wave Customer (human data) Property
      - Custom HRM Employee Property
      - Custom HRM Data Type
 
