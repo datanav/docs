@@ -2,7 +2,7 @@
 MemberCare to Exact Online Dataflow
 ===================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -159,24 +159,6 @@ The following properties are synchronized between a MemberCare Persons and a Exa
      - "string"
    * - birthDate
      - BirthDate
-     - "string"
-   * - firstname
-     - FirstName
-     - "string"
-   * - firstname
-     - FullName
-     - "string"
-   * - firstname
-     - LastName
-     - "string"
-   * - name
-     - FirstName
-     - "string"
-   * - name
-     - FullName
-     - "string"
-   * - name
-     - LastName
      - "string"
 
 
