@@ -2,7 +2,7 @@
 CRMOffice to Business Nxt Dataflow
 ==================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -39,9 +39,38 @@ The following properties are synchronized between a CRMOffice Activities and a B
    * - CRMOffice Activities Property
      - Business Nxt Country Property
      - Business Nxt Data Type
-   * - address.country
-     - name
-     - "string"
+
+
+CRMOffice Companies to Business Nxt Address
+-------------------------------------------
+Every CRMOffice Companies will be synchronized with a Business Nxt Address.
+
+Once a link between a CRMOffice Companies and a Business Nxt Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a CRMOffice Companies and a Business Nxt Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - CRMOffice Companies Property
+     - Business Nxt Address Property
+     - Business Nxt Data Type
+
+
+CRMOffice Companies to Business Nxt Company
+-------------------------------------------
+Every CRMOffice Companies will be synchronized with a Business Nxt Company.
+
+Once a link between a CRMOffice Companies and a Business Nxt Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a CRMOffice Companies and a Business Nxt Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - CRMOffice Companies Property
+     - Business Nxt Company Property
+     - Business Nxt Data Type
 
 
 CRMOffice Companies to Business Nxt Country
@@ -58,10 +87,4 @@ The following properties are synchronized between a CRMOffice Companies and a Bu
    * - CRMOffice Companies Property
      - Business Nxt Country Property
      - Business Nxt Data Type
-   * - postAddress.country
-     - name
-     - "string"
-   * - visitAddress.country
-     - name
-     - "string"
 
