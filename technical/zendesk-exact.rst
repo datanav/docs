@@ -2,7 +2,7 @@
 Zendesk to Exact Online Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -42,10 +42,4 @@ The following properties are synchronized between a Zendesk Users and a Exact On
    * - Zendesk Users Property
      - Exact Online Contacts Property
      - Exact Online Data Type
-   * - email
-     - Email
-     - "string"
-   * - name
-     - FullName
-     - "string"
 
