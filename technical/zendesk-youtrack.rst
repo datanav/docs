@@ -2,7 +2,7 @@
 Zendesk to Youtrack Dataflow
 ============================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -52,9 +52,6 @@ The following properties are synchronized between a Zendesk Organizations and a 
    * - Zendesk Organizations Property
      - Youtrack Groups Property
      - Youtrack Data Type
-   * - name
-     - name
-     - "string"
 
 
 Zendesk Ticketcomments to Youtrack Hubprojects
