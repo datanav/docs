@@ -2,7 +2,7 @@
 ZohoCRM to WebCRM Dataflow
 ==========================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -81,13 +81,4 @@ The following properties are synchronized between a ZohoCRM Deal and a WebCRM Op
    * - ZohoCRM Deal Property
      - WebCRM Opportunities Property
      - WebCRM Data Type
-   * - Account_Name.id
-     - OpportunityOrganisationId
-     - "string"
-   * - Contact_Name.id
-     - OpportunityOrganisationId
-     - "string"
-   * - Owner.id
-     - OpportunityPersonId
-     - "string"
 
