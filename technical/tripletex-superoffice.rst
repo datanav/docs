@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -56,31 +56,31 @@ The following properties are synchronized between a Tripletex Contact and a Supe
      - "string"
 
 
-Tripletex Customer person to SuperOffice Person
------------------------------------------------
-Every Tripletex Customer person will be synchronized with a SuperOffice Person.
+Tripletex Customer (human data) to SuperOffice Person
+-----------------------------------------------------
+Every Tripletex Customer (human data) will be synchronized with a SuperOffice Person.
 
-If a matching SuperOffice Person already exists, the Tripletex Customer person will be merged with the existing one.
+If a matching SuperOffice Person already exists, the Tripletex Customer (human data) will be merged with the existing one.
 If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
 
-A Tripletex Customer person will merge with a SuperOffice Person if one of the following property combinations match:
+A Tripletex Customer (human data) will merge with a SuperOffice Person if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer person Property
+   * - Tripletex Customer (human data) Property
      - SuperOffice Person Property
    * - email
      - Emails.Value
 
-Once a link between a Tripletex Customer person and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer (human data) and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer person and a SuperOffice Person:
+The following properties are synchronized between a Tripletex Customer (human data) and a SuperOffice Person:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer person Property
+   * - Tripletex Customer (human data) Property
      - SuperOffice Person Property
      - SuperOffice Data Type
    * - deliveryAddress.addressLine1
@@ -481,105 +481,6 @@ The following properties are synchronized between a Tripletex Supplier and a Sup
    * - url
      - Urls.Value
      - "string"
-
-
-Tripletex Contact to SuperOffice Contact
-----------------------------------------
-Before any synchronization can take place, a link between a Tripletex Contact and a SuperOffice Contact must be established.
-
-A new SuperOffice Contact will be created from a Tripletex Contact if it is connected to a Tripletex Order that is synchronized into SuperOffice.
-
-Once a link between a Tripletex Contact and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Contact and a SuperOffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Contact Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
-
-
-Tripletex Customer to SuperOffice Person
-----------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer and a SuperOffice Person must be established.
-
-A new SuperOffice Person will be created from a Tripletex Customer if it is connected to a Tripletex Order that is synchronized into SuperOffice.
-
-Once a link between a Tripletex Customer and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer and a SuperOffice Person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
-
-
-Tripletex Order to SuperOffice Quotealternative
------------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Order and a SuperOffice Quotealternative must be established.
-
-A new SuperOffice Quotealternative will be created from a Tripletex Order if it is connected to a Tripletex Orderline that is synchronized into SuperOffice.
-
-Once a link between a Tripletex Order and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Order and a SuperOffice Quotealternative:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Order Property
-     - SuperOffice Quotealternative Property
-     - SuperOffice Data Type
-   * - invoiceComment
-     - Name
-     - "string"
-
-
-Tripletex Product to SuperOffice Product
-----------------------------------------
-Before any synchronization can take place, a link between a Tripletex Product and a SuperOffice Product must be established.
-
-A new SuperOffice Product will be created from a Tripletex Product if it is connected to a Tripletex Orderline that is synchronized into SuperOffice.
-
-Once a link between a Tripletex Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Product and a SuperOffice Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     - SuperOffice Product Property
-     - SuperOffice Data Type
-   * - costExcludingVatCurrency
-     - UnitCost
-     - "string"
-   * - currency.id
-     - ERPPriceListKey
-     - "string"
-   * - description
-     - Description
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - priceExcludingVatCurrency
-     - UnitListPrice
-     - N/A
-   * - productUnit.id
-     - QuantityUnit
-     - "string"
-   * - supplier.id
-     - Supplier
-     - "string"
-   * - vatType.id
-     - VAT
-     - N/A
 
 
 Tripletex Department to SuperOffice Contact
