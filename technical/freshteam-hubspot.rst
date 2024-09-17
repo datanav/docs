@@ -2,7 +2,7 @@
 Freshteam to HubSpot Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -71,30 +71,6 @@ The following properties are synchronized between a Freshteam Employee and a Hub
    * - Freshteam Employee Property
      - HubSpot Contact Property
      - HubSpot Data Type
-   * - Billing_Country
-     - properties.country
-     - "string"
-   * - Billing_Country
-     - properties.state
-     - "string"
-   * - Shipping_Country
-     - properties.country
-     - "string"
-   * - Shipping_Country
-     - properties.state
-     - "string"
-   * - address.country
-     - properties.country
-     - "string"
-   * - address.country
-     - properties.state
-     - "string"
-   * - communication_address.communication_country
-     - properties.country
-     - "string"
-   * - communication_address.communication_country
-     - properties.state
-     - "string"
    * - date_of_birth
      - properties.date_of_birth
      - "string"
@@ -104,19 +80,13 @@ The following properties are synchronized between a Freshteam Employee and a Hub
    * - last_name
      - properties.lastname
      - "string"
-   * - official_email
-     - properties.email
-     - "string"
-   * - official_email
-     - properties.work_email
-     - "string"
    * - personal_email
      - properties.email
      - "string"
-   * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
+   * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
      - properties.mobilephone
      - "string"
-   * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.name)
+   * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
      - properties.phone
      - "string"
 
