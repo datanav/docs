@@ -2,7 +2,7 @@
 Salesforce to Custom HRM Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -85,6 +85,22 @@ The following properties are synchronized between a Salesforce Seller and a Cust
    :header-rows: 1
 
    * - Salesforce Seller Property
+     - Custom HRM Employee Property
+     - Custom HRM Data Type
+
+
+Salesforce User to Custom HRM Employee
+--------------------------------------
+Every Salesforce User will be synchronized with a Custom HRM Employee.
+
+Once a link between a Salesforce User and a Custom HRM Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce User and a Custom HRM Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce User Property
      - Custom HRM Employee Property
      - Custom HRM Data Type
 
