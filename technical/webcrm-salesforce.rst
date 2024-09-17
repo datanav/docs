@@ -2,7 +2,7 @@
 WebCRM to Salesforce Dataflow
 =============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 12:31:51
 
 Introduction
 ------------
@@ -96,6 +96,21 @@ The following properties are synchronized between a WebCRM Persons and a Salesfo
    * - WebCRM Persons Property
      - Salesforce Contact Property
      - Salesforce Data Type
+   * - PersonDirectPhone
+     - Phone
+     - "string"
+   * - PersonFirstName
+     - FirstName
+     - "string"
+   * - PersonLastName
+     - LastName
+     - "string"
+   * - PersonMobilePhone
+     - MobilePhone
+     - "string"
+   * - document_number
+     - Birthdate
+     - "string"
 
 
 WebCRM Products to Salesforce Product2
