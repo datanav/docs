@@ -2,7 +2,7 @@
 PowerOffice GO to Tripletex Dataflow
 ====================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -172,9 +172,6 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - dateOfBirth
      - dateOfBirth
      - N/A
-   * - emailAddress
-     - email
-     - "string"
    * - firstName
      - firstName
      - "string"
@@ -184,9 +181,6 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - lastName
      - lastName
      - "string"
-   * - partyId
-     - department.id (Dependant on having wd:Q703534 in  )
-     - N/A
    * - phoneNumber
      - phoneNumberWork
      - "string"
@@ -802,12 +796,6 @@ The following properties are synchronized between a PowerOffice GO Projectactivi
    * - PowerOffice GO Projectactivity Property
      - Tripletex Activity Property
      - Tripletex Data Type
-   * - isBillable
-     - isChargeable
-     - "string"
-   * - name
-     - name
-     - "string"
 
 
 PowerOffice GO Projects to Tripletex Project
