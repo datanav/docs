@@ -2,7 +2,7 @@
 ZohoCRM to Custom CRM Dataflow
 ==============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -44,6 +44,38 @@ The following properties are synchronized between a ZohoCRM Contact and a Custom
 ZohoCRM Deal to Custom CRM Order
 --------------------------------
 Every ZohoCRM Deal will be synchronized with a Custom CRM Order.
+
+Once a link between a ZohoCRM Deal and a Custom CRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Deal and a Custom CRM Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Deal Property
+     - Custom CRM Order Property
+     - Custom CRM Data Type
+
+
+ZohoCRM Contact to Custom CRM Customer
+--------------------------------------
+Every ZohoCRM Contact will be synchronized with a Custom CRM Customer.
+
+Once a link between a ZohoCRM Contact and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a ZohoCRM Contact and a Custom CRM Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - ZohoCRM Contact Property
+     - Custom CRM Customer Property
+     - Custom CRM Data Type
+
+
+ZohoCRM Deal to Custom CRM Order
+--------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Custom CRM Order.
 
 Once a link between a ZohoCRM Deal and a Custom CRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
