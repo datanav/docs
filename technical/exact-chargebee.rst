@@ -2,7 +2,7 @@
 Exact Online to Chargebee Dataflow
 ==================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -133,6 +133,22 @@ The following properties are synchronized between a Exact Online Employees and a
      - Chargebee Data Type
 
 
+Exact Online Items to Chargebee Item
+------------------------------------
+Every Exact Online Items will be synchronized with a Chargebee Item.
+
+Once a link between a Exact Online Items and a Chargebee Item is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Items and a Chargebee Item:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Items Property
+     - Chargebee Item Property
+     - Chargebee Data Type
+
+
 Exact Online Quotations to Chargebee Order
 ------------------------------------------
 Every Exact Online Quotations will be synchronized with a Chargebee Order.
@@ -187,6 +203,22 @@ The following properties are synchronized between a Exact Online Salesorderlines
      - Chargebee Data Type
 
 
+Exact Online Salesorders to Chargebee Order
+-------------------------------------------
+Every Exact Online Salesorders will be synchronized with a Chargebee Order.
+
+Once a link between a Exact Online Salesorders and a Chargebee Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Salesorders and a Chargebee Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Salesorders Property
+     - Chargebee Order Property
+     - Chargebee Data Type
+
+
 Exact Online Units to Chargebee Currency
 ----------------------------------------
 Every Exact Online Units will be synchronized with a Chargebee Currency.
@@ -216,6 +248,38 @@ The following properties are synchronized between a Exact Online Vatcodes and a 
 
    * - Exact Online Vatcodes Property
      - Chargebee Currency Property
+     - Chargebee Data Type
+
+
+Exact Online Accounts to Chargebee Address
+------------------------------------------
+Every Exact Online Accounts will be synchronized with a Chargebee Address.
+
+Once a link between a Exact Online Accounts and a Chargebee Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Accounts and a Chargebee Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Accounts Property
+     - Chargebee Address Property
+     - Chargebee Data Type
+
+
+Exact Online Accounts to Chargebee Customer
+-------------------------------------------
+Every Exact Online Accounts will be synchronized with a Chargebee Customer.
+
+Once a link between a Exact Online Accounts and a Chargebee Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Accounts and a Chargebee Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Accounts Property
+     - Chargebee Customer Property
      - Chargebee Data Type
 
 
@@ -249,7 +313,4 @@ The following properties are synchronized between a Exact Online Salesorders and
    * - Exact Online Salesorders Property
      - Chargebee Order Property
      - Chargebee Data Type
-   * - Currency
-     - currency_code
-     - "string"
 
