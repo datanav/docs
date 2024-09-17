@@ -2,7 +2,7 @@
 Chargebee to CRMOffice Dataflow
 ===============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -43,6 +43,22 @@ The following properties are synchronized between a Chargebee Item and a CRMOffi
    :header-rows: 1
 
    * - Chargebee Item Property
+     - CRMOffice Companies Property
+     - CRMOffice Data Type
+
+
+Chargebee Business_entity to CRMOffice Companies
+------------------------------------------------
+Every Chargebee Business_entity will be synchronized with a CRMOffice Companies.
+
+Once a link between a Chargebee Business_entity and a CRMOffice Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Business_entity and a CRMOffice Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Business_entity Property
      - CRMOffice Companies Property
      - CRMOffice Data Type
 
