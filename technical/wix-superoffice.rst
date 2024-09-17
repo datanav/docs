@@ -2,7 +2,7 @@
 Wix.com to SuperOffice Dataflow
 ===============================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -86,60 +86,6 @@ The following properties are synchronized between a Wix.com Members and a SuperO
    * - loginEmail
      - Emails.Value
      - "string"
-
-
-Wix.com Orders to SuperOffice Quotealternative
-----------------------------------------------
-Before any synchronization can take place, a link between a Wix.com Orders and a SuperOffice Quotealternative must be established.
-
-A new SuperOffice Quotealternative will be created from a Wix.com Orders if it is connected to a Wix.com Wix-orders that is synchronized into SuperOffice.
-
-Once a link between a Wix.com Orders and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Orders and a SuperOffice Quotealternative:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Orders Property
-     - SuperOffice Quotealternative Property
-     - SuperOffice Data Type
-   * - totals.total
-     - TotalPrice
-     - "float"
-
-
-Wix.com Products to SuperOffice Product
----------------------------------------
-Before any synchronization can take place, a link between a Wix.com Products and a SuperOffice Product must be established.
-
-A new SuperOffice Product will be created from a Wix.com Products if it is connected to a Wix.com Wix-orders that is synchronized into SuperOffice.
-
-Once a link between a Wix.com Products and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Products and a SuperOffice Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Products Property
-     - SuperOffice Product Property
-     - SuperOffice Data Type
-   * - costAndProfitData.itemCost
-     - UnitCost
-     - "string"
-   * - costRange.maxValue
-     - UnitCost
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - priceData.currency
-     - ERPPriceListKey
-     - "string"
-   * - priceData.price
-     - UnitListPrice
-     - N/A
 
 
 Wix.com Orders to SuperOffice Quoteline
