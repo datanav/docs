@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2024-09-17 12:35:48
+Generated: 2024-09-17 12:39:56
 
 Introduction
 ------------
@@ -470,12 +470,6 @@ The following properties are synchronized between a SuperOffice Project and a Tr
    * - SuperOffice Project Property
      - Tripletex Project Property
      - Tripletex Data Type
-   * - Associate.AssociateId
-     - projectManager.id
-     - "integer"
-   * - Name
-     - name
-     - "string"
 
 
 SuperOffice Quoteline to Tripletex Orderline
