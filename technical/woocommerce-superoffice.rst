@@ -2,7 +2,7 @@
 WooCommerce to SuperOffice Dataflow
 ===================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -30,6 +30,24 @@ The following properties are synchronized between a WooCommerce Order and a Supe
      - "integer"
 
 
+WooCommerce Product to SuperOffice Product
+------------------------------------------
+Before any synchronization can take place, a link between a WooCommerce Product and a SuperOffice Product must be established.
+
+A new SuperOffice Product will be created from a WooCommerce Product if it is connected to a WooCommerce Order that is synchronized into SuperOffice.
+
+Once a link between a WooCommerce Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WooCommerce Product and a SuperOffice Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WooCommerce Product Property
+     - SuperOffice Product Property
+     - SuperOffice Data Type
+
+
 WooCommerce Order to SuperOffice Quoteline
 ------------------------------------------
 Every WooCommerce Order will be synchronized with a SuperOffice Quoteline.
@@ -44,18 +62,6 @@ The following properties are synchronized between a WooCommerce Order and a Supe
    * - WooCommerce Order Property
      - SuperOffice Quoteline Property
      - SuperOffice Data Type
-   * - id
-     - QuoteAlternativeId
-     - "integer"
-   * - line_items.name
-     - Name
-     - "string"
-   * - line_items.price
-     - UnitListPrice
-     - N/A
-   * - line_items.quantity
-     - Quantity
-     - N/A
 
 
 WooCommerce Product to SuperOffice Product
@@ -72,13 +78,4 @@ The following properties are synchronized between a WooCommerce Product and a Su
    * - WooCommerce Product Property
      - SuperOffice Product Property
      - SuperOffice Data Type
-   * - name
-     - Name
-     - "string"
-   * - price
-     - UnitCost
-     - "string"
-   * - sale_price
-     - UnitListPrice
-     - N/A
 
