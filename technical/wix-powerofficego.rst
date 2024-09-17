@@ -2,12 +2,40 @@
 Wix.com to PowerOffice GO Dataflow
 ==================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to PowerOffice GO. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wix.com Contacts to PowerOffice GO Contactperson
+------------------------------------------------
+Before any synchronization can take place, a link between a Wix.com Contacts and a PowerOffice GO Contactperson must be established.
+
+A new PowerOffice GO Contactperson will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into PowerOffice GO.
+
+A Wix.com Contacts will merge with a PowerOffice GO Contactperson if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Contacts Property
+     - PowerOffice GO Contactperson Property
+   * - primaryInfo.email
+     - emailAddress
+
+Once a link between a Wix.com Contacts and a PowerOffice GO Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Contacts and a PowerOffice GO Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Contacts Property
+     - PowerOffice GO Contactperson Property
+     - PowerOffice GO Data Type
+
 
 Wix.com Contacts to PowerOffice GO Customers person
 ---------------------------------------------------
@@ -131,22 +159,45 @@ The following properties are synchronized between a Wix.com Contacts and a Power
      - "string"
 
 
-Wix.com Contacts to PowerOffice GO Contactperson
-------------------------------------------------
-Every Wix.com Contacts will be synchronized with a PowerOffice GO Contactperson.
+Wix.com Orders to PowerOffice GO Salesorders
+--------------------------------------------
+Before any synchronization can take place, a link between a Wix.com Orders and a PowerOffice GO Salesorders must be established.
 
-If a matching PowerOffice GO Contactperson already exists, the Wix.com Contacts will be merged with the existing one.
-If no matching PowerOffice GO Contactperson is found, a new PowerOffice GO Contactperson will be created.
+A new PowerOffice GO Salesorders will be created from a Wix.com Orders if it is connected to a Wix.com Wix-orders that is synchronized into PowerOffice GO.
 
-A Wix.com Contacts will merge with a PowerOffice GO Contactperson if one of the following property combinations match:
+Once a link between a Wix.com Orders and a PowerOffice GO Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Orders and a PowerOffice GO Salesorders:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wix.com Contacts Property
-     - PowerOffice GO Contactperson Property
-   * - primaryInfo.email
-     - emailAddress
+   * - Wix.com Orders Property
+     - PowerOffice GO Salesorders Property
+     - PowerOffice GO Data Type
+
+
+Wix.com Products to PowerOffice GO Product
+------------------------------------------
+Before any synchronization can take place, a link between a Wix.com Products and a PowerOffice GO Product must be established.
+
+A new PowerOffice GO Product will be created from a Wix.com Products if it is connected to a Wix.com Wix-orders that is synchronized into PowerOffice GO.
+
+Once a link between a Wix.com Products and a PowerOffice GO Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a PowerOffice GO Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
+     - PowerOffice GO Product Property
+     - PowerOffice GO Data Type
+
+
+Wix.com Contacts to PowerOffice GO Contactperson
+------------------------------------------------
+Every Wix.com Contacts will be synchronized with a PowerOffice GO Contactperson.
 
 Once a link between a Wix.com Contacts and a PowerOffice GO Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -158,21 +209,6 @@ The following properties are synchronized between a Wix.com Contacts and a Power
    * - Wix.com Contacts Property
      - PowerOffice GO Contactperson Property
      - PowerOffice GO Data Type
-   * - info.addresses.items.address.country
-     - residenceCountryCode
-     - "string"
-   * - info.name.first
-     - firstName
-     - "string"
-   * - info.name.last
-     - lastName
-     - "string"
-   * - primaryInfo.email
-     - emailAddress
-     - "string"
-   * - primaryInfo.phone
-     - phoneNumber
-     - "string"
 
 
 Wix.com Orders to PowerOffice GO Salesorderlines
@@ -189,33 +225,6 @@ The following properties are synchronized between a Wix.com Orders and a PowerOf
    * - Wix.com Orders Property
      - PowerOffice GO Salesorderlines Property
      - PowerOffice GO Data Type
-   * - id
-     - sesam_SalesOrderId
-     - "string"
-   * - id
-     - sesam_SalesOrdersId
-     - "string"
-   * - lineItems.name
-     - Description
-     - "string"
-   * - lineItems.price
-     - ProductUnitPrice
-     - N/A
-   * - lineItems.price
-     - SalesOrderLineUnitPrice
-     - "string"
-   * - lineItems.productId
-     - ProductCode
-     - "string"
-   * - lineItems.productId
-     - ProductId
-     - "integer"
-   * - lineItems.quantity
-     - Quantity
-     - N/A
-   * - totals.total
-     - TotalAmount
-     - "string"
 
 
 Wix.com Orders to PowerOffice GO Salesorders
@@ -232,18 +241,6 @@ The following properties are synchronized between a Wix.com Orders and a PowerOf
    * - Wix.com Orders Property
      - PowerOffice GO Salesorders Property
      - PowerOffice GO Data Type
-   * - buyerInfo.id
-     - CustomerId
-     - "integer"
-   * - buyerInfo.id
-     - CustomerReferenceContactPersonId
-     - "string"
-   * - currency
-     - CurrencyCode
-     - "string"
-   * - totals.total
-     - TotalAmount
-     - "string"
 
 
 Wix.com Products to PowerOffice GO Product
@@ -260,22 +257,4 @@ The following properties are synchronized between a Wix.com Products and a Power
    * - Wix.com Products Property
      - PowerOffice GO Product Property
      - PowerOffice GO Data Type
-   * - costAndProfitData.itemCost
-     - costPrice
-     - N/A
-   * - costRange.maxValue
-     - costPrice
-     - N/A
-   * - description
-     - description
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - price.price
-     - salesPrice
-     - "string"
-   * - priceData.price
-     - salesPrice
-     - N/A
 
