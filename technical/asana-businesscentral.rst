@@ -2,7 +2,7 @@
 Asana to Business Central Dataflow
 ==================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -55,22 +55,20 @@ The following properties are synchronized between a Asana Users and a Business C
    * - Asana Users Property
      - Business Central Employees Property
      - Business Central Data Type
-   * - email
-     - email
-     - "string"
-   * - email
-     - personalEmail
-     - "string"
-   * - name
-     - displayName
-     - "string"
-   * - name
-     - givenName
-     - "string"
-   * - name
-     - surname
-     - "string"
-   * - workspaces.gid
-     - jobTitle
-     - "string"
+
+
+Asana Workspaces to Business Central Customers company
+------------------------------------------------------
+Every Asana Workspaces will be synchronized with a Business Central Customers company.
+
+Once a link between a Asana Workspaces and a Business Central Customers company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Asana Workspaces and a Business Central Customers company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Asana Workspaces Property
+     - Business Central Customers company Property
+     - Business Central Data Type
 
