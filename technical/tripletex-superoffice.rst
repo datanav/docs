@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -540,6 +540,48 @@ The following properties are synchronized between a Tripletex Order and a SuperO
      - "string"
 
 
+Tripletex Product to SuperOffice Product
+----------------------------------------
+Before any synchronization can take place, a link between a Tripletex Product and a SuperOffice Product must be established.
+
+A new SuperOffice Product will be created from a Tripletex Product if it is connected to a Tripletex Orderline that is synchronized into SuperOffice.
+
+Once a link between a Tripletex Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a SuperOffice Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - SuperOffice Product Property
+     - SuperOffice Data Type
+   * - costExcludingVatCurrency
+     - UnitCost
+     - "string"
+   * - currency.id
+     - ERPPriceListKey
+     - "string"
+   * - description
+     - Description
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - priceExcludingVatCurrency
+     - UnitListPrice
+     - N/A
+   * - productUnit.id
+     - QuantityUnit
+     - "string"
+   * - supplier.id
+     - Supplier
+     - "string"
+   * - vatType.id
+     - VAT
+     - "integer"
+
+
 Tripletex Department to SuperOffice Contact
 -------------------------------------------
 Every Tripletex Department will be synchronized with a SuperOffice Contact.
@@ -576,144 +618,6 @@ The following properties are synchronized between a Tripletex Orderline and a Su
    * - Tripletex Orderline Property
      - SuperOffice Quoteline Property
      - SuperOffice Data Type
-   * - count
-     - DiscountPercent
-     - "integer"
-   * - count
-     - Name
-     - "string"
-   * - count
-     - Quantity
-     - N/A
-   * - count
-     - QuantityUnit
-     - "integer"
-   * - count
-     - Rank (Dependant on having  in Rank)
-     - "integer"
-   * - count
-     - UnitListPrice
-     - "string"
-   * - count
-     - VAT
-     - "integer"
-   * - description
-     - Description
-     - "string"
-   * - description
-     - DiscountPercent
-     - "integer"
-   * - description
-     - Name
-     - "string"
-   * - description
-     - Quantity
-     - "integer"
-   * - description
-     - QuantityUnit
-     - "integer"
-   * - description
-     - Rank (Dependant on having  in Rank)
-     - "integer"
-   * - description
-     - UnitListPrice
-     - "string"
-   * - description
-     - VAT
-     - "integer"
-   * - discount
-     - DiscountPercent
-     - "integer"
-   * - discount
-     - ERPDiscountPercent
-     - N/A
-   * - discount
-     - Name
-     - "string"
-   * - discount
-     - Quantity
-     - "integer"
-   * - discount
-     - QuantityUnit
-     - "integer"
-   * - discount
-     - Rank (Dependant on having  in Rank)
-     - "integer"
-   * - discount
-     - UnitListPrice
-     - "string"
-   * - discount
-     - VAT
-     - "integer"
-   * - order.id
-     - QuoteAlternativeId
-     - "integer"
-   * - product.id
-     - ERPProductKey
-     - "string"
-   * - unitCostCurrency
-     - DiscountPercent
-     - "integer"
-   * - unitCostCurrency
-     - Name
-     - "string"
-   * - unitCostCurrency
-     - Quantity
-     - "integer"
-   * - unitCostCurrency
-     - QuantityUnit
-     - "integer"
-   * - unitCostCurrency
-     - Rank (Dependant on having  in Rank)
-     - "integer"
-   * - unitCostCurrency
-     - UnitListPrice
-     - "string"
-   * - unitCostCurrency
-     - VAT
-     - "integer"
-   * - unitPriceExcludingVatCurrency
-     - DiscountPercent
-     - "integer"
-   * - unitPriceExcludingVatCurrency
-     - Name
-     - "string"
-   * - unitPriceExcludingVatCurrency
-     - Quantity
-     - "integer"
-   * - unitPriceExcludingVatCurrency
-     - QuantityUnit
-     - "integer"
-   * - unitPriceExcludingVatCurrency
-     - Rank (Dependant on having  in Rank)
-     - "integer"
-   * - unitPriceExcludingVatCurrency
-     - UnitListPrice
-     - N/A
-   * - unitPriceExcludingVatCurrency
-     - VAT
-     - "integer"
-   * - vatType.id
-     - DiscountPercent
-     - "integer"
-   * - vatType.id
-     - Name
-     - "string"
-   * - vatType.id
-     - Quantity
-     - "integer"
-   * - vatType.id
-     - QuantityUnit
-     - "integer"
-   * - vatType.id
-     - Rank (Dependant on having  in Rank)
-     - "integer"
-   * - vatType.id
-     - UnitListPrice
-     - "string"
-   * - vatType.id
-     - VAT
-     - "integer"
 
 
 Tripletex Product to SuperOffice Product
@@ -730,34 +634,4 @@ The following properties are synchronized between a Tripletex Product and a Supe
    * - Tripletex Product Property
      - SuperOffice Product Property
      - SuperOffice Data Type
-   * - costExcludingVatCurrency
-     - UnitCost
-     - "string"
-   * - currency.id
-     - ERPPriceListKey
-     - "string"
-   * - description
-     - Description
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - number
-     - Code
-     - "string"
-   * - number
-     - ERPProductKey
-     - "string"
-   * - priceExcludingVatCurrency
-     - UnitListPrice
-     - N/A
-   * - productUnit.id
-     - QuantityUnit
-     - "string"
-   * - supplier.id
-     - Supplier
-     - "string"
-   * - vatType.id
-     - VAT
-     - "integer"
 
