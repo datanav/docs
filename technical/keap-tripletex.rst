@@ -2,7 +2,7 @@
 Keap to Tripletex Dataflow
 ==========================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -23,13 +23,4 @@ The following properties are synchronized between a Keap Product and a Tripletex
    * - Keap Product Property
      - Tripletex Product Property
      - Tripletex Data Type
-   * - product_desc
-     - description
-     - "string"
-   * - product_name
-     - name
-     - "string"
-   * - product_price
-     - priceExcludingVatCurrency
-     - "float"
 
