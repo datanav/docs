@@ -2,7 +2,7 @@
 Chargebee to Wave Dataflow
 ==========================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 08:52:07
 
 Introduction
 ------------
@@ -25,6 +25,15 @@ The following properties are synchronized between a Chargebee Customer and a Wav
    * - Chargebee Customer Property
      - Wave Customer Property
      - Wave Data Type
+   * - email
+     - email
+     - "string"
+   * - first_name
+     - firstName
+     - "string"
+   * - last_name
+     - lastName
+     - "string"
 
 
 Chargebee Customer to Wave Customer person
@@ -148,15 +157,6 @@ The following properties are synchronized between a Chargebee Customer and a Wav
    * - Chargebee Customer Property
      - Wave Customer Property
      - Wave Data Type
-   * - email
-     - email
-     - "string"
-   * - first_name
-     - firstName
-     - "string"
-   * - last_name
-     - lastName
-     - "string"
 
 
 Chargebee Customer to Wave Customer person
