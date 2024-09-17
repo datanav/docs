@@ -2,7 +2,7 @@
 SuperOffice to Business Central Dataflow
 ========================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -195,6 +195,24 @@ The following properties are synchronized between a SuperOffice Person and a Bus
      - "string"
 
 
+SuperOffice Product to Business Central Items
+---------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Product and a Business Central Items must be established.
+
+A new Business Central Items will be created from a SuperOffice Product if it is connected to a SuperOffice Quoteline that is synchronized into Business Central.
+
+Once a link between a SuperOffice Product and a Business Central Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a Business Central Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Business Central Items Property
+     - Business Central Data Type
+
+
 SuperOffice Quotealternative to Business Central Salesorders
 ------------------------------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Business Central Salesorders must be established.
@@ -258,33 +276,6 @@ The following properties are synchronized between a SuperOffice Product and a Bu
    * - SuperOffice Product Property
      - Business Central Items Property
      - Business Central Data Type
-   * - Name
-     - displayName
-     - "string"
-   * - Name
-     - displayName.string
-     - "string"
-   * - Name
-     - displayName2
-     - "string"
-   * - ProductCategoryKey
-     - itemCategoryId
-     - "string"
-   * - UnitCost
-     - unitCost
-     - N/A
-   * - UnitListPrice
-     - unitPrice
-     - N/A
-   * - VAT
-     - itemCategoryId
-     - "string"
-   * - VAT
-     - taxGroupCode
-     - "string"
-   * - VAT
-     - taxGroupId
-     - "string"
 
 
 SuperOffice Quoteline to Business Central Salesorderlines
@@ -301,37 +292,4 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - Business Central Salesorderlines Property
      - Business Central Data Type
-   * - Description
-     - description
-     - "string"
-   * - DiscountPercent
-     - discountPercent
-     - N/A
-   * - ERPDiscountPercent
-     - discountPercent
-     - N/A
-   * - ERPProductKey
-     - itemId
-     - "string"
-   * - Name
-     - description
-     - "string"
-   * - Quantity
-     - invoiceQuantity
-     - "string"
-   * - Quantity
-     - quantity
-     - N/A
-   * - QuoteAlternativeId
-     - documentId
-     - "string"
-   * - UnitListPrice
-     - amountExcludingTax
-     - "string"
-   * - UnitListPrice
-     - unitPrice
-     - "float"
-   * - VAT
-     - taxPercent
-     - N/A
 
