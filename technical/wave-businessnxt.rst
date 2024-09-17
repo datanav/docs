@@ -2,33 +2,12 @@
 Wave to Business Nxt Dataflow
 =============================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave to Business Nxt. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Wave Currency to Business Nxt Currency
---------------------------------------
-Before any synchronization can take place, a link between a Wave Currency and a Business Nxt Currency must be established.
-
-A new Business Nxt Currency will be created from a Wave Currency if it is connected to a Wave Country that is synchronized into Business Nxt.
-
-Once a link between a Wave Currency and a Business Nxt Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Currency and a Business Nxt Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Currency Property
-     - Business Nxt Currency Property
-     - Business Nxt Data Type
-   * - name
-     - name
-     - "string"
-
 
 Wave Customer to Business Nxt Address
 -------------------------------------
