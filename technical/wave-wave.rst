@@ -2,7 +2,7 @@
 Wave to Wave Dataflow
 =====================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -332,4 +332,36 @@ The following properties are synchronized between a Wave Financial Vendor and a 
    * - website
      - website
      - "string"
+
+
+Wave Customer person to Wave Customer
+-------------------------------------
+Every Wave Customer person will be synchronized with a Wave Customer.
+
+Once a link between a Wave Customer person and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer person and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - Wave Customer Property
+     - Wave Data Type
+
+
+Wave Customer to Wave Customer person
+-------------------------------------
+Every Wave Customer will be synchronized with a Wave Customer person.
+
+Once a link between a Wave Customer and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Wave Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Wave Customer person Property
+     - Wave Data Type
 
