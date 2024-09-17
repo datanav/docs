@@ -2,12 +2,46 @@
 Chargebee to Shopify Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Chargebee to Shopify. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Chargebee Customer to Shopify Customer
+--------------------------------------
+Before any synchronization can take place, a link between a Chargebee Customer and a Shopify Customer must be established.
+
+A new Shopify Customer will be created from a Chargebee Customer if it is connected to a Chargebee Order that is synchronized into Shopify.
+
+Once a link between a Chargebee Customer and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Customer and a Shopify Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Customer Property
+     - Shopify Customer Property
+     - Shopify Data Type
+
+
+Chargebee Address to Shopify Customer
+-------------------------------------
+Every Chargebee Address will be synchronized with a Shopify Customer.
+
+Once a link between a Chargebee Address and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Address and a Shopify Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Address Property
+     - Shopify Customer Property
+     - Shopify Data Type
+
 
 Chargebee Customer to Shopify Customer
 --------------------------------------
@@ -23,15 +57,6 @@ The following properties are synchronized between a Chargebee Customer and a Sho
    * - Chargebee Customer Property
      - Shopify Customer Property
      - Shopify Data Type
-   * - email
-     - email
-     - "string"
-   * - first_name
-     - first_name
-     - "string"
-   * - last_name
-     - last_name
-     - "string"
 
 
 Chargebee Item to Shopify Sesamproduct
@@ -64,16 +89,4 @@ The following properties are synchronized between a Chargebee Order and a Shopif
    * - Chargebee Order Property
      - Shopify Order Property
      - Shopify Data Type
-   * - currency_code
-     - currency
-     - "string"
-   * - customer_id
-     - customer.id
-     - "string"
-   * - order_line_items.amount
-     - line_items.quantity
-     - "integer"
-   * - order_line_items.unit_price
-     - line_items.price
-     - "string"
 
