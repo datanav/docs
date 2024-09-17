@@ -2,7 +2,7 @@
 WebCRM to Custom ERP Dataflow
 =============================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -38,6 +38,38 @@ The following properties are synchronized between a WebCRM Organisations and a C
 
    * - WebCRM Organisations Property
      - Custom ERP Customer Property
+     - Custom ERP Data Type
+
+
+WebCRM Persons to Custom ERP Contact
+------------------------------------
+Every WebCRM Persons will be synchronized with a Custom ERP Contact.
+
+Once a link between a WebCRM Persons and a Custom ERP Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WebCRM Persons and a Custom ERP Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WebCRM Persons Property
+     - Custom ERP Contact Property
+     - Custom ERP Data Type
+
+
+WebCRM Products to Custom ERP Product
+-------------------------------------
+Every WebCRM Products will be synchronized with a Custom ERP Product.
+
+Once a link between a WebCRM Products and a Custom ERP Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WebCRM Products and a Custom ERP Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WebCRM Products Property
+     - Custom ERP Product Property
      - Custom ERP Data Type
 
 
