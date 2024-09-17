@@ -2,7 +2,7 @@
 Unieconomy to Trello Dataflow
 =============================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Unieconomy Companies and a T
    * - Unieconomy Companies Property
      - Trello Organizations Property
      - Trello Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Unieconomy Customers to Trello Organizations
