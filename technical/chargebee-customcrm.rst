@@ -2,7 +2,7 @@
 Chargebee to Custom CRM Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -38,6 +38,70 @@ The following properties are synchronized between a Chargebee Customer and a Cus
 
    * - Chargebee Customer Property
      - Custom CRM Contact Property
+     - Custom CRM Data Type
+
+
+Chargebee Item to Custom CRM Product
+------------------------------------
+Every Chargebee Item will be synchronized with a Custom CRM Product.
+
+Once a link between a Chargebee Item and a Custom CRM Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Item and a Custom CRM Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Item Property
+     - Custom CRM Product Property
+     - Custom CRM Data Type
+
+
+Chargebee Order to Custom CRM Order
+-----------------------------------
+Every Chargebee Order will be synchronized with a Custom CRM Order.
+
+Once a link between a Chargebee Order and a Custom CRM Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Order and a Custom CRM Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Order Property
+     - Custom CRM Order Property
+     - Custom CRM Data Type
+
+
+Chargebee Address to Custom CRM Customer
+----------------------------------------
+Every Chargebee Address will be synchronized with a Custom CRM Customer.
+
+Once a link between a Chargebee Address and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Address and a Custom CRM Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Address Property
+     - Custom CRM Customer Property
+     - Custom CRM Data Type
+
+
+Chargebee Customer to Custom CRM Customer
+-----------------------------------------
+Every Chargebee Customer will be synchronized with a Custom CRM Customer.
+
+Once a link between a Chargebee Customer and a Custom CRM Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Customer and a Custom CRM Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Customer Property
+     - Custom CRM Customer Property
      - Custom CRM Data Type
 
 
