@@ -2,7 +2,7 @@
 Chargebee to Exact Online Dataflow
 ==================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -156,6 +156,18 @@ The following properties are synchronized between a Chargebee Address and a Exac
    * - Chargebee Address Property
      - Exact Online Accounts Property
      - Exact Online Data Type
+   * - city
+     - City
+     - "string"
+   * - country
+     - Country
+     - "string"
+   * - subscription_id
+     - ID
+     - "string"
+   * - zip
+     - Postcode
+     - "string"
 
 
 Chargebee Customer to Exact Online Accounts
