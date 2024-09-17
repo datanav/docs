@@ -2,7 +2,7 @@
 PowerOffice GO to Youtrack Dataflow
 ===================================
 
-Generated: 2024-09-17 00:00:02
+Generated: 2024-09-17 09:13:05
 
 Introduction
 ------------
@@ -44,28 +44,28 @@ The following properties are synchronized between a PowerOffice GO Contactperson
      - "string"
 
 
-PowerOffice GO Customers person to Youtrack Users
--------------------------------------------------
-Before any synchronization can take place, a link between a PowerOffice GO Customers person and a Youtrack Users must be established.
+PowerOffice GO Customers to Youtrack Users
+------------------------------------------
+Before any synchronization can take place, a link between a PowerOffice GO Customers and a Youtrack Users must be established.
 
-A PowerOffice GO Customers person will merge with a Youtrack Users if one of the following property combinations match:
+A PowerOffice GO Customers will merge with a Youtrack Users if one of the following property combinations match:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice GO Customers person Property
+   * - PowerOffice GO Customers Property
      - Youtrack Users Property
    * - EmailAddress
      - profile.email.email
 
-Once a link between a PowerOffice GO Customers person and a Youtrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a PowerOffice GO Customers and a Youtrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a PowerOffice GO Customers person and a Youtrack Users:
+The following properties are synchronized between a PowerOffice GO Customers and a Youtrack Users:
 
 .. list-table::
    :header-rows: 1
 
-   * - PowerOffice GO Customers person Property
+   * - PowerOffice GO Customers Property
      - Youtrack Users Property
      - Youtrack Data Type
    * - EmailAddress
