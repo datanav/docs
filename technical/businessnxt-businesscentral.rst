@@ -2,7 +2,7 @@
 Business Nxt to Business Central Dataflow
 =========================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -55,6 +55,15 @@ The following properties are synchronized between a Business Nxt Address and a B
    * - Business Nxt Address Property
      - Business Central Customers company Property
      - Business Central Data Type
+   * - emailAddress
+     - email
+     - "string"
+   * - name
+     - displayName
+     - "string"
+   * - phone
+     - phoneNumber
+     - "string"
 
 
 Business Nxt Company to Business Central Customers company
@@ -71,6 +80,9 @@ The following properties are synchronized between a Business Nxt Company and a B
    * - Business Nxt Company Property
      - Business Central Customers company Property
      - Business Central Data Type
+   * - name
+     - displayName
+     - "string"
 
 
 Business Nxt Order to Business Central Salesorders
