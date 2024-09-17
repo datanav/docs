@@ -2,7 +2,7 @@
 CRMOffice to Business Nxt Dataflow
 ==================================
 
-Generated: 2024-09-17 07:28:34
+Generated: 2024-09-17 12:35:50
 
 Introduction
 ------------
@@ -39,6 +39,9 @@ The following properties are synchronized between a CRMOffice Activities and a B
    * - CRMOffice Activities Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - address.country
+     - name
+     - "string"
 
 
 CRMOffice Companies to Business Nxt Address
