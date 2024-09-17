@@ -2,7 +2,7 @@
 Salesforce to MemberCare Dataflow
 =================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -31,12 +31,6 @@ The following properties are synchronized between a Salesforce Contact and a Mem
      - "string"
    * - LastName
      - lastname
-     - "string"
-   * - Name
-     - firstname
-     - "string"
-   * - Name
-     - name
      - "string"
 
 
@@ -228,9 +222,6 @@ The following properties are synchronized between a Salesforce Product2 and a Me
      - MemberCare Products Property
      - MemberCare Data Type
    * - Name
-     - name
-     - "string"
-   * - Name	
      - name
      - "string"
 
