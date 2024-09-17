@@ -2,7 +2,7 @@
 Salesforce to Wave Dataflow
 ===========================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -25,6 +25,15 @@ The following properties are synchronized between a Salesforce Order and a Wave 
    * - Salesforce Order Property
      - Wave Invoice Property
      - Wave Data Type
+   * - CurrencyIsoCode
+     - currency.code
+     - "string"
+   * - Description
+     - memo
+     - "string"
+   * - Name
+     - title
+     - "string"
 
 
 Salesforce Product2 to Wave Product
@@ -43,6 +52,12 @@ The following properties are synchronized between a Salesforce Product2 and a Wa
    * - Salesforce Product2 Property
      - Wave Product Property
      - Wave Data Type
+   * - Description
+     - description
+     - "string"
+   * - Name
+     - name
+     - "string"
 
 
 Salesforce Customer to Wave Customer
