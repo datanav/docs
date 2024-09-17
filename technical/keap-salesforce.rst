@@ -2,7 +2,7 @@
 Keap to Salesforce Dataflow
 ===========================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -58,16 +58,20 @@ The following properties are synchronized between a Keap Product and a Salesforc
    * - Keap Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-   * - product_desc
-     - Description
-     - "string"
-   * - product_desc
-     - Description	
-     - "string"
-   * - product_name
-     - Name
-     - "string"
-   * - product_name
-     - Name	
-     - "string"
+
+
+Keap Product to Salesforce Product2
+-----------------------------------
+Every Keap Product will be synchronized with a Salesforce Product2.
+
+Once a link between a Keap Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Keap Product and a Salesforce Product2:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Keap Product Property
+     - Salesforce Product2 Property
+     - Salesforce Data Type
 
