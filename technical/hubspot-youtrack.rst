@@ -2,7 +2,7 @@
 HubSpot to Youtrack Dataflow
 ============================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -207,6 +207,22 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
      - Youtrack Data Type
 
 
+HubSpot Pipelineticket to Youtrack Issues
+-----------------------------------------
+Every HubSpot Pipelineticket will be synchronized with a Youtrack Issues.
+
+Once a link between a HubSpot Pipelineticket and a Youtrack Issues is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Pipelineticket and a Youtrack Issues:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Pipelineticket Property
+     - Youtrack Issues Property
+     - Youtrack Data Type
+
+
 HubSpot Ticket to Youtrack Issues
 ---------------------------------
 Every HubSpot Ticket will be synchronized with a Youtrack Issues.
@@ -221,9 +237,6 @@ The following properties are synchronized between a HubSpot Ticket and a Youtrac
    * - HubSpot Ticket Property
      - Youtrack Issues Property
      - Youtrack Data Type
-   * - properties.hubspot_owner_id
-     - reporter.id
-     - "string"
 
 
 HubSpot User to Youtrack Users
@@ -240,7 +253,4 @@ The following properties are synchronized between a HubSpot User and a Youtrack 
    * - HubSpot User Property
      - Youtrack Users Property
      - Youtrack Data Type
-   * - email
-     - profile.email.email
-     - "string"
 
