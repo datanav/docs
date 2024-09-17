@@ -2,7 +2,7 @@
 Business Central to HubSpot Dataflow
 ====================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -79,15 +79,6 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (organisation data) Property
      - HubSpot Company Property
      - HubSpot Data Type
-   * - address.city
-     - properties.city
-     - "string"
-   * - address.countryLetterCode
-     - properties.country
-     - "string"
-   * - address.postalCode
-     - properties.zip
-     - "string"
    * - addressLine1
      - properties.address
      - "string"
@@ -105,9 +96,6 @@ The following properties are synchronized between a Business Central Customers (
      - "string"
    * - id
      - id
-     - "string"
-   * - id (Dependant on having  in typeDependant on having NO in type)
-     - sync_org_nr
      - "string"
    * - phoneNumber
      - properties.phone
@@ -173,9 +161,6 @@ The following properties are synchronized between a Business Central Employees a
      - HubSpot Data Type
    * - birthDate
      - properties.date_of_birth
-     - "string"
-   * - email
-     - properties.email
      - "string"
    * - givenName
      - properties.firstname
