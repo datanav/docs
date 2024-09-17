@@ -2,12 +2,30 @@
 Exact Online to HubSpot Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Exact Online to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Exact Online Items to HubSpot Product
+-------------------------------------
+Before any synchronization can take place, a link between a Exact Online Items and a HubSpot Product must be established.
+
+A new HubSpot Product will be created from a Exact Online Items if it is connected to a Exact Online Exact-salesorderlines that is synchronized into HubSpot.
+
+Once a link between a Exact Online Items and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Items and a HubSpot Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Items Property
+     - HubSpot Product Property
+     - HubSpot Data Type
+
 
 Exact Online Accounts to HubSpot Company
 ----------------------------------------
@@ -167,5 +185,53 @@ The following properties are synchronized between a Exact Online Salesorderlines
 
    * - Exact Online Salesorderlines Property
      - HubSpot Lineitem Property
+     - HubSpot Data Type
+
+
+Exact Online Salesorderlines to HubSpot Lineitemdealassociationtype
+-------------------------------------------------------------------
+Every Exact Online Salesorderlines will be synchronized with a HubSpot Lineitemdealassociationtype.
+
+Once a link between a Exact Online Salesorderlines and a HubSpot Lineitemdealassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Salesorderlines and a HubSpot Lineitemdealassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Salesorderlines Property
+     - HubSpot Lineitemdealassociationtype Property
+     - HubSpot Data Type
+
+
+Exact Online Salesorderlines to HubSpot Lineitemquoteassociationtype
+--------------------------------------------------------------------
+Every Exact Online Salesorderlines will be synchronized with a HubSpot Lineitemquoteassociationtype.
+
+Once a link between a Exact Online Salesorderlines and a HubSpot Lineitemquoteassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Salesorderlines and a HubSpot Lineitemquoteassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Salesorderlines Property
+     - HubSpot Lineitemquoteassociationtype Property
+     - HubSpot Data Type
+
+
+Exact Online Salesorders to HubSpot Deal
+----------------------------------------
+Every Exact Online Salesorders will be synchronized with a HubSpot Deal.
+
+Once a link between a Exact Online Salesorders and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Salesorders and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Salesorders Property
+     - HubSpot Deal Property
      - HubSpot Data Type
 
