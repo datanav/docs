@@ -2,7 +2,7 @@
 Shopify to Exact Online Dataflow
 ================================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -44,21 +44,6 @@ The following properties are synchronized between a Shopify Customer and a Exact
      - "string"
    * - default_address.country
      - Country
-     - "string"
-   * - default_address.phone
-     - Phone
-     - "string"
-   * - email
-     - Email
-     - "string"
-   * - first_name
-     - FirstName
-     - "string"
-   * - last_name
-     - LastName
-     - "string"
-   * - phone
-     - Mobile
      - "string"
 
 
