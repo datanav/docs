@@ -2,7 +2,7 @@
 Exact Online to Business Nxt Dataflow
 =====================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -94,6 +94,22 @@ The following properties are synchronized between a Exact Online Divisions and a
      - Business Nxt Data Type
 
 
+Exact Online Items to Business Nxt Product
+------------------------------------------
+Every Exact Online Items will be synchronized with a Business Nxt Product.
+
+Once a link between a Exact Online Items and a Business Nxt Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Items and a Business Nxt Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Items Property
+     - Business Nxt Product Property
+     - Business Nxt Data Type
+
+
 Exact Online Quotations to Business Nxt Order
 ---------------------------------------------
 Every Exact Online Quotations will be synchronized with a Business Nxt Order.
@@ -138,6 +154,22 @@ The following properties are synchronized between a Exact Online Salesorderlines
    :header-rows: 1
 
    * - Exact Online Salesorderlines Property
+     - Business Nxt Order Property
+     - Business Nxt Data Type
+
+
+Exact Online Salesorders to Business Nxt Order
+----------------------------------------------
+Every Exact Online Salesorders will be synchronized with a Business Nxt Order.
+
+Once a link between a Exact Online Salesorders and a Business Nxt Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Salesorders and a Business Nxt Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Salesorders Property
      - Business Nxt Order Property
      - Business Nxt Data Type
 
@@ -191,9 +223,6 @@ The following properties are synchronized between a Exact Online Addresses and a
    * - Exact Online Addresses Property
      - Business Nxt Country Property
      - Business Nxt Data Type
-   * - CountryName
-     - name
-     - "string"
 
 
 Exact Online Currencies to Business Nxt Currency
@@ -210,9 +239,6 @@ The following properties are synchronized between a Exact Online Currencies and 
    * - Exact Online Currencies Property
      - Business Nxt Currency Property
      - Business Nxt Data Type
-   * - Description
-     - name
-     - "string"
 
 
 Exact Online Items to Business Nxt Product
@@ -261,7 +287,4 @@ The following properties are synchronized between a Exact Online Salesorders and
    * - Exact Online Salesorders Property
      - Business Nxt Order Property
      - Business Nxt Data Type
-   * - Discount
-     - totalDiscountAmountInCurrency
-     - "string"
 
