@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-09-17 09:14:34
+Generated: 2024-09-17 12:29:50
 
 Introduction
 ------------
@@ -1067,6 +1067,22 @@ The following properties are synchronized between a Tripletex Supplier and a Tri
      - "string"
 
 
+Tripletex Activity to Tripletex Projectactivity
+-----------------------------------------------
+Every Tripletex Activity will be synchronized with a Tripletex Projectactivity.
+
+Once a link between a Tripletex Activity and a Tripletex Projectactivity is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Activity and a Tripletex Projectactivity:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Activity Property
+     - Tripletex Projectactivity Property
+     - Tripletex Data Type
+
+
 Tripletex Customer (organisation data) to Tripletex Customer
 ------------------------------------------------------------
 removed person customers for now until that pattern is resolved, it  will be synchronized with a Tripletex Customer.
@@ -1234,5 +1250,21 @@ The following properties are synchronized between a Tripletex Customer and a Tri
 
    * - Tripletex Customer Property
      - Tripletex Customer (human data) Property
+     - Tripletex Data Type
+
+
+Tripletex Projectactivity to Tripletex Activity
+-----------------------------------------------
+Every Tripletex Projectactivity will be synchronized with a Tripletex Activity.
+
+Once a link between a Tripletex Projectactivity and a Tripletex Activity is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Projectactivity and a Tripletex Activity:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Projectactivity Property
+     - Tripletex Activity Property
      - Tripletex Data Type
 
