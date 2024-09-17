@@ -2,7 +2,7 @@
 SuperOffice to Zendesk Dataflow
 ===============================
 
-Generated: 2024-09-17 09:13:05
+Generated: 2024-09-17 09:14:34
 
 Introduction
 ------------
@@ -35,9 +35,6 @@ The following properties are synchronized between a SuperOffice Person and a Zen
    * - SuperOffice Person Property
      - Zendesk Users Property
      - Zendesk Data Type
-   * - Contact.ContactId
-     - organization_id
-     - "string"
    * - Emails.Value
      - email
      - "string"
@@ -70,9 +67,6 @@ The following properties are synchronized between a SuperOffice User and a Zende
    * - SuperOffice User Property
      - Zendesk Users Property
      - Zendesk Data Type
-   * - contactId
-     - organization_id
-     - "string"
    * - personEmail
      - email
      - "string"
