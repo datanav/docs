@@ -2,7 +2,7 @@
 Exact Online to Shopify Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
@@ -24,6 +24,40 @@ The following properties are synchronized between a Exact Online Items and a Sho
 
    * - Exact Online Items Property
      - Shopify Product Property
+     - Shopify Data Type
+
+
+Exact Online Salesorders to Shopify Order
+-----------------------------------------
+Before any synchronization can take place, a link between a Exact Online Salesorders and a Shopify Order must be established.
+
+A new Shopify Order will be created from a Exact Online Salesorders if it is connected to a Exact Online Exact-salesorders that is synchronized into Shopify.
+
+Once a link between a Exact Online Salesorders and a Shopify Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Salesorders and a Shopify Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Salesorders Property
+     - Shopify Order Property
+     - Shopify Data Type
+
+
+Exact Online Accounts to Shopify Customer
+-----------------------------------------
+Every Exact Online Accounts will be synchronized with a Shopify Customer.
+
+Once a link between a Exact Online Accounts and a Shopify Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Accounts and a Shopify Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Accounts Property
+     - Shopify Customer Property
      - Shopify Data Type
 
 
@@ -57,7 +91,4 @@ The following properties are synchronized between a Exact Online Salesorders and
    * - Exact Online Salesorders Property
      - Shopify Order Property
      - Shopify Data Type
-   * - Currency
-     - currency
-     - "string"
 
