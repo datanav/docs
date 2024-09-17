@@ -2,12 +2,30 @@
 Shopify to Exact Online Dataflow
 ================================
 
-Generated: 2024-09-17 00:00:03
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to Exact Online. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Shopify Order to Exact Online Salesorders
+-----------------------------------------
+Before any synchronization can take place, a link between a Shopify Order and a Exact Online Salesorders must be established.
+
+A new Exact Online Salesorders will be created from a Shopify Order if it is connected to a Shopify Order that is synchronized into Exact Online.
+
+Once a link between a Shopify Order and a Exact Online Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a Exact Online Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - Exact Online Salesorders Property
+     - Exact Online Data Type
+
 
 Shopify Product to Exact Online Items
 -------------------------------------
@@ -103,6 +121,38 @@ The following properties are synchronized between a Shopify Order and a Exact On
      - "string"
 
 
+Shopify Sesamproduct to Exact Online Items
+------------------------------------------
+Every Shopify Sesamproduct will be synchronized with a Exact Online Items.
+
+Once a link between a Shopify Sesamproduct and a Exact Online Items is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Sesamproduct and a Exact Online Items:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Sesamproduct Property
+     - Exact Online Items Property
+     - Exact Online Data Type
+
+
+Shopify Customer to Exact Online Accounts
+-----------------------------------------
+Every Shopify Customer will be synchronized with a Exact Online Accounts.
+
+Once a link between a Shopify Customer and a Exact Online Accounts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Customer and a Exact Online Accounts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Customer Property
+     - Exact Online Accounts Property
+     - Exact Online Data Type
+
+
 Shopify Customer to Exact Online Currencies
 -------------------------------------------
 Every Shopify Customer will be synchronized with a Exact Online Currencies.
@@ -117,9 +167,22 @@ The following properties are synchronized between a Shopify Customer and a Exact
    * - Shopify Customer Property
      - Exact Online Currencies Property
      - Exact Online Data Type
-   * - default_address.country_name
-     - Description
-     - "string"
+
+
+Shopify Order to Exact Online Salesinvoices
+-------------------------------------------
+Every Shopify Order will be synchronized with a Exact Online Salesinvoices.
+
+Once a link between a Shopify Order and a Exact Online Salesinvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Order and a Exact Online Salesinvoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Order Property
+     - Exact Online Salesinvoices Property
+     - Exact Online Data Type
 
 
 Shopify Order to Exact Online Salesorderlines
@@ -136,9 +199,6 @@ The following properties are synchronized between a Shopify Order and a Exact On
    * - Shopify Order Property
      - Exact Online Salesorderlines Property
      - Exact Online Data Type
-   * - id
-     - OrderID
-     - "string"
 
 
 Shopify Order to Exact Online Salesorders
@@ -155,12 +215,6 @@ The following properties are synchronized between a Shopify Order and a Exact On
    * - Shopify Order Property
      - Exact Online Salesorders Property
      - Exact Online Data Type
-   * - created_at
-     - OrderDate
-     - "string"
-   * - currency
-     - Currency
-     - "string"
 
 
 Shopify Sesamproduct to Exact Online Items
