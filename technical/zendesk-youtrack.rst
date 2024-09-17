@@ -2,12 +2,41 @@
 Zendesk to Youtrack Dataflow
 ============================
 
-Generated: 2024-09-17 00:00:01
+Generated: 2024-09-17 07:26:51
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Zendesk to Youtrack. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Zendesk Users to Youtrack Users
+-------------------------------
+Before any synchronization can take place, a link between a Zendesk Users and a Youtrack Users must be established.
+
+A Zendesk Users will merge with a Youtrack Users if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Users Property
+     - Youtrack Users Property
+   * - email
+     - profile.email.email
+
+Once a link between a Zendesk Users and a Youtrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Users and a Youtrack Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Users Property
+     - Youtrack Users Property
+     - Youtrack Data Type
+   * - name
+     - name
+     - "string"
+
 
 Zendesk Organizations to Youtrack Groups
 ----------------------------------------
@@ -74,27 +103,11 @@ The following properties are synchronized between a Zendesk Tickets and a Youtra
    * - Zendesk Tickets Property
      - Youtrack Issues Property
      - Youtrack Data Type
-   * - requester_id
-     - reporter.id
-     - "string"
 
 
 Zendesk Users to Youtrack Users
 -------------------------------
 When a Zendesk User is of type Agent, it  will be synchronized with a Youtrack Users.
-
-If a matching Youtrack Users already exists, the Zendesk Users will be merged with the existing one.
-If no matching Youtrack Users is found, a new Youtrack Users will be created.
-
-A Zendesk Users will merge with a Youtrack Users if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Users Property
-     - Youtrack Users Property
-   * - email
-     - profile.email.email
 
 Once a link between a Zendesk Users and a Youtrack Users is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -106,13 +119,4 @@ The following properties are synchronized between a Zendesk Users and a Youtrack
    * - Zendesk Users Property
      - Youtrack Users Property
      - Youtrack Data Type
-   * - email
-     - profile.email
-     - "string"
-   * - email
-     - profile.email.email
-     - "string"
-   * - name
-     - name
-     - "string"
 
