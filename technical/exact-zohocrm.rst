@@ -2,7 +2,7 @@
 Exact Online to ZohoCRM Dataflow
 ================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -86,4 +86,22 @@ The following properties are synchronized between a Exact Online Accounts and a 
    * - Exact Online Accounts Property
      - ZohoCRM Contact Property
      - ZohoCRM Data Type
+   * - City
+     - Mailing_City
+     - "string"
+   * - City
+     - Other_City
+     - "string"
+   * - Country
+     - Mailing_Country
+     - "string"
+   * - Country
+     - Other_Country
+     - "string"
+   * - Postcode
+     - Mailing_Zip
+     - "string"
+   * - Postcode
+     - Other_Zip
+     - "string"
 
