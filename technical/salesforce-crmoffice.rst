@@ -2,7 +2,7 @@
 Salesforce to CRMOffice Dataflow
 ================================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a Salesforce Contact and a CRM
    * - Salesforce Contact Property
      - CRMOffice Contacts Property
      - CRMOffice Data Type
+   * - FirstName
+     - givenName
+     - "string"
+   * - LastName
+     - familyName
+     - "string"
+   * - MobilePhone
+     - mobilePhone
+     - "string"
+   * - Phone
+     - directPhone
+     - "string"
 
 
 Salesforce Customer to CRMOffice Contacts
@@ -153,4 +165,25 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      - CRMOffice Companies Property
      - CRMOffice Data Type
+   * - City
+     - postAddress.postalArea
+     - "string"
+   * - City
+     - visitAddress.postalArea
+     - "string"
+   * - Country
+     - postAddress.country
+     - "string"
+   * - Country
+     - visitAddress.country
+     - "string"
+   * - ID
+     - id
+     - "string"
+   * - PostalCode
+     - postAddress.postCode
+     - "string"
+   * - PostalCode
+     - visitAddress.postCode
+     - "string"
 
