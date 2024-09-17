@@ -2,7 +2,7 @@
 Business Nxt to SuperOffice Dataflow
 ====================================
 
-Generated: 2024-09-17 07:26:51
+Generated: 2024-09-17 12:31:51
 
 Introduction
 ------------
@@ -67,6 +67,9 @@ The following properties are synchronized between a Business Nxt Orderline and a
    * - Business Nxt Orderline Property
      - SuperOffice Quoteline Property
      - SuperOffice Data Type
+   * - orderNo
+     - QuoteAlternativeId
+     - "integer"
 
 
 Business Nxt Product to SuperOffice Product
