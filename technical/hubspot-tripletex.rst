@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2024-09-17 07:26:52
+Generated: 2024-09-17 07:28:34
 
 Introduction
 ------------
@@ -389,7 +389,7 @@ HubSpot Product to Tripletex Product
 ------------------------------------
 Before any synchronization can take place, a link between a HubSpot Product and a Tripletex Product must be established.
 
-A new Tripletex Product will be created from a HubSpot Product if it is connected to a HubSpot Lineitem, or Lineitemdealassociation that is synchronized into Tripletex.
+A new Tripletex Product will be created from a HubSpot Product if it is connected to a HubSpot Lineitem, Lineitemdealassociation, Lineitemdealassociationtype, or Lineitemquoteassociationtype that is synchronized into Tripletex.
 
 Once a link between a HubSpot Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -406,7 +406,7 @@ The following properties are synchronized between a HubSpot Product and a Triple
      - "string"
    * - properties.hs_cost_of_goods_sold
      - costExcludingVatCurrency
-     - "integer"
+     - "float"
    * - properties.hs_sku
      - number
      - "string"
