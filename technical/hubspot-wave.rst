@@ -2,7 +2,7 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2024-09-17 00:00:22
+Generated: 2024-09-17 07:26:52
 
 Introduction
 ------------
@@ -283,6 +283,24 @@ The following properties are synchronized between a HubSpot Contact and a Wave C
      - "string"
 
 
+HubSpot Product to Wave Product
+-------------------------------
+Before any synchronization can take place, a link between a HubSpot Product and a Wave Product must be established.
+
+A new Wave Product will be created from a HubSpot Product if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Wave.
+
+Once a link between a HubSpot Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a Wave Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     - Wave Product Property
+     - Wave Data Type
+
+
 HubSpot Deal to Wave Invoice
 ----------------------------
 When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Wave Invoice.
@@ -297,18 +315,6 @@ The following properties are synchronized between a HubSpot Deal and a Wave Invo
    * - HubSpot Deal Property
      - Wave Invoice Property
      - Wave Data Type
-   * - properties.deal_currency_code
-     - currency.code
-     - "string"
-   * - properties.dealname
-     - memo
-     - "string"
-   * - properties.dealname
-     - title
-     - "string"
-   * - properties.description
-     - memo
-     - "string"
 
 
 HubSpot Product to Wave Product
@@ -325,13 +331,4 @@ The following properties are synchronized between a HubSpot Product and a Wave P
    * - HubSpot Product Property
      - Wave Product Property
      - Wave Data Type
-   * - properties.description
-     - description
-     - "string"
-   * - properties.name
-     - name
-     - "string"
-   * - properties.price
-     - unitPrice
-     - "string"
 
