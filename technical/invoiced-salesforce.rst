@@ -2,7 +2,7 @@
 Invoiced to Salesforce Dataflow
 ===============================
 
-Generated: 2024-09-18 00:02:55
+Generated: 2024-09-18 07:21:54
 
 Introduction
 ------------
@@ -99,6 +99,12 @@ The following properties are synchronized between a Invoiced Contacts and a Sale
    * - Invoiced Contacts Property
      - Salesforce Contact Property
      - Salesforce Data Type
+   * - email
+     - Email
+     - "string"
+   * - phone
+     - MobilePhone
+     - "string"
 
 
 Invoiced Customers (human data) to Salesforce Customer
