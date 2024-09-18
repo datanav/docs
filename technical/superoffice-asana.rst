@@ -2,7 +2,7 @@
 SuperOffice to Asana Dataflow
 =============================
 
-Generated: 2024-09-18 00:00:00
+Generated: 2024-09-18 00:02:55
 
 Introduction
 ------------
@@ -39,16 +39,4 @@ The following properties are synchronized between a SuperOffice Project and a As
    * - SuperOffice Project Property
      - Asana Projects Property
      - Asana Data Type
-   * - Associate.AssociateId
-     - owner.gid
-     - "string"
-   * - EndDate
-     - due_on
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - NextMilestoneDate
-     - start_on
-     - "string"
 
