@@ -2,7 +2,7 @@
 PowerOffice GO to PowerOffice GO Dataflow
 =========================================
 
-Generated: 2024-09-18 07:21:53
+Generated: 2024-09-18 08:10:29
 
 Introduction
 ------------
@@ -325,6 +325,9 @@ The following properties are synchronized between a PowerOffice GO Timetrackinga
    * - PowerOffice GO Timetrackingactivity Property
      - PowerOffice GO Timetrackingactivity Property
      - PowerOffice GO Data Type
+   * - activityType
+     - activityType
+     - "string"
 
 
 PowerOffice GO Customers (classification data) to PowerOffice GO Customers
