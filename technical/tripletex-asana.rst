@@ -2,7 +2,7 @@
 Tripletex to Asana Dataflow
 ===========================
 
-Generated: 2024-09-18 00:00:00
+Generated: 2024-09-18 00:02:55
 
 Introduction
 ------------
@@ -23,10 +23,4 @@ The following properties are synchronized between a Tripletex Project and a Asan
    * - Tripletex Project Property
      - Asana Projects Property
      - Asana Data Type
-   * - name
-     - name
-     - "string"
-   * - projectManager.id
-     - owner.gid
-     - "string"
 
