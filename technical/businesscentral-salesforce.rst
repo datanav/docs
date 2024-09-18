@@ -2,7 +2,7 @@
 Business Central to Salesforce Dataflow
 =======================================
 
-Generated: 2024-09-18 00:02:55
+Generated: 2024-09-18 07:21:54
 
 Introduction
 ------------
@@ -131,6 +131,15 @@ The following properties are synchronized between a Business Central Contacts (h
    * - Business Central Contacts (human data) Property
      - Salesforce Contact Property
      - Salesforce Data Type
+   * - email
+     - Email
+     - "string"
+   * - mobilePhoneNumber
+     - MobilePhone
+     - "string"
+   * - phoneNumber
+     - Phone
+     - "string"
 
 
 Business Central Currencies to Salesforce Currencytype
@@ -147,6 +156,9 @@ The following properties are synchronized between a Business Central Currencies 
    * - Business Central Currencies Property
      - Salesforce Currencytype Property
      - Salesforce Data Type
+   * - code
+     - IsoCode
+     - "string"
 
 
 Business Central Customers (human data) to Salesforce Customer
