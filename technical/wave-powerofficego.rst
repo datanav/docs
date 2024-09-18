@@ -2,7 +2,7 @@
 Wave to PowerOffice GO Dataflow
 ===============================
 
-Generated: 2024-09-17 09:14:34
+Generated: 2024-09-18 00:02:55
 
 Introduction
 ------------
@@ -183,18 +183,6 @@ The following properties are synchronized between a Wave Customer and a PowerOff
    * - Wave Customer Property
      - PowerOffice GO Contactperson Property
      - PowerOffice GO Data Type
-   * - email
-     - emailAddress
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - id
-     - partyId
-     - "integer"
-   * - lastName
-     - lastName
-     - "string"
 
 
 Wave Customer to PowerOffice GO Customers
