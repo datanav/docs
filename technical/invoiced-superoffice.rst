@@ -2,7 +2,7 @@
 Invoiced to SuperOffice Dataflow
 ================================
 
-Generated: 2024-09-18 00:02:55
+Generated: 2024-09-18 07:21:54
 
 Introduction
 ------------
@@ -122,4 +122,22 @@ The following properties are synchronized between a Invoiced Lineitem and a Supe
    * - Invoiced Lineitem Property
      - SuperOffice Quoteline Property
      - SuperOffice Data Type
+   * - $original_id
+     - QuoteAlternativeId
+     - "integer"
+   * - items.amount
+     - UnitListPrice
+     - N/A
+   * - items.description
+     - Description
+     - "string"
+   * - items.discounts
+     - ERPDiscountPercent
+     - "integer"
+   * - items.name
+     - Name
+     - "string"
+   * - items.quantity
+     - Quantity
+     - N/A
 
