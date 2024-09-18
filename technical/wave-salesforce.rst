@@ -2,7 +2,7 @@
 Wave to Salesforce Dataflow
 ===========================
 
-Generated: 2024-09-18 00:00:00
+Generated: 2024-09-18 00:02:55
 
 Introduction
 ------------
@@ -23,12 +23,6 @@ The following properties are synchronized between a Wave Product and a Salesforc
    * - Wave Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-   * - description
-     - Description
-     - "string"
-   * - name
-     - Name
-     - "string"
 
 
 Wave Customer to Salesforce Division
@@ -133,45 +127,6 @@ The following properties are synchronized between a Wave Customer and a Salesfor
    * - Wave Customer Property
      - Salesforce Contact Property
      - Salesforce Data Type
-   * - address.city
-     - MailingCity
-     - "string"
-   * - address.country.code
-     - MailingCountry
-     - "string"
-   * - address.postalCode
-     - MailingPostalCode
-     - "string"
-   * - address.province.code
-     - MailingState
-     - "string"
-   * - email
-     - Email
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - id
-     - ID
-     - "string"
-   * - lastName
-     - LastName
-     - "string"
-   * - mobile
-     - MobilePhone
-     - "string"
-   * - shippingDetails.address.city
-     - MailingCity
-     - "string"
-   * - shippingDetails.address.country.code
-     - MailingCountry
-     - "string"
-   * - shippingDetails.address.postalCode
-     - MailingPostalCode
-     - "string"
-   * - shippingDetails.address.province.code
-     - MailingState
-     - "string"
 
 
 Wave Customer to Salesforce Customer
@@ -284,21 +239,6 @@ The following properties are synchronized between a Wave Vendor and a Salesforce
    * - Wave Vendor Property
      - Salesforce Contact Property
      - Salesforce Data Type
-   * - email
-     - Email
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - lastName
-     - LastName
-     - "string"
-   * - mobile
-     - MobilePhone
-     - "string"
-   * - phone
-     - Phone
-     - "string"
 
 
 Wave Vendor to Salesforce Seller
