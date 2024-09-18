@@ -2,7 +2,7 @@
 Shopify to Exact Online Dataflow
 ================================
 
-Generated: 2024-09-18 00:00:02
+Generated: 2024-09-18 00:02:55
 
 Introduction
 ------------
@@ -134,9 +134,6 @@ The following properties are synchronized between a Shopify Customer and a Exact
    * - Shopify Customer Property
      - Exact Online Currencies Property
      - Exact Online Data Type
-   * - default_address.country_name
-     - Description
-     - "string"
 
 
 Shopify Order to Exact Online Salesinvoices
