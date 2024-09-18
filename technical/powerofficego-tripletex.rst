@@ -2,7 +2,7 @@
 PowerOffice GO to Tripletex Dataflow
 ====================================
 
-Generated: 2024-09-18 00:02:55
+Generated: 2024-09-18 07:21:54
 
 Introduction
 ------------
@@ -588,9 +588,6 @@ The following properties are synchronized between a PowerOffice GO Timetrackinga
    * - PowerOffice GO Timetrackingactivity Property
      - Tripletex Activity Property
      - Tripletex Data Type
-   * - name
-     - name
-     - "string"
    * - requireProject
      - isProjectActivity
      - "string"
@@ -796,6 +793,12 @@ The following properties are synchronized between a PowerOffice GO Projectactivi
    * - PowerOffice GO Projectactivity Property
      - Tripletex Activity Property
      - Tripletex Data Type
+   * - isBillable
+     - isChargeable
+     - "string"
+   * - name
+     - name
+     - "string"
 
 
 PowerOffice GO Projectactivity to Tripletex Projectactivity
@@ -892,6 +895,9 @@ The following properties are synchronized between a PowerOffice GO Timetrackinga
    * - PowerOffice GO Timetrackingactivity Property
      - Tripletex Activity Property
      - Tripletex Data Type
+   * - name
+     - name
+     - "string"
    * - requireProject
      - isProjectActivity
      - "string"
