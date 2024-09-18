@@ -2,7 +2,7 @@
 CRMOffice to Tripletex Dataflow
 ===============================
 
-Generated: 2024-09-18 00:02:55
+Generated: 2024-09-18 07:21:54
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a CRMOffice Activities and a T
    * - CRMOffice Activities Property
      - Tripletex Activity Property
      - Tripletex Data Type
+   * - subject
+     - name
+     - "string"
 
 
 CRMOffice Activities to Tripletex Projectactivity
