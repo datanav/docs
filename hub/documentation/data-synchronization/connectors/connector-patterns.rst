@@ -52,3 +52,32 @@ Datatypes should follow the API
 
 The connector should follow the API as close as possible. This means that if the API exposes data about the same entity in different endpoints, the connector should also expose these endpoints as different data types.
 
+Connector templates 
+===================
+
+The collect pipeline and the share pipes should all use their corresponding templates whenever possible, transform-collect-rest for the collect pipeline and transform-share-rest for the share pipes. 
+
+Share template access points
+============================
+
+The share template has specific access points which allows you to manipulate the content and structure of both the payload and the response. These should be used instead of additional transformation whenever possible.    
+
+Connector symmerty 
+==================
+
+Some endpoints are asymmetric, i.e. the datamodel exposed in collect pipeline might differ from the data model required in share pipes. This asymmetry should be managed by the connector such that data coming out of collect pipeline is symmetric with the data coming into the share pipes. 
+
+Singel share
+============
+
+A datatype should not be shared by more than one share pipe. If a datatype is shared by more than one share pipe you risk duplicate entries in the target system.
+
+Data dependencies
+=================
+
+When required connector pipes may perform hops to other connector datasets to achieve symmetry or to satisfy required data dependencies, but not to datasets outside the connector. This should however be performed with caution as you might introduce loops or additional dependencies.
+
+System operations
+=================
+
+System operations should be datatype specific and not generic across datatypes. Additional parameters required for the request should also be defined inside operations (or on system root level) but not in connector pipes.
