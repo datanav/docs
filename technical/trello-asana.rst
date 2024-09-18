@@ -2,7 +2,7 @@
 Trello to Asana Dataflow
 ========================
 
-Generated: 2024-09-18 00:00:00
+Generated: 2024-09-18 00:02:55
 
 Introduction
 ------------
@@ -23,18 +23,6 @@ The following properties are synchronized between a Trello Cards and a Asana Tas
    * - Trello Cards Property
      - Asana Tasks Property
      - Asana Data Type
-   * - due
-     - due_on
-     - "string"
-   * - dueComplete
-     - completed_at
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - start
-     - start_at
-     - "string"
 
 
 Trello Organizations to Asana Workspaces
