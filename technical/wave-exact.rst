@@ -2,7 +2,7 @@
 Wave to Exact Online Dataflow
 =============================
 
-Generated: 2024-09-18 00:02:55
+Generated: 2024-09-18 07:21:54
 
 Introduction
 ------------
@@ -111,6 +111,9 @@ The following properties are synchronized between a Wave Currency and a Exact On
    * - Wave Currency Property
      - Exact Online Currencies Property
      - Exact Online Data Type
+   * - name
+     - Description
+     - "string"
 
 
 Wave Customer to Exact Online Accounts
