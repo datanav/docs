@@ -2,7 +2,7 @@
 Wix.com to SuperOffice Dataflow
 ===============================
 
-Generated: 2024-09-18 00:02:55
+Generated: 2024-09-18 07:21:54
 
 Introduction
 ------------
@@ -93,6 +93,21 @@ The following properties are synchronized between a Wix.com Orders and a SuperOf
    * - Wix.com Orders Property
      - SuperOffice Quoteline Property
      - SuperOffice Data Type
+   * - id
+     - QuoteAlternativeId
+     - "integer"
+   * - lineItems.name
+     - Name
+     - "string"
+   * - lineItems.price
+     - UnitListPrice
+     - N/A
+   * - lineItems.productId
+     - ERPProductKey
+     - "string"
+   * - lineItems.quantity
+     - Quantity
+     - N/A
 
 
 Wix.com Products to SuperOffice Product
