@@ -2,7 +2,7 @@
 Business Central to Exact Online Dataflow
 =========================================
 
-Generated: 2024-09-18 00:00:02
+Generated: 2024-09-18 00:02:55
 
 Introduction
 ------------
@@ -235,12 +235,6 @@ The following properties are synchronized between a Business Central Currencies 
    * - Business Central Currencies Property
      - Exact Online Currencies Property
      - Exact Online Data Type
-   * - code
-     - Code
-     - "string"
-   * - displayName
-     - Description
-     - "string"
 
 
 Business Central Customers (organisation data) to Exact Online Accounts
