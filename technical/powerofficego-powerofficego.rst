@@ -2,7 +2,7 @@
 PowerOffice GO to PowerOffice GO Dataflow
 =========================================
 
-Generated: 2024-09-18 08:10:29
+Generated: 2024-09-18 08:29:46
 
 Introduction
 ------------
@@ -410,6 +410,9 @@ The following properties are synchronized between a PowerOffice GO Projectactivi
      - PowerOffice GO Data Type
    * - name
      - name
+     - "string"
+   * - sesam_activityid
+     - code
      - "string"
 
 
