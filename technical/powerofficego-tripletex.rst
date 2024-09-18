@@ -2,7 +2,7 @@
 PowerOffice GO to Tripletex Dataflow
 ====================================
 
-Generated: 2024-09-18 08:11:15
+Generated: 2024-09-18 08:20:29
 
 Introduction
 ------------
@@ -577,6 +577,8 @@ A PowerOffice GO Timetrackingactivity will merge with a Tripletex Activity if on
      - Tripletex Activity Property
    * - code
      - id
+   * - code
+     - number
 
 Once a link between a PowerOffice GO Timetrackingactivity and a Tripletex Activity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
