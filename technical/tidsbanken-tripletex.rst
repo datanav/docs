@@ -2,7 +2,7 @@
 Tidsbanken to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-18 00:00:00
+Generated: 2024-09-18 00:02:55
 
 Introduction
 ------------
@@ -424,28 +424,4 @@ The following properties are synchronized between a Tidsbanken Prosjekt and a Tr
    * - Tidsbanken Prosjekt Property
      - Tripletex Project Property
      - Tripletex Data Type
-   * - AnsvarligId
-     - projectManager.id
-     - "integer"
-   * - AvdelingId
-     - department.id
-     - "integer"
-   * - Avsluttet
-     - isClosed
-     - "string"
-   * - AvsluttetDato
-     - endDate
-     - N/A
-   * - InterntProsjekt
-     - isInternal
-     - "string"
-   * - KundeId
-     - customer.id
-     - "integer"
-   * - Navn
-     - name
-     - "string"
-   * - StartDato
-     - startDate
-     - N/A
 
