@@ -2,7 +2,7 @@
 Wix.com to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-18 00:00:00
+Generated: 2024-09-18 00:02:55
 
 Introduction
 ------------
@@ -23,9 +23,6 @@ The following properties are synchronized between a Wix.com Products and a Sales
    * - Wix.com Products Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-   * - name
-     - Name
-     - "string"
 
 
 Wix.com Contacts to Salesforce Contact
@@ -42,18 +39,6 @@ The following properties are synchronized between a Wix.com Contacts and a Sales
    * - Wix.com Contacts Property
      - Salesforce Contact Property
      - Salesforce Data Type
-   * - info.name.first
-     - FirstName
-     - "string"
-   * - info.name.last
-     - LastName
-     - "string"
-   * - primaryInfo.email
-     - Email
-     - "string"
-   * - primaryInfo.phone
-     - Phone
-     - "string"
 
 
 Wix.com Currencies to Salesforce Currencytype
