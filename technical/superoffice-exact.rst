@@ -2,7 +2,7 @@
 SuperOffice to Exact Online Dataflow
 ====================================
 
-Generated: 2024-09-18 00:02:55
+Generated: 2024-09-18 07:21:54
 
 Introduction
 ------------
@@ -140,6 +140,9 @@ The following properties are synchronized between a SuperOffice Listcurrencyitem
    * - SuperOffice Listcurrencyitems Property
      - Exact Online Currencies Property
      - Exact Online Data Type
+   * - Name
+     - Code
+     - "string"
 
 
 SuperOffice Person to Exact Online Addresses
