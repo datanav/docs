@@ -2,7 +2,7 @@
 Exact Online to Salesforce Dataflow
 ===================================
 
-Generated: 2024-09-18 00:02:55
+Generated: 2024-09-18 07:21:54
 
 Introduction
 ------------
@@ -58,9 +58,6 @@ The following properties are synchronized between a Exact Online Currencies and 
    * - Exact Online Currencies Property
      - Salesforce Currencytype Property
      - Salesforce Data Type
-   * - Code
-     - IsoCode
-     - "string"
 
 
 Exact Online Departments to Salesforce Division
@@ -239,6 +236,18 @@ The following properties are synchronized between a Exact Online Contacts and a 
    * - Exact Online Contacts Property
      - Salesforce Contact Property
      - Salesforce Data Type
+   * - BirthDate
+     - Birthdate
+     - "string"
+   * - FirstName
+     - Name
+     - "string"
+   * - FullName
+     - Name
+     - "string"
+   * - LastName
+     - Name
+     - "string"
 
 
 Exact Online Currencies to Salesforce Currencytype
@@ -255,6 +264,9 @@ The following properties are synchronized between a Exact Online Currencies and 
    * - Exact Online Currencies Property
      - Salesforce Currencytype Property
      - Salesforce Data Type
+   * - Code
+     - IsoCode
+     - "string"
 
 
 Exact Online Divisions to Salesforce Division
