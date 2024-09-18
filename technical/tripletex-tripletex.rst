@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-09-18 07:21:54
+Generated: 2024-09-18 08:20:29
 
 Introduction
 ------------
@@ -22,6 +22,12 @@ A Tripletex Activity will merge with a Tripletex Activity if one of the followin
      - Tripletex Activity Property
    * - id
      - id
+   * - id
+     - number
+   * - number
+     - id
+   * - number
+     - number
 
 Once a link between a Tripletex Activity and a Tripletex Activity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -47,6 +53,8 @@ A Tripletex Activity will merge with a Tripletex Projectactivity if one of the f
    * - Tripletex Activity Property
      - Tripletex Projectactivity Property
    * - id
+     - activity.id
+   * - number
      - activity.id
 
 Once a link between a Tripletex Activity and a Tripletex Projectactivity is established, it will keep in sync between the two systems, regardless of where it is edited.
@@ -838,6 +846,8 @@ A Tripletex Projectactivity will merge with a Tripletex Activity if one of the f
      - Tripletex Activity Property
    * - activity.id
      - id
+   * - activity.id
+     - number
 
 Once a link between a Tripletex Projectactivity and a Tripletex Activity is established, it will keep in sync between the two systems, regardless of where it is edited.
 
