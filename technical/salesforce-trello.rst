@@ -2,7 +2,7 @@
 Salesforce to Trello Dataflow
 =============================
 
-Generated: 2024-09-17 12:35:48
+Generated: 2024-09-18 00:02:55
 
 Introduction
 ------------
@@ -175,15 +175,6 @@ The following properties are synchronized between a Salesforce Task and a Trello
    * - Salesforce Task Property
      - Trello Cards Property
      - Trello Data Type
-   * - ActivityDate
-     - due
-     - "string"
-   * - CompletedDateTime
-     - dueComplete
-     - "string"
-   * - Subject
-     - name
-     - "string"
 
 
 Salesforce User to Trello Members
