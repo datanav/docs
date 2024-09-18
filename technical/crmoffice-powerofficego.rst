@@ -2,7 +2,7 @@
 CRMOffice to PowerOffice GO Dataflow
 ====================================
 
-Generated: 2024-09-18 00:00:02
+Generated: 2024-09-18 00:02:55
 
 Introduction
 ------------
@@ -23,9 +23,6 @@ The following properties are synchronized between a CRMOffice Activities and a P
    * - CRMOffice Activities Property
      - PowerOffice GO Projectactivity Property
      - PowerOffice GO Data Type
-   * - subject
-     - name
-     - "string"
 
 
 CRMOffice Activities to PowerOffice GO Timetrackingactivity
@@ -42,9 +39,6 @@ The following properties are synchronized between a CRMOffice Activities and a P
    * - CRMOffice Activities Property
      - PowerOffice GO Timetrackingactivity Property
      - PowerOffice GO Data Type
-   * - subject
-     - name
-     - "string"
 
 
 CRMOffice Contacts to PowerOffice GO Contactperson
