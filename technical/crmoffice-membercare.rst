@@ -2,7 +2,7 @@
 CRMOffice to MemberCare Dataflow
 ================================
 
-Generated: 2024-09-18 00:00:00
+Generated: 2024-09-18 00:02:55
 
 Introduction
 ------------
@@ -61,9 +61,6 @@ The following properties are synchronized between a CRMOffice Activities and a M
    * - CRMOffice Activities Property
      - MemberCare Countries Property
      - MemberCare Data Type
-   * - address.country
-     - name
-     - "string"
 
 
 CRMOffice Companies to MemberCare Companies
