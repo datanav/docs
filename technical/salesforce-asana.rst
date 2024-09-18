@@ -2,7 +2,7 @@
 Salesforce to Asana Dataflow
 ============================
 
-Generated: 2024-09-17 12:35:48
+Generated: 2024-09-18 00:02:55
 
 Introduction
 ------------
@@ -39,13 +39,4 @@ The following properties are synchronized between a Salesforce Task and a Asana 
    * - Salesforce Task Property
      - Asana Tasks Property
      - Asana Data Type
-   * - ActivityDate
-     - due_on
-     - "string"
-   * - CompletedDateTime
-     - completed_at
-     - "string"
-   * - Subject
-     - name
-     - "string"
 
