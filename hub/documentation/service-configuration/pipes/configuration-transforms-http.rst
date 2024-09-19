@@ -65,6 +65,16 @@ Properties
      - Set to ``false`` if the transform does not have side-effects. A side-effect means that it causes changes to the system that it talks to. The intention of this property is to prevent inadvertent changes to the system by features like pipe preview. You can set this to ``false`` if you're sure your transform is free from side-effects or if you don't mind changes happening when previewing a pipe.
      - ``true``
      -
+    
+   * - ``trigger_on``
+     - Object
+     - A dictionary with two properties: ``"key"`` (optional, defaults to ``"_trigger"``) and ``"value"``. The ``"key"``
+       should point to a property in the entity (it supports path notation) and ``"value"`` should contain a value that
+       this property should have to be passed into the transform. The ``"value"`` supports wildcards ("*") for substring
+       matching. If the ``"key"`` doesn't exist or the ``"value"`` does not match the corresponding value in the entity,
+       the entity will be passed through without being transformed.
+     -
+     -
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -90,5 +100,9 @@ Example configuration
           "batch_size": 5,
           "headers": {
                 "some-header": "some-value"
+          },
+          "trigger_on": {
+              "key":"_trigger",
+              "value": "some-value*"
           }
       }
