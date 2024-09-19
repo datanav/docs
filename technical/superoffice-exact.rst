@@ -2,7 +2,7 @@
 SuperOffice to Exact Online Dataflow
 ====================================
 
-Generated: 2024-09-19 00:00:03
+Generated: 2024-09-19 00:00:31
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a SuperOffice Product and a Ex
    * - SuperOffice Product Property
      - Exact Online Items Property
      - Exact Online Data Type
+   * - Code
+     - Code
+     - "string"
 
 
 SuperOffice Contact to Exact Online Accounts
