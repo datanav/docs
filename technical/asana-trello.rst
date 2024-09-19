@@ -2,7 +2,7 @@
 Asana to Trello Dataflow
 ========================
 
-Generated: 2024-09-19 00:00:01
+Generated: 2024-09-19 00:00:31
 
 Introduction
 ------------
@@ -105,6 +105,18 @@ The following properties are synchronized between a Asana Tasks and a Trello Car
    * - Asana Tasks Property
      - Trello Cards Property
      - Trello Data Type
+   * - completed_at
+     - dueComplete
+     - "string"
+   * - due_on
+     - due
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - start_at
+     - start
+     - "string"
 
 
 Asana Users to Trello Members
