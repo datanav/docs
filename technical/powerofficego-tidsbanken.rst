@@ -2,7 +2,7 @@
 PowerOffice GO to Tidsbanken Dataflow
 =====================================
 
-Generated: 2024-09-19 00:00:02
+Generated: 2024-09-19 00:00:31
 
 Introduction
 ------------
@@ -349,4 +349,28 @@ The following properties are synchronized between a PowerOffice GO Projects and 
    * - PowerOffice GO Projects Property
      - Tidsbanken Prosjekt Property
      - Tidsbanken Data Type
+   * - CustomerId
+     - KundeId
+     - "string"
+   * - DepartmentId
+     - AvdelingId
+     - "string"
+   * - EndDate
+     - AvsluttetDato
+     - N/A
+   * - IsActive
+     - Avsluttet
+     - "string"
+   * - IsInternal
+     - InterntProsjekt
+     - "string"
+   * - Name
+     - Navn
+     - "string"
+   * - ProjectManagerEmployeeId
+     - AnsvarligId
+     - "integer"
+   * - StartDate
+     - StartDato
+     - N/A
 
