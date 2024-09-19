@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2024_09_19:
+
+2024-09-19
+----------
+* Extended Integrated Search to allow using a well-defined :ref:`query syntax <integrated_search_query_syntax>`. Improvements have been made to the search results for namespaced identifiers that have been merged. They now have the same query result page.
+
 .. _changelog_2024_05_21:
 
 2024-05-21
