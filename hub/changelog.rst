@@ -6,6 +6,7 @@ Changelog
 2024-09-19
 ----------
 * Extended Integrated Search to allow using a well-defined :ref:`query syntax <integrated_search_query_syntax>`. Improvements have been made to the search results for namespaced identifiers that have been merged. They now have the same query result page.
+* Added the ``trigger_on`` property to the :ref:`http transform <http_transform>`.
 
 .. _changelog_2024_05_21:
 
