@@ -2,7 +2,7 @@
 CRMOffice to Exact Online Dataflow
 ==================================
 
-Generated: 2024-09-19 00:00:02
+Generated: 2024-09-19 00:00:31
 
 Introduction
 ------------
@@ -55,6 +55,15 @@ The following properties are synchronized between a CRMOffice Activities and a E
    * - CRMOffice Activities Property
      - Exact Online Addresses Property
      - Exact Online Data Type
+   * - address.country
+     - Country
+     - "string"
+   * - address.country
+     - CountryName
+     - "string"
+   * - address.postalArea
+     - City
+     - "string"
 
 
 CRMOffice Companies to Exact Online Addresses
