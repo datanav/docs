@@ -2,7 +2,7 @@
 PowerOffice GO to Tripletex Dataflow
 ====================================
 
-Generated: 2024-09-19 00:00:02
+Generated: 2024-09-19 00:04:40
 
 Introduction
 ------------
@@ -562,65 +562,6 @@ The following properties are synchronized between a PowerOffice GO Employees and
      - N/A
 
 
-PowerOffice GO Timetrackingactivity to Tripletex Activity
----------------------------------------------------------
-Before any synchronization can take place, a link between a PowerOffice GO Timetrackingactivity and a Tripletex Activity must be established.
-
-A new Tripletex Activity will be created from a PowerOffice GO Timetrackingactivity if it is connected to a PowerOffice GO Powerofficego-projectactivity, or Powerofficego-timetrackingactivity that is synchronized into Tripletex.
-
-A PowerOffice GO Timetrackingactivity will merge with a Tripletex Activity if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice GO Timetrackingactivity Property
-     - Tripletex Activity Property
-   * - code
-     - id
-   * - code
-     - number
-
-Once a link between a PowerOffice GO Timetrackingactivity and a Tripletex Activity is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice GO Timetrackingactivity and a Tripletex Activity:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice GO Timetrackingactivity Property
-     - Tripletex Activity Property
-     - Tripletex Data Type
-   * - requireProject
-     - isProjectActivity
-     - "string"
-
-
-PowerOffice GO Timetrackingactivity to Tripletex Projectactivity
-----------------------------------------------------------------
-Before any synchronization can take place, a link between a PowerOffice GO Timetrackingactivity and a Tripletex Projectactivity must be established.
-
-A PowerOffice GO Timetrackingactivity will merge with a Tripletex Projectactivity if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice GO Timetrackingactivity Property
-     - Tripletex Projectactivity Property
-   * - code
-     - activity.id
-
-Once a link between a PowerOffice GO Timetrackingactivity and a Tripletex Projectactivity is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice GO Timetrackingactivity and a Tripletex Projectactivity:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice GO Timetrackingactivity Property
-     - Tripletex Projectactivity Property
-     - Tripletex Data Type
-
-
 PowerOffice GO Contactperson to Tripletex Contact
 -------------------------------------------------
 Every PowerOffice GO Contactperson will be synchronized with a Tripletex Contact.
@@ -905,9 +846,6 @@ The following properties are synchronized between a PowerOffice GO Timetrackinga
      - Tripletex Data Type
    * - code
      - number
-     - "string"
-   * - name
-     - name
      - "string"
    * - requireProject
      - isProjectActivity
