@@ -2,7 +2,7 @@
 CRMOffice to Tripletex Dataflow
 ===============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -61,4 +61,16 @@ The following properties are synchronized between a CRMOffice Contacts and a Tri
    * - CRMOffice Contacts Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - directPhone
+     - phoneNumberWork
+     - "string"
+   * - familyName
+     - lastName
+     - "string"
+   * - givenName
+     - firstName
+     - "string"
+   * - mobilePhone
+     - phoneNumberMobile
+     - N/A
 
