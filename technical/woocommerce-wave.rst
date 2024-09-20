@@ -2,7 +2,7 @@
 WooCommerce to Wave Dataflow
 ============================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -221,4 +221,10 @@ The following properties are synchronized between a WooCommerce Product and a Wa
    * - WooCommerce Product Property
      - Wave Product Property
      - Wave Data Type
+   * - name
+     - name
+     - "string"
+   * - sale_price
+     - unitPrice
+     - "string"
 
