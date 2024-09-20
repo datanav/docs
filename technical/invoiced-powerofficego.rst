@@ -2,7 +2,7 @@
 Invoiced to PowerOffice GO Dataflow
 ===================================
 
-Generated: 2024-09-20 08:44:12
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -155,6 +155,15 @@ The following properties are synchronized between a Invoiced Items and a PowerOf
    * - Invoiced Items Property
      - PowerOffice GO Product Property
      - PowerOffice GO Data Type
+   * - description
+     - description
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - unit_cost
+     - costPrice
+     - N/A
 
 
 Invoiced Lineitem to PowerOffice GO Salesorderlines
