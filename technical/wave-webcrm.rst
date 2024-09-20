@@ -2,7 +2,7 @@
 Wave to WebCRM Dataflow
 =======================
 
-Generated: 2024-09-20 08:54:19
+Generated: 2024-09-20 10:53:50
 
 Introduction
 ------------
@@ -159,6 +159,9 @@ The following properties are synchronized between a Wave User and a WebCRM Users
    * - Wave User Property
      - WebCRM Users Property
      - WebCRM Data Type
+   * - defaultEmail
+     - UserEmail
+     - "string"
 
 
 Wave Vendor to WebCRM Persons
