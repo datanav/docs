@@ -2,7 +2,7 @@
 Business Central to  Dataflow
 =============================
 
-Generated: 2024-09-20 13:08:47
+Generated: 2024-09-20 13:09:43
 
 Introduction
 ------------
@@ -21,6 +21,22 @@ The following properties are synchronized between a Business Central Employees a
    :header-rows: 1
 
    * - Business Central Employees Property
+     -  Inventory Property
+     -  Data Type
+
+
+Business Central Items to  Inventory
+------------------------------------
+Every Business Central Items will be synchronized with a  Inventory.
+
+Once a link between a Business Central Items and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Items and a  Inventory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Items Property
      -  Inventory Property
      -  Data Type
 
