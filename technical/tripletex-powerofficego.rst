@@ -2,7 +2,7 @@
 Tripletex to PowerOffice GO Dataflow
 ====================================
 
-Generated: 2024-09-20 00:02:26
+Generated: 2024-09-20 07:27:55
 
 Introduction
 ------------
@@ -533,33 +533,6 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - Tripletex Employee Property
      - PowerOffice GO Employees Property
      - PowerOffice GO Data Type
-   * - dateOfBirth
-     - DateOfBirth
-     - N/A
-   * - department.id (Dependant on having wd:Q2366457 in  )
-     - DepartmentId
-     - "integer"
-   * - department.id (Dependant on having wd:Q29415492 in  )
-     - IsArchived
-     - "boolean"
-   * - email
-     - EmailAddress
-     - "string"
-   * - employeeNumber
-     - Number
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - lastName
-     - LastName
-     - "string"
-   * - phoneNumberMobile
-     - PhoneNumber
-     - "string"
-   * - sesam_employment_status
-     - IsArchived
-     - "boolean"
 
 
 Tripletex Supplier to PowerOffice GO Customers
@@ -843,6 +816,33 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - Tripletex Employee Property
      - PowerOffice GO Employees Property
      - PowerOffice GO Data Type
+   * - dateOfBirth
+     - DateOfBirth
+     - N/A
+   * - department.id (Dependant on having wd:Q2366457 in  )
+     - DepartmentId
+     - "integer"
+   * - department.id (Dependant on having wd:Q29415492 in  )
+     - IsArchived
+     - "boolean"
+   * - email
+     - EmailAddress
+     - "string"
+   * - employeeNumber
+     - Number
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - lastName
+     - LastName
+     - "string"
+   * - phoneNumberMobile
+     - PhoneNumber
+     - "string"
+   * - sesam_employment_status
+     - IsArchived
+     - "boolean"
 
 
 Tripletex Order to PowerOffice GO Salesorders
