@@ -2,7 +2,7 @@
 Tripletex to PowerOffice GO Dataflow
 ====================================
 
-Generated: 2024-09-20 11:05:51
+Generated: 2024-09-20 11:06:47
 
 Introduction
 ------------
@@ -606,6 +606,9 @@ The following properties are synchronized between a Tripletex Activity and a Pow
    * - isProjectActivity
      - requireProject
      - "string"
+   * - name
+     - name
+     - "string"
    * - number
      - code
      - "string"
@@ -952,6 +955,36 @@ The following properties are synchronized between a Tripletex Project and a Powe
    * - Tripletex Project Property
      - PowerOffice GO Projects Property
      - PowerOffice GO Data Type
+   * - contact.id
+     - ContactPersonId
+     - "integer"
+   * - customer.id
+     - CustomerId
+     - "integer"
+   * - department.id
+     - DepartmentId
+     - "integer"
+   * - endDate
+     - EndDate
+     - N/A
+   * - isClosed
+     - IsActive
+     - "string"
+   * - isInternal
+     - IsInternal
+     - "string"
+   * - mainProject.id
+     - ParentProjectId
+     - "integer"
+   * - name
+     - Name
+     - "string"
+   * - projectManager.id
+     - ProjectManagerEmployeeId
+     - "integer"
+   * - startDate
+     - StartDate
+     - N/A
 
 
 Tripletex Projectactivity to PowerOffice GO Projectactivity
