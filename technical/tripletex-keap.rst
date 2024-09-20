@@ -2,7 +2,7 @@
 Tripletex to Keap Dataflow
 ==========================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:44:12
 
 Introduction
 ------------
@@ -28,6 +28,9 @@ The following properties are synchronized between a Tripletex Customer and a Kea
      - "string"
    * - deliveryAddress.postalCode
      - address.zip_code
+     - "string"
+   * - email
+     - email_address
      - "string"
    * - id
      - id
