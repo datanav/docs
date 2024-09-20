@@ -2,7 +2,7 @@
 Exact Online to Tripletex Dataflow
 ==================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:27:55
 
 Introduction
 ------------
@@ -146,6 +146,21 @@ The following properties are synchronized between a Exact Online Employees and a
    * - Exact Online Employees Property
      - Tripletex Employee Property
      - Tripletex Data Type
+   * - BirthDate
+     - dateOfBirth
+     - N/A
+   * - City
+     - address.city
+     - "string"
+   * - Country
+     - address.country.id
+     - "integer"
+   * - ID
+     - id
+     - "integer"
+   * - Postcode
+     - address.postalCode
+     - "string"
 
 
 Exact Online Items to Tripletex Product
