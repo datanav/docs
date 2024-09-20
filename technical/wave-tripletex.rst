@@ -2,7 +2,7 @@
 Wave to Tripletex Dataflow
 ==========================
 
-Generated: 2024-09-20 08:44:12
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -921,6 +921,15 @@ The following properties are synchronized between a Wave Product and a Tripletex
    * - Wave Product Property
      - Tripletex Product Property
      - Tripletex Data Type
+   * - description
+     - description
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - unitPrice
+     - priceExcludingVatCurrency
+     - "float"
 
 
 Wave Vendor to Tripletex Contact
