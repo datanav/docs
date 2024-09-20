@@ -2,7 +2,7 @@
 WooCommerce to Business Nxt Dataflow
 ====================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -42,9 +42,6 @@ The following properties are synchronized between a WooCommerce Product and a Bu
    * - WooCommerce Product Property
      - Business Nxt Product Property
      - Business Nxt Data Type
-   * - sale_price
-     - priceQuantity
-     - "string"
 
 
 WooCommerce Order to Business Nxt Currency
@@ -109,4 +106,7 @@ The following properties are synchronized between a WooCommerce Product and a Bu
    * - WooCommerce Product Property
      - Business Nxt Product Property
      - Business Nxt Data Type
+   * - sale_price
+     - priceQuantity
+     - "string"
 
