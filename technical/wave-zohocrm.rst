@@ -2,7 +2,7 @@
 Wave to ZohoCRM Dataflow
 ========================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -105,6 +105,84 @@ The following properties are synchronized between a Wave Customer (human data) a
    * - Wave Customer (human data) Property
      - ZohoCRM Contact Property
      - ZohoCRM Data Type
+   * - address.city
+     - Mailing_City
+     - "string"
+   * - address.city
+     - Other_City
+     - "string"
+   * - address.country.code
+     - Mailing_Country
+     - "string"
+   * - address.country.code
+     - Other_Country
+     - "string"
+   * - address.postalCode
+     - Mailing_Zip
+     - "string"
+   * - address.postalCode
+     - Other_Zip
+     - "string"
+   * - address.province.code
+     - Mailing_State
+     - "string"
+   * - address.province.code
+     - Other_State
+     - "string"
+   * - email
+     - Email
+     - "string"
+   * - email
+     - Secondary_Email
+     - "string"
+   * - firstName
+     - First_Name
+     - "string"
+   * - lastName
+     - Last_Name
+     - "string"
+   * - mobile
+     - Mobile
+     - "string"
+   * - name
+     - Full_Name
+     - "string"
+   * - phone
+     - Other_Phone
+     - "string"
+   * - phone
+     - Phone
+     - "string"
+   * - shippingDetails.address.city
+     - Mailing_City
+     - "string"
+   * - shippingDetails.address.city
+     - Other_City
+     - "string"
+   * - shippingDetails.address.country.code
+     - Mailing_Country
+     - "string"
+   * - shippingDetails.address.country.code
+     - Other_Country
+     - "string"
+   * - shippingDetails.address.postalCode
+     - Mailing_Zip
+     - "string"
+   * - shippingDetails.address.postalCode
+     - Other_Zip
+     - "string"
+   * - shippingDetails.address.province.code
+     - Mailing_State
+     - "string"
+   * - shippingDetails.address.province.code
+     - Other_State
+     - "string"
+   * - shippingDetails.phone
+     - Other_Phone
+     - "string"
+   * - shippingDetails.phone
+     - Phone
+     - "string"
 
 
 Wave Customer to ZohoCRM Contact
