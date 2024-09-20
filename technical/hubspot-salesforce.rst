@@ -2,7 +2,7 @@
 HubSpot to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-20 00:00:24
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -23,12 +23,6 @@ The following properties are synchronized between a HubSpot Product and a Salesf
    * - HubSpot Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-   * - properties.description
-     - Description
-     - "string"
-   * - properties.name
-     - Name
-     - "string"
 
 
 HubSpot Company to Salesforce Division
@@ -597,6 +591,12 @@ The following properties are synchronized between a HubSpot Product and a Salesf
    * - HubSpot Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
+   * - properties.description
+     - Description
+     - "string"
+   * - properties.name
+     - Name
+     - "string"
 
 
 HubSpot Quote to Salesforce Quote
