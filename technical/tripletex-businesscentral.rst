@@ -2,7 +2,7 @@
 Tripletex to Business Central Dataflow
 ======================================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 08:44:12
 
 Introduction
 ------------
@@ -120,6 +120,63 @@ The following properties are synchronized between a Tripletex Customer and a Bus
    * - Tripletex Customer Property
      - Business Central Customers (organisation data) Property
      - Business Central Data Type
+   * - deliveryAddress.addressLine1
+     - addressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - addressLine2
+     - "string"
+   * - deliveryAddress.city
+     - city
+     - "string"
+   * - deliveryAddress.country.id
+     - country
+     - "string"
+   * - deliveryAddress.postalCode
+     - postalCode
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - name
+     - displayName
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - physicalAddress.addressLine1
+     - addressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - addressLine2
+     - "string"
+   * - physicalAddress.city
+     - city
+     - "string"
+   * - physicalAddress.country.id
+     - country
+     - "string"
+   * - physicalAddress.postalCode
+     - postalCode
+     - "string"
+   * - postalAddress.addressLine1
+     - addressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - addressLine2
+     - "string"
+   * - postalAddress.city
+     - city
+     - "string"
+   * - postalAddress.country.id
+     - country
+     - "string"
+   * - postalAddress.postalCode
+     - postalCode
+     - "string"
+   * - website
+     - website
+     - "string"
 
 
 Tripletex Customer to Business Central Customers (human data)
