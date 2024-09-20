@@ -2,7 +2,7 @@
 PowerOffice GO to  Dataflow
 ===========================
 
-Generated: 2024-09-20 13:18:50
+Generated: 2024-09-20 14:45:49
 
 Introduction
 ------------
@@ -29,6 +29,22 @@ The following properties are synchronized between a PowerOffice GO Product and a
    * - description
      - descriptor
      - "string"
+
+
+PowerOffice GO Product to  Inventory
+------------------------------------
+Every PowerOffice GO Product will be synchronized with a  Inventory.
+
+Once a link between a PowerOffice GO Product and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Product and a  Inventory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Product Property
+     -  Inventory Property
+     -  Data Type
 
 
 PowerOffice GO Salesorders to  Order
