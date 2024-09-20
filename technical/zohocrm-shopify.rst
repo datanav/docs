@@ -2,7 +2,7 @@
 ZohoCRM to Shopify Dataflow
 ===========================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -23,6 +23,51 @@ The following properties are synchronized between a ZohoCRM Contact and a Shopif
    * - ZohoCRM Contact Property
      - Shopify Customer Property
      - Shopify Data Type
+   * - Email
+     - email
+     - "string"
+   * - First_Name
+     - first_name
+     - "string"
+   * - Last_Name
+     - last_name
+     - "string"
+   * - Mailing_City
+     - default_address.city
+     - "string"
+   * - Mailing_Country
+     - default_address.country
+     - "string"
+   * - Mailing_State
+     - default_address.province_code
+     - "string"
+   * - Mailing_Zip
+     - default_address.zip
+     - "string"
+   * - Mobile
+     - phone
+     - "string"
+   * - Other_City
+     - default_address.city
+     - "string"
+   * - Other_Country
+     - default_address.country
+     - "string"
+   * - Other_Phone
+     - default_address.phone
+     - "string"
+   * - Other_State
+     - default_address.province_code
+     - "string"
+   * - Other_Zip
+     - default_address.zip
+     - "string"
+   * - Phone
+     - default_address.phone
+     - "string"
+   * - Secondary_Email
+     - email
+     - "string"
 
 
 ZohoCRM Deal to Shopify Order
