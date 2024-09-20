@@ -2,7 +2,7 @@
 Business Central to WebCRM Dataflow
 ===================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -61,6 +61,18 @@ The following properties are synchronized between a Business Central Contacts (h
    * - Business Central Contacts (human data) Property
      - WebCRM Persons Property
      - WebCRM Data Type
+   * - displayName
+     - PersonName
+     - "string"
+   * - email
+     - PersonEmail
+     - "string"
+   * - mobilePhoneNumber
+     - PersonMobilePhone
+     - "string"
+   * - phoneNumber
+     - PersonDirectPhone
+     - "string"
 
 
 Business Central Items to WebCRM Products
