@@ -2,7 +2,7 @@
 Exact Online to  Dataflow
 =========================
 
-Generated: 2024-09-20 13:10:58
+Generated: 2024-09-20 13:18:50
 
 Introduction
 ------------
@@ -22,5 +22,21 @@ The following properties are synchronized between a Exact Online Items and a  In
 
    * - Exact Online Items Property
      -  Inventory Property
+     -  Data Type
+
+
+Exact Online Salesorders to  Order
+----------------------------------
+Every Exact Online Salesorders will be synchronized with a  Order.
+
+Once a link between a Exact Online Salesorders and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Exact Online Salesorders and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Exact Online Salesorders Property
+     -  Order Property
      -  Data Type
 
