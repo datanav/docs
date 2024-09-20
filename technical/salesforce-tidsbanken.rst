@@ -2,7 +2,7 @@
 Salesforce to Tidsbanken Dataflow
 =================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 10:53:49
 
 Introduction
 ------------
@@ -41,6 +41,9 @@ The following properties are synchronized between a Salesforce User and a Tidsba
      - Tidsbanken Data Type
    * - City
      - Poststed
+     - "string"
+   * - Email
+     - Epost
      - "string"
    * - EmployeeNumber
      - sesam_ansattId
