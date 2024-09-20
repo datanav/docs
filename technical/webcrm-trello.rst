@@ -2,7 +2,7 @@
 WebCRM to Trello Dataflow
 =========================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -45,6 +45,9 @@ The following properties are synchronized between a WebCRM Persons and a Trello 
    * - WebCRM Persons Property
      - Trello Members Property
      - Trello Data Type
+   * - PersonEmail
+     - email
+     - "string"
    * - PersonName
      - fullName
      - "string"
