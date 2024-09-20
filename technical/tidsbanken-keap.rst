@@ -2,7 +2,7 @@
 Tidsbanken to Keap Dataflow
 ===========================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:44:12
 
 Introduction
 ------------
@@ -61,6 +61,9 @@ The following properties are synchronized between a Tidsbanken Kunde and a Keap 
    * - Tidsbanken Kunde Property
      - Keap Companies Property
      - Keap Data Type
+   * - Epost
+     - email_address
+     - "string"
    * - Id
      - id
      - "string"
