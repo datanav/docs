@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-20 13:11:59
+Generated: 2024-09-20 13:15:54
 
 Introduction
 ------------
@@ -25,5 +25,8 @@ The following properties are synchronized between a Tripletex Product and a  Inv
      -  Data Type
    * - description
      - descriptor
+     - "string"
+   * - stockOfGoods
+     - quantity
      - "string"
 
