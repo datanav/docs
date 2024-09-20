@@ -2,7 +2,7 @@
 HubSpot to Trello Dataflow
 ==========================
 
-Generated: 2024-09-20 00:00:24
+Generated: 2024-09-20 10:53:50
 
 Introduction
 ------------
@@ -83,4 +83,7 @@ The following properties are synchronized between a HubSpot User and a Trello Me
    * - HubSpot User Property
      - Trello Members Property
      - Trello Data Type
+   * - email
+     - email
+     - "string"
 
