@@ -2,7 +2,7 @@
 Tidsbanken to Business Central Dataflow
 =======================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:27:55
 
 Introduction
 ------------
@@ -55,6 +55,39 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Busi
    * - Tidsbanken Ansatt Property
      - Business Central Employees Property
      - Business Central Data Type
+   * - Adresse
+     - addressLine1
+     - "string"
+   * - Epost
+     - email
+     - "string"
+   * - Etternavn
+     - surname
+     - "string"
+   * - Fodt
+     - birthDate
+     - "string"
+   * - Fornavn
+     - givenName
+     - "string"
+   * - Id
+     - id
+     - "string"
+   * - Mobil
+     - mobilePhone
+     - "string"
+   * - Navn
+     - displayName
+     - "string"
+   * - Postnummer
+     - postalCode
+     - "string"
+   * - Poststed
+     - city
+     - "string"
+   * - Tittel
+     - jobTitle
+     - "string"
 
 
 Tidsbanken Kunde to Business Central Customers (organisation data)
