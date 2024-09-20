@@ -2,7 +2,7 @@
 Exact Online to Tripletex Dataflow
 ==================================
 
-Generated: 2024-09-20 08:42:05
+Generated: 2024-09-20 08:44:12
 
 Introduction
 ------------
@@ -52,6 +52,12 @@ The following properties are synchronized between a Exact Online Accounts and a 
    * - Exact Online Accounts Property
      - Tripletex Customer Property
      - Tripletex Data Type
+   * - Name
+     - name
+     - "string"
+   * - Website
+     - website
+     - "string"
 
 
 Exact Online Accounts to Tripletex Customer (human data)
