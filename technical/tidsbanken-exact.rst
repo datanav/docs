@@ -2,7 +2,7 @@
 Tidsbanken to Exact Online Dataflow
 ===================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 08:42:05
 
 Introduction
 ------------
@@ -55,6 +55,9 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Exac
    * - Tidsbanken Ansatt Property
      - Exact Online Contacts Property
      - Exact Online Data Type
+   * - Epost
+     - BusinessEmail
+     - "string"
    * - Fodt
      - BirthDate
      - "string"
@@ -137,6 +140,9 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Exac
    * - Tidsbanken Ansatt Property
      - Exact Online Employees Property
      - Exact Online Data Type
+   * - Epost
+     - BusinessEmail
+     - "string"
    * - Fodt
      - BirthDate
      - "string"
