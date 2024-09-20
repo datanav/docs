@@ -2,7 +2,7 @@
 Invoiced to Tripletex Dataflow
 ==============================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 08:44:12
 
 Introduction
 ------------
@@ -45,6 +45,57 @@ The following properties are synchronized between a Invoiced Customers (organisa
    * - Invoiced Customers (organisation data) Property
      - Tripletex Customer Property
      - Tripletex Data Type
+   * - address1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - address1
+     - physicalAddress.addressLine1
+     - "string"
+   * - address1
+     - postalAddress.addressLine1
+     - "string"
+   * - address2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - address2
+     - physicalAddress.addressLine2
+     - "string"
+   * - address2
+     - postalAddress.addressLine2
+     - "string"
+   * - city
+     - deliveryAddress.city
+     - "string"
+   * - city
+     - physicalAddress.city
+     - "string"
+   * - city
+     - postalAddress.city
+     - "string"
+   * - country
+     - deliveryAddress.country.id
+     - "string"
+   * - country
+     - physicalAddress.country.id
+     - "integer"
+   * - country
+     - postalAddress.country.id
+     - "integer"
+   * - id
+     - id
+     - "integer"
+   * - name
+     - name
+     - "string"
+   * - postal_code
+     - deliveryAddress.postalCode
+     - "string"
+   * - postal_code
+     - physicalAddress.postalCode
+     - "string"
+   * - postal_code
+     - postalAddress.postalCode
+     - "string"
 
 
 Invoiced Customers (human data) to Tripletex Customer (human data)
