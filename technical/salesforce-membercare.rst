@@ -2,7 +2,7 @@
 Salesforce to MemberCare Dataflow
 =================================
 
-Generated: 2024-09-20 00:00:24
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -337,6 +337,9 @@ The following properties are synchronized between a Salesforce Contact and a Mem
    * - Salesforce Contact Property
      - MemberCare Countries Property
      - MemberCare Data Type
+   * - MailingCountry
+     - name
+     - "string"
 
 
 Salesforce Invoice to MemberCare Invoices
@@ -449,4 +452,10 @@ The following properties are synchronized between a Salesforce User and a Member
    * - Salesforce User Property
      - MemberCare Countries Property
      - MemberCare Data Type
+   * - Country
+     - name
+     - "string"
+   * - CountryCode
+     - iso2Letter
+     - "string"
 
