@@ -2,7 +2,7 @@
 Chargebee to Tripletex Dataflow
 ===============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -149,6 +149,9 @@ The following properties are synchronized between a Chargebee Customer and a Tri
    * - Chargebee Customer Property
      - Tripletex Customer (human data) Property
      - Tripletex Data Type
+   * - email
+     - email
+     - "string"
 
 
 Chargebee Item to Tripletex Product
