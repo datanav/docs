@@ -2,7 +2,7 @@
 ZohoCRM to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -61,6 +61,9 @@ The following properties are synchronized between a ZohoCRM Contact and a Salesf
    * - ZohoCRM Contact Property
      - Salesforce Customer Property
      - Salesforce Data Type
+   * - Full_Name
+     - Name
+     - "string"
 
 
 ZohoCRM Deal to Salesforce Order
