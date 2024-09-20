@@ -2,7 +2,7 @@
 Business Central to Wave Dataflow
 =================================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -168,6 +168,12 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      - Wave Product Property
      - Wave Data Type
+   * - displayName
+     - name
+     - "string"
+   * - unitPrice
+     - unitPrice
+     - "string"
 
 
 Business Central Salesorders to Wave Invoice
