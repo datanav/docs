@@ -2,7 +2,7 @@
 Salesforce to Shopify Dataflow
 ==============================
 
-Generated: 2024-09-20 00:00:24
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -55,4 +55,10 @@ The following properties are synchronized between a Salesforce Product2 and a Sh
    * - Salesforce Product2 Property
      - Shopify Sesamproduct Property
      - Shopify Data Type
+   * - Description
+     - variants.title
+     - "string"
+   * - Name
+     - title
+     - "string"
 
