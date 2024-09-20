@@ -2,7 +2,7 @@
 Tripletex to ZohoCRM Dataflow
 =============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -121,6 +121,78 @@ The following properties are synchronized between a Tripletex Customer (human da
    * - Tripletex Customer (human data) Property
      - ZohoCRM Contact Property
      - ZohoCRM Data Type
+   * - deliveryAddress.city
+     - Mailing_City
+     - "string"
+   * - deliveryAddress.city
+     - Other_City
+     - "string"
+   * - deliveryAddress.country.id
+     - Mailing_Country
+     - "string"
+   * - deliveryAddress.country.id
+     - Other_Country
+     - "string"
+   * - deliveryAddress.postalCode
+     - Mailing_Zip
+     - "string"
+   * - deliveryAddress.postalCode
+     - Other_Zip
+     - "string"
+   * - email
+     - Email
+     - "string"
+   * - email
+     - Secondary_Email
+     - "string"
+   * - name
+     - Full_Name
+     - "string"
+   * - phoneNumber
+     - Other_Phone
+     - "string"
+   * - phoneNumber
+     - Phone
+     - "string"
+   * - phoneNumberMobile
+     - Mobile
+     - "string"
+   * - physicalAddress.city
+     - Mailing_City
+     - "string"
+   * - physicalAddress.city
+     - Other_City
+     - "string"
+   * - physicalAddress.country.id
+     - Mailing_Country
+     - "string"
+   * - physicalAddress.country.id
+     - Other_Country
+     - "string"
+   * - physicalAddress.postalCode
+     - Mailing_Zip
+     - "string"
+   * - physicalAddress.postalCode
+     - Other_Zip
+     - "string"
+   * - postalAddress.city
+     - Mailing_City
+     - "string"
+   * - postalAddress.city
+     - Other_City
+     - "string"
+   * - postalAddress.country.id
+     - Mailing_Country
+     - "string"
+   * - postalAddress.country.id
+     - Other_Country
+     - "string"
+   * - postalAddress.postalCode
+     - Mailing_Zip
+     - "string"
+   * - postalAddress.postalCode
+     - Other_Zip
+     - "string"
 
 
 Tripletex Customer to ZohoCRM Contact
