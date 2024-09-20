@@ -2,7 +2,7 @@
 Business Central to PowerOffice GO Dataflow
 ===========================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:27:55
 
 Introduction
 ------------
@@ -167,6 +167,24 @@ The following properties are synchronized between a Business Central Employees a
    * - Business Central Employees Property
      - PowerOffice GO Employees Property
      - PowerOffice GO Data Type
+   * - birthDate
+     - DateOfBirth
+     - N/A
+   * - email
+     - EmailAddress
+     - "string"
+   * - givenName
+     - FirstName
+     - "string"
+   * - jobTitle
+     - JobTitle
+     - "string"
+   * - mobilePhone
+     - PhoneNumber
+     - "string"
+   * - surname
+     - LastName
+     - "string"
 
 
 Business Central Items to PowerOffice GO Product
