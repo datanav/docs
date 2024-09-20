@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-09-20 13:10:58
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Salesforce Product2 and a  I
    * - Salesforce Product2 Property
      -  Inventory Property
      -  Data Type
+   * - Description
+     - descriptor
+     - "string"
 
