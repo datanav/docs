@@ -2,7 +2,7 @@
 SuperOffice to Keap Dataflow
 ============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:44:12
 
 Introduction
 ------------
@@ -37,6 +37,9 @@ The following properties are synchronized between a SuperOffice Contact and a Ke
      - "string"
    * - ContactId
      - id
+     - "string"
+   * - Emails.Value
+     - email_address
      - "string"
    * - Name
      - company_name
