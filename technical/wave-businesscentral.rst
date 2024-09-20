@@ -2,7 +2,7 @@
 Wave to Business Central Dataflow
 =================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -39,6 +39,12 @@ The following properties are synchronized between a Wave Customer and a Business
    * - Wave Customer Property
      - Business Central Contacts (human data) Property
      - Business Central Data Type
+   * - email
+     - email
+     - "string"
+   * - mobile
+     - mobilePhoneNumber
+     - "string"
 
 
 Wave Customer to Business Central Customers (organisation data)
@@ -103,6 +109,51 @@ The following properties are synchronized between a Wave Customer (human data) a
    * - Wave Customer (human data) Property
      - Business Central Customers (human data) Property
      - Business Central Data Type
+   * - address.addressLine1
+     - addressLine1
+     - "string"
+   * - address.addressLine2
+     - addressLine2
+     - "string"
+   * - address.city
+     - city
+     - "string"
+   * - address.country.code
+     - country
+     - "string"
+   * - address.postalCode
+     - postalCode
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - name
+     - displayName
+     - "string"
+   * - phone
+     - phoneNumber
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - addressLine1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - addressLine2
+     - "string"
+   * - shippingDetails.address.city
+     - city
+     - "string"
+   * - shippingDetails.address.country.code
+     - country
+     - "string"
+   * - shippingDetails.address.postalCode
+     - postalCode
+     - "string"
+   * - shippingDetails.phone
+     - phoneNumber
+     - "string"
 
 
 Wave Invoice to Business Central Salesorderlines
@@ -167,4 +218,31 @@ The following properties are synchronized between a Wave Vendor and a Business C
    * - Wave Vendor Property
      - Business Central Contacts (human data) Property
      - Business Central Data Type
+   * - address.addressLine1
+     - addressLine1
+     - "string"
+   * - address.addressLine2
+     - addressLine2
+     - "string"
+   * - address.city
+     - city
+     - "string"
+   * - address.country.code
+     - country
+     - "string"
+   * - address.postalCode
+     - postalCode
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - mobile
+     - mobilePhoneNumber
+     - "string"
+   * - phone
+     - phoneNumber
+     - "string"
 
