@@ -2,7 +2,7 @@
 Tripletex to Exact Online Dataflow
 ==================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 08:42:05
 
 Introduction
 ------------
@@ -167,6 +167,9 @@ The following properties are synchronized between a Tripletex Employee and a Exa
      - "string"
    * - dateOfBirth
      - BirthDate
+     - "string"
+   * - email
+     - BusinessEmail
      - "string"
 
 
@@ -384,6 +387,9 @@ The following properties are synchronized between a Tripletex Employee and a Exa
      - "string"
    * - dateOfBirth
      - BirthDate
+     - "string"
+   * - email
+     - BusinessEmail
      - "string"
    * - id
      - ID
