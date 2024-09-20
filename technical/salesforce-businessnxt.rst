@@ -2,7 +2,7 @@
 Salesforce to Business Nxt Dataflow
 ===================================
 
-Generated: 2024-09-20 00:00:24
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -246,6 +246,9 @@ The following properties are synchronized between a Salesforce Contact and a Bus
    * - Salesforce Contact Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - MailingCountry
+     - name
+     - "string"
 
 
 Salesforce Currencytype to Business Nxt Currency
@@ -422,4 +425,10 @@ The following properties are synchronized between a Salesforce User and a Busine
    * - Salesforce User Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - Country
+     - name
+     - "string"
+   * - CountryCode
+     - isoCode
+     - "string"
 
