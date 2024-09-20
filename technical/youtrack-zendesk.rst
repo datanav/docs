@@ -2,7 +2,7 @@
 YouTrack to Zendesk Dataflow
 ============================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 10:53:50
 
 Introduction
 ------------
@@ -118,5 +118,8 @@ The following properties are synchronized between a YouTrack Users and a Zendesk
      - Zendesk Data Type
    * - name
      - name
+     - "string"
+   * - profile.email.email
+     - email
      - "string"
 
