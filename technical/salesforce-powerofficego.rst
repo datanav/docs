@@ -2,7 +2,7 @@
 Salesforce to PowerOffice GO Dataflow
 =====================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -23,6 +23,21 @@ The following properties are synchronized between a Salesforce Contact and a Pow
    * - Salesforce Contact Property
      - PowerOffice GO Contactperson Property
      - PowerOffice GO Data Type
+   * - Birthdate
+     - dateOfBirth
+     - N/A
+   * - Email
+     - emailAddress
+     - "string"
+   * - FirstName
+     - firstName
+     - "string"
+   * - LastName
+     - lastName
+     - "string"
+   * - Phone
+     - phoneNumber
+     - "string"
 
 
 Salesforce Customer to PowerOffice GO Customers
