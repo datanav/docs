@@ -2,7 +2,7 @@
 Business Central to Wix Dataflow
 ================================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 13:15:54
 
 Introduction
 ------------
@@ -45,4 +45,13 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      - Wix Products Property
      - Wix Data Type
+   * - displayName
+     - name
+     - "string"
+   * - unitCost
+     - costAndProfitData.itemCost
+     - N/A
+   * - unitPrice
+     - priceData.price
+     - N/A
 
