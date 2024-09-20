@@ -2,7 +2,7 @@
 Business Central to Invoiced Dataflow
 =====================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -71,6 +71,27 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (human data) Property
      - Invoiced Customers (human data) Property
      - Invoiced Data Type
+   * - addressLine1
+     - address1
+     - "string"
+   * - addressLine2
+     - address2
+     - "string"
+   * - city
+     - city
+     - "string"
+   * - country
+     - country
+     - "string"
+   * - displayName
+     - name
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - postalCode
+     - postal_code
+     - "string"
 
 
 Business Central Items to Invoiced Items
