@@ -2,7 +2,7 @@
 Business Central to Tidsbanken Dataflow
 =======================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:27:55
 
 Introduction
 ------------
@@ -55,4 +55,25 @@ The following properties are synchronized between a Business Central Employees a
    * - Business Central Employees Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
+   * - birthDate
+     - Fodt
+     - "string"
+   * - displayName
+     - Navn
+     - "string"
+   * - email
+     - Epost
+     - "string"
+   * - givenName
+     - Fornavn
+     - "string"
+   * - jobTitle
+     - Tittel
+     - "string"
+   * - mobilePhone
+     - Mobil
+     - "string"
+   * - surname
+     - Etternavn
+     - "string"
 
