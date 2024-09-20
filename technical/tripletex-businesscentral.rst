@@ -2,7 +2,7 @@
 Tripletex to Business Central Dataflow
 ======================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -95,6 +95,15 @@ The following properties are synchronized between a Tripletex Contact and a Busi
    * - Tripletex Contact Property
      - Business Central Contacts (human data) Property
      - Business Central Data Type
+   * - email
+     - email
+     - "string"
+   * - phoneNumberMobile
+     - mobilePhoneNumber
+     - "string"
+   * - phoneNumberWork
+     - phoneNumber
+     - "string"
 
 
 Tripletex Customer to Business Central Customers (organisation data)
@@ -143,6 +152,69 @@ The following properties are synchronized between a Tripletex Customer (classifi
    * - Tripletex Customer (classification data) Property
      - Business Central Contacts (classification data) Property
      - Business Central Data Type
+   * - deliveryAddress.addressLine1
+     - addressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - addressLine2
+     - "string"
+   * - deliveryAddress.city
+     - city
+     - "string"
+   * - deliveryAddress.country.id
+     - country
+     - "string"
+   * - deliveryAddress.postalCode
+     - postalCode
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - isPrivateIndividual
+     - type
+     - "string"
+   * - name
+     - displayName
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - phoneNumberMobile
+     - mobilePhoneNumber
+     - "string"
+   * - physicalAddress.addressLine1
+     - addressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - addressLine2
+     - "string"
+   * - physicalAddress.city
+     - city
+     - "string"
+   * - physicalAddress.country.id
+     - country
+     - "string"
+   * - physicalAddress.postalCode
+     - postalCode
+     - "string"
+   * - postalAddress.addressLine1
+     - addressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - addressLine2
+     - "string"
+   * - postalAddress.city
+     - city
+     - "string"
+   * - postalAddress.country.id
+     - country
+     - "string"
+   * - postalAddress.postalCode
+     - postalCode
+     - "string"
 
 
 Tripletex Customer (organisation data) to Business Central Customers (organisation data)
@@ -239,6 +311,66 @@ The following properties are synchronized between a Tripletex Customer (human da
    * - Tripletex Customer (human data) Property
      - Business Central Customers (human data) Property
      - Business Central Data Type
+   * - deliveryAddress.addressLine1
+     - addressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - addressLine2
+     - "string"
+   * - deliveryAddress.city
+     - city
+     - "string"
+   * - deliveryAddress.country.id
+     - country
+     - "string"
+   * - deliveryAddress.postalCode
+     - postalCode
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - isPrivateIndividual
+     - type
+     - "string"
+   * - name
+     - displayName
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - physicalAddress.addressLine1
+     - addressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - addressLine2
+     - "string"
+   * - physicalAddress.city
+     - city
+     - "string"
+   * - physicalAddress.country.id
+     - country
+     - "string"
+   * - physicalAddress.postalCode
+     - postalCode
+     - "string"
+   * - postalAddress.addressLine1
+     - addressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - addressLine2
+     - "string"
+   * - postalAddress.city
+     - city
+     - "string"
+   * - postalAddress.country.id
+     - country
+     - "string"
+   * - postalAddress.postalCode
+     - postalCode
+     - "string"
 
 
 Tripletex Employee to Business Central Employees
