@@ -2,7 +2,7 @@
 PowerOffice GO to Freshteam Dataflow
 ====================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:27:55
 
 Introduction
 ------------
@@ -22,6 +22,38 @@ A PowerOffice GO Employees will merge with a Freshteam Employee if one of the fo
      - Freshteam Employee Property
    * - Number
      - employee_id
+
+Once a link between a PowerOffice GO Employees and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Employees and a Freshteam Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Employees Property
+     - Freshteam Employee Property
+     - Freshteam Data Type
+
+
+PowerOffice GO Departments to Freshteam Department
+--------------------------------------------------
+Every PowerOffice GO Departments will be synchronized with a Freshteam Department.
+
+Once a link between a PowerOffice GO Departments and a Freshteam Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Departments and a Freshteam Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Departments Property
+     - Freshteam Department Property
+     - Freshteam Data Type
+
+
+PowerOffice GO Employees to Freshteam Employee
+----------------------------------------------
+Every PowerOffice GO Employees will be synchronized with a Freshteam Employee.
 
 Once a link between a PowerOffice GO Employees and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -72,36 +104,4 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - PhoneNumber
      - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
      - "string"
-
-
-PowerOffice GO Departments to Freshteam Department
---------------------------------------------------
-Every PowerOffice GO Departments will be synchronized with a Freshteam Department.
-
-Once a link between a PowerOffice GO Departments and a Freshteam Department is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice GO Departments and a Freshteam Department:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice GO Departments Property
-     - Freshteam Department Property
-     - Freshteam Data Type
-
-
-PowerOffice GO Employees to Freshteam Employee
-----------------------------------------------
-Every PowerOffice GO Employees will be synchronized with a Freshteam Employee.
-
-Once a link between a PowerOffice GO Employees and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice GO Employees and a Freshteam Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice GO Employees Property
-     - Freshteam Employee Property
-     - Freshteam Data Type
 
