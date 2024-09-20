@@ -2,7 +2,7 @@
 PowerOffice GO to Unieconomy Dataflow
 =====================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:44:12
 
 Introduction
 ------------
@@ -39,6 +39,12 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Unieconomy Customers Property
      - Unieconomy Data Type
+   * - OrganizationNumber (Dependant on having wd:Q11994066 in MailAddress.CountryCode)
+     - OrgNumber
+     - "string"
+   * - WebsiteUrl
+     - WebUrl
+     - "string"
 
 
 PowerOffice GO Departments to Unieconomy Departments
