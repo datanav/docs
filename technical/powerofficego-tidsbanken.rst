@@ -2,7 +2,7 @@
 PowerOffice GO to Tidsbanken Dataflow
 =====================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 08:44:12
 
 Introduction
 ------------
@@ -131,54 +131,6 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Tidsbanken Kunde Property
      - Tidsbanken Data Type
-   * - EmailAddress
-     - Epost
-     - "string"
-   * - Id
-     - Id
-     - "string"
-   * - MailAddress.AddressLine1
-     - Gateadresse
-     - "string"
-   * - MailAddress.AddressLine1
-     - Leveringsadresse
-     - "string"
-   * - MailAddress.AddressLine2
-     - Leveringsadresse2
-     - "string"
-   * - MailAddress.AddressLine2
-     - Postadresse
-     - "string"
-   * - MailAddress.City
-     - LevPoststed
-     - "string"
-   * - MailAddress.City
-     - Poststed
-     - "string"
-   * - MailAddress.ZipCode
-     - LevPostNr
-     - "string"
-   * - MailAddress.ZipCode
-     - Postnr
-     - "string"
-   * - Name
-     - Navn
-     - "string"
-   * - Number
-     - sesam_kundeId
-     - "string"
-   * - OrganizationNumber (Dependant on having NO in MailAddress.CountryCode)
-     - Organisasjonsnummer
-     - "string"
-   * - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCode)
-     - sesam_kundeId
-     - "string"
-   * - PhoneNumber
-     - Telefon
-     - "string"
-   * - WebsiteUrl
-     - Url
-     - "string"
 
 
 PowerOffice GO Departments to Tidsbanken Avdeling
@@ -274,6 +226,54 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Tidsbanken Kunde Property
      - Tidsbanken Data Type
+   * - EmailAddress
+     - Epost
+     - "string"
+   * - Id
+     - Id
+     - "string"
+   * - MailAddress.AddressLine1
+     - Gateadresse
+     - "string"
+   * - MailAddress.AddressLine1
+     - Leveringsadresse
+     - "string"
+   * - MailAddress.AddressLine2
+     - Leveringsadresse2
+     - "string"
+   * - MailAddress.AddressLine2
+     - Postadresse
+     - "string"
+   * - MailAddress.City
+     - LevPoststed
+     - "string"
+   * - MailAddress.City
+     - Poststed
+     - "string"
+   * - MailAddress.ZipCode
+     - LevPostNr
+     - "string"
+   * - MailAddress.ZipCode
+     - Postnr
+     - "string"
+   * - Name
+     - Navn
+     - "string"
+   * - Number
+     - sesam_kundeId
+     - "string"
+   * - OrganizationNumber (Dependant on having NO in MailAddress.CountryCode)
+     - Organisasjonsnummer
+     - "string"
+   * - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCode)
+     - sesam_kundeId
+     - "string"
+   * - PhoneNumber
+     - Telefon
+     - "string"
+   * - WebsiteUrl
+     - Url
+     - "string"
 
 
 PowerOffice GO Departments to Tidsbanken Avdeling
