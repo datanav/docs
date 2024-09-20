@@ -2,7 +2,7 @@
 PowerOffice GO to Shopify Dataflow
 ==================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a PowerOffice GO Customers (hu
    * - PowerOffice GO Customers (human data) Property
      - Shopify Customer Property
      - Shopify Data Type
+   * - EmailAddress
+     - email
+     - "string"
+   * - FirstName
+     - first_name
+     - "string"
+   * - LastName
+     - last_name
+     - "string"
+   * - PhoneNumber
+     - default_address.phone
+     - "string"
 
 
 PowerOffice GO Customers to Shopify Customer
