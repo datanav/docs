@@ -2,7 +2,7 @@
 Business Central to PowerOffice GO Dataflow
 ===========================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -23,6 +23,30 @@ The following properties are synchronized between a Business Central Contacts (h
    * - Business Central Contacts (human data) Property
      - PowerOffice GO Contactperson Property
      - PowerOffice GO Data Type
+   * - addressLine1
+     - address1
+     - "string"
+   * - addressLine2
+     - address2
+     - "string"
+   * - city
+     - city
+     - "string"
+   * - country
+     - residenceCountryCode
+     - "string"
+   * - email
+     - emailAddress
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - postalCode
+     - zipCode
+     - "string"
 
 
 Business Central Contacts (classification data) to PowerOffice GO Customers
@@ -55,6 +79,33 @@ The following properties are synchronized between a Business Central Contacts (c
    * - Business Central Contacts (classification data) Property
      - PowerOffice GO Customers (classification data) Property
      - PowerOffice GO Data Type
+   * - addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - city
+     - MailAddress.City
+     - "string"
+   * - country
+     - MailAddress.CountryCode
+     - "string"
+   * - email
+     - EmailAddress
+     - "string"
+   * - id
+     - Id
+     - "integer"
+   * - phoneNumber
+     - PhoneNumber
+     - "string"
+   * - postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - type
+     - IsPerson
+     - N/A
 
 
 Business Central Customers (organisation data) to PowerOffice GO Customers
@@ -151,6 +202,33 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (human data) Property
      - PowerOffice GO Customers (human data) Property
      - PowerOffice GO Data Type
+   * - addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - city
+     - MailAddress.City
+     - "string"
+   * - country
+     - MailAddress.CountryCode
+     - "string"
+   * - email
+     - EmailAddress
+     - "string"
+   * - id
+     - Id
+     - "integer"
+   * - phoneNumber
+     - PhoneNumber
+     - "string"
+   * - postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - type
+     - IsPerson
+     - N/A
 
 
 Business Central Employees to PowerOffice GO Employees
