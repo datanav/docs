@@ -2,7 +2,7 @@
 Shopify to Invoiced Dataflow
 ============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -87,4 +87,10 @@ The following properties are synchronized between a Shopify Sesamproduct and a I
    * - Shopify Sesamproduct Property
      - Invoiced Items Property
      - Invoiced Data Type
+   * - title
+     - name
+     - "string"
+   * - variants.title
+     - description
+     - "string"
 
