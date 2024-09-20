@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2024-09-20 00:01:57
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -1263,6 +1263,144 @@ The following properties are synchronized between a Tripletex Customer and a Tri
    * - Tripletex Customer Property
      - Tripletex Customer (human data) Property
      - Tripletex Data Type
+   * - deliveryAddress.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - deliveryAddress.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - deliveryAddress.addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - deliveryAddress.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - deliveryAddress.addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - deliveryAddress.city
+     - deliveryAddress.city
+     - "string"
+   * - deliveryAddress.city
+     - physicalAddress.city
+     - "string"
+   * - deliveryAddress.city
+     - postalAddress.city
+     - "string"
+   * - deliveryAddress.country.id
+     - deliveryAddress.country.id
+     - "string"
+   * - deliveryAddress.country.id
+     - physicalAddress.country.id
+     - "integer"
+   * - deliveryAddress.country.id
+     - postalAddress.country.id
+     - "integer"
+   * - deliveryAddress.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - postalAddress.postalCode
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - physicalAddress.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - physicalAddress.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - physicalAddress.addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - physicalAddress.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - physicalAddress.addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - physicalAddress.city
+     - deliveryAddress.city
+     - "string"
+   * - physicalAddress.city
+     - physicalAddress.city
+     - "string"
+   * - physicalAddress.city
+     - postalAddress.city
+     - "string"
+   * - physicalAddress.country.id
+     - deliveryAddress.country.id
+     - "string"
+   * - physicalAddress.country.id
+     - physicalAddress.country.id
+     - "integer"
+   * - physicalAddress.country.id
+     - postalAddress.country.id
+     - "integer"
+   * - physicalAddress.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - physicalAddress.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - physicalAddress.postalCode
+     - postalAddress.postalCode
+     - "string"
+   * - postalAddress.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - postalAddress.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - postalAddress.addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - postalAddress.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - postalAddress.addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - postalAddress.city
+     - deliveryAddress.city
+     - "string"
+   * - postalAddress.city
+     - physicalAddress.city
+     - "string"
+   * - postalAddress.city
+     - postalAddress.city
+     - "string"
+   * - postalAddress.country.id
+     - deliveryAddress.country.id
+     - "string"
+   * - postalAddress.country.id
+     - physicalAddress.country.id
+     - "integer"
+   * - postalAddress.country.id
+     - postalAddress.country.id
+     - "integer"
+   * - postalAddress.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - postalAddress.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - postalAddress.postalCode
+     - postalAddress.postalCode
+     - "string"
 
 
 Tripletex Projectactivity to Tripletex Activity
