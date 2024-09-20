@@ -2,7 +2,7 @@
 Shopify to MemberCare Dataflow
 ==============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -118,6 +118,15 @@ The following properties are synchronized between a Shopify Customer and a Membe
    * - Shopify Customer Property
      - MemberCare Countries Property
      - MemberCare Data Type
+   * - currency
+     - iso2Letter
+     - "string"
+   * - default_address.country_code
+     - iso2Letter
+     - "string"
+   * - default_address.country_name
+     - name
+     - "string"
 
 
 Shopify Order to MemberCare Countries
