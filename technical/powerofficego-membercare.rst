@@ -2,7 +2,7 @@
 PowerOffice GO to MemberCare Dataflow
 =====================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:44:12
 
 Introduction
 ------------
@@ -251,6 +251,9 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - MemberCare Countries Property
      - MemberCare Data Type
+   * - MailAddress.CountryCode
+     - iso2Letter
+     - "string"
 
 
 PowerOffice GO Location to MemberCare Countries
