@@ -2,7 +2,7 @@
 Business Central to Tidsbanken Dataflow
 =======================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 08:44:12
 
 Introduction
 ------------
@@ -23,6 +23,42 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (organisation data) Property
      - Tidsbanken Kunde Property
      - Tidsbanken Data Type
+   * - addressLine1
+     - Gateadresse
+     - "string"
+   * - addressLine1
+     - Leveringsadresse
+     - "string"
+   * - addressLine2
+     - Leveringsadresse2
+     - "string"
+   * - addressLine2
+     - Postadresse
+     - "string"
+   * - city
+     - LevPoststed
+     - "string"
+   * - city
+     - Poststed
+     - "string"
+   * - displayName
+     - Navn
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - phoneNumber
+     - Telefon
+     - "string"
+   * - postalCode
+     - LevPostNr
+     - "string"
+   * - postalCode
+     - Postnr
+     - "string"
+   * - website
+     - Url
+     - "string"
 
 
 Business Central Customers (organisation data) to Tidsbanken Kunde
