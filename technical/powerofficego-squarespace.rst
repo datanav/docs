@@ -2,7 +2,7 @@
 PowerOffice GO to  Dataflow
 ===========================
 
-Generated: 2024-09-20 13:11:59
+Generated: 2024-09-20 13:15:54
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a PowerOffice GO Product and a
    * - PowerOffice GO Product Property
      -  Inventory Property
      -  Data Type
+   * - availableStock
+     - quantity
+     - "string"
    * - description
      - descriptor
      - "string"
