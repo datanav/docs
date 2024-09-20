@@ -2,7 +2,7 @@
 Business Central to Wix Dataflow
 ================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Business Central Contacts (h
    * - Business Central Contacts (human data) Property
      - Wix Contacts Property
      - Wix Data Type
+   * - email
+     - primaryInfo.email
+     - "string"
+   * - phoneNumber
+     - primaryInfo.phone
+     - "string"
 
 
 Business Central Items to Wix Products
