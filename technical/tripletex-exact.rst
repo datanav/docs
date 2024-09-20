@@ -2,7 +2,7 @@
 Tripletex to Exact Online Dataflow
 ==================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:27:55
 
 Introduction
 ------------
@@ -351,6 +351,12 @@ The following properties are synchronized between a Tripletex Employee and a Exa
    * - Tripletex Employee Property
      - Exact Online Addresses Property
      - Exact Online Data Type
+   * - address.city
+     - City
+     - "string"
+   * - address.country.id
+     - Country
+     - "string"
 
 
 Tripletex Employee to Exact Online Employees
@@ -367,6 +373,21 @@ The following properties are synchronized between a Tripletex Employee and a Exa
    * - Tripletex Employee Property
      - Exact Online Employees Property
      - Exact Online Data Type
+   * - address.city
+     - City
+     - "string"
+   * - address.country.id
+     - Country
+     - "string"
+   * - address.postalCode
+     - Postcode
+     - "string"
+   * - dateOfBirth
+     - BirthDate
+     - "string"
+   * - id
+     - ID
+     - "string"
 
 
 Tripletex Invoice to Exact Online Salesinvoices
