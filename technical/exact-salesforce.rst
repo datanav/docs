@@ -2,7 +2,7 @@
 Exact Online to Salesforce Dataflow
 ===================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -299,6 +299,18 @@ The following properties are synchronized between a Exact Online Employees and a
    * - Exact Online Employees Property
      - Salesforce User Property
      - Salesforce Data Type
+   * - City
+     - City
+     - "string"
+   * - Country
+     - Country
+     - "string"
+   * - ID
+     - ID
+     - "string"
+   * - Postcode
+     - PostalCode
+     - "string"
 
 
 Exact Online Items to Salesforce Product2
