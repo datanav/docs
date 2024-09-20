@@ -2,7 +2,7 @@
 HubSpot to Keap Dataflow
 ========================
 
-Generated: 2024-09-20 00:00:24
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -118,4 +118,13 @@ The following properties are synchronized between a HubSpot Product and a Keap P
    * - HubSpot Product Property
      - Keap Product Property
      - Keap Data Type
+   * - properties.description
+     - product_desc
+     - "string"
+   * - properties.name
+     - product_name
+     - "string"
+   * - properties.price
+     - product_price
+     - "string"
 
