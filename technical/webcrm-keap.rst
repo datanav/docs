@@ -2,7 +2,7 @@
 WebCRM to Keap Dataflow
 =======================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -99,4 +99,7 @@ The following properties are synchronized between a WebCRM Products and a Keap P
    * - WebCRM Products Property
      - Keap Product Property
      - Keap Data Type
+   * - ProductPrice
+     - product_price
+     - "string"
 
