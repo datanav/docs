@@ -2,7 +2,7 @@
 Freshteam to Exact Online Dataflow
 ==================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 08:42:05
 
 Introduction
 ------------
@@ -57,6 +57,9 @@ The following properties are synchronized between a Freshteam Employee and a Exa
    * - date_of_birth
      - BirthDate
      - "string"
+   * - official_email
+     - BusinessEmail
+     - "string"
 
 
 Freshteam Department to Exact Online Departments
@@ -91,5 +94,8 @@ The following properties are synchronized between a Freshteam Employee and a Exa
      - Exact Online Data Type
    * - date_of_birth
      - BirthDate
+     - "string"
+   * - official_email
+     - BusinessEmail
      - "string"
 
