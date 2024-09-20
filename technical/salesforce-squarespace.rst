@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-09-20 13:10:11
+Generated: 2024-09-20 13:10:58
 
 Introduction
 ------------
@@ -21,22 +21,6 @@ The following properties are synchronized between a Salesforce Product2 and a  I
    :header-rows: 1
 
    * - Salesforce Product2 Property
-     -  Inventory Property
-     -  Data Type
-
-
-Salesforce User to  Inventory
------------------------------
-Every Salesforce User will be synchronized with a  Inventory.
-
-Once a link between a Salesforce User and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Salesforce User and a  Inventory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Salesforce User Property
      -  Inventory Property
      -  Data Type
 
