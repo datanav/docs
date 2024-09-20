@@ -2,7 +2,7 @@
 WooCommerce to Business Central Dataflow
 ========================================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 13:15:54
 
 Introduction
 ------------
@@ -90,4 +90,13 @@ The following properties are synchronized between a WooCommerce Product and a Bu
    * - WooCommerce Product Property
      - Business Central Items Property
      - Business Central Data Type
+   * - name
+     - displayName
+     - "string"
+   * - price
+     - unitCost
+     - N/A
+   * - sale_price
+     - unitPrice
+     - N/A
 
