@@ -2,7 +2,7 @@
 PowerOffice GO to Trello Dataflow
 =================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:27:55
 
 Introduction
 ------------
@@ -102,9 +102,6 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - PowerOffice GO Employees Property
      - Trello Members Property
      - Trello Data Type
-   * - EmailAddress
-     - email
-     - "string"
 
 
 PowerOffice GO Projectactivity to Trello Actions
@@ -175,6 +172,9 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - PowerOffice GO Employees Property
      - Trello Members Property
      - Trello Data Type
+   * - EmailAddress
+     - email
+     - "string"
 
 
 PowerOffice GO Projectactivity to Trello Actions
