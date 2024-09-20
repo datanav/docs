@@ -2,7 +2,7 @@
 Salesforce to Business Central Dataflow
 =======================================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 10:53:49
 
 Introduction
 ------------
@@ -222,6 +222,9 @@ The following properties are synchronized between a Salesforce User and a Busine
      - "string"
    * - Country
      - country
+     - "string"
+   * - Email
+     - email
      - "string"
    * - Email
      - personalEmail
