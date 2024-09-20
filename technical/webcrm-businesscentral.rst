@@ -2,7 +2,7 @@
 WebCRM to Business Central Dataflow
 ===================================
 
-Generated: 2024-09-20 08:54:19
+Generated: 2024-09-20 13:15:54
 
 Introduction
 ------------
@@ -67,6 +67,12 @@ The following properties are synchronized between a WebCRM Products and a Busine
    * - WebCRM Products Property
      - Business Central Items Property
      - Business Central Data Type
+   * - ProductCostPrice
+     - unitCost
+     - N/A
+   * - ProductPrice
+     - unitPrice
+     - N/A
 
 
 WebCRM Quotationline to Business Central Salesorderlines
