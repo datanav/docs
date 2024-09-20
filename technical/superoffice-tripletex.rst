@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2024-09-20 11:07:02
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -454,6 +454,24 @@ The following properties are synchronized between a SuperOffice Product and a Tr
    * - SuperOffice Product Property
      - Tripletex Product Property
      - Tripletex Data Type
+   * - Description
+     - description
+     - "string"
+   * - ERPPriceListKey
+     - currency.id
+     - "integer"
+   * - Name
+     - name
+     - "string"
+   * - UnitCost
+     - costExcludingVatCurrency
+     - "float"
+   * - UnitListPrice
+     - priceExcludingVatCurrency
+     - "float"
+   * - VAT
+     - vatType.id
+     - "integer"
 
 
 SuperOffice Project to Tripletex Project
