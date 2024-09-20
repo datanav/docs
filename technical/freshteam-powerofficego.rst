@@ -2,7 +2,7 @@
 Freshteam to PowerOffice GO Dataflow
 ====================================
 
-Generated: 2024-09-20 10:53:28
+Generated: 2024-09-20 10:53:38
 
 Introduction
 ------------
@@ -91,9 +91,6 @@ The following properties are synchronized between a Freshteam Employee and a Pow
      - N/A
    * - first_name
      - FirstName
-     - "string"
-   * - id
-     - Id
      - "string"
    * - last_name
      - LastName
