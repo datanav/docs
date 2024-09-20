@@ -2,7 +2,7 @@
 Trello to Tripletex Dataflow
 ============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 10:53:49
 
 Introduction
 ------------
@@ -55,4 +55,7 @@ The following properties are synchronized between a Trello Members and a Triplet
    * - Trello Members Property
      - Tripletex Employee Property
      - Tripletex Data Type
+   * - email
+     - email
+     - "string"
 
