@@ -2,7 +2,7 @@
 Salesforce to Exact Online Dataflow
 ===================================
 
-Generated: 2024-09-20 08:54:19
+Generated: 2024-09-20 10:53:49
 
 Introduction
 ------------
@@ -591,6 +591,9 @@ The following properties are synchronized between a Salesforce User and a Exact 
      - "string"
    * - Country
      - Country
+     - "string"
+   * - Email
+     - BusinessEmail
      - "string"
    * - Email
      - Email
