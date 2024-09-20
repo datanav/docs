@@ -2,7 +2,7 @@
 Invoiced to Business Central Dataflow
 =====================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -39,6 +39,27 @@ The following properties are synchronized between a Invoiced Contacts and a Busi
    * - Invoiced Contacts Property
      - Business Central Contacts (human data) Property
      - Business Central Data Type
+   * - address1
+     - addressLine1
+     - "string"
+   * - address2
+     - addressLine2
+     - "string"
+   * - city
+     - city
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - name
+     - displayName
+     - "string"
+   * - phone
+     - mobilePhoneNumber
+     - "string"
+   * - postal_code
+     - postalCode
+     - "string"
 
 
 Invoiced Customers (organisation data) to Business Central Customers (organisation data)
@@ -103,6 +124,27 @@ The following properties are synchronized between a Invoiced Customers (human da
    * - Invoiced Customers (human data) Property
      - Business Central Customers (human data) Property
      - Business Central Data Type
+   * - address1
+     - addressLine1
+     - "string"
+   * - address2
+     - addressLine2
+     - "string"
+   * - city
+     - city
+     - "string"
+   * - country
+     - country
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - name
+     - displayName
+     - "string"
+   * - postal_code
+     - postalCode
+     - "string"
 
 
 Invoiced Invoices to Business Central Salesorders
