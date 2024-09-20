@@ -2,7 +2,7 @@
 Business Central to Shopify Dataflow
 ====================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -39,6 +39,12 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (human data) Property
      - Shopify Customer Property
      - Shopify Data Type
+   * - email
+     - email
+     - "string"
+   * - phoneNumber
+     - default_address.phone
+     - "string"
 
 
 Business Central Items to Shopify Sesamproduct
