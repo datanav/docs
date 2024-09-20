@@ -2,7 +2,7 @@
 Exact Online to Freshteam Dataflow
 ==================================
 
-Generated: 2024-09-20 08:54:19
+Generated: 2024-09-20 10:53:49
 
 Introduction
 ------------
@@ -46,6 +46,9 @@ The following properties are synchronized between a Exact Online Employees and a
      - official_email
      - "string"
    * - Email
+     - personal_email
+     - "string"
+   * - PrivateEmail
      - personal_email
      - "string"
 
