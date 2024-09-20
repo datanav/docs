@@ -2,7 +2,7 @@
 Business Central to Salesforce Dataflow
 =======================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -210,6 +210,9 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (human data) Property
      - Salesforce Customer Property
      - Salesforce Data Type
+   * - displayName
+     - Name
+     - "string"
 
 
 Business Central Employees to Salesforce User
