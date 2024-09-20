@@ -2,7 +2,7 @@
 Wave to HubSpot Dataflow
 ========================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 10:50:59
 
 Introduction
 ------------
@@ -362,4 +362,7 @@ The following properties are synchronized between a Wave User and a HubSpot User
    * - Wave User Property
      - HubSpot User Property
      - HubSpot Data Type
+   * - defaultEmail
+     - email
+     - "string"
 
