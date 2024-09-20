@@ -2,7 +2,7 @@
 SuperOffice to Business Central Dataflow
 ========================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -39,6 +39,15 @@ The following properties are synchronized between a SuperOffice Product and a Bu
    * - SuperOffice Product Property
      - Business Central Items Property
      - Business Central Data Type
+   * - Name
+     - displayName
+     - "string"
+   * - UnitCost
+     - unitCost
+     - N/A
+   * - UnitListPrice
+     - unitPrice
+     - N/A
 
 
 SuperOffice Quoteline to Business Central Salesorderlines
