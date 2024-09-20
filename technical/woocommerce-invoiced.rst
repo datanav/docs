@@ -2,7 +2,7 @@
 WooCommerce to Invoiced Dataflow
 ================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -87,4 +87,10 @@ The following properties are synchronized between a WooCommerce Product and a In
    * - WooCommerce Product Property
      - Invoiced Items Property
      - Invoiced Data Type
+   * - name
+     - name
+     - "string"
+   * - price
+     - unit_cost
+     - "string"
 
