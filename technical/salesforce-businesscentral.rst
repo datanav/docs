@@ -2,7 +2,7 @@
 Salesforce to Business Central Dataflow
 =======================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -55,6 +55,15 @@ The following properties are synchronized between a Salesforce Contact and a Bus
    * - Salesforce Contact Property
      - Business Central Contacts (human data) Property
      - Business Central Data Type
+   * - Email
+     - email
+     - "string"
+   * - MobilePhone
+     - mobilePhoneNumber
+     - "string"
+   * - Phone
+     - phoneNumber
+     - "string"
 
 
 Salesforce Customer to Business Central Customers (organisation data)
@@ -87,6 +96,9 @@ The following properties are synchronized between a Salesforce Customer and a Bu
    * - Salesforce Customer Property
      - Business Central Customers (human data) Property
      - Business Central Data Type
+   * - Name
+     - displayName
+     - "string"
 
 
 Salesforce Invoiceline to Business Central Salesorderlines
