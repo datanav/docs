@@ -2,7 +2,7 @@
 PowerOffice GO to Business Central Dataflow
 ===========================================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 08:44:12
 
 Introduction
 ------------
@@ -114,6 +114,36 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Business Central Customers (organisation data) Property
      - Business Central Data Type
+   * - Id
+     - id
+     - "string"
+   * - IsPerson
+     - type
+     - "string"
+   * - MailAddress.AddressLine1
+     - addressLine1
+     - "string"
+   * - MailAddress.AddressLine2
+     - addressLine2
+     - "string"
+   * - MailAddress.City
+     - city
+     - "string"
+   * - MailAddress.CountryCode
+     - country
+     - "string"
+   * - MailAddress.ZipCode
+     - postalCode
+     - "string"
+   * - Name
+     - displayName
+     - "string"
+   * - PhoneNumber
+     - phoneNumber
+     - "string"
+   * - WebsiteUrl
+     - website
+     - "string"
 
 
 PowerOffice GO Customers to Business Central Customers (classification data)
