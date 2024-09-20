@@ -2,7 +2,7 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 10:50:59
 
 Introduction
 ------------
@@ -188,6 +188,9 @@ The following properties are synchronized between a Wix.com Members and a Triple
    * - Wix.com Members Property
      - Tripletex Employee Property
      - Tripletex Data Type
+   * - loginEmail
+     - email
+     - "string"
 
 
 Wix.com Contacts to Tripletex Contact
