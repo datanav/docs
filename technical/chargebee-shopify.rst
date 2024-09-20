@@ -2,7 +2,7 @@
 Chargebee to Shopify Dataflow
 =============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -51,6 +51,15 @@ The following properties are synchronized between a Chargebee Customer and a Sho
    * - Chargebee Customer Property
      - Shopify Customer Property
      - Shopify Data Type
+   * - email
+     - email
+     - "string"
+   * - first_name
+     - first_name
+     - "string"
+   * - last_name
+     - last_name
+     - "string"
 
 
 Chargebee Item to Shopify Sesamproduct
