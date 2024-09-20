@@ -2,7 +2,7 @@
 YouTrack to Trello Dataflow
 ===========================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 10:53:50
 
 Introduction
 ------------
@@ -130,6 +130,9 @@ The following properties are synchronized between a YouTrack Users and a Trello 
      - Trello Data Type
    * - name
      - fullName
+     - "string"
+   * - profile.email.email
+     - email
      - "string"
 
 
