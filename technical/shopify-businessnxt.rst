@@ -2,7 +2,7 @@
 Shopify to Business Nxt Dataflow
 ================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -102,6 +102,15 @@ The following properties are synchronized between a Shopify Customer and a Busin
    * - Shopify Customer Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - currency
+     - isoCode
+     - "string"
+   * - default_address.country_code
+     - isoCode
+     - "string"
+   * - default_address.country_name
+     - name
+     - "string"
 
 
 Shopify Customer to Business Nxt Currency
@@ -118,6 +127,15 @@ The following properties are synchronized between a Shopify Customer and a Busin
    * - Shopify Customer Property
      - Business Nxt Currency Property
      - Business Nxt Data Type
+   * - currency
+     - isoCode
+     - "string"
+   * - default_address.country_code
+     - isoCode
+     - "string"
+   * - default_address.country_name
+     - name
+     - "string"
 
 
 Shopify Order to Business Nxt Country
