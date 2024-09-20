@@ -2,7 +2,7 @@
 Tripletex to WebCRM Dataflow
 ============================
 
-Generated: 2024-09-20 08:54:19
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -171,4 +171,16 @@ The following properties are synchronized between a Tripletex Product and a WebC
    * - Tripletex Product Property
      - WebCRM Products Property
      - WebCRM Data Type
+   * - costExcludingVatCurrency
+     - ProductCostPrice
+     - "string"
+   * - priceExcludingVatCurrency
+     - ProductPrice
+     - "string"
+   * - stockOfGoods
+     - ProductQuantity
+     - "string"
+   * - vatType.id
+     - ProductVatCode
+     - "string"
 
