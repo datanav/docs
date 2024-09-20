@@ -2,7 +2,7 @@
 PowerOffice GO to ZohoCRM Dataflow
 ==================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -85,6 +85,42 @@ The following properties are synchronized between a PowerOffice GO Customers (hu
    * - PowerOffice GO Customers (human data) Property
      - ZohoCRM Contact Property
      - ZohoCRM Data Type
+   * - EmailAddress
+     - Email
+     - "string"
+   * - EmailAddress
+     - Secondary_Email
+     - "string"
+   * - FirstName
+     - First_Name
+     - "string"
+   * - LastName
+     - Last_Name
+     - "string"
+   * - MailAddress.City
+     - Mailing_City
+     - "string"
+   * - MailAddress.City
+     - Other_City
+     - "string"
+   * - MailAddress.CountryCode
+     - Mailing_Country
+     - "string"
+   * - MailAddress.CountryCode
+     - Other_Country
+     - "string"
+   * - MailAddress.ZipCode
+     - Mailing_Zip
+     - "string"
+   * - MailAddress.ZipCode
+     - Other_Zip
+     - "string"
+   * - PhoneNumber
+     - Other_Phone
+     - "string"
+   * - PhoneNumber
+     - Phone
+     - "string"
 
 
 PowerOffice GO Customers to ZohoCRM Contact
