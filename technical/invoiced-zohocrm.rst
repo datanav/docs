@@ -2,7 +2,7 @@
 Invoiced to ZohoCRM Dataflow
 ============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -58,4 +58,25 @@ The following properties are synchronized between a Invoiced Customers (human da
    * - Invoiced Customers (human data) Property
      - ZohoCRM Contact Property
      - ZohoCRM Data Type
+   * - city
+     - Mailing_City
+     - "string"
+   * - city
+     - Other_City
+     - "string"
+   * - country
+     - Mailing_Country
+     - "string"
+   * - country
+     - Other_Country
+     - "string"
+   * - name
+     - Full_Name
+     - "string"
+   * - postal_code
+     - Mailing_Zip
+     - "string"
+   * - postal_code
+     - Other_Zip
+     - "string"
 
