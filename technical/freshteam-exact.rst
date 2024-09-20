@@ -2,7 +2,7 @@
 Freshteam to Exact Online Dataflow
 ==================================
 
-Generated: 2024-09-20 08:54:19
+Generated: 2024-09-20 10:53:49
 
 Introduction
 ------------
@@ -103,5 +103,8 @@ The following properties are synchronized between a Freshteam Employee and a Exa
      - "string"
    * - personal_email
      - Email
+     - "string"
+   * - personal_email
+     - PrivateEmail
      - "string"
 
