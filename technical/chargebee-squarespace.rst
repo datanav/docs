@@ -2,7 +2,7 @@
 Chargebee to  Dataflow
 ======================
 
-Generated: 2024-09-20 13:10:11
+Generated: 2024-09-20 13:18:50
 
 Introduction
 ------------
@@ -22,5 +22,21 @@ The following properties are synchronized between a Chargebee Item and a  Invent
 
    * - Chargebee Item Property
      -  Inventory Property
+     -  Data Type
+
+
+Chargebee Order to  Order
+-------------------------
+Every Chargebee Order will be synchronized with a  Order.
+
+Once a link between a Chargebee Order and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Chargebee Order and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Chargebee Order Property
+     -  Order Property
      -  Data Type
 
