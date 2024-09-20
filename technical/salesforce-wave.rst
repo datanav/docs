@@ -2,7 +2,7 @@
 Salesforce to Wave Dataflow
 ===========================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -74,4 +74,10 @@ The following properties are synchronized between a Salesforce Product2 and a Wa
    * - Salesforce Product2 Property
      - Wave Product Property
      - Wave Data Type
+   * - Description
+     - description
+     - "string"
+   * - Name
+     - name
+     - "string"
 
