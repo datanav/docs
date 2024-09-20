@@ -2,7 +2,7 @@
 Exact Online to WebCRM Dataflow
 ===============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:42:05
 
 Introduction
 ------------
@@ -80,6 +80,9 @@ The following properties are synchronized between a Exact Online Contacts and a 
    * - Exact Online Contacts Property
      - WebCRM Persons Property
      - WebCRM Data Type
+   * - BirthDate
+     - document_number
+     - "string"
 
 
 Exact Online Items to WebCRM Products
