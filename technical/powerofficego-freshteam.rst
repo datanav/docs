@@ -2,7 +2,7 @@
 PowerOffice GO to Freshteam Dataflow
 ====================================
 
-Generated: 2024-09-20 08:41:56
+Generated: 2024-09-20 08:42:05
 
 Introduction
 ------------
@@ -33,15 +33,6 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - PowerOffice GO Employees Property
      - Freshteam Employee Property
      - Freshteam Data Type
-   * - DateOfBirth
-     - date_of_birth
-     - "string"
-   * - EmailAddress
-     - official_email
-     - "string"
-   * - EmailAddress
-     - personal_email
-     - "string"
 
 
 PowerOffice GO Departments to Freshteam Department
@@ -74,6 +65,15 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - PowerOffice GO Employees Property
      - Freshteam Employee Property
      - Freshteam Data Type
+   * - DateOfBirth
+     - date_of_birth
+     - "string"
+   * - EmailAddress
+     - official_email
+     - "string"
+   * - EmailAddress
+     - personal_email
+     - "string"
    * - FirstName
      - first_name
      - "string"
