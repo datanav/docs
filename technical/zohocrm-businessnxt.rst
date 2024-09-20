@@ -2,7 +2,7 @@
 ZohoCRM to Business Nxt Dataflow
 ================================
 
-Generated: 2024-09-20 00:00:01
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -86,6 +86,12 @@ The following properties are synchronized between a ZohoCRM Contact and a Busine
    * - ZohoCRM Contact Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - Mailing_Country
+     - name
+     - "string"
+   * - Other_Country
+     - name
+     - "string"
 
 
 ZohoCRM Deal to Business Nxt Order
