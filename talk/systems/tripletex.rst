@@ -16,7 +16,7 @@ Tripletex
     
     |
     
-    .. link-button:: https://tripletex.talk.market
+    .. link-button:: https://www.sesam.io/talk/tripletex
         :type: url
         :text: Try for free
         :classes: btn-primary btn-block
