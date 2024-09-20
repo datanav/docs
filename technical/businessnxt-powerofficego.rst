@@ -2,7 +2,7 @@
 Business Nxt to PowerOffice GO Dataflow
 =======================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -55,4 +55,13 @@ The following properties are synchronized between a Business Nxt Product and a P
    * - Business Nxt Product Property
      - PowerOffice GO Product Property
      - PowerOffice GO Data Type
+   * - description
+     - description
+     - "string"
+   * - priceQuantity
+     - salesPrice
+     - N/A
+   * - quantityPerUnit
+     - availableStock
+     - "integer"
 
