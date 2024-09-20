@@ -2,7 +2,7 @@
 WebCRM to Wix Dataflow
 ======================
 
-Generated: 2024-09-20 08:54:19
+Generated: 2024-09-20 13:15:54
 
 Introduction
 ------------
@@ -51,4 +51,10 @@ The following properties are synchronized between a WebCRM Products and a Wix Pr
    * - WebCRM Products Property
      - Wix Products Property
      - Wix Data Type
+   * - ProductCostPrice
+     - costAndProfitData.itemCost
+     - N/A
+   * - ProductPrice
+     - priceData.price
+     - N/A
 
