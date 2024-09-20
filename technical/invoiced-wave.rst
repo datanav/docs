@@ -2,7 +2,7 @@
 Invoiced to Wave Dataflow
 =========================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Invoiced Customers (organisa
    * - Invoiced Customers (organisation data) Property
      - Wave Customer Property
      - Wave Data Type
+   * - name
+     - name
+     - N/A
 
 
 Invoiced Customers (human data) to Wave Customer (human data)
@@ -71,6 +74,39 @@ The following properties are synchronized between a Invoiced Customers (human da
    * - Invoiced Customers (human data) Property
      - Wave Customer (human data) Property
      - Wave Data Type
+   * - address1
+     - address.addressLine1
+     - "string"
+   * - address1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - address2
+     - address.addressLine2
+     - "string"
+   * - address2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - city
+     - address.city
+     - "string"
+   * - city
+     - shippingDetails.address.city
+     - "string"
+   * - country
+     - address.country.code
+     - "string"
+   * - country
+     - shippingDetails.address.country.code
+     - "string"
+   * - name
+     - name
+     - N/A
+   * - postal_code
+     - address.postalCode
+     - "string"
+   * - postal_code
+     - shippingDetails.address.postalCode
+     - "string"
 
 
 Invoiced Invoices to Wave Invoice
