@@ -1,5 +1,13 @@
-Business Central FAQ
-====================
+.. _talk_business central:
+
+Business Central
+================
+Business Central is an enterprise resource planning (ERP) solution aimed at small to medium-sized businesses (SMBs) developed by Microsoft.
+  
+  
+  
+Frequently Asked Questions
+==========================
 
 
 Is the data synchronization real-time?
