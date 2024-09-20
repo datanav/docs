@@ -2,7 +2,7 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -35,18 +35,6 @@ The following properties are synchronized between a Wix.com Contacts and a Tripl
    * - Wix.com Contacts Property
      - Tripletex Contact Property
      - Tripletex Data Type
-   * - info.name.first
-     - firstName
-     - "string"
-   * - info.name.last
-     - lastName
-     - "string"
-   * - primaryInfo.email
-     - email
-     - "string"
-   * - primaryInfo.phone
-     - phoneNumberWork
-     - "string"
 
 
 Wix.com Contacts to Tripletex Customer
@@ -216,6 +204,18 @@ The following properties are synchronized between a Wix.com Contacts and a Tripl
    * - Wix.com Contacts Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - info.name.first
+     - firstName
+     - "string"
+   * - info.name.last
+     - lastName
+     - "string"
+   * - primaryInfo.email
+     - email
+     - "string"
+   * - primaryInfo.phone
+     - phoneNumberWork
+     - "string"
 
 
 Wix.com Orders to Tripletex Order
