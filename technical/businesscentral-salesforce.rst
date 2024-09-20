@@ -2,7 +2,7 @@
 Business Central to Salesforce Dataflow
 =======================================
 
-Generated: 2024-09-20 08:54:19
+Generated: 2024-09-20 10:53:49
 
 Introduction
 ------------
@@ -231,6 +231,9 @@ The following properties are synchronized between a Business Central Employees a
      - Salesforce Data Type
    * - displayName
      - Name
+     - "string"
+   * - email
+     - Email
      - "string"
    * - givenName
      - FirstName
