@@ -2,7 +2,7 @@
 WooCommerce to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-20 00:00:23
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -23,9 +23,6 @@ The following properties are synchronized between a WooCommerce Product and a Sa
    * - WooCommerce Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-   * - name
-     - Name
-     - "string"
 
 
 WooCommerce Order to Salesforce Invoice
@@ -189,4 +186,7 @@ The following properties are synchronized between a WooCommerce Product and a Sa
    * - WooCommerce Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
+   * - name
+     - Name
+     - "string"
 
