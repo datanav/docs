@@ -2,7 +2,7 @@
 Unieconomy to PowerOffice GO Dataflow
 =====================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:44:12
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Unieconomy Customers and a P
    * - Unieconomy Customers Property
      - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
+   * - WebUrl
+     - WebsiteUrl
+     - "string"
 
 
 Unieconomy Customers to PowerOffice GO Customers (human data)
