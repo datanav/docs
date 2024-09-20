@@ -2,7 +2,7 @@
 Custom ERP to  Dataflow
 =======================
 
-Generated: 2024-09-20 13:09:00
+Generated: 2024-09-20 13:10:11
 
 Introduction
 ------------
@@ -21,6 +21,22 @@ The following properties are synchronized between a Custom ERP Employee and a  I
    :header-rows: 1
 
    * - Custom ERP Employee Property
+     -  Inventory Property
+     -  Data Type
+
+
+Custom ERP Product to  Inventory
+--------------------------------
+Every Custom ERP Product will be synchronized with a  Inventory.
+
+Once a link between a Custom ERP Product and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom ERP Product and a  Inventory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom ERP Product Property
      -  Inventory Property
      -  Data Type
 
