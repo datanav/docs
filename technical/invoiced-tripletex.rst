@@ -2,7 +2,7 @@
 Invoiced to Tripletex Dataflow
 ==============================
 
-Generated: 2024-09-20 08:44:12
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -227,6 +227,18 @@ The following properties are synchronized between a Invoiced Items and a Triplet
    * - Invoiced Items Property
      - Tripletex Product Property
      - Tripletex Data Type
+   * - currency
+     - currency.id
+     - "integer"
+   * - description
+     - description
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - unit_cost
+     - costExcludingVatCurrency
+     - "float"
 
 
 Invoiced Lineitem to Tripletex Orderline
