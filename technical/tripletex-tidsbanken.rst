@@ -2,7 +2,7 @@
 Tripletex to Tidsbanken Dataflow
 ================================
 
-Generated: 2024-09-20 00:00:23
+Generated: 2024-09-20 07:27:55
 
 Introduction
 ------------
@@ -299,48 +299,6 @@ The following properties are synchronized between a Tripletex Employee and a Tid
    * - Tripletex Employee Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
-   * - address.addressLine1
-     - Adresse
-     - "string"
-   * - address.city
-     - Poststed
-     - "string"
-   * - address.postalCode
-     - Postnummer
-     - "string"
-   * - dateOfBirth
-     - Fodt
-     - "string"
-   * - department.id (Dependant on having wd:Q29415492 in  )
-     - Aktiv
-     - "boolean"
-   * - department.id (Dependant on having wd:Q2366457 in  )
-     - AvdelingId
-     - "string"
-   * - email
-     - Epost
-     - "string"
-   * - employeeNumber
-     - sesam_ansattId
-     - "integer"
-   * - firstName
-     - Fornavn
-     - "string"
-   * - id
-     - Id
-     - "integer"
-   * - lastName
-     - Etternavn
-     - "string"
-   * - phoneNumberHome
-     - TlfPrivat
-     - "string"
-   * - phoneNumberMobile
-     - Mobil
-     - "string"
-   * - sesam_employment_status
-     - Aktiv
-     - "boolean"
 
 
 Tripletex Supplier to Tidsbanken Kunde
@@ -601,6 +559,48 @@ The following properties are synchronized between a Tripletex Employee and a Tid
    * - Tripletex Employee Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
+   * - address.addressLine1
+     - Adresse
+     - "string"
+   * - address.city
+     - Poststed
+     - "string"
+   * - address.postalCode
+     - Postnummer
+     - "string"
+   * - dateOfBirth
+     - Fodt
+     - "string"
+   * - department.id (Dependant on having wd:Q29415492 in  )
+     - Aktiv
+     - "boolean"
+   * - department.id (Dependant on having wd:Q2366457 in  )
+     - AvdelingId
+     - "string"
+   * - email
+     - Epost
+     - "string"
+   * - employeeNumber
+     - sesam_ansattId
+     - "integer"
+   * - firstName
+     - Fornavn
+     - "string"
+   * - id
+     - Id
+     - "integer"
+   * - lastName
+     - Etternavn
+     - "string"
+   * - phoneNumberHome
+     - TlfPrivat
+     - "string"
+   * - phoneNumberMobile
+     - Mobil
+     - "string"
+   * - sesam_employment_status
+     - Aktiv
+     - "boolean"
 
 
 Tripletex Project to Tidsbanken Prosjekt
