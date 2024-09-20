@@ -2,7 +2,7 @@
 Trello to Exact Online Dataflow
 ===============================
 
-Generated: 2024-09-20 08:54:19
+Generated: 2024-09-20 10:53:49
 
 Introduction
 ------------
@@ -61,6 +61,9 @@ The following properties are synchronized between a Trello Members and a Exact O
    * - Trello Members Property
      - Exact Online Employees Property
      - Exact Online Data Type
+   * - email
+     - BusinessEmail
+     - "string"
    * - email
      - Email
      - "string"
