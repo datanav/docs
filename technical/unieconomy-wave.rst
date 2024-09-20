@@ -2,7 +2,7 @@
 Unieconomy to Wave Dataflow
 ===========================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Unieconomy Customers and a W
    * - Unieconomy Customers Property
      - Wave Customer Property
      - Wave Data Type
+   * - WebUrl
+     - website
+     - "string"
 
 
 Unieconomy Customers to Wave Customer (human data)
