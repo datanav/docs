@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-09-20 13:11:59
+Generated: 2024-09-20 14:45:49
 
 Introduction
 ------------
@@ -26,4 +26,20 @@ The following properties are synchronized between a SuperOffice Product and a  I
    * - Description
      - descriptor
      - "string"
+
+
+SuperOffice Product to  Inventory
+---------------------------------
+Every SuperOffice Product will be synchronized with a  Inventory.
+
+Once a link between a SuperOffice Product and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a  Inventory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     -  Inventory Property
+     -  Data Type
 
