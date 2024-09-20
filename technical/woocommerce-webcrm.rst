@@ -2,7 +2,7 @@
 WooCommerce to WebCRM Dataflow
 ==============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 13:15:54
 
 Introduction
 ------------
@@ -39,4 +39,10 @@ The following properties are synchronized between a WooCommerce Product and a We
    * - WooCommerce Product Property
      - WebCRM Products Property
      - WebCRM Data Type
+   * - price
+     - ProductCostPrice
+     - "string"
+   * - sale_price
+     - ProductPrice
+     - "string"
 
