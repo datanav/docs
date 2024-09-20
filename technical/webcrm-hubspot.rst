@@ -2,7 +2,7 @@
 WebCRM to HubSpot Dataflow
 ==========================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -50,6 +50,9 @@ The following properties are synchronized between a WebCRM Persons and a HubSpot
      - HubSpot Data Type
    * - PersonDirectPhone
      - properties.phone
+     - "string"
+   * - PersonEmail
+     - properties.email
      - "string"
    * - PersonFirstName
      - properties.firstname
