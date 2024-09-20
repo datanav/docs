@@ -2,7 +2,7 @@
 PowerOffice GO to Business Central Dataflow
 ===========================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -55,6 +55,30 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - PowerOffice GO Contactperson Property
      - Business Central Contacts (human data) Property
      - Business Central Data Type
+   * - address1
+     - addressLine1
+     - "string"
+   * - address2
+     - addressLine2
+     - "string"
+   * - city
+     - city
+     - "string"
+   * - emailAddress
+     - email
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - residenceCountryCode
+     - country
+     - "string"
+   * - zipCode
+     - postalCode
+     - "string"
 
 
 PowerOffice GO Customers to Business Central Contacts (classification data)
@@ -71,6 +95,9 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Business Central Contacts (classification data) Property
      - Business Central Data Type
+   * - IsPerson
+     - type
+     - "string"
 
 
 PowerOffice GO Customers to Business Central Customers (organisation data)
@@ -135,6 +162,33 @@ The following properties are synchronized between a PowerOffice GO Customers (cl
    * - PowerOffice GO Customers (classification data) Property
      - Business Central Contacts (classification data) Property
      - Business Central Data Type
+   * - EmailAddress
+     - email
+     - "string"
+   * - Id
+     - id
+     - "string"
+   * - IsPerson
+     - type
+     - "string"
+   * - MailAddress.AddressLine1
+     - addressLine1
+     - "string"
+   * - MailAddress.AddressLine2
+     - addressLine2
+     - "string"
+   * - MailAddress.City
+     - city
+     - "string"
+   * - MailAddress.CountryCode
+     - country
+     - "string"
+   * - MailAddress.ZipCode
+     - postalCode
+     - "string"
+   * - PhoneNumber
+     - phoneNumber
+     - "string"
 
 
 PowerOffice GO Customers (organisation data) to Business Central Customers (organisation data)
@@ -183,6 +237,33 @@ The following properties are synchronized between a PowerOffice GO Customers (hu
    * - PowerOffice GO Customers (human data) Property
      - Business Central Customers (human data) Property
      - Business Central Data Type
+   * - EmailAddress
+     - email
+     - "string"
+   * - Id
+     - id
+     - "string"
+   * - IsPerson
+     - type
+     - "string"
+   * - MailAddress.AddressLine1
+     - addressLine1
+     - "string"
+   * - MailAddress.AddressLine2
+     - addressLine2
+     - "string"
+   * - MailAddress.City
+     - city
+     - "string"
+   * - MailAddress.CountryCode
+     - country
+     - "string"
+   * - MailAddress.ZipCode
+     - postalCode
+     - "string"
+   * - PhoneNumber
+     - phoneNumber
+     - "string"
 
 
 PowerOffice GO Employees to Business Central Employees
@@ -302,4 +383,10 @@ The following properties are synchronized between a PowerOffice GO Suppliers (hu
    * - PowerOffice GO Suppliers (human data) Property
      - Business Central Contacts (human data) Property
      - Business Central Data Type
+   * - EmailAddress
+     - email
+     - "string"
+   * - PhoneNumber
+     - phoneNumber
+     - "string"
 
