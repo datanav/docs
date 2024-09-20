@@ -2,7 +2,7 @@
 Business Nxt to  Dataflow
 =========================
 
-Generated: 2024-09-20 13:10:11
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Business Nxt Product and a  
    * - Business Nxt Product Property
      -  Inventory Property
      -  Data Type
+   * - description
+     - descriptor
+     - "string"
 
