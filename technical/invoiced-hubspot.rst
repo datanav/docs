@@ -2,7 +2,7 @@
 Invoiced to HubSpot Dataflow
 ============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -92,6 +92,15 @@ The following properties are synchronized between a Invoiced Items and a HubSpot
    * - Invoiced Items Property
      - HubSpot Product Property
      - HubSpot Data Type
+   * - description
+     - properties.description
+     - "string"
+   * - name
+     - properties.name
+     - "string"
+   * - unit_cost
+     - properties.hs_cost_of_goods_sold
+     - "string"
 
 
 Invoiced Lineitem to HubSpot Lineitem
