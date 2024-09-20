@@ -2,7 +2,7 @@
 Tidsbanken to PowerOffice GO Dataflow
 =====================================
 
-Generated: 2024-09-20 08:53:28
+Generated: 2024-09-20 08:53:40
 
 Introduction
 ------------
@@ -135,6 +135,9 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Powe
    * - AvdelingId
      - DepartmentId
      - "integer"
+   * - Epost
+     - EmailAddress
+     - "string"
 
 
 Tidsbanken Avdeling to PowerOffice GO Departments
@@ -216,9 +219,6 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Powe
    * - Tidsbanken Ansatt Property
      - PowerOffice GO Employees Property
      - PowerOffice GO Data Type
-   * - Epost
-     - EmailAddress
-     - "string"
    * - Etternavn
      - LastName
      - "string"
