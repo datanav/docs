@@ -2,7 +2,7 @@
 ZohoCRM to Invoiced Dataflow
 ============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -39,6 +39,30 @@ The following properties are synchronized between a ZohoCRM Contact and a Invoic
    * - ZohoCRM Contact Property
      - Invoiced Customers (human data) Property
      - Invoiced Data Type
+   * - Full_Name
+     - name
+     - "string"
+   * - Mailing_City
+     - city
+     - "string"
+   * - Mailing_Country
+     - country
+     - "string"
+   * - Mailing_Zip
+     - postal_code
+     - "string"
+   * - Other_City
+     - city
+     - "string"
+   * - Other_Country
+     - country
+     - "string"
+   * - Other_Zip
+     - postal_code
+     - "string"
+   * - id
+     - id
+     - "string"
 
 
 ZohoCRM Deal to Invoiced Invoices
