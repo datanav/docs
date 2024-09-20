@@ -2,7 +2,7 @@
 Tripletex to Freshteam Dataflow
 ===============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:27:55
 
 Introduction
 ------------
@@ -33,27 +33,6 @@ The following properties are synchronized between a Tripletex Employee and a Fre
    * - Tripletex Employee Property
      - Freshteam Employee Property
      - Freshteam Data Type
-   * - dateOfBirth
-     - date_of_birth
-     - "string"
-   * - email
-     - official_email
-     - "string"
-   * - firstName
-     - first_name
-     - "string"
-   * - lastName
-     - last_name
-     - "string"
-   * - phoneNumberHome
-     - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.name)
-     - "string"
-   * - phoneNumberMobile
-     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
-     - "string"
-   * - phoneNumberWork
-     - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
-     - "string"
 
 
 Tripletex Department to Freshteam Department
@@ -86,4 +65,25 @@ The following properties are synchronized between a Tripletex Employee and a Fre
    * - Tripletex Employee Property
      - Freshteam Employee Property
      - Freshteam Data Type
+   * - dateOfBirth
+     - date_of_birth
+     - "string"
+   * - email
+     - official_email
+     - "string"
+   * - firstName
+     - first_name
+     - "string"
+   * - lastName
+     - last_name
+     - "string"
+   * - phoneNumberHome
+     - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.name)
+     - "string"
+   * - phoneNumberMobile
+     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
+     - "string"
+   * - phoneNumberWork
+     - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
+     - "string"
 
