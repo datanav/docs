@@ -2,7 +2,7 @@
 SuperOffice to WebCRM Dataflow
 ==============================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -84,6 +84,15 @@ The following properties are synchronized between a SuperOffice Product and a We
    * - SuperOffice Product Property
      - WebCRM Products Property
      - WebCRM Data Type
+   * - UnitCost
+     - ProductCostPrice
+     - "string"
+   * - UnitListPrice
+     - ProductPrice
+     - "string"
+   * - VAT
+     - ProductVatCode
+     - "string"
 
 
 SuperOffice Quoteline to WebCRM Quotationline
