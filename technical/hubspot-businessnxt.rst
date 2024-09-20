@@ -2,7 +2,7 @@
 HubSpot to Business Nxt Dataflow
 ================================
 
-Generated: 2024-09-20 00:00:24
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -245,12 +245,6 @@ The following properties are synchronized between a HubSpot Product and a Busine
    * - HubSpot Product Property
      - Business Nxt Product Property
      - Business Nxt Data Type
-   * - properties.description
-     - description
-     - "string"
-   * - properties.price
-     - priceQuantity
-     - "string"
 
 
 HubSpot Quote to Business Nxt Order
@@ -538,4 +532,10 @@ The following properties are synchronized between a HubSpot Product and a Busine
    * - HubSpot Product Property
      - Business Nxt Product Property
      - Business Nxt Data Type
+   * - properties.description
+     - description
+     - "string"
+   * - properties.price
+     - priceQuantity
+     - "string"
 
