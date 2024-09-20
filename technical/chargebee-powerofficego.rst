@@ -2,7 +2,7 @@
 Chargebee to PowerOffice GO Dataflow
 ====================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -101,6 +101,15 @@ The following properties are synchronized between a Chargebee Customer and a Pow
    * - Chargebee Customer Property
      - PowerOffice GO Customers (human data) Property
      - PowerOffice GO Data Type
+   * - email
+     - EmailAddress
+     - "string"
+   * - first_name
+     - FirstName
+     - "string"
+   * - last_name
+     - LastName
+     - "string"
 
 
 Chargebee Item to PowerOffice GO Product
