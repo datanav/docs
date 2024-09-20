@@ -2,7 +2,7 @@
 WebCRM to  Dataflow
 ===================
 
-Generated: 2024-09-20 13:15:54
+Generated: 2024-09-20 14:45:49
 
 Introduction
 ------------
@@ -26,4 +26,20 @@ The following properties are synchronized between a WebCRM Products and a  Inven
    * - ProductQuantity
      - quantity
      - "string"
+
+
+WebCRM Products to  Inventory
+-----------------------------
+Every WebCRM Products will be synchronized with a  Inventory.
+
+Once a link between a WebCRM Products and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a WebCRM Products and a  Inventory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - WebCRM Products Property
+     -  Inventory Property
+     -  Data Type
 
