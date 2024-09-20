@@ -2,7 +2,7 @@
 Keap to HubSpot Dataflow
 ========================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:27:55
 
 Introduction
 ------------
@@ -102,4 +102,7 @@ The following properties are synchronized between a Keap Users and a HubSpot Use
    * - Keap Users Property
      - HubSpot User Property
      - HubSpot Data Type
+   * - email_address
+     - email
+     - "string"
 
