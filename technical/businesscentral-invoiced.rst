@@ -2,7 +2,7 @@
 Business Central to Invoiced Dataflow
 =====================================
 
-Generated: 2024-09-20 08:54:19
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -108,6 +108,12 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      - Invoiced Items Property
      - Invoiced Data Type
+   * - displayName
+     - name
+     - "string"
+   * - unitCost
+     - unit_cost
+     - "string"
 
 
 Business Central Salesorderlines to Invoiced Lineitem
