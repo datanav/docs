@@ -2,7 +2,7 @@
 Exact Online to Business Central Dataflow
 =========================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:27:55
 
 Introduction
 ------------
@@ -131,6 +131,21 @@ The following properties are synchronized between a Exact Online Employees and a
    * - Exact Online Employees Property
      - Business Central Employees Property
      - Business Central Data Type
+   * - BirthDate
+     - birthDate
+     - "string"
+   * - City
+     - city
+     - "string"
+   * - Country
+     - country
+     - "string"
+   * - ID
+     - id
+     - "string"
+   * - Postcode
+     - postalCode
+     - "string"
 
 
 Exact Online Items to Business Central Items
