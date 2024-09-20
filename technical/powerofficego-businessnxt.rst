@@ -2,7 +2,7 @@
 PowerOffice GO to Business Nxt Dataflow
 =======================================
 
-Generated: 2024-09-20 08:44:12
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -124,6 +124,9 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - PowerOffice GO Contactperson Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - residenceCountryCode
+     - isoCode
+     - "string"
 
 
 PowerOffice GO Currency to Business Nxt Currency
