@@ -2,7 +2,7 @@
 Chargebee to Business Nxt Dataflow
 ==================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -154,6 +154,9 @@ The following properties are synchronized between a Chargebee Customer and a Bus
    * - Chargebee Customer Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - billing_address.country
+     - name
+     - "string"
 
 
 Chargebee Item to Business Nxt Product
