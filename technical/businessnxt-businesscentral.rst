@@ -2,7 +2,7 @@
 Business Nxt to Business Central Dataflow
 =========================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -131,4 +131,7 @@ The following properties are synchronized between a Business Nxt Product and a B
    * - Business Nxt Product Property
      - Business Central Items Property
      - Business Central Data Type
+   * - priceQuantity
+     - unitPrice
+     - N/A
 
