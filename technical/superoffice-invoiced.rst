@@ -2,7 +2,7 @@
 SuperOffice to Invoiced Dataflow
 ================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a SuperOffice Product and a In
    * - SuperOffice Product Property
      - Invoiced Items Property
      - Invoiced Data Type
+   * - Description
+     - description
+     - "string"
+   * - ERPPriceListKey
+     - currency
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - UnitCost
+     - unit_cost
+     - "string"
 
 
 SuperOffice Quoteline to Invoiced Lineitem
