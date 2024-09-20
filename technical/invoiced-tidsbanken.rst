@@ -2,7 +2,7 @@
 Invoiced to Tidsbanken Dataflow
 ===============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:44:12
 
 Introduction
 ------------
@@ -23,6 +23,36 @@ The following properties are synchronized between a Invoiced Customers (organisa
    * - Invoiced Customers (organisation data) Property
      - Tidsbanken Kunde Property
      - Tidsbanken Data Type
+   * - address1
+     - Gateadresse
+     - "string"
+   * - address1
+     - Leveringsadresse
+     - "string"
+   * - address2
+     - Leveringsadresse2
+     - "string"
+   * - address2
+     - Postadresse
+     - "string"
+   * - city
+     - LevPoststed
+     - "string"
+   * - city
+     - Poststed
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - name
+     - Navn
+     - "string"
+   * - postal_code
+     - LevPostNr
+     - "string"
+   * - postal_code
+     - Postnr
+     - "string"
 
 
 Invoiced Customers (organisation data) to Tidsbanken Kunde
