@@ -2,7 +2,7 @@
 Salesforce to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 10:53:49
 
 Introduction
 ------------
@@ -175,6 +175,9 @@ The following properties are synchronized between a Salesforce User and a Triple
    * - Country
      - address.country.id
      - "integer"
+   * - Email
+     - email
+     - "string"
    * - EmployeeNumber
      - employeeNumber
      - "string"
