@@ -2,7 +2,7 @@
 Business Central to Business Central Dataflow
 =============================================
 
-Generated: 2024-09-20 07:54:59
+Generated: 2024-09-20 07:55:06
 
 Introduction
 ------------
@@ -163,6 +163,9 @@ The following properties are synchronized between a Business Central Customers (
      - "string"
    * - country
      - country
+     - "string"
+   * - id
+     - id
      - "string"
 
 
