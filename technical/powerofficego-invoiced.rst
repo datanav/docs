@@ -2,7 +2,7 @@
 PowerOffice GO to Invoiced Dataflow
 ===================================
 
-Generated: 2024-09-20 08:44:12
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -74,6 +74,24 @@ The following properties are synchronized between a PowerOffice GO Customers (hu
    * - PowerOffice GO Customers (human data) Property
      - Invoiced Customers (human data) Property
      - Invoiced Data Type
+   * - Id
+     - id
+     - "string"
+   * - MailAddress.AddressLine1
+     - address1
+     - "string"
+   * - MailAddress.AddressLine2
+     - address2
+     - "string"
+   * - MailAddress.City
+     - city
+     - "string"
+   * - MailAddress.CountryCode
+     - country
+     - "string"
+   * - MailAddress.ZipCode
+     - postal_code
+     - "string"
 
 
 PowerOffice GO Product to Invoiced Items
