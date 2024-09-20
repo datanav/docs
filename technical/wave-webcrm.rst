@@ -2,7 +2,7 @@
 Wave to WebCRM Dataflow
 =======================
 
-Generated: 2024-09-20 10:53:50
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -143,6 +143,9 @@ The following properties are synchronized between a Wave Product and a WebCRM Pr
    * - Wave Product Property
      - WebCRM Products Property
      - WebCRM Data Type
+   * - unitPrice
+     - ProductPrice
+     - "string"
 
 
 Wave User to WebCRM Users
