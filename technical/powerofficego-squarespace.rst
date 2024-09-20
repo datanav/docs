@@ -2,7 +2,7 @@
 PowerOffice GO to  Dataflow
 ===========================
 
-Generated: 2024-09-20 13:15:54
+Generated: 2024-09-20 13:18:50
 
 Introduction
 ------------
@@ -29,4 +29,20 @@ The following properties are synchronized between a PowerOffice GO Product and a
    * - description
      - descriptor
      - "string"
+
+
+PowerOffice GO Salesorders to  Order
+------------------------------------
+Every PowerOffice GO Salesorders will be synchronized with a  Order.
+
+Once a link between a PowerOffice GO Salesorders and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Salesorders and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Salesorders Property
+     -  Order Property
+     -  Data Type
 
