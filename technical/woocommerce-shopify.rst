@@ -2,7 +2,7 @@
 WooCommerce to Shopify Dataflow
 ===============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -23,6 +23,48 @@ The following properties are synchronized between a WooCommerce Customer and a S
    * - WooCommerce Customer Property
      - Shopify Customer Property
      - Shopify Data Type
+   * - billing.address_1
+     - default_address.address1
+     - "string"
+   * - billing.address_2
+     - default_address.address2
+     - "string"
+   * - billing.city
+     - default_address.city
+     - "string"
+   * - billing.country
+     - default_address.country
+     - "string"
+   * - billing.postcode
+     - default_address.zip
+     - "string"
+   * - billing.state
+     - default_address.province_code
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - last_name
+     - last_name
+     - "string"
+   * - shipping.address_1
+     - default_address.address1
+     - "string"
+   * - shipping.address_2
+     - default_address.address2
+     - "string"
+   * - shipping.city
+     - default_address.city
+     - "string"
+   * - shipping.country
+     - default_address.country
+     - "string"
+   * - shipping.postcode
+     - default_address.zip
+     - "string"
+   * - shipping.state
+     - default_address.province_code
+     - "string"
 
 
 WooCommerce Order to Shopify Order
