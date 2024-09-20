@@ -2,7 +2,7 @@
 WooCommerce to Wave Dataflow
 ============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -111,6 +111,84 @@ The following properties are synchronized between a WooCommerce Customer and a W
    * - WooCommerce Customer Property
      - Wave Customer (human data) Property
      - Wave Data Type
+   * - billing.address_1
+     - address.addressLine1
+     - "string"
+   * - billing.address_1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - billing.address_2
+     - address.addressLine2
+     - "string"
+   * - billing.address_2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - billing.city
+     - address.city
+     - "string"
+   * - billing.city
+     - shippingDetails.address.city
+     - "string"
+   * - billing.country
+     - address.country.code
+     - "string"
+   * - billing.country
+     - shippingDetails.address.country.code
+     - "string"
+   * - billing.postcode
+     - address.postalCode
+     - "string"
+   * - billing.postcode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - billing.state
+     - address.province.code
+     - "string"
+   * - billing.state
+     - shippingDetails.address.province.code
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - last_name
+     - lastName
+     - N/A
+   * - shipping.address_1
+     - address.addressLine1
+     - "string"
+   * - shipping.address_1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - shipping.address_2
+     - address.addressLine2
+     - "string"
+   * - shipping.address_2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - shipping.city
+     - address.city
+     - "string"
+   * - shipping.city
+     - shippingDetails.address.city
+     - "string"
+   * - shipping.country
+     - address.country.code
+     - "string"
+   * - shipping.country
+     - shippingDetails.address.country.code
+     - "string"
+   * - shipping.postcode
+     - address.postalCode
+     - "string"
+   * - shipping.postcode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - shipping.state
+     - address.province.code
+     - "string"
+   * - shipping.state
+     - shippingDetails.address.province.code
+     - "string"
 
 
 WooCommerce Order to Wave Invoice
