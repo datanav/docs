@@ -2,7 +2,7 @@
 Wix.com to Business Central Dataflow
 ====================================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 13:15:54
 
 Introduction
 ------------
@@ -77,4 +77,16 @@ The following properties are synchronized between a Wix.com Products and a Busin
    * - Wix.com Products Property
      - Business Central Items Property
      - Business Central Data Type
+   * - costAndProfitData.itemCost
+     - unitCost
+     - N/A
+   * - costRange.maxValue
+     - unitCost
+     - N/A
+   * - name
+     - displayName
+     - "string"
+   * - priceData.price
+     - unitPrice
+     - N/A
 
