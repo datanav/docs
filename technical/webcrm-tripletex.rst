@@ -2,7 +2,7 @@
 WebCRM to Tripletex Dataflow
 ============================
 
-Generated: 2024-09-20 08:54:19
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -57,6 +57,18 @@ The following properties are synchronized between a WebCRM Products and a Triple
    * - WebCRM Products Property
      - Tripletex Product Property
      - Tripletex Data Type
+   * - ProductCostPrice
+     - costExcludingVatCurrency
+     - "float"
+   * - ProductPrice
+     - priceExcludingVatCurrency
+     - "float"
+   * - ProductQuantity
+     - stockOfGoods
+     - "integer"
+   * - ProductVatCode
+     - vatType.id
+     - "integer"
 
 
 WebCRM Quotationline to Tripletex Orderline
