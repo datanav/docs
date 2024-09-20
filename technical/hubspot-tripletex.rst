@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2024-09-20 00:00:24
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -262,4 +262,16 @@ The following properties are synchronized between a HubSpot Product and a Triple
    * - HubSpot Product Property
      - Tripletex Product Property
      - Tripletex Data Type
+   * - properties.description
+     - description
+     - "string"
+   * - properties.hs_cost_of_goods_sold
+     - costExcludingVatCurrency
+     - "float"
+   * - properties.name
+     - name
+     - "string"
+   * - properties.price
+     - priceExcludingVatCurrency
+     - "float"
 
