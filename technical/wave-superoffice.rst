@@ -2,7 +2,7 @@
 Wave to SuperOffice Dataflow
 ============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -324,4 +324,13 @@ The following properties are synchronized between a Wave Product and a SuperOffi
    * - Wave Product Property
      - SuperOffice Product Property
      - SuperOffice Data Type
+   * - description
+     - Description
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - unitPrice
+     - UnitListPrice
+     - N/A
 
