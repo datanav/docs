@@ -2,7 +2,7 @@
 Exact Online to Business Central Dataflow
 =========================================
 
-Generated: 2024-09-20 08:41:49
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -142,6 +142,9 @@ The following properties are synchronized between a Exact Online Employees and a
      - "string"
    * - Country
      - country
+     - "string"
+   * - Email
+     - personalEmail
      - "string"
    * - ID
      - id
