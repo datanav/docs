@@ -2,7 +2,7 @@
 WebCRM to Zendesk Dataflow
 ==========================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 10:53:50
 
 Introduction
 ------------
@@ -42,4 +42,7 @@ The following properties are synchronized between a WebCRM Users and a Zendesk U
    * - WebCRM Users Property
      - Zendesk Users Property
      - Zendesk Data Type
+   * - UserEmail
+     - email
+     - "string"
 
