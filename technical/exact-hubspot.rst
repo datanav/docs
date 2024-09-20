@@ -2,7 +2,7 @@
 Exact Online to HubSpot Dataflow
 ================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -113,6 +113,9 @@ The following properties are synchronized between a Exact Online Employees and a
      - "string"
    * - Country
      - properties.country
+     - "string"
+   * - Email
+     - properties.email
      - "string"
    * - ID
      - id
