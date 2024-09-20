@@ -2,7 +2,7 @@
 Wix.com to WebCRM Dataflow
 ==========================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a Wix.com Contacts and a WebCR
    * - Wix.com Contacts Property
      - WebCRM Persons Property
      - WebCRM Data Type
+   * - info.name.first
+     - PersonFirstName
+     - "string"
+   * - info.name.last
+     - PersonLastName
+     - "string"
+   * - primaryInfo.email
+     - PersonEmail
+     - "string"
+   * - primaryInfo.phone
+     - PersonDirectPhone
+     - "string"
 
 
 Wix.com Orders to WebCRM Quotationline
