@@ -2,7 +2,7 @@
 Tidsbanken to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -408,6 +408,81 @@ The following properties are synchronized between a Tidsbanken Kunde and a Tripl
    * - Tidsbanken Kunde Property
      - Tripletex Customer (human data) Property
      - Tripletex Data Type
+   * - Gateadresse
+     - deliveryAddress.addressLine1
+     - "string"
+   * - Gateadresse
+     - physicalAddress.addressLine1
+     - "string"
+   * - Gateadresse
+     - postalAddress.addressLine1
+     - "string"
+   * - Id
+     - id
+     - "integer"
+   * - LevPostNr
+     - deliveryAddress.postalCode
+     - "string"
+   * - LevPostNr
+     - physicalAddress.postalCode
+     - "string"
+   * - LevPostNr
+     - postalAddress.postalCode
+     - "string"
+   * - LevPoststed
+     - deliveryAddress.city
+     - "string"
+   * - LevPoststed
+     - physicalAddress.city
+     - "string"
+   * - LevPoststed
+     - postalAddress.city
+     - "string"
+   * - Leveringsadresse
+     - deliveryAddress.addressLine1
+     - "string"
+   * - Leveringsadresse
+     - physicalAddress.addressLine1
+     - "string"
+   * - Leveringsadresse
+     - postalAddress.addressLine1
+     - "string"
+   * - Leveringsadresse2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - Leveringsadresse2
+     - physicalAddress.addressLine2
+     - "string"
+   * - Leveringsadresse2
+     - postalAddress.addressLine2
+     - "string"
+   * - Postadresse
+     - deliveryAddress.addressLine2
+     - "string"
+   * - Postadresse
+     - physicalAddress.addressLine2
+     - "string"
+   * - Postadresse
+     - postalAddress.addressLine2
+     - "string"
+   * - Postnr
+     - deliveryAddress.postalCode
+     - "string"
+   * - Postnr
+     - physicalAddress.postalCode
+     - "string"
+   * - Postnr
+     - postalAddress.postalCode
+     - "string"
+   * - Poststed
+     - deliveryAddress.city
+     - "string"
+   * - Poststed
+     - physicalAddress.city
+     - "string"
+   * - Poststed
+     - postalAddress.city
+     - "string"
 
 
 Tidsbanken Prosjekt to Tripletex Project
