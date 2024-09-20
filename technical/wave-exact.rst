@@ -2,7 +2,7 @@
 Wave to Exact Online Dataflow
 =============================
 
-Generated: 2024-09-20 08:42:05
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -39,12 +39,6 @@ The following properties are synchronized between a Wave Customer and a Exact On
    * - Wave Customer Property
      - Exact Online Accounts Property
      - Exact Online Data Type
-   * - name
-     - Name
-     - "string"
-   * - website
-     - Website
-     - "string"
 
 
 Wave Customer (human data) to Exact Online Contacts
@@ -130,6 +124,12 @@ The following properties are synchronized between a Wave Customer and a Exact On
    * - Wave Customer Property
      - Exact Online Accounts Property
      - Exact Online Data Type
+   * - name
+     - Name
+     - "string"
+   * - website
+     - Website
+     - "string"
 
 
 Wave Customer to Exact Online Contacts
@@ -211,6 +211,18 @@ The following properties are synchronized between a Wave Customer (location data
    * - Wave Customer (location data) Property
      - Exact Online Addresses Property
      - Exact Online Data Type
+   * - address.city
+     - City
+     - "string"
+   * - address.country.code
+     - Country
+     - "string"
+   * - shippingDetails.address.city
+     - City
+     - "string"
+   * - shippingDetails.address.country.code
+     - Country
+     - "string"
 
 
 Wave Invoice to Exact Online Salesorderlines
@@ -275,6 +287,12 @@ The following properties are synchronized between a Wave Vendor and a Exact Onli
    * - Wave Vendor Property
      - Exact Online Addresses Property
      - Exact Online Data Type
+   * - address.city
+     - City
+     - "string"
+   * - address.country.code
+     - Country
+     - "string"
 
 
 Wave Vendor to Exact Online Contacts
