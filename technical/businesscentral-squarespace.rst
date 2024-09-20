@@ -2,7 +2,7 @@
 Business Central to  Dataflow
 =============================
 
-Generated: 2024-09-20 13:15:54
+Generated: 2024-09-20 13:18:50
 
 Introduction
 ------------
@@ -26,4 +26,20 @@ The following properties are synchronized between a Business Central Items and a
    * - inventory
      - quantity
      - "string"
+
+
+Business Central Salesorders to  Order
+--------------------------------------
+Every Business Central Salesorders will be synchronized with a  Order.
+
+Once a link between a Business Central Salesorders and a  Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Central Salesorders and a  Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Central Salesorders Property
+     -  Order Property
+     -  Data Type
 
