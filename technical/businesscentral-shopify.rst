@@ -2,7 +2,7 @@
 Business Central to Shopify Dataflow
 ====================================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -61,6 +61,15 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      - Shopify Sesamproduct Property
      - Shopify Data Type
+   * - displayName
+     - title
+     - "string"
+   * - inventory
+     - variants.inventory_quantity
+     - "integer"
+   * - unitPrice
+     - sesam_priceExclVAT
+     - "string"
 
 
 Business Central Salesorders to Shopify Order
