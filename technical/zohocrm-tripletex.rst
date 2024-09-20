@@ -2,7 +2,7 @@
 ZohoCRM to Tripletex Dataflow
 =============================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 08:44:12
 
 Introduction
 ------------
@@ -23,6 +23,63 @@ The following properties are synchronized between a ZohoCRM Contact and a Triple
    * - ZohoCRM Contact Property
      - Tripletex Customer Property
      - Tripletex Data Type
+   * - Mailing_City
+     - deliveryAddress.city
+     - "string"
+   * - Mailing_City
+     - physicalAddress.city
+     - "string"
+   * - Mailing_City
+     - postalAddress.city
+     - "string"
+   * - Mailing_Country
+     - deliveryAddress.country.id
+     - "string"
+   * - Mailing_Country
+     - physicalAddress.country.id
+     - "integer"
+   * - Mailing_Country
+     - postalAddress.country.id
+     - "integer"
+   * - Mailing_Zip
+     - deliveryAddress.postalCode
+     - "string"
+   * - Mailing_Zip
+     - physicalAddress.postalCode
+     - "string"
+   * - Mailing_Zip
+     - postalAddress.postalCode
+     - "string"
+   * - Other_City
+     - deliveryAddress.city
+     - "string"
+   * - Other_City
+     - physicalAddress.city
+     - "string"
+   * - Other_City
+     - postalAddress.city
+     - "string"
+   * - Other_Country
+     - deliveryAddress.country.id
+     - "string"
+   * - Other_Country
+     - physicalAddress.country.id
+     - "integer"
+   * - Other_Country
+     - postalAddress.country.id
+     - "integer"
+   * - Other_Zip
+     - deliveryAddress.postalCode
+     - "string"
+   * - Other_Zip
+     - physicalAddress.postalCode
+     - "string"
+   * - Other_Zip
+     - postalAddress.postalCode
+     - "string"
+   * - id
+     - id
+     - "integer"
 
 
 ZohoCRM Contact to Tripletex Customer (human data)
