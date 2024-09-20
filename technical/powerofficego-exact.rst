@@ -2,7 +2,7 @@
 PowerOffice GO to Exact Online Dataflow
 =======================================
 
-Generated: 2024-09-20 08:44:06
+Generated: 2024-09-20 08:44:12
 
 Introduction
 ------------
@@ -68,12 +68,6 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - PowerOffice GO Contactperson Property
      - Exact Online Contacts Property
      - Exact Online Data Type
-   * - city
-     - City
-     - "string"
-   * - residenceCountryCode
-     - Country
-     - "string"
 
 
 PowerOffice GO Customers to Exact Online Accounts
@@ -90,12 +84,6 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Exact Online Accounts Property
      - Exact Online Data Type
-   * - Name
-     - Name
-     - "string"
-   * - WebsiteUrl
-     - Website
-     - "string"
 
 
 PowerOffice GO Customers (human data) to Exact Online Contacts
@@ -235,8 +223,14 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - PowerOffice GO Contactperson Property
      - Exact Online Contacts Property
      - Exact Online Data Type
+   * - city
+     - City
+     - "string"
    * - dateOfBirth
      - BirthDate
+     - "string"
+   * - residenceCountryCode
+     - Country
      - "string"
 
 
@@ -270,6 +264,12 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Exact Online Accounts Property
      - Exact Online Data Type
+   * - Name
+     - Name
+     - "string"
+   * - WebsiteUrl
+     - Website
+     - "string"
 
 
 PowerOffice GO Customers (organisation data) to Exact Online Accounts
