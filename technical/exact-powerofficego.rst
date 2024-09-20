@@ -2,7 +2,7 @@
 Exact Online to PowerOffice GO Dataflow
 =======================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -96,6 +96,9 @@ The following properties are synchronized between a Exact Online Contacts and a 
    * - Exact Online Contacts Property
      - PowerOffice GO Contactperson Property
      - PowerOffice GO Data Type
+   * - BirthDate
+     - dateOfBirth
+     - N/A
 
 
 Exact Online Departments to PowerOffice GO Departments
