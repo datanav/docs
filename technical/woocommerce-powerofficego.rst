@@ -2,7 +2,7 @@
 WooCommerce to PowerOffice GO Dataflow
 ======================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -39,6 +39,12 @@ The following properties are synchronized between a WooCommerce Customer and a P
    * - WooCommerce Customer Property
      - PowerOffice GO Customers (human data) Property
      - PowerOffice GO Data Type
+   * - email
+     - EmailAddress
+     - "string"
+   * - last_name
+     - LastName
+     - "string"
 
 
 WooCommerce Order to PowerOffice GO Salesorderlines
