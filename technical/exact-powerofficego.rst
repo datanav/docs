@@ -2,7 +2,7 @@
 Exact Online to PowerOffice GO Dataflow
 =======================================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 08:42:05
 
 Introduction
 ------------
@@ -134,6 +134,9 @@ The following properties are synchronized between a Exact Online Employees and a
    * - BirthDate
      - DateOfBirth
      - N/A
+   * - BusinessEmail
+     - EmailAddress
+     - "string"
 
 
 Exact Online Items to PowerOffice GO Product
