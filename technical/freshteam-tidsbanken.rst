@@ -2,7 +2,7 @@
 Freshteam to Tidsbanken Dataflow
 ================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:27:55
 
 Introduction
 ------------
@@ -33,24 +33,6 @@ The following properties are synchronized between a Freshteam Employee and a Tid
    * - Freshteam Employee Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
-   * - date_of_birth
-     - Fodt
-     - "string"
-   * - first_name
-     - Fornavn
-     - "string"
-   * - last_name
-     - Etternavn
-     - "string"
-   * - official_email
-     - Epost
-     - "string"
-   * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
-     - Mobil
-     - "string"
-   * - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.name)
-     - TlfPrivat
-     - "string"
 
 
 Freshteam Department to Tidsbanken Avdeling
@@ -83,4 +65,22 @@ The following properties are synchronized between a Freshteam Employee and a Tid
    * - Freshteam Employee Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
+   * - date_of_birth
+     - Fodt
+     - "string"
+   * - first_name
+     - Fornavn
+     - "string"
+   * - last_name
+     - Etternavn
+     - "string"
+   * - official_email
+     - Epost
+     - "string"
+   * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
+     - Mobil
+     - "string"
+   * - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.name)
+     - TlfPrivat
+     - "string"
 
