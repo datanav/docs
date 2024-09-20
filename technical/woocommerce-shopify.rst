@@ -2,7 +2,7 @@
 WooCommerce to Shopify Dataflow
 ===============================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -97,4 +97,13 @@ The following properties are synchronized between a WooCommerce Product and a Sh
    * - WooCommerce Product Property
      - Shopify Sesamproduct Property
      - Shopify Data Type
+   * - name
+     - title
+     - "string"
+   * - sale_price
+     - sesam_priceExclVAT
+     - "string"
+   * - sku
+     - variants.sku
+     - "string"
 
