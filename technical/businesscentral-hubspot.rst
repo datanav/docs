@@ -2,7 +2,7 @@
 Business Central to HubSpot Dataflow
 ====================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -193,6 +193,15 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      - HubSpot Product Property
      - HubSpot Data Type
+   * - displayName
+     - properties.name
+     - "string"
+   * - unitCost
+     - properties.hs_cost_of_goods_sold
+     - "string"
+   * - unitPrice
+     - properties.price
+     - "string"
 
 
 Business Central Salesorderlines to HubSpot Lineitem
