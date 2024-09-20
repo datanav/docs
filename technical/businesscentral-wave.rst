@@ -2,7 +2,7 @@
 Business Central to Wave Dataflow
 =================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -23,6 +23,45 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (organisation data) Property
      - Wave Customer Property
      - Wave Data Type
+   * - addressLine1
+     - address.addressLine1
+     - "string"
+   * - addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - addressLine2
+     - address.addressLine2
+     - "string"
+   * - addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - city
+     - address.city
+     - "string"
+   * - city
+     - shippingDetails.address.city
+     - "string"
+   * - country
+     - address.country.code
+     - "string"
+   * - country
+     - shippingDetails.address.country.code
+     - "string"
+   * - displayName
+     - name
+     - N/A
+   * - phoneNumber
+     - phone
+     - "string"
+   * - postalCode
+     - address.postalCode
+     - "string"
+   * - postalCode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - website
+     - website
+     - "string"
 
 
 Business Central Customers (human data) to Wave Customer (human data)
@@ -74,6 +113,45 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (human data) Property
      - Wave Customer (human data) Property
      - Wave Data Type
+   * - addressLine1
+     - address.addressLine1
+     - "string"
+   * - addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - addressLine2
+     - address.addressLine2
+     - "string"
+   * - addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - city
+     - address.city
+     - "string"
+   * - city
+     - shippingDetails.address.city
+     - "string"
+   * - country
+     - address.country.code
+     - "string"
+   * - country
+     - shippingDetails.address.country.code
+     - "string"
+   * - displayName
+     - name
+     - N/A
+   * - email
+     - email
+     - "string"
+   * - phoneNumber
+     - phone
+     - "string"
+   * - postalCode
+     - address.postalCode
+     - "string"
+   * - postalCode
+     - shippingDetails.address.postalCode
+     - "string"
 
 
 Business Central Items to Wave Product
