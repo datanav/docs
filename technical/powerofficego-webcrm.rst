@@ -2,7 +2,7 @@
 PowerOffice GO to WebCRM Dataflow
 =================================
 
-Generated: 2024-09-20 08:54:19
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -98,6 +98,18 @@ The following properties are synchronized between a PowerOffice GO Product and a
    * - PowerOffice GO Product Property
      - WebCRM Products Property
      - WebCRM Data Type
+   * - availableStock
+     - ProductQuantity
+     - "string"
+   * - costPrice
+     - ProductCostPrice
+     - "string"
+   * - salesPrice
+     - ProductPrice
+     - "string"
+   * - vatCode
+     - ProductVatCode
+     - "string"
 
 
 PowerOffice GO Salesorderlines to WebCRM Quotationline
