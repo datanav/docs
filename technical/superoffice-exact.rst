@@ -2,7 +2,7 @@
 SuperOffice to Exact Online Dataflow
 ====================================
 
-Generated: 2024-09-20 00:00:23
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -162,6 +162,12 @@ The following properties are synchronized between a SuperOffice Person and a Exa
    * - SuperOffice Person Property
      - Exact Online Addresses Property
      - Exact Online Data Type
+   * - Address.Street.City
+     - City
+     - "string"
+   * - Country.CountryId
+     - Country
+     - "string"
 
 
 SuperOffice Product to Exact Online Items
