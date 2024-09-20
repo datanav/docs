@@ -2,7 +2,7 @@
 Tidsbanken to Trello Dataflow
 =============================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 10:53:50
 
 Introduction
 ------------
@@ -102,6 +102,9 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Trel
    * - Tidsbanken Ansatt Property
      - Trello Members Property
      - Trello Data Type
+   * - Epost
+     - email
+     - "string"
    * - Navn
      - fullName
      - "string"
