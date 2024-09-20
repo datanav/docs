@@ -2,7 +2,7 @@
 Freshteam to Shopify Dataflow
 =============================
 
-Generated: 2024-09-19 00:00:01
+Generated: 2024-09-20 00:00:00
 
 Introduction
 ------------
