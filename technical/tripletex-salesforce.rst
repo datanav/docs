@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -237,6 +237,9 @@ The following properties are synchronized between a Tripletex Customer (human da
    * - Tripletex Customer (human data) Property
      - Salesforce Customer Property
      - Salesforce Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Tripletex Customer to Salesforce Customer
