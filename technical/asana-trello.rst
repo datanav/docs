@@ -2,7 +2,7 @@
 Asana to Trello Dataflow
 ========================
 
-Generated: 2024-09-20 00:00:23
+Generated: 2024-09-20 07:53:51
 
 Introduction
 ------------
@@ -133,6 +133,12 @@ The following properties are synchronized between a Asana Users and a Trello Mem
    * - Asana Users Property
      - Trello Members Property
      - Trello Data Type
+   * - email
+     - email
+     - "string"
+   * - name
+     - fullName
+     - "string"
 
 
 Asana Workspaces to Trello Organizations
