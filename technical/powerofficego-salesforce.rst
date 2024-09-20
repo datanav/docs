@@ -2,7 +2,7 @@
 PowerOffice GO to Salesforce Dataflow
 =====================================
 
-Generated: 2024-09-20 00:00:23
+Generated: 2024-09-20 07:27:55
 
 Introduction
 ------------
@@ -272,6 +272,24 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - PowerOffice GO Employees Property
      - Salesforce User Property
      - Salesforce Data Type
+   * - EmailAddress
+     - Email
+     - "string"
+   * - FirstName
+     - FirstName
+     - "string"
+   * - JobTitle
+     - Title
+     - "string"
+   * - LastName
+     - LastName
+     - "string"
+   * - Number
+     - EmployeeNumber
+     - "string"
+   * - PhoneNumber
+     - MobilePhone
+     - "string"
 
 
 PowerOffice GO Product to Salesforce Product2
