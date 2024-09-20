@@ -2,7 +2,7 @@
 PowerOffice GO to Exact Online Dataflow
 =======================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 08:42:05
 
 Introduction
 ------------
@@ -68,15 +68,6 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - PowerOffice GO Contactperson Property
      - Exact Online Contacts Property
      - Exact Online Data Type
-   * - city
-     - City
-     - "string"
-   * - dateOfBirth
-     - BirthDate
-     - "string"
-   * - residenceCountryCode
-     - Country
-     - "string"
 
 
 PowerOffice GO Customers to Exact Online Accounts
@@ -162,6 +153,9 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - DateOfBirth
      - BirthDate
      - "string"
+   * - EmailAddress
+     - BusinessEmail
+     - "string"
    * - MailAddress.City
      - City
      - "string"
@@ -235,6 +229,15 @@ The following properties are synchronized between a PowerOffice GO Contactperson
    * - PowerOffice GO Contactperson Property
      - Exact Online Contacts Property
      - Exact Online Data Type
+   * - city
+     - City
+     - "string"
+   * - dateOfBirth
+     - BirthDate
+     - "string"
+   * - residenceCountryCode
+     - Country
+     - "string"
 
 
 PowerOffice GO Currency to Exact Online Currencies
@@ -345,6 +348,9 @@ The following properties are synchronized between a PowerOffice GO Employees and
      - Exact Online Data Type
    * - DateOfBirth
      - BirthDate
+     - "string"
+   * - EmailAddress
+     - BusinessEmail
      - "string"
 
 
@@ -458,6 +464,15 @@ The following properties are synchronized between a PowerOffice GO Suppliers (hu
    * - PowerOffice GO Suppliers (human data) Property
      - Exact Online Contacts Property
      - Exact Online Data Type
+   * - DateOfBirth
+     - BirthDate
+     - "string"
+   * - MailAddress.City
+     - City
+     - "string"
+   * - MailAddress.CountryCode
+     - Country
+     - "string"
 
 
 PowerOffice GO Vatcodes to Exact Online Vatcodes
