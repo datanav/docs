@@ -2,7 +2,7 @@
 Invoiced to Exact Online Dataflow
 =================================
 
-Generated: 2024-09-20 08:42:05
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -115,6 +115,9 @@ The following properties are synchronized between a Invoiced Contacts and a Exac
    * - Invoiced Contacts Property
      - Exact Online Addresses Property
      - Exact Online Data Type
+   * - city
+     - City
+     - "string"
 
 
 Invoiced Contacts to Exact Online Contacts
