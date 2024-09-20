@@ -2,7 +2,7 @@
 PowerOffice GO to Tripletex Dataflow
 ====================================
 
-Generated: 2024-09-20 00:02:51
+Generated: 2024-09-20 07:27:55
 
 Introduction
 ------------
@@ -533,33 +533,6 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - PowerOffice GO Employees Property
      - Tripletex Employee Property
      - Tripletex Data Type
-   * - DateOfBirth
-     - dateOfBirth
-     - N/A
-   * - DepartmentId
-     - department.id (Dependant on having wd:Q2366457 in  )
-     - N/A
-   * - EmailAddress
-     - email
-     - "string"
-   * - FirstName
-     - firstName
-     - "string"
-   * - IsArchived
-     - department.id (Dependant on having wd:Q29415492 in  )
-     - N/A
-   * - IsArchived
-     - sesam_employment_status
-     - "boolean"
-   * - LastName
-     - lastName
-     - "string"
-   * - Number
-     - employeeNumber
-     - "string"
-   * - PhoneNumber
-     - phoneNumberMobile
-     - N/A
 
 
 PowerOffice GO Contactperson to Tripletex Contact
@@ -704,6 +677,33 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - PowerOffice GO Employees Property
      - Tripletex Employee Property
      - Tripletex Data Type
+   * - DateOfBirth
+     - dateOfBirth
+     - N/A
+   * - DepartmentId
+     - department.id (Dependant on having wd:Q2366457 in  )
+     - N/A
+   * - EmailAddress
+     - email
+     - "string"
+   * - FirstName
+     - firstName
+     - "string"
+   * - IsArchived
+     - department.id (Dependant on having wd:Q29415492 in  )
+     - N/A
+   * - IsArchived
+     - sesam_employment_status
+     - "boolean"
+   * - LastName
+     - lastName
+     - "string"
+   * - Number
+     - employeeNumber
+     - "string"
+   * - PhoneNumber
+     - phoneNumberMobile
+     - N/A
 
 
 PowerOffice GO Product to Tripletex Product
