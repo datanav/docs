@@ -2,7 +2,7 @@
 PowerOffice GO to Invoiced Dataflow
 ===================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:44:12
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Invoiced Customers (organisation data) Property
      - Invoiced Data Type
+   * - Name
+     - name
+     - "string"
 
 
 PowerOffice GO Customers to Invoiced Customers (human data)
