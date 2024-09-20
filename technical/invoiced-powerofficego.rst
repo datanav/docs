@@ -2,7 +2,7 @@
 Invoiced to PowerOffice GO Dataflow
 ===================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -23,6 +23,21 @@ The following properties are synchronized between a Invoiced Contacts and a Powe
    * - Invoiced Contacts Property
      - PowerOffice GO Contactperson Property
      - PowerOffice GO Data Type
+   * - address1
+     - address1
+     - "string"
+   * - address2
+     - address2
+     - "string"
+   * - city
+     - city
+     - "string"
+   * - email
+     - emailAddress
+     - "string"
+   * - postal_code
+     - zipCode
+     - "string"
 
 
 Invoiced Customers (organisation data) to PowerOffice GO Customers
@@ -87,6 +102,24 @@ The following properties are synchronized between a Invoiced Customers (human da
    * - Invoiced Customers (human data) Property
      - PowerOffice GO Customers (human data) Property
      - PowerOffice GO Data Type
+   * - address1
+     - MailAddress.AddressLine1
+     - "string"
+   * - address2
+     - MailAddress.AddressLine2
+     - "string"
+   * - city
+     - MailAddress.City
+     - "string"
+   * - country
+     - MailAddress.CountryCode
+     - "string"
+   * - id
+     - Id
+     - "integer"
+   * - postal_code
+     - MailAddress.ZipCode
+     - "string"
 
 
 Invoiced Invoices to PowerOffice GO Salesorders
