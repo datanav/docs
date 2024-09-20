@@ -2,7 +2,7 @@
 HubSpot to WebCRM Dataflow
 ==========================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -112,6 +112,12 @@ The following properties are synchronized between a HubSpot Product and a WebCRM
    * - HubSpot Product Property
      - WebCRM Products Property
      - WebCRM Data Type
+   * - properties.hs_cost_of_goods_sold
+     - ProductCostPrice
+     - "string"
+   * - properties.price
+     - ProductPrice
+     - "string"
 
 
 HubSpot User to WebCRM Users
