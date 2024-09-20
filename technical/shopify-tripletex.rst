@@ -2,7 +2,7 @@
 Shopify to Tripletex Dataflow
 =============================
 
-Generated: 2024-09-20 08:44:12
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -192,4 +192,16 @@ The following properties are synchronized between a Shopify Sesamproduct and a T
    * - Shopify Sesamproduct Property
      - Tripletex Product Property
      - Tripletex Data Type
+   * - sesam_priceExclVAT
+     - priceExcludingVatCurrency
+     - "float"
+   * - title
+     - name
+     - "string"
+   * - variants.inventory_quantity
+     - stockOfGoods
+     - "integer"
+   * - variants.title
+     - description
+     - "string"
 
