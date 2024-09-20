@@ -2,7 +2,7 @@
 Salesforce to Business Central Dataflow
 =======================================
 
-Generated: 2024-09-20 00:00:24
+Generated: 2024-09-20 07:27:55
 
 Introduction
 ------------
@@ -205,4 +205,37 @@ The following properties are synchronized between a Salesforce User and a Busine
    * - Salesforce User Property
      - Business Central Employees Property
      - Business Central Data Type
+   * - City
+     - city
+     - "string"
+   * - Country
+     - country
+     - "string"
+   * - Email
+     - personalEmail
+     - "string"
+   * - FirstName
+     - givenName
+     - "string"
+   * - ID
+     - id
+     - "string"
+   * - LastName
+     - surname
+     - "string"
+   * - MobilePhone
+     - mobilePhone
+     - "string"
+   * - Name
+     - displayName
+     - "string"
+   * - PostalCode
+     - postalCode
+     - "string"
+   * - Street
+     - addressLine1
+     - "string"
+   * - Title
+     - jobTitle
+     - "string"
 
