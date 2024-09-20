@@ -2,7 +2,7 @@
 PowerOffice GO to Shopify Dataflow
 ==================================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -67,6 +67,18 @@ The following properties are synchronized between a PowerOffice GO Product and a
    * - PowerOffice GO Product Property
      - Shopify Sesamproduct Property
      - Shopify Data Type
+   * - availableStock
+     - variants.inventory_quantity
+     - "integer"
+   * - description
+     - variants.title
+     - "string"
+   * - name
+     - title
+     - "string"
+   * - salesPrice
+     - sesam_priceExclVAT
+     - "string"
 
 
 PowerOffice GO Salesorders to Shopify Order
