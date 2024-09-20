@@ -2,7 +2,7 @@
 Tidsbanken to Freshteam Dataflow
 ================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 08:52:53
 
 Introduction
 ------------
@@ -33,6 +33,15 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Fres
    * - Tidsbanken Ansatt Property
      - Freshteam Employee Property
      - Freshteam Data Type
+   * - Epost
+     - official_email
+     - "string"
+   * - Etternavn
+     - last_name
+     - "string"
+   * - Fodt
+     - date_of_birth
+     - "string"
 
 
 Tidsbanken Ansatt to Freshteam Employee
@@ -49,15 +58,6 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Fres
    * - Tidsbanken Ansatt Property
      - Freshteam Employee Property
      - Freshteam Data Type
-   * - Epost
-     - official_email
-     - "string"
-   * - Etternavn
-     - last_name
-     - "string"
-   * - Fodt
-     - date_of_birth
-     - "string"
    * - Fornavn
      - first_name
      - "string"
