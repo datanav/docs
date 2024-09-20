@@ -2,7 +2,7 @@
 Tripletex to Exact Online Dataflow
 ==================================
 
-Generated: 2024-09-20 08:44:12
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -322,6 +322,24 @@ The following properties are synchronized between a Tripletex Customer (location
    * - Tripletex Customer (location data) Property
      - Exact Online Addresses Property
      - Exact Online Data Type
+   * - deliveryAddress.city
+     - City
+     - "string"
+   * - deliveryAddress.country.id
+     - Country
+     - "string"
+   * - physicalAddress.city
+     - City
+     - "string"
+   * - physicalAddress.country.id
+     - Country
+     - "string"
+   * - postalAddress.city
+     - City
+     - "string"
+   * - postalAddress.country.id
+     - Country
+     - "string"
 
 
 Tripletex Department to Exact Online Departments
