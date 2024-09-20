@@ -2,7 +2,7 @@
 Salesforce to Exact Online Dataflow
 ===================================
 
-Generated: 2024-09-20 00:00:24
+Generated: 2024-09-20 08:42:05
 
 Introduction
 ------------
@@ -39,24 +39,6 @@ The following properties are synchronized between a Salesforce Contact and a Exa
    * - Salesforce Contact Property
      - Exact Online Contacts Property
      - Exact Online Data Type
-   * - Birthdate
-     - BirthDate
-     - "string"
-   * - MailingCity
-     - City
-     - "string"
-   * - MailingCountry
-     - Country
-     - "string"
-   * - Name
-     - FirstName
-     - "string"
-   * - Name
-     - FullName
-     - "string"
-   * - Name
-     - LastName
-     - "string"
 
 
 Salesforce Currencytype to Exact Online Currencies
@@ -322,6 +304,24 @@ The following properties are synchronized between a Salesforce Contact and a Exa
    * - Salesforce Contact Property
      - Exact Online Contacts Property
      - Exact Online Data Type
+   * - Birthdate
+     - BirthDate
+     - "string"
+   * - MailingCity
+     - City
+     - "string"
+   * - MailingCountry
+     - Country
+     - "string"
+   * - Name
+     - FirstName
+     - "string"
+   * - Name
+     - FullName
+     - "string"
+   * - Name
+     - LastName
+     - "string"
 
 
 Salesforce Currencytype to Exact Online Currencies
@@ -577,4 +577,16 @@ The following properties are synchronized between a Salesforce User and a Exact 
    * - Salesforce User Property
      - Exact Online Employees Property
      - Exact Online Data Type
+   * - City
+     - City
+     - "string"
+   * - Country
+     - Country
+     - "string"
+   * - ID
+     - ID
+     - "string"
+   * - PostalCode
+     - Postcode
+     - "string"
 
