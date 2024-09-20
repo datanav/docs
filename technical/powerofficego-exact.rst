@@ -2,7 +2,7 @@
 PowerOffice GO to Exact Online Dataflow
 =======================================
 
-Generated: 2024-09-20 08:43:57
+Generated: 2024-09-20 08:44:06
 
 Introduction
 ------------
@@ -70,6 +70,9 @@ The following properties are synchronized between a PowerOffice GO Contactperson
      - Exact Online Data Type
    * - city
      - City
+     - "string"
+   * - residenceCountryCode
+     - Country
      - "string"
 
 
@@ -234,9 +237,6 @@ The following properties are synchronized between a PowerOffice GO Contactperson
      - Exact Online Data Type
    * - dateOfBirth
      - BirthDate
-     - "string"
-   * - residenceCountryCode
-     - Country
      - "string"
 
 
