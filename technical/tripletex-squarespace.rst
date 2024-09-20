@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-20 13:09:00
+Generated: 2024-09-20 13:10:11
 
 Introduction
 ------------
@@ -21,6 +21,22 @@ The following properties are synchronized between a Tripletex Employee and a  In
    :header-rows: 1
 
    * - Tripletex Employee Property
+     -  Inventory Property
+     -  Data Type
+
+
+Tripletex Product to  Inventory
+-------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a  Inventory.
+
+Once a link between a Tripletex Product and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a  Inventory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
      -  Inventory Property
      -  Data Type
 
