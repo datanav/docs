@@ -2,7 +2,7 @@
 PowerOffice GO to Business Nxt Dataflow
 =======================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 08:44:12
 
 Introduction
 ------------
@@ -156,6 +156,9 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - MailAddress.CountryCode
+     - isoCode
+     - "string"
 
 
 PowerOffice GO Location to Business Nxt Country
