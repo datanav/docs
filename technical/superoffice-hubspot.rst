@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -175,6 +175,18 @@ The following properties are synchronized between a SuperOffice Product and a Hu
    * - SuperOffice Product Property
      - HubSpot Product Property
      - HubSpot Data Type
+   * - Description
+     - properties.description
+     - "string"
+   * - Name
+     - properties.name
+     - "string"
+   * - UnitCost
+     - properties.hs_cost_of_goods_sold
+     - "string"
+   * - UnitListPrice
+     - properties.price
+     - "string"
 
 
 SuperOffice Quotealternative to HubSpot Quote
