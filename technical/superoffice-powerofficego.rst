@@ -2,7 +2,7 @@
 SuperOffice to PowerOffice GO Dataflow
 ======================================
 
-Generated: 2024-09-20 11:07:02
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -300,6 +300,24 @@ The following properties are synchronized between a SuperOffice Product and a Po
    * - SuperOffice Product Property
      - PowerOffice GO Product Property
      - PowerOffice GO Data Type
+   * - Description
+     - description
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - ProductTypeKey
+     - type
+     - "integer"
+   * - UnitCost
+     - costPrice
+     - N/A
+   * - UnitListPrice
+     - salesPrice
+     - N/A
+   * - VAT
+     - vatCode
+     - "string"
 
 
 SuperOffice Project to PowerOffice GO Projects
