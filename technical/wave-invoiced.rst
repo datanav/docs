@@ -2,7 +2,7 @@
 Wave to Invoiced Dataflow
 =========================
 
-Generated: 2024-09-20 08:54:19
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -158,4 +158,10 @@ The following properties are synchronized between a Wave Product and a Invoiced 
    * - Wave Product Property
      - Invoiced Items Property
      - Invoiced Data Type
+   * - description
+     - description
+     - "string"
+   * - name
+     - name
+     - "string"
 
