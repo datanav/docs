@@ -2,7 +2,7 @@
 Asana to Business Central Dataflow
 ==================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 08:11:06
 
 Introduction
 ------------
@@ -55,6 +55,9 @@ The following properties are synchronized between a Asana Users and a Business C
    * - Asana Users Property
      - Business Central Employees Property
      - Business Central Data Type
+   * - email
+     - email
+     - "string"
    * - email
      - personalEmail
      - "string"
