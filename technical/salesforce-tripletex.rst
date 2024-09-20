@@ -2,7 +2,7 @@
 Salesforce to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -23,6 +23,21 @@ The following properties are synchronized between a Salesforce Contact and a Tri
    * - Salesforce Contact Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - Email
+     - email
+     - "string"
+   * - FirstName
+     - firstName
+     - "string"
+   * - LastName
+     - lastName
+     - "string"
+   * - MobilePhone
+     - phoneNumberMobile
+     - N/A
+   * - Phone
+     - phoneNumberWork
+     - "string"
 
 
 Salesforce Customer to Tripletex Customer
@@ -55,6 +70,9 @@ The following properties are synchronized between a Salesforce Customer and a Tr
    * - Salesforce Customer Property
      - Tripletex Customer (human data) Property
      - Tripletex Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Salesforce Invoiceline to Tripletex Orderline
