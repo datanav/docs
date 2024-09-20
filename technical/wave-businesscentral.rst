@@ -2,7 +2,7 @@
 Wave to Business Central Dataflow
 =================================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -61,6 +61,51 @@ The following properties are synchronized between a Wave Customer and a Business
    * - Wave Customer Property
      - Business Central Customers (organisation data) Property
      - Business Central Data Type
+   * - address.addressLine1
+     - addressLine1
+     - "string"
+   * - address.addressLine2
+     - addressLine2
+     - "string"
+   * - address.city
+     - city
+     - "string"
+   * - address.country.code
+     - country
+     - "string"
+   * - address.postalCode
+     - postalCode
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - name
+     - displayName
+     - "string"
+   * - phone
+     - phoneNumber
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - addressLine1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - addressLine2
+     - "string"
+   * - shippingDetails.address.city
+     - city
+     - "string"
+   * - shippingDetails.address.country.code
+     - country
+     - "string"
+   * - shippingDetails.address.postalCode
+     - postalCode
+     - "string"
+   * - shippingDetails.phone
+     - phoneNumber
+     - "string"
+   * - website
+     - website
+     - "string"
 
 
 Wave Customer to Business Central Customers (human data)
