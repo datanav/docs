@@ -2,7 +2,7 @@
 Wave to PowerOffice GO Dataflow
 ===============================
 
-Generated: 2024-09-20 08:44:12
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -468,6 +468,15 @@ The following properties are synchronized between a Wave Product and a PowerOffi
    * - Wave Product Property
      - PowerOffice GO Product Property
      - PowerOffice GO Data Type
+   * - description
+     - description
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - unitPrice
+     - salesPrice
+     - N/A
 
 
 Wave Vendor to PowerOffice GO Contactperson
