@@ -2,7 +2,7 @@
 WooCommerce to Chargebee Dataflow
 =================================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -83,6 +83,39 @@ The following properties are synchronized between a WooCommerce Customer and a C
    * - WooCommerce Customer Property
      - Chargebee Customer Property
      - Chargebee Data Type
+   * - billing.address_1
+     - billing_address.line1
+     - "string"
+   * - billing.city
+     - billing_address.city
+     - "string"
+   * - billing.country
+     - billing_address.country
+     - "string"
+   * - billing.postcode
+     - billing_address.zip
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - last_name
+     - last_name
+     - "string"
+   * - shipping.address_1
+     - billing_address.line1
+     - "string"
+   * - shipping.city
+     - billing_address.city
+     - "string"
+   * - shipping.country
+     - billing_address.country
+     - "string"
+   * - shipping.postcode
+     - billing_address.zip
+     - "string"
 
 
 WooCommerce Order to Chargebee Order
