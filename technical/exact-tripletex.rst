@@ -2,7 +2,7 @@
 Exact Online to Tripletex Dataflow
 ==================================
 
-Generated: 2024-09-20 07:27:55
+Generated: 2024-09-20 08:42:05
 
 Introduction
 ------------
@@ -149,6 +149,9 @@ The following properties are synchronized between a Exact Online Employees and a
    * - BirthDate
      - dateOfBirth
      - N/A
+   * - BusinessEmail
+     - email
+     - "string"
    * - City
      - address.city
      - "string"
