@@ -2,7 +2,7 @@
 PowerOffice GO to Tidsbanken Dataflow
 =====================================
 
-Generated: 2024-09-20 00:00:23
+Generated: 2024-09-20 07:27:55
 
 Introduction
 ------------
@@ -242,33 +242,6 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - PowerOffice GO Employees Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
-   * - DateOfBirth
-     - Fodt
-     - "string"
-   * - DepartmentId
-     - AvdelingId
-     - "string"
-   * - EmailAddress
-     - Epost
-     - "string"
-   * - FirstName
-     - Fornavn
-     - "string"
-   * - IsArchived
-     - Aktiv
-     - "boolean"
-   * - JobTitle
-     - Tittel
-     - "string"
-   * - LastName
-     - Etternavn
-     - "string"
-   * - Number
-     - sesam_ansattId
-     - "integer"
-   * - PhoneNumber
-     - Mobil
-     - "string"
 
 
 PowerOffice GO Customers (organisation data) to Tidsbanken Kunde
@@ -333,6 +306,33 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - PowerOffice GO Employees Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
+   * - DateOfBirth
+     - Fodt
+     - "string"
+   * - DepartmentId
+     - AvdelingId
+     - "string"
+   * - EmailAddress
+     - Epost
+     - "string"
+   * - FirstName
+     - Fornavn
+     - "string"
+   * - IsArchived
+     - Aktiv
+     - "boolean"
+   * - JobTitle
+     - Tittel
+     - "string"
+   * - LastName
+     - Etternavn
+     - "string"
+   * - Number
+     - sesam_ansattId
+     - "integer"
+   * - PhoneNumber
+     - Mobil
+     - "string"
 
 
 PowerOffice GO Projects to Tidsbanken Prosjekt
