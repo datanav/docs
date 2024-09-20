@@ -2,7 +2,7 @@
 WebCRM to Wix Dataflow
 ======================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -25,6 +25,9 @@ The following properties are synchronized between a WebCRM Persons and a Wix Con
      - Wix Data Type
    * - PersonDirectPhone
      - primaryInfo.phone
+     - "string"
+   * - PersonEmail
+     - primaryInfo.email
      - "string"
    * - PersonFirstName
      - info.name.first
