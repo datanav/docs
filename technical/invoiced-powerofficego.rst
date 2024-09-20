@@ -2,7 +2,7 @@
 Invoiced to PowerOffice GO Dataflow
 ===================================
 
-Generated: 2024-09-20 07:55:22
+Generated: 2024-09-20 08:44:12
 
 Introduction
 ------------
@@ -54,6 +54,9 @@ The following properties are synchronized between a Invoiced Customers (organisa
    * - Invoiced Customers (organisation data) Property
      - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Invoiced Customers (human data) to PowerOffice GO Customers (human data)
