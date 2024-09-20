@@ -2,7 +2,7 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2024-09-20 00:00:24
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -112,4 +112,13 @@ The following properties are synchronized between a HubSpot Product and a Wave P
    * - HubSpot Product Property
      - Wave Product Property
      - Wave Data Type
+   * - properties.description
+     - description
+     - "string"
+   * - properties.name
+     - name
+     - "string"
+   * - properties.price
+     - unitPrice
+     - "string"
 
