@@ -2,7 +2,7 @@
 Business Central to Exact Online Dataflow
 =========================================
 
-Generated: 2024-09-20 08:44:12
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -200,6 +200,12 @@ The following properties are synchronized between a Business Central Contacts (l
    * - Business Central Contacts (location data) Property
      - Exact Online Addresses Property
      - Exact Online Data Type
+   * - city
+     - City
+     - "string"
+   * - country
+     - Country
+     - "string"
 
 
 Business Central Contacts (human data) to Exact Online Contacts
@@ -304,6 +310,12 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (location data) Property
      - Exact Online Addresses Property
      - Exact Online Data Type
+   * - city
+     - City
+     - "string"
+   * - country
+     - Country
+     - "string"
 
 
 Business Central Employees to Exact Online Employees
@@ -325,6 +337,9 @@ The following properties are synchronized between a Business Central Employees a
      - "string"
    * - email
      - BusinessEmail
+     - "string"
+   * - personalEmail
+     - Email
      - "string"
 
 
