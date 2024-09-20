@@ -2,7 +2,7 @@
 Wave to Salesforce Dataflow
 ===========================
 
-Generated: 2024-09-20 00:00:23
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -117,6 +117,9 @@ The following properties are synchronized between a Wave Customer (human data) a
    * - Wave Customer (human data) Property
      - Salesforce Customer Property
      - Salesforce Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Wave Customer to Salesforce Contact
