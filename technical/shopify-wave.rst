@@ -2,7 +2,7 @@
 Shopify to Wave Dataflow
 ========================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -23,6 +23,54 @@ The following properties are synchronized between a Shopify Customer and a Wave 
    * - Shopify Customer Property
      - Wave Customer Property
      - Wave Data Type
+   * - default_address.address1
+     - address.addressLine1
+     - "string"
+   * - default_address.address1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - default_address.address2
+     - address.addressLine2
+     - "string"
+   * - default_address.address2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - default_address.city
+     - address.city
+     - "string"
+   * - default_address.city
+     - shippingDetails.address.city
+     - "string"
+   * - default_address.country
+     - address.country.code
+     - "string"
+   * - default_address.country
+     - shippingDetails.address.country.code
+     - "string"
+   * - default_address.province_code
+     - address.province.code
+     - "string"
+   * - default_address.province_code
+     - shippingDetails.address.province.code
+     - "string"
+   * - default_address.zip
+     - address.postalCode
+     - "string"
+   * - default_address.zip
+     - shippingDetails.address.postalCode
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - first_name
+     - firstName
+     - "string"
+   * - last_name
+     - lastName
+     - "string"
+   * - phone
+     - mobile
+     - "string"
 
 
 Shopify Customer to Wave Customer (human data)
@@ -39,6 +87,57 @@ The following properties are synchronized between a Shopify Customer and a Wave 
    * - Shopify Customer Property
      - Wave Customer (human data) Property
      - Wave Data Type
+   * - default_address.address1
+     - address.addressLine1
+     - "string"
+   * - default_address.address1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - default_address.address2
+     - address.addressLine2
+     - "string"
+   * - default_address.address2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - default_address.city
+     - address.city
+     - "string"
+   * - default_address.city
+     - shippingDetails.address.city
+     - "string"
+   * - default_address.country
+     - address.country.code
+     - "string"
+   * - default_address.country
+     - shippingDetails.address.country.code
+     - "string"
+   * - default_address.phone
+     - phone
+     - "string"
+   * - default_address.province_code
+     - address.province.code
+     - "string"
+   * - default_address.province_code
+     - shippingDetails.address.province.code
+     - "string"
+   * - default_address.zip
+     - address.postalCode
+     - "string"
+   * - default_address.zip
+     - shippingDetails.address.postalCode
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - first_name
+     - firstName
+     - "string"
+   * - last_name
+     - lastName
+     - N/A
+   * - phone
+     - mobile
+     - "string"
 
 
 Shopify Order to Wave Invoice
