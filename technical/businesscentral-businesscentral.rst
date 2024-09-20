@@ -2,7 +2,7 @@
 Business Central to Business Central Dataflow
 =============================================
 
-Generated: 2024-09-20 07:55:06
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -120,6 +120,36 @@ The following properties are synchronized between a Business Central Contacts (c
    * - Business Central Contacts (classification data) Property
      - Business Central Customers (classification data) Property
      - Business Central Data Type
+   * - addressLine1
+     - addressLine1
+     - "string"
+   * - addressLine2
+     - addressLine2
+     - "string"
+   * - city
+     - city
+     - "string"
+   * - country
+     - country
+     - "string"
+   * - displayName
+     - displayName
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - postalCode
+     - postalCode
+     - "string"
+   * - type
+     - type
+     - "string"
 
 
 Business Central Customers (human data) to Business Central Customers (human data)
@@ -164,8 +194,23 @@ The following properties are synchronized between a Business Central Customers (
    * - country
      - country
      - "string"
+   * - displayName
+     - displayName
+     - "string"
+   * - email
+     - email
+     - "string"
    * - id
      - id
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - postalCode
+     - postalCode
+     - "string"
+   * - type
+     - type
      - "string"
 
 
