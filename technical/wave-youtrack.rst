@@ -2,7 +2,7 @@
 Wave to Youtrack Dataflow
 =========================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 10:53:49
 
 Introduction
 ------------
@@ -120,4 +120,7 @@ The following properties are synchronized between a Wave User and a Youtrack Use
    * - Wave User Property
      - Youtrack Users Property
      - Youtrack Data Type
+   * - defaultEmail
+     - profile.email.email
+     - "string"
 
