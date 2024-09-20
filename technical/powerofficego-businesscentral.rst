@@ -2,7 +2,7 @@
 PowerOffice GO to Business Central Dataflow
 ===========================================
 
-Generated: 2024-09-20 08:44:12
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -365,6 +365,18 @@ The following properties are synchronized between a PowerOffice GO Product and a
    * - PowerOffice GO Product Property
      - Business Central Items Property
      - Business Central Data Type
+   * - costPrice
+     - unitCost
+     - N/A
+   * - gtin
+     - gtin
+     - "string"
+   * - name
+     - displayName
+     - "string"
+   * - salesPrice
+     - unitPrice
+     - N/A
 
 
 PowerOffice GO Salesorderlines to Business Central Salesorderlines
