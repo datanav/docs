@@ -2,7 +2,7 @@
 Asana to Tidsbanken Dataflow
 ============================
 
-Generated: 2024-09-20 00:00:23
+Generated: 2024-09-20 07:27:55
 
 Introduction
 ------------
@@ -45,4 +45,7 @@ The following properties are synchronized between a Asana Users and a Tidsbanken
    * - Asana Users Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
+   * - name
+     - Navn
+     - "string"
 
