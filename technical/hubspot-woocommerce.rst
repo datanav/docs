@@ -2,7 +2,7 @@
 HubSpot to WooCommerce Dataflow
 ===============================
 
-Generated: 2024-09-20 00:00:24
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -39,4 +39,16 @@ The following properties are synchronized between a HubSpot Product and a WooCom
    * - HubSpot Product Property
      - WooCommerce Product Property
      - WooCommerce Data Type
+   * - properties.hs_cost_of_goods_sold
+     - price
+     - "string"
+   * - properties.hs_sku
+     - sku
+     - "string"
+   * - properties.name
+     - name
+     - "string"
+   * - properties.price
+     - sale_price
+     - "string"
 
