@@ -2,7 +2,7 @@
 Wix.com to Invoiced Dataflow
 ============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 13:11:59
 
 Introduction
 ------------
@@ -55,4 +55,16 @@ The following properties are synchronized between a Wix.com Products and a Invoi
    * - Wix.com Products Property
      - Invoiced Items Property
      - Invoiced Data Type
+   * - costAndProfitData.itemCost
+     - unit_cost
+     - "string"
+   * - costRange.maxValue
+     - unit_cost
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - priceData.currency
+     - currency
+     - "string"
 
