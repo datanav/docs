@@ -2,7 +2,7 @@
 Chargebee to ZohoCRM Dataflow
 =============================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 07:55:22
 
 Introduction
 ------------
@@ -76,4 +76,16 @@ The following properties are synchronized between a Chargebee Customer and a Zoh
    * - Chargebee Customer Property
      - ZohoCRM Contact Property
      - ZohoCRM Data Type
+   * - email
+     - Email
+     - "string"
+   * - email
+     - Secondary_Email
+     - "string"
+   * - first_name
+     - First_Name
+     - "string"
+   * - last_name
+     - Last_Name
+     - "string"
 
