@@ -2,7 +2,7 @@
 HubSpot to Exact Online Dataflow
 ================================
 
-Generated: 2024-09-20 08:42:05
+Generated: 2024-09-20 08:54:19
 
 Introduction
 ------------
@@ -493,6 +493,12 @@ The following properties are synchronized between a HubSpot Contact and a Exact 
    * - HubSpot Contact Property
      - Exact Online Addresses Property
      - Exact Online Data Type
+   * - properties.city
+     - City
+     - "string"
+   * - properties.country
+     - Country
+     - "string"
 
 
 HubSpot Deal to Exact Online Currencies
