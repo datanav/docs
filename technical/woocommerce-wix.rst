@@ -2,7 +2,7 @@
 WooCommerce to Wix Dataflow
 ===========================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-20 13:15:54
 
 Introduction
 ------------
@@ -23,4 +23,16 @@ The following properties are synchronized between a WooCommerce Product and a Wi
    * - WooCommerce Product Property
      - Wix Products Property
      - Wix Data Type
+   * - name
+     - name
+     - "string"
+   * - price
+     - costAndProfitData.itemCost
+     - N/A
+   * - sale_price
+     - priceData.price
+     - N/A
+   * - sku
+     - sku
+     - "string"
 
