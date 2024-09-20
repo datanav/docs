@@ -15,7 +15,7 @@ Hubspot
     
     |
     
-    .. link-button:: https://hubspot.talk.market
+    .. link-button:: https://www.sesam.io/talk/hubspot
         :type: url
         :text: Try for free
         :classes: btn-primary btn-block
