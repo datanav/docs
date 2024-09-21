@@ -2,7 +2,7 @@
 Shopify to Chargebee Dataflow
 =============================
 
-Generated: 2024-09-21 00:00:02
+Generated: 2024-09-21 00:01:13
 
 Introduction
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a Shopify Customer and a Charg
    * - Shopify Customer Property
      - Chargebee Customer Property
      - Chargebee Data Type
+   * - default_address.country_name
+     - billing_address.country
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - first_name
+     - first_name
+     - "string"
+   * - last_name
+     - last_name
+     - "string"
 
 
 Shopify Inventoryitem to Chargebee Item
@@ -134,18 +146,6 @@ The following properties are synchronized between a Shopify Customer and a Charg
    * - Shopify Customer Property
      - Chargebee Customer Property
      - Chargebee Data Type
-   * - default_address.country_name
-     - billing_address.country
-     - "string"
-   * - email
-     - email
-     - "string"
-   * - first_name
-     - first_name
-     - "string"
-   * - last_name
-     - last_name
-     - "string"
 
 
 Shopify Order to Chargebee Order
