@@ -2,7 +2,7 @@
 PowerOffice GO to Tidsbanken Dataflow
 =====================================
 
-Generated: 2024-09-21 00:00:03
+Generated: 2024-09-21 00:01:13
 
 Introduction
 ------------
@@ -131,6 +131,54 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Tidsbanken Kunde Property
      - Tidsbanken Data Type
+   * - EmailAddress
+     - Epost
+     - "string"
+   * - Id
+     - Id
+     - "string"
+   * - MailAddress.AddressLine1
+     - Gateadresse
+     - "string"
+   * - MailAddress.AddressLine1
+     - Leveringsadresse
+     - "string"
+   * - MailAddress.AddressLine2
+     - Leveringsadresse2
+     - "string"
+   * - MailAddress.AddressLine2
+     - Postadresse
+     - "string"
+   * - MailAddress.City
+     - LevPoststed
+     - "string"
+   * - MailAddress.City
+     - Poststed
+     - "string"
+   * - MailAddress.ZipCode
+     - LevPostNr
+     - "string"
+   * - MailAddress.ZipCode
+     - Postnr
+     - "string"
+   * - Name
+     - Navn
+     - "string"
+   * - Number
+     - sesam_kundeId
+     - "string"
+   * - OrganizationNumber (Dependant on having NO in MailAddress.CountryCode)
+     - Organisasjonsnummer
+     - "string"
+   * - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCode)
+     - sesam_kundeId
+     - "string"
+   * - PhoneNumber
+     - Telefon
+     - "string"
+   * - WebsiteUrl
+     - Url
+     - "string"
 
 
 PowerOffice GO Departments to Tidsbanken Avdeling
@@ -194,6 +242,33 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - PowerOffice GO Employees Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
+   * - DateOfBirth
+     - Fodt
+     - "string"
+   * - DepartmentId
+     - AvdelingId
+     - "string"
+   * - EmailAddress
+     - Epost
+     - "string"
+   * - FirstName
+     - Fornavn
+     - "string"
+   * - IsArchived
+     - Aktiv
+     - "boolean"
+   * - JobTitle
+     - Tittel
+     - "string"
+   * - LastName
+     - Etternavn
+     - "string"
+   * - Number
+     - sesam_ansattId
+     - "integer"
+   * - PhoneNumber
+     - Mobil
+     - "string"
 
 
 PowerOffice GO Customers (organisation data) to Tidsbanken Kunde
@@ -226,54 +301,6 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Tidsbanken Kunde Property
      - Tidsbanken Data Type
-   * - EmailAddress
-     - Epost
-     - "string"
-   * - Id
-     - Id
-     - "string"
-   * - MailAddress.AddressLine1
-     - Gateadresse
-     - "string"
-   * - MailAddress.AddressLine1
-     - Leveringsadresse
-     - "string"
-   * - MailAddress.AddressLine2
-     - Leveringsadresse2
-     - "string"
-   * - MailAddress.AddressLine2
-     - Postadresse
-     - "string"
-   * - MailAddress.City
-     - LevPoststed
-     - "string"
-   * - MailAddress.City
-     - Poststed
-     - "string"
-   * - MailAddress.ZipCode
-     - LevPostNr
-     - "string"
-   * - MailAddress.ZipCode
-     - Postnr
-     - "string"
-   * - Name
-     - Navn
-     - "string"
-   * - Number
-     - sesam_kundeId
-     - "string"
-   * - OrganizationNumber (Dependant on having NO in MailAddress.CountryCode)
-     - Organisasjonsnummer
-     - "string"
-   * - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCode)
-     - sesam_kundeId
-     - "string"
-   * - PhoneNumber
-     - Telefon
-     - "string"
-   * - WebsiteUrl
-     - Url
-     - "string"
 
 
 PowerOffice GO Departments to Tidsbanken Avdeling
@@ -306,32 +333,8 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - PowerOffice GO Employees Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
-   * - DateOfBirth
-     - Fodt
-     - "string"
-   * - DepartmentId
-     - AvdelingId
-     - "string"
    * - EmailAddress
      - Epost
-     - "string"
-   * - FirstName
-     - Fornavn
-     - "string"
-   * - IsArchived
-     - Aktiv
-     - "boolean"
-   * - JobTitle
-     - Tittel
-     - "string"
-   * - LastName
-     - Etternavn
-     - "string"
-   * - Number
-     - sesam_ansattId
-     - "integer"
-   * - PhoneNumber
-     - Mobil
      - "string"
 
 
