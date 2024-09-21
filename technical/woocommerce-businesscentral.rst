@@ -2,7 +2,7 @@
 WooCommerce to Business Central Dataflow
 ========================================
 
-Generated: 2024-09-20 13:15:54
+Generated: 2024-09-21 00:00:04
 
 Introduction
 ------------
