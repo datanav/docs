@@ -2,7 +2,7 @@
 Wix.com to CRMOffice Dataflow
 =============================
 
-Generated: 2024-09-21 00:00:03
+Generated: 2024-09-21 00:01:13
 
 Introduction
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Wix.com Contacts and a CRMOf
    * - Wix.com Contacts Property
      - CRMOffice Contacts Property
      - CRMOffice Data Type
+   * - info.name.first
+     - givenName
+     - "string"
+   * - info.name.last
+     - familyName
+     - "string"
+   * - primaryInfo.phone
+     - directPhone
+     - "string"
 
 
 Wix.com Products to CRMOffice Companies
@@ -55,13 +64,4 @@ The following properties are synchronized between a Wix.com Contacts and a CRMOf
    * - Wix.com Contacts Property
      - CRMOffice Contacts Property
      - CRMOffice Data Type
-   * - info.name.first
-     - givenName
-     - "string"
-   * - info.name.last
-     - familyName
-     - "string"
-   * - primaryInfo.phone
-     - directPhone
-     - "string"
 
