@@ -2,7 +2,7 @@
 Wix.com to PowerOffice GO Dataflow
 ==================================
 
-Generated: 2024-09-21 00:00:04
+Generated: 2024-09-21 00:01:13
 
 Introduction
 ------------
@@ -35,6 +35,18 @@ The following properties are synchronized between a Wix.com Contacts and a Power
    * - Wix.com Contacts Property
      - PowerOffice GO Contactperson Property
      - PowerOffice GO Data Type
+   * - info.name.first
+     - firstName
+     - "string"
+   * - info.name.last
+     - lastName
+     - "string"
+   * - primaryInfo.email
+     - emailAddress
+     - "string"
+   * - primaryInfo.phone
+     - phoneNumber
+     - "string"
 
 
 Wix.com Contacts to PowerOffice GO Customers
@@ -149,18 +161,6 @@ The following properties are synchronized between a Wix.com Contacts and a Power
    * - Wix.com Contacts Property
      - PowerOffice GO Contactperson Property
      - PowerOffice GO Data Type
-   * - info.name.first
-     - firstName
-     - "string"
-   * - info.name.last
-     - lastName
-     - "string"
-   * - primaryInfo.email
-     - emailAddress
-     - "string"
-   * - primaryInfo.phone
-     - phoneNumber
-     - "string"
 
 
 Wix.com Orders to PowerOffice GO Salesorderlines
