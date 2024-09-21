@@ -2,7 +2,7 @@
 Wave to Wix Dataflow
 ====================
 
-Generated: 2024-09-21 00:00:03
+Generated: 2024-09-21 00:01:13
 
 Introduction
 ------------
@@ -76,6 +76,15 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
    * - Wave Customer Property
      - Wix Contacts Property
      - Wix Data Type
+   * - email
+     - primaryInfo.email
+     - "string"
+   * - firstName
+     - info.name.first
+     - "string"
+   * - lastName
+     - info.name.last
+     - "string"
 
 
 Wave Vendor to Wix Contacts
@@ -102,6 +111,18 @@ The following properties are synchronized between a Wave Vendor and a Wix Contac
    * - Wave Vendor Property
      - Wix Contacts Property
      - Wix Data Type
+   * - email
+     - primaryInfo.email
+     - "string"
+   * - firstName
+     - info.name.first
+     - "string"
+   * - lastName
+     - info.name.last
+     - "string"
+   * - phone
+     - primaryInfo.phone
+     - "string"
 
 
 Wave Customer to Wix Contacts
@@ -118,15 +139,6 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
    * - Wave Customer Property
      - Wix Contacts Property
      - Wix Data Type
-   * - email
-     - primaryInfo.email
-     - "string"
-   * - firstName
-     - info.name.first
-     - "string"
-   * - lastName
-     - info.name.last
-     - "string"
 
 
 Wave Product to Wix Products
@@ -165,16 +177,4 @@ The following properties are synchronized between a Wave Vendor and a Wix Contac
    * - Wave Vendor Property
      - Wix Contacts Property
      - Wix Data Type
-   * - email
-     - primaryInfo.email
-     - "string"
-   * - firstName
-     - info.name.first
-     - "string"
-   * - lastName
-     - info.name.last
-     - "string"
-   * - phone
-     - primaryInfo.phone
-     - "string"
 
