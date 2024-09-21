@@ -2,7 +2,7 @@
 WebCRM to CRMOffice Dataflow
 ============================
 
-Generated: 2024-09-21 00:00:03
+Generated: 2024-09-21 00:01:13
 
 Introduction
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a WebCRM Persons and a CRMOffi
    * - WebCRM Persons Property
      - CRMOffice Contacts Property
      - CRMOffice Data Type
+   * - PersonDirectPhone
+     - directPhone
+     - "string"
+   * - PersonFirstName
+     - givenName
+     - "string"
+   * - PersonLastName
+     - familyName
+     - "string"
+   * - PersonMobilePhone
+     - mobilePhone
+     - "string"
 
 
 WebCRM Products to CRMOffice Companies
@@ -77,16 +89,4 @@ The following properties are synchronized between a WebCRM Persons and a CRMOffi
    * - WebCRM Persons Property
      - CRMOffice Contacts Property
      - CRMOffice Data Type
-   * - PersonDirectPhone
-     - directPhone
-     - "string"
-   * - PersonFirstName
-     - givenName
-     - "string"
-   * - PersonLastName
-     - familyName
-     - "string"
-   * - PersonMobilePhone
-     - mobilePhone
-     - "string"
 
