@@ -2,7 +2,7 @@
 PowerOffice GO to Freshteam Dataflow
 ====================================
 
-Generated: 2024-09-21 00:00:03
+Generated: 2024-09-21 00:01:13
 
 Introduction
 ------------
@@ -33,6 +33,42 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - PowerOffice GO Employees Property
      - Freshteam Employee Property
      - Freshteam Data Type
+   * - DateOfBirth
+     - date_of_birth
+     - "string"
+   * - EmailAddress
+     - official_email
+     - "string"
+   * - FirstName
+     - first_name
+     - "string"
+   * - Id
+     - id
+     - "string"
+   * - LastName
+     - last_name
+     - "string"
+   * - MailAddress.City
+     - address.city
+     - "string"
+   * - MailAddress.City
+     - communication_address.communication_city
+     - "string"
+   * - MailAddress.CountryCode
+     - address.country
+     - "string"
+   * - MailAddress.CountryCode
+     - communication_address.communication_country
+     - "string"
+   * - MailAddress.ZipCode
+     - address.zip_code
+     - "string"
+   * - MailAddress.ZipCode
+     - communication_address.communication_zip_code
+     - "string"
+   * - PhoneNumber
+     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
+     - "string"
 
 
 PowerOffice GO Departments to Freshteam Department
@@ -65,43 +101,10 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - PowerOffice GO Employees Property
      - Freshteam Employee Property
      - Freshteam Data Type
-   * - DateOfBirth
-     - date_of_birth
-     - "string"
    * - EmailAddress
      - official_email
      - "string"
    * - EmailAddress
      - personal_email
-     - "string"
-   * - FirstName
-     - first_name
-     - "string"
-   * - Id
-     - id
-     - "string"
-   * - LastName
-     - last_name
-     - "string"
-   * - MailAddress.City
-     - address.city
-     - "string"
-   * - MailAddress.City
-     - communication_address.communication_city
-     - "string"
-   * - MailAddress.CountryCode
-     - address.country
-     - "string"
-   * - MailAddress.CountryCode
-     - communication_address.communication_country
-     - "string"
-   * - MailAddress.ZipCode
-     - address.zip_code
-     - "string"
-   * - MailAddress.ZipCode
-     - communication_address.communication_zip_code
-     - "string"
-   * - PhoneNumber
-     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
      - "string"
 
