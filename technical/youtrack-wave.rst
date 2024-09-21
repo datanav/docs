@@ -2,7 +2,7 @@
 YouTrack to Wave Dataflow
 =========================
 
-Generated: 2024-09-20 00:00:00
+Generated: 2024-09-21 00:00:01
 
 Introduction
 ------------
