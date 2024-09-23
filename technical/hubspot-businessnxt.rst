@@ -2,7 +2,7 @@
 HubSpot to Business Nxt Dataflow
 ================================
 
-Generated: 2024-09-23 09:11:51
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -436,6 +436,18 @@ The following properties are synchronized between a HubSpot Company and a Busine
    * - HubSpot Company Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - properties.country
+     - name
+     - "string"
+   * - properties.industry
+     - name
+     - "string"
+   * - properties.state
+     - name
+     - "string"
+   * - properties.type
+     - name
+     - "string"
 
 
 HubSpot Deal to Business Nxt Currency
