@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-09-23 00:00:22
+Generated: 2024-09-23 09:11:00
 
 Introduction
 ------------
@@ -57,5 +57,21 @@ The following properties are synchronized between a Salesforce Product2 and a  I
 
    * - Salesforce Product2 Property
      -  Inventory Property
+     -  Data Type
+
+
+Salesforce Product2 to  Sesamproducts
+-------------------------------------
+Every Salesforce Product2 will be synchronized with a  Sesamproducts.
+
+Once a link between a Salesforce Product2 and a  Sesamproducts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Product2 and a  Sesamproducts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Product2 Property
+     -  Sesamproducts Property
      -  Data Type
 
