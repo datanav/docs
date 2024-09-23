@@ -2,7 +2,7 @@
 SuperOffice to Business Nxt Dataflow
 ====================================
 
-Generated: 2024-09-23 09:11:51
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -124,6 +124,12 @@ The following properties are synchronized between a SuperOffice Listcountryitems
    * - SuperOffice Listcountryitems Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - Name
+     - name
+     - "string"
+   * - TwoLetterISOCountry
+     - isoCode
+     - "string"
 
 
 SuperOffice Listcurrencyitems to Business Nxt Currency
@@ -156,6 +162,12 @@ The following properties are synchronized between a SuperOffice Listproductcateg
    * - SuperOffice Listproductcategoryitems Property
      - Business Nxt Productcategory Property
      - Business Nxt Data Type
+   * - Name
+     - text
+     - "string"
+   * - Tooltip
+     - description
+     - "string"
 
 
 SuperOffice Product to Business Nxt Product
