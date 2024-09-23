@@ -2,7 +2,7 @@
 Exact Online to MemberCare Dataflow
 ===================================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -273,6 +273,9 @@ The following properties are synchronized between a Exact Online Addresses and a
    * - Exact Online Addresses Property
      - MemberCare Countries Property
      - MemberCare Data Type
+   * - CountryName
+     - name
+     - "string"
 
 
 Exact Online Salesinvoices to MemberCare Invoices
