@@ -2,7 +2,7 @@
 Unieconomy to MemberCare Dataflow
 =================================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -96,4 +96,7 @@ The following properties are synchronized between a Unieconomy Countries and a M
    * - Unieconomy Countries Property
      - MemberCare Countries Property
      - MemberCare Data Type
+   * - Name
+     - name
+     - "string"
 
