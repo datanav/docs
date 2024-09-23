@@ -2,7 +2,7 @@
 Wix.com to Business Nxt Dataflow
 ================================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:11:51
 
 Introduction
 ------------
@@ -23,9 +23,6 @@ The following properties are synchronized between a Wix.com Products and a Busin
    * - Wix.com Products Property
      - Business Nxt Product Property
      - Business Nxt Data Type
-   * - priceData.price
-     - priceQuantity
-     - "string"
 
 
 Wix.com Currencies to Business Nxt Currency
@@ -90,4 +87,7 @@ The following properties are synchronized between a Wix.com Products and a Busin
    * - Wix.com Products Property
      - Business Nxt Product Property
      - Business Nxt Data Type
+   * - priceData.price
+     - priceQuantity
+     - "string"
 
