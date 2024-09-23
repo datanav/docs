@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-09-23 09:12:20
+Generated: 2024-09-23 09:15:53
 
 Introduction
 ------------
@@ -74,4 +74,7 @@ The following properties are synchronized between a Wix.com Products and a  Sesa
    * - Wix.com Products Property
      -  Sesamproducts Property
      -  Data Type
+   * - name
+     - name
+     - "string"
 
