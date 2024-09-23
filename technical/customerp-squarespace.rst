@@ -2,7 +2,7 @@
 Custom ERP to  Dataflow
 =======================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:11:00
 
 Introduction
 ------------
@@ -54,5 +54,21 @@ The following properties are synchronized between a Custom ERP Product and a  In
 
    * - Custom ERP Product Property
      -  Inventory Property
+     -  Data Type
+
+
+Custom ERP Product to  Sesamproducts
+------------------------------------
+Every Custom ERP Product will be synchronized with a  Sesamproducts.
+
+Once a link between a Custom ERP Product and a  Sesamproducts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Custom ERP Product and a  Sesamproducts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Custom ERP Product Property
+     -  Sesamproducts Property
      -  Data Type
 
