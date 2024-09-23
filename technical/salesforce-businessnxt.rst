@@ -2,7 +2,7 @@
 Salesforce to Business Nxt Dataflow
 ===================================
 
-Generated: 2024-09-23 00:00:22
+Generated: 2024-09-23 09:11:51
 
 Introduction
 ------------
@@ -183,12 +183,6 @@ The following properties are synchronized between a Salesforce Product2 and a Bu
    * - Salesforce Product2 Property
      - Business Nxt Product Property
      - Business Nxt Data Type
-   * - Description
-     - description
-     - "string"
-   * - DisplayUrl
-     - webPage
-     - "string"
 
 
 Salesforce Quote to Business Nxt Order
@@ -377,6 +371,12 @@ The following properties are synchronized between a Salesforce Product2 and a Bu
    * - Salesforce Product2 Property
      - Business Nxt Product Property
      - Business Nxt Data Type
+   * - Description
+     - description
+     - "string"
+   * - DisplayUrl
+     - webPage
+     - "string"
 
 
 Salesforce Quote to Business Nxt Country
