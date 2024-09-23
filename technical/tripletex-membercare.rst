@@ -2,7 +2,7 @@
 Tripletex to MemberCare Dataflow
 ================================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -247,6 +247,15 @@ The following properties are synchronized between a Tripletex Country and a Memb
    * - Tripletex Country Property
      - MemberCare Countries Property
      - MemberCare Data Type
+   * - isoAlpha2Code
+     - iso2Letter
+     - "string"
+   * - isoAlpha3Code
+     - iso3Letter
+     - "string"
+   * - name
+     - name
+     - "string"
 
 
 Tripletex Invoice to MemberCare Invoices
