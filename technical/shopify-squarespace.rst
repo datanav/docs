@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-09-23 09:26:56
+Generated: 2024-09-23 11:15:53
 
 Introduction
 ------------
@@ -184,5 +184,8 @@ The following properties are synchronized between a Shopify Sesamproduct and a  
      - "string"
    * - variants.sku
      - variants.sku
+     - "string"
+   * - variants.title
+     - description
      - "string"
 
