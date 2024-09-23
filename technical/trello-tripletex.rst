@@ -2,7 +2,7 @@
 Trello to Tripletex Dataflow
 ============================
 
-Generated: 2024-09-23 00:00:00
+Generated: 2024-09-23 07:48:14
 
 Introduction
 ------------
@@ -22,22 +22,6 @@ The following properties are synchronized between a Trello Actions and a Triplet
 
    * - Trello Actions Property
      - Tripletex Activity Property
-     - Tripletex Data Type
-
-
-Trello Actions to Tripletex Projectactivity
--------------------------------------------
-Every Trello Actions will be synchronized with a Tripletex Projectactivity.
-
-Once a link between a Trello Actions and a Tripletex Projectactivity is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Trello Actions and a Tripletex Projectactivity:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Trello Actions Property
-     - Tripletex Projectactivity Property
      - Tripletex Data Type
 
 
