@@ -2,7 +2,7 @@
 Salesforce to Exact Online Dataflow
 ===================================
 
-Generated: 2024-09-23 00:00:22
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -475,6 +475,12 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      - Exact Online Addresses Property
      - Exact Online Data Type
+   * - City
+     - City
+     - "string"
+   * - Country
+     - Country
+     - "string"
 
 
 Salesforce Product2 to Exact Online Items
