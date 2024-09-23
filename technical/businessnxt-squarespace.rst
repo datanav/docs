@@ -2,7 +2,7 @@
 Business Nxt to  Dataflow
 =========================
 
-Generated: 2024-09-23 09:12:06
+Generated: 2024-09-23 09:25:51
 
 Introduction
 ------------
@@ -77,4 +77,7 @@ The following properties are synchronized between a Business Nxt Product and a  
    * - Business Nxt Product Property
      -  Sesamproducts Property
      -  Data Type
+   * - priceQuantity
+     - variants.pricing.salePrice.value
+     - "string"
 
