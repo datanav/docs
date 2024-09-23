@@ -2,7 +2,7 @@
 HubSpot to MemberCare Dataflow
 ==============================
 
-Generated: 2024-09-23 00:00:22
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -480,4 +480,16 @@ The following properties are synchronized between a HubSpot Company and a Member
    * - HubSpot Company Property
      - MemberCare Countries Property
      - MemberCare Data Type
+   * - properties.country
+     - name
+     - "string"
+   * - properties.industry
+     - name
+     - "string"
+   * - properties.state
+     - name
+     - "string"
+   * - properties.type
+     - name
+     - "string"
 
