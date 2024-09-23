@@ -2,7 +2,7 @@
 Tripletex to CRMOffice Dataflow
 ===============================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 07:48:14
 
 Introduction
 ------------
@@ -193,23 +193,4 @@ The following properties are synchronized between a Tripletex Contact and a CRMO
    * - Tripletex Contact Property
      - CRMOffice Contacts Property
      - CRMOffice Data Type
-
-
-Tripletex Projectactivity to CRMOffice Activities
--------------------------------------------------
-Every Tripletex Projectactivity will be synchronized with a CRMOffice Activities.
-
-Once a link between a Tripletex Projectactivity and a CRMOffice Activities is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Projectactivity and a CRMOffice Activities:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Projectactivity Property
-     - CRMOffice Activities Property
-     - CRMOffice Data Type
-   * - activity.name
-     - subject
-     - "string"
 
