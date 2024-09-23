@@ -2,12 +2,28 @@
 PowerOffice GO to  Dataflow
 ===========================
 
-Generated: 2024-09-23 09:11:00
+Generated: 2024-09-23 09:11:51
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from PowerOffice GO to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+PowerOffice GO Product to  Inventory
+------------------------------------
+Every PowerOffice GO Product will be synchronized with a  Inventory.
+
+Once a link between a PowerOffice GO Product and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Product and a  Inventory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Product Property
+     -  Inventory Property
+     -  Data Type
+
 
 PowerOffice GO Product to  Inventory
 ------------------------------------
@@ -31,22 +47,6 @@ The following properties are synchronized between a PowerOffice GO Product and a
      - "string"
 
 
-PowerOffice GO Product to  Inventory
-------------------------------------
-Every PowerOffice GO Product will be synchronized with a  Inventory.
-
-Once a link between a PowerOffice GO Product and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice GO Product and a  Inventory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice GO Product Property
-     -  Inventory Property
-     -  Data Type
-
-
 PowerOffice GO Product to  Sesamproducts
 ----------------------------------------
 Every PowerOffice GO Product will be synchronized with a  Sesamproducts.
@@ -61,6 +61,9 @@ The following properties are synchronized between a PowerOffice GO Product and a
    * - PowerOffice GO Product Property
      -  Sesamproducts Property
      -  Data Type
+   * - name
+     - name
+     - "string"
 
 
 PowerOffice GO Salesorders to  Order
