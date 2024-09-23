@@ -2,7 +2,7 @@
 Wave to Chargebee Dataflow
 ==========================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -42,15 +42,6 @@ The following properties are synchronized between a Wave Customer (human data) a
    * - Wave Customer (human data) Property
      - Chargebee Customer Property
      - Chargebee Data Type
-   * - email
-     - email
-     - "string"
-   * - firstName
-     - first_name
-     - "string"
-   * - lastName
-     - last_name
-     - "string"
 
 
 Wave Invoice to Chargebee Order
@@ -162,6 +153,15 @@ The following properties are synchronized between a Wave Customer (human data) a
    * - Wave Customer (human data) Property
      - Chargebee Customer Property
      - Chargebee Data Type
+   * - email
+     - email
+     - "string"
+   * - firstName
+     - first_name
+     - "string"
+   * - lastName
+     - last_name
+     - "string"
 
 
 Wave Invoice to Chargebee Order
