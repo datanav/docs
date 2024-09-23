@@ -2,7 +2,7 @@
 Invoiced to  Dataflow
 =====================
 
-Generated: 2024-09-23 09:25:55
+Generated: 2024-09-23 11:15:53
 
 Introduction
 ------------
@@ -74,6 +74,9 @@ The following properties are synchronized between a Invoiced Items and a  Sesamp
    * - Invoiced Items Property
      -  Sesamproducts Property
      -  Data Type
+   * - description
+     - description
+     - "string"
    * - name
      - name
      - "string"
