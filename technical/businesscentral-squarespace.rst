@@ -2,7 +2,7 @@
 Business Central to  Dataflow
 =============================
 
-Generated: 2024-09-23 09:25:46
+Generated: 2024-09-23 09:26:56
 
 Introduction
 ------------
@@ -60,6 +60,9 @@ The following properties are synchronized between a Business Central Items and a
      -  Data Type
    * - displayName
      - name
+     - "string"
+   * - inventory
+     - variants.stock.quantity
      - "string"
    * - unitCost
      - variants.pricing.basePrice.value
