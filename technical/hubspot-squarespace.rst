@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-09-23 09:15:53
+Generated: 2024-09-23 09:25:55
 
 Introduction
 ------------
@@ -77,7 +77,16 @@ The following properties are synchronized between a HubSpot Product and a  Sesam
    * - HubSpot Product Property
      -  Sesamproducts Property
      -  Data Type
+   * - properties.hs_cost_of_goods_sold
+     - variants.pricing.basePrice.value
+     - "string"
+   * - properties.hs_sku
+     - variants.sku
+     - "string"
    * - properties.name
      - name
+     - "string"
+   * - properties.price
+     - variants.pricing.salePrice.value
      - "string"
 
