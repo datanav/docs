@@ -2,7 +2,7 @@
 Salesforce to Business Nxt Dataflow
 ===================================
 
-Generated: 2024-09-23 09:11:51
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -291,6 +291,18 @@ The following properties are synchronized between a Salesforce Order and a Busin
    * - Salesforce Order Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - BillingCountry
+     - name
+     - "string"
+   * - BillingCountryCode
+     - isoCode
+     - "string"
+   * - ShippingCountry
+     - name
+     - "string"
+   * - ShippingCountryCode
+     - isoCode
+     - "string"
 
 
 Salesforce Order to Business Nxt Order
@@ -393,6 +405,18 @@ The following properties are synchronized between a Salesforce Quote and a Busin
    * - Salesforce Quote Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - BillingCountry
+     - name
+     - "string"
+   * - BillingCountryCode
+     - isoCode
+     - "string"
+   * - ShippingCountry
+     - name
+     - "string"
+   * - ShippingCountryCode
+     - isoCode
+     - "string"
 
 
 Salesforce Quotelineitem to Business Nxt Orderline
