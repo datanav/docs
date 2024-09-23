@@ -2,7 +2,7 @@
 HubSpot to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-23 09:11:51
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -431,6 +431,24 @@ The following properties are synchronized between a HubSpot Deal and a Salesforc
    * - HubSpot Deal Property
      - Salesforce Order Property
      - Salesforce Data Type
+   * - properties.amount
+     - TotalAmount
+     - "string"
+   * - properties.closedate
+     - EffectiveDate
+     - "string"
+   * - properties.closedate
+     - OrderedDate
+     - "string"
+   * - properties.deal_currency_code
+     - CurrencyIsoCode
+     - "string"
+   * - properties.dealname
+     - Name
+     - "string"
+   * - properties.description
+     - Description
+     - "string"
 
 
 HubSpot Lineitem to Salesforce Invoiceline
@@ -613,4 +631,10 @@ The following properties are synchronized between a HubSpot Quote and a Salesfor
    * - HubSpot Quote Property
      - Salesforce Quote Property
      - Salesforce Data Type
+   * - properties.hs_quote_amount
+     - TotalPriceWithTax
+     - "string"
+   * - properties.hs_title
+     - Name
+     - "string"
 
