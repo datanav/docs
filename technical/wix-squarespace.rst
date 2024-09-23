@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-09-23 09:18:49
+Generated: 2024-09-23 09:25:55
 
 Introduction
 ------------
@@ -74,10 +74,22 @@ The following properties are synchronized between a Wix.com Products and a  Sesa
    * - Wix.com Products Property
      -  Sesamproducts Property
      -  Data Type
+   * - costAndProfitData.itemCost
+     - variants.pricing.basePrice.value
+     - "string"
+   * - costRange.maxValue
+     - variants.pricing.basePrice.value
+     - "string"
    * - name
      - name
      - "string"
+   * - priceData.price
+     - variants.pricing.salePrice.value
+     - "string"
    * - productType
      - type
+     - "string"
+   * - sku
+     - variants.sku
      - "string"
 
