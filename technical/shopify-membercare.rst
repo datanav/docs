@@ -2,7 +2,7 @@
 Shopify to MemberCare Dataflow
 ==============================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -143,6 +143,18 @@ The following properties are synchronized between a Shopify Order and a MemberCa
    * - Shopify Order Property
      - MemberCare Countries Property
      - MemberCare Data Type
+   * - billing_address.country
+     - name
+     - "string"
+   * - billing_address.country_code
+     - iso2Letter
+     - "string"
+   * - shipping_address.country
+     - name
+     - "string"
+   * - shipping_address.country_code
+     - iso2Letter
+     - "string"
 
 
 Shopify Order to MemberCare Invoices
