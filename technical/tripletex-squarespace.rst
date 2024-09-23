@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-23 09:12:20
+Generated: 2024-09-23 09:15:53
 
 Introduction
 ------------
@@ -77,4 +77,7 @@ The following properties are synchronized between a Tripletex Product and a  Ses
    * - Tripletex Product Property
      -  Sesamproducts Property
      -  Data Type
+   * - name
+     - name
+     - "string"
 
