@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-23 09:11:00
+Generated: 2024-09-23 09:11:51
 
 Introduction
 ------------
@@ -23,12 +23,6 @@ The following properties are synchronized between a Tripletex Product and a  Inv
    * - Tripletex Product Property
      -  Inventory Property
      -  Data Type
-   * - description
-     - descriptor
-     - "string"
-   * - stockOfGoods
-     - quantity
-     - "string"
 
 
 Tripletex Order to  Order
@@ -61,6 +55,12 @@ The following properties are synchronized between a Tripletex Product and a  Inv
    * - Tripletex Product Property
      -  Inventory Property
      -  Data Type
+   * - description
+     - descriptor
+     - "string"
+   * - stockOfGoods
+     - quantity
+     - "string"
 
 
 Tripletex Product to  Sesamproducts
@@ -77,4 +77,7 @@ The following properties are synchronized between a Tripletex Product and a  Ses
    * - Tripletex Product Property
      -  Sesamproducts Property
      -  Data Type
+   * - name
+     - name
+     - "string"
 
