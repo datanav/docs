@@ -2,7 +2,7 @@
 Wix.com to  Dataflow
 ====================
 
-Generated: 2024-09-23 09:11:00
+Generated: 2024-09-23 09:11:51
 
 Introduction
 ------------
@@ -23,9 +23,6 @@ The following properties are synchronized between a Wix.com Products and a  Inve
    * - Wix.com Products Property
      -  Inventory Property
      -  Data Type
-   * - sku
-     - sku
-     - "string"
 
 
 Wix.com Orders to  Order
@@ -58,6 +55,9 @@ The following properties are synchronized between a Wix.com Products and a  Inve
    * - Wix.com Products Property
      -  Inventory Property
      -  Data Type
+   * - sku
+     - sku
+     - "string"
 
 
 Wix.com Products to  Sesamproducts
@@ -74,4 +74,7 @@ The following properties are synchronized between a Wix.com Products and a  Sesa
    * - Wix.com Products Property
      -  Sesamproducts Property
      -  Data Type
+   * - name
+     - name
+     - "string"
 
