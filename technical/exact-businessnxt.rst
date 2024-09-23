@@ -2,7 +2,7 @@
 Exact Online to Business Nxt Dataflow
 =====================================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -226,6 +226,9 @@ The following properties are synchronized between a Exact Online Addresses and a
    * - Exact Online Addresses Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - CountryName
+     - name
+     - "string"
 
 
 Exact Online Currencies to Business Nxt Currency
@@ -242,6 +245,9 @@ The following properties are synchronized between a Exact Online Currencies and 
    * - Exact Online Currencies Property
      - Business Nxt Currency Property
      - Business Nxt Data Type
+   * - Description
+     - name
+     - "string"
 
 
 Exact Online Items to Business Nxt Product
