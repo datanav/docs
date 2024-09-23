@@ -2,7 +2,7 @@
 PowerOffice GO to  Dataflow
 ===========================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:11:00
 
 Introduction
 ------------
@@ -44,6 +44,22 @@ The following properties are synchronized between a PowerOffice GO Product and a
 
    * - PowerOffice GO Product Property
      -  Inventory Property
+     -  Data Type
+
+
+PowerOffice GO Product to  Sesamproducts
+----------------------------------------
+Every PowerOffice GO Product will be synchronized with a  Sesamproducts.
+
+Once a link between a PowerOffice GO Product and a  Sesamproducts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Product and a  Sesamproducts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Product Property
+     -  Sesamproducts Property
      -  Data Type
 
 
