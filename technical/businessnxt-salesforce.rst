@@ -2,7 +2,7 @@
 Business Nxt to Salesforce Dataflow
 ===================================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:11:51
 
 Introduction
 ------------
@@ -134,12 +134,6 @@ The following properties are synchronized between a Business Nxt Product and a S
    * - Business Nxt Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-   * - description
-     - Description
-     - "string"
-   * - webPage
-     - DisplayUrl
-     - "string"
 
 
 Business Nxt Productcategory to Salesforce Currencytype
@@ -300,4 +294,10 @@ The following properties are synchronized between a Business Nxt Product and a S
    * - Business Nxt Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
+   * - description
+     - Description
+     - "string"
+   * - webPage
+     - DisplayUrl
+     - "string"
 
