@@ -2,7 +2,7 @@
 WebCRM to  Dataflow
 ===================
 
-Generated: 2024-09-23 09:12:06
+Generated: 2024-09-23 09:25:55
 
 Introduction
 ------------
@@ -23,9 +23,6 @@ The following properties are synchronized between a WebCRM Products and a  Inven
    * - WebCRM Products Property
      -  Inventory Property
      -  Data Type
-   * - ProductQuantity
-     - quantity
-     - "string"
 
 
 WebCRM Products to  Inventory
@@ -42,6 +39,9 @@ The following properties are synchronized between a WebCRM Products and a  Inven
    * - WebCRM Products Property
      -  Inventory Property
      -  Data Type
+   * - ProductQuantity
+     - quantity
+     - "string"
 
 
 WebCRM Products to  Sesamproducts
@@ -58,4 +58,10 @@ The following properties are synchronized between a WebCRM Products and a  Sesam
    * - WebCRM Products Property
      -  Sesamproducts Property
      -  Data Type
+   * - ProductCostPrice
+     - variants.pricing.basePrice.value
+     - "string"
+   * - ProductPrice
+     - variants.pricing.salePrice.value
+     - "string"
 
