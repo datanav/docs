@@ -2,7 +2,7 @@
 Shopify to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-23 09:11:51
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -160,6 +160,81 @@ The following properties are synchronized between a Shopify Order and a Salesfor
    * - Shopify Order Property
      - Salesforce Order Property
      - Salesforce Data Type
+   * - billing_address.address1
+     - BillingStreet
+     - "string"
+   * - billing_address.city
+     - BillingCity
+     - "string"
+   * - billing_address.city
+     - ShippingCity
+     - "string"
+   * - billing_address.country
+     - BillingCountry
+     - "string"
+   * - billing_address.country
+     - ShippingCountry
+     - "string"
+   * - billing_address.country_code
+     - BillingCountryCode
+     - "string"
+   * - billing_address.country_code
+     - ShippingCountryCode
+     - "string"
+   * - billing_address.zip
+     - BillingPostalCode
+     - "string"
+   * - billing_address.zip
+     - ShippingStateCode
+     - "string"
+   * - created_at
+     - OrderedDate
+     - "string"
+   * - currency
+     - CurrencyIsoCode
+     - "string"
+   * - current_total_price
+     - TotalAmount
+     - "string"
+   * - customer.id
+     - ID
+     - "string"
+   * - id
+     - ID
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - shipping_address.address1
+     - BillingStreet
+     - "string"
+   * - shipping_address.city
+     - BillingCity
+     - "string"
+   * - shipping_address.city
+     - ShippingCity
+     - "string"
+   * - shipping_address.country
+     - BillingCountry
+     - "string"
+   * - shipping_address.country
+     - ShippingCountry
+     - "string"
+   * - shipping_address.country_code
+     - BillingCountryCode
+     - "string"
+   * - shipping_address.country_code
+     - ShippingCountryCode
+     - "string"
+   * - shipping_address.zip
+     - BillingPostalCode
+     - "string"
+   * - shipping_address.zip
+     - ShippingStateCode
+     - "string"
+   * - total_price
+     - TotalAmount
+     - "string"
 
 
 Shopify Order to Salesforce Orderitem
