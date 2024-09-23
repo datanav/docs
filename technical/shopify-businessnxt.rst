@@ -2,7 +2,7 @@
 Shopify to Business Nxt Dataflow
 ================================
 
-Generated: 2024-09-23 09:11:51
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -143,6 +143,18 @@ The following properties are synchronized between a Shopify Order and a Business
    * - Shopify Order Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - billing_address.country
+     - name
+     - "string"
+   * - billing_address.country_code
+     - isoCode
+     - "string"
+   * - shipping_address.country
+     - name
+     - "string"
+   * - shipping_address.country_code
+     - isoCode
+     - "string"
 
 
 Shopify Order to Business Nxt Order
