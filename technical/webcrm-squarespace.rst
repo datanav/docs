@@ -2,7 +2,7 @@
 WebCRM to  Dataflow
 ===================
 
-Generated: 2024-09-23 09:25:55
+Generated: 2024-09-23 09:26:56
 
 Introduction
 ------------
@@ -63,5 +63,8 @@ The following properties are synchronized between a WebCRM Products and a  Sesam
      - "string"
    * - ProductPrice
      - variants.pricing.salePrice.value
+     - "string"
+   * - ProductQuantity
+     - variants.stock.quantity
      - "string"
 
