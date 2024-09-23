@@ -2,7 +2,7 @@
 Keap to  Dataflow
 =================
 
-Generated: 2024-09-23 09:11:00
+Generated: 2024-09-23 09:11:51
 
 Introduction
 ------------
@@ -23,9 +23,6 @@ The following properties are synchronized between a Keap Product and a  Inventor
    * - Keap Product Property
      -  Inventory Property
      -  Data Type
-   * - product_desc
-     - descriptor
-     - "string"
 
 
 Keap Product to  Inventory
@@ -42,6 +39,9 @@ The following properties are synchronized between a Keap Product and a  Inventor
    * - Keap Product Property
      -  Inventory Property
      -  Data Type
+   * - product_desc
+     - descriptor
+     - "string"
 
 
 Keap Product to  Sesamproducts
@@ -58,4 +58,7 @@ The following properties are synchronized between a Keap Product and a  Sesampro
    * - Keap Product Property
      -  Sesamproducts Property
      -  Data Type
+   * - product_name
+     - name
+     - "string"
 
