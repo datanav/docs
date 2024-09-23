@@ -2,7 +2,7 @@
 MemberCare to Business Nxt Dataflow
 ===================================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -73,12 +73,6 @@ The following properties are synchronized between a MemberCare Countries and a B
    * - MemberCare Countries Property
      - Business Nxt Country Property
      - Business Nxt Data Type
-   * - iso2Letter
-     - isoCode
-     - "string"
-   * - name
-     - name
-     - "string"
 
 
 MemberCare Invoices to Business Nxt Order
@@ -205,6 +199,12 @@ The following properties are synchronized between a MemberCare Countries and a B
    * - MemberCare Countries Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - iso2Letter
+     - isoCode
+     - "string"
+   * - name
+     - name
+     - "string"
 
 
 MemberCare Invoices to Business Nxt Orderline
