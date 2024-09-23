@@ -2,7 +2,7 @@
 PowerOffice GO to Salesforce Dataflow
 =====================================
 
-Generated: 2024-09-23 09:11:51
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -322,6 +322,9 @@ The following properties are synchronized between a PowerOffice GO Quote and a S
    * - PowerOffice GO Quote Property
      - Salesforce Quote Property
      - Salesforce Data Type
+   * - TotalAmount
+     - TotalPriceWithTax
+     - "string"
 
 
 PowerOffice GO Salesorderlines to Salesforce Invoiceline
@@ -386,6 +389,15 @@ The following properties are synchronized between a PowerOffice GO Salesorders a
    * - PowerOffice GO Salesorders Property
      - Salesforce Order Property
      - Salesforce Data Type
+   * - CurrencyCode
+     - CurrencyIsoCode
+     - "string"
+   * - NetAmount
+     - TotalAmount
+     - "string"
+   * - SalesOrderDate
+     - OrderedDate
+     - "string"
 
 
 PowerOffice GO Suppliers (human data) to Salesforce Contact
