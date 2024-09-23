@@ -2,12 +2,64 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-09-23 09:15:53
+Generated: 2024-09-23 09:25:46
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Shopify to . It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Shopify Inventoryitem to  Sesamproducts
+---------------------------------------
+Before any synchronization can take place, a link between a Shopify Inventoryitem and a  Sesamproducts must be established.
+
+A Shopify Inventoryitem will merge with a  Sesamproducts if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Inventoryitem Property
+     -  Sesamproducts Property
+   * - sku
+     - variants.sku
+
+Once a link between a Shopify Inventoryitem and a  Sesamproducts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Inventoryitem and a  Sesamproducts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Inventoryitem Property
+     -  Sesamproducts Property
+     -  Data Type
+
+
+Shopify Sesamproduct to  Sesamproducts
+--------------------------------------
+Before any synchronization can take place, a link between a Shopify Sesamproduct and a  Sesamproducts must be established.
+
+A Shopify Sesamproduct will merge with a  Sesamproducts if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Sesamproduct Property
+     -  Sesamproducts Property
+   * - variants.sku
+     - variants.sku
+
+Once a link between a Shopify Sesamproduct and a  Sesamproducts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Shopify Sesamproduct and a  Sesamproducts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Shopify Sesamproduct Property
+     -  Sesamproducts Property
+     -  Data Type
+
 
 Shopify Inventoryitem to  Inventory
 -----------------------------------
