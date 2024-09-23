@@ -2,7 +2,7 @@
 Business Central to MemberCare Dataflow
 =======================================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -246,6 +246,12 @@ The following properties are synchronized between a Business Central Salesorders
    * - Business Central Salesorders Property
      - MemberCare Countries Property
      - MemberCare Data Type
+   * - billToCountry
+     - iso2Letter
+     - "string"
+   * - shipToCountry
+     - iso2Letter
+     - "string"
 
 
 Business Central Salesquotes to MemberCare Countries
@@ -262,4 +268,10 @@ The following properties are synchronized between a Business Central Salesquotes
    * - Business Central Salesquotes Property
      - MemberCare Countries Property
      - MemberCare Data Type
+   * - billToCountry
+     - name
+     - "string"
+   * - shipToCountry
+     - name
+     - "string"
 
