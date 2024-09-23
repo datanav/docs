@@ -2,7 +2,7 @@
 Tripletex to Exact Online Dataflow
 ==================================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -492,6 +492,9 @@ The following properties are synchronized between a Tripletex Productunit and a 
    * - Tripletex Productunit Property
      - Exact Online Units Property
      - Exact Online Data Type
+   * - name
+     - Description
+     - "string"
 
 
 Tripletex Vattype to Exact Online Vatcodes
