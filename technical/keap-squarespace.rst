@@ -2,7 +2,7 @@
 Keap to  Dataflow
 =================
 
-Generated: 2024-09-23 09:26:56
+Generated: 2024-09-23 11:15:53
 
 Introduction
 ------------
@@ -84,6 +84,9 @@ The following properties are synchronized between a Keap Product and a  Sesampro
    * - Keap Product Property
      -  Sesamproducts Property
      -  Data Type
+   * - product_desc
+     - description
+     - "string"
    * - product_name
      - name
      - "string"
