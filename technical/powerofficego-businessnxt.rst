@@ -2,7 +2,7 @@
 PowerOffice GO to Business Nxt Dataflow
 =======================================
 
-Generated: 2024-09-23 09:11:51
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -226,6 +226,9 @@ The following properties are synchronized between a PowerOffice GO Productgroup 
    * - PowerOffice GO Productgroup Property
      - Business Nxt Productcategory Property
      - Business Nxt Data Type
+   * - name
+     - text
+     - "string"
 
 
 PowerOffice GO Salesorderlines to Business Nxt Orderline
