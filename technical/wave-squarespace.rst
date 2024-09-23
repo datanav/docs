@@ -2,7 +2,7 @@
 Wave to  Dataflow
 =================
 
-Generated: 2024-09-23 09:15:53
+Generated: 2024-09-23 09:25:55
 
 Introduction
 ------------
@@ -76,5 +76,8 @@ The following properties are synchronized between a Wave Product and a  Sesampro
      -  Data Type
    * - name
      - name
+     - "string"
+   * - unitPrice
+     - variants.pricing.salePrice.value
      - "string"
 
