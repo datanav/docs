@@ -2,7 +2,7 @@
 SuperOffice to Business Nxt Dataflow
 ====================================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:11:51
 
 Introduction
 ------------
@@ -45,15 +45,6 @@ The following properties are synchronized between a SuperOffice Product and a Bu
    * - SuperOffice Product Property
      - Business Nxt Product Property
      - Business Nxt Data Type
-   * - Description
-     - description
-     - "string"
-   * - UnitListPrice
-     - priceQuantity
-     - "string"
-   * - Url
-     - webPage
-     - "string"
 
 
 SuperOffice Quotealternative to Business Nxt Order
@@ -181,6 +172,15 @@ The following properties are synchronized between a SuperOffice Product and a Bu
    * - SuperOffice Product Property
      - Business Nxt Product Property
      - Business Nxt Data Type
+   * - Description
+     - description
+     - "string"
+   * - UnitListPrice
+     - priceQuantity
+     - "string"
+   * - Url
+     - webPage
+     - "string"
 
 
 SuperOffice Quoteline to Business Nxt Orderline
