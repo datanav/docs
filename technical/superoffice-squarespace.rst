@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-09-23 09:12:20
+Generated: 2024-09-23 09:15:53
 
 Introduction
 ------------
@@ -58,4 +58,7 @@ The following properties are synchronized between a SuperOffice Product and a  S
    * - SuperOffice Product Property
      -  Sesamproducts Property
      -  Data Type
+   * - Name
+     - name
+     - "string"
 
