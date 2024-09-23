@@ -2,7 +2,7 @@
 Invoiced to  Dataflow
 =====================
 
-Generated: 2024-09-23 09:15:53
+Generated: 2024-09-23 09:25:55
 
 Introduction
 ------------
@@ -76,5 +76,8 @@ The following properties are synchronized between a Invoiced Items and a  Sesamp
      -  Data Type
    * - name
      - name
+     - "string"
+   * - unit_cost
+     - variants.pricing.basePrice.value
      - "string"
 
