@@ -2,7 +2,7 @@
 Unieconomy to Business Nxt Dataflow
 ===================================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -109,6 +109,9 @@ The following properties are synchronized between a Unieconomy Countries and a B
    * - Unieconomy Countries Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Unieconomy Currencycodes to Business Nxt Currency
@@ -125,4 +128,7 @@ The following properties are synchronized between a Unieconomy Currencycodes and
    * - Unieconomy Currencycodes Property
      - Business Nxt Currency Property
      - Business Nxt Data Type
+   * - Name
+     - name
+     - "string"
 
