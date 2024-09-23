@@ -2,7 +2,7 @@
 Tripletex to PowerOffice GO Dataflow
 ====================================
 
-Generated: 2024-09-23 06:58:01
+Generated: 2024-09-23 07:48:14
 
 Introduction
 ------------
@@ -654,28 +654,6 @@ The following properties are synchronized between a Tripletex Supplier and a Pow
      - "string"
 
 
-Tripletex Activity to PowerOffice GO Projectactivity
-----------------------------------------------------
-Every Tripletex Activity will be synchronized with a PowerOffice GO Projectactivity.
-
-Once a link between a Tripletex Activity and a PowerOffice GO Projectactivity is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Activity and a PowerOffice GO Projectactivity:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Activity Property
-     - PowerOffice GO Projectactivity Property
-     - PowerOffice GO Data Type
-   * - isChargeable
-     - isBillable
-     - "string"
-   * - name
-     - name
-     - "string"
-
-
 Tripletex Activity to PowerOffice GO Timetrackingactivity
 ---------------------------------------------------------
 Every Tripletex Activity will be synchronized with a PowerOffice GO Timetrackingactivity.
@@ -994,25 +972,6 @@ The following properties are synchronized between a Tripletex Projectactivity an
 
    * - Tripletex Projectactivity Property
      - PowerOffice GO Projectactivity Property
-     - PowerOffice GO Data Type
-   * - activity.name
-     - name
-     - "string"
-
-
-Tripletex Projectactivity to PowerOffice GO Timetrackingactivity
-----------------------------------------------------------------
-Every Tripletex Projectactivity will be synchronized with a PowerOffice GO Timetrackingactivity.
-
-Once a link between a Tripletex Projectactivity and a PowerOffice GO Timetrackingactivity is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Projectactivity and a PowerOffice GO Timetrackingactivity:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Projectactivity Property
-     - PowerOffice GO Timetrackingactivity Property
      - PowerOffice GO Data Type
    * - activity.name
      - name
