@@ -2,7 +2,7 @@
 Business Central to  Dataflow
 =============================
 
-Generated: 2024-09-23 09:12:20
+Generated: 2024-09-23 09:15:53
 
 Introduction
 ------------
@@ -58,6 +58,9 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      -  Sesamproducts Property
      -  Data Type
+   * - displayName
+     - name
+     - "string"
 
 
 Business Central Salesorders to  Order
