@@ -2,7 +2,7 @@
 Wave to Business Nxt Dataflow
 =============================
 
-Generated: 2024-09-23 09:11:51
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -89,6 +89,12 @@ The following properties are synchronized between a Wave Country and a Business 
    * - Wave Country Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - currency.code
+     - currencyNo
+     - "string"
+   * - name
+     - name
+     - "string"
 
 
 Wave Currency to Business Nxt Currency
@@ -105,6 +111,9 @@ The following properties are synchronized between a Wave Currency and a Business
    * - Wave Currency Property
      - Business Nxt Currency Property
      - Business Nxt Data Type
+   * - name
+     - name
+     - "string"
 
 
 Wave Invoice to Business Nxt Order
