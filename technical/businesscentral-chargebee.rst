@@ -2,7 +2,7 @@
 Business Central to Chargebee Dataflow
 ======================================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -77,9 +77,6 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (human data) Property
      - Chargebee Customer Property
      - Chargebee Data Type
-   * - email
-     - email
-     - "string"
 
 
 Business Central Employees to Chargebee Customer
@@ -264,6 +261,9 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (human data) Property
      - Chargebee Customer Property
      - Chargebee Data Type
+   * - email
+     - email
+     - "string"
 
 
 Business Central Items to Chargebee Item
