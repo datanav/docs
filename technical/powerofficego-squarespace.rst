@@ -2,7 +2,7 @@
 PowerOffice GO to  Dataflow
 ===========================
 
-Generated: 2024-09-23 09:15:53
+Generated: 2024-09-23 09:20:50
 
 Introduction
 ------------
@@ -63,6 +63,9 @@ The following properties are synchronized between a PowerOffice GO Product and a
      -  Data Type
    * - name
      - name
+     - "string"
+   * - type
+     - type
      - "string"
 
 
