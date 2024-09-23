@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-23 09:25:55
+Generated: 2024-09-23 09:26:56
 
 Introduction
 ------------
@@ -85,5 +85,8 @@ The following properties are synchronized between a Tripletex Product and a  Ses
      - "string"
    * - priceExcludingVatCurrency
      - variants.pricing.salePrice.value
+     - "string"
+   * - stockOfGoods
+     - variants.stock.quantity
      - "string"
 
