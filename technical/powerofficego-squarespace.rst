@@ -2,7 +2,7 @@
 PowerOffice GO to  Dataflow
 ===========================
 
-Generated: 2024-09-23 09:20:50
+Generated: 2024-09-23 09:25:55
 
 Introduction
 ------------
@@ -61,8 +61,14 @@ The following properties are synchronized between a PowerOffice GO Product and a
    * - PowerOffice GO Product Property
      -  Sesamproducts Property
      -  Data Type
+   * - costPrice
+     - variants.pricing.basePrice.value
+     - "string"
    * - name
      - name
+     - "string"
+   * - salesPrice
+     - variants.pricing.salePrice.value
      - "string"
    * - type
      - type
