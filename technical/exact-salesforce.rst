@@ -2,7 +2,7 @@
 Exact Online to Salesforce Dataflow
 ===================================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -349,6 +349,15 @@ The following properties are synchronized between a Exact Online Quotations and 
    * - Exact Online Quotations Property
      - Salesforce Quote Property
      - Salesforce Data Type
+   * - Currency
+     - CurrencyIsoCode
+     - "string"
+   * - DeliveryAddress
+     - ID
+     - "string"
+   * - Description
+     - Description
+     - "string"
 
 
 Exact Online Salesinvoices to Salesforce Invoice
@@ -429,4 +438,10 @@ The following properties are synchronized between a Exact Online Salesorders and
    * - Exact Online Salesorders Property
      - Salesforce Order Property
      - Salesforce Data Type
+   * - Currency
+     - CurrencyIsoCode
+     - "string"
+   * - Description
+     - Description
+     - "string"
 
