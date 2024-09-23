@@ -2,7 +2,7 @@
 Business Central to Business Nxt Dataflow
 =========================================
 
-Generated: 2024-09-23 09:11:51
+Generated: 2024-09-23 09:18:49
 
 Introduction
 ------------
@@ -236,6 +236,12 @@ The following properties are synchronized between a Business Central Salesorders
    * - Business Central Salesorders Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - billToCountry
+     - isoCode
+     - "string"
+   * - shipToCountry
+     - isoCode
+     - "string"
 
 
 Business Central Salesorders to Business Nxt Order
