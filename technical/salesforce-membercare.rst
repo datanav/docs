@@ -2,7 +2,7 @@
 Salesforce to MemberCare Dataflow
 =================================
 
-Generated: 2024-09-23 00:00:22
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -372,6 +372,18 @@ The following properties are synchronized between a Salesforce Order and a Membe
    * - Salesforce Order Property
      - MemberCare Countries Property
      - MemberCare Data Type
+   * - BillingCountry
+     - name
+     - "string"
+   * - BillingCountryCode
+     - iso2Letter
+     - "string"
+   * - ShippingCountry
+     - name
+     - "string"
+   * - ShippingCountryCode
+     - iso2Letter
+     - "string"
 
 
 Salesforce Order to MemberCare Invoices
@@ -420,6 +432,18 @@ The following properties are synchronized between a Salesforce Quote and a Membe
    * - Salesforce Quote Property
      - MemberCare Countries Property
      - MemberCare Data Type
+   * - BillingCountry
+     - name
+     - "string"
+   * - BillingCountryCode
+     - iso2Letter
+     - "string"
+   * - ShippingCountry
+     - name
+     - "string"
+   * - ShippingCountryCode
+     - iso2Letter
+     - "string"
 
 
 Salesforce Quote to MemberCare Invoices
