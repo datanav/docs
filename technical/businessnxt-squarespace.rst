@@ -2,7 +2,7 @@
 Business Nxt to  Dataflow
 =========================
 
-Generated: 2024-09-23 09:25:55
+Generated: 2024-09-23 09:26:56
 
 Introduction
 ------------
@@ -79,5 +79,8 @@ The following properties are synchronized between a Business Nxt Product and a  
      -  Data Type
    * - priceQuantity
      - variants.pricing.salePrice.value
+     - "string"
+   * - quantityPerUnit
+     - variants.stock.quantity
      - "string"
 
