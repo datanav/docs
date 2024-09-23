@@ -2,7 +2,7 @@
 Tripletex to  Dataflow
 ======================
 
-Generated: 2024-09-23 09:15:53
+Generated: 2024-09-23 09:25:55
 
 Introduction
 ------------
@@ -77,7 +77,13 @@ The following properties are synchronized between a Tripletex Product and a  Ses
    * - Tripletex Product Property
      -  Sesamproducts Property
      -  Data Type
+   * - costExcludingVatCurrency
+     - variants.pricing.basePrice.value
+     - "string"
    * - name
      - name
+     - "string"
+   * - priceExcludingVatCurrency
+     - variants.pricing.salePrice.value
      - "string"
 
