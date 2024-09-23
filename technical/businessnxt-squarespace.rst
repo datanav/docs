@@ -2,7 +2,7 @@
 Business Nxt to  Dataflow
 =========================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:11:00
 
 Introduction
 ------------
@@ -60,5 +60,21 @@ The following properties are synchronized between a Business Nxt Product and a  
 
    * - Business Nxt Product Property
      -  Inventory Property
+     -  Data Type
+
+
+Business Nxt Product to  Sesamproducts
+--------------------------------------
+Every Business Nxt Product will be synchronized with a  Sesamproducts.
+
+Once a link between a Business Nxt Product and a  Sesamproducts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Business Nxt Product and a  Sesamproducts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Business Nxt Product Property
+     -  Sesamproducts Property
      -  Data Type
 
