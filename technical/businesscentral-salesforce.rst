@@ -2,7 +2,7 @@
 Business Central to Salesforce Dataflow
 =======================================
 
-Generated: 2024-09-23 09:11:51
+Generated: 2024-09-23 09:18:54
 
 Introduction
 ------------
@@ -330,4 +330,73 @@ The following properties are synchronized between a Business Central Salesorders
    * - Business Central Salesorders Property
      - Salesforce Order Property
      - Salesforce Data Type
+   * - billToAddressLine1
+     - BillingStreet
+     - "string"
+   * - billToCity
+     - BillingCity
+     - "string"
+   * - billToCity
+     - ShippingCity
+     - "string"
+   * - billToCountry
+     - BillingCountry
+     - "string"
+   * - billToCountry
+     - BillingCountryCode
+     - "string"
+   * - billToCountry
+     - ShippingCountry
+     - "string"
+   * - billToCountry
+     - ShippingCountryCode
+     - "string"
+   * - billToPostCode
+     - BillingPostalCode
+     - "string"
+   * - billToPostCode
+     - ShippingStateCode
+     - "string"
+   * - currencyId
+     - CurrencyIsoCode
+     - "string"
+   * - id
+     - ID
+     - "string"
+   * - orderDate
+     - OrderedDate
+     - "string"
+   * - requestedDeliveryDate
+     - EffectiveDate
+     - "string"
+   * - shipToAddressLine1
+     - BillingStreet
+     - "string"
+   * - shipToCity
+     - BillingCity
+     - "string"
+   * - shipToCity
+     - ShippingCity
+     - "string"
+   * - shipToCountry
+     - BillingCountry
+     - "string"
+   * - shipToCountry
+     - BillingCountryCode
+     - "string"
+   * - shipToCountry
+     - ShippingCountry
+     - "string"
+   * - shipToCountry
+     - ShippingCountryCode
+     - "string"
+   * - shipToPostCode
+     - BillingPostalCode
+     - "string"
+   * - shipToPostCode
+     - ShippingStateCode
+     - "string"
+   * - totalAmountExcludingTax
+     - TotalAmount
+     - "string"
 
