@@ -2,7 +2,7 @@
 Tripletex to Business Central Dataflow
 ======================================
 
-Generated: 2024-09-23 00:00:01
+Generated: 2024-09-23 09:11:51
 
 Introduction
 ------------
@@ -35,18 +35,6 @@ The following properties are synchronized between a Tripletex Product and a Busi
    * - Tripletex Product Property
      - Business Central Items Property
      - Business Central Data Type
-   * - costExcludingVatCurrency
-     - unitCost
-     - N/A
-   * - ean
-     - gtin
-     - "string"
-   * - name
-     - displayName
-     - "string"
-   * - priceExcludingVatCurrency
-     - unitPrice
-     - N/A
 
 
 Tripletex Customer to Business Central Companies
@@ -528,4 +516,16 @@ The following properties are synchronized between a Tripletex Product and a Busi
    * - Tripletex Product Property
      - Business Central Items Property
      - Business Central Data Type
+   * - costExcludingVatCurrency
+     - unitCost
+     - N/A
+   * - ean
+     - gtin
+     - "string"
+   * - name
+     - displayName
+     - "string"
+   * - priceExcludingVatCurrency
+     - unitPrice
+     - N/A
 
