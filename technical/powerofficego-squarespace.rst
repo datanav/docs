@@ -2,7 +2,7 @@
 PowerOffice GO to  Dataflow
 ===========================
 
-Generated: 2024-09-23 09:26:56
+Generated: 2024-09-23 11:15:53
 
 Introduction
 ------------
@@ -66,6 +66,9 @@ The following properties are synchronized between a PowerOffice GO Product and a
      - "string"
    * - costPrice
      - variants.pricing.basePrice.value
+     - "string"
+   * - description
+     - description
      - "string"
    * - name
      - name
