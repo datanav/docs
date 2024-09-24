@@ -2,7 +2,7 @@
 Invoiced to Salesforce Dataflow
 ===============================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -137,6 +137,9 @@ The following properties are synchronized between a Invoiced Customers (human da
    * - Invoiced Customers (human data) Property
      - Salesforce Customer Property
      - Salesforce Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Invoiced Invoices to Salesforce Order
