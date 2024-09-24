@@ -2,7 +2,7 @@
 Business Central to Shopify Dataflow
 ====================================
 
-Generated: 2024-09-24 00:00:01
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -86,4 +86,88 @@ The following properties are synchronized between a Business Central Salesorders
    * - Business Central Salesorders Property
      - Shopify Order Property
      - Shopify Data Type
+   * - billToAddressLine1
+     - billing_address.address1
+     - "string"
+   * - billToAddressLine1
+     - shipping_address.address1
+     - "string"
+   * - billToAddressLine2
+     - billing_address.address2
+     - "string"
+   * - billToAddressLine2
+     - shipping_address.address2
+     - "string"
+   * - billToCity
+     - billing_address.city
+     - "string"
+   * - billToCity
+     - shipping_address.city
+     - "string"
+   * - billToCountry
+     - billing_address.country
+     - "string"
+   * - billToCountry
+     - billing_address.country_code
+     - "string"
+   * - billToCountry
+     - shipping_address.country
+     - "string"
+   * - billToCountry
+     - shipping_address.country_code
+     - "string"
+   * - billToPostCode
+     - billing_address.zip
+     - "string"
+   * - billToPostCode
+     - shipping_address.zip
+     - "string"
+   * - currencyId
+     - currency
+     - "string"
+   * - customerId
+     - customer.id
+     - "string"
+   * - shipToAddressLine1
+     - billing_address.address1
+     - "string"
+   * - shipToAddressLine1
+     - shipping_address.address1
+     - "string"
+   * - shipToAddressLine2
+     - billing_address.address2
+     - "string"
+   * - shipToAddressLine2
+     - shipping_address.address2
+     - "string"
+   * - shipToCity
+     - billing_address.city
+     - "string"
+   * - shipToCity
+     - shipping_address.city
+     - "string"
+   * - shipToCountry
+     - billing_address.country
+     - "string"
+   * - shipToCountry
+     - billing_address.country_code
+     - "string"
+   * - shipToCountry
+     - shipping_address.country
+     - "string"
+   * - shipToCountry
+     - shipping_address.country_code
+     - "string"
+   * - shipToPostCode
+     - billing_address.zip
+     - "string"
+   * - shipToPostCode
+     - shipping_address.zip
+     - "string"
+   * - totalAmountExcludingTax
+     - current_total_price
+     - "string"
+   * - totalAmountExcludingTax
+     - total_price
+     - "string"
 
