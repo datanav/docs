@@ -2,7 +2,7 @@
 Wix.com to PowerOffice GO Dataflow
 ==================================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -177,6 +177,21 @@ The following properties are synchronized between a Wix.com Orders and a PowerOf
    * - Wix.com Orders Property
      - PowerOffice GO Salesorderlines Property
      - PowerOffice GO Data Type
+   * - id
+     - sesam_SalesOrderId
+     - "string"
+   * - lineItems.name
+     - Description
+     - "string"
+   * - lineItems.price
+     - ProductUnitPrice
+     - N/A
+   * - lineItems.productId
+     - ProductId
+     - "integer"
+   * - lineItems.quantity
+     - Quantity
+     - N/A
 
 
 Wix.com Orders to PowerOffice GO Salesorders
@@ -193,6 +208,15 @@ The following properties are synchronized between a Wix.com Orders and a PowerOf
    * - Wix.com Orders Property
      - PowerOffice GO Salesorders Property
      - PowerOffice GO Data Type
+   * - buyerInfo.id
+     - CustomerId
+     - "integer"
+   * - buyerInfo.id
+     - CustomerReferenceContactPersonId
+     - "integer"
+   * - currency
+     - CurrencyCode
+     - "string"
 
 
 Wix.com Products to PowerOffice GO Product
