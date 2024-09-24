@@ -2,7 +2,7 @@
 Business Central to Tripletex Dataflow
 ======================================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -481,4 +481,22 @@ The following properties are synchronized between a Business Central Salesorders
    * - Business Central Salesorders Property
      - Tripletex Order Property
      - Tripletex Data Type
+   * - currencyId
+     - currency.id
+     - "integer"
+   * - customerId
+     - contact.id
+     - "integer"
+   * - customerId
+     - customer.id
+     - "integer"
+   * - orderDate
+     - orderDate
+     - N/A
+   * - requestedDeliveryDate
+     - deliveryDate
+     - N/A
+   * - salesperson
+     - ourContactEmployee.id
+     - "integer"
 
