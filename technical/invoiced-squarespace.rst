@@ -2,7 +2,7 @@
 Invoiced to  Dataflow
 =====================
 
-Generated: 2024-09-24 00:00:03
+Generated: 2024-09-24 00:00:36
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Invoiced Items and a  Invent
    * - Invoiced Items Property
      -  Inventory Property
      -  Data Type
+   * - description
+     - descriptor
+     - "string"
 
 
 Invoiced Invoices to  Order
@@ -55,9 +58,6 @@ The following properties are synchronized between a Invoiced Items and a  Invent
    * - Invoiced Items Property
      -  Inventory Property
      -  Data Type
-   * - description
-     - descriptor
-     - "string"
 
 
 Invoiced Items to  Sesamproducts
