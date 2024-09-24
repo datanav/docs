@@ -2,7 +2,7 @@
 PowerOffice GO to Freshteam Dataflow
 ====================================
 
-Generated: 2024-09-24 00:00:01
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -33,11 +33,49 @@ The following properties are synchronized between a PowerOffice GO Employees and
    * - PowerOffice GO Employees Property
      - Freshteam Employee Property
      - Freshteam Data Type
+
+
+PowerOffice GO Departments to Freshteam Department
+--------------------------------------------------
+Every PowerOffice GO Departments will be synchronized with a Freshteam Department.
+
+Once a link between a PowerOffice GO Departments and a Freshteam Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Departments and a Freshteam Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Departments Property
+     - Freshteam Department Property
+     - Freshteam Data Type
+   * - Name
+     - name
+     - "string"
+
+
+PowerOffice GO Employees to Freshteam Employee
+----------------------------------------------
+Every PowerOffice GO Employees will be synchronized with a Freshteam Employee.
+
+Once a link between a PowerOffice GO Employees and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Employees and a Freshteam Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Employees Property
+     - Freshteam Employee Property
+     - Freshteam Data Type
    * - DateOfBirth
      - date_of_birth
      - "string"
    * - EmailAddress
      - official_email
+     - "string"
+   * - EmailAddress
+     - personal_email
      - "string"
    * - FirstName
      - first_name
@@ -68,43 +106,5 @@ The following properties are synchronized between a PowerOffice GO Employees and
      - "string"
    * - PhoneNumber
      - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
-     - "string"
-
-
-PowerOffice GO Departments to Freshteam Department
---------------------------------------------------
-Every PowerOffice GO Departments will be synchronized with a Freshteam Department.
-
-Once a link between a PowerOffice GO Departments and a Freshteam Department is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice GO Departments and a Freshteam Department:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice GO Departments Property
-     - Freshteam Department Property
-     - Freshteam Data Type
-
-
-PowerOffice GO Employees to Freshteam Employee
-----------------------------------------------
-Every PowerOffice GO Employees will be synchronized with a Freshteam Employee.
-
-Once a link between a PowerOffice GO Employees and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice GO Employees and a Freshteam Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice GO Employees Property
-     - Freshteam Employee Property
-     - Freshteam Data Type
-   * - EmailAddress
-     - official_email
-     - "string"
-   * - EmailAddress
-     - personal_email
      - "string"
 
