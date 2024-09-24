@@ -2,7 +2,7 @@
 Shopify to Tripletex Dataflow
 =============================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -160,6 +160,21 @@ The following properties are synchronized between a Shopify Order and a Triplete
    * - Shopify Order Property
      - Tripletex Order Property
      - Tripletex Data Type
+   * - created_at
+     - orderDate
+     - N/A
+   * - currency
+     - currency.id
+     - "integer"
+   * - customer.id
+     - contact.id
+     - "integer"
+   * - customer.id
+     - customer.id
+     - "integer"
+   * - po_number
+     - reference
+     - "string"
 
 
 Shopify Order to Tripletex Orderline
@@ -176,6 +191,18 @@ The following properties are synchronized between a Shopify Order and a Triplete
    * - Shopify Order Property
      - Tripletex Orderline Property
      - Tripletex Data Type
+   * - id
+     - order.id
+     - "integer"
+   * - line_items.price
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - line_items.quantity
+     - count
+     - N/A
+   * - line_items.total_discount
+     - discount
+     - "float"
 
 
 Shopify Sesamproduct to Tripletex Product
