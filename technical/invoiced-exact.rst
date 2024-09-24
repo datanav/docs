@@ -2,7 +2,7 @@
 Invoiced to Exact Online Dataflow
 =================================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -219,6 +219,12 @@ The following properties are synchronized between a Invoiced Invoices and a Exac
    * - Invoiced Invoices Property
      - Exact Online Salesorders Property
      - Exact Online Data Type
+   * - currency
+     - Currency
+     - "string"
+   * - discounts
+     - Discount
+     - "string"
 
 
 Invoiced Items to Exact Online Items
