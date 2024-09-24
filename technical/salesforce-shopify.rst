@@ -2,7 +2,7 @@
 Salesforce to Shopify Dataflow
 ==============================
 
-Generated: 2024-09-24 00:00:26
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -39,6 +39,72 @@ The following properties are synchronized between a Salesforce Order and a Shopi
    * - Salesforce Order Property
      - Shopify Order Property
      - Shopify Data Type
+   * - BillingCity
+     - billing_address.city
+     - "string"
+   * - BillingCity
+     - shipping_address.city
+     - "string"
+   * - BillingCountry
+     - billing_address.country
+     - "string"
+   * - BillingCountry
+     - shipping_address.country
+     - "string"
+   * - BillingCountryCode
+     - billing_address.country_code
+     - "string"
+   * - BillingCountryCode
+     - shipping_address.country_code
+     - "string"
+   * - BillingPostalCode
+     - billing_address.zip
+     - "string"
+   * - BillingPostalCode
+     - shipping_address.zip
+     - "string"
+   * - BillingStreet
+     - billing_address.address1
+     - "string"
+   * - BillingStreet
+     - shipping_address.address1
+     - "string"
+   * - CurrencyIsoCode
+     - currency
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - ShippingCity
+     - billing_address.city
+     - "string"
+   * - ShippingCity
+     - shipping_address.city
+     - "string"
+   * - ShippingCountry
+     - billing_address.country
+     - "string"
+   * - ShippingCountry
+     - shipping_address.country
+     - "string"
+   * - ShippingCountryCode
+     - billing_address.country_code
+     - "string"
+   * - ShippingCountryCode
+     - shipping_address.country_code
+     - "string"
+   * - ShippingStateCode
+     - billing_address.zip
+     - "string"
+   * - ShippingStateCode
+     - shipping_address.zip
+     - "string"
+   * - TotalAmount
+     - current_total_price
+     - "string"
+   * - TotalAmount
+     - total_price
+     - "string"
 
 
 Salesforce Product2 to Shopify Sesamproduct
