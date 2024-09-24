@@ -2,7 +2,7 @@
 Wix.com to Chargebee Dataflow
 =============================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -64,6 +64,18 @@ The following properties are synchronized between a Wix.com Orders and a Chargeb
    * - Wix.com Orders Property
      - Chargebee Order Property
      - Chargebee Data Type
+   * - buyerInfo.id
+     - customer_id
+     - "string"
+   * - currency
+     - currency_code
+     - "string"
+   * - lineItems.price
+     - order_line_items.unit_price
+     - "string"
+   * - lineItems.quantity
+     - order_line_items.amount
+     - "string"
 
 
 Wix.com Products to Chargebee Item
