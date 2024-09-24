@@ -2,7 +2,7 @@
 Salesforce to MemberCare Dataflow
 =================================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -102,9 +102,6 @@ The following properties are synchronized between a Salesforce Invoice and a Mem
    * - Salesforce Invoice Property
      - MemberCare Invoices Property
      - MemberCare Data Type
-   * - DueDate
-     - payDueDate
-     - "string"
 
 
 Salesforce Invoiceline to MemberCare Invoices
@@ -338,6 +335,9 @@ The following properties are synchronized between a Salesforce Invoice and a Mem
    * - Salesforce Invoice Property
      - MemberCare Invoices Property
      - MemberCare Data Type
+   * - DueDate
+     - payDueDate
+     - "string"
 
 
 Salesforce Order to MemberCare Countries
