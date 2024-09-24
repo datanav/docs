@@ -2,7 +2,7 @@
 Exact Online to Wave Dataflow
 =============================
 
-Generated: 2024-09-24 00:00:01
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -95,4 +95,10 @@ The following properties are synchronized between a Exact Online Salesorders and
    * - Exact Online Salesorders Property
      - Wave Invoice Property
      - Wave Data Type
+   * - Currency
+     - currency.code
+     - "string"
+   * - Description
+     - memo
+     - "string"
 
