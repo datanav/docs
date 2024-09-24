@@ -2,7 +2,7 @@
 Business Nxt to Invoiced Dataflow
 =================================
 
-Generated: 2024-09-24 00:00:01
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Business Nxt Order and a Inv
    * - Business Nxt Order Property
      - Invoiced Invoices Property
      - Invoiced Data Type
+   * - totalDiscountAmountInCurrency
+     - discounts
+     - "string"
 
 
 Business Nxt Orderline to Invoiced Lineitem
