@@ -2,7 +2,7 @@
 MemberCare to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -131,6 +131,24 @@ The following properties are synchronized between a MemberCare Companies and a S
    * - MemberCare Companies Property
      - Salesforce Organization Property
      - Salesforce Data Type
+   * - addresses.country.id
+     - Country
+     - "string"
+   * - addresses.id
+     - ID
+     - "string"
+   * - addresses.postalCode.city
+     - City
+     - "string"
+   * - addresses.postalCode.zipCode
+     - PostalCode
+     - "string"
+   * - addresses.street
+     - Street
+     - "string"
+   * - companyName
+     - Name
+     - "string"
 
 
 MemberCare Invoices to Salesforce Invoice
