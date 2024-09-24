@@ -2,7 +2,7 @@
 Asana to Business Nxt Dataflow
 ==============================
 
-Generated: 2024-09-24 00:00:02
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -42,9 +42,6 @@ The following properties are synchronized between a Asana Workspaces and a Busin
    * - Asana Workspaces Property
      - Business Nxt Address Property
      - Business Nxt Data Type
-   * - name
-     - name
-     - "string"
 
 
 Asana Workspaces to Business Nxt Address
@@ -61,6 +58,9 @@ The following properties are synchronized between a Asana Workspaces and a Busin
    * - Asana Workspaces Property
      - Business Nxt Address Property
      - Business Nxt Data Type
+   * - name
+     - name
+     - "string"
 
 
 Asana Workspaces to Business Nxt Company
@@ -77,4 +77,7 @@ The following properties are synchronized between a Asana Workspaces and a Busin
    * - Asana Workspaces Property
      - Business Nxt Company Property
      - Business Nxt Data Type
+   * - name
+     - name
+     - "string"
 
