@@ -2,7 +2,7 @@
 Chargebee to Wave Dataflow
 ==========================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -169,4 +169,19 @@ The following properties are synchronized between a Chargebee Order and a Wave I
    * - Chargebee Order Property
      - Wave Invoice Property
      - Wave Data Type
+   * - currency_code
+     - currency.code
+     - "string"
+   * - customer_id
+     - customer.id
+     - "string"
+   * - order_line_items.amount
+     - items.quantity
+     - N/A
+   * - order_line_items.description
+     - items.description
+     - "string"
+   * - order_line_items.unit_price
+     - items.price
+     - "string"
 
