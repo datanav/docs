@@ -2,7 +2,7 @@
 Tripletex to Business Nxt Dataflow
 ==================================
 
-Generated: 2024-09-24 00:00:03
+Generated: 2024-09-24 00:00:36
 
 Introduction
 ------------
@@ -105,6 +105,15 @@ The following properties are synchronized between a Tripletex Product and a Busi
    * - Tripletex Product Property
      - Business Nxt Product Property
      - Business Nxt Data Type
+   * - description
+     - description
+     - "string"
+   * - priceExcludingVatCurrency
+     - priceQuantity
+     - "string"
+   * - stockOfGoods
+     - quantityPerUnit
+     - "string"
 
 
 Tripletex Country to Business Nxt Country
@@ -194,15 +203,6 @@ The following properties are synchronized between a Tripletex Product and a Busi
    * - Tripletex Product Property
      - Business Nxt Product Property
      - Business Nxt Data Type
-   * - description
-     - description
-     - "string"
-   * - priceExcludingVatCurrency
-     - priceQuantity
-     - "string"
-   * - stockOfGoods
-     - quantityPerUnit
-     - "string"
 
 
 Tripletex Productgroup to Business Nxt Productcategory
