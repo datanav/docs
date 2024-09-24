@@ -2,7 +2,7 @@
 Business Central to Tripletex Dataflow
 ======================================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -35,21 +35,6 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      - Tripletex Product Property
      - Tripletex Data Type
-   * - displayName
-     - name
-     - "string"
-   * - gtin
-     - ean
-     - "string"
-   * - inventory
-     - stockOfGoods
-     - "integer"
-   * - unitCost
-     - costExcludingVatCurrency
-     - "float"
-   * - unitPrice
-     - priceExcludingVatCurrency
-     - "float"
 
 
 Business Central Contacts (human data) to Tripletex Contact
@@ -449,6 +434,21 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      - Tripletex Product Property
      - Tripletex Data Type
+   * - displayName
+     - name
+     - "string"
+   * - gtin
+     - ean
+     - "string"
+   * - inventory
+     - stockOfGoods
+     - "integer"
+   * - unitCost
+     - costExcludingVatCurrency
+     - "float"
+   * - unitPrice
+     - priceExcludingVatCurrency
+     - "float"
 
 
 Business Central Salesorderlines to Tripletex Orderline
@@ -465,6 +465,24 @@ The following properties are synchronized between a Business Central Salesorderl
    * - Business Central Salesorderlines Property
      - Tripletex Orderline Property
      - Tripletex Data Type
+   * - discountPercent
+     - discount
+     - "float"
+   * - documentId
+     - order.id
+     - "integer"
+   * - itemId
+     - product.id
+     - "integer"
+   * - quantity
+     - count
+     - N/A
+   * - taxPercent
+     - vatType.id
+     - "integer"
+   * - unitPrice
+     - unitPriceExcludingVatCurrency
+     - "float"
 
 
 Business Central Salesorders to Tripletex Order
