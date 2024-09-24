@@ -2,7 +2,7 @@
 Wave to  Dataflow
 =================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -23,9 +23,6 @@ The following properties are synchronized between a Wave Product and a  Inventor
    * - Wave Product Property
      -  Inventory Property
      -  Data Type
-   * - description
-     - descriptor
-     - "string"
 
 
 Wave Invoice to  Order
@@ -58,6 +55,9 @@ The following properties are synchronized between a Wave Product and a  Inventor
    * - Wave Product Property
      -  Inventory Property
      -  Data Type
+   * - description
+     - descriptor
+     - "string"
 
 
 Wave Product to  Sesamproducts
