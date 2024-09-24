@@ -2,7 +2,7 @@
 Invoiced to Salesforce Dataflow
 ===============================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -61,12 +61,6 @@ The following properties are synchronized between a Invoiced Items and a Salesfo
    * - Invoiced Items Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-   * - description
-     - Description
-     - "string"
-   * - name
-     - Name
-     - "string"
 
 
 Invoiced Lineitem to Salesforce Invoice
@@ -175,6 +169,12 @@ The following properties are synchronized between a Invoiced Items and a Salesfo
    * - Invoiced Items Property
      - Salesforce Product2 Property
      - Salesforce Data Type
+   * - description
+     - Description
+     - "string"
+   * - name
+     - Name
+     - "string"
 
 
 Invoiced Lineitem to Salesforce Invoiceline
@@ -191,6 +191,15 @@ The following properties are synchronized between a Invoiced Lineitem and a Sale
    * - Invoiced Lineitem Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
+   * - items.amount
+     - UnitPrice
+     - "string"
+   * - items.description
+     - Description
+     - "string"
+   * - items.quantity
+     - Quantity
+     - "string"
 
 
 Invoiced Lineitem to Salesforce Orderitem
@@ -207,6 +216,15 @@ The following properties are synchronized between a Invoiced Lineitem and a Sale
    * - Invoiced Lineitem Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
+   * - $original_id
+     - OrderId
+     - "string"
+   * - items.amount
+     - TotalPrice
+     - "string"
+   * - items.quantity
+     - Quantity
+     - "string"
 
 
 Invoiced Lineitem to Salesforce Quotelineitem
@@ -223,4 +241,16 @@ The following properties are synchronized between a Invoiced Lineitem and a Sale
    * - Invoiced Lineitem Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
+   * - items.amount
+     - TotalPriceWithTax
+     - "string"
+   * - items.description
+     - Description
+     - "string"
+   * - items.discounts
+     - Discount
+     - "string"
+   * - items.quantity
+     - Quantity
+     - "string"
 
