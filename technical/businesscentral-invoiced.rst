@@ -2,7 +2,7 @@
 Business Central to Invoiced Dataflow
 =====================================
 
-Generated: 2024-09-24 00:00:01
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (organisation data) Property
      - Invoiced Customers (organisation data) Property
      - Invoiced Data Type
+   * - displayName
+     - name
+     - "string"
 
 
 Business Central Customers (human data) to Invoiced Customers (human data)
@@ -146,4 +149,10 @@ The following properties are synchronized between a Business Central Salesorders
    * - Business Central Salesorders Property
      - Invoiced Invoices Property
      - Invoiced Data Type
+   * - currencyId
+     - currency
+     - "string"
+   * - customerId
+     - customer
+     - "string"
 
