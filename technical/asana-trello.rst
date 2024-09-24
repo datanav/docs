@@ -2,7 +2,7 @@
 Asana to Trello Dataflow
 ========================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -83,12 +83,6 @@ The following properties are synchronized between a Asana Workspaces and a Trell
    * - Asana Workspaces Property
      - Trello Organizations Property
      - Trello Data Type
-   * - email_domains
-     - website
-     - "string"
-   * - name
-     - name
-     - "string"
 
 
 Asana Tasks to Trello Cards
@@ -155,4 +149,10 @@ The following properties are synchronized between a Asana Workspaces and a Trell
    * - Asana Workspaces Property
      - Trello Organizations Property
      - Trello Data Type
+   * - email_domains
+     - website
+     - "string"
+   * - name
+     - name
+     - "string"
 
