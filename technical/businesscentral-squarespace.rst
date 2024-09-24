@@ -2,7 +2,7 @@
 Business Central to  Dataflow
 =============================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -23,9 +23,6 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      -  Inventory Property
      -  Data Type
-   * - inventory
-     - quantity
-     - "string"
 
 
 Business Central Items to  Inventory
@@ -42,6 +39,9 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      -  Inventory Property
      -  Data Type
+   * - inventory
+     - quantity
+     - "string"
 
 
 Business Central Items to  Sesamproducts
