@@ -2,7 +2,7 @@
 WebCRM to Exact Online Dataflow
 ===============================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -166,4 +166,22 @@ The following properties are synchronized between a WebCRM Quotationline and a E
    * - WebCRM Quotationline Property
      - Exact Online Salesorderlines Property
      - Exact Online Data Type
+   * - QuotationLineCostPrice
+     - CostPriceFC
+     - "string"
+   * - QuotationLineDiscount
+     - CostPriceFC
+     - "string"
+   * - QuotationLineOpportunityId
+     - OrderID
+     - "string"
+   * - QuotationLinePrice
+     - CostPriceFC
+     - "string"
+   * - QuotationLineQuantity
+     - CostPriceFC
+     - "string"
+   * - QuotationLineVatPercentage
+     - CostPriceFC
+     - "string"
 
