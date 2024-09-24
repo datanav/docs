@@ -2,7 +2,7 @@
 Salesforce to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-24 00:00:26
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -152,9 +152,6 @@ The following properties are synchronized between a Salesforce Order and a Charg
    * - Salesforce Order Property
      - Chargebee Order Property
      - Chargebee Data Type
-   * - CurrencyIsoCode
-     - currency_code
-     - "string"
 
 
 Salesforce Orderitem to Chargebee Order
@@ -196,9 +193,6 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
-   * - Name
-     - name
-     - "string"
 
 
 Salesforce Product2 to Chargebee Item
@@ -354,6 +348,9 @@ The following properties are synchronized between a Salesforce Order and a Charg
    * - Salesforce Order Property
      - Chargebee Order Property
      - Chargebee Data Type
+   * - CurrencyIsoCode
+     - currency_code
+     - "string"
 
 
 Salesforce Organization to Chargebee Business_entity
@@ -370,6 +367,9 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Salesforce Product2 to Chargebee Item
