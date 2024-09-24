@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -488,6 +488,12 @@ The following properties are synchronized between a SuperOffice Project and a Tr
    * - SuperOffice Project Property
      - Tripletex Project Property
      - Tripletex Data Type
+   * - Associate.AssociateId
+     - projectManager.id
+     - "integer"
+   * - Name
+     - name
+     - "string"
 
 
 SuperOffice Quoteline to Tripletex Orderline
@@ -504,4 +510,28 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - Tripletex Orderline Property
      - Tripletex Data Type
+   * - Description
+     - description
+     - "string"
+   * - DiscountPercent
+     - discount
+     - "float"
+   * - ERPDiscountPercent
+     - discount
+     - "float"
+   * - ERPProductKey
+     - product.id
+     - "integer"
+   * - Quantity
+     - count
+     - N/A
+   * - QuoteAlternativeId
+     - order.id
+     - "integer"
+   * - UnitListPrice
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - VAT
+     - vatType.id
+     - "integer"
 
