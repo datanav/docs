@@ -2,7 +2,7 @@
 SuperOffice to Exact Online Dataflow
 ====================================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -23,9 +23,6 @@ The following properties are synchronized between a SuperOffice Product and a Ex
    * - SuperOffice Product Property
      - Exact Online Items Property
      - Exact Online Data Type
-   * - Code
-     - Code
-     - "string"
 
 
 SuperOffice Contact to Exact Online Accounts
@@ -89,9 +86,6 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - SuperOffice Quotealternative Property
      - Exact Online Quotations Property
      - Exact Online Data Type
-   * - Name
-     - Description
-     - "string"
 
 
 SuperOffice Quoteline to Exact Online Quotations
@@ -184,6 +178,9 @@ The following properties are synchronized between a SuperOffice Product and a Ex
    * - SuperOffice Product Property
      - Exact Online Items Property
      - Exact Online Data Type
+   * - Code
+     - Code
+     - "string"
 
 
 SuperOffice Product to Exact Online Vatcodes
@@ -216,6 +213,9 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - SuperOffice Quotealternative Property
      - Exact Online Quotations Property
      - Exact Online Data Type
+   * - Name
+     - Description
+     - "string"
 
 
 SuperOffice Quotealternative to Exact Online Vatcodes
