@@ -2,7 +2,7 @@
 Business Nxt to Salesforce Dataflow
 ===================================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -188,6 +188,30 @@ The following properties are synchronized between a Business Nxt Address and a S
    * - Business Nxt Address Property
      - Salesforce Organization Property
      - Salesforce Data Type
+   * - addressLine1
+     - Street
+     - "string"
+   * - addressNo
+     - ID
+     - "string"
+   * - countryNo
+     - Country
+     - "string"
+   * - fax
+     - Fax
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - phone
+     - Phone
+     - "string"
+   * - postCode
+     - PostalCode
+     - "string"
+   * - postalArea
+     - City
+     - "string"
 
 
 Business Nxt Company to Salesforce Organization
@@ -204,6 +228,12 @@ The following properties are synchronized between a Business Nxt Company and a S
    * - Business Nxt Company Property
      - Salesforce Organization Property
      - Salesforce Data Type
+   * - companyNo
+     - ID
+     - "string"
+   * - name
+     - Name
+     - "string"
 
 
 Business Nxt Currency to Salesforce Currencytype
