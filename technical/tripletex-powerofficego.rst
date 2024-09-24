@@ -2,7 +2,7 @@
 Tripletex to PowerOffice GO Dataflow
 ====================================
 
-Generated: 2024-09-24 00:00:03
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -35,21 +35,6 @@ The following properties are synchronized between a Tripletex Contact and a Powe
    * - Tripletex Contact Property
      - PowerOffice GO Contactperson Property
      - PowerOffice GO Data Type
-   * - customer.id
-     - partyId
-     - "integer"
-   * - email
-     - emailAddress
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - lastName
-     - lastName
-     - "string"
-   * - phoneNumberWork
-     - phoneNumber
-     - "string"
 
 
 Tripletex Contact to PowerOffice GO Customers
@@ -196,66 +181,6 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - Tripletex Customer Property
      - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
-   * - deliveryAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - deliveryAddress.city
-     - MailAddress.City
-     - "string"
-   * - deliveryAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - deliveryAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - email
-     - EmailAddress
-     - "string"
-   * - id
-     - Id
-     - "integer"
-   * - invoiceEmail
-     - InvoiceEmailAddress
-     - "string"
-   * - isPrivateIndividual
-     - IsPerson
-     - N/A
-   * - phoneNumber
-     - PhoneNumber
-     - "string"
-   * - physicalAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - physicalAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - physicalAddress.city
-     - MailAddress.City
-     - "string"
-   * - physicalAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - physicalAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - postalAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - postalAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - postalAddress.city
-     - MailAddress.City
-     - "string"
-   * - postalAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - postalAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
 
 
 Tripletex Customer to PowerOffice GO Customers
@@ -284,78 +209,6 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - Tripletex Customer Property
      - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
-   * - customerNumber
-     - Number
-     - "string"
-   * - customerNumber
-     - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCode)
-     - "string"
-   * - deliveryAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - deliveryAddress.city
-     - MailAddress.City
-     - "string"
-   * - deliveryAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - deliveryAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - email
-     - EmailAddress
-     - "string"
-   * - id
-     - Id
-     - "integer"
-   * - invoiceEmail
-     - InvoiceEmailAddress
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - organizationNumber
-     - OrganizationNumber (Dependant on having NO in MailAddress.CountryCode)
-     - "string"
-   * - phoneNumber
-     - PhoneNumber
-     - "string"
-   * - physicalAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - physicalAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - physicalAddress.city
-     - MailAddress.City
-     - "string"
-   * - physicalAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - physicalAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - postalAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - postalAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - postalAddress.city
-     - MailAddress.City
-     - "string"
-   * - postalAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - postalAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - website
-     - WebsiteUrl
-     - "string"
 
 
 Tripletex Department to PowerOffice GO Departments
@@ -384,15 +237,6 @@ The following properties are synchronized between a Tripletex Department and a P
    * - Tripletex Department Property
      - PowerOffice GO Departments Property
      - PowerOffice GO Data Type
-   * - departmentNumber
-     - Code
-     - "string"
-   * - isInactive
-     - IsActive
-     - "string"
-   * - name
-     - Name
-     - "string"
 
 
 Tripletex Employee to PowerOffice GO Contactperson
@@ -533,33 +377,6 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - Tripletex Employee Property
      - PowerOffice GO Employees Property
      - PowerOffice GO Data Type
-   * - dateOfBirth
-     - DateOfBirth
-     - N/A
-   * - department.id (Dependant on having wd:Q2366457 in  )
-     - DepartmentId
-     - "integer"
-   * - department.id (Dependant on having wd:Q29415492 in  )
-     - IsArchived
-     - "boolean"
-   * - email
-     - EmailAddress
-     - "string"
-   * - employeeNumber
-     - Number
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - lastName
-     - LastName
-     - "string"
-   * - phoneNumberMobile
-     - PhoneNumber
-     - "string"
-   * - sesam_employment_status
-     - IsArchived
-     - "boolean"
 
 
 Tripletex Supplier to PowerOffice GO Customers
@@ -693,6 +510,21 @@ The following properties are synchronized between a Tripletex Contact and a Powe
    * - Tripletex Contact Property
      - PowerOffice GO Contactperson Property
      - PowerOffice GO Data Type
+   * - customer.id
+     - partyId
+     - "integer"
+   * - email
+     - emailAddress
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - phoneNumberWork
+     - phoneNumber
+     - "string"
 
 
 Tripletex Customer (classification data) to PowerOffice GO Customers
@@ -805,6 +637,66 @@ The following properties are synchronized between a Tripletex Customer (human da
    * - Tripletex Customer (human data) Property
      - PowerOffice GO Customers (human data) Property
      - PowerOffice GO Data Type
+   * - deliveryAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - deliveryAddress.city
+     - MailAddress.City
+     - "string"
+   * - deliveryAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - email
+     - EmailAddress
+     - "string"
+   * - id
+     - Id
+     - "integer"
+   * - invoiceEmail
+     - InvoiceEmailAddress
+     - "string"
+   * - isPrivateIndividual
+     - IsPerson
+     - N/A
+   * - phoneNumber
+     - PhoneNumber
+     - "string"
+   * - physicalAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - physicalAddress.city
+     - MailAddress.City
+     - "string"
+   * - physicalAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - physicalAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - postalAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - postalAddress.city
+     - MailAddress.City
+     - "string"
+   * - postalAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - postalAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
 
 
 Tripletex Customer to PowerOffice GO Customers
@@ -821,6 +713,78 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - Tripletex Customer Property
      - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
+   * - customerNumber
+     - Number
+     - "string"
+   * - customerNumber
+     - OrganizationNumber (Dependant on having wd:Q852835 in MailAddress.CountryCode)
+     - "string"
+   * - deliveryAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - deliveryAddress.city
+     - MailAddress.City
+     - "string"
+   * - deliveryAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - email
+     - EmailAddress
+     - "string"
+   * - id
+     - Id
+     - "integer"
+   * - invoiceEmail
+     - InvoiceEmailAddress
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - organizationNumber
+     - OrganizationNumber (Dependant on having NO in MailAddress.CountryCode)
+     - "string"
+   * - phoneNumber
+     - PhoneNumber
+     - "string"
+   * - physicalAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - physicalAddress.city
+     - MailAddress.City
+     - "string"
+   * - physicalAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - physicalAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - postalAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - postalAddress.city
+     - MailAddress.City
+     - "string"
+   * - postalAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - postalAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - website
+     - WebsiteUrl
+     - "string"
 
 
 Tripletex Customer to PowerOffice GO Customers (human data)
@@ -853,6 +817,15 @@ The following properties are synchronized between a Tripletex Department and a P
    * - Tripletex Department Property
      - PowerOffice GO Departments Property
      - PowerOffice GO Data Type
+   * - departmentNumber
+     - Code
+     - "string"
+   * - isInactive
+     - IsActive
+     - "string"
+   * - name
+     - Name
+     - "string"
 
 
 Tripletex Employee to PowerOffice GO Employees
@@ -869,9 +842,33 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - Tripletex Employee Property
      - PowerOffice GO Employees Property
      - PowerOffice GO Data Type
+   * - dateOfBirth
+     - DateOfBirth
+     - N/A
+   * - department.id (Dependant on having wd:Q2366457 in  )
+     - DepartmentId
+     - "integer"
+   * - department.id (Dependant on having wd:Q29415492 in  )
+     - IsArchived
+     - "boolean"
    * - email
      - EmailAddress
      - "string"
+   * - employeeNumber
+     - Number
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - lastName
+     - LastName
+     - "string"
+   * - phoneNumberMobile
+     - PhoneNumber
+     - "string"
+   * - sesam_employment_status
+     - IsArchived
+     - "boolean"
 
 
 Tripletex Order to PowerOffice GO Salesorders
@@ -957,6 +954,36 @@ The following properties are synchronized between a Tripletex Project and a Powe
    * - Tripletex Project Property
      - PowerOffice GO Projects Property
      - PowerOffice GO Data Type
+   * - contact.id
+     - ContactPersonId
+     - "integer"
+   * - customer.id
+     - CustomerId
+     - "integer"
+   * - department.id
+     - DepartmentId
+     - "integer"
+   * - endDate
+     - EndDate
+     - N/A
+   * - isClosed
+     - IsActive
+     - "string"
+   * - isInternal
+     - IsInternal
+     - "string"
+   * - mainProject.id
+     - ParentProjectId
+     - "integer"
+   * - name
+     - Name
+     - "string"
+   * - projectManager.id
+     - ProjectManagerEmployeeId
+     - "integer"
+   * - startDate
+     - StartDate
+     - N/A
 
 
 Tripletex Projectactivity to PowerOffice GO Projectactivity
