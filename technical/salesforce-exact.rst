@@ -2,7 +2,7 @@
 Salesforce to Exact Online Dataflow
 ===================================
 
-Generated: 2024-09-24 00:00:33
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -39,24 +39,6 @@ The following properties are synchronized between a Salesforce Contact and a Exa
    * - Salesforce Contact Property
      - Exact Online Contacts Property
      - Exact Online Data Type
-   * - Birthdate
-     - BirthDate
-     - "string"
-   * - MailingCity
-     - City
-     - "string"
-   * - MailingCountry
-     - Country
-     - "string"
-   * - Name
-     - FirstName
-     - "string"
-   * - Name
-     - FullName
-     - "string"
-   * - Name
-     - LastName
-     - "string"
 
 
 Salesforce Currencytype to Exact Online Currencies
@@ -240,15 +222,6 @@ The following properties are synchronized between a Salesforce Quote and a Exact
    * - Salesforce Quote Property
      - Exact Online Quotations Property
      - Exact Online Data Type
-   * - CurrencyIsoCode
-     - Currency
-     - "string"
-   * - Description
-     - Description
-     - "string"
-   * - ID
-     - DeliveryAddress
-     - "string"
 
 
 Salesforce Quotelineitem to Exact Online Quotations
@@ -322,6 +295,24 @@ The following properties are synchronized between a Salesforce Contact and a Exa
    * - Salesforce Contact Property
      - Exact Online Contacts Property
      - Exact Online Data Type
+   * - Birthdate
+     - BirthDate
+     - "string"
+   * - MailingCity
+     - City
+     - "string"
+   * - MailingCountry
+     - Country
+     - "string"
+   * - Name
+     - FirstName
+     - "string"
+   * - Name
+     - FullName
+     - "string"
+   * - Name
+     - LastName
+     - "string"
 
 
 Salesforce Currencytype to Exact Online Currencies
@@ -443,6 +434,12 @@ The following properties are synchronized between a Salesforce Order and a Exact
    * - Salesforce Order Property
      - Exact Online Salesorders Property
      - Exact Online Data Type
+   * - CurrencyIsoCode
+     - Currency
+     - "string"
+   * - Description
+     - Description
+     - "string"
 
 
 Salesforce Orderitem to Exact Online Salesorderlines
@@ -513,6 +510,15 @@ The following properties are synchronized between a Salesforce Quote and a Exact
    * - Salesforce Quote Property
      - Exact Online Quotations Property
      - Exact Online Data Type
+   * - CurrencyIsoCode
+     - Currency
+     - "string"
+   * - Description
+     - Description
+     - "string"
+   * - ID
+     - DeliveryAddress
+     - "string"
 
 
 Salesforce Quote to Exact Online Salesinvoices
