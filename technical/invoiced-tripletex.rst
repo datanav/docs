@@ -2,7 +2,7 @@
 Invoiced to Tripletex Dataflow
 ==============================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -211,6 +211,15 @@ The following properties are synchronized between a Invoiced Invoices and a Trip
    * - Invoiced Invoices Property
      - Tripletex Order Property
      - Tripletex Data Type
+   * - currency
+     - currency.id
+     - "integer"
+   * - customer
+     - contact.id
+     - "integer"
+   * - customer
+     - customer.id
+     - "integer"
 
 
 Invoiced Items to Tripletex Product
@@ -255,4 +264,19 @@ The following properties are synchronized between a Invoiced Lineitem and a Trip
    * - Invoiced Lineitem Property
      - Tripletex Orderline Property
      - Tripletex Data Type
+   * - $original_id
+     - order.id
+     - "integer"
+   * - items.amount
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - items.description
+     - description
+     - "string"
+   * - items.discounts
+     - discount
+     - "float"
+   * - items.quantity
+     - count
+     - N/A
 
