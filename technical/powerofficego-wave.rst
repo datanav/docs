@@ -2,7 +2,7 @@
 PowerOffice GO to Wave Dataflow
 ===============================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -202,45 +202,6 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Wave Customer Property
      - Wave Data Type
-   * - MailAddress.AddressLine1
-     - address.addressLine1
-     - "string"
-   * - MailAddress.AddressLine1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - MailAddress.AddressLine2
-     - address.addressLine2
-     - "string"
-   * - MailAddress.AddressLine2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - MailAddress.City
-     - address.city
-     - "string"
-   * - MailAddress.City
-     - shippingDetails.address.city
-     - "string"
-   * - MailAddress.CountryCode
-     - address.country.code
-     - "string"
-   * - MailAddress.CountryCode
-     - shippingDetails.address.country.code
-     - "string"
-   * - MailAddress.ZipCode
-     - address.postalCode
-     - "string"
-   * - MailAddress.ZipCode
-     - shippingDetails.address.postalCode
-     - "string"
-   * - Name
-     - name
-     - N/A
-   * - PhoneNumber
-     - phone
-     - "string"
-   * - WebsiteUrl
-     - website
-     - "string"
 
 
 PowerOffice GO Customers to Wave Customer (human data)
@@ -298,4 +259,16 @@ The following properties are synchronized between a PowerOffice GO Salesorders a
    * - PowerOffice GO Salesorders Property
      - Wave Invoice Property
      - Wave Data Type
+   * - CurrencyCode
+     - currency.code
+     - "string"
+   * - CustomerId
+     - customer.id
+     - "string"
+   * - CustomerReferenceContactPersonId
+     - customer.id
+     - "string"
+   * - PurchaseOrderReference
+     - poNumber
+     - "string"
 
