@@ -2,7 +2,7 @@
 Wave to Salesforce Dataflow
 ===========================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -207,6 +207,18 @@ The following properties are synchronized between a Wave Invoice and a Salesforc
    * - Wave Invoice Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
+   * - currency.code
+     - CurrencyIsoCode
+     - "string"
+   * - items.description
+     - Description
+     - "string"
+   * - items.price
+     - UnitPrice
+     - "string"
+   * - items.quantity
+     - Quantity
+     - "string"
 
 
 Wave Invoice to Salesforce Order
@@ -251,6 +263,18 @@ The following properties are synchronized between a Wave Invoice and a Salesforc
    * - Wave Invoice Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
+   * - currency.code
+     - CurrencyIsoCode
+     - "string"
+   * - id
+     - OrderId
+     - "string"
+   * - items.price
+     - TotalPrice
+     - "string"
+   * - items.quantity
+     - Quantity
+     - "string"
 
 
 Wave Invoice to Salesforce Quotelineitem
@@ -267,6 +291,18 @@ The following properties are synchronized between a Wave Invoice and a Salesforc
    * - Wave Invoice Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
+   * - currency.code
+     - CurrencyIsoCode
+     - "string"
+   * - items.description
+     - Description
+     - "string"
+   * - items.price
+     - TotalPriceWithTax
+     - "string"
+   * - items.quantity
+     - Quantity
+     - "string"
 
 
 Wave Product to Salesforce Product2
