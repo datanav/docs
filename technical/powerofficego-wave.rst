@@ -2,7 +2,7 @@
 PowerOffice GO to Wave Dataflow
 ===============================
 
-Generated: 2024-09-24 00:00:01
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -103,6 +103,47 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Wave Customer Property
      - Wave Data Type
+
+
+PowerOffice GO Customers (organisation data) to Wave Customer
+-------------------------------------------------------------
+Every PowerOffice GO Customers (organisation data) will be synchronized with a Wave Customer.
+
+Once a link between a PowerOffice GO Customers (organisation data) and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Customers (organisation data) and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Customers (organisation data) Property
+     - Wave Customer Property
+     - Wave Data Type
+   * - EmailAddress
+     - email
+     - "string"
+   * - FirstName
+     - firstName
+     - "string"
+   * - LastName
+     - lastName
+     - "string"
+
+
+PowerOffice GO Customers (human data) to Wave Customer (human data)
+-------------------------------------------------------------------
+Every PowerOffice GO Customers (human data) will be synchronized with a Wave Customer (human data).
+
+Once a link between a PowerOffice GO Customers (human data) and a Wave Customer (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a PowerOffice GO Customers (human data) and a Wave Customer (human data):
+
+.. list-table::
+   :header-rows: 1
+
+   * - PowerOffice GO Customers (human data) Property
+     - Wave Customer (human data) Property
+     - Wave Data Type
    * - EmailAddress
      - email
      - "string"
@@ -147,47 +188,6 @@ The following properties are synchronized between a PowerOffice GO Customers and
      - "string"
 
 
-PowerOffice GO Customers (organisation data) to Wave Customer
--------------------------------------------------------------
-Every PowerOffice GO Customers (organisation data) will be synchronized with a Wave Customer.
-
-Once a link between a PowerOffice GO Customers (organisation data) and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice GO Customers (organisation data) and a Wave Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice GO Customers (organisation data) Property
-     - Wave Customer Property
-     - Wave Data Type
-   * - EmailAddress
-     - email
-     - "string"
-   * - FirstName
-     - firstName
-     - "string"
-   * - LastName
-     - lastName
-     - "string"
-
-
-PowerOffice GO Customers (human data) to Wave Customer (human data)
--------------------------------------------------------------------
-Every PowerOffice GO Customers (human data) will be synchronized with a Wave Customer (human data).
-
-Once a link between a PowerOffice GO Customers (human data) and a Wave Customer (human data) is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a PowerOffice GO Customers (human data) and a Wave Customer (human data):
-
-.. list-table::
-   :header-rows: 1
-
-   * - PowerOffice GO Customers (human data) Property
-     - Wave Customer (human data) Property
-     - Wave Data Type
-
-
 PowerOffice GO Customers to Wave Customer
 -----------------------------------------
 Every PowerOffice GO Customers will be synchronized with a Wave Customer.
@@ -202,6 +202,45 @@ The following properties are synchronized between a PowerOffice GO Customers and
    * - PowerOffice GO Customers Property
      - Wave Customer Property
      - Wave Data Type
+   * - MailAddress.AddressLine1
+     - address.addressLine1
+     - "string"
+   * - MailAddress.AddressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - MailAddress.AddressLine2
+     - address.addressLine2
+     - "string"
+   * - MailAddress.AddressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - MailAddress.City
+     - address.city
+     - "string"
+   * - MailAddress.City
+     - shippingDetails.address.city
+     - "string"
+   * - MailAddress.CountryCode
+     - address.country.code
+     - "string"
+   * - MailAddress.CountryCode
+     - shippingDetails.address.country.code
+     - "string"
+   * - MailAddress.ZipCode
+     - address.postalCode
+     - "string"
+   * - MailAddress.ZipCode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - Name
+     - name
+     - N/A
+   * - PhoneNumber
+     - phone
+     - "string"
+   * - WebsiteUrl
+     - website
+     - "string"
 
 
 PowerOffice GO Customers to Wave Customer (human data)
