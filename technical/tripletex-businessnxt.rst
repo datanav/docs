@@ -2,7 +2,7 @@
 Tripletex to Business Nxt Dataflow
 ==================================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -67,12 +67,6 @@ The following properties are synchronized between a Tripletex Order and a Busine
    * - Tripletex Order Property
      - Business Nxt Order Property
      - Business Nxt Data Type
-   * - deliveryDate
-     - dueDate
-     - "string"
-   * - orderDate
-     - orderDate
-     - "string"
 
 
 Tripletex Orderline to Business Nxt Order
@@ -105,15 +99,6 @@ The following properties are synchronized between a Tripletex Product and a Busi
    * - Tripletex Product Property
      - Business Nxt Product Property
      - Business Nxt Data Type
-   * - description
-     - description
-     - "string"
-   * - priceExcludingVatCurrency
-     - priceQuantity
-     - "string"
-   * - stockOfGoods
-     - quantityPerUnit
-     - "string"
 
 
 Tripletex Country to Business Nxt Country
@@ -171,6 +156,12 @@ The following properties are synchronized between a Tripletex Order and a Busine
    * - Tripletex Order Property
      - Business Nxt Order Property
      - Business Nxt Data Type
+   * - deliveryDate
+     - dueDate
+     - "string"
+   * - orderDate
+     - orderDate
+     - "string"
 
 
 Tripletex Orderline to Business Nxt Orderline
@@ -187,6 +178,9 @@ The following properties are synchronized between a Tripletex Orderline and a Bu
    * - Tripletex Orderline Property
      - Business Nxt Orderline Property
      - Business Nxt Data Type
+   * - order.id
+     - orderNo
+     - "string"
 
 
 Tripletex Product to Business Nxt Product
@@ -203,6 +197,15 @@ The following properties are synchronized between a Tripletex Product and a Busi
    * - Tripletex Product Property
      - Business Nxt Product Property
      - Business Nxt Data Type
+   * - description
+     - description
+     - "string"
+   * - priceExcludingVatCurrency
+     - priceQuantity
+     - "string"
+   * - stockOfGoods
+     - quantityPerUnit
+     - "string"
 
 
 Tripletex Productgroup to Business Nxt Productcategory
