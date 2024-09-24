@@ -2,7 +2,7 @@
 MemberCare to Business Central Dataflow
 =======================================
 
-Generated: 2024-09-24 00:00:02
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -77,4 +77,10 @@ The following properties are synchronized between a MemberCare Invoices and a Bu
    * - MemberCare Invoices Property
      - Business Central Salesorderlines Property
      - Business Central Data Type
+   * - invoiceItems.quantity
+     - quantity
+     - N/A
+   * - invoiceItems.unitPrice
+     - unitPrice
+     - "float"
 
