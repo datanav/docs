@@ -2,7 +2,7 @@
 MemberCare to Business Nxt Dataflow
 ===================================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -23,24 +23,6 @@ The following properties are synchronized between a MemberCare Companies and a B
    * - MemberCare Companies Property
      - Business Nxt Address Property
      - Business Nxt Data Type
-   * - addresses.country.id
-     - countryNo
-     - "string"
-   * - addresses.id
-     - addressNo
-     - "string"
-   * - addresses.postalCode.city
-     - postalArea
-     - "string"
-   * - addresses.postalCode.zipCode
-     - postCode
-     - "string"
-   * - addresses.street
-     - addressLine1
-     - "string"
-   * - companyName
-     - name
-     - "string"
 
 
 MemberCare Companycategories to Business Nxt Country
@@ -73,12 +55,6 @@ The following properties are synchronized between a MemberCare Countries and a B
    * - MemberCare Countries Property
      - Business Nxt Country Property
      - Business Nxt Data Type
-   * - iso2Letter
-     - isoCode
-     - "string"
-   * - name
-     - name
-     - "string"
 
 
 MemberCare Invoices to Business Nxt Order
@@ -173,6 +149,24 @@ The following properties are synchronized between a MemberCare Companies and a B
    * - MemberCare Companies Property
      - Business Nxt Address Property
      - Business Nxt Data Type
+   * - addresses.country.id
+     - countryNo
+     - "string"
+   * - addresses.id
+     - addressNo
+     - "string"
+   * - addresses.postalCode.city
+     - postalArea
+     - "string"
+   * - addresses.postalCode.zipCode
+     - postCode
+     - "string"
+   * - addresses.street
+     - addressLine1
+     - "string"
+   * - companyName
+     - name
+     - "string"
 
 
 MemberCare Companies to Business Nxt Company
@@ -189,6 +183,12 @@ The following properties are synchronized between a MemberCare Companies and a B
    * - MemberCare Companies Property
      - Business Nxt Company Property
      - Business Nxt Data Type
+   * - addresses.id
+     - companyNo
+     - "string"
+   * - companyName
+     - name
+     - "string"
 
 
 MemberCare Countries to Business Nxt Country
@@ -205,6 +205,12 @@ The following properties are synchronized between a MemberCare Countries and a B
    * - MemberCare Countries Property
      - Business Nxt Country Property
      - Business Nxt Data Type
+   * - iso2Letter
+     - isoCode
+     - "string"
+   * - name
+     - name
+     - "string"
 
 
 MemberCare Invoices to Business Nxt Orderline
