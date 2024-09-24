@@ -2,7 +2,7 @@
 Salesforce to PowerOffice GO Dataflow
 =====================================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -86,6 +86,12 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Salesforce Invoiceline Property
      - PowerOffice GO Salesorderlines Property
      - PowerOffice GO Data Type
+   * - Quantity
+     - Quantity
+     - N/A
+   * - UnitPrice
+     - ProductUnitPrice
+     - N/A
 
 
 Salesforce Order to PowerOffice GO Salesorders
@@ -124,6 +130,15 @@ The following properties are synchronized between a Salesforce Orderitem and a P
    * - Salesforce Orderitem Property
      - PowerOffice GO Salesorderlines Property
      - PowerOffice GO Data Type
+   * - OrderId
+     - sesam_SalesOrderId
+     - "string"
+   * - Quantity
+     - Quantity
+     - N/A
+   * - TotalPrice
+     - ProductUnitPrice
+     - N/A
 
 
 Salesforce Product2 to PowerOffice GO Product
@@ -162,6 +177,15 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - Salesforce Quotelineitem Property
      - PowerOffice GO Salesorderlines Property
      - PowerOffice GO Data Type
+   * - Discount
+     - Allowance
+     - "float"
+   * - Quantity
+     - Quantity
+     - N/A
+   * - TotalPriceWithTax
+     - ProductUnitPrice
+     - N/A
 
 
 Salesforce User to PowerOffice GO Employees
