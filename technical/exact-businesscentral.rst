@@ -2,7 +2,7 @@
 Exact Online to Business Central Dataflow
 =========================================
 
-Generated: 2024-09-24 00:00:02
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -71,6 +71,12 @@ The following properties are synchronized between a Exact Online Accounts and a 
    * - Exact Online Accounts Property
      - Business Central Customers (organisation data) Property
      - Business Central Data Type
+   * - Name
+     - displayName
+     - "string"
+   * - Website
+     - website
+     - "string"
 
 
 Exact Online Accounts to Business Central Customers (human data)
@@ -200,4 +206,7 @@ The following properties are synchronized between a Exact Online Salesorders and
    * - Exact Online Salesorders Property
      - Business Central Salesorders Property
      - Business Central Data Type
+   * - Currency
+     - currencyId
+     - "string"
 
