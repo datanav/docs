@@ -2,7 +2,7 @@
 Keap to  Dataflow
 =================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -33,15 +33,22 @@ The following properties are synchronized between a Keap Product and a  Sesampro
    * - Keap Product Property
      -  Sesamproducts Property
      -  Data Type
-   * - product_desc
-     - description
-     - "string"
-   * - product_name
-     - name
-     - "string"
-   * - product_price
-     - variants.pricing.salePrice.value
-     - "string"
+
+
+Keap Product to  Inventory
+--------------------------
+Every Keap Product will be synchronized with a  Inventory.
+
+Once a link between a Keap Product and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Keap Product and a  Inventory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Keap Product Property
+     -  Inventory Property
+     -  Data Type
 
 
 Keap Product to  Inventory
@@ -63,22 +70,6 @@ The following properties are synchronized between a Keap Product and a  Inventor
      - "string"
 
 
-Keap Product to  Inventory
---------------------------
-Every Keap Product will be synchronized with a  Inventory.
-
-Once a link between a Keap Product and a  Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Keap Product and a  Inventory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Keap Product Property
-     -  Inventory Property
-     -  Data Type
-
-
 Keap Product to  Sesamproducts
 ------------------------------
 Every Keap Product will be synchronized with a  Sesamproducts.
@@ -93,4 +84,13 @@ The following properties are synchronized between a Keap Product and a  Sesampro
    * - Keap Product Property
      -  Sesamproducts Property
      -  Data Type
+   * - product_desc
+     - description
+     - "string"
+   * - product_name
+     - name
+     - "string"
+   * - product_price
+     - variants.pricing.salePrice.value
+     - "string"
 
