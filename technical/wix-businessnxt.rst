@@ -2,7 +2,7 @@
 Wix.com to Business Nxt Dataflow
 ================================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -55,6 +55,12 @@ The following properties are synchronized between a Wix.com Orders and a Busines
    * - Wix.com Orders Property
      - Business Nxt Order Property
      - Business Nxt Data Type
+   * - billingInfo.paidDate
+     - settlementDate
+     - "string"
+   * - dateCreated
+     - invoiceDate
+     - "string"
 
 
 Wix.com Orders to Business Nxt Orderline
@@ -71,6 +77,9 @@ The following properties are synchronized between a Wix.com Orders and a Busines
    * - Wix.com Orders Property
      - Business Nxt Orderline Property
      - Business Nxt Data Type
+   * - id
+     - orderNo
+     - "string"
 
 
 Wix.com Products to Business Nxt Product
