@@ -2,7 +2,7 @@
 Tidsbanken to Unieconomy Dataflow
 =================================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -65,12 +65,6 @@ The following properties are synchronized between a Tidsbanken Kunde and a Uniec
    * - Tidsbanken Kunde Property
      - Unieconomy Customers Property
      - Unieconomy Data Type
-   * - Organisasjonsnummer
-     - OrgNumber
-     - "string"
-   * - Url
-     - WebUrl
-     - "string"
 
 
 Tidsbanken Avdeling to Unieconomy Departments
@@ -87,6 +81,9 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Un
    * - Tidsbanken Avdeling Property
      - Unieconomy Departments Property
      - Unieconomy Data Type
+   * - Navn
+     - Name
+     - "string"
 
 
 Tidsbanken Kunde to Unieconomy Customers
@@ -103,4 +100,10 @@ The following properties are synchronized between a Tidsbanken Kunde and a Uniec
    * - Tidsbanken Kunde Property
      - Unieconomy Customers Property
      - Unieconomy Data Type
+   * - Organisasjonsnummer
+     - OrgNumber
+     - "string"
+   * - Url
+     - WebUrl
+     - "string"
 
