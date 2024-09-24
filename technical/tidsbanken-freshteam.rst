@@ -2,7 +2,7 @@
 Tidsbanken to Freshteam Dataflow
 ================================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -22,6 +22,22 @@ A Tidsbanken Ansatt will merge with a Freshteam Employee if one of the following
      - Freshteam Employee Property
    * - Id
      - employee_id
+
+Once a link between a Tidsbanken Ansatt and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Ansatt and a Freshteam Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Ansatt Property
+     - Freshteam Employee Property
+     - Freshteam Data Type
+
+
+Tidsbanken Ansatt to Freshteam Employee
+---------------------------------------
+Every Tidsbanken Ansatt will be synchronized with a Freshteam Employee.
 
 Once a link between a Tidsbanken Ansatt and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -53,25 +69,6 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Fres
      - "string"
 
 
-Tidsbanken Ansatt to Freshteam Employee
----------------------------------------
-Every Tidsbanken Ansatt will be synchronized with a Freshteam Employee.
-
-Once a link between a Tidsbanken Ansatt and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tidsbanken Ansatt and a Freshteam Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Ansatt Property
-     - Freshteam Employee Property
-     - Freshteam Data Type
-   * - Epost
-     - official_email
-     - "string"
-
-
 Tidsbanken Avdeling to Freshteam Department
 -------------------------------------------
 Every Tidsbanken Avdeling will be synchronized with a Freshteam Department.
@@ -86,4 +83,7 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Fr
    * - Tidsbanken Avdeling Property
      - Freshteam Department Property
      - Freshteam Data Type
+   * - Navn
+     - name
+     - "string"
 
