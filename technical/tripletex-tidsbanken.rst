@@ -2,7 +2,7 @@
 Tripletex to Tidsbanken Dataflow
 ================================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -136,102 +136,6 @@ The following properties are synchronized between a Tripletex Customer and a Tid
    * - Tripletex Customer Property
      - Tidsbanken Kunde Property
      - Tidsbanken Data Type
-   * - customerNumber
-     - sesam_kundeId
-     - "string"
-   * - deliveryAddress.addressLine1
-     - Gateadresse
-     - "string"
-   * - deliveryAddress.addressLine1
-     - Leveringsadresse
-     - "string"
-   * - deliveryAddress.addressLine2
-     - Leveringsadresse2
-     - "string"
-   * - deliveryAddress.addressLine2
-     - Postadresse
-     - "string"
-   * - deliveryAddress.city
-     - LevPoststed
-     - "string"
-   * - deliveryAddress.city
-     - Poststed
-     - "string"
-   * - deliveryAddress.postalCode
-     - LevPostNr
-     - "string"
-   * - deliveryAddress.postalCode
-     - Postnr
-     - "string"
-   * - email
-     - Epost
-     - "string"
-   * - id
-     - Id
-     - "string"
-   * - name
-     - Navn
-     - "string"
-   * - organizationNumber
-     - Organisasjonsnummer
-     - "string"
-   * - phoneNumber
-     - Telefon
-     - "string"
-   * - phoneNumberMobile
-     - Mobil
-     - "string"
-   * - physicalAddress.addressLine1
-     - Gateadresse
-     - "string"
-   * - physicalAddress.addressLine1
-     - Leveringsadresse
-     - "string"
-   * - physicalAddress.addressLine2
-     - Leveringsadresse2
-     - "string"
-   * - physicalAddress.addressLine2
-     - Postadresse
-     - "string"
-   * - physicalAddress.city
-     - LevPoststed
-     - "string"
-   * - physicalAddress.city
-     - Poststed
-     - "string"
-   * - physicalAddress.postalCode
-     - LevPostNr
-     - "string"
-   * - physicalAddress.postalCode
-     - Postnr
-     - "string"
-   * - postalAddress.addressLine1
-     - Gateadresse
-     - "string"
-   * - postalAddress.addressLine1
-     - Leveringsadresse
-     - "string"
-   * - postalAddress.addressLine2
-     - Leveringsadresse2
-     - "string"
-   * - postalAddress.addressLine2
-     - Postadresse
-     - "string"
-   * - postalAddress.city
-     - LevPoststed
-     - "string"
-   * - postalAddress.city
-     - Poststed
-     - "string"
-   * - postalAddress.postalCode
-     - LevPostNr
-     - "string"
-   * - postalAddress.postalCode
-     - Postnr
-     - "string"
-   * - website
-     - Url
-     - "string"
 
 
 Tripletex Department to Tidsbanken Avdeling
@@ -260,15 +164,6 @@ The following properties are synchronized between a Tripletex Department and a T
    * - Tripletex Department Property
      - Tidsbanken Avdeling Property
      - Tidsbanken Data Type
-   * - departmentNumber
-     - sesam_avdelingId
-     - "string"
-   * - isInactive
-     - Synlig
-     - "string"
-   * - name
-     - Navn
-     - "string"
 
 
 Tripletex Employee to Tidsbanken Ansatt
@@ -299,48 +194,6 @@ The following properties are synchronized between a Tripletex Employee and a Tid
    * - Tripletex Employee Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
-   * - address.addressLine1
-     - Adresse
-     - "string"
-   * - address.city
-     - Poststed
-     - "string"
-   * - address.postalCode
-     - Postnummer
-     - "string"
-   * - dateOfBirth
-     - Fodt
-     - "string"
-   * - department.id (Dependant on having wd:Q29415492 in  )
-     - Aktiv
-     - "boolean"
-   * - department.id (Dependant on having wd:Q2366457 in  )
-     - AvdelingId
-     - "string"
-   * - email
-     - Epost
-     - "string"
-   * - employeeNumber
-     - sesam_ansattId
-     - "integer"
-   * - firstName
-     - Fornavn
-     - "string"
-   * - id
-     - Id
-     - "integer"
-   * - lastName
-     - Etternavn
-     - "string"
-   * - phoneNumberHome
-     - TlfPrivat
-     - "string"
-   * - phoneNumberMobile
-     - Mobil
-     - "string"
-   * - sesam_employment_status
-     - Aktiv
-     - "boolean"
 
 
 Tripletex Supplier to Tidsbanken Kunde
@@ -569,6 +422,102 @@ The following properties are synchronized between a Tripletex Customer and a Tid
    * - Tripletex Customer Property
      - Tidsbanken Kunde Property
      - Tidsbanken Data Type
+   * - customerNumber
+     - sesam_kundeId
+     - "string"
+   * - deliveryAddress.addressLine1
+     - Gateadresse
+     - "string"
+   * - deliveryAddress.addressLine1
+     - Leveringsadresse
+     - "string"
+   * - deliveryAddress.addressLine2
+     - Leveringsadresse2
+     - "string"
+   * - deliveryAddress.addressLine2
+     - Postadresse
+     - "string"
+   * - deliveryAddress.city
+     - LevPoststed
+     - "string"
+   * - deliveryAddress.city
+     - Poststed
+     - "string"
+   * - deliveryAddress.postalCode
+     - LevPostNr
+     - "string"
+   * - deliveryAddress.postalCode
+     - Postnr
+     - "string"
+   * - email
+     - Epost
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - name
+     - Navn
+     - "string"
+   * - organizationNumber
+     - Organisasjonsnummer
+     - "string"
+   * - phoneNumber
+     - Telefon
+     - "string"
+   * - phoneNumberMobile
+     - Mobil
+     - "string"
+   * - physicalAddress.addressLine1
+     - Gateadresse
+     - "string"
+   * - physicalAddress.addressLine1
+     - Leveringsadresse
+     - "string"
+   * - physicalAddress.addressLine2
+     - Leveringsadresse2
+     - "string"
+   * - physicalAddress.addressLine2
+     - Postadresse
+     - "string"
+   * - physicalAddress.city
+     - LevPoststed
+     - "string"
+   * - physicalAddress.city
+     - Poststed
+     - "string"
+   * - physicalAddress.postalCode
+     - LevPostNr
+     - "string"
+   * - physicalAddress.postalCode
+     - Postnr
+     - "string"
+   * - postalAddress.addressLine1
+     - Gateadresse
+     - "string"
+   * - postalAddress.addressLine1
+     - Leveringsadresse
+     - "string"
+   * - postalAddress.addressLine2
+     - Leveringsadresse2
+     - "string"
+   * - postalAddress.addressLine2
+     - Postadresse
+     - "string"
+   * - postalAddress.city
+     - LevPoststed
+     - "string"
+   * - postalAddress.city
+     - Poststed
+     - "string"
+   * - postalAddress.postalCode
+     - LevPostNr
+     - "string"
+   * - postalAddress.postalCode
+     - Postnr
+     - "string"
+   * - website
+     - Url
+     - "string"
 
 
 Tripletex Department to Tidsbanken Avdeling
@@ -585,6 +534,15 @@ The following properties are synchronized between a Tripletex Department and a T
    * - Tripletex Department Property
      - Tidsbanken Avdeling Property
      - Tidsbanken Data Type
+   * - departmentNumber
+     - sesam_avdelingId
+     - "string"
+   * - isInactive
+     - Synlig
+     - "string"
+   * - name
+     - Navn
+     - "string"
 
 
 Tripletex Employee to Tidsbanken Ansatt
@@ -601,9 +559,48 @@ The following properties are synchronized between a Tripletex Employee and a Tid
    * - Tripletex Employee Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
+   * - address.addressLine1
+     - Adresse
+     - "string"
+   * - address.city
+     - Poststed
+     - "string"
+   * - address.postalCode
+     - Postnummer
+     - "string"
+   * - dateOfBirth
+     - Fodt
+     - "string"
+   * - department.id (Dependant on having wd:Q29415492 in  )
+     - Aktiv
+     - "boolean"
+   * - department.id (Dependant on having wd:Q2366457 in  )
+     - AvdelingId
+     - "string"
    * - email
      - Epost
      - "string"
+   * - employeeNumber
+     - sesam_ansattId
+     - "integer"
+   * - firstName
+     - Fornavn
+     - "string"
+   * - id
+     - Id
+     - "integer"
+   * - lastName
+     - Etternavn
+     - "string"
+   * - phoneNumberHome
+     - TlfPrivat
+     - "string"
+   * - phoneNumberMobile
+     - Mobil
+     - "string"
+   * - sesam_employment_status
+     - Aktiv
+     - "boolean"
 
 
 Tripletex Project to Tidsbanken Prosjekt
