@@ -2,7 +2,7 @@
 Salesforce to  Dataflow
 =======================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -23,9 +23,6 @@ The following properties are synchronized between a Salesforce Product2 and a  I
    * - Salesforce Product2 Property
      -  Inventory Property
      -  Data Type
-   * - Description
-     - descriptor
-     - "string"
 
 
 Salesforce Order to  Order
@@ -58,6 +55,9 @@ The following properties are synchronized between a Salesforce Product2 and a  I
    * - Salesforce Product2 Property
      -  Inventory Property
      -  Data Type
+   * - Description
+     - descriptor
+     - "string"
 
 
 Salesforce Product2 to  Sesamproducts
