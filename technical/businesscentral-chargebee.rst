@@ -2,7 +2,7 @@
 Business Central to Chargebee Dataflow
 ======================================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -58,9 +58,6 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (organisation data) Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
-   * - displayName
-     - name
-     - "string"
 
 
 Business Central Customers (human data) to Chargebee Customer
@@ -77,9 +74,6 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (human data) Property
      - Chargebee Customer Property
      - Chargebee Data Type
-   * - email
-     - email
-     - "string"
 
 
 Business Central Employees to Chargebee Customer
@@ -162,12 +156,6 @@ The following properties are synchronized between a Business Central Salesorders
    * - Business Central Salesorders Property
      - Chargebee Order Property
      - Chargebee Data Type
-   * - currencyId
-     - currency_code
-     - "string"
-   * - customerId
-     - customer_id
-     - "string"
 
 
 Business Central Salesquotes to Chargebee Order
@@ -216,6 +204,9 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (organisation data) Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
+   * - displayName
+     - name
+     - "string"
 
 
 Business Central Customers (human data) to Chargebee Customer
@@ -264,6 +255,9 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (human data) Property
      - Chargebee Customer Property
      - Chargebee Data Type
+   * - email
+     - email
+     - "string"
 
 
 Business Central Items to Chargebee Item
@@ -296,4 +290,10 @@ The following properties are synchronized between a Business Central Salesorders
    * - Business Central Salesorders Property
      - Chargebee Order Property
      - Chargebee Data Type
+   * - currencyId
+     - currency_code
+     - "string"
+   * - customerId
+     - customer_id
+     - "string"
 
