@@ -2,7 +2,7 @@
 WooCommerce to  Dataflow
 ========================
 
-Generated: 2024-09-24 00:00:03
+Generated: 2024-09-24 00:00:36
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a WooCommerce Product and a  I
    * - WooCommerce Product Property
      -  Inventory Property
      -  Data Type
+   * - sku
+     - sku
+     - "string"
 
 
 WooCommerce Order to  Order
@@ -55,9 +58,6 @@ The following properties are synchronized between a WooCommerce Product and a  I
    * - WooCommerce Product Property
      -  Inventory Property
      -  Data Type
-   * - sku
-     - sku
-     - "string"
 
 
 WooCommerce Product to  Sesamproducts
