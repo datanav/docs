@@ -2,7 +2,7 @@
 Salesforce to Business Central Dataflow
 =======================================
 
-Generated: 2024-09-24 00:00:26
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -131,6 +131,60 @@ The following properties are synchronized between a Salesforce Order and a Busin
    * - Salesforce Order Property
      - Business Central Salesorders Property
      - Business Central Data Type
+   * - BillingCity
+     - billToCity
+     - "string"
+   * - BillingCity
+     - shipToCity
+     - "string"
+   * - BillingCountry
+     - billToCountry
+     - "string"
+   * - BillingCountry
+     - shipToCountry
+     - "string"
+   * - BillingPostalCode
+     - billToPostCode
+     - "string"
+   * - BillingPostalCode
+     - shipToPostCode
+     - "string"
+   * - BillingStreet
+     - billToAddressLine1
+     - "string"
+   * - BillingStreet
+     - shipToAddressLine1
+     - "string"
+   * - CurrencyIsoCode
+     - currencyId
+     - "string"
+   * - EffectiveDate
+     - requestedDeliveryDate
+     - N/A
+   * - ID
+     - id
+     - "string"
+   * - OrderedDate
+     - orderDate
+     - N/A
+   * - ShippingCity
+     - billToCity
+     - "string"
+   * - ShippingCity
+     - shipToCity
+     - "string"
+   * - ShippingCountry
+     - billToCountry
+     - "string"
+   * - ShippingCountry
+     - shipToCountry
+     - "string"
+   * - ShippingStateCode
+     - billToPostCode
+     - "string"
+   * - ShippingStateCode
+     - shipToPostCode
+     - "string"
 
 
 Salesforce Orderitem to Business Central Salesorderlines
