@@ -2,7 +2,7 @@
 Shopify to Business Central Dataflow
 ====================================
 
-Generated: 2024-09-24 00:00:02
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -61,6 +61,21 @@ The following properties are synchronized between a Shopify Order and a Business
    * - Shopify Order Property
      - Business Central Salesorderlines Property
      - Business Central Data Type
+   * - id
+     - documentId
+     - "string"
+   * - line_items.price
+     - unitPrice
+     - "float"
+   * - line_items.quantity
+     - quantity
+     - N/A
+   * - line_items.title
+     - description
+     - "string"
+   * - line_items.total_discount
+     - discountPercent
+     - N/A
 
 
 Shopify Order to Business Central Salesorders
@@ -77,6 +92,81 @@ The following properties are synchronized between a Shopify Order and a Business
    * - Shopify Order Property
      - Business Central Salesorders Property
      - Business Central Data Type
+   * - billing_address.address1
+     - billToAddressLine1
+     - "string"
+   * - billing_address.address1
+     - shipToAddressLine1
+     - "string"
+   * - billing_address.address2
+     - billToAddressLine2
+     - "string"
+   * - billing_address.address2
+     - shipToAddressLine2
+     - "string"
+   * - billing_address.city
+     - billToCity
+     - "string"
+   * - billing_address.city
+     - shipToCity
+     - "string"
+   * - billing_address.country
+     - billToCountry
+     - "string"
+   * - billing_address.country
+     - shipToCountry
+     - "string"
+   * - billing_address.zip
+     - billToPostCode
+     - "string"
+   * - billing_address.zip
+     - shipToPostCode
+     - "string"
+   * - created_at
+     - orderDate
+     - N/A
+   * - currency
+     - currencyId
+     - "string"
+   * - customer.id
+     - customerId
+     - "string"
+   * - customer.id
+     - id
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - shipping_address.address1
+     - billToAddressLine1
+     - "string"
+   * - shipping_address.address1
+     - shipToAddressLine1
+     - "string"
+   * - shipping_address.address2
+     - billToAddressLine2
+     - "string"
+   * - shipping_address.address2
+     - shipToAddressLine2
+     - "string"
+   * - shipping_address.city
+     - billToCity
+     - "string"
+   * - shipping_address.city
+     - shipToCity
+     - "string"
+   * - shipping_address.country
+     - billToCountry
+     - "string"
+   * - shipping_address.country
+     - shipToCountry
+     - "string"
+   * - shipping_address.zip
+     - billToPostCode
+     - "string"
+   * - shipping_address.zip
+     - shipToPostCode
+     - "string"
 
 
 Shopify Sesamproduct to Business Central Items
