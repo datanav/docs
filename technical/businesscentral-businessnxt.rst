@@ -2,7 +2,7 @@
 Business Central to Business Nxt Dataflow
 =========================================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -39,15 +39,6 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (organisation data) Property
      - Business Nxt Address Property
      - Business Nxt Data Type
-   * - displayName
-     - name
-     - "string"
-   * - email
-     - emailAddress
-     - "string"
-   * - phoneNumber
-     - phone
-     - "string"
 
 
 Business Central Items to Business Nxt Product
@@ -102,12 +93,6 @@ The following properties are synchronized between a Business Central Salesorders
    * - Business Central Salesorders Property
      - Business Nxt Order Property
      - Business Nxt Data Type
-   * - orderDate
-     - orderDate
-     - "string"
-   * - requestedDeliveryDate
-     - dueDate
-     - "string"
 
 
 Business Central Salesquotes to Business Nxt Order
@@ -159,6 +144,15 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (organisation data) Property
      - Business Nxt Address Property
      - Business Nxt Data Type
+   * - displayName
+     - name
+     - "string"
+   * - email
+     - emailAddress
+     - "string"
+   * - phoneNumber
+     - phone
+     - "string"
 
 
 Business Central Customers (organisation data) to Business Nxt Company
@@ -175,6 +169,9 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (organisation data) Property
      - Business Nxt Company Property
      - Business Nxt Data Type
+   * - displayName
+     - name
+     - "string"
 
 
 Business Central Itemcategories to Business Nxt Productcategory
@@ -264,6 +261,12 @@ The following properties are synchronized between a Business Central Salesorders
    * - Business Central Salesorders Property
      - Business Nxt Order Property
      - Business Nxt Data Type
+   * - orderDate
+     - orderDate
+     - "string"
+   * - requestedDeliveryDate
+     - dueDate
+     - "string"
 
 
 Business Central Salesquotes to Business Nxt Country
