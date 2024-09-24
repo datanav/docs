@@ -2,7 +2,7 @@
 Wix.com to Invoiced Dataflow
 ============================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Wix.com Orders and a Invoice
    * - Wix.com Orders Property
      - Invoiced Invoices Property
      - Invoiced Data Type
+   * - buyerInfo.id
+     - customer
+     - "string"
+   * - currency
+     - currency
+     - "string"
 
 
 Wix.com Orders to Invoiced Lineitem
@@ -39,6 +45,15 @@ The following properties are synchronized between a Wix.com Orders and a Invoice
    * - Wix.com Orders Property
      - Invoiced Lineitem Property
      - Invoiced Data Type
+   * - lineItems.name
+     - items.name
+     - "string"
+   * - lineItems.price
+     - items.amount
+     - "string"
+   * - lineItems.quantity
+     - items.quantity
+     - "string"
 
 
 Wix.com Products to Invoiced Items
