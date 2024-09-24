@@ -2,7 +2,7 @@
 WooCommerce to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -42,9 +42,6 @@ The following properties are synchronized between a WooCommerce Order and a Sale
    * - WooCommerce Order Property
      - Salesforce Invoice Property
      - Salesforce Data Type
-   * - currency
-     - CurrencyIsoCode
-     - "string"
 
 
 WooCommerce Customer to Salesforce Customer
@@ -109,6 +106,9 @@ The following properties are synchronized between a WooCommerce Order and a Sale
    * - WooCommerce Order Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - currency
+     - CurrencyIsoCode
+     - "string"
 
 
 WooCommerce Order to Salesforce Invoiceline
@@ -125,6 +125,15 @@ The following properties are synchronized between a WooCommerce Order and a Sale
    * - WooCommerce Order Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
+   * - currency
+     - CurrencyIsoCode
+     - "string"
+   * - line_items.price
+     - UnitPrice
+     - "string"
+   * - line_items.quantity
+     - Quantity
+     - "string"
 
 
 WooCommerce Order to Salesforce Order
@@ -205,6 +214,21 @@ The following properties are synchronized between a WooCommerce Order and a Sale
    * - WooCommerce Order Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
+   * - currency
+     - CurrencyIsoCode
+     - "string"
+   * - id
+     - OrderId
+     - "string"
+   * - line_items.price
+     - TotalPrice
+     - "string"
+   * - line_items.product_id
+     - Product2Id
+     - "string"
+   * - line_items.quantity
+     - Quantity
+     - "string"
 
 
 WooCommerce Order to Salesforce Quotelineitem
@@ -221,6 +245,15 @@ The following properties are synchronized between a WooCommerce Order and a Sale
    * - WooCommerce Order Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
+   * - currency
+     - CurrencyIsoCode
+     - "string"
+   * - line_items.price
+     - TotalPriceWithTax
+     - "string"
+   * - line_items.quantity
+     - Quantity
+     - "string"
 
 
 WooCommerce Product to Salesforce Product2
