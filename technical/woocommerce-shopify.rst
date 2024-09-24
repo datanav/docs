@@ -2,7 +2,7 @@
 WooCommerce to Shopify Dataflow
 ===============================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -81,6 +81,96 @@ The following properties are synchronized between a WooCommerce Order and a Shop
    * - WooCommerce Order Property
      - Shopify Order Property
      - Shopify Data Type
+   * - billing.address_1
+     - billing_address.address1
+     - "string"
+   * - billing.address_1
+     - shipping_address.address1
+     - "string"
+   * - billing.address_2
+     - billing_address.address2
+     - "string"
+   * - billing.address_2
+     - shipping_address.address2
+     - "string"
+   * - billing.city
+     - billing_address.city
+     - "string"
+   * - billing.city
+     - shipping_address.city
+     - "string"
+   * - billing.country
+     - billing_address.country
+     - "string"
+   * - billing.country
+     - shipping_address.country
+     - "string"
+   * - billing.postcode
+     - billing_address.zip
+     - "string"
+   * - billing.postcode
+     - shipping_address.zip
+     - "string"
+   * - billing.state
+     - billing_address.province_code
+     - "string"
+   * - billing.state
+     - shipping_address.province_code
+     - "string"
+   * - currency
+     - currency
+     - "string"
+   * - customer_id
+     - customer.id
+     - "string"
+   * - line_items.name
+     - line_items.title
+     - "string"
+   * - line_items.price
+     - line_items.price
+     - "string"
+   * - line_items.product_id
+     - line_items.product_id
+     - "integer"
+   * - line_items.quantity
+     - line_items.quantity
+     - "integer"
+   * - shipping.address_1
+     - billing_address.address1
+     - "string"
+   * - shipping.address_1
+     - shipping_address.address1
+     - "string"
+   * - shipping.address_2
+     - billing_address.address2
+     - "string"
+   * - shipping.address_2
+     - shipping_address.address2
+     - "string"
+   * - shipping.city
+     - billing_address.city
+     - "string"
+   * - shipping.city
+     - shipping_address.city
+     - "string"
+   * - shipping.country
+     - billing_address.country
+     - "string"
+   * - shipping.country
+     - shipping_address.country
+     - "string"
+   * - shipping.postcode
+     - billing_address.zip
+     - "string"
+   * - shipping.postcode
+     - shipping_address.zip
+     - "string"
+   * - shipping.state
+     - billing_address.province_code
+     - "string"
+   * - shipping.state
+     - shipping_address.province_code
+     - "string"
 
 
 WooCommerce Product to Shopify Sesamproduct
