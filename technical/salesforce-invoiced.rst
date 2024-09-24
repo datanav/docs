@@ -2,7 +2,7 @@
 Salesforce to Invoiced Dataflow
 ===============================
 
-Generated: 2024-09-24 00:00:26
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -39,6 +39,9 @@ The following properties are synchronized between a Salesforce Customer and a In
    * - Salesforce Customer Property
      - Invoiced Customers (human data) Property
      - Invoiced Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Salesforce Invoiceline to Invoiced Lineitem
@@ -71,6 +74,9 @@ The following properties are synchronized between a Salesforce Order and a Invoi
    * - Salesforce Order Property
      - Invoiced Invoices Property
      - Invoiced Data Type
+   * - CurrencyIsoCode
+     - currency
+     - "string"
 
 
 Salesforce Orderitem to Invoiced Lineitem
