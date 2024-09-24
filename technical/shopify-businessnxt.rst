@@ -2,7 +2,7 @@
 Shopify to Business Nxt Dataflow
 ================================
 
-Generated: 2024-09-24 00:00:02
+Generated: 2024-09-24 00:00:36
 
 Introduction
 ------------
@@ -77,6 +77,15 @@ The following properties are synchronized between a Shopify Sesamproduct and a B
    * - Shopify Sesamproduct Property
      - Business Nxt Product Property
      - Business Nxt Data Type
+   * - sesam_priceExclVAT
+     - priceQuantity
+     - "string"
+   * - variants.inventory_quantity
+     - quantityPerUnit
+     - "string"
+   * - variants.title
+     - description
+     - "string"
 
 
 Shopify Customer to Business Nxt Country
@@ -203,13 +212,4 @@ The following properties are synchronized between a Shopify Sesamproduct and a B
    * - Shopify Sesamproduct Property
      - Business Nxt Product Property
      - Business Nxt Data Type
-   * - sesam_priceExclVAT
-     - priceQuantity
-     - "string"
-   * - variants.inventory_quantity
-     - quantityPerUnit
-     - "string"
-   * - variants.title
-     - description
-     - "string"
 
