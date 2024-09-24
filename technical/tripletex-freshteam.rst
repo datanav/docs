@@ -2,7 +2,7 @@
 Tripletex to Freshteam Dataflow
 ===============================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -22,6 +22,41 @@ A Tripletex Employee will merge with a Freshteam Employee if one of the followin
      - Freshteam Employee Property
    * - employeeNumber
      - employee_id
+
+Once a link between a Tripletex Employee and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a Freshteam Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - Freshteam Employee Property
+     - Freshteam Data Type
+
+
+Tripletex Department to Freshteam Department
+--------------------------------------------
+Every Tripletex Department will be synchronized with a Freshteam Department.
+
+Once a link between a Tripletex Department and a Freshteam Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a Freshteam Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - Freshteam Department Property
+     - Freshteam Data Type
+   * - name
+     - name
+     - "string"
+
+
+Tripletex Employee to Freshteam Employee
+----------------------------------------
+Every Tripletex Employee will be synchronized with a Freshteam Employee.
 
 Once a link between a Tripletex Employee and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -53,40 +88,5 @@ The following properties are synchronized between a Tripletex Employee and a Fre
      - "string"
    * - phoneNumberWork
      - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
-     - "string"
-
-
-Tripletex Department to Freshteam Department
---------------------------------------------
-Every Tripletex Department will be synchronized with a Freshteam Department.
-
-Once a link between a Tripletex Department and a Freshteam Department is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Department and a Freshteam Department:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Department Property
-     - Freshteam Department Property
-     - Freshteam Data Type
-
-
-Tripletex Employee to Freshteam Employee
-----------------------------------------
-Every Tripletex Employee will be synchronized with a Freshteam Employee.
-
-Once a link between a Tripletex Employee and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Employee and a Freshteam Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - Freshteam Employee Property
-     - Freshteam Data Type
-   * - email
-     - official_email
      - "string"
 
