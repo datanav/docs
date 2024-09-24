@@ -2,7 +2,7 @@
 Business Central to PowerOffice GO Dataflow
 ===========================================
 
-Generated: 2024-09-24 00:00:02
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -356,4 +356,16 @@ The following properties are synchronized between a Business Central Salesorders
    * - Business Central Salesorders Property
      - PowerOffice GO Salesorders Property
      - PowerOffice GO Data Type
+   * - currencyId
+     - CurrencyCode
+     - "string"
+   * - customerId
+     - CustomerId
+     - "integer"
+   * - customerId
+     - CustomerReferenceContactPersonId
+     - "integer"
+   * - orderDate
+     - SalesOrderDate
+     - "string"
 
