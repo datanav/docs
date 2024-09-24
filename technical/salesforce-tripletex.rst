@@ -2,7 +2,7 @@
 Salesforce to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -89,6 +89,18 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Salesforce Invoiceline Property
      - Tripletex Orderline Property
      - Tripletex Data Type
+   * - Description
+     - description
+     - "string"
+   * - Quantity
+     - count
+     - N/A
+   * - TaxRate
+     - vatType.id
+     - "integer"
+   * - UnitPrice
+     - unitPriceExcludingVatCurrency
+     - "float"
 
 
 Salesforce Order to Tripletex Order
@@ -130,6 +142,15 @@ The following properties are synchronized between a Salesforce Orderitem and a T
    * - Salesforce Orderitem Property
      - Tripletex Orderline Property
      - Tripletex Data Type
+   * - OrderId
+     - order.id
+     - "integer"
+   * - Quantity
+     - count
+     - N/A
+   * - TotalPrice
+     - unitPriceExcludingVatCurrency
+     - "float"
 
 
 Salesforce Product2 to Tripletex Product
@@ -168,6 +189,18 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - Salesforce Quotelineitem Property
      - Tripletex Orderline Property
      - Tripletex Data Type
+   * - Description
+     - description
+     - "string"
+   * - Discount
+     - discount
+     - "float"
+   * - Quantity
+     - count
+     - N/A
+   * - TotalPriceWithTax
+     - unitPriceExcludingVatCurrency
+     - "float"
 
 
 Salesforce User to Tripletex Employee
