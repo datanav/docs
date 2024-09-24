@@ -2,7 +2,7 @@
 SuperOffice to Keap Dataflow
 ============================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -104,4 +104,7 @@ The following properties are synchronized between a SuperOffice Sale and a Keap 
    * - SuperOffice Sale Property
      - Keap Opportunity Property
      - Keap Data Type
+   * - Heading
+     - opportunity_title
+     - "string"
 
