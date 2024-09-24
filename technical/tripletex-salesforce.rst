@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -318,6 +318,27 @@ The following properties are synchronized between a Tripletex Invoice and a Sale
    * - Tripletex Invoice Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - amountExcludingVat
+     - TotalAmount
+     - "string"
+   * - currency.id
+     - CurrencyIsoCode
+     - "string"
+   * - deliveryDate
+     - FullSettlementDate
+     - "string"
+   * - invoiceDate
+     - InvoiceDate
+     - "string"
+   * - invoiceDate
+     - PostedDate
+     - "string"
+   * - invoiceDueDate
+     - DueDate
+     - "string"
+   * - invoiceNumber
+     - InvoiceNumber
+     - "string"
 
 
 Tripletex Order to Salesforce Order
@@ -359,6 +380,21 @@ The following properties are synchronized between a Tripletex Orderline and a Sa
    * - Tripletex Orderline Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
+   * - count
+     - Quantity
+     - "string"
+   * - currency.id
+     - CurrencyIsoCode
+     - "string"
+   * - description
+     - Description
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - UnitPrice
+     - "string"
+   * - vatType.id
+     - TaxRate
+     - "string"
 
 
 Tripletex Orderline to Salesforce Orderitem
@@ -375,6 +411,18 @@ The following properties are synchronized between a Tripletex Orderline and a Sa
    * - Tripletex Orderline Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
+   * - count
+     - Quantity
+     - "string"
+   * - currency.id
+     - CurrencyIsoCode
+     - "string"
+   * - order.id
+     - OrderId
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - TotalPrice
+     - "string"
 
 
 Tripletex Orderline to Salesforce Quotelineitem
@@ -391,6 +439,21 @@ The following properties are synchronized between a Tripletex Orderline and a Sa
    * - Tripletex Orderline Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
+   * - count
+     - Quantity
+     - "string"
+   * - currency.id
+     - CurrencyIsoCode
+     - "string"
+   * - description
+     - Description
+     - "string"
+   * - discount
+     - Discount
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - TotalPriceWithTax
+     - "string"
 
 
 Tripletex Product to Salesforce Product2
