@@ -2,7 +2,7 @@
 Exact Online to WooCommerce Dataflow
 ====================================
 
-Generated: 2024-09-24 00:00:01
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -39,4 +39,10 @@ The following properties are synchronized between a Exact Online Salesorders and
    * - Exact Online Salesorders Property
      - WooCommerce Order Property
      - WooCommerce Data Type
+   * - Currency
+     - currency
+     - "string"
+   * - Discount
+     - discount_total
+     - "string"
 
