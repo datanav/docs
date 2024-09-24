@@ -2,7 +2,7 @@
 Wix.com to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Wix.com Products and a Sales
    * - Wix.com Products Property
      - Salesforce Product2 Property
      - Salesforce Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Wix.com Contacts to Salesforce Contact
@@ -83,6 +86,15 @@ The following properties are synchronized between a Wix.com Orders and a Salesfo
    * - Wix.com Orders Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
+   * - currency
+     - CurrencyIsoCode
+     - "string"
+   * - lineItems.price
+     - UnitPrice
+     - "string"
+   * - lineItems.quantity
+     - Quantity
+     - "string"
 
 
 Wix.com Orders to Salesforce Order
@@ -124,6 +136,18 @@ The following properties are synchronized between a Wix.com Orders and a Salesfo
    * - Wix.com Orders Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
+   * - currency
+     - CurrencyIsoCode
+     - "string"
+   * - id
+     - OrderId
+     - "string"
+   * - lineItems.price
+     - TotalPrice
+     - "string"
+   * - lineItems.quantity
+     - Quantity
+     - "string"
 
 
 Wix.com Orders to Salesforce Quotelineitem
@@ -140,6 +164,15 @@ The following properties are synchronized between a Wix.com Orders and a Salesfo
    * - Wix.com Orders Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
+   * - currency
+     - CurrencyIsoCode
+     - "string"
+   * - lineItems.price
+     - TotalPriceWithTax
+     - "string"
+   * - lineItems.quantity
+     - Quantity
+     - "string"
 
 
 Wix.com Products to Salesforce Product2
@@ -156,7 +189,4 @@ The following properties are synchronized between a Wix.com Products and a Sales
    * - Wix.com Products Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-   * - name
-     - Name
-     - "string"
 
