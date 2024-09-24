@@ -2,7 +2,7 @@
 Wave to Wave Dataflow
 =====================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -100,78 +100,6 @@ The following properties are synchronized between a Wave Customer and a Wave Cus
    * - Wave Customer Property
      - Wave Customer Property
      - Wave Data Type
-   * - address.addressLine1
-     - address.addressLine1
-     - "string"
-   * - address.addressLine1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - address.addressLine2
-     - address.addressLine2
-     - "string"
-   * - address.addressLine2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - address.city
-     - address.city
-     - "string"
-   * - address.city
-     - shippingDetails.address.city
-     - "string"
-   * - address.country.code
-     - address.country.code
-     - "string"
-   * - address.country.code
-     - shippingDetails.address.country.code
-     - "string"
-   * - address.postalCode
-     - address.postalCode
-     - "string"
-   * - address.postalCode
-     - shippingDetails.address.postalCode
-     - "string"
-   * - address.province.code
-     - address.province.code
-     - "string"
-   * - address.province.code
-     - shippingDetails.address.province.code
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - address.addressLine1
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - address.addressLine2
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - shippingDetails.address.city
-     - address.city
-     - "string"
-   * - shippingDetails.address.city
-     - shippingDetails.address.city
-     - "string"
-   * - shippingDetails.address.country.code
-     - address.country.code
-     - "string"
-   * - shippingDetails.address.country.code
-     - shippingDetails.address.country.code
-     - "string"
-   * - shippingDetails.address.postalCode
-     - address.postalCode
-     - "string"
-   * - shippingDetails.address.postalCode
-     - shippingDetails.address.postalCode
-     - "string"
-   * - shippingDetails.address.province.code
-     - address.province.code
-     - "string"
-   * - shippingDetails.address.province.code
-     - shippingDetails.address.province.code
-     - "string"
 
 
 Wave Vendor to Wave Customer
@@ -352,4 +280,76 @@ The following properties are synchronized between a Wave Customer and a Wave Cus
    * - Wave Customer Property
      - Wave Customer (human data) Property
      - Wave Data Type
+   * - address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - address.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - address.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - address.city
+     - address.city
+     - "string"
+   * - address.city
+     - shippingDetails.address.city
+     - "string"
+   * - address.country.code
+     - address.country.code
+     - "string"
+   * - address.country.code
+     - shippingDetails.address.country.code
+     - "string"
+   * - address.postalCode
+     - address.postalCode
+     - "string"
+   * - address.postalCode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - address.province.code
+     - address.province.code
+     - "string"
+   * - address.province.code
+     - shippingDetails.address.province.code
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - shippingDetails.address.city
+     - address.city
+     - "string"
+   * - shippingDetails.address.city
+     - shippingDetails.address.city
+     - "string"
+   * - shippingDetails.address.country.code
+     - address.country.code
+     - "string"
+   * - shippingDetails.address.country.code
+     - shippingDetails.address.country.code
+     - "string"
+   * - shippingDetails.address.postalCode
+     - address.postalCode
+     - "string"
+   * - shippingDetails.address.postalCode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - shippingDetails.address.province.code
+     - address.province.code
+     - "string"
+   * - shippingDetails.address.province.code
+     - shippingDetails.address.province.code
+     - "string"
 
