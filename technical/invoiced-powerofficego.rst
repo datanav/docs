@@ -2,7 +2,7 @@
 Invoiced to PowerOffice GO Dataflow
 ===================================
 
-Generated: 2024-09-24 00:00:02
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -139,6 +139,15 @@ The following properties are synchronized between a Invoiced Invoices and a Powe
    * - Invoiced Invoices Property
      - PowerOffice GO Salesorders Property
      - PowerOffice GO Data Type
+   * - currency
+     - CurrencyCode
+     - "string"
+   * - customer
+     - CustomerId
+     - "integer"
+   * - customer
+     - CustomerReferenceContactPersonId
+     - "integer"
 
 
 Invoiced Items to PowerOffice GO Product
@@ -180,4 +189,19 @@ The following properties are synchronized between a Invoiced Lineitem and a Powe
    * - Invoiced Lineitem Property
      - PowerOffice GO Salesorderlines Property
      - PowerOffice GO Data Type
+   * - $original_id
+     - sesam_SalesOrderId
+     - "string"
+   * - items.amount
+     - ProductUnitPrice
+     - N/A
+   * - items.discounts
+     - Allowance
+     - "float"
+   * - items.name
+     - Description
+     - "string"
+   * - items.quantity
+     - Quantity
+     - N/A
 
