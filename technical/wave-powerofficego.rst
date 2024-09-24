@@ -2,7 +2,7 @@
 Wave to PowerOffice GO Dataflow
 ===============================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -436,6 +436,18 @@ The following properties are synchronized between a Wave Invoice and a PowerOffi
    * - Wave Invoice Property
      - PowerOffice GO Salesorderlines Property
      - PowerOffice GO Data Type
+   * - id
+     - sesam_SalesOrderId
+     - "string"
+   * - items.price
+     - ProductUnitPrice
+     - N/A
+   * - items.product.id
+     - ProductId
+     - "integer"
+   * - items.quantity
+     - Quantity
+     - N/A
 
 
 Wave Invoice to PowerOffice GO Salesorders
@@ -452,6 +464,21 @@ The following properties are synchronized between a Wave Invoice and a PowerOffi
    * - Wave Invoice Property
      - PowerOffice GO Salesorders Property
      - PowerOffice GO Data Type
+   * - currency.code
+     - CurrencyCode
+     - "string"
+   * - customer.id
+     - CustomerId
+     - "integer"
+   * - customer.id
+     - CustomerReferenceContactPersonId
+     - "integer"
+   * - invoiceNumber
+     - RelatedInvoiceNo
+     - "string"
+   * - poNumber
+     - PurchaseOrderReference
+     - "string"
 
 
 Wave Product to PowerOffice GO Product
