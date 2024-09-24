@@ -2,7 +2,7 @@
 SuperOffice to Salesforce Dataflow
 ==================================
 
-Generated: 2024-09-24 13:15:59
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -140,6 +140,15 @@ The following properties are synchronized between a SuperOffice Product and a Sa
    * - SuperOffice Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
+   * - Description
+     - Description
+     - "string"
+   * - Name
+     - Name
+     - "string"
+   * - Url
+     - DisplayUrl
+     - "string"
 
 
 SuperOffice Quotealternative to Salesforce Quote
@@ -184,6 +193,18 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
+   * - Description
+     - Description
+     - "string"
+   * - Quantity
+     - Quantity
+     - "string"
+   * - UnitListPrice
+     - UnitPrice
+     - "string"
+   * - VAT
+     - TaxRate
+     - "string"
 
 
 SuperOffice Quoteline to Salesforce Orderitem
@@ -200,6 +221,15 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
+   * - Quantity
+     - Quantity
+     - "string"
+   * - QuoteAlternativeId
+     - OrderId
+     - "string"
+   * - UnitListPrice
+     - TotalPrice
+     - "string"
 
 
 SuperOffice Quoteline to Salesforce Quotelineitem
@@ -216,4 +246,19 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
+   * - Description
+     - Description
+     - "string"
+   * - DiscountPercent
+     - Discount
+     - "string"
+   * - ERPDiscountPercent
+     - Discount
+     - "string"
+   * - Quantity
+     - Quantity
+     - "string"
+   * - UnitListPrice
+     - TotalPriceWithTax
+     - "string"
 
