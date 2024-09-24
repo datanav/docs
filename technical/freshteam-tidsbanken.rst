@@ -2,7 +2,7 @@
 Freshteam to Tidsbanken Dataflow
 ================================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -33,6 +33,41 @@ The following properties are synchronized between a Freshteam Employee and a Tid
    * - Freshteam Employee Property
      - Tidsbanken Ansatt Property
      - Tidsbanken Data Type
+
+
+Freshteam Department to Tidsbanken Avdeling
+-------------------------------------------
+Every Freshteam Department will be synchronized with a Tidsbanken Avdeling.
+
+Once a link between a Freshteam Department and a Tidsbanken Avdeling is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Freshteam Department and a Tidsbanken Avdeling:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Freshteam Department Property
+     - Tidsbanken Avdeling Property
+     - Tidsbanken Data Type
+   * - name
+     - Navn
+     - "string"
+
+
+Freshteam Employee to Tidsbanken Ansatt
+---------------------------------------
+Every Freshteam Employee will be synchronized with a Tidsbanken Ansatt.
+
+Once a link between a Freshteam Employee and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Freshteam Employee and a Tidsbanken Ansatt:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Freshteam Employee Property
+     - Tidsbanken Ansatt Property
+     - Tidsbanken Data Type
    * - date_of_birth
      - Fodt
      - "string"
@@ -50,40 +85,5 @@ The following properties are synchronized between a Freshteam Employee and a Tid
      - "string"
    * - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.name)
      - TlfPrivat
-     - "string"
-
-
-Freshteam Department to Tidsbanken Avdeling
--------------------------------------------
-Every Freshteam Department will be synchronized with a Tidsbanken Avdeling.
-
-Once a link between a Freshteam Department and a Tidsbanken Avdeling is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Freshteam Department and a Tidsbanken Avdeling:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Freshteam Department Property
-     - Tidsbanken Avdeling Property
-     - Tidsbanken Data Type
-
-
-Freshteam Employee to Tidsbanken Ansatt
----------------------------------------
-Every Freshteam Employee will be synchronized with a Tidsbanken Ansatt.
-
-Once a link between a Freshteam Employee and a Tidsbanken Ansatt is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Freshteam Employee and a Tidsbanken Ansatt:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Freshteam Employee Property
-     - Tidsbanken Ansatt Property
-     - Tidsbanken Data Type
-   * - official_email
-     - Epost
      - "string"
 
