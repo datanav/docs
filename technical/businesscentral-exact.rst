@@ -2,7 +2,7 @@
 Business Central to Exact Online Dataflow
 =========================================
 
-Generated: 2024-09-24 00:00:02
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -55,12 +55,6 @@ The following properties are synchronized between a Business Central Contacts (h
    * - Business Central Contacts (human data) Property
      - Exact Online Contacts Property
      - Exact Online Data Type
-   * - city
-     - City
-     - "string"
-   * - country
-     - Country
-     - "string"
 
 
 Business Central Customers (organisation data) to Exact Online Accounts
@@ -77,12 +71,6 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (organisation data) Property
      - Exact Online Accounts Property
      - Exact Online Data Type
-   * - displayName
-     - Name
-     - "string"
-   * - website
-     - Website
-     - "string"
 
 
 Business Central Customers (human data) to Exact Online Contacts
@@ -228,6 +216,12 @@ The following properties are synchronized between a Business Central Contacts (h
    * - Business Central Contacts (human data) Property
      - Exact Online Contacts Property
      - Exact Online Data Type
+   * - city
+     - City
+     - "string"
+   * - country
+     - Country
+     - "string"
 
 
 Business Central Currencies to Exact Online Currencies
@@ -266,6 +260,12 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (organisation data) Property
      - Exact Online Accounts Property
      - Exact Online Data Type
+   * - displayName
+     - Name
+     - "string"
+   * - website
+     - Website
+     - "string"
 
 
 Business Central Customers (organisation data) to Exact Online Accounts
@@ -405,4 +405,7 @@ The following properties are synchronized between a Business Central Salesorders
    * - Business Central Salesorders Property
      - Exact Online Salesorders Property
      - Exact Online Data Type
+   * - currencyId
+     - Currency
+     - "string"
 
