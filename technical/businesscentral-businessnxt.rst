@@ -2,7 +2,7 @@
 Business Central to Business Nxt Dataflow
 =========================================
 
-Generated: 2024-09-23 12:23:51
+Generated: 2024-09-24 00:00:02
 
 Introduction
 ------------
