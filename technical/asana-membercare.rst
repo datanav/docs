@@ -2,7 +2,7 @@
 Asana to MemberCare Dataflow
 ============================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -45,12 +45,6 @@ The following properties are synchronized between a Asana Workspaces and a Membe
    * - Asana Workspaces Property
      - MemberCare Companies Property
      - MemberCare Data Type
-   * - email_domains
-     - url
-     - "string"
-   * - name
-     - companyName
-     - "string"
 
 
 Asana Workspaces to MemberCare Companies
@@ -67,4 +61,10 @@ The following properties are synchronized between a Asana Workspaces and a Membe
    * - Asana Workspaces Property
      - MemberCare Companies Property
      - MemberCare Data Type
+   * - email_domains
+     - url
+     - "string"
+   * - name
+     - companyName
+     - "string"
 
