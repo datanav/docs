@@ -2,7 +2,7 @@
 SuperOffice to PowerOffice GO Dataflow
 ======================================
 
-Generated: 2024-09-24 00:00:02
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -334,6 +334,12 @@ The following properties are synchronized between a SuperOffice Project and a Po
    * - SuperOffice Project Property
      - PowerOffice GO Projects Property
      - PowerOffice GO Data Type
+   * - Associate.AssociateId
+     - ProjectManagerEmployeeId
+     - "integer"
+   * - Name
+     - Name
+     - "string"
 
 
 SuperOffice Quoteline to PowerOffice GO Salesorderlines
@@ -350,4 +356,28 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - PowerOffice GO Salesorderlines Property
      - PowerOffice GO Data Type
+   * - DiscountPercent
+     - Allowance
+     - "float"
+   * - ERPDiscountPercent
+     - Allowance
+     - "float"
+   * - ERPProductKey
+     - ProductId
+     - "integer"
+   * - Name
+     - Description
+     - "string"
+   * - Quantity
+     - Quantity
+     - N/A
+   * - QuoteAlternativeId
+     - sesam_SalesOrderId
+     - "string"
+   * - Rank
+     - SortOrder
+     - "integer"
+   * - UnitListPrice
+     - ProductUnitPrice
+     - N/A
 
