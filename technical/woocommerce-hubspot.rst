@@ -2,7 +2,7 @@
 WooCommerce to HubSpot Dataflow
 ===============================
 
-Generated: 2024-09-24 00:00:01
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -42,6 +42,15 @@ The following properties are synchronized between a WooCommerce Order and a HubS
    * - WooCommerce Order Property
      - HubSpot Lineitem Property
      - HubSpot Data Type
+   * - line_items.name
+     - properties.name
+     - "string"
+   * - line_items.price
+     - properties.price
+     - "string"
+   * - line_items.quantity
+     - properties.quantity
+     - N/A
 
 
 WooCommerce Order to HubSpot Lineitemdealassociationtype
