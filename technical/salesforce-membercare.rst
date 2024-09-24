@@ -2,7 +2,7 @@
 Salesforce to MemberCare Dataflow
 =================================
 
-Generated: 2024-09-24 00:00:33
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -187,24 +187,6 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      - MemberCare Companies Property
      - MemberCare Data Type
-   * - City
-     - addresses.postalCode.city
-     - "string"
-   * - Country
-     - addresses.country.id
-     - "string"
-   * - ID
-     - addresses.id
-     - "string"
-   * - Name
-     - companyName
-     - "string"
-   * - PostalCode
-     - addresses.postalCode.zipCode
-     - "string"
-   * - Street
-     - addresses.street
-     - "string"
 
 
 Salesforce Product2 to MemberCare Products
@@ -416,6 +398,24 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      - MemberCare Companies Property
      - MemberCare Data Type
+   * - City
+     - addresses.postalCode.city
+     - "string"
+   * - Country
+     - addresses.country.id
+     - "string"
+   * - ID
+     - addresses.id
+     - "string"
+   * - Name
+     - companyName
+     - "string"
+   * - PostalCode
+     - addresses.postalCode.zipCode
+     - "string"
+   * - Street
+     - addresses.street
+     - "string"
 
 
 Salesforce Quote to MemberCare Countries
