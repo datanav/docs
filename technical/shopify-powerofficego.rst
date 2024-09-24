@@ -2,7 +2,7 @@
 Shopify to PowerOffice GO Dataflow
 ==================================
 
-Generated: 2024-09-24 00:00:02
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -67,6 +67,21 @@ The following properties are synchronized between a Shopify Order and a PowerOff
    * - Shopify Order Property
      - PowerOffice GO Salesorderlines Property
      - PowerOffice GO Data Type
+   * - id
+     - sesam_SalesOrderId
+     - "string"
+   * - line_items.price
+     - ProductUnitPrice
+     - N/A
+   * - line_items.quantity
+     - Quantity
+     - N/A
+   * - line_items.title
+     - Description
+     - "string"
+   * - line_items.total_discount
+     - Allowance
+     - "float"
 
 
 Shopify Order to PowerOffice GO Salesorders
@@ -83,6 +98,21 @@ The following properties are synchronized between a Shopify Order and a PowerOff
    * - Shopify Order Property
      - PowerOffice GO Salesorders Property
      - PowerOffice GO Data Type
+   * - created_at
+     - SalesOrderDate
+     - "string"
+   * - currency
+     - CurrencyCode
+     - "string"
+   * - customer.id
+     - CustomerId
+     - "integer"
+   * - customer.id
+     - CustomerReferenceContactPersonId
+     - "integer"
+   * - po_number
+     - PurchaseOrderReference
+     - "string"
 
 
 Shopify Sesamproduct to PowerOffice GO Product
