@@ -2,7 +2,7 @@
 HubSpot to  Dataflow
 ====================
 
-Generated: 2024-09-24 00:00:03
+Generated: 2024-09-24 00:00:36
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a HubSpot Product and a  Inven
    * - HubSpot Product Property
      -  Inventory Property
      -  Data Type
+   * - properties.description
+     - descriptor
+     - "string"
+   * - properties.hs_sku
+     - sku
+     - "string"
 
 
 HubSpot Deal to  Order
@@ -55,12 +61,6 @@ The following properties are synchronized between a HubSpot Product and a  Inven
    * - HubSpot Product Property
      -  Inventory Property
      -  Data Type
-   * - properties.description
-     - descriptor
-     - "string"
-   * - properties.hs_sku
-     - sku
-     - "string"
 
 
 HubSpot Product to  Sesamproducts
