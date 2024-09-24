@@ -2,7 +2,7 @@
 WebCRM to HubSpot Dataflow
 ==========================
 
-Generated: 2024-09-24 00:00:01
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -104,6 +104,12 @@ The following properties are synchronized between a WebCRM Opportunities and a H
    * - WebCRM Opportunities Property
      - HubSpot Deal Property
      - HubSpot Data Type
+   * - OpportunityCurrencyName
+     - properties.deal_currency_code
+     - "string"
+   * - OpportunityCurrencySymbol
+     - properties.description
+     - "string"
 
 
 WebCRM Products to HubSpot Product
