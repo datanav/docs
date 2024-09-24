@@ -2,7 +2,7 @@
 Shopify to Salesforce Dataflow
 ==============================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -71,12 +71,6 @@ The following properties are synchronized between a Shopify Sesamproduct and a S
    * - Shopify Sesamproduct Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-   * - title
-     - Name
-     - "string"
-   * - variants.title
-     - Description
-     - "string"
 
 
 Shopify Customer to Salesforce Currencytype
@@ -325,4 +319,10 @@ The following properties are synchronized between a Shopify Sesamproduct and a S
    * - Shopify Sesamproduct Property
      - Salesforce Product2 Property
      - Salesforce Data Type
+   * - title
+     - Name
+     - "string"
+   * - variants.title
+     - Description
+     - "string"
 
