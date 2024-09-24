@@ -2,7 +2,7 @@
 WebCRM to SuperOffice Dataflow
 ==============================
 
-Generated: 2024-09-24 00:00:01
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -143,6 +143,9 @@ The following properties are synchronized between a WebCRM Opportunities and a S
    * - WebCRM Opportunities Property
      - SuperOffice Sale Property
      - SuperOffice Data Type
+   * - OpportunityCurrencyName
+     - Currency.Id
+     - "integer"
 
 
 WebCRM Products to SuperOffice Product
