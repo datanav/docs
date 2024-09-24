@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -219,6 +219,27 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - HubSpot Lineitem Property
      - HubSpot Data Type
+   * - Description
+     - properties.description
+     - "string"
+   * - DiscountPercent
+     - properties.hs_discount_percentage
+     - "string"
+   * - ERPDiscountPercent
+     - properties.hs_discount_percentage
+     - "string"
+   * - ERPProductKey
+     - properties.hs_product_id
+     - "string"
+   * - Name
+     - properties.name
+     - "string"
+   * - Quantity
+     - properties.quantity
+     - N/A
+   * - UnitListPrice
+     - properties.price
+     - "string"
 
 
 SuperOffice Quoteline to HubSpot Lineitemdealassociationtype
@@ -267,6 +288,18 @@ The following properties are synchronized between a SuperOffice Sale and a HubSp
    * - SuperOffice Sale Property
      - HubSpot Deal Property
      - HubSpot Data Type
+   * - Amount
+     - properties.amount
+     - "string"
+   * - Currency.Id
+     - properties.deal_currency_code
+     - "string"
+   * - Heading
+     - properties.dealname
+     - "string"
+   * - Saledate
+     - properties.closedate
+     - "string"
 
 
 SuperOffice User to HubSpot User
