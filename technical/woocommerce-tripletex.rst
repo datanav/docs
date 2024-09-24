@@ -2,7 +2,7 @@
 WooCommerce to Tripletex Dataflow
 =================================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -244,6 +244,15 @@ The following properties are synchronized between a WooCommerce Order and a Trip
    * - WooCommerce Order Property
      - Tripletex Order Property
      - Tripletex Data Type
+   * - currency
+     - currency.id
+     - "integer"
+   * - customer_id
+     - contact.id
+     - "integer"
+   * - customer_id
+     - customer.id
+     - "integer"
 
 
 WooCommerce Order to Tripletex Orderline
@@ -260,6 +269,15 @@ The following properties are synchronized between a WooCommerce Order and a Trip
    * - WooCommerce Order Property
      - Tripletex Orderline Property
      - Tripletex Data Type
+   * - id
+     - order.id
+     - "integer"
+   * - line_items.price
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - line_items.quantity
+     - count
+     - N/A
 
 
 WooCommerce Product to Tripletex Product
