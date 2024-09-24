@@ -2,7 +2,7 @@
 Wave to Shopify Dataflow
 ========================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -145,6 +145,30 @@ The following properties are synchronized between a Wave Invoice and a Shopify O
    * - Wave Invoice Property
      - Shopify Order Property
      - Shopify Data Type
+   * - currency.code
+     - currency
+     - "string"
+   * - customer.id
+     - customer.id
+     - "string"
+   * - items.price
+     - line_items.price
+     - "string"
+   * - items.quantity
+     - line_items.quantity
+     - "integer"
+   * - poNumber
+     - po_number
+     - "string"
+   * - title
+     - name
+     - "string"
+   * - total.value
+     - current_total_price
+     - "string"
+   * - total.value
+     - total_price
+     - "string"
 
 
 Wave Product to Shopify Sesamproduct
