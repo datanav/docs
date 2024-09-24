@@ -2,7 +2,7 @@
 Tidsbanken to Tripletex Dataflow
 ================================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -134,6 +134,82 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Trip
    * - Tidsbanken Ansatt Property
      - Tripletex Employee Property
      - Tripletex Data Type
+
+
+Tidsbanken Avdeling to Tripletex Department
+-------------------------------------------
+Before any synchronization can take place, a link between a Tidsbanken Avdeling and a Tripletex Department must be established.
+
+A new Tripletex Department will be created from a Tidsbanken Avdeling if it is connected to a Tidsbanken Ansatt, or Prosjekt that is synchronized into Tripletex.
+
+A Tidsbanken Avdeling will merge with a Tripletex Department if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     - Tripletex Department Property
+   * - Id
+     - departmentNumber
+
+Once a link between a Tidsbanken Avdeling and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Avdeling and a Tripletex Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Avdeling Property
+     - Tripletex Department Property
+     - Tripletex Data Type
+
+
+Tidsbanken Kunde to Tripletex Customer
+--------------------------------------
+Before any synchronization can take place, a link between a Tidsbanken Kunde and a Tripletex Customer must be established.
+
+A new Tripletex Customer will be created from a Tidsbanken Kunde if it is connected to a Tidsbanken Prosjekt that is synchronized into Tripletex.
+
+A Tidsbanken Kunde will merge with a Tripletex Customer if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Kunde Property
+     - Tripletex Customer Property
+   * - Epost
+     - email
+   * - Id
+     - customerNumber
+   * - Organisasjonsnummer
+     - organizationNumber
+
+Once a link between a Tidsbanken Kunde and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Kunde and a Tripletex Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Kunde Property
+     - Tripletex Customer Property
+     - Tripletex Data Type
+
+
+Tidsbanken Ansatt to Tripletex Employee
+---------------------------------------
+Every Tidsbanken Ansatt will be synchronized with a Tripletex Employee.
+
+Once a link between a Tidsbanken Ansatt and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tidsbanken Ansatt and a Tripletex Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tidsbanken Ansatt Property
+     - Tripletex Employee Property
+     - Tripletex Data Type
    * - Adresse
      - address.addressLine1
      - "string"
@@ -180,19 +256,7 @@ The following properties are synchronized between a Tidsbanken Ansatt and a Trip
 
 Tidsbanken Avdeling to Tripletex Department
 -------------------------------------------
-Before any synchronization can take place, a link between a Tidsbanken Avdeling and a Tripletex Department must be established.
-
-A new Tripletex Department will be created from a Tidsbanken Avdeling if it is connected to a Tidsbanken Ansatt, or Prosjekt that is synchronized into Tripletex.
-
-A Tidsbanken Avdeling will merge with a Tripletex Department if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Avdeling Property
-     - Tripletex Department Property
-   * - Id
-     - departmentNumber
+Every Tidsbanken Avdeling will be synchronized with a Tripletex Department.
 
 Once a link between a Tidsbanken Avdeling and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -220,23 +284,7 @@ The following properties are synchronized between a Tidsbanken Avdeling and a Tr
 
 Tidsbanken Kunde to Tripletex Customer
 --------------------------------------
-Before any synchronization can take place, a link between a Tidsbanken Kunde and a Tripletex Customer must be established.
-
-A new Tripletex Customer will be created from a Tidsbanken Kunde if it is connected to a Tidsbanken Prosjekt that is synchronized into Tripletex.
-
-A Tidsbanken Kunde will merge with a Tripletex Customer if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Kunde Property
-     - Tripletex Customer Property
-   * - Epost
-     - email
-   * - Id
-     - customerNumber
-   * - Organisasjonsnummer
-     - organizationNumber
+Every Tidsbanken Kunde will be synchronized with a Tripletex Customer.
 
 Once a link between a Tidsbanken Kunde and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -344,57 +392,6 @@ The following properties are synchronized between a Tidsbanken Kunde and a Tripl
    * - sesam_kundeId
      - customerNumber
      - "string"
-
-
-Tidsbanken Ansatt to Tripletex Employee
----------------------------------------
-Every Tidsbanken Ansatt will be synchronized with a Tripletex Employee.
-
-Once a link between a Tidsbanken Ansatt and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tidsbanken Ansatt and a Tripletex Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Ansatt Property
-     - Tripletex Employee Property
-     - Tripletex Data Type
-   * - Epost
-     - email
-     - "string"
-
-
-Tidsbanken Avdeling to Tripletex Department
--------------------------------------------
-Every Tidsbanken Avdeling will be synchronized with a Tripletex Department.
-
-Once a link between a Tidsbanken Avdeling and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tidsbanken Avdeling and a Tripletex Department:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Avdeling Property
-     - Tripletex Department Property
-     - Tripletex Data Type
-
-
-Tidsbanken Kunde to Tripletex Customer
---------------------------------------
-Every Tidsbanken Kunde will be synchronized with a Tripletex Customer.
-
-Once a link between a Tidsbanken Kunde and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tidsbanken Kunde and a Tripletex Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tidsbanken Kunde Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
 
 
 Tidsbanken Kunde to Tripletex Customer (human data)
