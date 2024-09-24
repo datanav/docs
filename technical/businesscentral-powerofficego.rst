@@ -2,7 +2,7 @@
 Business Central to PowerOffice GO Dataflow
 ===========================================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -340,6 +340,24 @@ The following properties are synchronized between a Business Central Salesorderl
    * - Business Central Salesorderlines Property
      - PowerOffice GO Salesorderlines Property
      - PowerOffice GO Data Type
+   * - description
+     - Description
+     - "string"
+   * - discountPercent
+     - Allowance
+     - "float"
+   * - documentId
+     - sesam_SalesOrderId
+     - "string"
+   * - itemId
+     - ProductId
+     - "integer"
+   * - quantity
+     - Quantity
+     - N/A
+   * - unitPrice
+     - ProductUnitPrice
+     - N/A
 
 
 Business Central Salesorders to PowerOffice GO Salesorders
