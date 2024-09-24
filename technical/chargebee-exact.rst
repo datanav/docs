@@ -2,7 +2,7 @@
 Chargebee to Exact Online Dataflow
 ==================================
 
-Generated: 2024-09-24 00:00:02
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -232,4 +232,7 @@ The following properties are synchronized between a Chargebee Order and a Exact 
    * - Chargebee Order Property
      - Exact Online Salesorders Property
      - Exact Online Data Type
+   * - currency_code
+     - Currency
+     - "string"
 
