@@ -2,7 +2,7 @@
 PowerOffice GO to Invoiced Dataflow
 ===================================
 
-Generated: 2024-09-24 00:00:01
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -133,6 +133,18 @@ The following properties are synchronized between a PowerOffice GO Salesorderlin
    * - PowerOffice GO Salesorderlines Property
      - Invoiced Lineitem Property
      - Invoiced Data Type
+   * - Allowance
+     - items.discounts
+     - "string"
+   * - Description
+     - items.name
+     - "string"
+   * - ProductUnitPrice
+     - items.amount
+     - "string"
+   * - Quantity
+     - items.quantity
+     - "string"
 
 
 PowerOffice GO Salesorders to Invoiced Invoices
@@ -149,4 +161,13 @@ The following properties are synchronized between a PowerOffice GO Salesorders a
    * - PowerOffice GO Salesorders Property
      - Invoiced Invoices Property
      - Invoiced Data Type
+   * - CurrencyCode
+     - currency
+     - "string"
+   * - CustomerId
+     - customer
+     - "string"
+   * - CustomerReferenceContactPersonId
+     - customer
+     - "string"
 
