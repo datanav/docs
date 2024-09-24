@@ -2,7 +2,7 @@
 Business Nxt to Business Central Dataflow
 =========================================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -121,6 +121,9 @@ The following properties are synchronized between a Business Nxt Orderline and a
    * - Business Nxt Orderline Property
      - Business Central Salesorderlines Property
      - Business Central Data Type
+   * - orderNo
+     - documentId
+     - "string"
 
 
 Business Nxt Product to Business Central Items
