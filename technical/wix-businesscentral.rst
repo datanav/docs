@@ -2,7 +2,7 @@
 Wix.com to Business Central Dataflow
 ====================================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -45,6 +45,21 @@ The following properties are synchronized between a Wix.com Orders and a Busines
    * - Wix.com Orders Property
      - Business Central Salesorderlines Property
      - Business Central Data Type
+   * - id
+     - documentId
+     - "string"
+   * - lineItems.name
+     - description
+     - "string"
+   * - lineItems.price
+     - unitPrice
+     - "float"
+   * - lineItems.productId
+     - itemId
+     - "string"
+   * - lineItems.quantity
+     - quantity
+     - N/A
 
 
 Wix.com Orders to Business Central Salesorders
