@@ -2,7 +2,7 @@
 PowerOffice GO to Exact Online Dataflow
 =======================================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -469,6 +469,9 @@ The following properties are synchronized between a PowerOffice GO Salesorders a
    * - PowerOffice GO Salesorders Property
      - Exact Online Salesorders Property
      - Exact Online Data Type
+   * - CurrencyCode
+     - Currency
+     - "string"
 
 
 PowerOffice GO Suppliers (human data) to Exact Online Contacts
