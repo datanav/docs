@@ -2,7 +2,7 @@
 Business Nxt to Business Central Dataflow
 =========================================
 
-Generated: 2024-09-24 00:00:02
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -99,6 +99,12 @@ The following properties are synchronized between a Business Nxt Order and a Bus
    * - Business Nxt Order Property
      - Business Central Salesorders Property
      - Business Central Data Type
+   * - dueDate
+     - requestedDeliveryDate
+     - N/A
+   * - orderDate
+     - orderDate
+     - N/A
 
 
 Business Nxt Orderline to Business Central Salesorderlines
