@@ -2,7 +2,7 @@
 Business Nxt to  Dataflow
 =========================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -23,12 +23,6 @@ The following properties are synchronized between a Business Nxt Product and a  
    * - Business Nxt Product Property
      -  Inventory Property
      -  Data Type
-   * - description
-     - descriptor
-     - "string"
-   * - quantityPerUnit
-     - quantity
-     - "string"
 
 
 Business Nxt Order to  Order
@@ -61,6 +55,12 @@ The following properties are synchronized between a Business Nxt Product and a  
    * - Business Nxt Product Property
      -  Inventory Property
      -  Data Type
+   * - description
+     - descriptor
+     - "string"
+   * - quantityPerUnit
+     - quantity
+     - "string"
 
 
 Business Nxt Product to  Sesamproducts
