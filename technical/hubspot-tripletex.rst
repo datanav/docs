@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -223,6 +223,21 @@ The following properties are synchronized between a HubSpot Lineitem and a Tripl
    * - HubSpot Lineitem Property
      - Tripletex Orderline Property
      - Tripletex Data Type
+   * - properties.description
+     - description
+     - "string"
+   * - properties.hs_discount_percentage
+     - discount
+     - "float"
+   * - properties.hs_product_id
+     - product.id
+     - "integer"
+   * - properties.price
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - properties.quantity
+     - count
+     - N/A
 
 
 HubSpot Lineitemdealassociationtype to Tripletex Orderline
