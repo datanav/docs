@@ -2,7 +2,7 @@
 HubSpot to WooCommerce Dataflow
 ===============================
 
-Generated: 2024-09-24 00:00:26
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a HubSpot Deal and a WooCommer
    * - HubSpot Deal Property
      - WooCommerce Order Property
      - WooCommerce Data Type
+   * - properties.deal_currency_code
+     - currency
+     - "string"
 
 
 HubSpot Product to WooCommerce Product
