@@ -2,7 +2,7 @@
 Business Central to Salesforce Dataflow
 =======================================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -194,6 +194,12 @@ The following properties are synchronized between a Business Central Customers (
    * - Business Central Customers (organisation data) Property
      - Salesforce Organization Property
      - Salesforce Data Type
+   * - displayName
+     - Name
+     - "string"
+   * - phoneNumber
+     - Phone
+     - "string"
 
 
 Business Central Customers (human data) to Salesforce Customer
