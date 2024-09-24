@@ -2,7 +2,7 @@
 Tripletex to Chargebee Dataflow
 ===============================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -124,15 +124,6 @@ The following properties are synchronized between a Tripletex Order and a Charge
    * - Tripletex Order Property
      - Chargebee Order Property
      - Chargebee Data Type
-   * - contact.id
-     - customer_id
-     - "string"
-   * - currency.id
-     - currency_code
-     - "string"
-   * - customer.id
-     - customer_id
-     - "string"
 
 
 Tripletex Orderline to Chargebee Order
@@ -263,6 +254,15 @@ The following properties are synchronized between a Tripletex Order and a Charge
    * - Tripletex Order Property
      - Chargebee Order Property
      - Chargebee Data Type
+   * - contact.id
+     - customer_id
+     - "string"
+   * - currency.id
+     - currency_code
+     - "string"
+   * - customer.id
+     - customer_id
+     - "string"
 
 
 Tripletex Product to Chargebee Item
