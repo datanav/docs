@@ -2,7 +2,7 @@
 Shopify to  Dataflow
 ====================
 
-Generated: 2024-09-24 00:00:03
+Generated: 2024-09-24 00:00:36
 
 Introduction
 ------------
@@ -65,6 +65,18 @@ The following properties are synchronized between a Shopify Sesamproduct and a  
    * - Shopify Sesamproduct Property
      -  Sesamproducts Property
      -  Data Type
+   * - sesam_priceExclVAT
+     - variants.pricing.salePrice.value
+     - "string"
+   * - title
+     - name
+     - "string"
+   * - variants.sku
+     - variants.sku
+     - "string"
+   * - variants.title
+     - description
+     - "string"
 
 
 Shopify Inventoryitem to  Inventory
@@ -116,6 +128,15 @@ The following properties are synchronized between a Shopify Sesamproduct and a  
    * - Shopify Sesamproduct Property
      -  Inventory Property
      -  Data Type
+   * - variants.inventory_quantity
+     - quantity
+     - "string"
+   * - variants.sku
+     - sku
+     - "string"
+   * - variants.title
+     - descriptor
+     - "string"
 
 
 Shopify Order to  Order
@@ -148,15 +169,6 @@ The following properties are synchronized between a Shopify Sesamproduct and a  
    * - Shopify Sesamproduct Property
      -  Inventory Property
      -  Data Type
-   * - variants.inventory_quantity
-     - quantity
-     - "string"
-   * - variants.sku
-     - sku
-     - "string"
-   * - variants.title
-     - descriptor
-     - "string"
 
 
 Shopify Sesamproduct to  Sesamproducts
@@ -173,19 +185,7 @@ The following properties are synchronized between a Shopify Sesamproduct and a  
    * - Shopify Sesamproduct Property
      -  Sesamproducts Property
      -  Data Type
-   * - sesam_priceExclVAT
-     - variants.pricing.salePrice.value
-     - "string"
-   * - title
-     - name
-     - "string"
    * - variants.inventory_quantity
      - variants.stock.quantity
-     - "string"
-   * - variants.sku
-     - variants.sku
-     - "string"
-   * - variants.title
-     - description
      - "string"
 
