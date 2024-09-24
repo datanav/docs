@@ -2,7 +2,7 @@
 Trello to CRMOffice Dataflow
 ============================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -23,12 +23,6 @@ The following properties are synchronized between a Trello Actions and a CRMOffi
    * - Trello Actions Property
      - CRMOffice Activities Property
      - CRMOffice Data Type
-   * - date
-     - startsAt
-     - "string"
-   * - memberCreator.id
-     - ownerId
-     - "string"
 
 
 Trello Boards to CRMOffice Activities
@@ -118,6 +112,12 @@ The following properties are synchronized between a Trello Actions and a CRMOffi
    * - Trello Actions Property
      - CRMOffice Activities Property
      - CRMOffice Data Type
+   * - date
+     - startsAt
+     - "string"
+   * - memberCreator.id
+     - ownerId
+     - "string"
 
 
 Trello Organizations to CRMOffice Companies
