@@ -2,7 +2,7 @@
 Salesforce to PowerOffice GO Dataflow
 =====================================
 
-Generated: 2024-09-24 00:00:26
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -102,6 +102,12 @@ The following properties are synchronized between a Salesforce Order and a Power
    * - Salesforce Order Property
      - PowerOffice GO Salesorders Property
      - PowerOffice GO Data Type
+   * - CurrencyIsoCode
+     - CurrencyCode
+     - "string"
+   * - OrderedDate
+     - SalesOrderDate
+     - "string"
 
 
 Salesforce Orderitem to PowerOffice GO Salesorderlines
