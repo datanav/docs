@@ -2,7 +2,7 @@
 Tripletex to PowerOffice GO Dataflow
 ====================================
 
-Generated: 2024-09-24 13:18:56
+Generated: 2024-09-24 13:20:03
 
 Introduction
 ------------
@@ -954,9 +954,6 @@ The following properties are synchronized between a Tripletex Project and a Powe
    * - Tripletex Project Property
      - PowerOffice GO Projects Property
      - PowerOffice GO Data Type
-   * - projectManager.id
-     - ProjectManagerEmployeeId
-     - "integer"
    * - startDate
      - StartDate
      - N/A
