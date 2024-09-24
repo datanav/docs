@@ -2,7 +2,7 @@
 MemberCare to Salesforce Dataflow
 =================================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -74,9 +74,6 @@ The following properties are synchronized between a MemberCare Invoices and a Sa
    * - MemberCare Invoices Property
      - Salesforce Invoice Property
      - Salesforce Data Type
-   * - payDueDate
-     - DueDate
-     - "string"
 
 
 MemberCare Organizations to Salesforce Division
@@ -165,6 +162,9 @@ The following properties are synchronized between a MemberCare Invoices and a Sa
    * - MemberCare Invoices Property
      - Salesforce Invoice Property
      - Salesforce Data Type
+   * - payDueDate
+     - DueDate
+     - "string"
 
 
 MemberCare Invoices to Salesforce Invoiceline
@@ -181,6 +181,18 @@ The following properties are synchronized between a MemberCare Invoices and a Sa
    * - MemberCare Invoices Property
      - Salesforce Invoiceline Property
      - Salesforce Data Type
+   * - id
+     - InvoiceId
+     - "string"
+   * - invoiceItems.description
+     - Description
+     - "string"
+   * - invoiceItems.quantity
+     - Quantity
+     - "string"
+   * - invoiceItems.unitPrice
+     - UnitPrice
+     - "string"
 
 
 MemberCare Invoices to Salesforce Orderitem
@@ -197,6 +209,12 @@ The following properties are synchronized between a MemberCare Invoices and a Sa
    * - MemberCare Invoices Property
      - Salesforce Orderitem Property
      - Salesforce Data Type
+   * - invoiceItems.quantity
+     - Quantity
+     - "string"
+   * - invoiceItems.unitPrice
+     - TotalPrice
+     - "string"
 
 
 MemberCare Invoices to Salesforce Quotelineitem
@@ -213,4 +231,13 @@ The following properties are synchronized between a MemberCare Invoices and a Sa
    * - MemberCare Invoices Property
      - Salesforce Quotelineitem Property
      - Salesforce Data Type
+   * - invoiceItems.description
+     - Description
+     - "string"
+   * - invoiceItems.quantity
+     - Quantity
+     - "string"
+   * - invoiceItems.unitPrice
+     - TotalPriceWithTax
+     - "string"
 
