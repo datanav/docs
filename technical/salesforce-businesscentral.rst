@@ -2,7 +2,7 @@
 Salesforce to Business Central Dataflow
 =======================================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -115,6 +115,15 @@ The following properties are synchronized between a Salesforce Invoiceline and a
    * - Salesforce Invoiceline Property
      - Business Central Salesorderlines Property
      - Business Central Data Type
+   * - Quantity
+     - quantity
+     - N/A
+   * - TaxRate
+     - taxPercent
+     - N/A
+   * - UnitPrice
+     - unitPrice
+     - "float"
 
 
 Salesforce Order to Business Central Salesorders
@@ -201,6 +210,15 @@ The following properties are synchronized between a Salesforce Orderitem and a B
    * - Salesforce Orderitem Property
      - Business Central Salesorderlines Property
      - Business Central Data Type
+   * - OrderId
+     - documentId
+     - "string"
+   * - Quantity
+     - quantity
+     - N/A
+   * - TotalPrice
+     - unitPrice
+     - "float"
 
 
 Salesforce Organization to Business Central Customers (classification data)
@@ -258,6 +276,15 @@ The following properties are synchronized between a Salesforce Quotelineitem and
    * - Salesforce Quotelineitem Property
      - Business Central Salesorderlines Property
      - Business Central Data Type
+   * - Discount
+     - discountPercent
+     - N/A
+   * - Quantity
+     - quantity
+     - N/A
+   * - TotalPriceWithTax
+     - unitPrice
+     - "float"
 
 
 Salesforce User to Business Central Employees
