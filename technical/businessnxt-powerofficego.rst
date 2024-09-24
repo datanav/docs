@@ -2,7 +2,7 @@
 Business Nxt to PowerOffice GO Dataflow
 =======================================
 
-Generated: 2024-09-24 00:00:02
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Business Nxt Order and a Pow
    * - Business Nxt Order Property
      - PowerOffice GO Salesorders Property
      - PowerOffice GO Data Type
+   * - orderDate
+     - SalesOrderDate
+     - "string"
 
 
 Business Nxt Orderline to PowerOffice GO Salesorderlines
@@ -39,6 +42,9 @@ The following properties are synchronized between a Business Nxt Orderline and a
    * - Business Nxt Orderline Property
      - PowerOffice GO Salesorderlines Property
      - PowerOffice GO Data Type
+   * - orderNo
+     - sesam_SalesOrderId
+     - "string"
 
 
 Business Nxt Product to PowerOffice GO Product
