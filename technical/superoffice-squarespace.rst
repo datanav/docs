@@ -2,7 +2,7 @@
 SuperOffice to  Dataflow
 ========================
 
-Generated: 2024-09-24 00:00:36
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -23,9 +23,6 @@ The following properties are synchronized between a SuperOffice Product and a  I
    * - SuperOffice Product Property
      -  Inventory Property
      -  Data Type
-   * - Description
-     - descriptor
-     - "string"
 
 
 SuperOffice Product to  Inventory
@@ -42,6 +39,9 @@ The following properties are synchronized between a SuperOffice Product and a  I
    * - SuperOffice Product Property
      -  Inventory Property
      -  Data Type
+   * - Description
+     - descriptor
+     - "string"
 
 
 SuperOffice Product to  Sesamproducts
