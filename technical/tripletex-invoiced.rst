@@ -2,7 +2,7 @@
 Tripletex to Invoiced Dataflow
 ==============================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -189,6 +189,15 @@ The following properties are synchronized between a Tripletex Order and a Invoic
    * - Tripletex Order Property
      - Invoiced Invoices Property
      - Invoiced Data Type
+   * - contact.id
+     - customer
+     - "string"
+   * - currency.id
+     - currency
+     - "string"
+   * - customer.id
+     - customer
+     - "string"
 
 
 Tripletex Orderline to Invoiced Lineitem
@@ -205,6 +214,18 @@ The following properties are synchronized between a Tripletex Orderline and a In
    * - Tripletex Orderline Property
      - Invoiced Lineitem Property
      - Invoiced Data Type
+   * - count
+     - items.quantity
+     - "string"
+   * - description
+     - items.description
+     - "string"
+   * - discount
+     - items.discounts
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - items.amount
+     - "string"
 
 
 Tripletex Product to Invoiced Items
