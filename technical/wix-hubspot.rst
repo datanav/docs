@@ -2,7 +2,7 @@
 Wix.com to HubSpot Dataflow
 ===========================
 
-Generated: 2024-09-24 00:00:01
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -115,6 +115,18 @@ The following properties are synchronized between a Wix.com Orders and a HubSpot
    * - Wix.com Orders Property
      - HubSpot Lineitem Property
      - HubSpot Data Type
+   * - lineItems.name
+     - properties.name
+     - "string"
+   * - lineItems.price
+     - properties.price
+     - "string"
+   * - lineItems.productId
+     - properties.hs_product_id
+     - "string"
+   * - lineItems.quantity
+     - properties.quantity
+     - N/A
 
 
 Wix.com Orders to HubSpot Lineitemdealassociationtype
