@@ -2,7 +2,7 @@
 Invoiced to Business Central Dataflow
 =====================================
 
-Generated: 2024-09-24 13:16:04
+Generated: 2024-09-24 13:32:19
 
 Introduction
 ------------
@@ -208,4 +208,19 @@ The following properties are synchronized between a Invoiced Lineitem and a Busi
    * - Invoiced Lineitem Property
      - Business Central Salesorderlines Property
      - Business Central Data Type
+   * - $original_id
+     - documentId
+     - "string"
+   * - items.amount
+     - unitPrice
+     - "float"
+   * - items.discounts
+     - discountPercent
+     - N/A
+   * - items.name
+     - description
+     - "string"
+   * - items.quantity
+     - quantity
+     - N/A
 
