@@ -2,7 +2,7 @@
 Tripletex to Shopify Dataflow
 =============================
 
-Generated: 2024-09-24 00:00:00
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -154,6 +154,18 @@ The following properties are synchronized between a Tripletex Order and a Shopif
    * - Tripletex Order Property
      - Shopify Order Property
      - Shopify Data Type
+   * - contact.id
+     - customer.id
+     - "string"
+   * - currency.id
+     - currency
+     - "string"
+   * - customer.id
+     - customer.id
+     - "string"
+   * - reference
+     - po_number
+     - "string"
 
 
 Tripletex Product to Shopify Sesamproduct
