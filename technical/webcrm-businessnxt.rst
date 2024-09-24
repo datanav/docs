@@ -2,7 +2,7 @@
 WebCRM to Business Nxt Dataflow
 ===============================
 
-Generated: 2024-09-24 00:00:03
+Generated: 2024-09-24 00:00:36
 
 Introduction
 ------------
@@ -64,6 +64,12 @@ The following properties are synchronized between a WebCRM Products and a Busine
    * - WebCRM Products Property
      - Business Nxt Product Property
      - Business Nxt Data Type
+   * - ProductPrice
+     - priceQuantity
+     - "string"
+   * - ProductQuantity
+     - quantityPerUnit
+     - "string"
 
 
 WebCRM Quotationline to Business Nxt Order
@@ -118,12 +124,6 @@ The following properties are synchronized between a WebCRM Products and a Busine
    * - WebCRM Products Property
      - Business Nxt Product Property
      - Business Nxt Data Type
-   * - ProductPrice
-     - priceQuantity
-     - "string"
-   * - ProductQuantity
-     - quantityPerUnit
-     - "string"
 
 
 WebCRM Quotationline to Business Nxt Orderline
