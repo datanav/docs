@@ -2,7 +2,7 @@
 Unieconomy to Exact Online Dataflow
 ===================================
 
-Generated: 2024-09-24 00:00:03
+Generated: 2024-09-24 13:16:04
 
 Introduction
 ------------
@@ -42,9 +42,6 @@ The following properties are synchronized between a Unieconomy Customers and a E
    * - Unieconomy Customers Property
      - Exact Online Accounts Property
      - Exact Online Data Type
-   * - WebUrl
-     - Website
-     - "string"
 
 
 Unieconomy Departments to Exact Online Accounts
@@ -102,6 +99,9 @@ The following properties are synchronized between a Unieconomy Customers and a E
    * - Unieconomy Customers Property
      - Exact Online Accounts Property
      - Exact Online Data Type
+   * - WebUrl
+     - Website
+     - "string"
 
 
 Unieconomy Departments to Exact Online Departments
@@ -118,4 +118,7 @@ The following properties are synchronized between a Unieconomy Departments and a
    * - Unieconomy Departments Property
      - Exact Online Departments Property
      - Exact Online Data Type
+   * - DepartmentNumber
+     - Description
+     - "string"
 
