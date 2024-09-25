@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2024-09-25 00:34:21
+Generated: 2024-09-25 01:12:57
 
 Introduction
 ------------
@@ -94,7 +94,10 @@ The following properties are synchronized between a HubSpot Contact and a HubSpo
 
 HubSpot Contactcompanyassociation to HubSpot Contact
 ----------------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Contactcompanyassociation and a HubSpot Contact must be established.
+Every HubSpot Contactcompanyassociation will be synchronized with a HubSpot Contact.
+
+If a matching HubSpot Contact already exists, the HubSpot Contactcompanyassociation will be merged with the existing one.
+If no matching HubSpot Contact is found, a new HubSpot Contact will be created.
 
 A HubSpot Contactcompanyassociation will merge with a HubSpot Contact if one of the following property combinations match:
 
@@ -1438,6 +1441,22 @@ The following properties are synchronized between a HubSpot User and a HubSpot U
 
    * - HubSpot User Property
      - HubSpot User Property
+     - HubSpot Data Type
+
+
+HubSpot User to HubSpot Contact
+-------------------------------
+Every HubSpot User will be synchronized with a HubSpot Contact.
+
+Once a link between a HubSpot User and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot User and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot User Property
+     - HubSpot Contact Property
      - HubSpot Data Type
 
 
