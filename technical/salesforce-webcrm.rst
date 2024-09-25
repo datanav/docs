@@ -2,12 +2,53 @@
 Salesforce to WebCRM Dataflow
 =============================
 
-Generated: 2024-09-25 00:34:21
+Generated: 2024-09-25 01:12:57
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Salesforce Division to WebCRM Organisations
+-------------------------------------------
+Every Salesforce Division will be synchronized with a WebCRM Organisations.
+
+Once a link between a Salesforce Division and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Division and a WebCRM Organisations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Division Property
+     - WebCRM Organisations Property
+     - WebCRM Data Type
+   * - Name
+     - OrganisationName
+     - "string"
+
+
+Salesforce Organization to WebCRM Organisations
+-----------------------------------------------
+Every Salesforce Organization will be synchronized with a WebCRM Organisations.
+
+Once a link between a Salesforce Organization and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Organization and a WebCRM Organisations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Organization Property
+     - WebCRM Organisations Property
+     - WebCRM Data Type
+   * - Name
+     - OrganisationName
+     - "string"
+   * - Phone
+     - OrganisationTelephone
+     - "string"
+
 
 Salesforce Contact to WebCRM Persons
 ------------------------------------
