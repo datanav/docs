@@ -2,7 +2,7 @@
 Shopify to Chargebee Dataflow
 =============================
 
-Generated: 2024-09-25 00:00:01
+Generated: 2024-09-25 00:01:25
 
 Introduction
 ------------
@@ -23,6 +23,18 @@ The following properties are synchronized between a Shopify Customer and a Charg
    * - Shopify Customer Property
      - Chargebee Customer Property
      - Chargebee Data Type
+   * - default_address.country_name
+     - billing_address.country
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - first_name
+     - first_name
+     - "string"
+   * - last_name
+     - last_name
+     - "string"
 
 
 Shopify Inventoryitem to Chargebee Item
@@ -55,6 +67,18 @@ The following properties are synchronized between a Shopify Order and a Chargebe
    * - Shopify Order Property
      - Chargebee Order Property
      - Chargebee Data Type
+   * - currency
+     - currency_code
+     - "string"
+   * - customer.id
+     - customer_id
+     - "string"
+   * - line_items.price
+     - order_line_items.unit_price
+     - "string"
+   * - line_items.quantity
+     - order_line_items.amount
+     - "string"
 
 
 Shopify Product to Chargebee Item
@@ -122,18 +146,6 @@ The following properties are synchronized between a Shopify Customer and a Charg
    * - Shopify Customer Property
      - Chargebee Customer Property
      - Chargebee Data Type
-   * - default_address.country_name
-     - billing_address.country
-     - "string"
-   * - email
-     - email
-     - "string"
-   * - first_name
-     - first_name
-     - "string"
-   * - last_name
-     - last_name
-     - "string"
 
 
 Shopify Order to Chargebee Order
@@ -150,18 +162,6 @@ The following properties are synchronized between a Shopify Order and a Chargebe
    * - Shopify Order Property
      - Chargebee Order Property
      - Chargebee Data Type
-   * - currency
-     - currency_code
-     - "string"
-   * - customer.id
-     - customer_id
-     - "string"
-   * - line_items.price
-     - order_line_items.unit_price
-     - "string"
-   * - line_items.quantity
-     - order_line_items.amount
-     - "string"
 
 
 Shopify Sesamproduct to Chargebee Item
