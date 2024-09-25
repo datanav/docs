@@ -2,7 +2,7 @@
 Exact Online to Business Central Dataflow
 =========================================
 
-Generated: 2024-09-25 00:00:03
+Generated: 2024-09-25 00:01:39
 
 Introduction
 ------------
@@ -206,7 +206,4 @@ The following properties are synchronized between a Exact Online Salesorders and
    * - Exact Online Salesorders Property
      - Business Central Salesorders Property
      - Business Central Data Type
-   * - Currency
-     - currencyId
-     - "string"
 
