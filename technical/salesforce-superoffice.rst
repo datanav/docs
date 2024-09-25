@@ -2,7 +2,7 @@
 Salesforce to SuperOffice Dataflow
 ==================================
 
-Generated: 2024-09-25 00:00:03
+Generated: 2024-09-25 00:01:39
 
 Introduction
 ------------
@@ -232,15 +232,6 @@ The following properties are synchronized between a Salesforce Product2 and a Su
    * - Salesforce Product2 Property
      - SuperOffice Product Property
      - SuperOffice Data Type
-   * - Description
-     - Description
-     - "string"
-   * - DisplayUrl
-     - Url
-     - "string"
-   * - Name
-     - Name
-     - "string"
 
 
 Salesforce Quote to SuperOffice Quotealternative
