@@ -2,7 +2,7 @@
 Asana to Chargebee Dataflow
 ===========================
 
-Generated: 2024-09-25 00:00:01
+Generated: 2024-09-25 00:01:26
 
 Introduction
 ------------
@@ -42,6 +42,9 @@ The following properties are synchronized between a Asana Workspaces and a Charg
    * - Asana Workspaces Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
+   * - name
+     - name
+     - "string"
 
 
 Asana Workspaces to Chargebee Business_entity
@@ -58,7 +61,4 @@ The following properties are synchronized between a Asana Workspaces and a Charg
    * - Asana Workspaces Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
-   * - name
-     - name
-     - "string"
 
