@@ -2,7 +2,7 @@
 Salesforce to MemberCare Dataflow
 =================================
 
-Generated: 2024-09-25 00:00:04
+Generated: 2024-09-25 00:01:26
 
 Introduction
 ------------
@@ -102,6 +102,9 @@ The following properties are synchronized between a Salesforce Invoice and a Mem
    * - Salesforce Invoice Property
      - MemberCare Invoices Property
      - MemberCare Data Type
+   * - DueDate
+     - payDueDate
+     - "string"
 
 
 Salesforce Invoiceline to MemberCare Invoices
@@ -184,6 +187,24 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      - MemberCare Companies Property
      - MemberCare Data Type
+   * - City
+     - addresses.postalCode.city
+     - "string"
+   * - Country
+     - addresses.country.id
+     - "string"
+   * - ID
+     - addresses.id
+     - "string"
+   * - Name
+     - companyName
+     - "string"
+   * - PostalCode
+     - addresses.postalCode.zipCode
+     - "string"
+   * - Street
+     - addresses.street
+     - "string"
 
 
 Salesforce Product2 to MemberCare Products
@@ -335,9 +356,6 @@ The following properties are synchronized between a Salesforce Invoice and a Mem
    * - Salesforce Invoice Property
      - MemberCare Invoices Property
      - MemberCare Data Type
-   * - DueDate
-     - payDueDate
-     - "string"
 
 
 Salesforce Order to MemberCare Countries
@@ -398,24 +416,6 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      - MemberCare Companies Property
      - MemberCare Data Type
-   * - City
-     - addresses.postalCode.city
-     - "string"
-   * - Country
-     - addresses.country.id
-     - "string"
-   * - ID
-     - addresses.id
-     - "string"
-   * - Name
-     - companyName
-     - "string"
-   * - PostalCode
-     - addresses.postalCode.zipCode
-     - "string"
-   * - Street
-     - addresses.street
-     - "string"
 
 
 Salesforce Quote to MemberCare Countries
