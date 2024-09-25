@@ -2,7 +2,7 @@
 Exact Online to Tripletex Dataflow
 ==================================
 
-Generated: 2024-09-25 00:00:02
+Generated: 2024-09-25 00:01:39
 
 Introduction
 ------------
@@ -33,6 +33,9 @@ The following properties are synchronized between a Exact Online Departments and
    * - Exact Online Departments Property
      - Tripletex Department Property
      - Tripletex Data Type
+   * - Code
+     - departmentNumber
+     - "string"
 
 
 Exact Online Accounts to Tripletex Customer
@@ -133,9 +136,6 @@ The following properties are synchronized between a Exact Online Departments and
    * - Exact Online Departments Property
      - Tripletex Department Property
      - Tripletex Data Type
-   * - Code
-     - departmentNumber
-     - "string"
 
 
 Exact Online Employees to Tripletex Employee
@@ -218,7 +218,4 @@ The following properties are synchronized between a Exact Online Salesorders and
    * - Exact Online Salesorders Property
      - Tripletex Order Property
      - Tripletex Data Type
-   * - Currency
-     - currency.id
-     - "integer"
 
