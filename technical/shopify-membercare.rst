@@ -2,7 +2,7 @@
 Shopify to MemberCare Dataflow
 ==============================
 
-Generated: 2024-09-25 00:00:02
+Generated: 2024-09-25 00:01:26
 
 Introduction
 ------------
@@ -61,6 +61,12 @@ The following properties are synchronized between a Shopify Order and a MemberCa
    * - Shopify Order Property
      - MemberCare Invoices Property
      - MemberCare Data Type
+   * - line_items.price
+     - invoiceItems.unitPrice
+     - "string"
+   * - line_items.quantity
+     - invoiceItems.quantity
+     - "string"
 
 
 Shopify Product to MemberCare Products
@@ -165,10 +171,4 @@ The following properties are synchronized between a Shopify Order and a MemberCa
    * - Shopify Order Property
      - MemberCare Invoices Property
      - MemberCare Data Type
-   * - line_items.price
-     - invoiceItems.unitPrice
-     - "string"
-   * - line_items.quantity
-     - invoiceItems.quantity
-     - "string"
 
