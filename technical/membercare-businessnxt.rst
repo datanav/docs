@@ -2,7 +2,7 @@
 MemberCare to Business Nxt Dataflow
 ===================================
 
-Generated: 2024-09-25 00:00:03
+Generated: 2024-09-25 00:01:26
 
 Introduction
 ------------
@@ -23,6 +23,24 @@ The following properties are synchronized between a MemberCare Companies and a B
    * - MemberCare Companies Property
      - Business Nxt Address Property
      - Business Nxt Data Type
+   * - addresses.country.id
+     - countryNo
+     - "string"
+   * - addresses.id
+     - addressNo
+     - "string"
+   * - addresses.postalCode.city
+     - postalArea
+     - "string"
+   * - addresses.postalCode.zipCode
+     - postCode
+     - "string"
+   * - addresses.street
+     - addressLine1
+     - "string"
+   * - companyName
+     - name
+     - "string"
 
 
 MemberCare Companycategories to Business Nxt Country
@@ -149,24 +167,6 @@ The following properties are synchronized between a MemberCare Companies and a B
    * - MemberCare Companies Property
      - Business Nxt Address Property
      - Business Nxt Data Type
-   * - addresses.country.id
-     - countryNo
-     - "string"
-   * - addresses.id
-     - addressNo
-     - "string"
-   * - addresses.postalCode.city
-     - postalArea
-     - "string"
-   * - addresses.postalCode.zipCode
-     - postCode
-     - "string"
-   * - addresses.street
-     - addressLine1
-     - "string"
-   * - companyName
-     - name
-     - "string"
 
 
 MemberCare Companies to Business Nxt Company
