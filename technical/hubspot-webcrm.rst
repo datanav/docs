@@ -2,12 +2,37 @@
 HubSpot to WebCRM Dataflow
 ==========================
 
-Generated: 2024-09-25 00:34:21
+Generated: 2024-09-25 01:12:57
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to WebCRM. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+HubSpot Company to WebCRM Organisations
+---------------------------------------
+Every HubSpot Company will be synchronized with a WebCRM Organisations.
+
+Once a link between a HubSpot Company and a WebCRM Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Company and a WebCRM Organisations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Company Property
+     - WebCRM Organisations Property
+     - WebCRM Data Type
+   * - properties.description
+     - OrganisationCompanyDescription
+     - "string"
+   * - properties.name
+     - OrganisationName
+     - "string"
+   * - properties.phone
+     - OrganisationTelephone
+     - "string"
+
 
 HubSpot Deal to WebCRM Opportunities
 ------------------------------------
