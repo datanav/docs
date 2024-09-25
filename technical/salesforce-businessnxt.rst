@@ -2,7 +2,7 @@
 Salesforce to Business Nxt Dataflow
 ===================================
 
-Generated: 2024-09-25 00:00:03
+Generated: 2024-09-25 00:01:26
 
 Introduction
 ------------
@@ -99,6 +99,18 @@ The following properties are synchronized between a Salesforce Order and a Busin
    * - Salesforce Order Property
      - Business Nxt Order Property
      - Business Nxt Data Type
+   * - EffectiveDate
+     - dueDate
+     - "string"
+   * - EndDate
+     - settlementDate
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - OrderedDate
+     - orderDate
+     - "string"
 
 
 Salesforce Orderitem to Business Nxt Order
@@ -131,6 +143,30 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      - Business Nxt Address Property
      - Business Nxt Data Type
+   * - City
+     - postalArea
+     - "string"
+   * - Country
+     - countryNo
+     - "string"
+   * - Fax
+     - fax
+     - "string"
+   * - ID
+     - addressNo
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - Phone
+     - phone
+     - "string"
+   * - PostalCode
+     - postCode
+     - "string"
+   * - Street
+     - addressLine1
+     - "string"
 
 
 Salesforce Product2 to Business Nxt Product
@@ -283,18 +319,6 @@ The following properties are synchronized between a Salesforce Order and a Busin
    * - Salesforce Order Property
      - Business Nxt Order Property
      - Business Nxt Data Type
-   * - EffectiveDate
-     - dueDate
-     - "string"
-   * - EndDate
-     - settlementDate
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - OrderedDate
-     - orderDate
-     - "string"
 
 
 Salesforce Orderitem to Business Nxt Orderline
@@ -330,30 +354,6 @@ The following properties are synchronized between a Salesforce Organization and 
    * - Salesforce Organization Property
      - Business Nxt Address Property
      - Business Nxt Data Type
-   * - City
-     - postalArea
-     - "string"
-   * - Country
-     - countryNo
-     - "string"
-   * - Fax
-     - fax
-     - "string"
-   * - ID
-     - addressNo
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - Phone
-     - phone
-     - "string"
-   * - PostalCode
-     - postCode
-     - "string"
-   * - Street
-     - addressLine1
-     - "string"
 
 
 Salesforce Organization to Business Nxt Company
