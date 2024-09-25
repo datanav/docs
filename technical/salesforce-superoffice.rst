@@ -2,12 +2,168 @@
 Salesforce to SuperOffice Dataflow
 ==================================
 
-Generated: 2024-09-25 00:34:21
+Generated: 2024-09-25 01:12:57
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Salesforce to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Salesforce Contact to SuperOffice Person
+----------------------------------------
+Every Salesforce Contact will be synchronized with a SuperOffice Person.
+
+Once a link between a Salesforce Contact and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Contact and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Contact Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
+   * - Birthdate
+     - BirthDate
+     - N/A
+   * - Email
+     - Emails.Value
+     - "string"
+   * - FirstName
+     - Firstname
+     - "string"
+   * - HomePhone
+     - PrivatePhones.Value
+     - "string"
+   * - LastName
+     - Lastname
+     - "string"
+   * - MobilePhone
+     - MobilePhones.Value
+     - "string"
+   * - Phone
+     - OfficePhones.Value
+     - "string"
+
+
+Salesforce Customer to SuperOffice Person
+-----------------------------------------
+Every Salesforce Customer will be synchronized with a SuperOffice Person.
+
+Once a link between a Salesforce Customer and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Customer and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Customer Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
+
+
+Salesforce Division to SuperOffice Contact
+------------------------------------------
+Every Salesforce Division will be synchronized with a SuperOffice Contact.
+
+Once a link between a Salesforce Division and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Division and a SuperOffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Division Property
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
+   * - Name
+     - Name
+     - "string"
+
+
+Salesforce Organization to SuperOffice Contact
+----------------------------------------------
+Every Salesforce Organization will be synchronized with a SuperOffice Contact.
+
+Once a link between a Salesforce Organization and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Organization and a SuperOffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Organization Property
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
+   * - Name
+     - Name
+     - "string"
+   * - Phone
+     - Phones.Value
+     - "string"
+
+
+Salesforce Seller to SuperOffice Person
+---------------------------------------
+Every Salesforce Seller will be synchronized with a SuperOffice Person.
+
+Once a link between a Salesforce Seller and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce Seller and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce Seller Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
+
+
+Salesforce User to SuperOffice Person
+-------------------------------------
+Every Salesforce User will be synchronized with a SuperOffice Person.
+
+Once a link between a Salesforce User and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Salesforce User and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Salesforce User Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
+   * - City
+     - Address.Street.City
+     - "string"
+   * - Country
+     - Country.CountryId
+     - "integer"
+   * - Division
+     - Contact.ContactId
+     - "integer"
+   * - Email
+     - Emails.Value
+     - "string"
+   * - FirstName
+     - Firstname
+     - "string"
+   * - ID
+     - PersonId
+     - "integer"
+   * - LastName
+     - Lastname
+     - "string"
+   * - MobilePhone
+     - MobilePhones.Value
+     - "string"
+   * - PostalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - Street
+     - Address.Street.Address1
+     - "string"
+
 
 Salesforce Invoiceline to SuperOffice Quoteline
 -----------------------------------------------
