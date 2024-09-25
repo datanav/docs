@@ -2,7 +2,7 @@
 MemberCare to Chargebee Dataflow
 ================================
 
-Generated: 2024-09-25 00:00:01
+Generated: 2024-09-25 00:01:26
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a MemberCare Companies and a C
    * - MemberCare Companies Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
+   * - companyName
+     - name
+     - "string"
 
 
 MemberCare Companycategories to Chargebee Currency
@@ -144,7 +147,4 @@ The following properties are synchronized between a MemberCare Companies and a C
    * - MemberCare Companies Property
      - Chargebee Business_entity Property
      - Chargebee Data Type
-   * - companyName
-     - name
-     - "string"
 
