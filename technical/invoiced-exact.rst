@@ -2,7 +2,7 @@
 Invoiced to Exact Online Dataflow
 =================================
 
-Generated: 2024-09-25 00:00:03
+Generated: 2024-09-25 00:01:26
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Invoiced Customers (organisa
    * - Invoiced Customers (organisation data) Property
      - Exact Online Accounts Property
      - Exact Online Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Invoiced Customers (human data) to Exact Online Contacts
@@ -150,9 +153,6 @@ The following properties are synchronized between a Invoiced Customers (organisa
    * - Invoiced Customers (organisation data) Property
      - Exact Online Accounts Property
      - Exact Online Data Type
-   * - name
-     - Name
-     - "string"
 
 
 Invoiced Customers (organisation data) to Exact Online Accounts
