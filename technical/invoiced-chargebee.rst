@@ -2,7 +2,7 @@
 Invoiced to Chargebee Dataflow
 ==============================
 
-Generated: 2024-09-25 00:00:01
+Generated: 2024-09-25 00:01:26
 
 Introduction
 ------------
@@ -58,6 +58,12 @@ The following properties are synchronized between a Invoiced Invoices and a Char
    * - Invoiced Invoices Property
      - Chargebee Order Property
      - Chargebee Data Type
+   * - currency
+     - currency_code
+     - "string"
+   * - customer
+     - customer_id
+     - "string"
 
 
 Invoiced Items to Chargebee Item
@@ -179,12 +185,6 @@ The following properties are synchronized between a Invoiced Invoices and a Char
    * - Invoiced Invoices Property
      - Chargebee Order Property
      - Chargebee Data Type
-   * - currency
-     - currency_code
-     - "string"
-   * - customer
-     - customer_id
-     - "string"
 
 
 Invoiced Items to Chargebee Item
