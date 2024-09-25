@@ -15,6 +15,7 @@ Documentation
    Data Transformation Language (DTL) <data-transformation-language>
    Data management <index-data-management>
    Data synchronization <index-synchronization>
+   Connectors <index-connectors>
    Operations <index-operations>
    Data platforms <index-dataplatforms>
    Tools <tools>
