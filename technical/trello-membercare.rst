@@ -2,7 +2,7 @@
 Trello to MemberCare Dataflow
 =============================
 
-Generated: 2024-09-25 00:00:02
+Generated: 2024-09-25 00:01:26
 
 Introduction
 ------------
@@ -42,6 +42,12 @@ The following properties are synchronized between a Trello Organizations and a M
    * - Trello Organizations Property
      - MemberCare Companies Property
      - MemberCare Data Type
+   * - name
+     - companyName
+     - "string"
+   * - website
+     - url
+     - "string"
 
 
 Trello Organizations to MemberCare Companies
@@ -58,10 +64,4 @@ The following properties are synchronized between a Trello Organizations and a M
    * - Trello Organizations Property
      - MemberCare Companies Property
      - MemberCare Data Type
-   * - name
-     - companyName
-     - "string"
-   * - website
-     - url
-     - "string"
 
