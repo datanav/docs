@@ -2,7 +2,7 @@
 Tripletex to Exact Online Dataflow
 ==================================
 
-Generated: 2024-09-26 00:00:02
+Generated: 2024-09-26 00:01:33
 
 Introduction
 ------------
@@ -447,6 +447,9 @@ The following properties are synchronized between a Tripletex Order and a Exact 
    * - Tripletex Order Property
      - Exact Online Salesorders Property
      - Exact Online Data Type
+   * - currency.id
+     - Currency
+     - "string"
 
 
 Tripletex Orderline to Exact Online Salesorderlines
