@@ -2,7 +2,7 @@
 Business Central to Salesforce Dataflow
 =======================================
 
-Generated: 2024-09-26 00:00:01
+Generated: 2024-09-26 00:01:33
 
 Introduction
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Businesscentral Items and a 
    * - Businesscentral Items Property
      - Salesforce Product2 Property
      - Salesforce Data Type
+   * - displayName
+     - Name
+     - "string"
 
 
 Business Central Companies to Salesforce Division
@@ -269,9 +272,6 @@ The following properties are synchronized between a Business Central Items and a
    * - Business Central Items Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-   * - displayName
-     - Name
-     - "string"
 
 
 Business Central Salesorderlines to Salesforce Invoiceline
