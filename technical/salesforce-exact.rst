@@ -2,7 +2,7 @@
 Salesforce to Exact Online Dataflow
 ===================================
 
-Generated: 2024-09-26 00:00:02
+Generated: 2024-09-26 00:01:33
 
 Introduction
 ------------
@@ -449,6 +449,12 @@ The following properties are synchronized between a Salesforce Order and a Exact
    * - Salesforce Order Property
      - Exact Online Salesorders Property
      - Exact Online Data Type
+   * - CurrencyIsoCode
+     - Currency
+     - "string"
+   * - Description
+     - Description
+     - "string"
 
 
 Salesforce Orderitem to Exact Online Salesorderlines
