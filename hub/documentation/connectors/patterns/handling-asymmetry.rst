@@ -24,6 +24,10 @@ GET and update (POST/PATCH/PUT) for datatype A but INSERT for datatype B
 
 This might also occur when datatype B in some way depends on datatype A, often through a required relationship. In these cases we need to view the datatypes as separate, but add an additional share pipe to the datatype B flow which only deals with inserts of datatype A. This logic should either be managed in the share pipe before the share template, or in an additional ``-preshare`` pipe before the share pipe. Datatype B's share pipe will also require it's insert capabilities removed as this is now managed by datatype A. In addition the colelct template for datatype B will now have to look for *$generated_id* in datatype A's share dataset.
 
+Datatype dependencies
+^^^^^^^^^^^^^^^^^^^^^
+
+Every system have a different way of structuring their data model, and some times they do not scale well with your central model. E.g. they might have split up datatypes in hierarchies which makes sence for that specific system, but not for any other system. Even though these hierarchies have no real interest to your central model they might be required in order to correctly share this datatype back to the system. In this case you might also have to introduce multiple share pipes for your datatype in order to create the correct hierarcial structure in the target system.  
 
 Hops required asymmetry
 ^^^^^^^^^^^^^^^^^^^^^^^
