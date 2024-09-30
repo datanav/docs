@@ -30,7 +30,7 @@ Datatype dependencies
 Every system have a different way of structuring their data model, and some times they do not scale well with your central model. E.g. they might have split up datatypes in hierarchies which makes sence for that specific system, but not for any other system. Even though these hierarchies have no real interest to your central model they might be required in order to correctly share this datatype back to the system. In this case you might also have to introduce multiple share pipes for your datatype in order to create the correct hierarcial structure in the target system.  
 
 Hops required asymmetry
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 
 When required connector pipes may perform hops to other connector datasets to achieve symmetry or to satisfy required data dependencies, but not to datasets outside the connector. This should however be performed with caution as you might introduce loops or additional dependencies. An example of this might be if the API does not expose relationships through the GET request (but rather implicitly through the rewuest URL. We can introduce these in the connector by performing hops to the required collect pipe. 
 
