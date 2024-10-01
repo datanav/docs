@@ -13,6 +13,7 @@ This document describes best practices on building and structuring connectors.
    datatypes-with-list-of-linked-objects
    handling-asymmetry
    parameterized-datatypes
+   register-webhook
    partial-webhook-events
    receive-webhook-events
    share-template-extension-points
