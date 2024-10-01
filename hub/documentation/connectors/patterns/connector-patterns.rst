@@ -23,3 +23,5 @@ This document describes best practices on building and structuring connectors.
    use-templates
    webhook-deletion-tracking
    open-closed-principle
+   pagination
+   continuation
