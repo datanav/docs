@@ -7,14 +7,14 @@ Time-based masterdata management in Sesam
 Summary
 -------
 
-Time-based masterdata management in Sesam cover the concept of instead of having a specific system being master of a specific property, which ever system had the property last modified is master. Often no one specific system can be said to always be the master of a specific type of data. Often what you would want in practice is to always have the latest version of the data, be it the newest phone number of an employee or the email address of a customer. In these situations, if a customer changes a phone number in one system you do not want an old phone number in an other system to be master. Time-based masterdata management always picks the last updated property to be the master value, independent of which system it originates from.
+Time-based master data management ensures that the most recently updated system becomes the master of a property, rather than assigning a specific system as the master for a given property. This approach is useful when no single system can be designated as the master for a particular type of data. In practice, it's often more important to have the latest version of the data—such as an employee's phone number or a customer's email address—regardless of which system it comes from. If a customer updates their phone number in one system, you don't want an outdated number from another system to override it. Time-based master data management always selects the most recent update as the master value, regardless of the source system.
 
 This section covers best practices in how to implement time-based masterdata management in Sesam and the effects is has.
 
 Claims
 ------
 
-In order to do time-based masterdata management every property needs a designated datetime corresponding to the date and time property was last modified. This introduces the concept of ``claims``. A claim is a collection of metadata for each property. The porperty's value is one claim property, but we would also add which entity/system the property originated from, the status of the claim (is it the newest one or an old claim) as well a datetime property telling us when the property was last updated. We can now rewrite the key-value ``<property>: <value>`` as ``<property>: <claimDict>`` where the value is a dictionary (the claim). For the purpose of this section (time-based masterdata management) we will only use a property's value, its $last-modified datetime and the claim's end-time (when the claim got replaced by a newer claim) as claim properties.
+In order to do time-based masterdata management, every property needs a datetime corresponding to the date and time the property was last modified. In Sesam, the preferred way of implementing this is as ``claims``. A claim is a collection of metadata for each property. The property's value is one claim property, but also which entity/system the property originated from, the status of the claim (is it the newest one or an old claim) as well as a datetime property telling us when the property was last updated. We can now rewrite the key-value ``<property>: <value>`` as ``<property>: <claimDict>`` where ``claimDict`` is a dictionary containing the claim data. In the example below, ``claimDict`` contains the property's value, its $last-modified datetime, and the claim's end-time, which is when the claim got replaced by a newer claim. These are the ``claim properties``.
 
 |start-h3| Example |end-h3|
 
@@ -30,7 +30,7 @@ In order to do time-based masterdata management every property needs a designate
 Adding last modified value
 --------------------------
 
-Optimally the system supplies last modified datetime values for each property. If not, the system often supply a last modified value for the entity as a whole. In that case each entity property would get the entity's last modified datetime value during the first time the entities are processed through the ``-collect`` pipe. If none of the options are available we can use Sesam's internal entity timestamp (``_ts``) as a initial datetime value.
+Optimally, the system supplies last modified datetime values for each property. If not, the system often supplies a last modified value for the entity as a whole. In that case each entity property would get the entity's last modified datetime value the first time the entities are processed through the ``-collect`` pipe. If the system has no datetime values that track changes, we can use Sesam's internal entity timestamp (``_ts``) as the initial datetime value.
 
 |start-h3| Datetime order of priority |end-h3|
 
@@ -44,7 +44,7 @@ Optimally the system supplies last modified datetime values for each property. I
 Updating last modified value
 ----------------------------
 
-Unless the system provides property specific datetime values you will have to add functionality that updates the datetime value in each claim if the value of the claim changes. This can be done in Sesam by performing a hops the the pipe's sink dataset and comparing the claim values. If the value has changed the the entity's new datetime value will become the property's new datetime value. This was, eventually all updated properties will have individual datetime values in their claims corresponding to the datetime they last changed. 
+Unless the system provides property specific datetime values you will have to add functionality that updates the datetime value in each claim if the value of the claim changes. This can be done in Sesam by performing a hops the the pipe's sink dataset and comparing the claim values. If the value has changed the the entity's new datetime value will become the property's new datetime value. Eventually all updated properties will have individual datetime values in their claims corresponding to the datetime they last changed. 
 
 A full DTL example on how to set and update $last-modified values in claims can be seen at the bottom of this page.
 
