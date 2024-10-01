@@ -16,4 +16,4 @@ At times we need to manipulate the update, insert or delete responses from a sys
 Manipulating lookup response
 ----------------------------
 
-At times we need to manipulate the lookup response to make it fit with the expected format. In order to do this we can use the ``rewrite_rules_lookup`` followed by ``rewrite_lookup `` extension point documented in the :ref:`transform-share-rest <template_transform_share_rest>`  in docs.
+At times we need to manipulate the lookup response to make it fit with the expected format. In order to do this we can use the ``rewrite_rules_lookup`` followed by ``rewrite_lookup`` extension point documented in the :ref:`transform-share-rest <template_transform_share_rest>`  in docs.
