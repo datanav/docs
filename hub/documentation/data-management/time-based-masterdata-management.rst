@@ -27,24 +27,23 @@ In order to do time-based masterdata management, every property needs a datetime
       "end-time": "~t2024-09-20T07:18:20.698042Z"
     }
 
-Adding last modified value
---------------------------
+Last modified value
+-------------------
 
-Optimally, the system supplies last modified datetime values for each property. If not, the system often supplies a last modified value for the entity as a whole. In that case each entity property would get the entity's last modified datetime value the first time the entities are processed through the ``-collect`` pipe. If the system has no datetime values that track changes, we can use Sesam's internal entity timestamp (``_ts``) as the initial datetime value.
+In order to perform time-based masterdata management, each claim requires a datetime value describing when each specific property last changed in the source system. However, not every system has last modified datetime values for each property. Some systems might only have a datetime value on the entity as a whole, while some systems might not have any datetime value. In all three cases we need to be able to supply the claim with a near real-time datetime value in order to perform accurate time-based masterdata management. The different scenarios are described below in order of priority:
 
-|start-h3| Datetime order of priority |end-h3|
+1. The system provides last modified datetime values for each individual property
 
-1. Each property's system provided individual datetime value
+  * In this case the system provided datetime values are directly added to each corresponding claim's ``$last-modified`` value
 
-2. Each entity's system provided individual datetime value
+2. The system provides last modified datetime values for each entity
 
-3. Sesam's internal entity datetime value
+  * In this case we use the provided datetime value as the initial ``$last-modified`` but manually update the ``$last-modified`` value when the claim value changes 
 
+3. The system does not provides any last modified datetime values on property or entity level
 
-Updating last modified value
-----------------------------
+  * In this case we use Sesam's internal ``_ts`` value from the ``-collect`` pipe as initial $last-modified value and manually update the ``$last-modified`` value when the claim value changes 
 
-Unless the system provides property specific datetime values you will have to add functionality that updates the datetime value in each claim if the value of the claim changes. This can be done in Sesam by performing a hops the the pipe's sink dataset and comparing the claim values. If the value has changed the the entity's new datetime value will become the property's new datetime value. Eventually all updated properties will have individual datetime values in their claims corresponding to the datetime they last changed. 
 
 A full DTL example on how to set and update $last-modified values in claims can be seen at the bottom of this page.
 
