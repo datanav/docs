@@ -12,10 +12,11 @@ This document describes best practices on building and structuring connectors.
    datatypes-follow-the-api
    datatypes-with-list-of-linked-objects
    handling-asymmetry
+   open-closed-principle
    parameterized-datatypes
-   register-webhook
    partial-webhook-events
    receive-webhook-events
+   register-webhook
    share-template-extension-points
    shared-webhook-events
    single-share
@@ -23,4 +24,3 @@ This document describes best practices on building and structuring connectors.
    use-datatype-specific-operations
    use-templates
    webhook-deletion-tracking
-   open-closed-principle
