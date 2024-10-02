@@ -41,6 +41,8 @@ and the following secrets will be injected into the system:
      - The token used to refresh the access token (obtained during onboarding).
      - String
 
+* Example of connectors using OAuth2: Hubspot, Keap, Shopify, Sage, ZohoCRM, Wave, BusinessCentral, Asana
+
 API key
 -------
 
@@ -69,6 +71,7 @@ and the following secrets will be injected into the system:
      - String
 
 * Api key is generally less secure than OAuth2, as it is a simple key that can be easily compromised. It is recommended to use OAuth2 whenever possible (some connectors support both schemes).
+* Example of connectors using API key: PowerofficeGo, WooCommerce, Wix
 
 Tripletex authentication
 ------------------------
@@ -81,7 +84,7 @@ This is a custom style of authentication used by the Tripletex connector. It req
 
    * - Property
      - Description
-   * - ``consumer_key``
+   * - ``consumer_token``
      - The unique key to create an integration with Tripletex.
    * - ``employee_token``
      - The token created by the administrator of the Tripletex account.
@@ -95,14 +98,14 @@ and the following secrets will be injected into the system:
    * - Property
      - Description
      - Type
-   * - ``consumer_key``
+   * - ``consumer_token``
      - The consumer key as provided in the connector configuration.
      - String
    * - ``employee_token``
      - The employee token as provided in the connector configuration.
      - String
 
-* Tripletex has production and test accounts. The production accounts use ``employee_token`` set by Sesam app while you have to set both tokens in the test accounts.
+* Tripletex has production and test environments. The production accounts use ``employee_token`` set by Sesam app while you have to set both tokens in the test accounts.
 
 SuperOffice authentication
 --------------------------
@@ -165,3 +168,5 @@ and the following secrets will be injected into the system:
    * - ``jwt_refresh_token``
      - The token used to refresh the access token (obtained during onboarding).
      - String
+
+* Example of connectors using JWT: webCRM
