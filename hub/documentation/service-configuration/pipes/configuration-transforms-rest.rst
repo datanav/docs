@@ -48,6 +48,7 @@ Prototype
         "if_transform_empty": "allow"
     }
 
+.. _REST_transform_properties:
 
 Properties
 ^^^^^^^^^^
