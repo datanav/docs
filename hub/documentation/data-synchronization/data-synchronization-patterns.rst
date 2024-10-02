@@ -8,6 +8,7 @@ Data Synchronization Patterns
    :hidden:
 
    Collect Patterns<collect-patterns>
+   Transform Patterns<transform-patterns>
    Share Patterns<share-patterns>
 
 We've identified a set of patterns when working with problems related to data synchronizaion in Sesam. We find it very useful to name these patterns as it makes it easier to refer to them when discussing problems.
@@ -90,6 +91,28 @@ Looking for some collect patterns? These topics will get you started on the righ
         :text: Read more
         :classes: btn-outline-primary btn-block  
 
+
+.. rst-class:: center-title
+
+Transform Patterns
+==================
+
+Looking for some transform patterns? These topics will get you started on the right foot.
+
+|
+|
+
+.. panels::
+    :body: text-left
+    :container: container-lg pb-3
+    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
+
+    **Namespace split pattern** 
+
+    .. link-button:: namespace-split-pattern
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block
 
 .. rst-class:: center-title
 
