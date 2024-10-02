@@ -78,6 +78,7 @@ Set and update ``$last-modified``
     "type": "dtl",
     "rules": {
       "default": [
+        ["comment", "locating the last version of the entity in the sink dataset"],
         ["add", "_history",
           ["apply", {
             "datasets": ["<sink-dataset> t"],
@@ -98,6 +99,7 @@ Set and update ``$last-modified``
       "history": [
         ["add", "_property", "_S.value"],
         ["add", "_pid", "_P._T._id"],
+        ["comment", "locating the last version of the property"],
         ["add", "_property-history",
           ["path", "_S.key",
             ["if",

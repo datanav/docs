@@ -21,3 +21,4 @@ In this section you will learn how to synchronize your data streams into and out
    Developer Extension Points <extension-points>
    Source Datatype Mapping <source-datatype-mapping>
    API Best Practices <documentation/data-synchronization/api-best-practices>
+   Bi-directional synchronization <bidirectional-synchronization>
