@@ -86,4 +86,12 @@ Looking for some collect patterns? These topics will get you started on the righ
         :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block  
+    ---
+
+    **Establish origin pattern**
+
+    .. link-button:: establish-origin-pattern
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block  
 
