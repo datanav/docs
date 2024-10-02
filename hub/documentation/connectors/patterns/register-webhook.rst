@@ -156,4 +156,4 @@ Example: -registerwebhook pipe
       "type": "pipe"
     }
 
-* ``webhook-insert`` operation should be added to the system configuration.
+* ``webhook-insert`` operation should be added to the system configuration. Make sure to set webhook_secret if necessary.
