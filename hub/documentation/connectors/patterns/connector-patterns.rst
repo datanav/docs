@@ -14,11 +14,9 @@ This document describes best practices on building and structuring connectors.
    handling-asymmetry
    open-closed-principle
    parameterized-datatypes
-   partial-webhook-events
    receive-webhook-events
    register-webhook
    share-template-extension-points
-   shared-webhook-events
    single-share
    two-step-collect
    use-datatype-specific-operations
