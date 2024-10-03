@@ -10,7 +10,7 @@ Example: -registerwebhook pipe
 ::
 
    {
-      "_id": "xxxxxx-datatype-registerwebhook",
+      "_id": "<system>-<datatype>-registerwebhook",
       "namespaced_identifiers": false,
       "pump": {
         "run_at_startup_if_not_populated": true
@@ -22,12 +22,12 @@ Example: -registerwebhook pipe
       "source": {
         "entities": [
           {
-            "_id": "datatype-create",
+            "_id": "<datatype>-create",
             "_updated": 0,
             "properties": {
               "webhook": {
-                "address": "$ENV(service_url)/receivers/xxxxxx-datatype-event/entities",
-                "topic": "datatype/create"
+                "address": "$ENV(service_url)/receivers/<system>-<datatype>-event/entities",
+                "topic": "<datatype>/create"
               }
             }
           }
@@ -53,7 +53,7 @@ Example: -registerwebhook pipe
                     "hops",
                     {
                       "datasets": [
-                        "xxxxxx-datatype-registerwebhook sink"
+                        "<system>-<datatype>-registerwebhook sink"
                       ],
                       "return": [
                         "first",
@@ -94,7 +94,7 @@ Example: -registerwebhook pipe
           "response_property": "lookup_response",
           "response_status_property": "lookup_status_code",
           "side_effects": false,
-          "system": "xxxxxx",
+          "system": "<system>",
           "trace": true,
           "trigger_on": {
             "key": "$operation",
@@ -117,10 +117,6 @@ Example: -registerwebhook pipe
               [
                 "copy",
                 "*"
-              ],
-              [
-                "comment",
-                "TODO: we should compare the state of the actual object vs our desired state."
               ],
               [
                 "discard",
@@ -149,7 +145,7 @@ Example: -registerwebhook pipe
           "response_property": "insert_response",
           "response_status_property": "insert_status_code",
           "side_effects": true,
-          "system": "xxxxxx",
+          "system": "<system>",
           "type": "rest"
         }
       ],
@@ -157,3 +153,59 @@ Example: -registerwebhook pipe
     }
 
 * ``webhook-insert`` operation should be added to the system configuration. Make sure to set webhook_secret if necessary.
+
+Wiping webhooks
+---------------
+
+The pipe to wipe webhooks should be called ``-wipe``.
+
+Example: -wipe pipe
+-------------------
+
+::
+
+     {
+    "_id": "<system>-<datatype>-wipe",
+    "namespaced_identifiers": false,
+    "pump": {
+      "mode": "manual",
+      "run_at_startup_if_not_populated": true
+    },
+    "source": {
+      "dataset": "<system>-<datatype>-collect",
+      "type": "dataset"
+    },
+    "transform": [
+      {
+        "rules": {
+          "default": [
+            [
+              "copy",
+              "*"
+            ],
+            [
+              "discard",
+              [
+                "matches",
+                "https://*.sesam.cloud/*",
+                "_S.address"
+              ]
+            ]
+          ]
+        },
+        "type": "dtl"
+      },
+      {
+        "operation": "<datatype>-delete",
+        "response_status_property": "status_code",
+        "system": "<system>",
+        "trace": true,
+        "trigger_on": {
+          "key": "_deleted",
+          "value": false
+        },
+        "type": "rest"
+      }
+    ],
+    "type": "pipe"
+  }
