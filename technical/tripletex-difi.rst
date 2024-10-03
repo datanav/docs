@@ -2,7 +2,7 @@
 Tripletex to Difi Dataflow
 ==========================
 
-Generated: 2024-10-02 00:00:00
+Generated: 2024-10-03 00:00:00
 
 Introduction
 ------------
