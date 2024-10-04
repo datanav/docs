@@ -43,6 +43,8 @@ Example: -event pipe
     "type": "pipe"
   }
 
+A full connector example of ``-event`` pipe can be found in the `Hubspot connector's playground branch <https://github.com/sesam-io/hubspot-connector/blob/playground>`__ in the `company template <https://github.com/sesam-io/hubspot-connector/blob/playground/templates/company.json>`__.
+
 Partial webhook events
 ----------------------
 
@@ -79,6 +81,19 @@ Example: -event2 pipe
               [
                 "if",
                 [
+                  "eq",
+                  "<webhook_filter_criteria>.deletion",
+                  "_S.<property>"
+                ],
+                [
+                  "add",
+                  "_deleted",
+                  true
+                ]
+              ],
+              [
+                "if",
+                [
                   "neq",
                   404,
                   "_S.status"
@@ -86,6 +101,14 @@ Example: -event2 pipe
                 [
                   "merge",
                   "_S.response"
+                ],
+                [
+                "discard",
+                [
+                  "eq",
+                  "<webhook_filter_criteria>.deletion",
+                  "_S.<property>"
+                ]
                 ]
               ]
             ]
@@ -96,6 +119,7 @@ Example: -event2 pipe
       "type": "pipe"
     }
 
+A full connector example of ``-event2`` pipe can be found in the `Hubspot connector's playground branch <https://github.com/sesam-io/hubspot-connector/blob/playground>`__ in the `company template <https://github.com/sesam-io/hubspot-connector/blob/playground/templates/company.json>`__.
 
 Shared webhook events
 ---------------------
@@ -153,3 +177,5 @@ Example: -collect pipe (webhook)
       ],
       "type": "pipe"
     }
+
+A full connector example of ``-collect`` pipe can be found in the `Hubspot connector's playground branch <https://github.com/sesam-io/hubspot-connector/blob/playground>`__ in the `company template <https://github.com/sesam-io/hubspot-connector/blob/playground/templates/company.json>`__.

@@ -26,7 +26,7 @@ Example: -registerwebhook pipe
             "_updated": 0,
             "properties": {
               "webhook": {
-                "address": "$ENV(service_url)/receivers/<system>-<datatype>-event/entities",
+                "address": "<service_url>/receivers/<system>-<datatype>-event/entities",
                 "topic": "<datatype>/create"
               }
             }
@@ -153,6 +153,7 @@ Example: -registerwebhook pipe
     }
 
 * ``webhook-insert`` operation should be added to the system configuration. Make sure to set webhook_secret if necessary.
+* A full connector example of ``-registerwebhook`` pipe can be found in the `Shopify connector's playground branch <https://github.com/sesam-io/shopify-connector/blob/playground>`__ in the `order template <https://github.com/sesam-io/shopify-connector/blob/playground/templates/order.json>`__.
 
 Wiping webhooks
 ---------------
@@ -209,3 +210,5 @@ Example: -wipe pipe
     ],
     "type": "pipe"
   }
+
+A full connector example of ``-wipe`` pipe can be found in the `Shopify connector's playground branch <https://github.com/sesam-io/shopify-connector/blob/playground>`__ in the `webhook template <https://github.com/sesam-io/shopify-connector/blob/playground/templates/webhook.json>`__.
