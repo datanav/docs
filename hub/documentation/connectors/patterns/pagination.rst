@@ -56,7 +56,9 @@ Example: system config with pagination
       "url": "https://api.example.com/v1/data?limit={{page_size}}"
     }
 
-Example: system config with pagination (incrementing previous parameter)
+A full connector example of pagination support could be found in `Shopify connector's playground branch <https://github.com/sesam-io/shopify-connector/tree/playground>`__ in the `System config <https://github.com/sesam-io/shopify-connector/blob/playground/templates/system.json>`__.
+
+Example: system config with pagination (incrementing parameter)
 ------------------------------------------------------------------------
 
 ::
@@ -74,3 +76,5 @@ Example: system config with pagination (incrementing previous parameter)
       },
       "url": "https://api.example.com/v1/data?limit={{page_size}}"
     }
+
+A full connector example of pagination support (with incrementing parameter) could be found in `webCRM connector's playground branch <https://github.com/sesam-io/webcrm-connector/tree/playground/templates>`__ in the `System config <https://github.com/sesam-io/webcrm-connector/blob/playground/templates/system.json>`__.

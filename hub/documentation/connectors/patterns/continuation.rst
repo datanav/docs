@@ -17,7 +17,6 @@ Example: system config with continuation
    "<datatype>-list": {
       "method": "GET",
       "page_size": 100,
-      "updated_expression": "<updated_expression>",
       "url": "https://api.example.com/v1/data"
     }
 
@@ -53,3 +52,5 @@ Example: pipe config with continuation
       },
       "type": "pipe"
     }
+
+A full connector example of continuation support could be found in `Superoffice connector's playground branch  <https://github.com/sesam-io/superoffice-connector/tree/playground>`_ in the `Contact template <https://github.com/sesam-io/superoffice-connector/blob/playground/templates/contact.json>`_.
