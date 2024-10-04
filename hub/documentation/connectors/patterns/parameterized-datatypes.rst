@@ -174,7 +174,7 @@ Below follows a stripped down example on how this could look if the system lacks
   "type": "pipe"
   }
 
-An connector example of parameterized input pipes can be found in the `Tripletex connector's playground branch <https://github.com/sesam-io/tripletex-connector/tree/playground>`_ in the `orderline template <https://github.com/sesam-io/tripletex-connector/blob/playground/templates/orderline.json>`_.
+An full connector example of parameterized input pipes can be found in the `Tripletex connector's playground branch <https://github.com/sesam-io/tripletex-connector/tree/playground>`_ in the `orderline template <https://github.com/sesam-io/tripletex-connector/blob/playground/templates/orderline.json>`_.
 
 .. |start-h3| raw:: html
 
