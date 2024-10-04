@@ -12,5 +12,6 @@ In this section we will show you both how single data entities are modelled in S
 
    Patterns <documentation/data-management/data-management-patterns>
    Data management <documentation/data-management/data-management>
+   Time-based masterdata management <documentation/data-management/time-based-masterdata-management>
    Entity Data Model <documentation/data-management/entity-data-model>
    
