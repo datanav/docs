@@ -42,6 +42,7 @@ and the following secrets will be injected into the system:
      - String
 
 * Example of connectors using OAuth2: Hubspot, Keap, Shopify, Sage, ZohoCRM, Wave, BusinessCentral, Asana
+* A full connector example with Oauth2 authentication could be found in `Hubspot connector's playground branch <https://github.com/sesam-io/hubspot-connector/blob/playground>`__ in the `Manifest <https://github.com/sesam-io/hubspot-connector/blob/playground/manifest.json>`__ and `System <https://github.com/sesam-io/hubspot-connector/blob/playground/templates/system.json>`__.
 
 API key
 -------
@@ -72,6 +73,7 @@ and the following secrets will be injected into the system:
 
 * Api key is generally less secure than OAuth2, as it is a simple key that can be easily compromised. It is recommended to use OAuth2 whenever possible (some connectors support both schemes).
 * Example of connectors using API key: PowerofficeGo, WooCommerce, Wix
+* A full connector example with API key authentication could be found in `WooCommerce connector's playground branch <https://github.com/sesam-io/woocommerce-connector/tree/playground>`__ in the `Manifest <https://github.com/sesam-io/woocommerce-connector/blob/playground/manifest.json>`__ and `System <https://github.com/sesam-io/woocommerce-connector/blob/playground/templates/system.json>`__.
 
 Tripletex authentication
 ------------------------
@@ -106,6 +108,7 @@ and the following secrets will be injected into the system:
      - String
 
 * Tripletex has production and test environments. The production accounts use ``employee_token`` set by Sesam app while you have to set both tokens in the test accounts.
+* A full connector example with custom Tripletex authentication could be found in `Tripletex connector's playground branch <https://github.com/sesam-io/tripletex-connector/tree/playground>`__ in the `Manifest <https://github.com/sesam-io/tripletex-connector/blob/playground/manifest.json>`__ and `System <https://github.com/sesam-io/tripletex-connector/blob/playground/templates/system.json>`__.
 
 SuperOffice authentication
 --------------------------
@@ -139,6 +142,8 @@ and the following secrets will be injected into the system:
      - The client secret as provided in the connector configuration.
      - String
 
+* A full connector example with custom Superoffice authentication could be found in `Superoffice connector's playground branch <https://github.com/sesam-io/superoffice-connector/tree/playground>`__ in the `Manifest <https://github.com/sesam-io/superoffice-connector/blob/playground/manifest.json>`__ and `System <https://github.com/sesam-io/superoffice-connector/blob/playground/templates/system.json>`__.
+
 JWT authentication
 ------------------
 
@@ -170,3 +175,4 @@ and the following secrets will be injected into the system:
      - String
 
 * Example of connectors using JWT: webCRM
+* A full connector example with JWT authentication could be found in `webCRM connector's playground branch <https://github.com/sesam-io/webcrm-connector/tree/playground>`__ in the `Manifest <https://github.com/sesam-io/webcrm-connector/blob/playground/manifest.json>`__ and `System <https://github.com/sesam-io/webcrm-connector/blob/playground/templates/system.json>`__.
