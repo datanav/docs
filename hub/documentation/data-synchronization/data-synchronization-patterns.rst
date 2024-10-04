@@ -100,6 +100,7 @@ Looking for some transform patterns? These topics will get you started on the ri
 
 |
 |
+
 .. panels::
     :body: text-left
     :container: container-lg pb-3
@@ -111,6 +112,8 @@ Looking for some transform patterns? These topics will get you started on the ri
         :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
+
+.. rst-class:: center-title
 
 Share Patterns
 ================
