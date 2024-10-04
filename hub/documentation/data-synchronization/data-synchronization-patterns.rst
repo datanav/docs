@@ -91,7 +91,6 @@ Looking for some collect patterns? These topics will get you started on the righ
         :text: Read more
         :classes: btn-outline-primary btn-block  
 
-
 .. rst-class:: center-title
 
 Transform Patterns
@@ -112,8 +111,6 @@ Looking for some transform patterns? These topics will get you started on the ri
         :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
-
-.. rst-class:: center-title
 
 Share Patterns
 ================
