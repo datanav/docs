@@ -56,13 +56,13 @@ The concept of internal duplicates covers two different scenarios. Firstly, a sy
 
 We can ensure that entities are not inserted into their own source by applying a combination of the :ref:`namespace split pattern <namespace_split>` and the :ref:`duplicate hops block pattern <duplicate-hops-block>`. 
 
-The first will ensure that all entities attempting to communicate with the source system are doing to in the correct semantic context, i.e. they are using the correct namespace in their ``_id`` value. This allows you to block inserts if entities already have the target system's namespace.
+The first will ensure that all entities attempting to communicate with the source system are doing it in the correct semantic context, i.e. they are using the correct namespace in their ``_id`` value. This allows you to block inserts if entities already have the target system's namespace.
 
 The second will ensure that no entities that already have a successful insert in the sink dataset of the ``-share`` pipe will be inserted again.
 
 |start-h5| **Management of preexisting duplicates** |end-h5|
 
-The only way to ensure that preexisting duplicates do not propagate as duplicates downstream is to identify them and :ref:`merge <merging>` then in their global pipe. This can be done by locating an  appropriate merge criterion that the two entities have in common. 
+The only way to ensure that preexisting duplicates do not propagate as duplicates downstream is to identify them and :ref:`merge <merging>` them in their global pipe. This can be done by locating an  appropriate merge criterion that the two entities have in common. 
 
 External duplicate management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -72,7 +72,7 @@ External duplicate management covers two different scenarios:
 1. Ensuring that preexisting duplicates are not propagated as duplicates into other systems
 2. Ensuring that entities inserted by Sesam are kept track of and merged with their origin entity 
 
-Point 1, e.g. a company represented in system *A* has a corresponding company represented in system *B* can be managed by by letting the entities merge in their global pipe. This also requires the identification of (preferably) uniquely identifying merge criterion that ensure these two entities are treated as the same entity. By applying the :ref:`namespace split pattern <namespace_split>` we can ensure that the correct version of the data is sent to the correct ``-share`` pipe. 
+Point 1, e.g. a company represented in system *A* has a corresponding company represented in system *B* can be managed by letting the entities merge in their global pipe. This also requires the identification of (preferably) uniquely identifying merge criterion that ensure these two entities are treated as the same entity. By applying the :ref:`namespace split pattern <namespace_split>` we can ensure that the correct version of the data is sent to the correct ``-share`` pipe. 
 
 Points 2 is solved by a combination of :ref:`capture response with transform pattern <capture_response_with_transform>` and the :ref:`establish origin pattern <establish_origin_pattern>` as seen in the :ref:`insert pattern <insert_pattern>` section.
 
