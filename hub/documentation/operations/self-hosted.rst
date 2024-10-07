@@ -50,7 +50,7 @@ Inbound firewall rules
    * - 80/HTTP
      - ANY (Public)
      - Sesam IP
-     - Sesam uses `Traefik to generate certificates, which requires port 80 to be open for incoming traffic from ANY (they don't provide a list of src IPs)  to support renewal of certificates. If you want to bring your own certificate or use a self-signed this port opening can be skipped.
+     - Sesam uses Traefik to generate certificates, which requires port 80 to be open for incoming traffic from ANY (they don't provide a list of src IPs)  to support renewal of certificates. If you want to bring your own certificate or use a self-signed this port opening can be skipped.
 
    * - 443/HTTPS
      - Clients
