@@ -1,7 +1,7 @@
 Continuation
 ============
 
-Continuation (also known as incremental loading) involves extracting only the data that has changed since the last extraction cycle.
+Continuation (also known as incremental loading) involves extracting only the data that has changed (excluding deletions) since the last extraction cycle.
 
 Implementing continuation in a connector
 ----------------------------------------
