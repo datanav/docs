@@ -19,7 +19,7 @@ Example: validation expression
 
    "validation_expression": "{% if request_headers['X-Shopify-Hmac-SHA256'] == b64encode(hmacsha256digest(secret('oauth_client_secret'), request_body)) %}{% else %}FAIL!{% endif %}"
 
-* When testing the webhooks with Sesampy on dev nodes, this is not automatically handled and you may need to manually put the ``client_secret`` value into the validation expression.
+* When testing the webhooks with `Sesampy <https://github.com/sesam-community/sesam-py/blob/master/README.md>`__ on dev nodes, this is not automatically handled and you may need to manually put the ``client_secret`` value into the validation expression.
 
 Example: -event pipe
 --------------------
@@ -136,15 +136,7 @@ Example: -collect pipe (webhook)
 
   {
       "_id": "<system>-<datatype>-collect",
-      "exclude_completeness": [
-        "<system>-<datatype>-share",
-        "<system>-<datatype>-event2",
-        "<system>-<datatype>-collect"
-      ],
       "namespaced_identifiers": false,
-      "pump": {
-        "run_at_startup_if_not_populated": true
-      },
       "source": {
         "datasets": [
           "<system>-<datatype>-all",
@@ -153,16 +145,6 @@ Example: -collect pipe (webhook)
         "type": "merge_datasets"
       },
       "transform": [
-        {
-          "properties": {
-            "operation_lookup_delete": "<datatype>-lookup",
-            "primary_key": "id",
-            "rest_system": "<system>",
-            "share_dataset": "<system>-<datatype>-share"
-          },
-          "template": "transform-collect-rest",
-          "type": "template"
-        },
         {
           "rules": {
             "default": [
