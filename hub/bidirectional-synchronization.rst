@@ -56,7 +56,7 @@ The concept of internal duplicates covers two different scenarios. Firstly, a sy
 
 We can ensure that entities are not inserted into their own source by applying a combination of the :ref:`namespace split pattern <namespace_split>` and the :ref:`duplicate hops block pattern <duplicate-hops-block>`. 
 
-The first will ensure that all entities attempting to communicate with the source system are doing to in the correct semantic context, i.e. they are using the correct namespace in their ``_id`` value. This allows you to block inserts if entities already have the target system's namespace.
+The first will ensure that all entities attempting to communicate with the source system are doing it in the correct semantic context, i.e. they are using the correct namespace in their ``_id`` value. This allows you to block inserts if entities already have the target system's namespace.
 
 The second will ensure that no entities that already have a successful insert in the sink dataset of the ``-share`` pipe will be inserted again.
 
