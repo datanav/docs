@@ -26,7 +26,7 @@ Software requirements
 
 - Docker
 
-- Docker-compose
+- Docker compose
 
 Firewall requirements
 ---------------------
@@ -128,7 +128,7 @@ Before starting the setup you will  need:
 
 - A docker repository login (provided by Sesam support)
 
-- A working docker-compose installation
+- A working docker compose installation
 
 .. _self_hosted_file_structure:
 
@@ -153,7 +153,7 @@ Sesam requires a valid license to function. Without a valid license the pipes wi
 
 .. _self_hosted_docker_compose:
 
-Docker-compose configuration
+Docker compose configuration
 ============================
 
 ::
@@ -283,10 +283,10 @@ Docker-compose configuration
 Log in to `Sesam portal <https://portal.sesam.io>`_ and add your sesam-node URL to the connection under the network tab and finally upload the license.
 
 
-Migrate an old installation to use docker-compose
+Migrate an old installation to use docker compose
 ==================================================
 
-Be sure to back up your data before proceeding. Before :ref:`Docker-compose configuration <self_hosted_docker_compose>` section you must make sure you have done the following:
+Be sure to back up your data before proceeding. Before :ref:`Docker compose configuration <self_hosted_docker_compose>` section you must make sure you have done the following:
 
 - Stop and remove all running containers.
 
