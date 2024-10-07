@@ -24,9 +24,9 @@ Software requirements
 
 - Ubuntu >= 18.04 or RHEL >= 7. We prefer running Ubuntu if possible.
 
-- Python3
+- Docker
 
-- Sesam will install the *sesam-agent* which in turn will setup and configure docker.
+- Docker-compose
 
 Firewall requirements
 ---------------------
