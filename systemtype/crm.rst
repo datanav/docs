@@ -24,13 +24,9 @@ Data types
 
    * - :ref:`Asset <datatype_asset>`
      - true
-     - true
+     - false
 
    * - :ref:`Classification <datatype_classification>`
-     - true
-     - true
-
-   * - :ref:`Documentation <datatype_documentation>`
      - true
      - false
 
@@ -52,7 +48,7 @@ Data types
 
    * - :ref:`Task <datatype_task>`
      - true
-     - true
+     - false
 
 Systems
 ^^^^^^^^^^
