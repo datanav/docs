@@ -9,7 +9,7 @@ In Sesam we solve this issue with the *establish origin pattern*. This pattern h
 
 - When an entity is inserted into a system, the system's response has to include the new system specific primary key of the new entity. 
 
-To be able to establish the origin of an inserted entity inserts into system *A* need to be done through the :ref:` capture response with transform pattern <capture_response_with_transform>` which allows us to capture the response from the system, including the newly generated primary key
+To be able to establish the origin of an inserted entity inserts into system *A* need to be done through the :ref:`capture response with transform pattern <capture_response_with_transform>` which allows us to capture the response from the system, including the newly generated primary key
 
 Example:
 
@@ -24,7 +24,7 @@ Example:
           ["map",
             ["dict", "origin_entity", "_."],
             ["hops", {
-              "datasets": ["A-company-share st"],
+              "datasets": ["<system>-<datatype>-share st"],
               "where": [
                 ["eq", "_S.<primary-key", "st.<$generated_id>"]
               ],
