@@ -282,27 +282,6 @@ Docker-compose configuration
 
 Log in to `Sesam portal <https://portal.sesam.io>`_ and add your sesam-node URL to the connection under the network tab and finally upload the license.
 
-Bring your own certificate
-==========================
-
-In order to serve the node with your own certificate you will need a valid password-less KEY and a cert in PEM format. If your certificate is password protected you can remove the password with openssl or equivalent tools.
-
-Give your cert and key a name and place them in the ``/sesam/nginx/conf/ssl`` folder (``privkey.pem`` and ``fullchain.pem`` in this example).
-
-Update the Sesam configuration file (``/etc/sesam-agent/config.json``) to include the path to the keys in the nginx section:
-
-::
-
-    "nginx": {
-      "ssl_cert": "/etc/nginx/includes.d/ssl/fullchain.pem",
-      "ssl_key": "/etc/nginx/includes.d/ssl/privkey.pem"
-    }
-
-Restart nginx for things to take effect:
-
-::
-
-    docker restart nginx
 
 Migrate an old installation to use docker-compose
 ==================================================
