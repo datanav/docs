@@ -62,7 +62,7 @@ The second will ensure that no entities that already have a successful insert in
 
 |start-h5| **Management of preexisting duplicates** |end-h5|
 
-The only way to ensure that preexisting duplicates do not propagate as duplicates downstream is to identify them and :ref:`merge <merging>` then in their global pipe. This can be done by locating an  appropriate merge criterion that the two entities have in common. 
+The only way to ensure that preexisting duplicates do not propagate as duplicates downstream is to identify them and :ref:`merge <merging>` them in their global pipe. This can be done by locating an  appropriate merge criterion that the two entities have in common. 
 
 External duplicate management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
