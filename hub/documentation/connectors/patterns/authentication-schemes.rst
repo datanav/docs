@@ -41,7 +41,7 @@ and the following secrets will be injected into the system:
      - The token used to refresh the access token (obtained during onboarding).
      - String
 
-* Example of connectors using OAuth2: Hubspot, Keap, Shopify, Sage, ZohoCRM, Wave, BusinessCentral, Asana
+* Example of connectors using OAuth2: `Hubspot <https://github.com/sesam-io/hubspot-connector/blob/playground>`__, `Keap <https://github.com/sesam-io/keap-connector/blob/playground>`__, `Shopify <https://github.com/sesam-io/shopify-connector/blob/playground>`__, `Sage <https://github.com/sesam-io/sage-connector/blob/playground>`__, `ZohoCRM <https://github.com/sesam-io/zohocrm-connector/blob/playground>`__, `Wave <https://github.com/sesam-io/wave-connector/blob/playground>`__, `BusinessCentral <https://github.com/sesam-io/businesscentral-connector/blob/playground>`__, `Asana <https://github.com/sesam-io/asana-connector/blob/playground>`__
 * A full connector example with Oauth2 authentication could be found in `Hubspot connector's playground branch <https://github.com/sesam-io/hubspot-connector/blob/playground>`__ in the `Manifest <https://github.com/sesam-io/hubspot-connector/blob/playground/manifest.json>`__ and `System <https://github.com/sesam-io/hubspot-connector/blob/playground/templates/system.json>`__.
 
 API key
@@ -72,7 +72,7 @@ and the following secrets will be injected into the system:
      - String
 
 * Api key is generally less secure than OAuth2, as it is a simple key that can be easily compromised. It is recommended to use OAuth2 whenever possible (some connectors support both schemes).
-* Example of connectors using API key: PowerofficeGo, WooCommerce, Wix
+* Example of connectors using API key: `PowerofficeGo <https://github.com/sesam-io/powerofficego-connector/blob/playground>`__, `WooCommerce <https://github.com/sesam-io/woocommerce-connector/blob/playground>`__, `Wix <https://github.com/sesam-io/wix-connector/blob/playground>`__
 * A full connector example with API key authentication could be found in `WooCommerce connector's playground branch <https://github.com/sesam-io/woocommerce-connector/tree/playground>`__ in the `Manifest <https://github.com/sesam-io/woocommerce-connector/blob/playground/manifest.json>`__ and `System <https://github.com/sesam-io/woocommerce-connector/blob/playground/templates/system.json>`__.
 
 Tripletex authentication
@@ -174,5 +174,5 @@ and the following secrets will be injected into the system:
      - The token used to refresh the access token (obtained during onboarding).
      - String
 
-* Example of connectors using JWT: webCRM
+* Example of connectors using JWT: `webCRM <https://github.com/sesam-io/webcrm-connector/blob/playground>`__
 * A full connector example with JWT authentication could be found in `webCRM connector's playground branch <https://github.com/sesam-io/webcrm-connector/tree/playground>`__ in the `Manifest <https://github.com/sesam-io/webcrm-connector/blob/playground/manifest.json>`__ and `System <https://github.com/sesam-io/webcrm-connector/blob/playground/templates/system.json>`__.
