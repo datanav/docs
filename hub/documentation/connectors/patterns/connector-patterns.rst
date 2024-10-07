@@ -11,6 +11,7 @@ This document describes best practices on building and structuring connectors.
    datatype-naming
    datatypes-follow-the-api
    datatypes-with-list-of-linked-objects
+   duplicate-hops-block
    handling-asymmetry
    parameterized-datatypes
    partial-webhook-events
