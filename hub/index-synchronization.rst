@@ -12,13 +12,13 @@ In this section you will learn how to synchronize your data streams into and out
 .. toctree::
    :maxdepth: 1
 
-   Patterns <documentation/data-synchronization/data-synchronization-patterns>
-   Non-idempotency <idempotency>
-   Cron Expressions <cron-expressions>
-   RDF Support <rdf-support>
-   JSON Pull Protocol <json-pull>
-   JSON Push Protocol <json-push>
-   Developer Extension Points <extension-points>
-   Source Datatype Mapping <source-datatype-mapping>
    API Best Practices <documentation/data-synchronization/api-best-practices>
    Bi-directional synchronization <bidirectional-synchronization>
+   Cron Expressions <cron-expressions>
+   Developer Extension Points <extension-points>
+   JSON Pull Protocol <json-pull>
+   JSON Push Protocol <json-push>
+   Non-idempotency <idempotency>
+   Patterns <documentation/data-synchronization/data-synchronization-patterns>
+   RDF Support <rdf-support>
+   Source Datatype Mapping <source-datatype-mapping>
