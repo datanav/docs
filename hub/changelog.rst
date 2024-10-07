@@ -1,6 +1,14 @@
 Changelog
 =========
 
+.. _changelog_2024_10_07:
+
+2024-10-07
+----------
+* Added ``verify_ssl`` as a global default in the :ref:`service metadata <service_metadata_verify_ssl>`.
+  This determines the default value of the ``verify_ssl`` property on :ref:`URL systems <urL_system>`.
+  The default value is ``false``.
+
 .. _changelog_2024_09_19:
 
 2024-09-19

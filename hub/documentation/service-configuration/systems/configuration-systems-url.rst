@@ -84,7 +84,8 @@ Properties
    * - ``verify_ssl``
      - Boolean
      - Indicate to the client if it should attempt to verify the SSL certificate when communicating with the
-       HTTP server over SSL/TLS.
+       HTTP server over SSL/TLS. A global default value for all URL systems can be set in the
+       :ref:`service metadata <service_metadata_verify_ssl>`.
      - ``false``
      -
 
