@@ -80,4 +80,4 @@ Properties
      -
      - No
 
-Completeness also has its own :ref:`completeness_dtl_function <DTL function>` as well a :ref:`dataset source <dataset_source>` property as that allows you to evaluate the completeness in the source.
+Completeness also has its own :ref:`DTL function <completeness_dtl_function>` as well a :ref:`dataset source <dataset_source>` property as that allows you to evaluate the completeness in the source.
