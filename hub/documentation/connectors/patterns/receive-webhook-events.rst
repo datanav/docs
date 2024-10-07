@@ -124,10 +124,73 @@ A full connector example of ``-event2`` pipe can be found in the `Hubspot connec
 Shared webhook events
 ---------------------
 
-If multitenant, receive all in one dataset and use subset expression with tenant id to filter out relevant events into tenant pipes. The tenant pipe should be called ``-event``.
-If when webhook events are shared, we need to separate them into datatype specific pipes before merging.
+If webhook events are shared, we need to separate them into datatype specific pipes before merging. When all events, regardless of their datatype, are received by a single pipe, we can filter out relevant events using a subset expression. This allows us to route events of a specific datatype to another pipe.
 
-If we have webhooks they need to combine with full scan pipes in the collect pipe.
+* The -all pipe gathers all incoming webhook events.
+* The -event pipe filters and processes webhooks for a specific datatype, using a subset expression to select the relevant events.
+
+Example: -event pipe with subset expression
+-------------------------------------------
+
+::
+
+  {
+    "_id": "<system>-<webhook_filter_criteria>-event",
+    "namespaced_identifiers": false,
+    "sink": {
+      "deletion_tracking": false,
+      "set_initial_offset": "onload"
+    },
+    "source": {
+      "dataset": "<hubspot_webhook_dataset>",
+      "subset": [
+        "eq",
+        [
+          "and",
+          [
+            "eq",
+            "_S.<id_property>",
+            [
+              "integer",
+              "<account_id>"
+            ]
+          ],
+          [
+            "matches",
+            "<webhook_filter_criteria>.*",
+            [
+              "list",
+              "_S.<property>"
+            ]
+          ]
+        ],
+        true
+      ],
+      "type": "dataset"
+    },
+    "transform": [
+      {
+        "rules": {
+          "default": [
+            [
+              "copy",
+              "*"
+            ],
+          ]
+        },
+        "type": "dtl"
+      }
+    ],
+    "type": "pipe"
+  }
+
+A full connector example of ``-event`` pipe with subset expression can be found in the `Hubspot connector's playground branch <https://github.com/sesam-io/hubspot-connector/blob/playground>`__ in the `company template <https://github.com/sesam-io/hubspot-connector/blob/playground/templates/company.json>`__.
+
+
+Combining regular data (non event) and event data
+-------------------------------------------------
+
+If we have webhooks we need to combine them with full scan pipes in the collect pipe.
 
 Example: -collect pipe (webhook)
 --------------------------------
