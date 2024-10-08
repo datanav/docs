@@ -202,7 +202,7 @@ Set and update ``$last-modified``
   }
 
 
-The example above also handles old claims and makes sure 
+The example above also handles old claims and makes sure that the new claim value is actually more current than the old one.
 
 .. |start-h3| raw:: html
 
