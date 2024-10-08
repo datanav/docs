@@ -46,7 +46,7 @@ Example: system config with pagination
 ::
 
    "<datatype>-list": {
-      "id_expression": "{{ <datatype> }}",
+      "id_expression": "{{ <primary_key> }}",
       "method": "GET",
       "next_page_link": "{%if (headers.link.next is defined)%}{{headers.link.next}}{%endif%}",
       "next_page_termination_strategy": [
