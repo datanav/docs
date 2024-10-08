@@ -1,5 +1,6 @@
 Parameterized datatypes
 =======================
+.. _parameterized-datatypes:
 
 In some cases you might have to fetch a datatype's full content based on subset of the data. These scenarios can occur be when:
 

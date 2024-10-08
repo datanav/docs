@@ -17,10 +17,9 @@ This document describes best practices on building and structuring connectors.
    open-closed-principle
    pagination
    parameterized-datatypes
-   partial-webhook-events
    receive-webhook-events
+   register-webhook
    share-template-extension-points
-   shared-webhook-events
    single-share
    two-step-collect
    use-datatype-specific-operations
