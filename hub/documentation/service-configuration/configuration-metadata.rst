@@ -350,6 +350,14 @@ Properties
      - 600
      - No
 
+       .. _service_metadata_verify_ssl:
+
+   * - ``global_defaults.verify_ssl``
+     - Boolean
+     - The default value for the ``verify_ssl`` property in :ref:`URL systems <urL_system>`.
+     - ``false``
+     - No
+
        .. _service_metadata_dependency_tracking_dependency_warning_threshold:
 
    * - ``dependency_tracking.dependency_warning_threshold``

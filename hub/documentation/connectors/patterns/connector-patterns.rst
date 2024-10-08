@@ -9,16 +9,18 @@ This document describes best practices on building and structuring connectors.
 
    authentication-schemes
    combine-all-and-event
+   continuation
    datatype-naming
    datatypes-follow-the-api
    datatypes-with-list-of-linked-objects
+   duplicate-hops-block
    handling-asymmetry
    open-closed-principle
+   pagination
    parameterized-datatypes
-   partial-webhook-events
    receive-webhook-events
+   register-webhook
    share-template-extension-points
-   shared-webhook-events
    single-share
    two-step-collect
    use-datatype-specific-operations
