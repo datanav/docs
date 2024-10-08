@@ -146,22 +146,11 @@ Example: -event pipe with subset expression
       "subset": [
         "eq",
         [
-          "and",
+          "matches",
+          "<webhook_filter_criteria>.*",
           [
-            "eq",
-            "_S.<id_property>",
-            [
-              "integer",
-              "<account_id>"
-            ]
-          ],
-          [
-            "matches",
-            "<webhook_filter_criteria>.*",
-            [
-              "list",
-              "_S.<property>"
-            ]
+            "list",
+            "_S.<property>"
           ]
         ],
         true
