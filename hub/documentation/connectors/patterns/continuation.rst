@@ -15,13 +15,7 @@ Example: system config with continuation
 ::
 
    "<datatype>-list": {
-      "properties": {
-      "base_url": "<datatype>",
-      "primary_key": "<primary_key>",
-      "updated_param": "<updated_param>"
-      },
       "method": "GET",
-      "page_size": 100,
       "url": "https://api.example.com/v1/data",
       "since_property_name": "<since_property_name>",
       "since_property_location": "<since_property_location>",
@@ -36,9 +30,6 @@ Example: pipe config with continuation
 
    {
       "_id": "<system>-<datatype>-all",
-      "metadata": {
-        "supports_since": true
-      },
       "namespaced_identifiers": false,
       "pump": {
           "schedule_interval": 30,
