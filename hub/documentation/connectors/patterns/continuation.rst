@@ -15,9 +15,17 @@ Example: system config with continuation
 ::
 
    "<datatype>-list": {
+      "properties": {
+      "base_url": "<datatype>",
+      "primary_key": "<primary_key>",
+      "updated_param": "<updated_param>"
+      },
       "method": "GET",
       "page_size": 100,
-      "url": "https://api.example.com/v1/data"
+      "url": "https://api.example.com/v1/data",
+      "since_property_name": "<since_property_name>",
+      "since_property_location": "<since_property_location>",
+      "updated_expression": "<update_expression>"
     }
 
 
@@ -33,22 +41,15 @@ Example: pipe config with continuation
       },
       "namespaced_identifiers": false,
       "pump": {
-          "run_at_startup_if_not_populated": true
+          "schedule_interval": 30,
+          "rescan_cron_expression": "0 * * * *"
       },
       "source": {
         "operation": "list",
-        "properties": {
-          "base_url": "<datatype>",
-          "primary_key": "<primary_key>",
-          "updated_param": "<updated_param>"
-        },
         "initial_since_value": "<initial_since_value>",
-        "since_property_name": "<since_property_name>",
-        "since_property_location": "<since_property_location>",
         "supports_since": true,
         "system": "<system>",
         "type": "rest",
-        "updated_expression": "<update_expression>"
       },
       "type": "pipe"
     }
