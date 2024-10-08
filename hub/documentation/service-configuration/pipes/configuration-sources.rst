@@ -145,6 +145,37 @@ the source. The table below explains them in detail.
           should also make sure that ``supports_since`` is set to
           ``true``.
 
+   * - ``updated_expression``
+     - String
+     - The property in the entities that holds the since value. It supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/)
+       syntax with the entities properties available to the templating context. It can be used to add ``_updated`` properties
+       to the emitted entities if missing from the source system (for continuation support). This is only relevant if
+       ``supports_since`` as been set to ``true``. See the ``since_property_name`` and ``since_property_location``
+       configuration properties as well. Note that this property can alternatively be defined in the specified
+       ``operation`` section of the :ref:`REST system <rest_system>`. The source configuration will take precedence
+       if defined. The bound parameters available to this template are ``body``, ``headers``
+       and ``properties``. All entity properties are also available as named variables.
+
+   * - ``since_property_name``
+     - String
+     - The name of the property to relay continuation information which points to the property to provide in the query
+       expression. This is only relevant if ``supports_since`` as been set to ``true``. See ``since_property_location``
+       and ``updated_expression`` as well. Note that this property can alternatively be defined in the specified
+       ``operation`` section of the :ref:`REST system <rest_system>`. The source configuration will take precedence if
+       defined. Note that if you use the ``since`` variable in the ``url`` template property in the system operation
+       configuration, the ``since_property_location`` and ``since_property_name`` configuration properties will be ignored
+       for this operation. Also note that if ``since_property_location`` is set to ``"manual"`` this property will be ignored.
+
+   * - ``since_property_location``
+     - String
+     - A enumeration of ``"query"``, ``"header"`` and ``"manual"``. The location property to relay continuation
+       information. This is only relevant if ``supports_since`` has been set to ``true``. If you set it to `"manual"`
+       the source will not attempt to provide any continuation parameters automatically. See ``since_property_name`` and
+       ``updated_expression`` as well. Note that this property can alternatively be defined in the specified ``operation``
+       section of the :ref:`REST system <rest_system>`. The source configuration will take precedence if defined.
+       Note that if you use the ``since`` variable in the ``url`` template property in the system operation
+       configuration, the ``since_property_location`` and ``since_property_name`` configuration properties will be
+       ignored for this operation.
 
    * - ``initial_since_value``
      - String or integer
