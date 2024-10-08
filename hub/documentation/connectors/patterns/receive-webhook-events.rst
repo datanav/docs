@@ -126,7 +126,7 @@ Shared webhook events
 
 If webhook events are shared, we need to separate them into datatype specific pipes before merging. When all events, regardless of their datatype, are received by a single pipe, we can filter out relevant events using a subset expression. This allows us to route events of a specific datatype to another pipe.
 
-* The -all pipe gathers all incoming webhook events.
+* A webhook dataset gathers all incoming webhook events.
 * The -event pipe filters and processes webhooks for a specific datatype, using a subset expression to select the relevant events.
 
 Example: -event pipe with subset expression
@@ -168,19 +168,6 @@ Example: -event pipe with subset expression
       ],
       "type": "dataset"
     },
-    "transform": [
-      {
-        "rules": {
-          "default": [
-            [
-              "copy",
-              "*"
-            ],
-          ]
-        },
-        "type": "dtl"
-      }
-    ],
     "type": "pipe"
   }
 
@@ -207,19 +194,6 @@ Example: -collect pipe (webhook)
         ],
         "type": "merge_datasets"
       },
-      "transform": [
-        {
-          "rules": {
-            "default": [
-              [
-                "copy",
-                "*"
-              ]
-            ]
-          },
-          "type": "dtl"
-        }
-      ],
       "type": "pipe"
     }
 
