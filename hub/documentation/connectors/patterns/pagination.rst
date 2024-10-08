@@ -1,7 +1,7 @@
 Pagination
 ==========
 
-Pagination in an API is a technique used to split large sets of data into smaller, manageable chunks. Instead of returning all data in one response (which can be slow and resource-intensive), the API delivers it in "pages," making the responses faster and easier to handle reducing the load on the API server.
+Pagination in an API is a technique used to split large sets of data into smaller, manageable chunks. Instead of returning all data in one response (which can be slow and resource intensive), the API delivers it in "pages," making the responses faster and easier to handle reducing the load on the API server.
 
 Key concepts
 ------------
@@ -64,7 +64,7 @@ Example: system config with pagination (incrementing parameter)
 ::
 
    "<datatype>-list": {
-      "id_expression": "{{ <datatype> }}",
+      "id_expression": "<primary_key>",
       "method": "GET",
       "next_page_link": "<query_endpoint>",
       "next_page_termination_strategy": [

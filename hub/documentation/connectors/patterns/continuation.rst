@@ -36,7 +36,7 @@ Example: pipe config with continuation
           "rescan_cron_expression": "0 * * * *"
       },
       "source": {
-        "operation": "list",
+        "operation": "<datatype>-list",
         "initial_since_value": "<initial_since_value>",
         "supports_since": true,
         "system": "<system>",
