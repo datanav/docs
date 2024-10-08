@@ -7,6 +7,7 @@ This document describes best practices on building and structuring connectors.
 .. toctree::
    :maxdepth: 1
 
+   authentication-schemes
    combine-all-and-event
    continuation
    datatype-naming
