@@ -8,11 +8,14 @@ This document describes best practices on building and structuring connectors.
    :maxdepth: 1
 
    combine-all-and-event
+   continuation
    datatype-naming
    datatypes-follow-the-api
    datatypes-with-list-of-linked-objects
    duplicate-hops-block
    handling-asymmetry
+   open-closed-principle
+   pagination
    parameterized-datatypes
    partial-webhook-events
    receive-webhook-events
@@ -23,4 +26,3 @@ This document describes best practices on building and structuring connectors.
    use-datatype-specific-operations
    use-templates
    webhook-deletion-tracking
-   open-closed-principle
