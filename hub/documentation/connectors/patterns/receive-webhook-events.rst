@@ -124,7 +124,7 @@ A full connector example of ``-event2`` pipe can be found in the `Hubspot connec
 Shared webhook events
 ---------------------
 
-If webhook events are shared, we need to separate them into datatype specific pipes before merging. When all events, regardless of their datatype, are received by a single pipe, we can filter out relevant events using a subset expression. This allows us to route events of a specific datatype to another pipe.
+If webhook events are shared, we need to separate them into datatype specific pipes before merging. When all events, regardless of their datatype, are received by a single pipe, we can filter out relevant events using a :ref:`subset <dataset_source>` expression. This allows us to route events of a specific datatype to another pipe.
 
 * A webhook dataset gathers all incoming webhook events.
 * The -event pipe filters and processes webhooks for a specific datatype, using a subset expression to select the relevant events.
