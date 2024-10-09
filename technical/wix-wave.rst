@@ -2,7 +2,7 @@
 Wix.com to Wave Dataflow
 ========================
 
-Generated: 2024-10-09 00:00:01
+Generated: 2024-10-09 00:07:49
 
 Introduction
 ------------
@@ -92,24 +92,6 @@ The following properties are synchronized between a Wix.com Orders and a Wave In
    * - Wix.com Orders Property
      - Wave Invoice Property
      - Wave Data Type
-   * - buyerInfo.id
-     - customer.id
-     - "string"
-   * - currency
-     - currency.code
-     - "string"
-   * - dateCreated
-     - invoiceDate
-     - N/A
-   * - lineItems.price
-     - items.price
-     - "string"
-   * - lineItems.productId
-     - items.product.id
-     - "string"
-   * - lineItems.quantity
-     - items.quantity
-     - N/A
 
 
 Wix.com Products to Wave Product
@@ -126,10 +108,4 @@ The following properties are synchronized between a Wix.com Products and a Wave 
    * - Wix.com Products Property
      - Wave Product Property
      - Wave Data Type
-   * - name
-     - name
-     - "string"
-   * - priceData.price
-     - unitPrice
-     - "string"
 
