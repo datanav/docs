@@ -2,7 +2,7 @@
 Wave to PowerOffice GO Dataflow
 ===============================
 
-Generated: 2024-10-09 00:00:02
+Generated: 2024-10-09 00:07:49
 
 Introduction
 ------------
@@ -392,51 +392,6 @@ The following properties are synchronized between a Wave Customer and a PowerOff
    * - Wave Customer Property
      - PowerOffice GO Customers Property
      - PowerOffice GO Data Type
-   * - address.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - address.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - address.city
-     - MailAddress.City
-     - "string"
-   * - address.country.code
-     - MailAddress.CountryCode
-     - "string"
-   * - address.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - id
-     - Id
-     - "integer"
-   * - name
-     - Name
-     - "string"
-   * - phone
-     - PhoneNumber
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - shippingDetails.address.city
-     - MailAddress.City
-     - "string"
-   * - shippingDetails.address.country.code
-     - MailAddress.CountryCode
-     - "string"
-   * - shippingDetails.address.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - shippingDetails.phone
-     - PhoneNumber
-     - "string"
-   * - website
-     - WebsiteUrl
-     - "string"
 
 
 Wave Customer to PowerOffice GO Customers (human data)
@@ -497,21 +452,6 @@ The following properties are synchronized between a Wave Invoice and a PowerOffi
    * - Wave Invoice Property
      - PowerOffice GO Salesorders Property
      - PowerOffice GO Data Type
-   * - currency.code
-     - CurrencyCode
-     - "string"
-   * - customer.id
-     - CustomerId
-     - "integer"
-   * - customer.id
-     - CustomerReferenceContactPersonId
-     - "integer"
-   * - invoiceNumber
-     - RelatedInvoiceNo
-     - "string"
-   * - poNumber
-     - PurchaseOrderReference
-     - "string"
 
 
 Wave Product to PowerOffice GO Product
