@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2024_10_09:
+
+2024-10-09
+----------
+* :ref:`Integrated Search <integrated_search_query_syntax>` has been extended to add support for phrase search.
+
 .. _changelog_2024_10_07:
 
 2024-10-07
