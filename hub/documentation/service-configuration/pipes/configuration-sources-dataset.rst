@@ -40,12 +40,13 @@ Properties
 
    * - ``subset``
      - Array
-     - | An ``eq`` DTL expression where the left hand side is the index expression and the right hand side is the value that represents the subset. If the subset is specified then only entities that are in that subset will be read from the source.
+     - | An ``eq`` DTL expression where the left-hand side is the index expression and the right-hand side is the value that represents the subset. If the subset is specified then only entities that are in that subset will be read from the source.
        |
        | Example: ``["eq", "_S.category", "tank"]``
 
        .. NOTE:: Make sure that you use indexes version 2 when you use subsets. The reason is that these support deletes. Indexes version 1 does not.
-       .. NOTE:: `eq` in subsets behaves the way it does in :ref:`joins <joins>`.
+       .. NOTE:: ``eq`` in subsets behaves the way it does in :ref:`joins <joins>`.
+       .. NOTE:: The right-hand side argument of the ``eq`` must be a literal value and not an expression. Example: use ``"~:foo:bar"`` instead of ``["ni", "foo", "bar"]``.
      -
      - No
 
