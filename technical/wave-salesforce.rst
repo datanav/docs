@@ -2,25 +2,25 @@
 Wave to Salesforce Dataflow
 ===========================
 
-Generated: 2024-10-09 00:00:01
+Generated: 2024-10-09 00:07:41
 
 Introduction
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave to Salesforce. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Wave Product to Salesforce Product2
------------------------------------
-Every Wave Product will be synchronized with a Salesforce Product2.
+Wave Financial Product to Salesforce Product2
+---------------------------------------------
+Every Wave Financial Product will be synchronized with a Salesforce Product2.
 
-Once a link between a Wave Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Wave Financial Product and a Salesforce Product2 is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Wave Product and a Salesforce Product2:
+The following properties are synchronized between a Wave Financial Product and a Salesforce Product2:
 
 .. list-table::
    :header-rows: 1
 
-   * - Wave Product Property
+   * - Wave Financial Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
    * - description
