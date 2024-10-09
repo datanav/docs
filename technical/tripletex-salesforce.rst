@@ -2,7 +2,7 @@
 Tripletex to Salesforce Dataflow
 ================================
 
-Generated: 2024-10-09 00:00:01
+Generated: 2024-10-09 00:07:49
 
 Introduction
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Tripletex Product and a Sale
    * - Tripletex Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
+   * - description
+     - Description
+     - "string"
+   * - name
+     - Name
+     - "string"
 
 
 Tripletex Activity to Salesforce Task
@@ -464,12 +470,6 @@ The following properties are synchronized between a Tripletex Product and a Sale
    * - Tripletex Product Property
      - Salesforce Product2 Property
      - Salesforce Data Type
-   * - description
-     - Description
-     - "string"
-   * - name
-     - Name
-     - "string"
 
 
 Tripletex Supplier to Salesforce Seller
