@@ -2,7 +2,7 @@
 Wave to Tripletex Dataflow
 ==========================
 
-Generated: 2024-10-09 00:00:01
+Generated: 2024-10-09 00:07:49
 
 Introduction
 ------------
@@ -802,18 +802,6 @@ The following properties are synchronized between a Wave Invoice and a Tripletex
    * - Wave Invoice Property
      - Tripletex Order Property
      - Tripletex Data Type
-   * - currency.code
-     - currency.id
-     - "integer"
-   * - customer.id
-     - contact.id
-     - "integer"
-   * - customer.id
-     - customer.id
-     - "integer"
-   * - poNumber
-     - reference
-     - "string"
 
 
 Wave Invoice to Tripletex Orderline
