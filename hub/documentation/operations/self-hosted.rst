@@ -26,7 +26,6 @@ Software requirements
 
 - Docker
 
-- Docker compose
 
 Firewall requirements
 ---------------------
@@ -128,7 +127,7 @@ Before starting the setup you will  need:
 
 - A docker repository login (provided by Sesam support)
 
-- A working docker compose installation
+- A `sesam` user on the virtual machine
 
 .. _self_hosted_file_structure:
 
@@ -143,12 +142,13 @@ If you want your data stored on the root-disk directly, just create the datafold
     mkdir -p /srv/data/sesam/node-00/data
     mkdir -p /sesam/node-00
     ln -s /srv/data/sesam/node-00/data /sesam/node-00/data
-    mkdir -p /etc/sesam-agent
 
 License Key
 ===========
 
-Sesam requires a valid license to function. Without a valid license the pipes will stop running. Instructions for obtaining a valid license key can be found in the `Sesam Portal <https://portal.sesam.io/>`__. Save the license key to the ``/srv/data/sesam/node-00/data/license.key`` file.
+Sesam requires a valid license to function. Without a valid license the pipes will stop running. 
+
+Instructions for obtaining a valid license key can be found in the `Sesam Portal <https://portal.sesam.io/>`__. Save the license key to the ``/srv/data/sesam/node-00/data/license.key`` file.
 
 
 .. _self_hosted_docker_compose:
