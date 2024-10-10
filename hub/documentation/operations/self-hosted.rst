@@ -203,17 +203,23 @@ Docker compose configuration
 2. Docker Setup
 ---------------
 
-1. Place the `docker-compose.yaml </files/docker-compose.yaml>`_ and `.env </files/env>`_  files in the
-   ``/srv/data`` directory:
+1. Place the `docker-compose.yaml </files/docker-compose.yaml>`_ and `.env </files/env>`_  files in the ``/srv/data`` directory:
 
    .. code:: bash
-
+      
       /srv/data/docker-compose.yml
       /srv/data/.env
 
-2. Edit the ``.env`` file with the correct values.
+2. Create a new unique identifier to use as APPLIANCE_ID 
 
-3. Create the needed networks
+   .. code:: bash
+      
+      uuidgen
+
+
+3. Edit the ``.env`` file with the correct values
+
+4. Create the needed networks
 
    .. code:: bash
       
