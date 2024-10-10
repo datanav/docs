@@ -156,128 +156,88 @@ Sesam requires a valid license to function. Without a valid license the pipes wi
 Docker compose configuration
 ============================
 
-::
+1. Environment Setup
+--------------------
 
-    # IMAGE TAGS, USER_ID and HOST names is found in .env file
-    version: '3'
+1. Export the base node path:
 
-    services:
-      watchtower:
-        image: containrrr/watchtower
-        container_name: watchtower
-        restart: always
-        volumes:
-          - /var/run/docker.sock:/var/run/docker.sock
-        command: >
-          --name sesam-node
-          --name fluentbit
-          --name traefik
-        environment:
-          - WATCHTOWER_CLEANUP=true        # Removes old images after updating
-          - WATCHTOWER_POLL_INTERVAL=3600   # Check for updates every 60 minutes
-          - WATCHTOWER_ROLLING_RESTART=true  # Enable rolling restarts to minimize downtime
+   .. code:: bash
 
-      traefik:
-        image: traefik:${TRAEFIK_DOCKER_IMAGE_TAG}
-        container_name: traefik
-        restart: always
-        command:
-          - "--providers.docker=true"
-          - "--entrypoints.web.address=:80"
-          - "--entrypoints.websecure.address=:443"
-          - "--certificatesresolvers.myleresolver.acme.httpchallenge=true"
-          - "--certificatesresolvers.myleresolver.acme.httpchallenge.entrypoint=web"
-          - "--certificatesresolvers.myleresolver.acme.email=sesamadmin@sesam.io"
-          - "--certificatesresolvers.myleresolver.acme.storage=/letsencrypt/acme.json"
-          - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
-          - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
-        ports:
-          - "80:80"
-          - "443:443"
-        volumes:
-          - "/var/run/docker.sock:/var/run/docker.sock:ro"
-          - "/srv/data/traefik/letsencrypt:/letsencrypt"
-        networks:
-          - sesam
-          - microservices
+      export BASE_NODE_PATH='/sesam/node-00'
 
-      sesam-node:
-        image: sesam/sesam-node:${SESAM_NODE_IMAGE_TAG}
-        container_name: sesam-node
-        restart: always
-        networks:
-          - sesam
-          - microservices
-        ports:
-          - "9042:9042"
-        volumes:
-          - /srv/data/sesam/node-00/data:/sesam/data:rprivate
-          - sesam-node-tmp:/tmp:z
-          - /sesam/node-00:/sesam:rprivate
-          - /var/run/docker.sock:/var/run/docker.sock:rprivate
-        environment:
-          - SESAM_UID=${USER_ID}
-          - SESAM_GID=${USER_ID}
-          - PATH=/opt/venv/bin:/opt/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-          - LANGUAGE=en_US.UTF-8
-          - LANG=en_US.UTF-8
-          - LC_ALL=en_US.UTF-8
-          - PYTHON_EGG_CACHE=/tmp
-          - PYTHONIOENCODING=UTF-8
-          - ORACLE_HOME=/opt/instantclient_21_1
-          - LD_LIBRARY_PATH=:/opt/instantclient_21_1
-          - VIRTUAL_ENV=/opt/venv
-          - CXX=g++
-          - CC=gcc
-          - SSL_CERT_DIR=/usr/lib/ssl/certs
-          - SESAM_IMAGE_VERSION=2
-        entrypoint: ["/entrypoint.sh"]
-        command:
-          - sh
-          - -c
-          - "chown -R -H ${USER_ID}:${USER_ID} /sesam/logs /sesam/data && exec gosu ${USER_ID} lake -l /sesam/logs -d /sesam/data --microservices=engine --enforce-license --sesam-portal-url https://portal.sesam.io/unified/ --redirect-portal-gui 1 -b /sesam/data/backup --backup-use-checkpoints"
-        labels:
-          - "traefik.enable=true"
-          - "traefik.http.routers.sesam-node.rule=Host(`${NODE_DOMAIN}`)"
-          - "traefik.http.routers.sesam-node.entrypoints=websecure"
-          - "traefik.http.routers.sesam-node.tls=true"
-          - "traefik.http.routers.sesam-node.tls.certresolver=myleresolver"
-          - "traefik.http.services.sesam-node.loadbalancer.server.port=9042"
+2. Create necessary directories:
 
-      fluentbit:
-        image: sesam/fluent-bit:${FLUENTBIT_IMAGE_TAG}
-        container_name: fluentbit
-        restart: always
-        volumes:
-          - /sesam/node-00/logs:/logs/node/logs:rw
-          - /var/log:/system-logs/logs:rw
-          - /sesam/fluentbit/data:/data:rw
-        environment:
-          - APPLIANCE_ID=${APPLIANCE_ID}
-          - SUBSCRIPTION_ID=${SUBSCRIPTION_ID}
-          - AUTH_HEADER=${FLUENTBIT_AUTH_HEADER}
-          - HOST=${FLUENTBIT_HOST}
-          - PORT=443
-          - TLS=on
-          - FLUENTBIT_VERSION=1.9.4
-        entrypoint:
-          - /fluent-bit/bin/fluent-bit
-        command:
-          - /fluent-bit/bin/fluent-bit
-          - -c
-          - /fluent-bit/etc/fluent-bit.conf
+   .. code:: bash
 
-    volumes:
-      # Docker Volume definition for sesam-node-tmp
-      sesam-node-tmp:
-        driver: local
+      sudo mkdir -p $BASE_NODE_PATH/logs
+      sudo mkdir -p /srv/data/$BASE_NODE_PATH/data
 
-    networks:
-      sesam:
-        external: true
-      microservices:
-        external: true
+3. Create a symbolic link for the data directory:
 
+   .. code:: bash
+
+      sudo ln -s /srv/data$BASE_NODE_PATH/data $BASE_NODE_PATH/data
+
+4. Save the license key to the data directory:
+
+   .. code:: bash
+
+      sudo echo "$LICENSE" > $BASE_NODE_PATH/data/license.key
+
+5. Create additional directories for other services:
+
+   .. code:: bash
+
+      sudo mkdir -p /srv/data/traefik/letsencrypt
+
+6. Adjust ownership of directories to the ``sesam`` user:
+
+   .. code:: bash
+
+      sudo chown -R sesam:sesam /srv/data
+      sudo chown -R sesam:sesam /sesam
+
+
+--------------
+
+2. Docker Setup
+---------------
+
+1. Place the `docker-compose.yaml </files/docker-compose.yaml>`_` and `.env </files/env>`_  files in the
+   ``/srv/data`` directory:
+
+   .. code:: bash
+
+      /srv/data/docker-compose.yml
+      /srv/data/.env
+
+2. Edit the ``.env`` file with the correct values.
+
+3. Create the needed networks
+
+   .. code:: bash
+      
+      docker network create sesam
+      docker network create microservices
+
+--------------
+
+3. Start Services
+-----------------
+
+1. Navigate to the ``/srv/data`` directory:
+
+   .. code:: bash
+
+      cd /srv/data
+
+2. Start the services using Docker Compose:
+
+   .. code:: bash
+
+      docker-compose up -d
+
+--------------
 
 
 Log in to `Sesam portal <https://portal.sesam.io>`_ and add your sesam-node URL to the connection under the network tab and finally upload the license.
