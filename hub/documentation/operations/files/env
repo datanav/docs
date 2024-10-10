@@ -1,0 +1,10 @@
+# run: `id -u sesam` to find correct USER_ID
+APPLIANCE_ID=your_appliance_id
+SUBSCRIPTION_ID=your_subscription_id
+TRAEFIK_DOCKER_IMAGE_TAG=latest
+SESAM_NODE_IMAGE_TAG=weekly-prod
+FLUENTBIT_IMAGE_TAG=latest
+FLUENTBIT_HOST=ss-companyhub.sesam.cloud
+FLUENTBIT_AUTH_HEADER="bearer your_auth_token"
+NODE_DOMAIN=datahub-<8-first-sub-id>.sesam.cloud
+USER_ID=1000
