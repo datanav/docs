@@ -1,4 +1,5 @@
 # run: `id -u sesam` to find correct USER_ID
+# APPLIANCE_ID can be created using uuidgen 
 APPLIANCE_ID=your_appliance_id
 SUBSCRIPTION_ID=your_subscription_id
 TRAEFIK_DOCKER_IMAGE_TAG=latest
