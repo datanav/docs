@@ -2,7 +2,7 @@
 Tripletex to PowerOffice GO Dataflow
 ====================================
 
-Generated: 2024-10-10 00:00:01
+Generated: 2024-10-10 00:01:16
 
 Introduction
 ------------
@@ -885,6 +885,27 @@ The following properties are synchronized between a Tripletex Order and a PowerO
    * - Tripletex Order Property
      - PowerOffice GO Salesorders Property
      - PowerOffice GO Data Type
+   * - contact.id
+     - CustomerId
+     - "integer"
+   * - contact.id
+     - CustomerReferenceContactPersonId
+     - "integer"
+   * - currency.id
+     - CurrencyCode
+     - "string"
+   * - customer.id
+     - CustomerId
+     - "integer"
+   * - customer.id
+     - CustomerReferenceContactPersonId
+     - "integer"
+   * - orderDate
+     - SalesOrderDate
+     - "string"
+   * - reference
+     - PurchaseOrderReference
+     - "string"
 
 
 Tripletex Orderline to PowerOffice GO Salesorderlines
