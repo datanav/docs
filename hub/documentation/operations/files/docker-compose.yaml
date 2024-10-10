@@ -7,7 +7,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /home/sesam/.docker/config.json:/config.json
-    command: sesam-node redis solr databrowser fluentbit traefik
+    command: sesam-node fluentbit traefik
     environment:
       - WATCHTOWER_CLEANUP=true        # Removes old images after updating
       - WATCHTOWER_POLL_INTERVAL=3600   # Check for updates every 60 minutes
