@@ -22,7 +22,7 @@ We recommend setting up at least a machine with 4 CPUs, 16GB RAM and a 350GB dat
 Software requirements
 ---------------------
 
-- Ubuntu >= 20.04 or RHEL >= 7. We prefer running Ubuntu if possible.
+- Ubuntu >= 20.04 or RHEL >= 8. We prefer running Ubuntu if possible.
 
 - Docker
 
