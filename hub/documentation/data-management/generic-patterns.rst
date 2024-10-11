@@ -5,6 +5,7 @@ Generic Patterns
 .. toctree::
    :hidden:
 
+   Open to extension closed for modification <open-to-extension-closed-for-modification-pattern>
    Rewriting identity pattern <rewriting-identity-pattern>
 
 Looking for some generic patterns? These topics will get you started on the right foot.
@@ -23,4 +24,15 @@ Looking for some generic patterns? These topics will get you started on the righ
         :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
+    ---
+
+    **Open to extension closed for modification**
+
+    .. link-button:: open-to-extension-closed-for-modification-pattern
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block
    
+
+
+     
