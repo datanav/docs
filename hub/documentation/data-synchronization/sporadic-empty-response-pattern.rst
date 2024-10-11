@@ -1,3 +1,5 @@
+.. _sporadic-empty-response:
+
 Sporadic empty response pattern
 -------------------------------
 

@@ -15,7 +15,7 @@ This document describes best practices on building and structuring connectors.
    datatypes-with-list-of-linked-objects
    duplicate-hops-block
    handling-asymmetry
-   open-closed-principle
+   open-to-extension-closed-for-modification
    pagination
    parameterized-datatypes
    receive-webhook-events
@@ -25,4 +25,5 @@ This document describes best practices on building and structuring connectors.
    two-step-collect
    use-datatype-specific-operations
    use-templates
+   verify-deletes
    webhook-deletion-tracking
