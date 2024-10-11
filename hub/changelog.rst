@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2024_10_11:
+
+2024-10-11
+----------
+* Updated :ref:`roadmap <roadmap>`.
+
+
 .. _changelog_2024_10_09:
 
 2024-10-09
