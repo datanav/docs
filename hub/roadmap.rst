@@ -59,8 +59,6 @@ Public Preview
 
 The following items are now available for experimental use.
 
-.. _roadmap_webhooks:
-
 Webhooks
 ========
 
@@ -81,8 +79,8 @@ We are looking into how to package up a set of configurations in such a way that
 .. note::
   Support for :ref:`connectors <connectors-feature>` are now available.
 
-Management Console (previously known as the Consumer Portal)
-============================================================
+Multitenancy
+============
 
 Today, one has to get the credentials to the systems one would like to connect from an external source and inject them into a running subscription as secrets. For subscriptions that are built around multiple tenants building such a solution can be time consuming.
 
@@ -91,7 +89,7 @@ We are looking into building a configurable tenant facing application that allow
 This will be built on top of reusable connectors, and support connectors that use OAuth2 flows as well as services with simpler API key credentials.
 
 .. note::
-  :ref:`Management Console <management_console>` is now available. Contact support@sesam.io for more information about pricing and how to set it up.
+  Support for :ref:`multitenancy <multitenancy-feature>` is now available. Contact support@sesam.io for more information about pricing and how to set it up.
 
 .. _roadmap_property_lineage:
 

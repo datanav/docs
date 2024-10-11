@@ -55,3 +55,4 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
    Data Management <features/data-management-features>
    Data Synchronization <features/data-synchronization-features>
    Operations <features/operations-features>
+   Multitenancy <features/multitenancy>
