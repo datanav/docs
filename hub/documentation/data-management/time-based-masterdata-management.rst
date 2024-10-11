@@ -29,10 +29,7 @@ We can now rewrite the key-value ``<property>: <value>`` as ``<property>: <claim
       "<namespace>:end-time": "~t2024-09-20T07:18:20.698042Z"
     }
 
-Last modified value
--------------------
-
-In order to perform time-based masterdata management, each claim requires a datetime value describing when each specific property last changed in the source system. However, not every system has last modified datetime values for each property. Some systems might only have a datetime value on the entity as a whole, while some systems might not have any datetime value. In all three cases we need to be able to supply the claim with a near real-time datetime value in order to perform accurate time-based masterdata management. The different scenarios are described below in order of priority:
+Not every system has last modified datetime values for each property. Some systems might only have a datetime value on the entity as a whole, while some systems might not have any datetime value. In all three cases we need to be able to supply the claim with a near real-time datetime value in order to perform accurate time-based masterdata management. The different scenarios are described below in order of priority:
 
 1. The system provides last modified datetime values for each individual property
 
