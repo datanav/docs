@@ -5,8 +5,10 @@ Changelog
 
 2024-10-11
 ----------
+* Added support for :ref:`connectors <connectors-feature>`.
+* Added support for :ref:`multitenancy <multitenancy-feature>`.
+* Added support for :ref:`webhooks <webhook-feature>`.
 * Updated :ref:`roadmap <roadmap>`.
-
 
 .. _changelog_2024_10_09:
 
