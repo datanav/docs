@@ -14,6 +14,7 @@ In this section you will learn how to synchronize your data streams into and out
 
    API Best Practices <documentation/data-synchronization/api-best-practices>
    Bi-directional synchronization <bidirectional-synchronization>
+   Connectors <index-connectors>
    Cron Expressions <cron-expressions>
    Developer Extension Points <extension-points>
    JSON Pull Protocol <json-pull>
