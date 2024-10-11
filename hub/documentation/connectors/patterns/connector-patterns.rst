@@ -22,6 +22,7 @@ This document describes best practices on building and structuring connectors.
    register-webhook
    share-template-extension-points
    single-share
+   synthetic-properties
    two-step-collect
    use-datatype-specific-operations
    use-templates
