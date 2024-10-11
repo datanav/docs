@@ -8,6 +8,7 @@ This document describes best practices on building and structuring connectors.
    :maxdepth: 1
 
    authentication-schemes
+   claims-pattern
    combine-all-and-event
    continuation
    datatype-naming

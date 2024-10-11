@@ -11,26 +11,25 @@ Time-based master data management ensures that the most recently updated system 
 
 This section covers best practices in how to implement time-based masterdata management in Sesam and the effects is has.
 
-Claims
-------
+Last modified value
+-------------------
 
-In order to do time-based masterdata management, every property needs a datetime corresponding to the date and time the property was last modified. In Sesam, the preferred way of implementing this is as ``claims``. A claim is a collection of metadata for each property. The property's value is one claim property, but also which entity/system the property originated from, the status of the claim (is it the newest one or an old claim) as well as a datetime property telling us when the property was last updated. We can now rewrite the key-value ``<property>: <value>`` as ``<property>: <claimDict>`` where ``claimDict`` is a dictionary containing the claim data. In the example below, ``claimDict`` contains the property's value, its $last-modified datetime, and the claim's end-time, which is when the claim got replaced by a newer claim. These are the ``claim properties``.
+In order to do time-based masterdata management, every property needs a datetime corresponding to the date and time the property was last modified. In Sesam, the preferred way of implementing this to introduce :ref:`claims <claims>`, a claim is a collection of metadata for each property. 
+
+We can now rewrite the key-value ``<property>: <value>`` as ``<property>: <claim>`` where the claim is a dictionary containing the claim data. In the example below, the claim contains the property's value, its $last-modified datetime, and the claim's end-time, which is when the claim got replaced by a newer claim. These are the ``claim properties``.
 
 |start-h3| Example |end-h3|
 
 ::
 
-  "<property>": 
+  "<namespace>:<property>": 
     {
-      "value": "value",
-      "$last-modified": "~t1987-09-11:T06:55:07.456827Z",
-      "end-time": "~t2024-09-20T07:18:20.698042Z"
+      "<namespace>:value": "value",
+      "<namespace>:$last-modified": "~t1987-09-11:T06:55:07.456827Z",
+      "<namespace>:end-time": "~t2024-09-20T07:18:20.698042Z"
     }
 
-Last modified value
--------------------
-
-In order to perform time-based masterdata management, each claim requires a datetime value describing when each specific property last changed in the source system. However, not every system has last modified datetime values for each property. Some systems might only have a datetime value on the entity as a whole, while some systems might not have any datetime value. In all three cases we need to be able to supply the claim with a near real-time datetime value in order to perform accurate time-based masterdata management. The different scenarios are described below in order of priority:
+Not every system has last modified datetime values for each property. Some systems might only have a datetime value on the entity as a whole, while some systems might not have any datetime value. In all three cases we need to be able to supply the claim with a near real-time datetime value in order to perform accurate time-based masterdata management. The different scenarios are described below in order of priority:
 
 1. The system provides last modified datetime values for each individual property
 
@@ -59,7 +58,7 @@ Now that we have up-to-date datetime values inside each property claim we can pe
   ["add", "<property>",
     ["path", "value",
       ["last",
-        ["sorted", "_.$last-modified",
+        ["sorted", "_.<namespace>:$last-modified",
           ["filter",
             ["is-empty", "_.end-time"], "_T.<property>"]
         ]
