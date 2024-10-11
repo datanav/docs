@@ -205,3 +205,12 @@ Looking for some generic patterns? These topics will get you started on the righ
         :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
+    ---
+
+    **Open to extension closed for modification**
+
+    .. link-button:: open-to-extension-closed-for-modification-pattern
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block
+   
