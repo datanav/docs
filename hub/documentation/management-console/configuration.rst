@@ -1,8 +1,8 @@
-=======================
-Connector Configuration
-=======================
+================================
+Management Console Configuration
+================================
 
-In a particular environment, connectors can be configured using a ``config.json`` file. This file has a property called ``connector_config`` whose value is the configuration of an embedded pipe with the same name. By editing the entities in the embedded source, the various connectors can be configured.
+In a particular environment, available connectors can be configured using a ``config.json`` file. This file has a property called ``connector_config`` whose value is the configuration of an embedded pipe with the same name. By editing the entities in the embedded source, the various connectors can be configured.
 
 
 Properties
