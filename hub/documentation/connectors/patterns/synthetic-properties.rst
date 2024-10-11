@@ -1,5 +1,5 @@
 Synthetic properties
-===================
+====================
 
 In some cases we need to introduce custom (synthetic) properties in the ``-collect`` or ``-enrich`` pipes when source system are missing the required metadata. In that case we should prefix the property names with ``sesam_`` in order to keep track of which properties originate from the source system and which do not.
 
