@@ -22,11 +22,10 @@ We recommend setting up at least a machine with 4 CPUs, 16GB RAM and a 350GB dat
 Software requirements
 ---------------------
 
-- Ubuntu >= 18.04 or RHEL >= 7. We prefer running Ubuntu if possible.
+- Ubuntu >= 20.04 or RHEL >= 8. We prefer running Ubuntu if possible.
 
-- Python3
+- Docker
 
-- Sesam will install the *sesam-agent* which in turn will setup and configure docker.
 
 Firewall requirements
 ---------------------
@@ -50,7 +49,7 @@ Inbound firewall rules
    * - 80/HTTP
      - ANY (Public)
      - Sesam IP
-     - Sesam uses `Let's Encrypt <https://letsencrypt.org/>`_ for SSL certificates. Letsencrypt requires port 80 to be open for incoming traffic from ANY (they don't provide a list of src IPs)  to support renewal of certificates. If you want to bring your own certificate or use a self-signed this port opening can be skipped.
+     - Sesam uses Traefik to generate certificates, which requires port 80 to be open for incoming traffic from ANY (they don't provide a list of src IPs)  to support renewal of certificates. If you want to bring your own certificate or use a self-signed this port opening can be skipped.
 
    * - 443/HTTPS
      - Clients
@@ -128,7 +127,7 @@ Before starting the setup you will  need:
 
 - A docker repository login (provided by Sesam support)
 
-- A sesam-agent config (example below)
+- A `sesam` user on the virtual machine
 
 .. _self_hosted_file_structure:
 
@@ -143,72 +142,117 @@ If you want your data stored on the root-disk directly, just create the datafold
     mkdir -p /srv/data/sesam/node-00/data
     mkdir -p /sesam/node-00
     ln -s /srv/data/sesam/node-00/data /sesam/node-00/data
-    mkdir -p /etc/sesam-agent
 
 License Key
 ===========
 
-Sesam requires a valid license to function. Without a valid license the pipes will stop running. Instructions for obtaining a valid license key can be found in the `Sesam Portal <https://portal.sesam.io/>`__. Save the license key to the ``/srv/data/sesam/node-00/data/license.key`` file.
+Sesam requires a valid license to function. Without a valid license the pipes will stop running. 
 
-Agent Configuration File
-========================
+Instructions for obtaining a valid license key can be found in the `Sesam Portal <https://portal.sesam.io/>`__. Save the license key to the ``/srv/data/sesam/node-00/data/license.key`` file.
 
-Example config file (must be located at /etc/sesam-agent/config.json)
 
-::
+.. _self_hosted_docker_compose:
 
-    {
-      "docker_username": "sesamonprem",
-      "docker_password": "<TOKEN>",
-      "nginx": {
-        "disable": false
-      },
-      "sesam-node": {
-        "args": "--sesam-portal-url https://portal.sesam.io/ --redirect-portal-gui 1 -b /sesam/data/backup --backup-use-checkpoints ",
-        "tag": "weekly-prod"
-      }
-    }
+Docker compose configuration
+============================
 
-.. _self_hosted_install_the_agent:
+1. Environment Setup
+--------------------
 
-Install the Agent
-=================
+1. Export the base node path:
 
-::
+   .. code:: bash
 
-    sudo wget https://downloads.sesam.io/agent/sesam-agent -O /sbin/sesam-agent
-    sudo chmod +x /sbin/sesam-agent
-    sudo /sbin/sesam-agent install
-    sudo /sbin/sesam-agent start
+      export BASE_NODE_PATH='/sesam/node-00'
+
+2. Create necessary directories:
+
+   .. code:: bash
+
+      sudo mkdir -p $BASE_NODE_PATH/logs
+      sudo mkdir -p /srv/data/$BASE_NODE_PATH/data
+
+3. Create a symbolic link for the data directory:
+
+   .. code:: bash
+
+      sudo ln -s /srv/data$BASE_NODE_PATH/data $BASE_NODE_PATH/data
+
+4. Save the license key to the data directory:
+
+   .. code:: bash
+
+      sudo echo "$LICENSE" > $BASE_NODE_PATH/data/license.key
+
+5. Create additional directories for other services:
+
+   .. code:: bash
+
+      sudo mkdir -p /srv/data/traefik/letsencrypt
+
+6. Adjust ownership of directories to the ``sesam`` user:
+
+   .. code:: bash
+
+      sudo chown -R sesam:sesam /srv/data
+      sudo chown -R sesam:sesam /sesam
+
+
+--------------
+
+2. Docker Setup
+---------------
+
+1. Place the `docker-compose.yaml <files/docker-compose.yaml>`_ and `.env <files/env>`_  files in the ``/srv/data`` directory:
+
+   .. code:: bash
+      
+      /srv/data/docker-compose.yml
+      /srv/data/.env
+
+2. Create a new unique identifier to use as APPLIANCE_ID 
+
+   .. code:: bash
+      
+      uuidgen
+
+
+3. Edit the ``.env`` file with the correct values
+
+4. Create the needed networks
+
+   .. code:: bash
+      
+      docker network create sesam
+      docker network create microservices
+
+--------------
+
+3. Start Services
+-----------------
+
+1. Navigate to the ``/srv/data`` directory:
+
+   .. code:: bash
+
+      cd /srv/data
+
+2. Start the services using Docker Compose:
+
+   .. code:: bash
+
+      docker compose up -d
+
+--------------
+
 
 Log in to `Sesam portal <https://portal.sesam.io>`_ and add your sesam-node URL to the connection under the network tab and finally upload the license.
 
-Bring your own certificate
-==========================
 
-In order to serve the node with your own certificate you will need a valid password-less KEY and a cert in PEM format. If your certificate is password protected you can remove the password with openssl or equivalent tools.
-
-Give your cert and key a name and place them in the ``/sesam/nginx/conf/ssl`` folder (``privkey.pem`` and ``fullchain.pem`` in this example).
-
-Update the Sesam configuration file (``/etc/sesam-agent/config.json``) to include the path to the keys in the nginx section:
-
-::
-
-    "nginx": {
-      "ssl_cert": "/etc/nginx/includes.d/ssl/fullchain.pem",
-      "ssl_key": "/etc/nginx/includes.d/ssl/privkey.pem"
-    }
-
-Restart nginx for things to take effect:
-
-::
-
-    docker restart nginx
-
-Migrate an old installation to use the sesam-agent
+Migrate an old installation to use docker compose
 ==================================================
 
-Be sure to back up your data before proceeding. Before :ref:`Install the Agent <self_hosted_install_the_agent>` section you must make sure you have done the following:
+Be sure to back up your data before proceeding. Before :ref:`Docker compose configuration <self_hosted_docker_compose>` section you must make sure you have done the following:
 
 - Stop and remove all running containers.
 
