@@ -10,3 +10,4 @@ See also :doc:`Connector Tools <connector-tools>`.
 
    The Connector Contract <documentation/connectors/connector-contract>
    Configuring connectors <documentation/connectors/configuration>
+   Available connectors <documentation/connectors/available-connectors>
