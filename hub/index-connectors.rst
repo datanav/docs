@@ -1,5 +1,7 @@
+.. _connectors:
+
 Connectors
-===============
+==========
 
 The following pages describe how to set up and configure your own :ref:`connector <whatis-connector>` in Sesam.  
 

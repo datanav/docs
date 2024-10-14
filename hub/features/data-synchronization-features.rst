@@ -94,6 +94,17 @@ Sesam offers a set of features that will give you the edge when it comes to mast
             :type: ref
             :text: Read more
             :classes: read-more
+    ---
+    :badge:`Free feature,badge-success badge-pill`
+
+    **Webhooks**
+
+    Webhooks is a way to signal and transfer updates to data between systems.
+
+    .. link-button:: webhook-feature
+            :type: ref
+            :text: Read more
+            :classes: read-more
 
 |
 
@@ -108,3 +119,5 @@ Sesam offers a set of features that will give you the edge when it comes to mast
    Deletion Tracking <deletion-tracking>
    Circuit breakers <circuit-breakers>
    Transit Encoding <transit-encoding>
+   Webhooks <webhooks>
+   Connectors <connectors>

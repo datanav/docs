@@ -139,8 +139,6 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
-    .. rst-class:: align-right
-
     :badge:`Free feature,badge-success badge-pill`
 
     **Compaction**

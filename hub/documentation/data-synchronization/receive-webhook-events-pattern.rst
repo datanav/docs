@@ -1,3 +1,5 @@
+.. _receive_webhook_events:
+
 Receiving webhook events
 ========================
 
