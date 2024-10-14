@@ -80,11 +80,6 @@ services:
     environment:
       - APPLIANCE_ID=${APPLIANCE_ID}
       - SUBSCRIPTION_ID=${SUBSCRIPTION_ID}
-      - AUTH_HEADER=${FLUENTBIT_AUTH_HEADER}
-      - HOST=${FLUENTBIT_HOST}
-      - PORT=443
-      - TLS=on
-      - FLUENTBIT_VERSION=1.9.4
     entrypoint:
       - /fluent-bit/bin/fluent-bit
     command:
