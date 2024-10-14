@@ -13,6 +13,6 @@ In this section you learn both what these tools are, how they work and how we ca
 
    Management Studio <management-studio>
    Sesam Client <sesam-client>
-   Consumer Portal <index-consumer-portal>
+   Management Console <index-management-console>
    GDPR platform <gdpr-platform>
    Connector Tools <connector-tools>

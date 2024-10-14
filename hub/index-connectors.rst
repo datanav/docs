@@ -1,5 +1,7 @@
+.. _connectors:
+
 Connectors
-===============
+==========
 
 See also :doc:`Connector Tools <connector-tools>`.
 
@@ -9,5 +11,5 @@ See also :doc:`Connector Tools <connector-tools>`.
    :maxdepth: 1
 
    The Connector Contract <documentation/connectors/connector-contract>
-   Configuring connectors <documentation/connectors/configuration>
+   Using connectors <documentation/connectors/using-connectors>
    Available connectors <documentation/connectors/available-connectors>
