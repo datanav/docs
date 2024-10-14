@@ -8,9 +8,6 @@ Tripletex
 
 The Tripletex connector configuration can be found in the  `tripletex-connector github repository <https://github.com/sesam-io/tripletex-connector>`_. The `playground branch <https://github.com/sesam-io/tripletex-connector/tree/playground>`_ is typically the most complete branch.
 
-FAQ
-===
-
 Find your employee token
 ------------------------
  .. note::
