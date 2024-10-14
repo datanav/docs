@@ -203,7 +203,7 @@ Docker compose configuration
 2. Docker Setup
 ---------------
 
-1. Place the `docker-compose.yaml <files/docker-compose.yaml>`_ and `.env <files/env>`_  files in the ``/srv/data`` directory:
+1. Place the :download:`docker-compose <files/files/docker-compose.yaml>` and :download:`.env <files/env>`  files in the ``/srv/data`` directory:
 
    .. code:: bash
       
