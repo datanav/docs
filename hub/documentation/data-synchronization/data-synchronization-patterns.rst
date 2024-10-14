@@ -11,7 +11,7 @@ Data Synchronization Patterns
    Transform Patterns<transform-patterns>
    Share Patterns<share-patterns>
 
-We've identified a set of patterns when working with problems related to data synchronizaion in Sesam. We find it very useful to name these patterns as it makes it easier to refer to them when discussing problems.
+We've identified a set of patterns when working with problems related to data synchronization in Sesam. We find it very useful to name these patterns as it makes it easier to refer to them when discussing problems.
 
 .. rst-class:: center-title
 
