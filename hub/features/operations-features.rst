@@ -120,4 +120,3 @@ Sesam offer a set of features that will give you the edge when it comes to opera
    Network Policy <network-policy>
    Status Page <status-page>
    Software Channels <software-channels>
-  
