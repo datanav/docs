@@ -1,5 +1,5 @@
 Connectors
-===============
+==========
 
 The following pages describe how to set up and configure your own :ref:`connector <whatis-connector>` in Sesam.  
 
@@ -13,3 +13,4 @@ See also :doc:`Connector Tools <connector-tools>`.
    The Connector Contract <documentation/connectors/connector-contract>
    Connector configurations <documentation/connectors/connector-configuration>
    Available connectors <documentation/connectors/available-connectors>
+   Using connectors <documentation/connectors/using-connectors>
