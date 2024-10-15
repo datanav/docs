@@ -1,3 +1,5 @@
+.. _data_synchronization_share_patterns:
+
 ================
 Share Patterns
 ================

@@ -92,5 +92,11 @@ Typical datatypes for the global ``global-person`` are:
 
 - person
 - user
-- employee
+- employee  
 
+.. _whatis-connector:
+
+Connector
+---------
+
+A connector is the collection of components required to synchronize one or more datatypes to a system. This synchronization can either be from the outside into Sesam or from Sesam to the outside. Sesam provides a list of built-in connectors to some of the most :doc:`common sources <documentation/service-configuration/systems/configuration-systems>`, such as :doc:`SQL <documentation/service-configuration/systems/configuration-systems-sql>` or :doc:`rest API's <documentation/service-configuration/systems/configuration-systems-rest>`. Sesam also provides a set of :doc:`developer extension points <extension-points>` to which you can build your own connector inside a microservice for extra functionality. 

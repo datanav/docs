@@ -1,3 +1,5 @@
+.. _data_synchronization_collect_patterns:
+
 ================
 Collect Patterns
 ================
