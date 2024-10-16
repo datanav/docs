@@ -71,3 +71,9 @@ There are two ways to work around this problem:
 or
 
 - Add enough information in the to-be-inserted product (if the system supports this) so that it :ref:`merges <merging_feature>` with an existing product in Tripletex.
+
+
+Why is the address of my contact in Tripletex not up to date?
+*************************************************************
+
+In Tripletex the contact field for **address** is not supported in their API. only in their GUI. That means that we can not read or write write data from or into these fields. 

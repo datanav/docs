@@ -12,39 +12,39 @@ List of connectors
 .. toctree::
    :maxdepth: 1
 
-   Tripletex <tripletex-connector>
+   Business Central <available-connectors/businesscentral-connector>
+   HubSpot <available-connectors/hubspot-connector>
+   PowerOffice GO <available-connectors/powerofficego-connector>
+   SuperOffice <available-connectors/superoffice-connector>
+   Tidsbanken <available-connectors/tidsbanken-connector>
+   Tripletex <available-connectors/tripletex-connector>
+   Wave <available-connectors/wave-connector>
+   Wix <available-connectors/wix-connector>
 
 TODO
 ====
 
 - Asana
 - BambooHR
-- Business Central
 - Chargebee
 - CRMOffice
 - DBpedia
 - Difi
 - Exact Online
 - Freshteam
-- HubSpot
 - Invoiced
 - Keap
 - Membercare
 - Monday
-- PowerOffice GO
 - Sage
 - Shopify
 - Squarespace
 - SSB
-- SuperOffice
-- Tidsbanken
 - Trello
 - Twelve Data
 - Uni Economy
-- Wave
 - webCRM
 - Wikidata
-- Wix
 - WooCommerce
 - Xledger
 - YouTrack
