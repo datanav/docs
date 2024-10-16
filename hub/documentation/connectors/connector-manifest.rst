@@ -44,11 +44,6 @@ Properties
      - Type
      - Description
      - Required?
-
-   * - ``additional_parameters``
-     - Object
-     - ?
-     - No???
      
    * - ``auth``
      - String
@@ -85,14 +80,9 @@ Properties
      - The location of the system template file for this system. Typically ``/templates/system.json``.
      - Yes
 
-   * - ``requires_service_api_access``
-     - Boolean
-     - Set to ``true`` if ??????
-     - No
-
    * - ``use_webhook_secret``
      - Boolean
-     - Set to ``true`` if ??????
+     - Set to ``true`` to generate a secret ``webhook_secret`` for validating incoming requests from the external system. This is intended to be used with the ``validation_expression`` in the :ref:`HTTP endpoint source <http_endpoint_source>`.
      - No
 
 
@@ -111,7 +101,7 @@ Properties in the ``datatypes`` object
 
    * - ``label``
      - String
-     - ? 
+     - A human-readable label for the datatype.
      - No
      
    * - ``parameters``
