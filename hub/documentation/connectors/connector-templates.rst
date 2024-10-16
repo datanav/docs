@@ -8,7 +8,7 @@ A template file in a Sesam connector describes the specific DTL configuration fi
 
 This includes configurations for both the ``-collect`` pipes following the established :ref:`data synchronization collect patterns <data_synchronization_collect_patterns>` as well as the ``-share`` pipes following the established :ref:`data synchronization share patterns <data_synchronization_share_patterns>`.
 
-It is recommended to make these configurations as generic as possible and let :ref:`the manifest file <connector_manifest>` manage the datatype specific details.
+It is recommended to make these configurations as generic as possible and let :ref:`the connector manifest <connector_manifest>` manage the datatype specific details.
 
 Example for a *contact* template file:
 
@@ -98,4 +98,4 @@ Example for a *contact* template file:
 
 The example above shows how a template file may look when using the collect template :ref:`collect template <template_transform_collect_rest>` and the :ref:`share template <template_transform_share_rest>`. 
 
-Notice that even though the file is named *contact*, the system name and datatype name are not yet set. The are configurable in the manifest file described below.
+Notice that even though the file is named *contact*, the system name and datatype name are not yet set. These are configurable in the *manifest file*.
