@@ -2,7 +2,7 @@
 Wix.com to PowerOffice GO Dataflow
 ==================================
 
-Generated: 2024-10-19 00:00:00
+Generated: 2024-10-19 00:06:55
 
 Introduction
 ------------
@@ -208,15 +208,6 @@ The following properties are synchronized between a Wix.com Orders and a PowerOf
    * - Wix.com Orders Property
      - PowerOffice GO Salesorders Property
      - PowerOffice GO Data Type
-   * - buyerInfo.id
-     - CustomerId
-     - "integer"
-   * - buyerInfo.id
-     - CustomerReferenceContactPersonId
-     - "integer"
-   * - currency
-     - CurrencyCode
-     - "string"
 
 
 Wix.com Products to PowerOffice GO Product
