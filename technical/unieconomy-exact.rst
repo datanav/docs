@@ -2,7 +2,7 @@
 Unieconomy to Exact Online Dataflow
 ===================================
 
-Generated: 2024-10-19 00:00:00
+Generated: 2024-10-19 00:06:55
 
 Introduction
 ------------
@@ -80,12 +80,6 @@ The following properties are synchronized between a Unieconomy Currencycodes and
    * - Unieconomy Currencycodes Property
      - Exact Online Currencies Property
      - Exact Online Data Type
-   * - Code
-     - Code
-     - "string"
-   * - Name
-     - Description
-     - "string"
 
 
 Unieconomy Customers to Exact Online Accounts
