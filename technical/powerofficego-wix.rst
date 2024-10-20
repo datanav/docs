@@ -2,7 +2,7 @@
 PowerOffice GO to Wix Dataflow
 ==============================
 
-Generated: 2024-10-20 00:00:00
+Generated: 2024-10-20 00:00:22
 
 Introduction
 ------------
@@ -117,6 +117,15 @@ The following properties are synchronized between a PowerOffice GO Product and a
    * - PowerOffice GO Product Property
      - Wix Products Property
      - Wix Data Type
+   * - costPrice
+     - costAndProfitData.itemCost
+     - N/A
+   * - name
+     - name
+     - "string"
+   * - salesPrice
+     - priceData.price
+     - N/A
 
 
 PowerOffice GO Suppliers (human data) to Wix Contacts
