@@ -2,7 +2,7 @@
 YouTrack to Tidsbanken Dataflow
 ===============================
 
-Generated: 2024-11-04 00:00:00
+Generated: 2024-11-05 00:00:01
 
 Introduction
 ------------
