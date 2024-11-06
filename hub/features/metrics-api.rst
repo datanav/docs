@@ -90,7 +90,11 @@ Pipe metrics
 
    * - ``sesam_pipe_config``
      - Gauge
-     - Value is always ``1.0`` Contains config_group label
+     - Value is always ``1.0`` Contains two labels:
+       - **`config_group`**: Indicates the configuration group.
+       - **`leaf`**: Indicates whether the pipe is a leaf.
+         - `0`: Not a leaf pipe.
+         - `1`: Leaf pipe.
 
    * - ``sesam_pipe_usage``
      - Gauge
