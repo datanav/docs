@@ -2,7 +2,7 @@
 Custom Webshop to Tidsbanken Dataflow
 =====================================
 
-Generated: 2024-11-12 00:00:00
+Generated: 2024-11-13 00:00:00
 
 Introduction
 ------------
