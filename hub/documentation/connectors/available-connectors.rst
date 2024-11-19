@@ -28,7 +28,7 @@ List of connectors
    PowerOffice GO <available-connectors/powerofficego-connector>
    Sage <available-connectors/sage-connector>
    Shopify <available-connectors/shopify-connector>
-   SSB <available-connectors/SSB-connector>
+   SSB <available-connectors/ssb-connector>
    Squarespace <available-connectors/squarespace-connector>
    SuperOffice <available-connectors/superoffice-connector>
    Tidsbanken <available-connectors/tidsbanken-connector>
