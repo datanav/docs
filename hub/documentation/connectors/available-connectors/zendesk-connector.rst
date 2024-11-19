@@ -1,4 +1,4 @@
-.. __zendesk_connector:
+.. _zendesk_connector:
 
 =======
 Zendesk

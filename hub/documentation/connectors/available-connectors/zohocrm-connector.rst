@@ -1,4 +1,4 @@
-.. __zohocrm_connector:
+.. _zohocrm_connector:
 
 ========
 Zoho CRM
