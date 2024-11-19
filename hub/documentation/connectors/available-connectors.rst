@@ -19,6 +19,7 @@ List of connectors
    CRMOffice <available-connectors/crmoffice-connector>
    DBpedia <available-connectors/dbpedia-connector>
    Difi <available-connectors/difi-connector>
+   Exact Online <available-connectors/exactonline-connector>
    Freshteam <available-connectors/freshteam-connector>
    HubSpot <available-connectors/hubspot-connector>
    Invoiced <available-connectors/invoiced-connector>
