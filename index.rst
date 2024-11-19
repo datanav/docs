@@ -2,60 +2,9 @@
 .. toctree::
    :hidden:
 
-   Sesam Talk <talk/index>
    Sesam Hub <hub/index>
       
-|
-|
 
-.. rst-class:: center-title
-
-Sesam Talk
-==========
-
-Quickly and easily synchronise your core business data across your different cloud services with Sesam Talk.
-
-|
-|
-
-.. panels::
-    :body: text-left
-    :container: container-lg pb-3
-    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
-
-    **What is Sesam Talk**
-
-    See how Sesam Talk can empower your business by easily synchronising your core data across SaaS services.
-
-    .. link-button:: talk/index
-        :type: ref
-        :text: Read more
-        :classes: btn-outline-primary btn-block
-    ---
-    **Supported systems**
-
-    See which cloud services Sesam Talk currently supports, as well as systems we are planning to support in the near future.
-
-    .. link-button:: talk/systems/index
-            :type: ref
-            :text: Read more
-            :classes: btn-outline-primary btn-block
-    ---
-    **Becoming a partner**
-
-    Read about how you can become a partner and how it can benefit both your business and your customers.
-
-    .. link-button:: talk/partner/index
-            :type: ref
-            :text: Read more
-            :classes: btn-outline-primary btn-block
-    
-
-|
-|
-
-.. rst-class:: center-title
-   
 Sesam Hub
 =========
 
