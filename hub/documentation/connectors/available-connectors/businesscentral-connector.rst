@@ -12,7 +12,6 @@ The Business Central connector configuration can be found in the  `businesscentr
 Frequently Asked Questions
 ==========================
 
-
 Is the data synchronization real-time?
 ---------------------------------------
 The synchronization latency depends on the APIs of the connected systems, the availability of webhooks, and the specific data type. While changes often propagate within seconds or minutes, Sesam does not guarantee real-time updates. The focus is on ensuring data consistency across systems.
