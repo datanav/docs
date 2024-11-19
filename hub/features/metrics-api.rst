@@ -90,7 +90,9 @@ Pipe metrics
 
    * - ``sesam_pipe_config``
      - Gauge
-     - Value is always ``1.0`` Contains config_group label
+     - Value is ``1.0`` if pipe config is valid, ``0.0`` otherwise.
+     - Label: ``config_group`` Configuration group name
+     - Label: ``leaf`` 1 if pipe has no downstream pipes, 0 otherwise
 
    * - ``sesam_pipe_usage``
      - Gauge
