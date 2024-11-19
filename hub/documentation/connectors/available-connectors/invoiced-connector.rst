@@ -1,4 +1,4 @@
-.. __invoiced_connector:
+.. _invoiced_connector:
 
 ========
 Invoiced

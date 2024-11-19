@@ -1,4 +1,4 @@
-.. __chargebee_connector:
+.. _chargebee_connector:
 
 =========
 ChargeBee

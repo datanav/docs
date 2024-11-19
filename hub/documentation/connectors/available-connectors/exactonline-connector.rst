@@ -1,4 +1,4 @@
-.. __exactonline_connector:
+.. _exactonline_connector:
 
 ============
 Exact Online

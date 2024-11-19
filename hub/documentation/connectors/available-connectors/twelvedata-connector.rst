@@ -1,4 +1,4 @@
-.. __twelvedata_connector:
+.. _twelvedata_connector:
 
 ===========
 Twelve Data

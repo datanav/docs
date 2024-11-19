@@ -1,4 +1,4 @@
-.. __asana_connector:
+.. _asana_connector:
 
 =====
 Asana

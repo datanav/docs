@@ -1,4 +1,4 @@
-.. __wikidata_connector:
+.. _wikidata_connector:
 
 ========
 Wikidata

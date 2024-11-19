@@ -1,4 +1,4 @@
-.. __dbpedia_connector:
+.. _dbpedia_connector:
 
 =======
 DBpedia

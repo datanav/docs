@@ -1,4 +1,4 @@
-.. __squarespace_connector:
+.. _squarespace_connector:
 
 ===========
 Squarespace

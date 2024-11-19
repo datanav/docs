@@ -1,4 +1,4 @@
-.. __trello_connector:
+.. _trello_connector:
 
 ======
 Trello

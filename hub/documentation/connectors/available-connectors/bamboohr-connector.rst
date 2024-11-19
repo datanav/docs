@@ -1,4 +1,4 @@
-.. __bamboohr_connector:
+.. _bamboohr_connector:
 
 =========
 Bamboo HR

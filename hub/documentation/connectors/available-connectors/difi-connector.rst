@@ -1,4 +1,4 @@
-.. __difi_connector:
+.. _difi_connector:
 
 ====
 Difi

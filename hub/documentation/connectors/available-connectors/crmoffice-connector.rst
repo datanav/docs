@@ -1,4 +1,4 @@
-.. __crmoffice_connector:
+.. _crmoffice_connector:
 
 =========
 CRMOffice

@@ -1,8 +1,8 @@
-.. __shopify_connector:
+.. _shopify_connector:
 
 =======
 Shopify
-=======
+=======	
 
 Shopify is a leading e-commerce platform that enables businesses to create online stores, manage inventory, and handle transactions with ease.
   

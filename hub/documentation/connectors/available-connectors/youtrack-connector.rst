@@ -1,4 +1,4 @@
-.. __youtrack_connector:
+.. _youtrack_connector:
 
 ========
 YouTrack

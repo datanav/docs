@@ -1,8 +1,8 @@
-.. __woocommerce_connector:
+.. _woocommerce_connector:
 
 ===========
 WooCommerce
-===========
+===========	
 
 WooCommerce is a customizable, open-source e-commerce plugin for WordPress, enabling businesses to build and manage online stores seamlessly.
   

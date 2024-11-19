@@ -1,4 +1,4 @@
-.. __ssb_connector:
+.. _ssb_connector:
 
 ===
 SSB

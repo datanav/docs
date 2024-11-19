@@ -1,4 +1,4 @@
-.. __monday_connector:
+.. _monday_connector:
 
 ==========
 Monday.com

@@ -1,4 +1,4 @@
-.. __webcrm_connector:
+.. _webcrm_connector:
 
 ======
 webCRM

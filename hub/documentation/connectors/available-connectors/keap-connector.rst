@@ -1,4 +1,4 @@
-.. __keap_connector:
+.. _keap_connector:
 
 ====
 Keap

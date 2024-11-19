@@ -1,4 +1,4 @@
-.. __unieconomy_connector:
+.. _unieconomy_connector:
 
 ===========
 Uni Economy

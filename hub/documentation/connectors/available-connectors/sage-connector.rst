@@ -1,4 +1,4 @@
-.. __sage_connector:
+.. _sage_connector:
 
 ====
 Sage

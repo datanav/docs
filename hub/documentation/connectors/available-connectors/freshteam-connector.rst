@@ -1,4 +1,4 @@
-.. __freshteam_connector:
+.. _freshteam_connector:
 
 =========
 Freshteam

@@ -1,4 +1,4 @@
-.. __xledger_connector:
+.. _xledger_connector:
 
 =======
 Xledger

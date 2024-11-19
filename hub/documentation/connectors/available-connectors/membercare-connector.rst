@@ -1,4 +1,4 @@
-.. __membercare_connector:
+.. _membercare_connector:
 
 ==========
 Membercare
