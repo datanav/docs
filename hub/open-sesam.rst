@@ -6,6 +6,10 @@ Open Sesam
    :depth: 2
    :local:
 
+.. note::
+
+  This is a discontinued service and should not be used.
+
 Sesam is designed for anyone to be able to collect, connect, and share data. Open Sesam is a provided as
 a way for people to host, enrich and publish data for free. The data they publish can be open data that is
 used by many others, it can be some samples that can demonstrate the value of Sesam, or just a simple way
