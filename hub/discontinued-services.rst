@@ -1,4 +1,3 @@
-.. _deprecated_services:
 =====================
 Discontinued services
 =====================
