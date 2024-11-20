@@ -1,5 +1,3 @@
-.. _enhanced_data_security:
-
 Enhanced Data Security
 ======================
 
