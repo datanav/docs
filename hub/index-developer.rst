@@ -21,4 +21,4 @@ Documentation
    Service Configuration <index-service-configuration>
    Service API <api>
    Deprecated features <deprecations>
-   Deprecated services <deprecated-services>
+   Discontinued services <discontinued-services>
