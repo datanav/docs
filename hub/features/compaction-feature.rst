@@ -89,8 +89,9 @@ Properties
 
    * - ``compaction.ttl_deletes_hours``
      - Number
-     - Enables TTL compaction if set. The value determines the number of hours until a deleted entity is considered
-       for compaction. When the entity is compacted away, *all* versions of the entity will be removed from the database.
+     - Enables TTL compaction for deletes if set. The value determines the number of hours until a deleted entity is
+       considered for compaction. When the entity is compacted away, *all* versions of the entity will be removed
+       from the database.
      - ``null``
      - No
 

@@ -5,7 +5,7 @@ Changelog
 
 2024-11-25
 ----------
-* Added support for TTL (time to live) :ref:`compaction <compaction_feature>`. This can be enabled by setting
+* Added support for TTL (time to live) :ref:`compaction <compaction_feature>` for deletes. This can be enabled by setting
   ``ttl_deletes_hours`` in the pipe's compaction section. When enabled, entities will be compacted away if the latest version of the entity
   has ``"_deleted": true`` and is older than ``ttl_deletes_hours``. *All* versions of the entity will be compacted away,
   and the only way to recover them is to restore from a backup that contains the entities.
