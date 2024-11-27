@@ -1,9 +1,9 @@
 Changelog
 =========
 
-.. _changelog_2024_11_25:
+.. _changelog_2024_11_27:
 
-2024-11-25
+2024-11-27
 ----------
 * Added support for TTL (time to live) :ref:`compaction <compaction_feature>` for deletes. This can be enabled by setting
   ``ttl_deletes_hours`` in the pipe's compaction section. When enabled, entities will be compacted away if the latest version of the entity
