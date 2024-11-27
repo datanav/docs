@@ -277,7 +277,7 @@ The following are available features that can be activate and/or changed on any 
      - Description
 
    * - ``Compaction``
-     - :ref:`Compaction <compaction_feature>` decides how and when old entities should re removed from datasets.
+     - :ref:`Compaction <compaction_feature>` decides how and when old entities should be removed from datasets.
 
    * - ``Circuit breakers``
      - :ref:`Circuit breakers <circuit_breakers>` prevent pipes from running if the number of changed entities is too large.

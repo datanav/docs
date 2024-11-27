@@ -86,3 +86,18 @@ Properties
        to prevent a pipe that runs often from constantly trying to compact the sink-dataset.
      - ``0``
      - No
+
+   * - ``compaction.ttl_deletes_hours``
+     - Number
+     - Enables TTL compaction for deletes if set. The value determines the number of hours until a deleted entity is
+       considered for compaction. When the entity is compacted away, *all* versions of the entity will be removed
+       from the database.
+     - ``null``
+     - No
+
+   * - ``compaction.ttl_deletes_timeout_seconds``
+     - Number
+     - Determines the number of seconds that the pipe is allowed to spend on the TTL compaction process. If the pipe
+       times out, the compaction process will continue from where it last stopped the next time the pipe runs.
+     - 60
+     - No
