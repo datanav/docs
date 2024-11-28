@@ -65,7 +65,7 @@ source_suffix = '.rst'
 #source_encoding = 'utf-8-sig'
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'hub/index'
 
 # General information about the project.
 project = 'Sesam'
@@ -142,7 +142,10 @@ html_theme = 'pydata_sphinx_theme'
 html_theme_options = {
     "footer_items": ["left-sidebar-bottom.html", "copyright.html", "iso.html" ],
     "navbar_end": "right-menu.html",
-    'navigation_depth': 5
+    'navigation_depth': 5,
+    "navbar_end": "right-menu.html",
+    "navbar_center": "",
+    "show_toc_level": 1 
 
     #     "announcement": "This is a preview of the upcoming Sesam Documentation. For the official documentation go to <a href=\"https://docs.sesam.io\">docs.sesam.io</a>",
     # "sidebar_hide_name": True
