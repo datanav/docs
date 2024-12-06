@@ -82,4 +82,5 @@ The reccurance shedules are system and data-type dependent.
    Enhanced Data Security <enhanced-data-security/index>
    Becoming a partner <partner/index>
    Service Level Objective <legal-slo>
+   Background <background>
    Help <help>
