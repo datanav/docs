@@ -22,4 +22,3 @@ As a data platform component, Sesam improves data-consistency by collecting data
    Concepts <concepts>
    Data architecture <data-architecture>
    Demo <demo>
-   Roadmap <roadmap>

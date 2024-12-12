@@ -199,4 +199,5 @@ Learn how to use Sesam effectively by following these tutorials.
     Learn<index-learn>
     Pricing<../pricing>
     Service Level Agreement<legal-sla>
+    Roadmap <roadmap>
     Changelog<changelog>
