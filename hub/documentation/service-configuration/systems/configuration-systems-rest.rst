@@ -145,8 +145,7 @@ Properties
 
    * - ``custom_auth``
      - Object
-     - An optional set of parameters that allow for flexible configuration of authentication towards various systems.
-       An optional set of parameters that instruct the system on how to fetch an access token for authentication towards
+     - An optional set of parameters that instruct the system on how to fetch an access token for authentication towards
        an external system.
        The ``get_token_operation`` is required and must point to an operation in the ``operations`` section that is
        configured to fetch an access token.
@@ -155,9 +154,11 @@ Properties
        in the Jinja2 environment and can be used with ``{{ access_token }}``.
        For systems that use refresh tokens, the ``initial_refresh_token`` should be set. Some systems may also supply
        a new refresh token in the same response that provides the access token. In that case, the
-       ``refresh_token_property`` should be also be set, and it should point to the name of the property that is
+       ``refresh_token_property`` should also be set, and it should point to the name of the property that is
        expected to contain the refresh token. The current refresh token is available in the Jinja2 environment as
        ``{{ refresh_token }}``.
+       Other props that need documentation: ``expires_at_expression``, ``expires_in_expression``, ``refresh_window``
+       Also, document the new Jinja properties access_token and refresh_token, and that support for converting to bytes, b64encode/decode, datetime injection has been added (Tripletex example config)
        See (new section somewhere) for example configurations.
      -
      -
