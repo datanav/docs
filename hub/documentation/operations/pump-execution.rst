@@ -67,7 +67,7 @@ Properties
 
    * - ``sync_type``
      - Enum<String>
-     - The ``sync_type`` value denotes the type of pipe run that produced this log entry. It can be one of the followin
+     - The ``sync_type`` value denotes the type of pipe run that produced this log entry. It can be one of the following
        values: ``full``, ``partial`` or ``incremental``.
 
    * - ``start_time``
@@ -129,7 +129,7 @@ Properties
 
    * - ``sync_type``
      - Enum<String>
-     - The ``sync_type`` value denotes the type of pipe run that produced this log entry. It can be one of the followin
+     - The ``sync_type`` value denotes the type of pipe run that produced this log entry. It can be one of the following
        values: ``full``, ``partial`` or ``incremental``.
 
    * - ``start_time``
@@ -216,7 +216,7 @@ Properties
 
    * - ``sync_type``
      - Enum<String>
-     - The ``sync_type`` value denotes the type of pipe run that produced this log entry. It can be one of the followin
+     - The ``sync_type`` value denotes the type of pipe run that produced this log entry. It can be one of the following
        values: ``full``, ``partial`` or ``incremental``.
 
    * - ``pump_definition``
