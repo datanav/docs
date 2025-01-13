@@ -662,7 +662,7 @@ bearer token format:
             },
     ..
 
-See :ref:`this section <custom_auth_examples>` for more example systems that use ``custom_auth``.
+See the :ref:`example configurations <custom_auth_examples>` for more examples on systems hat use ``custom_auth``.
 
 .. _rest_system_example:
 
@@ -725,14 +725,14 @@ Example configuration
         }
     }
 
-
 .. _custom_auth_examples:
 
-Example systems that use custom_auth
-------------------------------------
+Example configurations with custom authentication
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+These are examples on how to use the ``custom_auth`` functionality towards various systems.
 
 Tripletex
-^^^^^^^^^
+_________
 
 Tripletex uses basic authentication with "0" as the username. The authorization header needs to be constructed
 using Base64 encoding and bytes conversion. Additionally, an expiration date must be set when requesting a new
@@ -775,7 +775,8 @@ access token:
     }
 
 WebCRM
-^^^^^^
+______
+
 Uses a bearer token, with the expiration time in seconds provided in the property ``ExpiresIn``:
 
 ::
@@ -813,7 +814,8 @@ Uses a bearer token, with the expiration time in seconds provided in the propert
     }
 
 Membercare
-^^^^^^^^^^
+__________
+
 The authorization header is different from the typical bearer token format:
 
 ::
@@ -822,7 +824,7 @@ The authorization header is different from the typical bearer token format:
         "_id": "membercare",
         "type": "system:rest",
         "url_pattern": "https://hoyre-rest-test.membercare.no/api/%s",
-        "verify_ssl": true
+        "verify_ssl": true,
         "custom_auth": {
             "access_token_property": "value",
             "expires_at_expression": "{{ expiration }}",
@@ -862,7 +864,7 @@ The authorization header is different from the typical bearer token format:
     }
 
 Hubspot
-^^^^^^^
+_______
 
 Hubspot uses OAuth2, meaning that using our OAuth2 machinery (see the :ref:`URL system <url_system>`) works perfectly
 fine. This just demonstrates that you can also use ``custom_auth`` in a way that works towards OAuth2 systems using the

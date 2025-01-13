@@ -11,7 +11,7 @@ Changelog
   on a microservice for fetching an access token, it is highly recommended to switch over to using custom authentication
   instead so that a redeployment is not triggered whenever a new access token is fetched.
 
-  Some example configurations on how to use custom authentication can be found :ref:`here <custom_auth_examples>` .
+  Some example configurations on how to use custom authentication can be found :ref:`here <rest_system_examples>` .
 
 .. _changelog_2024_11_27:
 
