@@ -517,7 +517,7 @@ the following sub-properties:
 
    * - ``access_token_property``
      - String
-     - This must set to the name of the property inside the expected response from ``get_token_operation``
+     - This must be set to the name of the property inside the expected response from ``get_token_operation``
        that contains the access token, e.g. ``access_token``.
 
      -
