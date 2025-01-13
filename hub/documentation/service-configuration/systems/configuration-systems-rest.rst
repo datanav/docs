@@ -570,6 +570,11 @@ the following sub-properties:
        Note that the response is not required to contain a new refresh token (refresh tokens should not
        change very often).
 
+       .. WARNING::
+
+          On single compute subscriptions, new refresh tokens are only kept in memory. This means that pipes will start
+          failing after a reboot if a new refresh token was previously fetched. The ``initial_refresh_token`` will
+          need to be manually set to the new refresh token.
      -
      - No
 
