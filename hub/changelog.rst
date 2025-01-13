@@ -1,6 +1,18 @@
 Changelog
 =========
 
+.. _changelog_2025_01_13:
+
+2025-01-13
+----------
+* Added support for using custom authentication in the :ref:`REST system <rest_custom_auth>`. This enables flexible
+  configuration for fetching an access token that will be used for authentication towards the system. The access token
+  will be refreshed periodically, similar to how the existing OAuth2 machinery works. For existing systems that depend
+  on a microservice for fetching an access token, it is highly recommended to switch over to using custom authentication
+  instead so that a redeployment is not triggered whenever a new access token is fetched.
+
+  Some example configurations on how to use custom authentication can be found :ref:`here <custom_auth_examples>` .
+
 .. _changelog_2024_11_27:
 
 2024-11-27
