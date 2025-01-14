@@ -1,9 +1,9 @@
 Changelog
 =========
 
-.. _changelog_2025_01_13:
+.. _changelog_2025_01_14:
 
-2025-01-13
+2025-01-14
 ----------
 * Added support for using custom authentication in the :ref:`REST system <rest_custom_auth>`. This enables flexible
   configuration for fetching an access token that will be used for authentication towards the system. The access token
