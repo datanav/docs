@@ -143,6 +143,11 @@ Properties
      - ["application/json"]
      -
 
+   * - ``custom_auth``
+     - Object
+     - See the :ref:`custom authentication <rest_custom_auth>` section
+     -
+     -
 
 .. _rest_operations:
 
@@ -478,11 +483,107 @@ A operation configuration looks like:
      - 1
      -
 
+.. _rest_custom_auth:
+
+Custom authentication
+^^^^^^^^^^^^^^^^^^^^^
+The ``custom_auth`` section can be used for authentication towards systems that use some form of token authentication.
+This requires more configuration than ``oauth2`` authentication, but it is a lot more flexible. The general idea
+is to create an operation in the :ref:`operations <rest_operations>` section that points to an endpoint used for
+fetching an access token, and the ``custom_auth`` section describes how to parse the response from that operation so
+that the token can be used in other operations. Systems that use some type of refresh token are also supported.
+
+The fetched access token is available in the Jinja environment and can be used with ``{{ access_token }}``.
+If a refresh token is used, it can be used with ``{{ refresh_token }}``. There are several examples
+:ref:`here <custom_auth_examples>` of using ``custom_auth`` towards various systems. The ``custom_auth`` section uses
+the following sub-properties:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``get_token_operation``
+     - String
+     - This must point to an operation in the ``operations`` section that is configured to fetch an access token.
+
+     -
+     - Yes
+
+   * - ``access_token_property``
+     - String
+     - This must be set to the name of the property inside the expected response from ``get_token_operation``
+       that contains the access token, e.g. ``access_token``.
+
+     -
+     - Yes
+
+
+   * - ``expires_at_expression``
+     - String
+     - If the token is expected to contain a timestamp for when the access token expires,
+       this should be set to the name of the property that contains that timestamp. This needs to be a Jinja expression,
+       e.g. ``{{ expirationDate }}`` if the name of the property is ``expirationDate``.
+       If ``expires_in_expression`` is also set, the ``expires_at_expression`` will take priority if it evaluates to a
+       valid timestamp.
+
+     -
+     - Yes, if ``expires_in_expression`` is not set
+
+   * - ``expires_in_expression``
+     - String
+     - If the token is expected to contain the amount of time until the token expires, this
+       should be set to the name of the property that contains that value. The evaluated value must be in seconds.
+       If the provided value is not in seconds, you can use Jinja expressions to do the conversion (e.g. if a token
+       contains a property ``expiresIn`` that provides the token expiry in hours, you can use ``{{ expiresIn * 3600 }}``.
+       If ``expires_at_expression`` is also set, the ``expires_at_expression`` will take priority if it evaluates to a
+       valid timestamp.
+
+     -
+     - Yes, if ``expires_at_expression`` is not set
+
+   * - ``refresh_window``
+     - Integer
+     - This option sets how many seconds in advance to refresh a token before it expires.
+
+     - 30
+     - No
+
+   * - ``initial_refresh_token``
+     - String
+     - If the provider uses refresh tokens, an initial refresh token is generally required to be able to fetch a new
+       access token. Set this to a valid refresh token if that is the case. If the provider can also grant new refresh
+       tokens, make sure to also set ``refresh_token_property``.
+
+     -
+     - No
+
+   * - ``refresh_token_property``
+     - String
+     - Some providers can grant new refresh tokens in the same response as the new access token. If that is the case,
+       this should be set to the name of the property that can contain a new refresh token, e.g. ``refresh_token``.
+       Note that the response is not required to contain a new refresh token (refresh tokens should not
+       change very often).
+
+       .. WARNING::
+
+          For on-premise single subscriptions, new refresh tokens are only kept in memory. This means that pipes will start
+          failing after a reboot if a new refresh token was previously fetched. The ``initial_refresh_token`` will
+          need to be manually set to the new refresh token.
+     -
+     - No
+
+
 Notes on Jinja templates
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 (experimental)
-The ``payload``,  ``headers`` and ``params`` operation configuration properties are objects where the properties can be
+The ``payload``, ``headers`` and ``params`` operation configuration properties are objects where the properties can be
 templated using Jinja (both the key and the values) with various dynamically bound parameters. This makes it possible to construct
 these request parameters dynamically. You can also control whether a particular property is included in the final
 object by injecting a special marker constant ``"sesam:markskip"`` using conditional logic. If this marker is present in the
@@ -550,7 +651,23 @@ Result payload object:
     }
     ..
 
+When using the ``custom_auth`` feature, the access token and refresh token (if applicable) are available as dynamic
+parameters. Use this to construct the payload/headers/parameters for the operations, e.g. for a system that uses the
+bearer token format:
 
+
+::
+
+    {
+            "_id": "webcrm",
+            "type": "system:rest",
+            "url_pattern": "https://api.webcrm.com/%s",
+            "headers": {
+                "Authorization": "Bearer {{ access_token }}"
+            },
+    ..
+
+See the :ref:`example configurations <custom_auth_examples>` for more examples on systems hat use ``custom_auth``.
 
 .. _rest_system_example:
 
@@ -610,5 +727,196 @@ Example configuration
                "method": "POST",
                "payload-type": "multipart-form"
            }
+        }
+    }
+
+.. _custom_auth_examples:
+
+Example configurations with custom authentication
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+These are examples on how to use the ``custom_auth`` functionality towards various systems.
+
+Tripletex
+_________
+
+Tripletex uses basic authentication with "0" as the username. The authorization header needs to be constructed
+using Base64 encoding and bytes conversion. Additionally, an expiration date must be set when requesting a new
+access token:
+
+::
+
+    {
+        "_id": "tripletex",
+        "type": "system:rest",
+        "url_pattern": "https://api.tripletex.io/v2/%s",
+        "verify_ssl": true,
+        "headers": {
+            "Authorization": "Basic {{ ( ('0:' + access_token) | tobytes(encoding='utf-8') | b64encode).decode() }}"
+        },
+        "custom_auth": {
+            "get_token_operation": "fetch-session-token",
+            "access_token_property": "token",
+            "expires_at_expression": "expirationDate"
+        },
+        "operations": {
+            "contact-list": {
+                "id_expression": "{{ id }}",
+                "method": "GET",
+                "next_page_termination_strategy": "empty-result",
+                "payload_property": "values",
+                "url": "contact?fields=*,changes"
+            },
+            "fetch-session-token": {
+                "method": "PUT",
+                "params": {
+                    "consumerToken": "$SECRET(consumer_token)",
+                    "employeeToken": "$SECRET(employee_token)",
+                    "expirationDate": "{{ (now() + timedelta(hours=48)).strftime('%Y-%m-%d') }}"
+                },
+                "payload_property": "value",
+                "url": "token/session/:create"
+            }
+        }
+    }
+
+WebCRM
+______
+
+Uses a bearer token, with the expiration time in seconds provided in the property ``ExpiresIn``:
+
+::
+
+    {
+        "_id": "webcrm",
+        "type": "system:rest",
+        "url_pattern": "https://api.webcrm.com/%s",
+        "verify_ssl": true,
+        "headers": {
+            "Authorization": "Bearer {{ access_token }}"
+        },
+        "custom_auth": {
+            "get_token_operation": "fetch-access-token",
+            "access_token_property": "AccessToken",
+            "expires_in_expression": "{{ ExpiresIn }}"
+        },
+        "operations": {
+            "fetch-access-token": {
+                "url": "Auth/ApiLogin",
+                "method": "POST",
+                "payload": {
+                    "authCode": "$SECRET(application_token)"
+                }
+            },
+            "get-operation": {
+                "headers": {
+                    "Authorization": "Bearer {{ access_token }}"
+                },
+                "id_expression": "{{ PersonId }}",
+                "url": "Persons?Page=1&Size=10",
+                "method": "GET"
+            }
+        }
+    }
+
+Membercare
+__________
+
+The authorization header is different from the typical bearer token format:
+
+::
+
+    {
+        "_id": "membercare",
+        "type": "system:rest",
+        "url_pattern": "https://hoyre-rest-test.membercare.no/api/%s",
+        "verify_ssl": true,
+        "custom_auth": {
+            "access_token_property": "value",
+            "expires_at_expression": "{{ expiration }}",
+            "get_token_operation": "fetch-access-token"
+        },
+        "headers": {
+            "token": "{{ access_token }}"
+        },
+        "operations": {
+            "companies-list": {
+                "id_expression": "{{ debtorAccountNumber }}",
+                "method": "GET",
+                "payload_property": "result",
+                "since_property_name": "changedAfter",
+                "updated_expression": "{{ lastChange }}",
+                "url": "v1/companies"
+            },
+            "fetch-access-token": {
+                "headers": {
+                    "accept": "text/plain"
+                },
+                "method": "GET",
+                "params": {
+                    "clientApiKey": "$SECRET(api_key)",
+                    "personToImpersonate": "1"
+                },
+                "url": "v1/token"
+            },
+            "persons-list": {
+                "id_expression": "{{ debtorAccountNumber }}",
+                "method": "GET",
+                "next_page_link": "{{ body.nextPageUrl }}",
+                "payload_property": "result",
+                "url": "v1/persons"
+            }
+        }
+    }
+
+Hubspot
+_______
+
+Hubspot uses OAuth2, meaning that using our OAuth2 machinery (see the :ref:`URL system <url_system>`) works perfectly
+fine. This just demonstrates that you can also use ``custom_auth`` in a way that works towards OAuth2 systems using the
+``ìnitial_refresh_token`` and ``refresh_token_property`` properties:
+
+::
+
+    {
+        "_id": "hubspot",
+        "type": "system:rest",
+        "url_pattern": "https://api.hubapi.com/%s",
+        "verify_ssl": true,
+        "headers": {
+            "Authorization": "Bearer {{ access_token }}",
+            "Content-Type": "application/json"
+        },
+        "custom_auth": {
+            "get_token_operation": "fetch-access-token",
+            "access_token_property": "access_token",
+            "expires_in_expression": "{{ expires_in }}",
+            "initial_refresh_token": "$SECRET(refresh_token)",
+            "refresh_token_property": "refresh_token"
+        },
+        "operations": {
+            "fetch-access-token": {
+                "url": "oauth/v1/token",
+                "method": "POST",
+                "headers": {
+                    "content-type": "application/x-www-form-urlencoded"
+                },
+                "payload": {
+                    "grant_type": "refresh_token",
+                    "refresh_token": "$SECRET(refresh_token)",
+                    "client_id": "$SECRET(client_id)",
+                    "client_secret": "$SECRET(client_secret)"
+                }
+            },
+            "company-list": {
+                "id_expression": "{{ id }}",
+                "method": "GET",
+                "next_page_link": "{{ body.paging.next.link.split('?')[0]~'?after='~body.paging.next.after }}",
+                "params": {
+                    "associations": "contacts,companies,deals,tickets,products,quotes",
+                    "properties": "hs_merged_object_ids,jobtitle,firstname,lastname,email,date_of_birth,mobilephone,work_email,hs_analytics_first_timestamp,hs_analytics_last_timestamp,hs_analytics_last_visit_timestamp,hs_analytics_num_page_views,hs_analytics_num_visits,engagements_last_meeting_booked,engagements_last_meeting_booked_campaign,engagements_last_meeting_booked_source,hs_last_booked_meeting_date,hs_last_logged_call_date,hs_last_open_task_date,hs_last_sales_activity_timestamp,hs_lastmodifieddate,notes_last_contacted,notes_last_updated,notes_next_activity_date,num_contacted_notes,about_us,address,address2,annualrevenue,city,closedate,country,createdate,days_to_close,description,domain,engagements_last_meeting_booked_medium,first_contact_createdate,founded_year,hs_analytics_last_touch_converting_campaign,hs_analytics_source,hs_analytics_source_data_1,hs_analytics_source_data_2,hs_createdate,hs_num_child_companies,hs_object_id,hs_parent_company_id,industry,is_public,lifecyclestage,name,num_associated_contacts,numberofemployees,phone,state,timezone,total_money_raised,total_revenue,type,web_technologies,website,zip,hs_analytics_first_touch_converting_campaign,hs_analytics_first_visit_timestamp,first_deal_created_date,hs_num_open_deals,hs_total_deal_value,num_associated_deals,recent_deal_amount,recent_deal_close_date,hs_lead_status,hubspot_owner_assigneddate,hubspot_owner_id,hubspot_team_id,facebook_company_page,facebookfans,googleplus_page,linkedin_company_page,linkedinbio,twitterbio,twitterfollowers,twitterhandle,hs_ideal_customer_profile,hs_is_target_account,hs_num_blockers,hs_num_contacts_with_buying_roles,hs_num_decision_makers"
+                },
+                "payload_property": "results",
+                "url": "crm/v3/objects/company"
+            },
         }
     }
