@@ -540,7 +540,7 @@ the following sub-properties:
      - If the token is expected to contain the amount of time until the token expires, this
        should be set to the name of the property that contains that value. The evaluated value must be in seconds.
        If the provided value is not in seconds, you can use Jinja expressions to do the conversion (e.g. if a token
-       contains a property ``expiresIn`` that provides the token expiry in hours, you can use ``{{ expiresIn * 3600 }}``.
+       contains a property ``expiresIn`` that provides the token expiry in hours, you can use ``{{ expiresIn * 3600 }}``).
        If ``expires_at_expression`` is also set, the ``expires_at_expression`` will take priority if it evaluates to a
        valid timestamp.
 
@@ -756,7 +756,7 @@ access token:
         "custom_auth": {
             "get_token_operation": "fetch-session-token",
             "access_token_property": "token",
-            "expires_at_expression": "expirationDate"
+            "expires_at_expression": "{{ expirationDate }}"
         },
         "operations": {
             "contact-list": {
@@ -828,7 +828,7 @@ The authorization header is different from the typical bearer token format:
     {
         "_id": "membercare",
         "type": "system:rest",
-        "url_pattern": "https://hoyre-rest-test.membercare.no/api/%s",
+        "url_pattern": "https://customer-test.membercare.no/api/%s",
         "verify_ssl": true,
         "custom_auth": {
             "access_token_property": "value",
@@ -854,7 +854,7 @@ The authorization header is different from the typical bearer token format:
                 "method": "GET",
                 "params": {
                     "clientApiKey": "$SECRET(api_key)",
-                    "personToImpersonate": "1"
+                    "personToImpersonate": "person-to-impersonate"
                 },
                 "url": "v1/token"
             },
@@ -917,6 +917,6 @@ fine. This just demonstrates that you can also use ``custom_auth`` in a way that
                 },
                 "payload_property": "results",
                 "url": "crm/v3/objects/company"
-            },
+            }
         }
     }
