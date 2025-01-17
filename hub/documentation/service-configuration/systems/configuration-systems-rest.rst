@@ -828,7 +828,7 @@ The authorization header is different from the typical bearer token format:
     {
         "_id": "membercare",
         "type": "system:rest",
-        "url_pattern": "https://hoyre-rest-test.membercare.no/api/%s",
+        "url_pattern": "https://customer-test.membercare.no/api/%s",
         "verify_ssl": true,
         "custom_auth": {
             "access_token_property": "value",
@@ -854,7 +854,7 @@ The authorization header is different from the typical bearer token format:
                 "method": "GET",
                 "params": {
                     "clientApiKey": "$SECRET(api_key)",
-                    "personToImpersonate": "1"
+                    "personToImpersonate": "person-to-impersonate"
                 },
                 "url": "v1/token"
             },
