@@ -945,10 +945,10 @@ fine. This just demonstrates that you can also use ``custom_auth`` in a way that
 ArcGIS-UN
 _________
 
-The token provider for ArcGIS-UN sets the expiry as a Unix epoch under the `expires` property. The REST system expects
+The token provider for ArcGIS-UN sets the expiry as a Unix epoch under the ``expires`` property. The REST system expects
 the expiry to be given as a date, so we need to do some filtering first using the `datetime` and `datetime_format`
 Jinja filters (these filters mimic the :ref:`datetime <datetime_dtl_function>` and
-:ref:`datetime-format <datetime_format_dtl_function>` DTL functions, respectively). Note that the value of `expires`
+:ref:`datetime-format <datetime_format_dtl_function>` DTL functions, respectively). Note that the value of ``expires``
 is in milliseconds, and the filters expect the value to be in nanoseconds.
 
 ::
