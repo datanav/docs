@@ -670,7 +670,7 @@ bearer token format:
             },
     ..
 
-See the :ref:`example configurations <custom_auth_examples>` for more examples on systems hat use ``custom_auth``.
+See the :ref:`example configurations <custom_auth_examples>` for more examples on systems that use ``custom_auth``.
 
 
 .. _rest_system_jinja_filters:
