@@ -300,7 +300,7 @@ A operation configuration looks like:
    * - ``next_page_link``
      - String
      - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with several named variables
-       values available to the template: ``body``, ``url``, ``request_params``, ``request_headers`, ``properties``, ``since``
+       values available to the template: ``body``, ``url``, ``request_params``, ``request_headers``, ``properties``, ``since``
        (only for :ref:`REST sources <rest_source>`), ``entity``, ``source_entity`` (only for
        :ref:`REST transforms <rest_transform>`)  and ``response_headers``. Additionally, ``previous_body``,
        ``previous_request_headers``, ``previous_params`` and ``previous_headers`` (response headers)
@@ -762,7 +762,7 @@ Tripletex uses basic authentication with "0" as the username. The authorization 
 using Base64 encoding and bytes conversion. Additionally, an expiration date must be set when requesting a new
 access token:
 
-::
+.. code-block:: json
 
     {
         "_id": "tripletex",
@@ -803,7 +803,7 @@ ______
 
 Uses a bearer token, with the expiration time in seconds provided in the property ``ExpiresIn``:
 
-::
+.. code-block:: json
 
     {
         "_id": "webcrm",
@@ -842,7 +842,7 @@ __________
 
 The authorization header is different from the typical bearer token format:
 
-::
+.. code-block:: json
 
     {
         "_id": "membercare",
@@ -894,7 +894,7 @@ Hubspot uses OAuth2, meaning that using our OAuth2 machinery (see the :ref:`URL 
 fine. This just demonstrates that you can also use ``custom_auth`` in a way that works towards OAuth2 systems using the
 ``ìnitial_refresh_token`` and ``refresh_token_property`` properties:
 
-::
+.. code-block:: json
 
     {
         "_id": "hubspot",
@@ -951,7 +951,7 @@ Jinja filters (these filters mimic the :ref:`datetime <datetime_dtl_function>` a
 :ref:`datetime-format <datetime_format_dtl_function>` DTL functions, respectively). Note that the value of ``expires``
 is in milliseconds, and the filters expect the value to be in nanoseconds.
 
-::
+.. code-block:: json
 
     {
       "_id": "arcgis-un",
