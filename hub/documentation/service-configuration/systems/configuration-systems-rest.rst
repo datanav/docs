@@ -528,7 +528,10 @@ the following sub-properties:
      - String
      - If the token is expected to contain a timestamp for when the access token expires,
        this should be set to the name of the property that contains that timestamp. This needs to be a Jinja expression,
-       e.g. ``{{ expirationDate }}`` if the name of the property is ``expirationDate``.
+       e.g. ``{{ expirationDate }}`` if the name of the property is ``expirationDate``. Note that the expression
+       must evaluate to a date, e.g. "2025-01-25T10:42:24". :ref:`Jinja filters <rest_system_jinja_filters>` can
+       be used to convert any expiration values that are not given as a date, for example if it is provided as a Unix
+       epoch.
        If ``expires_in_expression`` is also set, the ``expires_at_expression`` will take priority if it evaluates to a
        valid timestamp.
 
@@ -668,6 +671,22 @@ bearer token format:
     ..
 
 See the :ref:`example configurations <custom_auth_examples>` for more examples on systems hat use ``custom_auth``.
+
+
+.. _rest_system_jinja_filters:
+
+Supported Jinja filters
+^^^^^^^^^^^^^^^^^^^^^^^
+In addition to the `built-in filters <https://jinja.palletsprojects.com/en/stable/templates/#list-of-builtin-filters>`_,
+the REST system also supports these custom filters:
+
+``datetime``:  See the :ref:`datetime <datetime_dtl_function>` DTL function. An example on using this filter can be
+found :ref:`here <rest_system_arcgis_un_example>`.
+
+``datetime_format``: See the :ref:`datetime-format <datetime_format_dtl_function>` DTL function. An example on using
+this filter can be found :ref:`here <rest_system_arcgis_un_example>`.
+
+
 
 .. _rest_system_example:
 
@@ -920,3 +939,50 @@ fine. This just demonstrates that you can also use ``custom_auth`` in a way that
             }
         }
     }
+
+.. _rest_system_arcgis_un_example:
+
+ArcGIS-UN
+_________
+
+The token provider for ArcGIS-UN sets the expiry as a Unix epoch under the `expires` property. The REST system expects
+the expiry to be given as a date, so we need to do some filtering first using the `datetime` and `datetime_format`
+Jinja filters (these filters mimic the :ref:`datetime <datetime_dtl_function>` and
+:ref:`datetime-format <datetime_format_dtl_function>` DTL functions, respectively). Note that the value of `expires`
+is in milliseconds, and the filters expect the value to be in nanoseconds.
+
+::
+
+    {
+      "_id": "arcgis-un",
+      "type": "system:rest",
+      "custom_auth": {
+        "access_token_property": "token",
+        "expires_at_expression": "{{ (expires * 1000 * 1000) | datetime | datetime_format }}",
+        "get_token_operation": "get-token"
+      },
+      "headers": {
+        "Authorization": "Bearer {{ access_token }}"
+      },
+      "operations": {
+        "get-sources-layers": {
+          "method": "GET",
+          "url": "server/rest/services/BUN/bun_edit/FeatureServer/queryDataElements?layers=&f=json"
+        },
+        "get-token": {
+          "method": "POST",
+          "payload": {
+            "client": "referer",
+            "expiration": 60,
+            "f": "json",
+            "password": "$SECRET(arcgis_un_rest_password)",
+            "referer": "https://sesam.io",
+            "username": "$SECRET(arcgis_un_rest_username)"
+          },
+          "url": "portal/sharing/rest/generateToken"
+        }
+      },
+      "url_pattern": "https://test.domain.io/%s",
+      "verify_ssl": true
+    }
+
