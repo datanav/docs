@@ -143,7 +143,7 @@ Properties
      - ["application/json"]
      -
 
-   * - ``custom_auth``
+   * - ``custom_auth`` (experimental)
      - Object
      - See the :ref:`custom authentication <rest_custom_auth>` section
      -
@@ -485,18 +485,33 @@ A operation configuration looks like:
 
 .. _rest_custom_auth:
 
-Custom authentication
-^^^^^^^^^^^^^^^^^^^^^
+Custom authentication (experimental)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The ``custom_auth`` section can be used for authentication towards systems that use some form of token authentication.
 This requires more configuration than ``oauth2`` authentication, but it is a lot more flexible. The general idea
 is to create an operation in the :ref:`operations <rest_operations>` section that points to an endpoint used for
 fetching an access token, and the ``custom_auth`` section describes how to parse the response from that operation so
-that the token can be used in other operations. Systems that use some type of refresh token are also supported.
+that the token can be used in other operations.
 
-The fetched access token is available in the Jinja environment and can be used with ``{{ access_token }}``.
-If a refresh token is used, it can be used with ``{{ refresh_token }}``. There are several examples
-:ref:`here <custom_auth_examples>` of using ``custom_auth`` towards various systems. The ``custom_auth`` section uses
-the following sub-properties:
+Up to two operations can be performed during the authentication flow. The ``get_token_operation`` is required, while
+an optional ``get_refresh_token_operation`` is also available. If the latter is used, it will be executed before the
+``get_token_operation``. The responses from both these operations are available in the Jinja environment under ``token``
+and properties can be accessed using dotted notation. E.g. if the response is expected to contain a token under the
+``access_token`` property, it can be used with ``{{ token.access_token }}``.
+
+Sesam also adds some standardized expiry-related properties to the ``token`` object:
+
+``expires_at``: A Unix epoch in seconds for when the access token expires
+
+``expiry_date``: A human-readable version of ``expires_at``
+
+``refresh_token_expires_at``: (Only when a ``get_refresh_token_operation`` is used) Like ``expires_at``, except for the refresh token(s)
+
+``refresh_token_expiry_date``: (Only when a ``get_refresh_token_operation`` is used) Like ``expiry_date``, except for the refresh token(s)
+
+
+There are several examples :ref:`here <custom_auth_examples>` of using ``custom_auth`` towards various systems.
+The ``custom_auth`` section uses the following sub-properties:
 
 .. list-table::
    :header-rows: 1
@@ -510,25 +525,17 @@ the following sub-properties:
 
    * - ``get_token_operation``
      - String
-     - This must point to an operation in the ``operations`` section that is configured to fetch an access token.
+     - This must point to an operation in the ``operations`` section that is configured to fetch an access token. This
+       operation will run *after* the ``get_refresh_token_operation`` if that operation is also set.
 
      -
      - Yes
-
-   * - ``access_token_property``
-     - String
-     - This must be set to the name of the property inside the expected response from ``get_token_operation``
-       that contains the access token, e.g. ``access_token``.
-
-     -
-     - Yes
-
 
    * - ``expires_at_expression``
      - String
      - If the token is expected to contain a timestamp for when the access token expires,
        this should be set to the name of the property that contains that timestamp. This needs to be a Jinja expression,
-       e.g. ``{{ expirationDate }}`` if the name of the property is ``expirationDate``. Note that the expression
+       e.g. ``{{ token.expirationDate }}`` if the name of the property is ``expirationDate``. Note that the expression
        must evaluate to a date, e.g. "2025-01-25T10:42:24". :ref:`Jinja filters <rest_system_jinja_filters>` can
        be used to convert any expiration values that are not given as a date, for example if it is provided as a Unix
        epoch.
@@ -543,7 +550,7 @@ the following sub-properties:
      - If the token is expected to contain the amount of time until the token expires, this
        should be set to the name of the property that contains that value. The evaluated value must be in seconds.
        If the provided value is not in seconds, you can use Jinja expressions to do the conversion (e.g. if a token
-       contains a property ``expiresIn`` that provides the token expiry in hours, you can use ``{{ expiresIn * 3600 }}``).
+       contains a property ``expiresIn`` that provides the token expiry in hours, you can use ``{{ token.expiresIn * 3600 }}``).
        If ``expires_at_expression`` is also set, the ``expires_at_expression`` will take priority if it evaluates to a
        valid timestamp.
 
@@ -560,18 +567,37 @@ the following sub-properties:
    * - ``initial_refresh_token``
      - String
      - If the provider uses refresh tokens, an initial refresh token is generally required to be able to fetch a new
-       access token. Set this to a valid refresh token if that is the case. If the provider can also grant new refresh
-       tokens, make sure to also set ``refresh_token_property``.
+       access token. Set this to a valid refresh token if that is the case.
+
+     -
+     - No
+
+   * - ``get_refresh_token_operation``
+     - String
+     - This must point to an operation in the ``operations`` section that is configured to fetch a response that
+       returns one or more tokens that behave similar to refresh tokens. These are typically used in authentication
+       flows that require more than one request to retrieve the access token.
+
+     -
+     - No
+
+   * - ``access_token_property``
+     - String
+     - Deprecated. Set to the name of the property inside the expected response from ``get_token_operation``
+       that contains the access token, e.g. ``value``. If this is set, the access token can be used with
+       ``{{ access_token }}``. It is recommended to instead just use the ``token`` object directly, i.e.
+       ``{{ token.value }}``, and to not use the ``access_token_property`` at all.
 
      -
      - No
 
    * - ``refresh_token_property``
      - String
-     - Some providers can grant new refresh tokens in the same response as the new access token. If that is the case,
-       this should be set to the name of the property that can contain a new refresh token, e.g. ``refresh_token``.
-       Note that the response is not required to contain a new refresh token (refresh tokens should not
-       change very often).
+     - Deprecated. Some providers can grant tokens that behave similar to OAuth2 refresh tokens. If that is the case,
+       this can be set to the name of the property that can contain a new refresh token, e.g. ``refresh_token``. This
+       will make the value of the token accessible with ``{{ refresh_token }}``. It is recommended to instead just
+       use the ``token`` object directly, i.e. ``{{ token.refresh_token }}``, and to not use the
+       ``refresh_token_property`` at all.
 
        .. WARNING::
 
@@ -654,9 +680,9 @@ Result payload object:
     }
     ..
 
-When using the ``custom_auth`` feature, the access token and refresh token (if applicable) are available as dynamic
-parameters. Use this to construct the payload/headers/parameters for the operations, e.g. for a system that uses the
-bearer token format:
+When using the ``custom_auth`` feature, the response properties from the authentication request(s) are available
+under the ``token`` object. Use this to construct the payload/headers/parameters for the operations, e.g. for a
+system that uses the bearer token format:
 
 
 ::
@@ -666,7 +692,7 @@ bearer token format:
             "type": "system:rest",
             "url_pattern": "https://api.webcrm.com/%s",
             "headers": {
-                "Authorization": "Bearer {{ access_token }}"
+                "Authorization": "Bearer {{ token.access_token }}"
             },
     ..
 
@@ -770,12 +796,11 @@ access token:
         "url_pattern": "https://api.tripletex.io/v2/%s",
         "verify_ssl": true,
         "headers": {
-            "Authorization": "Basic {{ ( ('0:' + access_token) | tobytes(encoding='utf-8') | b64encode).decode() }}"
+            "Authorization": "Basic {{ ( ('0:' + token.token) | tobytes(encoding='utf-8') | b64encode).decode() }}"
         },
         "custom_auth": {
             "get_token_operation": "fetch-session-token",
-            "access_token_property": "token",
-            "expires_at_expression": "{{ expirationDate }}"
+            "expires_at_expression": "{{ token.expirationDate }}"
         },
         "operations": {
             "contact-list": {
@@ -811,12 +836,11 @@ Uses a bearer token, with the expiration time in seconds provided in the propert
         "url_pattern": "https://api.webcrm.com/%s",
         "verify_ssl": true,
         "headers": {
-            "Authorization": "Bearer {{ access_token }}"
+            "Authorization": "Bearer {{ token.AccessToken }}"
         },
         "custom_auth": {
             "get_token_operation": "fetch-access-token",
-            "access_token_property": "AccessToken",
-            "expires_in_expression": "{{ ExpiresIn }}"
+            "expires_in_expression": "{{ token.ExpiresIn }}"
         },
         "operations": {
             "fetch-access-token": {
@@ -828,7 +852,7 @@ Uses a bearer token, with the expiration time in seconds provided in the propert
             },
             "get-operation": {
                 "headers": {
-                    "Authorization": "Bearer {{ access_token }}"
+                    "Authorization": "Bearer {{ token.AccessToken }}"
                 },
                 "id_expression": "{{ PersonId }}",
                 "url": "Persons?Page=1&Size=10",
@@ -850,12 +874,11 @@ The authorization header is different from the typical bearer token format:
         "url_pattern": "https://customer-test.membercare.no/api/%s",
         "verify_ssl": true,
         "custom_auth": {
-            "access_token_property": "value",
-            "expires_at_expression": "{{ expiration }}",
+            "expires_at_expression": "{{ token.expiration }}",
             "get_token_operation": "fetch-access-token"
         },
         "headers": {
-            "token": "{{ access_token }}"
+            "token": "{{ token.value }}"
         },
         "operations": {
             "companies-list": {
@@ -892,7 +915,7 @@ _______
 
 Hubspot uses OAuth2, meaning that using our OAuth2 machinery (see the :ref:`URL system <url_system>`) works perfectly
 fine. This just demonstrates that you can also use ``custom_auth`` in a way that works towards OAuth2 systems using the
-``ìnitial_refresh_token`` and ``refresh_token_property`` properties:
+``ìnitial_refresh_token`` property, and then using ``{{ token.refresh_token }}`` inside the payload:
 
 .. code-block:: json
 
@@ -902,15 +925,13 @@ fine. This just demonstrates that you can also use ``custom_auth`` in a way that
         "url_pattern": "https://api.hubapi.com/%s",
         "verify_ssl": true,
         "headers": {
-            "Authorization": "Bearer {{ access_token }}",
+            "Authorization": "Bearer {{ token.access_token }}",
             "Content-Type": "application/json"
         },
         "custom_auth": {
             "get_token_operation": "fetch-access-token",
-            "access_token_property": "access_token",
-            "expires_in_expression": "{{ expires_in }}",
+            "expires_in_expression": "{{ token.expires_in }}",
             "initial_refresh_token": "$SECRET(refresh_token)",
-            "refresh_token_property": "refresh_token"
         },
         "operations": {
             "fetch-access-token": {
@@ -921,7 +942,7 @@ fine. This just demonstrates that you can also use ``custom_auth`` in a way that
                 },
                 "payload": {
                     "grant_type": "refresh_token",
-                    "refresh_token": "$SECRET(refresh_token)",
+                    "refresh_token": "{{ token.refresh_token }}",
                     "client_id": "$SECRET(client_id)",
                     "client_secret": "$SECRET(client_secret)"
                 }
@@ -957,12 +978,11 @@ is in milliseconds, and the filters expect the value to be in nanoseconds.
       "_id": "arcgis-un",
       "type": "system:rest",
       "custom_auth": {
-        "access_token_property": "token",
-        "expires_at_expression": "{{ (expires * 1000 * 1000) | datetime | datetime_format }}",
+        "expires_at_expression": "{{ (token.expires * 1000 * 1000) | datetime | datetime_format }}",
         "get_token_operation": "get-token"
       },
       "headers": {
-        "Authorization": "Bearer {{ access_token }}"
+        "Authorization": "Bearer {{ token.token }}"
       },
       "operations": {
         "get-sources-layers": {
@@ -986,3 +1006,57 @@ is in milliseconds, and the filters expect the value to be in nanoseconds.
       "verify_ssl": true
     }
 
+.. _rest_system_solteq_example:
+
+Solteq
+______
+
+Requires two REST operations for fetching the access token. The first operation (``get_refresh_token_operation``)
+is used to fetch a ``WCToken`` and ``WCTrustedToken``. These are both required in the second operation
+(``get_token_operation``) when fetching the access token. This behaviour is similar to refresh tokens in OAuth2 systems.
+
+Note that the lifetimes of the ``WCToken`` and ``WCTrustedToken`` are opaque, so we need to make some assumptions on
+when we need to refresh them. We set ``refresh_token_expires_in_expression`` to ``{{ 600 }}`` so that we attempt to
+refresh it every 10 minutes. The expiry of the access token itself is encoded in the access token (which is a JWT),
+but we do not support decoding this at the moment. It has been set to 1 hour in this example configuration, but
+you should experiment with different values to find out what works best.
+
+.. code-block:: json
+
+    {
+      "_id": "solteq",
+      "type": "system:rest",
+      "custom_auth": {
+        "expires_at_expression": "{{ 3600 }}",
+        "get_refresh_token_operation": "fetch-WC-tokens",
+        "get_token_operation": "fetch-access-token",
+        "refresh_token_expires_in_expression": "{{ 600 }}",
+      },
+      "headers": {
+        "Authorization": "Bearer {{ token.access_token }}"
+      },
+      "operations": {
+        "fetch-WC-tokens": {
+          "method": "POST",
+          "payload": {
+            "logonId": "$SECRET(logon_id)",
+            "logonPassword": "$SECRET(logon_password)"
+          },
+          "payload-type": "json",
+          "url": "loginidentity"
+        },
+        "fetch-access-token": {
+          "headers": {
+            "WCToken": "{{ token.WCToken }}",
+            "WCTrustedToken": "{{ token.WCTrustedToken }}"
+          },
+          "method": "POST",
+          "url": "loginidentity/jwtToken"
+        },
+        "get-addresses": {
+          "method": "GET",
+          "url": "addresses"
+        }
+      },
+      "url_pattern": "http://solteq.site/%s"
+    }
