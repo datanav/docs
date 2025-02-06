@@ -45,6 +45,13 @@ The GDPR platform subscriptions are still running on the single machine architec
 
 We are looking into how we can move the GDPR platform to the clustered architecture and how to migrate those subscriptions to the new architecture.
 
+Optimizing resources on multi compute subscriptions (2026)
+==========================================================
+
+The single compute subscription has a limitation to the number of pipes it can execute that depends on the data and transformations applied. The multi compute subscription does not have this limitation, but the price and the amount of resources it consumes are significantly higher.
+
+We are looking into how we can optimize the resources on a multi compute subscription so that we consume less resources. Currently on multi compute each pipe is running in a separate worker process, and we will investigate if we can co-locate pipes on the same worker to optimize the resources. This might open up the possibility to offer new subscription plans that are priced in between single and multi compute subscriptions.
+
 High-level configuration (2026)
 ==================================
 
