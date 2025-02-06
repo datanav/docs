@@ -565,9 +565,11 @@ The ``custom_auth`` section uses the following sub-properties:
      - No
 
    * - ``initial_refresh_token``
-     - String
-     - If the provider uses refresh tokens, an initial refresh token is generally required to be able to fetch a new
-       access token. Set this to a valid refresh token if that is the case.
+     - Object
+     - If the provider uses tokens that work similar to refresh tokens, initial refresh tokens are sometimes required.
+       These should be provided as an object where the key is the name of the refresh token property, and the value
+       is the refresh token that you've been given. These are immediately made available in the ``token`` object for use
+       in Jinja expressions, and will later be overwritten by new refresh tokens fetched by the system.
 
      -
      - No
@@ -931,7 +933,9 @@ fine. This just demonstrates that you can also use ``custom_auth`` in a way that
         "custom_auth": {
             "get_token_operation": "fetch-access-token",
             "expires_in_expression": "{{ token.expires_in }}",
-            "initial_refresh_token": "$SECRET(refresh_token)",
+            "initial_refresh_token": {
+                "refresh_token": "$SECRET(refresh_token)"
+            }
         },
         "operations": {
             "fetch-access-token": {
