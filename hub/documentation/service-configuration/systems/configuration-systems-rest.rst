@@ -495,19 +495,33 @@ that the token can be used in other operations.
 
 Up to two operations can be performed during the authentication flow. The ``get_token_operation`` is required, while
 an optional ``get_refresh_token_operation`` is also available. If the latter is used, it will be executed before the
-``get_token_operation``. The responses from both these operations are available in the Jinja environment under ``token``
-and properties can be accessed using dotted notation. E.g. if the response is expected to contain a token under the
+``get_token_operation``. The responses from both these operations are available in the Jinja environment in the ``token``
+object and properties can be accessed using dotted notation. For example, if the response is expected to contain a token under the
 ``access_token`` property, it can be used with ``{{ token.access_token }}``.
 
-Sesam also adds some standardized expiry-related properties to the ``token`` object:
+These standardized expiry-related properties are also added to the ``token`` object whenever a new token is fetched:
 
-``expires_at``: A Unix epoch in seconds for when the access token expires
+.. list-table::
+   :header-rows: 1
+   :widths: 20, 60
 
-``expiry_date``: A human-readable version of ``expires_at``
+   * - Property
+     - Description
 
-``refresh_token_expires_at``: (Only when a ``get_refresh_token_operation`` is used) Like ``expires_at``, except for the refresh token(s)
+   * - ``expires_at``
+     - A Unix epoch in seconds for when the access token expires, e.g. ``1738756240``
 
-``refresh_token_expiry_date``: (Only when a ``get_refresh_token_operation`` is used) Like ``expiry_date``, except for the refresh token(s)
+   * - ``expiry_date``
+     - A human-readable version of ``expires_at``, e.g. ``"2025-02-05T12:50:40Z"``
+
+   * - ``refresh_token_expires_at``
+     - Like ``expires_at``, except for the refresh token(s). Only available when the ``get_refresh_token_operation``
+       is used.
+
+   * - ``refresh_token_expiry_date``
+     - Like ``expiry_date``, except for the refresh token(s). Only available when the ``get_refresh_token_operation``
+       is used.
+
 
 
 There are several examples :ref:`here <custom_auth_examples>` of using ``custom_auth`` towards various systems.
@@ -721,7 +735,7 @@ this filter can be found :ref:`here <rest_system_arcgis_un_example>`.
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-::
+.. code-block:: json
 
     {
         "_id": "our-rest-service",
