@@ -597,6 +597,20 @@ The ``custom_auth`` section uses the following sub-properties:
      -
      - No
 
+   * - ``refresh_token_expires_at_expression``
+     - String
+     - Like ``expires_at_expression``, except for the (optional) refresh token operation.
+
+     -
+     - Yes, if ``refresh_token_expires_in_expression`` is not set and the ``get_refresh_token_operation`` is set.
+
+   * - ``refresh_token_expires_in_expression``
+     - String
+     - Like ``expires_in_expression``, except for the (optional) refresh token operation.
+
+     -
+     - Yes, if ``refresh_token_expires_at_expression`` is not set and the ``get_refresh_token_operation`` is set.
+
    * - ``access_token_property``
      - String
      - Deprecated. Set to the name of the property inside the expected response from ``get_token_operation``
