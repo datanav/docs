@@ -1059,7 +1059,7 @@ you should experiment with different values to find out what works best.
       "_id": "solteq",
       "type": "system:rest",
       "custom_auth": {
-        "expires_at_expression": "{{ 3600 }}",
+        "expires_in_expression": "{{ 3600 }}",
         "get_refresh_token_operation": "fetch-WC-tokens",
         "get_token_operation": "fetch-access-token",
         "refresh_token_expires_in_expression": "{{ 600 }}",
