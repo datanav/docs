@@ -1,6 +1,18 @@
 Changelog
 =========
 
+.. _changelog_2025-02-06:
+
+2025-02-06
+----------
+* Added support for configuring a ``get_refresh_token_operation`` when using custom authentication in the :ref:`REST system <rest_custom_auth>`.
+  This is intended for authentication schemes that use tokens similar to OAuth2 refresh tokens. These refresh tokens are
+  then typically used for fetching the access token. This new operation will run before the ``get_access_token_operation`` if configured.
+* The responses from the ``get_access_token_operation`` and the new ``get_refresh_token_operation`` are now available
+  in the new ``token`` object, which can be accessed with Jinja expressions. This means that there is no need to configure
+  the ``access_token_property`` anymore, since all properties inside the response(s) can be accessed with ``{{ token.<property-name> }}``.
+* Marked the custom authentication feature as experimental.
+
 .. _changelog_2025_01_14:
 
 2025-01-14
