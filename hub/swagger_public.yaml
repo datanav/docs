@@ -1,4 +1,3 @@
-
 swagger: '2.0'
 info:
   version: 0.0.0
@@ -569,6 +568,9 @@ paths:
 
               Disables the pump. This means that the pump cannot be run automatically by the system. Note that it is
               still possible to start the pump manually with the "start"-operation.
+
+              To add a comment to the disable operation set the "comment" form parameter. This comment will be persisted
+              in the "pump-disabled" entity in the execution log.
 
           .. _api-reference-pump-update-last-seen:
 
@@ -1302,6 +1304,45 @@ paths:
         - application/json
         - application/zip
         - multipart/form-data
+      responses:
+        200:
+          description: OK
+
+  '/config-all':
+    get:
+      operationId: api.config.get_config_all
+      description:
+        Returns the all configuration of the node in all config-groups, including the default config-group.
+        The config is returned as an array of json objects, or as a zip-archive,
+        depending on the value of the 'Accepts' header.
+      produces:
+        - application/json
+        - application/zip
+      responses:
+        200:
+          description: The configuration
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ConfigEntity'
+
+    put:
+      operationId: api.config.put_config_all
+      description:
+        Overwrites all configuration of the node in all config-groups.
+      consumes:
+        - application/json
+        - application/zip
+        - multipart/form-data
+      parameters:
+        - in: query
+          name: force
+          type: boolean
+          default: false
+          required: false
+          description:
+            When this is set to "true" it forces the server to accept configuration errors and
+            do a best-effort attempt to apply the new configuration. This is rarely a good idea.
       responses:
         200:
           description: OK
