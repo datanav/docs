@@ -45,7 +45,7 @@ Example: -event pipe
     "type": "pipe"
   }
 
-A full connector example of ``-event`` pipe can be found in the `Hubspot connector's playground branch <https://github.com/sesam-io/hubspot-connector/blob/playground>`__ in the `company template <https://github.com/sesam-io/hubspot-connector/blob/playground/templates/company.json>`__.
+A full connector example of an ``-event`` pipe can be found in the `Tripletex connector's playground branch <https://github.com/sesam-io/tripletex-connector/blob/playground>`__ in the `contact template <https://github.com/sesam-io/tripletex-connector/blob/playground/templates/contact.json>`__.
 
 Partial webhook events
 ----------------------
