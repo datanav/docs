@@ -12,11 +12,11 @@ opposed to DTL functions.
 .. _custom_jinja_filters:
 
 Custom Jinja filters
-----------
+--------------------
 
 .. list-table::
    :header-rows: 1
-   :widths: 10, 60, 10, 40
+   :widths: 10, 60, 10, 60
 
    * - Filter
      - Description
@@ -25,17 +25,17 @@ Custom Jinja filters
 
    * - ``bytes``
      - See the :ref:`bytes <bytes_dtl_function>` DTL function.
-     - None
+     -
      -
 
    * - ``base64_encode``
      - See the :ref:`base64-encode <base64_encode_dtl_function>` DTL function.
-     - None
+     -
      -
 
    * - ``base64_decode``
      - See the :ref:`base64-decode <base64_decode_dtl_function>` DTL function.
-     - None
+     -
      -
 
    * - ``datetime``
@@ -51,4 +51,4 @@ Custom Jinja filters
    * - ``decode_jwt``
      - Decodes a JWT given a (public) key.
      - key
-     - ``decode_jwt(secret('public_key'))``
+     - ``secret('jwt') | decode_jwt(secret('public_key'))``

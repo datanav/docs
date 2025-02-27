@@ -152,7 +152,17 @@ Properties
 
    * - ``validation_expression``
      - String
-     - This property allows custom request validation for receiver endpoints. This is particularly useful when clients cannot use JWT tokens for authentication. The string must be a `Jinja template <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_. The Jinja template is rendered for each incoming request. If it renders as an empty string then the request is accepted, otherwise the rendered string will be reported as an error in the response. The context allows using the ``secret`` function to access values of secrets. The named variables ``url``, ``request_params`` and ``request_headers`` are available to the template.  Example: ``"{{ '' if request_headers['X-Sesam-Authorization'] == secret('webhook_secret') else 'Invalid authorization header value' }}"``.
+     - This property allows custom request validation for receiver endpoints. This is particularly useful when clients
+       cannot use JWT tokens for authentication. The string must be a `Jinja template <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_.
+       The Jinja template is rendered for each incoming request. If it renders as an empty string then the request is
+       accepted, otherwise the rendered string will be reported as an error in the response. The context allows using
+       the ``secret`` function to access values of secrets. The named variables ``url``, ``request_params`` and
+       ``request_headers`` are available to the template. Example:
+       ``"{{ '' if request_headers['X-Sesam-Authorization'] == secret('webhook_secret') else 'Invalid authorization header value' }}"``.
+
+       Our :ref:`custom Jinja filters <custom_jinja_filters>` can also be used for more advanced validation, such as
+       decoding an incoming JWT with ``decode_jwt``. Example:
+       ``"{% if (request_headers['header-with-jwt'] | decode_jwt(secret('public_key'))) %}{% else %}FAIL!{% endif %}"``
 
        .. NOTE::
 
