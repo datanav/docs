@@ -523,8 +523,9 @@ These standardized expiry-related properties are also added to the ``token`` obj
        is used.
 
 
+There are several examples :ref:`here <custom_auth_examples>` of using ``custom_auth`` towards various systems. Some of
+these examples make use of our :ref:`Jinja filters <jinja_filters_section>` for more advanced configuration.
 
-There are several examples :ref:`here <custom_auth_examples>` of using ``custom_auth`` towards various systems.
 The ``custom_auth`` section uses the following sub-properties:
 
 .. list-table::
@@ -550,7 +551,7 @@ The ``custom_auth`` section uses the following sub-properties:
      - If the token is expected to contain a timestamp for when the access token expires,
        this should be set to the name of the property that contains that timestamp. This needs to be a Jinja expression,
        e.g. ``{{ token.expirationDate }}`` if the name of the property is ``expirationDate``. Note that the expression
-       must evaluate to a date, e.g. "2025-01-25T10:42:24". :ref:`Jinja filters <rest_system_jinja_filters>` can
+       must evaluate to a date, e.g. "2025-01-25T10:42:24". :ref:`Jinja filters <jinja_filters_section>` can
        be used to convert any expiration values that are not given as a date, for example if it is provided as a Unix
        epoch.
        If ``expires_in_expression`` is also set, the ``expires_at_expression`` will take priority if it evaluates to a
@@ -729,21 +730,6 @@ system that uses the bearer token format:
 See the :ref:`example configurations <custom_auth_examples>` for more examples on systems that use ``custom_auth``.
 
 
-.. _rest_system_jinja_filters:
-
-Supported Jinja filters
-^^^^^^^^^^^^^^^^^^^^^^^
-In addition to the `built-in filters <https://jinja.palletsprojects.com/en/stable/templates/#list-of-builtin-filters>`_,
-the REST system also supports these custom filters:
-
-``datetime``:  See the :ref:`datetime <datetime_dtl_function>` DTL function. An example on using this filter can be
-found :ref:`here <rest_system_arcgis_un_example>`.
-
-``datetime_format``: See the :ref:`datetime-format <datetime_format_dtl_function>` DTL function. An example on using
-this filter can be found :ref:`here <rest_system_arcgis_un_example>`.
-
-
-
 .. _rest_system_example:
 
 Example configuration
@@ -826,7 +812,7 @@ access token:
         "url_pattern": "https://api.tripletex.io/v2/%s",
         "verify_ssl": true,
         "headers": {
-            "Authorization": "Basic {{ ( ('0:' + token.token) | tobytes(encoding='utf-8') | b64encode).decode() }}"
+            "Authorization": "Basic {{ ( ('0:' + token.token) | bytes | base64_encode) }}"
         },
         "custom_auth": {
             "get_token_operation": "fetch-session-token",

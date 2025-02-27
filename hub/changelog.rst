@@ -1,6 +1,17 @@
 Changelog
 =========
 
+.. _changelog_2025-02-27:
+
+2025-02-27
+----------
+* Added new Jinja filters: ``bytes``, ``base64_encode``, ``base64_decode``, ``datetime``, and ``datetime_filter``.
+  These filters work the same way as the corresponding DTL functions and should produce the same output.
+* Added a new ``decode_jwt`` Jinja filter which decodes a JWT given a public key. The output is the decoded JWT in JSON
+  format.
+* Added a new :ref:`section <jinja_filters_section>` which documents our available Jinja filters.
+
+
 .. _changelog_2025-02-06:
 
 2025-02-06
