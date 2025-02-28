@@ -1,6 +1,15 @@
 Changelog
 =========
 
+.. _changelog_2025-02-28:
+
+2025-02-28
+----------
+* Added the ``owner`` property to `POST api_json_web_tokens <./api.html#post--api-subscriptions-subscription_id-api_json_web_tokens>`_.
+* Added a new method to `PUT api_json_web_tokens <./api.html#put--api-subscriptions-subscription_id-api_json_web_tokens>`_.
+  Which allows for updating jwt metadata: Name, description, owner.
+
+
 .. _changelog_2025-02-27:
 
 2025-02-27
