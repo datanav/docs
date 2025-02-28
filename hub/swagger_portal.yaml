@@ -127,6 +127,21 @@ paths:
                 type: number
                 description: The current version of the Terms of Service
 
+  '/api/analytics':
+    post:
+      description:
+        service for receiving usage analytics from the Management Studio
+      parameters:
+        - in: body
+          name: analytics_info
+          description: Information about the analytics event
+          required: true
+          schema:
+            $ref: "#/definitions/AnalyticsEvent"
+      responses:
+        204:
+          description: OK
+
   /api/profile:
     get:
       description:
@@ -556,6 +571,11 @@ paths:
                 description:
                   A user-assigned description of this token. This is optional and is only used in the GUI.
                 type: string
+              owner:
+                description:
+                  The intended user of this token.
+                type: string
+                example: "6650635f-dc45-42b8-a972-22dfbd2cead1"
               exp:
                 description:
                   The expiration-date to set on the new JWT.  This is measured in number of seconds since the Epoch.
@@ -578,6 +598,73 @@ paths:
       responses:
         200:
           description: The new SubscriptionJWT
+          schema:
+            $ref: '#/definitions/SubscriptionJWT'
+ 
+    put:
+      operationId: api.subscription_api_jwts.put_json_web_token
+      description:
+        Updates the specified api JWT token
+      produces:
+        - application/json
+      parameters:
+        - name: subscription_id
+          in: path
+          description: The subscription id
+          required: true
+          type: string
+        - name: jwt_settings
+          in: body
+          description: The JWT parameters.
+          required: true
+          schema:
+            type: object
+            additionalProperties: false
+            properties:
+              id:
+                description:
+                  The ID of the token
+                type: string
+              name:
+                description:
+                  A user-assigned name for this token. This is optional and is only used in the GUI.
+                type: string
+              description:
+                description:
+                  A user-assigned description of this token. This is optional and is only used in the GUI.
+                type: string
+              owner:
+                description:
+                  The intended user of this token.
+                type: string
+                example: "6650635f-dc45-42b8-a972-22dfbd2cead1"
+              exp:
+                description:
+                  The expiration-date to set on the new JWT.  This is measured in number of seconds since the Epoch.
+                type: number
+                example: 2349343498
+              refresh_interval:
+                description:
+                  Optional. If this is specified, the resulting JWT must be refreshed at the specified rate. In this
+                  case the 'exp' property describes the last time the JWT can be refreshed.
+                type: number
+                example: 900
+              principals:
+                description:
+                  A list of the principals that the JWT should grant
+                type: array
+                items:
+                  type: string
+                  example: "group:Developer"
+              payload:
+                type: object
+              supported-operations:
+                type: object
+              audit:
+                type: object
+      responses:
+        200:
+          description: The modified JWT
           schema:
             $ref: '#/definitions/SubscriptionJWT'
 
@@ -1154,7 +1241,7 @@ paths:
       operationId: api.profile.get_notifications_summary_for_user
       description:
         Returns the status of all subscriptions and pipes with notification-rules that the user have access to.
-        This endpoint implements the Sesam "json-pull" protocol (https://docs.sesam.io/hub/json-pull.html).
+        This endpoint implements the Sesam "json-pull" protocol (https://docs.sesam.io/json-pull.html).
 
       produces:
         - application/json
@@ -1173,7 +1260,7 @@ paths:
           required: false
           type: integer
           description:
-            This is the 'since'-value in the sesam json-pull protocol (https://docs.sesam.io/hub/json-pull.html)
+            This is the 'since'-value in the sesam json-pull protocol (https://docs.sesam.io/json-pull.html)
 
         - name: deleted
           in: query
@@ -1696,6 +1783,12 @@ paths:
           in: formData
           description:
             The new password
+          required: true
+          type: string
+        - name: old_password
+          in: formData
+          description:
+            Old password
           required: true
           type: string
 
@@ -2415,7 +2508,7 @@ paths:
           description:
             Specifies that the endpoint should only return entities newer than the specified 'since' value.
             The since-value should be set to the value of the "_updated"-attribute in the last seen entity.
-            See https://docs.sesam.io/hub/features/continuation-support.html for details on how this works.
+            See https://docs.sesam.io/configuration.html#continuation-support for details on how this works.
           required: false
           type: integer
       responses:
@@ -2447,7 +2540,7 @@ paths:
           description:
             Specifies that the endpoint should only return entities newer than the specified 'since' value.
             The since-value should be set to the value of the "_updated"-attribute in the last seen entity.
-            See  for details on how this works.
+            See https://docs.sesam.io/configuration.html#continuation-support for details on how this works.
           required: false
           type: string
       responses:
@@ -2554,7 +2647,7 @@ paths:
           description:
             Specifies that the endpoint should only return entities newer than the specified 'since' value.
             The since-value should be set to the value of the "_updated"-attribute in the last seen entity.
-            See https://docs.sesam.io/hub/documentation/service-configuration/pipes/configuration-sources.html#continuation-support for details on how this works.
+            See https://docs.sesam.io/configuration.html#continuation-support for details on how this works.
           required: false
           type: string
       responses:
@@ -2588,7 +2681,7 @@ paths:
           description:
             Specifies that the endpoint should only return entities newer than the specified 'since' value.
             The since-value should be set to the value of the "_updated"-attribute in the last seen entity.
-            See https://docs.sesam.io/hub/documentation/service-configuration/pipes/configuration-sources.html#continuation-support for details on how this works.
+            See https://docs.sesam.io/configuration.html#continuation-support for details on how this works.
           required: false
           type: string
       responses:
@@ -2620,25 +2713,27 @@ paths:
           schema:
             type: object
             additionalProperties: false
-            # TODO in IS-11207(step2): Set 'required:' and get rid of the 'datahub' property once the self-service operator has been updated.
-            #required:
-            #  - provisioning_settings
+            required:
+              - provisioning_settings
             properties:
-              datahub:
-                type: object
-                additionalProperties: true
-                description: This property is deprecated. Use 'provisioning_settings' instead.
-
               provisioning_settings:
                 type: object
                 additionalProperties: false
-                required:
-                  - num_workers
                 properties:
                   num_workers:
                     type: integer
                     description:
                       Specifies that the number of worker boxes that this subscription needs.
+                  num_workers_durable:
+                    type: integer
+                    description:
+                      Specifies that the number of worker boxes with durable disks that this subscription needs. These
+                      boxes are counted separatly from the 'num_workers' boxes; there is no overlap between the two
+                      numbers.
+                  subscription_storage_size:
+                    type: integer
+                    description:
+                      Specifies the size in GiB of the persistent disk(s) that this subscription needs.
       responses:
         200:
           description: OK
@@ -2726,6 +2821,21 @@ paths:
           description: OK
 
 definitions:
+  AnalyticsEvent:
+    type: object
+    additionalProperties: true
+    required:
+      - action
+    properties:
+      subscription_id:
+        description:
+          The id of the subscription that this analytics event belongs to (if any). If the event
+          doesn't belong to a subscription, this property will not be present.
+        type: string
+      action:
+        type: string
+        enum: ["page_view", "api_call"]
+
   Feedback:
     type: object
     additionalProperties: false
@@ -3007,7 +3117,7 @@ definitions:
     properties:
       currency:
         type: string
-        enum: ["EUR"]
+        enum: ["USD"]
 
       fixed_items:
         type: object
@@ -3042,6 +3152,8 @@ definitions:
           sla_pr_GB:
             $ref: '#/definitions/PriceEstimateDynamicItem'
           search_pr_GB:
+            $ref: '#/definitions/PriceEstimateDynamicItem'
+          monitoring_pr_GB:
             $ref: '#/definitions/PriceEstimateDynamicItem'
 
           monitoring_pr_pipe_basic:
@@ -3092,8 +3204,8 @@ definitions:
           The 'main' type is given by the property-name used in the PriceEstimate to refer to this PriceEstimateFixedItem.
           The 'sub_type' specifies a more fine-grained type.
         type: string
-        enum: [# datahub has the "sizes" "developer", "single", "multi". "small", "medium", "large" and "xlarge" are legacy
-               "small", "medium", "large", "xlarge", "developer", "single", "multi",
+        enum: [# datahub has the "sizes" "developer", "developer-pro", "single", "multi". "small", "medium", "large" and "xlarge" are legacy
+               "small", "medium", "large", "xlarge", "developer", "developer-pro", "single", "multi",
 
                # microservices have "enterprise" instead of "xlarge"
                "enterprise",
@@ -3321,7 +3433,7 @@ definitions:
 
       provisioning_status:
         type: string
-        enum: ["pending", "completed", "provisioning", "failed", "destroyed"]
+        enum: ["pending", "completed", "provisioning", "failed", "destroyed", "waiting_for_maintenance_window"]
 
       is_unused_precreated_subscription:
         description: Specified if this is an unused precreated subscription. Such subscriptions are kept in
@@ -3331,6 +3443,10 @@ definitions:
 
       was_created_from_a_precreated_subscription:
         description: Specified if this subscription was create by assigning a precreated subscription.
+        type: boolean
+
+      was_hibernated_due_to_idleness:
+        description: True if this subscription has been put into hibernation to save on hardware costs
         type: boolean
 
       provisioner_version:
@@ -3717,7 +3833,6 @@ definitions:
     type: object
     additionalProperties: false
     required:
-      - access
       - address
     properties:
       access:
@@ -3726,6 +3841,9 @@ definitions:
       address:
         type: string
         example: "192.168.0.2"
+      description:
+        type: string
+        example: "Description"
 
   License:
     type: object
@@ -4035,7 +4153,7 @@ definitions:
               This property describes the size of the node. As of Sep 2021, small, medium, large and xlarge are legacy
               sizes. The UI maps small/medium to single and xlarge to multi.
             type: string
-            enum: ["small", "medium", "large", "xlarge", "developer", "single", "multi"]
+            enum: ["small", "medium", "large", "xlarge", "developer", "developer-pro", "single", "multi"]
 
           developer_mode:
             description:
@@ -4049,6 +4167,14 @@ definitions:
               price payment scheme. If this property exists, subscription is invoiced using fixed price scheme.
             type: integer
             minimum: 0
+
+          fixed_price_gb_date:
+            description:
+              This property records the date when fixed_price_gb got changed. Changing the value will then in 
+              practice extend the fixed price period to be over the next 12 months. The date should be recorded 
+              in a transit encoded date format. e.g. ~t2022-09-14
+            type: string
+            example: "~t2022-09-16T14:51:07Z"
 
           maximum_store_disk_usage:
             description:
@@ -4145,7 +4271,7 @@ definitions:
               # -  1 (the hyphen between the databrowser_id and the subscription id)
               # = 26
               maxLength: 26
-              pattern: "^[a-zA-Z][a-zA-Z0-9-]*[a-zA-Z0-9]$"
+              pattern: "^[a-zA-Z][a-zA-Z0-9-_]*[a-zA-Z0-9]$"
             name:
               type: string
               example: "Databrowser 01"
@@ -4242,9 +4368,31 @@ definitions:
               type: string
             example: ["210.10.8.3"]
 
+          second_ip:
+            type: boolean
+
+          topology:
+            type: string
+            example: "dual-dual"
+
+          active_active:
+            type: boolean
+
+          enable_bgp:
+            type: boolean
+
+          asn:
+            type: integer
+
       search:
         description:
           This controls whether to activate the search capability
+        type: boolean
+        default: false
+
+      monitoring:
+        description:
+          This controls whether to activate the new monitoring feature
         type: boolean
         default: false
 
@@ -4252,6 +4400,8 @@ definitions:
     description:
       Describes the customer settings for a VPN connection
     additionalProperties: false
+    required:
+      - _id
     type: object
     properties:
       gateway_address:
@@ -4282,6 +4432,48 @@ definitions:
         type: integer
         example: 1
 
+      asn:
+        type: integer
+
+      bgp_peering_address:
+        type: string
+        example: "192.168.100.0"
+
+      ipsec_policy:
+        type: object
+        properties:
+            "dh_group":
+              type: string
+              example: "ECP384"
+
+            "ike_encryption":
+              type: string
+              example: "AES256"
+
+            "ike_integrity":
+              type: string
+              example: "SHA384"
+
+            "ipsec_encryption":
+              type: string
+              example: "GCMAES256"
+
+            "ipsec_integrity":
+              type: string
+              example: "GCMAES256"
+
+            "pfs_group":
+              type: string
+              example: "ECP384"
+
+            "sa_datasize":
+              type: integer
+
+            "sa_lifetime":
+              type: integer
+
+            "use_policy_based_traffic_selectors":
+              type: boolean
 
   ProvisioningSettings:
     description:
@@ -4292,6 +4484,11 @@ definitions:
       num_workers:
         description:
           The number of server machines this subscription currently uses.
+        type: integer
+
+      num_workers_durable:
+        description:
+          The number of additional server machines with durable disk this subscription currently uses.
         type: integer
 
       max_workers:
@@ -4319,19 +4516,7 @@ definitions:
       network-acl:
         type: array
         items:
-          type: object
-          additionalProperties: false
-          required:
-            - access
-            - address
-          properties:
-            access:
-              type: string
-              enum: ["Allow", "Deny"]
-            address:
-              type: string
-              example: "192.168.0.2"
-
+          $ref: '#/definitions/NetworkACLEntry'
 
   InvitedUser:
     description:
@@ -4463,7 +4648,7 @@ definitions:
     description:
       A JWT api token that has been created for one subscription
     type: object
-    additionalProperties: False
+    additionalProperties: false
     required:
       - id
       - name
@@ -4484,7 +4669,9 @@ definitions:
         description:
           A user-assigned description of this token.
         type: string
-
+      owner:
+        description: The intended user of this token.
+        type: string
       supported-operations:
         description:
           Information about the various ui-actions that relates to this SubscriptionJWT
@@ -4494,6 +4681,15 @@ definitions:
           - delete_api_jwt_token
         properties:
           delete_api_jwt_token:
+            allOf:
+              - $ref: '#/definitions/SupportedOperation'
+              - type: object
+                properties:
+                  reason-code:
+                    type: string
+                    enum: ["user_is_not_admin", "email_not_verified",
+                           "portal_is_in_readonly_mode"]
+          put_api_jwt_token:
             allOf:
               - $ref: '#/definitions/SupportedOperation'
               - type: object
@@ -4593,8 +4789,6 @@ definitions:
 
       audit:
         $ref: '#/definitions/AuditInfo'
-
-
 
   RoleInfo:
     description:
