@@ -48,7 +48,7 @@ The table below shows the total resource quotas available for the microservices 
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block:: json
 
     {
         "_id": "id-of-microservice",
@@ -236,6 +236,13 @@ Properties
           The default value is ``false`` for developer subscriptions.
      - ``true``
      -
+
+   * - ``retry_strategy``
+     - Object
+     - See the documentation on the :ref:`URL system <url_system_retry_strategy>`.
+     -
+     -
+
 
 Documentation for deprecated properties can be found :ref:`here <microservice_system_deprecations>`.
 
