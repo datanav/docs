@@ -53,27 +53,6 @@ Prototype
             "http": "socks5://mysocksproxy:1234",
             "https": "socks5://user:password@mysslsocksproxy:1234",
         },
-        "retry_strategy": {
-            "400-428": {
-                "write_retry_delay": 0,
-                "max_retries_per_entity": 0
-            },
-            "429": {
-                "write_retry_delay": 30,
-                "max_retries_per_entity": 100,
-                "read_retry_delay": 30
-            },
-            "500,502,504": {
-                "write_retry_delay": 60,
-                "max_retries_per_entity": 100,
-                "read_retry_delay": 60
-            },
-            "default": {
-                "write_retry_delay": 30,
-                "max_retries_per_entity": 3,
-                "read_retry_delay": 0
-            }
-        },
         "authentication": "basic",
         "connect_timeout": 60,
         "read_timeout": 1800
@@ -228,7 +207,7 @@ Properties
        ``write_retry_delay``, ``max_retries_per_entity``, ``max_consecutive_write_errors``,
        ``max_write_errors_in_retry_dataset``, ``batch_retries``.
 
-       See the :ref:`prototype <url_system_prototype>` for an example configuration.
+       An example of a URL system with a ``retry_strategy`` can be found :ref:`here <url_system_example_configurations>`.
 
      -
      -
@@ -236,8 +215,12 @@ Properties
 
 [1] Exactly one of ``base_url`` and ``url_pattern`` must be specified.
 
-Example configuration
-^^^^^^^^^^^^^^^^^^^^^
+.. _url_system_example_configurations:
+
+Example configurations
+^^^^^^^^^^^^^^^^^^^^^^
+
+Basic example configuration:
 
 .. code-block:: json
 
@@ -260,4 +243,36 @@ Example with ntlm configuration:
         "username": "$ENV(username-variable)",
         "password": "$SECRET(password-variable)",
         "base_url": "http://our.domain.com/files"
+    }
+
+Example with retry strategies for different HTTP status codes:
+
+.. code-block:: json
+
+    {
+        "_id": "our-http-server",
+        "name": "Our HTTP Server",
+        "type": "system:url",
+        "base_url": "http://our.domain.com/files",
+        "retry_strategy": {
+            "400-428": {
+                "write_retry_delay": 0,
+                "max_retries_per_entity": 0
+            },
+            "429": {
+                "write_retry_delay": 30,
+                "max_retries_per_entity": 100,
+                "read_retry_delay": 30
+            },
+            "500,502,504": {
+                "write_retry_delay": 60,
+                "max_retries_per_entity": 100,
+                "read_retry_delay": 60
+            },
+            "default": {
+                "write_retry_delay": 30,
+                "max_retries_per_entity": 3,
+                "read_retry_delay": 0
+            }
+        }
     }
