@@ -1,6 +1,15 @@
 Changelog
 =========
 
+.. _changelog_2025-03-10:
+
+2025-03-10
+----------
+* Added the option to specify retry strategies for different HTTP status codes in the URL, REST and microservice systems.
+  This can be configured in the new ``retry_strategy`` :ref:`property <url_system_retry_strategy>`.
+* Documented ``batch_retries`` in the :ref:`pump properties <pump_properties>`.
+
+
 .. _changelog_2025-03-09:
 
 2025-03-09

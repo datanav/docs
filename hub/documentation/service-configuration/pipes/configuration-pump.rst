@@ -268,6 +268,13 @@ they are formatted in the :doc:`Cron Expressions <../../../cron-expressions>` do
      - 0
      -
 
+   * - ``batch_retries``
+     - Integer
+     - The maximum number of retries allowed when using batched writes. This will only have an effect if the sink
+       supports batching.
+     - 3
+     -
+
    * - ``fallback_to_single_entities_on_batch_fail``
      - Boolean
      - A flag that controls if the pipes should attempt to process a single entity at a time if a batch

@@ -8,10 +8,12 @@ serving `HTTP requests <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protoco
 It supports the ``HTTP`` and ``HTTPS`` protocols. It provides session handling, connection pooling and authentication
 services to sources and sinks which need to communicate with a HTTP server.
 
+.. _url_system_prototype:
+
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block:: json
 
     {
         "_id": "id-of-system",
@@ -50,6 +52,27 @@ Prototype
         "proxies": {
             "http": "socks5://mysocksproxy:1234",
             "https": "socks5://user:password@mysslsocksproxy:1234",
+        },
+        "retry_strategy": {
+            "400-428": {
+                "write_retry_delay": 0,
+                "max_retries_per_entity": 0
+            },
+            "429": {
+                "write_retry_delay": 30,
+                "max_retries_per_entity": 100,
+                "read_retry_delay": 30
+            },
+            "500,502,504": {
+                "write_retry_delay": 60,
+                "max_retries_per_entity": 100,
+                "read_retry_delay": 60
+            },
+            "default": {
+                "write_retry_delay": 30,
+                "max_retries_per_entity": 3,
+                "read_retry_delay": 0
+            }
         },
         "authentication": "basic",
         "connect_timeout": 60,
@@ -138,7 +161,7 @@ Properties
 
    * - ``oauth2``
      - Dict<String,String>
-     - A optional set of properties that specifies support for automatic fetching of JWT access tokens from a oauth2
+     - An optional set of properties that specifies support for automatic fetching of JWT access tokens from a oauth2
        enabled provider. The grant types supported are "client credentials" and "refresh token". For the "client credentials"
        grant type you need to supply a ``client_id`` and ``client_secret`` from your oauth2 provider. You must also
        specify a ``token_url`` URL to a service which generates JWT access tokens. For the "refresh token"
@@ -153,7 +176,7 @@ Properties
 
    * - ``tripletex``
      - Dict<String,String>
-     - A optional set of properties that specifies support for automatic generation and refreshing of Tripletex access
+     - An optional set of properties that specifies support for automatic generation and refreshing of Tripletex access
        tokens. See the `Tripletex API documentation <https://developer.tripletex.no/docs/documentation/authentication-and-tokens/>`_ for details.
        You need to supply a ``consumer_token`` and ``employee_token`` from your Tripletex account. You must also
        specify a ``token_url`` URL to the Tripletex API service which generates access tokens. Optionally you can define a
@@ -164,7 +187,7 @@ Properties
 
    * - ``proxies``
      - Dict<String,String>
-     - A optional set of properties that specifies a set of SOCKS5 proxies for the URL system. The keys represents url-
+     - An optional set of properties that specifies a set of SOCKS5 proxies for the URL system. The keys represents url-
        prefixes (for example 'http' and 'https') and the values of the HTTP(S) or SOCKS5 servers that the requests matching the
        prefixes should be passed through. The values should be on the form ``socks5://username:password@domain_or_ip:port``
        or .``http(s)://username:password@domain_or_ip:port``
@@ -193,12 +216,30 @@ Properties
      - ``false``
      -
 
+       .. _url_system_retry_strategy:
+   * - ``retry_strategy``
+     - Object
+     - Specifies the retry strategies for different HTTP status codes. This essentially allows setting defaults for
+       retry-related properties on the :ref:`pump <pump_properties>` depending on the received status code. The status
+       codes are set as keys, and each value must be an object that contains the desired properties.
+       The special ``default`` key can also be used to set a default for all status codes that are not specified in the
+       strategy. If a retry property is set directly on the pump, that value will take priority over the ``retry_strategy``.
+       The following properties can be set as part of the retry strategy: ``max_read_retries``, ``read_retry_delay``,
+       ``write_retry_delay``, ``max_retries_per_entity``, ``max_consecutive_write_errors``,
+       ``max_write_errors_in_retry_dataset``, ``batch_retries``.
+
+       See the :ref:`prototype <url_system_prototype>` for an example configuration.
+
+     -
+     -
+
+
 [1] Exactly one of ``base_url`` and ``url_pattern`` must be specified.
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-::
+.. code-block:: json
 
     {
         "_id": "our-http-server",
@@ -209,7 +250,7 @@ Example configuration
 
 Example with ntlm configuration:
 
-::
+.. code-block:: json
 
     {
         "_id": "our-http-server",
