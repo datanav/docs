@@ -35,7 +35,7 @@ Prototype
         "read_timeout": 1800,
         "rate_limiting_retries": 3,
         "rate_limiting_delay": 60,
-        "json_content_types": ["application/jsonish"]
+        "json_content_types": ["application/jsonish"],
         "headers": {
             "MY_HEADER": "some-value",
             "MY_OTHER_HEADER": "$ENV(key-for-other-value)",
@@ -45,10 +45,10 @@ Prototype
             "get-operation": {
                 "url" : "/a/service/that/supports/get/{{ _id }}",
                 "method": "GET",
-                "next_page_link": {{ body.pagination.next }},
-                "next_page_termination_strategy": ["next-page-link-empty", "same-next-page-request", "same-response"]
-                "id_expression": {{ id }},
-                "updated_expression": {{ updated }},
+                "next_page_link": "{{ body.pagination.next }}",
+                "next_page_termination_strategy": ["next-page-link-empty", "same-next-page-request", "same-response"],
+                "id_expression": "{{ id }}",
+                "updated_expression": "{{ updated }}",
                 "payload_property": "result",
                 "response_property": "response",
                 "since_property_name": "updated",
