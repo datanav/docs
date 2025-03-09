@@ -1,6 +1,17 @@
 Changelog
 =========
 
+.. _changelog_2025-03-09:
+
+2025-03-09
+----------
+* Pump execution log entities now have a property ``tokens`` if :ref:`custom authentication <rest_custom_auth>` or
+  :ref:`OAuth2 authentication <url_system_oauth2>` is used on any of the connected systems. The property exposes the
+  expiry dates for the tokens used by these systems. The purpose of this is to show the resulting output of the
+  ``expires_in_expression`` and ``expires_at_expression`` Jinja expressions, which can potentially produce the
+  wrong date if they are misconfigured.
+
+
 .. _changelog_2025-02-28:
 
 2025-02-28
