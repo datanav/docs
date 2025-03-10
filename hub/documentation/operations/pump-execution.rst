@@ -17,6 +17,9 @@ runs. The first will have the id "pump-started" and the last either
 "pump-ended" *or* "pump-completed". In between these entities,
 there may be entities recording read errors and/or write
 errors. Other informational entities such as "pump-enabled"/"pump-disabled" or "pipe-offset-set" may also be present.
+The entities will also contain a ``tokens`` property if :ref:`custom authentication <rest_custom_auth>` or
+:ref:`OAuth2 authentication <url_system_oauth2>` is used on any systems that the pipe uses. This property exposes
+expiry dates for any tokens that the systems are using.
 
 Depending on the pump settings, the write errors can then be
 retried one or more times during the next runs.
@@ -263,7 +266,7 @@ Properties
 The read-error entity
 ---------------------
 
-The execution dataset also can contain entities that record failed reads and/or entities wich represents retryable
+The execution dataset can also contain entities that record failed reads and/or entities which represents retryable
 entities (from write errors).
 
 Prototype
@@ -391,7 +394,7 @@ Properties
      - Boolean
      - A flag indicating if the entity can be retried by the retry mechanism. It is used for the case where a new
        version of a entity comes from the source while there also exist a previously failed version in the
-       execution dataset. In this case, if the new version is sucessfully written to the sink a new write-error entity
+       execution dataset. In this case, if the new version is successfully written to the sink a new write-error entity
        is written to the log for this entity, but marked as not retryable (i.e ``false`` value) so it can be skipped
        during retries.
 

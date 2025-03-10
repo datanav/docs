@@ -134,6 +134,8 @@ Properties
      -
      -
 
+       .. _url_system_oauth2:
+
    * - ``oauth2``
      - Dict<String,String>
      - A optional set of properties that specifies support for automatic fetching of JWT access tokens from a oauth2
