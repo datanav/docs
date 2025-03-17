@@ -55,6 +55,17 @@ Properties
      - ``"errors"``
      -
 
+   * - ``trigger_on``
+     - Object
+     - A dictionary with two properties: ``"key"`` (optional, defaults to ``"_trigger"``) and ``"value"``. The ``"key"``
+       should point to a property in the entity (it supports path notation) and ``"value"`` should contain a value that
+       this property should have to be passed into the transform. The ``"value"`` supports wildcards ("*") for substring
+       matching. If the ``"key"`` doesn't exist or the ``"value"`` does not match the corresponding value in the entity,
+       the entity will be passed through without being transformed. Note that this property is experimental and may
+       be changed or removed.
+     -
+     -
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -69,6 +80,10 @@ Example configuration
        },
        "transform": {
            "type": "json_schema",
+           "trigger_on": {
+                "key":"_trigger",
+                "value": "some-value*"
+            },
            "schema": {
                "type" : "object",
                "properties" : {
