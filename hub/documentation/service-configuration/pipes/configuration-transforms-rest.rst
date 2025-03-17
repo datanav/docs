@@ -154,7 +154,7 @@ Properties
      -
      -
 
-   * - ``trigger_on`` (experimental)
+   * - ``trigger_on``
      - Object
      - A dictionary with two properties: ``"key"`` (optional, defaults to ``"_trigger"``) and ``"value"``. The ``"key"``
        should point to a property in the entity (it supports path notation) and ``"value"`` should contain a value that

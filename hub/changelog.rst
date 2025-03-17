@@ -1,6 +1,16 @@
 Changelog
 =========
 
+.. _changelog_2025-03-17:
+
+2025-03-17
+----------
+* Added the ``trigger_on`` property to the following transforms:
+
+  - :ref:`DTL transform <dtl_transform>`.
+  - :ref:`JSON schema transform <json_schema_transform>`.
+  - :ref:`XML transform <xml_transform>`.
+
 .. _changelog_2025-03-10:
 
 2025-03-10
