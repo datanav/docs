@@ -2,6 +2,7 @@
 .. _notifications_feature:
 
 :badge:`Paid feature,badge-info badge-pill`
+:badge:`Deprecated,badge-warning badge-pill`
 
 =============
 Notifications

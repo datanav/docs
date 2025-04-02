@@ -106,7 +106,7 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
-    :badge:`Free feature,badge-success badge-pill`
+    :badge:`Paid feature,badge-info badge-pill`
 
     **Integrated Search**
 
