@@ -1,5 +1,5 @@
 .. _metrics-api:
-.. _metrics-api:
+.. _metrics_api:
 
 :badge:`Free feature,badge-success badge-pill`
 
