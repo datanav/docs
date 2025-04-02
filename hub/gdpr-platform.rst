@@ -1,3 +1,8 @@
+.. warning::
+
+  The GDPR Platform will reach end-of-life June 31st 2025. See :ref:`changelog for more information <changelog_2025-04-02>`.
+
+
 =============
 GDPR Platform
 =============

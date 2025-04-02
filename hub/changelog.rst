@@ -1,6 +1,14 @@
 Changelog
 =========
 
+.. _changelog_2025-04-02:
+
+2025-02-04
+----------
+* The :ref:`Notifications <notifications-feature>` feature will reach end-of-life June 31st 2025. It is superseded by the
+  :ref:`Metrics <metrics-api>` feature.
+* The :doc:`GDPR platform <gdpr-platform>` tool will reach end-of-life June 31st 2025.
+
 .. _changelog_2025-03-17:
 
 2025-03-17
@@ -8,7 +16,7 @@ Changelog
 * Added the ``trigger_on`` property to the following transforms:
 
   - :ref:`DTL transform <dtl_transform>`.
-  - :ref:`JSON schema transform <json_schema_transform>`.
+  - :ref:`JSON schema transfnotifications-featureorm <json_schema_transform>`.
   - :ref:`XML transform <xml_transform>`.
 
 .. _changelog_2025-03-10:
