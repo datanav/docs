@@ -16,7 +16,7 @@ Changelog
 * Added the ``trigger_on`` property to the following transforms:
 
   - :ref:`DTL transform <dtl_transform>`.
-  - :ref:`JSON schema transfnotifications-featureorm <json_schema_transform>`.
+  - :ref:`JSON schema transform <json_schema_transform>`.
   - :ref:`XML transform <xml_transform>`.
 
 .. _changelog_2025-03-10:
