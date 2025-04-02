@@ -3,7 +3,7 @@ Changelog
 
 .. _changelog_2025-04-02:
 
-2025-02-04
+2025-04-02
 ----------
 * The :ref:`Notifications <notifications-feature>` feature will reach end-of-life June 30th 2025. It is superseded by the
   :ref:`Metrics <metrics-api>` feature.
