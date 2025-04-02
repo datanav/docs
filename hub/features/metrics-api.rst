@@ -1,7 +1,7 @@
 .. _metrics-api:
 .. _metrics_api:
 
-:badge:`Paid feature,badge-info badge-pill`
+:badge:`Free feature,badge-success badge-pill`
 
 ======================
 Metrics and monitoring
