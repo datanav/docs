@@ -1,5 +1,7 @@
 # run: `id -u sesam` to find correct USER_ID
 # APPLIANCE_ID can be created using uuidgen 
+# NODE_DOMAIN must match your host fully qualified domain name.
+# DNS_ADMIN variable is where any cert or dns issues will be sent from letsencrypt. 
 APPLIANCE_ID=your_appliance_id
 SUBSCRIPTION_ID=your_subscription_id
 TRAEFIK_DOCKER_IMAGE_TAG=latest
@@ -7,3 +9,5 @@ SESAM_NODE_IMAGE_TAG=weekly-prod
 FLUENTBIT_IMAGE_TAG=latest
 FLUENTBIT_HOST=ss-companyhub.sesam.cloud
 USER_ID=1000
+NODE_DOMAIN=your_node_domain
+DNS_ADMIN=valid@email.address

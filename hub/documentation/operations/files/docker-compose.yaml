@@ -24,7 +24,7 @@ services:
       - "--entrypoints.websecure.address=:443"
       - "--certificatesresolvers.myleresolver.acme.httpchallenge=true"
       - "--certificatesresolvers.myleresolver.acme.httpchallenge.entrypoint=web"
-      - "--certificatesresolvers.myleresolver.acme.email=dnsadmin@yourdomain.com" # Update this to be a valid email
+      - "--certificatesresolvers.myleresolver.acme.email=${DNS_ADMIN}"
       - "--certificatesresolvers.myleresolver.acme.storage=/letsencrypt/acme.json"
       - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
       - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
