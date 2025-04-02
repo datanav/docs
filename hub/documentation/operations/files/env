@@ -1,6 +1,6 @@
 # run: `id -u sesam` to find correct USER_ID
 # APPLIANCE_ID can be created using uuidgen 
-# NODE_DOMAIN must match your host envirnoment domain.
+# NODE_DOMAIN must match your host fully qualified domain name.
 APPLIANCE_ID=your_appliance_id
 SUBSCRIPTION_ID=your_subscription_id
 TRAEFIK_DOCKER_IMAGE_TAG=latest
