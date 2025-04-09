@@ -18,6 +18,7 @@ services:
     container_name: traefik
     restart: always
     command:
+      - "--configFile=/etc/traefik/traefik.yml"
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.web.address=:80"
