@@ -60,7 +60,6 @@ services:
       - "traefik.http.routers.sesam-node.rule=Host(`${NODE_DOMAIN}`)"
       - "traefik.http.routers.sesam-node.entrypoints=websecure"
       - "traefik.http.routers.sesam-node.tls=true"
-      - "traefik.http.routers.sesam-node.tls.certresolver=myleresolver"
       - "traefik.http.services.sesam-node.loadbalancer.server.port=9042"
 
   fluentbit:
