@@ -22,10 +22,6 @@ services:
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.web.address=:80"
       - "--entrypoints.websecure.address=:443"
-      - "--certificatesresolvers.myleresolver.acme.httpchallenge=true"
-      - "--certificatesresolvers.myleresolver.acme.httpchallenge.entrypoint=web"
-      - "--certificatesresolvers.myleresolver.acme.email=${DNS_ADMIN}"
-      - "--certificatesresolvers.myleresolver.acme.storage=/letsencrypt/acme.json"
       - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
       - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
     ports:
@@ -33,7 +29,8 @@ services:
       - "443:443"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
-      - "/srv/data/traefik/letsencrypt:/letsencrypt"
+      - "/srv/data/traefik/traefik.yml:/etc/traefik/traefik.yml:ro"
+      - "/srv/data/traefik/certs:/certs:ro"
     networks:
       - sesam
       - microservices
@@ -53,9 +50,6 @@ services:
     environment:
       - SESAM_UID=${USER_ID}
       - SESAM_GID=${USER_ID}
-      - ORACLE_HOME=/opt/instantclient_21_1
-      - LD_LIBRARY_PATH=/opt/instantclient_21_1
-      - SESAM_IMAGE_VERSION=2
     entrypoint: ["/entrypoint.sh"]
     command:
       - sh
