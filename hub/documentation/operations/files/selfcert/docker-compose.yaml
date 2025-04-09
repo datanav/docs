@@ -1,0 +1,96 @@
+# IMAGE TAGS, USER_ID and HOST names is found in .env file
+services:
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /home/sesam/.docker/config.json:/config.json
+    command: sesam-node fluentbit traefik
+    environment:
+      - WATCHTOWER_CLEANUP=true        # Removes old images after updating
+      - WATCHTOWER_POLL_INTERVAL=3600   # Check for updates every 60 minutes
+      - WATCHTOWER_ROLLING_RESTART=true  # Enable rolling restarts to minimize downtime
+
+  traefik:
+    image: traefik:${TRAEFIK_DOCKER_IMAGE_TAG}
+    container_name: traefik
+    restart: always
+    command:
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - "/srv/data/traefik/traefik.yml:/etc/traefik/traefik.yml:ro"
+      - "/srv/data/traefik/certs:/certs:ro"
+    networks:
+      - sesam
+      - microservices
+
+  sesam-node:
+    image: sesam/sesam-node:${SESAM_NODE_IMAGE_TAG}
+    container_name: sesam-node
+    restart: always
+    networks:
+      - sesam
+      - microservices
+    volumes:
+      - /srv/data/sesam/node-00/data:/sesam/data:rprivate
+      - sesam-node-tmp:/tmp:z
+      - /sesam/node-00:/sesam:rprivate
+      - /var/run/docker.sock:/var/run/docker.sock:rprivate
+    environment:
+      - SESAM_UID=${USER_ID}
+      - SESAM_GID=${USER_ID}
+      - ORACLE_HOME=/opt/instantclient_21_1
+      - LD_LIBRARY_PATH=/opt/instantclient_21_1
+      - SESAM_IMAGE_VERSION=2
+    entrypoint: ["/entrypoint.sh"]
+    command:
+      - sh
+      - -c
+      - "chown -R -H ${USER_ID}:${USER_ID} /sesam/logs /sesam/data && exec gosu ${USER_ID} lake -l /sesam/logs -d /sesam/data --microservices=engine --enforce-license --sesam-portal-url https://portal.sesam.io/unified/ --redirect-portal-gui 1 -b /sesam/data/backup --backup-use-checkpoints"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.sesam-node.rule=Host(`${NODE_DOMAIN}`)"
+      - "traefik.http.routers.sesam-node.entrypoints=websecure"
+      - "traefik.http.routers.sesam-node.tls=true"
+      - "traefik.http.routers.sesam-node.tls.certresolver=myleresolver"
+      - "traefik.http.services.sesam-node.loadbalancer.server.port=9042"
+
+  fluentbit:
+    image: sesam/fluent-bit:${FLUENTBIT_IMAGE_TAG}
+    container_name: fluentbit
+    restart: always
+    volumes:
+      - /sesam/node-00/logs:/logs/node/logs:rw
+      - /var/log:/system-logs/logs:rw
+      - /sesam/fluentbit/data:/data:rw
+    environment:
+      - APPLIANCE_ID=${APPLIANCE_ID}
+      - SUBSCRIPTION_ID=${SUBSCRIPTION_ID}
+    entrypoint:
+      - /fluent-bit/bin/fluent-bit
+    command:
+      - /fluent-bit/bin/fluent-bit
+      - -c
+      - /fluent-bit/etc/fluent-bit.conf
+
+volumes:
+  # Docker Volume definition for sesam-node-tmp
+  sesam-node-tmp:
+    driver: local
+
+networks:
+  sesam:
+    external: true
+  microservices:
+    external: true
