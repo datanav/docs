@@ -52,10 +52,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:rprivate
     environment:
       - SESAM_UID=${USER_ID}
-      - SESAM_GID=${USER_ID}
-      - ORACLE_HOME=/opt/instantclient_21_1
-      - LD_LIBRARY_PATH=/opt/instantclient_21_1
-      - SESAM_IMAGE_VERSION=2
     entrypoint: ["/entrypoint.sh"]
     command:
       - sh
