@@ -201,7 +201,7 @@ Docker compose configuration
 --------------
 
 2 A. Docker Setup with letsencrypt
----------------
+-----------------------------------
 
 1. Place the :download:`docker-compose.yaml<files/standard/docker-compose.yaml>` and :download:`env<files/env>` files in the ``/srv/data`` directory:
 
@@ -229,7 +229,7 @@ Docker compose configuration
 
 
 2 B. Docker Setup with self provided certificates
----------------
+--------------------------------------------------
 
 
 1. Place the :download:`docker-compose.yaml<files/selfcert/docker-compose.yaml>` and :download:`env<files/env>` files in the ``/srv/data`` directory, download `traefik.yaml<files/selfcert/traefik.yaml>` and place in ``/srv/data/traefik/``   :
