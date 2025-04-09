@@ -232,7 +232,7 @@ Docker compose configuration
 --------------------------------------------------
 
 
-1. Place the :download:`docker-compose.yaml<files/selfcert/docker-compose.yaml>` and :download:`env<files/env>` files in the ``/srv/data`` directory, download :download:`traefik.yaml<files/selfcert/traefik.yaml>` and place in ``/srv/data/traefik/``. Place your certificates to ``/srv/data/traefik/certs``:
+1. Place the :download:`docker-compose.yaml<files/selfcert/docker-compose.yaml>` and :download:`env<files/env>` files in the ``/srv/data`` directory. Download :download:`traefik.yaml<files/selfcert/traefik.yaml>` and place in ``/srv/data/traefik/``. Place your certificates to ``/srv/data/traefik/certs``:
 
    .. code:: bash
       
