@@ -200,10 +200,10 @@ Docker compose configuration
 
 --------------
 
-2. Docker Setup
+2 A. Docker Setup with letsencrypt
 ---------------
 
-1. Place the :download:`docker-compose.yaml<files/docker-compose.yaml>` and :download:`env<files/env>` files in the ``/srv/data`` directory:
+1. Place the :download:`docker-compose.yaml<files/standard/docker-compose.yaml>` and :download:`env<files/env>` files in the ``/srv/data`` directory:
 
    .. code:: bash
       
@@ -220,6 +220,40 @@ Docker compose configuration
 3. Edit the ``.env`` file with the correct values
 
 4. Create the needed networks
+
+   .. code:: bash
+      
+      docker network create sesam
+      docker network create microservices
+
+
+
+2 B. Docker Setup with self provided certificates
+---------------
+
+
+1. Place the :download:`docker-compose.yaml<files/selfcert/docker-compose.yaml>` and :download:`env<files/env>` files in the ``/srv/data`` directory, download `traefik.yaml<files/selfcert/traefik.yaml>` and place in ``/srv/data/traefik/``   :
+
+   .. code:: bash
+      
+      /srv/data/docker-compose.yml
+      /srv/data/.env
+      /srv/data/traefik/traefik.yaml
+      /srv/data/traefik/certs/example.cert
+      /srv/data/traefik/certs/example.key
+
+2. Create a new unique identifier to use as APPLIANCE_ID 
+
+   .. code:: bash
+      
+      uuidgen
+
+
+3. Edit the ``.env`` file with the correct values
+
+4. Edit the ``traefik/traefik.yaml`` file with the correct values
+
+5. Create the needed networks
 
    .. code:: bash
       
