@@ -18,6 +18,7 @@ services:
     container_name: traefik
     restart: always
     command:
+      - "--configFile=/etc/traefik/traefik.yml"
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.web.address=:80"
@@ -60,7 +61,6 @@ services:
       - "traefik.http.routers.sesam-node.rule=Host(`${NODE_DOMAIN}`)"
       - "traefik.http.routers.sesam-node.entrypoints=websecure"
       - "traefik.http.routers.sesam-node.tls=true"
-      - "traefik.http.routers.sesam-node.tls.certresolver=myleresolver"
       - "traefik.http.services.sesam-node.loadbalancer.server.port=9042"
 
   fluentbit:
