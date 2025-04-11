@@ -1,5 +1,9 @@
 .. _management_console:
 
+.. warning::
+
+  The Management Console was part of the multitenancy feature and has been discontinued.
+
 ==================
 Management Console
 ==================

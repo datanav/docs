@@ -1,6 +1,14 @@
 Changelog
 =========
 
+.. _changelog_2025-04-11:
+
+2025-04-11
+----------
+* Early retirement for the :doc:`GDPR platform <gdpr-platform>` that was scheduled for end-of-life June 30th 2025.
+* Removed support for multitenancy and the :doc:`Management Console <index-management-console>` tool due to lack of use.
+* Updated :ref:`roadmap <roadmap>`.
+
 .. _changelog_2025-04-02:
 
 2025-04-02
@@ -97,7 +105,7 @@ Changelog
 2024-10-11
 ----------
 * Added support for :ref:`connectors <connectors-feature>`.
-* Added support for :ref:`multitenancy <multitenancy-feature>`.
+* Added support for multitenancy.
 * Added support for :ref:`webhooks <webhook-feature>`.
 * Updated :ref:`roadmap <roadmap>`.
 

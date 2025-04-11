@@ -12,6 +12,8 @@ not make use of these features.
    :hidden:
 
    Databrowser <databrowser>
+   GDPR platform <gdpr-platform>
+   Management Console <index-management-console>
 
 DTL Functions
 =============
