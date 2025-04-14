@@ -54,7 +54,7 @@ Production and test environment
    * - VPN
      - $3.00
    * - Metrics and monitoring
-     - $4.00
+     - Free
 
 .. list-table::
    :widths: 70 30
