@@ -105,14 +105,6 @@ subscription fee shall be adjusted correspondingly without prior notice.
 
 The following items are no longer available for new subscriptions:
 
-.. list-table::
-  :widths: 70 30
-  :header-rows: 1
-
-  * - Compute
-    - Pr environment
-  * - Large compute - 8 Engines < 750 GB Data
-    - $2,000.00
 
 .. list-table::
   :widths: 70 30
