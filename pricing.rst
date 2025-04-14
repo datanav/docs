@@ -58,17 +58,6 @@ Production and test environment
    :widths: 70 30
    :header-rows: 1
 
-   * - Additional features
-     - 
-   * - Metrics and monitoring
-     - Free
-   * - Integrated search and property lineage
-     - Free
-
-.. list-table::
-   :widths: 70 30
-   :header-rows: 1
-
    * - SLA - Response time [#]_
      - Pr GB
    * - Standard - 8h
