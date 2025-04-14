@@ -66,11 +66,14 @@ Production and test environment
      - $22.00
    * - Enterprise - 1h
      - $42.00
-
+   * - Premium 0,5h x 24/7 
+     - 125.00
 
 .. [#] Geo-replicated backup is included in cloud environments.
 .. [#] 1-year fixed price option available. 50% data price reduction for the fixed data amount, with 100% price increase for data exceeding the fixed data amount. Number of computes is determined by the maximum of fixed data amount and actual data amount.
 .. [#] SLA is billed for minimum 50GB data and a maximum of 300GB.
+-- [#] Contact support for Premium SLA.
+
 
 
 
