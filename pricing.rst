@@ -60,8 +60,6 @@ Production and test environment
 
    * - Additional features
      - 
-   * - Pipe notifications
-     - $25.00 pr pipe
    * - Metrics and monitoring
      - Free
    * - Integrated search and property lineage
@@ -136,15 +134,3 @@ The following items are no longer available for new subscriptions:
   * - Enterprise - Notifications
     - $25.00
 
-.. list-table::
-  :widths: 70 30
-  :header-rows: 1
-
-  * - :doc:`GDPR Data Access Portal <hub/gdpr-platform>`
-    - Pr GB
-  * - Basic < 1 request per second
-    - $50.00
-  * - Standard < 5 requests per second
-    - $100.00
-  * - Enterprise < 10 requests per second
-    - $200.00
