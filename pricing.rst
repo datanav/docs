@@ -61,7 +61,7 @@ Production and test environment
    * - Additional features
      - 
    * - Pipe notifications
-     - $25.00
+     - $25.00 pr pipe
    * - Metrics and monitoring
      - Free
    * - Integrated search and property lineage
