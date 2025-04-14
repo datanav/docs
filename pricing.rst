@@ -53,8 +53,19 @@ Production and test environment
      - $22.00
    * - VPN
      - $3.00
+
+.. list-table::
+   :widths: 70 30
+   :header-rows: 1
+
+   * - Additional features
+     - 
+   * - Pipe notifications
+     - $25.00
    * - Metrics and monitoring
-     - Included
+     - Free
+   * - Integrated search and property lineage
+     - Free
 
 .. list-table::
    :widths: 70 30
@@ -77,7 +88,7 @@ Production and test environment
 
 
 
-1. Invoicing
+3. Invoicing
 ============
 
 From the start of the Services, the Customer will be invoiced as agreed for the Service.
@@ -85,7 +96,7 @@ The invoice shall be specified in a manner that allows the Customer to
 control the individual price items, including any incurred standardized
 penalties. SESAM offers electronic invoicing in EHF.
 
-3. Due date
+4. Due date
 ===========
 
 Invoices are due after 30 calendar days.
@@ -99,3 +110,41 @@ If, after the signature of the Agreement, changes in public taxes,
 charges or other duties or other changes in public administrative
 practice affects the vendor's costs connected to the Service, the
 subscription fee shall be adjusted correspondingly without prior notice.
+
+
+
+5. Legacy prices
+================
+
+The following items are no longer available for new subscriptions:
+
+.. list-table::
+  :widths: 70 30
+  :header-rows: 1
+
+  * - Compute
+    - Pr environment
+  * - Large compute - 8 Engines < 750 GB Data
+    - $2,000.00
+
+.. list-table::
+  :widths: 70 30
+  :header-rows: 1
+
+  * - Pipe monitoring
+    - Pr pipe
+  * - Enterprise - Notifications
+    - $25.00
+
+.. list-table::
+  :widths: 70 30
+  :header-rows: 1
+
+  * - :doc:`GDPR Data Access Portal <hub/gdpr-platform>`
+    - Pr GB
+  * - Basic < 1 request per second
+    - $50.00
+  * - Standard < 5 requests per second
+    - $100.00
+  * - Enterprise < 10 requests per second
+    - $200.00
