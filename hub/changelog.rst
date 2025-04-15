@@ -1,6 +1,17 @@
 Changelog
 =========
 
+.. _changelog_2025-04-22:
+
+2025-04-22
+----------
+* We are rolling out a major upgrade of the SQL system where we've upgraded the database drivers and the SQL alchemy 
+  library that underpins it. This fixes several known vulnerabilities in the library and the drivers. 
+  
+  Note that there is a change in behaviour in the Oracle driver which no longer pads up to ``Y`` trailing zeros in 
+  columns of datatype ``NUMBER(X,Y)``, e.g. it will now return ``2.91`` instead of ``2.9100`` in a column of 
+  type ``NUMBER(6,4)``. The ``sql`` source may for this reason produce updated results for existing entities.
+
 .. _changelog_2025-04-11:
 
 2025-04-11
