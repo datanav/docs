@@ -67,7 +67,7 @@ Production and test environment
    * - Premium 0,5h x 24/7 [#]_
      - 125.00
 
-.. [#] Geo-replicated backup is included in cloud environments.
+.. [#] Surpassing the data limit will incurr another instance of the license. Example 1.5TB in a Multi Compute subscription will incur a $8 400 subscription cost.
 .. [#] 1-year fixed price option available. 50% data price reduction for the fixed data amount, with 100% price increase for data exceeding the fixed data amount. Number of computes is determined by the maximum of fixed data amount and actual data amount.
 .. [#] SLA is billed for minimum 50GB data and a maximum of 300GB.
 .. [#] Contact support for Premium SLA.
