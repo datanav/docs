@@ -9,5 +9,6 @@ SESAM_NODE_IMAGE_TAG=weekly-prod
 FLUENTBIT_IMAGE_TAG=latest
 FLUENTBIT_HOST=ss-companyhub.sesam.cloud
 USER_ID=1000
+IP=server_ip
 NODE_DOMAIN=your_node_domain
 DNS_ADMIN=valid@email.address
