@@ -67,7 +67,7 @@ master_doc = 'hub/index'
 
 # General information about the project.
 project = 'Sesam'
-copyright = '2023 Sesam.io AS'
+copyright = '2025 Bouvet ASA'
 author = 'The Sesam Team'
 
 # The version info for the project you're documenting, acts as replacement for
