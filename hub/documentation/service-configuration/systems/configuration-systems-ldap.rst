@@ -14,7 +14,7 @@ It supports the following properties:
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
         "host": "FQDN of LDAP host",
@@ -108,7 +108,7 @@ Properties
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
         "_id": "example_ldap",

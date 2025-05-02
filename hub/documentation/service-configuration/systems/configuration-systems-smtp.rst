@@ -10,7 +10,7 @@ and send emails based on the entities it receives.
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
         "_id": "id-of-system",
@@ -86,7 +86,7 @@ Example configuration
         "smtp_server": "localhost",
         "smtp_port": 25,
         "smtp_username": "$ENV(username-variable)",
-        "smtp_password": $SECRET(password-variable)
+        "smtp_password": $SECRET(password-variable),
         "max_per_hour": 100000
     }
 

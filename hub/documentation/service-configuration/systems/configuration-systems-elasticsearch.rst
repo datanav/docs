@@ -10,7 +10,7 @@ used in conjunction with the :ref:`Elasticsearch sink <elasticsearch_sink>`.
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
         "_id": "id-of-system",
@@ -62,7 +62,7 @@ Properties
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
         "_id": "our-elasticsearch-server",
@@ -75,7 +75,7 @@ Example configuration
 Example configuration with authentication
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
         "_id": "our-elasticsearch-server",

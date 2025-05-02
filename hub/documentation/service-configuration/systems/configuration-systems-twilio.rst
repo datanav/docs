@@ -11,7 +11,7 @@ It has the following properties:
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
         "_id": "system-id",
@@ -65,7 +65,7 @@ Properties
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
          "_id": "twilio_service",

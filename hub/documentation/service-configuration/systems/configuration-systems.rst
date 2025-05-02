@@ -16,7 +16,7 @@ All systems share a number of common properties:
 Prototype
 ---------
 
-::
+.. code-block :: json
 
     {
         "_id": "a_system_id",

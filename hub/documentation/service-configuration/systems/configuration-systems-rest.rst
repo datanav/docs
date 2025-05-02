@@ -18,7 +18,7 @@ apply. We'll only cover the REST system specific properties in this section.
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
         "_id": "id-of-system",
@@ -652,7 +652,7 @@ rendered template, then the property is omitted from its parent object. Note tha
 An example:
 
 
-::
+.. code-block :: json
 
     {
         "_id": "our-rest-service",
@@ -670,7 +670,6 @@ An example:
                    "some_other_key{% if entity.other_conditional_property is not defined %}sesam:markskip{% endif %}": "other_value"
                 }
             }
-        ..
 
 
 (experimental)
@@ -678,7 +677,7 @@ You can use the special marker ``"sesam:markjson"`` to construct JSON objects, l
 
 An example:
 
-::
+.. code-block :: json
 
     {
         "_id": "our-rest-service",
@@ -695,28 +694,30 @@ An example:
                    "some_other_key": "[{{ properties.arg1, \"literal value \"}}]sesam:markjson"
                 }
             }
-        ..
+
+
+        
 
 
 
 Result payload object:
 
 
-::
+.. code-block :: json
 
-    ..
+  {
     "payload": {
         "key": 10,
-        "some_other_key": [1.2, \"literal value \"]
+        "some_other_key": [1.2, "literal value"]
     }
-    ..
+  }
 
 When using the ``custom_auth`` feature, the response properties from the authentication request(s) are available
 under the ``token`` object. Use this to construct the payload/headers/parameters for the operations, e.g. for a
 system that uses the bearer token format:
 
 
-::
+.. code-block :: json
 
     {
             "_id": "webcrm",
@@ -725,7 +726,6 @@ system that uses the bearer token format:
             "headers": {
                 "Authorization": "Bearer {{ token.access_token }}"
             },
-    ..
 
 See the :ref:`example configurations <custom_auth_examples>` for more examples on systems that use ``custom_auth``.
 
