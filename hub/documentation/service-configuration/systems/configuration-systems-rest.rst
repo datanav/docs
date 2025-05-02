@@ -670,7 +670,6 @@ An example:
                    "some_other_key{% if entity.other_conditional_property is not defined %}sesam:markskip{% endif %}": "other_value"
                 }
             }
-        ..
 
 
 (experimental)
@@ -695,21 +694,20 @@ An example:
                    "some_other_key": "[{{ properties.arg1, \"literal value \"}}]sesam:markjson"
                 }
             }
-        ..
+        
 
 
 
 Result payload object:
 
 
-.. code-block :: json
+::
 
-    ..
-    "payload": {
-        "key": 10,
-        "some_other_key": [1.2, \"literal value \"]
-    }
-    ..
+  
+  "payload": {
+      "key": 10,
+      "some_other_key": [1.2, \"literal value \"]
+  }
 
 When using the ``custom_auth`` feature, the response properties from the authentication request(s) are available
 under the ``token`` object. Use this to construct the payload/headers/parameters for the operations, e.g. for a
@@ -725,7 +723,6 @@ system that uses the bearer token format:
             "headers": {
                 "Authorization": "Bearer {{ token.access_token }}"
             },
-    ..
 
 See the :ref:`example configurations <custom_auth_examples>` for more examples on systems that use ``custom_auth``.
 
