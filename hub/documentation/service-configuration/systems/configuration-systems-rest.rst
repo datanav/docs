@@ -694,6 +694,8 @@ An example:
                    "some_other_key": "[{{ properties.arg1, \"literal value \"}}]sesam:markjson"
                 }
             }
+
+
         
 
 
@@ -701,12 +703,13 @@ An example:
 Result payload object:
 
 
-::
+.. code-block :: json
 
-  
-  "payload": {
-      "key": 10,
-      "some_other_key": [1.2, \"literal value \"]
+  {
+    "payload": {
+        "key": 10,
+        "some_other_key": [1.2, "literal value"]
+    }
   }
 
 When using the ``custom_auth`` feature, the response properties from the authentication request(s) are available
