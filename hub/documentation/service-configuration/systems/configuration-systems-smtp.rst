@@ -77,7 +77,7 @@ Properties
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-.. code-block :: json
+::
 
     {
         "_id": "our-smtp-server",
@@ -86,7 +86,7 @@ Example configuration
         "smtp_server": "localhost",
         "smtp_port": 25,
         "smtp_username": "$ENV(username-variable)",
-        "smtp_password": $SECRET(password-variable)
+        "smtp_password": $SECRET(password-variable),
         "max_per_hour": 100000
     }
 
