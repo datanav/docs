@@ -9,7 +9,7 @@ server for indexing JSON documents. It is used in conjunction with the :ref:`Sol
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
         "_id": "id-of-system",
@@ -47,7 +47,7 @@ Properties
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
         "_id": "our-solr-server",

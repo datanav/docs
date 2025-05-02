@@ -16,13 +16,13 @@ Prototype
 
 The following *JSON* snippet shows the general form of a source definition.
 
-..code-block::json
+.. code-block:: json
 
-    {
-        "type": "a-source-type",
-        "comment": "This is a comment"
+  {
+    "type": "a-source-type",
+    "comment": "This is a comment"
         
-    }
+  }
 
 The only universally required property is ``type``.
 
@@ -64,9 +64,9 @@ the Sesam components and it is assumed to be interpretable *only by
 the source*. Within an entity the marker is carried in the
 ``_updated`` property if supported by its source.
 
-    .. important::
+.. important::
 
-        When using continuation support, Sesam will not be able to do automatic deletion tracking. If you wish to include deleted entities in your import, make sure you regularly set a full sync on the imported data.
+  When using continuation support, Sesam will not be able to do automatic deletion tracking. If you wish to include deleted entities in your import, make sure you regularly set a full sync on the imported data.
 
 
 
@@ -201,9 +201,9 @@ The table below shows which strategy is chosen depending on the value of the pro
    :header-rows: 1
    :widths: 25, 25, 25, 25
 
-   * - ``supports_since``
-     - ``is_since_comparable``
-     - ``is_chronological``
+   * - supports_since
+     - is_since_comparable
+     - is_chronological
      - Strategy
 
    * - ``false``
@@ -298,6 +298,8 @@ If you wish to activate continuation support for a :ref:`microservice <microserv
 
    </details>
 
+|
+
 The microservice needs to pass on an entity property named "_updated" to Sesam for each entity from the source. This property should take the value corresponding to the time-stamp or sequence value of the source data representing the last data update for that entity (the same column as for the "updated_column" for SQL type sources). When the entities have been passed on into Sesam, the inbound pipe will go through all these "_updated" values and pick the max value as the new "pipe_offset".
 
 The first time the inbound pipe runs (or if the pipe is reset), the "pipe_offset" will not have a value, resulting in a complete import of all the data from the endpoint. Once data has been imported, the new "pipe_offset" will get passed to the microservice as the query parameter "since". This parameter can in turn be used as a query parameter to the API ensuring that only data updated after the last "since" value will be included in the GET request. An example of this is shown in the Python code snippet below.
@@ -334,6 +336,8 @@ The first time the inbound pipe runs (or if the pipe is reset), the "pipe_offset
 .. raw:: html
 
    </details>
+
+|
 
 In this case the data from the source is not ordered chronologically, which means we can not use the "is_chronological" tag. The benefit of chronologically ordered data in the source system is that if the pipe's pump for some reason should fail in the middle of a request, Sesam can use the chronological order of the source data to continue requesting data from the last received entity. If the data is not ordered, Sesam has to re-run the whole last request.
 

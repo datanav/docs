@@ -10,7 +10,7 @@ and send emails based on the entities it receives.
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
         "_id": "id-of-system",
@@ -77,7 +77,7 @@ Properties
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
         "_id": "our-smtp-server",

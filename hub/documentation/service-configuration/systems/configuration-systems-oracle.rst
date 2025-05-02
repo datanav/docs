@@ -10,7 +10,7 @@ and how they are mapped to :ref:`Sesam types <entity_data_types>`.
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
         "_id": "sql_system_id",
@@ -81,7 +81,7 @@ Example configuration
 
 Example Oracle configuration:
 
-::
+.. code-block :: json
 
     {
         "_id": "oracle_db",

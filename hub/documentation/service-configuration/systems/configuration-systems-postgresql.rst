@@ -10,18 +10,18 @@ and how they are mapped to :ref:`Sesam types <entity_data_types>`.
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block :: json
 
-    {
-        "_id": "sql_system_id",
-        "type": "system:postgresql,
-        "name": "The PostgreSQL Database",
-        "username":"$ENV(username-variable)",
-        "password":"$SECRET(password-variable)",
-        "host":"fqdn-or-ip-address-here",
-        "port": 5432,
-        "database": "database-name",
-        "sslmode": "prefer"
+  {
+    "_id": "sql_system_id",
+    "type": "system:postgresql",
+    "name": "The PostgreSQL Database",
+    "username":"$ENV(username-variable)",
+    "password":"$SECRET(password-variable)",
+    "host":"fqdn-or-ip-address-here",
+    "port": 5432,
+    "database": "database-name",
+    "sslmode": "prefer"
     }
 
 Properties
@@ -80,7 +80,7 @@ Example configuration
 
 Example PostgreSQL configuration:
 
-::
+.. code-block :: json
 
     {
         "_id": "postgresql_db",

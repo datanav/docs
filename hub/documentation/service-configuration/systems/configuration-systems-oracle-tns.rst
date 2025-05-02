@@ -11,7 +11,7 @@ and how they are mapped to :ref:`Sesam types <entity_data_types>`.
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
         "_id": "sql_system_id",
@@ -69,7 +69,7 @@ Example configuration
 
 Example Oracle TNS configuration:
 
-::
+.. code-block :: json
 
     {
         "_id": "oracle_db",
@@ -77,7 +77,7 @@ Example Oracle TNS configuration:
         "type": "system:oracle_tns",
         "username": "$ENV(username-variable)",
         "password": "$SECRET(password-variable)",
-        "tns_name": "(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = foo)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = BAR)))"",
+        "tns_name": "(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = foo)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = BAR)))",
         "coerce_to_decimal": true
     }
 

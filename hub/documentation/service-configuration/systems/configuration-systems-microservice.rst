@@ -261,7 +261,7 @@ service:
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
         "_id": "our-http-server",

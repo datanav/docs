@@ -14,7 +14,7 @@ The common properties for all SQL systems are:
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
         "_id": "sql_system_id",

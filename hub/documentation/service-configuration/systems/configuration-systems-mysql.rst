@@ -11,7 +11,7 @@ how they are mapped to :ref:`Sesam types <entity_data_types>`.
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
         "_id": "sql_system_id",
@@ -72,7 +72,7 @@ Example configuration
 
 Example MySQL configuration:
 
-::
+.. code-block :: json
 
     {
         "_id": "sqlserver_db",

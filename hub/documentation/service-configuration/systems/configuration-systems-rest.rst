@@ -18,7 +18,7 @@ apply. We'll only cover the REST system specific properties in this section.
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block :: json
 
     {
         "_id": "id-of-system",
@@ -652,7 +652,7 @@ rendered template, then the property is omitted from its parent object. Note tha
 An example:
 
 
-::
+.. code-block :: json
 
     {
         "_id": "our-rest-service",
@@ -678,7 +678,7 @@ You can use the special marker ``"sesam:markjson"`` to construct JSON objects, l
 
 An example:
 
-::
+.. code-block :: json
 
     {
         "_id": "our-rest-service",
@@ -702,7 +702,7 @@ An example:
 Result payload object:
 
 
-::
+.. code-block :: json
 
     ..
     "payload": {
@@ -716,7 +716,7 @@ under the ``token`` object. Use this to construct the payload/headers/parameters
 system that uses the bearer token format:
 
 
-::
+.. code-block :: json
 
     {
             "_id": "webcrm",

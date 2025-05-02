@@ -64,7 +64,7 @@ Prototype
 
 Variant 1: Explicit equality-rules with the ``equality`` property
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-::
+.. code-block :: json
 
     {
         "type": "merge",
@@ -80,7 +80,7 @@ Variant 1: Explicit equality-rules with the ``equality`` property
 
 Variant 2: Implicit equality-rules with the ``equality_sets`` property
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-::
+.. code-block :: json
 
     {
         "type": "merge",
@@ -266,46 +266,56 @@ Properties
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Equality is resolved transitively, so if A is the same as B and B is the same as C then A,
 B and C are all considered the same. With the ``equality`` property, these rules must be specified
-one at a time, like this::
+one at a time, like this:
 
-        "equality": [
-            ["eq", "a.x", "b.x"],
-            ["eq", "b.x", "c.y"],
-            ["eq", "c.z", "d.z"],
-        ],
+.. code-block :: json
+
+    "equality": [
+        ["eq", "a.x", "b.x"],
+        ["eq", "b.x", "c.y"],
+        ["eq", "c.z", "d.z"],
+    ],
 
 The ``equality_sets`` property was added as a way to makes it clearer which equality-rules belong together.
-The equality-rules above could be expressed like this::
+The equality-rules above could be expressed like this:
 
-        "equality_sets": [
-            ["a.x", "b.x", "c.y"],
-            ["c.z", "d.z"],
-        ],
+.. code-block :: json
+
+    "equality_sets": [
+        ["a.x", "b.x", "c.y"],
+        ["c.z", "d.z"],
+    ],
 
 Note that the ``equality_sets`` property is just a bit of syntactic sugar; behind the scenes the implicit
 equality-rules are added to the rules in the ``equality`` property. This means that you can use both the
 ``equality_sets`` and the ``equality`` property at the same time if you want (although this is not recommended, since
 it makes it harder to figure out the equality-rules). It also means that you will not get a configuration warning if
-if you accidentally specify two equality-sets that are actually overlapping. If you for example specify this::
+if you accidentally specify two equality-sets that are actually overlapping. If you for example specify this:
 
-        "equality_sets": [
-            ["a.x", "b.x", "c.y"],
-            ["c.y", "d.y"],
-        ],
+.. code-block :: json
 
-you won't actually get two equality-sets, since behind the scenes you end up with these equality-rules::
+    "equality_sets": [
+        ["a.x", "b.x", "c.y"],
+        ["c.y", "d.y"],
+    ],
 
-        "equality": [
-            ["eq", "a.x", "b.x"],
-            ["eq", "b.x", "c.y"],
-            ["eq", "c.y", "d.y"]
-        ],
+you won't actually get two equality-sets, since behind the scenes you end up with these equality-rules:
 
-, which is equivalent to specifying a single equality-set, like this::
+.. code-block :: json
 
-        "equality_sets": [
-            ["a.x", "b.x", "c.y", "d.y"],
-        ],
+    "equality": [
+        ["eq", "a.x", "b.x"],
+        ["eq", "b.x", "c.y"],
+        ["eq", "c.y", "d.y"]
+    ],
+
+which is equivalent to specifying a single equality-set, like this:
+
+.. code-block :: json
+
+    "equality_sets": [
+        ["a.x", "b.x", "c.y", "d.y"],
+    ],
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
@@ -336,7 +346,7 @@ that uses the ``merge`` source.
 
 Dataset ``A``:
 
-::
+.. code-block :: json
 
    [
        {"_id": "a1", "f1": 1},
@@ -345,7 +355,7 @@ Dataset ``A``:
 
 Dataset ``B``:
 
-::
+.. code-block :: json
 
    [
        {"_id": "b1", "f1": 1, "f2": "x"},
@@ -354,7 +364,7 @@ Dataset ``B``:
 
 Dataset ``C``:
 
-::
+.. code-block :: json
 
    [
        {"_id": "c1", "f3": "X"},
@@ -365,7 +375,7 @@ Dataset ``C``:
 
 Pipe configuration:
 
-::
+.. code-block :: json
 
    {
        "_id": "result",
@@ -381,7 +391,7 @@ Pipe configuration:
 
 Given the above we should expect an output that looks like this:
 
-::
+.. code-block :: json
 
    [
        {"$ids": ["a1", "b1", "c1"], "_id": "0|a1|1|b1|2|c1", "_updated": 0,
