@@ -216,7 +216,7 @@ are important:
 When the user uses a #Filter, the system will do the following:
 
 1. Extract the title-strings from the #Filter. Examples: #SomeTitle =>
-   "SomeTitle", #"Knut Johannessen" => "Knut Johannessen"
+   "SomeTitle", #"John Doe" => "John Doe"
 
 2. | Do a search for documents whose "titles"-field contains the exact
      title as specified in the filter. Make a
