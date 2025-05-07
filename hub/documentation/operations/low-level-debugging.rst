@@ -112,7 +112,7 @@ to the way the "node.log" file is rotated).
 
    Example::
 
-      knut.johannessen@myserver:/sesam/logs/sesam-node$ ls -l
+      john.doe@myserver:/sesam/logs/sesam-node$ ls -l
       total 33104
       -rwxrwxrwx 1 777 sesam  1548906 Mar 21 12:43 node_access.log
       -rwxrwxrwx 1 777 sesam   113395 Mar 21 12:41 node_config.log
@@ -123,14 +123,14 @@ to the way the "node.log" file is rotated).
       -rwxrwxrwx 1 777 sesam 30627178 Mar 21 12:43 node_pipe_execution.log
 
       # First, find the process identifier of the node you are interested in.
-      knut.johannessen@myserver:/sesam/logs/sesam-node$ docker inspect testsesamportal_storage-sesam-node_1 | grep '"Pid"'
+      john.doe@myserver:/sesam/logs/sesam-node$ docker inspect testsesamportal_storage-sesam-node_1 | grep '"Pid"'
             "Pid": 6280,
 
       # Send the SIGUSR1 signal to the node-process
-      knut.johannessen@myserver:/sesam/logs/sesam-node$ sudo kill -SIGUSR1 6280
+      john.doe@myserver:/sesam/logs/sesam-node$ sudo kill -SIGUSR1 6280
 
       # A new "stacktrace.html" file is created in the logs folder:
-      knut.johannessen@myserver:/sesam/logs/sesam-node$ ls -l
+      john.doe@myserver:/sesam/logs/sesam-node$ ls -l
       total 33476
       -rwxrwxrwx 1   777 sesam  1548906 Mar 21 12:43 node_access.log
       -rwxrwxrwx 1   777 sesam   113395 Mar 21 12:41 node_config.log
@@ -142,8 +142,8 @@ to the way the "node.log" file is rotated).
       -rw-r--r-- 1 sesam sesam   279164 Mar 21 12:43 stacktrace.html
 
       # Sending a second signal will create a new "stacktrace.html" file and rotate the existing file:
-      knut.johannessen@myserver:/sesam/logs/sesam-node$ sudo kill -SIGUSR1 6280
-      knut.johannessen@myserver:/sesam/logs/sesam-node$ ls -l
+      john.doe@myserver:/sesam/logs/sesam-node$ sudo kill -SIGUSR1 6280
+      john.doe@myserver:/sesam/logs/sesam-node$ ls -l
       total 34148
       -rwxrwxrwx 1   777 sesam  1549330 Mar 21 12:47 node_access.log
       -rwxrwxrwx 1   777 sesam   113395 Mar 21 12:41 node_config.log
@@ -154,7 +154,7 @@ to the way the "node.log" file is rotated).
       -rwxrwxrwx 1   777 sesam 31109009 Mar 21 12:47 node_pipe_execution.log
       -rw-r--r-- 1 sesam sesam   279164 Mar 21 12:47 stacktrace.html
       -rw-r--r-- 1 sesam sesam   279164 Mar 21 12:43 stacktrace.html.1
-      knut.johannessen@myserver:/sesam/logs/sesam-node$ 
+      john.doe@myserver:/sesam/logs/sesam-node$
 
 
 Checking if the health-checker thread in the node has created a stacktrace
