@@ -10,7 +10,7 @@ Instead of creating several identical flows, one can simply re-use the same temp
 
 Example of a *manifest* file:
 
-::
+.. code-block:: json
 
   {
     "auth": "<value>",
