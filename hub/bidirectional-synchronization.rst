@@ -28,21 +28,27 @@ Main patterns to be managed
 
 - **Duplicate management**
 
-    * Internal duplicate management (*)
-        * Ensure that system A does not inject duplicates into system A
-        * Ensure that pre-existing duplicates in A are merged and kept in sync    
+  * Internal duplicate management (*)
+      - Ensure that system A does not inject duplicates into system A
+      - Ensure that pre-existing duplicates in A are merged and kept in sync    
 
-    * External duplicate management (*)
-        * Make sure that System A does not inject duplicates into system B
+  * External duplicate management (*)
+      - Make sure that System A does not inject duplicates into system B
+
+  .. admonition:: Commentary (*)
+
+    Not necessarily restricted to bidirectional synchronization. The effects however, if not properly managed, are greater than in a situation without bidirectional synchronization.* 
 
 - **Preservation of source system data integrity**
-    * Before updating entities in a system, we need to ensure that we don't overwrite any data that Sesam is not aware of yet
+  
+  * Before updating entities in a system, we need to ensure that we don't overwrite any data that Sesam is not aware of yet
 
 - **Race condition management**
-    * Ensure that the golden records are complete before propagating the data downstream
-    * Ensure that the output of ``-transform`` pipes is complete before propagating the data downstream
 
-*\(\*\ )\  Not necessarily restricted to bidirectional synchronization. The effects however, if not properly managed, are greater than in a situation without bidirectional synchronization.*  
+  * Ensure that the golden records are complete before propagating the data downstream
+
+  * Ensure that the output of ``-transform`` pipes is complete before propagating the data downstream
+ 
 
 Duplicate management
 --------------------
@@ -54,7 +60,8 @@ Internal duplicate management
 
 The concept of internal duplicates covers two different scenarios. First, a system should not be able to insert its own entities back to itself (*management of new duplicates*). Second, preexisting duplicates, e.g. the sales team creating two versions of a company in their CRM system, should be treated as the same entity whenever possible (*management of preexisting duplicates*).  
 
-|start-h5| **Management of new duplicates** |end-h5|
+Management of new duplicates
+****************************
 
 We can ensure that entities are not inserted into their own source by applying a combination of the :ref:`namespace split pattern <namespace_split>` and the :ref:`duplicate hops block pattern <duplicate-hops-block>`. 
 
@@ -62,7 +69,8 @@ The first will ensure that all entities attempting to communicate with the sourc
 
 The second will ensure that no entities that already have a successful insert in the sink dataset of the ``-share`` pipe will be inserted again.
 
-|start-h5| **Management of preexisting duplicates** |end-h5|
+Management of preexisting duplicates
+************************************
 
 The only way to ensure that preexisting duplicates do not propagate as duplicates downstream is to identify them and :ref:`merge <merging>` them in their global pipe. This can be done by locating an appropriate merge criterion that the two entities have in common. 
 
@@ -103,20 +111,21 @@ There are generally two different completeness checks we do to minimize race con
 -  Transform completeness
     * By using the :ref:`completeness DTL function <completeness_dtl_function>` we can ensure that all required pipes have successfully run before processing data through ``-transform`` pipes 
 
-|start-h5| **Example of the initial completeness** |end-h5|
+Example of the initial completeness:
 
-::
+.. code-block:: json
 
   "source": {
     "type": "dataset",
     "dataset": "global-organisation",
     "initial_completeness": ["A-company-organisation-enrich",
       "global-classification-enhance"]
-  },
+  }
 
-|start-h5| **Example of the completeness DTL function** |end-h5|
 
-::
+Example of the completeness DTL function:
+
+.. code-block:: json
 
   "source": {
     "type": "dataset",
@@ -157,10 +166,3 @@ There are generally two different completeness checks we do to minimize race con
     "dataset": "A-company-transform-split"
   }
 
-.. |start-h5| raw:: html
-
-     <h5>
-
-.. |end-h5| raw:: html
-    
-     <h5>

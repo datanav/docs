@@ -15,11 +15,11 @@ Optionally, and it is recommended that this is implemented, the resource can acc
 The JSON objects (in Sesam called an :ref:`entity <entity-data-model>`) produced by the source must also adhere to a few
 simple rules related to the :ref:`reserved fields <reserved_fields>` and the stucture of the batch:
 
-    - Entities MUST have an '_id' property.
-    - Entities MAY have an '_deleted' property. It defaults to false if ommitted.
-    - Entities MAY have an '_updated' property. If present this will be used when Sesam invokes the since parameter on subsequent calls.
-    - Any other properties starting with '_' are reserved and will not be stored in Sesam.
-    - A response must expose entities as a JSON Array.
+- Entities MUST have an '_id' property.
+- Entities MAY have an '_deleted' property. It defaults to false if ommitted.
+- Entities MAY have an '_updated' property. If present this will be used when Sesam invokes the since parameter on subsequent calls.
+- Any other properties starting with '_' are reserved and will not be stored in Sesam.
+- A response must expose entities as a JSON Array.
 
 Here is an example entity:
 
@@ -138,13 +138,13 @@ custom service alongside Sesam.
 
 The templates that are relevant to building new data sources are:
 
-    - The `ASP.NET template <https://github.com/sesam-io/aspnet-datasource-template>`__.  This template uses ASP.NET 1.0 and .NET Core 1.0, and is fully cross platform.
+- The `ASP.NET template <https://github.com/sesam-io/aspnet-datasource-template>`__.  This template uses ASP.NET 1.0 and .NET Core 1.0, and is fully cross platform.
 
-    - The `Python template <https://github.com/sesam-io/python-datasource-template>`__. Requires Python 3 and uses the `Flask <http://flask.pocoo.org>`_ framework.
+- The `Python template <https://github.com/sesam-io/python-datasource-template>`__. Requires Python 3 and uses the `Flask <http://flask.pocoo.org>`_ framework.
 
-    - The `Java template <https://github.com/sesam-io/java-datasource-template>`_. Requires Java 8 and uses the `Spark <http://sparkjava.com/>`_ micro framework.
+- The `Java template <https://github.com/sesam-io/java-datasource-template>`_. Requires Java 8 and uses the `Spark <http://sparkjava.com/>`_ micro framework.
 
-    - The `NodeJS template <https://github.com/sesam-io/nodejs-datasource-template>`_. Requires NodeJS v4 or later.
+- The `NodeJS template <https://github.com/sesam-io/nodejs-datasource-template>`_. Requires NodeJS v4 or later.
 
 In the following configurations we will see how the :ref:`JSON source <json_source>` in combination with the :ref:`Microservice system <microservice_system>` can be used to create a Custom Data Source.
 

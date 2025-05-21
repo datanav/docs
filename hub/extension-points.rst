@@ -19,10 +19,9 @@ Microservices are hosted in Sesam as docker containers. The Docker containers ca
 the :ref:`microservice system configuration <microservice_system>` and their logs can be inspected through the system's status tab.
 
 
-    .. tip::
+.. tip::
 
-        As well as writing services from scratch there are also a number of starter service implementations that can be copied
-        and changed. To read more about these connectors, or to contribute to the community, enter the the `Sesam community page <https://docs.sesam.io/community.html>`_.
+    As well as writing services from scratch there are also a number of starter service implementations that can be copied and changed. To read more about these connectors, or to contribute to the community, enter the the `Sesam community page <https://docs.sesam.io/community.html>`_.
 
 
 

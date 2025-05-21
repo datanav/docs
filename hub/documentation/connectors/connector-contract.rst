@@ -37,7 +37,7 @@ Properties
 Example: existing entity in system
 ----------------------------------
 
-::
+.. code-block:: json
 
    {
      "_id": "0",
@@ -51,7 +51,7 @@ Example: existing entity in system
 Example: an entity that has previously been inserted by Sesam
 -------------------------------------------------------------
 
-::
+.. code-block:: json
 
    {
      "_id": "0",
@@ -112,7 +112,7 @@ Example: insert
 
 This entity does not have a system primary key, i.e. the ``id`` property, and will result in an insert into the system.
 
-::
+.. code-block:: json
 
     {
       "_id": "bar-person:1",
@@ -129,7 +129,7 @@ Example: $replaced=true
 
 The entity with this ``_id`` has been merged into another entity. The ``$replaced`` property and the ``_delete`` property was created by an upstream merge source and this must be communicated downstream to the dataset.
 
-::
+.. code-block:: json
 
     {
       "_id": "bar-person:1",
@@ -142,7 +142,7 @@ Example: update
 
 The properties in ``$based_on`` is different from the properties on the entity, so the entity will be updated in the system accordingly.
 
-::
+.. code-block:: json
 
     {
       "_id": "foo-person:0",
@@ -162,7 +162,7 @@ Example: delete
 
 The entity has been marked as deleted and will therefore be deleted in the system.
 
-::
+.. code-block:: json
 
     {
       "_id": "foo-person:0",
@@ -292,7 +292,7 @@ any occurrence of that parameter in the configuration with the given value. For 
   {
     "datatypes": {
       "contact": {
-        ...
+      ...
         "parameters": {
           "foo": "bar"
         }
