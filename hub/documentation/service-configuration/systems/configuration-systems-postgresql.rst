@@ -69,7 +69,7 @@ Properties
 
    * - ``sslmode``
      - String
-     - The ssl mode to use. The value has to be one of "disable", "allow", "prefer", "require", "verify-ca" or "verify-full".
+     - The ssl mode to use. The value has to be one of "disable", "allow", "prefer", or "require".
        Please consult the `PostgreSQL documentation <https://www.postgresql.org/docs/10/libpq-ssl.html>`_  for
        the full details of what these modes entail.
      - ``"prefer"``
