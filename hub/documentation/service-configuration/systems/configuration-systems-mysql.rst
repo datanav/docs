@@ -67,6 +67,14 @@ Properties
      -
      - Yes
 
+   * - ``sslmode``
+     - String
+     - The ssl mode to use. The value has to be one of "disabled", "preferred", or "required".
+       Please consult the `MySQL documentation <https://dev.mysql.com/doc/refman/8.4/en/connection-options.html#option_general_ssl-mode>`_  for
+       the full details of what these modes entail.
+     - ``"preferred"``
+     -
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 

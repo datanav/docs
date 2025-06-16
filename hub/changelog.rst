@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2025-06-16:
+
+2025-06-16
+----------
+* Added the ``sslmode`` property to the :ref:`MySQL system <mysql_system>`.
+
 .. _changelog_2025-04-22:
 
 2025-04-22
