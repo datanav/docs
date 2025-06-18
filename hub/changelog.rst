@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2025-06-17:
+
+2025-06-17
+----------
+* Added the ``bulk_schema`` property to the :ref:`SQL sink <sql_sink>`.
+* ``use_bulk_operations=true`` now works with a custom database schema in the :ref:`SQL sink <sql_sink>` using the :ref:`Microsoft SQL Server system <mssql-sqlserver_system>`.
+
 .. _changelog_2025-06-16:
 
 2025-06-16

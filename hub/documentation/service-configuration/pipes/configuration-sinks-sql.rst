@@ -84,6 +84,14 @@ Properties
      -
      -
 
+   * - ``bulk_schema``
+     - String
+     - Specifies the database schema that should be used when creating temporary tables in the bulk
+       operations mode. This property is currently only used by
+       the :ref:`Microsoft SQL Server system <mssql-sqlserver_system>`.
+     -
+     -
+
    * - ``timestamp``
      - String
      - Defines a name of a property (column) that is added to each entity, containg a timestamp in UTC.
@@ -98,7 +106,7 @@ Properties
        operations requires Sesam to have extra permissions in the database, for instance). Only some
        sql systems supports bulk operations, see :ref:`the documentation of the SQL systems <sql_system>` for
        details.
-     - ``false`` for now; will be changed to ``true`` at some future date.
+     - ``false``
      -
 
    * - ``keep_failed_bulk_operation_files``
