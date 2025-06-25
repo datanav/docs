@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2025-06-25:
+
+2025-06-25
+----------
+- The ``validation_expression`` :ref:`property <validation_expression>` now supports looking up global secrets.
+  If the secret used in the expression is set on both the system and as a global secret, the system secret takes priority.
+
 .. _changelog_2025-06-17:
 
 2025-06-17
