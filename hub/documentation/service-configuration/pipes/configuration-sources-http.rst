@@ -150,7 +150,7 @@ Properties
      - 100
      - No
 
-   .. _validation_expression:
+       .. _validation_expression:
    * - ``validation_expression``
      - String
      - This property allows custom request validation for receiver endpoints. This is particularly useful when clients
