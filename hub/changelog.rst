@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2025-06-26:
+
+2025-06-26
+----------
+* Added the ``system`` property to the :ref:`embedded <embedded_source>` source.
+
 .. _changelog_2025-06-25:
 
 2025-06-25

@@ -25,6 +25,15 @@ Properties
      -
      - Yes
 
+   * - ``system``
+     - String
+     - The id of the :ref:`System <system_section>` component to use. This 
+       propery has no effect as it is primarily meant to be used when the embedded source is used in a pipe with a 
+       conditional source. When used with a conditional source and the ``system`` property is specified then the Graph view 
+       in the Management Studio will show the system specified.
+     -
+     - 
+
    * - ``if_source_empty``
      - Enum<String>
      - Determines the behaviour of the pipe when the source does not contain any entities. Normally, any previously synced
