@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2025-06-30:
+
+2025-06-26
+----------
+* Documented more of the properties that exists in the :doc:`pump execution <documentation/operations/pump-execution>` dataset.
+
 .. _changelog_2025-06-26:
 
 2025-06-26

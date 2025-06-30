@@ -64,6 +64,10 @@ Properties
      - String
      - The ``_id`` value for pump-started entities is fixed and will always be "pump-started"
 
+   * - ``metrics``
+     - Dict
+     - A collection of metrics computed from the pipe run. See the :ref:`metrics <pump_execution_metrics>` section for more details.
+
    * - ``event_type``
      - String
      - The ``event_type`` value for pump-started entities is fixed and will always be "pump-started"
@@ -76,6 +80,10 @@ Properties
    * - ``start_time``
      - String
      - The ISO-formatted timestamp for the timestamp the pump started ("YYYY-MM-DDTHH:mm:SS.fZ")
+
+   * - ``pipe``
+     - String
+     - The pipe id.
 
    * - ``pump_definition``
      - String
@@ -100,6 +108,7 @@ Prototype
         "pump_definition": "pump-configuration-id",
         "start_time": "pump-started-timestamp-in-UTC",
         "end_time": "pump-ended-iso-timestamp-in-UTC",
+        "total_time": "pump-run-total-time-in-seconds",
         "sync_type": "type-of-sync",
         "pump_started_location": 1234,
         "retry_entities_exist": false,
@@ -122,9 +131,21 @@ Properties
      - String
      - The ``_id`` value for pump-completed entities is fixed and will always be "pump-completed".
 
+   * - ``metrics``
+     - Dict
+     - A collection of metrics computed from the pipe run. See the :ref:`metrics <pump_execution_metrics>` section for more details.
+
    * - ``event_type``
      - String
      - The ``event_type`` value for pump-completed entities is fixed and will always be "pump-completed".
+
+   * - ``next_interval``
+     - Decimal
+     - Number of seconds until the next pump run is due.
+
+   * - ``pipe``
+     - String
+     - The pipe id.
 
    * - ``pump_definition``
      - String
@@ -142,6 +163,10 @@ Properties
    * - ``end_time``
      - String
      - The ISO-formatted timestamp for the timestamp the pump ended ("YYYY-MM-DDTHH:mm:SS.fZ").
+
+   * - ``total_time``
+     - String
+     - The pipe total run time in seconds.
 
    * - ``pump_started_location``
      - Integer
@@ -176,6 +201,7 @@ Prototype
         "pump_definition": "pump-configuration-id",
         "start_time": "pump-started-timestamp-in-UTC",
         "end_time": "pump-ended-iso-timestamp-in-UTC",
+        "total_time": "pump-run-total-time-in-seconds",
         "pump_started_location": 1234,
         "retry_entities_exist": true,
         "entities_succeeded": 123,
@@ -213,6 +239,10 @@ Properties
      - String
      - The ``_id`` value for pump-failed entities is fixed and will always be "pump-failed".
 
+   * - ``metrics``
+     - Dict
+     - A collection of metrics computed from the pipe run. See the :ref:`metrics <pump_execution_metrics>` section for more details.
+
    * - ``event_type``
      - String
      - The ``event_type`` value for pump-failed entities is fixed and will always be "pump-failed".
@@ -221,6 +251,14 @@ Properties
      - Enum<String>
      - The ``sync_type`` value denotes the type of pipe run that produced this log entry. It can be one of the following
        values: ``full``, ``partial`` or ``incremental``.
+
+   * - ``next_interval``
+     - Decimal
+     - Number of seconds until the next pump run is due.
+
+   * - ``pipe``
+     - String
+     - The pipe id.
 
    * - ``pump_definition``
      - String
@@ -234,6 +272,10 @@ Properties
      - String
      - The ISO-formatted timestamp for the timestamp the pump ended ("YYYY-MM-DDTHH:mm:SS.fZ").
 
+   * - ``total_time``
+     - String
+     - The pipe total run time in seconds.
+
    * - ``pump_started_location``
      - Integer
      - The absolute index into the log where the corresponding "pump-started" entity is located. It is used by
@@ -246,6 +288,19 @@ Properties
    * - ``exception_entity``
      - Object
      - A complete embedded copy of the entity that caused the failure (if available).
+
+   * - ``traceback``
+     - String
+     - Information about from the pump failure. It a stack trace of the execution failure.
+
+   * - ``original_traceback``
+     - String
+     - Information about from the source about the read failure. It contains among other things a stack trace of the
+       execution failure in the source.
+
+   * - ``original_error_message``
+     - String
+     - Same as the traceback, but only the root message itself.
 
    * - ``entities_succeeded``
      - Integer
@@ -279,8 +334,8 @@ Prototype
         "event_type": "read-error",
         "error_code": 0,
         "event_time": "failure-ISO-timestamp-in-UTC",
-        "exception": "traceback-info-from-pump",
-        "original_exception": "the-exception-cast-by-source"
+        "traceback": "traceback-info-from-pump",
+        "original_traceback": "the-exception-cast-by-source"
     }
 
 Properties
@@ -299,9 +354,17 @@ Properties
      - The ``_id`` value for read-error entities is computed from the string prefix "read-error:" concatenated with
        a GUID string.
 
+   * - ``metrics``
+     - Dict
+     - A collection of metrics computed from the pipe run. See the :ref:`metrics <pump_execution_metrics>` section for more details.
+
    * - ``event_type``
      - String
      - The ``event_type`` value for read-error entities is fixed and will always be "read-error".
+
+   * - ``pipe``
+     - String
+     - The pipe id.
 
    * - ``error_code``
      - Integer
@@ -313,14 +376,18 @@ Properties
      - String
      - The ISO-formatted timestamp for the timestamp when the read error happened ("YYYY-MM-DDTHH:mm:SS.fZ").
 
-   * - ``exception``
+   * - ``traceback``
      - String
      - Information about from the pump failure. It a stack trace of the execution failure.
 
-   * - ``original_exception``
+   * - ``original_traceback``
      - String
      - Information about from the source about the read failure. It contains among other things a stack trace of the
        execution failure in the source.
+
+   * - ``original_error_message``
+     - String
+     - Same as the traceback, but only the root message itself.
 
 The write-error entity
 ----------------------
@@ -351,8 +418,8 @@ Prototype
           "_id": "id-of-the-entity-that-resolved-the-error-if-different",
           "entity-property": "entity-value"
         },
-        "exception": "traceback-info-from-pump",
-        "original_exception": "the-exception-cast-by-sink",
+        "traceback": "traceback-info-from-pump",
+        "original_traceback": "the-exception-cast-by-sink",
     }
 
 Properties
@@ -371,9 +438,17 @@ Properties
      - The ``_id`` value for read-error entities is computed from the string prefix "write-error:" concatenated with
        the failed entity ``_id`` property.
 
+   * - ``metrics``
+     - Dict
+     - A collection of metrics computed from the pipe run. See the :ref:`metrics <pump_execution_metrics>` section for more details.
+
    * - ``event_type``
      - String
      - The ``event_type`` value for write-error entities is fixed and will always be "write-error".
+
+   * - ``pipe``
+     - String
+     - The pipe id.
 
    * - ``error_code``
      - Integer
@@ -421,14 +496,18 @@ Properties
      - A complete embedded copy of the entity that resolved the write-error if it was retried (and if it differs from
        ``entity``). This property will only be set if ``resolved`` is also ``true``.
 
-   * - ``exception``
+   * - ``traceback``
      - String
      - Information about from the pump failure. It a stack trace of the execution failure.
 
-   * - ``original_exception``
+   * - ``original_traceback``
      - String
      - Information about from the sink about the write failure. It contains among other things a stack trace of the
        execution failure in the sink.
+
+   * - ``original_error_message``
+     - String
+     - Same as the traceback, but only the root message itself.
 
 The pump-offset-set entity
 --------------------------
@@ -469,6 +548,10 @@ Properties
      - String
      - The ``_id`` value for pump-offset-set entities is fixed and will always be "pump-offset-set"
 
+   * - ``metrics``
+     - Dict
+     - A collection of metrics computed from the pipe run. See the :ref:`metrics <pump_execution_metrics>` section for more details.
+
    * - ``event_type``
      - String
      - The ``event_type`` value for pump-started entities is fixed and will always be "pump-offset-set"
@@ -476,6 +559,10 @@ Properties
    * - ``event_time``
      - String
      - The ISO-formatted timestamp for the timestamp the pump offset was set ("YYYY-MM-DDTHH:mm:SS.fZ")
+
+   * - ``pipe``
+     - String
+     - The pipe id.
 
    * - ``pipe_offset``
      - String
@@ -492,3 +579,74 @@ Properties
    * - ``user``
      - Object
      - Information about the user that started the run, if available.
+
+.. _pump_execution_metrics:
+
+The metrics property
+--------------------
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60
+
+   * - Property
+     - Type
+     - Description
+
+   * - ``entities.changes_last_run``
+     - Number
+     - The number of entities actually written to the sink dataset or the number of entities written to the sink 
+       target. Note that for a sink dataset only the number of changed entities is reported, which can be different
+       from the number of entities actually sent to the sink due to change tracking done in the dataset sink.
+
+   * - ``entities.entities_last_run``
+     - Number
+     - The number of source entities seen and processed by the pipe.
+
+   * - ``entities.read_errors_last_run``
+     - Number
+     - The number of read errors seen by the pump in this pipe run.
+
+   * - ``entities.sink_time``
+     - Number
+     - The number of seconds spent inside the sink in this pipe run. Note that this number can be a bit misleading due to optimizations.
+
+   * - ``entities.source_time``
+     - Number
+     - The number of seconds spent inside the source in this pipe run. Note that this number can be a bit misleading due to optimizations.
+
+   * - ``entities.transform_time``
+     - Number
+     - The number of seconds spent inside the transforms in this pipe run. Note that this number can be a bit misleading due to optimizations.
+
+   * - ``entities.ttl_deletes_entities_last_run``
+     - Number
+     - The number of entities deleted by TTL compaction for deletes in this pipe run.
+
+   * - ``entities.write_errors_last_run``
+     - Number
+     - The number of write errors seen by the pump in this pipe run.
+
+   * - ``hops.max-cardinality``
+     - Number
+     - The maximum number of entities retrieved through hops traversal for one individual source entity in this pipe run (overall).
+
+   * - ``hops.max-cardinality-last-run``
+     - Number
+     - Same as ``hops.max-cardinality``.
+
+   * - ``hops.total-rows-last-run``
+     - Number
+     - The total number of rows retrieved by hops traversal in this pipe run (each row can contain multiple entities – one per bound variable in the hops expression).
+
+   * - ``memory.batch-max-mem-size``
+     - Number
+     - The maximum memory footprint of entity batches computed by the pipe run.
+
+   * - ``memory.total-peak``
+     - Number
+     - The maximum memory footprint of the pipe worker thread itself.
+    
