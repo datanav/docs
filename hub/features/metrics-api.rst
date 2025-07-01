@@ -190,6 +190,10 @@ Note that metrics are not exposed for pipes that are disabled or have pump.mode=
      - Counter
      - The number of entities seen
 
+   * - ``sesam_pump_entities_retryable``
+     - Gauge
+     - The number of retryable entities in the retry queue.
+
    * - ``sesam_pump_entities_compacted``
      - Counter
      - The number of entities compacted away
