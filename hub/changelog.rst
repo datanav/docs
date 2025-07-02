@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2025-07-01:
+
+2025-07-01
+----------
+* Added new metric ``sesam_pump_entities_retryable`` to the :ref:`Metrics <metrics-api>` API.
+
 .. _changelog_2025-06-30:
 
 2025-06-26
