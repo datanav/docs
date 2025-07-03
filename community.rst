@@ -22,10 +22,7 @@ for sharing code on the Sesam Community.
 Using connectors
 ----------------
 
-You can browse the ready to use connectors in the `Extension Browser <https://sesam-community.firebaseapp.com/>`_,
-this is a collection of data from `Github <https://github.com/sesam-community>`_,
-`TravisCI <https://travis-ci.org/github/sesam-community>`_ and
-`DockerHub <https://hub.docker.com/u/sesamcommunity>`_.
+You can browse the ready to use connectors on `Github <https://github.com/sesam-community>`_, and `DockerHub <https://hub.docker.com/u/sesamcommunity>`_.
 
 Ask public questions
 --------------------
