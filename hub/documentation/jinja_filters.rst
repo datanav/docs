@@ -20,7 +20,7 @@ with ``secret('secret-name')``.
 ^^^^^^^^^^^^^^
 
 Decodes a JWT given a (public) key. Also supports supplying a JSON Web Key Set (JWKS) URL in place of a key. See the
-table below for all supported arguments.
+table below for all supported arguments. Example usage: ``secret('jwt') | decode_jwt(key=secret('public_key'))``
 
 .. list-table::
    :header-rows: 1
