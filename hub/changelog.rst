@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2025-08-04:
+
+2025-08-04
+----------
+* The ``decode_jwt`` Jinja :ref:`filter <custom_jinja_filters>` now supports a new argument ``jwks_url``. This can be used to obtain keys dynamically
+  from a JSON Web Key Set (JWKS) URL, instead of specifying it under the ``key`` argument.
+
 .. _changelog_2025-07-01:
 
 2025-07-01
