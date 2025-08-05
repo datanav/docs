@@ -16,7 +16,7 @@ with ``secret('secret-name')``.
 
 .. _custom_jinja_filters:
 
-**decode_jwt**
+``decode_jwt``
 ^^^^^^^^^^^^^^
 
 Decodes a JWT given a (public) key. Also supports supplying a JSON Web Key Set (JWKS) URL in place of a key. See the
