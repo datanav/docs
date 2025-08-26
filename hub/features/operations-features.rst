@@ -43,17 +43,6 @@ Sesam offer a set of features that will give you the edge when it comes to opera
     :badge:`Paid feature,badge-info badge-pill`
     :badge:`Deprecated,badge-warning badge-pill`
 
-    **Notifications**
-
-    Notifications enable you to monitor your pipes and get notification alerts in the user interface, or by email.
-
-    .. link-button:: notifications_feature
-            :type: ref
-            :text: Read more
-            :classes: read-more
-    ---
-    :badge:`Free feature,badge-success badge-pill`
-
 
     **Metrics and monitoring**
 
@@ -116,7 +105,6 @@ Sesam offer a set of features that will give you the edge when it comes to opera
 
    VPN <vpn>
    Durable Data <durable-data>
-   Notifications <notifications-feature>
    Metrics and monitoring <metrics-api>
    Bring your own key <bring-your-own-key>
    Network Policy <network-policy>

@@ -4,7 +4,7 @@
 :badge:`Free feature,badge-success badge-pill`
 
 ======================
-Metrics and monitoring
+Metrics
 ======================
 
 By enabling metrics and monitoring feature you will have access to a set of features that help you monitor your subscription. This bundle include features like custom notifications, insights and the metrics API.
@@ -218,29 +218,3 @@ Note that metrics are not exposed for pipes that are disabled or have pump.mode=
      - Gauge
      - The time when the pump was previously scheduled to run. In practice this is the run before the one scheduled at ``sesam_pump_scheduled_time``. The unit is the number of seconds since epoch.
 
-
-Monitoring
-==========
-
-Monitoring allows you to see pipe insights and set up custom pipe notifications.
-
-Insights
---------
-
-After enabling Metrics and monitoring, you can enable insights in the pipe you want to monitor. You will then have access to charts that show how many entities, errors and latencies there have been for the current pipe during the last 30 days.
-
-To enable insights on a specific pipe:
-
-- Navigate to the pipe you want to monitor
-- Find the Insight tab
-- Enable insights
-
-.. important::
-   Monitoring data collection will start only after you enable insights in a specific pipe.
-
-Notifications
--------------
-
-Add notification rules to pipes and get alerts when those rules are triggered. You can get notification alerts either in the user-interface or by email.
-
-To see how to use custom notifications, please visit the :doc:`notification documentation <notifications-feature>`.
