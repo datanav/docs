@@ -69,7 +69,7 @@ Changelog
 
 2025-04-02
 ----------
-* The :ref:`Notifications <notifications-feature>` feature will reach end-of-life June 30th 2025. It is superseded by the
+* The Notifications feature will reach end-of-life June 30th 2025. It is superseded by the
   :ref:`Metrics <metrics-api>` feature.
 * The :doc:`GDPR platform <gdpr-platform>` tool will reach end-of-life June 30th 2025.
 
