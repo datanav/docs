@@ -1329,7 +1329,7 @@ Changes to the user experience:
 
 2020-05-28
 ----------
-* Added the :ref:`Restore completed <restore_completed_notification_rule>` and :ref:`Pump offset set <pump_offset_set_notification_rule>` notification rule types.
+* Added the Restore completed and :ref:Pump offset set notification rule types.
 
 2020-03-27
 ----------
@@ -1409,8 +1409,8 @@ Changes to the user experience:
 
 2019-09-04
 ----------
-* Added new :ref:`Pump finished overdue <pump_finished_overdue_notification_rule>` notification rule type.
-* Added new :ref:`Pump failed <pump_failed_notification_rule>` notification rule type.
+* Added new Pump finished overdue notification rule type.
+* Added new Pump failed notification rule type.
 
 
 2019-08-27
@@ -1667,7 +1667,7 @@ Changes to the user experience:
 
 2017-11-22
 ----------
-* Added the :ref:`Pattern match <pump_completed_pattern_match_notification_rule>` notification rule type.
+* Added the Pattern match notification rule type.
 
 
 2017-11-15
