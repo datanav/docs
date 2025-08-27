@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2025-08-27:
+
+2025-08-27
+----------
+* Added support for :ref:`Flexi subscriptions <pricing>`, allowing for more flexible and cost efficient scaling of subscriptions as needs change.
+
+
 .. _changelog_2025-08-04:
 
 2025-08-04
