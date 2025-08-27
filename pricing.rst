@@ -29,18 +29,19 @@ by using the :doc:`Sesam Client <hub/sesam-client>`.
 
 .. _pricing-production:
 
-Production and test environment
+Production and test environment 
 -------------------------------
+A production or test environment comes with automated backup [#]_ and support for SLA and VPN. 
 
 .. list-table::
    :widths: 70 30
    :header-rows: 1
 
-   * - Compute [#]_
+   * - Compute 
      - Pr environment
    * - Single compute - 4 Engines < 350 GB Data
      - $1,300.00
-   * - Flexi compute - 8 Engines < 700 GB Data
+   * - Flexi compute [#]_ - Minimum 8 Engines < 700 GB Data
      - $2,600.00
    * - Multi compute - 16 Engines < 1 TB Data
      - $4,200.00
@@ -70,6 +71,7 @@ Production and test environment
      - 125.00
 
 .. [#] Geo-replicated backup is included in cloud environments.
+.. [#] Flexi subscriptions compute can be increased or decreased in 4 compute increments at $1300 pr increment. Minimum 8 compute. 
 .. [#] 1-year fixed price option available. 50% data price reduction for the fixed data amount, with 100% price increase for data exceeding the fixed data amount. Number of computes is determined by the maximum of fixed data amount and actual data amount.
 .. [#] SLA is billed for minimum 50GB data and a maximum of 300GB.
 .. [#] Contact support for Premium SLA.
