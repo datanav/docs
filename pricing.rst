@@ -33,7 +33,6 @@ Production and test environment
 -------------------------------
 A production or test environment comes with automated backup [#]_ and support for SLA and VPN. 
 
-If data storage is more than 1TB you will be billed with an additional Multi compute for every TB above 1TB. As an example, if you have 4,5TB of data you will be billed with 5 quantities of Multi computes.
 
 .. list-table::
    :widths: 70 30
@@ -45,7 +44,7 @@ If data storage is more than 1TB you will be billed with an additional Multi com
      - $1,300.00
    * - Flexi compute [#]_ - Minimum 8 Engines < 700 GB Data
      - $2,600.00
-   * - Multi compute - 16 Engines < 1 TB Data
+   * - Multi compute [#]_ - 16 Engines < 1 TB Data
      - $4,200.00
 
 .. list-table::
@@ -74,6 +73,7 @@ If data storage is more than 1TB you will be billed with an additional Multi com
 
 .. [#] Geo-replicated backup is included in cloud environments.
 .. [#] Flexi subscriptions compute can be increased or decreased in 4 compute increments at $1300 pr increment. Minimum 8 compute. 
+.. [#] If data storage is more than 1TB you will be billed with an additional Multi compute for every TB above 1TB. As an example, if you have 4,5TB of data you will be billed with 5 quantities of Multi computes.
 .. [#] 1-year fixed price option available. 50% data price reduction for the fixed data amount, with 100% price increase for data exceeding the fixed data amount. Number of computes is determined by the maximum of fixed data amount and actual data amount.
 .. [#] SLA is billed for minimum 50GB data and a maximum of 300GB.
 .. [#] Contact support for Premium SLA.
