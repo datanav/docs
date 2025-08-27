@@ -55,6 +55,8 @@ Production and test environment
      - $22.00
    * - VPN
      - $3.00
+   * - Advanced VPN
+     - $6.00
 
 .. list-table::
    :widths: 70 30
