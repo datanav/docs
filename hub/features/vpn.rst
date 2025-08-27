@@ -32,6 +32,7 @@ Finally under "Add or modify VPN details" fill in the required fields to setup t
 
 - Pre-shared Key: a string of characters that is used as an authentication key between Sesam and on-premises VPN device.
 
-.. NOTE::
+Advanced VPN
+-------------
 
-   Multi compute subscriptions support highly available VPN configurations. This lets you set up redundant BGP (Border Gateway Protocol) enabled connections that can be failed over to. Contact support to set up such VPN connections.
+Multi and flexi subscriptions support highly available VPN configurations. This lets you set up redundant BGP (Border Gateway Protocol) enabled connections that can be failed over to.  Advanced VPN also allows for custom IPSEC rules. Contact support to set up such VPN connections.
