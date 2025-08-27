@@ -40,6 +40,8 @@ Production and test environment
      - Pr environment
    * - Single compute - 4 Engines < 350 GB Data
      - $1,300.00
+   * - Flexi compute - 8 Engines < 700 GB Data
+     - $2,600.00
    * - Multi compute - 16 Engines < 1 TB Data
      - $4,200.00
 
@@ -100,18 +102,4 @@ subscription fee shall be adjusted correspondingly without prior notice.
 
 
 
-5. Legacy prices
-================
-
-The following items are no longer available for new subscriptions:
-
-
-.. list-table::
-  :widths: 70 30
-  :header-rows: 1
-
-  * - Pipe monitoring
-    - Pr pipe
-  * - Enterprise - Notifications
-    - $25.00
 
