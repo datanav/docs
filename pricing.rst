@@ -31,7 +31,7 @@ by using the :doc:`Sesam Client <hub/sesam-client>`.
 
 Production and test environment 
 -------------------------------
-A production or test environment comes with automated backup [#]_ and support for SLA and VPN. 
+A production or test environment comes with automated backup [#]_ and support for SLA and VPN. Single compute has a limit of 4 engines, and we recommend to use Flexi compute for scalable production workloads. 
 
 
 .. list-table::
@@ -42,7 +42,7 @@ A production or test environment comes with automated backup [#]_ and support fo
      - Pr environment
    * - Single compute - 4 Engines < 350 GB Data
      - $1,300.00
-   * - Flexi compute [#]_ - Minimum 8 Engines < 700 GB Data
+   * - Flexi compute [#]_ - Minimum 8 Engines
      - $2,600.00
    * - Multi compute [#]_ - 16 Engines < 1 TB Data
      - $4,200.00
