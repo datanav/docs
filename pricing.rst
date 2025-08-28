@@ -29,18 +29,22 @@ by using the :doc:`Sesam Client <hub/sesam-client>`.
 
 .. _pricing-production:
 
-Production and test environment
+Production and test environment 
 -------------------------------
+A production or test environment comes with automated backup [#]_ and support for SLA and VPN. Single compute has a limit of 4 engines, and we recommend to use Flexi compute for scalable production workloads. 
+
 
 .. list-table::
    :widths: 70 30
    :header-rows: 1
 
-   * - Compute [#]_
+   * - Compute 
      - Pr environment
    * - Single compute - 4 Engines < 350 GB Data
      - $1,300.00
-   * - Multi compute - 16 Engines < 1 TB Data
+   * - Flexi compute [#]_ - Minimum 8 Engines
+     - $2,600.00
+   * - Multi compute [#]_ - 16 Engines < 1 TB Data
      - $4,200.00
 
 .. list-table::
@@ -68,6 +72,8 @@ Production and test environment
      - 125.00
 
 .. [#] Geo-replicated backup is included in cloud environments.
+.. [#] Flexi subscriptions compute can be increased or decreased in 4 compute increments at $1300 pr increment. Minimum 8 compute. 
+.. [#] If data storage is more than 1TB you will be billed with an additional Multi compute for every TB above 1TB. As an example, if you have 4,5TB of data you will be billed with 5 quantities of Multi computes.
 .. [#] 1-year fixed price option available. 50% data price reduction for the fixed data amount, with 100% price increase for data exceeding the fixed data amount. Number of computes is determined by the maximum of fixed data amount and actual data amount.
 .. [#] SLA is billed for minimum 50GB data and a maximum of 300GB.
 .. [#] Contact support for Premium SLA.
@@ -75,7 +81,7 @@ Production and test environment
 
 
 
-3. Invoicing
+2. Invoicing
 ============
 
 From the start of the Services, the Customer will be invoiced as agreed for the Service.
@@ -83,7 +89,7 @@ The invoice shall be specified in a manner that allows the Customer to
 control the individual price items, including any incurred standardized
 penalties. SESAM offers electronic invoicing in EHF.
 
-4. Due date
+3. Due date
 ===========
 
 Invoices are due after 30 calendar days.
@@ -100,18 +106,4 @@ subscription fee shall be adjusted correspondingly without prior notice.
 
 
 
-5. Legacy prices
-================
-
-The following items are no longer available for new subscriptions:
-
-
-.. list-table::
-  :widths: 70 30
-  :header-rows: 1
-
-  * - Pipe monitoring
-    - Pr pipe
-  * - Enterprise - Notifications
-    - $25.00
 
