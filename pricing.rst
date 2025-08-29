@@ -69,7 +69,7 @@ A production or test environment comes with automated backup [#]_ and support fo
    * - Enterprise - 1h
      - $42.00
    * - Premium 0,5h x 24/7 [#]_
-     - 125.00
+     - $125.00
 
 .. [#] Geo-replicated backup is included in cloud environments.
 .. [#] Flexi subscriptions compute can be increased or decreased in 4 compute increments at $1300 pr increment. Minimum 8 compute. 
