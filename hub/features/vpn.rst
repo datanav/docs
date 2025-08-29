@@ -35,4 +35,4 @@ Finally under "Add or modify VPN details" fill in the required fields to setup t
 Advanced VPN
 -------------
 
-Multi and flexi subscriptions support highly available VPN configurations. This lets you set up redundant BGP (Border Gateway Protocol) enabled connections that can be failed over to.  Advanced VPN also allows for custom IPSEC rules. Contact support to set up such VPN connections.
+Multi and flexi subscriptions support highly available VPN configurations. This lets you set up redundant BGP (Border Gateway Protocol) enabled connections that can be failed over to.  Advanced VPN also allows for custom IPSec rules. Contact support to set up such VPN connections.
