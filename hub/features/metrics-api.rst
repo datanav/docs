@@ -166,27 +166,27 @@ Note that metrics are not exposed for pipes that are disabled or have pump.mode=
      - Gauge
      - Was the last pump run successful? 1.0 if successful and -1.0 if not successful and 0.0 if the pipe has not run yet.
 
-   * - ``sesam_pump_started``
+   * - ``sesam_pump_started_total``
      - Counter
      - The number of pump-started events. Note: no-op runs are not counted currently.
 
-   * - ``sesam_pump_completed``
+   * - ``sesam_pump_completed_total``
      - Counter
      - The number of pump-completed events. Note: no-op runs are not counted currently.
 
-   * - ``sesam_pump_failed``
+   * - ``sesam_pump_failed_total``
      - Counter
      - The number of non-interrupted pump-failed events.
 
-   * - ``sesam_pump_interrupted``
+   * - ``sesam_pump_interrupted_total``
      - Counter
      - The number of interrupted pump-failed events.
 
-   * - ``sesam_pump_entities_changes``
+   * - ``sesam_pump_entities_changes_total``
      - Counter
      - The number of entities changed
 
-   * - ``sesam_pump_entities_seen``
+   * - ``sesam_pump_entities_seen_total``
      - Counter
      - The number of entities seen
 
@@ -194,11 +194,11 @@ Note that metrics are not exposed for pipes that are disabled or have pump.mode=
      - Gauge
      - The number of retryable entities in the retry queue.
 
-   * - ``sesam_pump_entities_compacted``
+   * - ``sesam_pump_entities_compacted_total``
      - Counter
      - The number of entities compacted away
 
-   * - ``sesam_pump_entities_deletion_tracked``
+   * - ``sesam_pump_entities_deletion_tracked_total``
      - Counter
      - The number of entities deletion tracked
 
