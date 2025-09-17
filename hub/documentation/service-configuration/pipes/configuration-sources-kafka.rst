@@ -3,9 +3,9 @@
 Kafka source
 -----------------
 
-The Kafka source consumes data from a Kafka topic. The consumer stores the offset in the pipe, and does not commit the consumer offset back to Kafka.
+The Kafka source consumes data from a Kafka topic. The consumer does not use a consumer group, but instead stores the offset in the pipe, and it does not commit the consumer offset back to Kafka.
 
-The entities emitted from this source has offset, partition, timestamp, value and key as properties. Message keys in Kafka can be any bytes, but the source will try to utf-8 decode the key and add that as the ``_id`` property.
+The entities emitted from this source has the properties ``"offset"``, ``"partition"``, ``"timestamp"``, ``"value"``, ``"key"``, ``"value_schema"`` and ``"key_schema"``.
 
 Prototype
 ^^^^^^^^^
