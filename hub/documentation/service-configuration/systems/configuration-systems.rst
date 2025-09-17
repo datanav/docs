@@ -101,6 +101,7 @@ Type of systems
    :maxdepth: 1
 
    Elasticsearch system <configuration-systems-elasticsearch>
+   Kafka system <configuration-systems-kafka>
    LDAP system <configuration-systems-ldap>
    Legacy Microsoft SQL Server system <configuration-systems-mssql-legacy>
    Microservice system <configuration-systems-microservice>

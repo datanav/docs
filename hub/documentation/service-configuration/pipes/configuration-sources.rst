@@ -355,6 +355,7 @@ Type of sources
    Empty source <configuration-sources-empty>
    HTTP endpoint source <configuration-sources-http>
    JSON source <configuration-sources-json>
+   Kafka source <configuration-sources-kafka>
    LDAP source <configuration-sources-ldap>
    Merge source <configuration-sources-merge>
    Merge datasets source <configuration-sources-merge-datasets>

@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2025-09-18:
+
+2025-09-18
+----------
+* Added :ref:`Kafka system <kafka_system>`, :ref:`Kafka source <kafka_source>` and :ref:`Kafka sink <kafka_sink>`.
+
 .. _changelog_2025-08-28:
 
 2025-08-28
