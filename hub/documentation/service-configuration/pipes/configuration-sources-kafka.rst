@@ -70,6 +70,12 @@ Properties
      - ``"json"``
      -
 
+   * - ``strict``
+     - Boolean
+     - If the key or value cannot be deserialized then the pipe will fail if ``"strict"`` is ``true``. If ``false`` then pipe won't fail, but an invalid key will be stored in the ``"invalid_key"`` property and an invalid value will stored in the ``"invalid_value`` property. Note that if both fail then the resulting entity won't have an ``"_id"`` property, so that must be dealt with in the pipe.
+     - ``true``
+     -
+
    * - ``consumer_timeout_ms``
      - Integer
      - The pipe will consume all available messages from the topic. Once all messages has been consumed it will wait for this period of
