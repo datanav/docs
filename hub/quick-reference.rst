@@ -19,6 +19,7 @@ Configuration
        :ref:`empty <empty_source>` ·
        :ref:`http_endpoint <http_endpoint_source>` ·
        :ref:`json <json_source>` ·
+       :ref:`kafka <kafka_source>` ·
        :ref:`ldap <ldap_source>` ·
        :ref:`merge <merge_source>` ·
        :ref:`merge_datasets <merge_datasets_source>` ·
@@ -36,6 +37,7 @@ Configuration
        :ref:`elasticsearch <elasticsearch_sink>` ·
        :ref:`http_endpoint <http_endpoint_sink>` ·
        :ref:`json <json_sink>` ·
+       :ref:`kafka <kafka_sink>` ·
        :ref:`mail <mail_sink>` ·
        :ref:`null <null_sink>` ·
        :ref:`rest <rest_sink>` ·
@@ -48,6 +50,7 @@ Configuration
 
    * - Systems
      - :ref:`elasticsearch <elasticsearch_system>` ·
+       :ref:`kafka <kafka_system>` ·
        :ref:`ldap <ldap_system>` ·
        :ref:`microservice <microservice_system>` ·
        :ref:`mssql <mssql_system>` ·

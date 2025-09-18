@@ -64,6 +64,7 @@ Type of sinks
    Email Message sink <configuration-sinks-email>
    HTTP endpoint sink <configuration-sinks-http>
    JSON push sink <configuration-sinks-json>
+   Kafka sink <configuration-sinks-kafka>
    Null sink <configuration-sinks-null>
    REST sink <configuration-sinks-rest>
    SDShare push sink <configuration-sinks-sdshare>
