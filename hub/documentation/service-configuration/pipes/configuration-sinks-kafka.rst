@@ -11,6 +11,10 @@ The properties used matches the properties emitted by the :ref:`Kafka source <ka
 
 The sink will flush to Kafka after every batch.
 
+.. NOTE::
+
+   The sink does not do client-side schema valiation at this time. We might add this in a future release.
+
 Prototype
 ^^^^^^^^^
 
