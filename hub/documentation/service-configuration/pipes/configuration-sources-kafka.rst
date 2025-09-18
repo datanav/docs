@@ -5,7 +5,7 @@ Kafka source
 
 The Kafka source consumes data from a Kafka topic. The consumer does not use a consumer group, but instead stores the offset in the pipe, and it does not commit the consumer offset back to Kafka.
 
-The entities emitted from this source has the properties ``"offset"``, ``"partition"``, ``"timestamp"``, ``"key"``, ``"key_schema"``, ``"value"`` and ``"value_schema"``. If key deserialization fails and ``"strict"`` is ``false`` then the entity will also have an ``"invalid_key"`` property. Similarly if value deserialization fails and ``"strict"`` is ``false`` then the entity will also have an ``"invalid_value"`` property.
+The entities emitted from this source has the properties ``"offset"``, ``"partition"``, ``"timestamp"``, ``"key"``, ``"key_schema"``, ``"value"``, ``"value_schema"``, ``"headers"``. If key deserialization fails and ``"strict"`` is ``false`` then the entity will also have an ``"invalid_key"`` property. Similarly if value deserialization fails and ``"strict"`` is ``false`` then the entity will also have an ``"invalid_value"`` property. ``"headers"`` is optional and will only be present if the message has headers. If present the ``"headers"`` property is an object with string keys and string or bytes values. If the header value is of type bytes then it means that the header value couldn't be deserialized as a string.
 
 .. NOTE::
 
