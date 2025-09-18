@@ -5,7 +5,12 @@ Kafka source
 
 The Kafka source consumes data from a Kafka topic. The consumer does not use a consumer group, but instead stores the offset in the pipe, and it does not commit the consumer offset back to Kafka.
 
-The entities emitted from this source has the properties ``"offset"``, ``"partition"``, ``"timestamp"``, ``"value"``, ``"key"``, ``"value_schema"`` and ``"key_schema"``.
+The entities emitted from this source has the properties ``"offset"``, ``"partition"``, ``"timestamp"``, ``"key"``, ``"key_schema"``, ``"value"`` and ``"value_schema"``. If key deserialization fails and ``"strict"`` is ``false`` then the entity will also have an ``"invalid_key"`` property. Similarly if value deserialization fails and ``"strict"`` is ``false`` then the entity will also have an ``"invalid_value"`` property.
+
+.. NOTE::
+
+
+   The ``"_id"`` property will be added to the entities if the key is deserialized successfully and it is not null or bytes. If the ``"_id"`` property cannot be constructed then a pipe transform must add it before writing the entities to the dataset sink. 
 
 Prototype
 ^^^^^^^^^
@@ -72,7 +77,7 @@ Properties
 
    * - ``strict``
      - Boolean
-     - If the key or value cannot be deserialized then the pipe will fail if ``"strict"`` is ``true``. If ``false`` then pipe won't fail, but an invalid key will be stored in the ``"invalid_key"`` property and an invalid value will stored in the ``"invalid_value`` property. Note that if both fail then the resulting entity won't have an ``"_id"`` property, so that must be dealt with in the pipe.
+     - If the key or value cannot be deserialized then the pipe will fail if ``"strict"`` is ``true``. If ``false`` then pipe won't fail, but an invalid key will be stored in the ``"invalid_key"`` property and an invalid value will stored in the ``"invalid_value`` property. Note that if key serialization fails then the resulting entity won't have an ``"_id"`` property, so that must be dealt with in the pipe.
      - ``true``
      -
 

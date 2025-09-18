@@ -5,7 +5,7 @@ Kafka sink
 
 The Kafka sink produces data to a Kafka topic.
 
-Entities sent to this sink will use the ``"key"``, ``"value"``, ``"key_schema"`` and ``"value_schema"`` properties to produce the message sent to the Kafka topic. The latter two properties are only relevant if the ``"confluent_schema_json"`` serializer is used. ``"key"`` and``"value"`` are mandatory.
+Entities sent to this sink will use the ``"key"``, ``"value"``, ``"key_schema"`` and ``"value_schema"`` properties to produce the messages sent to the Kafka topic. The latter two properties are only relevant if the ``"confluent_schema_json"`` serializer is used. The properties ``"key"`` and ``"value"`` are mandatory.
 
 The properties used matches the properties emitted by the :ref:`Kafka source <kafka_source>`. This means that it should be possible to consume a topic and produce to a new topic in a pipe with no DTL.
 
