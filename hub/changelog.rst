@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2025-10-10:
+
+2025-10-10
+----------
+* Added support for Automatic Private IP Addressing (APIPA) to the redundant VPN feature in Sesam. Contact support if you need to set up a redundant VPN.
+
 .. _changelog_2025-09-18:
 
 2025-09-18
