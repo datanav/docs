@@ -273,7 +273,7 @@ The Customer may contact SESAM support on business days (Monday to
 Friday except Christmas Eve, New Year's Eve and other Norwegian public
 holidays) between 08:00 and 16:00 hours Central European Time, or on
 specified times determined by SESAM. Any contact with SESAM support
-shall take place via https://support.sesam.io.
+shall take place via https://support.sesam.io or support@sesam.io.
 
 Support is provided in accordance with the following guidelines:
 
