@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2025-12-01:
+
+2025-12-01
+----------
+* Added schema registry and Avro support to the :ref:`Kafka system <kafka_system>`, :ref:`Kafka source <kafka_source>` and :ref:`Kafka sink <kafka_sink>`.
+
 .. _changelog_2025-10-10:
 
 2025-10-10

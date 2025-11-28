@@ -38,16 +38,33 @@ Properties
 
    * - ``sasl_username``
      - String
-     - Username to use when authentication against a SASL enabled Kafka cluster. If username is set, authentication will be performed.
+     - Username to use when authenticating against a SASL enabled Kafka cluster. If username is set, authentication will be performed.
        For Azure Event Hubs this property must be set to ``$ConnectionString`` and the connection string should be passed as the
        password.
      -
      - No
 
-
    * - ``sasl_password``
      - String
-     - Password to use when authentication against a SASL enabled Kafka cluster. For Azure Event Hubs this should be set to ``Endpoint=sb://[...]``.
+     - Password to use when authenticating against a SASL enabled Kafka cluster. For Azure Event Hubs this should be set to ``Endpoint=sb://[...]``.
      -
      - No
+
+   * - ``registry_url``
+     - String
+     - The URL of the schema registry endpoint.
+     -
+     - No
+
+   * - ``registry_username``
+     - String
+     - The username to use when authenticating against the schema registry.
+     -
+     - Required when ``registry_url`` is specified.
+
+   * - ``registry_password``
+     - String
+     - The password to use when authenticating against the schema registry.
+     -
+     - Required when ``registry_url`` is specified.
 

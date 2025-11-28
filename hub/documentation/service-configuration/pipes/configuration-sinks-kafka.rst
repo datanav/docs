@@ -64,6 +64,12 @@ Properties
      - ``"json"``
      -
 
+   * - ``strategy``
+     - String
+     - Name of the strategy to use for the message. Allowed values are ``"key-value"`` and ``"value"``. The ``"key-value"`` will use the ``key`` property as the message key and ``value`` property as the message value. The ``"value"`` strategy will use the sink entity as the message value and the ``_id`` property as the message key.
+     - ``"key-value"``
+     -
+
    * - ``delivery_timeout_ms``
      - Integer
      - The time in milliseconds to await acknowledgement from the broker and the time allowed for retriable send failures.

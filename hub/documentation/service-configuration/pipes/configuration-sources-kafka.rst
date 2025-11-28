@@ -65,14 +65,20 @@ Properties
 
    * - ``key_deserializer``
      - String
-     - Name of the deserializer to use for the key. Allowed values are ``"bytes"``, ``"string"``, ``"json"``, ``"confluent_schema_json"``.
+     - Name of the deserializer to use for the key. Allowed values are ``"bytes"``, ``"string"``, ``"json"``, ``"schema_registry_avro"``.
      - ``"string"``
      -
 
    * - ``value_deserializer``
      - String
-     - Name of the deserializer to use for the value. Allowed values are ``"bytes"``, ``"string"``, ``"json"``, ``"confluent_schema_json"``.
+     - Name of the deserializer to use for the value. Allowed values are ``"bytes"``, ``"string"``, ``"json"``, ``"schema_registry_avro"``.
      - ``"json"``
+     -
+
+   * - ``strategy``
+     - String
+     - Name of the strategy to use for the message. Allowed values are ``"key-value"`` and ``"value"``. The ``"key-value"`` will return the message key in the ``key`` property and the message value in the ``value`` property. The ``"value"`` strategy will return the message value as the source entity. The message ``_id`` will be generated from the message key if possible.
+     - ``"key-value"``
      -
 
    * - ``strict``
