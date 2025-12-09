@@ -73,7 +73,7 @@ Variant 1: Explicit equality-rules with the ``equality`` property
         "equality": [
             ["eq", "a.x", "b.x"],
             ["eq", "b.x", "c.y"],
-            ["eq", "c.z", "d.z"],
+            ["eq", "c.z", "d.z"]
         ],
         "supports_signalling": false
     }
@@ -88,7 +88,7 @@ Variant 2: Implicit equality-rules with the ``equality_sets`` property
         "datasets": ["A a", "B b", "C c", "D d"],
         "equality_sets": [
             ["a.x", "b.x", "c.y"],
-            ["c.z", "d.z"],
+            ["c.z", "d.z"]
         ],
         "supports_signalling": false
     }
@@ -273,7 +273,7 @@ one at a time, like this:
     "equality": [
         ["eq", "a.x", "b.x"],
         ["eq", "b.x", "c.y"],
-        ["eq", "c.z", "d.z"],
+        ["eq", "c.z", "d.z"]
     ],
 
 The ``equality_sets`` property was added as a way to makes it clearer which equality-rules belong together.
@@ -283,7 +283,7 @@ The equality-rules above could be expressed like this:
 
     "equality_sets": [
         ["a.x", "b.x", "c.y"],
-        ["c.z", "d.z"],
+        ["c.z", "d.z"]
     ],
 
 Note that the ``equality_sets`` property is just a bit of syntactic sugar; behind the scenes the implicit
@@ -296,7 +296,7 @@ if you accidentally specify two equality-sets that are actually overlapping. If 
 
     "equality_sets": [
         ["a.x", "b.x", "c.y"],
-        ["c.y", "d.y"],
+        ["c.y", "d.y"]
     ],
 
 you won't actually get two equality-sets, since behind the scenes you end up with these equality-rules:
@@ -314,7 +314,7 @@ which is equivalent to specifying a single equality-set, like this:
 .. code-block :: json
 
     "equality_sets": [
-        ["a.x", "b.x", "c.y", "d.y"],
+        ["a.x", "b.x", "c.y", "d.y"]
     ],
 
 Continuation support
@@ -369,7 +369,7 @@ Dataset ``C``:
    [
        {"_id": "c1", "f3": "X"},
        {"_id": "c2", "_deleted": true, "f3": "Y"},
-       {"_id": "c3", "_deleted": true, "f3": "X"},
+       {"_id": "c3", "_deleted": true, "f3": "X"}
    ]
 
 
@@ -384,7 +384,7 @@ Pipe configuration:
            "datasets": ["A a", "B b", "C c"],
            "equality": [
                ["eq", "a.f1", "b.f1"],
-               ["eq", "b.f2", ["lower", "c.f3"]],
+               ["eq", "b.f2", ["lower", "c.f3"]]
            ]
        }
    }
