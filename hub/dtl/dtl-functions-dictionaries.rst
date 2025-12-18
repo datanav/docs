@@ -248,7 +248,7 @@ Dictionaries
        |   NAMESPACE_OR_CONFIGDICT(string|dict)
        |   VALUES(value-expression{1})
        |
-       | The apply-ns function can be used to add a namespace to the properties of a dict (recursively by default ), like the :ref:`add_namespaces <namespaces_feature_add_namespaces>` pipe feature does.
+       | The apply-ns function can be used to add a namespace to the properties of a dict (recursively by default ), like the :ref:`add_namespaces <namespace_features>` pipe feature does.
          The NAMESPACE_OR_CONFIGDICT is either a static string value or a static dict value.
          The static dict value is technically a set of keyword arguments. The default value is
        |    ``{``
@@ -258,7 +258,7 @@ Dictionaries
        |        ``"skip_dollar": true,``
        |        ``"recursive": true``
        |    ``}``
-       | and reflects the behaviour of the :ref:`add_namespaces=true <namespaces_feature_add_namespaces>` pipe property.
+       | and reflects the behaviour of the :ref:`add_namespaces=true <namespace_features>` pipe property.
        |
        | By default properties starting with an ``"_"`` (underscore) character is left as-is, except for the ``_id`` property, where the property-value is prefixed with ``<identity_namespace>:``.  The ``skip_underscore`` configdict setting can be set to ``false`` to treat properties starting with ``"_"`` as "normal" properties.
        |
@@ -277,6 +277,29 @@ Dictionaries
        | ``["apply-ns", {"property_namespace": "myns", "identity_namespace": null, "skip_underscore": false, "skip_dollar": false, "recursive": false},``
        |              ``{"_id": "123", "myns:foo": 1, "$bar": {"baz": 2}}``
        | Returns ``{"myns:_id": "123", "myns:foo": 1, "myns:$bar": {"baz": 2}}``
+
+
+.. _strip_ns_dtl_function:
+
+``strip-ns``
+------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | This function recursively removes namespaces from keys in a dict, like how the :ref:`remove_namespaces <namespace_features>` pipe feature removes namespaces from output entities.
+
+     - | Example:
+       | ``["strip-ns", {"ns1:b": 1, "ns2:c": 2}]```
+       | Returns ``{"b": 1, "c": 2}``
+       |
 
 
 .. _path_dtl_function:
