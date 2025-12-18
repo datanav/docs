@@ -46,7 +46,7 @@ You can enable namespaces in the service metadata for all the pipes in your subs
 
 Properties
 ^^^^^^^^^^
-.. _namespaces_feature_add_namespaces:
+.. _namespace_features:
 
 .. list-table::
    :header-rows: 1

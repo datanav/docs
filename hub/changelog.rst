@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2025-12-18:
+
+2025-12-18
+----------
+* Added a new DTL function :ref:`strip-ns <strip_ns_dtl_function>`.
+
 .. _changelog_2025-12-01:
 
 2025-12-01
