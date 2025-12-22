@@ -167,7 +167,10 @@ DTL Expression Functions
        :ref:`now <now_dtl_function>`
 
    * - Dictionaries
-     - :ref:`dict <dict_dtl_function>` ·
+     - :ref:`apply <apply_dtl_function>` ·
+       :ref:`apply-hops <apply_hops_dtl_function>` ·
+       :ref:`apply-ns <apply_ns_dtl_function>`
+       :ref:`dict <dict_dtl_function>` ·
        :ref:`has-key <has_key_dtl_function>` ·
        :ref:`is-dict <is_dict_dtl_function>` ·
        :ref:`items <items_dtl_function>` ·
@@ -175,9 +178,7 @@ DTL Expression Functions
        :ref:`keys <keys_dtl_function>` ·
        :ref:`values <values_dtl_function>` ·
        :ref:`path <path_dtl_function>` ·
-       :ref:`apply <apply_dtl_function>` ·
-       :ref:`apply-hops <apply_hops_dtl_function>` ·
-       :ref:`apply-ns <apply_ns_dtl_function>`
+       :ref:`strip-ns <strip_ns_dtl_function>`
 
    * - Encryption
      - :ref:`decrypt <decrypt_dtl_function>` ·
@@ -259,8 +260,6 @@ DTL Expression Functions
    * - Namespaced identifiers
      - :ref:`is-ni <is_ni_dtl_function>` ·
        :ref:`ni <ni_dtl_function>` ·
-       :ref:`ni-collapse <ni_collapse_dtl_function>` ·
-       :ref:`ni-expand <ni_expand_dtl_function>` ·
        :ref:`ni-id <ni_id_dtl_function>` ·
        :ref:`ni-ns <ni_ns_dtl_function>`
 

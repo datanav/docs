@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2025-12-22:
+
+2025-12-22
+----------
+* Deprecated the :ref:`ni-collapse <ni_collapse_dtl_function>` and :ref:`ni-expand <ni_expand_dtl_function>` DTL functions.
+
 .. _changelog_2025-12-18:
 
 2025-12-18
