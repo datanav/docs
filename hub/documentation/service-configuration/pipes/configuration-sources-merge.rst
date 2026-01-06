@@ -221,6 +221,13 @@ Properties
      - ``"default"``
      - No
 
+   * - ``include_internal_properties``
+     - Boolean
+     - When using the ``list`` strategy, the ``$merged`` property does not contain internal properties such as ``_ts``
+       by default. This property can be set to ``true`` to include those properties.
+     - false
+     -
+
    * - ``max_merged``
      - Integer
      - Sets the maximum number of entities that can be merged at a time (not supported in version 1).
