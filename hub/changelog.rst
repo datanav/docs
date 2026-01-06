@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2026-01-06:
+
+2026-01-06
+----------
+* Added the property ``include_internal_properties`` to the :ref:`merge source <merge_source>`.
+
+
 .. _changelog_2025-12-22:
 
 2025-12-22
