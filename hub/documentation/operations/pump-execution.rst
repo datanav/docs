@@ -529,12 +529,12 @@ Prototype
             {
                 "_id": "entity1",
                 "_deleted": false,
-                "_updated": 123
+                "_updated": 101
             },
             {
                 "_id": "entity2",
                 "_deleted": true,
-                "_updated": 127
+                "_updated": 100
             },
         ],
         "num_entities": 2,
