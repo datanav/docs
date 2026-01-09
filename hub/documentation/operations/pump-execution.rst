@@ -33,7 +33,7 @@ takes place.
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block:: json
 
     {
         "_id":  "pump-started",
@@ -100,7 +100,7 @@ If the pump completes successfully, it will write a "pump-completed" entity to t
 
 Prototype
 ^^^^^^^^^
-::
+.. code-block:: json
 
     {
         "_id":  "pump-completed",
@@ -193,7 +193,7 @@ If the pump fails for some reason, it will write a "pump-failed" entity when it 
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block:: json
 
     {
         "_id":  "pump-failed",
@@ -509,6 +509,84 @@ Properties
      - String
      - Same as the traceback, but only the root message itself.
 
+.. _pump_execution_entities_reposted:
+
+The entities-reposted entity
+----------------------------
+The "entities-reposted" entity is written to the pump execution dataset when a user reposts entities to the dataset.
+It contains the ``_id``, ``_deleted`` and ``_updated`` properties of all the reposted entities.
+
+Prototype
+^^^^^^^^^
+
+.. code-block:: json
+
+    {
+        "_id":  "entities-reposted",
+        "event_type": "entities-reposted",
+        "event_time": "2022-01-04T13:20:28.630647Z",
+        "entities": [
+            {
+                "_id": "entity1",
+                "_deleted": false,
+                "_updated": 101
+            },
+            {
+                "_id": "entity2",
+                "_deleted": true,
+                "_updated": 100
+            },
+        ],
+        "num_entities": 2,
+        "pipe_id": "some-pipe",
+        "user": {
+            "email": "some@user.com",
+            "remote_addr": "127.0.0.1",
+            "user_id": "some@user.com"
+        }
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60
+
+   * - Property
+     - Type
+     - Description
+
+   * - ``_id``
+     - String
+     - The ``_id`` value for pump-offset-set entities is fixed and will always be "pump-offset-set"
+
+   * - ``event_type``
+     - String
+     - The ``event_type`` value for pump-started entities is fixed and will always be "pump-offset-set"
+
+   * - ``event_time``
+     - String
+     - The ISO-formatted timestamp for the timestamp the pump offset was set ("YYYY-MM-DDTHH:mm:SS.fZ")
+
+   * - ``entities``
+     - Object
+     - A list of the entities that were reposted. Only the ``_id``, ``_deleted`` and ``_updated`` properties are
+       included for each of the entities.
+
+   * - ``num_entities``
+     - Integer
+     - The number of entities that were reposted.
+
+   * - ``pipe``
+     - String
+     - The pipe id.
+
+   * - ``user``
+     - Object
+     - Information about the user that started the run, if available.
+
+
 The pump-offset-set entity
 --------------------------
 
@@ -517,7 +595,7 @@ The "pump-offset-set" is written to the pump execution dataset when the pump off
 Prototype
 ^^^^^^^^^
 
-::
+.. code-block:: json
 
     {
         "_id":  "pump-offset-set",

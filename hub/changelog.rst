@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2026-01-08:
+
+2026-01-08
+----------
+* Added a new type of event to the pump execution dataset. The ``entities-reposted`` :ref:`event <pump_execution_entities_reposted>` is now created/updated
+  whenever a user reposts entities to the sink dataset.
+
 .. _changelog_2026-01-06:
 
 2026-01-06
