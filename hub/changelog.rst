@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2026-01-20:
+
+2026-01-20
+----------
+* Updated pump config validation to account for properties set on the sink system's ref:`retry_strategy <url_system_retry_strategy>`.
+  Note that only properties set under the ``default`` retry strategy are used for validation.
+
 .. _changelog_2026-01-08:
 
 2026-01-08
