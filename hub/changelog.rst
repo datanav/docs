@@ -244,6 +244,12 @@ Changelog
 * Extended Integrated Search to allow using a well-defined :ref:`query syntax <integrated_search_query_syntax>`. Improvements have been made to the search results for namespaced identifiers that have been merged. They now have the same query result page.
 * Added the ``trigger_on`` property to the :ref:`http transform <http_transform>`.
 
+.. _changelog_2024_09_17:
+
+2024-09-17
+----------
+* Added support for the ``parse_response_as`` property to the :ref:`operation properties <rest_operations>`. It can be specified in the ``operations`` property of both the :ref:`REST systems <rest_system>` and the :ref:`REST transform <rest_transform>`. It is not supported by the :ref:`REST source <rest_source>` or :ref:`REST sink <rest_sink>`.
+
 .. _changelog_2024_05_21:
 
 2024-05-21
