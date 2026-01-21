@@ -60,7 +60,7 @@ services:
       - "chown -R -H ${USER_ID}:${USER_ID} /sesam/logs /sesam/data && exec gosu ${USER_ID} lake -l /sesam/logs -d /sesam/data --microservices=engine --enforce-license --sesam-portal-url https://portal.sesam.io/unified/ --redirect-portal-gui 1 -b /sesam/data/backup --backup-use-checkpoints"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.sesam-node.rule=Host(`${NODE_DOMAIN}`)"
+      - "traefik.http.routers.sesam-node.rule=Host(`${NODE_DOMAIN}`) || Host(`${IP}`)""
       - "traefik.http.routers.sesam-node.entrypoints=websecure"
       - "traefik.http.routers.sesam-node.tls=true"
       - "traefik.http.routers.sesam-node.tls.certresolver=myleresolver"
