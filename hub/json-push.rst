@@ -1,3 +1,5 @@
+.. _json_push_protocol:
+
 ==================
 JSON Push Protocol
 ==================
