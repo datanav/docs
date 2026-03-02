@@ -150,6 +150,11 @@ With curl:
 Get a list of all the datasets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. warning::
+
+   Do not use the dataset API to write data in production. To push data into Sesam, use either an
+   :ref:`HTTP endpoint source <http_endpoint_source>` or the :ref:`JSON Push Protocol <json_push_protocol>`.
+
 With curl:
 
 ::
