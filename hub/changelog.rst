@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2026-03-04:
+
+2026-03-04
+----------
+* Fixed an issue where NaN and +Inf/-Inf values in entities were incorrectly serialized and produced invalid JSON. They are now serialized as null values.
+
 .. _changelog_2026-01-20:
 
 2026-01-20
