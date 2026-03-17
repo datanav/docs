@@ -173,6 +173,74 @@ Entity fields starting with ``$`` are semi-reserved. They have special meaning a
        the current one.
      -
 
+       .. _dollar_retract:
+   * - ``$retract``
+     - If set to ``true``, all previous versions of the entity are permanently
+       removed from the dataset while the current version is retained. See
+       :ref:`Retract as history prune <dollar_retract_detail>` for details
+       and a configuration example.
+     -
+
+.. _dollar_retract_detail:
+
+Retract as history prune
+------------------------
+
+Setting ``$retract: true`` on an output entity permanently removes all earlier
+versions of that entity id while keeping the current version. Deletion state is
+unaffected. The operation is idempotent.
+
+**Configuration example:**
+
+When a customer is offboarded their SSN is no longer needed. The pipe emits a
+sanitised entity (omitting ``ssn``) and sets ``$retract: true`` to prune the
+version history that contained it:
+
+.. code-block:: json
+
+   {
+       "_id": "customer-status-retract-history",
+       "type": "pipe",
+       "source": {
+           "type": "dataset",
+           "dataset": "customer_status"
+       },
+       "transform": {
+           "type": "dtl",
+           "rules": {
+               "default": [
+                   ["copy", "_id"],
+                   ["copy", "status"],
+                   ["if", ["eq", "_S.status", "offboarded"],
+                       ["add", "$retract", true]
+                   ]
+               ]
+           }
+       }
+   }
+
+Source entity while the customer is active:
+
+.. code-block:: json
+
+   {
+       "_id": "customer_123",
+       "status": "paid",
+       "ssn": "123456789"
+   }
+
+After offboarding, the source entity becomes:
+
+.. code-block:: json
+
+   {
+       "_id": "customer_123",
+       "status": "offboarded"
+   }
+
+The pipe copies only ``_id`` and ``status`` and adds ``$retract: true``,
+causing the sink to drop all earlier versions including those that contained ``ssn``.
+
 .. _entity_data_types:
 
 Standard types
