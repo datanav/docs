@@ -209,8 +209,8 @@ version history that contained it:
            "type": "dtl",
            "rules": {
                "default": [
-                   ["copy", "_id"],
-                   ["copy", "status"],
+                   ["copy", "*"],
+                   ["remove", "ssn"],
                    ["if", ["eq", "_S.status", "offboarded"],
                        ["add", "$retract", true]
                    ]
