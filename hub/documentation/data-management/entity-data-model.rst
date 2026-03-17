@@ -210,7 +210,6 @@ version history that contained it:
            "rules": {
                "default": [
                    ["copy", "*"],
-                   ["remove", "ssn"],
                    ["if", ["eq", "_S.status", "offboarded"],
                        ["add", "$retract", true]
                    ]
