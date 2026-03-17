@@ -229,17 +229,18 @@ Source entity while the customer is active:
        "ssn": "123456789"
    }
 
-After offboarding, the source entity becomes:
+After offboarding, the pipe outputs:
 
 .. code-block:: json
 
    {
        "_id": "customer_123",
-       "status": "offboarded"
+       "status": "offboarded",
+       "$retract": true
    }
 
-The pipe copies only ``_id`` and ``status`` and adds ``$retract: true``,
-causing the sink to drop all earlier versions including those that contained ``ssn``.
+The sink writes this as the latest version and permanently removes all earlier
+versions, including those that contained ``ssn``.
 
 .. _entity_data_types:
 
