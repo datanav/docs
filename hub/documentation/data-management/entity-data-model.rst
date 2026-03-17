@@ -190,6 +190,12 @@ Setting ``$retract: true`` on an output entity permanently removes all earlier
 versions of that entity id while keeping the current version. Deletion state is
 unaffected. The operation is idempotent.
 
+.. note::
+   ``$retract`` is stored as a regular field and will propagate downstream
+   automatically. However, patterns such as :ref:`merge sources <merge_source>`
+   or :ref:`emit_children <emit_children_transform>` may not carry it through
+   to the output entity and require explicit handling.
+
 **Configuration example:**
 
 When a customer is offboarded their SSN is no longer needed. The pipe emits a
