@@ -209,9 +209,13 @@ version history that contained it:
            "type": "dtl",
            "rules": {
                "default": [
-                   ["copy", "*"],
                    ["if", ["eq", "_S.status", "offboarded"],
-                       ["add", "$retract", true]
+                       [
+                           ["copy", "_id"],
+                           ["copy", "status"],
+                           ["add", "$retract", true]
+                       ],
+                       ["copy", "*"]
                    ]
                ]
            }
