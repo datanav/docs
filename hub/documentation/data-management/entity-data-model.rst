@@ -177,7 +177,7 @@ Entity fields starting with ``$`` are semi-reserved. They have special meaning a
    * - ``$retract``
      - If set to ``true`` and :ref:`compaction.retract <compaction_feature>` is enabled on the pipe,
        all previous versions of the entity are permanently removed from the dataset while the current
-       version is retained. See :ref:`Retract <retract_feature>` for details and a configuration example.
+       version is retained. See :ref:`Compaction: Retract <compaction_retract_detail>` for details.
      -
 
 .. _entity_data_types:

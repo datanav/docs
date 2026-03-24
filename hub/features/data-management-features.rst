@@ -152,17 +152,6 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
     ---
     :badge:`Free feature,badge-success badge-pill`
 
-    **Retract**
-
-    Permanently prune the version history of individual entities by setting ``$retract: true`` on a pipe output.
-
-    .. link-button:: retract_feature
-            :type: ref
-            :text: Read more
-            :classes: read-more
-    ---
-    :badge:`Free feature,badge-success badge-pill`
-
     **Config Groups**
 
     Configure your sesam subscription by adding and modifying single systems and pipes via specific endpoints.
@@ -189,5 +178,4 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
     Property Lineage <property-lineage>
     Completeness <completeness-feature>
     Compaction <compaction-feature>
-    Retract <retract-feature>
     Config Groups <api-config-groups>

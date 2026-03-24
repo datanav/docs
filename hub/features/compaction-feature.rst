@@ -111,3 +111,21 @@ Properties
        in the :ref:`node metadata <service_metadata_section>`.
      - ``false``
      - No
+
+.. _compaction_retract_detail:
+
+Retract
+^^^^^^^
+
+When ``compaction.retract`` is enabled and an output entity has ``$retract: true``, all earlier
+versions of that entity are permanently removed from the sink dataset while the current version
+is retained. Deletion state is unaffected. The operation is idempotent.
+
+.. WARNING::
+
+   Retract is irreversible. Pruned versions cannot be recovered.
+
+- Only the pipe's sink dataset is affected. Upstream datasets and external consumers are unchanged.
+- ``$retract`` propagates like any other field but may be dropped by :ref:`merge sources <merge_source>`
+  or :ref:`emit_children <emit_children_transform>`. Downstream pipes that must honour the retract
+  need ``compaction.retract`` enabled and ``$retract`` explicitly included in their output.
