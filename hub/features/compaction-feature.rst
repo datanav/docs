@@ -101,3 +101,13 @@ Properties
        times out, the compaction process will continue from where it last stopped the next time the pipe runs.
      - 60
      - No
+
+   * - ``compaction.retract``
+     - Boolean
+     - If ``true``, the pipe will honour the :ref:`$retract <dollar_retract>` field on output entities.
+       When an entity with ``$retract: true`` is written to the sink dataset, all earlier versions of that
+       entity are permanently removed while the current version is retained.
+       Can be enabled globally via :ref:`global_defaults.compaction_retract <service_metadata_global_defaults_compaction_retract>`
+       in the :ref:`node metadata <service_metadata_section>`.
+     - ``false``
+     - No

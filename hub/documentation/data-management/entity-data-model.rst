@@ -175,81 +175,10 @@ Entity fields starting with ``$`` are semi-reserved. They have special meaning a
 
        .. _dollar_retract:
    * - ``$retract``
-     - If set to ``true``, all previous versions of the entity are permanently
-       removed from the dataset while the current version is retained. See
-       :ref:`Retract as history prune <dollar_retract_detail>` for details
-       and a configuration example.
+     - If set to ``true`` and :ref:`compaction.retract <compaction_feature>` is enabled on the pipe,
+       all previous versions of the entity are permanently removed from the dataset while the current
+       version is retained. See :ref:`Retract <retract_feature>` for details and a configuration example.
      -
-
-.. _dollar_retract_detail:
-
-Retract as history prune
-------------------------
-
-Setting ``$retract: true`` on an output entity permanently removes all earlier
-versions of that entity id while keeping the current version. Deletion state is
-unaffected. The operation is idempotent.
-
-.. note::
-   ``$retract`` is stored as a regular field and will propagate downstream
-   automatically. However, patterns such as :ref:`merge sources <merge_source>`
-   or :ref:`emit_children <emit_children_transform>` may not carry it through
-   to the output entity and require explicit handling.
-
-**Configuration example:**
-
-When a customer is offboarded their SSN is no longer needed. The pipe emits a
-sanitised entity (omitting ``ssn``) and sets ``$retract: true`` to prune the
-version history that contained it:
-
-.. code-block:: json
-
-   {
-       "_id": "customer-status-retract-history",
-       "type": "pipe",
-       "source": {
-           "type": "dataset",
-           "dataset": "customer_status"
-       },
-       "transform": {
-           "type": "dtl",
-           "rules": {
-               "default": [
-                   ["if", ["eq", "_S.status", "offboarded"],
-                       [
-                           ["copy", "_id"],
-                           ["copy", "status"],
-                           ["add", "$retract", true]
-                       ],
-                       ["copy", "*"]
-                   ]
-               ]
-           }
-       }
-   }
-
-Source entity while the customer is active:
-
-.. code-block:: json
-
-   {
-       "_id": "customer_123",
-       "status": "paid",
-       "ssn": "123456789"
-   }
-
-After offboarding, the pipe outputs:
-
-.. code-block:: json
-
-   {
-       "_id": "customer_123",
-       "status": "offboarded",
-       "$retract": true
-   }
-
-The sink writes this as the latest version and permanently removes all earlier
-versions, including those that contained ``ssn``.
 
 .. _entity_data_types:
 
