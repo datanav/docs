@@ -5,14 +5,15 @@
 Retract
 =======
 
-The retract feature allows a pipe to permanently prune the version history of individual entities in its sink dataset. When an output entity carries the ``$retract: true`` field and the pipe has ``compaction.retract`` enabled, all earlier versions of that entity are removed while the current version is retained. Deletion state is unaffected. The operation is idempotent.
+The retract feature is designed for situations where GDPR or other data-protection requirements
+demand that historical versions of an entity — which may contain PII such as social security
+numbers or contact details — are permanently erased from storage.
 
-This is useful in situations where sensitive data (e.g. personal identifiers) was present in earlier versions of an entity and must be removed from storage without deleting the entity itself.
-
-.. note::
-   ``$retract`` propagates downstream like any other field. However, patterns such as
-   :ref:`merge sources <merge_source>` or :ref:`emit_children <emit_children_transform>`
-   may not carry it through to the output entity and require explicit handling.
+A standard soft-delete (``_deleted: true``) removes an entity logically but leaves all prior
+versions on disk. Retract addresses that gap: when an output entity carries ``$retract: true``
+and the pipe has ``compaction.retract`` enabled, all earlier versions of that entity are
+permanently removed from the sink dataset while the current version is retained. Deletion state
+is unaffected. The operation is idempotent.
 
 Enabling retract
 ----------------
@@ -25,8 +26,28 @@ See :ref:`compaction.retract <compaction_feature>` for the pipe-level property a
 :ref:`global_defaults.compaction_retract <service_metadata_global_defaults_compaction_retract>`
 for the global default.
 
-Configuration example
----------------------
+Limitations and caveats
+------------------------
+
+.. WARNING::
+
+   Retract is irreversible. Once earlier versions of an entity have been pruned they cannot
+   be recovered. Ensure the current version of the entity contains all data that must be
+   preserved before triggering a retract.
+
+**Only the sink dataset is affected.** Retract prunes versions in the pipe's sink dataset only.
+Upstream datasets, audit logs, backups, and any external systems that have already received the
+data are not affected. A full data-erasure strategy must account for all downstream consumers.
+
+**Downstream propagation is your responsibility.** ``$retract`` propagates like any other field,
+but patterns such as :ref:`merge sources <merge_source>` or
+:ref:`emit_children <emit_children_transform>` may not carry it through to the output entity.
+Any pipe further downstream that needs to honour the retract must explicitly include
+``$retract`` in its output and have ``compaction.retract`` enabled. Without this, those
+downstream datasets will retain their full version history.
+
+Example: removing PII on offboarding
+--------------------------------------
 
 When a customer is offboarded, their SSN is no longer needed. The pipe emits a sanitised entity
 (omitting ``ssn``) and sets ``$retract: true`` to prune the version history that contained it.
