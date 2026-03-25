@@ -107,8 +107,6 @@ Properties
      - If ``true``, the pipe will honour the :ref:`$retract <dollar_retract>` field on output entities.
        When an entity with ``$retract: true`` is written to the sink dataset, all earlier versions of that
        entity are permanently removed while the current version is retained.
-       Can be enabled globally via :ref:`global_defaults.compaction_retract <service_metadata_global_defaults_compaction_retract>`
-       in the :ref:`node metadata <service_metadata_section>`.
      - ``false``
      - No
 
@@ -123,7 +121,8 @@ is retained. Deletion state is unaffected. The operation is idempotent.
 
 .. WARNING::
 
-   Retract is irreversible. Pruned versions cannot be recovered.
+   Retract is irreversible. Pruned versions cannot be recovered. Enabling retract will override the
+   ``compaction.keep_versions`` setting on a per-entity basis.
 
 - Only the pipe's sink dataset is affected. Upstream datasets and external consumers are unchanged.
 - ``$retract`` propagates like any other field but may be dropped by :ref:`merge sources <merge_source>`
