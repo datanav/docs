@@ -169,16 +169,6 @@ Properties
      -
      -
 
-       .. _service_metadata_global_defaults_compaction_retract:
-
-   * - ``global_defaults.compaction_retract``
-     - Boolean
-     - When set to ``true``, all pipes default to having :ref:`compaction.retract <compaction_feature>` enabled.
-       This means that any pipe writing an entity with ``$retract: true`` will permanently remove all earlier
-       versions of that entity from its sink dataset. Can be overridden on individual pipes.
-     - ``false``
-     -
-
    * - ``global_defaults.max_entity_bytes_size``
      - Integer
      - Defines the maximum size in bytes of an individual entity as it is stored in a dataset.

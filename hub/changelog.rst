@@ -12,7 +12,7 @@ Changelog
 
 2026-03-17
 ----------
-* Added :ref:`compaction.retract <compaction_retract_detail>`. Setting ``$retract: true`` on an output entity permanently removes all earlier versions of that entity id while keeping the current version. Must be opted into per pipe or globally via ``global_defaults.compaction_retract`` in the :ref:`node metadata <service_metadata_section>`.
+* Added :ref:`compaction.retract <compaction_retract_detail>`. Setting ``$retract: true`` on an output entity permanently removes all earlier versions of that entity id while keeping the current version. Must be opted into per pipe via ``compaction.retract``.
 
 .. _changelog_2026-03-04:
 
