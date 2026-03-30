@@ -66,6 +66,7 @@ Type of sinks
    JSON push sink <configuration-sinks-json>
    Kafka sink <configuration-sinks-kafka>
    Null sink <configuration-sinks-null>
+   Replicated dataset sink <configuration-sinks-replicated-dataset>
    REST sink <configuration-sinks-rest>
    SDShare push sink <configuration-sinks-sdshare>
    SMS message sink <configuration-sinks-sms>
