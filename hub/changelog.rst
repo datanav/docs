@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2026-03-30:
+
+2026-03-30
+----------
+* Added documentation for the :ref:`replicated dataset sink <replicated_dataset_sink>`. The replicated
+  dataset sink is used to faithfully copy a dataset preserving the original entity sequence order from the upstream source.
+
 .. _changelog_2026-03-04:
 
 2026-03-04

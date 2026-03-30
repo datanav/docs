@@ -40,6 +40,7 @@ Configuration
        :ref:`kafka <kafka_sink>` ·
        :ref:`mail <mail_sink>` ·
        :ref:`null <null_sink>` ·
+       :ref:`replicated_dataset <replicated_dataset_sink>` ·
        :ref:`rest <rest_sink>` ·
        :ref:`sdshare <sdshare_sink>` ·
        :ref:`sms <sms_sink>` ·
