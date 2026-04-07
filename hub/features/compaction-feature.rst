@@ -110,6 +110,13 @@ Properties
      - ``false``
      - No
 
+   * - ``compaction.retract_timeout_seconds``
+     - Number
+     - Determines the number of seconds that the pipe is allowed to spend on the retraction process. If the pipe
+       times out, the retraction process will continue from where it last stopped the next time the pipe runs.
+     - 60
+     - No
+
 .. _compaction_retract_detail:
 
 Retract
