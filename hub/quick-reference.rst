@@ -337,4 +337,5 @@ Entity model
    * - Special fields
      - :ref:`$children <dollar_children>` ·
        :ref:`$ids <dollar_ids_field>` ·
-       :ref:`$replaced <dollar_replaced>`
+       :ref:`$replaced <dollar_replaced>` ·
+       :ref:`$retract <dollar_retract>`

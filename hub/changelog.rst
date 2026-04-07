@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2026-04-07:
+
+2026-04-07
+----------
+* Added :ref:`compaction.retract <compaction_retract_detail>`. When enabled on a pipe, writing an entity with ``$retract: true`` permanently removes all earlier versions of that entity from the sink dataset.
+
+
 .. _changelog_2026-03-30:
 
 2026-03-30
