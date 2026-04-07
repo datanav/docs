@@ -1,18 +1,19 @@
 Changelog
 =========
 
+.. _changelog_2026-04-07:
+
+2026-04-07
+----------
+* Added :ref:`compaction.retract <compaction_retract_detail>`. When enabled on a pipe, writing an entity with ``$retract: true`` permanently removes all earlier versions of that entity from the sink dataset.
+
+
 .. _changelog_2026-03-30:
 
 2026-03-30
 ----------
 * Added documentation for the :ref:`replicated dataset sink <replicated_dataset_sink>`. The replicated
   dataset sink is used to faithfully copy a dataset preserving the original entity sequence order from the upstream source.
-
-.. _changelog_2026-03-17:
-
-2026-03-17
-----------
-* Added :ref:`compaction.retract <compaction_retract_detail>`. When enabled on a pipe, writing an entity with ``$retract: true`` permanently removes all earlier versions of that entity from the sink dataset.
 
 .. _changelog_2026-03-04:
 
