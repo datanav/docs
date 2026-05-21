@@ -23,9 +23,9 @@ by using the :doc:`Sesam Client <hub/sesam-client>`.
    * - Compute
      - Pr environment
    * - Fixed price Developer - 1 Engine < 20 GB Data
-     - $75.00
+     - $78.00
    * - Fixed price Developer Pro - 2 Engines < 20 GB Data
-     - $320.00
+     - $332.80
 
 .. _pricing-production:
 
@@ -41,11 +41,11 @@ A production or test environment comes with automated backup [#]_ and support fo
    * - Compute 
      - Pr environment
    * - Single compute - 4 Engines < 350 GB Data
-     - $1,300.00
+     - $1,352.00
    * - Flexi compute [#]_ - Minimum 8 Engines
-     - $2,600.00
+     - $2,704.00
    * - Multi compute [#]_ - 16 Engines < 1 TB Data
-     - $4,200.00
+     - $4,368.00
 
 .. list-table::
    :widths: 70 30
@@ -54,9 +54,9 @@ A production or test environment comes with automated backup [#]_ and support fo
    * - Data [#]_
      - Pr GB
    * - Storage
-     - $22.00
+     - $22.88
    * - VPN
-     - $3.00
+     - $3.12
 
 .. list-table::
    :widths: 70 30
@@ -65,11 +65,11 @@ A production or test environment comes with automated backup [#]_ and support fo
    * - SLA - Response time [#]_
      - Pr GB
    * - Standard - 8h
-     - $22.00
+     - $22.88
    * - Enterprise - 1h
-     - $42.00
+     - $43.68
    * - Premium 0,5h x 24/7 [#]_
-     - $125.00
+     - $130.00
 
 .. [#] Geo-replicated backup is included in cloud environments.
 .. [#] Flexi subscriptions compute can be increased or decreased in 4 compute increments at $1300 pr increment. Minimum 8 compute. 
