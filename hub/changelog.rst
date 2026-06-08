@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2026-06-08:
+
+2026-06-08
+----------
+* Added a "Show differences only" checkbox to the entity compare view, making it easier to spot changes between entity versions.
+
 .. _changelog_2026-04-07:
 
 2026-04-07
