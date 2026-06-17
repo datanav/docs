@@ -5,7 +5,7 @@ Changelog
 
 2026-06-17
 ----------
-* Fixed a bug where posting an entity to a dead letter dataset would incorrectly post to the sink instead of the dead letter dataset.
+* Fixed a bug where posting an entity to a dead letter dataset would incorrectly post to the pipe sink instead of the dead letter dataset.
   This affects the ``Post entity...`` button in the management console when standing in the dead letter dataset as well as posting directly to the dead letter dataset via the API (e.g. using curl).
 
 .. _changelog_2026-06-08:
