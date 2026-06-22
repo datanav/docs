@@ -264,6 +264,18 @@ A operation configuration looks like:
      -
      -
 
+   * - ``parse_response_as``
+     - Enum<String>
+     - This property controls how the response body is parsed on the client-side. Allowed values are ``entities``, ``json``, ``text`` and ``bytes``.
+
+       - ``entities`` is the default and parses the response body as a stream of entities, i.e. JSON objects and arrays of JSON objects.
+       - ``json`` parses the response body as any JSON object including primitive types like numbers and strings.
+       - ``text`` parses the response body as a UTF-8 encoded string.
+       - ``bytes`` parses the response body as bytes.
+
+     - ``entities``
+     -
+
    * - ``response_property``
      - String
      - The name of the property to put the response in when emitting entities. Note that this property can be defined
